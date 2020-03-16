@@ -1,0 +1,214 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--
+  Font family: Exo
+  Line height: 32sp
+  (identical to box height)
+-->
+
+    <style name="vanced">
+        <item name="android:textSize">
+            24sp
+        </item>
+        <item name="android:textColor">
+            #2E73FF
+        </item>
+    </style>
+
+    <style name="install">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #1490D7
+        </item>
+    </style>
+
+    <style name="latest_inst">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #000000
+        </item>
+    </style>
+
+    <style name="n_a">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #000000
+        </item>
+    </style>
+
+    <style name="microg">
+        <item name="android:textSize">
+            24sp
+        </item>
+        <item name="android:textColor">
+            #2E73FF
+        </item>
+    </style>
+
+    <style name="settings">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #5E2E73FF
+        </item>
+    </style>
+
+    <style name="github_link">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="vanced_medias">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="website">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="discord">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="telegram">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="twitter">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="brave_browser">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="support_us">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="useful_links">
+        <item name="android:textSize">
+            18sp
+        </item>
+        <item name="android:textColor">
+            #000000
+        </item>
+    </style>
+
+    <style name="reddit">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="website_text">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="github_manager">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+           #FFFFFF
+        </item>
+    </style>
+
+    <style name="github_bot">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="github_website">
+        <item name="android:textSize">
+            14sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="home">
+        <item name="android:textSize">
+            36sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+
+
+
+
+
+
+
+
+    </resources>
