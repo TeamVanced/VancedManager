@@ -3,9 +3,8 @@
     <string name="vanced">Vanced</string>
     <string name="install">Install</string>
     <string name="latest_inst">Latest\nInstalled</string>
-    <string name="n_a">15.05.54\nN/A</string>
+    <string name="n_a">N/A</string>
     <string name="microg">MicroG</string>
-    <string name="n_a">0.2.6\nN/A</string>
     <string name="settings">Settings</string>
     <string name="github_link">GitHub links</string>
     <string name="vanced_medias">Vanced on Social Medias</string>
@@ -21,4 +20,4 @@
     <string name="github_manager">Manager</string>
     <string name="github_bot">Bot</string>
     <string name="github_website">Website</string>
-    </resources>
+</resources>
