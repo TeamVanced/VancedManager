@@ -5,5 +5,9 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/home" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/vectorsetting_icon"
+        android:title="@string/settings" />
 
 </menu>
