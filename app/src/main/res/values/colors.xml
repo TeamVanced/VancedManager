@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="white">#ffffff</color>
+    <color name="Vanced">#d834eb</color>
+    <color name="Brave">#fa6711</color>
 </resources>

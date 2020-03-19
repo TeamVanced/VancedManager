@@ -3,14 +3,13 @@ package com.vanced.manager
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var homeFragment: HomeFragment
+    lateinit var settingsFragment: SettingsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +23,8 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.frame_layout, homeFragment)
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .commit()
+        val toolbar = findViewById(R.id.home_toolbar) as Toolbar?
+        setSupportActionBar(toolbar)
 
         navView.setOnNavigationItemSelectedListener { item ->
 
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                         .replace(R.id.frame_layout, homeFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
+                    setSupportActionBar(toolbar)
                 }
 
             }

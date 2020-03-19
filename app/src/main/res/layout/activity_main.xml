@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,18 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
         android:background="?android:attr/windowBackground"
-        app:menu="@menu/bottom_nav_menu"
-        />
+        app:layout_constraintBottom_toBottomOf="@+id/frame_layout"
+        app:menu="@menu/bottom_nav_menu" />
 
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="760dp"
         android:layout_above="@id/bottom_nav"
-        android:background="@color/white">
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
 
     </FrameLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

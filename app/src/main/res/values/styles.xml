@@ -8,6 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="HomeToolbarText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:text">@string/home</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:fontFamily">@font/exo_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <!--
   Font family: Exo
   Line height: 32sp
