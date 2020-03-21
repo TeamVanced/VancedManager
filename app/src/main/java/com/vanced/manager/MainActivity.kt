@@ -25,12 +25,14 @@ class MainActivity : AppCompatActivity() {
             .commit()
         val toolbar = findViewById(R.id.home_toolbar) as Toolbar?
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         navView.setOnNavigationItemSelectedListener { item ->
 
             when (item.itemId) {
 
-                R.id.home -> {
+                R.id.navigation_home -> {
 
                     homeFragment = HomeFragment()
                     supportFragmentManager
@@ -39,6 +41,15 @@ class MainActivity : AppCompatActivity() {
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
                     setSupportActionBar(toolbar)
+                }
+                R.id.navigation_settings -> {
+
+                    settingsFragment = SettingsFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, settingsFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
                 }
 
             }
