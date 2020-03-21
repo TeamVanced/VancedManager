@@ -4,7 +4,8 @@
     <string name="home">Home</string>
     <string name="vanced">Vanced</string>
     <string name="install">Install</string>
-    <string name="latest_inst">Latest\nInstalled</string>
+    <string name="latest">Latest:</string>
+    <string name="installed">Installed:</string>
     <string name="n_a">N/A</string>
     <string name="microg">MicroG</string>
     <string name="settings">Settings</string>
@@ -22,7 +23,4 @@
     <string name="github_manager">Manager</string>
     <string name="github_bot">Bot</string>
     <string name="github_website">Website</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
