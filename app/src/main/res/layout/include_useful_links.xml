@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/eightdp"
+        app:cardBackgroundColor="?colorSurfaceVariant"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="348dp">
+
+            <TextView
+                android:id="@+id/useful_links_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/exo_bold"
+                android:text="@string/useful_links"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/social_media_card"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_marginStart="@dimen/eightdp"
+                android:layout_marginEnd="@dimen/eightdp"
+                android:foregroundGravity="center_vertical"
+                app:cardBackgroundColor="#6958D0"
+                app:cardCornerRadius="@dimen/eightdp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/useful_links_title">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/social_media_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/eightdp"
+                        android:layout_marginTop="@dimen/fourdp"
+                        android:fontFamily="@font/exo_semibold"
+                        android:text="@string/vanced_medias"
+                        android:textColor="#ffffff"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/social_media_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/social_media_title">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/discordbtn"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="33dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/tgbtn"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/vectordiscord"
+                                app:iconGravity="textStart" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/tgbtn"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="33dp"
+                                app:layout_constraintStart_toEndOf="@id/discordbtn"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/twitterbtn"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/vectortelegram"
+                                app:iconGravity="textStart" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/twitterbtn"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="33dp"
+                                app:layout_constraintStart_toEndOf="@id/tgbtn"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/redditbtn"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/vectortwitter"
+                                app:iconGravity="textStart" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/redditbtn"
+                                style="@style/Widget.AppCompat.Button.Borderless"
+                                android:layout_width="wrap_content"
+                                android:layout_height="33dp"
+                                app:layout_constraintStart_toEndOf="@id/twitterbtn"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/ic_reddit"
+                                app:iconGravity="textStart"
+                                app:iconTint="#ffffff" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/twodp"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/social_media_buttons"
+                        app:layout_constraintStart_toStartOf="@id/social_media_buttons"
+                        app:layout_constraintTop_toBottomOf="@id/social_media_buttons">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/discord_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/telegram_text"
+                                android:gravity="start"
+                                android:fontFamily="@font/exo_semibold"
+                                android:text="@string/discord"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:id="@+id/telegram_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toEndOf="@id/discord_text"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/twitter_text"
+                                android:fontFamily="@font/exo_semibold"
+                                android:text="@string/telegram"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:id="@+id/twitter_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toEndOf="@id/telegram_text"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/reddit_text"
+                                android:fontFamily="@font/exo_semibold"
+                                android:text="@string/twitter"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:id="@+id/reddit_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toEndOf="@id/twitter_text"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:fontFamily="@font/exo_semibold"
+                                android:text="@string/reddit"
+                                android:textColor="#ffffff" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/brave_website_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/social_media_card">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/brave_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="179dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/eightdp"
+                        android:layout_marginEnd="@dimen/fourdp"
+                        android:text="@string/support_us_"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        app:backgroundTint="?colorPrimary"
+                        app:layout_constraintEnd_toStartOf="@id/website_button"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/website_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="179dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:text="@string/website_text"
+                        android:textAllCaps="false"
+                        app:backgroundTint="?colorPrimary"
+                        android:textColor="#ffffff"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/brave_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/github_projects_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eightdp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="@dimen/eightdp"
+                app:cardBackgroundColor="#111111"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brave_website_buttons">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="393dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/github_projects_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/eightdp"
+                        android:layout_marginTop="@dimen/fourdp"
+                        android:fontFamily="@font/exo_semibold"
+                        android:text="@string/github_projects"
+                        android:textColor="#ffffff"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/github_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fourdp"
+                        android:gravity="center_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/github_projects_title">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/github_managerbtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="start"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/github_botbtn"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/vectorgithub"
+                                app:iconGravity="textStart" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/github_botbtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="end"
+                                app:backgroundTint="@android:color/transparent"
+                                app:layout_constraintStart_toEndOf="@id/github_managerbtn"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/github_websitebtn"
+                                app:icon="@drawable/vectorgithub"
+                                app:iconGravity="textStart" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/github_websitebtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="end"
+                                app:layout_constraintStart_toEndOf="@id/github_botbtn"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:backgroundTint="@android:color/transparent"
+                                app:icon="@drawable/vectorgithub"
+                                app:iconGravity="textStart" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/github_buttons">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/github_managertxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/github_bottxt"
+                                android:fontFamily="@font/exo_semibold"
+                                android:text="@string/github_manager"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:id="@+id/github_bottxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:layout_constraintStart_toEndOf="@id/github_managertxt"
+                                app:layout_constraintEnd_toStartOf="@id/github_websitetxt"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:fontFamily="@font/exo_semibold"
+                                android:text="@string/github_bot"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:id="@+id/github_websitetxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                app:layout_constraintStart_toEndOf="@id/github_bottxt"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:fontFamily="@font/exo_semibold"
+                                android:text="@string/github_website"
+                                android:textColor="#ffffff" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

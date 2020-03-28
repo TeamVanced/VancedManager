@@ -1,376 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="178dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="433dp"
-        android:src="@drawable/rectangle_3" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        tools:layout_marginTop="24dp">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="575dp"
-        android:src="@drawable/rectangle_3" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/stdp">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="382dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="312dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/rectangle_4" />
+            <include
+                android:id="@+id/home_vanced_wrapper"
+                layout="@layout/include_vanced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp"
+                app:layout_constraintTop_toBottomOf="@+id/home_device_wrapper" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView6"
-        android:layout_alignEnd="@+id/imageView6"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="253dp"
-        android:src="@drawable/rectangle_6"
-        android:contentDescription="TODO" />
+            <include
+                android:id="@+id/home_microg_wrapper"
+                layout="@layout/include_microg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp"
+                app:layout_constraintTop_toBottomOf="@+id/home_vanced_wrapper" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="141dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView6"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="243dp"
-        android:layout_marginBottom="363dp"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/useful_links"
-        android:textSize="22sp" />
+            <include
+                android:id="@+id/home_changelog_wrapper"
+                layout="@layout/include_changelogs"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp" />
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView6"
-        android:layout_alignTop="@+id/imageView6"
-        android:layout_alignEnd="@+id/imageView6"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="167dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="144dp"
-        android:background="@drawable/rectangle_5"
-        android:text="@string/support_us_"
-        android:textAllCaps="false"
-        android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView6"
-        android:layout_alignTop="@+id/imageView6"
-        android:layout_alignEnd="@+id/imageView6"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="167dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="144dp"
-        android:background="@drawable/rectangle_8"
-        android:text="@string/website_text"
-        android:textAllCaps="false"
-        android:textColor="#ffffff" />
+            <include
+                android:id="@+id/home_usefullinks_wrapper"
+                layout="@layout/include_useful_links"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp"
+                app:layout_constraintTop_toBottomOf="@+id/home_changelog_wrapper" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView6"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="276dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="36dp"
-        android:src="@drawable/rectangle_7" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="250dp"
-        android:layout_marginBottom="81dp"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/vanced"
-        android:textColor="#1490D7"
-        android:textSize="24sp" />
+    </androidx.core.widget.NestedScrollView>
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="88dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="41dp"
-        android:layout_marginEnd="281dp"
-        android:layout_marginBottom="46dp"
-        android:fontFamily="@font/exo_semibold"
-        android:text="@string/latest"
-        android:textSize="22sp" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="99dp"
-        android:layout_height="34dp"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="270dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/exo_semibold"
-        android:text="@string/installed"
-        android:textSize="22sp" />
-
-    <Button
-        android:id="@+id/button3"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="70dp"
-        android:fontFamily="@font/exo_semibold"
-        android:text="@string/install"
-        android:textAllCaps="false"
-        android:textColor="#1490D7"
-        android:textSize="22sp" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="42dp"
-        android:layout_height="34dp"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_alignEnd="@+id/imageView2"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="75dp"
-        android:src="@drawable/outline_cloud_download_24" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="42dp"
-        android:layout_height="34dp"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="74dp"
-        android:src="@drawable/outline_cloud_download_24" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginBottom="79dp"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/microg"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="78dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="286dp"
-        android:layout_marginBottom="41dp"
-        android:fontFamily="@font/exo_semibold"
-        android:text="@string/latest"
-        android:textSize="22sp" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="91dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="77dp"
-        android:layout_marginEnd="256dp"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/exo_semibold"
-        android:text="@string/installed"
-        android:textSize="22sp" />
-
-    <Button
-        android:id="@+id/button7"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="63dp"
-        android:fontFamily="@font/exo_semibold"
-        android:text="@string/install"
-        android:textAllCaps="false"
-        android:textSize="22sp" />
-
-    <Button
-        android:id="@+id/button8"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="26dp"
-        android:fontFamily="@font/exo_semibold"
-        android:text="@string/settings"
-        android:textAllCaps="false"
-        android:textSize="22sp" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_alignStart="@+id/imageView4"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_alignBottom="@+id/imageView4"
-        android:layout_marginStart="238dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="108dp"
-        android:layout_marginBottom="38dp"
-        android:src="@drawable/ic_settings_black_24dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="127dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignEnd="@+id/button"
-        android:layout_alignBottom="@+id/button"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="58dp"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/brave_browser"
-        android:textColor="#ffffff"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="240dp"
-        android:layout_height="23dp"
-        android:layout_alignStart="@+id/imageView7"
-        android:layout_alignTop="@+id/imageView7"
-        android:layout_alignEnd="@+id/imageView7"
-        android:layout_alignBottom="@+id/imageView7"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginBottom="83dp"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/vanced_medias"
-        android:textColor="#ffffff"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="110dp"
-        android:layout_height="25dp"
-        android:layout_alignStart="@+id/imageView8"
-        android:layout_alignTop="@+id/imageView8"
-        android:layout_alignEnd="@+id/imageView8"
-        android:layout_alignBottom="@+id/imageView8"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="223dp"
-        android:layout_marginBottom="68dp"
-        android:fontFamily="@font/exo_bold"
-        android:text="@string/github_link"
-        android:textColor="#ffffff"
-        android:textSize="18sp" />
-
-</RelativeLayout>
+</layout>

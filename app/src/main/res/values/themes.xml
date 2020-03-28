@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Light" parent="Theme.MaterialComponents.Light">
+
+        <item name="colorPrimary">#1490D7</item>
+        <item name="colorPrimaryVariant">#804EAFF5</item>
+        <item name="colorSecondary">#3E78AF</item>
+        <item name="colorSecondaryVariant">#803E78AF</item>
+        <item name="colorSurface">#ffffff</item>
+        <item name="colorSurfaceVariant">#E8E8E8</item>
+        <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
+        <item name="colorOnPrimary">#F9F9F9</item>
+        <item name="colorOnPrimaryVariant">#e8e8e8</item>
+        <item name="colorOnSecondary">#F9F9F9</item>
+        <item name="colorOnBackground">?colorOnSurface</item>
+        <item name="colorError">#CC0047</item>
+        <item name="colorOnError">#F9F9F9</item>
+        <item name="colorOnSurface">#444444</item>
+        <item name="colorOnSurfaceVariant">#BF444444</item>
+        <item name="colorDisabled">#808080</item>
+        <item name="colorDisabledVariant">#66808080</item>
+
+    </style>
+
+</resources>
