@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/eightdp"
+        app:cardBackgroundColor="?colorSurfaceVariant"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/microg_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo_bold"
+                android:text="@string/microg"
+                android:textColor="?colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/thtdp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="47dp" />
+
+            <LinearLayout
+                android:id="@+id/microg_remote_latest_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eightdp"
+                android:layout_marginTop="@dimen/eightdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/microg_title">
+
+                <TextView
+                    android:id="@+id/microg_latest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/latest"
+                    android:fontFamily="@font/exo_semibold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/microg_latest_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/eightdp"
+                    android:fontFamily="@font/exo_semibold"
+                    android:text="IDK" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eightdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/microg_remote_latest_version">
+
+                <TextView
+                    android:id="@+id/microg_installed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/installed"
+                    android:fontFamily="@font/exo_semibold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/microg_installed_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/eightdp"
+                    android:fontFamily="@font/exo_semibold"
+                    android:text="IDK" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/microg_installbtn"
+                app:backgroundTint="?colorPrimary"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="116dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/exo_semibold"
+                android:text="@string/install"
+                android:textAllCaps="false"
+                app:icon="@drawable/outline_cloud_download_24"
+                android:layout_marginEnd="@dimen/eightdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/microg_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/microg_settingsbtn"
+                app:backgroundTint="?colorPrimary"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/exo_semibold"
+                android:text="@string/settings"
+                android:textAllCaps="false"
+                app:icon="@drawable/ic_settings_black_24dp"
+                android:layout_marginEnd="@dimen/eightdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

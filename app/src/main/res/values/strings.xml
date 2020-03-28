@@ -4,12 +4,14 @@
     <string name="home">Home</string>
     <string name="vanced">Vanced</string>
     <string name="install">Install</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="update">Update</string>
     <string name="latest">Latest:</string>
     <string name="installed">Installed:</string>
     <string name="n_a">N/A</string>
     <string name="microg">MicroG</string>
     <string name="settings">Settings</string>
-    <string name="github_link">GitHub projects</string>
+    <string name="github_projects">GitHub projects</string>
     <string name="vanced_medias">Vanced on Social Medias</string>
     <string name="website">Website</string>
     <string name="discord">Discord</string>
@@ -23,4 +25,8 @@
     <string name="github_manager">Manager</string>
     <string name="github_bot">Bot</string>
     <string name="github_website">Website</string>
+    <string name="theme">Theme</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

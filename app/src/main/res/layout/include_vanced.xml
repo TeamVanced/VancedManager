@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/eightdp"
+        app:cardBackgroundColor="?colorSurfaceVariant"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/vanced_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo_bold"
+                android:text="@string/vanced"
+                android:textColor="?colorPrimary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/thtdp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="47dp" />
+
+            <LinearLayout
+                android:id="@+id/vanced_remote_latest_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eightdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vanced_title">
+
+                <TextView
+                    android:id="@+id/vanced_latest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/latest"
+                    android:fontFamily="@font/exo_semibold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/vanced_latest_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/eightdp"
+                    android:fontFamily="@font/exo_semibold"
+                    android:text="IDK" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eightdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version">
+
+                <TextView
+                    android:id="@+id/vanced_installed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/installed"
+                    android:fontFamily="@font/exo_semibold"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/vanced_installed_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/eightdp"
+                    android:fontFamily="@font/exo_semibold"
+                    android:text="IDK" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/vanced_installbtn"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                app:backgroundTint="?colorPrimary"
+                android:layout_width="116dp"
+                android:layout_height="40dp"
+                android:text="@string/install"
+                android:textAllCaps="false"
+                android:layout_marginEnd="@dimen/eightdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                tools:layout_editor_absoluteY="0dp"
+                android:fontFamily="@font/exo_semibold"
+                app:icon="@drawable/outline_cloud_download_24"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

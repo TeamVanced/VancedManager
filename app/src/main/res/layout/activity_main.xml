@@ -8,19 +8,23 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/home_toolbar" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
+        android:background="?colorSurface"
         app:layout_constraintBottom_toBottomOf="@+id/frame_layout"
         app:menu="@menu/bottom_nav_menu" />
 
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="760dp"
+        android:layout_height="match_parent"
         android:layout_above="@id/bottom_nav"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent">

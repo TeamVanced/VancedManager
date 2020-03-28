@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="update_check"
+        android:title="Check for updates"/>
+
+    <PreferenceCategory
+        android:title="Interface">
+
+        <ListPreference
+            android:icon="@drawable/ic_brush_black_24dp"
+            android:key="default_theme"
+            android:title="Theme"
+            android:summary="Choose your prefered theme"
+            android:entries="@array/theme_modes"
+            android:entryValues="@array/theme_modes_values"
+            android:defaultValue="0"/>
+
+        <ListPreference
+            android:icon="@drawable/ic_palette_black_24dp"
+            android:key="accent_color"/>
+
+        <ListPreference
+            android:key="language"
+            android:icon="@drawable/ic_language_black_24dp"
+            android:title="Language"
+            android:summary="Choose prefered language"
+            android:entries="@array/languages"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Manager">
+
+        <SwitchPreference
+            android:title="Push Notifications"
+            android:key="push_notifications_status"
+            android:summary="Receive push notifications when update is released"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

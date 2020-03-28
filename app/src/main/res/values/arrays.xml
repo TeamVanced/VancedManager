@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="theme_modes">
+        <item>"System based"</item>
+        <item>"Light theme"</item>
+        <item>"Dark theme"</item>
+    </string-array>
+
+    <string-array name="theme_modes_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>Coming soon(tm)</item>
+    </string-array>
+
+</resources>

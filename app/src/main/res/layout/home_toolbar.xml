@@ -11,6 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_2"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_info_black_24dp"
+            android:backgroundTint="#ffffff"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/eightdp"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
 </LinearLayout>
