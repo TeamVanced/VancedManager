@@ -11,11 +11,8 @@
     <attr name="colorOnPrimaryVariant" format="color" />
     <attr name="colorOnSurfaceVariant" format="color" />
     <attr name="colorSurfaceSurfaceVariant" format="color" />
+    <attr name="iconColor" format="reference|color" />
 
-    <!-- Declare custom theme attributes that allow changing which styles are
-         used for button bars depending on the API level.
-         ?android:attr/buttonBarStyle is new as of API 11 so this is
-         necessary to support previous API levels. -->
     <declare-styleable name="ButtonBarContainerTheme">
         <attr name="metaButtonBarStyle" format="reference" />
         <attr name="metaButtonBarButtonStyle" format="reference" />

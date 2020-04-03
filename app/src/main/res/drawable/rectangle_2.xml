@@ -1,7 +1,7 @@
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="411dp"
+    android:width="200dp"
     android:height="51dp"
     android:viewportWidth="411"
     android:viewportHeight="51"
@@ -35,11 +35,11 @@
                         android:endY="25.5"
                         >
                         <item
-                            android:color="#2E73FF"
+                            android:color="#FF2E73FF"
                             android:offset="0"
                             />
                         <item
-                            android:color="#FF0032"
+                            android:color="#FFFF0032"
                             android:offset="1"
                             />
                     </gradient>

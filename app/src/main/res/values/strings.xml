@@ -1,32 +1,33 @@
 <resources>
-    <string name="app_name">Vanced Manager</string>
+
+    <!-- Main Activity -->
     <string name="title_home">Home</string>
-    <string name="home">Home</string>
-    <string name="vanced">Vanced</string>
+    <string name="settings">Settings</string>
+
+    <!-- Home Page -->
+
     <string name="install">Install</string>
     <string name="uninstall">Uninstall</string>
     <string name="update">Update</string>
     <string name="latest">Latest:</string>
     <string name="installed">Installed:</string>
     <string name="n_a">N/A</string>
-    <string name="microg">MicroG</string>
-    <string name="settings">Settings</string>
     <string name="github_projects">GitHub projects</string>
     <string name="vanced_medias">Vanced on Social Medias</string>
     <string name="website">Website</string>
-    <string name="discord">Discord</string>
-    <string name="telegram">Telegram</string>
-    <string name="twitter">Twitter</string>
     <string name="brave_browser">Brave Browser</string>
-    <string name="support_us_">Support us by downloading Brave</string>
+    <string name="support_us">Support us by downloading Brave</string>
     <string name="useful_links">Useful Links</string>
     <string name="reddit">Reddit</string>
-    <string name="website_text">The official website of YouTube Vanced</string>
+    <string name="website_text">The official website of Vanced</string>
     <string name="github_manager">Manager</string>
     <string name="github_bot">Bot</string>
     <string name="github_website">Website</string>
+    <string name="changelogs">Changelogs</string>
+    <string name="about">About</string>
+
+    <!-- Settings -->
+
     <string name="theme">Theme</string>
-    <string name="title_activity_splash_screen">SplashScreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>

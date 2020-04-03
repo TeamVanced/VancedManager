@@ -17,4 +17,8 @@
         <item>Coming soon(tm)</item>
     </string-array>
 
+    <string-array name="languages_value">
+        <item>0</item>
+    </string-array>
+
 </resources>

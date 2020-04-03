@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="@dimen/eightdp"
-        app:cardBackgroundColor="?colorSurfaceVariant"
+        app:cardBackgroundColor="?attr/colorSurfaceVariant"
         app:cardElevation="0dp"
         app:cardPreventCornerOverlap="true">
 
@@ -42,6 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/latest"
+                    android:textColor="?attr/colorOnSurfaceVariant"
                     android:fontFamily="@font/exo_semibold"
                     android:textSize="14sp" />
 
@@ -50,6 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/eightdp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
                     android:fontFamily="@font/exo_semibold"
                     android:text="IDK" />
 
@@ -68,6 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/installed"
+                    android:textColor="?attr/colorOnSurfaceVariant"
                     android:fontFamily="@font/exo_semibold"
                     android:textSize="14sp" />
 
@@ -76,6 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/eightdp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
                     android:fontFamily="@font/exo_semibold"
                     android:text="IDK" />
 
