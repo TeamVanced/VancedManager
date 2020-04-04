@@ -18,11 +18,11 @@ Vanced Manager developers:
 - moosd (Installer)  
 - X1nto (UI, animations and basic functionality (Hope helped me alot tho))
 ### And of course Vanced Team
-- xfileFIN
+- xfileFIN  
 ![xfileFIN](https://i.imgur.com/hLdzTVq.png)
-- KevinX8
-![KevinX8](https://i.imgur.com/cS9C7P8/png)
-- Zanezam
+- KevinX8  
+![KevinX8](https://i.imgur.com/cS9C7P8.png)
+- Zanezam  
 ![Zanezam](https://i.imgur.com/QVcXA6q.png)
-- Laura Almeida
+- Laura Almeida  
 ![Laura Almeida](https://i.imgur.com/ovVD939.png)
