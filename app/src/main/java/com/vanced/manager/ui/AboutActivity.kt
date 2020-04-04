@@ -21,7 +21,7 @@ class AboutActivity : AppCompatActivity() {
         mattisLigma.setOnClickListener{
             val ligmaurl = "https://youtu.be/LDU_Txk06tM"
             val builder = CustomTabsIntent.Builder()
-            builder.setToolbarColor(ContextCompat.getColor(this, R.color.Vanced))
+            builder.setToolbarColor(ContextCompat.getColor(this, R.color.YT))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(this, Uri.parse(ligmaurl))
         }

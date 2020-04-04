@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#ffffff</color>
-    <color name="Vanced">#8B0B0B</color>
+    <color name="Vanced">#673AB7</color>
+    <color name="YT">#8B0B0B</color>
     <color name="Brave">#FF0000</color>
     <color name="Discord">#7289DA</color>
     <color name="Twitter">#1DA1F2</color>

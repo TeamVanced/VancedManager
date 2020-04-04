@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
 
     <!-- Main Activity -->
@@ -5,29 +6,28 @@
     <string name="settings">Settings</string>
 
     <!-- Home Page -->
-
+    <string name="about">About</string>
+    <string name="brave_browser">Brave Browser</string>
+    <string name="changelogs">Changelogs</string>
+    <string name="github_bot">Bot</string>
+    <string name="github_manager">Manager</string>
+    <string name="github_projects">GitHub projects</string>
+    <string name="github_website">Website</string>
     <string name="install">Install</string>
+    <string name="installed">Installed:</string>
+    <string name="latest">Latest:</string>
+    <string name="n_a">N/A</string>
+    <string name="reddit">Reddit</string>
     <string name="uninstall">Uninstall</string>
     <string name="update">Update</string>
-    <string name="latest">Latest:</string>
-    <string name="installed">Installed:</string>
-    <string name="n_a">N/A</string>
-    <string name="github_projects">GitHub projects</string>
+    <string name="useful_links">Useful Links</string>
     <string name="vanced_medias">Vanced on Social Medias</string>
     <string name="website">Website</string>
-    <string name="brave_browser">Brave Browser</string>
-    <string name="support_us">Support us by downloading Brave</string>
-    <string name="useful_links">Useful Links</string>
-    <string name="reddit">Reddit</string>
     <string name="website_text">The official website of Vanced</string>
-    <string name="github_manager">Manager</string>
-    <string name="github_bot">Bot</string>
-    <string name="github_website">Website</string>
-    <string name="changelogs">Changelogs</string>
-    <string name="about">About</string>
+
+    <string name="support_us">Support us by downloading Brave</string>
 
     <!-- Settings -->
-
     <string name="theme">Theme</string>
 
 </resources>

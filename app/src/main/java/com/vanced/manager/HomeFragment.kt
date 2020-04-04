@@ -75,6 +75,7 @@ class HomeFragment : Fragment() {
         val git3btn = getView()?.findViewById(R.id.github_websitebtn) as Button
 
         val microgStatus = pm?.let { isMicrogInstalled("com.mgoogle.android.gms", it) }
+
         if (microgStatus == true) {
             microgsettingsbtn.setOnClickListener {
                 val intent = Intent()
@@ -96,7 +97,7 @@ class HomeFragment : Fragment() {
             customTabsIntent.launchUrl(requireContext(), Uri.parse(braveurl))
         }
         websitebtn.setOnClickListener {
-            val vancedurl = "https://newpipe.schabi.org"
+            val vancedurl = "https://vanced.app"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.Vanced))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(vancedurl))
