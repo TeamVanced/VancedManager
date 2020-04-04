@@ -103,25 +103,25 @@ class HomeFragment : Fragment() {
             customTabsIntent.launchUrl(requireContext(), Uri.parse(vancedurl))
         }
         discordbtn.setOnClickListener {
-            val discordurl = "https://youtube.com/dQw4w9WgXcQ"
+            val discordurl = "https://discord.gg/TUVd7rd"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.Discord))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(discordurl))
         }
         telegrambtn.setOnClickListener {
-            val telegramurl = "https://t.me/NoGooLag"
+            val telegramurl = "https://t.me/joinchat/AAAAAEHf-pi4jH1SDIAL4w"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.Telegram))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(telegramurl))
         }
         twitterbtn.setOnClickListener {
-            val twitterurl = "https://youtube.com/dQw4w9WgXcQ"
+            val twitterurl = "https://twitter.com/YTVanced"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.Twitter))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(twitterurl))
         }
         redditbtn.setOnClickListener {
-            val redditurl = "https://reddit.com/r/NewPipe"
+            val redditurl = "https://reddit.com/r/vanced"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.Reddit))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(redditurl))
@@ -133,13 +133,13 @@ class HomeFragment : Fragment() {
             customTabsIntent.launchUrl(requireContext(), Uri.parse(gitmanagerurl))
         }
         git2btn.setOnClickListener {
-            val gitboturl = "https://youtube.com/dQw4w9WgXcQ"
+            val gitboturl = "https://github.com/YTVanced/VancedHelper"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.GitHub))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(gitboturl))
         }
         git3btn.setOnClickListener {
-            val gitwebsiteurl = "https://youtube.com/dQw4w9WgXcQ"
+            val gitwebsiteurl = "https://github.com/YTVanced/VancedWebsite"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.GitHub))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(gitwebsiteurl))
