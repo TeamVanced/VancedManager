@@ -19,10 +19,10 @@ Vanced Manager developers:
 - X1nto (UI, animations and basic functionality (Hope helped me alot tho))
 ### And of course Vanced Team
 - xfileFIN
- [xfileFIN](https://i.imgur.com/hLdzTVq.png)
+![xfileFIN](https://i.imgur.com/hLdzTVq.png)
 - KevinX8
-[KevinX8](https://i.imgur.com/cS9C7P8/png)
+![KevinX8](https://i.imgur.com/cS9C7P8/png)
 - Zanezam
-[Zanezam](https://i.imgur.com/QVcXA6q.png)
+![Zanezam](https://i.imgur.com/QVcXA6q.png)
 - Laura Almeida
-[Laura Almeida](https://i.imgur.com/ovVD939.png)
+![Laura Almeida](https://i.imgur.com/ovVD939.png)
