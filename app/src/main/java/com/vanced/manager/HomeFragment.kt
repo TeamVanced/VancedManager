@@ -11,12 +11,9 @@ import android.widget.Button
 import android.content.pm.PackageManager
 import android.content.Intent
 import androidx.browser.customtabs.CustomTabsIntent
-import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.include_changelogs.*
-import com.vanced.manager.Adapter.SectionPageAdapter
+import com.vanced.manager.ui.MainActivity
 
 /**
  * A simple [Fragment] subclass.
@@ -28,9 +25,25 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val homefragment = inflater.inflate(R.layout.fragment_home, container, false)
-        val viewPager = homefragment.findViewById(R.id.viewpager)
-        val tabLayout = homefragment.findViewById(R.id.tablayout)
+        val toolbar = view?.findViewById<Toolbar>(R.id.home_toolbar)
+
+        toolbar?.title = "Home"
+        toolbar?.inflateMenu(R.menu.toolbar_menu)
+        toolbar?.setOnMenuItemClickListener {
+            if (it.itemId == R.id.about) {
+                val intent = Intent()
+                intent.component = ComponentName(
+                    "com.vanced.manager",
+                    "com.vanced.manager.ui.AboutActivity"
+                )
+                startActivity(intent)
+            }
+            true
+        }
+
         return homefragment
+
+
     }
 
     private fun isMicrogInstalled(packageName: String, packageManager: PackageManager): Boolean {
@@ -42,38 +55,8 @@ class HomeFragment : Fragment() {
         }
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        setUpViewPager(viewpager)
-        tablayout.setupWithViewPager(viewpager)
-        tablayout.addOnTabSelectedListener(object:TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-            }
-        })
-    }
-
-    private fun setUpViewPager(viewPager2: ViewPager2) {
-        val adapter = SectionPageAdapter(getChildFragmentManager())
-        adapter.addFragment(VancedChangelogFragment, "Vanced")
-        adapter.addFragment(MicrogChangelogFragment, "MicroG")
-        viewpager.setAdapter(adapter)
-    }
-
-    companion object {
-        val instance:HomeFragment
-        get() {
-            return HomeFragment()
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        (activity as MainActivity).supportActionBar?.title = getString(R.string.home)
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.title_home)
 
         super.onViewCreated(view, savedInstanceState)
 
@@ -91,7 +74,23 @@ class HomeFragment : Fragment() {
         val git2btn = getView()?.findViewById(R.id.github_botbtn) as Button
         val git3btn = getView()?.findViewById(R.id.github_websitebtn) as Button
 
-        bravebtn.setOnClickListener {
+        val microgStatus = pm?.let { isMicrogInstalled("com.mgoogle.android.gms", it) }
+
+        if (microgStatus == true) {
+            microgsettingsbtn.setOnClickListener {
+                val intent = Intent()
+                intent.component = ComponentName(
+                    "com.mgoogle.android.gms",
+                    "org.microg.gms.ui.SettingsActivity"
+                )
+                startActivity(intent)
+            }
+        }
+        else {
+            microgsettingsbtn.isEnabled = false
+        }
+
+         bravebtn.setOnClickListener {
             val braveurl = "https://brave.com/van874"
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.Brave))
             val customTabsIntent = builder.build()
@@ -102,20 +101,6 @@ class HomeFragment : Fragment() {
             builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.Vanced))
             val customTabsIntent = builder.build()
             customTabsIntent.launchUrl(requireContext(), Uri.parse(vancedurl))
-        }
-        microgsettingsbtn.setOnClickListener {
-            val isInstalled = pm?.let { isMicrogInstalled("com.mgoogle.android.gms", it) }
-            if (isInstalled == true) {
-                val intent = Intent()
-                intent.component = ComponentName(
-                    "com.mgoogle.android.gms",
-                    "org.microg.gms.ui.SettingsActivity"
-                )
-                startActivity(intent)
-            } else {
-                val toast = Toast.makeText(context, "Install MicroG First!", Toast.LENGTH_SHORT)
-                toast.show()
-            }
         }
         discordbtn.setOnClickListener {
             val discordurl = "https://discord.gg/TUVd7rd"
@@ -164,3 +149,4 @@ class HomeFragment : Fragment() {
     }
 
 }
+

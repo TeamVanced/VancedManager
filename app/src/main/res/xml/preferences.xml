@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
         android:key="update_check"
-        android:title="Check for updates"/>
+        android:title="Check for updates" />
 
     <PreferenceCategory
         android:title="Interface">
 
         <ListPreference
             android:icon="@drawable/ic_brush_black_24dp"
-            android:key="default_theme"
+            android:key="theme_modes"
             android:title="Theme"
             android:summary="Choose your prefered theme"
             android:entries="@array/theme_modes"
             android:entryValues="@array/theme_modes_values"
-            android:defaultValue="0"/>
+            android:defaultValue="1"/>
 
         <ListPreference
             android:icon="@drawable/ic_palette_black_24dp"
-            android:key="accent_color"/>
+            android:key="accent_color"
+            android:title="Accent Color"/>
 
         <ListPreference
             android:key="language"
             android:icon="@drawable/ic_language_black_24dp"
             android:title="Language"
-            android:summary="Choose prefered language"
+            android:summary="Choose your prefered language"
             android:entries="@array/languages"/>
 
     </PreferenceCategory>
@@ -37,8 +39,8 @@
         <SwitchPreference
             android:title="Push Notifications"
             android:key="push_notifications_status"
-            android:summary="Receive push notifications when update is released"/>
-
+            android:summary="Receive push notifications when update is released"
+            android:icon="@drawable/ic_notifications_black_24dp"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

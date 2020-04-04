@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/social_media_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eightdp"
+        android:layout_marginEnd="@dimen/eightdp"
+        android:paddingBottom="2dp"
+        app:cardBackgroundColor="#6958D0"
+        app:cardCornerRadius="@dimen/eightdp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/social_media_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/eightdp"
+                android:layout_marginTop="@dimen/fourdp"
+                android:fontFamily="@font/exo_semibold"
+                android:text="@string/vanced_medias"
+                android:textColor="#ffffff"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/social_media_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/social_media_title"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/discord_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/telegram_layout">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/discordbtn"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@android:color/transparent"
+                            app:icon="@drawable/vectordiscord"
+                            app:iconPadding="0dp"
+                            app:iconGravity="textStart" />
+
+                        <TextView
+                            android:id="@+id/discord_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:fontFamily="@font/exo_semibold"
+                            android:text="@string/discord"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/telegram_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/discord_layout"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/twitter_layout">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/tgbtn"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@android:color/transparent"
+                            app:icon="@drawable/vectortelegram"
+                            app:iconPadding="0dp"
+                            app:iconGravity="textStart" />
+
+                        <TextView
+                            android:id="@+id/telegram_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/exo_semibold"
+                            android:text="@string/telegram"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/twitter_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/telegram_layout"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/reddit_layout">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/twitterbtn"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@android:color/transparent"
+                            app:icon="@drawable/vectortwitter"
+                            app:iconPadding="0dp"
+                            app:iconGravity="textStart" />
+
+                        <TextView
+                            android:id="@+id/twitter_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/exo_semibold"
+                            android:text="@string/twitter"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reddit_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toEndOf="@id/twitter_layout"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/redditbtn"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@android:color/transparent"
+                            android:backgroundTint="@android:color/transparent"
+                            app:icon="@drawable/ic_reddit"
+                            app:iconGravity="textStart"
+                            app:iconPadding="0dp"
+                            app:iconTint="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/reddit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/exo_semibold"
+                            android:text="@string/reddit"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

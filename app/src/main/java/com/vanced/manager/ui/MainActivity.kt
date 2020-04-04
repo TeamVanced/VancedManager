@@ -1,12 +1,17 @@
-package com.vanced.manager
+package com.vanced.manager.ui
 
-import android.content.DialogInterface
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
+import com.vanced.manager.HomeFragment
+import com.vanced.manager.R
+import com.vanced.manager.SettingsFragment
+import androidx.preference.ListPreference
+import androidx.preference.PreferenceFragmentCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,10 +36,6 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.frame_layout, homeFragment)
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
             .commit()
-        val toolbar = findViewById(R.id.home_toolbar) as Toolbar?
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
 
         navView.setOnNavigationItemSelectedListener { item ->
 
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                         .replace(R.id.frame_layout, homeFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
-                    setSupportActionBar(toolbar)
+                    return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_settings -> {
 
@@ -58,17 +59,19 @@ class MainActivity : AppCompatActivity() {
                         .replace(R.id.frame_layout, settingsFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
+                    return@setOnNavigationItemSelectedListener true
                 }
 
             }
 
-            true
+            false
         }
     }
     private fun showGayDialog() {
+        val clientList = arrayOf("Newpipe", "Vanced")
         AlertDialog.Builder(this)
-            .setTitle("Gay Alert!")
-            .setMessage("Warning!\nIf you didn't download this app from vanced.app or github,\nIt may be infected with malicious code. Make sure to have Official version or be gay")
+            .setTitle("Welcome!")
+            .setMessage("Just letting you know that NewPipe > Vanced, amirite ladies and gals? up top!\nIf you use Vanced you are fooking gae")
             .setPositiveButton("close"
             ) { dialog, which -> dialog.dismiss() }
             .create().show()

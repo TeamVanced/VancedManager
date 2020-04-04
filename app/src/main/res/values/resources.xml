@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Vanced Manager</string>
+    <string name="discord" translatable="false">Discord</string>
+    <string name="telegram" translatable="false">Telegram</string>
+    <string name="twitter" translatable="false">Twitter</string>
+    <string name="vanced" translatable="false">Vanced</string>
+    <string name="microg" translatable="false">MicroG</string>
+
+</resources>
