@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="@dimen/eightdp"
-        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+        app:cardBackgroundColor="?colorSurfaceVariant"
         app:cardElevation="0dp"
         app:cardPreventCornerOverlap="true">
 
