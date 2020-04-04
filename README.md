@@ -18,7 +18,11 @@ Vanced Manager developers:
 - moosd (Installer)  
 - X1nto (UI, animations and basic functionality (Hope helped me alot tho))
 ### And of course Vanced Team
-- [xfileFIN](https://vancedyoutube.com/wp-content/uploads/2019/10/4.jpeg)
-- [KevinX8](https://vancedyoutube.com/wp-content/uploads/2019/10/2.jpeg)
-- [Zanezam](https://vancedyoutube.com/wp-content/uploads/2019/10/3.jpeg)
-- [Laura Almeida](https://vancedyoutube.com/wp-content/uploads/2019/10/1.jpeg)
+- xfileFIN  
+![xfileFIN](https://i.imgur.com/hLdzTVq.png)
+- KevinX8  
+![KevinX8](https://i.imgur.com/cS9C7P8.png)
+- Zanezam  
+![Zanezam](https://i.imgur.com/QVcXA6q.png)
+- Laura Almeida  
+![Laura Almeida](https://i.imgur.com/ovVD939.png)
