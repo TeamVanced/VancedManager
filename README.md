@@ -9,7 +9,7 @@ Main problems with new format were either with device CPU architecture or MemeUI
 # Vanced Manager
 Ladies and gentlemen, I'm very proud to introduce the new **Vanced Manager ci Alpha Ui Preview Test Build 0.1.9™** which only has a UI at the time lol
 Vanced Manager is an universal utility for installing/updating Vanced and MicroG. It will push notifications once the update is ready and for root users, it can also automatically download and install them (Now that's pwetty epic).  
-Vanced manager comes with a slick UI ~~that was stolen from the new Magisk Manager (I'm very sorry John but i looked your code for about 100 times).~~ Actually, while UI may look very similar to new Magisk Manager's UI, It's still very different (that's a blatant lie, I know).  
+Vanced manager comes with a slick UI ~~that was stolen from the new Magisk Manager (I'm very sorry John but I looked your code for about 100 times).~~ Actually, while UI may look very similar to new Magisk Manager's UI, It's still very different (that's a blatant lie, I know).  
 ##### I'll probably forget this later so I should put a comment here saying that we should put some screenshots from manager once the UI is ready because why not
 ## Credits
 ### Vanced Manager developers:  

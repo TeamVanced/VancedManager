@@ -1,6 +1,7 @@
 package com.vanced.manager.ui
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             }
             AppCompatDelegate.MODE_NIGHT_NO -> {
                 setTheme(R.style.LightTheme)
+            }
+            AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM -> {
             }
         }
         super.onCreate(null)
