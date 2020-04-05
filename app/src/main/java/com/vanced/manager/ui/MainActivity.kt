@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
         val firstStart = prefs.getBoolean("firstStart", true)
         if (firstStart) {
-            showGayDialog()
+            showSecurityDialog()
         }
 
         val navView : BottomNavigationView = findViewById(R.id.bottom_nav)
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showGayDialog() {
+    private fun showSecurityDialog() {
         AlertDialog.Builder(this)
             .setTitle("Welcome!")
             .setMessage("Before we implement a proper security system to check whether app was modified or not, please be sure that you downloaded manager from vanced.app/github")
