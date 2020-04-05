@@ -1,26 +1,40 @@
 package com.vanced.manager.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
 import com.vanced.manager.HomeFragment
 import com.vanced.manager.R
 import com.vanced.manager.SettingsFragment
-import androidx.preference.ListPreference
-import androidx.preference.PreferenceFragmentCompat
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var homeFragment: HomeFragment
     lateinit var settingsFragment: SettingsFragment
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        when (AppCompatDelegate.getDefaultNightMode()) {
+            AppCompatDelegate.MODE_NIGHT_YES -> {
+                setTheme(R.style.DarkTheme)
+            }
+            AppCompatDelegate.MODE_NIGHT_NO -> {
+                setTheme(R.style.LightTheme)
+            }
+        }
+        super.onCreate(null)
         setContentView(R.layout.activity_main)
+
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = getString(R.string.title_home)
+
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
         val firstStart = prefs.getBoolean("firstStart", true)
@@ -67,11 +81,27 @@ class MainActivity : AppCompatActivity() {
             false
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return super .onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.about -> {
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+            true
+        }
+        else -> {
+            super.onOptionsItemSelected(item)
+        }
+    }
+
     private fun showGayDialog() {
-        val clientList = arrayOf("Newpipe", "Vanced")
         AlertDialog.Builder(this)
             .setTitle("Welcome!")
-            .setMessage("Just letting you know that NewPipe > Vanced, amirite ladies and gals? up top!\nIf you use Vanced you are fooking gae")
+            .setMessage("Before we implement a proper security system to check whether app was modified or not, please be sure that you downloaded manager from vanced.app/github")
             .setPositiveButton("close"
             ) { dialog, which -> dialog.dismiss() }
             .create().show()
