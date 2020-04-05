@@ -22,16 +22,8 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        when (AppCompatDelegate.getDefaultNightMode()) {
-            AppCompatDelegate.MODE_NIGHT_YES -> {
-                setTheme(R.style.DarkTheme)
-            }
-            AppCompatDelegate.MODE_NIGHT_NO -> {
-                setTheme(R.style.LightTheme)
-            }
-            AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM -> {
-            }
-        }
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.getDefaultNightMode())
+
         super.onCreate(null)
         setContentView(R.layout.activity_main)
 

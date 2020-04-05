@@ -19,15 +19,12 @@ class SettingsFragment : PreferenceFragmentCompat() {
             when (currentVal.toInt()){
                  0 -> {
                      AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                     activity?.recreate()
                  }
                  1 -> {
                      AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                     activity?.recreate()
                  }
                 else ->{
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                    activity?.recreate()
                 }
             }
             true
