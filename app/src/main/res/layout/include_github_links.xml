@@ -21,13 +21,14 @@
 
             <TextView
                 android:id="@+id/github_projects_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/eightdp"
                 android:layout_marginTop="@dimen/fourdp"
                 android:fontFamily="@font/exo_semibold"
                 android:text="@string/github_projects"
                 android:textColor="#ffffff"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,7 +63,7 @@
                             android:layout_height="35dp"
                             android:background="@android:color/transparent"
                             android:backgroundTint="@android:color/transparent"
-                            app:icon="@drawable/vectorgithub"
+                            app:icon="@drawable/github"
                             app:iconGravity="textStart"
                             app:iconPadding="0dp"
                             android:gravity="center"/>
@@ -98,7 +99,7 @@
                             app:layout_constraintStart_toEndOf="@id/github_managerbtn"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintEnd_toStartOf="@id/github_websitebtn"
-                            app:icon="@drawable/vectorgithub"
+                            app:icon="@drawable/github"
                             app:iconGravity="textStart"
                             app:iconPadding="0dp"
                             android:gravity="center"/>
@@ -137,7 +138,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             android:background="@android:color/transparent"
                             android:backgroundTint="@android:color/transparent"
-                            app:icon="@drawable/vectorgithub"
+                            app:icon="@drawable/github"
                             app:iconGravity="textStart"
                             app:iconPadding="0dp"
                             android:gravity="center"/>

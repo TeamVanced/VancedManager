@@ -1,18 +1,27 @@
 package com.vanced.manager.ui
 
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
+import com.google.android.material.appbar.MaterialToolbar
 import com.vanced.manager.R
+import com.vanced.manager.ui.core.ThemeActivity
 
-class AboutActivity : AppCompatActivity() {
+class AboutActivity : ThemeActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
+
+        val toolbar : MaterialToolbar = findViewById(R.id.about_toolbar)
+        toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
+        setSupportActionBar(toolbar)
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
+
         supportActionBar!!.title = "About"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 

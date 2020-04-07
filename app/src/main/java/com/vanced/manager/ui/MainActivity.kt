@@ -1,34 +1,30 @@
 package com.vanced.manager.ui
 
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentTransaction
+import com.google.android.material.appbar.MaterialToolbar
 import com.vanced.manager.HomeFragment
 import com.vanced.manager.R
 import com.vanced.manager.SettingsFragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.vanced.manager.ui.core.ThemeActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ThemeActivity() {
 
     lateinit var homeFragment: HomeFragment
     lateinit var settingsFragment: SettingsFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.getDefaultNightMode())
-
         super.onCreate(null)
         setContentView(R.layout.activity_main)
 
+        val toolbar : MaterialToolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.title = getString(R.string.title_home)
 
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)

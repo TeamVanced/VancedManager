@@ -24,10 +24,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/eightdp"
-                android:layout_marginTop="@dimen/fourdp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="@font/exo_semibold"
                 android:text="@string/vanced_medias"
                 android:textColor="#ffffff"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:paddingTop="1dp"
+                android:paddingTop="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/social_media_title"
@@ -63,9 +64,10 @@
                             android:layout_height="35dp"
                             android:background="@android:color/transparent"
                             android:backgroundTint="@android:color/transparent"
-                            app:icon="@drawable/vectordiscord"
+                            app:icon="@drawable/discord"
                             app:iconPadding="0dp"
-                            app:iconGravity="textStart" />
+                            app:iconGravity="textStart"
+                            app:iconTint="#ffffff"/>
 
                         <TextView
                             android:id="@+id/discord_text"
@@ -95,9 +97,10 @@
                             android:layout_height="35dp"
                             android:background="@android:color/transparent"
                             android:backgroundTint="@android:color/transparent"
-                            app:icon="@drawable/vectortelegram"
+                            app:icon="@drawable/telegram"
                             app:iconPadding="0dp"
-                            app:iconGravity="textStart" />
+                            app:iconGravity="textStart"
+                            app:iconTint="#ffffff" />
 
                         <TextView
                             android:id="@+id/telegram_text"
@@ -126,9 +129,10 @@
                             android:layout_height="35dp"
                             android:background="@android:color/transparent"
                             android:backgroundTint="@android:color/transparent"
-                            app:icon="@drawable/vectortwitter"
+                            app:icon="@drawable/twitter"
                             app:iconPadding="0dp"
-                            app:iconGravity="textStart" />
+                            app:iconGravity="textStart"
+                            app:iconTint="#ffffff"/>
 
                         <TextView
                             android:id="@+id/twitter_text"

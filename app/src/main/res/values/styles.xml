@@ -6,4 +6,14 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
+    <style name="LightTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">?colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">?colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
 </resources>

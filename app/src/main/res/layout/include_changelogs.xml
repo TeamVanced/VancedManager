@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toBottomOf="@id/changelog_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="?colorSurface">
+                android:background="?colorSurfaceVariant">
 
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tablayout"

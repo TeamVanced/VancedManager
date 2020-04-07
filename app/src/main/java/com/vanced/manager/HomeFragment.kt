@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.content.pm.PackageManager
 import android.content.Intent
+import android.content.res.ColorStateList
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
@@ -72,7 +73,7 @@ class HomeFragment : Fragment() {
             }
         }
         else {
-            microgsettingsbtn.isEnabled = false
+            microgsettingsbtn.visibility = View.INVISIBLE
         }
 
          bravebtn.setOnClickListener {

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="cardStyle" format="reference" />
-    <attr name="colorAccentFallback" format="reference" />
-    <attr name="imageColorTint" format="reference" />
-    <attr name="colorControl" format="reference" />
     <attr name="colorDisabled" format="color" />
     <attr name="colorDisabledVariant" format="color" />
     <attr name="colorSurfaceVariant" format="color" />
@@ -12,10 +8,6 @@
     <attr name="colorOnSurfaceVariant" format="color" />
     <attr name="colorSurfaceSurfaceVariant" format="color" />
     <attr name="iconColor" format="reference|color" />
-
-    <declare-styleable name="ButtonBarContainerTheme">
-        <attr name="metaButtonBarStyle" format="reference" />
-        <attr name="metaButtonBarButtonStyle" format="reference" />
-    </declare-styleable>
+    <attr name="toolbarBackIcon" format="reference|color"/>
 
 </resources>

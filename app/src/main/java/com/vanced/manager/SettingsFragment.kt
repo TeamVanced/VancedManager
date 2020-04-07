@@ -1,7 +1,6 @@
 package com.vanced.manager
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
 import com.vanced.manager.ui.MainActivity
@@ -15,17 +14,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
        val themeSwitch: ListPreference? = findPreference("theme_modes")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
-            val currentVal: String = themeSwitch.value
-            when (currentVal.toInt()){
-                 0 -> {
-                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                 }
-                 1 -> {
-                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                 }
-                else ->{
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
+            when (themeSwitch.value){
+                "LIGHT" -> {
+                    activity?.setTheme(R.style.LightTheme_Blue)
+                    activity?.recreate()
                 }
+                "DARK" -> {
+                    activity?.setTheme(R.style.DarkTheme_Blue)
+                    activity?.recreate()
+                }
+                 else -> {
+                     activity?.setTheme(R.style.LightTheme_Blue)
+                     activity?.recreate()
+                 }
             }
             true
     }
