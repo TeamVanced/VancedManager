@@ -8,7 +8,7 @@
 
     <style name="LightTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowBackground">?colorSurface</item>
-        <item name="android:statusBarColor">#e0e0e0</item>
+        <item name="android:statusBarColor">#787777</item>
     </style>
 
     <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
