@@ -24,10 +24,12 @@
     <string name="vanced_medias">Vanced on Social Medias</string>
     <string name="website">Website</string>
     <string name="website_text">The official website of Vanced</string>
-
     <string name="support_us">Support us by downloading Brave</string>
 
     <!-- Settings -->
     <string name="theme">Theme</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -24,6 +24,7 @@
                 android:textColor="?attr/colorOnSurfaceVariant"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="4dp"
                 android:layout_marginStart="@dimen/eightdp"/>
 
             <com.google.android.material.appbar.AppBarLayout
@@ -47,7 +48,8 @@
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@id/changelog_text"/>
+                app:layout_constraintTop_toBottomOf="@id/changelog_text"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

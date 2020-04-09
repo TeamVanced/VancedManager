@@ -1,8 +1,9 @@
-package com.vanced.manager
+package com.vanced.manager.ui.fragments
 
 import android.os.Bundle
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
+import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -12,7 +13,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         (activity as MainActivity).supportActionBar?.title = getString(R.string.settings)
 
-       val themeSwitch: ListPreference? = findPreference("theme_modes")
+       val themeSwitch: ListPreference? = findPreference("theme_mode")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
 
             when (themeSwitch.value){

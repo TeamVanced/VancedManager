@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.core
 
 import android.annotation.SuppressLint
+import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,7 @@ open class ThemeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         pref = PreferenceManager.getDefaultSharedPreferences(this)
-        currentTheme = pref.getString("theme_modes", "").toString()
+        currentTheme = pref.getString("theme_mode", "").toString()
 
         setFinalTheme(currentTheme)
 
@@ -24,7 +25,7 @@ open class ThemeActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val theme = pref.getString("theme_modes", "")
+        val theme = pref.getString("theme_mode", "")
         if (currentTheme != theme)
             recreate()
     }

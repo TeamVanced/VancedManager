@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vanced.manager" >
+    package="com.vanced.manager">
+
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
 
     <application
         android:allowBackup="true"
@@ -10,10 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/LightTheme.Blue">
-
+        android:theme="@style/LightTheme.Blue"
+        android:hardwareAccelerated="true">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".ui.core.SplashScreenActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -22,17 +24,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.MainActivity"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".ui.VancedInstallActivity"
+            android:parentActivityName=".ui.MainActivity"
+            android:label="@string/app_name" />
 
         <activity
             android:name=".ui.AboutActivity"
-            android:parentActivityName=".ui.MainActivity"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name"
+            android:parentActivityName=".ui.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

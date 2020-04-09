@@ -15,11 +15,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/fourdp">
+            android:paddingBottom="3dp">
 
             <TextView
                 android:id="@+id/useful_links_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
@@ -28,7 +28,8 @@
                 android:textSize="18sp"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,7 +45,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingBottom="@dimen/fourdp">
+                    android:paddingBottom="3dp">
 
                     <include
                         android:id="@+id/home_vanced_medias_wrapper"
@@ -90,18 +91,6 @@
                         app:layout_constraintTop_toBottomOf="@id/brave_button"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
-
-                    <include
-                        android:id="@+id/home_github_projects_wrapper"
-                        layout="@layout/include_github_links"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/twelvedp"
-                        android:layout_marginEnd="@dimen/twelvedp"
-                        android:layout_marginTop="4dp"
-                        app:layout_constraintTop_toBottomOf="@id/website_button"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

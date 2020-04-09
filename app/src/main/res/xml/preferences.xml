@@ -11,7 +11,7 @@
 
         <ListPreference
             android:icon="@drawable/ic_brush_black_24dp"
-            android:key="theme_modes"
+            android:key="theme_mode"
             android:title="Theme"
             android:summary="Choose your preferred theme"
             android:entries="@array/theme_modes"

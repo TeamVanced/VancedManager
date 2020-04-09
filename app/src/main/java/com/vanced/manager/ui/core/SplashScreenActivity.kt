@@ -1,8 +1,9 @@
-package com.vanced.manager
+package com.vanced.manager.ui.core
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 
 class SplashScreenActivity : AppCompatActivity() {
