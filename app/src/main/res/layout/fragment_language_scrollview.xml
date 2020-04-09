@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    tools:ignore="HardcodedText">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -17,7 +19,15 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:checkedButton="@id/Bahasa_Indonesia">
+            android:checkedButton="@id/English">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/English"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo_semibold"
+                android:text="English (default)"
+                android:textSize="18sp" />
 
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/Bahasa_Indonesia"
