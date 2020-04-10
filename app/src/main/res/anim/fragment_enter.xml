@@ -1,10 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<set
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shareInterpolator="false">
+​<?​xml​ version​=​"​1.0​"​ encoding​=​"​utf-8​"​?>
+<​set​ ​xmlns​:​android​=​"​http://schemas.android.com/apk/res/android​"​>
 
-    <translate
-        android:fromXDelta="100%" android:toXDelta="0%"
-        android:fromYDelta="0%" android:toYDelta="0%"/>
+    <​alpha​
+        ​android​:​duration​=​"​@android:integer/config_shortAnimTime​"​
+        ​android​:​fromAlpha​=​"​0​"​
+        ​android​:​toAlpha​=​"​1​"​ />
 
-</set>
+    <​scale​
+        ​android​:​duration​=​"​@android:integer/config_shortAnimTime​"​
+        ​android​:​fromXScale​=​"​0.9​"​
+        ​android​:​fromYScale​=​"​0.9​"​
+        ​android​:​pivotX​=​"​50%p​"​
+        ​android​:​pivotY​=​"​50%p​"​
+        ​android​:​toXScale​=​"​1​"​
+        ​android​:​toYScale​=​"​1​"​ />
+</​set​>
