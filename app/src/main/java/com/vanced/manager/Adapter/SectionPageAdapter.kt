@@ -1,27 +1,24 @@
 package com.vanced.manager.Adapter
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.vanced.manager.ui.fragments.MicrogChangelogFragment
+import com.vanced.manager.ui.fragments.VancedChangelogFragment
 
-class SectionPageAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class SectionPageAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
-    private val fragmentList : MutableList<Fragment> = ArrayList()
-    private val titleList : MutableList<String> = ArrayList()
+    override fun getItemCount(): Int = 2
 
-    override fun getCount(): Int {
-        return fragmentList.size
+    override fun createFragment(position: Int): Fragment {
+        var fragment: Fragment? = null
+        when (position) {
+            0 -> fragment = VancedChangelogFragment()
+            1 -> fragment = MicrogChangelogFragment()
+        }
+        return fragment!!
     }
 
-    override fun getItem(position: Int): Fragment {
-        return fragmentList[position]
-    }
-
-    override fun getPageTitle(position: Int): CharSequence? {
-        return titleList[position]
-    }
-    fun addFragment(fragment: Fragment, title:String) {
-        fragmentList.add(fragment)
-        titleList.add(title)
-    }
 }

@@ -2,12 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:cardCornerRadius="@dimen/eightdp"
         app:cardBackgroundColor="?colorSurfaceVariant"
         app:cardElevation="0dp"
@@ -29,17 +33,12 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <RadioGroup
+                android:id="@+id/vanced_variant_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:checkedButton="@id/button_nonroot"
                 app:layout_constraintTop_toBottomOf="@id/install_theme_title"
                 app:layout_constraintStart_toStartOf="parent">
-
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/button_root"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="root"/>
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/button_nonroot"
@@ -48,6 +47,13 @@
                     android:textSize="18sp"
                     android:text="non-root"/>
 
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/button_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="root"/>
+
             </RadioGroup>
 
             <com.google.android.material.button.MaterialButton
@@ -55,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vanced_variant_buttons"
                 android:layout_marginEnd="10dp"
                 android:text="Next"
                 android:textAllCaps="false"

@@ -10,7 +10,6 @@ import com.vanced.manager.ui.fragments.VancedThemeSelectionFragment
 
 class VancedInstallActivity : ThemeActivity() {
 
-    lateinit var vancedThemeSelectionFragment: VancedThemeSelectionFragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vanced_install)
@@ -25,11 +24,10 @@ class VancedInstallActivity : ThemeActivity() {
         supportActionBar!!.title = "Install"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        vancedThemeSelectionFragment = VancedThemeSelectionFragment()
         supportFragmentManager
             .beginTransaction()
             .setCustomAnimations(android.R.anim.fade_in, R.animator.fragment_exit)
-            .replace(R.id.vanced_install_frame, vancedThemeSelectionFragment)
+            .replace(R.id.vanced_install_frame, VancedThemeSelectionFragment())
             .commit()
     }
 }

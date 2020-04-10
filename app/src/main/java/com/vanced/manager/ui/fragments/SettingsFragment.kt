@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.preference.ListPreference
 import androidx.preference.PreferenceFragmentCompat
@@ -25,10 +26,26 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     activity?.setTheme(R.style.DarkTheme_Blue)
                     activity?.recreate()
                 }
-                 else -> {
-                     activity?.setTheme(R.style.LightTheme_Blue)
-                     activity?.recreate()
+                 "FOLLOW" -> {
+                     when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                         Configuration.UI_MODE_NIGHT_YES ->{
+                             activity?.setTheme(R.style.DarkTheme_Blue)
+                             activity?.recreate()
+                         }
+                         Configuration.UI_MODE_NIGHT_NO -> {
+                             activity?.setTheme(R.style.LightTheme_Blue)
+                             activity?.recreate()
+                         }
+                         else -> {
+                             activity?.setTheme(R.style.LightTheme_Blue)
+                             activity?.recreate()
+                         }
+                     }
                  }
+                else -> {
+                    activity?.setTheme(R.style.LightTheme_Blue)
+                    activity?.recreate()
+                }
             }
             true
     }

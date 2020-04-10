@@ -1,6 +1,7 @@
 <resources>
 
-    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="background">?colorSurface</item>
         <item name="android:windowBackground">@drawable/splash_logo</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
@@ -13,7 +14,7 @@
 
     <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:windowBackground">?colorSurface</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">#000000</item>
     </style>
 
 </resources>

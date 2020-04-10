@@ -4,11 +4,13 @@
     <string-array name="theme_modes">
         <item>"Light theme"</item>
         <item>"Dark theme"</item>
+        <item>Follow System</item>
     </string-array>
 
     <string-array name="theme_modes_values">
         <item>LIGHT</item>
         <item>DARK</item>
+        <item>FOLLOW</item>
     </string-array>
 
     <string-array name="languages">

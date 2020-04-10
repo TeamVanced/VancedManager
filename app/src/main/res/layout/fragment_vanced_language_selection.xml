@@ -4,11 +4,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:cardCornerRadius="@dimen/eightdp"
         app:cardBackgroundColor="?colorSurfaceVariant"
         app:cardElevation="0dp"
@@ -45,8 +48,9 @@
             <FrameLayout
                 android:id="@+id/language_choose_frame"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                app:layout_constraintTop_toBottomOf="@id/install_language_title"
+                android:layout_height="360dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/install_language_note"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

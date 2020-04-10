@@ -21,7 +21,7 @@
         <item name="colorDisabled">#808080</item>
         <item name="colorDisabledVariant">#66808080</item>
         <item name="iconColor">?colorPrimaryVariant</item>
-        <item name="toolbarBackIcon">#111111</item>
+        <item name="toolbarIconColor">#111111</item>
 
     </style>
 

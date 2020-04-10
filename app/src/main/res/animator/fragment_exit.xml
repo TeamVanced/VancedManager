@@ -2,10 +2,10 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 
     <objectAnimator
-        android:duration="600"
+        android:duration="500"
         android:propertyName="x"
         android:valueFrom="0"
-        android:valueTo="-1000"
+        android:valueTo="-1200"
         android:valueType="floatType" />
 
 </set>

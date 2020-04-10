@@ -8,6 +8,6 @@
     <attr name="colorOnSurfaceVariant" format="color" />
     <attr name="colorSurfaceSurfaceVariant" format="color" />
     <attr name="iconColor" format="reference|color" />
-    <attr name="toolbarBackIcon" format="reference|color"/>
+    <attr name="toolbarIconColor" format="reference|color"/>
 
 </resources>

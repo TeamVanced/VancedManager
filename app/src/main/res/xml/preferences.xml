@@ -4,7 +4,8 @@
 
     <Preference
         android:key="update_check"
-        android:title="Check for updates" />
+        android:title="Check for updates"
+        android:icon="@drawable/ic_cloud_upload_black_24dp"/>
 
     <PreferenceCategory
         android:title="Interface">
@@ -16,7 +17,7 @@
             android:summary="Choose your preferred theme"
             android:entries="@array/theme_modes"
             android:entryValues="@array/theme_modes_values"
-            android:defaultValue="DARK"/>
+            android:defaultValue="LIGHT"/>
 
         <ListPreference
             android:icon="@drawable/ic_palette_black_24dp"

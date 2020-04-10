@@ -15,11 +15,8 @@ import com.vanced.manager.ui.core.ThemeActivity
 
 class MainActivity : ThemeActivity() {
 
-    lateinit var homeFragment: HomeFragment
-    lateinit var settingsFragment: SettingsFragment
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(null)
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val toolbar : MaterialToolbar = findViewById(R.id.home_toolbar)
@@ -33,11 +30,10 @@ class MainActivity : ThemeActivity() {
 
         val navView : BottomNavigationView = findViewById(R.id.bottom_nav)
 
-        homeFragment = HomeFragment()
         supportFragmentManager
             .beginTransaction()
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-            .replace(R.id.frame_layout, homeFragment)
+            .setCustomAnimations(R.anim.fragment_enter, R.anim.fragment_exit)
+            .replace(R.id.frame_layout, HomeFragment())
             .commit()
 
         navView.setOnNavigationItemSelectedListener { item ->
@@ -46,21 +42,19 @@ class MainActivity : ThemeActivity() {
 
                 R.id.navigation_home -> {
 
-                    homeFragment = HomeFragment()
                     supportFragmentManager
                         .beginTransaction()
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .replace(R.id.frame_layout, homeFragment)
+                        .setCustomAnimations(R.anim.fragment_enter, R.anim.fragment_exit)
+                        .replace(R.id.frame_layout, HomeFragment())
                         .commit()
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_settings -> {
 
-                    settingsFragment = SettingsFragment()
                     supportFragmentManager
                         .beginTransaction()
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .replace(R.id.frame_layout, settingsFragment)
+                        .setCustomAnimations(R.anim.fragment_enter, R.anim.fragment_exit)
+                        .replace(R.id.frame_layout, SettingsFragment())
                         .commit()
                     return@setOnNavigationItemSelectedListener true
                 }

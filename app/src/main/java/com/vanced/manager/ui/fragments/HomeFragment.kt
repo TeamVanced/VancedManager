@@ -12,11 +12,18 @@ import android.content.pm.PackageManager
 import android.content.Intent
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
+import com.vanced.manager.Adapter.SectionPageAdapter
 import com.vanced.manager.R
 import com.vanced.manager.ui.VancedInstallActivity
 import com.vanced.manager.ui.MainActivity
 
 class HomeFragment : Fragment() {
+
+    private lateinit var viewPager: ViewPager2
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,6 +45,18 @@ class HomeFragment : Fragment() {
         (activity as MainActivity).supportActionBar?.title = getString(R.string.title_home)
 
         super.onViewCreated(view, savedInstanceState)
+
+        viewPager = view.findViewById(R.id.viewpager)
+        viewPager.adapter = SectionPageAdapter(FragmentActivity())
+
+        val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "Vanced"
+                1 -> tab.text = "MicroG"
+            }
+        }.attach()
 
         val builder = CustomTabsIntent.Builder()
         val pm = activity?.packageManager

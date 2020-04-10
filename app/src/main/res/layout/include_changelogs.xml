@@ -27,29 +27,24 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginStart="@dimen/eightdp"/>
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/app_bar_layout"
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/changelog_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="?colorSurfaceVariant">
+                android:background="?colorSurfaceVariant"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="?colorPrimary"
+                app:tabSelectedTextColor="?colorPrimary"
+                app:tabTextColor="?colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/changelog_text" />
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tablayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="?colorSurfaceVariant" />
-
-            </com.google.android.material.appbar.AppBarLayout>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@id/changelog_text"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tablayout"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

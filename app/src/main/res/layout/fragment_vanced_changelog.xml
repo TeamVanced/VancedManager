@@ -5,11 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.VancedChangelogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="32sp"
-        android:text="This-is-a-hardcoded-string" />
+        android:text="This is a hardcoded string" />
 
 </FrameLayout>
