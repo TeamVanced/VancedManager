@@ -25,21 +25,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val homefragment = inflater.inflate(R.layout.fragment_home, container, false)
-        val toolbar = view?.findViewById<Toolbar>(R.id.home_toolbar)
-
-        toolbar?.title = "Home"
-        toolbar?.inflateMenu(R.menu.toolbar_menu)
-        toolbar?.setOnMenuItemClickListener {
-            if (it.itemId == R.id.about) {
-                val intent = Intent()
-                intent.component = ComponentName(
-                    "com.vanced.manager",
-                    "com.vanced.manager.ui.AboutActivity"
-                )
-                startActivity(intent)
-            }
-            true
-        }
 
         return homefragment
 
