@@ -22,10 +22,10 @@ open class ThemeActivity : AppCompatActivity() {
         currentTheme = pref.getString("theme_mode", "").toString()
 
         setFinalTheme(currentTheme)
-        super.onCreate(savedInstanceState)
-
         if (android.os.Build.VERSION.SDK_INT < 28) {
             setTaskBG()
+
+        super.onCreate(savedInstanceState)
         }
     }
 
