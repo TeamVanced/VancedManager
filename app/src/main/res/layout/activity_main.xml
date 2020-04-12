@@ -7,6 +7,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--
+    If my own implementation of bottom navigation viewer
+    will suck a HUGE dick, I'll use navigation component
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/> -->
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/home_appbar"
         android:layout_width="match_parent"
@@ -20,7 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:titleTextColor="?attr/toolbarIconColor"
-            app:titleTextAppearance="@font/exo_bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +56,6 @@
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_nav"
         android:layout_below="@id/home_appbar">
-
     </FrameLayout>
 
 </RelativeLayout>

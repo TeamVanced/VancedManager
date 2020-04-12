@@ -12,17 +12,17 @@ import android.content.pm.PackageManager
 import android.content.Intent
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.vanced.manager.Adapter.SectionPageAdapter
+import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.R
 import com.vanced.manager.ui.VancedInstallActivity
 import com.vanced.manager.ui.MainActivity
 
 class HomeFragment : Fragment() {
 
+    private lateinit var sectionPageAdapter: SectionPageAdapter
     private lateinit var viewPager: ViewPager2
 
     override fun onCreateView(
@@ -46,10 +46,10 @@ class HomeFragment : Fragment() {
 
         super.onViewCreated(view, savedInstanceState)
 
-        viewPager = view.findViewById(R.id.viewpager)
-        viewPager.adapter = SectionPageAdapter(FragmentActivity())
-
+        sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
+        viewPager = view.findViewById(R.id.viewpager)
+        viewPager.adapter = sectionPageAdapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
@@ -61,6 +61,7 @@ class HomeFragment : Fragment() {
         val builder = CustomTabsIntent.Builder()
         val pm = activity?.packageManager
 
+        val microginstallbtn = getView()?.findViewById(R.id.microg_installbtn) as Button
         val microguninstallbtn = getView()?.findViewById(R.id.microg_uninstallbtn) as Button
         val microgsettingsbtn = getView()?.findViewById(R.id.microg_settingsbtn) as Button
         val vancedinstallbtn = getView()?.findViewById(R.id.vanced_installbtn) as Button
@@ -78,6 +79,15 @@ class HomeFragment : Fragment() {
         vancedinstallbtn.setOnClickListener{
             val intent = Intent(activity, VancedInstallActivity::class.java)
             startActivity(intent)
+        }
+
+        microginstallbtn.setOnClickListener {
+            val nevergonna = "https://youtu.be/dQw4w9WgXcQ"
+            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
+                R.color.YT
+            ))
+            val customTabsIntent = builder.build()
+            customTabsIntent.launchUrl(requireContext(), Uri.parse(nevergonna))
         }
 
         if (microgStatus!!) {

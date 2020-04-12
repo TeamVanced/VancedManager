@@ -3,7 +3,7 @@
 
     <!-- Main Activity -->
     <string name="title_home">Home</string>
-    <string name="settings">Settings</string>
+    <string name="title_settings">Settings</string>
 
     <!-- Home Page -->
     <string name="about">About</string>
@@ -28,6 +28,9 @@
 
     <!-- Settings -->
     <string name="theme">Theme</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Install Page -->
 

@@ -4,8 +4,11 @@ import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 
@@ -15,13 +18,15 @@ open class ThemeActivity : AppCompatActivity() {
     private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
         pref = PreferenceManager.getDefaultSharedPreferences(this)
         currentTheme = pref.getString("theme_mode", "").toString()
 
         setFinalTheme(currentTheme)
+        super.onCreate(savedInstanceState)
 
+        if (android.os.Build.VERSION.SDK_INT < 28) {
+            setTaskBG()
+        }
     }
 
     override fun onResume() {
@@ -29,6 +34,7 @@ open class ThemeActivity : AppCompatActivity() {
         val theme = pref.getString("theme_mode", "")
         if (currentTheme != theme)
             recreate()
+        setTaskBG()
     }
     private fun setFinalTheme(currentTheme: String) {
         when (currentTheme) {
@@ -38,10 +44,16 @@ open class ThemeActivity : AppCompatActivity() {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                     Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme_Blue)
                     Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme_Blue)
-                    else -> setTheme(R.style.LightTheme_Blue)
                 }
             }
             else -> setTheme(R.style.LightTheme_Blue)
         }
+    }
+    private fun setTaskBG() {
+        val icon = BitmapFactory.decodeResource(resources, R.drawable.splash192)
+        val label = getString(R.string.app_name)
+        val color = ResourcesCompat.getColor(resources, R.color.Black, null)
+        val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, icon, color)
+        setTaskDescription(taskDec)
     }
 }

@@ -4,13 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/home_fragment">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.vanced.manager.ui.home.HomeFragment"
+        android:id="@+id/home_fragment"
+        android:name="com.vanced.manager.ui.fragments.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
-    </fragment>
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.vanced.manager.ui.fragments.SettingsFragment"
+        android:label="Settings" />
+
 
 </navigation>

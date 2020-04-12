@@ -8,6 +8,8 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.appbar.MaterialToolbar
 import com.vanced.manager.R
 import com.vanced.manager.ui.core.ThemeActivity
+import com.vanced.manager.ui.fragments.AboutFragment
+import com.vanced.manager.ui.fragments.VancedThemeSelectionFragment
 
 class AboutActivity : ThemeActivity() {
 
@@ -25,14 +27,10 @@ class AboutActivity : ThemeActivity() {
         supportActionBar!!.title = "About"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        val mattisLigma : TextView = findViewById(R.id.mattis_ligma)
-
-        mattisLigma.setOnClickListener{
-            val ligmaurl = "https://youtu.be/LDU_Txk06tM"
-            val builder = CustomTabsIntent.Builder()
-            builder.setToolbarColor(ContextCompat.getColor(this, R.color.YT))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(this, Uri.parse(ligmaurl))
-        }
+        supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(android.R.anim.fade_in, R.animator.fragment_exit)
+            .replace(R.id.frame_layout_about, AboutFragment())
+            .commit()
     }
 }

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.appbar.MaterialToolbar
@@ -15,11 +16,17 @@ import com.vanced.manager.ui.core.ThemeActivity
 
 class MainActivity : ThemeActivity() {
 
+    val homeFragment: HomeFragment = HomeFragment()
+    val settingsFragment: SettingsFragment = SettingsFragment()
+
+    var currentFragment: Fragment? = null
+    var activeFragment: Int = R.id.navigation_home
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar : MaterialToolbar = findViewById(R.id.home_toolbar)
+        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
@@ -28,40 +35,18 @@ class MainActivity : ThemeActivity() {
             showSecurityDialog()
         }
 
-        val navView : BottomNavigationView = findViewById(R.id.bottom_nav)
+        supportFragmentManager.beginTransaction().add(R.id.frame_layout, SettingsFragment()).hide(SettingsFragment()).commit()
+        supportFragmentManager.beginTransaction().add(R.id.frame_layout, HomeFragment()).commit()
 
-        supportFragmentManager
-            .beginTransaction()
-            .setCustomAnimations(R.anim.fragment_enter, R.anim.fragment_exit)
-            .replace(R.id.frame_layout, HomeFragment())
-            .commit()
+        val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
 
-        navView.setOnNavigationItemSelectedListener { item ->
+        when (activeFragment) {
+            R.id.navigation_home -> currentFragment = homeFragment
+            R.id.navigation_settings -> currentFragment = settingsFragment
+        }
 
-            when (item.itemId) {
-
-                R.id.navigation_home -> {
-
-                    supportFragmentManager
-                        .beginTransaction()
-                        .setCustomAnimations(R.anim.fragment_enter, R.anim.fragment_exit)
-                        .replace(R.id.frame_layout, HomeFragment())
-                        .commit()
-                    return@setOnNavigationItemSelectedListener true
-                }
-                R.id.navigation_settings -> {
-
-                    supportFragmentManager
-                        .beginTransaction()
-                        .setCustomAnimations(R.anim.fragment_enter, R.anim.fragment_exit)
-                        .replace(R.id.frame_layout, SettingsFragment())
-                        .commit()
-                    return@setOnNavigationItemSelectedListener true
-                }
-
-            }
-
-            false
+        navView.setOnNavigationItemSelectedListener{
+            setFragments(it.itemId)
         }
     }
 
@@ -94,4 +79,40 @@ class MainActivity : ThemeActivity() {
         editor.putBoolean("firstStart", false)
         editor.apply()
     }
+
+    private fun setFragments(itemId: Int): Boolean {
+        activeFragment = itemId
+        when (itemId) {
+            R.id.navigation_home -> {
+                if (currentFragment is HomeFragment) {
+                    return false
+                }
+                supportFragmentManager
+                    .beginTransaction()
+                    .hide(currentFragment!!)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .show(HomeFragment())
+                    .commit()
+
+                currentFragment = homeFragment
+
+            }
+            R.id.navigation_settings -> {
+                if (currentFragment is SettingsFragment) {
+                    return false
+                }
+                supportFragmentManager
+                    .beginTransaction()
+                    .hide(currentFragment!!)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .show(SettingsFragment())
+                    .commit()
+
+                currentFragment = settingsFragment
+            }
+
+        }
+        return true
+    }
+
 }

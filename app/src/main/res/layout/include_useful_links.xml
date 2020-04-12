@@ -1,103 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:tools="http://schemas.android.com/tools"
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/eightdp"
+    app:cardBackgroundColor="?colorSurfaceVariant"
+    app:cardElevation="0dp"
+    app:contentPaddingLeft="12dp"
+    app:contentPaddingRight="12dp"
+    app:contentPaddingBottom="12dp"
+    app:cardPreventCornerOverlap="true">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="@dimen/eightdp"
-        app:cardBackgroundColor="?colorSurfaceVariant"
-        app:cardElevation="0dp"
-        app:cardPreventCornerOverlap="true">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/useful_links_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="3dp">
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/exo_bold"
+            android:text="@string/useful_links"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-            <TextView
-                android:id="@+id/useful_links_title"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/useful_links_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/exo_bold"
-                android:text="@string/useful_links"
-                android:textSize="18sp"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/useful_links_title"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:paddingBottom="@dimen/fourdp"
-                android:orientation="vertical"
-                android:layout_marginTop="4dp">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <include
+                    android:id="@+id/home_vanced_medias_wrapper"
+                    layout="@layout/include_vanced_medias"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingBottom="3dp">
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-                    <include
-                        android:id="@+id/home_vanced_medias_wrapper"
-                        layout="@layout/include_vanced_medias"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/twelvedp"
-                        android:layout_marginEnd="@dimen/twelvedp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/brave_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/support_us"
+                    android:layout_marginTop="4dp"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    app:backgroundTint="?colorPrimary"
+                    app:cornerRadius="@dimen/eightdp"
+                    app:layout_constraintTop_toBottomOf="@id/home_vanced_medias_wrapper"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/website_button"/>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/brave_button"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/twelvedp"
-                        android:layout_marginEnd="@dimen/twelvedp"
-                        android:text="@string/support_us"
-                        android:layout_marginTop="4dp"
-                        android:textAllCaps="false"
-                        android:textColor="#ffffff"
-                        app:backgroundTint="?colorPrimary"
-                        app:cornerRadius="@dimen/eightdp"
-                        app:layout_constraintTop_toBottomOf="@id/home_vanced_medias_wrapper"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/website_button"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/website_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/website_text"
+                    android:textAllCaps="false"
+                    app:backgroundTint="?colorPrimary"
+                    android:textColor="#ffffff"
+                    app:cornerRadius="@dimen/eightdp"
+                    app:layout_constraintTop_toBottomOf="@id/brave_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/website_button"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/twelvedp"
-                        android:layout_marginEnd="@dimen/twelvedp"
-                        android:text="@string/website_text"
-                        android:textAllCaps="false"
-                        app:backgroundTint="?colorPrimary"
-                        android:textColor="#ffffff"
-                        app:cornerRadius="@dimen/eightdp"
-                        app:layout_constraintTop_toBottomOf="@id/brave_button"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
-            </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
 
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>

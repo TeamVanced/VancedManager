@@ -30,7 +30,7 @@
             android:key="language"
             android:icon="@drawable/ic_language_black_24dp"
             android:title="Language"
-            android:summary="Choose your preffered language"
+            android:summary="Choose your preferred language"
             android:entries="@array/languages"
             android:entryValues="@array/languages_value"/>
 

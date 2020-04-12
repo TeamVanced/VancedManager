@@ -19,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:titleTextColor="?attr/toolbarIconColor"
-            app:titleTextAppearance="@font/exo_bold"
             android:background="@android:color/transparent" />
 
     </com.google.android.material.appbar.AppBarLayout>

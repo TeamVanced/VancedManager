@@ -1,16 +1,16 @@
-package com.vanced.manager.Adapter
+package com.vanced.manager.adapter
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.vanced.manager.ui.fragments.MicrogChangelogFragment
 import com.vanced.manager.ui.fragments.VancedChangelogFragment
 
-class SectionPageAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
+class SectionPageAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
-    override fun getItemCount(): Int = 2
+    private val fragmentItems = 2
+    override fun getItemCount(): Int {
+        return fragmentItems
+    }
 
     override fun createFragment(position: Int): Fragment {
         var fragment: Fragment? = null
