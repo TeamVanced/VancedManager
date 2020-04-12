@@ -14,11 +14,11 @@ class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.SplashTheme)
-        super.onCreate(savedInstanceState)
-
         if (android.os.Build.VERSION.SDK_INT < 28) {
             setTaskBG()
         }
+
+        super.onCreate(savedInstanceState)
 
         startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
         finish()

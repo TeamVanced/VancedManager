@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
         android:key="update_check"
@@ -8,7 +8,8 @@
         android:icon="@drawable/ic_cloud_upload_black_24dp"/>
 
     <PreferenceCategory
-        android:title="Interface">
+        android:title="Interface"
+        app:iconSpaceReserved="false">
 
         <ListPreference
             android:icon="@drawable/ic_brush_black_24dp"
@@ -37,7 +38,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Manager">
+        android:title="Manager"
+        app:iconSpaceReserved="false">
 
         <SwitchPreference
             android:title="Push Notifications"

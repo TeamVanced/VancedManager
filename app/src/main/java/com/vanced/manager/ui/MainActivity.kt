@@ -16,15 +16,19 @@ import com.vanced.manager.ui.core.ThemeActivity
 
 class MainActivity : ThemeActivity() {
 
-    val homeFragment: HomeFragment = HomeFragment()
-    val settingsFragment: SettingsFragment = SettingsFragment()
+    private val homeFragment: HomeFragment = HomeFragment()
+    private val settingsFragment: SettingsFragment = SettingsFragment()
 
-    var currentFragment: Fragment? = null
-    var activeFragment: Int = R.id.navigation_home
+    private var currentFragment: Fragment? = null
+    private var activeFragment: Int = R.id.navigation_home
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        savedInstanceState?.let {
+            activeFragment = it.getInt(CURRENT_FRAGMENT, R.id.navigation_home)
+        }
 
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
@@ -35,15 +39,21 @@ class MainActivity : ThemeActivity() {
             showSecurityDialog()
         }
 
-        supportFragmentManager.beginTransaction().add(R.id.frame_layout, SettingsFragment()).hide(SettingsFragment()).commit()
-        supportFragmentManager.beginTransaction().add(R.id.frame_layout, HomeFragment()).commit()
-
-        val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
-
         when (activeFragment) {
             R.id.navigation_home -> currentFragment = homeFragment
             R.id.navigation_settings -> currentFragment = settingsFragment
         }
+
+        if (savedInstanceState == null) {
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.frame_layout, settingsFragment).hide(settingsFragment)
+                .add(R.id.frame_layout, homeFragment).hide(homeFragment)
+                .show(currentFragment!!)
+                .commit()
+        }
+
+        val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
 
         navView.setOnNavigationItemSelectedListener{
             setFragments(it.itemId)
@@ -91,11 +101,10 @@ class MainActivity : ThemeActivity() {
                     .beginTransaction()
                     .hide(currentFragment!!)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .show(HomeFragment())
+                    .show(homeFragment)
                     .commit()
 
                 currentFragment = homeFragment
-
             }
             R.id.navigation_settings -> {
                 if (currentFragment is SettingsFragment) {
@@ -105,14 +114,17 @@ class MainActivity : ThemeActivity() {
                     .beginTransaction()
                     .hide(currentFragment!!)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .show(SettingsFragment())
+                    .show(settingsFragment)
                     .commit()
 
                 currentFragment = settingsFragment
             }
-
         }
         return true
+    }
+
+    companion object{
+        const val CURRENT_FRAGMENT = "current_fragment"
     }
 
 }
