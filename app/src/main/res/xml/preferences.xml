@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
@@ -24,6 +25,7 @@
             android:icon="@drawable/ic_palette_black_24dp"
             android:key="accent_color"
             android:title="Accent Color"
+            app:isPreferenceVisible="false"
             android:entries="@array/accent_color"
             android:entryValues="@array/accent_color"/>
 

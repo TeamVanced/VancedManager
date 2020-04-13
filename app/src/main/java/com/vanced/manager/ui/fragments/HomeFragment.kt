@@ -42,7 +42,6 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        (activity as MainActivity).supportActionBar?.title = getString(R.string.title_home)
 
         super.onViewCreated(view, savedInstanceState)
 

@@ -2,6 +2,7 @@ package com.vanced.manager.ui.fragments
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -12,8 +13,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
-
-        (activity as MainActivity).supportActionBar?.title = getString(R.string.title_settings)
 
         val updateCheck: Preference? = findPreference("update_check")
         

@@ -24,9 +24,8 @@ open class ThemeActivity : AppCompatActivity() {
         setFinalTheme(currentTheme)
         if (android.os.Build.VERSION.SDK_INT < 28) {
             setTaskBG()
-
-        super.onCreate(savedInstanceState)
         }
+        super.onCreate(savedInstanceState)
     }
 
     override fun onResume() {

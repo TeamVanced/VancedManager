@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.appbar.MaterialToolbar
@@ -19,16 +18,9 @@ class MainActivity : ThemeActivity() {
     private val homeFragment: HomeFragment = HomeFragment()
     private val settingsFragment: SettingsFragment = SettingsFragment()
 
-    private var currentFragment: Fragment? = null
-    private var activeFragment: Int = R.id.navigation_home
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        savedInstanceState?.let {
-            activeFragment = it.getInt(CURRENT_FRAGMENT, R.id.navigation_home)
-        }
 
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
@@ -39,24 +31,45 @@ class MainActivity : ThemeActivity() {
             showSecurityDialog()
         }
 
-        when (activeFragment) {
-            R.id.navigation_home -> currentFragment = homeFragment
-            R.id.navigation_settings -> currentFragment = settingsFragment
-        }
-
-        if (savedInstanceState == null) {
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.frame_layout, settingsFragment).hide(settingsFragment)
-                .add(R.id.frame_layout, homeFragment).hide(homeFragment)
-                .show(currentFragment!!)
-                .commit()
-        }
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.frame_layout, settingsFragment).hide(settingsFragment)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .add(R.id.frame_layout, homeFragment)
+            .commit()
+        supportActionBar?.title = getString(R.string.title_home)
 
         val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
 
-        navView.setOnNavigationItemSelectedListener{
-            setFragments(it.itemId)
+        navView.setOnNavigationItemSelectedListener{ item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .hide(settingsFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .add(homeFragment)
+                        .commit()
+                    supportActionBar?.title = getString(R.string.title_home)
+
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.navigation_settings -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .hide(homeFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .add(settingsFragment)
+                        .commit()
+                    supportActionBar?.title = getString(R.string.title_settings)
+
+                    return@setOnNavigationItemSelectedListener true
+                }
+            }
+            false
+        }
+
+        navView.setOnNavigationItemReselectedListener {
         }
     }
 
@@ -88,43 +101,6 @@ class MainActivity : ThemeActivity() {
         val editor = prefs.edit()
         editor.putBoolean("firstStart", false)
         editor.apply()
-    }
-
-    private fun setFragments(itemId: Int): Boolean {
-        activeFragment = itemId
-        when (itemId) {
-            R.id.navigation_home -> {
-                if (currentFragment is HomeFragment) {
-                    return false
-                }
-                supportFragmentManager
-                    .beginTransaction()
-                    .hide(currentFragment!!)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .show(homeFragment)
-                    .commit()
-
-                currentFragment = homeFragment
-            }
-            R.id.navigation_settings -> {
-                if (currentFragment is SettingsFragment) {
-                    return false
-                }
-                supportFragmentManager
-                    .beginTransaction()
-                    .hide(currentFragment!!)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .show(settingsFragment)
-                    .commit()
-
-                currentFragment = settingsFragment
-            }
-        }
-        return true
-    }
-
-    companion object{
-        const val CURRENT_FRAGMENT = "current_fragment"
     }
 
 }
