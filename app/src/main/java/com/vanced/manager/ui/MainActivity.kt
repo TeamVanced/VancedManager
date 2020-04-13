@@ -48,7 +48,7 @@ class MainActivity : ThemeActivity() {
                         .beginTransaction()
                         .hide(settingsFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .add(homeFragment)
+                        .show(homeFragment)
                         .commit()
                     supportActionBar?.title = getString(R.string.title_home)
 
@@ -59,7 +59,7 @@ class MainActivity : ThemeActivity() {
                         .beginTransaction()
                         .hide(homeFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .add(settingsFragment)
+                        .show(settingsFragment)
                         .commit()
                     supportActionBar?.title = getString(R.string.title_settings)
 
