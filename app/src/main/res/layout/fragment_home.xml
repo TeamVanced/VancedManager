@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.AboutFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -23,9 +25,10 @@
             android:clipToPadding="false"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <include
                     android:id="@+id/home_vanced_wrapper"
@@ -33,10 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_marginEnd="@dimen/stdp" />
 
                 <include
                     android:id="@+id/home_microg_wrapper"
@@ -45,10 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/stdp"
                     android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home_vanced_wrapper" />
+                    android:layout_marginEnd="@dimen/stdp" />
 
                 <include
                     android:id="@+id/home_changelog_wrapper"
@@ -57,10 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/stdp"
                     android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/home_microg_wrapper" />
+                    android:layout_marginEnd="@dimen/stdp" />
 
 
                 <include
@@ -70,15 +64,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/stdp"
                     android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home_changelog_wrapper" />
+                    android:layout_marginEnd="@dimen/stdp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -11,6 +11,11 @@ import com.vanced.manager.ui.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
+    override fun onStart() {
+        super.onStart()
+        activity?.title = getString(R.string.title_settings)
+    }
+
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
 

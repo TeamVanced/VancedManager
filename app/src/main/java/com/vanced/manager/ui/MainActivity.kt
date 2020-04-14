@@ -6,7 +6,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.R
@@ -14,9 +15,6 @@ import com.vanced.manager.ui.fragments.SettingsFragment
 import com.vanced.manager.ui.core.ThemeActivity
 
 class MainActivity : ThemeActivity() {
-
-    private val homeFragment: HomeFragment = HomeFragment()
-    private val settingsFragment: SettingsFragment = SettingsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,45 +29,25 @@ class MainActivity : ThemeActivity() {
             showSecurityDialog()
         }
 
-        supportFragmentManager
-            .beginTransaction()
-            .add(R.id.frame_layout, settingsFragment).hide(settingsFragment)
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-            .add(R.id.frame_layout, homeFragment)
-            .commit()
-        supportActionBar?.title = getString(R.string.title_home)
+        val navHost = findNavController(R.id.bottom_nav_host)
+        val navBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        navBar.setupWithNavController(navHost)
 
-        val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
-
-        navView.setOnNavigationItemSelectedListener{ item ->
+        navBar.setOnNavigationItemSelectedListener{ item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .hide(settingsFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .show(homeFragment)
-                        .commit()
-                    supportActionBar?.title = getString(R.string.title_home)
-
-                    return@setOnNavigationItemSelectedListener true
+                    navHost.navigate(R.id.toHomeFragment)
+                    navBar.menu.getItem(R.id.navigation_home).isChecked = true
                 }
                 R.id.navigation_settings -> {
-                    supportFragmentManager
-                        .beginTransaction()
-                        .hide(homeFragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                        .show(settingsFragment)
-                        .commit()
-                    supportActionBar?.title = getString(R.string.title_settings)
-
-                    return@setOnNavigationItemSelectedListener true
+                    navHost.navigate(R.id.toSettingsFragment)
+                    navBar.menu.getItem(R.id.navigation_settings).isChecked = true
                 }
             }
             false
         }
 
-        navView.setOnNavigationItemReselectedListener {
+        navBar.setOnNavigationItemReselectedListener {
         }
     }
 

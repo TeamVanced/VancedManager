@@ -25,6 +25,11 @@ class HomeFragment : Fragment() {
     private lateinit var sectionPageAdapter: SectionPageAdapter
     private lateinit var viewPager: ViewPager2
 
+    override fun onStart() {
+        super.onStart()
+        activity?.title = getString(R.string.title_home)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -57,7 +62,6 @@ class HomeFragment : Fragment() {
             }
         }.attach()
 
-        val builder = CustomTabsIntent.Builder()
         val pm = activity?.packageManager
 
         val microginstallbtn = getView()?.findViewById(R.id.microg_installbtn) as Button
@@ -81,12 +85,7 @@ class HomeFragment : Fragment() {
         }
 
         microginstallbtn.setOnClickListener {
-            val nevergonna = "https://youtu.be/dQw4w9WgXcQ"
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
-                R.color.YT
-            ))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(nevergonna))
+            openUrl("https://youtu.be/dQw4w9WgXcQ", R.color.YT)
         }
 
         if (microgStatus!!) {
@@ -111,54 +110,35 @@ class HomeFragment : Fragment() {
         }
 
          bravebtn.setOnClickListener {
-            val braveurl = "https://brave.com/van874"
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
-                R.color.Brave
-            ))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(braveurl))
+            openUrl("https://brave.com/van874", R.color.Brave)
+
         }
         websitebtn.setOnClickListener {
-            val vancedurl = "https://vanced.app"
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
-                R.color.Vanced
-            ))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(vancedurl))
+            openUrl("https://vanced.app", R.color.Vanced)
         }
         discordbtn.setOnClickListener {
-            val discordurl = "https://discord.gg/TUVd7rd"
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
-                R.color.Discord
-            ))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(discordurl))
+            openUrl("https://discord.gg/TUVd7rd", R.color.Discord)
+
         }
         telegrambtn.setOnClickListener {
-            val telegramurl = "https://t.me/joinchat/AAAAAEHf-pi4jH1SDIAL4w"
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
-                R.color.Telegram
-            ))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(telegramurl))
+            openUrl("https://t.me/joinchat/AAAAAEHf-pi4jH1SDIAL4w", R.color.Telegram)
+
         }
         twitterbtn.setOnClickListener {
-            val twitterurl = "https://twitter.com/YTVanced"
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
-                R.color.Twitter
-            ))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(twitterurl))
+            openUrl("https://twitter.com/YTVanced", R.color.Twitter)
+
         }
         redditbtn.setOnClickListener {
-            val redditurl = "https://reddit.com/r/vanced"
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(),
-                R.color.Reddit
-            ))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(redditurl))
+            openUrl("https://reddit.com/r/vanced", R.color.Reddit)
         }
 
+    }
+
+    private fun openUrl(Url: String, color: Int) {
+        val builder = CustomTabsIntent.Builder()
+        builder.setToolbarColor(ContextCompat.getColor(requireContext(), color))
+        val customTabsIntent = builder.build()
+        customTabsIntent.launchUrl(requireContext(), Uri.parse(Url))
     }
 
 }

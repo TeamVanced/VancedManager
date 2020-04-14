@@ -15,7 +15,23 @@
     <fragment
         android:id="@+id/settings_fragment"
         android:name="com.vanced.manager.ui.fragments.SettingsFragment"
-        android:label="Settings" />
+        android:label="@string/title_settings" />
+
+    <action
+        android:id="@+id/toSettingsFragment"
+        app:destination="@id/settings_fragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    <action
+        android:id="@+id/toHomeFragment"
+        app:destination="@id/home_fragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
 
 </navigation>

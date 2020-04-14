@@ -27,15 +27,24 @@ class AboutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mattisLigma = getView()?.findViewById(R.id.mattis_ligma) as TextView
+        val githubSource = getView()?.findViewById(R.id.about_github_button) as TextView
+        val license = getView()?.findViewById(R.id.about_license_button) as TextView
 
-        mattisLigma.setOnClickListener{
-            val ligmaurl = "https://youtu.be/LDU_Txk06tM"
-            val builder = CustomTabsIntent.Builder()
-            builder.setToolbarColor(ContextCompat.getColor(requireContext(), R.color.YT))
-            val customTabsIntent = builder.build()
-            customTabsIntent.launchUrl(requireContext(), Uri.parse(ligmaurl))
+        githubSource.setOnClickListener{
+            openUrl("https://github.com/YTvanced/VancedInstaller", R.color.GitHub)
         }
+
+        license.setOnClickListener{
+            openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE", R.color.GitHub)
+
+        }
+    }
+
+    private fun openUrl(Url: String, color: Int) {
+        val builder = CustomTabsIntent.Builder()
+        builder.setToolbarColor(ContextCompat.getColor(requireContext(), color))
+        val customTabsIntent = builder.build()
+        customTabsIntent.launchUrl(requireContext(), Uri.parse(Url))
     }
 
 }
