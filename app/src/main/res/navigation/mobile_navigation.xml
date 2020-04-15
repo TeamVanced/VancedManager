@@ -10,26 +10,98 @@
         android:id="@+id/home_fragment"
         android:name="com.vanced.manager.ui.fragments.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/toAboutFragment"
+            app:destination="@id/about_fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/toInstallThemeFragment"
+            app:destination="@id/install_theme_fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@animator/fragment_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/settings_fragment"
         android:name="com.vanced.manager.ui.fragments.SettingsFragment"
-        android:label="@string/title_settings" />
+        android:label="@string/title_settings">
+
+        <action
+            android:id="@+id/toAboutFragment"
+            app:destination="@id/about_fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/about_fragment"
+        android:name="com.vanced.manager.ui.fragments.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/install_theme_fragment"
+        android:name="com.vanced.manager.ui.fragments.VancedThemeSelectionFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_vanced_theme_selection">
+
+        <action
+            android:id="@+id/toInstallVariantFragment"
+            app:destination="@id/install_variant_fragment"
+            app:enterAnim="@animator/fragment_enter"
+            app:exitAnim="@animator/fragment_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/install_variant_fragment"
+        android:name="com.vanced.manager.ui.fragments.VancedVariantSelectionFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_vanced_variant_selection">
+
+        <action
+            android:id="@+id/toInstallLanguageFragment"
+            app:destination="@id/install_language_fragment"
+            app:enterAnim="@animator/fragment_enter"
+            app:exitAnim="@animator/fragment_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/install_language_fragment"
+        android:name="com.vanced.manager.ui.fragments.VancedLanguageSelectionFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_vanced_language_selection" />
 
     <action
         android:id="@+id/toSettingsFragment"
         app:destination="@id/settings_fragment"
-        app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_fade_exit"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
         app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
     <action
         android:id="@+id/toHomeFragment"
         app:destination="@id/home_fragment"
-        app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_fade_exit"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
         app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 

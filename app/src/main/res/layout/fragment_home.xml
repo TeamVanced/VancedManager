@@ -1,75 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.AboutFragment">
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="@dimen/twelvedp"
+        android:background="?colorSurface"
+        android:clipToPadding="false"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            android:id="@+id/home_vanced_wrapper"
+            layout="@layout/include_vanced"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/twelvedp"
-            android:background="?colorSurface"
-            android:clipToPadding="false"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/stdp"
+            android:layout_marginEnd="@dimen/stdp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+        <include
+            android:id="@+id/home_microg_wrapper"
+            layout="@layout/include_microg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/stdp"
+            android:layout_marginTop="@dimen/stdp"
+            android:layout_marginEnd="@dimen/stdp" />
 
-                <include
-                    android:id="@+id/home_vanced_wrapper"
-                    layout="@layout/include_vanced"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp" />
-
-                <include
-                    android:id="@+id/home_microg_wrapper"
-                    layout="@layout/include_microg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp" />
-
-                <include
-                    android:id="@+id/home_changelog_wrapper"
-                    layout="@layout/include_changelogs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp" />
+        <include
+            android:id="@+id/home_changelog_wrapper"
+            layout="@layout/include_changelogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/stdp"
+            android:layout_marginTop="@dimen/stdp"
+            android:layout_marginEnd="@dimen/stdp" />
 
 
-                <include
-                    android:id="@+id/home_useful_links_wrapper"
-                    layout="@layout/include_useful_links"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp" />
+        <include
+            android:id="@+id/home_useful_links_wrapper"
+            layout="@layout/include_useful_links"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/stdp"
+            android:layout_marginTop="@dimen/stdp"
+            android:layout_marginEnd="@dimen/stdp" />
 
-            </LinearLayout>
+    </LinearLayout>
 
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>

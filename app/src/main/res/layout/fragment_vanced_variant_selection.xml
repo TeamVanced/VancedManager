@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -44,13 +42,15 @@
                     android:id="@+id/button_nonroot"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="non-root"/>
+                    android:fontFamily="@font/exo_semibold"
+                    android:text="non-root"
+                    android:textSize="18sp" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/button_root"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/exo_semibold"
                     android:textSize="18sp"
                     android:text="root"/>
 

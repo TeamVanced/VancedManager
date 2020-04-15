@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
-import com.vanced.manager.ui.fragments.HomeFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vanced.manager.R
-import com.vanced.manager.ui.fragments.SettingsFragment
 import com.vanced.manager.ui.core.ThemeActivity
 
 class MainActivity : ThemeActivity() {
@@ -37,11 +35,11 @@ class MainActivity : ThemeActivity() {
             when (item.itemId) {
                 R.id.navigation_home -> {
                     navHost.navigate(R.id.toHomeFragment)
-                    navBar.menu.getItem(R.id.navigation_home).isChecked = true
+                    return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_settings -> {
                     navHost.navigate(R.id.toSettingsFragment)
-                    navBar.menu.getItem(R.id.navigation_settings).isChecked = true
+                    return@setOnNavigationItemSelectedListener true
                 }
             }
             false

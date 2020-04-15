@@ -7,14 +7,14 @@
     app:cardCornerRadius="@dimen/eightdp"
     app:cardBackgroundColor="?colorSurfaceVariant"
     app:cardElevation="0dp"
-    app:contentPaddingLeft="12dp"
-    app:contentPaddingRight="12dp"
-    app:contentPaddingBottom="12dp"
+    app:contentPaddingBottom="4dp"
+    app:contentPaddingLeft="8dp"
+    app:contentPaddingRight="8dp"
     app:cardPreventCornerOverlap="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/useful_links_title"
@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/support_us"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="5dp"
                     android:textAllCaps="false"
                     android:textColor="#ffffff"
                     app:backgroundTint="?colorPrimary"
