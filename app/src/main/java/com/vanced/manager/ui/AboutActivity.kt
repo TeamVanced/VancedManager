@@ -24,7 +24,7 @@ class AboutActivity : ThemeActivity() {
             finish()
         }
 
-        supportActionBar!!.title = "About"
+        supportActionBar!!.title = getString(R.string.title_about)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         supportFragmentManager

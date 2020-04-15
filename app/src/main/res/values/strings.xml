@@ -2,11 +2,11 @@
 <resources>
 
     <!-- Main Activity -->
+    <string name="title_about">About</string>
     <string name="title_home">Home</string>
     <string name="title_settings">Settings</string>
 
     <!-- Home Page -->
-    <string name="about">About</string>
     <string name="brave_browser">Brave Browser</string>
     <string name="changelogs">Changelogs</string>
     <string name="github_bot">Bot</string>
@@ -21,16 +21,22 @@
     <string name="uninstall">Uninstall</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
-    <string name="vanced_medias">Vanced on Social Medias</string>
+    <string name="vanced_medias">Vanced on Social Media</string>
     <string name="website">Website</string>
     <string name="website_text">The official website of Vanced</string>
     <string name="support_us">Support us by downloading Brave</string>
 
     <!-- Settings -->
+    <string name="check_updates">Check for updates</string>
+    <string name="category_interface">Interface</string>
+    <string name="category_manager">Manager</string>
     <string name="theme">Theme</string>
+    <string name="theme_summary">Choose your preferred theme</string>
+    <string name="language">Language</string>
+    <string name="language_summary">Choose your preferred language</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when update is released</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Install Page -->
 
