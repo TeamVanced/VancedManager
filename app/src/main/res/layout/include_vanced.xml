@@ -96,6 +96,7 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/vanced_uninstallbtn"
             app:layout_constraintHorizontal_bias="1.0"
             android:fontFamily="@font/exo_semibold"
             app:icon="@drawable/outline_cloud_download_24"/>
@@ -112,7 +113,8 @@
             app:backgroundTint="?attr/colorError"
             app:icon="@drawable/ic_delete_black_24dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vanced_installbtn"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

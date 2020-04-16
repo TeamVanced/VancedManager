@@ -34,11 +34,11 @@ class MainActivity : ThemeActivity() {
         navBar.setOnNavigationItemSelectedListener{ item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    navHost.navigate(R.id.toHomeFragment)
+                    navHost.navigate(R.id.action_settingsFragment_to_homeFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_settings -> {
-                    navHost.navigate(R.id.toSettingsFragment)
+                    navHost.navigate(R.id.action_homeFragment_to_settingsFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
             }

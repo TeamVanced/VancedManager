@@ -15,8 +15,8 @@
         <action
             android:id="@+id/toAboutFragment"
             app:destination="@id/about_fragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
@@ -90,18 +90,18 @@
         tools:layout="@layout/fragment_vanced_language_selection" />
 
     <action
-        android:id="@+id/toSettingsFragment"
+        android:id="@+id/action_homeFragment_to_settingsFragment"
         app:destination="@id/settings_fragment"
-        app:enterAnim="@anim/fragment_fade_enter"
-        app:exitAnim="@anim/fragment_fade_exit"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
         app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
     <action
-        android:id="@+id/toHomeFragment"
+        android:id="@+id/action_settingsFragment_to_homeFragment"
         app:destination="@id/home_fragment"
-        app:enterAnim="@anim/fragment_fade_enter"
-        app:exitAnim="@anim/fragment_fade_exit"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
         app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 

@@ -100,7 +100,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/microg_title"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/microg_settingsbtn"
@@ -129,7 +130,8 @@
             app:backgroundTint="?attr/colorError"
             app:icon="@drawable/ic_delete_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/microg_installbtn"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
