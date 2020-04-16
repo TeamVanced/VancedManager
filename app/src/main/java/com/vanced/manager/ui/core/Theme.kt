@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.content.res.Configuration
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
@@ -22,10 +20,11 @@ open class ThemeActivity : AppCompatActivity() {
         currentTheme = pref.getString("theme_mode", "").toString()
 
         setFinalTheme(currentTheme)
+        super.onCreate(savedInstanceState)
+
         if (android.os.Build.VERSION.SDK_INT < 28) {
             setTaskBG()
         }
-        super.onCreate(savedInstanceState)
     }
 
     override fun onResume() {
@@ -49,10 +48,9 @@ open class ThemeActivity : AppCompatActivity() {
         }
     }
     private fun setTaskBG() {
-        val icon = BitmapFactory.decodeResource(resources, R.drawable.splash192)
         val label = getString(R.string.app_name)
         val color = ResourcesCompat.getColor(resources, R.color.Black, null)
-        val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, icon, color)
+        val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, null, color)
         setTaskDescription(taskDec)
     }
 }
