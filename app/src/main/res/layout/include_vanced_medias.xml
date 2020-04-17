@@ -1,118 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/social_media_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/eightdp"
+    android:layout_marginEnd="@dimen/eightdp"
+    android:paddingTop="@dimen/eightdp"
+    app:cardBackgroundColor="#6958D0"
+    android:paddingBottom="2dp"
+    app:cardCornerRadius="@dimen/eightdp"
+    app:cardElevation="0dp">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/social_media_card"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/eightdp"
-        android:layout_marginEnd="@dimen/eightdp"
-        android:paddingTop="@dimen/eightdp"
-        app:cardBackgroundColor="#6958D0"
-        app:cardCornerRadius="@dimen/eightdp"
-        app:cardElevation="0dp">
+        android:layout_gravity="center">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/social_media_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_marginStart="@dimen/eightdp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/exo_semibold"
+            android:text="@string/vanced_medias"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/social_media_title"
+        <LinearLayout
+            android:id="@+id/social_media_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/social_media_title"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/eightdp"
-                android:layout_marginTop="2dp"
-                android:fontFamily="@font/exo_semibold"
-                android:text="@string/vanced_medias"
-                android:textColor="#ffffff"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/social_media_buttons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/social_media_title"
-                app:layout_constraintBottom_toBottomOf="parent">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/discordbtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    app:icon="@drawable/discord"
+                    app:iconPadding="0dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="#ffffff"
+                    app:layout_constraintEnd_toStartOf="@id/tgbtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/discordbtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:backgroundTint="@android:color/transparent"
-                        app:icon="@drawable/discord"
-                        app:iconPadding="0dp"
-                        app:iconGravity="textStart"
-                        app:iconTint="#ffffff"
-                        app:layout_constraintEnd_toStartOf="@id/tgbtn"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/tgbtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:backgroundTint="@android:color/transparent"
-                        app:icon="@drawable/telegram"
-                        app:iconPadding="0dp"
-                        app:iconGravity="textStart"
-                        app:iconTint="#ffffff"
-                        app:layout_constraintEnd_toStartOf="@id/twitterbtn"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/discordbtn"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tgbtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    app:icon="@drawable/telegram"
+                    app:iconPadding="0dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="#ffffff"
+                    app:layout_constraintEnd_toStartOf="@id/twitterbtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/discordbtn"/>
 
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/twitterbtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:backgroundTint="@android:color/transparent"
-                        app:icon="@drawable/twitter"
-                        app:iconPadding="0dp"
-                        app:iconGravity="textStart"
-                        app:iconTint="#ffffff"
-                        app:layout_constraintEnd_toStartOf="@id/redditbtn"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/tgbtn"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/twitterbtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    app:icon="@drawable/twitter"
+                    app:iconPadding="0dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="#ffffff"
+                    app:layout_constraintEnd_toStartOf="@id/redditbtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tgbtn"/>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/redditbtn"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent"
-                        android:backgroundTint="@android:color/transparent"
-                        app:icon="@drawable/ic_reddit"
-                        app:iconGravity="textStart"
-                        app:iconPadding="0dp"
-                        app:iconTint="#ffffff"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/twitterbtn"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/redditbtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@android:color/transparent"
+                    app:icon="@drawable/ic_reddit"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconTint="#ffffff"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/twitterbtn"/>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
+        </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
+</com.google.android.material.card.MaterialCardView>

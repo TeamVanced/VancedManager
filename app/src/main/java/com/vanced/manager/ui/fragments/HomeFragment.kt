@@ -3,24 +3,21 @@ package com.vanced.manager.ui.fragments
 import android.content.ComponentName
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.content.pm.PackageManager
 import android.content.Intent
-import androidx.browser.customtabs.CustomTabsIntent
-import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.R
 import com.vanced.manager.ui.VancedInstallActivity
-import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.core.BaseFragment
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment() {
 
     private lateinit var sectionPageAdapter: SectionPageAdapter
     private lateinit var viewPager: ViewPager2
@@ -132,13 +129,6 @@ class HomeFragment : Fragment() {
             openUrl("https://reddit.com/r/vanced", R.color.Reddit)
         }
 
-    }
-
-    private fun openUrl(Url: String, color: Int) {
-        val builder = CustomTabsIntent.Builder()
-        builder.setToolbarColor(ContextCompat.getColor(requireContext(), color))
-        val customTabsIntent = builder.build()
-        customTabsIntent.launchUrl(requireContext(), Uri.parse(Url))
     }
 
 }
