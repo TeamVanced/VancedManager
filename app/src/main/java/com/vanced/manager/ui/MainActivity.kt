@@ -1,10 +1,11 @@
 package com.vanced.manager.ui
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.forEach
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
@@ -14,11 +15,14 @@ import com.vanced.manager.ui.core.ThemeActivity
 
 class MainActivity : ThemeActivity() {
 
+    private var isParent = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
+
         setSupportActionBar(toolbar)
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
@@ -34,11 +38,11 @@ class MainActivity : ThemeActivity() {
         navBar.setOnNavigationItemSelectedListener{ item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    navHost.navigate(R.id.action_settingsFragment_to_homeFragment)
+                    navHost.navigate(R.id.action_homeFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
                 R.id.navigation_settings -> {
-                    navHost.navigate(R.id.action_homeFragment_to_settingsFragment)
+                    navHost.navigate(R.id.action_settingsFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
             }
@@ -47,21 +51,46 @@ class MainActivity : ThemeActivity() {
 
         navBar.setOnNavigationItemReselectedListener {
         }
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.toolbar_menu, menu)
-        return super .onCreateOptionsMenu(menu)
-    }
+        navHost.addOnDestinationChangedListener{_, currfrag: NavDestination, _ ->
+            when (currfrag.id) {
+                R.id.home_fragment, R.id.settings_fragment -> navBar.visibility = View.VISIBLE
+                else -> navBar.visibility = View.INVISIBLE
 
-    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.about -> {
-            val intent = Intent(this, AboutActivity::class.java)
-            startActivity(intent)
-            true
+            }
+            isParent = when (currfrag.id) {
+                R.id.home_fragment, R.id.settings_fragment -> true
+                else -> false
+            }
+
+            setDisplayHomeAsUpEnabled(!isParent)
+
+            navBar.menu.forEach {
+                if (it.itemId == currfrag.id) {
+                    it.isChecked = true
+                }
+            }
+
         }
-        else -> {
-            super.onOptionsItemSelected(item)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                findNavController(R.id.bottom_nav_host).navigate(R.id.action_homeFragment)
+            }
+            else -> super.onOptionsItemSelected(item)
+
+        }
+        return true
+    }
+    
+    private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
+        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
+        when {
+            isNeeded -> toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
+            else -> toolbar.navigationIcon = null
         }
     }
 

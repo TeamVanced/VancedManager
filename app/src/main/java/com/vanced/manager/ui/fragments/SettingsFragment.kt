@@ -2,18 +2,21 @@ package com.vanced.manager.ui.fragments
 
 import android.content.res.Configuration
 import android.os.Bundle
-import android.view.View
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.navigation.findNavController
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.vanced.manager.R
-import com.vanced.manager.ui.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onStart() {
         super.onStart()
         activity?.title = getString(R.string.title_settings)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -54,4 +57,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
     }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.secret_settings_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.secret_settings -> view?.findNavController()?.navigate(R.id.toSecretSettingsFragment)
+        else -> null
+    }?.let { true } ?: super.onOptionsItemSelected(item)
+
 }

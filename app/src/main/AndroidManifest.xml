@@ -4,6 +4,8 @@
     package="com.vanced.manager">
 
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -25,16 +27,6 @@
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/app_name" />
-
-        <activity
-            android:name=".ui.VancedInstallActivity"
-            android:parentActivityName=".ui.MainActivity"
-            android:label="@string/app_name" />
-
-        <activity
-            android:name=".ui.AboutActivity"
-            android:label="@string/app_name"
-            android:parentActivityName=".ui.MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

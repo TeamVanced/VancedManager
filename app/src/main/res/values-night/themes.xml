@@ -17,7 +17,7 @@
         <item name="colorError">#CC0047</item>
         <item name="colorOnError">#F9F9F9</item>
         <item name="colorOnSurface">#444444</item>
-        <item name="colorOnSurfaceVariant">#e8e8e8</item>
+        <item name="colorOnSurfaceVariant">#FFFFFF</item>
         <item name="colorDisabled">#808080</item>
         <item name="colorDisabledVariant">#66808080</item>
         <item name="iconColor">?colorPrimaryVariant</item>

@@ -1,77 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/eightdp"
+    app:cardBackgroundColor="?colorSurfaceVariant"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="12dp"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="true">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:cardCornerRadius="@dimen/eightdp"
-        app:cardBackgroundColor="?colorSurfaceVariant"
-        app:cardElevation="0dp"
-        app:cardPreventCornerOverlap="true">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            android:id="@+id/install_theme_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:fontFamily="@font/exo_bold"
+            android:text="@string/choose_preferred_theme" />
 
-            <TextView
-                android:id="@+id/install_theme_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:textSize="20sp"
-                android:fontFamily="@font/exo_bold"
-                android:text="Choose your preferred theme for Vanced"
-                app:layout_constraintEnd_toEndOf="parent"/>
+        <RadioGroup
+            android:id="@+id/vanced_theme_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/install_theme_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:checkedButton="@id/button_light_dark">
 
-            <RadioGroup
-                android:id="@+id/vanced_theme_buttons"
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/button_light_dark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/install_theme_title"
-                app:layout_constraintStart_toStartOf="parent"
-                android:checkedButton="@id/button_light_dark">
+                android:textSize="18sp"
+                android:text="Light + Dark"
+                android:fontFamily="@font/exo_semibold"/>
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/button_light_dark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Light + Dark"
-                    android:fontFamily="@font/exo_semibold"/>
-
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/button_light_black"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/exo_semibold"
-                    android:text="Light + Black"/>
-
-            </RadioGroup>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/vanced_next_to_variant"
-                android:layout_width="wrap_content"
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/button_light_black"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/vanced_theme_buttons"
-                android:layout_marginEnd="10dp"
-                android:text="Next"
-                android:textAllCaps="false"
-                app:icon="@drawable/ic_keyboard_next"
-                app:iconGravity="end"/>
+                android:textSize="18sp"
+                android:fontFamily="@font/exo_semibold"
+                android:text="Light + Black"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RadioGroup>
 
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/vanced_next_to_variant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vanced_theme_buttons"
+            android:layout_marginEnd="6dp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_keyboard_next"
+            app:iconGravity="end"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

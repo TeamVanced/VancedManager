@@ -3,18 +3,16 @@ package com.vanced.manager.ui.fragments
 import android.content.ComponentName
 import android.net.Uri
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.content.pm.PackageManager
 import android.content.Intent
+import android.view.*
+import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.R
-import com.vanced.manager.ui.VancedInstallActivity
 import com.vanced.manager.ui.core.BaseFragment
 
 class HomeFragment : BaseFragment() {
@@ -25,6 +23,7 @@ class HomeFragment : BaseFragment() {
     override fun onStart() {
         super.onStart()
         activity?.title = getString(R.string.title_home)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -32,15 +31,6 @@ class HomeFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_home, container, false)
-    }
-
-    private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
-        return try {
-            packageManager.getPackageInfo(packageName, 0)
-            true
-        } catch (e: PackageManager.NameNotFoundException) {
-            false
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -77,8 +67,7 @@ class HomeFragment : BaseFragment() {
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it)}
 
         vancedinstallbtn.setOnClickListener{
-            val intent = Intent(activity, VancedInstallActivity::class.java)
-            startActivity(intent)
+            view.findNavController().navigate(R.id.toInstallThemeFragment)
         }
 
         microginstallbtn.setOnClickListener {
@@ -129,6 +118,24 @@ class HomeFragment : BaseFragment() {
             openUrl("https://reddit.com/r/vanced", R.color.Reddit)
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.toolbar_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.about -> view?.findNavController()?.navigate(R.id.toAboutFragment)
+        else -> null
+    }?.let { true } ?: super.onOptionsItemSelected(item)
+
+    private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
+        return try {
+            packageManager.getPackageInfo(packageName, 0)
+            true
+        } catch (e: PackageManager.NameNotFoundException) {
+            false
+        }
     }
 
 }

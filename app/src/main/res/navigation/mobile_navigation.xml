@@ -23,10 +23,10 @@
         <action
             android:id="@+id/toInstallThemeFragment"
             app:destination="@id/install_theme_fragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@animator/fragment_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@animator/fragment_enter_right"
+            app:exitAnim="@animator/fragment_exit_left"
+            app:popEnterAnim="@animator/fragment_enter_left"
+            app:popExitAnim="@animator/fragment_exit_right" />
 
     </fragment>
 
@@ -36,8 +36,8 @@
         android:label="@string/title_settings">
 
         <action
-            android:id="@+id/toAboutFragment"
-            app:destination="@id/about_fragment"
+            android:id="@+id/toSecretSettingsFragment"
+            app:destination="@id/secret_settings_fragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
@@ -60,10 +60,10 @@
         <action
             android:id="@+id/toInstallVariantFragment"
             app:destination="@id/install_variant_fragment"
-            app:enterAnim="@animator/fragment_enter"
-            app:exitAnim="@animator/fragment_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@animator/fragment_enter_right"
+            app:exitAnim="@animator/fragment_exit_left"
+            app:popEnterAnim="@animator/fragment_enter_left"
+            app:popExitAnim="@animator/fragment_exit_right" />
 
     </fragment>
 
@@ -76,10 +76,10 @@
         <action
             android:id="@+id/toInstallLanguageFragment"
             app:destination="@id/install_language_fragment"
-            app:enterAnim="@animator/fragment_enter"
-            app:exitAnim="@animator/fragment_exit"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@animator/fragment_enter_right"
+            app:exitAnim="@animator/fragment_exit_left"
+            app:popEnterAnim="@animator/fragment_enter_left"
+            app:popExitAnim="@animator/fragment_exit_right" />
 
     </fragment>
 
@@ -87,23 +87,44 @@
         android:id="@+id/install_language_fragment"
         android:name="com.vanced.manager.ui.fragments.VancedLanguageSelectionFragment"
         android:label="@string/title_install"
-        tools:layout="@layout/fragment_vanced_language_selection" />
+        tools:layout="@layout/fragment_vanced_language_selection" >
+
+        <action
+            android:id="@+id/action_installTo_homeFragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@animator/fragment_enter_left"
+            app:exitAnim="@animator/fragment_exit_right"
+            app:popEnterAnim="@animator/fragment_enter_right"
+            app:popExitAnim="@animator/fragment_exit_left"
+            app:popUpTo="@id/home_fragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/secret_settings_fragment"
+        android:name="com.vanced.manager.ui.fragments.SecretSettingsFragment"
+        android:label="@string/title_install" />
 
     <action
-        android:id="@+id/action_homeFragment_to_settingsFragment"
+        android:id="@+id/action_settingsFragment"
         app:destination="@id/settings_fragment"
         app:enterAnim="@anim/nav_default_enter_anim"
         app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@id/settings_fragment"
+        app:popUpToInclusive="true"/>
 
     <action
-        android:id="@+id/action_settingsFragment_to_homeFragment"
+        android:id="@+id/action_homeFragment"
         app:destination="@id/home_fragment"
         app:enterAnim="@anim/nav_default_enter_anim"
         app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@id/home_fragment"
+        app:popUpToInclusive="true"/>
 
 
 </navigation>

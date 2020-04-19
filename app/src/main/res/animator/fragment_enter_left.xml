@@ -4,8 +4,8 @@
     <objectAnimator
         android:duration="500"
         android:propertyName="x"
-        android:valueFrom="0"
-        android:valueTo="-1200"
+        android:valueFrom="-1000"
+        android:valueTo="0"
         android:valueType="floatType" />
 
 </set>

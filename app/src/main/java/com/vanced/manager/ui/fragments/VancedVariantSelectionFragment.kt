@@ -6,9 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.vanced.manager.R
 
 class VancedVariantSelectionFragment : Fragment() {
+
+    override fun onStart() {
+        super.onStart()
+        activity?.title = getString(R.string.title_install)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,11 +31,7 @@ class VancedVariantSelectionFragment : Fragment() {
         val nextButton = getView()?.findViewById(R.id.vanced_next_to_language) as Button
 
         nextButton.setOnClickListener{
-            fragmentManager
-                ?.beginTransaction()
-                ?.setCustomAnimations(R.animator.fragment_enter, R.animator.fragment_exit)
-                ?.replace(R.id.vanced_install_frame, VancedLanguageSelectionFragment())
-                ?.commit()
+            view.findNavController().navigate(R.id.toInstallLanguageFragment)
         }
     }
 }

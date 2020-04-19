@@ -8,9 +8,15 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.findNavController
 import com.vanced.manager.R
 
 class VancedThemeSelectionFragment : Fragment() {
+
+    override fun onStart() {
+        super.onStart()
+        activity?.title = getString(R.string.title_install)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,11 +32,7 @@ class VancedThemeSelectionFragment : Fragment() {
         val nextButton = getView()?.findViewById(R.id.vanced_next_to_variant) as Button
 
         nextButton.setOnClickListener{
-            fragmentManager
-                ?.beginTransaction()
-                ?.setCustomAnimations(R.animator.fragment_enter, R.animator.fragment_exit)
-                ?.replace(R.id.vanced_install_frame, VancedVariantSelectionFragment())
-                ?.commit()
+            view.findNavController().navigate(R.id.toInstallVariantFragment)
         }
     }
 

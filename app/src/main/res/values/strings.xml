@@ -39,6 +39,12 @@
 
 
     <!-- Install Page -->
+    <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
+    <string name="choose_preferred_language_note">Note: if you install anything other than English, English will still be installed as an additional language</string>
+    <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
+    <string name="choose_preferred_variant">Choose your preferred variant for Vanced</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
     <string name="title_install">Install</string>
 
 
