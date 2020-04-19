@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vanced.manager" >
+    package="com.vanced.manager">
+
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -9,11 +13,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-
+        android:supportsRtl="true">
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".ui.core.SplashScreenActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -22,17 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.MainActivity"
-            android:label="@string/app_name">
-        </activity>
-
-        <activity
-            android:name=".ui.AboutActivity"
-            android:parentActivityName=".ui.MainActivity"
-            android:label="@string/app_name">
-        </activity>
+            android:label="@string/app_name" />
 
         <meta-data
             android:name="preloaded_fonts"

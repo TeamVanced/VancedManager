@@ -2,15 +2,15 @@
 <resources>
 
     <string-array name="theme_modes">
-        <item>"System based"</item>
         <item>"Light theme"</item>
         <item>"Dark theme"</item>
+        <item>Follow System</item>
     </string-array>
 
     <string-array name="theme_modes_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
+        <item>LIGHT</item>
+        <item>DARK</item>
+        <item>FOLLOW</item>
     </string-array>
 
     <string-array name="languages">
@@ -19,6 +19,10 @@
 
     <string-array name="languages_value">
         <item>0</item>
+    </string-array>
+
+    <string-array name="accent_color">
+        <item>NaN</item>
     </string-array>
 
 </resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/twelvedp"
+        android:layout_marginEnd="16dp"
+        android:background="?colorSurface"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/about_header_wrapper"
+            layout="@layout/include_about_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/about_vanced_devs_wrapper"
+            layout="@layout/include_about_vanced_devs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stdp" />
+
+        <include
+            android:id="@+id/about_app_devs_wrapper"
+            layout="@layout/include_about_app_devs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stdp" />
+
+        <include
+            android:id="@+id/about_github_container_wrapper"
+            layout="@layout/include_about_sources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stdp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+

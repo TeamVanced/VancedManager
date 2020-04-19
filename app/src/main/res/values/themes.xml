@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="MainTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="LightTheme.Blue">
 
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -17,10 +17,11 @@
         <item name="colorError">#CC0047</item>
         <item name="colorOnError">#F9F9F9</item>
         <item name="colorOnSurface">#444444</item>
-        <item name="colorOnSurfaceVariant">#BF444444</item>
+        <item name="colorOnSurfaceVariant">#C3131313</item>
         <item name="colorDisabled">#808080</item>
-        <item name="colorDisabledVariant">#66808080</item>
+        <item name="colorDisabledVariant">#000000</item>
         <item name="iconColor">?colorPrimaryVariant</item>
+        <item name="toolbarIconColor">#111111</item>
 
     </style>
 

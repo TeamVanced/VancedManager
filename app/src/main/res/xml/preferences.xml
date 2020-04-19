@@ -5,41 +5,48 @@
 
     <Preference
         android:key="update_check"
-        android:title="Check for updates" />
+        android:title="@string/check_updates"
+        android:icon="@drawable/ic_cloud_upload_black_24dp"/>
 
     <PreferenceCategory
-        android:title="Interface">
+        android:title="@string/category_interface"
+        app:iconSpaceReserved="false">
 
         <ListPreference
             android:icon="@drawable/ic_brush_black_24dp"
-            android:key="theme_modes"
+            android:key="theme_mode"
             android:title="Theme"
-            android:summary="Choose your prefered theme"
+            android:summary="@string/theme_summary"
             android:entries="@array/theme_modes"
             android:entryValues="@array/theme_modes_values"
-            android:defaultValue="1"/>
+            android:defaultValue="LIGHT"/>
 
         <ListPreference
             android:icon="@drawable/ic_palette_black_24dp"
             android:key="accent_color"
-            android:title="Accent Color"/>
+            android:title="Accent Color"
+            app:isPreferenceVisible="false"
+            android:entries="@array/accent_color"
+            android:entryValues="@array/accent_color"/>
 
         <ListPreference
             android:key="language"
             android:icon="@drawable/ic_language_black_24dp"
-            android:title="Language"
-            android:summary="Choose your prefered language"
-            android:entries="@array/languages"/>
+            android:title="@string/language"
+            android:summary="@string/language_summary"
+            android:entries="@array/languages"
+            android:entryValues="@array/languages_value"/>
 
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Manager">
+        android:title="@string/category_manager"
+        app:iconSpaceReserved="false">
 
         <SwitchPreference
-            android:title="Push Notifications"
+            android:title="@string/push_notifications"
             android:key="push_notifications_status"
-            android:summary="Receive push notifications when update is released"
+            android:summary="@string/push_notifications_summary"
             android:icon="@drawable/ic_notifications_black_24dp"/>
     </PreferenceCategory>
 
