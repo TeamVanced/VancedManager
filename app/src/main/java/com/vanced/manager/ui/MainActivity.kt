@@ -7,6 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.view.forEach
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,7 +23,6 @@ class MainActivity : ThemeActivity() {
         setContentView(R.layout.activity_main)
 
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
-
         setSupportActionBar(toolbar)
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
@@ -33,6 +33,8 @@ class MainActivity : ThemeActivity() {
 
         val navHost = findNavController(R.id.bottom_nav_host)
         val navBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        val appBarConfiguration = AppBarConfiguration(navHost.graph)
+        toolbar.setupWithNavController(navHost, appBarConfiguration)
         navBar.setupWithNavController(navHost)
 
         navBar.setOnNavigationItemSelectedListener{ item ->

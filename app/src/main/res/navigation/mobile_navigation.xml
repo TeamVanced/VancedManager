@@ -38,8 +38,8 @@
         <action
             android:id="@+id/toSecretSettingsFragment"
             app:destination="@id/secret_settings_fragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
@@ -104,17 +104,7 @@
     <fragment
         android:id="@+id/secret_settings_fragment"
         android:name="com.vanced.manager.ui.fragments.SecretSettingsFragment"
-        android:label="@string/title_install" />
-
-    <action
-        android:id="@+id/action_settingsFragment"
-        app:destination="@id/settings_fragment"
-        app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim"
-        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_pop_exit_anim"
-        app:popUpTo="@id/settings_fragment"
-        app:popUpToInclusive="true"/>
+        android:label="Secret Settings" />
 
     <action
         android:id="@+id/action_homeFragment"
@@ -124,7 +114,16 @@
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
         app:popExitAnim="@anim/nav_default_pop_exit_anim"
         app:popUpTo="@id/home_fragment"
-        app:popUpToInclusive="true"/>
+        app:popUpToInclusive="true" />
 
+    <action
+        android:id="@+id/action_settingsFragment"
+        app:destination="@id/settings_fragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@id/settings_fragment"
+        app:popUpToInclusive="true" />
 
 </navigation>

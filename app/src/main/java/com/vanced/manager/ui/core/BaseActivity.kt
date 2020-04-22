@@ -28,11 +28,13 @@ open class ThemeActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        super.onResume()
         val theme = pref.getString("theme_mode", "")
+        super.onResume()
         if (currentTheme != theme)
             recreate()
-        setTaskBG()
+        if (android.os.Build.VERSION.SDK_INT < 28) {
+            setTaskBG()
+        }
     }
     private fun setFinalTheme(currentTheme: String) {
         when (currentTheme) {

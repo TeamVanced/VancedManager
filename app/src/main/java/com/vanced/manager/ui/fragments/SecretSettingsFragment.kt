@@ -1,32 +1,19 @@
 package com.vanced.manager.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
+import androidx.preference.PreferenceFragmentCompat
 import com.vanced.manager.R
 
-class SecretSettingsFragment : Fragment() {
+class SecretSettingsFragment : PreferenceFragmentCompat() {
 
     override fun onStart() {
         super.onStart()
-        activity?.title = getString(R.string.title_settings)
+        activity?.title = "Secret Settings"
+        setHasOptionsMenu(true)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preferences, rootKey)
 
     }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return TextView(activity).apply {
-            setText(R.string.title_settings)
-        }
-    }
-
 }

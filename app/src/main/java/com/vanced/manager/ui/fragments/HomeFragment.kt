@@ -1,41 +1,44 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.ComponentName
-import android.net.Uri
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.content.pm.PackageManager
 import android.content.Intent
+import android.net.*
+import android.os.Build
 import android.view.*
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.R
 import com.vanced.manager.ui.core.BaseFragment
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment() {
 
     private lateinit var sectionPageAdapter: SectionPageAdapter
     private lateinit var viewPager: ViewPager2
 
-    override fun onStart() {
-        super.onStart()
-        activity?.title = getString(R.string.title_home)
-        setHasOptionsMenu(true)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.title = getString(R.string.title_home)
+        setHasOptionsMenu(true)
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         super.onViewCreated(view, savedInstanceState)
+
+        connectionStatus()
 
         sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
@@ -122,6 +125,7 @@ class HomeFragment : BaseFragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.toolbar_menu, menu)
+        super .onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -136,6 +140,78 @@ class HomeFragment : BaseFragment() {
         } catch (e: PackageManager.NameNotFoundException) {
             false
         }
+    }
+
+    private var networkCallback = object: ConnectivityManager.NetworkCallback() {
+
+        override fun onLost(network: Network) {
+            super.onLost(network)
+
+            activity?.runOnUiThread(java.lang.Runnable {
+
+                val animationShow: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_enter)
+                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val networkRetrybtn = view?.findViewById<Button>(R.id.network_retrybtn)
+                networkErrorLayout?.visibility = View.VISIBLE
+                networkErrorLayout?.startAnimation(animationShow)
+
+                networkRetrybtn?.setOnClickListener {
+                    connectionStatus()
+                }
+
+            })
+
+        }
+
+        override fun onUnavailable() {
+            super.onUnavailable()
+
+            activity?.runOnUiThread(java.lang.Runnable {
+
+                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val networkRetrybtn = view?.findViewById<Button>(R.id.network_retrybtn)
+                networkErrorLayout?.visibility = View.VISIBLE
+
+                networkRetrybtn?.setOnClickListener {
+                    connectionStatus()
+                }
+
+            })
+
+
+        }
+
+        override fun onAvailable(network: Network) {
+            super.onAvailable(network)
+
+            activity?.runOnUiThread(java.lang.Runnable {
+
+                val animationHide: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_exit)
+                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val networkRetrybtn = view?.findViewById<Button>(R.id.network_retrybtn)
+
+                networkErrorLayout?.startAnimation(animationHide)
+                networkErrorLayout?.visibility = View.GONE
+                try {
+                    networkRetrybtn?.setOnClickListener(null)
+                } catch (e: Exception) {}
+
+            })
+
+        }
+    }
+
+    private fun connectionStatus() {
+        val connectivityManager = context?.applicationContext?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkRequest = NetworkRequest.Builder()
+            .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
+            .build()
+        try {
+            connectivityManager.unregisterNetworkCallback(networkCallback)
+        } catch (e: Exception) {
+
+        }
+        connectivityManager.registerNetworkCallback(networkRequest, networkCallback)
     }
 
 }

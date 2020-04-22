@@ -9,16 +9,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/twelvedp"
+        android:layout_marginTop="4dp"
         android:background="?colorSurface"
         android:clipToPadding="false"
         android:orientation="vertical">
+
+        <include
+            android:id="@+id/home_network_wrapper"
+            layout="@layout/include_network_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/stdp"
+            android:layout_marginEnd="@dimen/stdp"
+            android:visibility="gone"/>
 
         <include
             android:id="@+id/home_vanced_wrapper"
             layout="@layout/include_vanced"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:layout_marginStart="@dimen/stdp"
             android:layout_marginEnd="@dimen/stdp" />
 

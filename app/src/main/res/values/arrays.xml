@@ -25,4 +25,12 @@
         <item>NaN</item>
     </string-array>
 
+    <string-array name="syke">
+        <item>SYKE</item>
+    </string-array>
+
+    <string-array name="yomama">
+        <item>Yo mama fat</item>
+    </string-array>
+
 </resources>
