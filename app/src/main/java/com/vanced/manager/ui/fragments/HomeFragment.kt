@@ -32,13 +32,17 @@ class HomeFragment : BaseFragment() {
     ): View? {
         activity?.title = getString(R.string.title_home)
         setHasOptionsMenu(true)
+
+        connectionStatus()
+
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
         connectionStatus()
+
+        super.onViewCreated(view, savedInstanceState)
 
         sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
@@ -166,7 +170,7 @@ class HomeFragment : BaseFragment() {
         override fun onUnavailable() {
             super.onUnavailable()
 
-            activity?.runOnUiThread(java.lang.Runnable {
+            activity?.runOnUiThread {
 
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
                 val networkRetrybtn = view?.findViewById<Button>(R.id.network_retrybtn)
@@ -176,7 +180,7 @@ class HomeFragment : BaseFragment() {
                     connectionStatus()
                 }
 
-            })
+            }
 
 
         }
@@ -184,7 +188,7 @@ class HomeFragment : BaseFragment() {
         override fun onAvailable(network: Network) {
             super.onAvailable(network)
 
-            activity?.runOnUiThread(java.lang.Runnable {
+            activity?.runOnUiThread {
 
                 val animationHide: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_exit)
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
@@ -196,7 +200,7 @@ class HomeFragment : BaseFragment() {
                     networkRetrybtn?.setOnClickListener(null)
                 } catch (e: Exception) {}
 
-            })
+            }
 
         }
     }

@@ -3,6 +3,8 @@ package com.vanced.manager.ui
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.forEach
 import androidx.navigation.NavDestination
@@ -55,9 +57,19 @@ class MainActivity : ThemeActivity() {
         }
 
         navHost.addOnDestinationChangedListener{_, currfrag: NavDestination, _ ->
+            val navBarHide: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_exit)
+            val navBarShow: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_enter)
             when (currfrag.id) {
-                R.id.home_fragment, R.id.settings_fragment -> navBar.visibility = View.VISIBLE
-                else -> navBar.visibility = View.INVISIBLE
+
+                R.id.home_fragment, R.id.settings_fragment -> {
+                    navBar.visibility = View.VISIBLE
+                    navBar.startAnimation(navBarShow)
+
+                }
+                else -> {
+                    navBar.startAnimation(navBarHide)
+                    navBar.visibility = View.INVISIBLE
+                }
 
             }
             isParent = when (currfrag.id) {
