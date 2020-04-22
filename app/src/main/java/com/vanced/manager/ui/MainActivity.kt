@@ -62,13 +62,18 @@ class MainActivity : ThemeActivity() {
             when (currfrag.id) {
 
                 R.id.home_fragment, R.id.settings_fragment -> {
-                    navBar.visibility = View.VISIBLE
-                    navBar.startAnimation(navBarShow)
+
+                    if (navBar.visibility != View.VISIBLE) {
+                        navBar.visibility = View.VISIBLE
+                        navBar.startAnimation(navBarShow)
+                    }
 
                 }
                 else -> {
-                    navBar.startAnimation(navBarHide)
-                    navBar.visibility = View.INVISIBLE
+                    if (navBar.visibility != View.INVISIBLE) {
+                        navBar.startAnimation(navBarHide)
+                        navBar.visibility = View.INVISIBLE
+                    }
                 }
 
             }
