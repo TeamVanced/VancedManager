@@ -33,8 +33,6 @@ class HomeFragment : BaseFragment() {
         activity?.title = getString(R.string.title_home)
         setHasOptionsMenu(true)
 
-        connectionStatus()
-
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -167,8 +165,8 @@ class HomeFragment : BaseFragment() {
 
         }
 
-        override fun onUnavailable() {
-            super.onUnavailable()
+        override fun onUnavailable(network: Network) {
+            super.onUnavailable(network)
 
             activity?.runOnUiThread {
 
