@@ -70,9 +70,9 @@ class MainActivity : ThemeActivity() {
 
                 }
                 else -> {
-                    if (navBar.visibility != View.INVISIBLE) {
+                    if (navBar.visibility != View.GONE) {
                         navBar.startAnimation(navBarHide)
-                        navBar.visibility = View.INVISIBLE
+                        navBar.visibility = View.GONE
                     }
                 }
 
