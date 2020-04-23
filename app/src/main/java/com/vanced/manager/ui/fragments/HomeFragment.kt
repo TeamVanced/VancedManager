@@ -134,10 +134,10 @@ class HomeFragment : BaseFragment() {
         when (item.itemId) {
             R.id.toolbar_about -> {
                 activity?.findNavController(R.id.bottom_nav_host)?.navigate(R.id.toAboutFragment)
-                return true
             }
+            else -> super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
+        return true
     }
 
     private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {

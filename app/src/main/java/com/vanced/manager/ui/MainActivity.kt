@@ -100,7 +100,6 @@ class MainActivity : ThemeActivity() {
                 findNavController(R.id.bottom_nav_host).navigate(R.id.action_homeFragment)
             }
             else -> super.onOptionsItemSelected(item)
-
         }
         return true
     }
