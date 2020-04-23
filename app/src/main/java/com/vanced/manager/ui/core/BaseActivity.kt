@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
@@ -20,11 +21,11 @@ open class ThemeActivity : AppCompatActivity() {
         currentTheme = pref.getString("theme_mode", "").toString()
 
         setFinalTheme(currentTheme)
-        super.onCreate(savedInstanceState)
 
-        if (android.os.Build.VERSION.SDK_INT < 28) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG(currentTheme)
         }
+        super.onCreate(savedInstanceState)
     }
 
     override fun onResume() {
@@ -32,7 +33,7 @@ open class ThemeActivity : AppCompatActivity() {
         super.onResume()
         if (currentTheme != theme)
             recreate()
-        if (android.os.Build.VERSION.SDK_INT < 28) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG(currentTheme)
         }
     }
@@ -50,28 +51,34 @@ open class ThemeActivity : AppCompatActivity() {
         }
     }
     private fun setTaskBG(currentTheme: String) {
-        var color = ResourcesCompat.getColor(resources, R.color.White, null)
+        val label = getString(R.string.app_name)
         when (currentTheme) {
             "LIGHT" -> {
-                color = ResourcesCompat.getColor(resources, R.color.Black, null)
+                val color = ResourcesCompat.getColor(resources, R.color.Black, null)
+                val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, null, color)
+                setTaskDescription(taskDec)
             }
             "DARK" -> {
-                color = ResourcesCompat.getColor(resources, R.color.Black, null)
+                val color = ResourcesCompat.getColor(resources, R.color.Black, null)
+                val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, null, color)
+                setTaskDescription(taskDec)
             }
             "FOLLOW" -> {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                     Configuration.UI_MODE_NIGHT_YES -> {
-                        color = ResourcesCompat.getColor(resources, R.color.Black, null)
+                        val color = ResourcesCompat.getColor(resources, R.color.Black, null)
+                        val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, null, color)
+                        setTaskDescription(taskDec)
                     }
                     Configuration.UI_MODE_NIGHT_NO -> {
-                        color = ResourcesCompat.getColor(resources, R.color.White, null)
+                        val color = ResourcesCompat.getColor(resources, R.color.White, null)
+                        val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, null, color)
+                        setTaskDescription(taskDec)
                     }
                 }
             }
         }
 
-        val label = getString(R.string.app_name)
-        val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, null, color)
-        setTaskDescription(taskDec)
+
     }
 }

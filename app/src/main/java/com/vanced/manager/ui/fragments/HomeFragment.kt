@@ -11,6 +11,7 @@ import android.os.Build
 import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.card.MaterialCardView
@@ -20,6 +21,7 @@ import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.R
 import com.vanced.manager.ui.core.BaseFragment
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlin.time.Duration
 
 class HomeFragment : BaseFragment() {
 
@@ -134,6 +136,7 @@ class HomeFragment : BaseFragment() {
         when (item.itemId) {
             R.id.toolbar_about -> {
                 activity?.findNavController(R.id.bottom_nav_host)?.navigate(R.id.toAboutFragment)
+                Toast.makeText(context, "You clicked on About menu", Toast.LENGTH_SHORT)
             }
             else -> super.onOptionsItemSelected(item)
         }
