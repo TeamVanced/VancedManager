@@ -20,28 +20,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Network connection unavailable"
+            android:text="@string/network_error"
+            android:fontFamily="@font/exo_semibold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/network_retrybtn"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="?attr/colorError"
             android:textSize="18sp"
             android:gravity="center" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/network_retrybtn"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:text="Retry"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </com.google.android.material.card.MaterialCardView>

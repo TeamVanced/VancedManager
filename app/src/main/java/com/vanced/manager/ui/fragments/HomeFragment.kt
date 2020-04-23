@@ -130,10 +130,16 @@ class HomeFragment : BaseFragment() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.about -> view?.findNavController()?.navigate(R.id.toAboutFragment)
-        else -> null
-    }?.let { true } ?: super.onOptionsItemSelected(item)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.about -> {
+            activity!!.findNavController(R.id.bottom_nav_host).navigate(R.id.toAboutFragment)
+            true
+        }
+        else -> {
+            super.onOptionsItemSelected(item)
+            false
+        }
+    }
 
     private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
@@ -153,18 +159,13 @@ class HomeFragment : BaseFragment() {
 
                 val animationShow: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_enter)
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val networkRetrybtn = view?.findViewById<Button>(R.id.network_retrybtn)
+
                 networkErrorLayout?.visibility = View.VISIBLE
                 networkErrorLayout?.startAnimation(animationShow)
-
-                networkRetrybtn?.setOnClickListener {
-                    connectionStatus()
-                }
 
             }
 
         }
-
 
         override fun onUnavailable() {
             super.onUnavailable()
@@ -172,12 +173,7 @@ class HomeFragment : BaseFragment() {
             activity?.runOnUiThread {
 
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val networkRetrybtn = view?.findViewById<Button>(R.id.network_retrybtn)
                 networkErrorLayout?.visibility = View.VISIBLE
-
-                networkRetrybtn?.setOnClickListener {
-                    connectionStatus()
-                }
 
             }
 
@@ -190,17 +186,13 @@ class HomeFragment : BaseFragment() {
 
                 val animationHide: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_exit)
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val networkRetrybtn = view?.findViewById<Button>(R.id.network_retrybtn)
 
                 networkErrorLayout?.startAnimation(animationHide)
                 networkErrorLayout?.visibility = View.GONE
-                try {
-                    networkRetrybtn?.setOnClickListener(null)
-                } catch (e: Exception) {}
-
             }
 
         }
+
     }
 
     private fun connectionStatus() {

@@ -23,7 +23,7 @@ open class ThemeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (android.os.Build.VERSION.SDK_INT < 28) {
-            setTaskBG()
+            setTaskBG(currentTheme)
         }
     }
 
@@ -33,7 +33,7 @@ open class ThemeActivity : AppCompatActivity() {
         if (currentTheme != theme)
             recreate()
         if (android.os.Build.VERSION.SDK_INT < 28) {
-            setTaskBG()
+            setTaskBG(currentTheme)
         }
     }
     private fun setFinalTheme(currentTheme: String) {
@@ -49,9 +49,28 @@ open class ThemeActivity : AppCompatActivity() {
             else -> setTheme(R.style.LightTheme_Blue)
         }
     }
-    private fun setTaskBG() {
+    private fun setTaskBG(currentTheme: String) {
+        var color = ResourcesCompat.getColor(resources, R.color.White, null)
+        when (currentTheme) {
+            "LIGHT" -> {
+                color = ResourcesCompat.getColor(resources, R.color.Black, null)
+            }
+            "DARK" -> {
+                color = ResourcesCompat.getColor(resources, R.color.Black, null)
+            }
+            "FOLLOW" -> {
+                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                    Configuration.UI_MODE_NIGHT_YES -> {
+                        color = ResourcesCompat.getColor(resources, R.color.Black, null)
+                    }
+                    Configuration.UI_MODE_NIGHT_NO -> {
+                        color = ResourcesCompat.getColor(resources, R.color.White, null)
+                    }
+                }
+            }
+        }
+
         val label = getString(R.string.app_name)
-        val color = ResourcesCompat.getColor(resources, R.color.Black, null)
         val taskDec: ActivityManager.TaskDescription = ActivityManager.TaskDescription(label, null, color)
         setTaskDescription(taskDec)
     }
