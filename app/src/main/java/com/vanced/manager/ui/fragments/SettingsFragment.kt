@@ -63,15 +63,15 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.secret_settings -> {
-            requireActivity().findNavController(R.id.bottom_nav_host).navigate(R.id.toSecretSettingsFragment)
-            true
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.secret_settings -> {
+                activity?.findNavController(R.id.bottom_nav_host)?.navigate(R.id.toSecretSettingsFragment)
+                return true
+            }
         }
-        else -> {
-            super.onOptionsItemSelected(item)
-            false
-        }
+        return super.onOptionsItemSelected(item)
     }
+
 
 }

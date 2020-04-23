@@ -130,15 +130,14 @@ class HomeFragment : BaseFragment() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
-        R.id.about -> {
-            activity!!.findNavController(R.id.bottom_nav_host).navigate(R.id.toAboutFragment)
-            true
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.toolbar_about -> {
+                activity?.findNavController(R.id.bottom_nav_host)?.navigate(R.id.toAboutFragment)
+                return true
+            }
         }
-        else -> {
-            super.onOptionsItemSelected(item)
-            false
-        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
