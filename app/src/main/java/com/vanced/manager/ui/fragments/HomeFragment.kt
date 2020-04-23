@@ -149,7 +149,7 @@ class HomeFragment : BaseFragment() {
         override fun onLost(network: Network) {
             super.onLost(network)
 
-            activity?.runOnUiThread(java.lang.Runnable {
+            activity?.runOnUiThread {
 
                 val animationShow: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_enter)
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
@@ -161,9 +161,10 @@ class HomeFragment : BaseFragment() {
                     connectionStatus()
                 }
 
-            })
+            }
 
         }
+
 
         override fun onUnavailable() {
             super.onUnavailable()
@@ -179,7 +180,6 @@ class HomeFragment : BaseFragment() {
                 }
 
             }
-
 
         }
 
