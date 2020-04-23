@@ -165,8 +165,8 @@ class HomeFragment : BaseFragment() {
 
         }
 
-        override fun onUnavailable(network: Network) {
-            super.onUnavailable(network)
+        override fun onUnavailable() {
+            super.onUnavailable()
 
             activity?.runOnUiThread {
 
