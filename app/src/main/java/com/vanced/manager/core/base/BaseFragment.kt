@@ -1,5 +1,6 @@
-package com.vanced.manager.ui.core
+package com.vanced.manager.core.base
 
+import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
@@ -12,6 +13,15 @@ open class BaseFragment : Fragment() {
         builder.setToolbarColor(ContextCompat.getColor(requireContext(), color))
         val customTabsIntent = builder.build()
         customTabsIntent.launchUrl(requireContext(), Uri.parse(Url))
+    }
+
+    fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
+        return try {
+            packageManager.getPackageInfo(packageName, 0)
+            true
+        } catch (e: PackageManager.NameNotFoundException) {
+            false
+        }
     }
 
 }

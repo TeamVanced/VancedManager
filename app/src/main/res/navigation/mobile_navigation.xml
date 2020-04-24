@@ -15,10 +15,12 @@
         <action
             android:id="@+id/toAboutFragment"
             app:destination="@id/about_fragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@anim/fragment_enter_left"
+            app:exitAnim="@anim/fragment_exit_right"
+            app:popEnterAnim="@anim/fragment_enter_right"
+            app:popExitAnim="@anim/fragment_exit_left"
+            app:popUpTo="@id/home_fragment"
+            app:popUpToInclusive="true" />
 
         <action
             android:id="@+id/toInstallThemeFragment"
@@ -38,10 +40,12 @@
         <action
             android:id="@+id/toSecretSettingsFragment"
             app:destination="@id/secret_settings_fragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@anim/fragment_enter_left"
+            app:exitAnim="@anim/fragment_exit_right"
+            app:popEnterAnim="@anim/fragment_enter_right"
+            app:popExitAnim="@anim/fragment_exit_left"
+            app:popUpTo="@id/settings_fragment"
+            app:popUpToInclusive="true" />
 
     </fragment>
 

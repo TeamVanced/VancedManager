@@ -6,7 +6,6 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AlertDialog
-import androidx.core.view.forEach
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -84,26 +83,30 @@ class MainActivity : ThemeActivity() {
 
             setDisplayHomeAsUpEnabled(!isParent)
 
-            navBar.menu.forEach {
-                if (it.itemId == currfrag.id) {
-                    it.isChecked = true
-                }
-            }
-
         }
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navHost = findNavController(R.id.bottom_nav_host)
         when (item.itemId) {
             android.R.id.home -> {
-                findNavController(R.id.bottom_nav_host).navigate(R.id.action_homeFragment)
+                onBackPressed()
+                return true
+            }
+            R.id.toolbar_about -> {
+                navHost.navigate(R.id.toAboutFragment)
+                return true
+            }
+            R.id.secret_settings -> {
+                navHost.navigate(R.id.toSecretSettingsFragment)
+                return true
             }
             else -> super.onOptionsItemSelected(item)
         }
-        return true
+        return false
     }
-    
+
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         when {
@@ -115,8 +118,12 @@ class MainActivity : ThemeActivity() {
     private fun showSecurityDialog() {
         AlertDialog.Builder(this)
             .setTitle("Welcome!")
-            .setMessage("Before we implement a proper security system to check whether app was modified or not, please be sure that you downloaded manager from vanced.app/github")
-            .setPositiveButton("close"
+            .setMessage(
+                "Before we implement a proper security system to check whether the app was modified or not," +
+                        " please make sure that you downloaded it from vanced.app/github"
+            )
+            .setPositiveButton(
+                "Close"
             ) { dialog, _ -> dialog.dismiss() }
             .create().show()
 

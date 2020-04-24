@@ -4,9 +4,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import android.view.MenuItem
-import android.widget.Toast
-import androidx.navigation.findNavController
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -63,16 +60,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
+    /*
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.secret_settings -> {
                 activity?.findNavController(R.id.bottom_nav_host)?.navigate(R.id.toSecretSettingsFragment)
-                Toast.makeText(context, "You clicked on SS menu", Toast.LENGTH_SHORT)
+                Toast.makeText(context, "You clicked on SS menu", Toast.LENGTH_SHORT).show()
             }
             else -> super.onOptionsItemSelected(item)
         }
         return true
     }
-
+    */
 
 }

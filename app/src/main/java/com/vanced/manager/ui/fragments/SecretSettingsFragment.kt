@@ -6,14 +6,9 @@ import com.vanced.manager.R
 
 class SecretSettingsFragment : PreferenceFragmentCompat() {
 
-    override fun onStart() {
-        super.onStart()
-        activity?.title = "Secret Settings"
-        setHasOptionsMenu(true)
-    }
-
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.preferences, rootKey)
+        setPreferencesFromResource(R.xml.secret_settings, rootKey)
+        activity?.title = "Secret Settings"
 
     }
 }
