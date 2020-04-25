@@ -60,6 +60,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/about_license_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:icon="@drawable/github"
                         app:iconGravity="textStart"
                         app:iconPadding="0dp"/>

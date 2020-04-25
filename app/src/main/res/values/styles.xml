@@ -19,4 +19,11 @@
         <item name="android:statusBarColor">#000000</item>
     </style>
 
+    <style name="DialogTheme" parent="@style/Theme.MaterialComponents.Dialog.Alert">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="android:textColorPrimary">?colorOnSurfaceVariant</item>
+    </style>
+
 </resources>

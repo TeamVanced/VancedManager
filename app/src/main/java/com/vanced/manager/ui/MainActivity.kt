@@ -5,7 +5,6 @@ import android.view.MenuItem
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import androidx.appcompat.app.AlertDialog
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -13,9 +12,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vanced.manager.R
-import com.vanced.manager.ui.core.ThemeActivity
+import com.vanced.manager.core.Main
 
-class MainActivity : ThemeActivity() {
+class MainActivity : Main() {
 
     private var isParent = true
 
@@ -25,12 +24,6 @@ class MainActivity : ThemeActivity() {
 
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
-
-        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        val firstStart = prefs.getBoolean("firstStart", true)
-        if (firstStart) {
-            showSecurityDialog()
-        }
 
         val navHost = findNavController(R.id.bottom_nav_host)
         val navBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
@@ -114,23 +107,4 @@ class MainActivity : ThemeActivity() {
             else -> toolbar.navigationIcon = null
         }
     }
-
-    private fun showSecurityDialog() {
-        AlertDialog.Builder(this)
-            .setTitle("Welcome!")
-            .setMessage(
-                "Before we implement a proper security system to check whether the app was modified or not," +
-                        " please make sure that you downloaded it from vanced.app/github"
-            )
-            .setPositiveButton(
-                "Close"
-            ) { dialog, _ -> dialog.dismiss() }
-            .create().show()
-
-        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        val editor = prefs.edit()
-        editor.putBoolean("firstStart", false)
-        editor.apply()
-    }
-
 }

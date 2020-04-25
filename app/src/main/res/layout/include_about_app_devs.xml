@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:text="Manager Devs"
             android:textSize="24sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
             android:fontFamily="@font/exo_semibold"
             android:layout_marginTop="4dp"
             app:layout_constraintTop_toTopOf="parent"
