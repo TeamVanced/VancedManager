@@ -60,17 +60,4 @@ class SettingsFragment : PreferenceFragmentCompat() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-    /*
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.secret_settings -> {
-                activity?.findNavController(R.id.bottom_nav_host)?.navigate(R.id.toSecretSettingsFragment)
-                Toast.makeText(context, "You clicked on SS menu", Toast.LENGTH_SHORT).show()
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-        return true
-    }
-    */
-
 }
