@@ -30,7 +30,9 @@
     </string-array>
 
     <string-array name="yomama">
-        <item>Yo mama fat</item>
+        <item>Yo</item>
+        <item>mama</item>
+        <item>fat</item>
     </string-array>
 
 </resources>
