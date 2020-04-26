@@ -24,8 +24,9 @@
         <item name="cornerSize">8dp</item>
         <item name="android:textColor">?colorOnSurfaceVariant</item>
         <item name="android:textColorPrimary">?colorOnSurfaceVariant</item>
-        <item name="colorSurface">?attr/DialogBG</item>
+        <item name="colorSurface">?DialogBG</item>
         <item name="colorAccent">?colorPrimary</item>
+        <item name="colorPrimary">?colorPrimary</item>
     </style>
 
 </resources>
