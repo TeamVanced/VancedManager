@@ -19,11 +19,7 @@ open class About : BaseFragment() {
         }
 
         license.setOnClickListener {
-            openUrl(
-                "https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE",
-                R.color.GitHub
-            )
-
+            openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE", R.color.GitHub)
         }
     }
 

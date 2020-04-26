@@ -17,6 +17,7 @@ open class Home : BaseFragment() {
 
         val pm = activity?.packageManager
 
+        //Damn that's a lot of buttons
         val microginstallbtn = getView()?.findViewById(R.id.microg_installbtn) as Button
         val microguninstallbtn = getView()?.findViewById(R.id.microg_uninstallbtn) as Button
         val microgsettingsbtn = getView()?.findViewById(R.id.microg_settingsbtn) as Button
@@ -29,6 +30,7 @@ open class Home : BaseFragment() {
         val twitterbtn = getView()?.findViewById(R.id.twitterbtn) as Button
         val redditbtn = getView()?.findViewById(R.id.redditbtn) as Button
 
+        //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 

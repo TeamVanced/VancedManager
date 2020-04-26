@@ -6,6 +6,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
 import com.vanced.manager.ui.core.ThemeActivity
 
+// This activity will NOT be used in manifest
+// since MainActivity will extend it
 @SuppressLint("Registered")
 open class Main: ThemeActivity() {
 

@@ -13,6 +13,7 @@ import com.vanced.manager.R
 
 @SuppressLint("Registered")
 open class ThemeActivity : AppCompatActivity() {
+
     private lateinit var currentTheme: String
     private lateinit var pref: SharedPreferences
 
@@ -31,12 +32,21 @@ open class ThemeActivity : AppCompatActivity() {
     override fun onResume() {
         val theme = pref.getString("theme_mode", "")
         super.onResume()
+        //if for some weird reasons we get invalid
+        //theme, recreate activity
         if (currentTheme != theme)
             recreate()
+
+        //set Task Header color in recents menu for
+        //devices with lower Android version than Pie
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG()
         }
     }
+
+    //This stupid ass AppCompatDelegate does
+    //not want to work, so I have to use my
+    //own implementation of theme switching
     private fun setFinalTheme(currentTheme: String) {
         when (currentTheme) {
             "LIGHT" -> setTheme(R.style.LightTheme_Blue)
