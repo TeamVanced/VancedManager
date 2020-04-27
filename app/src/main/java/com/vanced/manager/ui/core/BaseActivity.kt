@@ -31,7 +31,6 @@ open class ThemeActivity : AppCompatActivity() {
 
     override fun onResume() {
         val theme = pref.getString("theme_mode", "")
-        super.onResume()
         //if for some weird reasons we get invalid
         //theme, recreate activity
         if (currentTheme != theme)
@@ -42,6 +41,7 @@ open class ThemeActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG()
         }
+        super.onResume()
     }
 
     //This stupid ass AppCompatDelegate does

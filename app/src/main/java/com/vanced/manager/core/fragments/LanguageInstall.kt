@@ -12,18 +12,12 @@ open class LanguageInstall : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val fragmentManager = childFragmentManager
 
         val finishButton = getView()?.findViewById(R.id.vanced_install_finish) as Button
 
         finishButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_installTo_homeFragment)
         }
-
-        fragmentManager
-            .beginTransaction()
-            .replace(R.id.language_choose_frame, LanguageScrollviewFragment())
-            .commit()
 
     }
 

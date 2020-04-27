@@ -26,9 +26,11 @@ class MainActivity : Main() {
         setSupportActionBar(toolbar)
 
         val navHost = findNavController(R.id.bottom_nav_host)
-        val navBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
         val appBarConfiguration = AppBarConfiguration(navHost.graph)
         toolbar.setupWithNavController(navHost, appBarConfiguration)
+
+        /*
+        val navBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navBar.setupWithNavController(navHost)
 
         navBar.setOnNavigationItemSelectedListener{ item ->
@@ -47,8 +49,10 @@ class MainActivity : Main() {
 
         navBar.setOnNavigationItemReselectedListener {
         }
+        */
 
         navHost.addOnDestinationChangedListener{_, currfrag: NavDestination, _ ->
+            /*
             val navBarHide: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_exit)
             val navBarShow: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_enter)
             when (currfrag.id) {
@@ -69,8 +73,9 @@ class MainActivity : Main() {
                 }
 
             }
+            */
             isParent = when (currfrag.id) {
-                R.id.home_fragment, R.id.settings_fragment -> true
+                R.id.home_fragment -> true
                 else -> false
             }
 
@@ -89,6 +94,10 @@ class MainActivity : Main() {
             }
             R.id.toolbar_about -> {
                 navHost.navigate(R.id.toAboutFragment)
+                return true
+            }
+            R.id.toolbar_settings -> {
+                navHost.navigate(R.id.action_settingsFragment)
                 return true
             }
             R.id.secret_settings -> {

@@ -24,9 +24,14 @@
         <item name="cornerSize">8dp</item>
         <item name="android:textColor">?colorOnSurfaceVariant</item>
         <item name="android:textColorPrimary">?colorOnSurfaceVariant</item>
-        <item name="colorSurface">?attr/DialogBG</item>
-        <item name="colorAccent">?colorPrimary</item>
-        <item name="colorPrimary">?colorPrimary</item>
+        <item name="colorSurface">?DialogBG</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogPositiveButton</item>
+    </style>
+
+    <style name="DialogPositiveButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="textAllCaps">false</item>
+        <item name="backgroundTint">@android:color/transparent</item>
     </style>
 
 </resources>
