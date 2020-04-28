@@ -29,6 +29,9 @@ class MainActivity : Main() {
         val appBarConfiguration = AppBarConfiguration(navHost.graph)
         toolbar.setupWithNavController(navHost, appBarConfiguration)
 
+
+        //WARNING: Reserved code!
+        //DO NOT TOUCH!
         /*
         val navBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navBar.setupWithNavController(navHost)
@@ -52,6 +55,8 @@ class MainActivity : Main() {
         */
 
         navHost.addOnDestinationChangedListener{_, currfrag: NavDestination, _ ->
+            //WARNING: Reserved code 2
+            //DO NOT TOUCH
             /*
             val navBarHide: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_exit)
             val navBarShow: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_enter)
