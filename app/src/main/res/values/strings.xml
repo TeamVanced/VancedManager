@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
 
+    <!-- Global Strings -->
+    <string name="close">Close</string>
+    <string name="security_context">Please make sure you downloaded app from vanced.app, Vanced Discord server or GitHub</string>
+    <string name="unsupported_version_context">I don\'t know how but you probably installed Vanced Manager on unsupported Android version. The app will now close</string>
+    <string name="welcome">Welcome</string>
+    <string name="whoops">Whoops!</string>
+
     <!-- Main Activity -->
     <string name="title_about">About</string>
     <string name="title_home">Home</string>
+    <string name="title_install">Install</string>
     <string name="title_settings">Settings</string>
 
     <!-- Home Page -->
     <string name="brave_browser">Brave Browser</string>
     <string name="changelogs">Changelogs</string>
-    <string name="github_bot">Bot</string>
-    <string name="github_manager">Manager</string>
-    <string name="github_projects">GitHub projects</string>
-    <string name="github_website">Website</string>
     <string name="install">Install</string>
     <string name="installed">Installed:</string>
     <string name="latest">Latest:</string>
@@ -37,7 +41,8 @@
     <string name="language_summary">Choose your preferred language</string>
     <string name="push_notifications">Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when update is released</string>
-
+    <string name="re_check">Re-check</string>
+    <string name="update_center">Update Center</string>
 
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
@@ -50,7 +55,10 @@
     <string name="install_nonroot">Non-root</string>
     <string name="install_root">Root</string>
     <string name="next">Next</string>
-    <string name="title_install">Install</string>
 
+    <!-- About Page -->
+    <string name="manager_devs">Manager Devs</string>
+    <string name="sources">Sources</string>
+    <string name="vanced_team">Vanced Team</string>
 
 </resources>

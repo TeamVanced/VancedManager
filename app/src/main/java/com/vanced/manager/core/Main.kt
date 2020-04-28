@@ -1,7 +1,9 @@
 package com.vanced.manager.core
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
 import com.vanced.manager.ui.core.ThemeActivity
@@ -11,24 +13,27 @@ import com.vanced.manager.ui.core.ThemeActivity
 @SuppressLint("Registered")
 open class Main: ThemeActivity() {
 
+    @SuppressLint("ObsoleteSdkInt")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
         val firstStart = prefs.getBoolean("firstStart", true)
         if (firstStart) {
-            showSecurityDialog()
+            //A little surprise for those who
+            //love lowering minSdkVersions
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+                showUnsupportedSdkDialog()
+            } else showSecurityDialog()
         }
     }
 
     private fun showSecurityDialog() {
-        MaterialAlertDialogBuilder(this, R.style.DialogTheme)
-            .setTitle("Welcome!")
-            .setMessage("Please make sure you downloaded " +
-                    "app from vanced.app, Vanced Discord server or GitHub")
-            .setPositiveButton(
-                "Close"
-            ) { dialog, _ -> dialog.dismiss() }
+        AlertDialog.Builder(this)
+            .setTitle(resources.getString(R.string.welcome))
+            .setMessage(resources.getString(R.string.security_context))
+            .setPositiveButton(resources.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            .create()
             .show()
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
@@ -36,4 +41,16 @@ open class Main: ThemeActivity() {
         editor.putBoolean("firstStart", false)
         editor.apply()
     }
+
+    private fun showUnsupportedSdkDialog() {
+       AlertDialog.Builder(this)
+            .setTitle(resources.getString(R.string.whoops))
+            .setMessage(resources.getString(R.string.unsupported_version_context))
+            .setPositiveButton(
+                "OK"
+            ) { _, _ -> finish() }
+           .create()
+           .show()
+    }
+
 }

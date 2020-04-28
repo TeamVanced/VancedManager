@@ -18,17 +18,17 @@ open class Home : BaseFragment() {
         val pm = activity?.packageManager
 
         //Damn that's a lot of buttons
-        val microginstallbtn = getView()?.findViewById(R.id.microg_installbtn) as Button
-        val microguninstallbtn = getView()?.findViewById(R.id.microg_uninstallbtn) as Button
-        val microgsettingsbtn = getView()?.findViewById(R.id.microg_settingsbtn) as Button
-        val vancedinstallbtn = getView()?.findViewById(R.id.vanced_installbtn) as Button
+        val microginstallbtn = view.findViewById<Button>(R.id.microg_installbtn)
+        val microguninstallbtn = view.findViewById<Button>(R.id.microg_uninstallbtn)
+        val microgsettingsbtn = view.findViewById<Button>(R.id.microg_settingsbtn)
+        val vancedinstallbtn = view.findViewById<Button>(R.id.vanced_installbtn)
 
-        val bravebtn = getView()?.findViewById(R.id.brave_button) as Button
-        val websitebtn = getView()?.findViewById(R.id.website_button) as Button
-        val discordbtn = getView()?.findViewById(R.id.discordbtn) as Button
-        val telegrambtn = getView()?.findViewById(R.id.tgbtn) as Button
-        val twitterbtn = getView()?.findViewById(R.id.twitterbtn) as Button
-        val redditbtn = getView()?.findViewById(R.id.redditbtn) as Button
+        val bravebtn = view.findViewById<Button>(R.id.brave_button)
+        val websitebtn = view.findViewById<Button>(R.id.website_button)
+        val discordbtn = view.findViewById<Button>(R.id.discordbtn)
+        val telegrambtn = view.findViewById<Button>(R.id.tgbtn)
+        val twitterbtn = view.findViewById<Button>(R.id.twitterbtn)
+        val redditbtn = view.findViewById<Button>(R.id.redditbtn)
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }

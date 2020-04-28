@@ -2,15 +2,21 @@ package com.vanced.manager.ui.core
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager
+import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
+import android.util.DisplayMetrics
+import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
+import java.util.*
 
+// This activity will NOT be used in manifest
+// since MainActivity will extend it
 @SuppressLint("Registered")
 open class ThemeActivity : AppCompatActivity() {
 
@@ -29,8 +35,19 @@ open class ThemeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 
+    override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
+        setLanguage(currentLang)
+        super.applyOverrideConfiguration(overrideConfiguration)
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(newBase)
+        setLanguage(currentLang)
+    }
+
     override fun onResume() {
         val theme = pref.getString("theme_mode", "")
+
         //if for some weird reasons we get invalid
         //theme, recreate activity
         if (currentTheme != theme)
