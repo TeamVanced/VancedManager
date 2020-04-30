@@ -15,19 +15,19 @@ jobs:
         with:
           java-version: 1.8
 
-        - name: Grant rights
-          run: chmod +x ./gradlew
+      - name: Grant rights
+        run: chmod +x ./gradlew
 
-        - name: Build project with Gradle
-          run: ./gradlew build
+      - name: Build project with Gradle
+        run: ./gradlew build
 
-        - name: Build Release APK with Gradle
-          run: ./gradlew assembleRelease
+      - name: Build Release APK with Gradle
+        run: ./gradlew assembleRelease
 
-        - uses: r0adkll/sign-android-release@v1
-          with:
-            releaseDirectory: ./app/release
-            signingKeyBase64: ${{ secrets.TOKEN }}
-            alias: ${{ secrets.ALIAS }}
-            keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+      - uses: r0adkll/sign-android-release@v1
+        with:
+          releaseDirectory: ./app/release
+          signingKeyBase64: ${{ secrets.TOKEN }}
+          alias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
   
