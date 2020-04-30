@@ -1,2 +1,0 @@
-- name: Debug APK Publisher
-  uses: ShaunLWM/action-release-debugapk@0.0.5
