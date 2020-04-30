@@ -15,7 +15,7 @@ jobs:
         java-version: 1.8
 
     - name: Grant rights
-      run: chmod +x build.gradle
+      run: chmod +x ./build.gradle
 
     - name: Build project with Gradle
       run: ./gradlew build
