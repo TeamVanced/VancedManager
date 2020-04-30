@@ -1,3 +1,4 @@
+name: Signed APK Builder
 
 on:
  push:
