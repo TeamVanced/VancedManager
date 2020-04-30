@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     app:cardBackgroundColor="?colorSurfaceVariant"
@@ -19,7 +20,8 @@
             android:id="@+id/about_card_vancedTeam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sources"
+            android:text="@string/sources"
+            android:textColor="?attr/colorOnSurfaceVariant"
             android:textSize="24sp"
             android:fontFamily="@font/exo_semibold"
             android:layout_marginTop="2dp"
@@ -59,24 +61,27 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/about_license_button"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:icon="@drawable/github"
                         app:iconGravity="textStart"
                         app:iconPadding="0dp"/>
 
                     <com.google.android.material.button.MaterialButton
+                        tools:ignore="HardcodedText"
                         android:id="@+id/about_license_button"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_marginStart="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="GPL"
+                        android:textSize="21sp"
+                        android:fontFamily="@font/exo_semibold"
                         android:background="@android:color/transparent"
                         android:backgroundTint="@android:color/transparent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@id/about_github_button"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:icon="@drawable/ic_assignment_black_24dp"
-                        app:iconGravity="textStart"
-                        app:iconPadding="0dp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="settings"
+        android:icon="@drawable/ic_shortcut_settings_black_24dp"
+        android:shortcutShortLabel="@string/title_settings">
+
+        <intent
+            android:action="com.vanced.manager.OPEN_SETTINGS"
+            android:targetClass="com.vanced.manager.ui.MainActivity"
+            android:targetPackage="com.vanced.manager"
+            android:data="vncdmngr://open_settings_fragment"/>
+
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="install"
+        android:icon="@drawable/shortcut_cloud_download_24"
+        android:shortcutShortLabel="@string/title_install">
+
+        <intent
+            android:action="com.vanced.manager.OPEN_INSTALL"
+            android:targetClass="com.vanced.manager.ui.MainActivity"
+            android:targetPackage="com.vanced.manager"
+            android:data="vncdmngr://open_install_fragment"/>
+
+    </shortcut>
+
+</shortcuts>

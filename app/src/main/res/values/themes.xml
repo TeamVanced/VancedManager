@@ -22,6 +22,7 @@
         <item name="colorDisabledVariant">#000000</item>
         <item name="iconColor">?colorPrimaryVariant</item>
         <item name="toolbarIconColor">#111111</item>
+        <item name="DialogBG">#ffffff</item>
 
     </style>
 

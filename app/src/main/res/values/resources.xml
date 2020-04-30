@@ -7,5 +7,7 @@
     <string name="twitter" translatable="false">Twitter</string>
     <string name="vanced" translatable="false">Vanced</string>
     <string name="microg" translatable="false">MicroG</string>
+    <string name="shortcut_settings" translatable="false">Settings</string>
+    <string name="shortcut_install" translatable="false">Install</string>
 
 </resources>

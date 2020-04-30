@@ -19,4 +19,19 @@
         <item name="android:statusBarColor">#000000</item>
     </style>
 
+    <style name="DialogTheme" parent="@style/Theme.MaterialComponents.Dialog.Alert">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="android:textColorPrimary">?colorOnSurfaceVariant</item>
+        <item name="colorSurface">?DialogBG</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogPositiveButton</item>
+    </style>
+
+    <style name="DialogPositiveButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="textAllCaps">false</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
 </resources>

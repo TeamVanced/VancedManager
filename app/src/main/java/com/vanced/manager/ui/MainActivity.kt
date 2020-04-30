@@ -3,17 +3,18 @@ package com.vanced.manager.ui
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import androidx.appcompat.app.AlertDialog
-import androidx.core.view.forEach
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vanced.manager.R
-import com.vanced.manager.ui.core.ThemeActivity
+import com.vanced.manager.core.Main
 
-class MainActivity : ThemeActivity() {
+class MainActivity : Main() {
 
     private var isParent = true
 
@@ -22,16 +23,16 @@ class MainActivity : ThemeActivity() {
         setContentView(R.layout.activity_main)
 
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
-
         setSupportActionBar(toolbar)
 
-        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        val firstStart = prefs.getBoolean("firstStart", true)
-        if (firstStart) {
-            showSecurityDialog()
-        }
-
         val navHost = findNavController(R.id.bottom_nav_host)
+        val appBarConfiguration = AppBarConfiguration(navHost.graph)
+        toolbar.setupWithNavController(navHost, appBarConfiguration)
+
+
+        //WARNING: Reserved code!
+        //DO NOT TOUCH!
+        /*
         val navBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
         navBar.setupWithNavController(navHost)
 
@@ -51,41 +52,68 @@ class MainActivity : ThemeActivity() {
 
         navBar.setOnNavigationItemReselectedListener {
         }
+        */
 
         navHost.addOnDestinationChangedListener{_, currfrag: NavDestination, _ ->
+            //WARNING: Reserved code 2
+            //DO NOT TOUCH
+            /*
+            val navBarHide: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_exit)
+            val navBarShow: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.navbar_enter)
             when (currfrag.id) {
-                R.id.home_fragment, R.id.settings_fragment -> navBar.visibility = View.VISIBLE
-                else -> navBar.visibility = View.INVISIBLE
+
+                R.id.home_fragment, R.id.settings_fragment -> {
+
+                    if (navBar.visibility != View.VISIBLE) {
+                        navBar.visibility = View.VISIBLE
+                        navBar.startAnimation(navBarShow)
+                    }
+
+                }
+                else -> {
+                    if (navBar.visibility != View.GONE) {
+                        navBar.startAnimation(navBarHide)
+                        navBar.visibility = View.GONE
+                    }
+                }
 
             }
+            */
             isParent = when (currfrag.id) {
-                R.id.home_fragment, R.id.settings_fragment -> true
+                R.id.home_fragment -> true
                 else -> false
             }
 
             setDisplayHomeAsUpEnabled(!isParent)
-
-            navBar.menu.forEach {
-                if (it.itemId == currfrag.id) {
-                    it.isChecked = true
-                }
-            }
 
         }
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navHost = findNavController(R.id.bottom_nav_host)
         when (item.itemId) {
             android.R.id.home -> {
-                findNavController(R.id.bottom_nav_host).navigate(R.id.action_homeFragment)
+                onBackPressed()
+                return true
+            }
+            R.id.toolbar_about -> {
+                navHost.navigate(R.id.toAboutFragment)
+                return true
+            }
+            R.id.toolbar_settings -> {
+                navHost.navigate(R.id.action_settingsFragment)
+                return true
+            }
+            R.id.secret_settings -> {
+                navHost.navigate(R.id.toSecretSettingsFragment)
+                return true
             }
             else -> super.onOptionsItemSelected(item)
-
         }
-        return true
+        return false
     }
-    
+
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         when {
@@ -93,19 +121,4 @@ class MainActivity : ThemeActivity() {
             else -> toolbar.navigationIcon = null
         }
     }
-
-    private fun showSecurityDialog() {
-        AlertDialog.Builder(this)
-            .setTitle("Welcome!")
-            .setMessage("Before we implement a proper security system to check whether app was modified or not, please be sure that you downloaded manager from vanced.app/github")
-            .setPositiveButton("close"
-            ) { dialog, _ -> dialog.dismiss() }
-            .create().show()
-
-        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        val editor = prefs.edit()
-        editor.putBoolean("firstStart", false)
-        editor.apply()
-    }
-
 }

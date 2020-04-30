@@ -9,5 +9,6 @@
     <attr name="colorSurfaceSurfaceVariant" format="color" />
     <attr name="iconColor" format="reference|color" />
     <attr name="toolbarIconColor" format="reference|color"/>
+    <attr name="DialogBG" format="reference|color" />
 
 </resources>

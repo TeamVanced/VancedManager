@@ -2,12 +2,14 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
-    app:contentPadding="6dp"
+    app:contentPaddingRight="6dp"
+    app:contentPaddingLeft="6dp"
+    app:cardElevation="0dp"
     tools:context=".ui.fragments.UpdateCheckFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,40 +20,52 @@
             android:id="@+id/update_center_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Center"
+            android:text="@string/update_center"
             android:textAlignment="center"
             android:textSize="18sp"
             android:fontFamily="@font/exo_semibold"
+            android:textColor="?attr/colorOnSurfaceVariant"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <androidx.core.widget.ContentLoadingProgressBar
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        <ProgressBar
             android:id="@+id/update_center_progressbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/update_center_text"
-            android:progress="10"/>
+            app:layout_constraintBottom_toTopOf="@id/update_button_container"/>
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/update_button_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/update_center_progressbar"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:text="Close"
-            android:textAllCaps="false"/>
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/update_center_progressbar"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="Re-check"
-            android:textAllCaps="false"/>
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/update_center_dismiss"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="@string/close"
+                android:textAllCaps="false"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/update_center_recheck"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/re_check"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

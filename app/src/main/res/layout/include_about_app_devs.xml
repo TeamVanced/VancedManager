@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
@@ -10,7 +11,8 @@
     app:cardElevation="0dp"
     app:contentPaddingRight="8dp"
     app:contentPaddingLeft="8dp"
-    app:contentPaddingBottom="8dp">
+    app:contentPaddingBottom="8dp"
+    tools:ignore="HardcodedText">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,8 +22,9 @@
             android:id="@+id/about_card_vancedTeam"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Manager Devs"
+            android:text="@string/manager_devs"
             android:textSize="24sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
             android:fontFamily="@font/exo_semibold"
             android:layout_marginTop="4dp"
             app:layout_constraintTop_toTopOf="parent"

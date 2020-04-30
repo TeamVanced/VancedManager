@@ -14,15 +14,27 @@
     </string-array>
 
     <string-array name="languages">
-        <item>Coming soon(tm)</item>
+        <item>English</item>
+        <item>ქართული</item>
     </string-array>
 
     <string-array name="languages_value">
-        <item>0</item>
+        <item>en</item>
+        <item>ka</item>
     </string-array>
 
     <string-array name="accent_color">
         <item>NaN</item>
+    </string-array>
+
+    <string-array name="syke">
+        <item>SYKE</item>
+    </string-array>
+
+    <string-array name="yomama">
+        <item>Yo</item>
+        <item>mama</item>
+        <item>fat</item>
     </string-array>
 
 </resources>

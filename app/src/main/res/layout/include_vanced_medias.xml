@@ -7,9 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/eightdp"
     android:layout_marginEnd="@dimen/eightdp"
-    android:paddingTop="@dimen/eightdp"
     app:cardBackgroundColor="#6958D0"
-    android:paddingBottom="2dp"
     app:cardCornerRadius="@dimen/eightdp"
     app:cardElevation="0dp">
 
