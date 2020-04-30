@@ -51,6 +51,8 @@
             app:popEnterAnim="@animator/fragment_enter_pop"
             app:popExitAnim="@animator/fragment_exit_pop" />
 
+        <deepLink app:uri="vncdmngr://open_settings_fragment" />
+
     </fragment>
 
     <fragment
@@ -72,6 +74,8 @@
             app:exitAnim="@animator/fragment_exit_left"
             app:popEnterAnim="@animator/fragment_enter_left"
             app:popExitAnim="@animator/fragment_exit_right" />
+
+        <deepLink app:uri="vncdmngr://open_install_fragment" />
 
     </fragment>
 

@@ -35,16 +35,6 @@ open class ThemeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
-        setLanguage(currentLang)
-        super.applyOverrideConfiguration(overrideConfiguration)
-    }
-
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(newBase)
-        setLanguage(currentLang)
-    }
-
     override fun onResume() {
         val theme = pref.getString("theme_mode", "")
 
