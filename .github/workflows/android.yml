@@ -21,12 +21,12 @@ jobs:
     - name: Build project with Gradle
       run: ./gradlew build
 
-    - name: Build Debug APK with Gradle
+    - name: Build Release APK with Gradle
       run: ./gradlew assembleRelease
       
     - uses: r0adkll/sign-android-release@v1
       with:
-        releaseDirectory: ./app/build/outputs/apk/release
+        releaseDirectory: app/build/outputs/apk/release
         signingKeyBase64: ${{ secrets.TOKEN }}
         alias: ${{ secrets.ALIAS }}
         keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
