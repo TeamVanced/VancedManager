@@ -23,7 +23,6 @@
     <string name="n_a">N/A</string>
     <string name="network_error">Network connection unavailable</string>
     <string name="reddit">Reddit</string>
-    <string name="uninstall">Uninstall</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
     <string name="vanced_medias">Vanced on Social Media</string>
@@ -37,8 +36,6 @@
     <string name="category_manager">Manager</string>
     <string name="theme">Theme</string>
     <string name="theme_summary">Choose your preferred theme</string>
-    <string name="language">Language</string>
-    <string name="language_summary">Choose your preferred language</string>
     <string name="push_notifications">Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when update is released</string>
     <string name="re_check">Re-check</string>

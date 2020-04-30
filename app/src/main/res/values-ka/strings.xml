@@ -23,13 +23,12 @@
     <string name="n_a">N/A</string>
     <string name="network_error">კავშირი არ არის</string>
     <string name="reddit">Reddit</string>
-    <string name="uninstall">დეინსტალაცია</string>
     <string name="update">განახლება</string>
     <string name="useful_links">საჭირო ლინკები</string>
     <string name="vanced_medias">Vanced სოციალურ ქსელებზე</string>
     <string name="website">Website</string>
     <string name="website_text">Vanced-ის ოფიციალური ვებსაიტი</string>
-    <string name="support_us">დაგვიჭრეთ მხარი Brave-ის გადმოწერით</string>
+    <string name="support_us">დაგვიჭირეთ მხარი Brave-ის გადმოწერით</string>
 
     <!-- Settings -->
     <string name="check_updates">განახლებების შემოწმება</string>
@@ -37,8 +36,6 @@
     <string name="category_manager">მენეჯერი</string>
     <string name="theme">თემა</string>
     <string name="theme_summary">აირჩიეთ სასურველი თემა</string>
-    <string name="language">ენა</string>
-    <string name="language_summary">აირჩიეთ სასურველი ენა</string>
     <string name="push_notifications">შეტყობინებები</string>
     <string name="push_notifications_summary">მიიღეთ შეტყობინება როდესაც განახლება გამოვა</string>
     <string name="re_check">გადამოწმება</string>
