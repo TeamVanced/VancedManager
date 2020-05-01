@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:cardCornerRadius="@dimen/eightdp"
-    app:cardBackgroundColor="?colorSurfaceVariant"
     app:cardElevation="0dp"
     app:cardPreventCornerOverlap="true"
     app:contentPaddingRight="8dp"
     app:contentPaddingLeft="8dp"
     app:contentPaddingTop="5dp"
     app:contentPaddingBottom="5dp">
+    <!--app:cardBackgroundColor="?colorSurfaceVariant"-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
