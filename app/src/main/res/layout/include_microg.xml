@@ -21,7 +21,7 @@
             android:id="@+id/microg_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_2_bold"
+            android:fontFamily="@font/exo_bold"
             android:text="@string/microg"
             android:textColor="?colorPrimary"
             android:textSize="24sp"

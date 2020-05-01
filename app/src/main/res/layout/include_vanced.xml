@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_vanced"
             android:drawablePadding="8dp"
-            android:fontFamily="@font/exo_2_bold"
+            android:fontFamily="@font/exo_bold"
             android:text="@string/vanced"
             android:textColor="?colorPrimary"
             android:textSize="24sp"
