@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="LightTheme.Blue">
+    <style name="LightTheme.Blue" parent="@style/LightTheme">
 
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
