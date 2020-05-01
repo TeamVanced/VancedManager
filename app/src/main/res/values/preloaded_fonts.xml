@@ -3,6 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/exo</item>
         <item>@font/exo_2</item>
+        <item>@font/exo_2_bold</item>
         <item>@font/exo_semibold</item>
     </array>
 </resources>

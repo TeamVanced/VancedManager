@@ -19,16 +19,16 @@
 
         <TextView
             android:id="@+id/vanced_title"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_bold"
+            android:drawableStart="@drawable/ic_vanced"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/exo_2_bold"
             android:text="@string/vanced"
             android:textColor="?colorPrimary"
             android:textSize="24sp"
-            android:drawableStart="@drawable/ic_vanced"
-            android:drawablePadding="8dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/vanced_remote_latest_version"
