@@ -26,8 +26,14 @@ jobs:
 
       - uses: r0adkll/sign-android-release@v1
         with:
-          releaseDirectory: ./app/release
+          releaseDirectory: app/release
           signingKeyBase64: ${{ secrets.TOKEN }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+
+      - name: Upload file to github
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'Vanced-Manager'
+          path: ${{ steps.sign-app.outputs.signedReleaseFile }}
   
