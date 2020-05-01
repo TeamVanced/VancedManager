@@ -104,7 +104,7 @@ class HomeFragment : Home() {
 
     }
 
-    private fun connectionStatus() {
+    fun connectionStatus() {
         val connectivityManager = context?.applicationContext?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkRequest = NetworkRequest.Builder()
             .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)

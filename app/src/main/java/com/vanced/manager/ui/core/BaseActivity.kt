@@ -54,21 +54,21 @@ open class ThemeActivity : AppCompatActivity() {
     //This stupid ass AppCompatDelegate does
     //not want to work, so I have to use my
     //own implementation of theme switching
-    private fun setFinalTheme(currentTheme: String) {
+    open fun setFinalTheme(currentTheme: String) {
         when (currentTheme) {
-            "LIGHT" -> setTheme(R.style.LightTheme_Blue)
-            "DARK" -> setTheme(R.style.DarkTheme_Blue)
+            "LIGHT" -> setTheme(R.style.MainTheme_Light)
+            "DARK" -> setTheme(R.style.MainTheme_Dark)
             "FOLLOW" -> {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme_Blue)
-                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme_Blue)
+                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.MainTheme_Light)
+                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.MainTheme_Dark)
                 }
             }
-            else -> setTheme(R.style.LightTheme_Blue)
+            else -> setTheme(R.style.MainTheme_Light)
         }
     }
 
-    private fun setTaskBG() {
+    fun setTaskBG() {
         val label = getString(R.string.app_name)
         val color = ResourcesCompat.getColor(resources, R.color.Black, null)
         val taskDec: ActivityManager.TaskDescription =
