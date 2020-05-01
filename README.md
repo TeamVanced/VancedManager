@@ -1,3 +1,5 @@
+![Signed APK Builder](https://github.com/X1nto/VancedInstaller/workflows/Signed%20APK%20Builder/badge.svg?branch=master)
+
 # Prelude
 Hi, my name is Steve Cock, I'm the main UI designer for the upcoming Vanced Manager. When xfileFIN first published Vanced 15.05.54, people were upset because new Vanced used split apk files. The reason for that was pretty simple:  
 1) YouTube itself does that  
