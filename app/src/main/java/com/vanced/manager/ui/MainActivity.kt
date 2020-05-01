@@ -22,8 +22,6 @@ class MainActivity : Main() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        finish()
-
         val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
 

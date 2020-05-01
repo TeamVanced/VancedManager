@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
        
 jobs:
   build:
@@ -38,4 +41,10 @@ jobs:
         with:
           name: 'Vanced-Manager'
           path: ${{ steps.sign-app.outputs.signedReleaseFile }}
-  
+
+      - name: Upload to Discord
+        uses: sinshutu/upload-to-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          args: ${{ steps.sign-app.outputs.signedReleaseFile }}
