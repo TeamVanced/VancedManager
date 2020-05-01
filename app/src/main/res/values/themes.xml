@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="MainTheme.Light">
+    <style name="LightTheme.Blue">
 
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -23,7 +23,6 @@
         <item name="iconColor">?colorPrimaryVariant</item>
         <item name="toolbarIconColor">#111111</item>
         <item name="DialogBG">#ffffff</item>
-        <item name="android:statusBarColor">#787777</item>
 
     </style>
 
