@@ -7,38 +7,45 @@
     app:cardCornerRadius="@dimen/eightdp"
     app:cardElevation="0dp"
     app:cardPreventCornerOverlap="true"
+    app:cardBackgroundColor="?colorSurfaceVariant"
     app:contentPaddingRight="8dp"
     app:contentPaddingLeft="8dp"
     app:contentPaddingTop="5dp"
     app:contentPaddingBottom="5dp">
-    <!--app:cardBackgroundColor="?colorSurfaceVariant"-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!--
+        <ImageView
+            android:id="@+id/home_vanced_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_vanced"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/vanced_remote_latest_version"/>
+
         <TextView
             android:id="@+id/vanced_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_vanced"
+            android:textColor="?colorPrimary"
             android:drawablePadding="8dp"
             android:fontFamily="@font/exo_bold"
             android:text="@string/vanced"
             android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-            android:textColor="?colorPrimary"
-        -->
+            app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"/>
 
         <LinearLayout
             android:id="@+id/vanced_remote_latest_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/linearLayout2">
-            <!--app:layout_constraintTop_toBottomOf="@+id/vanced_title"-->
+            app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/vanced_title">
 
             <TextView
                 android:id="@+id/vanced_latest"
@@ -96,6 +103,7 @@
             android:layout_height="40dp"
             android:text="@string/install"
             android:textAllCaps="false"
+            android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/vanced_uninstallbtn"

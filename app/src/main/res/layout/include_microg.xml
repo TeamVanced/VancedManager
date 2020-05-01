@@ -94,6 +94,7 @@
             android:fontFamily="@font/exo_semibold"
             android:text="@string/install"
             android:textAllCaps="false"
+            android:textColor="#ffffff"
             app:backgroundTint="?colorPrimary"
             app:icon="@drawable/outline_cloud_download_24"
             app:layout_constraintEnd_toEndOf="parent"
