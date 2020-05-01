@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
@@ -10,6 +11,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.vanced.manager.R
+import com.vanced.manager.ui.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -32,27 +34,32 @@ class SettingsFragment : PreferenceFragmentCompat() {
             when (themeSwitch.value){
                 "LIGHT" -> {
                     activity?.setTheme(R.style.LightTheme_Blue)
-                    activity?.recreate()
+                    //activity?.recreate()
+                    recreate()
                 }
                 "DARK" -> {
                     activity?.setTheme(R.style.DarkTheme_Blue)
-                    activity?.recreate()
+                    //activity?.recreate()
+                    recreate()
                 }
                 "FOLLOW" -> {
                     when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                         Configuration.UI_MODE_NIGHT_YES ->{
                             activity?.setTheme(R.style.DarkTheme_Blue)
-                            activity?.recreate()
+                            //activity?.recreate()
+                            recreate()
                         }
                         Configuration.UI_MODE_NIGHT_NO -> {
                             activity?.setTheme(R.style.LightTheme_Blue)
-                            activity?.recreate()
+                            //activity?.recreate()
+                            recreate()
                         }
                     }
                 }
                 else -> {
                     activity?.setTheme(R.style.LightTheme_Blue)
-                    activity?.recreate()
+                    //activity?.recreate()
+                    recreate()
                 }
             }
             true
@@ -62,6 +69,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.secret_settings_menu, menu)
         super .onCreateOptionsMenu(menu, inflater)
+    }
+
+    private fun recreate() {
+        startActivity(Intent(requireContext(), MainActivity::class.java))
+        activity?.finish()
     }
 
 }
