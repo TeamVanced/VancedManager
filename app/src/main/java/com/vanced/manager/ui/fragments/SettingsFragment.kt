@@ -33,31 +33,31 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
             when (themeSwitch.value){
                 "LIGHT" -> {
-                    activity?.setTheme(R.style.LightTheme_Blue)
+                    //activity?.setTheme(R.style.LightTheme_Blue)
                     //activity?.recreate()
                     recreate()
                 }
                 "DARK" -> {
-                    activity?.setTheme(R.style.DarkTheme_Blue)
+                    //activity?.setTheme(R.style.DarkTheme_Blue)
                     //activity?.recreate()
                     recreate()
                 }
                 "FOLLOW" -> {
                     when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                         Configuration.UI_MODE_NIGHT_YES ->{
-                            activity?.setTheme(R.style.DarkTheme_Blue)
+                            //activity?.setTheme(R.style.DarkTheme_Blue)
                             //activity?.recreate()
                             recreate()
                         }
                         Configuration.UI_MODE_NIGHT_NO -> {
-                            activity?.setTheme(R.style.LightTheme_Blue)
+                            //activity?.setTheme(R.style.LightTheme_Blue)
                             //activity?.recreate()
                             recreate()
                         }
                     }
                 }
                 else -> {
-                    activity?.setTheme(R.style.LightTheme_Blue)
+                    //activity?.setTheme(R.style.LightTheme_Blue)
                     //activity?.recreate()
                     recreate()
                 }
