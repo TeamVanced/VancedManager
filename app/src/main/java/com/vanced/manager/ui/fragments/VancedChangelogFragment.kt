@@ -19,4 +19,8 @@ class VancedChangelogFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_vanced_changelog, container, false)
     }
 
+    fun fetchChangelog() {
+        val url = ""
+    }
+
 }
