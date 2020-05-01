@@ -25,7 +25,7 @@
             android:drawablePadding="8dp"
             android:fontFamily="@font/exo_bold"
             android:text="@string/vanced"
-            android:textColor="?colorPrimary"
+            <!-- android:textColor="?colorPrimary" -->
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
