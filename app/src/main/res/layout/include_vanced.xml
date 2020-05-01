@@ -27,9 +27,8 @@
             android:text="@string/vanced"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            <!--android:textColor="?colorPrimary"--> 
-        />
+            app:layout_constraintTop_toTopOf="parent" />
+            <!--android:textColor="?colorPrimary"-->
 
         <LinearLayout
             android:id="@+id/vanced_remote_latest_version"
