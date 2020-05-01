@@ -37,8 +37,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vanced_title"
             app:layout_constraintBottom_toTopOf="@id/linearLayout2">
+            <!--app:layout_constraintTop_toBottomOf="@+id/vanced_title"-->
 
             <TextView
                 android:id="@+id/vanced_latest"
