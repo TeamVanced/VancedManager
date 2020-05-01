@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!--
         <TextView
             android:id="@+id/vanced_title"
             android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-            <!--android:textColor="?colorPrimary"-->
+            android:textColor="?colorPrimary"
+        -->
 
         <LinearLayout
             android:id="@+id/vanced_remote_latest_version"
