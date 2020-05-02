@@ -6,13 +6,13 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <style name="LightTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">#787777</item>
     </style>
 
-    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="DarkTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="colorBackgroundFloating">#111111</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">#000000</item>
