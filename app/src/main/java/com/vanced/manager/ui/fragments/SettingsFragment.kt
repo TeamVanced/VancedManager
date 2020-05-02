@@ -4,7 +4,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentManager
 import androidx.preference.DialogPreference
 import androidx.preference.ListPreference
@@ -32,33 +31,28 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
             when (themeSwitch.value){
                 "LIGHT" -> {
-                    //activity?.setTheme(R.style.LightTheme_Blue)
-                    //activity?.recreate()
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    activity?.setTheme(R.style.LightTheme_Blue)
+                    activity?.recreate()
                 }
                 "DARK" -> {
-                    //activity?.setTheme(R.style.DarkTheme_Blue)
-                    //activity?.recreate()
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    activity?.setTheme(R.style.DarkTheme_Blue)
+                    activity?.recreate()
                 }
                 "FOLLOW" -> {
                     when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                         Configuration.UI_MODE_NIGHT_YES ->{
-                            //activity?.setTheme(R.style.DarkTheme_Blue)
-                            //activity?.recreate()
-                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                            activity?.setTheme(R.style.DarkTheme_Blue)
+                            activity?.recreate()
                         }
                         Configuration.UI_MODE_NIGHT_NO -> {
-                            //activity?.setTheme(R.style.LightTheme_Blue)
-                            //activity?.recreate()
-                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                            activity?.setTheme(R.style.LightTheme_Blue)
+                            activity?.recreate()
                         }
                     }
                 }
                 else -> {
-                    //activity?.setTheme(R.style.LightTheme_Blue)
-                    //activity?.recreate()
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    activity?.setTheme(R.style.LightTheme_Blue)
+                    activity?.recreate()
                 }
             }
             true
