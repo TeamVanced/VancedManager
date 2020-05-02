@@ -54,15 +54,15 @@ open class ThemeActivity : AppCompatActivity() {
 
     private fun setFinalTheme(currentTheme: String) {
         when (currentTheme) {
-            "LIGHT" -> setTheme(R.style.LightTheme_Blue)
-            "DARK" -> setTheme(R.style.DarkTheme_Blue)
+            "LIGHT" -> setTheme(R.style.LightTheme)
+            "DARK" -> setTheme(R.style.DarkTheme)
             "FOLLOW" -> {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme_Blue)
-                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme_Blue)
+                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme)
+                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme)
                 }
             }
-            else -> setTheme(R.style.LightTheme_Blue)
+            else -> setTheme(R.style.LightTheme)
         }
     }
 
