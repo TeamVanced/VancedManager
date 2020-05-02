@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
@@ -53,15 +54,20 @@ open class ThemeActivity : AppCompatActivity() {
     //own implementation of theme switching
     private fun setFinalTheme(currentTheme: String) {
         when (currentTheme) {
-            "LIGHT" -> setTheme(R.style.LightTheme_Blue)
-            "DARK" -> setTheme(R.style.DarkTheme_Blue)
+            "LIGHT" -> //setTheme(R.style.LightTheme_Blue)
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            "DARK" -> //setTheme(R.style.DarkTheme_Blue)
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             "FOLLOW" -> {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme_Blue)
-                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme_Blue)
+                    Configuration.UI_MODE_NIGHT_YES -> //setTheme(R.style.DarkTheme_Blue)
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    Configuration.UI_MODE_NIGHT_NO -> //setTheme(R.style.LightTheme_Blue)
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 }
             }
-            else -> setTheme(R.style.LightTheme_Blue)
+            else -> //setTheme(R.style.LightTheme_Blue)
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
 

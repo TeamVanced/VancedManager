@@ -2,15 +2,12 @@ package com.vanced.manager.ui
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.bottomnavigation.BottomNavigationView
+
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
 
@@ -28,7 +25,6 @@ class MainActivity : Main() {
         val navHost = findNavController(R.id.bottom_nav_host)
         val appBarConfiguration = AppBarConfiguration(navHost.graph)
         toolbar.setupWithNavController(navHost, appBarConfiguration)
-
 
         //WARNING: Reserved code!
         //DO NOT TOUCH!
