@@ -23,7 +23,7 @@ open class ThemeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         pref = PreferenceManager.getDefaultSharedPreferences(this)
-        currentTheme = pref.getString("theme_mode", "").toString()
+        currentTheme = pref.getString("theme_mode", "LIGHT").toString()
 
         setFinalTheme(currentTheme)
 
@@ -34,7 +34,7 @@ open class ThemeActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val theme = pref.getString("theme_mode", "")
+        val theme = pref.getString("theme_mode", "LIGHT")
 
         //if for some weird reasons we get invalid
         //theme, recreate activity
