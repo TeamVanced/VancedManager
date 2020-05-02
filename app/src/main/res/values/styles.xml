@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_logo</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
