@@ -2,18 +2,14 @@ package com.vanced.manager.ui.core
 
 import android.annotation.SuppressLint
 import android.app.ActivityManager
-import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
-import android.util.DisplayMetrics
-import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
-import java.util.*
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -24,6 +20,8 @@ open class ThemeActivity : AppCompatActivity() {
     private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
         pref = PreferenceManager.getDefaultSharedPreferences(this)
         currentTheme = pref.getString("theme_mode", "").toString()
 
@@ -32,10 +30,10 @@ open class ThemeActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG()
         }
-        super.onCreate(savedInstanceState)
     }
 
     override fun onResume() {
+        super.onResume()
         val theme = pref.getString("theme_mode", "")
 
         //if for some weird reasons we get invalid
@@ -48,7 +46,6 @@ open class ThemeActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG()
         }
-        super.onResume()
     }
 
     //This stupid ass AppCompatDelegate does
