@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -15,6 +16,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
+
+        //Fuck Android 6 and 5 users! Because theme is not working
+        //we can't display preference for them.
+        // They should've upgraded to something newer
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            setPreferencesFromResource(R.xml.theme_preference, rootKey)
+        }
+
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
 
