@@ -22,11 +22,6 @@ class MainActivity : Main() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        pref = PreferenceManager.getDefaultSharedPreferences(this)
-        currentTheme = pref.getString("theme_mode", "LIGHT").toString()
-
-        setFinalTheme(currentTheme)
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -47,16 +42,6 @@ class MainActivity : Main() {
 
         }
 
-    }
-
-    override fun onResume() {
-        super.onResume()
-        val theme = pref.getString("theme_mode", "LIGHT")
-
-        //if for some weird reasons we get invalid
-        //theme, recreate activity
-        if (currentTheme != theme)
-            recreate()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -88,20 +73,6 @@ class MainActivity : Main() {
         when {
             isNeeded -> toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
             else -> toolbar.navigationIcon = null
-        }
-    }
-
-    private fun setFinalTheme(currentTheme: String) {
-        when (currentTheme) {
-            "LIGHT" -> setTheme(R.style.LightTheme_Blue)
-            "DARK" -> setTheme(R.style.DarkTheme_Blue)
-            "FOLLOW" -> {
-                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme_Blue)
-                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme_Blue)
-                }
-            }
-            else -> setTheme(R.style.LightTheme_Blue)
         }
     }
 }

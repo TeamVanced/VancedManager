@@ -16,16 +16,16 @@ import com.vanced.manager.R
 @SuppressLint("Registered")
 open class ThemeActivity : AppCompatActivity() {
 
-    //private lateinit var currentTheme: String
-    //private lateinit var pref: SharedPreferences
+    private lateinit var currentTheme: String
+    private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //pref = PreferenceManager.getDefaultSharedPreferences(this)
-        //currentTheme = pref.getString("theme_mode", "LIGHT").toString()
+        pref = PreferenceManager.getDefaultSharedPreferences(this)
+        currentTheme = pref.getString("theme_mode", "LIGHT").toString()
 
-        //setFinalTheme(currentTheme)
+        setFinalTheme(currentTheme)
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG()
@@ -34,12 +34,12 @@ open class ThemeActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        //val theme = pref.getString("theme_mode", "LIGHT")
+        val theme = pref.getString("theme_mode", "LIGHT")
 
         //if for some weird reasons we get invalid
         //theme, recreate activity
-        //if (currentTheme != theme)
-            //recreate()
+        if (currentTheme != theme)
+            recreate()
 
         //set Task Header color in recents menu for
         //devices with lower Android version than Pie
@@ -51,7 +51,7 @@ open class ThemeActivity : AppCompatActivity() {
     //This stupid ass AppCompatDelegate does
     //not want to work, so I have to use my
     //own implementation of theme switching
-    /*
+
     private fun setFinalTheme(currentTheme: String) {
         when (currentTheme) {
             "LIGHT" -> setTheme(R.style.LightTheme_Blue)
@@ -65,7 +65,6 @@ open class ThemeActivity : AppCompatActivity() {
             else -> setTheme(R.style.LightTheme_Blue)
         }
     }
-    */
 
     private fun setTaskBG() {
         val label = getString(R.string.app_name)
