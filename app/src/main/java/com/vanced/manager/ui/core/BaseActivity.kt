@@ -53,7 +53,7 @@ open class ThemeActivity : AppCompatActivity() {
     //own implementation of theme switching
 
     private fun setFinalTheme(currentTheme: String) {
-        val currentAccent = pref.getString("accent_color", "Blue").toString()
+        val currentAccent = pref.getString("accent_mode", "Blue").toString()
         when (currentTheme) {
             "LIGHT" -> setLightAccent(currentAccent)
             "DARK" -> setDarkAccent(currentAccent)
