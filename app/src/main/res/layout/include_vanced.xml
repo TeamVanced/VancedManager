@@ -37,6 +37,7 @@
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/vanced_remote_latest_version"
             android:layout_marginStart="8dp"/>
 
         <LinearLayout
@@ -63,7 +64,7 @@
                 android:layout_marginStart="@dimen/eightdp"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 android:fontFamily="@font/exo_semibold"
-                android:text="IDK" />
+                android:text="@string/loading" />
 
         </LinearLayout>
 
@@ -91,7 +92,7 @@
                 android:layout_marginStart="@dimen/eightdp"
                 android:textColor="?attr/colorOnSurfaceVariant"
                 android:fontFamily="@font/exo_semibold"
-                android:text="IDK" />
+                android:text="@string/loading" />
 
         </LinearLayout>
 

@@ -20,6 +20,7 @@
     <string name="install">Install</string>
     <string name="installed">Installed:</string>
     <string name="latest">Latest:</string>
+    <string name="loading">Loading…</string>
     <string name="n_a">N/A</string>
     <string name="network_error">Network connection unavailable</string>
     <string name="reddit">Reddit</string>

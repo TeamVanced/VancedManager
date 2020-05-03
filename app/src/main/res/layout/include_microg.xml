@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/eightdp"
                 android:fontFamily="@font/exo_semibold"
-                android:text="IDK"
+                android:text="@string/loading"
                 android:textColor="?attr/colorOnSurfaceVariant" />
 
         </LinearLayout>
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/eightdp"
                 android:fontFamily="@font/exo_semibold"
-                android:text="IDK"
+                android:text="@string/loading"
                 android:textColor="?attr/colorOnSurfaceVariant" />
 
         </LinearLayout>

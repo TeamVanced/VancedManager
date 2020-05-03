@@ -20,6 +20,7 @@
     <string name="install">ინსტალაცია</string>
     <string name="installed">დაინსტალირებული:</string>
     <string name="latest">უახლესი:</string>
+    <string name="loading">იტვირთება…</string>
     <string name="n_a">N/A</string>
     <string name="network_error">კავშირი არ არის</string>
     <string name="reddit">Reddit</string>
