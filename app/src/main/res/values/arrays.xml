@@ -24,7 +24,10 @@
     </string-array>
 
     <string-array name="accent_color">
-        <item>NaN</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Yellow</item>
     </string-array>
 
     <string-array name="syke">

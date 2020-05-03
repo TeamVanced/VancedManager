@@ -53,16 +53,35 @@ open class ThemeActivity : AppCompatActivity() {
     //own implementation of theme switching
 
     private fun setFinalTheme(currentTheme: String) {
+        val currentAccent = pref.getString("accent_color", "Blue").toString()
         when (currentTheme) {
-            "LIGHT" -> setTheme(R.style.LightTheme)
-            "DARK" -> setTheme(R.style.DarkTheme)
+            "LIGHT" -> setLightAccent(currentAccent)
+            "DARK" -> setDarkAccent(currentAccent)
             "FOLLOW" -> {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme)
-                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme)
+                    Configuration.UI_MODE_NIGHT_YES -> setDarkAccent(currentAccent)
+                    Configuration.UI_MODE_NIGHT_NO -> setLightAccent(currentAccent)
                 }
             }
-            else -> setTheme(R.style.LightTheme)
+            else -> setLightAccent("Blue")
+        }
+    }
+
+    private fun setDarkAccent(accentColor: String) {
+        when (accentColor) {
+            "Blue" -> setTheme(R.style.DarkTheme_Blue)
+            "Red" -> setTheme(R.style.DarkTheme_Red)
+            "Green" -> setTheme(R.style.DarkTheme_Green)
+            "Yellow" -> setTheme(R.style.DarkTheme_Yellow)
+        }
+    }
+
+    private fun setLightAccent(accentColor: String) {
+        when (accentColor) {
+            "Blue" -> setTheme(R.style.LightTheme_Blue)
+            "Red" -> setTheme(R.style.LightTheme_Red)
+            "Green" -> setTheme(R.style.LightTheme_Green)
+            "Yellow" -> setTheme(R.style.LightTheme_Yellow)
         }
     }
 

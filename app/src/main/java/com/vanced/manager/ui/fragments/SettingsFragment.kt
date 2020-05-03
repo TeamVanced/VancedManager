@@ -5,7 +5,6 @@ import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import androidx.fragment.app.FragmentManager
 import androidx.preference.*
 import com.vanced.manager.R
 
@@ -36,30 +35,46 @@ class SettingsFragment : PreferenceFragmentCompat() {
         
        val themeSwitch: ListPreference? = findPreference("theme_mode")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
-
             when (themeSwitch.value){
                 "LIGHT" -> {
-                    activity?.setTheme(R.style.LightTheme)
                     activity?.recreate()
                 }
                 "DARK" -> {
-                    activity?.setTheme(R.style.DarkTheme)
                     activity?.recreate()
                 }
                 "FOLLOW" -> {
                     when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                         Configuration.UI_MODE_NIGHT_YES ->{
-                            activity?.setTheme(R.style.DarkTheme)
                             activity?.recreate()
                         }
                         Configuration.UI_MODE_NIGHT_NO -> {
-                            activity?.setTheme(R.style.LightTheme)
                             activity?.recreate()
                         }
                     }
                 }
                 else -> {
-                    activity?.setTheme(R.style.LightTheme)
+                    activity?.recreate()
+                }
+            }
+            true
+        }
+
+        val accentSwitch: ListPreference? = findPreference("accent_color")
+        accentSwitch?.setOnPreferenceChangeListener { _, _ ->
+            when (accentSwitch.value) {
+                "Blue" -> {
+                    activity?.recreate()
+                }
+                "Green" -> {
+                    activity?.recreate()
+                }
+                "Red" -> {
+                    activity?.recreate()
+                }
+                "Yellow" -> {
+                    activity?.recreate()
+                }
+                else -> {
                     activity?.recreate()
                 }
             }

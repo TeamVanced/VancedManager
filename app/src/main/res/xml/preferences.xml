@@ -35,6 +35,15 @@
             android:entryValues="@array/theme_modes_values"
             android:defaultValue="LIGHT"/>
 
+        <ListPreference
+            android:defaultValue="Blue"
+            android:entries="@array/accent_color"
+            android:entryValues="@array/accent_color"
+            android:icon="@drawable/ic_palette_black_24dp"
+            android:key="accent_mode"
+            android:summary="@string/theme_summary"
+            android:title="@string/theme" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

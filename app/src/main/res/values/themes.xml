@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="LightTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="LightTheme.Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -26,6 +26,33 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">#787777</item>
+
+    </style>
+
+    <style name="LightTheme.Red" parent="LightTheme.Blue">
+
+        <item name="colorPrimary">#D71414</item>
+        <item name="colorPrimaryVariant">#B92C2C</item>
+        <item name="colorSecondary">#AF3E3E</item>
+        <item name="colorSecondaryVariant">#80AF3E3E</item>
+
+    </style>
+
+    <style name="LightTheme.Green" parent="LightTheme.Blue">
+
+        <item name="colorPrimary">#3ED714</item>
+        <item name="colorPrimaryVariant">#2CB943</item>
+        <item name="colorSecondary">#3EAF51</item>
+        <item name="colorSecondaryVariant">#803EAF44</item>
+
+    </style>
+
+    <style name="LightTheme.Yellow" parent="LightTheme.Blue">
+
+        <item name="colorPrimary">#D7AD14</item>
+        <item name="colorPrimaryVariant">#B9B22C</item>
+        <item name="colorSecondary">#AFAD3E</item>
+        <item name="colorSecondaryVariant">#80AFAD3E</item>
 
     </style>
 
