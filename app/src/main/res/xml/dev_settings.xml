@@ -2,7 +2,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
+    <Preference
         android:key="firststart_switch"
         android:title="First start switcher"
         android:summary="Dev only please"/>
