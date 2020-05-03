@@ -40,9 +40,9 @@
             android:entries="@array/accent_color"
             android:entryValues="@array/accent_color"
             android:icon="@drawable/ic_palette_black_24dp"
-            android:key="accent_mode"
-            android:summary="@string/theme_summary"
-            android:title="@string/theme" />
+            android:key="accent_color"
+            android:summary="@string/accent_color_summary"
+            android:title="@string/accent_color" />
 
     </PreferenceCategory>
 

@@ -52,8 +52,11 @@ open class ThemeActivity : AppCompatActivity() {
     //not want to work, so I have to use my
     //own implementation of theme switching
 
+    //This whole theme switcher is a good
+    //example of how NOT to write theme switcher.
+    //Remember kids, hardcoding is bad
     private fun setFinalTheme(currentTheme: String) {
-        val currentAccent = pref.getString("accent_mode", "Blue").toString()
+        val currentAccent = pref.getString("accent_color", "Blue").toString()
         when (currentTheme) {
             "LIGHT" -> setLightAccent(currentAccent)
             "DARK" -> setDarkAccent(currentAccent)

@@ -35,49 +35,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
         
        val themeSwitch: ListPreference? = findPreference("theme_mode")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
-            when (themeSwitch.value){
-                "LIGHT" -> {
-                    activity?.recreate()
-                }
-                "DARK" -> {
-                    activity?.recreate()
-                }
-                "FOLLOW" -> {
-                    when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                        Configuration.UI_MODE_NIGHT_YES ->{
-                            activity?.recreate()
-                        }
-                        Configuration.UI_MODE_NIGHT_NO -> {
-                            activity?.recreate()
-                        }
-                    }
-                }
-                else -> {
-                    activity?.recreate()
-                }
-            }
+            activity?.recreate()
             true
         }
 
-        val accentSwitch: ListPreference? = findPreference("accent_mode")
+        val accentSwitch: ListPreference? = findPreference("accent_color")
         accentSwitch?.setOnPreferenceChangeListener { _, _ ->
-            when (accentSwitch.value) {
-                "Blue" -> {
-                    activity?.recreate()
-                }
-                "Green" -> {
-                    activity?.recreate()
-                }
-                "Red" -> {
-                    activity?.recreate()
-                }
-                "Yellow" -> {
-                    activity?.recreate()
-                }
-                else -> {
-                    activity?.recreate()
-                }
-            }
+            activity?.recreate()
             true
         }
 
