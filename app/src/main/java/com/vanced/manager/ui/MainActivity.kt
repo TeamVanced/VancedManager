@@ -63,6 +63,10 @@ class MainActivity : Main() {
                 navHost.navigate(R.id.toSecretSettingsFragment)
                 return true
             }
+            R.id.dev_settings -> {
+                navHost.navigate(R.id.toDevSettingsFragment)
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
         }
         return false

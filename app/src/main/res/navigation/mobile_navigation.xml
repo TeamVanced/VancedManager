@@ -116,7 +116,22 @@
     <fragment
         android:id="@+id/secret_settings_fragment"
         android:name="com.vanced.manager.ui.fragments.SecretSettingsFragment"
-        android:label="Secret Settings" />
+        android:label="Secret Settings">
+
+        <action
+            android:id="@+id/toDevSettingsFragment"
+            app:destination="@id/dev_settings_fragment"
+            app:enterAnim="@animator/fragment_enter"
+            app:exitAnim="@animator/fragment_exit"
+            app:popEnterAnim="@animator/fragment_enter_pop"
+            app:popExitAnim="@animator/fragment_exit_pop" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dev_settings_fragment"
+        android:name="com.vanced.manager.ui.fragments.DevSettingsFragment"
+        android:label="Dev Settings" />
 
     <action
         android:id="@+id/action_homeFragment"
