@@ -170,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/exo_semibold"
-                android:text="Български (България) + Black"
+                android:text="Български (България)"
                 android:textSize="18sp" />
 
             <com.google.android.material.radiobutton.MaterialRadioButton
