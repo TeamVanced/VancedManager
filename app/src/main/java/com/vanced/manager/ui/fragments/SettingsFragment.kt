@@ -59,7 +59,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-        val accentSwitch: ListPreference? = findPreference("accent_color")
+        val accentSwitch: ListPreference? = findPreference("accent_mode")
         accentSwitch?.setOnPreferenceChangeListener { _, _ ->
             when (accentSwitch.value) {
                 "Blue" -> {
