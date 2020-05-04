@@ -22,12 +22,6 @@ allprojects {
         jcenter()
 
     }
-
-    android {
-        lintOptions {
-            disable 'MissingTranslation'
-        }
-    }
 }
 
 task clean(type: Delete) {

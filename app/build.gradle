@@ -19,6 +19,13 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
+
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
+
     applicationVariants.all { variant ->
         variant.resValue "string", "versionName", variant.versionName
     }
