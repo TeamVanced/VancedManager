@@ -36,7 +36,7 @@
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_semibold"
+            android:fontFamily="@font/exo_bold"
             android:text="@string/install"
             android:textAllCaps="false"
             android:textColor="#ffffff"
