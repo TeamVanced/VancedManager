@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="close">اغلق</string>
+    <string name="security_context">"عناصر ناأبة
+"</string>
+    <string name="unsupported_version_context">عناصر ناأبة</string>
+    <string name="welcome">مرحبا
+اهلا</string>
+    <string name="whoops">وبس!</string>
+    <!-- Main Activity -->
+    <string name="title_about">"معاومات
+"</string>
+    <string name="title_home">بيت</string>
+    <string name="title_install">تثبيت</string>
+    <string name="title_settings">اعادات</string>
+    <!-- Home Page -->
+    <string name="brave_browser">صفحة Brave
+صفحة برايف</string>
+    <string name="changelogs">"معلومات التغير "</string>
+    <string name="install">تثبيت</string>
+    <string name="installed">مثبتة</string>
+    <string name="latest">آخر:</string>
+    <string name="loading">جار التحميل...</string>
+    <string name="n_a">ن/أ</string>
+    <string name="network_error">اتصاا الشبكة غير متاح</string>
+    <string name="reddit">Reddit
+رددت</string>
+    <string name="update">تحديث</string>
+    <string name="useful_links">روابط المفيدة</string>
+    <string name="vanced_medias">Vanced على توصيل اجتماعي
+فانسد على توصيل اجتماعي</string>
+    <string name="website">موقع</string>
+    <string name="website_text">الموقع رسمي لفانسد</string>
+    <string name="support_us">ادعمنا بتريق تنزيل بريف</string>
+    <!-- Settings -->
+    <string name="accent_color">الوان</string>
+    <string name="accent_color_summary">اختر افضل لون</string>
+    <string name="accent_blue">ازرق</string>
+    <string name="accent_green">اخضر</string>
+    <string name="accent_red">احمر</string>
+    <string name="accent_yellow">اصفر</string>
+    <string name="check_updates">تحقق من وجود تحديثات</string>
+    <!-- Install Page -->
+    <!-- About Page -->
+</resources>
