@@ -30,6 +30,13 @@
         <item>@string/accent_yellow</item>
     </string-array>
 
+    <string-array name="accent_color_values">
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Yellow</item>
+    </string-array>
+
     <string-array name="syke">
         <item>SYKE</item>
     </string-array>

@@ -38,7 +38,7 @@
         <ListPreference
             android:defaultValue="Blue"
             android:entries="@array/accent_color"
-            android:entryValues="@array/accent_color"
+            android:entryValues="@array/accent_color_values"
             android:icon="@drawable/ic_palette_black_24dp"
             android:key="accent_color"
             android:summary="@string/accent_color_summary"
