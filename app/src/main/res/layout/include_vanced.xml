@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:cardCornerRadius="@dimen/eightdp"
@@ -11,7 +12,8 @@
     app:contentPaddingRight="8dp"
     app:contentPaddingLeft="8dp"
     app:contentPaddingTop="5dp"
-    app:contentPaddingBottom="5dp">
+    app:contentPaddingBottom="5dp"
+    tools:ignore="ContentDescription, KeyboardInaccessibleWidget">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,7 +26,7 @@
             app:srcCompat="@drawable/ic_vanced"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier"/>
+            app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
 
         <TextView
             android:id="@+id/vanced_title"
