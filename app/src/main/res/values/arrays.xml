@@ -2,25 +2,15 @@
 <resources>
 
     <string-array name="theme_modes">
-        <item>"Light theme"</item>
-        <item>"Dark theme"</item>
-        <item>Follow System</item>
-    </string-array>
-
-    <string-array name="theme_modes_values">
         <item>@string/theme_light</item>
         <item>@string/theme_dark</item>
         <item>@string/theme_follow</item>
     </string-array>
 
-    <string-array name="languages">
-        <item>English</item>
-        <item>ქართული</item>
-    </string-array>
-
-    <string-array name="languages_value">
-        <item>en</item>
-        <item>ka</item>
+    <string-array name="theme_modes_values">
+        <item>LIGHT</item>
+        <item>DARK</item>
+        <item>FOLLOW</item>
     </string-array>
 
     <string-array name="accent_color">
