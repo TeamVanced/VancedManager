@@ -33,11 +33,18 @@
 
     <!-- Settings -->
     <string name="accent_color">აქცენტის ფერი</string>
+    <string name="accent_blue">ლურჯი</string>
     <string name="accent_color_summary">Cაირჩიეთ სასურველი აქცენტის ფერი</string>
+    <string name="accent_green">მწვანე</string>
+    <string name="accent_red">წითელი</string>
+    <string name="accent_yellow">ყვითელი</string>
     <string name="check_updates">განახლებების შემოწმება</string>
     <string name="category_interface">ინტერფეისი</string>
     <string name="category_manager">მენეჯერი</string>
     <string name="theme">თემა</string>
+    <string name="theme_follow">სისტემაზე დაფუძნებული</string>
+    <string name="theme_dark">მუქი თემა</string>
+    <string name="theme_light">ღია თემა</string>
     <string name="theme_summary">აირჩიეთ სასურველი თემა</string>
     <string name="push_notifications">შეტყობინებები</string>
     <string name="push_notifications_summary">მიიღეთ შეტყობინება როდესაც განახლება გამოვა</string>

@@ -37,8 +37,44 @@
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/vanced_remote_latest_version"
+            app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier"
             android:layout_marginStart="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/vanced_installbtn"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            app:backgroundTint="?colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/install"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:fontFamily="@font/exo_semibold"
+            app:icon="@drawable/outline_cloud_download_24"
+            android:scrollbars="none"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/vanced_title_buttons_barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="home_vanced_logo, vanced_title, vanced_installbtn"/>
+
+        <ImageView
+            android:id="@+id/vanced_uninstallbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vanced_title_buttons_barrier"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_delete_black_24dp"
+            android:tint="@color/Red"
+            android:scrollbars="none"/>
 
         <LinearLayout
             android:id="@+id/vanced_remote_latest_version"
@@ -46,7 +82,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/vanced_title">
+            app:layout_constraintTop_toBottomOf="@+id/vanced_title_buttons_barrier">
 
             <TextView
                 android:id="@+id/vanced_latest"
@@ -54,8 +90,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/latest"
                 android:textColor="?attr/colorOnSurfaceVariant"
-                android:fontFamily="@font/exo_semibold"
-                android:textSize="14sp" />
+                android:fontFamily="@font/exo"
+                android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/vanced_latest_version"
@@ -73,8 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version">
 
             <TextView
                 android:id="@+id/vanced_installed"
@@ -82,8 +117,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/installed"
                 android:textColor="?attr/colorOnSurfaceVariant"
-                android:fontFamily="@font/exo_semibold"
-                android:textSize="14sp" />
+                android:fontFamily="@font/exo"
+                android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/vanced_installed_version"
@@ -95,39 +130,6 @@
                 android:text="@string/loading" />
 
         </LinearLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/vanced_installbtn"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            app:backgroundTint="?colorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="@string/install"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/vanced_uninstallbtn"
-            app:layout_constraintHorizontal_bias="1.0"
-            android:fontFamily="@font/exo_semibold"
-            app:icon="@drawable/outline_cloud_download_24"
-            android:scrollbars="none"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/vanced_uninstallbtn"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:fontFamily="@font/exo_semibold"
-            app:iconPadding="0dp"
-            android:textAllCaps="false"
-            app:backgroundTint="?attr/colorError"
-            app:icon="@drawable/ic_delete_black_24dp"
-            app:iconGravity="textStart"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vanced_installbtn"
-            android:scrollbars="none"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

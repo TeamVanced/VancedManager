@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
@@ -19,8 +20,6 @@ open class Home : BaseFragment() {
 
         //Damn that's a lot of buttons
         val microginstallbtn = view.findViewById<Button>(R.id.microg_installbtn)
-        val microguninstallbtn = view.findViewById<Button>(R.id.microg_uninstallbtn)
-        val microgsettingsbtn = view.findViewById<Button>(R.id.microg_settingsbtn)
         val vancedinstallbtn = view.findViewById<Button>(R.id.vanced_installbtn)
 
         val bravebtn = view.findViewById<Button>(R.id.brave_button)
@@ -29,6 +28,9 @@ open class Home : BaseFragment() {
         val telegrambtn = view.findViewById<Button>(R.id.tgbtn)
         val twitterbtn = view.findViewById<Button>(R.id.twitterbtn)
         val redditbtn = view.findViewById<Button>(R.id.redditbtn)
+
+        val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
+        val microgsettingsbtn = view.findViewById<ImageView>(R.id.microg_settingsbtn)
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
