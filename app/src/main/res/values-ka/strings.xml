@@ -33,8 +33,8 @@
 
     <!-- Settings -->
     <string name="accent_color">აქცენტის ფერი</string>
-    <string name="accent_blue">ლურჯი</string>
     <string name="accent_color_summary">აირჩიეთ სასურველი აქცენტის ფერი</string>
+    <string name="accent_blue">ლურჯი</string>
     <string name="accent_green">მწვანე</string>
     <string name="accent_red">წითელი</string>
     <string name="accent_yellow">ყვითელი</string>
