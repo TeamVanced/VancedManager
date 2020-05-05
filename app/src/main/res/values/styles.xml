@@ -7,9 +7,9 @@
     </style>
 
     <style name="TransparentTheme.Blue" parent="Theme.MaterialComponents.NoActionBar">
-        
+
         <item name="colorPrimary">#1490D7</item>
-        <item name="colorPrimaryVariant">#2C7EB9</item>
+        <item name="colorPrimaryVariant">#804EAFF5</item>
         <item name="colorSecondary">#3E78AF</item>
         <item name="colorSecondaryVariant">#803E78AF</item>
         <item name="colorSurface">@android:color/transparent</item>
@@ -24,13 +24,14 @@
         <item name="colorOnSurface">#444444</item>
         <item name="colorOnSurfaceVariant">#FFFFFF</item>
         <item name="colorDisabled">#808080</item>
-        <item name="colorDisabledVariant">#000000</item>
+        <item name="colorDisabledVariant">#66808080</item>
         <item name="iconColor">?colorPrimaryVariant</item>
-        <item name="toolbarIconColor">#111111</item>
-        <item name="DialogBG">#ffffff</item>
+        <item name="toolbarIconColor">?colorOnPrimary</item>
+        <item name="DialogBG">#111111</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowBackground">?colorSurface</item>
-        <item name="android:statusBarColor">#787777</item>
+        <item name="colorBackgroundFloating">#111111</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">#000000</item>
         
     </style>
 
