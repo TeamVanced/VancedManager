@@ -26,5 +26,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@android:color/transparent"/>
 
-
 </RelativeLayout>

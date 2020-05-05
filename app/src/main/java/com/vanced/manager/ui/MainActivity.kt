@@ -1,6 +1,5 @@
 package com.vanced.manager.ui
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
@@ -8,7 +7,6 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-//import com.google.android.material.appbar.MaterialToolbar
 
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
