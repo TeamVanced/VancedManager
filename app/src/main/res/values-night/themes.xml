@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="DarkTheme.Blue" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="DarkTheme.Blue" parent="Theme.AppCompat.NoActionBar">
 
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#804EAFF5</item>
