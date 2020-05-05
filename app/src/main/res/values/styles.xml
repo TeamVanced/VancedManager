@@ -32,6 +32,9 @@
         <item name="colorBackgroundFloating">#111111</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:statusBarColor">#000000</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
         
     </style>
 
