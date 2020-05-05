@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -28,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.card.MaterialCardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/about_github_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -49,7 +49,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.google.android.material.button.MaterialButton
+                    <Button
                         android:id="@+id/about_github_button"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_gravity="start"
@@ -66,7 +66,7 @@
                         app:iconGravity="textStart"
                         app:iconPadding="0dp"/>
 
-                    <com.google.android.material.button.MaterialButton
+                    <Button
                         tools:ignore="HardcodedText"
                         android:id="@+id/about_license_button"
                         style="@style/Widget.AppCompat.Button.Borderless"
@@ -87,8 +87,8 @@
 
             </LinearLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>

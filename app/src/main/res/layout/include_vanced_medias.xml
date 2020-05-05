@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/social_media_card"
@@ -22,11 +22,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/eightdp"
             android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
             android:fontFamily="@font/exo_semibold"
             android:text="@string/vanced_medias"
             android:textColor="#ffffff"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/discordbtn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/tgbtn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                     app:layout_constraintStart_toEndOf="@id/discordbtn"/>
 
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/twitterbtn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tgbtn"/>
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/redditbtn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
@@ -110,4 +110,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>
