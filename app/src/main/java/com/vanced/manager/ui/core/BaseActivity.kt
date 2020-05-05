@@ -66,7 +66,6 @@ open class ThemeActivity : AppCompatActivity() {
                     Configuration.UI_MODE_NIGHT_NO -> setLightAccent(currentAccent)
                 }
             }
-            "TRANS" -> setTransAccent(currentAccent)
             else -> setLightAccent("Blue")
         }
     }
@@ -86,15 +85,6 @@ open class ThemeActivity : AppCompatActivity() {
             "Red" -> setTheme(R.style.LightTheme_Red)
             "Green" -> setTheme(R.style.LightTheme_Green)
             "Yellow" -> setTheme(R.style.LightTheme_Yellow)
-        }
-    }
-
-    private fun setTransAccent(accentColor: String) {
-        when (accentColor) {
-            "Blue" -> setTheme(R.style.TransparentTheme_Blue)
-            "Red" -> setTheme(R.style.TransparentTheme_Red)
-            "Green" -> setTheme(R.style.TransparentTheme_Green)
-            "Yellow" -> setTheme(R.style.TransparentTheme_Yellow)
         }
     }
 
