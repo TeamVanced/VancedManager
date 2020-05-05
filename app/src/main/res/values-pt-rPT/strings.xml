@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <!-- Global Strings -->
+    <string name="close">Fechar</string>
+    <string name="security_context">Verifique se você baixou o aplicativo do vanced.app, Vanced Discord ou GitHub</string>
+    <string name="unsupported_version_context">Não sei como, mas você provavelmente instalou o Vanced Manager na versão Android não suportada. O aplicativo será fechado agora</string>
+    <string name="welcome">Bem-Vindo</string>
+    <string name="whoops">Whoops!</string>
+
+    <!-- Main Activity -->
+    <string name="title_about">Sobre</string>
+    <string name="title_home">Página Principal</string>
+    <string name="title_install">Instalar</string>
+    <string name="title_settings">Configurações</string>
+
+    <!-- Home Page -->
+    <string name="brave_browser">Navegador Brave</string>
+    <string name="changelogs">Notas de Lançamento</string>
+    <string name="install">Instalar</string>
+    <string name="installed">Instalado:</string>
+    <string name="latest">Mais Recente:</string>
+    <string name="loading">Carregando…</string>
+    <string name="n_a">N/A</string>
+    <string name="network_error">Conexão de rede indisponível</string>
+    <string name="reddit">Reddit</string>
+    <string name="update">Atualizar</string>
+    <string name="useful_links">Links Importantes</string>
+    <string name="vanced_medias">Vanced nas Redes Sociais</string>
+    <string name="website">Website</string>
+    <string name="website_text">Site oficial do Vanced</string>
+
+
+    <!-- Settings -->
+    <string name="accent_color">Cor de Destaque</string>
+    <string name="accent_color_summary">Escolhe tua cor de destaque preferida</string>
+    <string name="accent_blue">Azul</string>
+    <string name="accent_green">Verde</string>
+    <string name="accent_red">Vermelho</string>
+    <string name="accent_yellow">Amarelo</string>
+    <string name="check_updates">Verificar por Atualizações</string>
+    <string name="category_interface">Interface</string>
+    <string name="category_manager">Gerente</string>
+    <string name="theme">Tema</string>
+    <string name="theme_follow">Seguir Sistema</string>
+    <string name="theme_dark">Tema Escuro</string>
+    <string name="theme_light">Tema Claro</string>
+    <string name="theme_summary">Escolhe o teu tema preferido</string>
+    <string name="push_notifications">Notificações</string>
+    <string name="push_notifications_summary">Receber notificações quando uma actualização estiver disponível</string>
+    <string name="re_check">Verificar Novamente</string>
+    <string name="update_center">Centro de Actualizações</string>
+
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Escolhe tua língua preferida para o Vanced</string>
+    <string name="choose_preferred_language_note">Nota: Se você instalar algo diferente de Inglês, Inglês será instalado como um idioma adicional</string>
+    <string name="choose_preferred_theme">Escolhe teu tema preferido para o Vanced</string>
+    <string name="choose_preferred_variant">Escolhe tua variação preferida para o Vanced</string>
+    <string name="finish">Terminar</string>
+    <string name="install_light_black">Claro + Preto</string>
+    <string name="install_light_dark">Claro + Escuro</string>
+    <string name="install_nonroot">Não Roteado</string>
+    <string name="install_root">Roteado</string>
+    <string name="next">Próximo</string>
+
+    <!-- About Page -->
+    <string name="manager_devs">Desenvolvedores Gerentes</string>
+    <string name="sources">Fontes</string>
+    <string name="vanced_team">Equipa Vanced</string>
+</resources>
