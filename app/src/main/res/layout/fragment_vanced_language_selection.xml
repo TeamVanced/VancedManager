@@ -62,7 +62,7 @@
 
             </FrameLayout>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:id="@+id/vanced_install_finish"
                 android:layout_width="wrap_content"
