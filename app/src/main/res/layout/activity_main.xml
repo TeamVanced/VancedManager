@@ -19,20 +19,17 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/home_appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?colorSurface"
+        android:layout_alignParentTop="true">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/home_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:titleTextColor="?attr/toolbarIconColor"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:background="@android:color/transparent"/>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-
 
 </RelativeLayout>
