@@ -1,15 +1,13 @@
 package com.vanced.manager.ui
 
 import android.content.SharedPreferences
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.preference.PreferenceManager
-import com.google.android.material.appbar.MaterialToolbar
 
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
@@ -17,15 +15,13 @@ import com.vanced.manager.core.Main
 class MainActivity : Main() {
 
     private var isParent = true
-    private lateinit var currentTheme: String
-    private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
+        val toolbar: Toolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
 
         val navHost = findNavController(R.id.bottom_nav_host)
@@ -73,7 +69,7 @@ class MainActivity : Main() {
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
+        val toolbar: Toolbar = findViewById(R.id.home_toolbar)
         when {
             isNeeded -> toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
             else -> toolbar.navigationIcon = null
