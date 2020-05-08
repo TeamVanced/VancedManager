@@ -17,15 +17,15 @@
 
     <shortcut
         android:enabled="true"
-        android:shortcutId="install"
-        android:icon="@drawable/shortcut_cloud_download_24"
-        android:shortcutShortLabel="@string/title_install">
+        android:shortcutId="about"
+        android:icon="@drawable/ic_shortcut_info_black_24dp"
+        android:shortcutShortLabel="@string/title_about">
 
         <intent
             android:action="com.vanced.manager.OPEN_INSTALL"
             android:targetClass="com.vanced.manager.ui.MainActivity"
             android:targetPackage="com.vanced.manager"
-            android:data="vncdmngr://open_install_fragment"/>
+            android:data="vncdmngr://open_about_fragment"/>
 
     </shortcut>
 
