@@ -18,6 +18,8 @@ open class Main: ThemeActivity() {
 
         val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
         val firstStart = prefs.getBoolean("firstStart", true)
+
+        //Easter Egg
         val falseStatement = prefs.getBoolean("statement", true)
 
         if (firstStart) {
@@ -47,6 +49,7 @@ open class Main: ThemeActivity() {
         editor.apply()
     }
 
+    //Easter Egg
     private fun statementFalse() {
         AlertDialog.Builder(this)
             .setTitle("Wait what?")
