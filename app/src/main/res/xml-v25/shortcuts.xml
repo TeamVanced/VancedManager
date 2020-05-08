@@ -5,7 +5,7 @@
     <shortcut
         android:enabled="true"
         android:shortcutId="settings"
-        android:icon="@drawable/ic_shortcut_settings_black_24dp"
+        android:icon="@drawable/ic_shortcut_settings"
         android:shortcutShortLabel="@string/title_settings">
 
         <intent
@@ -19,7 +19,7 @@
     <shortcut
         android:enabled="true"
         android:shortcutId="about"
-        android:icon="@drawable/ic_shortcut_info_black_24dp"
+        android:icon="@drawable/ic_shortcut_info"
         android:shortcutShortLabel="@string/title_about">
 
         <intent
