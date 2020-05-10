@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
@@ -66,11 +67,11 @@ class HomeFragment : Home() {
 
             activity?.runOnUiThread {
 
-                val animationShow: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_enter)
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val oa = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0f)
 
                 networkErrorLayout?.visibility = View.VISIBLE
-                networkErrorLayout?.startAnimation(animationShow)
+                oa.start()
 
             }
 
@@ -93,10 +94,10 @@ class HomeFragment : Home() {
 
             activity?.runOnUiThread {
 
-                val animationHide: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.view_exit)
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val oa = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, -1f)
 
-                networkErrorLayout?.startAnimation(animationHide)
+                oa.start()
                 networkErrorLayout?.visibility = View.GONE
             }
 
