@@ -64,10 +64,12 @@ class HomeFragment : Home() {
             activity?.runOnUiThread {
 
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val oa = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0f)
+                val oa1 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
+                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
 
                 networkErrorLayout?.visibility = View.VISIBLE
-                oa.start()
+                oa1.start()
+                oa2.start()
 
             }
 
@@ -91,9 +93,11 @@ class HomeFragment : Home() {
             activity?.runOnUiThread {
 
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val oa = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, -1f)
+                val oa1 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
+                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
 
-                oa.start()
+                oa1.start()
+                oa2.start()
                 networkErrorLayout?.visibility = View.GONE
             }
 
