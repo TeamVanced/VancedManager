@@ -66,7 +66,7 @@ open class Home : BaseFragment() {
         }
 
         if (vancedStatus!!) {
-            microguninstallbtn.setOnClickListener {
+            vanceduninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.vanced.android.youtube")
                 val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
                 startActivity(vanUninstall)
