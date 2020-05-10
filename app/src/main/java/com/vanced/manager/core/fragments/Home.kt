@@ -31,6 +31,7 @@ open class Home : BaseFragment() {
 
         val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
         val microgsettingsbtn = view.findViewById<ImageView>(R.id.microg_settingsbtn)
+        val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
@@ -62,6 +63,16 @@ open class Home : BaseFragment() {
         } else {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
+        }
+
+        if (vancedStatus!!) {
+            microguninstallbtn.setOnClickListener {
+                val uri = Uri.parse("package:com.vanced.android.youtube")
+                val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
+                startActivity(vanUninstall)
+            }
+        } else {
+            vanceduninstallbtn.visibility = View.INVISIBLE
         }
 
         bravebtn.setOnClickListener {

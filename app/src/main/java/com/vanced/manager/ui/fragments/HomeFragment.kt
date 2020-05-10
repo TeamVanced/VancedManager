@@ -8,8 +8,6 @@ import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Bundle
 import android.view.*
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
@@ -58,8 +56,6 @@ class HomeFragment : Home() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-
-
     private var networkCallback = object: ConnectivityManager.NetworkCallback() {
 
         override fun onLost(network: Network) {
@@ -105,7 +101,7 @@ class HomeFragment : Home() {
 
     }
 
-    fun connectionStatus() {
+    private fun connectionStatus() {
         val connectivityManager = context?.applicationContext?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkRequest = NetworkRequest.Builder()
             .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
