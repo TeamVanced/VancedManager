@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="12dp"
+    android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="none">
 
@@ -29,7 +28,7 @@
         <com.vanced.manager.ui.core.SlidingLinearLayout
             android:id="@+id/home_main_wrapper"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="8dp"
             android:orientation="vertical">
 

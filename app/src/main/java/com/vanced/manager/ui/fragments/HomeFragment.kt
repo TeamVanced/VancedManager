@@ -68,7 +68,7 @@ class HomeFragment : Home() {
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
                 val mainLayout = view?.findViewById<LinearLayout>(R.id.home_main_wrapper)
                 val oa0 = ObjectAnimator.ofFloat(mainLayout, "yFraction", 0f, 0.3f)
-                val oa1 = ObjectAnimator.ofFloat(mainLayout, "yFraction", 0.3f, 0f)
+                val oa1 = ObjectAnimator.ofFloat(mainLayout, "yFraction", 0.3f, 0.1f)
                 val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
                 val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
 
