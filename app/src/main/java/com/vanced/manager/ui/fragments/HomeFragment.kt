@@ -8,7 +8,6 @@ import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Bundle
 import android.view.*
-import android.widget.LinearLayout
 import androidx.core.animation.addListener
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.card.MaterialCardView
@@ -66,9 +65,6 @@ class HomeFragment : Home() {
             activity?.runOnUiThread {
 
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val mainLayout = view?.findViewById<LinearLayout>(R.id.home_main_wrapper)
-                val oa0 = ObjectAnimator.ofFloat(mainLayout, "yFraction", 0f, 0.1f)
-                val oa1 = ObjectAnimator.ofFloat(mainLayout, "yFraction", 0.1f, 0.05f)
                 val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
                 val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
 
@@ -76,11 +72,6 @@ class HomeFragment : Home() {
                 oa2.apply {
                     oa2.addListener(onStart = {
                         networkErrorLayout?.visibility = View.VISIBLE
-                        oa0.start()
-                    }
-                    )
-                    oa2.addListener(onEnd = {
-                        oa1.start()
                     })
                     start()
                 }
@@ -96,23 +87,15 @@ class HomeFragment : Home() {
             activity?.runOnUiThread {
 
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val mainLayout = view?.findViewById<LinearLayout>(R.id.home_main_wrapper)
-                val oa0 = ObjectAnimator.ofFloat(mainLayout, "yFraction", 0f, 0.1f)
-                val oa1 = ObjectAnimator.ofFloat(mainLayout, "yFraction", 0.1f, 0f)
                 val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
                 val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
 
                 oa2.start()
                 oa3.apply {
-                    oa3.addListener(onStart = {
-                        oa0.start()
-                    })
 
                     oa3.addListener(onEnd = {
-                        oa1.start()
                         networkErrorLayout?.visibility = View.GONE
-                    }
-                    )
+                    })
                     start()
                 }
 
