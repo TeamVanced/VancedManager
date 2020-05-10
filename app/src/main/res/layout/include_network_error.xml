@@ -11,24 +11,14 @@
     app:contentPaddingRight="8dp"
     app:contentPaddingLeft="8dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/network_errortxt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/network_errortxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/network_error"
-            android:fontFamily="@font/exo_semibold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="?attr/colorError"
-            android:textSize="18sp"
-            android:gravity="center" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:text="@string/network_error"
+        android:fontFamily="@font/exo_semibold"
+        android:textColor="?attr/colorError"
+        android:textSize="18sp"
+        android:gravity="center" />
 
 </com.vanced.manager.ui.core.SlidingCardView>
