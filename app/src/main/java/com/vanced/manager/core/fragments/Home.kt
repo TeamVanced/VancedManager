@@ -2,11 +2,13 @@ package com.vanced.manager.core.fragments
 
 import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
@@ -35,7 +37,10 @@ open class Home : BaseFragment() {
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
+        val microgVer = pm?.getPackageInfo("com.mgoogle.android.gms", 0)
+
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+        val vancedVer = pm?.getPackageInfo("com.vanced.android.youtube", 0)
 
         vancedinstallbtn.setOnClickListener {
             view.findNavController().navigate(R.id.toInstallThemeFragment)
@@ -45,6 +50,7 @@ open class Home : BaseFragment() {
             openUrl("https://youtu.be/dQw4w9WgXcQ", R.color.YT)
         }
 
+        val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
             microguninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.mgoogle.android.gms")
@@ -60,19 +66,24 @@ open class Home : BaseFragment() {
                 )
                 startActivity(intent)
             }
+            microgVerText.text = microgVer.toString()
         } else {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
+            microgVerText.text = getString(R.string.unavailable)
         }
 
+        val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         if (vancedStatus!!) {
             vanceduninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.vanced.android.youtube")
                 val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
                 startActivity(vanUninstall)
             }
+            vancedVerText.text = vancedVer.toString()
         } else {
             vanceduninstallbtn.visibility = View.INVISIBLE
+            vancedVerText.text = getString(R.string.unavailable)
         }
 
         bravebtn.setOnClickListener {

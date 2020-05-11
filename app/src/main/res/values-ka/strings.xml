@@ -24,6 +24,7 @@
     <string name="n_a">N/A</string>
     <string name="network_error">კავშირი არ არის</string>
     <string name="reddit">Reddit</string>
+    <string name="unavailable">ხელმიუწვდომელია</string>
     <string name="update">განახლება</string>
     <string name="useful_links">საჭირო ლინკები</string>
     <string name="vanced_medias">Vanced სოციალურ ქსელებზე</string>
