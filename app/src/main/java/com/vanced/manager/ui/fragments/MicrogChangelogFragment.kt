@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.vanced.manager.R
 
 /**
@@ -18,5 +19,4 @@ class MicrogChangelogFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_microg_changelog, container, false)
     }
-
 }

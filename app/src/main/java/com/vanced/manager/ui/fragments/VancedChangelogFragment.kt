@@ -1,10 +1,12 @@
 package com.vanced.manager.ui.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.vanced.manager.R
 
 /**
@@ -17,10 +19,6 @@ class VancedChangelogFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_vanced_changelog, container, false)
-    }
-
-    fun fetchChangelog() {
-        val url = ""
     }
 
 }

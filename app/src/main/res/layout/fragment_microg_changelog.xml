@@ -7,10 +7,11 @@
     tools:context=".ui.fragments.MicrogChangelogFragment">
 
     <TextView
+        android:id="@+id/microg_changelog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:text="Same but for microg"
-        android:textAlignment="center" />
+        android:textSize="18sp"
+        android:text="Wait who even cares about microg changelog lol"
+        tools:ignore="HardcodedText" />
 
 </FrameLayout>

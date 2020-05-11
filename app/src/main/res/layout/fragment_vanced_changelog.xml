@@ -7,10 +7,18 @@
     tools:context=".ui.fragments.VancedChangelogFragment">
 
     <TextView
+        android:id="@+id/vanced_changelog"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="32sp"
-        android:textAlignment="center"
-        android:text="This is a hardcoded string" />
+        android:textSize="18sp"
+        android:text="Removed:\n
+- Auto subtitles (has been replaced with live captions)\n
+- minimised video player style (Google removed it) \n
+- auto repeat (might be fixed later) \n
+- accessibility seek buttons (might be fixed later) \n\nChanged:
+- Whatever Youtube fixed over 9 months :P \n
+- some small bugs \n
+- Installation now with SAI"
+        tools:ignore="HardcodedText" />
 
 </FrameLayout>
