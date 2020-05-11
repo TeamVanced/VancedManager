@@ -37,10 +37,7 @@ open class Home : BaseFragment() {
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
-        val microgVer = pm?.getPackageInfo("com.mgoogle.android.gms", 0)
-
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
-        val vancedVer = pm?.getPackageInfo("com.vanced.android.youtube", 0)
 
         vancedinstallbtn.setOnClickListener {
             view.findNavController().navigate(R.id.toInstallThemeFragment)
@@ -52,6 +49,7 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
+            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0)
             microguninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.mgoogle.android.gms")
                 val mgUninstall = Intent(Intent.ACTION_DELETE, uri)
@@ -75,6 +73,7 @@ open class Home : BaseFragment() {
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         if (vancedStatus!!) {
+            val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0)
             vanceduninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.vanced.android.youtube")
                 val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
