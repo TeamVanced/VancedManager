@@ -49,7 +49,7 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
-            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0)
+            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.mgoogle.android.gms")
                 val mgUninstall = Intent(Intent.ACTION_DELETE, uri)
@@ -73,7 +73,7 @@ open class Home : BaseFragment() {
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         if (vancedStatus!!) {
-            val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0)
+            val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.vanced.android.youtube")
                 val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
