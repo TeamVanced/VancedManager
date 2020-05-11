@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:text="Wait who even cares about microg changelog lol"
+        android:text="Changes:\n - Added casting support\n
+- Fixed notifications\n\nMicroG now requires Vanced 14.21.54 and up"
         tools:ignore="HardcodedText" />
 
 </FrameLayout>
