@@ -6,6 +6,8 @@
     style="@style/MaterialCard"
     android:layout_width="wrap_content"
     android:layout_gravity="center"
+    app:contentPaddingTop="0dp"
+    app:contentPaddingBottom="0dp"
     app:contentPaddingRight="6dp"
     app:contentPaddingLeft="6dp"
     tools:context=".ui.fragments.UpdateCheckFragment">
