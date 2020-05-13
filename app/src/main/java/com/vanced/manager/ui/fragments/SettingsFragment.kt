@@ -15,11 +15,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
         //Fuck Android 6 android 5 users! Because theme is not working
         //we can't display preference for them.
         //They should've upgraded to something newer
-        /*if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.M) {
             val prefScreen: PreferenceScreen? = findPreference("prefScreen")
             val prefCategory: PreferenceCategory? = findPreference("interface_category")
             prefScreen?.removePreference(prefCategory)
-        }*/
+        }
 
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
