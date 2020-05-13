@@ -2,14 +2,9 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/InnerMaterialCard"
     android:id="@+id/social_media_card"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/eightdp"
-    android:layout_marginEnd="@dimen/eightdp"
-    app:cardBackgroundColor="#6958D0"
-    app:cardCornerRadius="@dimen/eightdp"
-    app:cardElevation="0dp">
+    app:cardBackgroundColor="#6958D0">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -45,30 +40,16 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/discordbtn"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:backgroundTint="@android:color/transparent"
+                    style="@style/SocialButtonStyle"
                     app:icon="@drawable/discord"
-                    app:iconPadding="0dp"
-                    app:iconGravity="textStart"
-                    app:iconTint="#ffffff"
                     app:layout_constraintEnd_toStartOf="@id/tgbtn"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/tgbtn"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:backgroundTint="@android:color/transparent"
+                    style="@style/SocialButtonStyle"
                     app:icon="@drawable/telegram"
-                    app:iconPadding="0dp"
-                    app:iconGravity="textStart"
-                    app:iconTint="#ffffff"
                     app:layout_constraintEnd_toStartOf="@id/twitterbtn"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/discordbtn"/>
@@ -76,30 +57,16 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/twitterbtn"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:backgroundTint="@android:color/transparent"
+                    style="@style/SocialButtonStyle"
                     app:icon="@drawable/twitter"
-                    app:iconPadding="0dp"
-                    app:iconGravity="textStart"
-                    app:iconTint="#ffffff"
                     app:layout_constraintEnd_toStartOf="@id/redditbtn"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tgbtn"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/redditbtn"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:backgroundTint="@android:color/transparent"
+                    style="@style/SocialButtonStyle"
                     app:icon="@drawable/ic_reddit"
-                    app:iconGravity="textStart"
-                    app:iconPadding="0dp"
-                    app:iconTint="#ffffff"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/twitterbtn"/>

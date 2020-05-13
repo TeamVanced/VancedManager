@@ -2,15 +2,8 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/eightdp"
-    app:cardBackgroundColor="?colorSurfaceVariant"
-    app:cardElevation="0dp"
-    app:contentPaddingBottom="4dp"
-    app:contentPaddingLeft="8dp"
-    app:contentPaddingRight="8dp"
-    app:cardPreventCornerOverlap="true">
+    style="@style/MaterialCard"
+    app:contentPaddingTop="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,20 +11,14 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/CardTitle"
             android:id="@+id/useful_links_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/exo_bold"
-            android:text="@string/useful_links"
-            android:textSize="18sp"
-            android:textColor="?attr/colorOnSurfaceVariant" />
+            android:text="@string/useful_links" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="4dp">
+            android:orientation="vertical">
 
             <include
                 android:id="@+id/home_vanced_medias_wrapper"
@@ -40,26 +27,16 @@
                 android:layout_height="wrap_content" />
 
             <com.google.android.material.button.MaterialButton
+                style="@style/LinkButtonStyle"
                 android:id="@+id/brave_button"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/support_us"
                 android:layout_marginTop="5dp"
-                android:textAllCaps="false"
-                android:textColor="#ffffff"
-                app:backgroundTint="?colorPrimary"
                 app:cornerRadius="@dimen/eightdp" />
 
             <com.google.android.material.button.MaterialButton
+                style="@style/LinkButtonStyle"
                 android:id="@+id/website_button"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/website_text"
-                android:textAllCaps="false"
-                app:backgroundTint="?colorPrimary"
-                android:textColor="#ffffff"
                 app:cornerRadius="@dimen/eightdp" />
 
         </LinearLayout>

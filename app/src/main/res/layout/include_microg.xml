@@ -2,51 +2,37 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:cardCornerRadius="@dimen/eightdp"
-    app:cardBackgroundColor="?colorSurfaceVariant"
-    app:cardElevation="0dp"
-    app:cardPreventCornerOverlap="true"
-    app:contentPaddingLeft="8dp"
-    app:contentPaddingRight="8dp"
-    app:contentPaddingTop="5dp"
-    app:contentPaddingBottom="5dp">
+    style="@style/MaterialCard">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/microg_title"
+        <ImageView
+            android:id="@+id/home_microg_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_bold"
-            android:text="@string/microg"
-            android:textColor="?colorPrimary"
-            android:textSize="24sp"
+            app:srcCompat="@drawable/ic_microg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier"
-            android:drawableStart="@drawable/ic_microg"
-            android:drawablePadding="8dp"/>
+            app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier" />
 
-        <Button
+        <TextView
+            style="@style/TextAppTitle"
+            android:id="@+id/microg_title"
+            android:text="@string/microg"
+            app:layout_constraintStart_toEndOf="@id/home_microg_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/microg_installbtn"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_bold"
+            style="@style/ButtonStyle"
             android:text="@string/install"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            app:backgroundTint="?colorPrimary"
             app:icon="@drawable/outline_cloud_download_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn"
-            android:scrollbars="none"/>
+            app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/microg_title_buttons_barrier"
@@ -64,22 +50,14 @@
             app:layout_constraintBottom_toTopOf="@id/linearLayout2">
 
             <TextView
+                style="@style/AppVer"
                 android:id="@+id/microg_latest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/exo"
-                android:text="@string/latest"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:textSize="13sp" />
+                android:text="@string/latest" />
 
             <TextView
+                style="@style/AppVer.Bold"
                 android:id="@+id/microg_latest_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/eightdp"
-                android:fontFamily="@font/exo_semibold"
-                android:text="@string/loading"
-                android:textColor="?attr/colorOnSurfaceVariant" />
+                android:text="@string/loading" />
 
         </LinearLayout>
 
@@ -92,49 +70,33 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
+                style="@style/AppVer"
                 android:id="@+id/microg_installed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/exo"
-                android:text="@string/installed"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:textSize="13sp" />
+                android:text="@string/installed" />
 
             <TextView
+                style="@style/AppVer.Bold"
                 android:id="@+id/microg_installed_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/eightdp"
-                android:fontFamily="@font/exo_semibold"
-                android:text="@string/loading"
-                android:textColor="?attr/colorOnSurfaceVariant" />
+                android:text="@string/loading" />
 
         </LinearLayout>
 
         <ImageView
+            style="@style/ClickableImageWidget"
             android:id="@+id/microg_settingsbtn"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="8dp"
-            android:tint="?colorPrimary"
-            android:clickable="true"
-            app:srcCompat="@drawable/ic_settings_black_24dp"
+            app:srcCompat="@drawable/ic_microg_settings"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/microg_uninstallbtn"
-            android:scrollbars="none"/>
+            app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
+            android:layout_marginEnd="4dp"/>
 
         <ImageView
+            style="@style/ClickableImageWidget.Red"
             android:id="@+id/microg_uninstallbtn"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:fontFamily="@font/exo_semibold"
             app:srcCompat="@drawable/ic_delete_black_24dp"
-            android:tint="@color/Red"
-            android:clickable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/microg_installbtn"
-            android:scrollbars="none"/>
+            app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

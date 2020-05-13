@@ -3,16 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:cardCornerRadius="@dimen/eightdp"
-    app:cardElevation="0dp"
-    app:cardPreventCornerOverlap="true"
-    app:cardBackgroundColor="?colorSurfaceVariant"
-    app:contentPaddingRight="8dp"
-    app:contentPaddingLeft="8dp"
-    app:contentPaddingTop="5dp"
-    app:contentPaddingBottom="5dp"
+    style="@style/MaterialCard"
     tools:ignore="ContentDescription, KeyboardInaccessibleWidget">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,34 +20,20 @@
             app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
 
         <TextView
+            style="@style/TextAppTitle"
             android:id="@+id/vanced_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="?colorPrimary"
-            android:drawablePadding="8dp"
-            android:fontFamily="@font/exo_bold"
             android:text="@string/vanced"
-            android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier"
-            android:layout_marginStart="8dp"/>
+            app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/vanced_installbtn"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            app:backgroundTint="?colorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/ButtonStyle"
             android:text="@string/install"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            android:fontFamily="@font/exo_bold"
-            app:icon="@drawable/outline_cloud_download_24"
-            android:scrollbars="none"/>
+            app:icon="@drawable/outline_cloud_download_24" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/vanced_title_buttons_barrier"
@@ -66,17 +43,12 @@
             app:constraint_referenced_ids="home_vanced_logo, vanced_title, vanced_installbtn"/>
 
         <ImageView
+            style="@style/ClickableImageWidget.Red"
             android:id="@+id/vanced_uninstallbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:iconPadding="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/vanced_title_buttons_barrier"
-            android:clickable="true"
-            app:srcCompat="@drawable/ic_delete_black_24dp"
-            android:tint="@color/Red"
-            android:scrollbars="none"/>
+            app:srcCompat="@drawable/ic_delete_black_24dp" />
 
         <LinearLayout
             android:id="@+id/vanced_remote_latest_version"
@@ -87,21 +59,13 @@
             app:layout_constraintTop_toBottomOf="@+id/vanced_title_buttons_barrier">
 
             <TextView
+                style="@style/AppVer"
                 android:id="@+id/vanced_latest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/latest"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:fontFamily="@font/exo"
-                android:textSize="13sp" />
+                android:text="@string/latest" />
 
             <TextView
+                style="@style/AppVer.Bold"
                 android:id="@+id/vanced_latest_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/eightdp"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:fontFamily="@font/exo_semibold"
                 android:text="@string/loading" />
 
         </LinearLayout>
@@ -114,21 +78,13 @@
             app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version">
 
             <TextView
+                style="@style/AppVer"
                 android:id="@+id/vanced_installed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/installed"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:fontFamily="@font/exo"
-                android:textSize="13sp" />
+                android:text="@string/installed" />
 
             <TextView
+                style="@style/AppVer.Bold"
                 android:id="@+id/vanced_installed_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/eightdp"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:fontFamily="@font/exo_semibold"
                 android:text="@string/loading" />
 
         </LinearLayout>

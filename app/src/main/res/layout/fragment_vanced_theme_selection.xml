@@ -6,16 +6,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="12dp"
-        app:cardElevation="0dp"
-        app:cardCornerRadius="@dimen/eightdp"
-        app:cardBackgroundColor="?colorSurfaceVariant"
-        app:cardPreventCornerOverlap="true"
+        style="@style/InstallMaterialCard"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -25,12 +16,7 @@
 
             <TextView
                 android:id="@+id/install_theme_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:textColor="?attr/colorOnSurfaceVariant"
-                android:fontFamily="@font/exo_bold"
+                style="@style/InstallCardTitle"
                 android:text="@string/choose_preferred_theme" />
 
             <RadioGroup
@@ -58,16 +44,10 @@
             </RadioGroup>
 
             <com.google.android.material.button.MaterialButton
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/InstallButtonStyle"
                 android:id="@+id/vanced_next_to_variant"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="6dp"
                 android:text="@string/next"
-                android:textAllCaps="false"
-                app:icon="@drawable/ic_keyboard_next"
-                app:iconGravity="end"
-                android:layout_gravity="end"/>
+                app:icon="@drawable/ic_keyboard_next" />
 
         </LinearLayout>
 

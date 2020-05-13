@@ -3,15 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="8dp"
-    app:cardPreventCornerOverlap="true"
-    app:cardBackgroundColor="?colorSurfaceVariant"
-    app:cardElevation="0dp"
-    app:contentPaddingRight="8dp"
-    app:contentPaddingLeft="8dp"
-    app:contentPaddingBottom="8dp"
+    style="@style/MaterialCard"
+    app:contentPaddingTop="2dp"
     tools:ignore="HardcodedText">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,17 +12,11 @@
         android:layout_height="match_parent">
 
         <TextView
+            style="@style/AboutCardTitle"
             android:id="@+id/about_card_vancedTeam"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/manager_devs"
-            android:textSize="24sp"
-            android:textColor="?attr/colorOnSurfaceVariant"
-            android:fontFamily="@font/exo_semibold"
-            android:layout_marginTop="4dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"

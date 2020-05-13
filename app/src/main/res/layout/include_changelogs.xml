@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
+    style="@style/MaterialCard"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/eightdp"
-    app:cardBackgroundColor="?colorSurfaceVariant"
-    app:cardElevation="0dp"
-    app:cardPreventCornerOverlap="true">
+    app:contentPaddingTop="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,15 +11,9 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/CardTitle"
             android:id="@+id/changelog_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/exo_bold"
-            android:text="@string/changelogs"
-            android:textSize="18sp"
-            android:textColor="?attr/colorOnSurfaceVariant"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="@dimen/eightdp"/>
+            android:text="@string/changelogs" />
 
         <LinearLayout
             android:layout_width="match_parent"

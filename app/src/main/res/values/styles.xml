@@ -1,11 +1,130 @@
 <resources>
 
     <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
-
         <item name="android:windowBackground">@drawable/splash_logo</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
+    </style>
 
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="textAllCaps">false</item>
+        <item name="backgroundTint">?colorPrimary</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/exo_bold</item>
+    </style>
+
+    <style name="InstallButtonStyle" parent="ButtonStyle">
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="iconGravity">end</item>
+    </style>
+
+    <style name="SocialButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">#ffffff</item>
+    </style>
+
+    <style name="LinkButtonStyle" parent="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="MaterialCard" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardBackgroundColor">?colorSurfaceVariant</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPaddingLeft">8dp</item>
+        <item name="contentPaddingRight">8dp</item>
+        <item name="contentPaddingTop">4dp</item>
+        <item name="contentPaddingBottom">4dp</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <style name="InstallMaterialCard" parent="MaterialCard">
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="contentPaddingRight">0dp</item>
+        <item name="contentPaddingTop">0dp</item>
+        <item name="contentPaddingBottom">0dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="InnerMaterialCard" parent="MaterialCard">
+        <item name="contentPaddingTop">0dp</item>
+        <item name="contentPaddingBottom">0dp</item>
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="contentPaddingRight">0dp</item>
+    </style>
+
+    <style name="TextAppTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:fontFamily">@font/exo_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+    <style name="CardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="android:fontFamily">@font/exo_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="InstallCardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="android:fontFamily">@font/exo_bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="AboutCardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="android:fontFamily">@font/exo_semibold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="AppVer" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/exo</item>
+    </style>
+
+    <style name="AppVer.Bold" parent="AppVer">
+        <item name="android:fontFamily">@font/exo_semibold</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+    <style name="ClickableImageWidget">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:tint">?colorPrimary</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="ClickableImageWidget.Red" parent="ClickableImageWidget">
+        <item name="android:tint">@color/Red</item>
     </style>
 
 </resources>
