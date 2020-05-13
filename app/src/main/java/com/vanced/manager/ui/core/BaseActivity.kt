@@ -66,7 +66,12 @@ open class ThemeActivity : AppCompatActivity() {
                     Configuration.UI_MODE_NIGHT_NO -> setLightAccent(currentAccent)
                 }
             }
-            else -> setLightAccent("Blue")
+            else -> {
+                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                    Configuration.UI_MODE_NIGHT_YES -> setDarkAccent(currentAccent)
+                    Configuration.UI_MODE_NIGHT_NO -> setLightAccent(currentAccent)
+                }
+            }
         }
     }
 

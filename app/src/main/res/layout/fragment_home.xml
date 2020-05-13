@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="4dp"
-        android:clipToPadding="false"
         android:orientation="vertical">
 
         <include
@@ -52,7 +51,6 @@
             android:layout_marginStart="@dimen/stdp"
             android:layout_marginTop="@dimen/stdp"
             android:layout_marginEnd="@dimen/stdp" />
-
 
         <include
             android:id="@+id/home_useful_links_wrapper"
