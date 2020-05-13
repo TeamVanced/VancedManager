@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.fragments
 
-import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
