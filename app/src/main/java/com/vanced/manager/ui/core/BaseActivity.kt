@@ -20,12 +20,11 @@ open class ThemeActivity : AppCompatActivity() {
     private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
         pref = PreferenceManager.getDefaultSharedPreferences(this)
         currentTheme = pref.getString("theme_mode", "LIGHT").toString()
 
         setFinalTheme(currentTheme)
+        super.onCreate(savedInstanceState)
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG()
@@ -42,7 +41,7 @@ open class ThemeActivity : AppCompatActivity() {
             recreate()
 
         //set Task Header color in recents menu for
-        //devices with lower Android version than Pie
+        //devices that are not using pie recents
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {
             setTaskBG()
         }

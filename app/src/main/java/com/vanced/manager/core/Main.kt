@@ -12,7 +12,6 @@ import com.vanced.manager.ui.core.ThemeActivity
 @SuppressLint("Registered")
 open class Main: ThemeActivity() {
 
-    @SuppressLint("ObsoleteSdkInt")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,13 +21,8 @@ open class Main: ThemeActivity() {
         //Easter Egg
         val falseStatement = prefs.getBoolean("statement", true)
 
-        if (firstStart) {
-            //A little surprise for those who
-            //love lowering minSdkVersions
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-                showUnsupportedSdkDialog()
-            } else showSecurityDialog()
-        }
+        if (firstStart) showSecurityDialog()
+
 
         if (!falseStatement) {
             statementFalse()
@@ -62,17 +56,6 @@ open class Main: ThemeActivity() {
         val editor = prefs.edit()
         editor.putBoolean("statement", true)
         editor.apply()
-    }
-
-    private fun showUnsupportedSdkDialog() {
-       AlertDialog.Builder(this)
-            .setTitle(resources.getString(R.string.whoops))
-            .setMessage(resources.getString(R.string.unsupported_version_context))
-            .setPositiveButton(
-                "OK"
-            ) { _, _ -> finish() }
-           .create()
-           .show()
     }
 
 }
