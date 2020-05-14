@@ -22,9 +22,8 @@ class MainActivity : Main() {
 
         val toolbar: Toolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
-    }
 
-        /*val navHost = findNavController(R.id.bottom_nav_host)
+        val navHost = findNavController(R.id.bottom_nav_host)
         val appBarConfiguration = AppBarConfiguration(navHost.graph)
         toolbar.setupWithNavController(navHost, appBarConfiguration)
 
@@ -67,7 +66,7 @@ class MainActivity : Main() {
         }
         return false
     }
-    */
+
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         val toolbar: Toolbar = findViewById(R.id.home_toolbar)
         when {
