@@ -1,16 +1,16 @@
 package com.vanced.manager.core
 
 import android.annotation.SuppressLint
-import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.vanced.manager.R
-import com.vanced.manager.ui.core.ThemeActivity
+import com.vanced.manager.core.base.BaseActivity
+import com.vanced.manager.ui.core.ThemedActivity
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
 @SuppressLint("Registered")
-open class Main: ThemeActivity() {
+open class Main: BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

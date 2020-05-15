@@ -24,8 +24,8 @@
     <style name="SocialButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@android:color/transparent</item>
-        <item name="android:background">@android:color/transparent</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
         <item name="android:textColor">#ffffff</item>
         <item name="iconPadding">0dp</item>
         <item name="iconGravity">textStart</item>
@@ -71,7 +71,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">?colorPrimary</item>
-        <item name="android:fontFamily">@font/exo_bold</item>
+        <item name="fontFamily">@font/exo_bold</item>
         <item name="android:textSize">24sp</item>
         <item name="android:layout_marginStart">8dp</item>
     </style>
@@ -80,7 +80,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">?colorOnSurfaceVariant</item>
-        <item name="android:fontFamily">@font/exo_bold</item>
+        <item name="fontFamily">@font/exo_bold</item>
         <item name="android:textSize">18sp</item>
     </style>
 
@@ -88,7 +88,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">?colorOnSurfaceVariant</item>
-        <item name="android:fontFamily">@font/exo_bold</item>
+        <item name="fontFamily">@font/exo_bold</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">18sp</item>
     </style>
@@ -97,7 +97,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">?colorOnSurfaceVariant</item>
-        <item name="android:fontFamily">@font/exo_semibold</item>
+        <item name="fontFamily">@font/exo_semibold</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">24sp</item>
     </style>
@@ -107,11 +107,11 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">?colorOnSurfaceVariant</item>
         <item name="android:textSize">13sp</item>
-        <item name="android:fontFamily">@font/exo</item>
+        <item name="fontFamily">@font/exo</item>
     </style>
 
     <style name="AppVer.Bold" parent="AppVer">
-        <item name="android:fontFamily">@font/exo_semibold</item>
+        <item name="fontFamily">@font/exo_semibold</item>
         <item name="android:layout_marginStart">8dp</item>
     </style>
 
@@ -119,12 +119,12 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:clickable">true</item>
-        <item name="android:tint">?colorPrimary</item>
+        <item name="tint">?colorPrimary</item>
         <item name="iconPadding">0dp</item>
     </style>
 
     <style name="ClickableImageWidget.Red" parent="ClickableImageWidget">
-        <item name="android:tint">@color/Red</item>
+        <item name="tint">@color/Red</item>
     </style>
 
 </resources>

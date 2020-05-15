@@ -14,7 +14,7 @@ import com.vanced.manager.R
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
 @SuppressLint("Registered")
-open class ThemeActivity : AppCompatActivity() {
+open class ThemedActivity : AppCompatActivity() {
 
     private lateinit var currentTheme: String
     private lateinit var pref: SharedPreferences
