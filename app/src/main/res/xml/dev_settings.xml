@@ -13,7 +13,7 @@
         <Preference
             android:key="device_arch"
             android:title="Kernel Architecture"
-            android:summary="Arch"
+            android:summary="Arch" />
 
     </PreferenceCategory>
 
