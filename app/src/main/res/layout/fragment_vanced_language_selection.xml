@@ -7,6 +7,8 @@
 
     <com.google.android.material.card.MaterialCardView
         style="@style/InstallMaterialCard"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -25,15 +27,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
-                android:textSize="13sp"
                 android:fontFamily="@font/exo_semibold"
-                android:text="@string/choose_preferred_language_note" />
+                android:text="@string/choose_preferred_language_note"
+                android:textSize="13sp" />
 
             <FrameLayout
                 android:id="@+id/language_choose_frame"
                 android:layout_width="match_parent"
-                android:layout_height="360dp"
-                android:layout_marginEnd="2dp">
+                android:layout_height="0dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1">
 
                 <include
                     layout="@layout/include_language_scrollview"
@@ -43,8 +46,8 @@
             </FrameLayout>
 
             <com.google.android.material.button.MaterialButton
-                style="@style/InstallButtonStyle"
                 android:id="@+id/vanced_install_finish"
+                style="@style/InstallButtonStyle"
                 android:text="@string/finish"
                 app:icon="@drawable/ic_done_black_24dp" />
 
