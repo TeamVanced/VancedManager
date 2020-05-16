@@ -8,8 +8,9 @@
     <com.google.android.material.card.MaterialCardView
         style="@style/InstallMaterialCard"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
