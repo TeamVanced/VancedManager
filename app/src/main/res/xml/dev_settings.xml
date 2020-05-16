@@ -12,7 +12,7 @@
 
         <Preference
             android:key="device_arch"
-            android:title="Supported ABIs"
+            android:title="Kernel Architecture"
             android:summary="Arch" />
 
     </PreferenceCategory>
