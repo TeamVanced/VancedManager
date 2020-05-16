@@ -7,4 +7,14 @@
         android:title="First start switcher"
         android:summary="Dev only please"/>
 
+    <PreferenceCategory
+        android:title="Device info">
+
+        <Preference
+            android:key="device_arch"
+            android:title="Kernel Architecture"
+            android:summary="Arch"
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

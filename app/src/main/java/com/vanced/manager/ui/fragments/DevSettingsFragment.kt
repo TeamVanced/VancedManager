@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -37,5 +38,8 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
             true
 
         }
+        val archPref: Preference? = findPreference("device_arch")
+        archPref?.summary = Build.SUPPORTED_ABIS.toString()
+
     }
 }
