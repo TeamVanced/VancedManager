@@ -39,7 +39,9 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
 
         }
         val archPref: Preference? = findPreference("device_arch")
-        archPref?.summary = Build.SUPPORTED_ABIS.toString()
+        val supportedAbis: Array<String> = Build.SUPPORTED_ABIS
+
+        archPref?.summary = supportedAbis.toString()
 
     }
 }
