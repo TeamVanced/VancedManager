@@ -3,7 +3,6 @@ package com.vanced.manager.ui.fragments
 import android.app.Activity
 import android.content.pm.PackageManager
 import androidx.lifecycle.ViewModel
-import com.vanced.manager.R
 
 class HomeViewModel {
 
@@ -23,8 +22,6 @@ class HomeViewModel {
     }
 
     val microgInstalledTxt: String? = pm?.getPackageInfo("com.mgoogle.android.gms", 0)?.versionName
-    val vancedInstalledTxt: String? = pm?.getPackageInfo("com.vanced.android.youtube", 0)?.versionName.toString()
-
-
+    val vancedInstalledTxt: String? = pm?.getPackageInfo("com.vanced.android.youtube", 0)?.versionName
 
 }

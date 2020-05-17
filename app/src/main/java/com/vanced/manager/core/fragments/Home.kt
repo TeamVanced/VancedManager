@@ -46,7 +46,7 @@ open class Home : BaseFragment() {
             openUrl("https://youtu.be/dQw4w9WgXcQ", R.color.YT)
         }
 
-        /*val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
+        val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
@@ -68,9 +68,9 @@ open class Home : BaseFragment() {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
             microgVerText.text = getString(R.string.unavailable)
-        }*/
+        }
 
-        /*val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
+        val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         if (vancedStatus!!) {
             val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
@@ -82,7 +82,7 @@ open class Home : BaseFragment() {
         } else {
             vanceduninstallbtn.visibility = View.INVISIBLE
             vancedVerText.text = getString(R.string.unavailable)
-        }*/
+        }
 
         bravebtn.setOnClickListener {
             openUrl("https://brave.com/van874", R.color.Brave)
