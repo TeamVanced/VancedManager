@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 
 class SecretSettingsFragment : PreferenceFragmentCompat() {

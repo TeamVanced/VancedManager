@@ -2,11 +2,13 @@ package com.vanced.manager.ui
 
 import android.os.Bundle
 import android.view.MenuItem
+
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import androidx.preference.PreferenceManager
 
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
@@ -41,6 +43,8 @@ class MainActivity : Main() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navHost = findNavController(R.id.bottom_nav_host)
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        val devSettings = prefs.getBoolean("devSettings", true)
         when (item.itemId) {
             android.R.id.home -> {
                 onBackPressed()
@@ -59,8 +63,11 @@ class MainActivity : Main() {
                 return true
             }
             R.id.dev_settings -> {
-                navHost.navigate(R.id.toDevSettingsFragment)
-                return true
+                if (devSettings) {
+                    navHost.navigate(R.id.toDevSettingsFragment)
+                    return true
+                } else super.onOptionsItemSelected(item)
+
             }
             else -> super.onOptionsItemSelected(item)
         }

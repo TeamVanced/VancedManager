@@ -1,15 +1,51 @@
 package com.vanced.manager.core.fragments
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
+import androidx.preference.PreferenceManager
+import com.google.android.material.card.MaterialCardView
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 
 open class About : BaseFragment() {
 
+    private var count = 0
+    private var startMillSec: Long = 0
+
+    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val aboutHeader: MaterialCardView = view.findViewById(R.id.about_header_wrapper)
+        aboutHeader.setOnTouchListener { _: View?, event: MotionEvent ->
+
+            val eventAction = event.action
+            if (eventAction == MotionEvent.ACTION_UP) {
+                val time = System.currentTimeMillis()
+                if (startMillSec == 0L || time - startMillSec > 3000) {
+                    startMillSec = time
+                    count = 1
+                } else {
+                    count++
+                }
+
+                if (count == 5) {
+                    Toast.makeText(requireContext(), "Dev options unlocked!", Toast.LENGTH_SHORT).show()
+                    val prefs =
+                        PreferenceManager.getDefaultSharedPreferences(
+                            requireContext()
+                        )
+                    prefs.edit().putBoolean("devSettings", true).apply()
+                }
+                return@setOnTouchListener true
+            }
+            false
+        }
 
         val githubSource = getView()?.findViewById(R.id.about_github_button) as Button
         val license = getView()?.findViewById(R.id.about_license_button) as Button

@@ -3,9 +3,9 @@ package com.vanced.manager.core
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseActivity
-import com.vanced.manager.ui.core.ThemedActivity
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -15,18 +15,17 @@ open class Main: BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val firstStart = prefs.getBoolean("firstStart", true)
 
         //Easter Egg
         val falseStatement = prefs.getBoolean("statement", true)
 
-        if (firstStart) showSecurityDialog()
-
-
-        if (!falseStatement) {
-            statementFalse()
+        when {
+            firstStart -> showSecurityDialog()
+            !falseStatement -> statementFalse()
         }
+
     }
 
     private fun showSecurityDialog() {
@@ -37,10 +36,8 @@ open class Main: BaseActivity() {
             .create()
             .show()
 
-        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        val editor = prefs.edit()
-        editor.putBoolean("firstStart", false)
-        editor.apply()
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        prefs.edit().putBoolean("firstStart", false).apply()
     }
 
     //Easter Egg
@@ -52,10 +49,8 @@ open class Main: BaseActivity() {
             .create()
             .show()
 
-        val prefs = getSharedPreferences("prefs", MODE_PRIVATE)
-        val editor = prefs.edit()
-        editor.putBoolean("statement", true)
-        editor.apply()
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        prefs.edit().putBoolean("statement", true).apply()
     }
 
 }
