@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.preference.PreferenceManager
 import com.google.android.material.card.MaterialCardView
@@ -21,8 +22,8 @@ open class About : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val aboutHeader: MaterialCardView = view.findViewById(R.id.about_header_wrapper)
-        aboutHeader.setOnTouchListener { _: View?, event: MotionEvent ->
+        val aboutHeader: LinearLayout = view.findViewById(R.id.about_header_layout)
+        aboutHeader.setOnTouchListener { _, event: MotionEvent ->
 
             val eventAction = event.action
             if (eventAction == MotionEvent.ACTION_UP) {

@@ -29,8 +29,8 @@ class MainActivity : Main() {
         val appBarConfiguration = AppBarConfiguration(navHost.graph)
         toolbar.setupWithNavController(navHost, appBarConfiguration)
 
-        navHost.addOnDestinationChangedListener{_, currfrag: NavDestination, _ ->
-            isParent = when (currfrag.id) {
+        navHost.addOnDestinationChangedListener{_, currFrag: NavDestination, _ ->
+            isParent = when (currFrag.id) {
                 R.id.home_fragment -> true
                 else -> false
             }
@@ -44,7 +44,7 @@ class MainActivity : Main() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navHost = findNavController(R.id.bottom_nav_host)
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-        val devSettings = prefs.getBoolean("devSettings", true)
+        val devSettings = prefs.getBoolean("devSettings", false)
         when (item.itemId) {
             android.R.id.home -> {
                 onBackPressed()
@@ -63,10 +63,11 @@ class MainActivity : Main() {
                 return true
             }
             R.id.dev_settings -> {
-                if (devSettings) {
+                return if (devSettings) {
                     navHost.navigate(R.id.toDevSettingsFragment)
-                    return true
-                } else super.onOptionsItemSelected(item)
+                    true
+                } else
+                    false
 
             }
             else -> super.onOptionsItemSelected(item)
