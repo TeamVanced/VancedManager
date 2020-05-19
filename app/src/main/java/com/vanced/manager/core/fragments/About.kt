@@ -47,8 +47,8 @@ open class About : BaseFragment() {
             false
         }
 
-        val githubSource = getView()?.findViewById(R.id.about_github_button) as Button
-        val license = getView()?.findViewById(R.id.about_license_button) as Button
+        val githubSource = view.findViewById<Button>(R.id.about_github_button)
+        val license = view.findViewById<Button>(R.id.about_license_button)
 
         githubSource.setOnClickListener {
             openUrl("https://github.com/YTvanced/VancedInstaller", R.color.GitHub)
