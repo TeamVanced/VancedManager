@@ -7,6 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 
@@ -17,8 +18,7 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
 
         val ftSwitch: Preference? = findPreference("firststart_switch")
 
-        val prefs = activity?.getSharedPreferences("prefs", AppCompatActivity.MODE_PRIVATE)
-        val editor = prefs?.edit()
+        val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
         ftSwitch?.setOnPreferenceClickListener {
 
             AlertDialog.Builder(requireContext())
@@ -33,8 +33,7 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
                 .create()
                 .show()
 
-            editor?.putBoolean("firstStart", true)
-            editor?.apply()
+            prefs.edit().putBoolean("firstStart", true).apply()
             true
 
         }
