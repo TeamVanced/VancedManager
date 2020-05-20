@@ -3,15 +3,18 @@ package com.vanced.manager.core.fragments
 import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
 import com.dezlum.codelabs.getjson.GetJson
 import com.google.gson.JsonObject
+import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -73,9 +76,15 @@ open class Home : BaseFragment() {
                     },
                     onComplete = {
                         val apk = dwnldUrl.file()
-                        val uri = Uri.fromFile(apk)
+                        val uri =
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                                FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID, apk)
+                            } else
+                                Uri.fromFile(apk)
                         val intent = Intent(Intent.ACTION_VIEW)
                         intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                         startActivity(intent)
                     },
                     onError = {

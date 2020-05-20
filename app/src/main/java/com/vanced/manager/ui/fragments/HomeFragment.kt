@@ -73,29 +73,29 @@ class HomeFragment : Home() {
         override fun onLost(network: Network) {
             super.onLost(network)
 
-            activity?.runOnUiThread {
-
-                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
-                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
-
-
-                oa2.apply {
-                    oa2.addListener(onStart = {
-                        networkErrorLayout?.visibility = View.VISIBLE
-                    })
-                    start()
-                }
-                oa3.start()
-
-            }
+            netAvailable()
 
         }
 
         override fun onAvailable(network: Network) {
             super.onAvailable(network)
 
-            netAvailable()
+            activity?.runOnUiThread {
+
+                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
+                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+
+                oa2.start()
+                oa3.apply {
+                    oa3.addListener(onEnd = {
+                        networkErrorLayout?.visibility = View.GONE
+                    })
+                    start()
+                }
+
+
+            }
 
         }
 

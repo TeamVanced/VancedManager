@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,16 +14,19 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
-import com.google.gson.JsonObject
+import androidx.core.content.FileProvider
 import com.vanced.manager.BuildConfig
 
 import com.vanced.manager.R
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
 import zlc.season.rxdownload4.download
 import zlc.season.rxdownload4.file
 
 class UpdateCheckFragment : DialogFragment() {
+
+    private var disposable: Disposable? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,7 +61,7 @@ class UpdateCheckFragment : DialogFragment() {
                 updatebtn.setOnClickListener {
                     val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
                     val dwnldUrl = apkUrl.get("url").asString
-                    dwnldUrl.download()
+                    disposable = dwnldUrl.download()
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeBy(
                             onNext = { progress ->
@@ -67,9 +71,15 @@ class UpdateCheckFragment : DialogFragment() {
                             },
                             onComplete = {
                                 val apk = dwnldUrl.file()
-                                val uri = Uri.fromFile(apk)
+                                val uri =
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                                        FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID, apk)
+                                    } else
+                                        Uri.fromFile(apk)
                                 val intent = Intent(Intent.ACTION_VIEW)
                                 intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                                 startActivity(intent)
                             },
                             onError = {
