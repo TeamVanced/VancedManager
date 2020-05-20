@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+/*
 import android.app.Activity
 import android.app.Application
 import android.content.pm.PackageManager
@@ -10,7 +11,7 @@ import com.google.gson.JsonObject
 
 class HomeViewModel(application: Application): AndroidViewModel(application) {
 
-    /*private val pm: PackageManager? = Activity().packageManager
+    private val pm: PackageManager? = Activity().packageManager
 
     //we need to check whether these apps are installed or not
     val microgStatus: Boolean? = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
@@ -27,7 +28,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val microgInstalledTxt: String? = pm?.getPackageInfo("com.mgoogle.android.gms", 0)?.versionName
     val vancedInstalledTxt: String? = pm?.getPackageInfo("com.vanced.android.youtube", 0)?.versionName
-    */
+
 
     val isConnected: Boolean = GetJson().isConnected(getApplication())
     private val vancedVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
@@ -36,3 +37,4 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     val microgLatestTxt: String? = microgVer.get("version").asString
 
 }
+ */

@@ -1,115 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MaterialCard">
 
-    <data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <variable
-            name="viewModel"
-            type="com.vanced.manager.ui.fragments.HomeViewModel" />
+        <ImageView
+            android:id="@+id/home_microg_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_microg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier" />
 
-    </data>
+        <TextView
+            style="@style/TextAppTitle"
+            android:id="@+id/microg_title"
+            android:text="@string/microg"
+            app:layout_constraintStart_toEndOf="@id/home_microg_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier" />
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/MaterialCard">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/microg_installbtn"
+            style="@style/ButtonStyle"
+            android:text="@string/install"
+            app:icon="@drawable/outline_cloud_download_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/microg_title_buttons_barrier"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="microg_title, microg_installbtn"/>
 
-            <ImageView
-                android:id="@+id/home_microg_logo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_microg"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier" />
+        <LinearLayout
+            android:id="@+id/microg_remote_latest_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/microg_title_buttons_barrier"
+            app:layout_constraintBottom_toTopOf="@id/linearLayout2">
 
             <TextView
-                style="@style/TextAppTitle"
-                android:id="@+id/microg_title"
-                android:text="@string/microg"
-                app:layout_constraintStart_toEndOf="@id/home_microg_logo"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier" />
+                style="@style/AppVer"
+                android:id="@+id/microg_latest"
+                android:text="@string/latest" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/microg_installbtn"
-                style="@style/ButtonStyle"
-                android:text="@string/install"
-                app:icon="@drawable/outline_cloud_download_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn" />
+            <TextView
+                style="@style/AppVer.Bold"
+                android:id="@+id/microg_latest_version"
+                android:text="@string/loading" />
 
-            <androidx.constraintlayout.widget.Barrier
-                android:id="@+id/microg_title_buttons_barrier"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:barrierDirection="bottom"
-                app:constraint_referenced_ids="microg_title, microg_installbtn"/>
+        </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/microg_remote_latest_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/microg_title_buttons_barrier"
-                app:layout_constraintBottom_toTopOf="@id/linearLayout2">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/microg_remote_latest_version"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-                <TextView
-                    style="@style/AppVer"
-                    android:id="@+id/microg_latest"
-                    android:text="@string/latest" />
+            <TextView
+                style="@style/AppVer"
+                android:id="@+id/microg_installed"
+                android:text="@string/installed" />
 
-                <TextView
-                    style="@style/AppVer.Bold"
-                    android:id="@+id/microg_latest_version"
-                    android:text="@{ viewModel.isConnected ? viewModel.microgLatestTxt : @string/unavailable}" />
+            <TextView
+                style="@style/AppVer.Bold"
+                android:id="@+id/microg_installed_version"
+                android:text="@string/loading" />
 
-            </LinearLayout>
+        </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/microg_remote_latest_version"
-                app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            style="@style/ClickableImageWidget"
+            android:id="@+id/microg_settingsbtn"
+            app:srcCompat="@drawable/ic_microg_settings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/microg_uninstallbtn"
+            app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
+            android:layout_marginEnd="4dp"/>
 
-                <TextView
-                    style="@style/AppVer"
-                    android:id="@+id/microg_installed"
-                    android:text="@string/installed" />
+        <ImageView
+            style="@style/ClickableImageWidget.Red"
+            android:id="@+id/microg_uninstallbtn"
+            app:srcCompat="@drawable/ic_delete_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier" />
 
-                <TextView
-                    style="@style/AppVer.Bold"
-                    android:id="@+id/microg_installed_version"
-                    android:text="@string/loading" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
-
-            <ImageView
-                style="@style/ClickableImageWidget"
-                android:id="@+id/microg_settingsbtn"
-                app:srcCompat="@drawable/ic_microg_settings"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/microg_uninstallbtn"
-                app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
-                android:layout_marginEnd="4dp"/>
-
-            <ImageView
-                style="@style/ClickableImageWidget.Red"
-                android:id="@+id/microg_uninstallbtn"
-                app:srcCompat="@drawable/ic_delete_black_24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
+</com.google.android.material.card.MaterialCardView>
