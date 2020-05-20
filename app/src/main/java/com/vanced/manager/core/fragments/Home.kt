@@ -48,7 +48,7 @@ open class Home : BaseFragment() {
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
-        /*val vancedLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
+        val vancedLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
         val microgLatestTxt = view.findViewById<TextView>(R.id.microg_latest_version)
 
         if (GetJson().isConnected(requireContext())) {
@@ -60,7 +60,7 @@ open class Home : BaseFragment() {
         } else {
             vancedLatestTxt.text = getString(R.string.unavailable)
             microgLatestTxt.text = getString(R.string.unavailable)
-        }*/
+        }
 
         vancedinstallbtn.setOnClickListener {
             view.findNavController().navigate(R.id.toInstallThemeFragment)
