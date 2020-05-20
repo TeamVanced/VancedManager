@@ -75,13 +75,13 @@
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/update_center_recheck"
+                    android:id="@+id/update_center_update"
                     style="@style/ButtonStyle"
                     android:layout_marginStart="4dp"
                     android:text="Update" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/update_center_update"
+                    android:id="@+id/update_center_recheck"
                     style="@style/ButtonStyle"
                     android:layout_marginStart="4dp"
                     android:text="@string/re_check" />
