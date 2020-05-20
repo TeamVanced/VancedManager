@@ -4,13 +4,9 @@ on:
   push:
     branches:
       - master
-    tags:
-      - '*'
   pull_request:
     branches:
       - master
-    tags:
-      - '*'
 
 jobs:
   build:
@@ -45,15 +41,6 @@ jobs:
         with:
           name: 'Vanced-Manager'
           path: ${{ steps.sign-app.outputs.signedReleaseFile }}
-
-      - name: Upload to GitHub releases
-        uses: svenstaro/upload-release-action@v1-release
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ steps.sign-app.outputs.signedReleaseFile }}
-          asset_name: release.apk
-          tag: ${{ github.ref }}
-          overwrite: true
 
       - name: Upload to Discord
         uses: sinshutu/upload-to-discord@master

@@ -32,12 +32,13 @@ open class About : BaseFragment() {
                 }
 
                 if (count == 5) {
-                    Toast.makeText(requireContext(), "Dev options unlocked!", Toast.LENGTH_SHORT).show()
-                    val prefs =
-                        PreferenceManager.getDefaultSharedPreferences(
-                            requireContext()
-                        )
-                    prefs.edit().putBoolean("devSettings", true).apply()
+                    val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
+                    val devSettings = prefs.getBoolean("devSettings", false)
+                    if (!devSettings) {
+                        Toast.makeText(requireContext(), "Dev options unlocked!", Toast.LENGTH_SHORT).show()
+                        prefs.edit().putBoolean("devSettings", true).apply()
+                    } else Toast.makeText(requireContext(), "Dev options already unlocked", Toast.LENGTH_SHORT).show()
+
                 }
                 return@setOnTouchListener true
             }
