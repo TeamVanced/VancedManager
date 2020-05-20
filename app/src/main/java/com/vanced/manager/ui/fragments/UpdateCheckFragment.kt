@@ -46,7 +46,7 @@ class UpdateCheckFragment : DialogFragment() {
         closebtn.setOnClickListener { dismiss() }
 
         if (GetJson().isConnected(requireContext())) {
-            val checkUrl = GetJson().AsJSONObject("https://github.com/X1nto/VancedFiles/blob/master/manager.json")
+            val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
             val remoteVersion = checkUrl.get("versionCode").asInt
 
             if (remoteVersion > BuildConfig.VERSION_CODE) {
@@ -57,7 +57,7 @@ class UpdateCheckFragment : DialogFragment() {
 
                 updatebtn.setOnClickListener {
                     val url =
-                        "https://github.com/X1nto/VancedFiles/blob/master/release.apk"
+                        "https://x1nto.github.io/VancedFiles/release.apk"
                     url.download()
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeBy(

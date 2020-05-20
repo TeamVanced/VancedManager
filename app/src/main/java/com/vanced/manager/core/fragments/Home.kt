@@ -44,8 +44,8 @@ open class Home : BaseFragment() {
         val microgLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
 
         if (GetJson().isConnected(requireContext())) {
-            val vancedVer: JsonObject = GetJson().AsJSONObject("https://github.com/X1nto/VancedFiles/blob/master/vanced.json")
-            val microgVer: JsonObject = GetJson().AsJSONObject("https://github.com/X1nto/VancedFiles/blob/master/microg.json")
+            val vancedVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+            val microgVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
             vancedLatestTxt.text = vancedVer.get("version").asString
             microgLatestTxt.text = microgVer.get("version").asString
 
