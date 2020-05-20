@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.core.animation.addListener
 import androidx.viewpager2.widget.ViewPager2
+import com.dezlum.codelabs.getjson.GetJson
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -34,7 +35,8 @@ class HomeFragment : Home() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        connectionStatus()
+        //connectionStatus()
+        checkNetwork()
 
         super.onViewCreated(view, savedInstanceState)
 
@@ -57,7 +59,48 @@ class HomeFragment : Home() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-    private var networkCallback = object: ConnectivityManager.NetworkCallback() {
+    private fun checkNetwork() {
+        if (!GetJson().isConnected(requireContext())) {
+
+            activity?.runOnUiThread {
+
+                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
+                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
+
+
+                oa2.apply {
+                    oa2.addListener(onStart = {
+                        networkErrorLayout?.visibility = View.VISIBLE
+                    })
+                    start()
+                }
+                oa3.start()
+
+            }
+
+        } else {
+
+            activity?.runOnUiThread {
+
+                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
+                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+
+                oa2.start()
+                oa3.apply {
+
+                    oa3.addListener(onEnd = {
+                        networkErrorLayout?.visibility = View.GONE
+                    })
+                    start()
+                }
+
+            }
+        }
+    }
+
+    /*private var networkCallback = object: ConnectivityManager.NetworkCallback() {
 
         override fun onLost(network: Network) {
             super.onLost(network)
@@ -114,7 +157,7 @@ class HomeFragment : Home() {
             connectivityManager.unregisterNetworkCallback(networkCallback)
         } catch (e: Exception) {}
         connectivityManager.registerNetworkCallback(networkRequest, networkCallback)
-    }
+    }*/
 
 }
 

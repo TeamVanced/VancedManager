@@ -12,6 +12,8 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
+import com.dezlum.codelabs.getjson.GetJson
+import com.vanced.manager.BuildConfig
 
 import com.vanced.manager.R
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -43,36 +45,45 @@ class UpdateCheckFragment : DialogFragment() {
 
         closebtn.setOnClickListener { dismiss() }
 
-        recheckbtn.visibility = View.GONE
-        checkingTxt.text = "Update Found!"
-        loadCircle.visibility = View.GONE
+        if (GetJson().isConnected(requireContext())) {
+            val checkUrl = GetJson().AsJSONObject("https://github.com/X1nto/VancedFiles/blob/master/manager.json")
+            val remoteVersion = checkUrl.get("versionCode").asInt
 
-        updatebtn.setOnClickListener {
-            val url =
-                "https://github.com/X1nto/VancedFiles/blob/master/release.apk"
-            url.download()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeBy(
-                    onNext = { progress ->
-                        loadBar.visibility = View.VISIBLE
-                        loadBar.progress =
-                            "${progress.downloadSizeStr()}/${progress.totalSizeStr()}".toInt()
-                    },
-                    onComplete = {
-                        val apk = url.file()
-                        val uri = Uri.fromFile(apk)
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.setDataAndType(uri, "application/vnd.android.package-archive")
-                        startActivity(intent)
-                    },
-                    onError = {
-                        checkingTxt.text = "Something went wrong"
-                    }
-                )
-        }
+            if (remoteVersion > BuildConfig.VERSION_CODE) {
 
+                recheckbtn.visibility = View.GONE
+                checkingTxt.text = "Update Found!"
+                loadCircle.visibility = View.GONE
 
+                updatebtn.setOnClickListener {
+                    val url =
+                        "https://github.com/X1nto/VancedFiles/blob/master/release.apk"
+                    url.download()
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribeBy(
+                            onNext = { progress ->
+                                loadBar.visibility = View.VISIBLE
+                                loadBar.progress =
+                                    "${progress.downloadSizeStr()}/${progress.totalSizeStr()}".toInt()
+                            },
+                            onComplete = {
+                                val apk = url.file()
+                                val uri = Uri.fromFile(apk)
+                                val intent = Intent(Intent.ACTION_VIEW)
+                                intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                                startActivity(intent)
+                            },
+                            onError = {
+                                checkingTxt.text = "Something went wrong"
+                            }
+                        )
+                }
 
+            } else {
+                checkingTxt.text = "No updates found"
+            }
+
+        } else checkingTxt.text = "No connection"
 
     }
 

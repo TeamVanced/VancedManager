@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
+import com.dezlum.codelabs.getjson.GetJson
+import com.google.gson.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 
@@ -37,6 +39,20 @@ open class Home : BaseFragment() {
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+
+        val vancedLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
+        val microgLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
+
+        if (GetJson().isConnected(requireContext())) {
+            val vancedVer: JsonObject = GetJson().AsJSONObject("https://github.com/X1nto/VancedFiles/blob/master/vanced.json")
+            val microgVer: JsonObject = GetJson().AsJSONObject("https://github.com/X1nto/VancedFiles/blob/master/microg.json")
+            vancedLatestTxt.text = vancedVer.get("version").asString
+            microgLatestTxt.text = microgVer.get("version").asString
+
+        } else {
+            vancedLatestTxt.text = getString(R.string.unavailable)
+            microgLatestTxt.text = getString(R.string.unavailable)
+        }
 
         vancedinstallbtn.setOnClickListener {
             view.findNavController().navigate(R.id.toInstallThemeFragment)
