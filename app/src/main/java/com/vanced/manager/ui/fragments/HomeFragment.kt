@@ -81,21 +81,25 @@ class HomeFragment : Home() {
 
         } else {
 
-            activity?.runOnUiThread {
+            val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
 
-                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
-                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+            if (networkErrorLayout?.visibility != View.GONE) {
 
-                oa2.start()
-                oa3.apply {
+                activity?.runOnUiThread {
 
-                    oa3.addListener(onEnd = {
-                        networkErrorLayout?.visibility = View.GONE
-                    })
-                    start()
+
+                    val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
+                    val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+
+                    oa2.start()
+                    oa3.apply {
+
+                        oa3.addListener(onEnd = {
+                            networkErrorLayout?.visibility = View.GONE
+                        })
+                        start()
+                    }
                 }
-
             }
         }
     }
