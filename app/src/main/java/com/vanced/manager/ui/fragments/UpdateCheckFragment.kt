@@ -49,7 +49,7 @@ class UpdateCheckFragment : DialogFragment() {
 
         updatebtn.setOnClickListener {
             val url =
-                "https://github.com/X1nto/VancedInstaller/releases/lastest/download/release.apk"
+                "https://github.com/X1nto/VancedInstaller/releases/latest/download/release.apk"
             url.download()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(

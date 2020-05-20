@@ -51,7 +51,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ steps.sign-app.outputs.signedReleaseFile }}
-          asset_name: release
+          asset_name: release.apk
           tag: ${{ github.ref }}
           overwrite: true
 
