@@ -4,10 +4,14 @@ on:
   push:
     branches:
       - master
+    tags:
+      - '*'
   pull_request:
     branches:
       - master
-       
+    tags:
+      - '*'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,11 +40,20 @@ jobs:
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
 
-      - name: Upload file to github
+      - name: Upload to GitHub
         uses: actions/upload-artifact@v2
         with:
           name: 'Vanced-Manager'
           path: ${{ steps.sign-app.outputs.signedReleaseFile }}
+
+      - name: Upload to GitHub releases
+        uses: svenstaro/upload-release-action@v1-release
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ steps.sign-app.outputs.signedReleaseFile }}
+          asset_name: release
+          tag: ${{ github.ref }}
+          overwrite: true
 
       - name: Upload to Discord
         uses: sinshutu/upload-to-discord@master

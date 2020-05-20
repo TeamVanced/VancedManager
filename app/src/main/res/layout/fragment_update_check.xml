@@ -12,37 +12,54 @@
     app:contentPaddingLeft="6dp"
     tools:context=".ui.fragments.UpdateCheckFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             style="@style/CardTitle"
             android:id="@+id/update_center_text"
+            android:layout_width="match_parent"
             android:text="@string/update_center"
             android:textAlignment="center"
-            android:fontFamily="@font/exo_semibold"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:fontFamily="@font/exo_semibold" />
 
-        <ProgressBar
-            android:id="@+id/update_center_progressbar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+        <TextView
+            android:id="@+id/update_center_checking"
+            style="@style/AppVer.Bold"
+            android:layout_marginTop="4dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/update_center_text"
-            app:layout_constraintBottom_toTopOf="@id/update_button_container"/>
+            android:text="Checking For Updates..."
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/update_center_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/update_center_progressbar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/update_button_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/update_center_progressbar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/update_center_dismiss"
@@ -53,14 +70,27 @@
                 android:text="@string/close"
                 android:textAllCaps="false"/>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/update_center_recheck"
-                style="@style/ButtonStyle"
-                android:layout_marginStart="4dp"
-                android:text="@string/re_check" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/update_center_recheck"
+                    style="@style/ButtonStyle"
+                    android:layout_marginStart="4dp"
+                    android:text="Update" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/update_center_update"
+                    style="@style/ButtonStyle"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/re_check" />
+
+            </FrameLayout>
+
 
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
