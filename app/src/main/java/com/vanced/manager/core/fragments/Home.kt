@@ -8,11 +8,16 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.findNavController
 import com.dezlum.codelabs.getjson.GetJson
 import com.google.gson.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.rxkotlin.subscribeBy
+import zlc.season.rxdownload4.download
+import zlc.season.rxdownload4.file
 
 open class Home : BaseFragment() {
 
@@ -41,7 +46,7 @@ open class Home : BaseFragment() {
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
         val vancedLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
-        val microgLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
+        val microgLatestTxt = view.findViewById<TextView>(R.id.microg_latest_version)
 
         if (GetJson().isConnected(requireContext())) {
             val vancedVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
@@ -59,7 +64,24 @@ open class Home : BaseFragment() {
         }
 
         microginstallbtn.setOnClickListener {
-            openUrl("https://youtu.be/dQw4w9WgXcQ", R.color.YT)
+            val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
+            val dwnldUrl = apkUrl.get("url").asString
+            dwnldUrl.download()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeBy(
+                    onNext = {
+                    },
+                    onComplete = {
+                        val apk = dwnldUrl.file()
+                        val uri = Uri.fromFile(apk)
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                        startActivity(intent)
+                    },
+                    onError = {
+                        Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT).show()
+                    }
+                )
         }
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)

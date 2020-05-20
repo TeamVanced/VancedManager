@@ -35,7 +35,7 @@ class HomeFragment : Home() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        //connectionStatus()
+        connectionStatus()
         checkNetwork()
 
         super.onViewCreated(view, savedInstanceState)
@@ -62,49 +62,13 @@ class HomeFragment : Home() {
     private fun checkNetwork() {
         if (!GetJson().isConnected(requireContext())) {
 
-            activity?.runOnUiThread {
+            netAvailable()
 
-                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
-                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
-
-
-                oa2.apply {
-                    oa2.addListener(onStart = {
-                        networkErrorLayout?.visibility = View.VISIBLE
-                    })
-                    start()
-                }
-                oa3.start()
-
-            }
-
-        } else {
-
-            val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-
-            if (networkErrorLayout?.visibility != View.GONE) {
-
-                activity?.runOnUiThread {
-
-
-                    val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
-                    val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
-
-                    oa2.start()
-                    oa3.apply {
-
-                        oa3.addListener(onEnd = {
-                            networkErrorLayout?.visibility = View.GONE
-                        })
-                        start()
-                    }
-                }
-            }
         }
+
     }
 
-    /*private var networkCallback = object: ConnectivityManager.NetworkCallback() {
+    private var networkCallback = object: ConnectivityManager.NetworkCallback() {
 
         override fun onLost(network: Network) {
             super.onLost(network)
@@ -131,23 +95,32 @@ class HomeFragment : Home() {
         override fun onAvailable(network: Network) {
             super.onAvailable(network)
 
+            netAvailable()
+
+        }
+
+    }
+
+    private fun netAvailable() {
+
+        val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+        if (networkErrorLayout?.visibility != View.VISIBLE) {
+
             activity?.runOnUiThread {
 
-                val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
-                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
+                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
 
-                oa2.start()
-                oa3.apply {
 
-                    oa3.addListener(onEnd = {
-                        networkErrorLayout?.visibility = View.GONE
+                oa2.apply {
+                    oa2.addListener(onStart = {
+                        networkErrorLayout?.visibility = View.VISIBLE
                     })
                     start()
                 }
+                oa3.start()
 
             }
-
         }
 
     }
@@ -161,7 +134,7 @@ class HomeFragment : Home() {
             connectivityManager.unregisterNetworkCallback(networkCallback)
         } catch (e: Exception) {}
         connectivityManager.registerNetworkCallback(networkRequest, networkCallback)
-    }*/
+    }
 
 }
 

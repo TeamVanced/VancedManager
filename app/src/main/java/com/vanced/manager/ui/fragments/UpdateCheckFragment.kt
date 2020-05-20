@@ -13,6 +13,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
+import com.google.gson.JsonObject
 import com.vanced.manager.BuildConfig
 
 import com.vanced.manager.R
@@ -40,7 +41,6 @@ class UpdateCheckFragment : DialogFragment() {
         val updatebtn = view.findViewById<Button>(R.id.update_center_update)
         val recheckbtn = view.findViewById<Button>(R.id.update_center_recheck)
         val checkingTxt = view.findViewById<TextView>(R.id.update_center_checking)
-        val loadCircle = view.findViewById<ProgressBar>(R.id.update_center_loading)
         val loadBar = view.findViewById<ProgressBar>(R.id.update_center_progressbar)
 
         closebtn.setOnClickListener { dismiss() }
@@ -53,12 +53,11 @@ class UpdateCheckFragment : DialogFragment() {
 
                 recheckbtn.visibility = View.GONE
                 checkingTxt.text = "Update Found!"
-                loadCircle.visibility = View.GONE
 
                 updatebtn.setOnClickListener {
-                    val url =
-                        "https://x1nto.github.io/VancedFiles/release.apk"
-                    url.download()
+                    val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
+                    val dwnldUrl = apkUrl.get("url").asString
+                    dwnldUrl.download()
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeBy(
                             onNext = { progress ->
@@ -67,7 +66,7 @@ class UpdateCheckFragment : DialogFragment() {
                                     "${progress.downloadSizeStr()}/${progress.totalSizeStr()}".toInt()
                             },
                             onComplete = {
-                                val apk = url.file()
+                                val apk = dwnldUrl.file()
                                 val uri = Uri.fromFile(apk)
                                 val intent = Intent(Intent.ACTION_VIEW)
                                 intent.setDataAndType(uri, "application/vnd.android.package-archive")
