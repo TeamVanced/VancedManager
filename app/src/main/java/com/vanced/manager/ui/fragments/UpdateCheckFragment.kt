@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -98,6 +99,7 @@ class UpdateCheckFragment : DialogFragment() {
                             },
                             onError = { throwable ->
                                checkingTxt.text = throwable.toString()
+                                Log.e("Error", throwable.toString())
                             }
                         )
                 }
