@@ -13,14 +13,14 @@
     tools:context=".ui.fragments.UpdateCheckFragment">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             style="@style/CardTitle"
             android:id="@+id/update_center_text"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:text="@string/update_center"
             android:textAlignment="center"
             android:fontFamily="@font/exo_semibold" />
@@ -29,7 +29,7 @@
             android:id="@+id/update_center_checking"
             style="@style/AppVer.Bold"
             android:layout_marginTop="4dp"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:text="Checking For Updates..."
             android:textAlignment="center"
             android:textSize="16sp" />
