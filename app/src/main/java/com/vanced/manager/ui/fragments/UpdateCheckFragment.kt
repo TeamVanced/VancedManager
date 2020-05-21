@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.app.DownloadManager
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -15,14 +16,22 @@ import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
 import androidx.core.content.FileProvider
+import com.tonyodev.fetch2.Fetch
+import com.tonyodev.fetch2.FetchConfiguration
+import com.tonyodev.fetch2.NetworkType
+import com.tonyodev.fetch2.Priority
 import com.vanced.manager.BuildConfig
 
 import com.vanced.manager.R
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
+import okhttp3.Request
+import okio.Okio
 import zlc.season.rxdownload4.download
 import zlc.season.rxdownload4.file
+import zlc.season.rxdownload4.request.okHttpClient
+import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
 
@@ -59,8 +68,10 @@ class UpdateCheckFragment : DialogFragment() {
                 checkingTxt.text = "Update Found!"
 
                 updatebtn.setOnClickListener {
+
                     val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
                     val dwnldUrl = apkUrl.get("url").asString
+
                     disposable = dwnldUrl.download()
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeBy(
@@ -70,10 +81,11 @@ class UpdateCheckFragment : DialogFragment() {
                                     "${progress.downloadSizeStr()}/${progress.totalSizeStr()}".toInt()
                             },
                             onComplete = {
+                                val pn = activity?.packageName
                                 val apk = dwnldUrl.file()
                                 val uri =
                                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                                        FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID, apk)
+                                        FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
                                     } else
                                         Uri.fromFile(apk)
                                 val intent = Intent(Intent.ACTION_VIEW)
@@ -81,10 +93,10 @@ class UpdateCheckFragment : DialogFragment() {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                                 startActivity(intent)
-                            },
-                            onError = {
-                                checkingTxt.text = "Something went wrong"
                             }
+                            //onError = {
+                              //  checkingTxt.text = "Something went wrong"
+                            //}
                         )
                 }
 

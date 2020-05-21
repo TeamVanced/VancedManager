@@ -75,10 +75,11 @@ open class Home : BaseFragment() {
                     onNext = {
                     },
                     onComplete = {
+                        val pn = activity?.packageName
                         val apk = dwnldUrl.file()
                         val uri =
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                                FileProvider.getUriForFile(requireContext(), BuildConfig.APPLICATION_ID, apk)
+                                FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
                             } else
                                 Uri.fromFile(apk)
                         val intent = Intent(Intent.ACTION_VIEW)
