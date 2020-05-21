@@ -78,10 +78,9 @@ class UpdateCheckFragment : DialogFragment() {
                     disposable = dwnldUrl.download()
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribeBy(
-                            onNext = { progress ->
-                                loadBar.visibility = View.VISIBLE
-                                loadBar.progress =
-                                    "${progress.downloadSizeStr()}/${progress.totalSizeStr()}".toInt()
+                            onNext = {
+                                //loadBar.visibility = View.VISIBLE
+                                //loadBar.progress = (progress.downloadSize / progress.totalSize).toInt()
                             },
                             onComplete = {
                                 val pn = activity?.packageName
