@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.annotation.SuppressLint
 import android.app.DownloadManager
 import android.content.Intent
 import android.graphics.Color
@@ -47,6 +48,7 @@ class UpdateCheckFragment : DialogFragment() {
         return inflater.inflate(R.layout.fragment_update_check, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -93,10 +95,10 @@ class UpdateCheckFragment : DialogFragment() {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                                 startActivity(intent)
+                            },
+                            onError = { throwable ->
+                               checkingTxt.text = throwable.toString()
                             }
-                            //onError = {
-                              //  checkingTxt.text = "Something went wrong"
-                            //}
                         )
                 }
 
