@@ -8,7 +8,7 @@ import com.vanced.manager.ui.fragments.VancedChangelogFragment
 
 class SectionPageAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
-    private val fragmentItems = 2
+    private val fragmentItems = 3
     override fun getItemCount(): Int {
         return fragmentItems
     }
