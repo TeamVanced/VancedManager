@@ -1,6 +1,6 @@
 package com.vanced.manager.core.fragments
 
-import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -14,7 +14,6 @@ import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
 import com.dezlum.codelabs.getjson.GetJson
 import com.google.gson.JsonObject
-import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -92,18 +91,29 @@ open class Home : BaseFragment() {
         if (microgStatus!!) {
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
-                val uri = Uri.parse("package:com.mgoogle.android.gms")
-                val mgUninstall = Intent(Intent.ACTION_DELETE, uri)
-                startActivity(mgUninstall)
+                try {
+                    val uri = Uri.parse("package:com.mgoogle.android.gms")
+                    val mgUninstall = Intent(Intent.ACTION_DELETE, uri)
+                    startActivity(mgUninstall)
+                } catch (e: ActivityNotFoundException){
+                    Toast.makeText(requireContext(), "App already uninstalled", Toast.LENGTH_SHORT).show()
+                    activity?.recreate()
+                }
+
             }
 
             microgsettingsbtn.setOnClickListener {
-                val intent = Intent()
-                intent.component = ComponentName(
-                    "com.mgoogle.android.gms",
-                    "org.microg.gms.ui.SettingsActivity"
-                )
-                startActivity(intent)
+                try {
+                    val intent = Intent()
+                    intent.component = ComponentName(
+                        "com.mgoogle.android.gms",
+                        "org.microg.gms.ui.SettingsActivity"
+                    )
+                    startActivity(intent)
+                } catch (e: ActivityNotFoundException){
+                    Toast.makeText(requireContext(), "App is uninstalled", Toast.LENGTH_SHORT).show()
+                    activity?.recreate()
+                }
             }
             microgVerText.text = microgVer.toString()
         } else {
@@ -116,9 +126,14 @@ open class Home : BaseFragment() {
         if (vancedStatus!!) {
             val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
-                val uri = Uri.parse("package:com.vanced.android.youtube")
-                val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
-                startActivity(vanUninstall)
+                try {
+                    val uri = Uri.parse("package:com.vanced.android.youtube")
+                    val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
+                    startActivity(vanUninstall)
+                } catch (e: ActivityNotFoundException){
+                    Toast.makeText(requireContext(), "App already uninstalled", Toast.LENGTH_SHORT).show()
+                    activity?.recreate()
+                }
             }
             vancedVerText.text = vancedVer.toString()
         } else {
