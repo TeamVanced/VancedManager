@@ -186,6 +186,8 @@ open class Home : BaseFragment() {
                     }
                 },
                 onComplete = {
+                    loadBar.visibility = View.GONE
+
                     val pn = activity?.packageName
                     val apk = dwnldUrl.file()
                     val uri =
@@ -199,8 +201,8 @@ open class Home : BaseFragment() {
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     startActivity(intent)
                 },
-                onError = {
-                    Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT).show()
+                onError = { throwable ->
+                    Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
                 }
             )
     }
