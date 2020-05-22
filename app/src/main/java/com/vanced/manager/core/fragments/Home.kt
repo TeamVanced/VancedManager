@@ -96,7 +96,7 @@ open class Home : BaseFragment() {
                     val mgUninstall = Intent(Intent.ACTION_DELETE, uri)
                     startActivity(mgUninstall)
                 } catch (e: ActivityNotFoundException){
-                    Toast.makeText(requireContext(), "App already uninstalled", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
 
@@ -111,7 +111,7 @@ open class Home : BaseFragment() {
                     )
                     startActivity(intent)
                 } catch (e: ActivityNotFoundException){
-                    Toast.makeText(requireContext(), "App is uninstalled", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
             }
@@ -131,7 +131,7 @@ open class Home : BaseFragment() {
                     val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
                     startActivity(vanUninstall)
                 } catch (e: ActivityNotFoundException){
-                    Toast.makeText(requireContext(), "App already uninstalled", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
             }
