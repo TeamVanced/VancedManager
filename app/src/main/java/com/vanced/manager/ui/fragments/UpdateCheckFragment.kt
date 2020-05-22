@@ -54,12 +54,17 @@ class UpdateCheckFragment : DialogFragment() {
         val recheckbtn = view.findViewById<Button>(R.id.update_center_recheck)
         val checkingTxt = view.findViewById<TextView>(R.id.update_center_checking)
         val loadBar = view.findViewById<ProgressBar>(R.id.update_center_progressbar)
+        val changelogTitle = view.findViewById<TextView>(R.id.update_center_changelog_title)
+        val changelogTxt = view.findViewById<TextView>(R.id.update_center_changelog)
 
         closebtn.setOnClickListener { dismiss() }
 
         if (GetJson().isConnected(requireContext())) {
             val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
             val remoteVersion = checkUrl.get("versionCode").asInt
+            val changelog = checkUrl.get("changelog").asString
+
+            changelogTxt.text = changelog
 
             if (remoteVersion > BuildConfig.VERSION_CODE) {
 
@@ -89,7 +94,11 @@ class UpdateCheckFragment : DialogFragment() {
                 checkingTxt.text = "No updates found"
             }
 
-        } else checkingTxt.text = "No connection"
+        } else {
+            checkingTxt.text = "No connection"
+            changelogTxt.visibility = View.GONE
+            changelogTitle.visibility = View.GONE
+        }
 
     }
 
