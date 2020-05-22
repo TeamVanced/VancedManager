@@ -7,10 +7,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
@@ -49,6 +46,8 @@ open class Home : BaseFragment() {
         val microgsettingsbtn = view.findViewById<ImageView>(R.id.microg_settingsbtn)
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
 
+        val microgProgress = view.findViewById<ProgressBar>(R.id.microg_progress)
+
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
@@ -83,7 +82,7 @@ open class Home : BaseFragment() {
                     420)
 
             } else {
-                installApk("https://x1nto.github.io/VancedFiles/microg.json")
+                installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress)
             }
 
         }
@@ -161,7 +160,6 @@ open class Home : BaseFragment() {
         when (requestCode) {
             420 -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    installApk("https://x1nto.github.io/VancedFiles/microg.json")
                     Toast.makeText(requireContext(), "Permission Granted", Toast.LENGTH_SHORT).show()
                 }
                 else
@@ -170,7 +168,7 @@ open class Home : BaseFragment() {
         }
     }
 
-    private fun installApk(url: String) {
+    private fun installApk(url: String, loadBar: ProgressBar) {
         val apkUrl = GetJson().AsJSONObject(url)
         val dwnldUrl = apkUrl.get("url").asString
 
@@ -180,7 +178,12 @@ open class Home : BaseFragment() {
         disposable = dwnldUrl.download()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
-                onNext = {
+                onNext = { progress ->
+                    activity?.runOnUiThread {
+                        loadBar.visibility = View.VISIBLE
+                        //loadBar.progress = (progress.downloadSize / progress.totalSize).toInt()
+                        loadBar.progress = progress.percent().toInt()
+                    }
                 },
                 onComplete = {
                     val pn = activity?.packageName
