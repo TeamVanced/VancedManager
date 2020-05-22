@@ -27,7 +27,7 @@ class ManagerChangelogFragment : Fragment() {
         val changelogTxt = view.findViewById<TextView>(R.id.manager_changelog)
 
         val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
-        val changelog = checkUrl.get("versionCode").asString
+        val changelog = checkUrl.get("changelog").asString
 
         if (GetJson().isConnected(requireContext()))
             changelogTxt.text = changelog
