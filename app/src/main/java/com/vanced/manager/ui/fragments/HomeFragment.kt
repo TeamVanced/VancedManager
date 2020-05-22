@@ -49,6 +49,7 @@ class HomeFragment : Home() {
             when (position) {
                 0 -> tab.text = "Vanced"
                 1 -> tab.text = "MicroG"
+                2 -> tab.text = "Manager"
             }
         }.attach()
 
