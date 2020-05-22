@@ -125,12 +125,8 @@ class UpdateCheckFragment : DialogFragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onNext = { progress ->
-                    activity?.runOnUiThread {
-                        loadBar.visibility = View.VISIBLE
-                        //loadBar.progress = (progress.downloadSize / progress.totalSize).toInt()
-                        loadBar.progress = progress.percent().toInt()
-                    }
-
+                    loadBar.visibility = View.VISIBLE
+                    loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
                     val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
