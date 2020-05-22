@@ -4,8 +4,10 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceManager
+import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseActivity
+import zlc.season.rxdownload4.file
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -17,6 +19,7 @@ open class Main: BaseActivity() {
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val firstStart = prefs.getBoolean("firstStart", true)
+        val isUpgrading = prefs.getBoolean("isUpgrading", false)
 
         //Easter Egg
         val falseStatement = prefs.getBoolean("statement", true)
@@ -24,6 +27,15 @@ open class Main: BaseActivity() {
         when {
             firstStart -> showSecurityDialog()
             !falseStatement -> statementFalse()
+            isUpgrading -> {
+                val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
+                val dwnldUrl = apkUrl.get("url").asString
+
+                if (dwnldUrl.file().exists())
+                    dwnldUrl.file().delete()
+
+                prefs.edit().putBoolean("isUpgrading", false).apply()
+            }
         }
 
     }

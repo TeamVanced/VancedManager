@@ -2,6 +2,7 @@ package com.vanced.manager.core.fragments
 
 import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
 import com.dezlum.codelabs.getjson.GetJson
@@ -18,11 +20,14 @@ import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
 import zlc.season.rxdownload4.download
 import zlc.season.rxdownload4.file
 
 open class Home : BaseFragment() {
+
+    private var disposable: Disposable? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -67,31 +72,20 @@ open class Home : BaseFragment() {
         }
 
         microginstallbtn.setOnClickListener {
-            val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-            val dwnldUrl = apkUrl.get("url").asString
-            dwnldUrl.download()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeBy(
-                    onNext = {
-                    },
-                    onComplete = {
-                        val pn = activity?.packageName
-                        val apk = dwnldUrl.file()
-                        val uri =
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                                FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
-                            } else
-                                Uri.fromFile(apk)
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.setDataAndType(uri, "application/vnd.android.package-archive")
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                        startActivity(intent)
-                    },
-                    onError = {
-                        Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT).show()
-                    }
-                )
+            if (ContextCompat.checkSelfPermission(requireContext(),
+                    android.Manifest.permission.READ_EXTERNAL_STORAGE) +
+                ContextCompat.checkSelfPermission(requireContext(),
+                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+                requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                    420)
+
+            } else {
+                installApk("https://x1nto.github.io/VancedFiles/microg.json")
+            }
+
         }
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
@@ -155,6 +149,57 @@ open class Home : BaseFragment() {
             openUrl("https://reddit.com/r/vanced", R.color.Reddit)
         }
 
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        when (requestCode) {
+            420 -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    installApk("https://x1nto.github.io/VancedFiles/microg.json")
+                    Toast.makeText(requireContext(), "Permission Granted", Toast.LENGTH_SHORT).show()
+                }
+                else
+                    Toast.makeText(requireContext(), "Permission Denied", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun installApk(url: String) {
+        val apkUrl = GetJson().AsJSONObject(url)
+        val dwnldUrl = apkUrl.get("url").asString
+
+        if (dwnldUrl.file().exists())
+            dwnldUrl.file().delete()
+
+        disposable = dwnldUrl.download()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onNext = {
+                },
+                onComplete = {
+                    val pn = activity?.packageName
+                    val apk = dwnldUrl.file()
+                    val uri =
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                            FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
+                        } else
+                            Uri.fromFile(apk)
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    startActivity(intent)
+                },
+                onError = {
+                    Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT).show()
+                }
+            )
     }
 
 }

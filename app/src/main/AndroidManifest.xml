@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.vanced.manager">
 
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
@@ -16,7 +17,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        tools:ignore="UnusedAttribute">
+
         <activity
             android:name=".ui.core.SplashScreenActivity"
             android:label="@string/app_name"
