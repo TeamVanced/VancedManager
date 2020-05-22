@@ -43,6 +43,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/update_center_changelog_title"
+            style="@style/AppVer.Bold"
+            android:layout_marginTop="12dp"
+            android:text="Changelog"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/update_center_changelog"
+            style="@style/AppVer"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+            android:text="Loading..."
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
         <LinearLayout
             android:id="@+id/update_button_container"
             android:layout_width="wrap_content"

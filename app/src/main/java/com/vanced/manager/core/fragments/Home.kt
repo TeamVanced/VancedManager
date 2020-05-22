@@ -1,5 +1,6 @@
 package com.vanced.manager.core.fragments
 
+import android.app.Activity
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -93,7 +94,7 @@ open class Home : BaseFragment() {
             microguninstallbtn.setOnClickListener {
                 val uri = Uri.parse("package:com.mgoogle.android.gms")
                 val mgUninstall = Intent(Intent.ACTION_DELETE, uri)
-                startActivity(mgUninstall)
+                startActivityForResult(mgUninstall, 2)
             }
 
             microgsettingsbtn.setOnClickListener {
@@ -168,6 +169,24 @@ open class Home : BaseFragment() {
         }
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        when (requestCode){
+            1-> {
+                if (resultCode == Activity.RESULT_CANCELED)
+                    activity?.recreate()
+                else
+                    activity?.recreate()
+            }
+            2 -> {
+                if (resultCode == Activity.RESULT_OK)
+                    activity?.recreate()
+            }
+
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
     private fun installApk(url: String, loadBar: ProgressBar) {
         val apkUrl = GetJson().AsJSONObject(url)
         val dwnldUrl = apkUrl.get("url").asString
@@ -199,7 +218,7 @@ open class Home : BaseFragment() {
                     intent.setDataAndType(uri, "application/vnd.android.package-archive")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    startActivity(intent)
+                    startActivityForResult(intent, 1)
                 },
                 onError = { throwable ->
                     Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
