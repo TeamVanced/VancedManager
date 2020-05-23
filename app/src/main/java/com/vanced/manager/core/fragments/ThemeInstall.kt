@@ -17,7 +17,7 @@ open class ThemeInstall : BaseFragment() {
 
         val nextButton = view.findViewById<Button>(R.id.vanced_next_to_variant)
         val loadBar = view.findViewById<ProgressBar>(R.id.vantheme_progress)
-        val themeGroup = view.findViewById<RadioGroup>(R.id.lang_radiogroup)
+        val themeGroup = view.findViewById<RadioGroup>(R.id.theme_radiogroup)
         val selectedThemeId = themeGroup.checkedRadioButtonId
 
         nextButton.setOnClickListener {
