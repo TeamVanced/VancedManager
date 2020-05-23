@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.vanced.manager.R
@@ -21,7 +22,8 @@ open class ThemeInstall : BaseFragment() {
         val selectedThemeId = themeGroup.checkedRadioButtonId
 
         nextButton.setOnClickListener {
-            downloadSplit("theme", selectedThemeId.toString(), false, loadBar, R.id.toInstallVariantFragment)
+            Toast.makeText(requireContext(), selectedThemeId.toString(), Toast.LENGTH_SHORT).show()
+           //downloadSplit("theme", selectedThemeId.toString(), false, loadBar, R.id.toInstallVariantFragment)
         }
     }
 
