@@ -24,7 +24,7 @@
                 android:id="@+id/vanced_theme_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkedButton="@id/button_light_dark">
+                android:checkedButton="@id/dark">
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/dark"

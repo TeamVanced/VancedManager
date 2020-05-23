@@ -3,7 +3,6 @@ package com.vanced.manager.core.base
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Environment
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -11,10 +10,8 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.vanced.manager.R
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
-import kotlinx.android.synthetic.main.activity_main.*
 import zlc.season.rxdownload4.download
 import zlc.season.rxdownload4.file
 import zlc.season.rxdownload4.task.Task
