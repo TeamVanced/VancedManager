@@ -87,18 +87,19 @@ class HomeFragment : Home() {
             val microginstallbtn = view?.findViewById<Button>(R.id.microg_installbtn)
             val vancedinstallbtn = view?.findViewById<Button>(R.id.vanced_installbtn)
 
-            microginstallbtn?.visibility = View.VISIBLE
-            vancedinstallbtn?.visibility = View.VISIBLE
-
             val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
             val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
 
             val vancedVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
             val microgVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-            vancedLatestTxt?.text = vancedVer.get("version").asString
-            microgLatestTxt?.text = microgVer.get("version").asString
 
             activity?.runOnUiThread {
+
+                microginstallbtn?.visibility = View.VISIBLE
+                vancedinstallbtn?.visibility = View.VISIBLE
+
+                vancedLatestTxt?.text = vancedVer.get("version").asString
+                microgLatestTxt?.text = microgVer.get("version").asString
 
                 val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
                 val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
@@ -124,21 +125,21 @@ class HomeFragment : Home() {
         val microginstallbtn = view?.findViewById<Button>(R.id.microg_installbtn)
         val vancedinstallbtn = view?.findViewById<Button>(R.id.vanced_installbtn)
 
-        microginstallbtn?.visibility = View.GONE
-        vancedinstallbtn?.visibility = View.GONE
-
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
 
         if (GetJson().isConnected(requireContext())) {
 
-            vancedLatestTxt?.text = getString(R.string.unavailable)
-            microgLatestTxt?.text = getString(R.string.unavailable)
-
             val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
             if (networkErrorLayout?.visibility != View.VISIBLE) {
 
                 activity?.runOnUiThread {
+
+                    microginstallbtn?.visibility = View.GONE
+                    vancedinstallbtn?.visibility = View.GONE
+
+                    vancedLatestTxt?.text = getString(R.string.unavailable)
+                    microgLatestTxt?.text = getString(R.string.unavailable)
 
                     val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
                     val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
