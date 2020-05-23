@@ -2,10 +2,7 @@ package com.vanced.manager.core.fragments
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.RadioGroup
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.vanced.manager.R
@@ -20,9 +17,10 @@ open class ThemeInstall : BaseFragment() {
         val loadBar = view.findViewById<ProgressBar>(R.id.vantheme_progress)
         val themeGroup = view.findViewById<RadioGroup>(R.id.theme_radiogroup)
         val selectedThemeId = themeGroup.checkedRadioButtonId
+        val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
 
         nextButton.setOnClickListener {
-            Toast.makeText(requireContext(), selectedThemeId.toString(), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), selectedButton.id.toString(), Toast.LENGTH_SHORT).show()
            //downloadSplit("theme", selectedThemeId.toString(), false, loadBar, R.id.toInstallVariantFragment)
         }
     }
