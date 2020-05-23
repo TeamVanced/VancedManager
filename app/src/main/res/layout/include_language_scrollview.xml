@@ -6,19 +6,16 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fillViewport="true"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
     tools:ignore="HardcodedText">
 
     <RadioGroup
+        android:id="@+id/lang_radiogroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:checkedButton="@id/English">
+        android:checkedButton="@id/en">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/English"
+            android:id="@+id/en"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -26,15 +23,15 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Bahasa_Indonesia"
+            android:id="@+id/in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
-            android:text="Bahasa Indonesia"
+            android:text="Indonesian"
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Catalian"
+            android:id="@+id/ca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -42,7 +39,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Deutsch"
+            android:id="@+id/de"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -50,7 +47,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Spanish"
+            android:id="@+id/es"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -58,7 +55,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/French"
+            android:id="@+id/fr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -66,7 +63,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Hrvatski"
+            android:id="@+id/hr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -74,7 +71,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Italian"
+            android:id="@+id/it"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -90,15 +87,15 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Nederlands"
+            android:id="@+id/nl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
-            android:text="Nederlands"
+            android:text="Dutch"
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Polish"
+            android:id="@+id/pl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -106,7 +103,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Portugees"
+            android:id="@+id/pt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -114,7 +111,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Romanian"
+            android:id="@+id/ro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -122,7 +119,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Suomi"
+            android:id="@+id/fi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -130,7 +127,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Svenska"
+            android:id="@+id/sv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -138,7 +135,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Tieng"
+            android:id="@+id/vi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -146,7 +143,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Turkish"
+            android:id="@+id/tr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -154,7 +151,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Armenian"
+            android:id="@+id/hy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -162,15 +159,15 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Bulgarian"
+            android:id="@+id/bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
-            android:text="Български (България)"
+            android:text="Български"
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Russian"
+            android:id="@+id/ru"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -178,7 +175,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Ukrainian"
+            android:id="@+id/uk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -186,7 +183,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Arabic"
+            android:id="@+id/ar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -194,7 +191,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Georgian"
+            android:id="@+id/ka"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -202,7 +199,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Japanese"
+            android:id="@+id/ja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -210,7 +207,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Chinese"
+            android:id="@+id/zh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
@@ -218,7 +215,7 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Korean"
+            android:id="@+id/ko"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"

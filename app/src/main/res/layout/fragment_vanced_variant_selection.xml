@@ -2,6 +2,7 @@
 <com.vanced.manager.ui.core.SlidingConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -48,6 +49,14 @@
                 android:id="@+id/vanced_next_to_language"
                 android:text="@string/next"
                 app:icon="@drawable/ic_keyboard_next" />
+
+            <ProgressBar
+                android:id="@+id/vanvariant_progress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"/>
 
         </LinearLayout>
 

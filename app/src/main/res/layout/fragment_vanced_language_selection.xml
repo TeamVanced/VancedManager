@@ -2,6 +2,7 @@
 <com.vanced.manager.ui.core.SlidingConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -51,6 +52,14 @@
                 style="@style/InstallButtonStyle"
                 android:text="@string/finish"
                 app:icon="@drawable/ic_done_black_24dp" />
+
+            <ProgressBar
+                android:id="@+id/vanlang_progress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"/>
 
         </LinearLayout>
 

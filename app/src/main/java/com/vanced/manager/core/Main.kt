@@ -12,6 +12,7 @@ import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseActivity
 import zlc.season.rxdownload4.file
+import java.io.File
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -20,7 +21,6 @@ open class Main: BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
 
         if (ContextCompat.checkSelfPermission(this,
                 android.Manifest.permission.READ_EXTERNAL_STORAGE) +

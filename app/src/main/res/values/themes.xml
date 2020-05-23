@@ -49,10 +49,19 @@
 
     <style name="LightTheme.Yellow" parent="LightTheme.Blue">
 
-        <item name="colorPrimary">#D7AD14</item>
-        <item name="colorPrimaryVariant">#B9B22C</item>
-        <item name="colorSecondary">#AFAD3E</item>
-        <item name="colorSecondaryVariant">#80AFAD3E</item>
+        <item name="colorPrimary">#ffd500</item>
+        <item name="colorPrimaryVariant">#A6FFD500</item>
+        <item name="colorSecondary">#D3B418</item>
+        <item name="colorSecondaryVariant">#B7D3B418</item>
+
+    </style>
+
+    <style name="LightTheme.Purple" parent="LightTheme.Blue">
+
+        <item name="colorPrimary">#9370DB</item>
+        <item name="colorPrimaryVariant">#B59370DB</item>
+        <item name="colorSecondary">#734BC7</item>
+        <item name="colorSecondaryVariant">#9A734BC7</item>
 
     </style>
 

@@ -1,21 +1,31 @@
 package com.vanced.manager.core.fragments
 
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import android.widget.ProgressBar
 import com.vanced.manager.R
+import com.vanced.manager.core.base.BaseFragment
 
-open class VariantInstall : Fragment() {
+open class VariantInstall : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val nextButton = getView()?.findViewById(R.id.vanced_next_to_language) as Button
+        val nextButton = view.findViewById<Button>(R.id.vanced_next_to_language)
+        val loadBar = view.findViewById<ProgressBar>(R.id.vanvariant_progress)
 
         nextButton.setOnClickListener {
-            view.findNavController().navigate(R.id.toInstallLanguageFragment)
+            val arch =
+                when {
+                    Build.SUPPORTED_ABIS.contains("x86") -> "x86"
+                    Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64-v8a"
+                    Build.SUPPORTED_ABIS.contains("armeabi-v7a") -> "armeabi-v7a"
+                    else -> "arm"
+                }
+
+            downloadSplit("arch", arch, false, loadBar, R.id.toInstallThemeFragment)
         }
     }
 }

@@ -8,12 +8,15 @@ import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
+import android.widget.TextView
 import androidx.core.animation.addListener
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.gson.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.core.fragments.Home
@@ -63,7 +66,7 @@ class HomeFragment : Home() {
     private fun checkNetwork() {
         if (!GetJson().isConnected(requireContext())) {
 
-            netAvailable()
+            netUnavailable()
 
         }
 
@@ -74,12 +77,26 @@ class HomeFragment : Home() {
         override fun onLost(network: Network) {
             super.onLost(network)
 
-            netAvailable()
+            netUnavailable()
 
         }
 
         override fun onAvailable(network: Network) {
             super.onAvailable(network)
+
+            val microginstallbtn = view?.findViewById<Button>(R.id.microg_installbtn)
+            val vancedinstallbtn = view?.findViewById<Button>(R.id.vanced_installbtn)
+
+            microginstallbtn?.visibility = View.VISIBLE
+            vancedinstallbtn?.visibility = View.VISIBLE
+
+            val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
+            val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
+
+            val vancedVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+            val microgVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
+            vancedLatestTxt?.text = vancedVer.get("version").asString
+            microgLatestTxt?.text = microgVer.get("version").asString
 
             activity?.runOnUiThread {
 
@@ -102,28 +119,43 @@ class HomeFragment : Home() {
 
     }
 
-    private fun netAvailable() {
+    private fun netUnavailable() {
 
-        val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-        if (networkErrorLayout?.visibility != View.VISIBLE) {
+        val microginstallbtn = view?.findViewById<Button>(R.id.microg_installbtn)
+        val vancedinstallbtn = view?.findViewById<Button>(R.id.vanced_installbtn)
 
-            activity?.runOnUiThread {
+        microginstallbtn?.visibility = View.GONE
+        vancedinstallbtn?.visibility = View.GONE
 
-                val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
-                val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
+        val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
+        val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
+
+        if (GetJson().isConnected(requireContext())) {
+
+            vancedLatestTxt?.text = getString(R.string.unavailable)
+            microgLatestTxt?.text = getString(R.string.unavailable)
+
+            val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+            if (networkErrorLayout?.visibility != View.VISIBLE) {
+
+                activity?.runOnUiThread {
+
+                    val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
+                    val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
 
 
-                oa2.apply {
-                    oa2.addListener(onStart = {
-                        networkErrorLayout?.visibility = View.VISIBLE
-                    })
-                    start()
+                    oa2.apply {
+                        oa2.addListener(onStart = {
+                            networkErrorLayout?.visibility = View.VISIBLE
+                        })
+                        start()
+                    }
+                    oa3.start()
+
                 }
-                oa3.start()
-
             }
-        }
 
+        }
     }
 
     private fun connectionStatus() {

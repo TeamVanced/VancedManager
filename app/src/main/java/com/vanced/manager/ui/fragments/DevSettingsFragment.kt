@@ -39,7 +39,7 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
         val archPref: Preference? = findPreference("device_arch")
         val supportedAbis: Array<String> = Build.SUPPORTED_ABIS
 
-        if (supportedAbis.contains("arm64-v8a") && supportedAbis.contains("x86_64")) {
+        if (supportedAbis.contains("arm64-v8a") || supportedAbis.contains("x86_64")) {
             archPref?.summary = "64bit"
         } else {
             archPref?.summary = "32bit"

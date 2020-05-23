@@ -80,6 +80,7 @@ open class ThemedActivity : AppCompatActivity() {
             "Red" -> setTheme(R.style.DarkTheme_Red)
             "Green" -> setTheme(R.style.DarkTheme_Green)
             "Yellow" -> setTheme(R.style.DarkTheme_Yellow)
+            "Purple" -> setTheme(R.style.DarkTheme_Purple)
         }
     }
 
@@ -89,6 +90,7 @@ open class ThemedActivity : AppCompatActivity() {
             "Red" -> setTheme(R.style.LightTheme_Red)
             "Green" -> setTheme(R.style.LightTheme_Green)
             "Yellow" -> setTheme(R.style.LightTheme_Yellow)
+            "Purple" -> setTheme(R.style.LightTheme_Purple)
         }
     }
 
