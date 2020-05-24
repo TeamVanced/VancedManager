@@ -119,7 +119,7 @@ open class BaseFragment : Fragment() {
         val task = activity?.filesDir?.path?.let {
             Task(
                 url = dwnldUrl,
-                saveName = getFileNameFromUrl(url),
+                saveName = getFileNameFromUrl(dwnldUrl),
                 savePath = it
             )
         }
