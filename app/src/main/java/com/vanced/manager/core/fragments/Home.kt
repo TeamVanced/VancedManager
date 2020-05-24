@@ -67,7 +67,7 @@ open class Home : BaseFragment() {
         }
 
         vancedinstallbtn.setOnClickListener {
-            view.findNavController().navigate(R.id.toInstallThemeFragment)
+            view.findNavController().navigate(R.id.toInstallVariantFragment)
         }
 
         microginstallbtn.setOnClickListener {

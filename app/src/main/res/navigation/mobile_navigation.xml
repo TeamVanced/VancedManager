@@ -29,8 +29,8 @@
             app:popExitAnim="@animator/fragment_exit_pop"  />
 
         <action
-            android:id="@+id/toInstallThemeFragment"
-            app:destination="@id/install_theme_fragment"
+            android:id="@+id/toInstallVariantFragment"
+            app:destination="@id/install_variant_fragment"
             app:enterAnim="@animator/fragment_enter_right"
             app:exitAnim="@animator/fragment_exit_left"
             app:popEnterAnim="@animator/fragment_enter_left"
@@ -72,8 +72,8 @@
         tools:layout="@layout/fragment_vanced_theme_selection">
 
         <action
-            android:id="@+id/toInstallVariantFragment"
-            app:destination="@id/install_variant_fragment"
+            android:id="@+id/toInstallLanguageFragment"
+            app:destination="@id/install_language_fragment"
             app:enterAnim="@animator/fragment_enter_right"
             app:exitAnim="@animator/fragment_exit_left"
             app:popEnterAnim="@animator/fragment_enter_left"
@@ -88,8 +88,8 @@
         tools:layout="@layout/fragment_vanced_variant_selection">
 
         <action
-            android:id="@+id/toInstallLanguageFragment"
-            app:destination="@id/install_language_fragment"
+            android:id="@+id/toInstallThemeFragment"
+            app:destination="@id/install_theme_fragment"
             app:enterAnim="@animator/fragment_enter_right"
             app:exitAnim="@animator/fragment_exit_left"
             app:popEnterAnim="@animator/fragment_enter_left"

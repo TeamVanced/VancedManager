@@ -71,7 +71,7 @@ open class BaseFragment : Fragment() {
                     Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
                 }
             )
-        }
+    }
 
     fun downloadEn() {
         val url = "https://x1nto.github.io/VancedFiles/Splits/Language/split_config.en.apk"
@@ -81,19 +81,19 @@ open class BaseFragment : Fragment() {
             task.delete()
 
         disposable = task
-                .download()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeBy(
-                    onNext = {
-                    },
-                    onComplete = {
-                    },
-                    onError = { throwable ->
-                        Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
-                    }
+            .download()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onNext = {
+                },
+                onComplete = {
+                },
+                onError = { throwable ->
+                    Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
+                }
 
-                )
-        }
+            )
+
     }
 
 }

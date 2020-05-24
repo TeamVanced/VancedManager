@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.core.animation.addListener
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
+import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -20,11 +21,15 @@ import com.google.gson.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.core.fragments.Home
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 
 class HomeFragment : Home() {
 
     private lateinit var sectionPageAdapter: SectionPageAdapter
     private lateinit var viewPager: ViewPager2
+    private var disposable: Disposable? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,10 +43,12 @@ class HomeFragment : Home() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        connectionStatus()
-        checkNetwork()
+        //connectionStatus()
+        //checkNetwork()
 
         super.onViewCreated(view, savedInstanceState)
+
+        checkNetwork()
 
         sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
@@ -58,12 +65,49 @@ class HomeFragment : Home() {
 
     }
 
+    private fun checkNetwork() {
+        val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+
+        disposable = ReactiveNetwork.observeInternetConnectivity()
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe { isConnectedToInternet ->
+                if (isConnectedToInternet) {
+                    if (networkErrorLayout?.visibility != View.GONE) {
+                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
+                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+
+                        oa2.start()
+                        oa3.apply {
+                            oa3.addListener(onEnd = {
+                                networkErrorLayout?.visibility = View.GONE
+                            })
+                            start()
+                        }
+                    }
+                } else {
+                    if (networkErrorLayout?.visibility != View.VISIBLE) {
+                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
+                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
+
+                        oa2.apply {
+                            oa2.addListener(onStart = {
+                                networkErrorLayout?.visibility = View.VISIBLE
+                            })
+                            start()
+                        }
+                        oa3.start()
+                    }
+                }
+            }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.toolbar_menu, menu)
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-    private fun checkNetwork() {
+    /*private fun checkNetwork() {
         if (!GetJson().isConnected(requireContext())) {
 
             netUnavailable()
@@ -142,6 +186,7 @@ class HomeFragment : Home() {
         } catch (e: Exception) {}
         connectivityManager.registerNetworkCallback(networkRequest, networkCallback)
     }
+     */
 
 }
 

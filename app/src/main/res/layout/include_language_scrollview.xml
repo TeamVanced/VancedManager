@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
             android:text="Català"
+            android:tag="ca"
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton

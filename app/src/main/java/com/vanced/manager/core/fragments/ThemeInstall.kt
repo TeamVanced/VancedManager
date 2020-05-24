@@ -15,11 +15,10 @@ open class ThemeInstall : BaseFragment() {
         val loadBar = view.findViewById<ProgressBar>(R.id.vantheme_progress)
         val themeGroup = view.findViewById<RadioGroup>(R.id.theme_radiogroup)
 
-
         nextButton.setOnClickListener {
             val selectedThemeId = themeGroup.checkedRadioButtonId
             val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
-            downloadSplit("theme", selectedButton.tag.toString(), false, loadBar, R.id.toInstallVariantFragment)
+            downloadSplit("theme", selectedButton.tag.toString(), false, loadBar, R.id.toInstallLanguageFragment)
         }
     }
 

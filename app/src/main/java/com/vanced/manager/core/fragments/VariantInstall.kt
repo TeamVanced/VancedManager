@@ -25,7 +25,7 @@ open class VariantInstall : BaseFragment() {
                     else -> "armeabi_v7a"
                 }
 
-            downloadSplit("arch", arch, false, loadBar, R.id.toInstallLanguageFragment)
+            downloadSplit("arch", arch, false, loadBar, R.id.toInstallThemeFragment)
         }
     }
 }
