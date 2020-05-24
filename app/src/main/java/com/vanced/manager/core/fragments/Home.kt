@@ -58,14 +58,6 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
-            microginstallbtn.text = getString(R.string.installed)
-            microginstallbtn.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                R.drawable.outline_cloud_done_24,
-                0,
-                0,
-                0
-            )
-
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
                 try {
