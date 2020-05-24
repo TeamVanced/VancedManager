@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
 import com.dezlum.codelabs.getjson.GetJson
-import com.google.gson.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -52,20 +51,6 @@ open class Home : BaseFragment() {
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
-        val vancedLatestTxt = view.findViewById<TextView>(R.id.vanced_latest_version)
-        val microgLatestTxt = view.findViewById<TextView>(R.id.microg_latest_version)
-
-        if (GetJson().isConnected(requireContext())) {
-            val vancedVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-            val microgVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-            vancedLatestTxt.text = vancedVer.get("version").asString
-            microgLatestTxt.text = microgVer.get("version").asString
-
-        } else {
-            vancedLatestTxt.text = getString(R.string.unavailable)
-            microgLatestTxt.text = getString(R.string.unavailable)
-        }
-
         vancedinstallbtn.setOnClickListener {
             view.findNavController().navigate(R.id.toInstallVariantFragment)
         }
@@ -89,6 +74,9 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
+            microginstallbtn.text = getString(R.string.installed)
+            microginstallbtn.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.outline_cloud_done_24, 0, 0, 0)
+
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
                 try {
@@ -124,6 +112,8 @@ open class Home : BaseFragment() {
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         if (vancedStatus!!) {
+            vancedinstallbtn.text = getString(R.string.installed)
+            vancedinstallbtn.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.outline_cloud_done_24, 0, 0, 0)
             val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
                 try {

@@ -61,6 +61,7 @@ open class BaseFragment : Fragment() {
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
+                    loadBar.visibility = View.GONE
                     view?.findNavController()?.navigate(navigate)
                     //if (isInstalling) {
                         //So we should implement installation here.
