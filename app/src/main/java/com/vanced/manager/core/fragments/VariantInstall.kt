@@ -21,7 +21,6 @@ open class VariantInstall : BaseFragment() {
                 when {
                     Build.SUPPORTED_ABIS.contains("x86") -> "x86"
                     Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
-                    Build.SUPPORTED_ABIS.contains("armeabi-v7a") -> "armeabi_v7a"
                     else -> "armeabi_v7a"
                 }
 

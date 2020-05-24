@@ -3,27 +3,17 @@ package com.vanced.manager.core.fragments
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
 import androidx.navigation.findNavController
-import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.rxkotlin.subscribeBy
-import zlc.season.rxdownload4.download
-import zlc.season.rxdownload4.file
+import java.io.File
 
 open class Home : BaseFragment() {
-
-    private var disposable: Disposable? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -52,30 +42,29 @@ open class Home : BaseFragment() {
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
         vancedinstallbtn.setOnClickListener {
+            try {
+                val cacheDir: File? = activity?.cacheDir
+                if (cacheDir?.isDirectory!!)
+                    cacheDir.delete()
+            } catch (e: Exception) {
+                Log.d("VMCache", "Unable to delete cacheDir")
+            }
             view.findNavController().navigate(R.id.toInstallVariantFragment)
         }
 
         microginstallbtn.setOnClickListener {
-            if (ContextCompat.checkSelfPermission(requireContext(),
-                    android.Manifest.permission.READ_EXTERNAL_STORAGE) +
-                ContextCompat.checkSelfPermission(requireContext(),
-                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-
-                requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                    420)
-
-            } else {
-                installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress)
-            }
-
+            installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress)
         }
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
             microginstallbtn.text = getString(R.string.installed)
-            microginstallbtn.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.outline_cloud_done_24, 0, 0, 0)
+            microginstallbtn.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                R.drawable.outline_cloud_done_24,
+                0,
+                0,
+                0
+            )
 
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
@@ -83,7 +72,7 @@ open class Home : BaseFragment() {
                     val uri = Uri.parse("package:com.mgoogle.android.gms")
                     val mgUninstall = Intent(Intent.ACTION_DELETE, uri)
                     startActivity(mgUninstall)
-                } catch (e: ActivityNotFoundException){
+                } catch (e: ActivityNotFoundException) {
                     Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
@@ -98,7 +87,7 @@ open class Home : BaseFragment() {
                         "org.microg.gms.ui.SettingsActivity"
                     )
                     startActivity(intent)
-                } catch (e: ActivityNotFoundException){
+                } catch (e: ActivityNotFoundException) {
                     Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
@@ -112,15 +101,13 @@ open class Home : BaseFragment() {
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         if (vancedStatus!!) {
-            vancedinstallbtn.text = getString(R.string.installed)
-            vancedinstallbtn.setCompoundDrawablesRelativeWithIntrinsicBounds(R.drawable.outline_cloud_done_24, 0, 0, 0)
             val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
                 try {
                     val uri = Uri.parse("package:com.vanced.android.youtube")
                     val vanUninstall = Intent(Intent.ACTION_DELETE, uri)
                     startActivity(vanUninstall)
-                } catch (e: ActivityNotFoundException){
+                } catch (e: ActivityNotFoundException) {
                     Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
@@ -154,60 +141,6 @@ open class Home : BaseFragment() {
             openUrl("https://reddit.com/r/vanced", R.color.Reddit)
         }
 
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
-        when (requestCode) {
-            420 -> {
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    Toast.makeText(requireContext(), "Permission Granted", Toast.LENGTH_SHORT).show()
-                }
-                else
-                    Toast.makeText(requireContext(), "Permission Denied", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
-    private fun installApk(url: String, loadBar: ProgressBar) {
-        val apkUrl = GetJson().AsJSONObject(url)
-        val dwnldUrl = apkUrl.get("url").asString
-
-        if (dwnldUrl.file().exists())
-            dwnldUrl.file().delete()
-
-        disposable = dwnldUrl.download()
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeBy(
-                onNext = { progress ->
-                    loadBar.visibility = View.VISIBLE
-                    loadBar.progress = progress.percent().toInt()
-                },
-                onComplete = {
-                    loadBar.visibility = View.GONE
-
-                    val pn = activity?.packageName
-                    val apk = dwnldUrl.file()
-                    val uri =
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                            FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
-                        } else
-                            Uri.fromFile(apk)
-                    val intent = Intent(Intent.ACTION_VIEW)
-                    intent.setDataAndType(uri, "application/vnd.android.package-archive")
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    startActivity(intent)
-                },
-                onError = { throwable ->
-                    Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
-                }
-            )
     }
 
 }

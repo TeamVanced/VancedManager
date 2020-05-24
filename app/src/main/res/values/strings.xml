@@ -18,7 +18,8 @@
     <string name="brave_browser">Brave Browser</string>
     <string name="changelogs">Changelogs</string>
     <string name="install">Install</string>
-    <string name="installed">Installed:</string>
+    <string name="version_installed">Installed:</string>
+    <string name="button_installed">Installed</string>
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
     <string name="n_a">N/A</string>

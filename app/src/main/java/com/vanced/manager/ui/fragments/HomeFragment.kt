@@ -12,7 +12,6 @@ import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.google.gson.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.core.fragments.Home
@@ -61,25 +60,71 @@ class HomeFragment : Home() {
     }
 
     private fun checkNetwork() {
+        val pm = activity?.packageManager
+        val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
+        val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+        val microginstallbtn = view?.findViewById<Button>(R.id.microg_installbtn)
+        val vancedinstallbtn = view?.findViewById<Button>(R.id.vanced_installbtn)
+        val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
+        val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { isConnectedToInternet ->
                 run {
-                    val microginstallbtn = view?.findViewById<Button>(R.id.microg_installbtn)
-                    val vancedinstallbtn = view?.findViewById<Button>(R.id.vanced_installbtn)
-                    val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
-                    val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
-
                     if (isConnectedToInternet) {
                         vancedinstallbtn?.visibility = View.VISIBLE
                         microginstallbtn?.visibility = View.VISIBLE
 
-                        val vancedVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                        val microgVer: JsonObject = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-                        vancedLatestTxt?.text = vancedVer.get("version").asString
-                        microgLatestTxt?.text = microgVer.get("version").asString
+                        val vancedRemoteVer: String =
+                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+                                .get("version").asString
+                        val microgRemoteVer: String =
+                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
+                                .get("version").asString
+                        vancedLatestTxt?.text = vancedRemoteVer
+                        microgLatestTxt?.text = microgRemoteVer
+
+                        when {
+                            microgStatus!! -> {
+                                val microgVer =
+                                    pm.getPackageInfo("com.mgoogle.microg", 0).versionName
+                                when {
+                                    microgRemoteVer > microgVer -> {
+                                        microginstallbtn?.text = getString(R.string.update)
+                                    }
+                                    microgRemoteVer == microgVer -> {
+                                        microginstallbtn?.text = getString(R.string.update)
+                                    }
+                                }
+                            }
+                            vancedStatus!! -> {
+                                val vancedVer =
+                                    pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
+                                when {
+                                    vancedRemoteVer > vancedVer -> {
+                                        vancedinstallbtn?.text = getString(R.string.update)
+                                        vancedinstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                                            R.drawable.ic_cloud_upload_black_24dp,
+                                            0,
+                                            0,
+                                            0
+                                        )
+                                    }
+                                    microgRemoteVer == vancedVer -> {
+                                        vancedinstallbtn?.text = getString(R.string.update)
+                                        vancedinstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                                            R.drawable.outline_cloud_done_24,
+                                            0,
+                                            0,
+                                            0
+                                        )
+                                    }
+                                }
+                            }
+                        }
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
                         val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)

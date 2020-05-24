@@ -1,14 +1,18 @@
 package com.vanced.manager.core.base
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.dezlum.codelabs.getjson.GetJson
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
@@ -48,7 +52,13 @@ open class BaseFragment : Fragment() {
                 else -> return
             }
 
-        val task = activity?.filesDir?.path?.let { Task(url = url, saveName = getFileNameFromUrl(url), savePath = it) }
+        val task = activity?.cacheDir?.path?.let {
+            Task(
+                url = url,
+                saveName = getFileNameFromUrl(url),
+                savePath = it
+            )
+        }
 
         if (task?.file()?.exists()!!)
             task.delete()
@@ -77,7 +87,13 @@ open class BaseFragment : Fragment() {
     fun downloadEn() {
         val url = "https://x1nto.github.io/VancedFiles/Splits/Language/split_config.en.apk"
 
-        val task = activity?.filesDir?.path?.let { Task(url = url, saveName = getFileNameFromUrl(url), savePath = it) }
+        val task = activity?.cacheDir?.path?.let {
+            Task(
+                url = url,
+                saveName = getFileNameFromUrl(url),
+                savePath = it
+            )
+        }
         if (task?.file()?.exists()!!)
             task.delete()
 
@@ -95,6 +111,51 @@ open class BaseFragment : Fragment() {
 
             )
 
+    }
+
+    fun installApk(url: String, loadBar: ProgressBar) {
+        val apkUrl = GetJson().AsJSONObject(url)
+        val dwnldUrl = apkUrl.get("url").asString
+        val task = activity?.filesDir?.path?.let {
+            Task(
+                url = dwnldUrl,
+                saveName = getFileNameFromUrl(url),
+                savePath = it
+            )
+        }
+
+        if (task?.file()?.exists()!!)
+            task.delete()
+
+        disposable = task
+            .download()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onNext = { progress ->
+                    loadBar.visibility = View.VISIBLE
+                    loadBar.progress = progress.percent().toInt()
+                },
+                onComplete = {
+                    loadBar.visibility = View.GONE
+
+                    val pn = activity?.packageName
+                    val apk = task.file()
+                    val uri =
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                            FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
+                        } else
+                            Uri.fromFile(apk)
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    startActivity(intent)
+                },
+                onError = { throwable ->
+                    Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT)
+                        .show()
+                }
+            )
     }
 
 }
