@@ -16,11 +16,11 @@ open class ThemeInstall : BaseFragment() {
         val nextButton = view.findViewById<Button>(R.id.vanced_next_to_variant)
         val loadBar = view.findViewById<ProgressBar>(R.id.vantheme_progress)
         val themeGroup = view.findViewById<RadioGroup>(R.id.theme_radiogroup)
-        val selectedThemeId = themeGroup.checkedRadioButtonId
-        val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
 
 
         nextButton.setOnClickListener {
+            val selectedThemeId = themeGroup.checkedRadioButtonId
+            val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
             Toast.makeText(requireContext(), selectedButton.tag.toString(), Toast.LENGTH_SHORT).show()
            //downloadSplit("theme", selectedThemeId.toString(), false, loadBar, R.id.toInstallVariantFragment)
         }
