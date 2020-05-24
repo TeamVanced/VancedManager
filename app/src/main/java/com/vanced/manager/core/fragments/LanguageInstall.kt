@@ -19,8 +19,8 @@ open class LanguageInstall : BaseFragment() {
         val langGroup = view.findViewById<RadioGroup>(R.id.lang_radiogroup)
 
         finishButton.setOnClickListener {
-            val selectedThemeId = langGroup.checkedRadioButtonId
-            val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
+            val selectedLangId = langGroup.checkedRadioButtonId
+            val selectedButton = view.findViewById<RadioButton>(selectedLangId)
             if (selectedButton.tag.toString() != "en")
                 downloadEn()
             downloadSplit("lang", selectedButton.tag.toString(), true, loadBar, R.id.action_installTo_homeFragment)
