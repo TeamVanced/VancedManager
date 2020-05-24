@@ -72,28 +72,32 @@ class HomeFragment : Home() {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { isConnectedToInternet ->
-                if (isConnectedToInternet) {
-                    val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
-                    val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+                run {
+                    if (isConnectedToInternet) {
+                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
+                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
 
-                    oa2.start()
-                    oa3.apply {
-                        oa3.addListener(onEnd = {
-                            networkErrorLayout?.visibility = View.GONE
-                        })
-                        start()
-                    }
-                } else {
-                    val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
-                    val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
+                        oa2.start()
+                        oa3.apply {
+                            oa3.addListener(onEnd = {
+                                networkErrorLayout?.visibility = View.GONE
+                            })
+                            start()
+                        }
+                    } else {
+                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
+                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
 
-                    oa2.apply {
-                        oa2.addListener(onStart = {
-                            networkErrorLayout?.visibility = View.VISIBLE
-                        })
-                        start()
+                        oa2.apply {
+                            oa2.addListener(onStart = {
+                                networkErrorLayout?.visibility = View.VISIBLE
+                            })
+                            start()
+                        }
+                        oa3.start()
+
                     }
-                    oa3.start()
+
 
                 }
             }
