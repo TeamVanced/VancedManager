@@ -18,7 +18,7 @@
     <string name="brave_browser">Brave Браузер</string>
     <string name="changelogs">Список змін</string>
     <string name="install">Встановити</string>
-    <string name="installed">Встановлено:</string>
+    <string name="version_installed">Встановлено:</string>
     <string name="latest">Найновіші:</string>
     <string name="loading">Завантаження…</string>
     <string name="n_a">Недоступно</string>

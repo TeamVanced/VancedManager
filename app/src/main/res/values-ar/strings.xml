@@ -21,7 +21,7 @@
     <string name="brave_browser">صفحة Braveصفحة برايف</string>
     <string name="changelogs">"معلومات التغير "</string>
     <string name="install">تثبيت</string>
-    <string name="installed">مثبتة</string>
+    <string name="version_installed">مثبتة</string>
     <string name="latest">آخر:</string>
     <string name="loading">جار التحميل…</string>
     <string name="n_a">ن/أ</string>

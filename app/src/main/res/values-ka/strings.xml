@@ -18,7 +18,8 @@
     <string name="brave_browser">Brave Browser</string>
     <string name="changelogs">ცვლილებები</string>
     <string name="install">ინსტალაცია</string>
-    <string name="installed">დაინსტალირებული:</string>
+    <string name="version_installed">დაინსტალირებული:</string>
+    <string name="button_installed">დაინსტალირებულია</string>
     <string name="latest">უახლესი:</string>
     <string name="loading">იტვირთება…</string>
     <string name="n_a">N/A</string>

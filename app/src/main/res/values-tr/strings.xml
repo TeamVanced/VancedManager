@@ -18,7 +18,7 @@
     <string name="brave_browser">Brave Tarayıcısı</string>
     <string name="changelogs">Değişim Kaydı</string>
     <string name="install">Yüklemek</string>
-    <string name="installed">Yüklendi:</string>
+    <string name="version_installed">Yüklendi:</string>
     <string name="latest">En Son:</string>
     <string name="loading">Yükleniyor…</string>
     <string name="n_a">Kullanılamaz</string>

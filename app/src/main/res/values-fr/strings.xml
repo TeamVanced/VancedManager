@@ -17,7 +17,7 @@
     <string name="brave_browser">Navigateur Brave</string>
     <string name="changelogs">Journal des modifications</string>
     <string name="install">Installer</string>
-    <string name="installed">Version installée:</string>
+    <string name="version_installed">Version installée:</string>
     <string name="latest">Dernière version:</string>
     <string name="loading">Chargement…</string>
     <string name="n_a">N/A</string>

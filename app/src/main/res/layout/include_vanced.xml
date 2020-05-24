@@ -80,7 +80,7 @@
             <TextView
                 style="@style/AppVer"
                 android:id="@+id/vanced_installed"
-                android:text="@string/installed" />
+                android:text="@string/version_installed" />
 
             <TextView
                 style="@style/AppVer.Bold"
