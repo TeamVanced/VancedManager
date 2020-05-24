@@ -1,6 +1,5 @@
 package com.vanced.manager.core.base
 
-import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.view.View
@@ -35,7 +34,6 @@ open class BaseFragment : Fragment() {
         }
     }
 
-    @SuppressLint("CheckResult")
     fun downloadSplit(apk: String, apkVar: String, isInstalling: Boolean, loadBar: ProgressBar, navigate: Int) {
         val baseurl = "https://x1nto.github.io/VancedFiles/Splits/"
         val url: String =
@@ -45,9 +43,6 @@ open class BaseFragment : Fragment() {
                 "arch" -> baseurl + "Config/config." + apkVar + ".apk"
                 else -> return
             }
-
-        if (url.file().exists())
-            url.file().delete()
 
         activity?.filesDir?.path?.let {
             Task(url = url, saveName = getFileNameFromUrl(url), savePath = it)
@@ -59,10 +54,10 @@ open class BaseFragment : Fragment() {
                         loadBar.progress = progress.percent().toInt()
                     },
                     onComplete = {
-                        if (isInstalling) {
+                        //if (isInstalling) {
                             //So we should implement installation here.
                             //That will be done later
-                        }
+                        //}
                         view?.findNavController()?.navigate(navigate)
                     },
                     onError = { throwable ->

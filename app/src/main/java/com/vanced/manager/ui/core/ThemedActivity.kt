@@ -21,7 +21,7 @@ open class ThemedActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         pref = PreferenceManager.getDefaultSharedPreferences(this)
-        currentTheme = pref.getString("theme_mode", "LIGHT").toString()
+        currentTheme = pref.getString("theme_mode", "").toString()
 
         setFinalTheme(currentTheme)
         super.onCreate(savedInstanceState)
