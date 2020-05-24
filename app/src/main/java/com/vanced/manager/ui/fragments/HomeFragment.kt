@@ -36,10 +36,6 @@ class HomeFragment : Home() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        //connectionStatus()
-        //checkNetwork()
-
         super.onViewCreated(view, savedInstanceState)
 
         checkNetwork()
