@@ -85,12 +85,12 @@
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/Magyar"
+            android:id="@+id/hu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
             android:text="Magyar"
-            android:tag="ma"
+            android:tag="hu"
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton

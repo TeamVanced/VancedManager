@@ -3,8 +3,6 @@ package com.vanced.manager.core.fragments
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 
@@ -21,8 +19,7 @@ open class ThemeInstall : BaseFragment() {
         nextButton.setOnClickListener {
             val selectedThemeId = themeGroup.checkedRadioButtonId
             val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
-            Toast.makeText(requireContext(), selectedButton.tag.toString(), Toast.LENGTH_SHORT).show()
-           //downloadSplit("theme", selectedThemeId.toString(), false, loadBar, R.id.toInstallVariantFragment)
+            downloadSplit("theme", selectedButton.tag.toString(), false, loadBar, R.id.toInstallVariantFragment)
         }
     }
 
