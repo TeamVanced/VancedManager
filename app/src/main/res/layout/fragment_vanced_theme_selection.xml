@@ -32,6 +32,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:text="@string/install_light_dark"
+                    android:tag="dark"
                     android:fontFamily="@font/exo_semibold"/>
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
@@ -40,6 +41,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:fontFamily="@font/exo_semibold"
+                    android:tag="black"
                     android:text="@string/install_light_black"/>
 
             </RadioGroup>

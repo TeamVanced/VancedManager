@@ -19,8 +19,9 @@ open class ThemeInstall : BaseFragment() {
         val selectedThemeId = themeGroup.checkedRadioButtonId
         val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
 
+
         nextButton.setOnClickListener {
-            Toast.makeText(requireContext(), selectedButton.id.toString(), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), selectedButton.tag.toString(), Toast.LENGTH_SHORT).show()
            //downloadSplit("theme", selectedThemeId.toString(), false, loadBar, R.id.toInstallVariantFragment)
         }
     }
