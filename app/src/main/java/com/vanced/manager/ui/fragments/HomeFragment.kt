@@ -66,38 +66,35 @@ class HomeFragment : Home() {
     }
 
     private fun checkNetwork() {
-        val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
 
+        val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe { isConnectedToInternet ->
                 if (isConnectedToInternet) {
-                    if (networkErrorLayout?.visibility != View.GONE) {
-                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
-                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
+                    val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
+                    val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
 
-                        oa2.start()
-                        oa3.apply {
-                            oa3.addListener(onEnd = {
-                                networkErrorLayout?.visibility = View.GONE
-                            })
-                            start()
-                        }
+                    oa2.start()
+                    oa3.apply {
+                        oa3.addListener(onEnd = {
+                            networkErrorLayout?.visibility = View.GONE
+                        })
+                        start()
                     }
                 } else {
-                    if (networkErrorLayout?.visibility != View.VISIBLE) {
-                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
-                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
+                    val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
+                    val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
 
-                        oa2.apply {
-                            oa2.addListener(onStart = {
-                                networkErrorLayout?.visibility = View.VISIBLE
-                            })
-                            start()
-                        }
-                        oa3.start()
+                    oa2.apply {
+                        oa2.addListener(onStart = {
+                            networkErrorLayout?.visibility = View.VISIBLE
+                        })
+                        start()
                     }
+                    oa3.start()
+
                 }
             }
     }
