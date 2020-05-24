@@ -20,12 +20,12 @@ open class VariantInstall : BaseFragment() {
             val arch =
                 when {
                     Build.SUPPORTED_ABIS.contains("x86") -> "x86"
-                    Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64-v8a"
-                    Build.SUPPORTED_ABIS.contains("armeabi-v7a") -> "armeabi-v7a"
-                    else -> "armeabi-v7a"
+                    Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
+                    Build.SUPPORTED_ABIS.contains("armeabi-v7a") -> "armeabi_v7a"
+                    else -> "armeabi_v7a"
                 }
 
-            downloadSplit("arch", arch, false, loadBar, R.id.toInstallThemeFragment)
+            downloadSplit("arch", arch, false, loadBar, R.id.toInstallLanguageFragment)
         }
     }
 }
