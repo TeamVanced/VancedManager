@@ -38,7 +38,7 @@ class HomeFragment : Home() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        checkNetwork()
+        initNetworkFun()
 
         sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
@@ -55,7 +55,7 @@ class HomeFragment : Home() {
 
     }
 
-    private fun checkNetwork() {
+    private fun initNetworkFun() {
         val pm = activity?.packageManager
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
@@ -86,7 +86,7 @@ class HomeFragment : Home() {
                         when {
                             microgStatus!! -> {
                                 val microgVer =
-                                    pm.getPackageInfo("com.mgoogle.microg", 0).versionName
+                                    pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
                                 when {
                                     microgRemoteVer > microgVer -> {
                                         microginstallbtn?.text = getString(R.string.update)
