@@ -8,9 +8,9 @@
     </string-array>
 
     <string-array name="theme_modes_values">
-        <item>LIGHT</item>
-        <item>DARK</item>
-        <item>FOLLOW</item>
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Follow</item>
     </string-array>
 
     <string-array name="accent_color">

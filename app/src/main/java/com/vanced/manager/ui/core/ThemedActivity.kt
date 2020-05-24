@@ -21,7 +21,7 @@ open class ThemedActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         pref = PreferenceManager.getDefaultSharedPreferences(this)
-        currentTheme = pref.getString("theme_mode", "").toString()
+        currentTheme = pref.getString("theme_mode", "Light").toString()
 
         setFinalTheme(currentTheme)
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ open class ThemedActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val theme = pref.getString("theme_mode", "LIGHT")
+        val theme = pref.getString("theme_mode", "Light")
 
         //if for some weird reasons we get invalid
         //theme, recreate activity
@@ -57,20 +57,15 @@ open class ThemedActivity : AppCompatActivity() {
     private fun setFinalTheme(currentTheme: String) {
         val currentAccent = pref.getString("accent_color", "Blue").toString()
         when (currentTheme) {
-            "LIGHT" -> setLightAccent(currentAccent)
-            "DARK" -> setDarkAccent(currentAccent)
-            "FOLLOW" -> {
+            "Light" -> setLightAccent(currentAccent)
+            "Dark" -> setDarkAccent(currentAccent)
+            "Follow" -> {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                     Configuration.UI_MODE_NIGHT_YES -> setDarkAccent(currentAccent)
                     Configuration.UI_MODE_NIGHT_NO -> setLightAccent(currentAccent)
                 }
             }
-            else -> {
-                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setDarkAccent("Blue")
-                    Configuration.UI_MODE_NIGHT_NO -> setLightAccent("Blue")
-                }
-            }
+            else -> setLightAccent("Blue")
         }
     }
 

@@ -10,13 +10,17 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
+import zlc.season.rxdownload4.delete
 import zlc.season.rxdownload4.download
 import zlc.season.rxdownload4.file
 import zlc.season.rxdownload4.task.Task
 import zlc.season.rxdownload4.utils.getFileNameFromUrl
 
 open class BaseFragment : Fragment() {
+
+    private var disposable: Disposable? = null
 
     fun openUrl(Url: String, color: Int) {
         val builder = CustomTabsIntent.Builder()
@@ -44,34 +48,39 @@ open class BaseFragment : Fragment() {
                 else -> return
             }
 
-        activity?.filesDir?.path?.let {
-            Task(url = url, saveName = getFileNameFromUrl(url), savePath = it)
-                .download()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeBy(
-                    onNext = { progress ->
-                        loadBar.visibility = View.VISIBLE
-                        loadBar.progress = progress.percent().toInt()
-                    },
-                    onComplete = {
-                        //if (isInstalling) {
-                            //So we should implement installation here.
-                            //That will be done later
-                        //}
-                        view?.findNavController()?.navigate(navigate)
-                    },
-                    onError = { throwable ->
-                        Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
-                    }
+        val task = activity?.filesDir?.path?.let { Task(url = url, saveName = getFileNameFromUrl(url), savePath = it) }
 
-                )
+        if (task?.file()?.exists()!!)
+            task.delete()
+
+        disposable = task.download()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onNext = { progress ->
+                    loadBar.visibility = View.VISIBLE
+                    loadBar.progress = progress.percent().toInt()
+                },
+                onComplete = {
+                    view?.findNavController()?.navigate(navigate)
+                    //if (isInstalling) {
+                        //So we should implement installation here.
+                        //That will be done later
+                    //}
+                },
+                onError = { throwable ->
+                    Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
+                }
+            )
         }
 
-    }
     fun downloadEn() {
         val url = "https://x1nto.github.io/VancedFiles/Splits/Language/split_config.en.apk"
-        activity?.filesDir?.path?.let {
-            Task(url = url, saveName = getFileNameFromUrl(url), savePath = it)
+
+        val task = activity?.filesDir?.path?.let { Task(url = url, saveName = getFileNameFromUrl(url), savePath = it) }
+        if (task?.file()?.exists()!!)
+            task.delete()
+
+        disposable = task
                 .download()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeBy(
