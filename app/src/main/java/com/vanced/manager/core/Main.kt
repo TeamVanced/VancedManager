@@ -45,9 +45,7 @@ open class Main: BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
         try {
-            val cacheDir: File = cacheDir
-            if (cacheDir.isDirectory)
-                cacheDir.delete()
+            cacheDir.deleteRecursively()
         } catch (e: Exception) {
             Log.d("VMCache", "Unable to delete cacheDir")
         }

@@ -43,9 +43,7 @@ open class Home : BaseFragment() {
 
         vancedinstallbtn.setOnClickListener {
             try {
-                val cacheDir: File? = activity?.cacheDir
-                if (cacheDir?.isDirectory!!)
-                    cacheDir.delete()
+                activity?.cacheDir?.deleteRecursively()
             } catch (e: Exception) {
                 Log.d("VMCache", "Unable to delete cacheDir")
             }

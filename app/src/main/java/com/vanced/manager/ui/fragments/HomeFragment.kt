@@ -92,7 +92,7 @@ class HomeFragment : Home() {
                                         microginstallbtn?.text = getString(R.string.update)
                                     }
                                     microgRemoteVer == microgVer -> {
-                                        microginstallbtn?.text = getString(R.string.update)
+                                        microginstallbtn?.text = getString(R.string.button_installed)
                                     }
                                 }
                             }
