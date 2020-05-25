@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.content.res.Configuration
-import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -71,18 +70,24 @@ open class ThemedActivity : AppCompatActivity() {
     }
 
     private fun setDarkAccent(accentColor: String) {
-        try {
-            setTheme("R.style.DarkTheme_$accentColor".toInt())
-        } catch (e: Resources.NotFoundException) {
-            setTheme(R.style.DarkTheme_Blue)
+        when (accentColor) {
+            "Blue" -> setTheme(R.style.DarkTheme_Blue)
+            "Red" -> setTheme(R.style.DarkTheme_Red)
+            "Green" -> setTheme(R.style.DarkTheme_Green)
+            "Yellow" -> setTheme(R.style.DarkTheme_Yellow)
+            "Purple" -> setTheme(R.style.DarkTheme_Purple)
+            else -> setTheme(R.style.DarkTheme_Blue)
         }
     }
 
     private fun setLightAccent(accentColor: String) {
-        try {
-            setTheme("R.style.DarkTheme_$accentColor".toInt())
-        } catch (e: Resources.NotFoundException) {
-            setTheme(R.style.LightTheme_Blue)
+        when (accentColor) {
+            "Blue" -> setTheme(R.style.LightTheme_Blue)
+            "Red" -> setTheme(R.style.LightTheme_Red)
+            "Green" -> setTheme(R.style.LightTheme_Green)
+            "Yellow" -> setTheme(R.style.LightTheme_Yellow)
+            "Purple" -> setTheme(R.style.LightTheme_Purple)
+            else -> setTheme(R.style.LightTheme_Blue)
         }
     }
 
