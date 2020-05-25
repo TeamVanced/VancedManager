@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
@@ -19,8 +20,6 @@ import java.io.*
 // since MainActivity will extend it
 @SuppressLint("Registered")
 open class Main: BaseActivity() {
-
-    private val packageInstaller: PackageInstaller = packageManager.packageInstaller
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,7 +103,7 @@ open class Main: BaseActivity() {
         val installParams = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
         installParams.setSize(totalSize)
         try {
-            sessionId = packageInstaller.createSession(installParams)
+            sessionId = packageManager.packageInstaller.createSession(installParams)
             Log.d("AppLog","Success: created install session [$sessionId]")
             for ((key, value) in nameSizeMap) {
                 doWriteSession(sessionId, apkFolderPath + key, value, key)
@@ -131,7 +130,7 @@ open class Main: BaseActivity() {
         var inputStream: InputStream? = null
         var out: OutputStream? = null
         try {
-            session = packageInstaller.openSession(sessionId)
+            session = packageManager.packageInstaller.openSession(sessionId)
             if (inPathToUse != null) {
                 inputStream = FileInputStream(inPathToUse)
             }
@@ -167,13 +166,13 @@ open class Main: BaseActivity() {
         var session: PackageInstaller.Session? = null
         try {
             try {
-                session = packageInstaller.openSession(sessionId)
+                session = packageManager.packageInstaller.openSession(sessionId)
                 val callbackIntent = Intent(applicationContext, SplitInstallerService::class.java)
                 val pendingIntent = PendingIntent.getService(applicationContext, 0, callbackIntent, 0)
                 session.commit(pendingIntent.intentSender)
                 session.close()
                 Log.d("AppLog", "install request sent")
-                Log.d("AppLog", "doCommitSession: " + packageInstaller.mySessions)
+                Log.d("AppLog", "doCommitSession: " + packageManager.packageInstaller.mySessions)
                 Log.d("AppLog", "doCommitSession: after session commit ")
             } catch (e: IOException) {
                 e.printStackTrace()
