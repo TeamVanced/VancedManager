@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.*
 import android.widget.TextView
 import androidx.core.animation.addListener
-import androidx.core.content.res.ResourcesCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
 import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
