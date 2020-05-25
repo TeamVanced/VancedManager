@@ -90,11 +90,11 @@ class HomeFragment : Home() {
                                     pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
                                 when {
                                     microgRemoteVer > microgVer -> {
-                                        microginstallbtn?.text = getString(R.string.update)
+                                        microginstallbtn?.text = activity?.getString(R.string.update)
                                         microginstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.ic_cloud_upload_black_24dp, null)
                                     }
                                     microgRemoteVer == microgVer -> {
-                                        microginstallbtn?.text = getString(R.string.button_installed)
+                                        microginstallbtn?.text = activity?.getString(R.string.button_installed)
                                         microginstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.outline_cloud_done_24, null)
                                     }
                                 }
