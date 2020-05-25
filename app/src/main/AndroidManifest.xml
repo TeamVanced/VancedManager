@@ -57,6 +57,8 @@
 
         </provider>
 
+        <service android:name=".core.installer.SplitInstallerService" />
+
     </application>
 
 </manifest>

@@ -54,6 +54,7 @@ class HomeFragment : Home() {
                 2 -> tab.text = "Manager"
             }
         }.attach()
+        tabLayout.getTabAt(0)?.select()
 
     }
 
