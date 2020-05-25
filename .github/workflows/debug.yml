@@ -1,0 +1,43 @@
+name: Debug APK Builder
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+  pull_request:
+    branches:
+      - master
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Grant rights
+        run: chmod +x ./gradlew
+
+      - name: Build project with Gradle
+        run: ./gradlew build
+
+      - name: Build Release APK with Gradle
+        run: ./gradlew assembleDebug
+
+      - name: Upload to GitHub
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'Vanced-Manager'
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Upload to Discord
+        uses: sinshutu/upload-to-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          args: app/build/outputs/apk/debug/app-debug.apk
