@@ -31,7 +31,7 @@ import java.io.*
 open class BaseFragment : Fragment() {
 
     private var disposable: Disposable? = null
-    private lateinit var packageInstaller: PackageInstaller
+    private var packageInstaller: PackageInstaller? = activity?.packageManager?.packageInstaller
 
     fun openUrl(Url: String, color: Int) {
         val builder = CustomTabsIntent.Builder()
@@ -208,7 +208,7 @@ open class BaseFragment : Fragment() {
         val installParams = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
         installParams.setSize(totalSize)
         try {
-            sessionId = packageInstaller.createSession(installParams)
+            sessionId = packageInstaller?.createSession(installParams)!!
             Log.d("AppLog","Success: created install session [$sessionId]")
             for ((key, value) in nameSizeMap) {
                 doWriteSession(sessionId, apkFolderPath + key, value, key)
@@ -235,11 +235,11 @@ open class BaseFragment : Fragment() {
         var inputStream: InputStream? = null
         var out: OutputStream? = null
         try {
-            session = packageInstaller.openSession(sessionId)
+            session = packageInstaller?.openSession(sessionId)
             if (inPathToUse != null) {
                 inputStream = FileInputStream(inPathToUse)
             }
-            out = session.openWrite(splitName, 0, sizeBytesToUse)
+            out = session?.openWrite(splitName, 0, sizeBytesToUse)
             var total = 0
             val buffer = ByteArray(65536)
             var c: Int
@@ -248,9 +248,11 @@ open class BaseFragment : Fragment() {
                 if (c == -1)
                     break
                 total += c
-                out.write(buffer, 0, c)
+                out?.write(buffer, 0, c)
             }
-            session.fsync(out)
+            if (out != null) {
+                session?.fsync(out)
+            }
             Log.d("AppLog", "Success: streamed $total bytes")
             return PackageInstaller.STATUS_SUCCESS
         } catch (e: IOException) {
@@ -271,13 +273,13 @@ open class BaseFragment : Fragment() {
         var session: PackageInstaller.Session? = null
         try {
             try {
-                session = packageInstaller.openSession(sessionId)
+                session = packageInstaller?.openSession(sessionId)
                 val callbackIntent = Intent(activity?.applicationContext, SplitInstallerService::class.java)
                 val pendingIntent = PendingIntent.getService(activity?.applicationContext, 0, callbackIntent, 0)
-                session.commit(pendingIntent.intentSender)
-                session.close()
+                session?.commit(pendingIntent.intentSender)
+                session?.close()
                 Log.d("AppLog", "install request sent")
-                Log.d("AppLog", "doCommitSession: " + packageInstaller.mySessions)
+                Log.d("AppLog", "doCommitSession: " + packageInstaller?.mySessions)
                 Log.d("AppLog", "doCommitSession: after session commit ")
             } catch (e: IOException) {
                 e.printStackTrace()
@@ -286,22 +288,6 @@ open class BaseFragment : Fragment() {
         } finally {
             session!!.close()
         }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        when (requestCode) {
-            69 -> {
-                activity?.recreate()
-            }
-            420 -> {
-                activity?.recreate()
-            }
-            666 -> {
-                activity?.recreate()
-            }
-        }
-
     }
 
 }

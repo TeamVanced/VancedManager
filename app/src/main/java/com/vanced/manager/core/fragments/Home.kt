@@ -116,4 +116,20 @@ open class Home : BaseFragment() {
 
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            69 -> {
+                activity?.recreate()
+            }
+            420 -> {
+                activity?.recreate()
+            }
+            666 -> {
+                activity?.recreate()
+            }
+        }
+
+    }
+
 }

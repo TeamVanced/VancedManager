@@ -45,7 +45,6 @@ class HomeFragment : Home() {
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
         viewPager = view.findViewById(R.id.viewpager)
         viewPager.adapter = sectionPageAdapter
-        viewPager.currentItem = 0
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
@@ -54,7 +53,6 @@ class HomeFragment : Home() {
                 2 -> tab.text = "Manager"
             }
         }.attach()
-        tabLayout.getTabAt(0)?.select()
 
     }
 
@@ -101,15 +99,6 @@ class HomeFragment : Home() {
                                     }
                                 }
                             }
-                            /*!microgStatus -> {
-                                microginstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                                    R.drawable.outline_cloud_download_24,
-                                    0,
-                                    0,
-                                    0
-                                )
-                            }
-                             */
                             vancedStatus!! -> {
                                 val vancedVer =
                                     pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
@@ -124,14 +113,6 @@ class HomeFragment : Home() {
                                     }
                                 }
                             }
-                            /*!vancedStatus -> {
-                                vancedinstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                                    R.drawable.outline_cloud_download_24,
-                                    0,
-                                    0,
-                                    0
-                                )
-                            }*/
                         }
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
