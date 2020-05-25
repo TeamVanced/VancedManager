@@ -43,7 +43,8 @@
 
         <activity
             android:name=".core.installer.SplitInstallActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoDisplay"/>
 
         <meta-data
             android:name="preloaded_fonts"

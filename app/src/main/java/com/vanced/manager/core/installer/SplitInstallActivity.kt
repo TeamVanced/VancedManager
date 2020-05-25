@@ -1,15 +1,15 @@
 package com.vanced.manager.core.installer
 
+import android.app.Activity
 import android.app.PendingIntent
 import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import java.io.*
 
-class SplitInstallActivity: AppCompatActivity() {
+class SplitInstallActivity: Activity() {
 
     private lateinit var packageInstaller: PackageInstaller
 
