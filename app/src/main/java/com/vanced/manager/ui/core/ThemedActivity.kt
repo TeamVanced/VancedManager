@@ -4,8 +4,10 @@ import android.annotation.SuppressLint
 import android.app.ActivityManager
 import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
+import android.util.AndroidException
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceManager
@@ -71,17 +73,19 @@ open class ThemedActivity : AppCompatActivity() {
 
     private fun setDarkAccent(accentColor: String) {
         val themeVal: Int = ("R.style.DarkTheme_$accentColor").toInt()
-        when (accentColor) {
-            accentColor -> setTheme(themeVal)
-            else -> setTheme(R.style.DarkTheme_Blue)
+        try {
+            setTheme(themeVal)
+        } catch (e: Resources.NotFoundException) {
+            setTheme(R.style.DarkTheme_Blue)
         }
     }
 
     private fun setLightAccent(accentColor: String) {
         val themeVal: Int = ("R.style.LightTheme_$accentColor").toInt()
-        when (accentColor) {
-            accentColor -> setTheme(themeVal)
-            else -> setTheme(R.style.LightTheme_Blue)
+        try {
+            setTheme(themeVal)
+        } catch (e: Resources.NotFoundException) {
+            setTheme(R.style.LightTheme_Blue)
         }
     }
 
