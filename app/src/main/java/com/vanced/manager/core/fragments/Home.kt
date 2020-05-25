@@ -70,9 +70,7 @@ open class Home : BaseFragment() {
         if (microgStatus!!) {
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
-                val uri = Uri.parse("com.mgoogle.android.gms")
-                val uninstall = Intent(Intent.ACTION_DELETE, uri)
-                startActivity(uninstall)
+                uninstallApk("com.mgoogle.android.gms")
             }
 
             microgsettingsbtn.setOnClickListener {
@@ -99,9 +97,7 @@ open class Home : BaseFragment() {
         if (vancedStatus!!) {
             val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
-                val uri = Uri.parse("com.vanced.android.youtube")
-                val uninstall = Intent(Intent.ACTION_DELETE, uri)
-                startActivity(uninstall)
+                uninstallApk("com.vanced.android.youtube")
             }
             vancedVerText.text = vancedVer.toString()
         } else {
@@ -177,6 +173,16 @@ open class Home : BaseFragment() {
                         .show()
                 }
             )
+    }
+
+    private fun uninstallApk(pkgUri: String) {
+        try {
+            val uri = Uri.parse("package:$pkgUri")
+            val uninstall = Intent(Intent.ACTION_DELETE, uri)
+            startActivity(uninstall)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(requireContext(), "Failed to uninstall", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
