@@ -20,7 +20,7 @@ import java.io.*
 @SuppressLint("Registered")
 open class Main: BaseActivity() {
 
-    private lateinit var packageInstaller: PackageInstaller
+    private val packageInstaller: PackageInstaller = packageManager.packageInstaller
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

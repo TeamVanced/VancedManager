@@ -84,7 +84,7 @@ open class BaseFragment : Fragment() {
 
                 },
                 onError = { throwable ->
-                    Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
                 }
             )
     }

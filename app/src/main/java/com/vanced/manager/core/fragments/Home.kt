@@ -176,14 +176,9 @@ open class Home : BaseFragment() {
     }
 
     private fun uninstallApk(pkgUri: String) {
-        try {
-            val uri = Uri.parse(pkgUri)
-            val uninstall = Intent(Intent.ACTION_DELETE, uri)
-            startActivity(uninstall)
-        } catch (e: ActivityNotFoundException) {
-            Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
-            activity?.recreate()
-        }
+        val uri = Uri.parse(pkgUri)
+        val uninstall = Intent(Intent.ACTION_DELETE, uri)
+        startActivity(uninstall)
     }
 
 }
