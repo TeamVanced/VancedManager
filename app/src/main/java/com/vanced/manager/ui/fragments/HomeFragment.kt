@@ -91,11 +91,11 @@ class HomeFragment : Home() {
                                 when {
                                     microgRemoteVer > microgVer -> {
                                         microginstallbtn?.text = activity?.getString(R.string.update)
-                                        microginstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.ic_cloud_upload_black_24dp, null)
+                                        microginstallbtn?.icon = activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
                                     }
                                     microgRemoteVer == microgVer -> {
                                         microginstallbtn?.text = activity?.getString(R.string.button_installed)
-                                        microginstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.outline_cloud_done_24, null)
+                                        microginstallbtn?.icon = activity?.getDrawable(R.drawable.outline_cloud_done_24)
                                     }
                                 }
                             }
@@ -104,12 +104,12 @@ class HomeFragment : Home() {
                                     pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
                                 when {
                                     vancedRemoteVer > vancedVer -> {
-                                        vancedinstallbtn?.text = getString(R.string.update)
-                                        vancedinstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.ic_cloud_upload_black_24dp, null)
+                                        vancedinstallbtn?.text = activity?.getString(R.string.update)
+                                        vancedinstallbtn?.icon = activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
                                     }
                                     vancedRemoteVer == vancedVer -> {
-                                        vancedinstallbtn?.text = getString(R.string.update)
-                                        vancedinstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.outline_cloud_done_24, null)
+                                        vancedinstallbtn?.text = activity?.getString(R.string.button_installed)
+                                        vancedinstallbtn?.icon = activity?.getDrawable(R.drawable.outline_cloud_done_24)
                                     }
                                 }
                             }
