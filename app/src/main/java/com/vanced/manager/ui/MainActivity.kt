@@ -1,5 +1,6 @@
 package com.vanced.manager.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 
@@ -74,6 +75,24 @@ class MainActivity : Main() {
         }
         return false
     }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            69 -> {
+                recreate()
+            }
+            420 -> {
+                recreate()
+            }
+            666 -> {
+                recreate()
+            }
+        }
+
+    }
+
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         val toolbar: Toolbar = findViewById(R.id.home_toolbar)
