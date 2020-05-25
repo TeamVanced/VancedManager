@@ -70,7 +70,9 @@ open class Home : BaseFragment() {
         if (microgStatus!!) {
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
-                uninstallApk("com.mgoogle.android.gms")
+                val uri = Uri.parse("com.mgoogle.android.gms")
+                val uninstall = Intent(Intent.ACTION_DELETE, uri)
+                startActivity(uninstall)
             }
 
             microgsettingsbtn.setOnClickListener {
@@ -97,7 +99,9 @@ open class Home : BaseFragment() {
         if (vancedStatus!!) {
             val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
-                uninstallApk("com.vanced.android.youtube")
+                val uri = Uri.parse("com.vanced.android.youtube")
+                val uninstall = Intent(Intent.ACTION_DELETE, uri)
+                startActivity(uninstall)
             }
             vancedVerText.text = vancedVer.toString()
         } else {
@@ -173,12 +177,6 @@ open class Home : BaseFragment() {
                         .show()
                 }
             )
-    }
-
-    private fun uninstallApk(pkgUri: String) {
-        val uri = Uri.parse(pkgUri)
-        val uninstall = Intent(Intent.ACTION_DELETE, uri)
-        startActivity(uninstall)
     }
 
 }
