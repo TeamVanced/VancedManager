@@ -9,8 +9,11 @@ import android.util.Log
 class SplitInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
-
-        when (if (intent.hasExtra(PackageInstaller.EXTRA_STATUS)) null else intent.getIntExtra(PackageInstaller.EXTRA_STATUS, 0)) {
+        when (
+            if (intent.hasExtra(PackageInstaller.EXTRA_STATUS))
+            null
+        else
+            intent.getIntExtra(PackageInstaller.EXTRA_STATUS, 0)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

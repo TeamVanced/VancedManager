@@ -58,8 +58,8 @@
 
     <style name="LightTheme.Purple" parent="LightTheme.Blue">
 
-        <item name="colorPrimary">#9370DB</item>
-        <item name="colorPrimaryVariant">#B59370DB</item>
+        <item name="colorPrimary">#6D49B7</item>
+        <item name="colorPrimaryVariant">#563C8D</item>
         <item name="colorSecondary">#734BC7</item>
         <item name="colorSecondaryVariant">#9A734BC7</item>
 

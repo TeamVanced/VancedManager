@@ -70,22 +70,18 @@ open class ThemedActivity : AppCompatActivity() {
     }
 
     private fun setDarkAccent(accentColor: String) {
+        val themeVal: Int = ("R.style.DarkTheme_$accentColor").toInt()
         when (accentColor) {
-            "Blue" -> setTheme(R.style.DarkTheme_Blue)
-            "Red" -> setTheme(R.style.DarkTheme_Red)
-            "Green" -> setTheme(R.style.DarkTheme_Green)
-            "Yellow" -> setTheme(R.style.DarkTheme_Yellow)
-            "Purple" -> setTheme(R.style.DarkTheme_Purple)
+            accentColor -> setTheme(themeVal)
+            else -> setTheme(R.style.DarkTheme_Blue)
         }
     }
 
     private fun setLightAccent(accentColor: String) {
+        val themeVal: Int = ("R.style.LightTheme_$accentColor").toInt()
         when (accentColor) {
-            "Blue" -> setTheme(R.style.LightTheme_Blue)
-            "Red" -> setTheme(R.style.LightTheme_Red)
-            "Green" -> setTheme(R.style.LightTheme_Green)
-            "Yellow" -> setTheme(R.style.LightTheme_Yellow)
-            "Purple" -> setTheme(R.style.LightTheme_Purple)
+            accentColor -> setTheme(themeVal)
+            else -> setTheme(R.style.LightTheme_Blue)
         }
     }
 

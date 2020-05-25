@@ -70,7 +70,7 @@ open class Home : BaseFragment() {
         if (microgStatus!!) {
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
             microguninstallbtn.setOnClickListener {
-                uninstallApk("com.mgoogle.android.gms", 69)
+                uninstallApk("com.mgoogle.android.gms")
             }
 
             microgsettingsbtn.setOnClickListener {
@@ -97,7 +97,7 @@ open class Home : BaseFragment() {
         if (vancedStatus!!) {
             val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
-                uninstallApk("com.vanced.android.youtube", 420)
+                uninstallApk("com.vanced.android.youtube")
             }
             vancedVerText.text = vancedVer.toString()
         } else {
@@ -166,7 +166,7 @@ open class Home : BaseFragment() {
                     intent.setDataAndType(uri, "application/vnd.android.package-archive")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    activity?.startActivityForResult(intent, 420)
+                    startActivity(intent)
                 },
                 onError = { throwable ->
                     Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT)
@@ -175,11 +175,11 @@ open class Home : BaseFragment() {
             )
     }
 
-    private fun uninstallApk(pkgUri: String, requestCode: Int) {
+    private fun uninstallApk(pkgUri: String) {
         try {
             val uri = Uri.parse(pkgUri)
             val uninstall = Intent(Intent.ACTION_DELETE, uri)
-            activity?.startActivityForResult(uninstall, requestCode)
+            startActivity(uninstall)
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
             activity?.recreate()
