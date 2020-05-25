@@ -1,5 +1,6 @@
 package com.vanced.manager.core.base
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -149,7 +150,7 @@ open class BaseFragment : Fragment() {
                     intent.setDataAndType(uri, "application/vnd.android.package-archive")
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    startActivity(intent)
+                    startActivityForResult(intent, 69)
                 },
                 onError = { throwable ->
                     Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT)
@@ -157,5 +158,24 @@ open class BaseFragment : Fragment() {
                 }
             )
     }
+
+    fun uninstallApk(pkgUri: String) {
+        try {
+            val uri = Uri.parse(pkgUri)
+            val uninstall = Intent(Intent.ACTION_DELETE, uri)
+            startActivityForResult(uninstall, 69)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
+            activity?.recreate()
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 69) {
+            activity?.recreate()
+        }
+    }
+
 
 }

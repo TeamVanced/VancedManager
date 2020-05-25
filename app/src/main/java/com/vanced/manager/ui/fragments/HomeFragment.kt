@@ -3,12 +3,13 @@ package com.vanced.manager.ui.fragments
 import android.animation.ObjectAnimator
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import android.widget.TextView
 import androidx.core.animation.addListener
+import androidx.core.content.res.ResourcesCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
 import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -44,6 +45,7 @@ class HomeFragment : Home() {
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
         viewPager = view.findViewById(R.id.viewpager)
         viewPager.adapter = sectionPageAdapter
+        viewPager.currentItem = 0
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when (position) {
@@ -59,8 +61,8 @@ class HomeFragment : Home() {
         val pm = activity?.packageManager
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
-        val microginstallbtn = view?.findViewById<Button>(R.id.microg_installbtn)
-        val vancedinstallbtn = view?.findViewById<Button>(R.id.vanced_installbtn)
+        val microginstallbtn = view?.findViewById<MaterialButton>(R.id.microg_installbtn)
+        val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
@@ -90,36 +92,45 @@ class HomeFragment : Home() {
                                 when {
                                     microgRemoteVer > microgVer -> {
                                         microginstallbtn?.text = getString(R.string.update)
+                                        microginstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.ic_cloud_upload_black_24dp, null)
                                     }
                                     microgRemoteVer == microgVer -> {
                                         microginstallbtn?.text = getString(R.string.button_installed)
+                                        microginstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.outline_cloud_done_24, null)
                                     }
                                 }
                             }
+                            /*!microgStatus -> {
+                                microginstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                                    R.drawable.outline_cloud_download_24,
+                                    0,
+                                    0,
+                                    0
+                                )
+                            }
+                             */
                             vancedStatus!! -> {
                                 val vancedVer =
                                     pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
                                 when {
                                     vancedRemoteVer > vancedVer -> {
                                         vancedinstallbtn?.text = getString(R.string.update)
-                                        vancedinstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                                            R.drawable.ic_cloud_upload_black_24dp,
-                                            0,
-                                            0,
-                                            0
-                                        )
+                                        vancedinstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.ic_cloud_upload_black_24dp, null)
                                     }
-                                    microgRemoteVer == vancedVer -> {
+                                    vancedRemoteVer == vancedVer -> {
                                         vancedinstallbtn?.text = getString(R.string.update)
-                                        vancedinstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                                            R.drawable.outline_cloud_done_24,
-                                            0,
-                                            0,
-                                            0
-                                        )
+                                        vancedinstallbtn?.icon = ResourcesCompat.getDrawable(resources, R.drawable.outline_cloud_done_24, null)
                                     }
                                 }
                             }
+                            /*!vancedStatus -> {
+                                vancedinstallbtn?.setCompoundDrawablesRelativeWithIntrinsicBounds(
+                                    R.drawable.outline_cloud_download_24,
+                                    0,
+                                    0,
+                                    0
+                                )
+                            }*/
                         }
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
