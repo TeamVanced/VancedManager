@@ -42,11 +42,6 @@ class MainActivity : Main() {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-        recreate()
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navHost = findNavController(R.id.bottom_nav_host)
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
