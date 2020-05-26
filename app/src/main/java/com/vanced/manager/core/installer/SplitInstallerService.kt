@@ -5,31 +5,32 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
+import androidx.annotation.Nullable
 
 class SplitInstallerService: Service() {
+    private val TAG = "VMInstall"
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
-        when (
-            if (intent.hasExtra(PackageInstaller.EXTRA_STATUS))
-            null
-        else
-            intent.getIntExtra(PackageInstaller.EXTRA_STATUS, 0)) {
+        when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
-                val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
+                Log.d(TAG, "Requesting user confirmation for installation")
+                val confirmationIntent =
+                    intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
                     startActivity(confirmationIntent)
                 } catch (e: Exception) {
                 }
             }
-            PackageInstaller.STATUS_SUCCESS -> Log.d("AppLog", "Installation succeed")
-            else -> Log.d("VMInstall", "Installation failed")
+            PackageInstaller.STATUS_SUCCESS -> Log.d(TAG, "Installation succeed")
+            else -> Log.d(TAG, "Installation failed")
         }
         stopSelf()
         return START_NOT_STICKY
     }
 
-    override fun onBind(intent: Intent): IBinder? {
+    @Nullable
+    override fun onBind(intent: Intent?): IBinder? {
         return null
     }
 

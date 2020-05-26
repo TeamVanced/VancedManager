@@ -14,6 +14,7 @@ import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.dezlum.codelabs.getjson.GetJson
+import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -125,6 +126,7 @@ open class BaseFragment : Fragment() {
     }
 
     private fun launchInstaller() {
+        view?.findNavController()?.navigate(R.id.action_installTo_homeFragment)
         val activity = (activity as MainActivity?)!!
         activity.installSplitApk()
     }
