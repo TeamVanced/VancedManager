@@ -81,7 +81,7 @@ open class Main: BaseActivity() {
     }
 
     fun installSplitApk(): Int {
-        val apkFolderPath = cacheDir.absolutePath
+        val apkFolderPath = cacheDir.path + "/"
         val nameSizeMap = HashMap<String, Long>()
         var totalSize: Long = 0
         var sessionId = 0
