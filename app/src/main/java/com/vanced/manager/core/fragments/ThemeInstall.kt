@@ -1,5 +1,6 @@
 package com.vanced.manager.core.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -14,6 +15,7 @@ open class ThemeInstall : BaseFragment() {
 
         val nextButton = view.findViewById<Button>(R.id.vanced_next_to_variant)
         val themeGroup = view.findViewById<RadioGroup>(R.id.theme_radiogroup)
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
         nextButton.setOnClickListener {
             val selectedThemeId = themeGroup.checkedRadioButtonId

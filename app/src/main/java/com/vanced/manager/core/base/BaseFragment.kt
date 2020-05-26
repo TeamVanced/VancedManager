@@ -30,7 +30,7 @@ import zlc.season.rxdownload4.utils.getFileNameFromUrl
 open class BaseFragment : Fragment() {
 
     private var disposable: Disposable? = null
-    val prefs = activity?.getSharedPreferences("installPref", Context.MODE_PRIVATE)
+    private val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
     private val baseUrl = "https://x1nto.github.io/VancedFiles/Splits/"
 
     fun openUrl(Url: String, color: Int) {

@@ -1,5 +1,6 @@
 package com.vanced.manager.core.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -16,6 +17,7 @@ open class LanguageInstall : BaseFragment() {
 
         val finishButton = view.findViewById<Button>(R.id.vanced_install_finish)
         val langGroup = view.findViewById<RadioGroup>(R.id.lang_radiogroup)
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
         finishButton.setOnClickListener {
             val selectedLangId = langGroup.checkedRadioButtonId
