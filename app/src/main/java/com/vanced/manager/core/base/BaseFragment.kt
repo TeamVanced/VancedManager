@@ -150,7 +150,7 @@ open class BaseFragment : Fragment() {
                         downloadEn(loadBar, dlText)
                     else {
                         dlText.visibility = View.GONE
-                        prefs.edit()?.putBoolean("isDownloading", true)?.apply()
+                        prefs.edit()?.putBoolean("isDownloading", false)?.apply()
                         launchInstaller()
                     }
                 },
@@ -186,7 +186,7 @@ open class BaseFragment : Fragment() {
                 onComplete = {
                     loadBar.visibility = View.GONE
                     dlText.visibility = View.GONE
-                    prefs?.edit()?.putBoolean("isDownloading", true)?.apply()
+                    prefs?.edit()?.putBoolean("isDownloading", false)?.apply()
                     launchInstaller()
                 },
                 onError = { throwable ->
