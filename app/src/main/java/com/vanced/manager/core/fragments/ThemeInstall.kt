@@ -3,6 +3,7 @@ package com.vanced.manager.core.fragments
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 
@@ -18,6 +19,7 @@ open class ThemeInstall : BaseFragment() {
             val selectedThemeId = themeGroup.checkedRadioButtonId
             val selectedButton = view.findViewById<RadioButton>(selectedThemeId)
             prefs?.edit()?.putString("theme", selectedButton.tag.toString())?.apply()
+            view.findNavController().navigate(R.id.toInstallLanguageFragment)
         }
     }
 
