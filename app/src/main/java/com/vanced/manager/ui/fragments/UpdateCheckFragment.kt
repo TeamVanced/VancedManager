@@ -16,7 +16,6 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
 import androidx.core.content.FileProvider
@@ -29,7 +28,8 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
 import zlc.season.rxdownload4.download
 import zlc.season.rxdownload4.file
-import java.util.jar.Manifest
+import zlc.season.rxdownload4.task.Task
+import zlc.season.rxdownload4.utils.getFileNameFromUrl
 
 class UpdateCheckFragment : DialogFragment() {
 
@@ -67,22 +67,7 @@ class UpdateCheckFragment : DialogFragment() {
                 checkingTxt.text = "Update Found!"
 
                 updatebtn.setOnClickListener {
-
-                    if (ContextCompat.checkSelfPermission(requireContext(),
-                            android.Manifest.permission.READ_EXTERNAL_STORAGE) +
-                        ContextCompat.checkSelfPermission(requireContext(),
-                            android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        != PackageManager.PERMISSION_GRANTED) {
-
-                        requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                            android.Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                            69)
-
-                    } else {
-                        upgradeManager(loadBar, checkingTxt)
-                    }
-
-
+                        upgradeManager(loadBar)
                 }
 
             } else {
@@ -114,14 +99,23 @@ class UpdateCheckFragment : DialogFragment() {
         }
     }
 
-    private fun upgradeManager(loadBar: ProgressBar, checkingTxt: TextView) {
+    private fun upgradeManager(loadBar: ProgressBar) {
         val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
         val dwnldUrl = apkUrl.get("url").asString
 
-        if (dwnldUrl.file().exists())
-            dwnldUrl.file().delete()
+        val task = activity?.filesDir?.path?.let {
+            Task(
+                url = dwnldUrl,
+                saveName = getFileNameFromUrl(dwnldUrl),
+                savePath = it
+            )
+        }
 
-        disposable = dwnldUrl.download()
+        if (task?.file()?.exists()!!)
+            task.file().delete()
+
+        disposable = task
+            .download()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onNext = { progress ->
@@ -134,7 +128,7 @@ class UpdateCheckFragment : DialogFragment() {
                     prefs.edit().putBoolean("isUpgrading", true).apply()
 
                     val pn = activity?.packageName
-                    val apk = dwnldUrl.file()
+                    val apk = task.file()
                     val uri =
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                             FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
@@ -147,8 +141,8 @@ class UpdateCheckFragment : DialogFragment() {
                     startActivity(intent)
                 },
                 onError = { throwable ->
-                    checkingTxt.text = throwable.toString()
-                    Log.e("Error", throwable.toString())
+                    Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
+                    Log.e("VMUpgrade", throwable.toString())
                 }
             )
     }
