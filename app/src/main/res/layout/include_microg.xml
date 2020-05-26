@@ -106,6 +106,15 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <TextView
+            android:id="@+id/microg_downloading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CardTitle"
+            android:text="Downloading"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
         <ProgressBar
             android:id="@+id/microg_progress"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"

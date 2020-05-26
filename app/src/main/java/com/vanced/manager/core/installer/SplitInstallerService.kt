@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
+import android.widget.Toast
 import androidx.annotation.Nullable
 
 class SplitInstallerService: Service() {
@@ -22,7 +23,10 @@ class SplitInstallerService: Service() {
                 } catch (e: Exception) {
                 }
             }
-            PackageInstaller.STATUS_SUCCESS -> Log.d(TAG, "Installation succeed")
+            PackageInstaller.STATUS_SUCCESS -> {
+                Log.d(TAG, "Installation succeed")
+                Toast.makeText(this, "Vanced installed successfully", Toast.LENGTH_SHORT).show()
+            }
             else -> Log.d(TAG, "Installation failed")
         }
         stopSelf()

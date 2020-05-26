@@ -2,6 +2,7 @@ package com.vanced.manager.core.fragments
 
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -50,7 +51,8 @@ open class Home : BaseFragment() {
         }
 
         microginstallbtn.setOnClickListener {
-            installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress)
+            val dlText = view.findViewById<TextView>(R.id.microg_downloading)
+            installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress, dlText)
         }
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
@@ -115,6 +117,17 @@ open class Home : BaseFragment() {
             openUrl("https://reddit.com/r/vanced", R.color.Reddit)
         }
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val loadBar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
+        val dlText = view?.findViewById<TextView>(R.id.vanced_downloading)
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val isInstalling = prefs?.getBoolean("isInstalling", false)
+        if (isInstalling!!) {
+            downloadArch(loadBar!!, dlText!!)
+        }
     }
 
 }

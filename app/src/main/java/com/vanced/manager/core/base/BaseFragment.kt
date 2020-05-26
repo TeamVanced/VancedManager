@@ -1,20 +1,21 @@
 package com.vanced.manager.core.base
 
+import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.view.View
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.dezlum.codelabs.getjson.GetJson
-import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -25,9 +26,12 @@ import zlc.season.rxdownload4.file
 import zlc.season.rxdownload4.task.Task
 import zlc.season.rxdownload4.utils.getFileNameFromUrl
 
+@SuppressLint("SetTextI18n")
 open class BaseFragment : Fragment() {
 
     private var disposable: Disposable? = null
+    val prefs = activity?.getSharedPreferences("installPref", Context.MODE_PRIVATE)
+    private val baseUrl = "https://x1nto.github.io/VancedFiles/Splits/"
 
     fun openUrl(Url: String, color: Int) {
         val builder = CustomTabsIntent.Builder()
@@ -45,15 +49,47 @@ open class BaseFragment : Fragment() {
         }
     }
 
-    fun downloadSplit(apk: String, apkVar: String, isInstalling: Boolean, loadBar: ProgressBar, navigate: Int) {
-        val baseurl = "https://x1nto.github.io/VancedFiles/Splits/"
-        val url: String =
-            when(apk) {
-                "theme" -> baseurl + "Theme/" + apkVar + ".apk"
-                "lang" -> baseurl + "Language/split_config." + apkVar + ".apk"
-                "arch" -> baseurl + "Config/config." + apkVar + ".apk"
-                else -> return
+    fun downloadArch(loadBar: ProgressBar, dlText: TextView) {
+        val arch =
+            when {
+                Build.SUPPORTED_ABIS.contains("x86") -> "x86"
+                Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
+                else -> "armeabi_v7a"
             }
+        val url = "$baseUrl/config.$arch.apk"
+        val task = activity?.cacheDir?.path?.let {
+            Task(
+                url = url,
+                saveName = getFileNameFromUrl(url),
+                savePath = it
+            )
+        }
+
+        if (task?.file()?.exists()!!)
+            task.delete()
+
+        disposable = task.download()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onNext = { progress ->
+                    val filename = getFileNameFromUrl(url)
+                    loadBar.visibility = View.VISIBLE
+                    dlText.visibility = View.VISIBLE
+                    dlText.text = "Downloading $filename..."
+                    loadBar.progress = progress.percent().toInt()
+                },
+                onComplete = {
+                    loadBar.visibility = View.GONE
+                    downloadTheme(loadBar, dlText)
+                },
+                onError = { throwable ->
+                    Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
+                }
+            )
+    }
+    private fun downloadTheme(loadBar: ProgressBar, dlText: TextView) {
+        val theme = prefs?.getString("theme", "")
+        val url = "$baseUrl/Theme/$theme.apk"
 
         val task = activity?.cacheDir?.path?.let {
             Task(
@@ -70,22 +106,14 @@ open class BaseFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onNext = { progress ->
+                    val filename = getFileNameFromUrl(url)
                     loadBar.visibility = View.VISIBLE
+                    dlText.text = "Downloading $filename..."
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
                     loadBar.visibility = View.GONE
-                    if (isInstalling) {
-                        if (apk == "lang") {
-                            if (apkVar != "en")
-                                downloadEn(loadBar)
-                            else
-                                launchInstaller()
-                        }
-                        else
-                            launchInstaller()
-                    } else
-                        view?.findNavController()?.navigate(navigate)
+                    downloadLang(loadBar, dlText)
                 },
                 onError = { throwable ->
                     Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
@@ -93,7 +121,45 @@ open class BaseFragment : Fragment() {
             )
     }
 
-    private fun downloadEn(loadBar: ProgressBar) {
+    private fun downloadLang(loadBar: ProgressBar, dlText: TextView) {
+        val lang = prefs?.getString("lang", "")
+        val url = "$baseUrl/Language/split_config.$lang.apk"
+
+        val task = activity?.cacheDir?.path?.let {
+            Task(
+                url = url,
+                saveName = getFileNameFromUrl(url),
+                savePath = it
+            )
+        }
+
+        if (task?.file()?.exists()!!)
+            task.delete()
+
+        disposable = task.download()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy(
+                onNext = { progress ->
+                    val filename = getFileNameFromUrl(url)
+                    loadBar.visibility = View.VISIBLE
+                    dlText.text = "Downloading $filename..."
+                    loadBar.progress = progress.percent().toInt()
+                },
+                onComplete = {
+                    loadBar.visibility = View.GONE
+                    if (lang != "en")
+                        downloadEn(loadBar, dlText)
+                    else
+                        dlText.visibility = View.GONE
+                        launchInstaller()
+                },
+                onError = { throwable ->
+                    Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
+                }
+            )
+    }
+
+    private fun downloadEn(loadBar: ProgressBar, dlText: TextView) {
         val url = "https://x1nto.github.io/VancedFiles/Splits/Language/split_config.en.apk"
         val task = activity?.cacheDir?.path?.let {
             Task(
@@ -110,11 +176,14 @@ open class BaseFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onNext = {progress ->
+                    val filename = getFileNameFromUrl(url)
                     loadBar.visibility = View.VISIBLE
+                    dlText.text = "Downloading $filename..."
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
                     loadBar.visibility = View.GONE
+                    dlText.visibility = View.GONE
                     launchInstaller()
                 },
                 onError = { throwable ->
@@ -126,12 +195,11 @@ open class BaseFragment : Fragment() {
     }
 
     private fun launchInstaller() {
-        view?.findNavController()?.navigate(R.id.action_installTo_homeFragment)
         val activity = (activity as MainActivity?)!!
         activity.installSplitApk()
     }
 
-    fun installApk(url: String, loadBar: ProgressBar) {
+    fun installApk(url: String, loadBar: ProgressBar, dlText: TextView) {
         val apkUrl = GetJson().AsJSONObject(url)
         val dwnldUrl = apkUrl.get("url").asString
         val task = activity?.filesDir?.path?.let {
@@ -150,11 +218,15 @@ open class BaseFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onNext = { progress ->
+                    val filename = getFileNameFromUrl(url)
                     loadBar.visibility = View.VISIBLE
+                    dlText.visibility = View.VISIBLE
+                    dlText.text = "Downloading $filename..."
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
                     loadBar.visibility = View.GONE
+                    dlText.visibility = View.GONE
 
                     val pn = activity?.packageName
                     val apk = task.file()

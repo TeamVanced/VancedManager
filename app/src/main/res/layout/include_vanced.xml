@@ -6,90 +6,114 @@
     style="@style/MaterialCard"
     tools:ignore="ContentDescription, KeyboardInaccessibleWidget">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/home_vanced_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_vanced"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/home_vanced_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_vanced"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
+
+            <TextView
+                style="@style/TextAppTitle"
+                android:id="@+id/vanced_title"
+                android:text="@string/vanced"
+                app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/vanced_installbtn"
+                style="@style/ButtonStyle"
+                android:text="@string/install"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:icon="@drawable/outline_cloud_download_24" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/vanced_title_buttons_barrier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="home_vanced_logo, vanced_title, vanced_installbtn"/>
+
+            <ImageView
+                style="@style/ClickableImageWidget.Red"
+                android:id="@+id/vanced_uninstallbtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vanced_title_buttons_barrier"
+                app:srcCompat="@drawable/ic_delete_black_24dp" />
+
+            <LinearLayout
+                android:id="@+id/vanced_remote_latest_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/vanced_title_buttons_barrier">
+
+                <TextView
+                    style="@style/AppVer"
+                    android:id="@+id/vanced_latest"
+                    android:text="@string/latest" />
+
+                <TextView
+                    style="@style/AppVer.Bold"
+                    android:id="@+id/vanced_latest_version"
+                    android:text="@string/loading" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version">
+
+                <TextView
+                    style="@style/AppVer"
+                    android:id="@+id/vanced_installed"
+                    android:text="@string/version_installed" />
+
+                <TextView
+                    style="@style/AppVer.Bold"
+                    android:id="@+id/vanced_installed_version"
+                    android:text="@string/loading" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            style="@style/TextAppTitle"
-            android:id="@+id/vanced_title"
-            android:text="@string/vanced"
-            app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
+            android:id="@+id/vanced_downloading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CardTitle"
+            android:text="Downloading"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/vanced_installbtn"
-            style="@style/ButtonStyle"
-            android:text="@string/install"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:icon="@drawable/outline_cloud_download_24" />
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/vanced_title_buttons_barrier"
+        <ProgressBar
+            android:id="@+id/vanced_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:barrierDirection="bottom"
-            app:constraint_referenced_ids="home_vanced_logo, vanced_title, vanced_installbtn"/>
+            android:visibility="gone"
+            tools:visibility="visible"/>
 
-        <ImageView
-            style="@style/ClickableImageWidget.Red"
-            android:id="@+id/vanced_uninstallbtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vanced_title_buttons_barrier"
-            app:srcCompat="@drawable/ic_delete_black_24dp" />
-
-        <LinearLayout
-            android:id="@+id/vanced_remote_latest_version"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/vanced_title_buttons_barrier">
-
-            <TextView
-                style="@style/AppVer"
-                android:id="@+id/vanced_latest"
-                android:text="@string/latest" />
-
-            <TextView
-                style="@style/AppVer.Bold"
-                android:id="@+id/vanced_latest_version"
-                android:text="@string/loading" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version">
-
-            <TextView
-                style="@style/AppVer"
-                android:id="@+id/vanced_installed"
-                android:text="@string/version_installed" />
-
-            <TextView
-                style="@style/AppVer.Bold"
-                android:id="@+id/vanced_installed_version"
-                android:text="@string/loading" />
-
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
 
