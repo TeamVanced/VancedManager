@@ -218,7 +218,7 @@ open class BaseFragment : Fragment() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy(
                 onNext = { progress ->
-                    val filename = getFileNameFromUrl(url)
+                    val filename = getFileNameFromUrl(dwnldUrl)
                     loadBar.visibility = View.VISIBLE
                     dlText.visibility = View.VISIBLE
                     dlText.text = "Downloading $filename..."
