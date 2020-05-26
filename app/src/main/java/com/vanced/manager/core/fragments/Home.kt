@@ -35,23 +35,34 @@ open class Home : BaseFragment() {
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
 
         val microgProgress = view.findViewById<ProgressBar>(R.id.microg_progress)
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val isDownloading: Boolean? = prefs?.getBoolean("isDownloading", false)
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
         vancedinstallbtn.setOnClickListener {
-            try {
-                activity?.cacheDir?.deleteRecursively()
-            } catch (e: Exception) {
-                Log.d("VMCache", "Unable to delete cacheDir")
+            if (!isDownloading!!) {
+                try {
+                    activity?.cacheDir?.deleteRecursively()
+                } catch (e: Exception) {
+                    Log.d("VMCache", "Unable to delete cacheDir")
+                }
+                view.findNavController().navigate(R.id.toInstallVariantFragment)
+            } else {
+                Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
             }
-            view.findNavController().navigate(R.id.toInstallVariantFragment)
+
         }
 
         microginstallbtn.setOnClickListener {
-            val dlText = view.findViewById<TextView>(R.id.microg_downloading)
-            installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress, dlText)
+            if (!isDownloading!!) {
+                val dlText = view.findViewById<TextView>(R.id.microg_downloading)
+                installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress, dlText)
+            } else {
+                Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
+            }
         }
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
@@ -126,7 +137,7 @@ open class Home : BaseFragment() {
         val isInstalling = prefs?.getBoolean("isInstalling", false)
         if (isInstalling!!) {
             downloadArch(loadBar!!, dlText!!)
-            prefs.edit().putBoolean("isInstalling", false)
+            prefs.edit().putBoolean("isInstalling", false).apply()
         }
     }
 

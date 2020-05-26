@@ -49,6 +49,8 @@ open class BaseFragment : Fragment() {
     }
 
     fun downloadArch(loadBar: ProgressBar, dlText: TextView) {
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        prefs?.edit()?.putBoolean("isDownloading", true)?.apply()
         val arch =
             when {
                 Build.SUPPORTED_ABIS.contains("x86") -> "x86"
@@ -146,9 +148,11 @@ open class BaseFragment : Fragment() {
                     loadBar.visibility = View.GONE
                     if (lang != "en")
                         downloadEn(loadBar, dlText)
-                    else
+                    else {
                         dlText.visibility = View.GONE
+                        prefs.edit()?.putBoolean("isDownloading", true)?.apply()
                         launchInstaller()
+                    }
                 },
                 onError = { throwable ->
                     Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
@@ -157,6 +161,7 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadEn(loadBar: ProgressBar, dlText: TextView) {
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val url = "https://x1nto.github.io/VancedFiles/Splits/Language/split_config.en.apk"
         val task = activity?.cacheDir?.path?.let {
             Task(
@@ -181,6 +186,7 @@ open class BaseFragment : Fragment() {
                 onComplete = {
                     loadBar.visibility = View.GONE
                     dlText.visibility = View.GONE
+                    prefs?.edit()?.putBoolean("isDownloading", true)?.apply()
                     launchInstaller()
                 },
                 onError = { throwable ->
@@ -192,8 +198,6 @@ open class BaseFragment : Fragment() {
     }
 
     private fun launchInstaller() {
-        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        prefs?.edit()?.putBoolean("isInstalling", false)?.apply()
         val activity = (activity as MainActivity?)!!
         activity.installSplitApk()
     }
