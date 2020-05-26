@@ -192,6 +192,8 @@ open class BaseFragment : Fragment() {
     }
 
     private fun launchInstaller() {
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        prefs?.edit()?.putBoolean("isInstalling", false)?.apply()
         val activity = (activity as MainActivity?)!!
         activity.installSplitApk()
     }

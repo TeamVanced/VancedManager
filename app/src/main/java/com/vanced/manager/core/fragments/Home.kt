@@ -11,7 +11,6 @@ import android.widget.*
 import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
-import io.reactivex.disposables.Disposable
 
 open class Home : BaseFragment() {
 
