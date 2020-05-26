@@ -2,6 +2,7 @@ package com.vanced.manager.core
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.Bundle
@@ -48,6 +49,7 @@ open class Main: BaseActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
         try {
             cacheDir.deleteRecursively()
         } catch (e: Exception) {

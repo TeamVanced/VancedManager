@@ -31,7 +31,7 @@ open class BaseFragment : Fragment() {
 
     private var disposable: Disposable? = null
     private val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-    private val baseUrl = "https://x1nto.github.io/VancedFiles/Splits/"
+    private val baseUrl = "https://x1nto.github.io/VancedFiles/Splits"
 
     fun openUrl(Url: String, color: Int) {
         val builder = CustomTabsIntent.Builder()
@@ -79,7 +79,6 @@ open class BaseFragment : Fragment() {
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
-                    loadBar.visibility = View.GONE
                     downloadTheme(loadBar, dlText)
                 },
                 onError = { throwable ->
@@ -88,7 +87,7 @@ open class BaseFragment : Fragment() {
             )
     }
     private fun downloadTheme(loadBar: ProgressBar, dlText: TextView) {
-        val theme = prefs?.getString("theme", "")
+        val theme = prefs?.getString("theme", "dark")
         val url = "$baseUrl/Theme/$theme.apk"
 
         val task = activity?.cacheDir?.path?.let {
@@ -107,12 +106,10 @@ open class BaseFragment : Fragment() {
             .subscribeBy(
                 onNext = { progress ->
                     val filename = getFileNameFromUrl(url)
-                    loadBar.visibility = View.VISIBLE
                     dlText.text = "Downloading $filename..."
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
-                    loadBar.visibility = View.GONE
                     downloadLang(loadBar, dlText)
                 },
                 onError = { throwable ->
@@ -122,7 +119,7 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadLang(loadBar: ProgressBar, dlText: TextView) {
-        val lang = prefs?.getString("lang", "")
+        val lang = prefs?.getString("lang", "en")
         val url = "$baseUrl/Language/split_config.$lang.apk"
 
         val task = activity?.cacheDir?.path?.let {
@@ -141,7 +138,6 @@ open class BaseFragment : Fragment() {
             .subscribeBy(
                 onNext = { progress ->
                     val filename = getFileNameFromUrl(url)
-                    loadBar.visibility = View.VISIBLE
                     dlText.text = "Downloading $filename..."
                     loadBar.progress = progress.percent().toInt()
                 },
