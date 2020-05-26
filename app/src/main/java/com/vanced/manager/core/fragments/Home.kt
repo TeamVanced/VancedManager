@@ -127,6 +127,7 @@ open class Home : BaseFragment() {
         val isInstalling = prefs?.getBoolean("isInstalling", false)
         if (isInstalling!!) {
             downloadArch(loadBar!!, dlText!!)
+            prefs.edit().putBoolean("isInstalling", false)
         }
     }
 

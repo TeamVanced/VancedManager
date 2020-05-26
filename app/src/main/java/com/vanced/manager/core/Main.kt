@@ -48,13 +48,13 @@ open class Main: BaseActivity() {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
         try {
             cacheDir.deleteRecursively()
         } catch (e: Exception) {
             Log.d("VMCache", "Unable to delete cacheDir")
         }
+        super.onDestroy()
     }
 
     private fun showSecurityDialog() {

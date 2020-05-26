@@ -30,7 +30,6 @@ import zlc.season.rxdownload4.utils.getFileNameFromUrl
 open class BaseFragment : Fragment() {
 
     private var disposable: Disposable? = null
-    private val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
     private val baseUrl = "https://x1nto.github.io/VancedFiles/Splits"
 
     fun openUrl(Url: String, color: Int) {
@@ -87,6 +86,7 @@ open class BaseFragment : Fragment() {
             )
     }
     private fun downloadTheme(loadBar: ProgressBar, dlText: TextView) {
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val theme = prefs?.getString("theme", "dark")
         val url = "$baseUrl/Theme/$theme.apk"
 
@@ -119,6 +119,7 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadLang(loadBar: ProgressBar, dlText: TextView) {
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val lang = prefs?.getString("lang", "en")
         val url = "$baseUrl/Language/split_config.$lang.apk"
 
