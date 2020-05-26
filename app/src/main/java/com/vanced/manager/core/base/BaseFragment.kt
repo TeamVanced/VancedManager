@@ -56,7 +56,7 @@ open class BaseFragment : Fragment() {
                 Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                 else -> "armeabi_v7a"
             }
-        val url = "$baseUrl/config.$arch.apk"
+        val url = "$baseUrl/Config/config.$arch.apk"
         val task = activity?.cacheDir?.path?.let {
             Task(
                 url = url,
