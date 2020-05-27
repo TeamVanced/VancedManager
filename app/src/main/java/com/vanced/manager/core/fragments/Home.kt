@@ -34,9 +34,44 @@ open class Home : BaseFragment() {
         val microgsettingsbtn = view.findViewById<ImageView>(R.id.microg_settingsbtn)
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
 
+        val microgProgress = view.findViewById<ProgressBar>(R.id.microg_progress)
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val isDownloading: Boolean? = prefs?.getBoolean("isDownloading", false)
+
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+
+        vancedinstallbtn.setOnClickListener {
+            if (!isDownloading!!) {
+                try {
+                    activity?.cacheDir?.deleteRecursively()
+                } catch (e: Exception) {
+                    Log.d("VMCache", "Unable to delete cacheDir")
+                }
+                view.findNavController().navigate(R.id.toInstallVariantFragment)
+            } else {
+                Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        microginstallbtn.setOnClickListener {
+            if (!isDownloading!!) {
+                val dlText = view.findViewById<TextView>(R.id.microg_downloading)
+                try {
+                    installApk(
+                        "https://x1nto.github.io/VancedFiles/microg.json",
+                        microgProgress,
+                        dlText
+                    )
+                } catch (e: Exception) {
+                    Toast.makeText(activity, "Unable to start installation", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
