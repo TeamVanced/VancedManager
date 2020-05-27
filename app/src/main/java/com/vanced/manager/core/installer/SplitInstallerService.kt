@@ -5,8 +5,10 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.os.Build
 import android.os.IBinder
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AlertDialog
@@ -47,18 +49,24 @@ class SplitInstallerService: Service() {
     }
 
     private fun alertBuilder(msg: String) {
-        AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(this)
             .setTitle("Error")
             .setMessage("Operation failed because $msg")
             .setPositiveButton(getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             .create()
-            .show()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            dialog.window?.setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY)
+        } else
+            dialog.window?.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT)
+
+        dialog.show()
     }
 
     private fun launchVanced() {
         val intent = Intent()
         intent.component = ComponentName("com.vanced.android.youtube", "com.vanced.android.youtube.HomeActivity")
-        AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(this)
             .setTitle("Success!")
             .setMessage("Vanced has been successfully installed, do you want to launch it now?")
             .setPositiveButton("Launch") {
@@ -68,7 +76,12 @@ class SplitInstallerService: Service() {
                 dialog, _ -> dialog.dismiss()
             }
             .create()
-            .show()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            dialog.window?.setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY)
+        } else
+            dialog.window?.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT)
+        dialog.show()
     }
 
     @Nullable
