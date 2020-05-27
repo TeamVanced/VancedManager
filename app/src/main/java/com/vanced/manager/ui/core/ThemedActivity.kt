@@ -32,13 +32,11 @@ open class ThemedActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        super.onResume()
-        val theme = pref.getString("theme_mode", "Light")
+        pref = PreferenceManager.getDefaultSharedPreferences(this)
+        currentTheme = pref.getString("theme_mode", "Light").toString()
 
-        //if for some weird reasons we get invalid
-        //theme, recreate activity
-        if (currentTheme != theme)
-            recreate()
+        setFinalTheme(currentTheme)
+        super.onResume()
 
         //set Task Header color in recents menu for
         //devices that are not using pie recents
