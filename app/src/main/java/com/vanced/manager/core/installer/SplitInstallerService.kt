@@ -49,7 +49,7 @@ class SplitInstallerService: Service() {
     }
 
     private fun alertBuilder(msg: String) {
-        val dialog = AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(applicationContext)
             .setTitle("Error")
             .setMessage("Operation failed because $msg")
             .setPositiveButton(getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
@@ -66,7 +66,7 @@ class SplitInstallerService: Service() {
     private fun launchVanced() {
         val intent = Intent()
         intent.component = ComponentName("com.vanced.android.youtube", "com.vanced.android.youtube.HomeActivity")
-        val dialog = AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(applicationContext)
             .setTitle("Success!")
             .setMessage("Vanced has been successfully installed, do you want to launch it now?")
             .setPositiveButton("Launch") {
