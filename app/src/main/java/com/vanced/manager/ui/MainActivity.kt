@@ -40,17 +40,14 @@ class MainActivity : Main() {
 
         }
 
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_COMPLETED
-        ))
+        registerReceivers()
 
     }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            when (intent.action) {
-                INSTALL_COMPLETED -> launchVanced()
-                else -> intent.action?.let { alertBuilder(it) }
+            if (intent.action == INSTALL_COMPLETED) {
+                launchVanced()
             }
         }
     }
@@ -67,9 +64,7 @@ class MainActivity : Main() {
 
     override fun onResume() {
         super.onResume()
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_COMPLETED
-        ))
+        registerReceivers()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -148,8 +143,32 @@ class MainActivity : Main() {
             .show()
     }
 
+    private fun registerReceivers() {
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            INSTALL_COMPLETED
+        ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            INSTALL_ABORTED
+        ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            INSTALL_BLOCKED
+        ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            INSTALL_STORAGE
+        ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            INSTALL_CONFLICT
+        ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            INSTALL_FAILED
+        ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            INSTALL_INVALID
+        ))
+
+    }
+
     companion object {
-        const val BLANK_INTENT = "BLANK"
         const val INSTALL_COMPLETED = "Installation completed"
         const val INSTALL_ABORTED = "user aborted installation"
         const val INSTALL_BLOCKED = "user blocked installation"
