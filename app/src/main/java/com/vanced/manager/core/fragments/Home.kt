@@ -59,7 +59,15 @@ open class Home : BaseFragment() {
         microginstallbtn.setOnClickListener {
             if (!isDownloading!!) {
                 val dlText = view.findViewById<TextView>(R.id.microg_downloading)
-                installApk("https://x1nto.github.io/VancedFiles/microg.json", microgProgress, dlText)
+                try {
+                    installApk(
+                        "https://x1nto.github.io/VancedFiles/microg.json",
+                        microgProgress,
+                        dlText
+                    )
+                } catch (e: Exception) {
+                    Toast.makeText(activity, "Unable to start installation", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
             }
