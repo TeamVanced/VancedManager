@@ -41,7 +41,7 @@ class MainActivity : Main() {
         }
 
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            BLANK_INTENT
+            INSTALL_COMPLETED
         ))
 
     }
@@ -68,7 +68,7 @@ class MainActivity : Main() {
     override fun onResume() {
         super.onResume()
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            BLANK_INTENT
+            INSTALL_COMPLETED
         ))
     }
 
