@@ -8,6 +8,7 @@ import android.os.IBinder
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.Nullable
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.ui.MainActivity
 
 class SplitInstallerService: Service() {
@@ -30,27 +31,27 @@ class SplitInstallerService: Service() {
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
                 mIntent.action = MainActivity.INSTALL_COMPLETED
-                sendBroadcast(mIntent)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_ABORTED -> {
                 val mIntent = Intent(MainActivity.INSTALL_ABORTED)
                 mIntent.action = MainActivity.INSTALL_ABORTED
-                sendBroadcast(mIntent)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_INVALID -> {
                 val mIntent = Intent(MainActivity.INSTALL_INVALID)
                 mIntent.action = MainActivity.INSTALL_INVALID
-                sendBroadcast(mIntent)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_CONFLICT -> {
                 val mIntent = Intent(MainActivity.INSTALL_CONFLICT)
                 mIntent.action = MainActivity.INSTALL_CONFLICT
-                sendBroadcast(mIntent)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_STORAGE -> {
                 val mIntent = Intent(MainActivity.INSTALL_STORAGE)
                 mIntent.action = MainActivity.INSTALL_STORAGE
-                sendBroadcast(mIntent)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_BLOCKED -> {
                 val mIntent = Intent(MainActivity.INSTALL_BLOCKED)

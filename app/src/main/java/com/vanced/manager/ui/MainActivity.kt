@@ -39,6 +39,7 @@ class MainActivity : Main() {
             setDisplayHomeAsUpEnabled(!isParent)
 
         }
+
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
             BLANK_INTENT
         ))
