@@ -54,6 +54,7 @@ class SplitInstallerService: Service() {
             .create()
             .show()
     }
+
     private fun launchVanced() {
         val intent = Intent()
         intent.component = ComponentName("com.vanced.android.youtube", "com.vanced.android.youtube.HomeActivity")
@@ -66,6 +67,8 @@ class SplitInstallerService: Service() {
             .setNegativeButton("Cancel") {
                 dialog, _ -> dialog.dismiss()
             }
+            .create()
+            .show()
     }
 
     @Nullable

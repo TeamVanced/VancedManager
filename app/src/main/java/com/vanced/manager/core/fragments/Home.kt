@@ -141,10 +141,11 @@ open class Home : BaseFragment() {
         super.onResume()
         val loadBar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
         val dlText = view?.findViewById<TextView>(R.id.vanced_downloading)
+        val loadCircle = view?.findViewById<ProgressBar>(R.id.vanced_installing)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val isInstalling = prefs?.getBoolean("isInstalling", false)
         if (isInstalling!!) {
-            downloadArch(loadBar!!, dlText!!)
+            downloadArch(loadBar!!, dlText!!, loadCircle!!)
             prefs.edit().putBoolean("isInstalling", false).apply()
         }
     }

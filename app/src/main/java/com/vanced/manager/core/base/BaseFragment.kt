@@ -48,7 +48,7 @@ open class BaseFragment : Fragment() {
         }
     }
 
-    fun downloadArch(loadBar: ProgressBar, dlText: TextView) {
+    fun downloadArch(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         prefs?.edit()?.putBoolean("isDownloading", true)?.apply()
         val arch =
@@ -80,14 +80,14 @@ open class BaseFragment : Fragment() {
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
-                    downloadTheme(loadBar, dlText)
+                    downloadTheme(loadBar, dlText, loadCircle)
                 },
                 onError = { throwable ->
                     Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
                 }
             )
     }
-    private fun downloadTheme(loadBar: ProgressBar, dlText: TextView) {
+    private fun downloadTheme(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val theme = prefs?.getString("theme", "dark")
         val url = "$baseUrl/Theme/$theme.apk"
@@ -112,7 +112,7 @@ open class BaseFragment : Fragment() {
                     loadBar.progress = progress.percent().toInt()
                 },
                 onComplete = {
-                    downloadLang(loadBar, dlText)
+                    downloadLang(loadBar, dlText, loadCircle)
                 },
                 onError = { throwable ->
                     Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
@@ -120,7 +120,7 @@ open class BaseFragment : Fragment() {
             )
     }
 
-    private fun downloadLang(loadBar: ProgressBar, dlText: TextView) {
+    private fun downloadLang(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val lang = prefs?.getString("lang", "en")
         val url = "$baseUrl/Language/split_config.$lang.apk"
@@ -147,9 +147,10 @@ open class BaseFragment : Fragment() {
                 onComplete = {
                     loadBar.visibility = View.GONE
                     if (lang != "en")
-                        downloadEn(loadBar, dlText)
+                        downloadEn(loadBar, dlText, loadCircle)
                     else {
                         dlText.visibility = View.GONE
+                        loadCircle.visibility = View.VISIBLE
                         prefs.edit()?.putBoolean("isDownloading", false)?.apply()
                         launchInstaller()
                     }
@@ -160,7 +161,7 @@ open class BaseFragment : Fragment() {
             )
     }
 
-    private fun downloadEn(loadBar: ProgressBar, dlText: TextView) {
+    private fun downloadEn(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val url = "https://x1nto.github.io/VancedFiles/Splits/Language/split_config.en.apk"
         val task = activity?.cacheDir?.path?.let {
@@ -186,6 +187,7 @@ open class BaseFragment : Fragment() {
                 onComplete = {
                     loadBar.visibility = View.GONE
                     dlText.visibility = View.GONE
+                    loadCircle.visibility = View.VISIBLE
                     prefs?.edit()?.putBoolean("isDownloading", false)?.apply()
                     launchInstaller()
                 },
