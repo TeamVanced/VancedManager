@@ -81,6 +81,7 @@ class SplitInstallerService: Service() {
             dialog.window?.setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY)
         } else
             dialog.window?.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT)
+
         dialog.show()
     }
 
