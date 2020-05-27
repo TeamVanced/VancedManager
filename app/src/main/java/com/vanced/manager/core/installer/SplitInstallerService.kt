@@ -8,11 +8,9 @@ import android.os.IBinder
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.Nullable
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.ui.MainActivity
 
 class SplitInstallerService: Service() {
-    private val TAG = "VMInstall"
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
@@ -31,31 +29,38 @@ class SplitInstallerService: Service() {
                 Log.d(TAG, "Installation succeed")
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
+                mIntent.action = MainActivity.INSTALL_COMPLETED
                 sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_ABORTED -> {
                 val mIntent = Intent(MainActivity.INSTALL_ABORTED)
+                mIntent.action = MainActivity.INSTALL_ABORTED
                 sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_INVALID -> {
                 val mIntent = Intent(MainActivity.INSTALL_INVALID)
+                mIntent.action = MainActivity.INSTALL_INVALID
                 sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_CONFLICT -> {
                 val mIntent = Intent(MainActivity.INSTALL_CONFLICT)
+                mIntent.action = MainActivity.INSTALL_CONFLICT
                 sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_STORAGE -> {
                 val mIntent = Intent(MainActivity.INSTALL_STORAGE)
+                mIntent.action = MainActivity.INSTALL_STORAGE
                 sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_BLOCKED -> {
                 val mIntent = Intent(MainActivity.INSTALL_BLOCKED)
+                mIntent.action = MainActivity.INSTALL_BLOCKED
                 sendBroadcast(mIntent)
             }
             else -> {
                 Log.d(TAG, "Installation failed")
                 val mIntent = Intent(MainActivity.INSTALL_FAILED)
+                mIntent.action = MainActivity.INSTALL_ABORTED
                 sendBroadcast(mIntent)
             }
         }
@@ -66,6 +71,10 @@ class SplitInstallerService: Service() {
     @Nullable
     override fun onBind(intent: Intent?): IBinder? {
         return null
+    }
+
+    companion object{
+        const val TAG = "VMInstall"
     }
 
 }

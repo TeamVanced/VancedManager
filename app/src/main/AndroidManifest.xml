@@ -18,7 +18,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/LightTheme.Blue"
         tools:ignore="UnusedAttribute">
 
         <activity
