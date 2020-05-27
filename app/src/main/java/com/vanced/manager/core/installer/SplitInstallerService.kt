@@ -1,18 +1,15 @@
 package com.vanced.manager.core.installer
 
 import android.app.Service
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import android.os.Build
 import android.os.IBinder
 import android.util.Log
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.Nullable
-import androidx.appcompat.app.AlertDialog
-import com.vanced.manager.R
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.vanced.manager.ui.MainActivity
 
 class SplitInstallerService: Service() {
     private val TAG = "VMInstall"
@@ -33,56 +30,37 @@ class SplitInstallerService: Service() {
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                launchVanced()
+                val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
+                sendBroadcast(mIntent)
             }
-            PackageInstaller.STATUS_FAILURE_ABORTED -> alertBuilder("user aborted installation")
-            PackageInstaller.STATUS_FAILURE_INVALID -> alertBuilder("apk files are invalid")
-            PackageInstaller.STATUS_FAILURE_CONFLICT -> alertBuilder("app conflicts with already installed app")
-            PackageInstaller.STATUS_FAILURE_STORAGE -> alertBuilder("there was an error with storage.\n Hold up how is that even possible?")
+            PackageInstaller.STATUS_FAILURE_ABORTED -> {
+                val mIntent = Intent(MainActivity.INSTALL_ABORTED)
+                sendBroadcast(mIntent)
+            }
+            PackageInstaller.STATUS_FAILURE_INVALID -> {
+                val mIntent = Intent(MainActivity.INSTALL_INVALID)
+                sendBroadcast(mIntent)
+            }
+            PackageInstaller.STATUS_FAILURE_CONFLICT -> {
+                val mIntent = Intent(MainActivity.INSTALL_CONFLICT)
+                sendBroadcast(mIntent)
+            }
+            PackageInstaller.STATUS_FAILURE_STORAGE -> {
+                val mIntent = Intent(MainActivity.INSTALL_STORAGE)
+                sendBroadcast(mIntent)
+            }
+            PackageInstaller.STATUS_FAILURE_BLOCKED -> {
+                val mIntent = Intent(MainActivity.INSTALL_BLOCKED)
+                sendBroadcast(mIntent)
+            }
             else -> {
                 Log.d(TAG, "Installation failed")
-                alertBuilder("Installation failed")
+                val mIntent = Intent(MainActivity.INSTALL_FAILED)
+                sendBroadcast(mIntent)
             }
         }
         stopSelf()
         return START_NOT_STICKY
-    }
-
-    private fun alertBuilder(msg: String) {
-        val dialog = AlertDialog.Builder(applicationContext)
-            .setTitle("Error")
-            .setMessage("Operation failed because $msg")
-            .setPositiveButton(getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
-            .create()
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            dialog.window?.setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY)
-        } else
-            dialog.window?.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT)
-
-        dialog.show()
-    }
-
-    private fun launchVanced() {
-        val intent = Intent()
-        intent.component = ComponentName("com.vanced.android.youtube", "com.vanced.android.youtube.HomeActivity")
-        val dialog = AlertDialog.Builder(applicationContext)
-            .setTitle("Success!")
-            .setMessage("Vanced has been successfully installed, do you want to launch it now?")
-            .setPositiveButton("Launch") {
-                _, _ -> startActivity(intent)
-            }
-            .setNegativeButton("Cancel") {
-                dialog, _ -> dialog.dismiss()
-            }
-            .create()
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            dialog.window?.setType(WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY)
-        } else
-            dialog.window?.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT)
-
-        dialog.show()
     }
 
     @Nullable

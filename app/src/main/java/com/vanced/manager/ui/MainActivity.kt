@@ -1,15 +1,16 @@
 package com.vanced.manager.ui
 
+import android.content.*
 import android.os.Bundle
 import android.view.MenuItem
-
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
-
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
 
@@ -38,7 +39,36 @@ class MainActivity : Main() {
             setDisplayHomeAsUpEnabled(!isParent)
 
         }
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            BLANK_INTENT
+        ))
 
+    }
+
+    private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            when (intent.action) {
+                INSTALL_COMPLETED -> launchVanced()
+                else -> intent.action?.let { alertBuilder(it) }
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            BLANK_INTENT
+        ))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -81,5 +111,51 @@ class MainActivity : Main() {
             isNeeded -> toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
             else -> toolbar.navigationIcon = null
         }
+    }
+
+    private fun alertBuilder(msg: String) {
+        AlertDialog.Builder(this)
+            .setTitle("Error")
+            .setMessage("Operation failed because $msg")
+            .setPositiveButton(getString(R.string.close)) { dialog, _ ->
+                run {
+                    dialog.dismiss()
+                    recreate()
+                }
+            }
+            .create()
+            .show()
+    }
+
+    private fun launchVanced() {
+        val intent = Intent()
+        intent.component = ComponentName("com.vanced.android.youtube", "com.vanced.android.youtube.HomeActivity")
+        AlertDialog.Builder(this)
+            .setTitle("Success!")
+            .setMessage("Vanced has been successfully installed, do you want to launch it now?")
+            .setPositiveButton("Launch") {
+                    _, _ -> startActivity(intent)
+            }
+            .setNegativeButton("Cancel") {
+                    dialog, _ ->
+                run {
+                    dialog.dismiss()
+                    recreate()
+                }
+            }
+            .create()
+            .show()
+    }
+
+    companion object {
+        const val BLANK_INTENT = "BLANK"
+        const val INSTALL_COMPLETED = "Installation completed"
+        const val INSTALL_ABORTED = "user aborted installation"
+        const val INSTALL_BLOCKED = "user blocked installation"
+        const val INSTALL_STORAGE = "there was an error with storage.\n Hold up how is that even possible?"
+        const val INSTALL_CONFLICT = "app conflicts with already installed app"
+        const val INSTALL_FAILED = "it just failed idk"
+        const val INSTALL_INVALID = "apk files are invalid"
+
     }
 }
