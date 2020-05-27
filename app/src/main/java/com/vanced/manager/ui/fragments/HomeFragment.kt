@@ -1,10 +1,15 @@
 package com.vanced.manager.ui.fragments
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.*
+import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.animation.addListener
+import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
 import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
@@ -64,6 +69,9 @@ class HomeFragment : Home() {
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val microgProgress = view?.findViewById<ProgressBar>(R.id.microg_progress)
+        val isDownloading: Boolean? = prefs?.getBoolean("isDownloading", false)
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
@@ -82,6 +90,37 @@ class HomeFragment : Home() {
                                 .get("version").asString
                         vancedLatestTxt?.text = vancedRemoteVer
                         microgLatestTxt?.text = microgRemoteVer
+
+                        vancedinstallbtn?.setOnClickListener {
+                            if (!isDownloading!!) {
+                                try {
+                                    activity?.cacheDir?.deleteRecursively()
+                                } catch (e: Exception) {
+                                    Log.d("VMCache", "Unable to delete cacheDir")
+                                }
+                                view?.findNavController()?.navigate(R.id.toInstallVariantFragment)
+                            } else {
+                                Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
+                            }
+
+                        }
+
+                        microginstallbtn?.setOnClickListener {
+                            if (!isDownloading!!) {
+                                val dlText = view?.findViewById<TextView>(R.id.microg_downloading)
+                                try {
+                                    installApk(
+                                        "https://x1nto.github.io/VancedFiles/microg.json",
+                                        microgProgress!!,
+                                        dlText!!
+                                    )
+                                } catch (e: Exception) {
+                                    Toast.makeText(activity, "Unable to start installation", Toast.LENGTH_SHORT).show()
+                                }
+                            } else {
+                                Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
+                            }
+                        }
 
                         if (microgStatus!!) {
                             val microgVer =
