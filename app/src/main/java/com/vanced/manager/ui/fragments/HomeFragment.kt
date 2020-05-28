@@ -76,16 +76,16 @@ class HomeFragment : Home() {
 
                         val vancedRemoteVer =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                                .get("version").asInt
+                                .get("version").asString
                         val microgRemoteVer =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-                                .get("version").asInt
+                                .get("version").asString
                         vancedLatestTxt?.text = vancedRemoteVer.toString()
                         microgLatestTxt?.text = microgRemoteVer.toString()
 
                         if (microgStatus!!) {
                             val microgVer =
-                                pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName.toInt()
+                                pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
                             when {
                                 microgRemoteVer > microgVer -> {
                                     microginstallbtn?.text = activity?.getString(R.string.update)
@@ -103,7 +103,7 @@ class HomeFragment : Home() {
 
                         if (vancedStatus!!) {
                             val vancedVer =
-                                pm.getPackageInfo("com.vanced.android.youtube", 0).versionName.toInt()
+                                pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
                             when {
                                 vancedRemoteVer > vancedVer -> {
                                     vancedinstallbtn?.text = activity?.getString(R.string.update)

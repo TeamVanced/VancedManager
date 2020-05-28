@@ -4,16 +4,19 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 
 open class Home : BaseFragment() {
 
+    @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -75,7 +78,7 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
-            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
+            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode
             microguninstallbtn.setOnClickListener {
                 uninstallApk("com.mgoogle.android.gms")
             }
@@ -89,7 +92,7 @@ open class Home : BaseFragment() {
                     )
                     startActivity(intent)
                 } catch (e: ActivityNotFoundException) {
-                    Toast.makeText(requireContext(), "App not installed", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
             }
