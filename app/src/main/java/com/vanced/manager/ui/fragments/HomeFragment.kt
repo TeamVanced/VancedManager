@@ -74,44 +74,48 @@ class HomeFragment : Home() {
                         vancedinstallbtn?.visibility = View.VISIBLE
                         microginstallbtn?.visibility = View.VISIBLE
 
-                        val vancedRemoteVer: String =
+                        val vancedRemoteVer =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                                .get("version").asString
-                        val microgRemoteVer: String =
+                                .get("version").asInt
+                        val microgRemoteVer =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-                                .get("version").asString
-                        vancedLatestTxt?.text = vancedRemoteVer
-                        microgLatestTxt?.text = microgRemoteVer
+                                .get("version").asInt
+                        vancedLatestTxt?.text = vancedRemoteVer.toString()
+                        microgLatestTxt?.text = microgRemoteVer.toString()
 
                         if (microgStatus!!) {
                             val microgVer =
-                                pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
-                            if (microgRemoteVer > microgVer) {
-                                microginstallbtn?.text = activity?.getString(R.string.update)
-                                microginstallbtn?.icon =
-                                    activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
-                            }
-                            else if (microgRemoteVer == microgVer) {
-                                microginstallbtn?.text =
-                                    activity?.getString(R.string.button_installed)
-                                microginstallbtn?.icon =
-                                    activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName.toInt()
+                            when {
+                                microgRemoteVer > microgVer -> {
+                                    microginstallbtn?.text = activity?.getString(R.string.update)
+                                    microginstallbtn?.icon =
+                                        activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+                                }
+                                microgRemoteVer == microgVer -> {
+                                    microginstallbtn?.text =
+                                        activity?.getString(R.string.button_installed)
+                                    microginstallbtn?.icon =
+                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                }
                             }
                         }
 
                         if (vancedStatus!!) {
                             val vancedVer =
-                                pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
-                            if (vancedRemoteVer > vancedVer) {
-                                vancedinstallbtn?.text = activity?.getString(R.string.update)
-                                vancedinstallbtn?.icon =
-                                    activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
-                            }
-                            else if (vancedRemoteVer == vancedVer) {
-                                vancedinstallbtn?.text =
-                                    activity?.getString(R.string.button_installed)
-                                vancedinstallbtn?.icon =
-                                    activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                pm.getPackageInfo("com.vanced.android.youtube", 0).versionName.toInt()
+                            when {
+                                vancedRemoteVer > vancedVer -> {
+                                    vancedinstallbtn?.text = activity?.getString(R.string.update)
+                                    vancedinstallbtn?.icon =
+                                        activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+                                }
+                                vancedRemoteVer == vancedVer -> {
+                                    vancedinstallbtn?.text =
+                                        activity?.getString(R.string.button_installed)
+                                    vancedinstallbtn?.icon =
+                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                }
                             }
                         }
 

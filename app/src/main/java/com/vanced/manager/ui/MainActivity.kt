@@ -46,10 +46,9 @@ class MainActivity : Main() {
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            if (intent.action.equals(INSTALL_COMPLETED)) {
-                launchVanced()
-            } else {
-                intent.action?.let { alertBuilder(it) }
+            when {
+                intent.action.equals(INSTALL_COMPLETED) -> launchVanced()
+                else -> intent.action?.let { alertBuilder(it) }
             }
         }
     }
@@ -127,7 +126,7 @@ class MainActivity : Main() {
 
     private fun launchVanced() {
         val intent = Intent()
-        intent.component = ComponentName("com.vanced.android.youtube", "com.vanced.android.youtube.HomeActivity")
+        intent.component = ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
         AlertDialog.Builder(this)
             .setTitle("Success!")
             .setMessage("Vanced has been successfully installed, do you want to launch it now?")
