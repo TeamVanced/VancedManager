@@ -9,14 +9,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.annotation.RequiresApi
 import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 
 open class Home : BaseFragment() {
 
-    @RequiresApi(Build.VERSION_CODES.P)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -78,7 +76,12 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
-            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode
+            val microgVer = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode
+            } else {
+                pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode
+            }
+
             microguninstallbtn.setOnClickListener {
                 uninstallApk("com.mgoogle.android.gms")
             }
