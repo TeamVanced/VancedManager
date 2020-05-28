@@ -79,7 +79,7 @@ open class Home : BaseFragment() {
             val microgVer = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                 pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode
             } else {
-                pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode
+                pm.getPackageInfo("com.mgoogle.android.gms", 0).versionCode
             }
 
             microguninstallbtn.setOnClickListener {
