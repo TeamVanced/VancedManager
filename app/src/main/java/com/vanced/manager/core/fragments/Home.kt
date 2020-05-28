@@ -4,7 +4,6 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -76,11 +75,7 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
-            val microgVer = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode
-            } else {
-                pm.getPackageInfo("com.mgoogle.android.gms", 0).versionCode
-            }
+            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
 
             microguninstallbtn.setOnClickListener {
                 uninstallApk("com.mgoogle.android.gms")

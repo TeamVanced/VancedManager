@@ -67,7 +67,7 @@ class SplitInstallerService: Service() {
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 Log.d(TAG, "Installation failed")
                 val mIntent = Intent(MainActivity.INSTALL_FAILED)
-                mIntent.action = MainActivity.INSTALL_ABORTED
+                mIntent.action = MainActivity.INSTALL_FAILED
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
         }

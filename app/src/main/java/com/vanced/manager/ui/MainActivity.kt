@@ -48,7 +48,13 @@ class MainActivity : Main() {
         override fun onReceive(context: Context, intent: Intent) {
             when {
                 intent.action.equals(INSTALL_COMPLETED) -> launchVanced()
-                else -> intent.action?.let { alertBuilder(it) }
+                intent.action.equals(INSTALL_BLOCKED) -> alertBuilder(INSTALL_BLOCKED)
+                intent.action.equals(INSTALL_FAILED) -> alertBuilder(INSTALL_FAILED)
+                intent.action.equals(INSTALL_ABORTED) -> alertBuilder(INSTALL_ABORTED)
+                intent.action.equals(INSTALL_STORAGE) -> alertBuilder(INSTALL_STORAGE)
+                intent.action.equals(INSTALL_CONFLICT) -> alertBuilder(INSTALL_CONFLICT)
+                intent.action.equals(INSTALL_INVALID) -> alertBuilder(INSTALL_INVALID)
+
             }
         }
     }
@@ -177,6 +183,5 @@ class MainActivity : Main() {
         const val INSTALL_CONFLICT = "app conflicts with already installed app"
         const val INSTALL_FAILED = "it just failed idk"
         const val INSTALL_INVALID = "apk files are invalid"
-
     }
 }
