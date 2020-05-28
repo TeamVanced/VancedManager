@@ -75,7 +75,7 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
-            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
+            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName.removeSuffix("-dirty")
 
             microguninstallbtn.setOnClickListener {
                 uninstallApk("com.mgoogle.android.gms")
