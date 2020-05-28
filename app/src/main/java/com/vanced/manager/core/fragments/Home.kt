@@ -75,7 +75,7 @@ open class Home : BaseFragment() {
 
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
-            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName.removeSuffix("-dirty")
+            val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
 
             microguninstallbtn.setOnClickListener {
                 uninstallApk("com.mgoogle.android.gms")
@@ -94,7 +94,7 @@ open class Home : BaseFragment() {
                     activity?.recreate()
                 }
             }
-            microgVerText.text = microgVer.toString()
+            microgVerText.text = microgVer
         } else {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
@@ -107,7 +107,7 @@ open class Home : BaseFragment() {
             vanceduninstallbtn.setOnClickListener {
                 uninstallApk("com.vanced.android.youtube")
             }
-            vancedVerText.text = vancedVer.toString()
+            vancedVerText.text = vancedVer
         } else {
             vanceduninstallbtn.visibility = View.INVISIBLE
             vancedVerText.text = getString(R.string.unavailable)
