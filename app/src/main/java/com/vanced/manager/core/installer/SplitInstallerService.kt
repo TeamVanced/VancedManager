@@ -34,35 +34,41 @@ class SplitInstallerService: Service() {
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_ABORTED -> {
+                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_ABORTED)
                 mIntent.action = MainActivity.INSTALL_ABORTED
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_INVALID -> {
+                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_INVALID)
                 mIntent.action = MainActivity.INSTALL_INVALID
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_CONFLICT -> {
+                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_CONFLICT)
                 mIntent.action = MainActivity.INSTALL_CONFLICT
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_STORAGE -> {
+                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_STORAGE)
                 mIntent.action = MainActivity.INSTALL_STORAGE
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             PackageInstaller.STATUS_FAILURE_BLOCKED -> {
+                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_BLOCKED)
                 mIntent.action = MainActivity.INSTALL_BLOCKED
-                sendBroadcast(mIntent)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             else -> {
+                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 Log.d(TAG, "Installation failed")
                 val mIntent = Intent(MainActivity.INSTALL_FAILED)
                 mIntent.action = MainActivity.INSTALL_ABORTED
-                sendBroadcast(mIntent)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
         }
         stopSelf()

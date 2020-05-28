@@ -46,8 +46,10 @@ class MainActivity : Main() {
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            if (intent.action == INSTALL_COMPLETED) {
+            if (intent.action.equals(INSTALL_COMPLETED)) {
                 launchVanced()
+            } else {
+                intent.action?.let { alertBuilder(it) }
             }
         }
     }
