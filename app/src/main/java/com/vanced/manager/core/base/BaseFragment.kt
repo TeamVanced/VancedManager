@@ -36,7 +36,7 @@ open class BaseFragment : Fragment() {
         val builder = CustomTabsIntent.Builder()
         builder.setToolbarColor(ContextCompat.getColor(requireContext(), color))
         val customTabsIntent = builder.build()
-        customTabsIntent.launchUrl(activity, Uri.parse(Url))
+        activity?.let { customTabsIntent.launchUrl(it, Uri.parse(Url)) }
     }
 
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
