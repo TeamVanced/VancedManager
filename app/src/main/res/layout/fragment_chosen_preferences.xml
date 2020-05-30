@@ -19,7 +19,7 @@
 
         <TextView
             style="@style/CardTitle"
-            android:id="@+id/update_center_text"
+            android:id="@+id/chosen_values_text"
             android:layout_gravity="center"
             android:text="Chosen Preferences"
             android:textAlignment="center"

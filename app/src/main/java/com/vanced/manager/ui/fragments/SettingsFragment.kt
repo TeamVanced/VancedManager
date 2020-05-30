@@ -36,12 +36,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        val installMode: DropDownPreference? = findPreference("vanced_variant")
+        installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "nonroot")
+
         val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
-        chosenPrefs?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "nonroot")
         chosenPrefs?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()
-            val updateDialog = ChosenPreferenceDialogFragment()
-            updateDialog.show(fm, "Chosen Preferences")
+            val chosenPrefsDialog = ChosenPreferenceDialogFragment()
+            chosenPrefsDialog.show(fm, "Chosen Preferences")
             true
         }
 

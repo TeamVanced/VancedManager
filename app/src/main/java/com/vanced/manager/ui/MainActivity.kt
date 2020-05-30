@@ -46,14 +46,14 @@ class MainActivity : Main() {
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            when {
-                intent.action.equals(INSTALL_COMPLETED) -> launchVanced()
-                intent.action.equals(INSTALL_BLOCKED) -> alertBuilder(INSTALL_BLOCKED)
-                intent.action.equals(INSTALL_FAILED) -> alertBuilder(INSTALL_FAILED)
-                intent.action.equals(INSTALL_ABORTED) -> alertBuilder(INSTALL_ABORTED)
-                intent.action.equals(INSTALL_STORAGE) -> alertBuilder(INSTALL_STORAGE)
-                intent.action.equals(INSTALL_CONFLICT) -> alertBuilder(INSTALL_CONFLICT)
-                intent.action.equals(INSTALL_INVALID) -> alertBuilder(INSTALL_INVALID)
+            when (intent.action) {
+                INSTALL_COMPLETED -> launchVanced()
+                INSTALL_BLOCKED -> alertBuilder(INSTALL_BLOCKED)
+                INSTALL_FAILED -> alertBuilder(INSTALL_FAILED)
+                INSTALL_ABORTED -> alertBuilder(INSTALL_ABORTED)
+                INSTALL_STORAGE -> alertBuilder(INSTALL_STORAGE)
+                INSTALL_CONFLICT -> alertBuilder(INSTALL_CONFLICT)
+                INSTALL_INVALID -> alertBuilder(INSTALL_INVALID)
 
             }
         }

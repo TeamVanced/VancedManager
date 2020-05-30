@@ -53,7 +53,8 @@ open class Main: BaseActivity() {
 
     override fun onPause() {
         getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isDownloading", false).apply()
+        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isVancedDownloading", false).apply()
+        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isMicrogDownloading", false).apply()
         try {
             cacheDir.deleteRecursively()
         } catch (e: Exception) {

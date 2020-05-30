@@ -29,6 +29,7 @@
             android:id="@+id/update_center_checking"
             style="@style/AppVer.Bold"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="0dp"
             android:layout_gravity="center"
             android:text="Checking For Updates..."
             android:textAlignment="center"

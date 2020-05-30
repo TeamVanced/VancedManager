@@ -22,7 +22,7 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
         if (dialog != null && dialog?.window != null) {
             dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
-        return inflater.inflate(R.layout.fragment_update_check, container, false)
+        return inflater.inflate(R.layout.fragment_chosen_preferences, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
