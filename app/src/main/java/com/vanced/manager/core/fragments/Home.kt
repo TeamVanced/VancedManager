@@ -56,7 +56,7 @@ open class Home : BaseFragment() {
                 } catch (e: Exception) {
                     Log.d("VMCache", "Unable to delete cacheDir")
                 }
-                view.findNavController().navigate(R.id.toInstallVariantFragment)
+                view.findNavController().navigate(R.id.toInstallThemeFragment)
             } else {
                 Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
             }

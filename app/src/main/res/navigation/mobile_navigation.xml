@@ -29,7 +29,7 @@
             app:popExitAnim="@animator/fragment_exit_pop"  />
 
         <action
-            android:id="@+id/toInstallVariantFragment"
+            android:id="@+id/toInstallThemeFragment"
             app:destination="@id/install_theme_fragment"
             app:enterAnim="@animator/fragment_enter_right"
             app:exitAnim="@animator/fragment_exit_left"
