@@ -48,7 +48,7 @@ open class Home : BaseFragment() {
         vancedinstallbtn.setOnClickListener {
             if (!isVancedDownloading!!) {
                 if (MiuiHelper.isMiui()) {
-                    val mainActivity = (activity as MainActivity?)!!
+                    val mainActivity = (activity as MainActivity)
                     mainActivity.secondMiuiDialog()
                 }
                 try {

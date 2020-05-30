@@ -200,7 +200,7 @@ open class BaseFragment : Fragment() {
     }
 
     private fun launchInstaller() {
-        val activity = (activity as MainActivity?)!!
+        val activity = (activity as MainActivity)
         activity.installSplitApk()
     }
 
