@@ -11,6 +11,8 @@ import android.widget.*
 import androidx.navigation.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
+import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.utils.MiuiHelper
 
 open class Home : BaseFragment() {
 
@@ -45,6 +47,10 @@ open class Home : BaseFragment() {
 
         vancedinstallbtn.setOnClickListener {
             if (!isVancedDownloading!!) {
+                if (MiuiHelper.isMiui()) {
+                    val mainActivity = (activity as MainActivity?)!!
+                    mainActivity.secondMiuiDialog()
+                }
                 try {
                     activity?.cacheDir?.deleteRecursively()
                 } catch (e: Exception) {

@@ -5,14 +5,18 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
+import androidx.core.os.BuildCompat
 import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
+import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseActivity
 import com.vanced.manager.core.installer.SplitInstallerService
+import com.vanced.manager.utils.MiuiHelper
 import zlc.season.rxdownload4.file
 import java.io.*
 
@@ -62,12 +66,28 @@ open class Main: BaseActivity() {
         AlertDialog.Builder(this)
             .setTitle(resources.getString(R.string.welcome))
             .setMessage(resources.getString(R.string.security_context))
-            .setPositiveButton(resources.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            .setPositiveButton(resources.getString(R.string.close)) { dialog, _ ->
+                run {
+                    dialog.dismiss()
+                    if (MiuiHelper.isMiui()) {
+                        showMiuiDialog()
+                    }
+                }
+            }
             .create()
             .show()
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         prefs.edit().putBoolean("firstStart", false).apply()
+    }
+
+    private fun showMiuiDialog() {
+        basicAlertBuilder("Detected MiUI user!", "Hey! Looks like you're a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings." +
+                "If you can't find such setting, it means that you are using a new version of ROM which does not need fixing anything.")
+    }
+
+    fun secondMiuiDialog() {
+        basicAlertBuilder("I'm gonna stop you right there!", "I am once again asking you to disable MiUI optimisations if you have not already. K thx bai")
     }
 
     //Easter Egg
