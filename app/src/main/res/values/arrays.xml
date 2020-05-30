@@ -10,7 +10,7 @@
     <string-array name="theme_modes_values">
         <item>Light</item>
         <item>Dark</item>
-        <item>Follow</item>
+        <item>Follow System</item>
     </string-array>
 
     <string-array name="accent_color">

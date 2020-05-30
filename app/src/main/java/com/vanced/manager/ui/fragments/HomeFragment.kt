@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.fragments
 
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.os.Bundle
 import android.view.*
 import android.widget.TextView
@@ -73,11 +74,11 @@ class HomeFragment : Home() {
         val pm = activity?.packageManager
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
-        val microginstallbtn = view?.findViewById<MaterialButton>(R.id.microg_installbtn)
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
-        val microgLatestTxt = view?.findViewById<TextView>(R.id.microg_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val variant = prefs?.getString("vanced_variant", "nonroot")
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
@@ -86,7 +87,6 @@ class HomeFragment : Home() {
                 run {
                     if (isConnectedToInternet) {
                         vancedinstallbtn?.visibility = View.VISIBLE
-                        microginstallbtn?.visibility = View.VISIBLE
 
                         val vancedRemoteVer =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
@@ -95,16 +95,24 @@ class HomeFragment : Home() {
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
                                 .get("version").asString
                         vancedLatestTxt?.text = vancedRemoteVer
-                        microgLatestTxt?.text = microgRemoteVer
 
-                        if (microgStatus!!) {
-                            val microgVer =
-                                pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
-                            if (microgRemoteVer == microgVer) {
-                                microginstallbtn?.text =
-                                    activity?.getString(R.string.button_installed)
-                                microginstallbtn?.icon =
-                                    activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                        if (variant == "nonroot") {
+                            val microgLatestTxt =
+                                view?.findViewById<TextView>(R.id.microg_latest_version)
+                            val microginstallbtn =
+                                view?.findViewById<MaterialButton>(R.id.microg_installbtn)
+                            microginstallbtn?.visibility = View.VISIBLE
+                            microgLatestTxt?.text = microgRemoteVer
+
+                            if (microgStatus!!) {
+                                val microgVer =
+                                    pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
+                                if (microgRemoteVer == microgVer) {
+                                    microginstallbtn?.text =
+                                        activity?.getString(R.string.button_installed)
+                                    microginstallbtn?.icon =
+                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                }
                             }
                         }
 
@@ -130,11 +138,17 @@ class HomeFragment : Home() {
                             start()
                         }
                     } else {
-                        vancedinstallbtn?.visibility = View.INVISIBLE
-                        microginstallbtn?.visibility = View.INVISIBLE
+                        if (variant == "nonroot") {
+                            val microgLatestTxt =
+                                view?.findViewById<TextView>(R.id.microg_latest_version)
+                            val microginstallbtn =
+                                view?.findViewById<MaterialButton>(R.id.microg_installbtn)
+                            microginstallbtn?.visibility = View.INVISIBLE
+                            microgLatestTxt?.text = getString(R.string.unavailable)
+                        }
 
+                        vancedinstallbtn?.visibility = View.INVISIBLE
                         vancedLatestTxt?.text = getString(R.string.unavailable)
-                        microgLatestTxt?.text = getString(R.string.unavailable)
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
                         val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)

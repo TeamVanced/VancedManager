@@ -22,19 +22,22 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
         
-       val themeSwitch: ListPreference? = findPreference("theme_mode")
+        val themeSwitch: ListPreference? = findPreference("theme_mode")
+        themeSwitch?.summary = preferenceScreen.sharedPreferences.getString("theme_mode", "Light")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
             activity?.recreate()
             true
         }
 
         val accentSwitch: ListPreference? = findPreference("accent_color")
+        accentSwitch?.summary = preferenceScreen.sharedPreferences.getString("accent_color", "Blue")
         accentSwitch?.setOnPreferenceChangeListener { _, _ ->
             activity?.recreate()
             true
         }
 
-        val chosenPrefs: Preference? = findPreference("update_check")
+        val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
+        chosenPrefs?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "nonroot")
         chosenPrefs?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()
             val updateDialog = ChosenPreferenceDialogFragment()

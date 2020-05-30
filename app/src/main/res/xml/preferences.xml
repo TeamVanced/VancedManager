@@ -50,7 +50,7 @@
         android:title="Vanced">
 
         <DropDownPreference
-            android:title="Variant"
+            android:title="Installation Mode"
             android:entries="@array/vanced_variant"
             android:entryValues="@array/vanced_variant_values"
             android:key="vanced_variant"/>
