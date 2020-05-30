@@ -38,6 +38,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         val installMode: DropDownPreference? = findPreference("vanced_variant")
         installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "nonroot")
+        installMode?.setOnPreferenceChangeListener{ _, _ ->
+            activity?.recreate()
+            true
+        }
 
         val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
         chosenPrefs?.setOnPreferenceClickListener {

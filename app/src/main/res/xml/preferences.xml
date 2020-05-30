@@ -33,7 +33,7 @@
             android:summary="@string/theme_summary"
             android:entries="@array/theme_modes"
             android:entryValues="@array/theme_modes_values"
-            android:defaultValue="Light"/>
+            android:defaultValue="Follow System"/>
 
         <ListPreference
             android:defaultValue="Blue"
@@ -47,7 +47,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Vanced">
+        android:title="Vanced"
+        app:iconSpaceReserved="false">
 
         <DropDownPreference
             android:title="Installation Mode"
