@@ -50,7 +50,7 @@ open class BaseFragment : Fragment() {
 
     fun downloadArch(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        prefs?.edit()?.putBoolean("isDownloading", true)?.apply()
+        prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply()
         val arch =
             when {
                 Build.SUPPORTED_ABIS.contains("x86") -> "x86"
@@ -151,7 +151,7 @@ open class BaseFragment : Fragment() {
                     else {
                         dlText.visibility = View.GONE
                         loadCircle.visibility = View.VISIBLE
-                        prefs.edit()?.putBoolean("isDownloading", false)?.apply()
+                        prefs.edit()?.putBoolean("isVancedDownloading", false)?.apply()
                         launchInstaller()
                     }
                 },
@@ -188,7 +188,7 @@ open class BaseFragment : Fragment() {
                     loadBar.visibility = View.GONE
                     dlText.visibility = View.GONE
                     loadCircle.visibility = View.VISIBLE
-                    prefs?.edit()?.putBoolean("isDownloading", false)?.apply()
+                    prefs?.edit()?.putBoolean("isVancedDownloading", false)?.apply()
                     launchInstaller()
                 },
                 onError = { throwable ->
@@ -205,6 +205,9 @@ open class BaseFragment : Fragment() {
     }
 
     fun installApk(url: String, loadBar: ProgressBar, dlText: TextView) {
+        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        prefs?.edit()?.putBoolean("isMicrogDownloading", true)?.apply()
+
         val apkUrl = GetJson().AsJSONObject(url)
         val dwnldUrl = apkUrl.get("url").asString
         val task = activity?.filesDir?.path?.let {
@@ -216,7 +219,7 @@ open class BaseFragment : Fragment() {
         }
 
         if (task?.file()?.exists()!!)
-            task.delete()
+            task.file().delete()
 
         disposable = task
             .download()
@@ -233,6 +236,7 @@ open class BaseFragment : Fragment() {
                     loadBar.visibility = View.GONE
                     dlText.visibility = View.GONE
 
+                    prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
                     val pn = activity?.packageName
                     val apk = task.file()
                     val uri =

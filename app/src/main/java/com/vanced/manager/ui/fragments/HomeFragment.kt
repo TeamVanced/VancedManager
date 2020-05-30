@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.TextView
 import androidx.core.animation.addListener
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
 import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
@@ -39,6 +40,19 @@ class HomeFragment : Home() {
         super.onViewCreated(view, savedInstanceState)
 
         initNetworkFun()
+
+        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+
+        val microgWrapper = view.findViewById<MaterialCardView>(R.id.home_microg_wrapper)
+        if (variantPref == "root") {
+            activity?.runOnUiThread {
+                microgWrapper.visibility = View.GONE
+            }
+        } else {
+            activity?.runOnUiThread {
+                microgWrapper.visibility = View.VISIBLE
+            }
+        }
 
         sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view.findViewById(R.id.tablayout) as TabLayout

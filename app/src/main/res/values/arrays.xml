@@ -29,6 +29,16 @@
         <item>Purple</item>
     </string-array>
 
+    <string-array name="vanced_variant">
+        <item>non-root</item>
+        <item>root</item>
+    </string-array>
+
+    <string-array name="vanced_variant_values">
+        <item>nonroot</item>
+        <item>root</item>
+    </string-array>
+
     <string-array name="syke">
         <item>SYKE</item>
     </string-array>

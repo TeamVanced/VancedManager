@@ -30,7 +30,7 @@
 
         <action
             android:id="@+id/toInstallVariantFragment"
-            app:destination="@id/install_variant_fragment"
+            app:destination="@id/install_theme_fragment"
             app:enterAnim="@animator/fragment_enter_right"
             app:exitAnim="@animator/fragment_exit_left"
             app:popEnterAnim="@animator/fragment_enter_left"
@@ -79,21 +79,15 @@
             app:popEnterAnim="@animator/fragment_enter_left"
             app:popExitAnim="@animator/fragment_exit_right" />
 
-    </fragment>
-
-    <fragment
-        android:id="@+id/install_variant_fragment"
-        android:name="com.vanced.manager.ui.fragments.VancedVariantSelectionFragment"
-        android:label="@string/title_install"
-        tools:layout="@layout/fragment_vanced_variant_selection">
-
         <action
-            android:id="@+id/toInstallThemeFragment"
-            app:destination="@id/install_theme_fragment"
-            app:enterAnim="@animator/fragment_enter_right"
-            app:exitAnim="@animator/fragment_exit_left"
-            app:popEnterAnim="@animator/fragment_enter_left"
-            app:popExitAnim="@animator/fragment_exit_right" />
+            android:id="@+id/action_themeTo_homeFragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@animator/fragment_enter_left"
+            app:exitAnim="@animator/fragment_exit_right"
+            app:popEnterAnim="@animator/fragment_enter_right"
+            app:popExitAnim="@animator/fragment_exit_left"
+            app:popUpTo="@id/home_fragment"
+            app:popUpToInclusive="true"/>
 
     </fragment>
 

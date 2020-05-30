@@ -34,6 +34,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        val chosenPrefs: Preference? = findPreference("update_check")
+        chosenPrefs?.setOnPreferenceClickListener {
+            val fm = childFragmentManager.beginTransaction()
+            val updateDialog = ChosenPreferenceDialogFragment()
+            updateDialog.show(fm, "Chosen Preferences")
+            true
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

@@ -36,14 +36,15 @@ open class Home : BaseFragment() {
 
         val microgProgress = view.findViewById<ProgressBar>(R.id.microg_progress)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val isDownloading: Boolean? = prefs?.getBoolean("isDownloading", false)
+        val isVancedDownloading: Boolean? = prefs?.getBoolean("isVancedDownloading", false)
+        val isMicrogDownloading: Boolean? = prefs?.getBoolean("isMicrogDownloading", false)
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
         vancedinstallbtn.setOnClickListener {
-            if (!isDownloading!!) {
+            if (!isVancedDownloading!!) {
                 try {
                     activity?.cacheDir?.deleteRecursively()
                 } catch (e: Exception) {
@@ -57,7 +58,7 @@ open class Home : BaseFragment() {
         }
 
         microginstallbtn.setOnClickListener {
-            if (!isDownloading!!) {
+            if (!isMicrogDownloading!!) {
                 val dlText = view.findViewById<TextView>(R.id.microg_downloading)
                 try {
                     installApk(

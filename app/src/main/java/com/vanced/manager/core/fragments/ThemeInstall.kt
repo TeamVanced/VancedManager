@@ -17,6 +17,10 @@ open class ThemeInstall : BaseFragment() {
         val themeGroup = view.findViewById<RadioGroup>(R.id.theme_radiogroup)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
+        val themePref = prefs?.getString("theme", "dark")
+        val button = themeGroup.findViewWithTag<RadioButton>(themePref)
+        button.isChecked = true
+
         nextButton.setOnClickListener {
             val selectedThemeId = themeGroup.checkedRadioButtonId
             val selectedButton = view.findViewById<RadioButton>(selectedThemeId)

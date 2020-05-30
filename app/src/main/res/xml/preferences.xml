@@ -46,4 +46,19 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="Vanced">
+
+        <DropDownPreference
+            android:title="Variant"
+            android:entries="@array/vanced_variant"
+            android:entryValues="@array/vanced_variant_values"
+            android:key="vanced_variant"/>
+
+        <Preference
+            android:title="Chosen Installation values"
+            android:key="vanced_chosen_modes" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

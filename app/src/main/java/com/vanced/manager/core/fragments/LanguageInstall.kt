@@ -19,6 +19,10 @@ open class LanguageInstall : BaseFragment() {
         val langGroup = view.findViewById<RadioGroup>(R.id.lang_radiogroup)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
+        val langPref = prefs?.getString("lang", "en")
+        val button = langGroup.findViewWithTag<RadioButton>(langPref)
+        button.isChecked = true
+
         finishButton.setOnClickListener {
             val selectedLangId = langGroup.checkedRadioButtonId
             val selectedButton = view.findViewById<RadioButton>(selectedLangId)
