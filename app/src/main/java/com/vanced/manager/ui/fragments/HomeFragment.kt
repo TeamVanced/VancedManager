@@ -2,6 +2,7 @@ package com.vanced.manager.ui.fragments
 
 import android.animation.ObjectAnimator
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.view.*
 import android.widget.TextView
@@ -21,6 +22,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
+@Suppress("DEPRECATION")
 class HomeFragment : Home() {
 
     private lateinit var sectionPageAdapter: SectionPageAdapter
@@ -96,6 +98,13 @@ class HomeFragment : Home() {
                                 .get("version").asString
                         vancedLatestTxt?.text = vancedRemoteVer
 
+                        val vancedRemoteCode =
+                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+                                .get("version").asInt
+                        val microgRemoteCode =
+                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
+                                .get("versionCode").asInt
+
                         if (variant == "nonroot") {
                             val microgLatestTxt =
                                 view?.findViewById<TextView>(R.id.microg_latest_version)
@@ -105,25 +114,70 @@ class HomeFragment : Home() {
                             microgLatestTxt?.text = microgRemoteVer
 
                             if (microgStatus!!) {
-                                val microgVer =
-                                    pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
-                                if (microgRemoteVer == microgVer) {
-                                    microginstallbtn?.text =
-                                        activity?.getString(R.string.button_installed)
-                                    microginstallbtn?.icon =
-                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                val microgVerCode =
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                                        pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode.and(0xFFFFFFFF).toInt()
+                                    else
+                                        pm.getPackageInfo("com.mgoogle.android.gms", 0).versionCode
+                                when {
+                                    microgRemoteCode > microgVerCode -> {
+                                        microginstallbtn?.text =
+                                            activity?.getString(R.string.button_installed)
+                                        microginstallbtn?.icon =
+                                            activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                    }
+
+                                    microgRemoteCode == microgVerCode -> {
+                                        microginstallbtn?.text =
+                                            activity?.getString(R.string.update)
+                                        microginstallbtn?.icon =
+                                            activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+                                    }
                                 }
                             }
                         }
 
                         if (vancedStatus!!) {
-                            val vancedVer =
-                                pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
-                            if (vancedRemoteVer == vancedVer) {
-                                vancedinstallbtn?.text =
-                                    activity?.getString(R.string.button_installed)
-                                vancedinstallbtn?.icon =
-                                    activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                            val vancedVerCode =
+                                if (prefs?.getString("vanced_variant", "nonroot") == "root") {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                                        pm.getPackageInfo(
+                                            "com.google.android.youtube",
+                                            0
+                                        ).longVersionCode.and(0xFFFFFFFF).toInt()
+                                    else
+                                        pm.getPackageInfo(
+                                            "com.google.android.youtube",
+                                            0
+                                        ).versionCode
+                                }
+                                else {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                                        pm.getPackageInfo(
+                                            "com.vanced.android.youtube",
+                                            0
+                                        ).longVersionCode.and(0xFFFFFFFF).toInt()
+                                    else
+                                        pm.getPackageInfo(
+                                            "com.vanced.android.youtube",
+                                            0
+                                        ).versionCode
+                                }
+
+                            when {
+                                vancedRemoteCode > vancedVerCode -> {
+                                    vancedinstallbtn?.text =
+                                        activity?.getString(R.string.button_installed)
+                                    vancedinstallbtn?.icon =
+                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                }
+
+                                vancedRemoteCode == vancedVerCode -> {
+                                    vancedinstallbtn?.text =
+                                        activity?.getString(R.string.update)
+                                    vancedinstallbtn?.icon =
+                                        activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+                                }
                             }
                         }
 

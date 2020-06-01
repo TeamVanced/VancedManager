@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import com.dezlum.codelabs.getjson.GetJson
+import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.ui.MainActivity
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -189,7 +190,11 @@ open class BaseFragment : Fragment() {
                     dlText.visibility = View.GONE
                     loadCircle.visibility = View.VISIBLE
                     prefs?.edit()?.putBoolean("isVancedDownloading", false)?.apply()
-                    launchInstaller()
+                    if (prefs?.getString("vanced_variant", "nonroot") == "root") {
+                        launchRootInstaller()
+                    } else {
+                        launchInstaller()
+                    }
                 },
                 onError = { throwable ->
                     Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_SHORT).show()
@@ -202,6 +207,10 @@ open class BaseFragment : Fragment() {
     private fun launchInstaller() {
         val activity = (activity as MainActivity)
         activity.installSplitApk()
+    }
+
+    private fun launchRootInstaller() {
+        activity?.startService(Intent(activity, RootSplitInstallerService::class.java))
     }
 
     fun installApk(url: String, loadBar: ProgressBar, dlText: TextView) {

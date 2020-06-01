@@ -5,14 +5,11 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
-import androidx.core.os.BuildCompat
 import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
-import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseActivity
 import com.vanced.manager.core.installer.SplitInstallerService

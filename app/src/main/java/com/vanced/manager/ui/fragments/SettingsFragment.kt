@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import androidx.preference.*
+import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -38,7 +39,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         val installMode: DropDownPreference? = findPreference("vanced_variant")
         installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "nonroot")
-        installMode?.setOnPreferenceChangeListener{ _, _ ->
+        installMode?.setOnPreferenceChangeListener{ preference, _ ->
+            when (preference.toString()) {
+                "root" -> {
+                    if (!Shell.rootAccess()) {
+                        preferenceScreen.sharedPreferences.edit().putString("vanced_variant", "nonroot").apply()
+                    }
+                }
+            }
             activity?.recreate()
             true
         }

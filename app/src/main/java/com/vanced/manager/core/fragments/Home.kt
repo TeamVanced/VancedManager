@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.navigation.findNavController
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.ui.MainActivity
@@ -106,6 +107,7 @@ open class Home : BaseFragment() {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
             microgVerText.text = getString(R.string.unavailable)
+            vancedinstallbtn.isEnabled = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") != "nonroot"
         }
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
