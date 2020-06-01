@@ -7,6 +7,7 @@ import android.os.AsyncTask
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
+import androidx.annotation.Nullable
 import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
@@ -129,7 +130,8 @@ class RootSplitInstallerService: Service() {
         return result
     }
 
+    @Nullable
     override fun onBind(intent: Intent?): IBinder? {
-        TODO("Not yet implemented")
+        return null
     }
 }

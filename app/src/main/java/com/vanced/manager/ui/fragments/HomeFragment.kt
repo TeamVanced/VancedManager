@@ -100,7 +100,7 @@ class HomeFragment : Home() {
 
                         val vancedRemoteCode =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                                .get("version").asInt
+                                .get("versionCode").asInt
                         val microgRemoteCode =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
                                 .get("versionCode").asInt
@@ -139,29 +139,33 @@ class HomeFragment : Home() {
 
                         if (vancedStatus!!) {
                             val vancedVerCode =
-                                if (prefs?.getString("vanced_variant", "nonroot") == "root") {
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                                if (variant == "root") {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                                         pm.getPackageInfo(
                                             "com.google.android.youtube",
                                             0
                                         ).longVersionCode.and(0xFFFFFFFF).toInt()
-                                    else
+                                    }
+                                    else {
                                         pm.getPackageInfo(
                                             "com.google.android.youtube",
                                             0
                                         ).versionCode
+                                    }
                                 }
                                 else {
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                                         pm.getPackageInfo(
                                             "com.vanced.android.youtube",
                                             0
                                         ).longVersionCode.and(0xFFFFFFFF).toInt()
-                                    else
+                                    }
+                                    else {
                                         pm.getPackageInfo(
                                             "com.vanced.android.youtube",
                                             0
                                         ).versionCode
+                                    }
                                 }
 
                             when {
