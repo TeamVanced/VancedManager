@@ -15,6 +15,7 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
+import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.ui.MainActivity
@@ -190,7 +191,7 @@ open class BaseFragment : Fragment() {
                     dlText.visibility = View.GONE
                     loadCircle.visibility = View.VISIBLE
                     prefs?.edit()?.putBoolean("isVancedDownloading", false)?.apply()
-                    if (prefs?.getString("vanced_variant", "nonroot") == "root") {
+                    if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") == "root") {
                         launchRootInstaller()
                     } else {
                         launchInstaller()

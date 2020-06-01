@@ -1,7 +1,6 @@
 package com.vanced.manager.ui.fragments
 
 import android.animation.ObjectAnimator
-import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.view.*
@@ -79,8 +78,7 @@ class HomeFragment : Home() {
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val variant = prefs?.getString("vanced_variant", "nonroot")
+        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
@@ -122,16 +120,16 @@ class HomeFragment : Home() {
                                 when {
                                     microgRemoteCode > microgVerCode -> {
                                         microginstallbtn?.text =
-                                            activity?.getString(R.string.button_installed)
+                                            activity?.getString(R.string.update)
                                         microginstallbtn?.icon =
-                                            activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                            activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
                                     }
 
                                     microgRemoteCode == microgVerCode -> {
                                         microginstallbtn?.text =
-                                            activity?.getString(R.string.update)
+                                            activity?.getString(R.string.button_installed)
                                         microginstallbtn?.icon =
-                                            activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+                                            activity?.getDrawable(R.drawable.outline_cloud_done_24)
                                     }
                                 }
                             }
@@ -171,16 +169,16 @@ class HomeFragment : Home() {
                             when {
                                 vancedRemoteCode > vancedVerCode -> {
                                     vancedinstallbtn?.text =
-                                        activity?.getString(R.string.button_installed)
+                                        activity?.getString(R.string.update)
                                     vancedinstallbtn?.icon =
-                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
+                                        activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
                                 }
 
                                 vancedRemoteCode == vancedVerCode -> {
                                     vancedinstallbtn?.text =
-                                        activity?.getString(R.string.update)
+                                        activity?.getString(R.string.button_installed)
                                     vancedinstallbtn?.icon =
-                                        activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
                                 }
                             }
                         }

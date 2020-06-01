@@ -39,8 +39,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         val installMode: DropDownPreference? = findPreference("vanced_variant")
         installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "nonroot")
-        installMode?.setOnPreferenceChangeListener{ preference, _ ->
-            when (preference.toString()) {
+        installMode?.setOnPreferenceChangeListener{ _, _ ->
+            when (installMode.value) {
                 "root" -> {
                     if (!Shell.rootAccess()) {
                         preferenceScreen.sharedPreferences.edit().putString("vanced_variant", "nonroot").apply()
