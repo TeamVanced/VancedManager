@@ -46,7 +46,7 @@ open class Home : BaseFragment() {
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus =
             if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root")
-                isRootVancedInstalled()
+                pm?.let { isPackageInstalled("com.google.android.youtube", it) }
             else
                 pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
@@ -125,11 +125,10 @@ open class Home : BaseFragment() {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
             microgVerText.text = getString(R.string.unavailable)
-            vancedinstallbtn.visibility =
-                if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Nonroot")
-                    View.GONE
-                else
-                    View.VISIBLE
+            if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Nonroot")
+                vancedinstallbtn.visibility = View.GONE
+            else
+                vancedinstallbtn.visibility = View.VISIBLE
         }
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
