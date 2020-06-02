@@ -131,7 +131,7 @@ class HomeFragment : Home() {
 
                         if (vancedStatus!!) {
                             val vancedVerCode =
-                                if (variant == "root") {
+                                if (variant == "Root") {
                                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                                         pm.getPackageInfo(
                                             "com.google.android.youtube",

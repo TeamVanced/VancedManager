@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.*
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
+import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.ui.MainActivity
@@ -25,8 +26,8 @@ open class Home : BaseFragment() {
         val pm = activity?.packageManager
 
         //Damn that's a lot of buttons
-        val microginstallbtn = view.findViewById<Button>(R.id.microg_installbtn)
-        val vancedinstallbtn = view.findViewById<Button>(R.id.vanced_installbtn)
+        val microginstallbtn = view.findViewById<MaterialButton>(R.id.microg_installbtn)
+        val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
 
         val bravebtn = view.findViewById<Button>(R.id.brave_button)
         val websitebtn = view.findViewById<Button>(R.id.website_button)
@@ -132,6 +133,7 @@ open class Home : BaseFragment() {
                 vancedinstallbtn.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
                 vancedinstallbtn.setTextColor(ColorStateList.valueOf(Color.GRAY))
                 vancedinstallbtn.text = activity?.getString(R.string.no_microg)
+                vancedinstallbtn.icon = null
             }
         }
 
