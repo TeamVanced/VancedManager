@@ -119,6 +119,7 @@
         android:label="Dev Settings" />
 
     <action
+        android:id="@+id/toHomeFragment"
         app:destination="@id/home_fragment"
         app:enterAnim="@animator/fragment_enter"
         app:exitAnim="@animator/fragment_exit"
