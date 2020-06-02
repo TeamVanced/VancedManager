@@ -15,6 +15,11 @@
         <item name="fontFamily">@font/exo_bold</item>
     </style>
 
+    <style name="DisabledButtonStyle" parent="ButtonStyle">
+        <item name="backgroundTint">?colorDisabled</item>
+        <item name="android:textColor">#e8e8e8</item>
+    </style>
+
     <style name="InstallButtonStyle" parent="ButtonStyle">
         <item name="android:layout_marginEnd">6dp</item>
         <item name="android:layout_gravity">end</item>
