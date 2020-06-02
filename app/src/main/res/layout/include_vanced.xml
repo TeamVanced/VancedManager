@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
-                app:constraint_referenced_ids="home_vanced_logo, vanced_title, vanced_installbtn"/>
+                app:constraint_referenced_ids="vanced_installbtn"/>
 
             <ImageView
                 style="@style/ClickableImageWidget.Red"

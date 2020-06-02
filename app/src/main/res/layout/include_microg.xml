@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
-                app:constraint_referenced_ids="microg_title, microg_installbtn"/>
+                app:constraint_referenced_ids="microg_installbtn"/>
 
             <LinearLayout
                 android:id="@+id/microg_remote_latest_version"
