@@ -132,7 +132,11 @@ class MainActivity : Main() {
 
     private fun launchVanced() {
         val intent = Intent()
-        intent.component = ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
+        intent.component =
+            if (PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "Nonroot") == "Root")
+                ComponentName("com.google.android.youtube", "com.google.android.youtube.HomeActivity")
+            else
+                ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
         AlertDialog.Builder(this)
             .setTitle("Success!")
             .setMessage("Vanced has been successfully installed, do you want to launch it now?")

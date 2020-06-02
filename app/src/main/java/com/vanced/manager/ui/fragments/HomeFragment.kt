@@ -16,6 +16,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
+import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -25,6 +26,7 @@ import io.reactivex.schedulers.Schedulers
 class HomeFragment : Home() {
 
     private lateinit var sectionPageAdapter: SectionPageAdapter
+    private lateinit var sectionPageRootAdapter: SectionPageRootAdapter
     private lateinit var viewPager: ViewPager2
     private var disposable: Disposable? = null
 
@@ -43,7 +45,7 @@ class HomeFragment : Home() {
 
         initNetworkFun()
 
-        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
 
         val microgWrapper = view.findViewById<MaterialCardView>(R.id.home_microg_wrapper)
         if (variantPref == "root") {
@@ -56,18 +58,10 @@ class HomeFragment : Home() {
             }
         }
 
-        sectionPageAdapter = SectionPageAdapter(this)
-        val tabLayout = view.findViewById(R.id.tablayout) as TabLayout
-        viewPager = view.findViewById(R.id.viewpager)
-        viewPager.adapter = sectionPageAdapter
-
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            when (position) {
-                0 -> tab.text = "Vanced"
-                1 -> tab.text = "MicroG"
-                2 -> tab.text = "Manager"
-            }
-        }.attach()
+        if (variantPref == "Root")
+            attachRootChangelog()
+        else
+            attachNonrootChangelog()
 
     }
 
@@ -103,7 +97,7 @@ class HomeFragment : Home() {
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
                                 .get("versionCode").asInt
 
-                        if (variant == "nonroot") {
+                        if (variant == "Nonroot") {
                             val microgLatestTxt =
                                 view?.findViewById<TextView>(R.id.microg_latest_version)
                             val microginstallbtn =
@@ -222,6 +216,35 @@ class HomeFragment : Home() {
 
                 }
             }
+    }
+
+    private fun attachNonrootChangelog() {
+        sectionPageAdapter = SectionPageAdapter(this)
+        val tabLayout = view?.findViewById(R.id.tablayout) as TabLayout
+        viewPager = view?.findViewById(R.id.viewpager)!!
+        viewPager.adapter = sectionPageAdapter
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "Vanced"
+                1 -> tab.text = "MicroG"
+                2 -> tab.text = "Manager"
+            }
+        }.attach()
+    }
+
+    private fun attachRootChangelog() {
+        sectionPageRootAdapter = SectionPageRootAdapter(this)
+        val tabLayout = view?.findViewById(R.id.tablayout) as TabLayout
+        viewPager = view?.findViewById(R.id.viewpager)!!
+        viewPager.adapter = sectionPageRootAdapter
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "Vanced"
+                1 -> tab.text = "Manager"
+            }
+        }.attach()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

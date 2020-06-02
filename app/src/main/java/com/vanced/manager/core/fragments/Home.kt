@@ -44,13 +44,24 @@ open class Home : BaseFragment() {
 
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
-        val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+        val vancedStatus =
+            if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root")
+                isRootVancedInstalled()
+            else
+                pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
 
         vancedinstallbtn.setOnClickListener {
             if (!isVancedDownloading!!) {
-                if (MiuiHelper.isMiui()) {
-                    val mainActivity = (activity as MainActivity)
-                    mainActivity.secondMiuiDialog()
+                val mainActivity = (activity as MainActivity)
+                if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root") {
+                    if (MiuiHelper.isMiui()) {
+                        mainActivity.secondMiuiDialog()
+                    } else
+                        mainActivity.rootModeDetected()
+                } else {
+                    if (MiuiHelper.isMiui()) {
+                        mainActivity.secondMiuiDialog()
+                    }
                 }
                 try {
                     activity?.cacheDir?.deleteRecursively()
@@ -107,7 +118,11 @@ open class Home : BaseFragment() {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
             microgVerText.text = getString(R.string.unavailable)
-            vancedinstallbtn.isEnabled = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") != "nonroot"
+            vancedinstallbtn.isEnabled = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") != "Nonroot"
+            if (!vancedinstallbtn.isEnabled) {
+                vancedinstallbtn.setBackgroundColor(R.attr.colorDisabled)
+                vancedinstallbtn.setTextColor(R.attr.colorDisabledVariant)
+            }
         }
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)

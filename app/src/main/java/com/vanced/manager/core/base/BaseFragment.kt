@@ -27,6 +27,7 @@ import zlc.season.rxdownload4.download
 import zlc.season.rxdownload4.file
 import zlc.season.rxdownload4.task.Task
 import zlc.season.rxdownload4.utils.getFileNameFromUrl
+import java.io.File
 
 @SuppressLint("SetTextI18n")
 open class BaseFragment : Fragment() {
@@ -50,16 +51,27 @@ open class BaseFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SdCardPath")
+    fun isRootVancedInstalled(): Boolean {
+        val file = File("/data/data/com.google.android.youtube/shared_prefs/youtube_vanced.xml")
+        return activity?.packageManager?.let {
+            isPackageInstalled("com.google.android.youtube",
+                it
+            )
+        }!! && file.exists()
+    }
+
     fun downloadArch(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply()
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
         val arch =
             when {
                 Build.SUPPORTED_ABIS.contains("x86") -> "x86"
                 Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                 else -> "armeabi_v7a"
             }
-        val url = "$baseUrl/Config/config.$arch.apk"
+        val url = "$baseUrl/$variant/Config/config.$arch.apk"
         val task = activity?.cacheDir?.path?.let {
             Task(
                 url = url,
@@ -89,10 +101,12 @@ open class BaseFragment : Fragment() {
                 }
             )
     }
+
     private fun downloadTheme(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val theme = prefs?.getString("theme", "dark")
-        val url = "$baseUrl/Theme/$theme.apk"
+        val url = "$baseUrl/$variant/Theme/$theme.apk"
 
         val task = activity?.cacheDir?.path?.let {
             Task(
@@ -123,9 +137,10 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadLang(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val lang = prefs?.getString("lang", "en")
-        val url = "$baseUrl/Language/split_config.$lang.apk"
+        val url = "$baseUrl/$variant/Language/split_config.$lang.apk"
 
         val task = activity?.cacheDir?.path?.let {
             Task(
@@ -154,7 +169,11 @@ open class BaseFragment : Fragment() {
                         dlText.visibility = View.GONE
                         loadCircle.visibility = View.VISIBLE
                         prefs.edit()?.putBoolean("isVancedDownloading", false)?.apply()
-                        launchInstaller()
+                        if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root") {
+                            launchRootInstaller()
+                        } else {
+                            launchInstaller()
+                        }
                     }
                 },
                 onError = { throwable ->
@@ -164,8 +183,9 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadEn(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val url = "https://x1nto.github.io/VancedFiles/Splits/Language/split_config.en.apk"
+        val url = "https://x1nto.github.io/VancedFiles/Splits/$variant/Language/split_config.en.apk"
         val task = activity?.cacheDir?.path?.let {
             Task(
                 url = url,
@@ -191,7 +211,7 @@ open class BaseFragment : Fragment() {
                     dlText.visibility = View.GONE
                     loadCircle.visibility = View.VISIBLE
                     prefs?.edit()?.putBoolean("isVancedDownloading", false)?.apply()
-                    if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") == "root") {
+                    if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root") {
                         launchRootInstaller()
                     } else {
                         launchInstaller()

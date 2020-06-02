@@ -85,7 +85,23 @@ open class Main: BaseActivity() {
     }
 
     fun secondMiuiDialog() {
-        basicAlertBuilder("I'm gonna stop you right there!", "I am once again asking you to disable MiUI optimisations if you have not already. K thx bai")
+        AlertDialog.Builder(this)
+            .setTitle("I'm gonna stop you right there!")
+            .setMessage("I am once again asking you to disable MiUI optimisations if you have not already. K thx bai")
+            .setPositiveButton("wut?") { dialog, _ ->
+                run {
+                    if (PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "Nonroot") == "Root")
+                        rootModeDetected()
+                    else
+                        dialog.dismiss()
+                }
+            }
+            .create()
+            .show()
+    }
+
+    fun rootModeDetected() {
+        basicAlertBuilder("Root mode detected!", "In order for app to work properly, please make sure you disabled signature verification.")
     }
 
     //Easter Egg
