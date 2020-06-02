@@ -4,6 +4,8 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -125,10 +127,12 @@ open class Home : BaseFragment() {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
             microgVerText.text = getString(R.string.unavailable)
-            if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Nonroot")
-                vancedinstallbtn.visibility = View.GONE
-            else
-                vancedinstallbtn.visibility = View.VISIBLE
+            vancedinstallbtn.isEnabled =  PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") != "Nonroot"
+            if (!vancedinstallbtn.isEnabled) {
+                vancedinstallbtn.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
+                vancedinstallbtn.setTextColor(ColorStateList.valueOf(Color.GRAY))
+                vancedinstallbtn.text = activity?.getString(R.string.no_microg)
+            }
         }
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)

@@ -20,6 +20,7 @@
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
     <string name="network_error">Network connection unavailable</string>
+    <string name="no_microg">No Microg!</string>
     <string name="unavailable">Unavailable</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>

@@ -31,32 +31,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier" />
 
-            <FrameLayout
-                android:id="@+id/vanced_buttons_frame"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/vanced_installbtn"
+                style="@style/ButtonStyle"
+                android:text="@string/install"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/DisabledButtonStyle"
-                    android:text="No Microg!"
-                    android:clickable="false" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/vanced_installbtn"
-                    style="@style/ButtonStyle"
-                    android:text="@string/install"
-                    app:icon="@drawable/outline_cloud_download_24"/>
-
-            </FrameLayout>
+                app:layout_constraintTop_toTopOf="parent"
+                app:icon="@drawable/outline_cloud_download_24" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/vanced_title_buttons_barrier"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
-                app:constraint_referenced_ids="home_vanced_logo, vanced_buttons_frame"/>
+                app:constraint_referenced_ids="home_vanced_logo, vanced_installbtn"/>
 
             <ImageView
                 style="@style/ClickableImageWidget.Red"
