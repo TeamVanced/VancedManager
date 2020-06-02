@@ -20,7 +20,6 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/about_github_container"
             style="@style/InnerMaterialCard"
             app:contentPaddingRight="@dimen/eightdp"
             app:contentPaddingLeft="@dimen/eightdp"

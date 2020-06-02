@@ -4,9 +4,7 @@
     <!-- Global Strings -->
     <string name="close">Close</string>
     <string name="security_context">Please make sure you downloaded app from vanced.app, Vanced Discord server or GitHub</string>
-    <string name="unsupported_version_context">I don\'t know how but you probably installed Vanced Manager on unsupported Android version. The app will now close</string>
     <string name="welcome">Welcome</string>
-    <string name="whoops">Whoops!</string>
 
     <!-- Main Activity -->
     <string name="title_about">About</string>
@@ -15,21 +13,17 @@
     <string name="title_settings">Settings</string>
 
     <!-- Home Page -->
-    <string name="brave_browser">Brave Browser</string>
     <string name="changelogs">Changelogs</string>
     <string name="install">Install</string>
     <string name="version_installed">Installed:</string>
     <string name="button_installed">Installed</string>
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
-    <string name="n_a">N/A</string>
     <string name="network_error">Network connection unavailable</string>
-    <string name="reddit">Reddit</string>
     <string name="unavailable">Unavailable</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
     <string name="vanced_medias">Vanced on Social Media</string>
-    <string name="website">Website</string>
     <string name="website_text">The official website of Vanced</string>
     <string name="support_us">Support us by downloading Brave</string>
 
@@ -57,12 +51,9 @@
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
     <string name="choose_preferred_language_note">Note: if you install anything other than English, English will still be installed as an additional language</string>
     <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
-    <string name="choose_preferred_variant">Choose your preferred variant for Vanced</string>
     <string name="finish">Finish</string>
     <string name="install_light_black">Light + Black</string>
     <string name="install_light_dark">Light + Dark</string>
-    <string name="install_nonroot">Non-root</string>
-    <string name="install_root">Root</string>
     <string name="next">Next</string>
 
     <!-- About Page -->

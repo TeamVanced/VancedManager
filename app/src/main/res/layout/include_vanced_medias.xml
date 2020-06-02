@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/InnerMaterialCard"
-    android:id="@+id/social_media_card"
     app:cardBackgroundColor="#6958D0">
 
     <LinearLayout
@@ -12,7 +11,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/social_media_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -24,7 +22,6 @@
             android:textSize="18sp" />
 
         <LinearLayout
-            android:id="@+id/social_media_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 

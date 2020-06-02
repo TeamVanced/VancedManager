@@ -53,7 +53,7 @@ open class BaseFragment : Fragment() {
 
     @SuppressLint("SdCardPath")
     fun isRootVancedInstalled(): Boolean {
-        val file = File("/data/data/com.google.android.youtube/shared_prefs/youtube_vanced.xml")
+        val file = File("/data/data/com.google.android.youtube/shared_prefs/", "youtube_vanced.xml")
         return activity?.packageManager?.let {
             isPackageInstalled("com.google.android.youtube",
                 it

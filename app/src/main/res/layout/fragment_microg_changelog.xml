@@ -7,7 +7,6 @@
     tools:context=".ui.fragments.MicrogChangelogFragment">
 
     <TextView
-        android:id="@+id/microg_changelog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"

@@ -3,9 +3,7 @@
 
     <!-- Global Strings -->
     <string name="close">Fermer</string>
-    <string name="unsupported_version_context">Je sais pas comment mais vous avez installé Vanced Manager sur une version Android non supportée. L\'application va se fermer.</string>
     <string name="welcome">Bienvenue</string>
-    <string name="whoops">Oups!</string>
 
     <!-- Main Activity -->
     <string name="title_about">À propos</string>
@@ -14,19 +12,15 @@
     <string name="title_settings">Paramètres</string>
 
     <!-- Home Page -->
-    <string name="brave_browser">Navigateur Brave</string>
     <string name="changelogs">Journal des modifications</string>
     <string name="install">Installer</string>
     <string name="version_installed">Version installée:</string>
     <string name="latest">Dernière version:</string>
     <string name="loading">Chargement…</string>
-    <string name="n_a">N/A</string>
     <string name="network_error">Connection réseau indisponible</string>
-    <string name="reddit">Reddit</string>
     <string name="update">Mettre à jour</string>
     <string name="useful_links">Liens utiles</string>
     <string name="vanced_medias">Vanced sur les Résaux Sociaux</string>
-    <string name="website">Site web</string>
     <string name="website_text">Le site web officiel de Vanced</string>
     <string name="support_us">Supporte nous en téléchargeant Brave</string>
 
@@ -53,12 +47,9 @@
     <string name="choose_preferred_language">Choisir votre langue préférée pour Vanced</string>
     <string name="choose_preferred_language_note">Note: si vous installer autre chose que l\'anglais, l\'anglais sera toujours installé en langue additionnelle</string>
     <string name="choose_preferred_theme">Choisis le thème de Vanced</string>
-    <string name="choose_preferred_variant">Choisis la variante de Vanced</string>
     <string name="finish">Terminer</string>
     <string name="install_light_black">Clair + Sombre</string>
     <string name="install_light_dark">Clair + Noir</string>
-    <string name="install_nonroot">Non rooté</string>
-    <string name="install_root">Rooté</string>
     <string name="next">Suivant</string>
 
     <!-- About Page -->

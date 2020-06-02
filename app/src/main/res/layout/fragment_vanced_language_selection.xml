@@ -19,12 +19,10 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/install_language_title"
                 style="@style/InstallCardTitle"
                 android:text="@string/choose_preferred_language" />
 
             <TextView
-                android:id="@+id/install_language_note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -34,7 +32,6 @@
                 android:textSize="13sp" />
 
             <FrameLayout
-                android:id="@+id/language_choose_frame"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginEnd="2dp"
@@ -52,16 +49,6 @@
                 style="@style/InstallButtonStyle"
                 android:text="@string/finish"
                 app:icon="@drawable/ic_done_black_24dp" />
-
-            <ProgressBar
-                android:id="@+id/vanlang_progress"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="6dp"
-                android:visibility="gone"
-                tools:visibility="visible"/>
 
         </LinearLayout>
 

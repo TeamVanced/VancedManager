@@ -28,6 +28,7 @@ open class LanguageInstall : BaseFragment() {
             val selectedButton = view.findViewById<RadioButton>(selectedLangId)
             prefs?.edit()?.putString("lang", selectedButton.tag.toString())?.apply()
             prefs?.edit()?.putBoolean("isInstalling", true)?.apply()
+            prefs?.edit()?.putBoolean("valuesModified", true)?.apply()
             view.findNavController().navigate(R.id.action_installTo_homeFragment)
         }
 

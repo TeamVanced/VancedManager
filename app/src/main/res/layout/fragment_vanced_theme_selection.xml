@@ -16,7 +16,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/install_theme_title"
                 style="@style/InstallCardTitle"
                 android:text="@string/choose_preferred_theme" />
 
@@ -36,7 +35,6 @@
                     android:fontFamily="@font/exo_semibold"/>
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
@@ -51,16 +49,6 @@
                 android:id="@+id/vanced_next_to_variant"
                 android:text="@string/next"
                 app:icon="@drawable/ic_keyboard_next" />
-
-            <ProgressBar
-                android:id="@+id/vantheme_progress"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="6dp"
-                android:visibility="gone"
-                tools:visibility="visible"/>
 
         </LinearLayout>
 

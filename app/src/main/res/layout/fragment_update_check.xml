@@ -19,7 +19,6 @@
 
         <TextView
             style="@style/CardTitle"
-            android:id="@+id/update_center_text"
             android:layout_gravity="center"
             android:text="@string/update_center"
             android:textAlignment="center"
@@ -45,7 +44,6 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
-            android:id="@+id/update_button_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 

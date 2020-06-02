@@ -12,7 +12,6 @@
 
         <TextView
             style="@style/CardTitle"
-            android:id="@+id/useful_links_title"
             android:text="@string/useful_links" />
 
         <LinearLayout
@@ -22,7 +21,6 @@
             android:layout_marginTop="2dp">
 
             <include
-                android:id="@+id/home_vanced_medias_wrapper"
                 layout="@layout/include_vanced_medias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

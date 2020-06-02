@@ -41,7 +41,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "Nonroot")
         installMode?.setOnPreferenceChangeListener{ _, _ ->
             when (installMode.value) {
-                "Root" -> {
+                "Nonroot" -> {
                     if (!Shell.rootAccess()) {
                         preferenceScreen.sharedPreferences.edit().putString("vanced_variant", "Nonroot").apply()
                     }

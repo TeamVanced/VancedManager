@@ -4,9 +4,7 @@
     <!-- Global Strings -->
     <string name="close">Fechar</string>
     <string name="security_context">Verifique se você baixou o aplicativo do vanced.app, Vanced Discord ou GitHub</string>
-    <string name="unsupported_version_context">Não sei como, mas você provavelmente instalou o Vanced Manager na versão Android não suportada. O aplicativo será fechado agora</string>
     <string name="welcome">Bem-Vindo</string>
-    <string name="whoops">Whoops!</string>
 
     <!-- Main Activity -->
     <string name="title_about">Sobre</string>
@@ -15,19 +13,15 @@
     <string name="title_settings">Configurações</string>
 
     <!-- Home Page -->
-    <string name="brave_browser">Navegador Brave</string>
     <string name="changelogs">Notas de Lançamento</string>
     <string name="install">Instalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais Recente:</string>
     <string name="loading">Carregando…</string>
-    <string name="n_a">N/A</string>
     <string name="network_error">Conexão de rede indisponível</string>
-    <string name="reddit">Reddit</string>
     <string name="update">Atualizar</string>
     <string name="useful_links">Links Importantes</string>
     <string name="vanced_medias">Vanced nas Redes Sociais</string>
-    <string name="website">Website</string>
     <string name="website_text">Site oficial do Vanced</string>
 
 
@@ -55,12 +49,9 @@
     <string name="choose_preferred_language">Escolhe tua língua preferida para o Vanced</string>
     <string name="choose_preferred_language_note">Nota: Se você instalar algo diferente de Inglês, Inglês será instalado como um idioma adicional</string>
     <string name="choose_preferred_theme">Escolhe teu tema preferido para o Vanced</string>
-    <string name="choose_preferred_variant">Escolhe tua variação preferida para o Vanced</string>
     <string name="finish">Terminar</string>
     <string name="install_light_black">Claro + Preto</string>
     <string name="install_light_dark">Claro + Escuro</string>
-    <string name="install_nonroot">Não Roteado</string>
-    <string name="install_root">Roteado</string>
     <string name="next">Próximo</string>
 
     <!-- About Page -->

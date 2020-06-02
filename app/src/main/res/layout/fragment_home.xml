@@ -25,7 +25,6 @@
             tools:visibility="visible"/>
 
         <include
-            android:id="@+id/home_vanced_wrapper"
             layout="@layout/include_vanced"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,7 +42,6 @@
             android:layout_marginEnd="@dimen/stdp" />
 
         <include
-            android:id="@+id/home_changelog_wrapper"
             layout="@layout/include_changelogs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,7 +50,6 @@
             android:layout_marginEnd="@dimen/stdp" />
 
         <include
-            android:id="@+id/home_useful_links_wrapper"
             layout="@layout/include_useful_links"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -5,7 +5,6 @@
     style="@style/MaterialCard">
 
     <TextView
-        android:id="@+id/network_errortxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/network_error"

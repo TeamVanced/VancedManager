@@ -26,7 +26,6 @@
 
             <TextView
                 style="@style/TextAppTitle"
-                android:id="@+id/vanced_title"
                 android:text="@string/vanced"
                 app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
                 app:layout_constraintTop_toTopOf="parent"
@@ -65,7 +64,6 @@
 
                 <TextView
                     style="@style/AppVer"
-                    android:id="@+id/vanced_latest"
                     android:text="@string/latest" />
 
                 <TextView
@@ -84,7 +82,6 @@
 
                 <TextView
                     style="@style/AppVer"
-                    android:id="@+id/vanced_installed"
                     android:text="@string/version_installed" />
 
                 <TextView

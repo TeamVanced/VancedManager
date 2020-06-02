@@ -48,7 +48,7 @@ class HomeFragment : Home() {
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
 
         val microgWrapper = view.findViewById<MaterialCardView>(R.id.home_microg_wrapper)
-        if (variantPref == "root") {
+        if (variantPref == "Root") {
             activity?.runOnUiThread {
                 microgWrapper.visibility = View.GONE
             }

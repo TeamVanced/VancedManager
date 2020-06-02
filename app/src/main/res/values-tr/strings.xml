@@ -4,9 +4,7 @@
     <!-- Global Strings -->
     <string name="close">Kapat</string>
     <string name="security_context">Lütfen, uygulamayı vanced.app\'den, Vanced Discord sunucu\'sundan  veya GitHub\'dan indirdiğinize emin olun.</string>
-    <string name="unsupported_version_context">Vanced Manager bir şekilde desteklenmeyen bir Android sürümüne kurulmuş. Şimdi uygulama kapanacak.</string>
     <string name="welcome">Hoşgeldin</string>
-    <string name="whoops">Hay Aksi!</string>
 
     <!-- Main Activity -->
     <string name="title_about">Hakkında</string>
@@ -15,19 +13,15 @@
     <string name="title_settings">Ayarlar</string>
 
     <!-- Home Page -->
-    <string name="brave_browser">Brave Tarayıcısı</string>
     <string name="changelogs">Değişim Kaydı</string>
     <string name="install">Yüklemek</string>
     <string name="version_installed">Yüklendi:</string>
     <string name="latest">En Son:</string>
     <string name="loading">Yükleniyor…</string>
-    <string name="n_a">Kullanılamaz</string>
     <string name="network_error">Ağ bağlantısı yok</string>
-    <string name="reddit">Reddit</string>
     <string name="update">Güncellemek</string>
     <string name="useful_links">Faydalı Bağlantılar</string>
     <string name="vanced_medias">Sosyal Medyada Vanced</string>
-    <string name="website">Web Sitesi</string>
     <string name="website_text">Vanced\'in resmi web sitesi</string>
     <string name="support_us">Brave Tarayıcısı\'nı indirerek bizi destekleyebilirsiniz</string>
 
@@ -55,12 +49,9 @@
     <string name="choose_preferred_language">Vanced için tercih ettiğiniz dili seçin</string>
     <string name="choose_preferred_language_note">Uyarı: Eğer İngilizceden farklı bir dil yüklerseniz, İngilizce yine de ikinci dil olarak yüklü kalacaktır</string>
     <string name="choose_preferred_theme">Vanced için tercih ettiğiniz temayı seçin</string>
-    <string name="choose_preferred_variant">Tercih ettiğiniz Vanced varyantını seçin</string>
     <string name="finish">Bitir</string>
     <string name="install_light_black">Aydınlık + Siyah</string>
     <string name="install_light_dark">Aydınlık + Karanlık</string>
-    <string name="install_nonroot">Rootlanmamış</string>
-    <string name="install_root">Root</string>
     <string name="next">Sonraki</string>
 
     <!-- About Page -->

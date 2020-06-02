@@ -19,7 +19,6 @@
 
         <TextView
             style="@style/CardTitle"
-            android:id="@+id/chosen_values_text"
             android:layout_gravity="center"
             android:text="Chosen Preferences"
             android:textAlignment="center"
@@ -66,7 +65,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/chosen_prefs_button_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 

@@ -5,10 +5,8 @@
     <string name="close">اغلق</string>
     <string name="security_context">"عناصر ناأبة
 "</string>
-    <string name="unsupported_version_context">عناصر ناأبة</string>
     <string name="welcome">مرحبا
 اهلا</string>
-    <string name="whoops">وبس!</string>
     <!-- Main Activity -->
 
     <string name="title_about">"معاومات
@@ -18,19 +16,15 @@
     <string name="title_settings">اعادات</string>
 
     <!-- Home Page -->
-    <string name="brave_browser">صفحة Braveصفحة برايف</string>
     <string name="changelogs">"معلومات التغير "</string>
     <string name="install">تثبيت</string>
     <string name="version_installed">مثبتة</string>
     <string name="latest">آخر:</string>
     <string name="loading">جار التحميل…</string>
-    <string name="n_a">ن/أ</string>
     <string name="network_error">اتصاا الشبكة غير متاح</string>
-    <string name="reddit">Redditرددت</string>
     <string name="update">تحديث</string>
     <string name="useful_links">روابط المفيدة</string>
     <string name="vanced_medias">Vanced على توصيل اجتماعي فانسد على توصيل اجتماعي</string>
-    <string name="website">موقع</string>
     <string name="website_text">الموقع رسمي لفانسد</string>
     <string name="support_us">ادعمنا بتريق تنزيل بريف</string>
 
@@ -58,12 +52,9 @@
     <string name="choose_preferred_language">اختر اللغة المفضلة لفانسد</string>
     <string name="choose_preferred_language_note">لاحظة: اذا قمت تثبيت بأي لغة غير الانجليزية، سيكون اللغة الانجليزية مثبتة بللغة اضافية</string>
     <string name="choose_preferred_theme">اختر موضوع اللون المفضلة لفانسد</string>
-    <string name="choose_preferred_variant">اختر بديل مفضلة لفانسد</string>
     <string name="finish">نهاية</string>
     <string name="install_light_black">ابيض + اسود</string>
     <string name="install_light_dark">ابيض + داكن</string>
-    <string name="install_nonroot">غيز-جذر</string>
-    <string name="install_root">جذر</string>
     <string name="next">ثانية</string>
 
     <!-- About Page -->

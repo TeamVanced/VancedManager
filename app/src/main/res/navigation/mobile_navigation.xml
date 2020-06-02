@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
     app:startDestination="@id/home_fragment">
 
     <fragment
@@ -80,7 +79,6 @@
             app:popExitAnim="@animator/fragment_exit_right" />
 
         <action
-            android:id="@+id/action_themeTo_homeFragment"
             app:destination="@id/home_fragment"
             app:enterAnim="@animator/fragment_enter_left"
             app:exitAnim="@animator/fragment_exit_right"
@@ -130,7 +128,6 @@
         android:label="Dev Settings" />
 
     <action
-        android:id="@+id/action_homeFragment"
         app:destination="@id/home_fragment"
         app:enterAnim="@animator/fragment_enter"
         app:exitAnim="@animator/fragment_exit"

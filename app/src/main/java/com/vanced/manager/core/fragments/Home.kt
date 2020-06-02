@@ -68,7 +68,14 @@ open class Home : BaseFragment() {
                 } catch (e: Exception) {
                     Log.d("VMCache", "Unable to delete cacheDir")
                 }
-                view.findNavController().navigate(R.id.toInstallThemeFragment)
+                if (prefs.getBoolean("valuesModified", false)) {
+                    val loadBar = view.findViewById<ProgressBar>(R.id.vanced_progress)
+                    val dlText = view.findViewById<TextView>(R.id.vanced_downloading)
+                    val loadCircle = view.findViewById<ProgressBar>(R.id.vanced_installing)
+                    downloadArch(loadBar!!, dlText!!, loadCircle!!)
+                    prefs.edit().putBoolean("isInstalling", false).apply()
+                } else
+                    view.findNavController().navigate(R.id.toInstallThemeFragment)
             } else {
                 Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
             }
@@ -118,18 +125,25 @@ open class Home : BaseFragment() {
             microgsettingsbtn.visibility = View.INVISIBLE
             microguninstallbtn.visibility = View.INVISIBLE
             microgVerText.text = getString(R.string.unavailable)
-            vancedinstallbtn.isEnabled = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") != "Nonroot"
-            if (!vancedinstallbtn.isEnabled) {
-                vancedinstallbtn.setBackgroundColor(R.attr.colorDisabled)
-                vancedinstallbtn.setTextColor(R.attr.colorDisabledVariant)
-            }
+            vancedinstallbtn.visibility =
+                if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Nonroot")
+                    View.GONE
+                else
+                    View.VISIBLE
         }
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         if (vancedStatus!!) {
-            val vancedVer = pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
+            val vancedVer =
+                if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root")
+                    pm.getPackageInfo("com.google.android.youtube", 0).versionName
+                else
+                    pm.getPackageInfo("com.vanced.android.youtube", 0).versionName
             vanceduninstallbtn.setOnClickListener {
-                uninstallApk("com.vanced.android.youtube")
+                if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root")
+                    uninstallApk("com.vanced.android.youtube")
+                else
+                    uninstallApk("com.google.android.youtube")
             }
             vancedVerText.text = vancedVer
         } else {

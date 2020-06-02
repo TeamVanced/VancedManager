@@ -4,9 +4,7 @@
     <!-- Global Strings -->
     <string name="close">Закрити</string>
     <string name="security_context">Будь ласка, переконайтеся,що ви завантажили додаток з vanced.app,Vanced діскорд серверу або з GitHub</string>
-    <string name="unsupported_version_context">Ви,напевно,встановили Vanced Manager на непідтримувану версію Андроїда.Додаток зараз закриється</string>
     <string name="welcome">Ласкаво просимо</string>
-    <string name="whoops">"Уупс!"</string>
 
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
@@ -15,19 +13,15 @@
     <string name="title_settings">Налаштування</string>
 
     <!-- Home Page -->
-    <string name="brave_browser">Brave Браузер</string>
     <string name="changelogs">Список змін</string>
     <string name="install">Встановити</string>
     <string name="version_installed">Встановлено:</string>
     <string name="latest">Найновіші:</string>
     <string name="loading">Завантаження…</string>
-    <string name="n_a">Недоступно</string>
     <string name="network_error">Немає з\'єднання з мережею</string>
-    <string name="reddit">Reddit</string>
     <string name="update">Оновлення</string>
     <string name="useful_links">Корисні сторінки</string>
     <string name="vanced_medias">Vanced в соціальних мережах</string>
-    <string name="website">Веб-сайт</string>
     <string name="website_text">Офіційний веб-сайт Vanced</string>
     <string name="support_us">Підтримай нас завантаживши браузер Brave</string>
 
@@ -55,12 +49,9 @@
     <string name="choose_preferred_language">Виберіть вашу головну мову для Vanced</string>
     <string name="choose_preferred_language_note">Примітка: Якщо ви встановите що-небудь, крім Англійської, Англійська мова все одно буде встановлена як додаткова мова</string>
     <string name="choose_preferred_theme">Виберіть вашу головну тему для Vanced</string>
-    <string name="choose_preferred_variant">Виберіть вашу версію для Vanced</string>
     <string name="finish">Завершити</string>
     <string name="install_light_black">Світла + Чорна</string>
     <string name="install_light_dark">Світла + Темна</string>
-    <string name="install_nonroot">Не рут</string>
-    <string name="install_root">Рут</string>
     <string name="next">Наступна</string>
 
     <!-- About Page -->

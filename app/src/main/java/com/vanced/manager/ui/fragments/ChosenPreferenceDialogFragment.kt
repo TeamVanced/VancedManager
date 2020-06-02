@@ -43,6 +43,7 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
         resetbtn.setOnClickListener {
             prefs?.edit()?.putString("theme", "dark")?.apply()
             prefs?.edit()?.putString("lang", "en")?.apply()
+            prefs?.edit()?.putBoolean("valuesModified", false)?.apply()
             dismiss()
         }
 
