@@ -72,7 +72,7 @@ class HomeFragment : Home() {
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
@@ -130,34 +130,25 @@ class HomeFragment : Home() {
                         }
 
                         if (vancedStatus!!) {
-                            val vancedVerCode =
+                            val vanPkgName =
                                 if (variant == "Root") {
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                                        pm.getPackageInfo(
-                                            "com.google.android.youtube",
-                                            0
-                                        ).longVersionCode.and(0xFFFFFFFF).toInt()
-                                    }
-                                    else {
-                                        pm.getPackageInfo(
-                                            "com.google.android.youtube",
-                                            0
-                                        ).versionCode
-                                    }
+                                    "com.google.android.youtube"
+                                } else {
+                                  "com.vanced.android.youtube"
+                                }
+
+                            val vancedVerCode =
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                                    pm.getPackageInfo(
+                                        vanPkgName,
+                                        0
+                                    ).longVersionCode.and(0xFFFFFFFF).toInt()
                                 }
                                 else {
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                                        pm.getPackageInfo(
-                                            "com.vanced.android.youtube",
-                                            0
-                                        ).longVersionCode.and(0xFFFFFFFF).toInt()
-                                    }
-                                    else {
-                                        pm.getPackageInfo(
-                                            "com.vanced.android.youtube",
-                                            0
-                                        ).versionCode
-                                    }
+                                    pm.getPackageInfo(
+                                        vanPkgName,
+                                        0
+                                    ).versionCode
                                 }
 
                             when {
