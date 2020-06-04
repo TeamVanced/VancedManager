@@ -6,7 +6,6 @@ import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Build
 import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
@@ -54,11 +53,19 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             application.getString(R.string.unavailable)
         }
 
-    val vancedVersion: String = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-        .get("version").asString
+    val vancedVersion: String =
+        if (isConnected)
+            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+                .get("version").asString
+        else
+            application.getString(R.string.unavailable)
 
-    val microgVersion: String = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-        .get("version").asString
+    val microgVersion: String =
+        if (isConnected)
+            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
+                .get("version").asString
+        else
+            application.getString(R.string.unavailable)
 
     val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "nonroot"
 

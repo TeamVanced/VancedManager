@@ -73,7 +73,7 @@
                     <TextView
                         style="@style/AppVer.Bold"
                         android:id="@+id/microg_latest_version"
-                        android:text="@{viewModel.connected ? viewModel.microgVersion : @string/unavailable}" />
+                        android:text="@{viewModel.microgVersion}" />
 
                 </LinearLayout>
 
