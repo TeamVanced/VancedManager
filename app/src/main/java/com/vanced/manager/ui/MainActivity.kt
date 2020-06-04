@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
+import androidx.databinding.DataBindingUtil
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
@@ -13,15 +14,18 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
+import com.vanced.manager.databinding.ActivityMainBinding
 
 class MainActivity : Main() {
 
     private var isParent = true
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.lifecycleOwner = this
 
         val toolbar: Toolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)

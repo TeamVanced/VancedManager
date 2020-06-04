@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
-    android:background="?colorSurface"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <fragment
-        android:id="@+id/bottom_nav_host"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/home_appbar"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/mobile_navigation"/>
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/home_appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/container"
         android:background="?colorSurface"
-        android:layout_alignParentTop="true">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/home_toolbar"
+        <fragment
+            android:id="@+id/bottom_nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:titleTextColor="?attr/toolbarIconColor"
-            android:background="@android:color/transparent"/>
+            android:layout_height="match_parent"
+            android:layout_below="@id/home_appbar"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/mobile_navigation"/>
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/home_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorSurface"
+            android:layout_alignParentTop="true">
 
-</RelativeLayout>
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/home_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="?attr/toolbarIconColor"
+                android:background="@android:color/transparent"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </RelativeLayout>
+
+</layout>

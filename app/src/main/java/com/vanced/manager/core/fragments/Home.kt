@@ -48,10 +48,12 @@ open class Home : BaseFragment() {
         //we need to check whether these apps are installed or not
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus =
-            if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root")
+            if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root") {
                 pm?.let { isPackageInstalled("com.google.android.youtube", it) }
-            else
+            }
+            else {
                 pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+            }
 
         vancedinstallbtn.setOnClickListener {
             if (!isVancedDownloading!!) {
@@ -111,7 +113,7 @@ open class Home : BaseFragment() {
             }
 
             microgsettingsbtn.setOnClickListener {
-                try {
+                /*try {
                     val intent = Intent()
                     intent.component = ComponentName(
                         "com.mgoogle.android.gms",
@@ -122,11 +124,12 @@ open class Home : BaseFragment() {
                     Toast.makeText(activity, "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
+                 */
             }
-            microgVerText.text = microgVer
+            //microgVerText.text = microgVer
         } else {
-            microgsettingsbtn.visibility = View.INVISIBLE
-            microguninstallbtn.visibility = View.INVISIBLE
+            //microgsettingsbtn.visibility = View.INVISIBLE
+            //microguninstallbtn.visibility = View.INVISIBLE
             microgVerText.text = getString(R.string.unavailable)
             vancedinstallbtn.isEnabled =  PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") != "Nonroot"
             if (!vancedinstallbtn.isEnabled) {
@@ -138,7 +141,7 @@ open class Home : BaseFragment() {
         }
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
-        if (vancedStatus!!) {
+        /*if (vancedStatus!!) {
             val vancedVer =
                 if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root")
                     pm.getPackageInfo("com.google.android.youtube", 0).versionName
@@ -152,9 +155,10 @@ open class Home : BaseFragment() {
             }
             vancedVerText.text = vancedVer
         } else {
-            vanceduninstallbtn.visibility = View.INVISIBLE
+            //vanceduninstallbtn.visibility = View.INVISIBLE
             vancedVerText.text = getString(R.string.unavailable)
         }
+         */
 
         bravebtn.setOnClickListener {
             openUrl("https://brave.com/van874", R.color.Brave)

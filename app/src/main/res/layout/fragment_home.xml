@@ -1,62 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vanced.manager.ui.core.SlidingNestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:scrollbars="none">
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+    </data>
+
+    <com.vanced.manager.ui.core.SlidingNestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="4dp"
-        android:orientation="vertical">
+        android:fillViewport="true"
+        android:scrollbars="none">
 
-        <include
-            android:id="@+id/home_network_wrapper"
-            layout="@layout/include_network_error"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="@dimen/stdp"
-            android:layout_marginEnd="@dimen/stdp"
-            android:visibility="gone"
-            tools:visibility="visible"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
 
-        <include
-            layout="@layout/include_vanced"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="@dimen/stdp"
-            android:layout_marginEnd="@dimen/stdp" />
+            <include
+                android:id="@+id/home_network_wrapper"
+                layout="@layout/include_network_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp"
+                android:visibility="gone"
+                tools:visibility="visible"/>
 
-        <include
-            android:id="@+id/home_microg_wrapper"
-            layout="@layout/include_microg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/stdp"
-            android:layout_marginTop="@dimen/stdp"
-            android:layout_marginEnd="@dimen/stdp" />
+            <include
+                layout="@layout/include_vanced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp"
+                bind:viewModel="@{viewModel}"/>
 
-        <include
-            layout="@layout/include_changelogs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/stdp"
-            android:layout_marginTop="@dimen/stdp"
-            android:layout_marginEnd="@dimen/stdp" />
+            <include
+                android:id="@+id/home_microg_wrapper"
+                layout="@layout/include_microg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp"
+                android:visibility="@{viewModel.nonrootModeSelected ? View.VISIBLE : View.GONE}"
+                bind:viewModel="@{viewModel}"/>
 
-        <include
-            layout="@layout/include_useful_links"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/stdp"
-            android:layout_marginTop="@dimen/stdp"
-            android:layout_marginEnd="@dimen/stdp" />
+            <include
+                layout="@layout/include_changelogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp" />
 
-    </LinearLayout>
+            <include
+                layout="@layout/include_useful_links"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp" />
 
-</com.vanced.manager.ui.core.SlidingNestedScrollView>
+        </LinearLayout>
+
+    </com.vanced.manager.ui.core.SlidingNestedScrollView>
+
+</layout>

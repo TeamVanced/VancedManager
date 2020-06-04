@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.TextView
 import androidx.core.animation.addListener
+import androidx.databinding.DataBindingUtil
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
@@ -18,6 +19,7 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
+import com.vanced.manager.databinding.FragmentHomeBinding
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -28,6 +30,7 @@ class HomeFragment : Home() {
     private lateinit var sectionPageAdapter: SectionPageAdapter
     private lateinit var sectionPageRootAdapter: SectionPageRootAdapter
     private lateinit var viewPager: ViewPager2
+    private lateinit var binding: FragmentHomeBinding
     private var disposable: Disposable? = null
 
     override fun onCreateView(
@@ -36,8 +39,9 @@ class HomeFragment : Home() {
     ): View? {
         activity?.title = getString(R.string.title_home)
         setHasOptionsMenu(true)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,7 +51,7 @@ class HomeFragment : Home() {
 
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
 
-        val microgWrapper = view.findViewById<MaterialCardView>(R.id.home_microg_wrapper)
+        /*val microgWrapper = view.findViewById<MaterialCardView>(R.id.home_microg_wrapper)
         if (variantPref == "Root") {
             activity?.runOnUiThread {
                 microgWrapper.visibility = View.GONE
@@ -57,6 +61,7 @@ class HomeFragment : Home() {
                 microgWrapper.visibility = View.VISIBLE
             }
         }
+         */
 
         if (variantPref == "Root")
             attachRootChangelog()
@@ -68,7 +73,7 @@ class HomeFragment : Home() {
     private fun initNetworkFun() {
         val pm = activity?.packageManager
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
-        val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+        //val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
@@ -90,9 +95,9 @@ class HomeFragment : Home() {
                                 .get("version").asString
                         vancedLatestTxt?.text = vancedRemoteVer
 
-                        val vancedRemoteCode =
-                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                                .get("versionCode").asInt
+                        //val vancedRemoteCode =
+                          //  GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+                            //    .get("versionCode").asInt
                         val microgRemoteCode =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
                                 .get("versionCode").asInt
@@ -129,6 +134,7 @@ class HomeFragment : Home() {
                             }
                         }
 
+                        /*
                         if (vancedStatus!!) {
                             val vanPkgName =
                                 if (variant == "Root") {
@@ -151,6 +157,7 @@ class HomeFragment : Home() {
                                     ).versionCode
                                 }
 
+                            /*
                             when {
                                 vancedRemoteCode > vancedVerCode -> {
                                     vancedinstallbtn?.text =
@@ -165,8 +172,11 @@ class HomeFragment : Home() {
                                     vancedinstallbtn?.icon =
                                         activity?.getDrawable(R.drawable.outline_cloud_done_24)
                                 }
+
                             }
+                             */
                         }
+                         */
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
                         val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
