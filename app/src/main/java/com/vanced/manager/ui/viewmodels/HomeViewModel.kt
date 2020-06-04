@@ -60,7 +60,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     val microgVersion: String = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
         .get("version").asString
 
-    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "ronroot"
+    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "nonroot"
 
     fun openMicrogSettings() {
         try {

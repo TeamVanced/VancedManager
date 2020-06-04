@@ -23,7 +23,7 @@ class MicrogChangelogFragment : Fragment() {
 
         val changelogTxt = view.findViewById<TextView>(R.id.microg_changelog)
 
-        val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
+        val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
         val changelog = checkUrl.get("changelog").asString
 
         if (GetJson().isConnected(activity))
