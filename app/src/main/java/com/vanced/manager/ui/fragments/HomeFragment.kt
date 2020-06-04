@@ -41,10 +41,7 @@ class HomeFragment : Home() {
     ): View? {
         activity?.title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        val viewModel: HomeViewModel by viewModels()
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-        binding.viewModel = viewModel
-
         return binding.root
     }
 
@@ -52,6 +49,8 @@ class HomeFragment : Home() {
         super.onViewCreated(view, savedInstanceState)
 
         initNetworkFun()
+        val viewModel: HomeViewModel by viewModels()
+        binding.viewModel = viewModel
 
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
 
