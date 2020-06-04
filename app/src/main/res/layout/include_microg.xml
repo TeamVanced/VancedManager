@@ -114,6 +114,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
+                    android:onClick="@{()-> viewModel.uninstallMicrog()}"
                     android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

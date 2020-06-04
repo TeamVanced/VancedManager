@@ -2,7 +2,6 @@ package com.vanced.manager.ui.fragments
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -58,7 +57,7 @@ class UpdateCheckFragment : DialogFragment() {
         closebtn.setOnClickListener { dismiss() }
 
         if (GetJson().isConnected(requireContext())) {
-            val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
+            val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
             val remoteVersion = checkUrl.get("versionCode").asInt
 
             if (remoteVersion > BuildConfig.VERSION_CODE) {
@@ -80,27 +79,8 @@ class UpdateCheckFragment : DialogFragment() {
 
     }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
-        when (requestCode) {
-            69 -> {
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    Toast.makeText(requireContext(), "Permission Granted", Toast.LENGTH_SHORT)
-                        .show()
-                }
-                else
-                    Toast.makeText(requireContext(), "Permission Denied", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
     private fun upgradeManager(loadBar: ProgressBar) {
-        val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
+        val apkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
         val dwnldUrl = apkUrl.get("url").asString
 
         val task = activity?.filesDir?.path?.let {

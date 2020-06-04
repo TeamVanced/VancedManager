@@ -52,21 +52,9 @@ class HomeFragment : Home() {
         val viewModel: HomeViewModel by viewModels()
         binding.viewModel = viewModel
 
-        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
 
-        /*val microgWrapper = view.findViewById<MaterialCardView>(R.id.home_microg_wrapper)
-        if (variantPref == "Root") {
-            activity?.runOnUiThread {
-                microgWrapper.visibility = View.GONE
-            }
-        } else {
-            activity?.runOnUiThread {
-                microgWrapper.visibility = View.VISIBLE
-            }
-        }
-         */
-
-        if (variantPref == "Root")
+        if (variantPref == "root")
             attachRootChangelog()
         else
             attachNonrootChangelog()
@@ -76,11 +64,11 @@ class HomeFragment : Home() {
     private fun initNetworkFun() {
         val pm = activity?.packageManager
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
-        //val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+        val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
@@ -90,28 +78,17 @@ class HomeFragment : Home() {
                     if (isConnectedToInternet) {
                         vancedinstallbtn?.visibility = View.VISIBLE
 
-                        //val vancedRemoteVer =
-                          //  GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                            //    .get("version").asString
-                        val microgRemoteVer =
-                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-                                .get("version").asString
-                        //vancedLatestTxt?.text = vancedRemoteVer
-
-                        //val vancedRemoteCode =
-                          //  GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                            //    .get("versionCode").asInt
+                        val vancedRemoteCode =
+                            GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json")
+                                .get("versionCode").asInt
                         val microgRemoteCode =
-                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
+                            GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
                                 .get("versionCode").asInt
 
                         if (variant == "Nonroot") {
-                            val microgLatestTxt =
-                                view?.findViewById<TextView>(R.id.microg_latest_version)
                             val microginstallbtn =
                                 view?.findViewById<MaterialButton>(R.id.microg_installbtn)
                             microginstallbtn?.visibility = View.VISIBLE
-                            microgLatestTxt?.text = microgRemoteVer
 
                             if (microgStatus!!) {
                                 val microgVerCode =
@@ -137,10 +114,9 @@ class HomeFragment : Home() {
                             }
                         }
 
-                        /*
                         if (vancedStatus!!) {
                             val vanPkgName =
-                                if (variant == "Root") {
+                                if (variant == "root") {
                                     "com.google.android.youtube"
                                 } else {
                                   "com.vanced.android.youtube"
@@ -160,7 +136,7 @@ class HomeFragment : Home() {
                                     ).versionCode
                                 }
 
-                            /*
+
                             when {
                                 vancedRemoteCode > vancedVerCode -> {
                                     vancedinstallbtn?.text =
@@ -177,9 +153,8 @@ class HomeFragment : Home() {
                                 }
 
                             }
-                             */
+
                         }
-                         */
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
                         val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)

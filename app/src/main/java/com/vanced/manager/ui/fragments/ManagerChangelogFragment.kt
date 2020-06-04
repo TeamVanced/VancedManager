@@ -9,9 +9,6 @@ import android.widget.TextView
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
 
-/**
- * A simple [Fragment] subclass.
- */
 class ManagerChangelogFragment : Fragment() {
 
     override fun onCreateView(
@@ -26,10 +23,10 @@ class ManagerChangelogFragment : Fragment() {
 
         val changelogTxt = view.findViewById<TextView>(R.id.manager_changelog)
 
-        val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
+        val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
         val changelog = checkUrl.get("changelog").asString
 
-        if (GetJson().isConnected(requireContext()))
+        if (GetJson().isConnected(activity))
             changelogTxt.text = changelog
     }
 }

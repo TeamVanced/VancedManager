@@ -1,70 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/InnerMaterialCard"
-    app:cardBackgroundColor="#6958D0">
+    xmlns:bind="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <data>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/exo_semibold"
-            android:text="@string/vanced_medias"
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/InnerMaterialCard"
+        app:cardBackgroundColor="#6958D0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/exo_semibold"
+                android:text="@string/vanced_medias"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/discordbtn"
-                    style="@style/SocialButtonStyle"
-                    app:icon="@drawable/discord"
-                    app:layout_constraintEnd_toStartOf="@id/tgbtn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/tgbtn"
-                    style="@style/SocialButtonStyle"
-                    app:icon="@drawable/telegram"
-                    app:layout_constraintEnd_toStartOf="@id/twitterbtn"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/discordbtn"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/discordbtn"
+                        style="@style/SocialButtonStyle"
+                        app:icon="@drawable/discord"
+                        app:layout_constraintEnd_toStartOf="@id/tgbtn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:onClick='@{()-> viewModel.openUrl("https://discord.gg/TUVd7rd", @color/Discord)}'/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/twitterbtn"
-                    style="@style/SocialButtonStyle"
-                    app:icon="@drawable/twitter"
-                    app:layout_constraintEnd_toStartOf="@id/redditbtn"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/tgbtn"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tgbtn"
+                        style="@style/SocialButtonStyle"
+                        app:icon="@drawable/telegram"
+                        app:layout_constraintEnd_toStartOf="@id/twitterbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/discordbtn"
+                        android:onClick='@{()-> viewModel.openUrl("https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w", @color/Telegram)}'/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/redditbtn"
-                    style="@style/SocialButtonStyle"
-                    app:icon="@drawable/ic_reddit"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/twitterbtn"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/twitterbtn"
+                        style="@style/SocialButtonStyle"
+                        app:icon="@drawable/twitter"
+                        app:layout_constraintEnd_toStartOf="@id/redditbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tgbtn"
+                        android:onClick='@{()-> viewModel.openUrl("https://twitter.com/YTVanced", @color/Twitter)}'/>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/redditbtn"
+                        style="@style/SocialButtonStyle"
+                        app:icon="@drawable/ic_reddit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/twitterbtn"
+                        android:onClick='@{()-> viewModel.openUrl("https://reddit.com/r/vanced", @color/Reddit)}'/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-</com.google.android.material.card.MaterialCardView>
+</layout>

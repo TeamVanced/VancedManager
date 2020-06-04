@@ -5,7 +5,11 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
 import android.widget.Toast
+import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
@@ -23,8 +27,10 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         }
     }
 
+    val isConnected = GetJson().isConnected(application)
+
     private val vancedPkgName: String =
-        if (getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot") {
+        if (getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "root") {
             "com.google.android.youtube"
         } else {
             "com.vanced.android.youtube"
@@ -32,9 +38,6 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val isMicrogInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
     val isVancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
-
-
-    val isConnected = GetJson().isConnected(application)
 
     val vancedInstalledVersion: String =
         if (isVancedInstalled) {
@@ -57,7 +60,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     val microgVersion: String = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
         .get("version").asString
 
-    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot"
+    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "ronroot"
 
     fun openMicrogSettings() {
         try {
@@ -66,10 +69,42 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
                 "com.mgoogle.android.gms",
                 "org.microg.gms.ui.SettingsActivity"
             )
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(getApplication(), intent, null)
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(getApplication(), "App not installed", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    fun uninstallMicrog() {
+        try {
+            val uri = Uri.parse("package:com.mgoogle.android.gms")
+            val uninstall = Intent(Intent.ACTION_DELETE, uri)
+            uninstall.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(getApplication(), uninstall, null)
+
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(getApplication(), "Failed to uninstall", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun uninstallVanced() {
+        try {
+            val uri = Uri.parse("package:$vancedPkgName")
+            val uninstall = Intent(Intent.ACTION_DELETE, uri)
+            uninstall.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(getApplication(), uninstall, null)
+
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(getApplication(), "Failed to uninstall", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun openUrl(Url: String, color: Int) {
+        val builder = CustomTabsIntent.Builder()
+        builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
+        val customTabsIntent = builder.build()
+        customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
     }
 
 }

@@ -33,7 +33,7 @@ import java.io.File
 open class BaseFragment : Fragment() {
 
     private var disposable: Disposable? = null
-    private val baseUrl = "https://x1nto.github.io/VancedFiles/Splits"
+    private val baseUrl = "https://vanced.app/api/v1/apks/v15.05.54/"
 
     fun openUrl(Url: String, color: Int) {
         val builder = CustomTabsIntent.Builder()
@@ -64,7 +64,7 @@ open class BaseFragment : Fragment() {
     fun downloadArch(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply()
-        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val arch =
             when {
                 Build.SUPPORTED_ABIS.contains("x86") -> "x86"
@@ -103,7 +103,7 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadTheme(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
-        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val theme = prefs?.getString("theme", "dark")
         val url = "$baseUrl/$variant/Theme/$theme.apk"
@@ -137,7 +137,7 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadLang(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
-        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val lang = prefs?.getString("lang", "en")
         val url = "$baseUrl/$variant/Language/split_config.$lang.apk"
@@ -169,7 +169,7 @@ open class BaseFragment : Fragment() {
                         dlText.visibility = View.GONE
                         loadCircle.visibility = View.VISIBLE
                         prefs.edit()?.putBoolean("isVancedDownloading", false)?.apply()
-                        if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root") {
+                        if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") == "root") {
                             launchRootInstaller()
                         } else {
                             launchInstaller()
@@ -183,9 +183,9 @@ open class BaseFragment : Fragment() {
     }
 
     private fun downloadEn(loadBar: ProgressBar, dlText: TextView, loadCircle: ProgressBar) {
-        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variant = PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val url = "https://x1nto.github.io/VancedFiles/Splits/$variant/Language/split_config.en.apk"
+        val url = "$baseUrl/$variant/Language/split_config.en.apk"
         val task = activity?.cacheDir?.path?.let {
             Task(
                 url = url,
@@ -211,7 +211,7 @@ open class BaseFragment : Fragment() {
                     dlText.visibility = View.GONE
                     loadCircle.visibility = View.VISIBLE
                     prefs?.edit()?.putBoolean("isVancedDownloading", false)?.apply()
-                    if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot") == "Root") {
+                    if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") == "root") {
                         launchRootInstaller()
                     } else {
                         launchInstaller()
@@ -287,7 +287,7 @@ open class BaseFragment : Fragment() {
             )
     }
 
-    fun uninstallApk(pkgUri: String) {
+    /*fun uninstallApk(pkgUri: String) {
         try {
             val uri = Uri.parse("package:$pkgUri")
             val uninstall = Intent(Intent.ACTION_DELETE, uri)
@@ -296,5 +296,6 @@ open class BaseFragment : Fragment() {
             Toast.makeText(activity, "Failed to uninstall", Toast.LENGTH_SHORT).show()
         }
     }
+     */
 
 }
