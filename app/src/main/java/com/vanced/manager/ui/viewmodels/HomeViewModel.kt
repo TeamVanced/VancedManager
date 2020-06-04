@@ -23,6 +23,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+
     val isMicrogInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", Activity().packageManager)
     val isVancedInstalled: Boolean = isPackageInstalled("com.vanced.android.youtube", Activity().packageManager)
 

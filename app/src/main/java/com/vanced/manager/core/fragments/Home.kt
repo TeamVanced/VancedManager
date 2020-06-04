@@ -104,6 +104,7 @@ open class Home : BaseFragment() {
             }
         }
 
+        /*
         val microgVerText = view.findViewById<TextView>(R.id.microg_installed_version)
         if (microgStatus!!) {
             val microgVer = pm.getPackageInfo("com.mgoogle.android.gms", 0).versionName
@@ -112,8 +113,9 @@ open class Home : BaseFragment() {
                 uninstallApk("com.mgoogle.android.gms")
             }
 
+
             microgsettingsbtn.setOnClickListener {
-                /*try {
+                try {
                     val intent = Intent()
                     intent.component = ComponentName(
                         "com.mgoogle.android.gms",
@@ -124,8 +126,10 @@ open class Home : BaseFragment() {
                     Toast.makeText(activity, "App not installed", Toast.LENGTH_SHORT).show()
                     activity?.recreate()
                 }
-                 */
+
             }
+
+
             //microgVerText.text = microgVer
         } else {
             //microgsettingsbtn.visibility = View.INVISIBLE
@@ -139,6 +143,7 @@ open class Home : BaseFragment() {
                 vancedinstallbtn.icon = null
             }
         }
+         */
 
         val vancedVerText = view.findViewById<TextView>(R.id.vanced_installed_version)
         /*if (vancedStatus!!) {

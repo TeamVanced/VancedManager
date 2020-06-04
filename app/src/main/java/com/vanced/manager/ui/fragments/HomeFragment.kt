@@ -7,6 +7,7 @@ import android.view.*
 import android.widget.TextView
 import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
@@ -20,6 +21,7 @@ import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.databinding.FragmentHomeBinding
+import com.vanced.manager.ui.viewmodels.HomeViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -39,7 +41,9 @@ class HomeFragment : Home() {
     ): View? {
         activity?.title = getString(R.string.title_home)
         setHasOptionsMenu(true)
+        val viewModel: HomeViewModel by viewModels()
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        binding.viewModel = viewModel
 
         return binding.root
     }
@@ -87,13 +91,13 @@ class HomeFragment : Home() {
                     if (isConnectedToInternet) {
                         vancedinstallbtn?.visibility = View.VISIBLE
 
-                        val vancedRemoteVer =
-                            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
-                                .get("version").asString
+                        //val vancedRemoteVer =
+                          //  GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+                            //    .get("version").asString
                         val microgRemoteVer =
                             GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
                                 .get("version").asString
-                        vancedLatestTxt?.text = vancedRemoteVer
+                        //vancedLatestTxt?.text = vancedRemoteVer
 
                         //val vancedRemoteCode =
                           //  GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
