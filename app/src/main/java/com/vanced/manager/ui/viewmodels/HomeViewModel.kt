@@ -12,7 +12,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.dezlum.codelabs.getjson.GetJson
 
-class HomeViewModel(application: Application): AndroidViewModel(application) {
+open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
@@ -23,14 +23,13 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-
     val isMicrogInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", Activity().packageManager)
     val isVancedInstalled: Boolean = isPackageInstalled("com.vanced.android.youtube", Activity().packageManager)
 
     val isConnected = GetJson().isConnected(application)
 
     val vancedInstalledVersion: String =
-        if (getDefaultSharedPreferences(getApplication()).getString("vanced_variant", "Nonroot") == "Nonroot") {
+        if (getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot") {
             Activity().packageManager.getPackageInfo("com.vanced.android.youtube", 0).versionName
         } else {
             Activity().packageManager.getPackageInfo("com.google.android.youtube", 0).versionName
@@ -44,7 +43,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     val microgVersion: String = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
         .get("version").asString
 
-    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(getApplication()).getString("vanced_variant", "Nonroot") == "Nonroot"
+    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot"
 
     fun openMicrogSettings() {
         try {
