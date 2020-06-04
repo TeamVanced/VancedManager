@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.viewmodels
 
-import android.app.Activity
 import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
@@ -11,6 +10,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.dezlum.codelabs.getjson.GetJson
+import com.vanced.manager.R
 
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
@@ -23,19 +23,33 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         }
     }
 
+    private val vancedPkgName: String =
+        if (getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot") {
+            "com.google.android.youtube"
+        } else {
+            "com.vanced.android.youtube"
+        }
+
     val isMicrogInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
-    val isVancedInstalled: Boolean = isPackageInstalled("com.vanced.android.youtube", application.packageManager)
+    val isVancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
+
 
     val isConnected = GetJson().isConnected(application)
 
     val vancedInstalledVersion: String =
-        if (getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot") {
-            application.packageManager.getPackageInfo("com.vanced.android.youtube", 0).versionName
+        if (isVancedInstalled) {
+            application.packageManager.getPackageInfo(vancedPkgName, 0).versionName
         } else {
-            application.packageManager.getPackageInfo("com.google.android.youtube", 0).versionName
+            application.getString(R.string.unavailable)
         }
 
-    val microgInstalledVersion: String = application.packageManager.getPackageInfo("com.mgoogle.android.gms", 0).versionName
+
+    val microgInstalledVersion: String =
+        if (isMicrogInstalled) {
+            application.packageManager.getPackageInfo("com.mgoogle.android.gms", 0).versionName
+        } else {
+            application.getString(R.string.unavailable)
+        }
 
     val vancedVersion: String = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
         .get("version").asString

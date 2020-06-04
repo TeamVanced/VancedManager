@@ -100,7 +100,7 @@
                 <TextView
                     style="@style/AppVer.Bold"
                     android:id="@+id/vanced_installed_version"
-                    android:text="@{viewModel.vancedInstalled ? viewModel.vancedInstalledVersion : @string/unavailable}" />
+                    android:text="@{viewModel.vancedInstalledVersion}" />
 
             </LinearLayout>
 
