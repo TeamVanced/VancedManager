@@ -30,12 +30,12 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val vancedInstalledVersion: String =
         if (getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot") {
-            Activity().packageManager.getPackageInfo("com.vanced.android.youtube", 0).versionName
+            application.packageManager.getPackageInfo("com.vanced.android.youtube", 0).versionName
         } else {
-            Activity().packageManager.getPackageInfo("com.google.android.youtube", 0).versionName
+            application.packageManager.getPackageInfo("com.google.android.youtube", 0).versionName
         }
 
-    val microgInstalledVersion: String = Activity().packageManager.getPackageInfo("com.mgoogle.android.gms", 0).versionName
+    val microgInstalledVersion: String = application.packageManager.getPackageInfo("com.mgoogle.android.gms", 0).versionName
 
     val vancedVersion: String = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
         .get("version").asString
