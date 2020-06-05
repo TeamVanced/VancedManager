@@ -85,7 +85,7 @@ class HomeFragment : Home() {
                             GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
                                 .get("versionCode").asInt
 
-                        if (variant == "Nonroot") {
+                        if (variant == "nonroot") {
                             val microginstallbtn =
                                 view?.findViewById<MaterialButton>(R.id.microg_installbtn)
                             microginstallbtn?.visibility = View.VISIBLE

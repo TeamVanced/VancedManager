@@ -55,14 +55,14 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val vancedVersion: String =
         if (isConnected)
-            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json")
+            GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json")
                 .get("version").asString
         else
             application.getString(R.string.unavailable)
 
     val microgVersion: String =
         if (isConnected)
-            GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
+            GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
                 .get("version").asString
         else
             application.getString(R.string.unavailable)

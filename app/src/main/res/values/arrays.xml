@@ -35,8 +35,8 @@
     </string-array>
 
     <string-array name="vanced_variant_values">
-        <item>Nonroot</item>
-        <item>Root</item>
+        <item>nonroot</item>
+        <item>root</item>
     </string-array>
 
     <string-array name="syke">
