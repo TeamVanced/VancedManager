@@ -107,7 +107,18 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         }
     }
 
-    fun openUrl(Url: String, color: Int) {
+    fun openUrl(Url: String) {
+        val color: Int =
+            when (Url) {
+                "https://discord.gg/TUVd7rd" -> R.color.Discord
+                "https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w" -> R.color.Telegram
+                "https://twitter.com/YTVanced" -> R.color.Twitter
+                "https://reddit.com/r/vanced" -> R.color.Reddit
+                "https://vanced.app" -> R.color.Vanced
+                "https://brave.com/van874" -> R.color.Brave
+                else -> R.color.Vanced
+            }
+
         val builder = CustomTabsIntent.Builder()
         builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
         val customTabsIntent = builder.build()

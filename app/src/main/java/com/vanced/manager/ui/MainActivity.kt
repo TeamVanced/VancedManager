@@ -152,9 +152,11 @@ class MainActivity : Main() {
                     dialog, _ ->
                 run {
                     dialog.dismiss()
-                    recreate()
+                    startActivity(Intent(this@MainActivity, MainActivity::class.java))
+                    finish()
                 }
             }
+            .setCancelable(false)
             .create()
             .show()
     }

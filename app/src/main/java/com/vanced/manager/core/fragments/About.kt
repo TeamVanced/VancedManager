@@ -4,10 +4,8 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.preference.PreferenceManager
-import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 
 open class About : BaseFragment() {
@@ -43,17 +41,6 @@ open class About : BaseFragment() {
                 return@setOnTouchListener true
             }
             false
-        }
-
-        val githubSource = view.findViewById<Button>(R.id.about_github_button)
-        val license = view.findViewById<Button>(R.id.about_license_button)
-
-        githubSource.setOnClickListener {
-            openUrl("https://github.com/YTvanced/VancedInstaller", R.color.GitHub)
-        }
-
-        license.setOnClickListener {
-            openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE", R.color.GitHub)
         }
     }
 

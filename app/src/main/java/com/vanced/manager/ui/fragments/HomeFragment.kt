@@ -63,12 +63,17 @@ class HomeFragment : Home() {
 
     private fun initNetworkFun() {
         val pm = activity?.packageManager
+        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
-        val vancedStatus = pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+        val vancedStatus =
+            if (variant == "root") {
+                pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+            } else {
+                pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+            }
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
@@ -124,21 +129,20 @@ class HomeFragment : Home() {
 
                             val vancedVerCode =
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                                    pm.getPackageInfo(
+                                    pm?.getPackageInfo(
                                         vanPkgName,
                                         0
-                                    ).longVersionCode.and(0xFFFFFFFF).toInt()
+                                    )?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
                                 }
                                 else {
-                                    pm.getPackageInfo(
+                                    pm?.getPackageInfo(
                                         vanPkgName,
                                         0
-                                    ).versionCode
+                                    )?.versionCode
                                 }
 
-
                             when {
-                                vancedRemoteCode > vancedVerCode -> {
+                                vancedRemoteCode > vancedVerCode!! -> {
                                     vancedinstallbtn?.text =
                                         activity?.getString(R.string.update)
                                     vancedinstallbtn?.icon =

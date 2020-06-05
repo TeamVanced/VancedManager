@@ -18,16 +18,8 @@ open class Home : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Damn that's a lot of buttons
         val microginstallbtn = view.findViewById<MaterialButton>(R.id.microg_installbtn)
         val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
-
-        //val bravebtn = view.findViewById<Button>(R.id.brave_button)
-        //val websitebtn = view.findViewById<Button>(R.id.website_button)
-        //val discordbtn = view.findViewById<Button>(R.id.discordbtn)
-        //val telegrambtn = view.findViewById<Button>(R.id.tgbtn)
-        //val twitterbtn = view.findViewById<Button>(R.id.twitterbtn)
-        //val redditbtn = view.findViewById<Button>(R.id.redditbtn)
 
         val microgProgress = view.findViewById<ProgressBar>(R.id.microg_progress)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
@@ -82,31 +74,6 @@ open class Home : BaseFragment() {
                 Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
             }
         }
-
-        /*
-        bravebtn.setOnClickListener {
-            openUrl("https://brave.com/van874", R.color.Brave)
-
-        }
-        websitebtn.setOnClickListener {
-            openUrl("https://vanced.app", R.color.Vanced)
-        }
-        discordbtn.setOnClickListener {
-            openUrl("https://discord.gg/TUVd7rd", R.color.Discord)
-
-        }
-        telegrambtn.setOnClickListener {
-            openUrl("https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w", R.color.Telegram)
-
-        }
-        twitterbtn.setOnClickListener {
-            openUrl("https://twitter.com/YTVanced", R.color.Twitter)
-
-        }
-        redditbtn.setOnClickListener {
-            openUrl("https://reddit.com/r/vanced", R.color.Reddit)
-        }
-         */
 
     }
 
