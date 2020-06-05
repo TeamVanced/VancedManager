@@ -67,7 +67,7 @@ class HomeFragment : Home() {
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus =
             if (variant == "root") {
-                pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
+                pm?.let { isPackageInstalled("com.google.android.youtube", it) }
             } else {
                 pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
             }
