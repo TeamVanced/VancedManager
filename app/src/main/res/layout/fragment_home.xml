@@ -57,6 +57,17 @@
                 bind:viewModel="@{viewModel}"/>
 
             <include
+                android:id="@+id/home_signature_wrapper"
+                layout="@layout/include_signature_verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
+                android:layout_marginEnd="@dimen/stdp"
+                android:visibility="@{viewModel.nonrootModeSelected ? View.GONE : View.VISIBLE}"
+                bind:viewModel="@{viewModel}"/>
+
+            <include
                 layout="@layout/include_changelogs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

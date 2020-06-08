@@ -58,6 +58,7 @@
         <service android:name=".core.installer.SplitInstallerService" />
         <service android:name=".core.installer.RootSplitInstallerService" />
         <service android:name=".core.installer.RootAPKInstaller" />
+        <service android:name=".core.installer.RootAppUninstaller" />
 
     </application>
 

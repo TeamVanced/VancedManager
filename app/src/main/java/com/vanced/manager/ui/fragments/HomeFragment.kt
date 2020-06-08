@@ -1,13 +1,19 @@
 package com.vanced.manager.ui.fragments
 
 import android.animation.ObjectAnimator
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
 import android.view.*
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
 import com.dezlum.codelabs.getjson.GetJson
@@ -20,6 +26,8 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
+import com.vanced.manager.core.installer.RootAppUninstaller
+import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -53,12 +61,20 @@ class HomeFragment : Home() {
         binding.viewModel = viewModel
 
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        registerReceivers()
 
-        if (variantPref == "root")
+        val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
+        if (variantPref == "root") {
             attachRootChangelog()
-        else
+            vancedinstallbtn.isEnabled = false
+        } else
             attachNonrootChangelog()
 
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activity?.let { LocalBroadcastManager.getInstance(it).unregisterReceiver(broadcastReceiver) }
     }
 
     private fun initNetworkFun() {
@@ -116,6 +132,8 @@ class HomeFragment : Home() {
                                             activity?.getDrawable(R.drawable.outline_cloud_done_24)
                                     }
                                 }
+                            } else {
+                                vancedinstallbtn?.isEnabled = false
                             }
                         }
 
@@ -201,6 +219,42 @@ class HomeFragment : Home() {
             }
     }
 
+    private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            val statusTxt = view?.findViewById<TextView>(R.id.signature_status)
+            val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
+            val loadCircle = view?.findViewById<ProgressBar>(R.id.signature_loading)
+            when (intent.action) {
+                SIGNATURE_DISABLED -> {
+                    loadCircle?.visibility = View.GONE
+                    statusTxt?.text = "Disabled"
+                    vancedinstallbtn?.isEnabled = true
+                    val mIntent = Intent(activity, RootAppUninstaller::class.java)
+                    intent.putExtra("Data", "com.vanced.stub")
+                    activity?.startService(mIntent)
+                }
+                SIGNATURE_ENABLED -> {
+                    statusTxt?.text = "Enabled"
+                    loadCircle?.visibility = View.GONE
+                }
+            }
+        }
+    }
+
+    private fun registerReceivers() {
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                SIGNATURE_DISABLED
+            ))
+        }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                SIGNATURE_ENABLED
+            )
+            )
+        }
+    }
+
     private fun attachNonrootChangelog() {
         sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view?.findViewById(R.id.tablayout) as TabLayout
@@ -233,6 +287,11 @@ class HomeFragment : Home() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.toolbar_menu, menu)
         super .onCreateOptionsMenu(menu, inflater)
+    }
+
+    companion object {
+        const val SIGNATURE_DISABLED = "Signature verification disabled"
+        const val SIGNATURE_ENABLED = "Signature verification enabled"
     }
 
 }

@@ -287,15 +287,4 @@ open class BaseFragment : Fragment() {
             )
     }
 
-    /*fun uninstallApk(pkgUri: String) {
-        try {
-            val uri = Uri.parse("package:$pkgUri")
-            val uninstall = Intent(Intent.ACTION_DELETE, uri)
-            startActivity(uninstall)
-        } catch (e: ActivityNotFoundException) {
-            Toast.makeText(activity, "Failed to uninstall", Toast.LENGTH_SHORT).show()
-        }
-    }
-     */
-
 }

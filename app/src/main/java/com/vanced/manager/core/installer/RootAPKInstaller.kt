@@ -9,6 +9,7 @@ import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.FileInfo
 import java.io.File
 import java.text.SimpleDateFormat
@@ -27,13 +28,17 @@ class RootAPKInstaller: Service() {
             Log.d("AppLog", "succeeded installing?${installResult.isSuccess}")
             if (installResult.isSuccess) {
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
-                mIntent.action = MainActivity.INSTALL_COMPLETED
+                val mIntent = Intent(HomeFragment.SIGNATURE_DISABLED)
+                mIntent.action = HomeFragment.SIGNATURE_DISABLED
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+            } else {
+                val mIntent = Intent(HomeFragment.SIGNATURE_ENABLED)
+                mIntent.action = HomeFragment.SIGNATURE_ENABLED
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
         }
 
-        return super.onStartCommand(intent, flags, startId)
+        return START_NOT_STICKY
     }
 
     @WorkerThread

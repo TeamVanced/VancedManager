@@ -122,6 +122,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         val builder = CustomTabsIntent.Builder()
         builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
         val customTabsIntent = builder.build()
+        customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
     }
 

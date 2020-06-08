@@ -21,7 +21,7 @@ class AboutFragment : About() {
         savedInstanceState: Bundle?
     ): View? {
         activity?.title = getString(R.string.title_about)
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
         return binding.root
     }
 
