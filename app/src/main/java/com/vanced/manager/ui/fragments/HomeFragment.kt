@@ -5,6 +5,8 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.*
@@ -67,6 +69,8 @@ class HomeFragment : Home() {
         if (variantPref == "root") {
             attachRootChangelog()
             vancedinstallbtn.isEnabled = false
+            vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
+            vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.GRAY))
         } else
             attachNonrootChangelog()
 
@@ -88,7 +92,6 @@ class HomeFragment : Home() {
                 pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
             }
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
-        val vancedLatestTxt = view?.findViewById<TextView>(R.id.vanced_latest_version)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
@@ -134,6 +137,10 @@ class HomeFragment : Home() {
                                 }
                             } else {
                                 vancedinstallbtn?.isEnabled = false
+                                vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
+                                vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.GRAY))
+                                vancedinstallbtn?.text = activity?.getString(R.string.no_microg)
+                                vancedinstallbtn?.icon = null
                             }
                         }
 
@@ -226,6 +233,8 @@ class HomeFragment : Home() {
                     loadCircle?.visibility = View.GONE
                     statusTxt?.text = "Disabled"
                     vancedinstallbtn?.isEnabled = true
+                    vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(R.attr.colorPrimary)
+                    vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.WHITE)
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
