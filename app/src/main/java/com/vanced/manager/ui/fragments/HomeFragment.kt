@@ -9,12 +9,10 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.*
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.animation.addListener
-import androidx.core.content.res.ResourcesCompat.getColor
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -66,10 +64,8 @@ class HomeFragment : Home() {
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         registerReceivers()
 
-        val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
         if (variantPref == "root") {
             attachRootChangelog()
-            vancedinstallbtn.visibility = View.GONE
         } else
             attachNonrootChangelog()
 
@@ -198,8 +194,6 @@ class HomeFragment : Home() {
                         if (variant == "nonroot") {
                             view?.findViewById<MaterialButton>(R.id.microg_installbtn)?.visibility = View.INVISIBLE
                             view?.findViewById<TextView>(R.id.microg_latest_version)?.text = getString(R.string.unavailable)
-                        } else {
-                            view?.findViewById<MaterialButton>(R.id.signature_button)?.visibility = View.GONE
                         }
 
                         vancedinstallbtn?.visibility = View.INVISIBLE
