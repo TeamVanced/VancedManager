@@ -1,6 +1,7 @@
 package com.vanced.manager.core.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.preference.PreferenceManager
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
+import com.vanced.manager.core.installer.StubInstaller
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.MiuiHelper
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -86,6 +88,7 @@ open class Home : BaseFragment() {
         }
 
         signaturebtn.setOnClickListener {
+            /*
             val loadCircle = view.findViewById<ProgressBar>(R.id.signature_loading)
             activity?.filesDir?.delete()
 
@@ -115,6 +118,9 @@ open class Home : BaseFragment() {
                             .show()
                     }
                 )
+             */
+            val mIntent = Intent(activity, StubInstaller::class.java)
+            activity?.startService(mIntent)
         }
 
     }

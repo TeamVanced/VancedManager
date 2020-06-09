@@ -64,8 +64,7 @@
                 android:layout_marginStart="@dimen/stdp"
                 android:layout_marginTop="@dimen/stdp"
                 android:layout_marginEnd="@dimen/stdp"
-                android:visibility="@{viewModel.nonrootModeSelected ? View.GONE : View.VISIBLE}"
-                bind:viewModel="@{viewModel}"/>
+                android:visibility="@{viewModel.nonrootModeSelected ? View.GONE : View.VISIBLE}" />
 
             <include
                 layout="@layout/include_changelogs"

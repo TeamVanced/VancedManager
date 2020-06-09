@@ -190,16 +190,13 @@ class HomeFragment : Home() {
                         }
                     } else {
                         if (variant == "nonroot") {
-                            val microgLatestTxt =
-                                view?.findViewById<TextView>(R.id.microg_latest_version)
-                            val microginstallbtn =
-                                view?.findViewById<MaterialButton>(R.id.microg_installbtn)
-                            microginstallbtn?.visibility = View.INVISIBLE
-                            microgLatestTxt?.text = getString(R.string.unavailable)
+                            view?.findViewById<MaterialButton>(R.id.microg_installbtn)?.visibility = View.INVISIBLE
+                            view?.findViewById<TextView>(R.id.microg_latest_version)?.text = getString(R.string.unavailable)
+                        } else {
+                            view?.findViewById<MaterialButton>(R.id.signature_button)?.visibility = View.GONE
                         }
 
                         vancedinstallbtn?.visibility = View.INVISIBLE
-                        vancedLatestTxt?.text = getString(R.string.unavailable)
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
                         val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
@@ -230,7 +227,7 @@ class HomeFragment : Home() {
                     statusTxt?.text = "Disabled"
                     vancedinstallbtn?.isEnabled = true
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
-                    intent.putExtra("Data", "com.vanced.stub")
+                    mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
                 }
                 SIGNATURE_ENABLED -> {
