@@ -225,7 +225,7 @@ class HomeFragment : Home() {
                 SIGNATURE_DISABLED -> {
                     loadCircle?.visibility = View.GONE
                     statusTxt?.text = "Disabled"
-                    statusTxt?.setTextColor(R.color.Green)
+                    statusTxt?.setTextColor(resources.getColor(R.color.Green))
                     vancedinstallbtn?.visibility = View.VISIBLE
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
@@ -233,7 +233,7 @@ class HomeFragment : Home() {
                 }
                 SIGNATURE_ENABLED -> {
                     statusTxt?.text = "Enabled"
-                    statusTxt?.setTextColor(R.color.Red)
+                    statusTxt?.setTextColor(resources.getColor(R.color.Red))
                     loadCircle?.visibility = View.GONE
                 }
             }
