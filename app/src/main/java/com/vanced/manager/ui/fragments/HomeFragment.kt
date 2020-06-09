@@ -233,7 +233,11 @@ class HomeFragment : Home() {
                     loadCircle?.visibility = View.GONE
                     statusTxt?.text = "Disabled"
                     vancedinstallbtn?.isEnabled = true
-                    vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(getThemeColor(R.attr.colorPrimary))
+                    vancedinstallbtn?.backgroundTintList = activity?.getColor(R.attr.colorPrimary)?.let {
+                        ColorStateList.valueOf(
+                            it
+                        )
+                    }
                     vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.WHITE))
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
