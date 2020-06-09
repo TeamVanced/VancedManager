@@ -234,7 +234,7 @@ class HomeFragment : Home() {
                     statusTxt?.text = "Disabled"
                     vancedinstallbtn?.isEnabled = true
                     vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(R.attr.colorPrimary)
-                    vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.WHITE)
+                    vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.WHITE))
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
