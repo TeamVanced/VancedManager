@@ -9,6 +9,7 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.*
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -29,7 +30,6 @@ import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.core.installer.RootAppUninstaller
-import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -233,7 +233,7 @@ class HomeFragment : Home() {
                     loadCircle?.visibility = View.GONE
                     statusTxt?.text = "Disabled"
                     vancedinstallbtn?.isEnabled = true
-                    vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(R.attr.colorPrimary)
+                    vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(getThemeColor(R.attr.colorPrimary))
                     vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.WHITE))
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
@@ -245,6 +245,12 @@ class HomeFragment : Home() {
                 }
             }
         }
+    }
+
+    private fun getThemeColor(attr: Int): Int {
+        val typedValue = TypedValue()
+        activity?.theme?.resolveAttribute(attr, typedValue, true)
+        return typedValue.resourceId
     }
 
     private fun registerReceivers() {

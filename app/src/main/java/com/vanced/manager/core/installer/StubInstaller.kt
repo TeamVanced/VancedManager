@@ -1,7 +1,6 @@
 package com.vanced.manager.core.installer
 
 import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.os.IBinder
 import android.util.Log
@@ -37,13 +36,13 @@ class StubInstaller: Service() {
     private fun copyStub() {
         try {
             val stubName = "stub.apk"
-            val inAssset = assets.open(stubName)
+            val inAsset = assets.open(stubName)
             val outFile = File(filesDir, stubName)
-            val out: OutputStream = FileOutputStream(outFile)
+            val outAsset: OutputStream = FileOutputStream(outFile)
             val buffer = ByteArray(1024)
             var read: Int
-            while (inAssset.read(buffer).also { read = it } != -1) {
-                out.write(buffer, 0, read)
+            while (inAsset.read(buffer).also { read = it } != -1) {
+                outAsset.write(buffer, 0, read)
             }
         } catch (e: IOException) {
             Log.d("VMStub", "Failed to copy stub")
@@ -51,7 +50,7 @@ class StubInstaller: Service() {
     }
 
     override fun onBind(intent: Intent?): IBinder? {
-        TODO("Not yet implemented")
+        return null
     }
 }
 
