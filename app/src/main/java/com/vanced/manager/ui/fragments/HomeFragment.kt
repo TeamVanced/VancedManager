@@ -14,6 +14,7 @@ import android.view.*
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.animation.addListener
+import androidx.core.content.res.ResourcesCompat.getColor
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -68,9 +69,7 @@ class HomeFragment : Home() {
         val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
         if (variantPref == "root") {
             attachRootChangelog()
-            vancedinstallbtn.isEnabled = false
-            vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
-            vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.GRAY))
+            vancedinstallbtn.visibility = View.GONE
         } else
             attachNonrootChangelog()
 
@@ -232,13 +231,7 @@ class HomeFragment : Home() {
                 SIGNATURE_DISABLED -> {
                     loadCircle?.visibility = View.GONE
                     statusTxt?.text = "Disabled"
-                    vancedinstallbtn?.isEnabled = true
-                    vancedinstallbtn?.backgroundTintList = activity?.getColor(R.attr.colorPrimary)?.let {
-                        ColorStateList.valueOf(
-                            it
-                        )
-                    }
-                    vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.WHITE))
+                    vancedinstallbtn?.visibility = View.VISIBLE
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
@@ -249,12 +242,6 @@ class HomeFragment : Home() {
                 }
             }
         }
-    }
-
-    private fun getThemeColor(attr: Int): Int {
-        val typedValue = TypedValue()
-        activity?.theme?.resolveAttribute(attr, typedValue, true)
-        return typedValue.resourceId
     }
 
     private fun registerReceivers() {

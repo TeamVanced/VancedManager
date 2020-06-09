@@ -14,7 +14,6 @@ import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.installer.StubInstaller
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.MiuiHelper
-import io.reactivex.disposables.Disposable
 
 open class Home : BaseFragment() {
 
