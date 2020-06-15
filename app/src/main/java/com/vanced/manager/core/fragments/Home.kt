@@ -23,10 +23,14 @@ open class Home : BaseFragment(), View.OnClickListener {
         val microginstallbtn = view.findViewById<MaterialButton>(R.id.microg_installbtn)
         val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val signaturebtn = view.findViewById<MaterialButton>(R.id.signature_button)
+        val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
+        val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
 
         vancedinstallbtn.setOnClickListener(this)
         microginstallbtn.setOnClickListener(this)
         signaturebtn.setOnClickListener(this)
+        microguninstallbtn.setOnClickListener(this)
+        vanceduninstallbtn.setOnClickListener(this)
 
     }
 
