@@ -26,7 +26,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         }
     }
 
-    val isConnected = GetJson().isConnected(application)
+    private val connected: Boolean = GetJson().isConnected(application)
 
     private val vancedPkgName: String =
         if (getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "root") {
@@ -34,12 +34,13 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         } else {
             "com.vanced.android.youtube"
         }
+    private val signaturePref = getDefaultSharedPreferences(application).getString("signature_status", "unavailable")
 
-    val isMicrogInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
-    val isVancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
+    val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
+    val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
 
     val vancedInstalledVersion: String =
-        if (isVancedInstalled) {
+        if (vancedInstalled) {
             application.packageManager.getPackageInfo(vancedPkgName, 0).versionName
         } else {
             application.getString(R.string.unavailable)
@@ -47,27 +48,34 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
 
     val microgInstalledVersion: String =
-        if (isMicrogInstalled) {
+        if (microgInstalled) {
             application.packageManager.getPackageInfo("com.mgoogle.android.gms", 0).versionName
         } else {
             application.getString(R.string.unavailable)
         }
 
     val vancedVersion: String =
-        if (isConnected)
+        if (connected)
             GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json")
                 .get("version").asString
         else
             application.getString(R.string.unavailable)
 
     val microgVersion: String =
-        if (isConnected)
+        if (connected)
             GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
                 .get("version").asString
         else
             application.getString(R.string.unavailable)
 
-    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "nonroot"
+    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot"
+
+    val signatureStatusTxt: String =
+        when (signaturePref) {
+            "disabled" -> application.getString(R.string.signature_disabled)
+            "enabled" -> application.getString(R.string.signature_enabled)
+            else -> application.getString(R.string.unavailable)
+        }
 
     fun openMicrogSettings() {
         try {
@@ -80,30 +88,6 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             startActivity(getApplication(), intent, null)
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(getApplication(), "App not installed", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    fun uninstallMicrog() {
-        try {
-            val uri = Uri.parse("package:com.mgoogle.android.gms")
-            val uninstall = Intent(Intent.ACTION_DELETE, uri)
-            uninstall.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(getApplication(), uninstall, null)
-
-        } catch (e: ActivityNotFoundException) {
-            Toast.makeText(getApplication(), "Failed to uninstall", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    fun uninstallVanced() {
-        try {
-            val uri = Uri.parse("package:$vancedPkgName")
-            val uninstall = Intent(Intent.ACTION_DELETE, uri)
-            uninstall.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(getApplication(), uninstall, null)
-
-        } catch (e: ActivityNotFoundException) {
-            Toast.makeText(getApplication(), "Failed to uninstall", Toast.LENGTH_SHORT).show()
         }
     }
 

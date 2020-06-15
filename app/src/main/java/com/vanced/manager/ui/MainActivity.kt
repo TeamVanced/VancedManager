@@ -12,7 +12,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
-import com.vanced.manager.BR
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -53,12 +52,12 @@ class MainActivity : Main() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
                 INSTALL_COMPLETED -> launchVanced()
-                INSTALL_BLOCKED -> alertBuilder(INSTALL_BLOCKED)
-                INSTALL_FAILED -> alertBuilder(INSTALL_FAILED)
-                INSTALL_ABORTED -> alertBuilder(INSTALL_ABORTED)
-                INSTALL_STORAGE -> alertBuilder(INSTALL_STORAGE)
-                INSTALL_CONFLICT -> alertBuilder(INSTALL_CONFLICT)
-                INSTALL_INVALID -> alertBuilder(INSTALL_INVALID)
+                INSTALL_BLOCKED -> alertBuilder(getString(R.string.installation_blocked))
+                INSTALL_FAILED -> alertBuilder(getString(R.string.installation_failed))
+                INSTALL_ABORTED -> alertBuilder(getString(R.string.installation_aborted))
+                INSTALL_STORAGE -> alertBuilder(getString(R.string.installation_storage))
+                INSTALL_CONFLICT -> alertBuilder(getString(R.string.installation_conflict))
+                INSTALL_INVALID -> alertBuilder(getString(R.string.installation_invalid))
 
             }
         }
@@ -113,6 +112,11 @@ class MainActivity : Main() {
         return false
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+    }
+
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         val toolbar: Toolbar = findViewById(R.id.home_toolbar)
         when {
@@ -124,7 +128,7 @@ class MainActivity : Main() {
     private fun alertBuilder(msg: String) {
         AlertDialog.Builder(this)
             .setTitle("Error")
-            .setMessage("Operation failed because $msg")
+            .setMessage(msg)
             .setPositiveButton(getString(R.string.close)) { dialog, _ ->
                 run {
                     dialog.dismiss()

@@ -11,8 +11,8 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 6
-        versionName "1.2.0 beta"
+        versionCode 7
+        versionName "1.4.0 beta"
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -42,7 +42,6 @@ android {
 
 // To inline the bytecode built with JVM target 1.8 into
 // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
-
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

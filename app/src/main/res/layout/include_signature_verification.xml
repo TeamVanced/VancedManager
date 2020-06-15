@@ -1,72 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    style="@style/MaterialCard"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <data>
 
-        <ImageView
-            android:id="@+id/signature_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_security_black_24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/signature_barrier"/>
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
 
-        <TextView
-            style="@style/TextAppTitle"
-            android:id="@+id/signature_title"
-            android:text="Signature Verification"
-            app:layout_constraintStart_toEndOf="@id/signature_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/signature_barrier"/>
+    </data>
 
-        <com.google.android.material.button.MaterialButton
-            style="@style/ButtonStyle"
-            android:id="@+id/signature_button"
-            android:text="Check"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.card.MaterialCardView
+        style="@style/MaterialCard"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/signature_barrier"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:constraint_referenced_ids="signature_button"
-            app:barrierDirection="bottom"/>
+            android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/signature_status_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/signature_barrier">
+            <ImageView
+                android:id="@+id/signature_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_security_black_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/signature_barrier"/>
 
             <TextView
-                style="@style/AppVer"
-                android:text="status:" />
+                style="@style/TextAppTitle"
+                android:id="@+id/signature_title"
+                android:text="Signature Verification"
+                app:layout_constraintStart_toEndOf="@id/signature_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/signature_barrier"/>
 
-            <TextView
-                style="@style/AppVer.Bold"
-                android:id="@+id/signature_status"
-                android:text="@string/unavailable"/>
+            <com.google.android.material.button.MaterialButton
+                style="@style/ButtonStyle"
+                android:id="@+id/signature_button"
+                android:text="Check"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/signature_barrier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="signature_button"
+                app:barrierDirection="bottom"/>
 
-        <ProgressBar
-            android:id="@+id/signature_loading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@id/signature_status_layout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:visibility="visible" />
+            <LinearLayout
+                android:id="@+id/signature_status_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/signature_barrier">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    style="@style/AppVer"
+                    android:text="status:" />
 
-</com.google.android.material.card.MaterialCardView>
+                <TextView
+                    style="@style/AppVer.Bold"
+                    android:id="@+id/signature_status"
+                    android:text="@{viewModel.signatureStatusTxt}"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/signature_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/signature_status_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

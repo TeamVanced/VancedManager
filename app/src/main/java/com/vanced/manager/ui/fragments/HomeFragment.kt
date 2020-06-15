@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.fragments
 
 import android.animation.ObjectAnimator
+import android.app.Activity.*
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -9,6 +10,7 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -35,7 +37,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
-@Suppress("DEPRECATION")
 class HomeFragment : Home() {
 
     private lateinit var sectionPageAdapter: SectionPageAdapter
@@ -62,10 +63,14 @@ class HomeFragment : Home() {
         binding.viewModel = viewModel
 
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        val signatureStatus = getDefaultSharedPreferences(activity).getString("signature_status", "unavailable")
         registerReceivers()
 
         if (variantPref == "root") {
             attachRootChangelog()
+            if (signatureStatus != "disabled") {
+                disableVancedButton(getString(R.string.signature_not_checked))
+            }
         } else
             attachNonrootChangelog()
 
@@ -78,10 +83,10 @@ class HomeFragment : Home() {
 
     private fun initNetworkFun() {
         val pm = activity?.packageManager
-        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus =
-            if (variant == "root") {
+            if (variant == "Root") {
                 pm?.let { isPackageInstalled("com.google.android.youtube", it) }
             } else {
                 pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
@@ -110,6 +115,7 @@ class HomeFragment : Home() {
                             microginstallbtn?.visibility = View.VISIBLE
 
                             if (microgStatus!!) {
+                                @Suppress("DEPRECATION")
                                 val microgVerCode =
                                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
                                         pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode.and(0xFFFFFFFF).toInt()
@@ -131,22 +137,20 @@ class HomeFragment : Home() {
                                     }
                                 }
                             } else {
-                                vancedinstallbtn?.isEnabled = false
-                                vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
-                                vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.GRAY))
-                                vancedinstallbtn?.text = activity?.getString(R.string.no_microg)
-                                vancedinstallbtn?.icon = null
+                                activity?.getString(R.string.no_microg)?.let {
+                                    disableVancedButton(it)
+                                }
                             }
                         }
 
                         if (vancedStatus!!) {
                             val vanPkgName =
-                                if (variant == "root") {
+                                if (variant == "root")
                                     "com.google.android.youtube"
-                                } else {
-                                  "com.vanced.android.youtube"
-                                }
+                                else
+                                    "com.vanced.android.youtube"
 
+                            @Suppress("DEPRECATION")
                             val vancedVerCode =
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                                     pm?.getPackageInfo(
@@ -216,24 +220,49 @@ class HomeFragment : Home() {
             }
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val tag = "VMUninstall"
+        when (requestCode) {
+            MICROG_INSTALL -> {
+                when (resultCode) {
+                    RESULT_OK -> {
+                        activity?.recreate()
+                        Log.d(tag, "Successfully installed MicroG")
+                    }
+                    RESULT_CANCELED -> Log.d(tag, "Failed to install MicroG, perhaps user canceled request?")
+                    RESULT_FIRST_USER -> Log.d(tag, "What does this even mean?")
+                }
+            }
+            APP_UNINSTALL -> {
+                when (resultCode) {
+                    RESULT_OK -> {
+                        activity?.recreate()
+                        Log.d(tag, "Successfully uninstalled app")
+                    }
+                    RESULT_CANCELED -> Log.d(tag, "Failed to uninstall app, perhaps user canceled request?")
+                    RESULT_FIRST_USER -> Log.d(tag, "What does this even mean?")
+                }
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             val statusTxt = view?.findViewById<TextView>(R.id.signature_status)
-            val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
             val loadCircle = view?.findViewById<ProgressBar>(R.id.signature_loading)
             when (intent.action) {
                 SIGNATURE_DISABLED -> {
                     loadCircle?.visibility = View.GONE
-                    statusTxt?.text = "Disabled"
-                    statusTxt?.setTextColor(resources.getColor(R.color.Green))
-                    vancedinstallbtn?.visibility = View.VISIBLE
+                    statusTxt?.text = getString(R.string.signature_disabled)
+                    statusTxt?.setTextColor(getColor(R.color.Green))
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
                 }
                 SIGNATURE_ENABLED -> {
-                    statusTxt?.text = "Enabled"
-                    statusTxt?.setTextColor(resources.getColor(R.color.Red))
+                    statusTxt?.text = getString(R.string.signature_enabled)
+                    statusTxt?.setTextColor(getColor(R.color.Red))
                     loadCircle?.visibility = View.GONE
                 }
             }
@@ -286,6 +315,23 @@ class HomeFragment : Home() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.toolbar_menu, menu)
         super .onCreateOptionsMenu(menu, inflater)
+    }
+
+    private fun disableVancedButton(txt: String) {
+        val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
+        vancedinstallbtn?.isEnabled = false
+        vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
+        vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.GRAY))
+        vancedinstallbtn?.text = txt
+        vancedinstallbtn?.icon = null
+    }
+
+    @Suppress("DEPRECATION")
+    private fun getColor(color: Int): Int {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            resources.getColor(color, activity?.theme)
+         else
+            resources.getColor(color)
     }
 
     companion object {

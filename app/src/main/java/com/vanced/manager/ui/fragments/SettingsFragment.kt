@@ -28,14 +28,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val themeSwitch: ListPreference? = findPreference("theme_mode")
         themeSwitch?.summary = preferenceScreen.sharedPreferences.getString("theme_mode", "Light")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
-            activity?.recreate()
+            restartMain()
             true
         }
 
         val accentSwitch: ListPreference? = findPreference("accent_color")
         accentSwitch?.summary = preferenceScreen.sharedPreferences.getString("accent_color", "Blue")
         accentSwitch?.setOnPreferenceChangeListener { _, _ ->
-            activity?.recreate()
+            restartMain()
             true
         }
 
@@ -49,8 +49,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     }
                 }
             }
-            startActivity(Intent(activity, MainActivity::class.java))
-            activity?.finish()
+            restartMain()
             true
         }
 
@@ -67,6 +66,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.secret_settings_menu, menu)
         super .onCreateOptionsMenu(menu, inflater)
+    }
+
+    fun restartMain() {
+        startActivity(Intent(activity, MainActivity::class.java))
+        activity?.finish()
     }
 
 }

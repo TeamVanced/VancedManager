@@ -23,10 +23,10 @@ class ManagerChangelogFragment : Fragment() {
 
         val changelogTxt = view.findViewById<TextView>(R.id.manager_changelog)
 
-        val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
-        val changelog = checkUrl.get("changelog").asString
-
-        if (GetJson().isConnected(activity))
+        if (GetJson().isConnected(activity)) {
+            val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
+            val changelog = checkUrl.get("changelog").asString
             changelogTxt.text = changelog
+        }
     }
 }

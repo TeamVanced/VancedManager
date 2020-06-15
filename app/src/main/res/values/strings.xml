@@ -15,8 +15,14 @@
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
     <string name="install">Install</string>
-    <string name="version_installed">Installed:</string>
+    <string name="installation_aborted">Operation failed because user aborted installation</string>
+    <string name="installation_blocked">Operation failed because user blocked installation</string>
+    <string name="installation_conflict">Operation failed because app conflicts with already installed app</string>
+    <string name="installation_failed">Operation failed because it just failed idk</string>
+    <string name="installation_invalid">Operation failed because apk files are invalid</string>
+    <string name="installation_storage">Operation failed because there was an error with storage. Hold up how is that even possible?</string>
     <string name="button_installed">Installed</string>
+    <string name="version_installed">Installed:</string>
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
     <string name="network_error">Network connection unavailable</string>
@@ -26,6 +32,9 @@
     <string name="useful_links">Useful Links</string>
     <string name="vanced_medias">Vanced on Social Media</string>
     <string name="website_text">The official website of Vanced</string>
+    <string name="signature_disabled">Disabled</string>
+    <string name="signature_enabled">Enabled</string>
+    <string name="signature_not_checked">Signature not checked</string>
     <string name="support_us">Support us by downloading Brave</string>
 
     <!-- Settings -->
