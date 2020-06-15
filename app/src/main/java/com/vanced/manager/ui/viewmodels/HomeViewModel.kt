@@ -29,7 +29,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     private val connected: Boolean = GetJson().isConnected(application)
 
     private val vancedPkgName: String =
-        if (getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "root") {
+        if (getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Root") {
             "com.google.android.youtube"
         } else {
             "com.vanced.android.youtube"
