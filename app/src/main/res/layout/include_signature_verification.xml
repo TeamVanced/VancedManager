@@ -31,7 +31,7 @@
             <TextView
                 style="@style/TextAppTitle"
                 android:id="@+id/signature_title"
-                android:text="Signature Verification"
+                android:text="@string/signature_verification"
                 app:layout_constraintStart_toEndOf="@id/signature_icon"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/signature_barrier"/>
@@ -39,7 +39,7 @@
             <com.google.android.material.button.MaterialButton
                 style="@style/ButtonStyle"
                 android:id="@+id/signature_button"
-                android:text="Check"
+                android:text="@string/check"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,7 +58,7 @@
 
                 <TextView
                     style="@style/AppVer"
-                    android:text="status:" />
+                    android:text="@string/signature_status" />
 
                 <TextView
                     style="@style/AppVer.Bold"
@@ -80,4 +80,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
 </layout>

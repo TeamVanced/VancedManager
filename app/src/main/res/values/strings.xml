@@ -14,6 +14,7 @@
 
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
+    <string name="check">Check</string>
     <string name="install">Install</string>
     <string name="installation_aborted">Operation failed because user aborted installation</string>
     <string name="installation_blocked">Operation failed because user blocked installation</string>
@@ -34,6 +35,8 @@
     <string name="website_text">The official website of Vanced</string>
     <string name="signature_disabled">Disabled</string>
     <string name="signature_enabled">Enabled</string>
+    <string name="signature_status">status:</string>
+    <string name="signature_verification">Signature Verification</string>
     <string name="signature_not_checked">Signature not checked</string>
     <string name="support_us">Support us by downloading Brave</string>
 
