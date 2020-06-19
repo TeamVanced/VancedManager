@@ -179,7 +179,7 @@ class HomeFragment : Home() {
 
                             }
 
-                            if (variant == "Root" && viewModel.signatureStatusTxt != getString(R.string.signature_disabled)) {
+                            if (variant == "Root" && viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
                                 disableVancedButton(getString(R.string.signature_not_checked))
                             }
 
@@ -240,14 +240,18 @@ class HomeFragment : Home() {
             val viewModel: HomeViewModel by viewModels()
             when (intent.action) {
                 SIGNATURE_DISABLED -> {
-                    viewModel.signatureStatusTxt = getString(R.string.signature_disabled)
+                    activity?.runOnUiThread {
+                        viewModel.signatureStatusTxt.value = getString(R.string.signature_disabled)
+                    }
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
                     //activity?.recreate()
                 }
                 SIGNATURE_ENABLED -> {
-                    viewModel.signatureStatusTxt = getString(R.string.signature_enabled)
+                    activity?.runOnUiThread {
+                        viewModel.signatureStatusTxt.value = getString(R.string.signature_enabled)
+                    }
                     //activity?.recreate()
                 }
                 MICROG_DOWNLOADING -> {

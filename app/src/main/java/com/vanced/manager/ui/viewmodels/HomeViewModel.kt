@@ -10,6 +10,8 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
@@ -61,7 +63,8 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot"
 
-    var signatureStatusTxt: String = application.getString(R.string.unavailable)
+    val signatureString = application.getString(R.string.unavailable)
+    val signatureStatusTxt: MutableLiveData<String> = MutableLiveData()
 
     fun openMicrogSettings() {
         try {
@@ -94,6 +97,10 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         val customTabsIntent = builder.build()
         customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
+    }
+
+    init {
+        signatureStatusTxt.value = signatureString
     }
 
 }

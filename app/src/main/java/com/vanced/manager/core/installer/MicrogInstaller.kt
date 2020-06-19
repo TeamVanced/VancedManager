@@ -1,14 +1,13 @@
 package com.vanced.manager.core.installer
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
-import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.core.content.FileProvider
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.core.base.BaseFragment
-import com.vanced.manager.ui.MainActivity
 import zlc.season.rxdownload4.file
 import zlc.season.rxdownload4.task.Task
 import zlc.season.rxdownload4.utils.getFileNameFromUrl
@@ -37,12 +36,7 @@ object MicrogInstaller {
         mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         mIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         mIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true)
-        startActivityForResult(
-            MainActivity(),
-            mIntent,
-            BaseFragment.MICROG_INSTALL,
-            null
-        )
+        Activity().startActivityForResult(mIntent, BaseFragment.MICROG_INSTALL)
     }
     
 }
