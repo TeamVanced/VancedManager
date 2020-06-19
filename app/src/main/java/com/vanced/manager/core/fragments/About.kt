@@ -35,7 +35,8 @@ open class About : BaseFragment() {
                     if (!devSettings) {
                         Toast.makeText(requireContext(), "Dev options unlocked!", Toast.LENGTH_SHORT).show()
                         prefs.edit().putBoolean("devSettings", true).apply()
-                    } else Toast.makeText(requireContext(), "Dev options already unlocked", Toast.LENGTH_SHORT).show()
+                    } else
+                        Toast.makeText(requireContext(), "Dev options already unlocked", Toast.LENGTH_SHORT).show()
 
                 }
                 return@setOnTouchListener true

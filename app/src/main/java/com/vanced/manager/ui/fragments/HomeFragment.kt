@@ -261,9 +261,6 @@ class HomeFragment : Home() {
                     progressbar?.visibility = View.VISIBLE
                     progressbar?.progress = progress
                 }
-                MICROG_DOWNLOADED -> {
-                    activity?.let { installMicrog(it) }
-                }
             }
         }
     }
@@ -283,12 +280,6 @@ class HomeFragment : Home() {
         activity?.let {
             LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
                 VANCED_DOWNLOADING
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                MICROG_DOWNLOADED
             )
             )
         }
@@ -353,7 +344,6 @@ class HomeFragment : Home() {
         const val SIGNATURE_DISABLED = "Signature verification disabled"
         const val SIGNATURE_ENABLED = "Signature verification enabled"
         const val VANCED_DOWNLOADING = "Vanced downloading"
-        const val MICROG_DOWNLOADED = "MicroG downloaded"
         const val MICROG_DOWNLOADING = "MicroG downloading"
     }
 

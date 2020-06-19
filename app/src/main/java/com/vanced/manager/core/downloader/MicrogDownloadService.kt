@@ -7,6 +7,7 @@ import android.os.IBinder
 import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.dezlum.codelabs.getjson.GetJson
+import com.vanced.manager.core.installer.MicrogInstaller.installMicrog
 import com.vanced.manager.ui.fragments.HomeFragment
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
@@ -54,6 +55,7 @@ class MicrogDownloadService: Service() {
                 },
                 onComplete = {
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
+                    installMicrog(this)
                 },
                 onError = { throwable ->
                     Toast.makeText(this, throwable.toString(), Toast.LENGTH_SHORT)
