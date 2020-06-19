@@ -295,6 +295,12 @@ class HomeFragment : Home() {
             )
             )
         }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                DOWNLOAD_ERROR
+            )
+            )
+        }
 
     }
 
