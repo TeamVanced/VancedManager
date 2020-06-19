@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
@@ -28,7 +29,6 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
-import com.vanced.manager.core.installer.MicrogInstaller.installMicrog
 import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.MainActivity
@@ -69,9 +69,6 @@ class HomeFragment : Home() {
 
         if (variantPref == "Root") {
             attachRootChangelog()
-            if (viewModel.signatureStatusTxt != getString(R.string.signature_disabled)) {
-                disableVancedButton(getString(R.string.signature_not_checked))
-            }
         } else
             attachNonrootChangelog()
 
@@ -94,6 +91,7 @@ class HomeFragment : Home() {
             }
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
+        val viewModel: HomeViewModel by viewModels()
 
         disposable = ReactiveNetwork.observeInternetConnectivity()
             .subscribeOn(Schedulers.io())
@@ -110,7 +108,7 @@ class HomeFragment : Home() {
                             GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
                                 .get("versionCode").asInt
 
-                        if (variant == "nonroot") {
+                        if (variant == "Nonroot") {
                             val microginstallbtn =
                                 view?.findViewById<MaterialButton>(R.id.microg_installbtn)
                             microginstallbtn?.visibility = View.VISIBLE
@@ -138,9 +136,7 @@ class HomeFragment : Home() {
                                     }
                                 }
                             } else {
-                                activity?.getString(R.string.no_microg)?.let {
-                                    disableVancedButton(it)
-                                }
+                                disableVancedButton(getString(R.string.no_microg))
                             }
                         }
 
@@ -181,6 +177,10 @@ class HomeFragment : Home() {
                                         activity?.getDrawable(R.drawable.outline_cloud_done_24)
                                 }
 
+                            }
+
+                            if (variant == "Root" && viewModel.signatureStatusTxt != getString(R.string.signature_disabled)) {
+                                disableVancedButton(getString(R.string.signature_not_checked))
                             }
 
                         }
@@ -237,17 +237,18 @@ class HomeFragment : Home() {
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
+            val viewModel: HomeViewModel by viewModels()
             when (intent.action) {
                 SIGNATURE_DISABLED -> {
-                    activity?.application?.let { HomeViewModel(it).signatureStatusTxt = getString(R.string.signature_disabled)}
+                    viewModel.signatureStatusTxt = getString(R.string.signature_disabled)
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
-                    activity?.recreate()
+                    //activity?.recreate()
                 }
                 SIGNATURE_ENABLED -> {
-                    activity?.application?.let { HomeViewModel(it).signatureStatusTxt = getString(R.string.signature_enabled)}
-                    activity?.recreate()
+                    viewModel.signatureStatusTxt = getString(R.string.signature_enabled)
+                    //activity?.recreate()
                 }
                 MICROG_DOWNLOADING -> {
                     val progress = intent.getIntExtra("microgProgress", 0)
@@ -260,6 +261,11 @@ class HomeFragment : Home() {
                     val progressbar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
                     progressbar?.visibility = View.VISIBLE
                     progressbar?.progress = progress
+                }
+                DOWNLOAD_ERROR -> {
+                    val error = intent.getStringExtra("DownloadError") as String
+                    Toast.makeText(activity, error, Toast.LENGTH_SHORT).show()
+                    Log.d("VMDwnld", error)
                 }
             }
         }
@@ -345,6 +351,7 @@ class HomeFragment : Home() {
         const val SIGNATURE_ENABLED = "Signature verification enabled"
         const val VANCED_DOWNLOADING = "Vanced downloading"
         const val MICROG_DOWNLOADING = "MicroG downloading"
+        const val DOWNLOAD_ERROR = "Error occurred"
     }
 
 }

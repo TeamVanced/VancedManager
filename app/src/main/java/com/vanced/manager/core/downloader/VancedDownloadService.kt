@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
-import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.vanced.manager.core.installer.RootSplitInstallerService
@@ -65,12 +64,12 @@ class VancedDownloadService: Service() {
             task.delete()
 
         disposable = task.download()
-            .observeOn(Schedulers.single())
+            .observeOn(Schedulers.newThread())
             .subscribeBy(
                 onNext = { progress ->
                     val intent = Intent(HomeFragment.VANCED_DOWNLOADING)
                     intent.action = HomeFragment.VANCED_DOWNLOADING
-                    intent.putExtra("vancedProgress", progress.percentStr().toInt())
+                    intent.putExtra("vancedProgress", progress.percent().toInt())
                     LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 },
                 onComplete = {
@@ -91,7 +90,10 @@ class VancedDownloadService: Service() {
                     }
                 },
                 onError = { throwable ->
-                    Toast.makeText(this, throwable.toString(), Toast.LENGTH_SHORT).show()
+                    val intent = Intent(HomeFragment.DOWNLOAD_ERROR)
+                    intent.action = HomeFragment.DOWNLOAD_ERROR
+                    intent.putExtra("DownloadError", throwable.toString())
+                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 }
             )
     }

@@ -4,7 +4,6 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.os.IBinder
-import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.core.installer.MicrogInstaller.installMicrog
@@ -50,7 +49,7 @@ class MicrogDownloadService: Service() {
                 onNext = { progress ->
                     val intent = Intent(HomeFragment.MICROG_DOWNLOADING)
                     intent.action = HomeFragment.MICROG_DOWNLOADING
-                    intent.putExtra("microgProgress", progress.percentStr().toInt())
+                    intent.putExtra("microgProgress", progress.percent().toInt())
                     LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 },
                 onComplete = {
@@ -58,8 +57,10 @@ class MicrogDownloadService: Service() {
                     installMicrog(this)
                 },
                 onError = { throwable ->
-                    Toast.makeText(this, throwable.toString(), Toast.LENGTH_SHORT)
-                        .show()
+                    val intent = Intent(HomeFragment.DOWNLOAD_ERROR)
+                    intent.action = HomeFragment.DOWNLOAD_ERROR
+                    intent.putExtra("DownloadError", throwable.toString())
+                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 }
             )
     }
