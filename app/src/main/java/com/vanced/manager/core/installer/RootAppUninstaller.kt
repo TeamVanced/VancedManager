@@ -18,6 +18,7 @@ class RootAppUninstaller: Service() {
         } else {
             Log.d("VMUninstall", "Failed to uninstall $data")
         }
+        stopSelf()
         return START_NOT_STICKY
     }
 

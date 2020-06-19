@@ -1,7 +1,6 @@
 package com.vanced.manager.ui.fragments
 
 import android.animation.ObjectAnimator
-import android.app.Activity.*
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -13,7 +12,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
@@ -30,9 +28,12 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
+import com.vanced.manager.core.installer.MicrogInstaller.installMicrog
 import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
+import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.viewmodels.HomeViewModel
+import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -62,13 +63,13 @@ class HomeFragment : Home() {
         val viewModel: HomeViewModel by viewModels()
         binding.viewModel = viewModel
 
-        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
-        val signatureStatus = getDefaultSharedPreferences(activity).getString("signature_status", "unavailable")
+        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        //val signatureStatus = getDefaultSharedPreferences(activity).getString("signature_status", "unavailable")
         registerReceivers()
 
-        if (variantPref == "root") {
+        if (variantPref == "Root") {
             attachRootChangelog()
-            if (signatureStatus != "disabled") {
+            if (viewModel.signatureStatusTxt != getString(R.string.signature_disabled)) {
                 disableVancedButton(getString(R.string.signature_not_checked))
             }
         } else
@@ -145,7 +146,7 @@ class HomeFragment : Home() {
 
                         if (vancedStatus!!) {
                             val vanPkgName =
-                                if (variant == "root")
+                                if (variant == "Root")
                                     "com.google.android.youtube"
                                 else
                                     "com.vanced.android.youtube"
@@ -195,9 +196,8 @@ class HomeFragment : Home() {
                             start()
                         }
                     } else {
-                        if (variant == "nonroot") {
+                        if (variant == "Nonroot") {
                             view?.findViewById<MaterialButton>(R.id.microg_installbtn)?.visibility = View.INVISIBLE
-                            view?.findViewById<TextView>(R.id.microg_latest_version)?.text = getString(R.string.unavailable)
                         }
 
                         vancedinstallbtn?.visibility = View.INVISIBLE
@@ -221,27 +221,15 @@ class HomeFragment : Home() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        val tag = "VMUninstall"
+        val tag = "VMpm"
         when (requestCode) {
             MICROG_INSTALL -> {
-                when (resultCode) {
-                    RESULT_OK -> {
-                        activity?.recreate()
-                        Log.d(tag, "Successfully installed MicroG")
-                    }
-                    RESULT_CANCELED -> Log.d(tag, "Failed to install MicroG, perhaps user canceled request?")
-                    RESULT_FIRST_USER -> Log.d(tag, "What does this even mean?")
-                }
+                Log.d(tag, "Microg install status: $resultCode")
+                restartActivity()
             }
             APP_UNINSTALL -> {
-                when (resultCode) {
-                    RESULT_OK -> {
-                        activity?.recreate()
-                        Log.d(tag, "Successfully uninstalled app")
-                    }
-                    RESULT_CANCELED -> Log.d(tag, "Failed to uninstall app, perhaps user canceled request?")
-                    RESULT_FIRST_USER -> Log.d(tag, "What does this even mean?")
-                }
+                Log.d(tag, "App uninstall status: $resultCode")
+                restartActivity()
             }
         }
         super.onActivityResult(requestCode, resultCode, data)
@@ -249,21 +237,32 @@ class HomeFragment : Home() {
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            val statusTxt = view?.findViewById<TextView>(R.id.signature_status)
-            val loadCircle = view?.findViewById<ProgressBar>(R.id.signature_loading)
             when (intent.action) {
                 SIGNATURE_DISABLED -> {
-                    loadCircle?.visibility = View.GONE
-                    statusTxt?.text = getString(R.string.signature_disabled)
-                    statusTxt?.setTextColor(getColor(R.color.Green))
+                    activity?.application?.let { HomeViewModel(it).signatureStatusTxt = getString(R.string.signature_disabled)}
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
+                    activity?.recreate()
                 }
                 SIGNATURE_ENABLED -> {
-                    statusTxt?.text = getString(R.string.signature_enabled)
-                    statusTxt?.setTextColor(getColor(R.color.Red))
-                    loadCircle?.visibility = View.GONE
+                    activity?.application?.let { HomeViewModel(it).signatureStatusTxt = getString(R.string.signature_enabled)}
+                    activity?.recreate()
+                }
+                MICROG_DOWNLOADING -> {
+                    val progress = intent.getIntExtra("microgProgress", 0)
+                    val progressbar = view?.findViewById<ProgressBar>(R.id.microg_progress)
+                    progressbar?.visibility = View.VISIBLE
+                    progressbar?.progress = progress
+                }
+                VANCED_DOWNLOADING -> {
+                    val progress = intent.getIntExtra("vancedProgress", 0)
+                    val progressbar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
+                    progressbar?.visibility = View.VISIBLE
+                    progressbar?.progress = progress
+                }
+                MICROG_DOWNLOADED -> {
+                    activity?.let { installMicrog(it) }
                 }
             }
         }
@@ -281,6 +280,25 @@ class HomeFragment : Home() {
             )
             )
         }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                VANCED_DOWNLOADING
+            )
+            )
+        }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                MICROG_DOWNLOADED
+            )
+            )
+        }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                MICROG_DOWNLOADING
+            )
+            )
+        }
+
     }
 
     private fun attachNonrootChangelog() {
@@ -326,17 +344,17 @@ class HomeFragment : Home() {
         vancedinstallbtn?.icon = null
     }
 
-    @Suppress("DEPRECATION")
-    private fun getColor(color: Int): Int {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            resources.getColor(color, activity?.theme)
-         else
-            resources.getColor(color)
+    private fun restartActivity() {
+        startActivity(Intent(activity, MainActivity::class.java))
+        activity?.finish()
     }
 
     companion object {
         const val SIGNATURE_DISABLED = "Signature verification disabled"
         const val SIGNATURE_ENABLED = "Signature verification enabled"
+        const val VANCED_DOWNLOADING = "Vanced downloading"
+        const val MICROG_DOWNLOADED = "MicroG downloaded"
+        const val MICROG_DOWNLOADING = "MicroG downloading"
     }
 
 }

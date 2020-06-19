@@ -23,7 +23,6 @@ import kotlin.collections.ArrayList
 class RootSplitInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-
         Shell.getShell {
             val isRoot = it.isRoot
             Log.d("AppLog", "isRoot ?$isRoot ")
@@ -33,9 +32,8 @@ class RootSplitInstallerService: Service() {
                 installSplitApkFiles(fileInfoList)
             }
         }
-
+        stopSelf()
         return START_NOT_STICKY
-
     }
 
     @WorkerThread

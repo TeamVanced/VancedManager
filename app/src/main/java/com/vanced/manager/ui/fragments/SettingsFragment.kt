@@ -28,14 +28,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
         val themeSwitch: ListPreference? = findPreference("theme_mode")
         themeSwitch?.summary = preferenceScreen.sharedPreferences.getString("theme_mode", "Light")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
-            restartMain()
+            activity?.recreate()
             true
         }
 
         val accentSwitch: ListPreference? = findPreference("accent_color")
         accentSwitch?.summary = preferenceScreen.sharedPreferences.getString("accent_color", "Blue")
         accentSwitch?.setOnPreferenceChangeListener { _, _ ->
-            restartMain()
+            activity?.recreate()
             true
         }
 
@@ -45,7 +45,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             when (installMode.value) {
                 "nonroot" -> {
                     if (!Shell.rootAccess()) {
-                        preferenceScreen.sharedPreferences.edit().putString("vanced_variant", "nonroot").apply()
+                        installMode.value = "nonroot"
                     }
                 }
             }
@@ -68,7 +68,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-    fun restartMain() {
+    private fun restartMain() {
         startActivity(Intent(activity, MainActivity::class.java))
         activity?.finish()
     }

@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
@@ -14,17 +13,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
+import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
-
-    private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
-        return try {
-            packageManager.getPackageInfo(packageName, 0)
-            true
-        } catch (e: PackageManager.NameNotFoundException) {
-            false
-        }
-    }
 
     private val connected: Boolean = GetJson().isConnected(application)
 
@@ -34,7 +25,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         } else {
             "com.vanced.android.youtube"
         }
-    private val signaturePref = getDefaultSharedPreferences(application).getString("signature_status", "unavailable")
+    //private val signaturePref = getDefaultSharedPreferences(application).getString("signature_status", "unavailable")
 
     val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
     val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
@@ -70,12 +61,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot"
 
-    val signatureStatusTxt: String =
-        when (signaturePref) {
-            "disabled" -> application.getString(R.string.signature_disabled)
-            "enabled" -> application.getString(R.string.signature_enabled)
-            else -> application.getString(R.string.unavailable)
-        }
+    var signatureStatusTxt: String = application.getString(R.string.unavailable)
 
     fun openMicrogSettings() {
         try {

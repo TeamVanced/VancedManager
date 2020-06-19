@@ -3,7 +3,6 @@ package com.vanced.manager.ui
 import android.content.*
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -15,6 +14,9 @@ import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
+import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
+import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
+import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 
 class MainActivity : Main() {
 
@@ -22,6 +24,7 @@ class MainActivity : Main() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setFinalTheme(this)
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -51,21 +54,16 @@ class MainActivity : Main() {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                INSTALL_COMPLETED -> launchVanced()
-                INSTALL_BLOCKED -> alertBuilder(getString(R.string.installation_blocked))
-                INSTALL_FAILED -> alertBuilder(getString(R.string.installation_failed))
-                INSTALL_ABORTED -> alertBuilder(getString(R.string.installation_aborted))
-                INSTALL_STORAGE -> alertBuilder(getString(R.string.installation_storage))
-                INSTALL_CONFLICT -> alertBuilder(getString(R.string.installation_conflict))
-                INSTALL_INVALID -> alertBuilder(getString(R.string.installation_invalid))
+                INSTALL_COMPLETED -> launchVanced(this@MainActivity)
+                INSTALL_BLOCKED -> installAlertBuilder(getString(R.string.installation_blocked), this@MainActivity)
+                INSTALL_FAILED -> installAlertBuilder(getString(R.string.installation_failed), this@MainActivity)
+                INSTALL_ABORTED -> installAlertBuilder(getString(R.string.installation_aborted), this@MainActivity)
+                INSTALL_STORAGE -> installAlertBuilder(getString(R.string.installation_storage), this@MainActivity)
+                INSTALL_CONFLICT -> installAlertBuilder(getString(R.string.installation_conflict), this@MainActivity)
+                INSTALL_INVALID -> installAlertBuilder(getString(R.string.installation_invalid), this@MainActivity)
 
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver)
     }
 
     override fun onPause() {
@@ -74,6 +72,7 @@ class MainActivity : Main() {
     }
 
     override fun onResume() {
+        setFinalTheme(this)
         super.onResume()
         registerReceivers()
     }
@@ -114,7 +113,6 @@ class MainActivity : Main() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
@@ -123,46 +121,6 @@ class MainActivity : Main() {
             isNeeded -> toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
             else -> toolbar.navigationIcon = null
         }
-    }
-
-    private fun alertBuilder(msg: String) {
-        AlertDialog.Builder(this)
-            .setTitle("Error")
-            .setMessage(msg)
-            .setPositiveButton(getString(R.string.close)) { dialog, _ ->
-                run {
-                    dialog.dismiss()
-                    recreate()
-                }
-            }
-            .create()
-            .show()
-    }
-
-    private fun launchVanced() {
-        val intent = Intent()
-        intent.component =
-            if (PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "Nonroot") == "Root")
-                ComponentName("com.google.android.youtube", "com.google.android.youtube.HomeActivity")
-            else
-                ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
-        AlertDialog.Builder(this)
-            .setTitle("Success!")
-            .setMessage("Vanced has been successfully installed, do you want to launch it now?")
-            .setPositiveButton("Launch") {
-                    _, _ -> startActivity(intent)
-            }
-            .setNegativeButton("Cancel") {
-                    dialog, _ ->
-                run {
-                    dialog.dismiss()
-                    startActivity(Intent(this@MainActivity, MainActivity::class.java))
-                    finish()
-                }
-            }
-            .setCancelable(false)
-            .create()
-            .show()
     }
 
     private fun registerReceivers() {

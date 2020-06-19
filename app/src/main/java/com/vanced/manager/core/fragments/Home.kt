@@ -11,9 +11,13 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
+import com.vanced.manager.core.downloader.MicrogDownloadService
+import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.core.installer.StubInstaller
-import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.dialogs.DialogContainer.rootModeDetected
+import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
 import com.vanced.manager.utils.MiuiHelper
+import com.vanced.manager.utils.PackageHelper.uninstallApp
 
 open class Home : BaseFragment(), View.OnClickListener {
 
@@ -36,19 +40,15 @@ open class Home : BaseFragment(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
-        val loadBar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
-        val dlText = view?.findViewById<TextView>(R.id.vanced_downloading)
-        val loadCircle = view?.findViewById<ProgressBar>(R.id.vanced_installing)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val isInstalling = prefs?.getBoolean("isInstalling", false)
         if (isInstalling!!) {
-            downloadSplits("arch", loadBar!!, dlText!!, loadCircle!!)
+            activity?.startService(Intent(activity, VancedDownloadService::class.java))
             prefs.edit().putBoolean("isInstalling", false).apply()
         }
     }
 
     override fun onClick(v: View?) {
-        val microgProgress = view?.findViewById<ProgressBar>(R.id.microg_progress)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val isVancedDownloading: Boolean? = prefs?.getBoolean("isVancedDownloading", false)
         val isMicrogDownloading: Boolean? = prefs?.getBoolean("isMicrogDownloading", false)
@@ -64,15 +64,14 @@ open class Home : BaseFragment(), View.OnClickListener {
         when (v?.id) {
             R.id.vanced_installbtn -> {
                 if (!isVancedDownloading!!) {
-                    val mainActivity = (activity as MainActivity)
                     if (variant == "Root") {
                         if (MiuiHelper.isMiui()) {
-                            mainActivity.secondMiuiDialog()
+                            activity?.let { secondMiuiDialog(it) }
                         } else
-                            mainActivity.rootModeDetected()
+                            activity?.let { rootModeDetected(it) }
                     } else {
                         if (MiuiHelper.isMiui()) {
-                            mainActivity.secondMiuiDialog()
+                            activity?.let { secondMiuiDialog(it) }
                         }
                     }
                     try {
@@ -81,10 +80,7 @@ open class Home : BaseFragment(), View.OnClickListener {
                         Log.d("VMCache", "Unable to delete cacheDir")
                     }
                     if (prefs.getBoolean("valuesModified", false)) {
-                        val loadBar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
-                        val dlText = view?.findViewById<TextView>(R.id.vanced_downloading)
-                        val loadCircle = view?.findViewById<ProgressBar>(R.id.vanced_installing)
-                        downloadSplits("arch", loadBar!!, dlText!!, loadCircle!!)
+                        activity?.startService(Intent(activity, VancedDownloadService::class.java))
                         prefs.edit().putBoolean("isInstalling", false).apply()
                     } else
                         view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
@@ -94,12 +90,8 @@ open class Home : BaseFragment(), View.OnClickListener {
             }
             R.id.microg_installbtn -> {
                 if (!isMicrogDownloading!!) {
-                    val dlText = view?.findViewById<TextView>(R.id.microg_downloading)
                     try {
-                        installMicrog(
-                            microgProgress,
-                            dlText
-                        )
+                        activity?.startService(Intent(activity, MicrogDownloadService::class.java))
 
                     } catch (e: Exception) {
                         Toast.makeText(activity, "Unable to start installation", Toast.LENGTH_SHORT).show()
@@ -111,11 +103,12 @@ open class Home : BaseFragment(), View.OnClickListener {
             R.id.signature_button -> {
                 val loadCircle = view?.findViewById<ProgressBar>(R.id.signature_loading)
                 loadCircle?.visibility = View.VISIBLE
-                val mIntent = Intent(activity, StubInstaller::class.java)
-                activity?.startService(mIntent)
+                val intent = Intent(activity, StubInstaller::class.java)
+                activity?.startService(intent)
             }
-            R.id.microg_uninstallbtn -> uninstallApp("com.mgoogle.android.gms")
-            R.id.vanced_uninstallbtn -> uninstallApp(vancedPkgName)
+            R.id.microg_uninstallbtn -> activity?.let { uninstallApp("com.mgoogle.android.gms", it)
+            }
+            R.id.vanced_uninstallbtn -> activity?.let { uninstallApp(vancedPkgName, it) }
         }
     }
 

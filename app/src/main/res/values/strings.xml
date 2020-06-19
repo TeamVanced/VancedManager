@@ -45,6 +45,7 @@
     <string name="accent_color_summary">Choose your preferred accent color</string>
     <string name="accent_blue">Blue</string>
     <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
     <string name="accent_red">Red</string>
     <string name="accent_yellow">Yellow</string>
     <string name="check_updates">Check for updates</string>

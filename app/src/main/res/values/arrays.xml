@@ -18,7 +18,7 @@
         <item>@string/accent_red</item>
         <item>@string/accent_green</item>
         <item>@string/accent_yellow</item>
-        <item>Purple</item>
+        <item>@string/accent_purple</item>
     </string-array>
 
     <string-array name="accent_color_values">
@@ -35,8 +35,8 @@
     </string-array>
 
     <string-array name="vanced_variant_values">
-        <item>nonroot</item>
-        <item>root</item>
+        <item>Nonroot</item>
+        <item>Root</item>
     </string-array>
 
     <string-array name="syke">
