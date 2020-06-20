@@ -181,7 +181,7 @@ class HomeFragment : Home() {
 
                             }
 
-                            if (variant == "Root" && viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
+                            if (variant == "root" && viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
                                 disableVancedButton(getString(R.string.signature_not_checked))
                             }
 
