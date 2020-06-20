@@ -50,11 +50,14 @@ class MicrogDownloadService: Service() {
                     val intent = Intent(HomeFragment.MICROG_DOWNLOADING)
                     intent.action = HomeFragment.MICROG_DOWNLOADING
                     intent.putExtra("microgProgress", progress.percent().toInt())
+                    intent.putExtra("fileName", "Downloading ${getFileNameFromUrl(dwnldUrl)}...")
                     LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 },
                 onComplete = {
+                    val intent = Intent(HomeFragment.MICROG_DOWNLOADED)
+                    intent.action = HomeFragment.MICROG_DOWNLOADED
+                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
-                    installMicrog(this)
                 },
                 onError = { throwable ->
                     val intent = Intent(HomeFragment.DOWNLOAD_ERROR)

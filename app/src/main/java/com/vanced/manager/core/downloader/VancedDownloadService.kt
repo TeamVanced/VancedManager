@@ -24,17 +24,16 @@ class VancedDownloadService: Service() {
     private var disposable: Disposable? = null
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        downloadSplits("arch")
+        downloadSplits()
         return START_NOT_STICKY
     }
 
     private fun downloadSplits(
-        type: String
+        type: String = "arch"
     ) {
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply()
-        val variant = PreferenceManager.getDefaultSharedPreferences(this)
-            .getString("vanced_variant", "nonroot")
+        val variant = PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "nonroot")
         val lang = prefs?.getString("lang", "en")
         val theme = prefs?.getString("theme", "dark")
         val arch =
@@ -70,9 +69,13 @@ class VancedDownloadService: Service() {
                     val intent = Intent(HomeFragment.VANCED_DOWNLOADING)
                     intent.action = HomeFragment.VANCED_DOWNLOADING
                     intent.putExtra("vancedProgress", progress.percent().toInt())
+                    intent.putExtra("fileName", "Downloading ${getFileNameFromUrl(url)}...")
                     LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 },
                 onComplete = {
+                    val intent = Intent(HomeFragment.MICROG_DOWNLOADED)
+                    intent.action = HomeFragment.MICROG_DOWNLOADED
+                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                     when (type) {
                         "arch" -> downloadSplits("theme")
                         "theme" -> downloadSplits("lang")

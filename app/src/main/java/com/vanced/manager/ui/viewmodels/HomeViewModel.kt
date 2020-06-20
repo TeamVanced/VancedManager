@@ -10,7 +10,6 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.dezlum.codelabs.getjson.GetJson
@@ -22,7 +21,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     private val connected: Boolean = GetJson().isConnected(application)
 
     private val vancedPkgName: String =
-        if (getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Root") {
+        if (getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "root") {
             "com.google.android.youtube"
         } else {
             "com.vanced.android.youtube"
@@ -61,9 +60,9 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         else
             application.getString(R.string.unavailable)
 
-    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "Nonroot") == "Nonroot"
+    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "nonroot"
 
-    val signatureString = application.getString(R.string.unavailable)
+    private val signatureString = application.getString(R.string.unavailable)
     val signatureStatusTxt: MutableLiveData<String> = MutableLiveData()
 
     fun openMicrogSettings() {

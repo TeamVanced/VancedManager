@@ -20,15 +20,15 @@ object PackageHelper {
         }
     }
 
-    fun uninstallApp(pkgName: String, context: Context) {
+    fun uninstallApp(pkgName: String, activity: Activity) {
         try {
             val uri = Uri.parse("package:$pkgName")
             val uninstall = Intent(Intent.ACTION_DELETE, uri)
             uninstall.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             uninstall.putExtra(Intent.EXTRA_RETURN_RESULT, true)
-           Activity().startActivityForResult(uninstall, BaseFragment.APP_UNINSTALL)
+            activity.startActivityForResult(uninstall, BaseFragment.APP_UNINSTALL)
         } catch (e: ActivityNotFoundException) {
-            Toast.makeText(context, "Failed to uninstall", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "Failed to uninstall", Toast.LENGTH_SHORT).show()
         }
     }
 }

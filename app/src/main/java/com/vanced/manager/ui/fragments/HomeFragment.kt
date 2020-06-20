@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
@@ -29,6 +30,7 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
+import com.vanced.manager.core.installer.MicrogInstaller.installMicrog
 import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.MainActivity
@@ -63,11 +65,11 @@ class HomeFragment : Home() {
         val viewModel: HomeViewModel by viewModels()
         binding.viewModel = viewModel
 
-        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         //val signatureStatus = getDefaultSharedPreferences(activity).getString("signature_status", "unavailable")
         registerReceivers()
 
-        if (variantPref == "Root") {
+        if (variantPref == "noot") {
             attachRootChangelog()
         } else
             attachNonrootChangelog()
@@ -81,7 +83,7 @@ class HomeFragment : Home() {
 
     private fun initNetworkFun() {
         val pm = activity?.packageManager
-        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "Nonroot")
+        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus =
             if (variant == "Root") {
@@ -108,7 +110,7 @@ class HomeFragment : Home() {
                             GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
                                 .get("versionCode").asInt
 
-                        if (variant == "Nonroot") {
+                        if (variant == "nonroot") {
                             val microginstallbtn =
                                 view?.findViewById<MaterialButton>(R.id.microg_installbtn)
                             microginstallbtn?.visibility = View.VISIBLE
@@ -142,7 +144,7 @@ class HomeFragment : Home() {
 
                         if (vancedStatus!!) {
                             val vanPkgName =
-                                if (variant == "Root")
+                                if (variant == "root")
                                     "com.google.android.youtube"
                                 else
                                     "com.vanced.android.youtube"
@@ -196,7 +198,7 @@ class HomeFragment : Home() {
                             start()
                         }
                     } else {
-                        if (variant == "Nonroot") {
+                        if (variant == "nonroot") {
                             view?.findViewById<MaterialButton>(R.id.microg_installbtn)?.visibility = View.INVISIBLE
                         }
 
@@ -246,25 +248,42 @@ class HomeFragment : Home() {
                     val mIntent = Intent(activity, RootAppUninstaller::class.java)
                     mIntent.putExtra("Data", "com.vanced.stub")
                     activity?.startService(mIntent)
-                    //activity?.recreate()
+                    activity?.recreate()
                 }
                 SIGNATURE_ENABLED -> {
                     activity?.runOnUiThread {
                         viewModel.signatureStatusTxt.value = getString(R.string.signature_enabled)
                     }
-                    //activity?.recreate()
+                    activity?.recreate()
                 }
                 MICROG_DOWNLOADING -> {
                     val progress = intent.getIntExtra("microgProgress", 0)
                     val progressbar = view?.findViewById<ProgressBar>(R.id.microg_progress)
+                    val downloadTxt = intent.getStringExtra("fileName")
+                    val txt = view?.findViewById<TextView>(R.id.microg_downloading)
+                    txt?.visibility = View.VISIBLE
+                    txt?.text = downloadTxt
                     progressbar?.visibility = View.VISIBLE
                     progressbar?.progress = progress
                 }
                 VANCED_DOWNLOADING -> {
                     val progress = intent.getIntExtra("vancedProgress", 0)
                     val progressbar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
+                    val downloadTxt = intent.getStringExtra("fileName")
+                    val txt = view?.findViewById<TextView>(R.id.vanced_downloading)
+                    txt?.visibility = View.VISIBLE
+                    txt?.text = downloadTxt
                     progressbar?.visibility = View.VISIBLE
                     progressbar?.progress = progress
+                }
+                MICROG_DOWNLOADED -> {
+                    view?.findViewById<TextView>(R.id.microg_downloading)?.visibility = View.GONE
+                    view?.findViewById<ProgressBar>(R.id.microg_progress)?.visibility = View.GONE
+                    activity?.let { installMicrog(it) }
+                }
+                VANCED_DOWNLOADED -> {
+                    view?.findViewById<TextView>(R.id.vanced_downloading)?.visibility = View.GONE
+                    view?.findViewById<ProgressBar>(R.id.vanced_progress)?.visibility = View.GONE
                 }
                 DOWNLOAD_ERROR -> {
                     val error = intent.getStringExtra("DownloadError") as String
@@ -296,6 +315,18 @@ class HomeFragment : Home() {
         activity?.let {
             LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
                 MICROG_DOWNLOADING
+            )
+            )
+        }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                VANCED_DOWNLOADED
+            )
+            )
+        }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                MICROG_DOWNLOADED
             )
             )
         }
@@ -361,6 +392,8 @@ class HomeFragment : Home() {
         const val SIGNATURE_ENABLED = "Signature verification enabled"
         const val VANCED_DOWNLOADING = "Vanced downloading"
         const val MICROG_DOWNLOADING = "MicroG downloading"
+        const val VANCED_DOWNLOADED = "Vanced downloaded"
+        const val MICROG_DOWNLOADED = "MicroG downloaded"
         const val DOWNLOAD_ERROR = "Error occurred"
     }
 
