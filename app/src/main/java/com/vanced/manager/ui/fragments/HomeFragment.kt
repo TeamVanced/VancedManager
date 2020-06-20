@@ -284,6 +284,7 @@ class HomeFragment : Home() {
                 VANCED_DOWNLOADED -> {
                     view?.findViewById<TextView>(R.id.vanced_downloading)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.vanced_progress)?.visibility = View.GONE
+                    view?.findViewById<ProgressBar>(R.id.vanced_installing)?.visibility = View.VISIBLE
                 }
                 DOWNLOAD_ERROR -> {
                     val error = intent.getStringExtra("DownloadError") as String
