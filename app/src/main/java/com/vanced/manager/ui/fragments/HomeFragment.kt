@@ -69,7 +69,7 @@ class HomeFragment : Home() {
         //val signatureStatus = getDefaultSharedPreferences(activity).getString("signature_status", "unavailable")
         registerReceivers()
 
-        if (variantPref == "noot") {
+        if (variantPref == "root") {
             attachRootChangelog()
         } else
             attachNonrootChangelog()
