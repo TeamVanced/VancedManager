@@ -86,7 +86,7 @@ class HomeFragment : Home() {
         val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
         val vancedStatus =
-            if (variant == "Root") {
+            if (variant == "root") {
                 pm?.let { isPackageInstalled("com.google.android.youtube", it) }
             } else {
                 pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
@@ -181,10 +181,10 @@ class HomeFragment : Home() {
 
                             }
 
-                            if (variant == "root" && viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
-                                disableVancedButton(getString(R.string.signature_not_checked))
-                            }
+                        }
 
+                        if (variant == "root" && viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
+                            disableVancedButton(getString(R.string.signature_not_checked))
                         }
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)

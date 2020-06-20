@@ -73,14 +73,14 @@ class VancedDownloadService: Service() {
                     LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 },
                 onComplete = {
-                    val intent = Intent(HomeFragment.VANCED_DOWNLOADED)
-                    intent.action = HomeFragment.VANCED_DOWNLOADED
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                     when (type) {
                         "arch" -> downloadSplits("theme")
                         "theme" -> downloadSplits("lang")
                         "lang" -> {
                             if (lang == "en" || type == "enlang") {
+                                val intent = Intent(HomeFragment.VANCED_DOWNLOADED)
+                                intent.action = HomeFragment.VANCED_DOWNLOADED
+                                LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                                 if (variant == "root")
                                     launchRootInstaller()
                                 else
