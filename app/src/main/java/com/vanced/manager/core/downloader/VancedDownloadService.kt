@@ -73,8 +73,8 @@ class VancedDownloadService: Service() {
                     LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 },
                 onComplete = {
-                    val intent = Intent(HomeFragment.MICROG_DOWNLOADED)
-                    intent.action = HomeFragment.MICROG_DOWNLOADED
+                    val intent = Intent(HomeFragment.VANCED_DOWNLOADED)
+                    intent.action = HomeFragment.VANCED_DOWNLOADED
                     LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                     when (type) {
                         "arch" -> downloadSplits("theme")
