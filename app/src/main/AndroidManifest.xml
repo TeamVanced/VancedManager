@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/LightTheme.Blue"
-        tools:ignore="UnusedAttribute">
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:allowBackup">
 
         <activity
             android:name=".ui.core.SplashScreenActivity"
