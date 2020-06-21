@@ -19,7 +19,7 @@ class VancedDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         downloadSplits()
-        stopSelf()
+        //stopSelf()
         return START_NOT_STICKY
     }
 
