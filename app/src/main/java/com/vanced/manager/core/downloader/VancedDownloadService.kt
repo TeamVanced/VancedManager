@@ -19,7 +19,7 @@ class VancedDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         downloadSplits()
-        //stopSelf()
+        stopSelf()
         return START_NOT_STICKY
     }
 
@@ -66,18 +66,13 @@ class VancedDownloadService: Service() {
                         "arch" -> downloadSplits("theme")
                         "theme" -> downloadSplits("lang")
                         "lang" -> {
-                            if (lang == "en" || type == "enlang") {
-                                val intent = Intent(HomeFragment.VANCED_DOWNLOADED)
-                                intent.action = HomeFragment.VANCED_DOWNLOADED
-                                LocalBroadcastManager.getInstance(this@VancedDownloadService).sendBroadcast(intent)
-                                if (variant == "root")
-                                    launchRootInstaller()
-                                else
-                                    launchInstaller()
+                            if (lang == "en") {
+                                prepareInstall(variant!!)
                             } else {
                                 downloadSplits("enlang")
                             }
                         }
+                        "enlang" -> prepareInstall(variant!!)
                     }
                 }
 
@@ -90,6 +85,17 @@ class VancedDownloadService: Service() {
                 }
             })
     }
+
+    private fun prepareInstall(variant: String) {
+        val intent = Intent(HomeFragment.VANCED_DOWNLOADED)
+        intent.action = HomeFragment.VANCED_DOWNLOADED
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+        if (variant == "root")
+            launchRootInstaller()
+        else
+            launchInstaller()
+    }
+
     private fun launchInstaller() {
         SplitInstaller.installSplitApk(this)
     }
