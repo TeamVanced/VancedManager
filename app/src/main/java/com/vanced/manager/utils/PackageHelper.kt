@@ -1,13 +1,10 @@
 package com.vanced.manager.utils
 
 import android.app.Activity
-import android.content.ActivityNotFoundException
-import android.content.Context
+import android.app.PendingIntent
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
-import android.widget.Toast
-import com.vanced.manager.core.base.BaseFragment
+import com.vanced.manager.core.installer.SplitInstallerService
 
 object PackageHelper {
 
@@ -20,15 +17,9 @@ object PackageHelper {
         }
     }
 
-    fun uninstallApp(pkgName: String, activity: Activity) {
-        try {
-            val uri = Uri.parse("package:$pkgName")
-            val uninstall = Intent(Intent.ACTION_DELETE, uri)
-            uninstall.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            uninstall.putExtra(Intent.EXTRA_RETURN_RESULT, true)
-            activity.startActivityForResult(uninstall, BaseFragment.APP_UNINSTALL)
-        } catch (e: ActivityNotFoundException) {
-            Toast.makeText(activity, "Failed to uninstall", Toast.LENGTH_SHORT).show()
-        }
+    fun uninstallApk(pkg: String, activity: Activity) {
+        val callbackIntent = Intent(activity.applicationContext, SplitInstallerService::class.java)
+        val pendingIntent = PendingIntent.getService(activity.applicationContext, 0, callbackIntent, 0)
+        activity.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
     }
 }

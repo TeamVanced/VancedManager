@@ -17,7 +17,7 @@ import com.vanced.manager.core.installer.StubInstaller
 import com.vanced.manager.ui.dialogs.DialogContainer.rootModeDetected
 import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
 import com.vanced.manager.utils.MiuiHelper
-import com.vanced.manager.utils.PackageHelper.uninstallApp
+import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 open class Home : BaseFragment(), View.OnClickListener {
 
@@ -53,9 +53,9 @@ open class Home : BaseFragment(), View.OnClickListener {
         val isVancedDownloading: Boolean? = prefs?.getBoolean("isVancedDownloading", false)
         val isMicrogDownloading: Boolean? = prefs?.getBoolean("isMicrogDownloading", false)
         val variant = getDefaultSharedPreferences(activity)
-            .getString("vanced_variant", "Nonroot")
+            .getString("vanced_variant", "nonroot")
         val vancedPkgName =
-            if (variant == "Root") {
+            if (variant == "root") {
                 "com.google.android.youtube"
             } else {
                 "com.vanced.android.youtube"
@@ -64,7 +64,7 @@ open class Home : BaseFragment(), View.OnClickListener {
         when (v?.id) {
             R.id.vanced_installbtn -> {
                 if (!isVancedDownloading!!) {
-                    if (variant == "Root") {
+                    if (variant == "root") {
                         if (MiuiHelper.isMiui()) {
                             activity?.let { secondMiuiDialog(it) }
                         } else
@@ -106,9 +106,9 @@ open class Home : BaseFragment(), View.OnClickListener {
                 val intent = Intent(activity, StubInstaller::class.java)
                 activity?.startService(intent)
             }
-            R.id.microg_uninstallbtn -> activity?.let { uninstallApp("com.mgoogle.android.gms", it)
+            R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it)
             }
-            R.id.vanced_uninstallbtn -> activity?.let { uninstallApp(vancedPkgName, it) }
+            R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
         }
     }
 

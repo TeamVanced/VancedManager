@@ -20,6 +20,7 @@
     <string name="installation_blocked">Operation failed because user blocked installation</string>
     <string name="installation_conflict">Operation failed because app conflicts with already installed app</string>
     <string name="installation_failed">Operation failed because it just failed idk</string>
+    <string name="installation_incompatible">Operation failed because app is incompatible with your device</string>
     <string name="installation_invalid">Operation failed because apk files are invalid</string>
     <string name="installation_storage">Operation failed because there was an error with storage. Hold up how is that even possible?</string>
     <string name="button_installed">Installed</string>
@@ -33,11 +34,12 @@
     <string name="useful_links">Useful Links</string>
     <string name="vanced_medias">Vanced on Social Media</string>
     <string name="website_text">The official website of Vanced</string>
+    <string name="signature_disable">Disable Sig.</string>
     <string name="signature_disabled">Disabled</string>
     <string name="signature_enabled">Enabled</string>
     <string name="signature_status">status:</string>
-    <string name="signature_verification">Signature Verification</string>
-    <string name="signature_not_checked">Signature not checked</string>
+    <string name="signature_verification">Sig. Verification</string>
+    <string name="signature_not_checked">Check signature</string>
     <string name="support_us">Support us by downloading Brave</string>
 
     <!-- Settings -->
@@ -60,6 +62,8 @@
     <string name="push_notifications_summary">Receive push notifications when update is released</string>
     <string name="re_check">Re-check</string>
     <string name="update_center">Update Center</string>
+    <string name="update_found">Update found!</string>
+    <string name="update_notfound">No new updates</string>>
 
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>

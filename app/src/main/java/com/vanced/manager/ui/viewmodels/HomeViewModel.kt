@@ -26,7 +26,6 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         } else {
             "com.vanced.android.youtube"
         }
-    //private val signaturePref = getDefaultSharedPreferences(application).getString("signature_status", "unavailable")
 
     val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
     val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)

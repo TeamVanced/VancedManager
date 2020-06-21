@@ -8,9 +8,11 @@ import androidx.preference.*
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
+import java.util.*
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
+    @ExperimentalStdlibApi
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
 
@@ -40,7 +42,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
 
         val installMode: DropDownPreference? = findPreference("vanced_variant")
-        installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant", "nonroot")
+        installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant",
+            "nonroot"
+        )?.capitalize(Locale.ROOT)
         installMode?.setOnPreferenceChangeListener{ _, _ ->
             when (installMode.value) {
                 "nonroot" -> {

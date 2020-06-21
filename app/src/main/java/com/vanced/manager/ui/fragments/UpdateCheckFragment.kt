@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.fragments
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -19,20 +18,16 @@ import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
 import androidx.core.content.FileProvider
 import androidx.preference.PreferenceManager
+import com.downloader.Error
+import com.downloader.OnDownloadListener
+import com.downloader.PRDownloader
 import com.vanced.manager.BuildConfig
 
 import com.vanced.manager.R
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import io.reactivex.rxkotlin.subscribeBy
-import zlc.season.rxdownload4.download
-import zlc.season.rxdownload4.file
-import zlc.season.rxdownload4.task.Task
-import zlc.season.rxdownload4.utils.getFileNameFromUrl
+import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
-
-    private var disposable: Disposable? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,7 +39,6 @@ class UpdateCheckFragment : DialogFragment() {
         return inflater.inflate(R.layout.fragment_update_check, container, false)
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -63,18 +57,18 @@ class UpdateCheckFragment : DialogFragment() {
             if (remoteVersion > BuildConfig.VERSION_CODE) {
 
                 recheckbtn.visibility = View.GONE
-                checkingTxt.text = "Update Found!"
+                checkingTxt.text = getString(R.string.update_found)
 
                 updatebtn.setOnClickListener {
                         upgradeManager(loadBar)
                 }
 
             } else {
-                checkingTxt.text = "No updates found"
+                checkingTxt.text = getString(R.string.update_notfound)
             }
 
         } else {
-            checkingTxt.text = "No connection"
+            checkingTxt.text = getString(R.string.network_error)
         }
 
     }
@@ -83,32 +77,22 @@ class UpdateCheckFragment : DialogFragment() {
         val apkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
         val dwnldUrl = apkUrl.get("url").asString
 
-        val task = activity?.filesDir?.path?.let {
-            Task(
-                url = dwnldUrl,
-                saveName = getFileNameFromUrl(dwnldUrl),
-                savePath = it
-            )
-        }
+        PRDownloader.download(dwnldUrl, activity?.filesDir?.path, "manager.apk")
+            .build()
+            .setOnProgressListener { progress ->
+                val mProgress = progress.currentBytes * 100 / progress.totalBytes
+                loadBar.visibility = View.VISIBLE
+                loadBar.progress = mProgress.toInt()
 
-        if (task?.file()?.exists()!!)
-            task.file().delete()
-
-        disposable = task
-            .download()
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribeBy(
-                onNext = { progress ->
-                    loadBar.visibility = View.VISIBLE
-                    loadBar.progress = progress.percent().toInt()
-                },
-                onComplete = {
+            }
+            .start(object : OnDownloadListener{
+                override fun onDownloadComplete() {
                     val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
                     prefs.getBoolean("isUpgrading", false)
                     prefs.edit().putBoolean("isUpgrading", true).apply()
 
                     val pn = activity?.packageName
-                    val apk = task.file()
+                    val apk = File(activity?.filesDir?.path, "manager.apk")
                     val uri =
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                             FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
@@ -119,12 +103,14 @@ class UpdateCheckFragment : DialogFragment() {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     startActivity(intent)
-                },
-                onError = { throwable ->
-                    Toast.makeText(activity, throwable.toString(), Toast.LENGTH_SHORT).show()
-                    Log.e("VMUpgrade", throwable.toString())
                 }
-            )
+
+                override fun onError(error: Error?) {
+                    Toast.makeText(activity, error.toString(), Toast.LENGTH_SHORT).show()
+                    Log.e("VMUpgrade", error.toString())
+                }
+            })
+
     }
 
 

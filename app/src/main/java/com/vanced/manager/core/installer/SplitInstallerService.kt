@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 
 class SplitInstallerService: Service() {
@@ -33,46 +34,27 @@ class SplitInstallerService: Service() {
                 mIntent.action = MainActivity.INSTALL_COMPLETED
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
-            PackageInstaller.STATUS_FAILURE_ABORTED -> {
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                val mIntent = Intent(MainActivity.INSTALL_ABORTED)
-                mIntent.action = MainActivity.INSTALL_ABORTED
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            }
-            PackageInstaller.STATUS_FAILURE_INVALID -> {
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                val mIntent = Intent(MainActivity.INSTALL_INVALID)
-                mIntent.action = MainActivity.INSTALL_INVALID
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            }
-            PackageInstaller.STATUS_FAILURE_CONFLICT -> {
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                val mIntent = Intent(MainActivity.INSTALL_CONFLICT)
-                mIntent.action = MainActivity.INSTALL_CONFLICT
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            }
-            PackageInstaller.STATUS_FAILURE_STORAGE -> {
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                val mIntent = Intent(MainActivity.INSTALL_STORAGE)
-                mIntent.action = MainActivity.INSTALL_STORAGE
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            }
-            PackageInstaller.STATUS_FAILURE_BLOCKED -> {
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                val mIntent = Intent(MainActivity.INSTALL_BLOCKED)
-                mIntent.action = MainActivity.INSTALL_BLOCKED
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            }
-            else -> {
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                Log.d(TAG, "Installation failed")
-                val mIntent = Intent(MainActivity.INSTALL_FAILED)
-                mIntent.action = MainActivity.INSTALL_FAILED
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            }
+            else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
         }
         stopSelf()
         return START_NOT_STICKY
+    }
+
+    private fun sendFailure(status: Int) {
+        val msg = when (status) {
+            PackageInstaller.STATUS_FAILURE_ABORTED -> getString(R.string.installation_aborted)
+            PackageInstaller.STATUS_FAILURE_BLOCKED -> getString(R.string.installation_blocked)
+            PackageInstaller.STATUS_FAILURE_STORAGE -> getString(R.string.installation_storage)
+            PackageInstaller.STATUS_FAILURE_INVALID -> getString(R.string.installation_invalid)
+            PackageInstaller.STATUS_FAILURE_INCOMPATIBLE -> getString(R.string.installation_incompatible)
+            PackageInstaller.STATUS_FAILURE_CONFLICT -> getString(R.string.installation_conflict)
+            else -> getString(R.string.installation_failed)
+        }
+
+        val mIntent = Intent(MainActivity.INSTALL_FAILED)
+        mIntent.action = MainActivity.INSTALL_FAILED
+        mIntent.putExtra("errorMsg", msg)
+        LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
     }
 
     @Nullable

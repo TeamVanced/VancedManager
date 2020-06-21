@@ -6,22 +6,17 @@ import android.content.Intent
 import android.os.IBinder
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.dezlum.codelabs.getjson.GetJson
-import com.vanced.manager.core.installer.MicrogInstaller.installMicrog
+import com.downloader.Error
+import com.downloader.OnDownloadListener
+import com.downloader.PRDownloader
 import com.vanced.manager.ui.fragments.HomeFragment
-import io.reactivex.disposables.Disposable
-import io.reactivex.rxkotlin.subscribeBy
-import io.reactivex.schedulers.Schedulers
-import zlc.season.rxdownload4.download
-import zlc.season.rxdownload4.file
-import zlc.season.rxdownload4.task.Task
-import zlc.season.rxdownload4.utils.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 
 class MicrogDownloadService: Service() {
 
-    private var disposable: Disposable? = null
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         downloadMicrog()
+        stopSelf()
         return START_NOT_STICKY
     }
 
@@ -31,41 +26,30 @@ class MicrogDownloadService: Service() {
 
         val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
         val dwnldUrl = apkUrl.get("url").asString
-        val task = filesDir?.path?.let {
-            Task(
-                url = dwnldUrl,
-                saveName = getFileNameFromUrl(dwnldUrl),
-                savePath = it
-            )
-        }
-
-        if (task?.file()?.exists()!!)
-            task.file().delete()
-
-        disposable = task
-            .download()
-            .observeOn(Schedulers.newThread())
-            .subscribeBy(
-                onNext = { progress ->
-                    val intent = Intent(HomeFragment.MICROG_DOWNLOADING)
-                    intent.action = HomeFragment.MICROG_DOWNLOADING
-                    intent.putExtra("microgProgress", progress.percent().toInt())
-                    intent.putExtra("fileName", "Downloading ${getFileNameFromUrl(dwnldUrl)}...")
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
-                },
-                onComplete = {
+        PRDownloader.download(dwnldUrl, filesDir.path, "microg.apk")
+            .build()
+            .setOnProgressListener { progress ->
+                val intent = Intent(HomeFragment.MICROG_DOWNLOADING)
+                val mProgress = progress.currentBytes * 100 / progress.totalBytes
+                intent.action = HomeFragment.MICROG_DOWNLOADING
+                intent.putExtra("microgProgress", mProgress.toInt())
+                intent.putExtra("fileName", "Downloading ${getFileNameFromUrl(dwnldUrl)}...")
+                LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+            }
+            .start(object : OnDownloadListener {
+                override fun onDownloadComplete() {
                     val intent = Intent(HomeFragment.MICROG_DOWNLOADED)
                     intent.action = HomeFragment.MICROG_DOWNLOADED
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+                    LocalBroadcastManager.getInstance(this@MicrogDownloadService).sendBroadcast(intent)
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
-                },
-                onError = { throwable ->
+                }
+                override fun onError(error: Error) {
                     val intent = Intent(HomeFragment.DOWNLOAD_ERROR)
                     intent.action = HomeFragment.DOWNLOAD_ERROR
-                    intent.putExtra("DownloadError", throwable.toString())
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+                    intent.putExtra("DownloadError", error.toString())
+                    LocalBroadcastManager.getInstance(this@MicrogDownloadService).sendBroadcast(intent)
                 }
-            )
+            })
     }
 
     override fun onBind(intent: Intent?): IBinder? {

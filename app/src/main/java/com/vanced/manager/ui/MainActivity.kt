@@ -55,13 +55,9 @@ class MainActivity : Main() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
                 INSTALL_COMPLETED -> launchVanced(this@MainActivity)
-                INSTALL_BLOCKED -> installAlertBuilder(getString(R.string.installation_blocked), this@MainActivity)
-                INSTALL_FAILED -> installAlertBuilder(getString(R.string.installation_failed), this@MainActivity)
-                INSTALL_ABORTED -> installAlertBuilder(getString(R.string.installation_aborted), this@MainActivity)
-                INSTALL_STORAGE -> installAlertBuilder(getString(R.string.installation_storage), this@MainActivity)
-                INSTALL_CONFLICT -> installAlertBuilder(getString(R.string.installation_conflict), this@MainActivity)
-                INSTALL_INVALID -> installAlertBuilder(getString(R.string.installation_invalid), this@MainActivity)
-
+                INSTALL_FAILED -> {
+                    installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
+                }
             }
         }
     }
@@ -128,33 +124,13 @@ class MainActivity : Main() {
             INSTALL_COMPLETED
         ))
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_ABORTED
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_BLOCKED
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_STORAGE
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_CONFLICT
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
             INSTALL_FAILED
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_INVALID
         ))
 
     }
 
     companion object {
         const val INSTALL_COMPLETED = "Installation completed"
-        const val INSTALL_ABORTED = "user aborted installation"
-        const val INSTALL_BLOCKED = "user blocked installation"
-        const val INSTALL_STORAGE = "there was an error with storage.\n Hold up how is that even possible?"
-        const val INSTALL_CONFLICT = "app conflicts with already installed app"
         const val INSTALL_FAILED = "it just failed idk"
-        const val INSTALL_INVALID = "apk files are invalid"
     }
 }

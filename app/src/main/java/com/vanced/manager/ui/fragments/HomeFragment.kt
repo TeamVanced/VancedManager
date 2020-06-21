@@ -184,7 +184,12 @@ class HomeFragment : Home() {
                         }
 
                         if (variant == "root" && viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
-                            disableVancedButton(getString(R.string.signature_not_checked))
+                            when (viewModel.signatureStatusTxt.value) {
+                                getString(R.string.unavailable) -> disableVancedButton(getString(R.string.signature_not_checked))
+                                getString(R.string.signature_enabled) -> disableVancedButton(getString(R.string.signature_disable))
+                                else -> throw NotImplementedError("Error handling status")
+                            }
+
                         }
 
                         val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
@@ -291,6 +296,15 @@ class HomeFragment : Home() {
                     Toast.makeText(activity, error, Toast.LENGTH_SHORT).show()
                     Log.d("VMDwnld", error)
                 }
+                APP_UNINSTALLED -> {
+                    val pkgName = intent.getStringExtra("pkgName")
+                    restartActivity()
+                    Log.d(tag, "successfully uninstalled $pkgName")
+                }
+                APP_NOT_UNINSTALLED -> {
+                    val pkgName = intent.getStringExtra("pkgName")
+                    Log.d(tag, "Failed to uninstall $pkgName")
+                }
             }
         }
     }
@@ -334,6 +348,18 @@ class HomeFragment : Home() {
         activity?.let {
             LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
                 DOWNLOAD_ERROR
+            )
+            )
+        }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                APP_UNINSTALLED
+            )
+            )
+        }
+        activity?.let {
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
+                APP_NOT_UNINSTALLED
             )
             )
         }
@@ -396,6 +422,9 @@ class HomeFragment : Home() {
         const val VANCED_DOWNLOADED = "Vanced downloaded"
         const val MICROG_DOWNLOADED = "MicroG downloaded"
         const val DOWNLOAD_ERROR = "Error occurred"
+        const val APP_UNINSTALLED = "App uninstalled"
+        const val APP_NOT_UNINSTALLED = "App not uninstalled"
+
     }
 
 }

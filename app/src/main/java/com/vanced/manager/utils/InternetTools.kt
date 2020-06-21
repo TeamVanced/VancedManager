@@ -14,5 +14,7 @@ object InternetTools {
         customTabsIntent.launchUrl(context, Uri.parse(Url))
     }
 
+    fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
+
 }
 
