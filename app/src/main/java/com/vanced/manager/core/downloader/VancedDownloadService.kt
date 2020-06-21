@@ -47,7 +47,7 @@ class VancedDownloadService: Service() {
                 else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
             }
 
-        PRDownloader.download(url, filesDir.path, getFileNameFromUrl(url))
+        PRDownloader.download(url, cacheDir.path, getFileNameFromUrl(url))
             .build()
             .setOnProgressListener { progress ->
                 val intent = Intent(HomeFragment.VANCED_DOWNLOADING)
