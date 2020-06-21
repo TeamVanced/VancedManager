@@ -5,12 +5,9 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.preference.PreferenceManager
-import com.dezlum.codelabs.getjson.GetJson
-import com.vanced.manager.core.base.BaseActivity
 import com.vanced.manager.ui.core.ThemedActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.showSecurityDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.statementFalse
-import zlc.season.rxdownload4.file
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -31,12 +28,6 @@ open class Main: ThemedActivity() {
             firstStart -> showSecurityDialog(this)
             !falseStatement -> statementFalse(this)
             isUpgrading -> {
-                val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
-                val dwnldUrl = apkUrl.get("url").asString
-
-                if (dwnldUrl.file().exists())
-                    dwnldUrl.file().delete()
-
                 prefs.edit().putBoolean("isUpgrading", false).apply()
             }
         }
