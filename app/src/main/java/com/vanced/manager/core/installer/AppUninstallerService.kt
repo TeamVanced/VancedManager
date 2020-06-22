@@ -32,7 +32,7 @@ class AppUninstallerService: Service() {
             PackageInstaller.STATUS_FAILURE -> {
                 val mIntent = Intent(MainActivity.APP_NOT_UNINSTALLED)
                 mIntent.action = MainActivity.APP_NOT_UNINSTALLED
-                mIntent.putExtra("pkgName", PackageInstaller.EXTRA_PACKAGE_NAME)
+                mIntent.putExtra("pkgName", pkgName)
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
                 Log.d("VMpm", "Failed to uninstall $pkgName")
             }
