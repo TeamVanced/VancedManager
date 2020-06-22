@@ -87,10 +87,19 @@ object DialogContainer {
             .show()
     }
 
+    fun regularPackageInstalled(msg: String, context: Context) {
+        AlertDialog.Builder(context)
+            .setTitle("Success")
+            .setMessage(msg)
+            .setPositiveButton(context.getString(R.string.close)) { _, _ -> MainActivity().restartActivity() }
+            .create()
+            .show()
+    }
+
     fun launchVanced(context: Context) {
         val intent = Intent()
         intent.component =
-            if (PreferenceManager.getDefaultSharedPreferences(context).getString("vanced_variant", "Nonroot") == "Root")
+            if (PreferenceManager.getDefaultSharedPreferences(context).getString("vanced_variant", "nonroot") == "root")
                 ComponentName("com.google.android.youtube", "com.google.android.youtube.HomeActivity")
             else
                 ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
@@ -103,8 +112,7 @@ object DialogContainer {
             .setNegativeButton("Cancel") { dialog, _ ->
                 run {
                     dialog.dismiss()
-                    startActivity(context, Intent(context, MainActivity::class.java), null)
-                    MainActivity().finish()
+                    MainActivity().restartActivity()
                 }
             }
             .setCancelable(false)

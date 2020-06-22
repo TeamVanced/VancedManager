@@ -2,7 +2,6 @@ package com.vanced.manager.ui
 
 import android.content.*
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
@@ -17,7 +16,7 @@ import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
-import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.ui.dialogs.DialogContainer.regularPackageInstalled
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 
 class MainActivity : Main() {
@@ -62,7 +61,7 @@ class MainActivity : Main() {
                     else
                         installAlertBuilder(getString(R.string.microg_installed), this@MainActivity)
                 }
-                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
+                INSTALL_FAILED -> regularPackageInstalled(intent.getStringExtra("errorMsg") as String, this@MainActivity)
                 APP_UNINSTALLED -> restartActivity()
                 APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall) + intent.getStringExtra("pkgName"), this@MainActivity)
             }
@@ -136,7 +135,7 @@ class MainActivity : Main() {
 
     }
 
-    private fun restartActivity() {
+    fun restartActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
