@@ -2,6 +2,7 @@ package com.vanced.manager.ui
 
 import android.content.*
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
@@ -62,7 +63,10 @@ class MainActivity : Main() {
                         regularPackageInstalled(getString(R.string.microg_installed), this@MainActivity)
                 }
                 INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
-                APP_UNINSTALLED -> restartActivity()
+                APP_UNINSTALLED -> {
+                    restartActivity()
+                    Log.d("VMpm", "test")
+                }
                 APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall) + intent.getStringExtra("pkgName"), this@MainActivity)
             }
         }
@@ -122,18 +126,12 @@ class MainActivity : Main() {
     }
 
     private fun registerReceivers() {
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_COMPLETED
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            INSTALL_FAILED
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            APP_UNINSTALLED
-        ))
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
-            APP_NOT_UNINSTALLED
-        ))
+        val intentFilter = IntentFilter()
+        intentFilter.addAction(INSTALL_COMPLETED)
+        intentFilter.addAction(INSTALL_FAILED)
+        intentFilter.addAction(APP_UNINSTALLED)
+        intentFilter.addAction(APP_NOT_UNINSTALLED)
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, intentFilter)
 
     }
 

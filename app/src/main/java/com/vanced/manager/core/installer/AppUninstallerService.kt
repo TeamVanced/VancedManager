@@ -3,9 +3,9 @@ package com.vanced.manager.core.installer
 import android.app.Service
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.os.Handler
 import android.os.IBinder
 import android.util.Log
-import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.ui.MainActivity
 
@@ -15,7 +15,7 @@ class AppUninstallerService: Service() {
         val pkgName = intent?.getStringExtra("pkg")
         when (intent?.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
-                Log.d(AppInstallerService.TAG, "Requesting user confirmation for installation")
+                Log.d(AppInstallerService.TAG, "Requesting user confirmation for uninstallation")
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
@@ -24,17 +24,21 @@ class AppUninstallerService: Service() {
                 }
             }
             PackageInstaller.STATUS_SUCCESS -> {
-                val mIntent = Intent(MainActivity.APP_UNINSTALLED)
-                mIntent.action = MainActivity.APP_UNINSTALLED
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-                Log.d("VMpm", "Successfully uninstalled $pkgName")
+                Handler().postDelayed({
+                    val mIntent = Intent()
+                    mIntent.action = MainActivity.APP_UNINSTALLED
+                    LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+                    Log.d("VMpm", "Successfully uninstalled $pkgName")
+                }, 1500)
             }
             PackageInstaller.STATUS_FAILURE -> {
-                val mIntent = Intent(MainActivity.APP_NOT_UNINSTALLED)
-                mIntent.action = MainActivity.APP_NOT_UNINSTALLED
-                mIntent.putExtra("pkgName", pkgName)
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-                Log.d("VMpm", "Failed to uninstall $pkgName")
+                Handler().postDelayed({
+                    val mIntent = Intent()
+                    mIntent.action = MainActivity.APP_NOT_UNINSTALLED
+                    mIntent.putExtra("pkgName", pkgName)
+                    LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+                    Log.d("VMpm", "Failed to uninstall $pkgName")
+                }, 1500)
             }
         }
         stopSelf()
