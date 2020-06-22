@@ -50,6 +50,7 @@ object PackageHelper {
 
     fun uninstallApk(pkg: String, activity: Activity) {
         val callbackIntent = Intent(activity.applicationContext, AppUninstallerService::class.java)
+        callbackIntent.putExtra("pkg", pkg)
         val pendingIntent = PendingIntent.getService(activity.applicationContext, 0, callbackIntent, 0)
         activity.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
     }
