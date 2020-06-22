@@ -30,18 +30,14 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
-import com.vanced.manager.core.installer.MicrogInstaller.installMicrog
 import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
-import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.PackageHelper.installApp
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import java.io.File
-import java.io.FileInputStream
 
 class HomeFragment : Home() {
 
