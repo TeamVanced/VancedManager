@@ -14,7 +14,6 @@ class AppUninstallerService: Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
-                Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
                 Log.d(AppInstallerService.TAG, "Requesting user confirmation for installation")
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -32,6 +31,7 @@ class AppUninstallerService: Service() {
                 Log.d("VMpm", "Failed to uninstall ${PackageInstaller.EXTRA_PACKAGE_NAME}")
             }
         }
+        stopSelf()
         return START_NOT_STICKY
     }
 

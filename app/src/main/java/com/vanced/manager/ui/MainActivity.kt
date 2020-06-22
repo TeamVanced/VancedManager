@@ -59,9 +59,9 @@ class MainActivity : Main() {
                     if (intent.getStringExtra("package") == "split")
                         launchVanced(this@MainActivity)
                     else
-                        installAlertBuilder(getString(R.string.microg_installed), this@MainActivity)
+                        regularPackageInstalled(getString(R.string.microg_installed), this@MainActivity)
                 }
-                INSTALL_FAILED -> regularPackageInstalled(intent.getStringExtra("errorMsg") as String, this@MainActivity)
+                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
                 APP_UNINSTALLED -> restartActivity()
                 APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall) + intent.getStringExtra("pkgName"), this@MainActivity)
             }
