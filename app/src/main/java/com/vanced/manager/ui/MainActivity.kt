@@ -113,10 +113,6 @@ class MainActivity : Main() {
         return false
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-    }
-
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         val toolbar: Toolbar = findViewById(R.id.home_toolbar)
         when {
@@ -132,11 +128,17 @@ class MainActivity : Main() {
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
             INSTALL_FAILED
         ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            APP_UNINSTALLED
+        ))
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, IntentFilter(
+            APP_NOT_UNINSTALLED
+        ))
 
     }
 
     fun restartActivity() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this@MainActivity, MainActivity::class.java))
         finish()
     }
 

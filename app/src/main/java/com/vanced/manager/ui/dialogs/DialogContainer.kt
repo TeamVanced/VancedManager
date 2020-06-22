@@ -87,11 +87,11 @@ object DialogContainer {
             .show()
     }
 
-    fun regularPackageInstalled(msg: String, context: Context) {
-        AlertDialog.Builder(context)
+    fun regularPackageInstalled(msg: String, activity: MainActivity) {
+        AlertDialog.Builder(activity)
             .setTitle("Success")
             .setMessage(msg)
-            .setPositiveButton(context.getString(R.string.close)) { _, _ -> MainActivity().restartActivity() }
+            .setPositiveButton(activity.getString(R.string.close)) { _, _ -> activity.restartActivity() }
             .create()
             .show()
     }
