@@ -2,6 +2,7 @@ package com.vanced.manager.ui
 
 import android.content.*
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
@@ -16,6 +17,7 @@ import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
+import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 
 class MainActivity : Main() {
@@ -54,10 +56,15 @@ class MainActivity : Main() {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                INSTALL_COMPLETED -> launchVanced(this@MainActivity)
-                INSTALL_FAILED -> {
-                    installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
+                INSTALL_COMPLETED -> {
+                    if (intent.getStringExtra("package") == "split")
+                        launchVanced(this@MainActivity)
+                    else
+                        installAlertBuilder(getString(R.string.microg_installed), this@MainActivity)
                 }
+                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
+                APP_UNINSTALLED -> restartActivity()
+                APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall) + intent.getStringExtra("pkgName"), this@MainActivity)
             }
         }
     }
@@ -129,8 +136,15 @@ class MainActivity : Main() {
 
     }
 
+    private fun restartActivity() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+
     companion object {
         const val INSTALL_COMPLETED = "Installation completed"
         const val INSTALL_FAILED = "it just failed idk"
+        const val APP_UNINSTALLED = "App uninstalled"
+        const val APP_NOT_UNINSTALLED = "App not uninstalled"
     }
 }

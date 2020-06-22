@@ -12,15 +12,14 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 
-class SplitInstallerService: Service() {
+class AppInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
                 Log.d(TAG, "Requesting user confirmation for installation")
-                val confirmationIntent =
-                    intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
+                val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
                     startActivity(confirmationIntent)
@@ -32,7 +31,7 @@ class SplitInstallerService: Service() {
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
                 mIntent.action = MainActivity.INSTALL_COMPLETED
-                mIntent.putExtra("package", "split")
+                mIntent.putExtra("package", "normal")
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
             }
             else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))

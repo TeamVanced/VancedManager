@@ -11,6 +11,7 @@ import androidx.annotation.Nullable
 import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
+import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.FileInfo
 import java.io.File
@@ -75,10 +76,12 @@ class RootSplitInstallerService: Service() {
         if (installResult.isSuccess) {
             val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
             mIntent.action = MainActivity.INSTALL_COMPLETED
+            mIntent.putExtra("package", "split")
             LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
         } else {
             val mIntent = Intent(MainActivity.INSTALL_FAILED)
             mIntent.action = MainActivity.INSTALL_FAILED
+            mIntent.putExtra("errorMsg", getString(R.string.installation_failed))
             LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
         }
     }

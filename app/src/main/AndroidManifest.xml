@@ -61,6 +61,7 @@
         <service android:name=".core.installer.StubInstaller" />
         <service android:name=".core.installer.RootAppUninstaller" />
         <service android:name=".core.installer.AppUninstallerService" />
+        <service android:name=".core.installer.AppInstallerService" />
         <service android:name=".core.downloader.VancedDownloadService" />
         <service android:name=".core.downloader.MicrogDownloadService" />
 

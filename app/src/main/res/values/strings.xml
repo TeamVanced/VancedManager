@@ -15,6 +15,7 @@
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
     <string name="check">Check</string>
+    <string name="failed_uninstall">Failed to uninstall package: </string>
     <string name="install">Install</string>
     <string name="installation_aborted">Operation failed because user aborted installation</string>
     <string name="installation_blocked">Operation failed because user blocked installation</string>
@@ -27,6 +28,7 @@
     <string name="version_installed">Installed:</string>
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
+    <string name="microg_installed">MicroG successfully installed</string>
     <string name="network_error">Network connection unavailable</string>
     <string name="no_microg">No Microg!</string>
     <string name="unavailable">Unavailable</string>

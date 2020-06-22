@@ -35,10 +35,13 @@ import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.viewmodels.HomeViewModel
+import com.vanced.manager.utils.PackageHelper.installApp
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import java.io.File
+import java.io.FileInputStream
 
 class HomeFragment : Home() {
 
@@ -227,21 +230,6 @@ class HomeFragment : Home() {
             }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        val tag = "VMpm"
-        when (requestCode) {
-            MICROG_INSTALL -> {
-                Log.d(tag, "Microg install status: $resultCode")
-                restartActivity()
-            }
-            APP_UNINSTALL -> {
-                Log.d(tag, "App uninstall status: $resultCode")
-                restartActivity()
-            }
-        }
-        super.onActivityResult(requestCode, resultCode, data)
-    }
-
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             val viewModel: HomeViewModel by viewModels()
@@ -284,7 +272,7 @@ class HomeFragment : Home() {
                 MICROG_DOWNLOADED -> {
                     view?.findViewById<TextView>(R.id.microg_downloading)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.microg_progress)?.visibility = View.GONE
-                    activity?.let { installMicrog(it) }
+                    activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
                 }
                 VANCED_DOWNLOADED -> {
                     view?.findViewById<TextView>(R.id.vanced_downloading)?.visibility = View.GONE
@@ -295,15 +283,6 @@ class HomeFragment : Home() {
                     val error = intent.getStringExtra("DownloadError") as String
                     Toast.makeText(activity, error, Toast.LENGTH_SHORT).show()
                     Log.d("VMDwnld", error)
-                }
-                APP_UNINSTALLED -> {
-                    val pkgName = intent.getStringExtra("pkgName")
-                    restartActivity()
-                    Log.d(tag, "successfully uninstalled $pkgName")
-                }
-                APP_NOT_UNINSTALLED -> {
-                    val pkgName = intent.getStringExtra("pkgName")
-                    Log.d(tag, "Failed to uninstall $pkgName")
                 }
             }
         }
@@ -348,18 +327,6 @@ class HomeFragment : Home() {
         activity?.let {
             LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
                 DOWNLOAD_ERROR
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                APP_UNINSTALLED
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                APP_NOT_UNINSTALLED
             )
             )
         }
@@ -409,11 +376,6 @@ class HomeFragment : Home() {
         vancedinstallbtn?.icon = null
     }
 
-    private fun restartActivity() {
-        startActivity(Intent(activity, MainActivity::class.java))
-        activity?.finish()
-    }
-
     companion object {
         const val SIGNATURE_DISABLED = "Signature verification disabled"
         const val SIGNATURE_ENABLED = "Signature verification enabled"
@@ -422,8 +384,6 @@ class HomeFragment : Home() {
         const val VANCED_DOWNLOADED = "Vanced downloaded"
         const val MICROG_DOWNLOADED = "MicroG downloaded"
         const val DOWNLOAD_ERROR = "Error occurred"
-        const val APP_UNINSTALLED = "App uninstalled"
-        const val APP_NOT_UNINSTALLED = "App not uninstalled"
 
     }
 

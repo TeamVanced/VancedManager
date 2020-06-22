@@ -24,8 +24,10 @@ import com.downloader.PRDownloader
 import com.vanced.manager.BuildConfig
 
 import com.vanced.manager.R
+import com.vanced.manager.utils.PackageHelper.installApp
 import io.reactivex.disposables.Disposable
 import java.io.File
+import java.io.FileInputStream
 
 class UpdateCheckFragment : DialogFragment() {
 
@@ -91,18 +93,12 @@ class UpdateCheckFragment : DialogFragment() {
                     prefs.getBoolean("isUpgrading", false)
                     prefs.edit().putBoolean("isUpgrading", true).apply()
 
-                    val pn = activity?.packageName
-                    val apk = File(activity?.filesDir?.path, "manager.apk")
-                    val uri =
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                            FileProvider.getUriForFile(requireContext(), "$pn.provider", apk)
-                        } else
-                            Uri.fromFile(apk)
-                    val intent = Intent(Intent.ACTION_VIEW)
-                    intent.setDataAndType(uri, "application/vnd.android.package-archive")
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                    startActivity(intent)
+                    activity?.let {
+                        installApp(
+                            it,
+                            it.filesDir.path + "/microg.apk",
+                            "com.vanced.manager")
+                    }
                 }
 
                 override fun onError(error: Error?) {
