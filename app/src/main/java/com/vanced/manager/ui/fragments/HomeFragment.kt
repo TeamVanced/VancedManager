@@ -65,7 +65,6 @@ class HomeFragment : Home() {
         binding.viewModel = viewModel
 
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
-        //val signatureStatus = getDefaultSharedPreferences(activity).getString("signature_status", "unavailable")
         registerReceivers()
 
         if (variantPref == "root") {

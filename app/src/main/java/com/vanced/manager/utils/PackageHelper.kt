@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.content.pm.PackageInstaller.SessionParams
 import android.content.pm.PackageManager
+import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
 import java.io.FileInputStream
 import java.io.IOException
@@ -27,14 +28,14 @@ object PackageHelper {
         path: String,
         pkg: String?
     ) {
-        val callbackIntent = Intent(activity.applicationContext, AppUninstallerService::class.java)
+        val callbackIntent = Intent(activity.applicationContext, AppInstallerService::class.java)
         val pendingIntent = PendingIntent.getService(activity.applicationContext, 0, callbackIntent, 0)
         val packageInstaller = activity.packageManager.packageInstaller
         val params = SessionParams(SessionParams.MODE_FULL_INSTALL)
         params.setAppPackageName(pkg)
         val sessionId = packageInstaller.createSession(params)
         val session = packageInstaller.openSession(sessionId)
-        val inputStream = FileInputStream(path)
+        val inputStream: InputStream = FileInputStream(path)
         val outputStream = session.openWrite("install", 0, -1)
         val buffer = ByteArray(65536)
         var c: Int
@@ -46,7 +47,6 @@ object PackageHelper {
         outputStream.close()
         session.commit(pendingIntent.intentSender)
     }
-
 
     fun uninstallApk(pkg: String, activity: Activity) {
         val callbackIntent = Intent(activity.applicationContext, AppUninstallerService::class.java)

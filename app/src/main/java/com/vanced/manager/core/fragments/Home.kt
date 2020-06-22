@@ -106,8 +106,7 @@ open class Home : BaseFragment(), View.OnClickListener {
                 val intent = Intent(activity, StubInstaller::class.java)
                 activity?.startService(intent)
             }
-            R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it)
-            }
+            R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it) }
             R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
         }
     }
