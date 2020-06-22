@@ -29,7 +29,7 @@ class AppUninstallerService: Service() {
                     mIntent.action = MainActivity.APP_UNINSTALLED
                     LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
                     Log.d("VMpm", "Successfully uninstalled $pkgName")
-                }, 1500)
+                }, 500)
             }
             PackageInstaller.STATUS_FAILURE -> {
                 Handler().postDelayed({
@@ -38,7 +38,7 @@ class AppUninstallerService: Service() {
                     mIntent.putExtra("pkgName", pkgName)
                     LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
                     Log.d("VMpm", "Failed to uninstall $pkgName")
-                }, 1500)
+                }, 500)
             }
         }
         stopSelf()

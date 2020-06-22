@@ -137,6 +137,7 @@ class MainActivity : Main() {
 
     fun restartActivity() {
         startActivity(Intent(this@MainActivity, MainActivity::class.java))
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         finish()
     }
 
