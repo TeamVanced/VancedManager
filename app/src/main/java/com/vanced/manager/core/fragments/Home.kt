@@ -9,6 +9,7 @@ import android.widget.*
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
+import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.downloader.MicrogDownloadService
@@ -31,6 +32,8 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
         val spinner: Spinner = view.findViewById(R.id.home_variant_selector)
 
+        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+
         activity?.let {
             ArrayAdapter.createFromResource(it,
                 R.array.vanced_variant,
@@ -45,7 +48,19 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
         signaturebtn.setOnClickListener(this)
         microguninstallbtn.setOnClickListener(this)
         vanceduninstallbtn.setOnClickListener(this)
+
+        when (variantPref) {
+            "nonroot" -> spinner.setSelection(0)
+            "root" -> {
+                if (Shell.rootAccess())
+                    spinner.setSelection(1)
+                else
+                    spinner.setSelection(0)
+            }
+        }
+
         spinner.onItemSelectedListener = this
+
 
     }
 
@@ -133,7 +148,12 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         when (position) {
             0 -> writeToVariantPref("nonroot")
-            1 -> writeToVariantPref("root")
+            1 -> {
+                if (Shell.rootAccess())
+                    writeToVariantPref("root")
+                else
+                    writeToVariantPref("nonroot")
+            }
         }
     }
 
