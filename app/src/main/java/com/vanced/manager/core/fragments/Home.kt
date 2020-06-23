@@ -118,7 +118,7 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
-        view?.findViewById<Spinner>(R.id.home_variant_selector)?.setSelection(0)
+        TODO("Ehh we don't need it")
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -130,7 +130,12 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
 
     private fun writeToVariantPref(variant: String) {
         getDefaultSharedPreferences(activity).edit().putString("vanced_variant", variant).apply()
-        MainActivity().restartActivity()
+        restartActivity()
+    }
+
+    private fun restartActivity() {
+        startActivity(Intent(activity, MainActivity::class.java))
+        activity?.finish()
     }
 
 }
