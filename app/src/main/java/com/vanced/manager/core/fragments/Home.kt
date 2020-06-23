@@ -14,6 +14,7 @@ import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.core.installer.StubInstaller
+import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.uninstallApk
@@ -127,7 +128,9 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
         }
     }
 
-    private fun writeToVariantPref(variant: String) =
+    private fun writeToVariantPref(variant: String) {
         getDefaultSharedPreferences(activity).edit().putString("vanced_variant", variant).apply()
+        MainActivity().restartActivity()
+    }
 
 }
