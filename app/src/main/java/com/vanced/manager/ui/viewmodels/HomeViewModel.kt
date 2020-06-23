@@ -12,13 +12,11 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
+import com.vanced.manager.utils.InternetTools.displayJsonString
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
-open class HomeViewModel(application: Application): AndroidViewModel(application) {
-
-    private val connected: Boolean = GetJson().isConnected(application)
+class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private val vancedPkgName: String =
         if (getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "root") {
@@ -30,34 +28,11 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
     val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
 
-    val vancedInstalledVersion: String =
-        if (vancedInstalled) {
-            application.packageManager.getPackageInfo(vancedPkgName, 0).versionName
-        } else {
-            application.getString(R.string.unavailable)
-        }
+    val vancedInstalledVersion: MutableLiveData<String> = MutableLiveData()
+    val microgInstalledVersion: MutableLiveData<String> = MutableLiveData()
 
-
-    val microgInstalledVersion: String =
-        if (microgInstalled) {
-            application.packageManager.getPackageInfo("com.mgoogle.android.gms", 0).versionName
-        } else {
-            application.getString(R.string.unavailable)
-        }
-
-    val vancedVersion: String =
-        if (connected)
-            GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json")
-                .get("version").asString
-        else
-            application.getString(R.string.unavailable)
-
-    val microgVersion: String =
-        if (connected)
-            GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
-                .get("version").asString
-        else
-            application.getString(R.string.unavailable)
+    val vancedVersion: MutableLiveData<String> = MutableLiveData()
+    val microgVersion: MutableLiveData<String> = MutableLiveData()
 
     val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "nonroot"
 
@@ -97,8 +72,21 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
     }
 
+    private fun getPkgInfo(toCheck: Boolean, pkg: String, application: Application): String  {
+        return if (toCheck) {
+            application.packageManager.getPackageInfo(pkg, 0).versionName
+        } else {
+            application.getString(R.string.unavailable)
+        }
+    }
+
     init {
         signatureStatusTxt.value = signatureString
+        vancedVersion.value = displayJsonString("vanced.json","version", application)
+        microgVersion.value = displayJsonString("microg.json","version", application)
+        vancedInstalledVersion.value = getPkgInfo(vancedInstalled, vancedPkgName, application)
+        microgInstalledVersion.value = getPkgInfo(microgInstalled, "com.mgoogle.android.gms", application)
+
     }
 
 }

@@ -33,6 +33,7 @@ import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
+import com.vanced.manager.utils.InternetTools.displayJsonInt
 import com.vanced.manager.utils.PackageHelper.installApp
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -101,12 +102,8 @@ class HomeFragment : Home() {
                     if (isConnectedToInternet) {
                         vancedinstallbtn?.visibility = View.VISIBLE
 
-                        val vancedRemoteCode =
-                            GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json")
-                                .get("versionCode").asInt
-                        val microgRemoteCode =
-                            GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json")
-                                .get("versionCode").asInt
+                        val vancedRemoteCode = activity?.let { displayJsonInt("vanced.json", "versionCode", it) }
+                        val microgRemoteCode = activity?.let { displayJsonInt("microg.json", "versionCode", it) }
 
                         if (variant == "nonroot") {
                             val microginstallbtn =
@@ -121,7 +118,7 @@ class HomeFragment : Home() {
                                     else
                                         pm.getPackageInfo("com.mgoogle.android.gms", 0).versionCode
                                 when {
-                                    microgRemoteCode > microgVerCode -> {
+                                    microgRemoteCode!! > microgVerCode -> {
                                         microginstallbtn?.text =
                                             activity?.getString(R.string.update)
                                         microginstallbtn?.icon =
@@ -163,7 +160,7 @@ class HomeFragment : Home() {
                                 }
 
                             when {
-                                vancedRemoteCode > vancedVerCode!! -> {
+                                vancedRemoteCode!! > vancedVerCode!! -> {
                                     vancedinstallbtn?.text =
                                         activity?.getString(R.string.update)
                                     vancedinstallbtn?.icon =

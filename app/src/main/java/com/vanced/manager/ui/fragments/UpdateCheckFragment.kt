@@ -1,10 +1,7 @@
 package com.vanced.manager.ui.fragments
 
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -16,7 +13,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
-import androidx.core.content.FileProvider
 import androidx.preference.PreferenceManager
 import com.downloader.Error
 import com.downloader.OnDownloadListener
@@ -25,9 +21,6 @@ import com.vanced.manager.BuildConfig
 
 import com.vanced.manager.R
 import com.vanced.manager.utils.PackageHelper.installApp
-import io.reactivex.disposables.Disposable
-import java.io.File
-import java.io.FileInputStream
 
 class UpdateCheckFragment : DialogFragment() {
 
@@ -76,8 +69,7 @@ class UpdateCheckFragment : DialogFragment() {
     }
 
     private fun upgradeManager(loadBar: ProgressBar) {
-        val apkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
-        val dwnldUrl = apkUrl.get("url").asString
+        val dwnldUrl = "https://github.com/VancedManager/releases/latest/download/manager.apk"
 
         PRDownloader.download(dwnldUrl, activity?.filesDir?.path, "manager.apk")
             .build()
@@ -96,7 +88,7 @@ class UpdateCheckFragment : DialogFragment() {
                     activity?.let {
                         installApp(
                             it,
-                            it.filesDir.path + "/microg.apk",
+                            it.filesDir.path + "/manager.apk",
                             "com.vanced.manager")
                     }
                 }
