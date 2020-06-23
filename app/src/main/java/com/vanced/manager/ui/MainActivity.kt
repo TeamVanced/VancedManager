@@ -26,7 +26,7 @@ class MainActivity : Main() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setFinalTheme(this)
+        //setFinalTheme(this)
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)

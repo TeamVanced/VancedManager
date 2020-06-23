@@ -4,15 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
-import com.vanced.manager.ui.core.ThemedActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.showSecurityDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.statementFalse
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
 @SuppressLint("Registered")
-open class Main: ThemedActivity() {
+open class Main: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
