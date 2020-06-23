@@ -46,7 +46,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/vanced_installbtn"
                 style="@style/ButtonStyle"
-                android:text="@{viewModel.microgInstalled ? @string/install : @string/no_microg}"
+                android:text="@string/install"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:icon="@drawable/outline_cloud_download_24" />

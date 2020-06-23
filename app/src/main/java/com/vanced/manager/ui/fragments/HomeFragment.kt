@@ -267,6 +267,8 @@ class HomeFragment : Home() {
                 MICROG_DOWNLOADED -> {
                     view?.findViewById<TextView>(R.id.microg_downloading)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.microg_progress)?.visibility = View.GONE
+                    view?.findViewById<ProgressBar>(R.id.microg_installing)?.visibility =
+                        View.VISIBLE
                     activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
                 }
                 VANCED_DOWNLOADED -> {
@@ -284,46 +286,15 @@ class HomeFragment : Home() {
     }
 
     private fun registerReceivers() {
+        val intentFilter = IntentFilter()
+        intentFilter.addAction(SIGNATURE_DISABLED)
+        intentFilter.addAction(SIGNATURE_ENABLED)
+        intentFilter.addAction(VANCED_DOWNLOADING)
+        intentFilter.addAction(MICROG_DOWNLOADING)
+        intentFilter.addAction(VANCED_DOWNLOADED)
+        intentFilter.addAction(MICROG_DOWNLOADED)
         activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                SIGNATURE_DISABLED
-            ))
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                SIGNATURE_ENABLED
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                VANCED_DOWNLOADING
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                MICROG_DOWNLOADING
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                VANCED_DOWNLOADED
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                MICROG_DOWNLOADED
-            )
-            )
-        }
-        activity?.let {
-            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, IntentFilter(
-                DOWNLOAD_ERROR
-            )
-            )
+            LocalBroadcastManager.getInstance(it).registerReceiver(broadcastReceiver, intentFilter)
         }
 
     }

@@ -14,12 +14,11 @@ import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.core.installer.StubInstaller
-import com.vanced.manager.ui.dialogs.DialogContainer.rootModeDetected
 import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
-open class Home : BaseFragment(), View.OnClickListener {
+open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,12 +28,14 @@ open class Home : BaseFragment(), View.OnClickListener {
         val signaturebtn = view.findViewById<MaterialButton>(R.id.signature_button)
         val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
+        val spinner: Spinner = view.findViewById(R.id.home_variant_selector)
 
         vancedinstallbtn.setOnClickListener(this)
         microginstallbtn.setOnClickListener(this)
         signaturebtn.setOnClickListener(this)
         microguninstallbtn.setOnClickListener(this)
         vanceduninstallbtn.setOnClickListener(this)
+        spinner.onItemSelectedListener = this
 
     }
 
@@ -64,14 +65,9 @@ open class Home : BaseFragment(), View.OnClickListener {
         when (v?.id) {
             R.id.vanced_installbtn -> {
                 if (!isVancedDownloading!!) {
-                    if (variant == "root") {
-                        if (MiuiHelper.isMiui()) {
-                            activity?.let { secondMiuiDialog(it) }
-                        } else
-                            activity?.let { rootModeDetected(it) }
-                    } else {
-                        if (MiuiHelper.isMiui()) {
-                            activity?.let { secondMiuiDialog(it) }
+                    if (MiuiHelper.isMiui()) {
+                        activity?.let {
+                            secondMiuiDialog(it)
                         }
                     }
                     try {
@@ -80,12 +76,21 @@ open class Home : BaseFragment(), View.OnClickListener {
                         Log.d("VMCache", "Unable to delete cacheDir")
                     }
                     if (prefs.getBoolean("valuesModified", false)) {
-                        activity?.startService(Intent(activity, VancedDownloadService::class.java))
+                        activity?.startService(
+                            Intent(
+                                activity,
+                                VancedDownloadService::class.java
+                            )
+                        )
                         prefs.edit().putBoolean("isInstalling", false).apply()
                     } else
                         view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
                 } else {
-                    Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        activity,
+                        "Please wait until installation finishes",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
             R.id.microg_installbtn -> {
@@ -110,5 +115,19 @@ open class Home : BaseFragment(), View.OnClickListener {
             R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
         }
     }
+
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+        view?.findViewById<Spinner>(R.id.home_variant_selector)?.setSelection(0)
+    }
+
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        when (position) {
+            0 -> writeToVariantPref("nonroot")
+            1 -> writeToVariantPref("root")
+        }
+    }
+
+    private fun writeToVariantPref(variant: String) =
+        getDefaultSharedPreferences(activity).edit().putString("vanced_variant", variant).apply()
 
 }

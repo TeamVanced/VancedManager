@@ -9,7 +9,8 @@ object ThemeHelper {
 
     fun setFinalTheme(context: Context) {
         val currentAccent = PreferenceManager.getDefaultSharedPreferences(context).getString("accent_color", "Blue")
-        when (PreferenceManager.getDefaultSharedPreferences(context).getString("theme_mode", "Blue")) {
+        when (PreferenceManager.getDefaultSharedPreferences(context)
+            .getString("theme_mode", "Follow System")) {
             "Light" -> setLightAccent(currentAccent, context)
             "Dark" -> setDarkAccent(currentAccent, context)
             "Follow System" -> {

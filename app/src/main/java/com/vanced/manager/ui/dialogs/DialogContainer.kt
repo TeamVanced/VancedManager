@@ -32,28 +32,20 @@ object DialogContainer {
     }
 
     private fun showMiuiDialog(context: Context) {
-        basicAlertBuilder("Detected MiUI user!", "Hey! Looks like you're a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings." +
-                "If you can't find such setting, it means that you are using a new version of ROM which does not need fixing anything.", context)
+        basicAlertBuilder(
+            context.getString(R.string.miui_one_title),
+            context.getString(R.string.miui_one),
+            context
+        )
     }
 
     fun secondMiuiDialog(context: Context) {
         AlertDialog.Builder(context)
-            .setTitle("I'm gonna stop you right there!")
-            .setMessage("I am once again asking you to disable MiUI optimisations if you have not already. K thx bai")
-            .setPositiveButton("wut?") { dialog, _ ->
-                run {
-                    if (PreferenceManager.getDefaultSharedPreferences(context).getString("vanced_variant", "Nonroot") == "Root")
-                        rootModeDetected(context)
-                    else
-                        dialog.dismiss()
-                }
-            }
+            .setTitle(context.getString(R.string.miui_two_title))
+            .setMessage(context.getString(R.string.miui_two))
+            .setPositiveButton("Fine") { dialog, _ -> dialog.dismiss() }
             .create()
             .show()
-    }
-
-    fun rootModeDetected(context: Context) {
-        basicAlertBuilder("Root mode detected!", "In order for app to work properly, please make sure you disabled signature verification.", context)
     }
 
     //Easter Egg
@@ -80,7 +72,7 @@ object DialogContainer {
 
     fun installAlertBuilder(msg: String, context: Context) {
         AlertDialog.Builder(context)
-            .setTitle("Error")
+            .setTitle(context.getString(R.string.error))
             .setMessage(msg)
             .setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             .create()
@@ -89,9 +81,10 @@ object DialogContainer {
 
     fun regularPackageInstalled(msg: String, activity: MainActivity) {
         AlertDialog.Builder(activity)
-            .setTitle("Success")
+            .setTitle(activity.getString(R.string.success))
             .setMessage(msg)
             .setPositiveButton(activity.getString(R.string.close)) { _, _ -> activity.restartActivity() }
+            .setCancelable(false)
             .create()
             .show()
     }
@@ -104,9 +97,9 @@ object DialogContainer {
             else
                 ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
         AlertDialog.Builder(context)
-            .setTitle("Success!")
-            .setMessage("Vanced has been successfully installed, do you want to launch it now?")
-            .setPositiveButton("Launch") {
+            .setTitle(context.getString(R.string.success))
+            .setMessage(context.getString(R.string.vanced_installed))
+            .setPositiveButton(context.getString(R.string.launch)) {
                     _, _ -> startActivity(context, intent, null)
             }
             .setNegativeButton("Cancel") { dialog, _ ->

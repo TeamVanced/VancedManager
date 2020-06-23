@@ -4,11 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import androidx.preference.*
-import com.topjohnwu.superuser.Shell
+import androidx.preference.ListPreference
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
-import java.util.*
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -28,7 +28,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
         
         val themeSwitch: ListPreference? = findPreference("theme_mode")
-        themeSwitch?.summary = preferenceScreen.sharedPreferences.getString("theme_mode", "Light")
+        themeSwitch?.summary =
+            preferenceScreen.sharedPreferences.getString("theme_mode", "Follow System")
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
             activity?.recreate()
             true
@@ -41,6 +42,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        /*
         val installMode: DropDownPreference? = findPreference("vanced_variant")
         installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant",
             "nonroot"
@@ -56,6 +58,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
             restartMain()
             true
         }
+
+         */
 
         val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
         chosenPrefs?.setOnPreferenceClickListener {

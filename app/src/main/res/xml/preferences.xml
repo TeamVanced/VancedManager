@@ -50,12 +50,6 @@
         android:title="Vanced"
         app:iconSpaceReserved="false">
 
-        <DropDownPreference
-            android:title="Installation Mode"
-            android:entries="@array/vanced_variant"
-            android:entryValues="@array/vanced_variant_values"
-            android:key="vanced_variant"/>
-
         <Preference
             android:title="Chosen Installation values"
             android:key="vanced_chosen_modes" />

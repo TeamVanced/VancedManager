@@ -30,11 +30,6 @@
     </string-array>
 
     <string-array name="vanced_variant">
-        <item>Nonroot</item>
-        <item>Root</item>
-    </string-array>
-
-    <string-array name="vanced_variant_values">
         <item>nonroot</item>
         <item>root</item>
     </string-array>

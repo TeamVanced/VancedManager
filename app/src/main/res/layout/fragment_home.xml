@@ -36,12 +36,21 @@
                 android:visibility="gone"
                 tools:visibility="visible"/>
 
+            <Spinner
+                android:id="@+id/home_variant_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/eightdp"
+                android:layout_marginEnd="@dimen/stdp"
+                android:entries="@array/vanced_variant" />
+
             <include
                 layout="@layout/include_vanced"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="@dimen/stdp"
+                android:layout_marginTop="@dimen/stdp"
                 android:layout_marginEnd="@dimen/stdp"
                 bind:viewModel="@{viewModel}"/>
 

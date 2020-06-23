@@ -3,8 +3,6 @@
 
     <!-- Global Strings -->
     <string name="close">Close</string>
-    <string name="security_context">Please make sure you downloaded app from vanced.app, Vanced Discord server or GitHub</string>
-    <string name="welcome">Welcome</string>
 
     <!-- Main Activity -->
     <string name="title_about">About</string>
@@ -65,7 +63,20 @@
     <string name="re_check">Re-check</string>
     <string name="update_center">Update Center</string>
     <string name="update_found">Update found!</string>
-    <string name="update_notfound">No new updates</string>>
+    <string name="update_notfound">No new updates</string>
+
+    <!-- Dialogs -->
+    <string name="miui_one_title">Detected MiUI user!</string>
+    <string name="miui_one">Hey! Looks like you\'re a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings\nIf you can't find such setting, it means that you are using a new version of ROM which does not need fixing anything.</string>
+    <string name="miui_two_title">I\'m gonna stop you right there!</string>
+    <string name="miui_two">I am once again asking you to disable MiUI optimisations if you have not already. K thx bai</string>
+    <string name="error">Error</string>
+    <string name="security_context">Please make sure you downloaded app from vanced.app, Vanced Discord server or GitHub</string>
+    <string name="success">Success!</string>
+    <string name="vanced_installed">Vanced has been successfully installed, do you want to launch it now?</string>
+    <string name="launch">Launch</string>
+    <string name="welcome">Welcome</string>
+
 
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
