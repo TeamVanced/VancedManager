@@ -129,8 +129,11 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
     }
 
     private fun writeToVariantPref(variant: String) {
-        getDefaultSharedPreferences(activity).edit().putString("vanced_variant", variant).apply()
-        restartActivity()
+        val prefs = getDefaultSharedPreferences(activity)
+        if (prefs.getString("vanced_variant", "nonroot") != variant) {
+            prefs.edit().putString("vanced_variant", variant).apply()
+            restartActivity()
+        } else Log.d("VMvariant", "$variant is already selected")
     }
 
     private fun restartActivity() {
