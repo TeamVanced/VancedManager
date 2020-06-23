@@ -42,25 +42,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-        /*
-        val installMode: DropDownPreference? = findPreference("vanced_variant")
-        installMode?.summary = preferenceScreen.sharedPreferences.getString("vanced_variant",
-            "nonroot"
-        )?.capitalize(Locale.ROOT)
-        installMode?.setOnPreferenceChangeListener{ _, _ ->
-            when (installMode.value) {
-                "nonroot" -> {
-                    if (!Shell.rootAccess()) {
-                        installMode.value = "nonroot"
-                    }
-                }
-            }
-            restartMain()
-            true
-        }
-
-         */
-
         val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
         chosenPrefs?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()
@@ -74,11 +55,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.secret_settings_menu, menu)
         super .onCreateOptionsMenu(menu, inflater)
-    }
-
-    private fun restartMain() {
-        startActivity(Intent(activity, MainActivity::class.java))
-        activity?.finish()
     }
 
 }

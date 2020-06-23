@@ -31,6 +31,15 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
         val spinner: Spinner = view.findViewById(R.id.home_variant_selector)
 
+        activity?.let {
+            ArrayAdapter.createFromResource(it,
+                R.array.vanced_variant,
+                android.R.layout.simple_spinner_item).also { arrayAdapter ->
+                arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                spinner.adapter = arrayAdapter
+            }
+        }
+
         vancedinstallbtn.setOnClickListener(this)
         microginstallbtn.setOnClickListener(this)
         signaturebtn.setOnClickListener(this)
