@@ -8,7 +8,7 @@
         <item name="colorSecondary">#3E78AF</item>
         <item name="colorSecondaryVariant">#803E78AF</item>
         <item name="colorSurface">#000000</item>
-        <item name="colorSurfaceVariant">#121111</item>
+        <item name="colorSurfaceVariant">#111111</item>
         <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
         <item name="colorOnPrimary">#F9F9F9</item>
         <item name="colorOnPrimaryVariant">#e8e8e8</item>
@@ -63,6 +63,5 @@
         <item name="colorSecondaryVariant">#9A734BC7</item>
 
     </style>
-
 
 </resources>
