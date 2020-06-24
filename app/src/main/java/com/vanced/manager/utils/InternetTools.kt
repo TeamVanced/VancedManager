@@ -32,11 +32,13 @@ object InternetTools {
     }
 
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
-        return try {
+        return if (GetJson().isConnected(context)) {
+            try {
                 GetJson().AsJSONObject("https://vanced.app/api/v1/$json").get(obj).asInt
             } catch (e: IllegalStateException) {
                 GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
             }
+        } else 0
     }
 
 }

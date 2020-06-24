@@ -4,7 +4,9 @@ import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.os.Build
 import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
@@ -12,18 +14,25 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
+import com.vanced.manager.utils.InternetTools.displayJsonInt
 import com.vanced.manager.utils.InternetTools.displayJsonString
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 class HomeViewModel(application: Application): AndroidViewModel(application) {
 
+    private val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
+    private val connected: Boolean = GetJson().isConnected(application)
+
     private val vancedPkgName: String =
-        if (getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "root") {
+        if (variant== "root") {
             "com.google.android.youtube"
         } else {
             "com.vanced.android.youtube"
         }
+
+    private val pm = application.packageManager
 
     val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
     val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
@@ -34,7 +43,19 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     val vancedVersion: MutableLiveData<String> = MutableLiveData()
     val microgVersion: MutableLiveData<String> = MutableLiveData()
 
-    val isNonrootModeSelected: Boolean = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot") == "nonroot"
+    private val vancedInstalledVersionCode = getPkgVerCode(vancedInstalled, vancedPkgName)
+    private val microgInstalledVersionCode = getPkgVerCode(microgInstalled, "com.mgoogle.android.gms")
+
+    private val vancedVersionCode = displayJsonInt("vanced.json", "versionCode", application)
+    private val microgVersionCode = displayJsonInt("microg.json", "versionCode", application)
+
+    val vancedInstallButtonTxt = compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
+    val microgInstallButtonTxt = compareInt(microgInstalledVersionCode, microgVersionCode, application)
+
+    val vancedInstallButtonIcon = compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
+    val microgInstallButtonIcon = compareIntDrawable(microgInstalledVersionCode, microgVersionCode, application)
+
+    val nonrootModeSelected: Boolean = variant == "nonroot"
 
     private val signatureString = application.getString(R.string.unavailable)
     val signatureStatusTxt: MutableLiveData<String> = MutableLiveData()
@@ -74,10 +95,38 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private fun getPkgInfo(toCheck: Boolean, pkg: String, application: Application): String  {
         return if (toCheck) {
-            application.packageManager.getPackageInfo(pkg, 0).versionName
+            pm.getPackageInfo(pkg, 0).versionName
         } else {
             application.getString(R.string.unavailable)
         }
+    }
+
+    private fun getPkgVerCode(toCheck: Boolean, pkg: String): Int {
+        return if (toCheck) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                pm.getPackageInfo(pkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()
+            else
+                pm.getPackageInfo(pkg, 0).versionCode
+        } else 0
+    }
+
+    private fun compareInt(int1: Int, int2: Int, application: Application): String {
+        return if (connected)
+            when {
+            int1 > int2 -> application.getString(R.string.update)
+            int2 == int1 -> application.getString(R.string.button_installed)
+            else -> application.getString(R.string.install)
+        } else application.getString(R.string.install)
+    }
+
+    private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
+        return if (connected)
+            when {
+            int1 > int2 -> application.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+            int2 == int1 -> application.getDrawable(R.drawable.outline_cloud_done_24)
+            else -> application.getDrawable(R.drawable.outline_cloud_download_24)
+        } else application.getDrawable(R.drawable.outline_cloud_download_24)
+
     }
 
     init {
@@ -88,5 +137,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         microgInstalledVersion.value = getPkgInfo(microgInstalled, "com.mgoogle.android.gms", application)
 
     }
+
 
 }

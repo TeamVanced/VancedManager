@@ -45,8 +45,8 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/microg_installbtn"
                     style="@style/ButtonStyle"
-                    android:text="@string/install"
-                    app:icon="@drawable/outline_cloud_download_24"
+                    android:text="@{viewModel.microgInstallButtonTxt}"
+                    app:icon="@{viewModel.microgInstallButtonIcon}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn" />

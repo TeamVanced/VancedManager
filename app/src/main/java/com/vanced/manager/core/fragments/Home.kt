@@ -61,7 +61,6 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
 
         spinner.onItemSelectedListener = this
 
-
     }
 
     override fun onResume() {

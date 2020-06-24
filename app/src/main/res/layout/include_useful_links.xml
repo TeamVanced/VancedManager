@@ -31,12 +31,6 @@
                 android:orientation="vertical"
                 android:layout_marginTop="2dp">
 
-                <include
-                    layout="@layout/include_vanced_medias"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    bind:viewModel="@{viewModel}"/>
-
                 <com.google.android.material.button.MaterialButton
                     style="@style/LinkButtonStyle"
                     android:id="@+id/brave_button"
@@ -51,6 +45,12 @@
                     android:text="@string/website_text"
                     app:cornerRadius="@dimen/eightdp"
                     android:onClick='@{()-> viewModel.openUrl("https://vanced.app")}'/>
+
+                <include
+                    layout="@layout/include_vanced_medias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    bind:viewModel="@{viewModel}"/>
 
             </LinearLayout>
 

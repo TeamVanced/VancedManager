@@ -4,10 +4,12 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.os.IBinder
+import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
 import com.downloader.OnDownloadListener
+import com.downloader.OnStartOrResumeListener
 import com.downloader.PRDownloader
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -15,9 +17,13 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 class MicrogDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        downloadMicrog()
+        try {
+            downloadMicrog()
+        } catch (e: Exception) {
+            Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+        }
         stopSelf()
-        return START_NOT_STICKY
+        return START_STICKY
     }
 
     private fun downloadMicrog() {
@@ -28,6 +34,7 @@ class MicrogDownloadService: Service() {
         val dwnldUrl = apkUrl.get("url").asString
         PRDownloader.download(dwnldUrl, filesDir.path, "microg.apk")
             .build()
+            .setOnStartOrResumeListener { OnStartOrResumeListener { TODO("Not yet implemented") } }
             .setOnProgressListener { progress ->
                 val intent = Intent(HomeFragment.MICROG_DOWNLOADING)
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes

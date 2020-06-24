@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
+import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.downloader.Error
@@ -18,9 +19,13 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 class VancedDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        downloadSplits()
+        try {
+            downloadSplits()
+        } catch (e: Exception) {
+            Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+        }
         stopSelf()
-        return START_NOT_STICKY
+        return START_STICKY
     }
 
     private fun downloadSplits(

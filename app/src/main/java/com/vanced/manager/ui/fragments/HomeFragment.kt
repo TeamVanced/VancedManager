@@ -1,29 +1,23 @@
 package com.vanced.manager.ui.fragments
 
-import android.animation.ObjectAnimator
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.animation.addListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
-import com.dezlum.codelabs.getjson.GetJson
-import com.github.pwittchen.reactivenetwork.library.rx2.ReactiveNetwork
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
@@ -33,12 +27,7 @@ import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.utils.InternetTools.displayJsonInt
 import com.vanced.manager.utils.PackageHelper.installApp
-import com.vanced.manager.utils.PackageHelper.isPackageInstalled
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
 
 class HomeFragment : Home() {
 
@@ -46,7 +35,6 @@ class HomeFragment : Home() {
     private lateinit var sectionPageRootAdapter: SectionPageRootAdapter
     private lateinit var viewPager: ViewPager2
     private lateinit var binding: FragmentHomeBinding
-    private var disposable: Disposable? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,7 +49,6 @@ class HomeFragment : Home() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initNetworkFun()
         val viewModel: HomeViewModel by viewModels()
         binding.viewModel = viewModel
 
@@ -70,156 +57,25 @@ class HomeFragment : Home() {
 
         if (variantPref == "root") {
             attachRootChangelog()
-        } else
+            if (viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
+                when (viewModel.signatureStatusTxt.value) {
+                    getString(R.string.unavailable) -> disableVancedButton(getString(R.string.signature_not_checked))
+                    getString(R.string.signature_enabled) -> disableVancedButton(getString(R.string.signature_disable))
+                    else -> throw NotImplementedError("Error handling status")
+                }
+            }
+        } else {
             attachNonrootChangelog()
+            if (!viewModel.microgInstalled) {
+                disableVancedButton(getString(R.string.no_microg))
+            }
+        }
 
     }
 
     override fun onPause() {
         super.onPause()
         activity?.let { LocalBroadcastManager.getInstance(it).unregisterReceiver(broadcastReceiver) }
-    }
-
-    private fun initNetworkFun() {
-        val pm = activity?.packageManager
-        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
-        val microgStatus = pm?.let { isPackageInstalled("com.mgoogle.android.gms", it) }
-        val vancedStatus =
-            if (variant == "root") {
-                pm?.let { isPackageInstalled("com.google.android.youtube", it) }
-            } else {
-                pm?.let { isPackageInstalled("com.vanced.android.youtube", it) }
-            }
-        val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
-        val networkErrorLayout = view?.findViewById<MaterialCardView>(R.id.home_network_wrapper)
-        val viewModel: HomeViewModel by viewModels()
-
-        disposable = ReactiveNetwork.observeInternetConnectivity()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe { isConnectedToInternet ->
-                run {
-                    if (isConnectedToInternet) {
-                        vancedinstallbtn?.visibility = View.VISIBLE
-
-                        val vancedRemoteCode = activity?.let { displayJsonInt("vanced.json", "versionCode", it) }
-                        val microgRemoteCode = activity?.let { displayJsonInt("microg.json", "versionCode", it) }
-
-                        if (variant == "nonroot") {
-                            val microginstallbtn =
-                                view?.findViewById<MaterialButton>(R.id.microg_installbtn)
-                            microginstallbtn?.visibility = View.VISIBLE
-
-                            if (microgStatus!!) {
-                                @Suppress("DEPRECATION")
-                                val microgVerCode =
-                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-                                        pm.getPackageInfo("com.mgoogle.android.gms", 0).longVersionCode.and(0xFFFFFFFF).toInt()
-                                    else
-                                        pm.getPackageInfo("com.mgoogle.android.gms", 0).versionCode
-                                when {
-                                    microgRemoteCode!! > microgVerCode -> {
-                                        microginstallbtn?.text =
-                                            activity?.getString(R.string.update)
-                                        microginstallbtn?.icon =
-                                            activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
-                                    }
-
-                                    microgRemoteCode == microgVerCode -> {
-                                        microginstallbtn?.text =
-                                            activity?.getString(R.string.button_installed)
-                                        microginstallbtn?.icon =
-                                            activity?.getDrawable(R.drawable.outline_cloud_done_24)
-                                    }
-                                }
-                            } else {
-                                disableVancedButton(getString(R.string.no_microg))
-                            }
-                        }
-
-                        if (vancedStatus!!) {
-                            val vanPkgName =
-                                if (variant == "root")
-                                    "com.google.android.youtube"
-                                else
-                                    "com.vanced.android.youtube"
-
-                            @Suppress("DEPRECATION")
-                            val vancedVerCode =
-                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                                    pm?.getPackageInfo(
-                                        vanPkgName,
-                                        0
-                                    )?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
-                                }
-                                else {
-                                    pm?.getPackageInfo(
-                                        vanPkgName,
-                                        0
-                                    )?.versionCode
-                                }
-
-                            when {
-                                vancedRemoteCode!! > vancedVerCode!! -> {
-                                    vancedinstallbtn?.text =
-                                        activity?.getString(R.string.update)
-                                    vancedinstallbtn?.icon =
-                                        activity?.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
-                                }
-
-                                vancedRemoteCode == vancedVerCode -> {
-                                    vancedinstallbtn?.text =
-                                        activity?.getString(R.string.button_installed)
-                                    vancedinstallbtn?.icon =
-                                        activity?.getDrawable(R.drawable.outline_cloud_done_24)
-                                }
-
-                            }
-
-                        }
-
-                        if (variant == "root" && viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
-                            when (viewModel.signatureStatusTxt.value) {
-                                getString(R.string.unavailable) -> disableVancedButton(getString(R.string.signature_not_checked))
-                                getString(R.string.signature_enabled) -> disableVancedButton(getString(R.string.signature_disable))
-                                else -> throw NotImplementedError("Error handling status")
-                            }
-
-                        }
-
-                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0f, 0.3f)
-                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, -1f)
-
-                        oa2.start()
-                        oa3.apply {
-                            oa3.addListener(onEnd = {
-                                networkErrorLayout?.visibility = View.GONE
-                            })
-                            start()
-                        }
-                    } else {
-                        if (variant == "nonroot") {
-                            view?.findViewById<MaterialButton>(R.id.microg_installbtn)?.visibility = View.INVISIBLE
-                        }
-
-                        vancedinstallbtn?.visibility = View.INVISIBLE
-
-                        val oa2 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", -1f, 0.3f)
-                        val oa3 = ObjectAnimator.ofFloat(networkErrorLayout, "yFraction", 0.3f, 0f)
-
-                        oa2.apply {
-                            oa2.addListener(onStart = {
-                                networkErrorLayout?.visibility = View.VISIBLE
-                            })
-                            start()
-                        }
-                        oa3.start()
-
-                    }
-
-
-                }
-            }
     }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {

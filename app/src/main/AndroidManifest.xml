@@ -62,8 +62,15 @@
         <service android:name=".core.installer.RootAppUninstaller" />
         <service android:name=".core.installer.AppUninstallerService" />
         <service android:name=".core.installer.AppInstallerService" />
-        <service android:name=".core.downloader.VancedDownloadService" />
-        <service android:name=".core.downloader.MicrogDownloadService" />
+        <service
+            android:name=".core.downloader.VancedDownloadService"
+            android:exported="true"
+            android:process=":VancedDownloadProcess" />
+        
+        <service
+            android:name=".core.downloader.MicrogDownloadService"
+            android:exported="true"
+            android:process=":MicrogDownloadProcess"/>
 
     </application>
 

@@ -46,10 +46,10 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/vanced_installbtn"
                 style="@style/ButtonStyle"
-                android:text="@string/install"
+                android:text="@{viewModel.vancedInstallButtonTxt}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:icon="@drawable/outline_cloud_download_24" />
+                app:icon="@{viewModel.vancedInstallButtonIcon}" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/vanced_title_buttons_barrier"
