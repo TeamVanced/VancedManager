@@ -26,6 +26,7 @@
         <item name="colorBackgroundFloating">#111111</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">?colorSurface</item>
+        <item name="android:navigationBarColor">#000000</item>
 
     </style>
 

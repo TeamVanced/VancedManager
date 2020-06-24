@@ -99,8 +99,11 @@ object DialogContainer {
         AlertDialog.Builder(activity)
             .setTitle(activity.getString(R.string.success))
             .setMessage(activity.getString(R.string.vanced_installed))
-            .setPositiveButton(activity.getString(R.string.launch)) {
-                    _, _ -> startActivity(activity, intent, null)
+            .setPositiveButton(activity.getString(R.string.launch)) { _, _ ->
+                run {
+                    startActivity(activity, intent, null)
+                    activity.finish()
+                }
             }
             .setNegativeButton("Cancel") { dialog, _ ->
                 run {

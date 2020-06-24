@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
             android:text="Polski"
-            android:tag="nl"
+            android:tag="pl"
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
