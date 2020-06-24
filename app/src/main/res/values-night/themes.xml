@@ -23,7 +23,6 @@
         <item name="iconColor">?colorPrimaryVariant</item>
         <item name="toolbarIconColor">?colorOnPrimary</item>
         <item name="DialogBG">#111111</item>
-        <item name="colorBackgroundFloating">#111111</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
