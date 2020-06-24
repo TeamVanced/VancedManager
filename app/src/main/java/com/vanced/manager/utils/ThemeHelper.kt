@@ -1,47 +1,47 @@
 package com.vanced.manager.utils
 
-import android.content.Context
 import android.content.res.Configuration
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
+import com.vanced.manager.ui.MainActivity
 
 object ThemeHelper {
 
-    fun setFinalTheme(context: Context) {
-        val currentAccent = PreferenceManager.getDefaultSharedPreferences(context).getString("accent_color", "Blue")
-        when (PreferenceManager.getDefaultSharedPreferences(context)
+    fun setFinalTheme(activity: MainActivity) {
+        val currentAccent = PreferenceManager.getDefaultSharedPreferences(activity).getString("accent_color", "Blue")
+        when (PreferenceManager.getDefaultSharedPreferences(activity)
             .getString("theme_mode", "Follow System")) {
-            "Light" -> setLightAccent(currentAccent, context)
-            "Dark" -> setDarkAccent(currentAccent, context)
+            "Light" -> activity.setTheme(getLightAccent(currentAccent))
+            "Dark" -> activity.setTheme(getDarkAccent(currentAccent))
             "Follow System" -> {
-                when (context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setDarkAccent(currentAccent, context)
-                    Configuration.UI_MODE_NIGHT_NO -> setLightAccent(currentAccent, context)
+                when (activity.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                    Configuration.UI_MODE_NIGHT_YES -> activity.setTheme(getDarkAccent(currentAccent))
+                    Configuration.UI_MODE_NIGHT_NO -> activity.setTheme(getLightAccent(currentAccent))
                 }
             }
-            else -> setLightAccent("Blue", context)
+            else -> getLightAccent("Blue")
         }
     }
 
-    private fun setDarkAccent(accentColor: String?, context: Context) {
-        when (accentColor) {
-            "Blue" -> context.setTheme(R.style.DarkTheme_Blue)
-            "Red" -> context.setTheme(R.style.DarkTheme_Red)
-            "Green" -> context.setTheme(R.style.DarkTheme_Green)
-            "Yellow" -> context.setTheme(R.style.DarkTheme_Yellow)
-            "Purple" -> context.setTheme(R.style.DarkTheme_Purple)
-            else -> context.setTheme(R.style.DarkTheme_Blue)
+    private fun getDarkAccent(accentColor: String?): Int {
+        return when (accentColor) {
+            "Blue" -> R.style.DarkTheme_Blue
+            "Red" -> R.style.DarkTheme_Red
+            "Green" -> R.style.DarkTheme_Green
+            "Yellow" -> R.style.DarkTheme_Yellow
+            "Purple" -> R.style.DarkTheme_Purple
+            else -> R.style.DarkTheme_Blue
         }
     }
 
-    private fun setLightAccent(accentColor: String?, context: Context) {
-        when (accentColor) {
-            "Blue" -> context.setTheme(R.style.LightTheme_Blue)
-            "Red" -> context.setTheme(R.style.LightTheme_Red)
-            "Green" -> context.setTheme(R.style.LightTheme_Green)
-            "Yellow" -> context.setTheme(R.style.LightTheme_Yellow)
-            "Purple" -> context.setTheme(R.style.LightTheme_Purple)
-            else -> context.setTheme(R.style.LightTheme_Blue)
+    private fun getLightAccent(accentColor: String?): Int {
+        return when (accentColor) {
+            "Blue" -> R.style.LightTheme_Blue
+            "Red" -> R.style.LightTheme_Red
+            "Green" -> R.style.LightTheme_Green
+            "Yellow" -> R.style.LightTheme_Yellow
+            "Purple" -> R.style.LightTheme_Purple
+            else -> R.style.LightTheme_Blue
         }
     }
     

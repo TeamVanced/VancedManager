@@ -4,7 +4,6 @@ import android.content.*
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.NavDestination
@@ -12,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
+import com.google.android.material.appbar.MaterialToolbar
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -26,13 +26,13 @@ class MainActivity : Main() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //setFinalTheme(this)
+        setFinalTheme(this)
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.lifecycleOwner = this
 
-        val toolbar: Toolbar = findViewById(R.id.home_toolbar)
+        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         setSupportActionBar(toolbar)
 
         val navHost = findNavController(R.id.bottom_nav_host)
@@ -118,7 +118,7 @@ class MainActivity : Main() {
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        val toolbar: Toolbar = findViewById(R.id.home_toolbar)
+        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
         when {
             isNeeded -> toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
             else -> toolbar.navigationIcon = null
