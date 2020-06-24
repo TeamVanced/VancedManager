@@ -23,7 +23,7 @@
         <item name="iconColor">?colorPrimaryVariant</item>
         <item name="toolbarIconColor">#111111</item>
         <item name="DialogBG">#ffffff</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">#ffffff</item>
