@@ -34,6 +34,8 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private val pm = application.packageManager
 
+    val variantSwitchTxt = "Variant: $variant"
+
     val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
     val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
 

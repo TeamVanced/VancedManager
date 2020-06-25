@@ -27,13 +27,11 @@
             android:layout_marginTop="4dp"
             android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/home_variant_selector"
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/variant_switcher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="@dimen/eightdp"
-                android:layout_marginEnd="@dimen/stdp" />
+                android:text="@{viewModel.variantSwitchTxt}"/>
 
             <include
                 layout="@layout/include_vanced"

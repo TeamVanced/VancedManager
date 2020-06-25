@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.animation.LayoutTransition
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -10,7 +11,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.*
-import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.*
@@ -72,6 +72,7 @@ class HomeFragment : Home() {
             }
         }
 
+        view.findViewById<ViewGroup>(R.id.changelog_card).layoutTransition.enableTransitionType(LayoutTransition.CHANGING)
         view.findViewById<ImageButton>(R.id.changelog_button).setOnClickListener {
                 cardExpandCollapse()
         }

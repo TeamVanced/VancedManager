@@ -9,6 +9,7 @@ import android.widget.*
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.switchmaterial.SwitchMaterial
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
@@ -20,7 +21,7 @@ import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
-open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelectedListener {
+open class Home : BaseFragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,36 +31,32 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
         val signaturebtn = view.findViewById<MaterialButton>(R.id.signature_button)
         val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
-        val spinner: Spinner = view.findViewById(R.id.home_variant_selector)
+        val switch: SwitchMaterial = view.findViewById(R.id.variant_switcher)
 
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
-
-        activity?.let {
-            ArrayAdapter.createFromResource(it,
-                R.array.vanced_variant,
-                android.R.layout.simple_spinner_item).also { arrayAdapter ->
-                arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                spinner.adapter = arrayAdapter
-            }
-        }
 
         vancedinstallbtn.setOnClickListener(this)
         microginstallbtn.setOnClickListener(this)
         signaturebtn.setOnClickListener(this)
         microguninstallbtn.setOnClickListener(this)
         vanceduninstallbtn.setOnClickListener(this)
-
-        when (variantPref) {
-            "nonroot" -> spinner.setSelection(0)
-            "root" -> {
+        switch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
                 if (Shell.rootAccess())
-                    spinner.setSelection(1)
+                    writeToVariantPref("root")
                 else
-                    spinner.setSelection(0)
+                    writeToVariantPref("nonroot")
+            } else {
+                writeToVariantPref("nonroot")
             }
         }
 
-        spinner.onItemSelectedListener = this
+        when (variantPref) {
+            "nonroot" -> switch.isChecked = false
+            "root" -> {
+                switch.isChecked = Shell.rootAccess()
+            }
+        }
 
     }
 
@@ -137,22 +134,6 @@ open class Home : BaseFragment(), View.OnClickListener, AdapterView.OnItemSelect
             }
             R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it) }
             R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
-        }
-    }
-
-    override fun onNothingSelected(parent: AdapterView<*>?) {
-        TODO("Ehh we don't need it")
-    }
-
-    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        when (position) {
-            0 -> writeToVariantPref("nonroot")
-            1 -> {
-                if (Shell.rootAccess())
-                    writeToVariantPref("root")
-                else
-                    writeToVariantPref("nonroot")
-            }
         }
     }
 
