@@ -13,7 +13,7 @@
 
     <com.google.android.material.card.MaterialCardView
         style="@style/InnerMaterialCard"
-        app:cardBackgroundColor="?colorAccent">
+        app:cardBackgroundColor="?colorPrimary">
 
         <LinearLayout
             android:layout_width="match_parent"

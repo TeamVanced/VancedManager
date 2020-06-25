@@ -10,6 +10,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.*
@@ -19,7 +20,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
@@ -33,9 +33,6 @@ import com.vanced.manager.utils.PackageHelper.installApp
 
 class HomeFragment : Home() {
 
-    private lateinit var sectionPageAdapter: SectionPageAdapter
-    private lateinit var sectionPageRootAdapter: SectionPageRootAdapter
-    private lateinit var viewPager: ViewPager2
     private lateinit var binding: FragmentHomeBinding
     private var isExpanded: Boolean = false
 
@@ -75,17 +72,16 @@ class HomeFragment : Home() {
             }
         }
 
-        view.findViewById<MaterialCardView>(R.id.changelog_card).setOnTouchListener { _, _ ->
-            cardExpandCollapse()
-            return@setOnTouchListener true
-        }
+        view.findViewById<LinearLayout>(R.id.viewpager_container).visibility = View.VISIBLE
+
         view.findViewById<ImageButton>(R.id.changelog_button).setOnClickListener {
-            cardExpandCollapse()
+                cardExpandCollapse()
+            }
         }
-    }
 
     private fun cardExpandCollapse() {
         val viewPagerContainer = view?.findViewById<LinearLayout>(R.id.viewpager_container)
+        val arrow = view?.findViewById<ImageButton>(R.id.changelog_button)
         val arrowAnimation: RotateAnimation
         if (isExpanded) {
             viewPagerContainer?.visibility = View.GONE
@@ -96,7 +92,7 @@ class HomeFragment : Home() {
             isExpanded = true
             arrowAnimation = RotateAnimation(0f, 180f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
         }
-        arrowAnimation.start()
+        arrow?.startAnimation(arrowAnimation)
     }
 
     override fun onPause() {
@@ -179,9 +175,9 @@ class HomeFragment : Home() {
     }
 
     private fun attachNonrootChangelog() {
-        sectionPageAdapter = SectionPageAdapter(this)
+        val sectionPageAdapter = SectionPageAdapter(this)
         val tabLayout = view?.findViewById(R.id.tablayout) as TabLayout
-        viewPager = view?.findViewById(R.id.viewpager)!!
+        val viewPager = view?.findViewById(R.id.viewpager) as ViewPager2
         viewPager.adapter = sectionPageAdapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
@@ -194,9 +190,9 @@ class HomeFragment : Home() {
     }
 
     private fun attachRootChangelog() {
-        sectionPageRootAdapter = SectionPageRootAdapter(this)
+        val sectionPageRootAdapter = SectionPageRootAdapter(this)
         val tabLayout = view?.findViewById(R.id.tablayout) as TabLayout
-        viewPager = view?.findViewById(R.id.viewpager)!!
+        val viewPager = view?.findViewById(R.id.viewpager) as ViewPager2
         viewPager.adapter = sectionPageRootAdapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->

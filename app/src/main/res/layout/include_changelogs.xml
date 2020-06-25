@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/changelog_card"
+    android:animateLayoutChanges="true"
     style="@style/MaterialCard">
 
     <LinearLayout
@@ -36,9 +37,7 @@
             android:id="@+id/viewpager_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone"
-            tools:visibility="visible">
+            android:orientation="vertical">
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tablayout"
