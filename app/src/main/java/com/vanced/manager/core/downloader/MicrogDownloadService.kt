@@ -13,13 +13,14 @@ import com.downloader.OnStartOrResumeListener
 import com.downloader.PRDownloader
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import java.lang.IllegalStateException
 
 class MicrogDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         try {
             downloadMicrog()
-        } catch (e: Exception) {
+        } catch (e: IllegalStateException) {
             Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
         }
         stopSelf()

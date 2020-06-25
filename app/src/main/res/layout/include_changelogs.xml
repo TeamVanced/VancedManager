@@ -8,5 +8,5 @@
     app:contentPaddingTop="2dp"
     app:expandOnClick="true"
     app:inner_view="@layout/include_changelog_pages"
-    android:background="?colorSurface"/>
+    android:background="?colorSurfaceVariant"/>
 
