@@ -72,23 +72,24 @@ class HomeFragment : Home() {
             }
         }
 
-        view.findViewById<LinearLayout>(R.id.viewpager_container).visibility = View.VISIBLE
-
         view.findViewById<ImageButton>(R.id.changelog_button).setOnClickListener {
                 cardExpandCollapse()
-            }
         }
+    }
 
     private fun cardExpandCollapse() {
-        val viewPagerContainer = view?.findViewById<LinearLayout>(R.id.viewpager_container)
+        val viewPagerContainer = view?.findViewById<ViewPager2>(R.id.viewpager)
+        val tabLayoutContainer = view?.findViewById<TabLayout>(R.id.tablayout)
         val arrow = view?.findViewById<ImageButton>(R.id.changelog_button)
         val arrowAnimation: RotateAnimation
         if (isExpanded) {
             viewPagerContainer?.visibility = View.GONE
+            tabLayoutContainer?.visibility = View.GONE
             isExpanded = false
             arrowAnimation = RotateAnimation(180f, 0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
         } else {
             viewPagerContainer?.visibility = View.VISIBLE
+            tabLayoutContainer?.visibility = View.VISIBLE
             isExpanded = true
             arrowAnimation = RotateAnimation(0f, 180f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
         }
