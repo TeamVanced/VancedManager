@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -9,15 +10,16 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.*
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
+import android.view.animation.Animation
+import android.view.animation.RotateAnimation
+import android.widget.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
@@ -35,6 +37,7 @@ class HomeFragment : Home() {
     private lateinit var sectionPageRootAdapter: SectionPageRootAdapter
     private lateinit var viewPager: ViewPager2
     private lateinit var binding: FragmentHomeBinding
+    private var isExpanded: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +49,7 @@ class HomeFragment : Home() {
         return binding.root
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -71,6 +75,28 @@ class HomeFragment : Home() {
             }
         }
 
+        view.findViewById<MaterialCardView>(R.id.changelog_card).setOnTouchListener { _, _ ->
+            cardExpandCollapse()
+            return@setOnTouchListener true
+        }
+        view.findViewById<ImageButton>(R.id.changelog_button).setOnClickListener {
+            cardExpandCollapse()
+        }
+    }
+
+    private fun cardExpandCollapse() {
+        val viewPagerContainer = view?.findViewById<LinearLayout>(R.id.viewpager_container)
+        val arrowAnimation: RotateAnimation
+        if (isExpanded) {
+            viewPagerContainer?.visibility = View.GONE
+            isExpanded = false
+            arrowAnimation = RotateAnimation(180f, 0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
+        } else {
+            viewPagerContainer?.visibility = View.VISIBLE
+            isExpanded = true
+            arrowAnimation = RotateAnimation(0f, 180f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
+        }
+        arrowAnimation.start()
     }
 
     override fun onPause() {

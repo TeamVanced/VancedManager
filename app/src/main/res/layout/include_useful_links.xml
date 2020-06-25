@@ -25,34 +25,11 @@
                 style="@style/CardTitle"
                 android:text="@string/useful_links" />
 
-            <LinearLayout
+            <include
+                layout="@layout/include_vanced_medias"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="2dp">
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/LinkButtonStyle"
-                    android:id="@+id/brave_button"
-                    android:text="@string/support_us"
-                    android:layout_marginTop="5dp"
-                    app:cornerRadius="@dimen/eightdp"
-                    android:onClick='@{()-> viewModel.openUrl("https://brave.com/van874")}'/>
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/LinkButtonStyle"
-                    android:id="@+id/website_button"
-                    android:text="@string/website_text"
-                    app:cornerRadius="@dimen/eightdp"
-                    android:onClick='@{()-> viewModel.openUrl("https://vanced.app")}'/>
-
-                <include
-                    layout="@layout/include_vanced_medias"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    bind:viewModel="@{viewModel}"/>
-
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                bind:viewModel="@{viewModel}"/>
 
         </LinearLayout>
 

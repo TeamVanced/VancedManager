@@ -33,11 +33,12 @@
                     android:textAllCaps="false"
                     android:fontFamily="@font/exo_semibold"
                     android:textSize="17sp"
+                    app:iconPadding="7sp"
                     app:layout_constraintEnd_toStartOf="@id/bravebtn"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:onClick='@{()-> viewModel.openUrl("https://reddit.com/r/vanced")}'/>
+                    android:onClick='@{()-> viewModel.openUrl("https://vanced.app")}'/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/bravebtn"
@@ -46,13 +47,13 @@
                     android:text="@string/support_us"
                     android:textAllCaps="false"
                     android:fontFamily="@font/exo_semibold"
-                    app:iconPadding="15dp"
+                    app:iconPadding="7dp"
                     android:textSize="17sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/websitebtn"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:onClick='@{()-> viewModel.openUrl("https://reddit.com/r/vanced")}'/>
+                    android:onClick='@{()-> viewModel.openUrl("https://brave.com/van874")}'/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
