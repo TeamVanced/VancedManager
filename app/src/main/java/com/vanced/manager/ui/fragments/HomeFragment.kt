@@ -1,7 +1,6 @@
 package com.vanced.manager.ui.fragments
 
 import android.animation.LayoutTransition
-import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -46,7 +45,6 @@ class HomeFragment : Home() {
         return binding.root
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -60,15 +58,15 @@ class HomeFragment : Home() {
             attachRootChangelog()
             if (viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
                 when (viewModel.signatureStatusTxt.value) {
-                    getString(R.string.unavailable) -> disableVancedButton(getString(R.string.signature_not_checked))
-                    getString(R.string.signature_enabled) -> disableVancedButton(getString(R.string.signature_disable))
+                    getString(R.string.unavailable) -> disableVancedButton()
+                    getString(R.string.signature_enabled) -> disableVancedButton()
                     else -> throw NotImplementedError("Error handling status")
                 }
             }
         } else {
             attachNonrootChangelog()
             if (!viewModel.microgInstalled) {
-                disableVancedButton(getString(R.string.no_microg))
+                disableVancedButton()
             }
         }
 
@@ -82,19 +80,17 @@ class HomeFragment : Home() {
         val viewPagerContainer = view?.findViewById<ViewPager2>(R.id.viewpager)
         val tabLayoutContainer = view?.findViewById<TabLayout>(R.id.tablayout)
         val arrow = view?.findViewById<ImageButton>(R.id.changelog_button)
-        val arrowAnimation: RotateAnimation
         if (isExpanded) {
             viewPagerContainer?.visibility = View.GONE
             tabLayoutContainer?.visibility = View.GONE
             isExpanded = false
-            arrowAnimation = RotateAnimation(180f, 0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
+            arrow?.startAnimation(RotateAnimation(180f, 0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f))
         } else {
             viewPagerContainer?.visibility = View.VISIBLE
             tabLayoutContainer?.visibility = View.VISIBLE
             isExpanded = true
-            arrowAnimation = RotateAnimation(0f, 180f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
+            arrow?.startAnimation(RotateAnimation(0f, 180f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f))
         }
-        arrow?.startAnimation(arrowAnimation)
     }
 
     override fun onPause() {
@@ -210,12 +206,11 @@ class HomeFragment : Home() {
         super .onCreateOptionsMenu(menu, inflater)
     }
 
-    private fun disableVancedButton(txt: String) {
+    private fun disableVancedButton() {
         val vancedinstallbtn = view?.findViewById<MaterialButton>(R.id.vanced_installbtn)
         vancedinstallbtn?.isEnabled = false
         vancedinstallbtn?.backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
         vancedinstallbtn?.setTextColor(ColorStateList.valueOf(Color.GRAY))
-        vancedinstallbtn?.text = txt
         vancedinstallbtn?.icon = null
     }
 

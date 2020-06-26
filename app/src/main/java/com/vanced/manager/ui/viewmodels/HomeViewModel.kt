@@ -34,8 +34,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private val pm = application.packageManager
 
-    val variantSwitchTxt = "Variant: $variant"
-
     val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
     val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
 
@@ -51,10 +49,8 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private val vancedVersionCode = displayJsonInt("vanced.json", "versionCode", application)
     private val microgVersionCode = displayJsonInt("microg.json", "versionCode", application)
 
-    val vancedInstallButtonTxt = compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
     val microgInstallButtonTxt = compareInt(microgInstalledVersionCode, microgVersionCode, application)
 
-    val vancedInstallButtonIcon = compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
     val microgInstallButtonIcon = compareIntDrawable(microgInstalledVersionCode, microgVersionCode, application)
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
@@ -139,6 +135,36 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         microgInstalledVersion.value = getPkgInfo(microgInstalled, "com.mgoogle.android.gms", application)
 
     }
+
+    val vancedInstallButtonTxt =
+        if (variant == "nonroot") {
+            if (microgInstalled) {
+                compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
+            } else {
+                application.getString(R.string.no_microg)
+            }
+        } else {
+            when (signatureStatusTxt.value) {
+                application.getString(R.string.unavailable) -> application.getString(R.string.signature_not_checked)
+                application.getString(R.string.signature_enabled) -> application.getString(R.string.signature_disable)
+                application.getString(R.string.signature_disabled) -> compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
+                else -> throw NotImplementedError("Error handling status")
+
+            }
+        }
+
+    val vancedInstallButtonIcon =
+        if (variant == "nonroot") {
+            if (microgInstalled)
+                compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
+             else
+                null
+        } else {
+            if (signatureStatusTxt.value == application.getString(R.string.signature_disabled))
+                compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
+            else
+                null
+        }
 
 
 }

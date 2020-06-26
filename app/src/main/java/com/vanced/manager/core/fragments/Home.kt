@@ -9,7 +9,6 @@ import android.widget.*
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.switchmaterial.SwitchMaterial
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
@@ -31,32 +30,18 @@ open class Home : BaseFragment(), View.OnClickListener {
         val signaturebtn = view.findViewById<MaterialButton>(R.id.signature_button)
         val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
-        val switch: SwitchMaterial = view.findViewById(R.id.variant_switcher)
+        val rootswitch = view.findViewById<MaterialButton>(R.id.root_switch)
+        val nonrootswitch = view.findViewById<MaterialButton>(R.id.nonroot_switch)
 
-        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        //val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
 
         vancedinstallbtn.setOnClickListener(this)
         microginstallbtn.setOnClickListener(this)
         signaturebtn.setOnClickListener(this)
         microguninstallbtn.setOnClickListener(this)
         vanceduninstallbtn.setOnClickListener(this)
-        switch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                if (Shell.rootAccess())
-                    writeToVariantPref("root")
-                else
-                    writeToVariantPref("nonroot")
-            } else {
-                writeToVariantPref("nonroot")
-            }
-        }
-
-        when (variantPref) {
-            "nonroot" -> switch.isChecked = false
-            "root" -> {
-                switch.isChecked = Shell.rootAccess()
-            }
-        }
+        rootswitch.setOnClickListener(this)
+        nonrootswitch.setOnClickListener(this)
 
     }
 
@@ -134,20 +119,23 @@ open class Home : BaseFragment(), View.OnClickListener {
             }
             R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it) }
             R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
+            R.id.nonroot_switch -> writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
+            R.id.root_switch ->
+                if (Shell.rootAccess())
+                    writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
+                else
+                    writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
         }
     }
 
-    private fun writeToVariantPref(variant: String) {
+    private fun writeToVariantPref(variant: String, animIn: Int, animOut: Int) {
         val prefs = getDefaultSharedPreferences(activity)
         if (prefs.getString("vanced_variant", "nonroot") != variant) {
             prefs.edit().putString("vanced_variant", variant).apply()
-            restartActivity()
+            startActivity(Intent(activity, MainActivity::class.java))
+            activity?.overridePendingTransition(animIn, animOut)
+            activity?.finish()
         } else Log.d("VMvariant", "$variant is already selected")
-    }
-
-    private fun restartActivity() {
-        startActivity(Intent(activity, MainActivity::class.java))
-        activity?.finish()
     }
 
 }

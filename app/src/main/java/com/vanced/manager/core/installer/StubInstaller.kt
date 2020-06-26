@@ -16,8 +16,9 @@ class StubInstaller: Service() {
         if (!apkFile.exists())  {
             copyStub()
         }
+        Log.d("VMpath", apkFile.path)
         Log.d("AppLog", "Installing stub...")
-        val installResult = Shell.su("pm install ${apkFile.absolutePath}").exec()
+        val installResult = Shell.su("pm install ${apkFile.path}").exec()
         Log.d("AppLog", "succeeded installing?${installResult.isSuccess}")
         if (installResult.isSuccess) {
             val mIntent = Intent(HomeFragment.SIGNATURE_DISABLED)

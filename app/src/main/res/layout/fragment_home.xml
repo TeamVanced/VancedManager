@@ -27,11 +27,54 @@
             android:layout_marginTop="4dp"
             android:orientation="vertical">
 
-            <com.google.android.material.switchmaterial.SwitchMaterial
-                android:id="@+id/variant_switcher"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.variantSwitchTxt}"/>
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/nonroot"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nonroot_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonStyle"
+                        android:text="@string/nonroot"
+                        android:visibility="@{viewModel.nonrootModeSelected ? View.GONE : View.VISIBLE}"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:text="@string/root"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/root_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonStyle"
+                        android:text="@string/root"
+                        android:visibility="@{viewModel.nonrootModeSelected ? View.VISIBLE : View.GONE}"/>
+
+                </FrameLayout>
+
+            </RelativeLayout>
 
             <include
                 layout="@layout/include_vanced"
