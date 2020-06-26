@@ -18,7 +18,7 @@ android {
     }
 
     lintOptions {
-        disable 'MissingTranslation'
+        disable 'MissingTranslation', 'ExtraTranslation'
     }
 
     aaptOptions {
@@ -68,8 +68,6 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'com.github.100rabhkr:GetJSON:1.0'
-    implementation 'com.github.pwittchen:reactivenetwork-rx2:3.0.8'
     implementation 'com.github.topjohnwu.libsu:core:2.5.1'
-    implementation 'com.alespero:expandable-cardview:0.8'
     implementation 'com.mindorks.android:prdownloader:0.6.0'
 }
