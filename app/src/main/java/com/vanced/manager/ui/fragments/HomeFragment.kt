@@ -70,7 +70,7 @@ class HomeFragment : Home() {
             }
         }
 
-        view.findViewById<ViewGroup>(R.id.changelog_card).layoutTransition.enableTransitionType(LayoutTransition.CHANGING)
+        view.findViewById<ViewGroup>(R.id.home_container).layoutTransition.enableTransitionType(LayoutTransition.CHANGING)
         view.findViewById<ImageButton>(R.id.changelog_button).setOnClickListener {
                 cardExpandCollapse()
         }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -15,6 +14,7 @@
     </data>
 
     <com.vanced.manager.ui.core.SlidingNestedScrollView
+        android:id="@+id/home_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -30,6 +30,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/stdp"
+                android:layout_marginStart="@dimen/stdp"
                 android:orientation="horizontal">
 
                 <FrameLayout
@@ -41,6 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:textAllCaps="false"
                         android:text="@string/nonroot"/>
 
                     <com.google.android.material.button.MaterialButton
@@ -62,6 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:textAllCaps="false"
                         android:text="@string/root"/>
 
                     <com.google.android.material.button.MaterialButton

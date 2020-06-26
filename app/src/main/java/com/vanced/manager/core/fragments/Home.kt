@@ -123,8 +123,10 @@ open class Home : BaseFragment(), View.OnClickListener {
             R.id.root_switch ->
                 if (Shell.rootAccess())
                     writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
-                else
+                else {
                     writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
+                    Toast.makeText(activity, "Root access not granted", Toast.LENGTH_SHORT)
+                }
         }
     }
 
