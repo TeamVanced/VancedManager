@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/changelog_card"
-    android:animateLayoutChanges="true"
     style="@style/MaterialCard">
 
     <LinearLayout
@@ -12,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
+        android:animateLayoutChanges="true"
         android:orientation="vertical">
 
         <RelativeLayout

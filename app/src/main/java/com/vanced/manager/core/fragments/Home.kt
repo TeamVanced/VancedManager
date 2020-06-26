@@ -2,10 +2,12 @@ package com.vanced.manager.core.fragments
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
@@ -17,6 +19,7 @@ import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.core.installer.StubInstaller
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
+import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
@@ -103,7 +106,6 @@ open class Home : BaseFragment(), View.OnClickListener {
                 if (!isMicrogDownloading!!) {
                     try {
                         activity?.startService(Intent(activity, MicrogDownloadService::class.java))
-
                     } catch (e: Exception) {
                         Toast.makeText(activity, "Unable to start installation", Toast.LENGTH_SHORT).show()
                     }
@@ -112,10 +114,35 @@ open class Home : BaseFragment(), View.OnClickListener {
                 }
             }
             R.id.signature_button -> {
+                val viewModel: HomeViewModel by viewModels()
                 val loadCircle = view?.findViewById<ProgressBar>(R.id.signature_loading)
                 loadCircle?.visibility = View.VISIBLE
-                val intent = Intent(activity, StubInstaller::class.java)
-                activity?.startService(intent)
+                //val intent = Intent(activity, StubInstaller::class.java)
+                //activity?.startService(intent)
+                val checkSig = activity?.packageManager?.checkSignatures("com.vanced.manager", "com.android.systemui")
+                if (checkSig == PackageManager.SIGNATURE_MATCH) {
+                    activity?.runOnUiThread {
+                        viewModel.signatureStatusTxt.value = getString(R.string.signature_disabled)
+                        viewModel.vancedInstallButtonTxt.value = viewModel.compareInt(
+                            viewModel.vancedVersionCode,
+                            viewModel.vancedInstalledVersionCode,
+                            viewModel.getApplication()
+                        )
+                        viewModel.vancedInstallButtonIcon.value = viewModel.compareIntDrawable(
+                            viewModel.vancedVersionCode,
+                            viewModel.vancedInstalledVersionCode,
+                            viewModel.getApplication()
+                        )
+                        activity?.recreate()
+                    }
+                } else {
+                    activity?.runOnUiThread {
+                        viewModel.signatureStatusTxt.value = getString(R.string.signature_enabled)
+                        viewModel.vancedInstallButtonTxt.value = getString(R.string.signature_disable)
+                        viewModel.vancedInstallButtonIcon.value = null
+                        activity?.recreate()
+                    }
+                }
             }
             R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it) }
             R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
@@ -125,7 +152,7 @@ open class Home : BaseFragment(), View.OnClickListener {
                     writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
                 else {
                     writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
-                    Toast.makeText(activity, "Root access not granted", Toast.LENGTH_SHORT)
+                    Toast.makeText(activity, "Root access not granted", Toast.LENGTH_SHORT).show()
                 }
         }
     }

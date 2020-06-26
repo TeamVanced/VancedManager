@@ -46,10 +46,10 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     val vancedVersion: MutableLiveData<String> = MutableLiveData()
     val microgVersion: MutableLiveData<String> = MutableLiveData()
 
-    private val vancedInstalledVersionCode = getPkgVerCode(vancedInstalled, vancedPkgName)
+    val vancedInstalledVersionCode = getPkgVerCode(vancedInstalled, vancedPkgName)
     private val microgInstalledVersionCode = getPkgVerCode(microgInstalled, "com.mgoogle.android.gms")
 
-    private val vancedVersionCode = displayJsonInt("vanced.json", "versionCode", application)
+    val vancedVersionCode = displayJsonInt("vanced.json", "versionCode", application)
     private val microgVersionCode = displayJsonInt("microg.json", "versionCode", application)
 
     val microgInstallButtonTxt = compareInt(microgInstalledVersionCode, microgVersionCode, application)
@@ -111,7 +111,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         } else 0
     }
 
-    private fun compareInt(int1: Int, int2: Int, application: Application): String {
+    fun compareInt(int1: Int, int2: Int, application: Application): String {
         return if (connected)
             when {
             int1 > int2 -> application.getString(R.string.update)
@@ -120,7 +120,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         } else application.getString(R.string.install)
     }
 
-    private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
+    fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
         return if (connected)
             when {
             int1 > int2 -> application.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
