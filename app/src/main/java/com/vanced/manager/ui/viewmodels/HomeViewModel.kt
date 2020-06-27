@@ -58,9 +58,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
 
-    private val signatureString = application.getString(R.string.unavailable)
-    val signatureStatusTxt: MutableLiveData<String> = MutableLiveData()
-
     fun openMicrogSettings() {
         try {
             val intent = Intent()
@@ -111,7 +108,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         } else 0
     }
 
-    fun compareInt(int1: Int, int2: Int, application: Application): String {
+    private fun compareInt(int1: Int, int2: Int, application: Application): String {
         return if (connected)
             when {
             int1 > int2 -> application.getString(R.string.update)
@@ -120,7 +117,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         } else application.getString(R.string.install)
     }
 
-    fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
+    private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
         return if (connected)
             when {
             int1 > int2 -> application.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
@@ -131,7 +128,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     }
 
     init {
-        signatureStatusTxt.value = signatureString
         vancedVersion.value = displayJsonString("vanced.json","version", application)
         microgVersion.value = displayJsonString("microg.json","version", application)
         vancedInstalledVersion.value = getPkgInfo(vancedInstalled, vancedPkgName, application)
@@ -142,12 +138,9 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                     compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
                 else
                     null
-            } else {
-                if (signatureStatusTxt.value == application.getString(R.string.signature_disabled))
-                    compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
-                else
-                    null
-            }
+            } else
+                compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
+
         vancedInstallButtonTxt.value =
             if (variant == "nonroot") {
                 if (microgInstalled) {
@@ -155,15 +148,8 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                 } else {
                     application.getString(R.string.no_microg)
                 }
-            } else {
-                when (signatureStatusTxt.value) {
-                    application.getString(R.string.unavailable) -> application.getString(R.string.signature_not_checked)
-                    application.getString(R.string.signature_enabled) -> application.getString(R.string.signature_disable)
-                    application.getString(R.string.signature_disabled) -> compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
-                    else -> throw NotImplementedError("Error handling status")
-
-                }
-            }
+            } else
+                compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
 
     }
 

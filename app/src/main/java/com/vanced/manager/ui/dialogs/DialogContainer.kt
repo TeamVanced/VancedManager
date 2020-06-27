@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.dialogs
 
+import android.app.Activity
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
@@ -39,11 +40,23 @@ object DialogContainer {
         )
     }
 
+    fun showRootDialog(activity: Activity) {
+        AlertDialog.Builder(activity)
+            .setTitle(activity.getString(R.string.miui_two_title))
+            .setMessage(activity.getString(R.string.miui_two))
+            .setPositiveButton(activity.getString(R.string.button_dismiss)) { dialog, _ ->
+                dialog.dismiss()
+                PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply()
+            }
+            .create()
+            .show()
+    }
+
     fun secondMiuiDialog(context: Context) {
         AlertDialog.Builder(context)
             .setTitle(context.getString(R.string.miui_two_title))
             .setMessage(context.getString(R.string.miui_two))
-            .setPositiveButton("Fine") { dialog, _ -> dialog.dismiss() }
+            .setPositiveButton(context.getString(R.string.button_fine)) { dialog, _ -> dialog.dismiss() }
             .create()
             .show()
     }
@@ -105,7 +118,7 @@ object DialogContainer {
                     activity.finish()
                 }
             }
-            .setNegativeButton("Cancel") { dialog, _ ->
+            .setNegativeButton(activity.getString(R.string.close)) { dialog, _ ->
                 run {
                     dialog.dismiss()
                     activity.restartActivity()

@@ -7,6 +7,7 @@ import android.view.MenuInflater
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 
@@ -19,6 +20,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
 
+        /*
         val updateCheck: Preference? = findPreference("update_check")
         updateCheck?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()
@@ -26,6 +28,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
             updateDialog.show(fm, "Update Center")
             true
         }
+
+         */
         
         val themeSwitch: ListPreference? = findPreference("theme_mode")
         themeSwitch?.summary =
@@ -42,6 +46,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        /*
         val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
         chosenPrefs?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()
@@ -50,10 +55,15 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+         */
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.secret_settings_menu, menu)
+        val devSettings = PreferenceManager.getDefaultSharedPreferences(activity).getBoolean("devSettings", false)
+        if (devSettings) {
+            inflater.inflate(R.menu.dev_settings_menu, menu)
+        }
         super .onCreateOptionsMenu(menu, inflater)
     }
 

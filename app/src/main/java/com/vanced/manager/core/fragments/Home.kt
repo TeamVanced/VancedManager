@@ -2,12 +2,10 @@ package com.vanced.manager.core.fragments
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
@@ -16,10 +14,8 @@ import com.vanced.manager.R
 import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
-import com.vanced.manager.core.installer.StubInstaller
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
-import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
@@ -30,17 +26,13 @@ open class Home : BaseFragment(), View.OnClickListener {
 
         val microginstallbtn = view.findViewById<MaterialButton>(R.id.microg_installbtn)
         val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
-        val signaturebtn = view.findViewById<MaterialButton>(R.id.signature_button)
         val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
         val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
         val rootswitch = view.findViewById<MaterialButton>(R.id.root_switch)
         val nonrootswitch = view.findViewById<MaterialButton>(R.id.nonroot_switch)
 
-        //val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
-
         vancedinstallbtn.setOnClickListener(this)
         microginstallbtn.setOnClickListener(this)
-        signaturebtn.setOnClickListener(this)
         microguninstallbtn.setOnClickListener(this)
         vanceduninstallbtn.setOnClickListener(this)
         rootswitch.setOnClickListener(this)
@@ -62,8 +54,7 @@ open class Home : BaseFragment(), View.OnClickListener {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val isVancedDownloading: Boolean? = prefs?.getBoolean("isVancedDownloading", false)
         val isMicrogDownloading: Boolean? = prefs?.getBoolean("isMicrogDownloading", false)
-        val variant = getDefaultSharedPreferences(activity)
-            .getString("vanced_variant", "nonroot")
+        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         val vancedPkgName =
             if (variant == "root") {
                 "com.google.android.youtube"
@@ -111,37 +102,6 @@ open class Home : BaseFragment(), View.OnClickListener {
                     }
                 } else {
                     Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
-                }
-            }
-            R.id.signature_button -> {
-                val viewModel: HomeViewModel by viewModels()
-                val loadCircle = view?.findViewById<ProgressBar>(R.id.signature_loading)
-                loadCircle?.visibility = View.VISIBLE
-                //val intent = Intent(activity, StubInstaller::class.java)
-                //activity?.startService(intent)
-                val checkSig = activity?.packageManager?.checkSignatures("com.vanced.manager", "com.android.systemui")
-                if (checkSig == PackageManager.SIGNATURE_MATCH) {
-                    activity?.runOnUiThread {
-                        viewModel.signatureStatusTxt.value = getString(R.string.signature_disabled)
-                        viewModel.vancedInstallButtonTxt.value = viewModel.compareInt(
-                            viewModel.vancedVersionCode,
-                            viewModel.vancedInstalledVersionCode,
-                            viewModel.getApplication()
-                        )
-                        viewModel.vancedInstallButtonIcon.value = viewModel.compareIntDrawable(
-                            viewModel.vancedVersionCode,
-                            viewModel.vancedInstalledVersionCode,
-                            viewModel.getApplication()
-                        )
-                        activity?.recreate()
-                    }
-                } else {
-                    activity?.runOnUiThread {
-                        viewModel.signatureStatusTxt.value = getString(R.string.signature_enabled)
-                        viewModel.vancedInstallButtonTxt.value = getString(R.string.signature_disable)
-                        viewModel.vancedInstallButtonIcon.value = null
-                        activity?.recreate()
-                    }
                 }
             }
             R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it) }

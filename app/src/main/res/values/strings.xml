@@ -9,10 +9,13 @@
     <string name="title_home">Home</string>
     <string name="title_install">Install</string>
     <string name="title_settings">Settings</string>
+    <string name="button_dismiss">Dismiss</string>
+    <string name="button_fine">Fine</string>
 
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
     <string name="check">Check</string>
+    <string name="disable_signature">Root mode detected! In order for manager to install Vanced correctly, please make sure you disabled signature verification.</string>
     <string name="failed_uninstall">Failed to uninstall package: </string>
     <string name="install">Install</string>
     <string name="installation_aborted">Operation failed because user aborted installation</string>
@@ -21,6 +24,7 @@
     <string name="installation_failed">Operation failed because it just failed idk</string>
     <string name="installation_incompatible">Operation failed because app is incompatible with your device</string>
     <string name="installation_invalid">Operation failed because apk files are invalid</string>
+    <string name="installation_signature">Unexpected error occurred while installing Vanced. Did you disable signature verification?</string>
     <string name="installation_storage">Operation failed because there was an error with storage. Hold up how is that even possible?</string>
     <string name="button_installed">Installed</string>
     <string name="version_installed">Installed:</string>
@@ -33,12 +37,6 @@
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
     <string name="website_text">Website</string>
-    <string name="signature_disable">Disable Sig.</string>
-    <string name="signature_disabled">Disabled</string>
-    <string name="signature_enabled">Enabled</string>
-    <string name="signature_status">status:</string>
-    <string name="signature_verification">Sig. Verification</string>
-    <string name="signature_not_checked">Check signature</string>
     <string name="support_us">Support us!</string>
 
     <!-- Settings -->
@@ -52,6 +50,7 @@
     <string name="check_updates">Check for updates</string>
     <string name="category_interface">Interface</string>
     <string name="category_manager">Manager</string>
+    <string name="chosen_install_values">Chosen Installation values</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>

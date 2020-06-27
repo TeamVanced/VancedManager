@@ -15,14 +15,14 @@ import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import java.lang.IllegalStateException
+import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         try {
             downloadSplits()
-        } catch (e: IllegalStateException) {
+        } catch (e: ExecutionException) {
             Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
         }
         stopSelf()

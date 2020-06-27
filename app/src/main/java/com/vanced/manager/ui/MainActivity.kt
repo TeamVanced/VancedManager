@@ -85,8 +85,6 @@ class MainActivity : Main() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navHost = findNavController(R.id.bottom_nav_host)
-        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-        val devSettings = prefs.getBoolean("devSettings", false)
         when (item.itemId) {
             android.R.id.home -> {
                 onBackPressed()
@@ -100,17 +98,9 @@ class MainActivity : Main() {
                 navHost.navigate(R.id.action_settingsFragment)
                 return true
             }
-            R.id.secret_settings -> {
-                navHost.navigate(R.id.toSecretSettingsFragment)
+            R.id.dev_settings -> { 
+                navHost.navigate(R.id.toDevSettingsFragment)
                 return true
-            }
-            R.id.dev_settings -> {
-                return if (devSettings) {
-                    navHost.navigate(R.id.toDevSettingsFragment)
-                    true
-                } else
-                    false
-
             }
             else -> super.onOptionsItemSelected(item)
         }

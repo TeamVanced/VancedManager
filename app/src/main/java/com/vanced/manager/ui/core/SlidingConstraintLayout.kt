@@ -26,7 +26,7 @@ open class SlidingConstraintLayout : ConstraintLayout {
                 if (width > 0)
                     xFraction * width
                 else
-                    (-9999).toFloat()
+                    (1).toFloat()
             x = newWidth
         }
 }

@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.fragments
 
-import android.animation.LayoutTransition
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -25,7 +24,6 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
-import com.vanced.manager.core.installer.RootAppUninstaller
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.PackageHelper.installApp
@@ -54,16 +52,9 @@ class HomeFragment : Home() {
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         registerReceivers()
 
-        if (variantPref == "root") {
+        if (variantPref == "root")
             attachRootChangelog()
-            if (viewModel.signatureStatusTxt.value != getString(R.string.signature_disabled)) {
-                when (viewModel.signatureStatusTxt.value) {
-                    getString(R.string.unavailable) -> disableVancedButton()
-                    getString(R.string.signature_enabled) -> disableVancedButton()
-                    else -> throw NotImplementedError("Error handling status")
-                }
-            }
-        } else {
+        else {
             attachNonrootChangelog()
             if (!viewModel.microgInstalled) {
                 disableVancedButton()
@@ -71,7 +62,7 @@ class HomeFragment : Home() {
         }
 
         view.findViewById<ImageButton>(R.id.changelog_button).setOnClickListener {
-                cardExpandCollapse()
+            cardExpandCollapse()
         }
     }
 
@@ -99,23 +90,7 @@ class HomeFragment : Home() {
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            val viewModel: HomeViewModel by viewModels()
             when (intent.action) {
-                SIGNATURE_DISABLED -> {
-                    activity?.runOnUiThread {
-                        viewModel.signatureStatusTxt.value = getString(R.string.signature_disabled)
-                    }
-                    val mIntent = Intent(activity, RootAppUninstaller::class.java)
-                    mIntent.putExtra("Data", "com.vanced.stub")
-                    activity?.startService(mIntent)
-                    activity?.recreate()
-                }
-                SIGNATURE_ENABLED -> {
-                    activity?.runOnUiThread {
-                        viewModel.signatureStatusTxt.value = getString(R.string.signature_enabled)
-                    }
-                    activity?.recreate()
-                }
                 MICROG_DOWNLOADING -> {
                     val progress = intent.getIntExtra("microgProgress", 0)
                     val progressbar = view?.findViewById<ProgressBar>(R.id.microg_progress)
@@ -139,8 +114,7 @@ class HomeFragment : Home() {
                 MICROG_DOWNLOADED -> {
                     view?.findViewById<TextView>(R.id.microg_downloading)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.microg_progress)?.visibility = View.GONE
-                    view?.findViewById<ProgressBar>(R.id.microg_installing)?.visibility =
-                        View.VISIBLE
+                    view?.findViewById<ProgressBar>(R.id.microg_installing)?.visibility = View.VISIBLE
                     activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
                 }
                 VANCED_DOWNLOADED -> {
@@ -159,8 +133,6 @@ class HomeFragment : Home() {
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
-        intentFilter.addAction(SIGNATURE_DISABLED)
-        intentFilter.addAction(SIGNATURE_ENABLED)
         intentFilter.addAction(VANCED_DOWNLOADING)
         intentFilter.addAction(MICROG_DOWNLOADING)
         intentFilter.addAction(VANCED_DOWNLOADED)
@@ -214,8 +186,6 @@ class HomeFragment : Home() {
     }
 
     companion object {
-        const val SIGNATURE_DISABLED = "Signature verification disabled"
-        const val SIGNATURE_ENABLED = "Signature verification enabled"
         const val VANCED_DOWNLOADING = "Vanced downloading"
         const val MICROG_DOWNLOADING = "MicroG downloading"
         const val VANCED_DOWNLOADED = "Vanced downloaded"

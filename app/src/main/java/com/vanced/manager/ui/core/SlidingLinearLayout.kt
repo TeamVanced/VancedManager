@@ -26,7 +26,7 @@ open class SlidingLinearLayout: LinearLayout {
                 if (height > 0)
                     yFraction * height
                 else
-                    (-9999).toFloat()
+                    (1).toFloat()
             y = newHeight
         }
 
