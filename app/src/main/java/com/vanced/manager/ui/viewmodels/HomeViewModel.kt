@@ -120,7 +120,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
         return if (connected)
             when {
-            int1 > int2 -> application.getDrawable(R.drawable.ic_cloud_upload_black_24dp)
+            int1 > int2 -> application.getDrawable(R.drawable.ic_update)
             int2 == int1 -> application.getDrawable(R.drawable.outline_cloud_done_24)
             else -> application.getDrawable(R.drawable.outline_cloud_download_24)
         } else application.getDrawable(R.drawable.outline_cloud_download_24)

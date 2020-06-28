@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
 
 object DialogContainer {
@@ -33,11 +34,15 @@ object DialogContainer {
     }
 
     private fun showMiuiDialog(context: Context) {
-        basicAlertBuilder(
-            context.getString(R.string.miui_one_title),
-            context.getString(R.string.miui_one),
-            context
-        )
+        AlertDialog.Builder(context)
+            .setTitle(context.getString(R.string.miui_one_title))
+            .setMessage(context.getString(R.string.miui_one))
+            .setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            .setNeutralButton(context.getString(R.string.guide)) { _, _ ->
+                openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
+            }
+            .create()
+            .show()
     }
 
     fun showRootDialog(activity: Activity) {
@@ -48,6 +53,9 @@ object DialogContainer {
                 dialog.dismiss()
                 PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply()
             }
+            .setNeutralButton(activity.getString(R.string.guide)) { _, _ ->
+                openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, activity)
+            }
             .create()
             .show()
     }
@@ -57,6 +65,9 @@ object DialogContainer {
             .setTitle(context.getString(R.string.miui_two_title))
             .setMessage(context.getString(R.string.miui_two))
             .setPositiveButton(context.getString(R.string.button_fine)) { dialog, _ -> dialog.dismiss() }
+            .setNeutralButton(context.getString(R.string.guide)) { _, _ ->
+                openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
+            }
             .create()
             .show()
     }
@@ -72,15 +83,6 @@ object DialogContainer {
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit().putBoolean("statement", true).apply()
-    }
-
-    private fun basicAlertBuilder(title: String, msg: String, context: Context) {
-        AlertDialog.Builder(context)
-            .setTitle(title)
-            .setMessage(msg)
-            .setPositiveButton("close") { dialog, _ -> dialog.dismiss() }
-            .create()
-            .show()
     }
 
     fun installAlertBuilder(msg: String, context: Context) {

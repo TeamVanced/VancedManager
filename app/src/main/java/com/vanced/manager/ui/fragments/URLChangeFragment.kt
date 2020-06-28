@@ -23,7 +23,7 @@ class URLChangeFragment : DialogFragment() {
         if (dialog != null && dialog?.window != null) {
             dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
-        return inflater.inflate(R.layout.fragment_update_check, container, false)
+        return inflater.inflate(R.layout.fragment_custom_url, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

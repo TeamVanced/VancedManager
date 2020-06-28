@@ -19,18 +19,17 @@ import com.vanced.manager.utils.InternetTools.getLatestVancedUrl
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
 import java.lang.Exception
 import java.lang.IllegalStateException
+import java.lang.RuntimeException
 import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
-
-    private val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", getLatestVancedUrl(this))
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         try {
             downloadSplits()
         } catch (e: Exception) {
             when (e) {
-                is ExecutionException, is IllegalStateException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+                is ExecutionException, is RuntimeException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
                 else -> throw e
             }
 
@@ -42,6 +41,7 @@ class VancedDownloadService: Service() {
     private fun downloadSplits(
         type: String = "arch"
     ) {
+        val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", getLatestVancedUrl(this))
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply()
         val variant = PreferenceManager.getDefaultSharedPreferences(this)

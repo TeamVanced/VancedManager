@@ -11,6 +11,7 @@ import androidx.annotation.Nullable
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.utils.MiuiHelper.isMiui
 
 class SplitInstallerService: Service() {
 
@@ -49,7 +50,12 @@ class SplitInstallerService: Service() {
             PackageInstaller.STATUS_FAILURE_INVALID -> getString(R.string.installation_invalid)
             PackageInstaller.STATUS_FAILURE_INCOMPATIBLE -> getString(R.string.installation_incompatible)
             PackageInstaller.STATUS_FAILURE_CONFLICT -> getString(R.string.installation_conflict)
-            else -> getString(R.string.installation_failed)
+            else ->
+                if (isMiui())
+                    getString(R.string.installation_miui)
+                else
+                    getString(R.string.installation_failed)
+
         }
 
         val mIntent = Intent(MainActivity.INSTALL_FAILED)

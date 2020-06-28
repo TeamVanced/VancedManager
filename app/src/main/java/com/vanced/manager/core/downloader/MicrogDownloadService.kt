@@ -16,6 +16,7 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper
 import java.lang.Exception
 import java.lang.IllegalStateException
+import java.lang.RuntimeException
 import java.util.concurrent.ExecutionException
 
 class MicrogDownloadService: Service() {
@@ -25,7 +26,7 @@ class MicrogDownloadService: Service() {
             downloadMicrog()
         } catch (e: Exception) {
             when (e) {
-                is ExecutionException, is IllegalStateException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+                is ExecutionException, is RuntimeException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
                 else -> throw e
             }
         }

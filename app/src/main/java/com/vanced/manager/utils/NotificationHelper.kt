@@ -18,6 +18,7 @@ object NotificationHelper {
         notifBuilder.apply {
             setContentTitle(context.getString(R.string.app_name))
             setContentText(context.getString(R.string.downloading_file, filename))
+            setSmallIcon(R.drawable.ic_stat_name)
         }
         val notif = notifBuilder.build()
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

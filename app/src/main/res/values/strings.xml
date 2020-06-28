@@ -72,6 +72,7 @@
     <string name="update_notfound">No new updates</string>
 
     <!-- Dialogs -->
+    <string name="guide">Guide</string>
     <string name="hold_on">Hold on!</string>
     <string name="miui_one_title">Detected MiUI user!</string>
     <string name="miui_one">Hey! Looks like you\'re a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings\nIf you can\'t find such setting, it means that you are using a new version of ROM which does not need fixing anything.</string>
