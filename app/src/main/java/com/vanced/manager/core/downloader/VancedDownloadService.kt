@@ -29,7 +29,7 @@ class VancedDownloadService: Service() {
             downloadSplits()
         } catch (e: Exception) {
             when (e) {
-                is ExecutionException, is RuntimeException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+                is ExecutionException, is InterruptedException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
                 else -> throw e
             }
 

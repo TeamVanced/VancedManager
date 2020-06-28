@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
 import androidx.preference.PreferenceManager
-import com.dezlum.codelabs.getjson.GetJson
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.getLatestVancedUrl
@@ -33,9 +32,11 @@ class URLChangeFragment : DialogFragment() {
         urlField.hint = prefs.getString("install_url", activity?.let { getLatestVancedUrl(it) })
         view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
             prefs.edit().putString("install_url", urlField.text.toString()).apply()
+            dismiss()
         }
         view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {
             prefs.edit().putString("install_url", activity?.let { getLatestVancedUrl(it) }).apply()
+            dismiss()
         }
     }
 

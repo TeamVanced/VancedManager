@@ -6,5 +6,6 @@
     <string name="microg" translatable="false">MicroG</string>
     <string name="root" translatable="false">root</string>
     <string name="nonroot" translatable="false">nonroot</string>
+    <string name="notif_channel_name">App Downloads</string>
 
 </resources>

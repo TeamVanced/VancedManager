@@ -52,7 +52,7 @@ object InternetTools {
 
     fun getLatestVancedUrl(context: Context): String {
         return if (GetJson().isConnected(context)) {
-            val latestVer = GetJson().AsJSONObject("https://x1nto.github.io/vanced.json").getAsJsonObject("version").asString
+            val latestVer = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json").get("version").asString
             "https://vanced.app/api/v1/apks/$latestVer"
         } else
             "https://vanced.app/api/v1/apks/v15.05.54"
