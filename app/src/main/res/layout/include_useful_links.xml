@@ -14,7 +14,8 @@
 
     <com.google.android.material.card.MaterialCardView
         style="@style/MaterialCard"
-        app:contentPaddingTop="2dp">
+        app:contentPaddingTop="2dp"
+        android:animateLayoutChanges="true">
 
         <LinearLayout
             android:layout_width="match_parent"

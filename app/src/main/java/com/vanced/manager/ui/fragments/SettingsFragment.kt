@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -9,18 +8,16 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
-import com.vanced.manager.ui.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
-    @ExperimentalStdlibApi
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
 
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
 
-        /*
+
         val updateCheck: Preference? = findPreference("update_check")
         updateCheck?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()
@@ -28,8 +25,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             updateDialog.show(fm, "Update Center")
             true
         }
-
-         */
         
         val themeSwitch: ListPreference? = findPreference("theme_mode")
         themeSwitch?.summary =
@@ -46,7 +41,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-        /*
         val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
         chosenPrefs?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()
@@ -55,7 +49,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-         */
+        val installUrl: Preference? = findPreference("install_url")
+        installUrl?.setOnPreferenceClickListener {
+            val fm = childFragmentManager.beginTransaction()
+            val chosenPrefsDialog = URLChangeFragment()
+            chosenPrefsDialog.show(fm, "Install URL")
+            true
+        }
 
     }
 

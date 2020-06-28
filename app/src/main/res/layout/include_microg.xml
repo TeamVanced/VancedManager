@@ -132,6 +132,7 @@
                 android:layout_height="wrap_content"
                 style="@style/CardTitle"
                 android:text="Downloading"
+                android:textSize="16sp"
                 android:visibility="gone"
                 tools:visibility="visible"/>
 

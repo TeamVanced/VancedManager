@@ -10,7 +10,7 @@
         android:id="@+id/microg_changelog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:text="Changes:\n - Added casting support\n
 - Fixed notifications\n\nMicroG now requires Vanced 14.21.54 and up"
         tools:ignore="HardcodedText" />

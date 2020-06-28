@@ -10,7 +10,7 @@
         android:id="@+id/vanced_changelog"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:text="Removed:\n
 - Auto subtitles (has been replaced with live captions)\n
 - minimised video player style (Google removed it) \n

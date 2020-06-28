@@ -15,15 +15,25 @@ import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.getLatestVancedUrl
+import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
+import java.lang.Exception
+import java.lang.IllegalStateException
 import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
 
+    private val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", getLatestVancedUrl(this))
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         try {
             downloadSplits()
-        } catch (e: ExecutionException) {
-            Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            when (e) {
+                is ExecutionException, is IllegalStateException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+                else -> throw e
+            }
+
         }
         stopSelf()
         return START_STICKY
@@ -53,6 +63,8 @@ class VancedDownloadService: Service() {
                 else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
             }
 
+        val channel = 69
+
         PRDownloader.download(url, cacheDir.path, getFileNameFromUrl(url))
             .build()
             .setOnProgressListener { progress ->
@@ -65,6 +77,7 @@ class VancedDownloadService: Service() {
                     "Downloading ${getFileNameFromUrl(url)}..."
                 )
                 LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+                displayDownloadNotif(channel, mProgress.toInt(), filename = getFileNameFromUrl(url), context = this)
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
@@ -74,11 +87,15 @@ class VancedDownloadService: Service() {
                         "lang" -> {
                             if (lang == "en") {
                                 prepareInstall(variant!!)
+                                displayDownloadNotif(channel, maxVal = 0, filename = getFileNameFromUrl(url), context = this@VancedDownloadService)
                             } else {
                                 downloadSplits("enlang")
                             }
                         }
-                        "enlang" -> prepareInstall(variant!!)
+                        "enlang" -> {
+                            prepareInstall(variant!!)
+                            displayDownloadNotif(channel, maxVal = 0, filename = getFileNameFromUrl(url), context = this@VancedDownloadService)
+                        }
                     }
                 }
 
@@ -108,9 +125,6 @@ class VancedDownloadService: Service() {
 
     private fun launchRootInstaller() {
         startService(Intent(this, RootSplitInstallerService::class.java))
-    }
-    companion object {
-        const val baseUrl = "https://vanced.app/api/v1/apks/v15.05.54"
     }
 
     override fun onBind(intent: Intent?): IBinder? {

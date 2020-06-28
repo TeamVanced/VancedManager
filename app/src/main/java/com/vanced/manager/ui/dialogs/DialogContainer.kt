@@ -42,8 +42,8 @@ object DialogContainer {
 
     fun showRootDialog(activity: Activity) {
         AlertDialog.Builder(activity)
-            .setTitle(activity.getString(R.string.miui_two_title))
-            .setMessage(activity.getString(R.string.miui_two))
+            .setTitle(activity.getString(R.string.hold_on))
+            .setMessage(activity.getString(R.string.disable_signature))
             .setPositiveButton(activity.getString(R.string.button_dismiss)) { dialog, _ ->
                 dialog.dismiss()
                 PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply()

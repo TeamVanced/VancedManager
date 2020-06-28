@@ -43,8 +43,8 @@
         android:label="@string/title_settings">
 
         <action
-            android:id="@+id/toSecretSettingsFragment"
-            app:destination="@id/secret_settings_fragment"
+            android:id="@+id/toDevSettingsFragment"
+            app:destination="@id/dev_settings_fragment"
             app:enterAnim="@animator/fragment_enter"
             app:exitAnim="@animator/fragment_exit"
             app:popEnterAnim="@animator/fragment_enter_pop"
@@ -95,21 +95,6 @@
             app:popExitAnim="@animator/fragment_exit_left"
             app:popUpTo="@id/home_fragment"
             app:popUpToInclusive="true"/>
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/secret_settings_fragment"
-        android:name="com.vanced.manager.ui.fragments.SecretSettingsFragment"
-        android:label="Secret Settings">
-
-        <action
-            android:id="@+id/toDevSettingsFragment"
-            app:destination="@id/dev_settings_fragment"
-            app:enterAnim="@animator/fragment_enter"
-            app:exitAnim="@animator/fragment_exit"
-            app:popEnterAnim="@animator/fragment_enter_pop"
-            app:popExitAnim="@animator/fragment_exit_pop" />
 
     </fragment>
 

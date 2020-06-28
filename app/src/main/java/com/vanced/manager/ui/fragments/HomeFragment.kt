@@ -9,6 +9,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.*
@@ -74,12 +75,12 @@ class HomeFragment : Home() {
             viewPagerContainer?.visibility = View.GONE
             tabLayoutContainer?.visibility = View.GONE
             isExpanded = false
-            arrow?.startAnimation(RotateAnimation(180f, 0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f))
+            arrow?.animate()?.rotation(0F)?.interpolator = AccelerateDecelerateInterpolator()
         } else {
             viewPagerContainer?.visibility = View.VISIBLE
             tabLayoutContainer?.visibility = View.VISIBLE
             isExpanded = true
-            arrow?.startAnimation(RotateAnimation(0f, 180f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f))
+            arrow?.animate()?.rotation(180F)?.interpolator = AccelerateDecelerateInterpolator()
         }
     }
 

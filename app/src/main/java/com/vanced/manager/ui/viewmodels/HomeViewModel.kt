@@ -46,10 +46,10 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     val vancedVersion: MutableLiveData<String> = MutableLiveData()
     val microgVersion: MutableLiveData<String> = MutableLiveData()
 
-    val vancedInstalledVersionCode = getPkgVerCode(vancedInstalled, vancedPkgName)
+    private val vancedInstalledVersionCode = getPkgVerCode(vancedInstalled, vancedPkgName)
     private val microgInstalledVersionCode = getPkgVerCode(microgInstalled, "com.mgoogle.android.gms")
 
-    val vancedVersionCode = displayJsonInt("vanced.json", "versionCode", application)
+    private val vancedVersionCode = displayJsonInt("vanced.json", "versionCode", application)
     private val microgVersionCode = displayJsonInt("microg.json", "versionCode", application)
 
     val microgInstallButtonTxt = compareInt(microgInstalledVersionCode, microgVersionCode, application)
@@ -112,7 +112,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         return if (connected)
             when {
             int1 > int2 -> application.getString(R.string.update)
-            int2 == int1 -> application.getString(R.string.button_installed)
+            int2 == int1 -> application.getString(R.string.button_reinstall)
             else -> application.getString(R.string.install)
         } else application.getString(R.string.install)
     }
@@ -135,21 +135,21 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         vancedInstallButtonIcon.value =
             if (variant == "nonroot") {
                 if (microgInstalled)
-                    compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
+                    compareIntDrawable(vancedVersionCode, vancedInstalledVersionCode, application)
                 else
                     null
             } else
-                compareIntDrawable(vancedInstalledVersionCode, vancedVersionCode, application)
+                compareIntDrawable(vancedVersionCode, vancedInstalledVersionCode, application)
 
         vancedInstallButtonTxt.value =
             if (variant == "nonroot") {
                 if (microgInstalled) {
-                    compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
+                    compareInt(vancedVersionCode, vancedInstalledVersionCode, application)
                 } else {
                     application.getString(R.string.no_microg)
                 }
             } else
-                compareInt(vancedInstalledVersionCode, vancedVersionCode, application)
+                compareInt(vancedVersionCode, vancedInstalledVersionCode, application)
 
     }
 

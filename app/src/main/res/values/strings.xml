@@ -3,6 +3,8 @@
 
     <!-- Global Strings -->
     <string name="close">Close</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
 
     <!-- Main Activity -->
     <string name="title_about">About</string>
@@ -15,7 +17,7 @@
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
     <string name="check">Check</string>
-    <string name="disable_signature">Root mode detected! In order for manager to install Vanced correctly, please make sure you disabled signature verification.</string>
+    <string name="downloading_file">Downloading %1$s</string>
     <string name="failed_uninstall">Failed to uninstall package: </string>
     <string name="install">Install</string>
     <string name="installation_aborted">Operation failed because user aborted installation</string>
@@ -25,14 +27,16 @@
     <string name="installation_incompatible">Operation failed because app is incompatible with your device</string>
     <string name="installation_invalid">Operation failed because apk files are invalid</string>
     <string name="installation_signature">Unexpected error occurred while installing Vanced. Did you disable signature verification?</string>
+    <string name="installation_miui">Unexpected error occurred while installing Vanced. Did you disable MiUI Optimisations?</string>
     <string name="installation_storage">Operation failed because there was an error with storage. Hold up how is that even possible?</string>
-    <string name="button_installed">Installed</string>
+    <string name="button_reinstall">Reinstall</string>
     <string name="version_installed">Installed:</string>
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
     <string name="microg_installed">MicroG successfully installed</string>
     <string name="network_error">Network connection unavailable</string>
     <string name="no_microg">No Microg!</string>
+    <string name="unable_download">Unable to download %1$s</string>
     <string name="unavailable">Unavailable</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
@@ -51,11 +55,15 @@
     <string name="category_interface">Interface</string>
     <string name="category_manager">Manager</string>
     <string name="chosen_install_values">Chosen Installation values</string>
+    <string name="chosen_lang">Language: %1$s</string>
+    <string name="chosen_theme">Theme: %1$s</string>
+    <string name="chosen_preferences">Chosen Preferences</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
     <string name="theme_light">Light Theme</string>
     <string name="theme_summary">Choose your preferred theme</string>
+    <string name="update_url">Update Channel URL</string>
     <string name="push_notifications">Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when update is released</string>
     <string name="re_check">Re-check</string>
@@ -64,6 +72,7 @@
     <string name="update_notfound">No new updates</string>
 
     <!-- Dialogs -->
+    <string name="hold_on">Hold on!</string>
     <string name="miui_one_title">Detected MiUI user!</string>
     <string name="miui_one">Hey! Looks like you\'re a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings\nIf you can\'t find such setting, it means that you are using a new version of ROM which does not need fixing anything.</string>
     <string name="miui_two_title">I\'m gonna stop you right there!</string>
@@ -80,6 +89,7 @@
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
     <string name="choose_preferred_language_note">Note: if you install anything other than English, English will still be installed as an additional language</string>
     <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
+    <string name="disable_signature">Root mode detected! In order for manager to install Vanced correctly, please make sure you disabled signature verification.</string>
     <string name="finish">Finish</string>
     <string name="install_light_black">Light + Black</string>
     <string name="install_light_dark">Light + Dark</string>

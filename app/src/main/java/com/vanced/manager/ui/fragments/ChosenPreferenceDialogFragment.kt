@@ -35,8 +35,8 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
 
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
-        themetxt.text = prefs?.getString("theme", "dark")
-        langtxt.text = prefs?.getString("lang", "en")
+        themetxt.text = activity?.getString(R.string.chosen_theme, prefs?.getString("theme", "dark"))
+        langtxt.text = activity?.getString(R.string.chosen_lang, prefs?.getString("lang", "en"))
 
         closebtn.setOnClickListener { dismiss() }
 

@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:animateLayoutChanges="true"
         android:scrollbars="none">
 
         <LinearLayout
@@ -42,6 +43,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        bind:strokeWidth="3dp"
+                        bind:strokeColor="?colorPrimary"
                         android:textAllCaps="false"
                         android:text="@string/nonroot"/>
 
@@ -64,6 +67,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        bind:strokeWidth="3dp"
+                        bind:strokeColor="?colorPrimary"
                         android:textAllCaps="false"
                         android:text="@string/root"/>
 

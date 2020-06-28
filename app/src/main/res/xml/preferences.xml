@@ -11,8 +11,7 @@
         <Preference
             android:key="update_check"
             android:title="@string/check_updates"
-            android:icon="@drawable/ic_cloud_upload_black_24dp"
-            android:fragment="com.vanced.manager.ui.fragments.UpdateCheckFragment"/>
+            android:icon="@drawable/ic_cloud_upload_black_24dp" />
 
         <SwitchPreference
             android:title="Auto-Check updates"
@@ -58,8 +57,11 @@
 
         <Preference
             android:title="@string/chosen_install_values"
-            android:key="vanced_chosen_modes"
-            android:fragment="com.vanced.manager.ui.fragments.ChosenPreferenceDialogFragment"/>
+            android:key="vanced_chosen_modes" />
+
+        <Preference
+            android:title="@string/update_url"
+            android:key="install_url" />
 
     </PreferenceCategory>
 
