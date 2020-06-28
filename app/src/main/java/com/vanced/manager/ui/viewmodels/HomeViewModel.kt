@@ -121,9 +121,9 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         return if (connected)
             when {
             int1 > int2 -> application.getDrawable(R.drawable.ic_update)
-            int2 == int1 -> application.getDrawable(R.drawable.outline_cloud_done_24)
-            else -> application.getDrawable(R.drawable.outline_cloud_download_24)
-        } else application.getDrawable(R.drawable.outline_cloud_download_24)
+            int2 == int1 -> application.getDrawable(R.drawable.ic_done)
+            else -> application.getDrawable(R.drawable.ic_download)
+        } else application.getDrawable(R.drawable.ic_download)
 
     }
 
