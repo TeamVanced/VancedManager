@@ -93,14 +93,10 @@ class HomeFragment : Home() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
                 MICROG_DOWNLOADED -> {
-                    view?.findViewById<TextView>(R.id.microg_downloading)?.visibility = View.GONE
-                    view?.findViewById<ProgressBar>(R.id.microg_progress)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.microg_installing)?.visibility = View.VISIBLE
                     activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
                 }
                 VANCED_DOWNLOADED -> {
-                    view?.findViewById<TextView>(R.id.vanced_downloading)?.visibility = View.GONE
-                    view?.findViewById<ProgressBar>(R.id.vanced_progress)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.vanced_installing)?.visibility = View.VISIBLE
                 }
             }
