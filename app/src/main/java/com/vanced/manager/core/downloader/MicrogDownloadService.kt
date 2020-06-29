@@ -5,23 +5,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.IBinder
 import android.widget.Toast
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.dezlum.codelabs.getjson.GetJson
-import com.downloader.Error
-import com.downloader.OnDownloadListener
-import com.downloader.OnStartOrResumeListener
-import com.downloader.PRDownloader
+import com.downloader.*
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
-import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
-import com.vanced.manager.utils.PackageHelper.installApp
-import java.lang.Exception
-import java.lang.IllegalStateException
-import java.lang.RuntimeException
 import java.util.concurrent.ExecutionException
 
 class MicrogDownloadService: Service() {
@@ -59,6 +50,9 @@ class MicrogDownloadService: Service() {
                     context = this
                 )
             }
+            .setOnCancelListener { OnCancelListener {
+                cancelNotif(channel, this)
+            } }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
