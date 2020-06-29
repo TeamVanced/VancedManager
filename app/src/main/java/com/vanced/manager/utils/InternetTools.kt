@@ -61,7 +61,7 @@ object InternetTools {
         return remoteVersion > BuildConfig.VERSION_CODE
     }
 
-    const val baseUrl = "https://vanced.app/api/v1/"
+    const val baseUrl = "https://vanced.app/api/v1"
 
 
 }
