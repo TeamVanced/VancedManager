@@ -1,6 +1,5 @@
 package com.vanced.manager.core.downloader
 
-import android.app.NotificationManager
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -9,6 +8,7 @@ import android.os.IBinder
 import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
+import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.OnStartOrResumeListener
@@ -17,14 +17,12 @@ import com.vanced.manager.R
 import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.getLatestVancedUrl
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
 import java.lang.Exception
-import java.lang.IllegalStateException
-import java.lang.RuntimeException
 import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
@@ -46,10 +44,10 @@ class VancedDownloadService: Service() {
     private fun downloadSplits(
         type: String = "arch"
     ) {
-        val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", getLatestVancedUrl(this))
+        val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", baseUrl)
+        val vancedVer = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json").get("version").asString
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val variant = PreferenceManager.getDefaultSharedPreferences(this)
-            .getString("vanced_variant", "nonroot")
+        val variant = PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "nonroot")
         val lang = prefs?.getString("lang", "en")
         val theme = prefs?.getString("theme", "dark")
         val arch =
@@ -60,10 +58,10 @@ class VancedDownloadService: Service() {
             }
         val url =
             when (type) {
-                "arch" -> "$baseUrl/$variant/Config/config.$arch.apk"
-                "theme" -> "$baseUrl/$variant/Theme/$theme.apk"
-                "lang" -> "$baseUrl/$variant/Language/split_config.$lang.apk"
-                "enlang" -> "$baseUrl/$variant/Language/split_config.en.apk"
+                "arch" -> "$baseUrl/apks/v$vancedVer/$variant/Config/config.$arch.apk"
+                "theme" -> "$baseUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
+                "lang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.$lang.apk"
+                "enlang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.en.apk"
                 else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
             }
 

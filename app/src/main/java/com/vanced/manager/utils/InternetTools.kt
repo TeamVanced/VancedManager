@@ -8,6 +8,7 @@ import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
+import java.lang.Exception
 import java.lang.IllegalStateException
 
 object InternetTools {
@@ -22,12 +23,16 @@ object InternetTools {
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
 
     fun displayJsonString(json: String, obj: String, context: Context): String {
-        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", getLatestVancedUrl(context))
+        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return if (GetJson().isConnected(context)) {
             try {
                 GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
-            } catch (e: IllegalStateException) {
-                GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
+            } catch (e: Exception) {
+                when (e) {
+                    is InterruptedException, is IllegalStateException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
+                    else -> throw e
+                }
+
             }
         } else {
             context.getString(R.string.unavailable)
@@ -35,12 +40,16 @@ object InternetTools {
     }
 
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
-        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", getLatestVancedUrl(context))
+        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return if (GetJson().isConnected(context)) {
             try {
                 GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
-            } catch (e: IllegalStateException) {
-                GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
+            } catch (e: Exception) {
+                when (e) {
+                    is InterruptedException, is IllegalStateException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
+                    else -> throw e
+                }
+
             }
         } else 0
     }
@@ -52,13 +61,8 @@ object InternetTools {
         return remoteVersion > BuildConfig.VERSION_CODE
     }
 
-    fun getLatestVancedUrl(context: Context): String {
-        return if (GetJson().isConnected(context)) {
-            val latestVer = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json").get("version").asString
-            "https://vanced.app/api/v1/apks/v$latestVer"
-        } else
-            "https://vanced.app/api/v1/apks/v15.05.54"
-    }
+    const val baseUrl = "https://vanced.app/api/v1/"
+
 
 }
 
