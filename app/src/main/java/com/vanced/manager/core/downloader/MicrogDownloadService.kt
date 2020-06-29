@@ -44,10 +44,10 @@ class MicrogDownloadService: Service() {
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes
                 NotificationHelper.displayDownloadNotif(
                     channel,
-                    progress = mProgress.toInt(),
-                    filename = getFileNameFromUrl(dwnldUrl),
-                    downTag = "MicrogDownload",
-                    context = this
+                    mProgress.toInt(),
+                    getFileNameFromUrl(dwnldUrl),
+                    "MicrogDownload",
+                    this
                 )
             }
             .setOnCancelListener { OnCancelListener {

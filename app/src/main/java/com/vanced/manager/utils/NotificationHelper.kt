@@ -24,7 +24,7 @@ object NotificationHelper {
         }
     }
 
-    fun displayDownloadNotif(channel: Int, maxVal: Int = 100, progress:Int = 0, filename: String, downTag: String, context: Context) {
+    fun displayDownloadNotif(channel: Int, progress:Int, filename: String, downTag: String, context: Context) {
         val notifBuilder =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 Notification.Builder(context, channel.toString()).setChannelId("69420")
@@ -35,7 +35,7 @@ object NotificationHelper {
             action = "cancel"
             putExtra("dwnldId", downTag)
         }
-        val cancelPendingIntent = PendingIntent.getBroadcast(context, 0, cancelDownload, 0)
+        val cancelPendingIntent = PendingIntent.getBroadcast(context, 0, cancelDownload, PendingIntent.FLAG_UPDATE_CURRENT)
 
         notifBuilder.apply {
             setContentTitle(context.getString(R.string.app_name))
@@ -50,7 +50,7 @@ object NotificationHelper {
         val notif = notifBuilder.build()
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.apply {
-            notifBuilder.setProgress(maxVal, progress, false)
+            notifBuilder.setProgress(100, progress, false)
             notify(channel, notif)
         }
 
