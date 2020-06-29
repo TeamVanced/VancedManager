@@ -32,7 +32,6 @@ object NotificationHelper {
                 Notification.Builder(context).setPriority(Notification.PRIORITY_LOW)
 
         val cancelDownload = Intent(context, DownloadBroadcastReceiver::class.java).apply {
-            action = "cancel"
             putExtra("dwnldId", downTag)
         }
         val cancelPendingIntent = PendingIntent.getBroadcast(context, 0, cancelDownload, PendingIntent.FLAG_UPDATE_CURRENT)

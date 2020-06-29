@@ -56,15 +56,7 @@
 
         </provider>
 
-        <receiver
-            android:name=".core.downloader.DownloadBroadcastReceiver"
-            android:exported="false">
-
-            <intent-filter>
-                <action android:name="cancel" />
-            </intent-filter>
-
-        </receiver>
+        <receiver android:name=".core.downloader.DownloadBroadcastReceiver"/>
 
         <service android:name=".core.installer.SplitInstallerService" />
         <service android:name=".core.installer.RootSplitInstallerService" />
