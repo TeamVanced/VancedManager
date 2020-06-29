@@ -46,7 +46,8 @@
                         bind:strokeWidth="2dp"
                         bind:strokeColor="?colorPrimary"
                         android:textAllCaps="false"
-                        android:text="@string/nonroot"/>
+                        android:text="@string/nonroot"
+                        android:visibility="@{viewModel.nonrootModeSelected ? View.VISIBLE : View.GONE}"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nonroot_switch"
@@ -70,7 +71,8 @@
                         bind:strokeWidth="2dp"
                         bind:strokeColor="?colorPrimary"
                         android:textAllCaps="false"
-                        android:text="@string/root"/>
+                        android:text="@string/root"
+                        android:visibility="@{viewModel.nonrootModeSelected ? View.GONE : View.VISIBLE}"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/root_switch"

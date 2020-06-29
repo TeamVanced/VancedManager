@@ -2,9 +2,9 @@ package com.vanced.manager.utils
 
 import android.content.Context
 import android.net.Uri
-import android.view.View
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
+import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
@@ -22,9 +22,10 @@ object InternetTools {
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
 
     fun displayJsonString(json: String, obj: String, context: Context): String {
+        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", getLatestVancedUrl(context))
         return if (GetJson().isConnected(context)) {
             try {
-                GetJson().AsJSONObject("https://vanced.app/api/v1/$json").get(obj).asString
+                GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
             } catch (e: IllegalStateException) {
                 GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
             }
@@ -34,9 +35,10 @@ object InternetTools {
     }
 
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
+        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", getLatestVancedUrl(context))
         return if (GetJson().isConnected(context)) {
             try {
-                GetJson().AsJSONObject("https://vanced.app/api/v1/$json").get(obj).asInt
+                GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
             } catch (e: IllegalStateException) {
                 GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
             }
@@ -53,7 +55,7 @@ object InternetTools {
     fun getLatestVancedUrl(context: Context): String {
         return if (GetJson().isConnected(context)) {
             val latestVer = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json").get("version").asString
-            "https://vanced.app/api/v1/apks/$latestVer"
+            "https://vanced.app/api/v1/apks/v$latestVer"
         } else
             "https://vanced.app/api/v1/apks/v15.05.54"
     }

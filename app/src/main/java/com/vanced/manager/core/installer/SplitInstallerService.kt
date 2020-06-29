@@ -12,13 +12,20 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.MiuiHelper.isMiui
+import com.vanced.manager.utils.NotificationHelper
 
 class SplitInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
+        val notifId = 666
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
+                NotificationHelper.createBasicNotif(
+                    getString(R.string.installing_app, "Vanced"),
+                    notifId,
+                    this
+                )
                 Log.d(TAG, "Requesting user confirmation for installation")
                 val confirmationIntent =
                     intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
@@ -35,15 +42,34 @@ class SplitInstallerService: Service() {
                 mIntent.action = MainActivity.INSTALL_COMPLETED
                 mIntent.putExtra("package", "split")
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+                NotificationHelper.createBasicNotif(
+                    getString(R.string.successfully_installed, "Vanced"),
+                    notifId,
+                    this
+                )
             }
-            else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
+            else -> {
+                sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
+                NotificationHelper.createBasicNotif(
+                    getErrorMessage(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)),
+                    notifId,
+                    this
+                )
+            }
         }
         stopSelf()
         return START_NOT_STICKY
     }
 
     private fun sendFailure(status: Int) {
-        val msg = when (status) {
+        val mIntent = Intent(MainActivity.INSTALL_FAILED)
+        mIntent.action = MainActivity.INSTALL_FAILED
+        mIntent.putExtra("errorMsg", getErrorMessage(status))
+        LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+    }
+
+    private fun getErrorMessage(status: Int): String {
+        return when (status) {
             PackageInstaller.STATUS_FAILURE_ABORTED -> getString(R.string.installation_aborted)
             PackageInstaller.STATUS_FAILURE_BLOCKED -> getString(R.string.installation_blocked)
             PackageInstaller.STATUS_FAILURE_STORAGE -> getString(R.string.installation_storage)
@@ -55,13 +81,7 @@ class SplitInstallerService: Service() {
                     getString(R.string.installation_miui)
                 else
                     getString(R.string.installation_failed)
-
         }
-
-        val mIntent = Intent(MainActivity.INSTALL_FAILED)
-        mIntent.action = MainActivity.INSTALL_FAILED
-        mIntent.putExtra("errorMsg", msg)
-        LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
     }
 
     @Nullable

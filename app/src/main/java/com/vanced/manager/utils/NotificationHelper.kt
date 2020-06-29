@@ -3,9 +3,12 @@ package com.vanced.manager.utils
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.DownloadBroadcastReceiver
 
 object NotificationHelper {
 
@@ -21,7 +24,39 @@ object NotificationHelper {
         }
     }
 
-    fun displayDownloadNotif(channel: Int, maxVal: Int = 100, progress:Int = 0, filename: String, context: Context) {
+    fun displayDownloadNotif(channel: Int, maxVal: Int = 100, progress:Int = 0, filename: String, downTag: String, context: Context) {
+        val notifBuilder =
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                Notification.Builder(context, channel.toString()).setChannelId("69420")
+            else
+                Notification.Builder(context).setPriority(Notification.PRIORITY_DEFAULT)
+
+        val cancelDownload = Intent(context, DownloadBroadcastReceiver::class.java).apply {
+            action = "cancel"
+            putExtra("dwnldId", downTag)
+        }
+        val cancelPendingIntent = PendingIntent.getBroadcast(context, 0, cancelDownload, 0)
+
+        notifBuilder.apply {
+            setContentTitle(context.getString(R.string.app_name))
+            setContentText(context.getString(R.string.downloading_file, filename))
+            setSmallIcon(R.drawable.ic_stat_name)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                addAction(Notification.Action.Builder(null, context.getString(R.string.cancel), cancelPendingIntent).build())
+            else
+                addAction(0, context.getString(R.string.cancel), cancelPendingIntent )
+        }
+
+        val notif = notifBuilder.build()
+        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.apply {
+            notifBuilder.setProgress(maxVal, progress, false)
+            notify(channel, notif)
+        }
+
+    }
+
+    fun createBasicNotif(text: String, channel: Int, context: Context) {
         val notifBuilder =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 Notification.Builder(context, channel.toString()).setChannelId("69420")
@@ -30,17 +65,18 @@ object NotificationHelper {
 
         notifBuilder.apply {
             setContentTitle(context.getString(R.string.app_name))
-            setContentText(context.getString(R.string.downloading_file, filename))
+            setContentText(text)
             setSmallIcon(R.drawable.ic_stat_name)
         }
+
         val notif = notifBuilder.build()
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        notificationManager.apply {
-            notifBuilder.setProgress(maxVal, progress, false)
-            notify(channel, notif)
-        }
+        notificationManager.notify(channel, notif)
+    }
 
-
+    fun cancelNotif(id: Int, context: Context) {
+        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.cancel(id)
     }
 
 }

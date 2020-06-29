@@ -1,5 +1,6 @@
 package com.vanced.manager.core.downloader
 
+import android.app.NotificationManager
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -10,12 +11,16 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.downloader.Error
 import com.downloader.OnDownloadListener
+import com.downloader.OnStartOrResumeListener
 import com.downloader.PRDownloader
+import com.vanced.manager.R
 import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getLatestVancedUrl
+import com.vanced.manager.utils.NotificationHelper.cancelNotif
+import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
 import java.lang.Exception
 import java.lang.IllegalStateException
@@ -43,7 +48,6 @@ class VancedDownloadService: Service() {
     ) {
         val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", getLatestVancedUrl(this))
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply()
         val variant = PreferenceManager.getDefaultSharedPreferences(this)
             .getString("vanced_variant", "nonroot")
         val lang = prefs?.getString("lang", "en")
@@ -66,18 +70,12 @@ class VancedDownloadService: Service() {
         val channel = 69
 
         PRDownloader.download(url, cacheDir.path, getFileNameFromUrl(url))
+            .setTag("VancedDownload")
             .build()
+            .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
-                val intent = Intent(HomeFragment.VANCED_DOWNLOADING)
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                intent.action = HomeFragment.VANCED_DOWNLOADING
-                intent.putExtra("vancedProgress", mProgress.toInt())
-                intent.putExtra(
-                    "fileName",
-                    "Downloading ${getFileNameFromUrl(url)}..."
-                )
-                LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
-                displayDownloadNotif(channel, mProgress.toInt(), filename = getFileNameFromUrl(url), context = this)
+                displayDownloadNotif(channel, progress = mProgress.toInt(), filename = getFileNameFromUrl(url), downTag = "VancedDownload", context = this)
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
@@ -87,24 +85,20 @@ class VancedDownloadService: Service() {
                         "lang" -> {
                             if (lang == "en") {
                                 prepareInstall(variant!!)
-                                displayDownloadNotif(channel, maxVal = 0, filename = getFileNameFromUrl(url), context = this@VancedDownloadService)
+                                cancelNotif(channel, this@VancedDownloadService)
                             } else {
                                 downloadSplits("enlang")
                             }
                         }
                         "enlang" -> {
                             prepareInstall(variant!!)
-                            displayDownloadNotif(channel, maxVal = 0, filename = getFileNameFromUrl(url), context = this@VancedDownloadService)
+                            cancelNotif(channel, this@VancedDownloadService)
                         }
                     }
                 }
 
                 override fun onError(error: Error) {
-                    val intent = Intent(HomeFragment.DOWNLOAD_ERROR)
-                    intent.action = HomeFragment.DOWNLOAD_ERROR
-                    intent.putExtra("DownloadError", error.toString())
-                    LocalBroadcastManager.getInstance(this@VancedDownloadService)
-                        .sendBroadcast(intent)
+                    createBasicNotif(getString(R.string.error_downloading, "Vanced"), channel, this@VancedDownloadService)
                 }
             })
     }
@@ -114,17 +108,9 @@ class VancedDownloadService: Service() {
         intent.action = HomeFragment.VANCED_DOWNLOADED
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
         if (variant == "root")
-            launchRootInstaller()
+            startService(Intent(this, RootSplitInstallerService::class.java))
         else
-            launchInstaller()
-    }
-
-    private fun launchInstaller() {
-        SplitInstaller.installSplitApk(this)
-    }
-
-    private fun launchRootInstaller() {
-        startService(Intent(this, RootSplitInstallerService::class.java))
+            SplitInstaller.installSplitApk(this)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

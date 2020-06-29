@@ -11,9 +11,12 @@ import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.OnStartOrResumeListener
 import com.downloader.PRDownloader
+import com.vanced.manager.R
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper
+import com.vanced.manager.utils.NotificationHelper.cancelNotif
+import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import java.lang.Exception
 import java.lang.IllegalStateException
 import java.lang.RuntimeException
@@ -36,52 +39,32 @@ class MicrogDownloadService: Service() {
 
     private fun downloadMicrog() {
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        prefs?.edit()?.putBoolean("isMicrogDownloading", true)?.apply()
 
         val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
         val dwnldUrl = apkUrl.get("url").asString
         val channel = 420
         PRDownloader.download(dwnldUrl, filesDir.path, "microg.apk")
+            .setTag("MicrogDownload")
             .build()
-            .setOnStartOrResumeListener { OnStartOrResumeListener { TODO("Not yet implemented") } }
+            .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isMicrogDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
-                val intent = Intent(HomeFragment.MICROG_DOWNLOADING)
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                intent.action = HomeFragment.MICROG_DOWNLOADING
-                intent.putExtra("microgProgress", mProgress.toInt())
-                intent.putExtra("fileName", "Downloading ${getFileNameFromUrl(dwnldUrl)}...")
-                LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
                 NotificationHelper.displayDownloadNotif(
                     channel,
-                    maxVal = 0,
+                    progress = mProgress.toInt(),
                     filename = getFileNameFromUrl(dwnldUrl),
-                    context = this@MicrogDownloadService
+                    downTag = "MicrogDownload",
+                    context = this
                 )
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
-                    val intent = Intent(HomeFragment.MICROG_DOWNLOADED)
-                    intent.action = HomeFragment.MICROG_DOWNLOADED
-                    LocalBroadcastManager.getInstance(this@MicrogDownloadService).sendBroadcast(intent)
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
-                    NotificationHelper.displayDownloadNotif(
-                        channel,
-                        maxVal = 0,
-                        filename = getFileNameFromUrl(dwnldUrl),
-                        context = this@MicrogDownloadService
-                    )
+                    cancelNotif(channel, this@MicrogDownloadService)
                 }
                 override fun onError(error: Error) {
-                    val intent = Intent(HomeFragment.DOWNLOAD_ERROR)
-                    intent.action = HomeFragment.DOWNLOAD_ERROR
-                    intent.putExtra("DownloadError", error.toString())
-                    LocalBroadcastManager.getInstance(this@MicrogDownloadService).sendBroadcast(intent)
-                    NotificationHelper.displayDownloadNotif(
-                        channel,
-                        maxVal = 0,
-                        filename = getFileNameFromUrl(dwnldUrl),
-                        context = this@MicrogDownloadService
-                    )
+                    prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
+                    createBasicNotif(getString(R.string.error_downloading, "Microg"), channel, this@MicrogDownloadService)
                 }
             })
     }

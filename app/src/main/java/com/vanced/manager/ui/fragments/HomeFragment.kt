@@ -92,26 +92,6 @@ class HomeFragment : Home() {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                MICROG_DOWNLOADING -> {
-                    val progress = intent.getIntExtra("microgProgress", 0)
-                    val progressbar = view?.findViewById<ProgressBar>(R.id.microg_progress)
-                    val downloadTxt = intent.getStringExtra("fileName")
-                    val txt = view?.findViewById<TextView>(R.id.microg_downloading)
-                    txt?.visibility = View.VISIBLE
-                    txt?.text = downloadTxt
-                    progressbar?.visibility = View.VISIBLE
-                    progressbar?.progress = progress
-                }
-                VANCED_DOWNLOADING -> {
-                    val progress = intent.getIntExtra("vancedProgress", 0)
-                    val progressbar = view?.findViewById<ProgressBar>(R.id.vanced_progress)
-                    val downloadTxt = intent.getStringExtra("fileName")
-                    val txt = view?.findViewById<TextView>(R.id.vanced_downloading)
-                    txt?.visibility = View.VISIBLE
-                    txt?.text = downloadTxt
-                    progressbar?.visibility = View.VISIBLE
-                    progressbar?.progress = progress
-                }
                 MICROG_DOWNLOADED -> {
                     view?.findViewById<TextView>(R.id.microg_downloading)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.microg_progress)?.visibility = View.GONE
@@ -123,19 +103,12 @@ class HomeFragment : Home() {
                     view?.findViewById<ProgressBar>(R.id.vanced_progress)?.visibility = View.GONE
                     view?.findViewById<ProgressBar>(R.id.vanced_installing)?.visibility = View.VISIBLE
                 }
-                DOWNLOAD_ERROR -> {
-                    val error = intent.getStringExtra("DownloadError") as String
-                    Toast.makeText(activity, error, Toast.LENGTH_SHORT).show()
-                    Log.d("VMDwnld", error)
-                }
             }
         }
     }
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
-        intentFilter.addAction(VANCED_DOWNLOADING)
-        intentFilter.addAction(MICROG_DOWNLOADING)
         intentFilter.addAction(VANCED_DOWNLOADED)
         intentFilter.addAction(MICROG_DOWNLOADED)
         activity?.let {
@@ -187,11 +160,8 @@ class HomeFragment : Home() {
     }
 
     companion object {
-        const val VANCED_DOWNLOADING = "Vanced downloading"
-        const val MICROG_DOWNLOADING = "MicroG downloading"
         const val VANCED_DOWNLOADED = "Vanced downloaded"
         const val MICROG_DOWNLOADED = "MicroG downloaded"
-        const val DOWNLOAD_ERROR = "Error occurred"
 
     }
 

@@ -5,6 +5,7 @@
     <string name="close">Close</string>
     <string name="reset">Reset</string>
     <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 
     <!-- Main Activity -->
     <string name="title_about">About</string>
@@ -18,8 +19,10 @@
     <string name="changelogs">Changelogs</string>
     <string name="check">Check</string>
     <string name="downloading_file">Downloading %1$s</string>
-    <string name="failed_uninstall">Failed to uninstall package: </string>
+    <string name="failed_uninstall">Failed to uninstall package %1$s</string>
+    <string name="error_downloading">Error Downloading %1$s</string>
     <string name="install">Install</string>
+    <string name="installing_app">Installing %1$s</string>
     <string name="installation_aborted">Operation failed because user aborted installation</string>
     <string name="installation_blocked">Operation failed because user blocked installation</string>
     <string name="installation_conflict">Operation failed because app conflicts with already installed app</string>
@@ -34,6 +37,7 @@
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
     <string name="microg_installed">MicroG successfully installed</string>
+    <string name="successfully_installed">Successfully installed %1$s</string>
     <string name="network_error">Network connection unavailable</string>
     <string name="no_microg">No Microg!</string>
     <string name="unable_download">Unable to download %1$s</string>

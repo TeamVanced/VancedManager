@@ -126,23 +126,6 @@
                 android:visibility="gone"
                 tools:visibility="visible" />
 
-            <TextView
-                android:id="@+id/microg_downloading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/CardTitle"
-                android:text="Downloading"
-                android:textSize="16sp"
-                android:visibility="gone"
-                tools:visibility="visible"/>
-
-            <ProgressBar
-                android:id="@+id/microg_progress"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                tools:visibility="visible"/>
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>

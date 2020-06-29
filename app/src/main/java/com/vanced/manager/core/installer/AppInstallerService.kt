@@ -11,14 +11,22 @@ import androidx.annotation.Nullable
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.utils.MiuiHelper
+import com.vanced.manager.utils.NotificationHelper
 
 class AppInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
+        val notifId = 42
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
                 Log.d(TAG, "Requesting user confirmation for installation")
+                NotificationHelper.createBasicNotif(
+                    getString(R.string.installing_app, "MicroG"),
+                    notifId,
+                    this
+                )
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
@@ -33,28 +41,47 @@ class AppInstallerService: Service() {
                 mIntent.action = MainActivity.INSTALL_COMPLETED
                 mIntent.putExtra("package", "normal")
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+                NotificationHelper.createBasicNotif(
+                    getString(
+                        R.string.successfully_installed,
+                        "Microg"
+                    ), notifId, this
+                )
             }
-            else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
+            else -> {
+                sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
+                NotificationHelper.createBasicNotif(
+                    getErrorMessage(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)),
+                    notifId,
+                    this
+                )
+            }
         }
         stopSelf()
         return START_NOT_STICKY
     }
 
     private fun sendFailure(status: Int) {
-        val msg = when (status) {
+        val mIntent = Intent(MainActivity.INSTALL_FAILED)
+        mIntent.action = MainActivity.INSTALL_FAILED
+        mIntent.putExtra("errorMsg", getErrorMessage(status))
+        LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+    }
+
+    private fun getErrorMessage(status: Int): String {
+        return when (status) {
             PackageInstaller.STATUS_FAILURE_ABORTED -> getString(R.string.installation_aborted)
             PackageInstaller.STATUS_FAILURE_BLOCKED -> getString(R.string.installation_blocked)
             PackageInstaller.STATUS_FAILURE_STORAGE -> getString(R.string.installation_storage)
             PackageInstaller.STATUS_FAILURE_INVALID -> getString(R.string.installation_invalid)
             PackageInstaller.STATUS_FAILURE_INCOMPATIBLE -> getString(R.string.installation_incompatible)
             PackageInstaller.STATUS_FAILURE_CONFLICT -> getString(R.string.installation_conflict)
-            else -> getString(R.string.installation_failed)
+            else ->
+                if (MiuiHelper.isMiui())
+                    getString(R.string.installation_miui)
+                else
+                    getString(R.string.installation_failed)
         }
-
-        val mIntent = Intent(MainActivity.INSTALL_FAILED)
-        mIntent.action = MainActivity.INSTALL_FAILED
-        mIntent.putExtra("errorMsg", msg)
-        LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
     }
 
     @Nullable

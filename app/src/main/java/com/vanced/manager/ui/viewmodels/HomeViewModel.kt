@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
+import android.content.res.Resources
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
@@ -111,18 +112,20 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private fun compareInt(int1: Int, int2: Int, application: Application): String {
         return if (connected)
             when {
-            int1 > int2 -> application.getString(R.string.update)
-            int2 == int1 -> application.getString(R.string.button_reinstall)
-            else -> application.getString(R.string.install)
+                int1 > int2 -> application.getString(R.string.update)
+                int2 == int1 -> application.getString(R.string.button_reinstall)
+                int2 == 0 -> application.getString(R.string.install)
+                else -> application.getString(R.string.install)
         } else application.getString(R.string.install)
     }
 
     private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
         return if (connected)
             when {
-            int1 > int2 -> application.getDrawable(R.drawable.ic_update)
-            int2 == int1 -> application.getDrawable(R.drawable.ic_done)
-            else -> application.getDrawable(R.drawable.ic_download)
+                int1 > int2 -> application.getDrawable(R.drawable.ic_update)
+                int2 == int1 -> application.getDrawable(R.drawable.ic_done)
+                int2 == 0 -> application.getDrawable(R.drawable.ic_download)
+                else -> application.getDrawable(R.drawable.ic_download)
         } else application.getDrawable(R.drawable.ic_download)
 
     }
