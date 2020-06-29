@@ -1,15 +1,26 @@
 package com.vanced.manager.core.installer
 
 import android.app.PendingIntent
+import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.os.IBinder
 import android.util.Log
 import java.io.*
 
-object SplitInstaller {
+class SplitInstaller: Service() {
 
-    fun installSplitApk(context: Context): Int {
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        installSplitApk(this)
+        return START_STICKY
+    }
+
+    override fun onBind(intent: Intent?): IBinder? {
+        return null
+    }
+
+    private fun installSplitApk(context: Context): Int {
         val apkFolderPath = context.cacheDir.path + "/"
         val nameSizeMap = HashMap<String, Long>()
         var totalSize: Long = 0

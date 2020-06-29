@@ -2,6 +2,7 @@ package com.vanced.manager.utils
 
 import android.app.Activity
 import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller.SessionParams
 import android.content.pm.PackageManager
@@ -24,13 +25,13 @@ object PackageHelper {
 
     @Throws(IOException::class)
     fun installApp(
-        activity: Activity,
+        context: Context,
         path: String,
         pkg: String?
     ) {
-        val callbackIntent = Intent(activity.applicationContext, AppInstallerService::class.java)
-        val pendingIntent = PendingIntent.getService(activity.applicationContext, 0, callbackIntent, 0)
-        val packageInstaller = activity.packageManager.packageInstaller
+        val callbackIntent = Intent(context.applicationContext, AppInstallerService::class.java)
+        val pendingIntent = PendingIntent.getService(context.applicationContext, 0, callbackIntent, 0)
+        val packageInstaller = context.packageManager.packageInstaller
         val params = SessionParams(SessionParams.MODE_FULL_INSTALL)
         params.setAppPackageName(pkg)
         val sessionId = packageInstaller.createSession(params)

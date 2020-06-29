@@ -17,7 +17,7 @@ object NotificationHelper {
             val notifChannel = NotificationChannel(
                 "69420",
                 context.getString(R.string.notif_channel_name),
-                NotificationManager.IMPORTANCE_DEFAULT
+                NotificationManager.IMPORTANCE_LOW
             )
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(notifChannel)
@@ -29,7 +29,7 @@ object NotificationHelper {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 Notification.Builder(context, channel.toString()).setChannelId("69420")
             else
-                Notification.Builder(context).setPriority(Notification.PRIORITY_DEFAULT)
+                Notification.Builder(context).setPriority(Notification.PRIORITY_LOW)
 
         val cancelDownload = Intent(context, DownloadBroadcastReceiver::class.java).apply {
             action = "cancel"

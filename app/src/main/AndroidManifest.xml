@@ -56,10 +56,22 @@
 
         </provider>
 
+        <receiver
+            android:name=".core.downloader.DownloadBroadcastReceiver"
+            android:exported="false">
+
+            <intent-filter>
+                <action android:name="cancel" />
+            </intent-filter>
+
+        </receiver>
+
         <service android:name=".core.installer.SplitInstallerService" />
         <service android:name=".core.installer.RootSplitInstallerService" />
+        <service android:name=".core.installer.SplitInstaller" />
         <service android:name=".core.installer.AppUninstallerService" />
         <service android:name=".core.installer.AppInstallerService" />
+        <service android:name=".core.installer.AppInstaller" />
         <service android:name=".core.downloader.VancedDownloadService" />
         <service android:name=".core.downloader.MicrogDownloadService" />
 

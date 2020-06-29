@@ -108,7 +108,7 @@ class VancedDownloadService: Service() {
         if (variant == "root")
             startService(Intent(this, RootSplitInstallerService::class.java))
         else
-            SplitInstaller.installSplitApk(this)
+            startService(Intent(this, SplitInstaller::class.java))
     }
 
     override fun onBind(intent: Intent?): IBinder? {

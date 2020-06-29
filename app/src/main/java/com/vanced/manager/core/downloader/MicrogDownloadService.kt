@@ -12,11 +12,13 @@ import com.downloader.OnDownloadListener
 import com.downloader.OnStartOrResumeListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
+import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
+import com.vanced.manager.utils.PackageHelper.installApp
 import java.lang.Exception
 import java.lang.IllegalStateException
 import java.lang.RuntimeException
@@ -61,6 +63,10 @@ class MicrogDownloadService: Service() {
                 override fun onDownloadComplete() {
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
                     cancelNotif(channel, this@MicrogDownloadService)
+                    val intent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
+                    intent.putExtra("path", "${filesDir.path}/microg.apk")
+                    intent.putExtra("pkg", "com.mgoogle.android.gms")
+                    startService(intent)
                 }
                 override fun onError(error: Error) {
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
