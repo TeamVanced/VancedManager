@@ -11,7 +11,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.preference.PreferenceManager
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
-import com.vanced.manager.utils.InternetTools.getLatestVancedUrl
+import com.vanced.manager.utils.InternetTools.baseUrl
 
 class URLChangeFragment : DialogFragment() {
 
@@ -29,13 +29,13 @@ class URLChangeFragment : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         val urlField = view.findViewById<EditText>(R.id.url_input)
         val prefs = PreferenceManager.getDefaultSharedPreferences(activity)
-        urlField.hint = prefs.getString("install_url", activity?.let { getLatestVancedUrl(it) })
+        urlField.hint = prefs.getString("install_url", baseUrl)
         view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
             prefs.edit().putString("install_url", urlField.text.toString()).apply()
             dismiss()
         }
         view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {
-            prefs.edit().putString("install_url", activity?.let { getLatestVancedUrl(it) }).apply()
+            prefs.edit().putString("install_url", baseUrl).apply()
             dismiss()
         }
     }
