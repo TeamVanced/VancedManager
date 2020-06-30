@@ -16,5 +16,6 @@ After 3 months of making, we are finally ready to introduce Vanced Manager to yo
 
 ## Credits
 - topjohnwu for his wonderful LibSU
+- MindOrks for their amazing PRDownloader
 - aefyr for SAI, which was inspiration for our Manager
 - 100rabhkr for GetJson library
