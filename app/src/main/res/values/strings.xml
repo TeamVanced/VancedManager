@@ -89,7 +89,6 @@
     <string name="launch">Launch</string>
     <string name="welcome">Welcome</string>
 
-
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
     <string name="choose_preferred_language_note">Note: if you install anything other than English, English will still be installed as an additional language</string>
@@ -101,7 +100,7 @@
     <string name="next">Next</string>
 
     <!-- About Page -->
-    <string name="manager_devs">Manager Devs</string>
+    <string name="manager_dev">Manager Dev</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Vanced Team</string>
 

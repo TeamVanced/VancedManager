@@ -71,7 +71,7 @@ class VancedDownloadService: Service() {
             .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                displayDownloadNotif(channel, mProgress.toInt(), "vanced", getFileNameFromUrl(url), this)
+                displayDownloadNotif(channel, mProgress.toInt(), getFileNameFromUrl(url), this)
             }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
@@ -104,16 +104,9 @@ class VancedDownloadService: Service() {
         intent.action = HomeFragment.VANCED_DOWNLOADED
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
         if (variant == "root")
-            startInstallService(Intent(this, RootSplitInstallerService::class.java))
+            startService(Intent(this, RootSplitInstallerService::class.java))
         else
-            startInstallService(Intent(this, SplitInstaller::class.java))
-    }
-
-    private fun startInstallService(intent: Intent) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-            startForegroundService(intent)
-        else
-            startService(intent)
+            startService(Intent(this, SplitInstaller::class.java))
     }
 
     override fun onDestroy() {

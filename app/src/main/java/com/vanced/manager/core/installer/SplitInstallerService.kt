@@ -14,7 +14,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.MiuiHelper.isMiui
-import com.vanced.manager.utils.NotificationHelper
+import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 
 class SplitInstallerService: Service() {
 
@@ -23,7 +23,7 @@ class SplitInstallerService: Service() {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
-                startForegroundNotif(getString(R.string.installing_app, "Vanced"))
+                createBasicNotif(getString(R.string.installing_app, "Vanced"), notifId, this)
                 Log.d(TAG, "Requesting user confirmation for installation")
                 val confirmationIntent =
                     intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
@@ -40,7 +40,7 @@ class SplitInstallerService: Service() {
                 mIntent.action = MainActivity.INSTALL_COMPLETED
                 mIntent.putExtra("package", "split")
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-                NotificationHelper.createBasicNotif(
+                createBasicNotif(
                     getString(R.string.successfully_installed, "Vanced"),
                     notifId,
                     this
@@ -48,7 +48,7 @@ class SplitInstallerService: Service() {
             }
             else -> {
                 sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
-                NotificationHelper.createBasicNotif(
+                createBasicNotif(
                     getErrorMessage(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)),
                     notifId,
                     this

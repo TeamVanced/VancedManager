@@ -57,8 +57,6 @@
 
         </provider>
 
-        <receiver android:name=".core.downloader.DownloadBroadcastReceiver"/>
-
         <service android:name=".core.installer.SplitInstallerService" />
         <service android:name=".core.installer.RootSplitInstallerService" />
         <service android:name=".core.installer.SplitInstaller" />

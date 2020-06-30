@@ -48,7 +48,6 @@ class MicrogDownloadService: Service() {
                 NotificationHelper.displayDownloadNotif(
                     channel,
                     mProgress.toInt(),
-                    "microg",
                     getFileNameFromUrl(dwnldUrl),
                     this
                 )
@@ -60,10 +59,7 @@ class MicrogDownloadService: Service() {
                     val intent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
                     intent.putExtra("path", "${filesDir.path}/microg.apk")
                     intent.putExtra("pkg", "com.mgoogle.android.gms")
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                        startForegroundService(intent)
-                    else
-                        startService(intent)
+                    startService(intent)
                 }
                 override fun onError(error: Error) {
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()

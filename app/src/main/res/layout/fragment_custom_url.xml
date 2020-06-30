@@ -37,8 +37,8 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.button.MaterialButton
@@ -46,17 +46,19 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 android:text="@string/reset"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                android:layout_alignParentStart="true"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/url_save"
                 style="@style/ButtonStyle"
-                android:layout_marginStart="4dp"
-                android:text="@string/save" />
+                android:layout_marginEnd="4dp"
+                android:text="@string/save"
+                android:layout_alignParentEnd="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -24,7 +24,7 @@ object NotificationHelper {
         }
     }
 
-    fun displayDownloadNotif(channel: Int, progress:Int, type: String, filename: String, context: Context) {
+    fun displayDownloadNotif(channel: Int, progress:Int, filename: String, context: Context) {
         val notifBuilder =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 Notification.Builder(context, channel.toString()).setChannelId("69420")

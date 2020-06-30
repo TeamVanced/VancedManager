@@ -25,7 +25,7 @@ class AppInstallerService: Service() {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
                 Log.d(TAG, "Requesting user confirmation for installation")
-                startForegroundNotif(getString(R.string.installing_app, "MicroG"))
+                createBasicNotif(getString(R.string.installing_app, "MicroG"), notifId, this)
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
@@ -79,23 +79,6 @@ class AppInstallerService: Service() {
                 else
                     getString(R.string.installation_failed)
         }
-    }
-
-    private fun startForegroundNotif(text: String) {
-        val notifBuilder =
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                Notification.Builder(this, 42.toString()).setChannelId("69420")
-            else
-                Notification.Builder(this).setPriority(Notification.PRIORITY_DEFAULT)
-
-        notifBuilder.apply {
-            setContentTitle(getString(R.string.app_name))
-            setContentText(text)
-            setSmallIcon(R.drawable.ic_stat_name)
-        }
-
-        val notif = notifBuilder.build()
-        startForeground(42, notif)
     }
 
     @Nullable
