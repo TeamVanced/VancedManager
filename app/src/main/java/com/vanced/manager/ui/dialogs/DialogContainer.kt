@@ -4,10 +4,13 @@ import android.app.Activity
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.startActivity
+import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
@@ -61,11 +64,17 @@ object DialogContainer {
             .show()
     }
 
-    fun secondMiuiDialog(context: Context) {
+    fun secondMiuiDialog(context: Context, view: View) {
         AlertDialog.Builder(context)
             .setTitle(context.getString(R.string.miui_two_title))
             .setMessage(context.getString(R.string.miui_two))
-            .setPositiveButton(context.getString(R.string.button_fine)) { dialog, _ -> dialog.dismiss() }
+            .setPositiveButton(context.getString(R.string.button_fine)) { dialog, _ ->
+                dialog.dismiss()
+                if (context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false))
+                    context.startService(Intent(context, VancedDownloadService::class.java))
+                else
+                    view.findNavController().navigate(R.id.toInstallThemeFragment)
+            }
             .setNeutralButton(context.getString(R.string.guide)) { _, _ ->
                 openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
             }

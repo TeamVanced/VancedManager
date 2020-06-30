@@ -59,8 +59,7 @@
                 android:layout_marginEnd="4dp"
                 android:layout_marginStart="2dp"
                 android:text="@string/save"
-                android:layout_alignParentEnd="true"
-                android:layout_alignStart="@id/url_reset"/>
+                android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
 

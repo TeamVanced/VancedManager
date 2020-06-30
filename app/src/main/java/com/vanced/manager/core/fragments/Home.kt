@@ -65,26 +65,29 @@ open class Home : BaseFragment(), View.OnClickListener {
         when (v?.id) {
             R.id.vanced_installbtn -> {
                 if (!isVancedDownloading!!) {
-                    if (!MiuiHelper.isMiuiOptimisationsDisabled()) {
-                        activity?.let {
-                            secondMiuiDialog(it)
-                        }
-                    }
                     try {
                         activity?.cacheDir?.deleteRecursively()
                     } catch (e: Exception) {
                         Log.d("VMCache", "Unable to delete cacheDir")
                     }
                     if (prefs.getBoolean("valuesModified", false)) {
-                        activity?.startService(
-                            Intent(
-                                activity,
-                                VancedDownloadService::class.java
+                        if (!MiuiHelper.isMiuiOptimisationsDisabled()) {
+                            activity?.let { view?.let { it1 -> secondMiuiDialog(it, it1) } }
+                        } else {
+                            activity?.startService(
+                                Intent(
+                                    activity,
+                                    VancedDownloadService::class.java
+                                )
                             )
-                        )
-                        prefs.edit().putBoolean("isInstalling", false).apply()
-                    } else
-                        view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
+                        }
+                    } else {
+                        if (!MiuiHelper.isMiuiOptimisationsDisabled()) {
+                            activity?.let { view?.let { it1 -> secondMiuiDialog(it, it1) } }
+                        } else
+                            view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
+                    }
+
                 } else {
                     Toast.makeText(
                         activity,
