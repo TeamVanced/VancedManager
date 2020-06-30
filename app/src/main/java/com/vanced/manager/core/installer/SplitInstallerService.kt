@@ -1,9 +1,11 @@
 package com.vanced.manager.core.installer
 
+import android.app.Notification
 import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import android.widget.Toast
@@ -21,11 +23,7 @@ class SplitInstallerService: Service() {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
-                NotificationHelper.createBasicNotif(
-                    getString(R.string.installing_app, "Vanced"),
-                    notifId,
-                    this
-                )
+                startForegroundNotif(getString(R.string.installing_app, "Vanced"))
                 Log.d(TAG, "Requesting user confirmation for installation")
                 val confirmationIntent =
                     intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
@@ -82,6 +80,23 @@ class SplitInstallerService: Service() {
                 else
                     getString(R.string.installation_failed)
         }
+    }
+
+    private fun startForegroundNotif(text: String) {
+        val notifBuilder =
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                Notification.Builder(this, 666.toString()).setChannelId("69420")
+            else
+                Notification.Builder(this).setPriority(Notification.PRIORITY_DEFAULT)
+
+        notifBuilder.apply {
+            setContentTitle(getString(R.string.app_name))
+            setContentText(text)
+            setSmallIcon(R.drawable.ic_stat_name)
+        }
+
+        val notif = notifBuilder.build()
+        startForeground(666, notif)
     }
 
     @Nullable

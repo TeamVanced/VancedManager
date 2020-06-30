@@ -31,20 +31,12 @@ object NotificationHelper {
             else
                 Notification.Builder(context).setPriority(Notification.PRIORITY_HIGH)
 
-        val cancelDownload = Intent(context, DownloadBroadcastReceiver::class.java)
-        cancelDownload.putExtra("type", type)
-
-        val cancelPendingIntent = PendingIntent.getBroadcast(context, 0, cancelDownload, PendingIntent.FLAG_UPDATE_CURRENT)
-
         notifBuilder.apply {
             setContentTitle(context.getString(R.string.app_name))
             setContentText(context.getString(R.string.downloading_file, filename))
             setSmallIcon(R.drawable.ic_stat_name)
             setOnlyAlertOnce(true)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-                addAction(Notification.Action.Builder(null, context.getString(R.string.cancel), cancelPendingIntent).build())
-            else
-                addAction(0, context.getString(R.string.cancel), cancelPendingIntent)
+            setOngoing(true)
         }
 
         val notif = notifBuilder.build()

@@ -1,5 +1,6 @@
 package com.vanced.manager.core.installer
 
+import android.app.Notification
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -52,7 +53,7 @@ class RootSplitInstallerService: Service() {
         }
         for (apkFile in apkFiles) {
             Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
-            createBasicNotif(getString(R.string.installing_app, "Vanced"), notifId, this)
+            startForegroundNotif(getString(R.string.installing_app, "Vanced"))
             val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
             val process: Process = Runtime.getRuntime().exec(command)
             val inputPipe = apkFile.getInputStream()
@@ -134,6 +135,23 @@ class RootSplitInstallerService: Service() {
             }
         }
         return result
+    }
+
+    private fun startForegroundNotif(text: String) {
+        val notifBuilder =
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                Notification.Builder(this, 666.toString()).setChannelId("69420")
+            else
+                Notification.Builder(this).setPriority(Notification.PRIORITY_DEFAULT)
+
+        notifBuilder.apply {
+            setContentTitle(getString(R.string.app_name))
+            setContentText(text)
+            setSmallIcon(R.drawable.ic_stat_name)
+        }
+
+        val notif = notifBuilder.build()
+        startForeground(666, notif)
     }
 
     @Nullable

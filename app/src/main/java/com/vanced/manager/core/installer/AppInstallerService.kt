@@ -1,9 +1,11 @@
 package com.vanced.manager.core.installer
 
+import android.app.Notification
 import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import android.widget.Toast
@@ -13,6 +15,7 @@ import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.NotificationHelper
+import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 
 class AppInstallerService: Service() {
 
@@ -22,11 +25,7 @@ class AppInstallerService: Service() {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Toast.makeText(this, "Installing...", Toast.LENGTH_SHORT).show()
                 Log.d(TAG, "Requesting user confirmation for installation")
-                NotificationHelper.createBasicNotif(
-                    getString(R.string.installing_app, "MicroG"),
-                    notifId,
-                    this
-                )
+                startForegroundNotif(getString(R.string.installing_app, "MicroG"))
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
@@ -41,16 +40,14 @@ class AppInstallerService: Service() {
                 mIntent.action = MainActivity.INSTALL_COMPLETED
                 mIntent.putExtra("package", "normal")
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-                NotificationHelper.createBasicNotif(
-                    getString(
+                createBasicNotif(getString(
                         R.string.successfully_installed,
                         "Microg"
-                    ), notifId, this
-                )
+                    ), notifId, this)
             }
             else -> {
                 sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
-                NotificationHelper.createBasicNotif(
+                createBasicNotif(
                     getErrorMessage(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)),
                     notifId,
                     this
@@ -82,6 +79,23 @@ class AppInstallerService: Service() {
                 else
                     getString(R.string.installation_failed)
         }
+    }
+
+    private fun startForegroundNotif(text: String) {
+        val notifBuilder =
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                Notification.Builder(this, 42.toString()).setChannelId("69420")
+            else
+                Notification.Builder(this).setPriority(Notification.PRIORITY_DEFAULT)
+
+        notifBuilder.apply {
+            setContentTitle(getString(R.string.app_name))
+            setContentText(text)
+            setSmallIcon(R.drawable.ic_stat_name)
+        }
+
+        val notif = notifBuilder.build()
+        startForeground(42, notif)
     }
 
     @Nullable
