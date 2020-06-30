@@ -18,6 +18,7 @@ object DialogContainer {
         AlertDialog.Builder(context)
             .setTitle(context.resources.getString(R.string.welcome))
             .setMessage(context.resources.getString(R.string.security_context))
+            .setCancelable(false)
             .setPositiveButton(context.resources.getString(R.string.close)) { dialog, _ ->
                 run {
                     dialog.dismiss()

@@ -65,7 +65,7 @@ open class Home : BaseFragment(), View.OnClickListener {
         when (v?.id) {
             R.id.vanced_installbtn -> {
                 if (!isVancedDownloading!!) {
-                    if (MiuiHelper.isMiui()) {
+                    if (!MiuiHelper.isMiuiOptimisationsDisabled()) {
                         activity?.let {
                             secondMiuiDialog(it)
                         }

@@ -7,9 +7,9 @@ import java.io.InputStreamReader
 
 object MiuiHelper {
 
-    fun isMiui(): Boolean {
-        return !TextUtils.isEmpty(getSystemProps("ro.miui.system.version.name"))
-    }
+    fun isMiui(): Boolean = !TextUtils.isEmpty(getSystemProps("ro.miui.ui.version.name"))
+
+    fun isMiuiOptimisationsDisabled(): Boolean = getSystemProps("persist.sys.miui_optimization") == "0"
 
     private fun getSystemProps(propname: String): String? {
         val line: String
