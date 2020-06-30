@@ -37,7 +37,6 @@ class MicrogDownloadService: Service() {
         val dwnldUrl = apkUrl.get("url").asString
         val channel = 420
         PRDownloader.download(dwnldUrl, filesDir.path, "microg.apk")
-            .setTag(55)
             .build()
             .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isMicrogDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
@@ -46,7 +45,6 @@ class MicrogDownloadService: Service() {
                     channel,
                     mProgress.toInt(),
                     getFileNameFromUrl(dwnldUrl),
-                    55,
                     this
                 )
             }

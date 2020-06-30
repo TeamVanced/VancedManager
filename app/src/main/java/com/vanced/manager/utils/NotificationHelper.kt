@@ -24,7 +24,7 @@ object NotificationHelper {
         }
     }
 
-    fun displayDownloadNotif(channel: Int, progress:Int, filename: String, tag: Int, context: Context) {
+    fun displayDownloadNotif(channel: Int, progress:Int, filename: String, context: Context) {
         val notifBuilder =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 Notification.Builder(context, channel.toString()).setChannelId("69420")
@@ -32,7 +32,6 @@ object NotificationHelper {
                 Notification.Builder(context).setPriority(Notification.PRIORITY_HIGH)
 
         val cancelDownload = Intent(context, DownloadBroadcastReceiver::class.java)
-        cancelDownload.putExtra("tag", tag)
 
         val cancelPendingIntent = PendingIntent.getBroadcast(context, 0, cancelDownload, PendingIntent.FLAG_UPDATE_CURRENT)
 
