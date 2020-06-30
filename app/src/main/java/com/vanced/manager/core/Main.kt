@@ -12,7 +12,10 @@ import com.vanced.manager.ui.dialogs.DialogContainer.statementFalse
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.R
+import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
+import com.vanced.manager.utils.MiuiHelper.isMiui
+import com.vanced.manager.utils.MiuiHelper.isMiuiOptimisationsDisabled
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -37,6 +40,7 @@ open class Main: AppCompatActivity() {
             !falseStatement -> statementFalse(this)
             isUpgrading -> prefs.edit().putBoolean("isUpgrading", false).apply()
             variant == "root" && shouldShowRootDialog -> showRootDialog(this)
+            !firstStart && !isMiuiOptimisationsDisabled() -> secondMiuiDialog(this)
         }
 
     }

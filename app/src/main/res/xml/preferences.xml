@@ -64,10 +64,6 @@
             android:title="@string/update_url"
             android:key="install_url" />
 
-        <SwitchPreference
-            android:title="@string/suppress_miui"
-            android:key="suppress_miui"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>

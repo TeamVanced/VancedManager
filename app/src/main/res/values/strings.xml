@@ -70,7 +70,6 @@
     <string name="update_url">Update Channel URL</string>
     <string name="push_notifications">Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when update is released</string>
-    <string name="suppress_miui">Suppress MiUI warnings</string>
     <string name="re_check">Re-check</string>
     <string name="update_center">Update Center</string>
     <string name="update_found">Update found!</string>
@@ -80,9 +79,9 @@
     <string name="guide">Guide</string>
     <string name="hold_on">Hold on!</string>
     <string name="miui_one_title">Detected MiUI user!</string>
-    <string name="miui_one">Hey! Looks like you\'re a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings\nIf you can\'t find such setting, it means that you are using a new version of ROM which does not need fixing anything.</string>
+    <string name="miui_one">Hey! Looks like you\'re a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings\n However, if you are on 20.2.20 ROM that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
     <string name="miui_two_title">I\'m gonna stop you right there!</string>
-    <string name="miui_two">Looks like you did NOT disable MiUI optimisations. Please disable it. K thx bai</string>
+    <string name="miui_two">Looks like you did NOT disable MiUI optimisations. Please disable it. However, if you are on 20.2.20 ROM that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
     <string name="error">Error</string>
     <string name="security_context">Please make sure you downloaded app from vanced.app, Vanced Discord server or GitHub</string>
     <string name="success">Success!</string>

@@ -72,19 +72,15 @@ open class Home : BaseFragment(), View.OnClickListener {
                     } catch (e: Exception) {
                         Log.d("VMCache", "Unable to delete cacheDir")
                     }
-                    if (!MiuiHelper.isMiuiOptimisationsDisabled() && !defPrefs.getBoolean("suppress_miui", false)) {
-                        activity?.let { view?.let { it1 -> secondMiuiDialog(it, it1) } }
-                    } else {
-                        if (prefs.getBoolean("valuesModified", false)) {
-                            activity?.startService(
-                                Intent(
-                                    activity,
-                                    VancedDownloadService::class.java
-                                )
+                    if (prefs.getBoolean("valuesModified", false)) {
+                        activity?.startService(
+                            Intent(
+                                activity,
+                                VancedDownloadService::class.java
                             )
-                        } else {
-                            view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
-                        }
+                        )
+                    } else {
+                        view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
                     }
                 } else {
                     Toast.makeText(

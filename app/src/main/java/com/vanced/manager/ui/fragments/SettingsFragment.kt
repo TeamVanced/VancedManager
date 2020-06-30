@@ -15,8 +15,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
 
-        if (!isMiui()) preferenceScreen.removePreference(findPreference("suppress_miui"))
-
         val updateCheck: Preference? = findPreference("update_check")
         updateCheck?.setOnPreferenceClickListener {
             val fm = childFragmentManager.beginTransaction()

@@ -64,7 +64,7 @@ object DialogContainer {
             .show()
     }
 
-    fun secondMiuiDialog(context: Context, view: View) {
+    fun secondMiuiDialog(context: Context) {
         AlertDialog.Builder(context)
             .setTitle(context.getString(R.string.miui_two_title))
             .setMessage(context.getString(R.string.miui_two))
