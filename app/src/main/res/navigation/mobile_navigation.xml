@@ -1,14 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/home_fragment">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.vanced.manager.ui.home.HomeFragment"
+        android:id="@+id/home_fragment"
+        android:name="com.vanced.manager.ui.fragments.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_settingsFragment"
+            app:destination="@id/settings_fragment"
+            app:enterAnim="@animator/fragment_enter"
+            app:exitAnim="@animator/fragment_exit"
+            app:popEnterAnim="@animator/fragment_enter_pop"
+            app:popExitAnim="@animator/fragment_exit_pop" />
+
+        <action
+            android:id="@+id/toAboutFragment"
+            app:destination="@id/about_fragment"
+            app:enterAnim="@animator/fragment_enter"
+            app:exitAnim="@animator/fragment_exit"
+            app:popEnterAnim="@animator/fragment_enter_pop"
+            app:popExitAnim="@animator/fragment_exit_pop"  />
+
+        <action
+            android:id="@+id/toInstallThemeFragment"
+            app:destination="@id/install_theme_fragment"
+            app:enterAnim="@animator/fragment_enter_right"
+            app:exitAnim="@animator/fragment_exit_left"
+            app:popEnterAnim="@animator/fragment_enter_left"
+            app:popExitAnim="@animator/fragment_exit_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.vanced.manager.ui.fragments.SettingsFragment"
+        android:label="@string/title_settings">
+
+        <action
+            android:id="@+id/toDevSettingsFragment"
+            app:destination="@id/dev_settings_fragment"
+            app:enterAnim="@animator/fragment_enter"
+            app:exitAnim="@animator/fragment_exit"
+            app:popEnterAnim="@animator/fragment_enter_pop"
+            app:popExitAnim="@animator/fragment_exit_pop" />
+
+        <deepLink app:uri="vncdmngr://open_settings_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/about_fragment"
+        android:name="com.vanced.manager.ui.fragments.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about">
+
+        <deepLink app:uri="vncdmngr://open_about_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/install_theme_fragment"
+        android:name="com.vanced.manager.ui.fragments.VancedThemeSelectionFragment"
+        android:label="@string/title_install"
+        tools:layout="@layout/fragment_vanced_theme_selection">
+
+        <action
+            android:id="@+id/toInstallLanguageFragment"
+            app:destination="@id/install_language_fragment"
+            app:enterAnim="@animator/fragment_enter_right"
+            app:exitAnim="@animator/fragment_exit_left"
+            app:popEnterAnim="@animator/fragment_enter_left"
+            app:popExitAnim="@animator/fragment_exit_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/install_language_fragment"
+        android:name="com.vanced.manager.ui.fragments.VancedLanguageSelectionFragment"
+        android:label="@string/title_install"
+        tools:layout="@layout/fragment_vanced_language_selection" >
+
+        <action
+            android:id="@+id/action_installTo_homeFragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@animator/fragment_enter_left"
+            app:exitAnim="@animator/fragment_exit_right"
+            app:popEnterAnim="@animator/fragment_enter_right"
+            app:popExitAnim="@animator/fragment_exit_left"
+            app:popUpTo="@id/home_fragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dev_settings_fragment"
+        android:name="com.vanced.manager.ui.fragments.DevSettingsFragment"
+        android:label="Dev Settings" />
+
+    <action
+        android:id="@+id/toHomeFragment"
+        app:destination="@id/home_fragment"
+        app:enterAnim="@animator/fragment_enter"
+        app:exitAnim="@animator/fragment_exit"
+        app:popEnterAnim="@animator/fragment_enter_pop"
+        app:popExitAnim="@animator/fragment_exit_pop"
+        app:popUpTo="@id/home_fragment"
+        app:popUpToInclusive="true" />
 
 </navigation>

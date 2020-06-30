@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/InnerMaterialCard"
+        app:cardBackgroundColor="?colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/websitebtn"
+                    style="@style/SocialButtonStyle"
+                    app:icon="@drawable/ic_vanced_nobg"
+                    android:text="@string/website_text"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/exo_semibold"
+                    android:textSize="17sp"
+                    app:iconPadding="7sp"
+                    app:layout_constraintEnd_toStartOf="@id/bravebtn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:onClick='@{()-> viewModel.openUrl("https://vanced.app")}'/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bravebtn"
+                    style="@style/SocialButtonStyle"
+                    app:icon="@drawable/ic_brave_logo"
+                    android:text="@string/support_us"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/exo_semibold"
+                    app:iconPadding="7dp"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/websitebtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:onClick='@{()-> viewModel.openUrl("https://brave.com/van874")}'/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/discordbtn"
+                    style="@style/SocialButtonStyle"
+                    app:icon="@drawable/discord"
+                    app:layout_constraintEnd_toStartOf="@id/tgbtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:onClick='@{()-> viewModel.openUrl("https://discord.gg/TUVd7rd")}'/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tgbtn"
+                    style="@style/SocialButtonStyle"
+                    app:icon="@drawable/telegram"
+                    app:layout_constraintEnd_toStartOf="@id/twitterbtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/discordbtn"
+                    android:onClick='@{()-> viewModel.openUrl("https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w")}'/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/twitterbtn"
+                    style="@style/SocialButtonStyle"
+                    app:icon="@drawable/twitter"
+                    app:layout_constraintEnd_toStartOf="@id/redditbtn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tgbtn"
+                    android:onClick='@{()-> viewModel.openUrl("https://twitter.com/YTVanced")}'/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/redditbtn"
+                    style="@style/SocialButtonStyle"
+                    app:icon="@drawable/ic_reddit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/twitterbtn"
+                    android:onClick='@{()-> viewModel.openUrl("https://reddit.com/r/vanced")}'/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

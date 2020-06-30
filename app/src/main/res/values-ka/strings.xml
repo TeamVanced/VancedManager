@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <!-- Global Strings -->
+    <string name="close">დახურვა</string>
+    <string name="security_context">გთხოვთ დარწმუნდით რომ აპი გადმოწერეთ vanced.app-იდან, Vanced Discord სერვერიდან ან GitHub-იდან</string>
+    <string name="welcome">მოგესალმებით</string>
+
+    <!-- Main Activity -->
+    <string name="title_about">შესახებ</string>
+    <string name="title_home">საწყისი</string>
+    <string name="title_install">ინსტალაცია</string>
+    <string name="title_settings">პარამეტრები</string>
+
+    <!-- Home Page -->
+    <string name="changelogs">ცვლილებები</string>
+    <string name="install">ინსტალაცია</string>
+    <string name="version_installed">დაინსტალირებული:</string>
+    <string name="button_installed">დაინსტალირებულია</string>
+    <string name="latest">უახლესი:</string>
+    <string name="loading">იტვირთება…</string>
+    <string name="network_error">კავშირი არ არის</string>
+    <string name="unavailable">ხელმიუწვდომელია</string>
+    <string name="update">განახლება</string>
+    <string name="useful_links">საჭირო ლინკები</string>
+    <string name="vanced_medias">Vanced სოციალურ ქსელებზე</string>
+    <string name="website_text">Vanced-ის ოფიციალური ვებსაიტი</string>
+    <string name="support_us">დაგვიჭირეთ მხარი Brave-ის გადმოწერით</string>
+
+    <!-- Settings -->
+    <string name="accent_color">აქცენტის ფერი</string>
+    <string name="accent_color_summary">აირჩიეთ სასურველი აქცენტის ფერი</string>
+    <string name="accent_blue">ლურჯი</string>
+    <string name="accent_green">მწვანე</string>
+    <string name="accent_red">წითელი</string>
+    <string name="accent_yellow">ყვითელი</string>
+    <string name="check_updates">განახლებების შემოწმება</string>
+    <string name="category_interface">ინტერფეისი</string>
+    <string name="category_manager">მენეჯერი</string>
+    <string name="theme">თემა</string>
+    <string name="theme_follow">სისტემაზე დაფუძნებული</string>
+    <string name="theme_dark">მუქი თემა</string>
+    <string name="theme_light">ღია თემა</string>
+    <string name="theme_summary">აირჩიეთ სასურველი თემა</string>
+    <string name="push_notifications">შეტყობინებები</string>
+    <string name="push_notifications_summary">მიიღეთ შეტყობინება როდესაც განახლება გამოვა</string>
+    <string name="re_check">გადამოწმება</string>
+    <string name="update_center">განახლების ცენტრი</string>
+
+    <!-- Install Page -->
+    <string name="choose_preferred_language">აირჩიეთ სასურველი ენა Vanced-ისთვის</string>
+    <string name="choose_preferred_language_note">შენიშვნა: თუ თქვენ აირჩევთ სხვა ენას გარდა ინგლისურისა, ინგლისური მაინც იქნება დაყენებული როგორც დამატებითი ენა</string>
+    <string name="choose_preferred_theme">აირჩიეთ სასურველი თემა Vanced-ისთვის</string>
+    <string name="finish">დასრულება</string>
+    <string name="install_light_black">ღია + შავი</string>
+    <string name="install_light_dark">ღია + მუქი</string>
+    <string name="next">შემდეგი</string>
+
+    <!-- About Page -->
+    <string name="manager_devs">Manager-ის დეველოპერები</string>
+    <string name="sources">წყაროები</string>
+    <string name="vanced_team">Vanced-ის გუნდი</string>
+
+</resources>

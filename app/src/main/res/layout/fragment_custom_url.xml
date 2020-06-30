@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MaterialCard"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    app:contentPaddingTop="0dp"
+    app:contentPaddingBottom="0dp"
+    app:contentPaddingRight="6dp"
+    app:contentPaddingLeft="6dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/CardTitle"
+            android:layout_gravity="center"
+            android:text="@string/update_url"
+            android:textAlignment="center"
+            android:fontFamily="@font/exo_semibold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:hintEnabled="true"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeColor="?colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/url_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/url_reset"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="2dp"
+                android:text="@string/reset"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/url_save"
+                style="@style/ButtonStyle"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="2dp"
+                android:text="@string/save" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

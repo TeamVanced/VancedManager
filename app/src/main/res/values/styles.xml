@@ -1,214 +1,135 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_logo</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
-    <!--
-  Font family: Exo
-  Line height: 32sp
-  (identical to box height)
--->
-
-    <style name="vanced">
-        <item name="android:textSize">
-            24sp
-        </item>
-        <item name="android:textColor">
-            #2E73FF
-        </item>
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="textAllCaps">false</item>
+        <item name="backgroundTint">?colorPrimary</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/exo_bold</item>
     </style>
 
-    <style name="install">
-        <item name="android:textSize">
-            18sp
-        </item>
-        <item name="android:textColor">
-            #1490D7
-        </item>
+    <style name="DisabledButtonStyle" parent="ButtonStyle">
+        <item name="backgroundTint">?colorDisabled</item>
+        <item name="android:textColor">#e8e8e8</item>
     </style>
 
-    <style name="latest_inst">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #000000
-        </item>
+    <style name="InstallButtonStyle" parent="ButtonStyle">
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="iconGravity">end</item>
     </style>
 
-    <style name="n_a">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #000000
-        </item>
+    <style name="SocialButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">#ffffff</item>
     </style>
 
-    <style name="microg">
-        <item name="android:textSize">
-            24sp
-        </item>
-        <item name="android:textColor">
-            #2E73FF
-        </item>
+    <style name="LinkButtonStyle" parent="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="cornerRadius">8dp</item>
     </style>
 
-    <style name="settings">
-        <item name="android:textSize">
-            18sp
-        </item>
-        <item name="android:textColor">
-            #5E2E73FF
-        </item>
+    <style name="MaterialCard" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardBackgroundColor">?colorSurfaceVariant</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPaddingLeft">8dp</item>
+        <item name="contentPaddingRight">8dp</item>
+        <item name="contentPaddingTop">4dp</item>
+        <item name="contentPaddingBottom">4dp</item>
+        <item name="cardPreventCornerOverlap">true</item>
     </style>
 
-    <style name="github_link">
-        <item name="android:textSize">
-            18sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="InstallMaterialCard" parent="MaterialCard">
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="contentPaddingRight">0dp</item>
+        <item name="contentPaddingTop">0dp</item>
+        <item name="contentPaddingBottom">0dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">12dp</item>
     </style>
 
-    <style name="vanced_medias">
-        <item name="android:textSize">
-            18sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="InnerMaterialCard" parent="MaterialCard">
+        <item name="contentPaddingTop">0dp</item>
+        <item name="contentPaddingBottom">0dp</item>
+        <item name="contentPaddingLeft">0dp</item>
+        <item name="contentPaddingRight">0dp</item>
     </style>
 
-    <style name="website">
-        <item name="android:textSize">
-            18sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="TextAppTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="fontFamily">@font/exo_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:layout_marginStart">8dp</item>
     </style>
 
-    <style name="discord">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="CardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="fontFamily">@font/exo_bold</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="telegram">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="InstallCardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="fontFamily">@font/exo_bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="twitter">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="AboutCardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="fontFamily">@font/exo_semibold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
     </style>
 
-    <style name="brave_browser">
-        <item name="android:textSize">
-            18sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="AppVer" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/exo</item>
     </style>
 
-    <style name="support_us">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="AppVer.Bold" parent="AppVer">
+        <item name="fontFamily">@font/exo_semibold</item>
+        <item name="android:layout_marginStart">8dp</item>
     </style>
 
-    <style name="useful_links">
-        <item name="android:textSize">
-            18sp
-        </item>
-        <item name="android:textColor">
-            #000000
-        </item>
+    <style name="ClickableImageWidget">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="tint">?colorPrimary</item>
+        <item name="iconPadding">0dp</item>
     </style>
 
-    <style name="reddit">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
+    <style name="ClickableImageWidget.Red" parent="ClickableImageWidget">
+        <item name="tint">@color/Red</item>
     </style>
 
-    <style name="website_text">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
-    </style>
-
-    <style name="github_manager">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-           #FFFFFF
-        </item>
-    </style>
-
-    <style name="github_bot">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
-    </style>
-
-    <style name="github_website">
-        <item name="android:textSize">
-            14sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
-    </style>
-
-    <style name="home">
-        <item name="android:textSize">
-            36sp
-        </item>
-        <item name="android:textColor">
-            #FFFFFF
-        </item>
-    </style>
-
-
-
-
-
-
-
-
-
-    </resources>
+</resources>

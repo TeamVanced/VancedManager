@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="Vanced">#673AB7</color>
+    <color name="Brave">#FB542B</color>
+    <color name="Discord">#7289DA</color>
+    <color name="Twitter">#1DA1F2</color>
+    <color name="Telegram">#0088cc</color>
+    <color name="Reddit">#FF4500</color>
+    <color name="GitHub">#17191A</color>
+
+    <color name="Black">#000000</color>
+    <color name="Red">#CC0047</color>
+    <color name="Green">#00CC7A</color>
+
 </resources>

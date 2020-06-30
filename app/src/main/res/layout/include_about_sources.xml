@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.AboutViewModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/MaterialCard"
+        app:contentPaddingTop="2dp"
+        app:contentPaddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/AboutCardTitle"
+                android:id="@+id/about_card_vancedTeam"
+                android:text="@string/sources"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/InnerMaterialCard"
+                app:contentPaddingRight="@dimen/eightdp"
+                app:contentPaddingLeft="@dimen/eightdp"
+                app:cardBackgroundColor="#000000">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/SocialButtonStyle"
+                            android:id="@+id/about_github_button"
+                            android:onClick='@{()-> viewModel.openUrl("https://github.com/YTVanced/VancedInstaller")}'
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/about_license_button"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:icon="@drawable/github" />
+
+                        <com.google.android.material.button.MaterialButton
+                            tools:ignore="HardcodedText"
+                            android:id="@+id/about_license_button"
+                            style="@style/SocialButtonStyle"
+                            android:layout_marginStart="16dp"
+                            android:text="GPL"
+                            android:textSize="21sp"
+                            android:fontFamily="@font/exo_semibold"
+                            android:onClick='@{()-> viewModel.openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE")}'
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/about_github_button"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
+

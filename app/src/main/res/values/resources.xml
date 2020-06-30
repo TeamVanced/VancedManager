@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Vanced Manager</string>
+    <string name="vanced" translatable="false">Vanced</string>
+    <string name="microg" translatable="false">MicroG</string>
+    <string name="root" translatable="false">root</string>
+    <string name="nonroot" translatable="false">nonroot</string>
+    <string name="notif_channel_name">App Downloads</string>
+
+</resources>

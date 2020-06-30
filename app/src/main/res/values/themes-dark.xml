@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DarkTheme.Blue" parent="Theme.MaterialComponents.NoActionBar">
+
+        <item name="colorPrimary">#1490D7</item>
+        <item name="colorPrimaryVariant">#2C7EB9</item>
+        <item name="colorSecondary">#3E78AF</item>
+        <item name="colorSecondaryVariant">#803E78AF</item>
+        <item name="colorSurface">#000000</item>
+        <item name="colorSurfaceVariant">#111111</item>
+        <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
+        <item name="colorOnPrimary">#F9F9F9</item>
+        <item name="colorOnPrimaryVariant">#e8e8e8</item>
+        <item name="colorOnSecondary">#F9F9F9</item>
+        <item name="colorOnBackground">?colorOnSurface</item>
+        <item name="colorError">#CC0047</item>
+        <item name="colorOnError">#F9F9F9</item>
+        <item name="colorOnSurface">#444444</item>
+        <item name="colorOnSurfaceVariant">#FFFFFF</item>
+        <item name="colorDisabled">#808080</item>
+        <item name="colorDisabledVariant">#66808080</item>
+        <item name="iconColor">?colorPrimaryVariant</item>
+        <item name="toolbarIconColor">?colorOnPrimary</item>
+        <item name="DialogBG">#111111</item>
+        <item name="colorBackgroundFloating">#111111</item>
+        <item name="android:windowBackground">?colorSurface</item>
+        <item name="android:statusBarColor">?colorSurface</item>
+        <item name="android:navigationBarColor">#000000</item>
+
+    </style>
+
+    <style name="DarkTheme.Red" parent="DarkTheme.Blue">
+
+        <item name="colorPrimary">#D71414</item>
+        <item name="colorPrimaryVariant">#B92C2C</item>
+        <item name="colorSecondary">#AF3E3E</item>
+        <item name="colorSecondaryVariant">#80AF3E3E</item>
+
+    </style>
+
+    <style name="DarkTheme.Green" parent="DarkTheme.Blue">
+
+        <item name="colorPrimary">#3ED714</item>
+        <item name="colorPrimaryVariant">#2CB943</item>
+        <item name="colorSecondary">#3EAF51</item>
+        <item name="colorSecondaryVariant">#803EAF44</item>
+
+    </style>
+
+    <style name="DarkTheme.Yellow" parent="DarkTheme.Blue">
+
+        <item name="colorPrimary">#ffd500</item>
+        <item name="colorPrimaryVariant">#A6FFD500</item>
+        <item name="colorSecondary">#D3B418</item>
+        <item name="colorSecondaryVariant">#B7D3B418</item>
+
+    </style>
+
+    <style name="DarkTheme.Purple" parent="DarkTheme.Blue">
+
+        <item name="colorPrimary">#6D49B7</item>
+        <item name="colorPrimaryVariant">#563C8D</item>
+        <item name="colorSecondary">#734BC7</item>
+        <item name="colorSecondaryVariant">#9A734BC7</item>
+
+    </style>
+
+</resources>

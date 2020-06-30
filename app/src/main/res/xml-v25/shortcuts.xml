@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="settings"
+        android:icon="@drawable/ic_shortcut_settings"
+        android:shortcutShortLabel="@string/title_settings">
+
+        <intent
+            android:action="com.vanced.manager.OPEN_SETTINGS"
+            android:targetClass="com.vanced.manager.ui.MainActivity"
+            android:targetPackage="com.vanced.manager"
+            android:data="vncdmngr://open_settings_fragment"/>
+
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="about"
+        android:icon="@drawable/ic_shortcut_info"
+        android:shortcutShortLabel="@string/title_about">
+
+        <intent
+            android:action="com.vanced.manager.OPEN_INSTALL"
+            android:targetClass="com.vanced.manager.ui.MainActivity"
+            android:targetPackage="com.vanced.manager"
+            android:data="vncdmngr://open_about_fragment"/>
+
+    </shortcut>
+
+</shortcuts>

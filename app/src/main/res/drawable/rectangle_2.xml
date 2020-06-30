@@ -1,50 +1,13 @@
-<vector
+<shape
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="411dp"
-    android:height="51dp"
-    android:viewportWidth="411"
-    android:viewportHeight="51"
-    >
-    <group>
-        <clip-path
-            android:pathData="M3 0H408C409.657 0 411 1.34315 411 3V48C411 49.6569 409.657 51 408 51H3C1.34315 51 0 49.6569 0 48V3C0 1.34315 1.34315 0 3 0Z"
-            />
-        <path
-            android:pathData="M0 0V51H411V0"
-            android:fillColor="#C4C4C4"
-            />
-        <group
-            android:translateX="-0.5"
-            android:translateY="-1.954"
-            android:pivotX="205.5"
-            android:pivotY="25.5"
-            android:scaleX="2.828"
-            android:scaleY="11.985"
-            android:rotation="-45"
-            >
-            <path
-                android:pathData="M0 0V51H411V0"
-                >
-                <aapt:attr name="android:fillColor">
-                    <gradient
-                        android:type="linear"
-                        android:startX="102.75"
-                        android:startY="25.5"
-                        android:endX="308.25"
-                        android:endY="25.5"
-                        >
-                        <item
-                            android:color="#2E73FF"
-                            android:offset="0"
-                            />
-                        <item
-                            android:color="#FF0032"
-                            android:offset="1"
-                            />
-                    </gradient>
-                </aapt:attr>
-            </path>
-        </group>
-    </group>
-</vector>
+    android:shape="rectangle">
+
+    <gradient
+        android:startColor="#FF2E73FF"
+        android:endColor="#FFFF0032"
+        android:angle="45" />
+
+    <corners
+        android:radius="8dp"/>
+
+</shape>
