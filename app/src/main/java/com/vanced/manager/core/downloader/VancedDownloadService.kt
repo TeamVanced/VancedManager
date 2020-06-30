@@ -62,14 +62,14 @@ class VancedDownloadService: Service() {
             }
 
         val channel = 69
-
-        PRDownloader.download(url, cacheDir.path, getFileNameFromUrl(url))
-            .setTag("VancedDownload")
+        PRDownloader
+            .download(url, cacheDir.path, getFileNameFromUrl(url))
+            .setTag(66)
             .build()
             .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                displayDownloadNotif(channel, mProgress.toInt(), getFileNameFromUrl(url), "VancedDownload", this)
+                displayDownloadNotif(channel, mProgress.toInt(), getFileNameFromUrl(url), 66, this)
             }
             .setOnCancelListener { OnCancelListener {
                 cancelNotif(channel, this)
