@@ -47,16 +47,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
+                android:layout_marginEnd="2dp"
                 android:text="@string/reset"
                 android:textAllCaps="false"
-                android:layout_alignParentStart="true"/>
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@id/url_save" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/url_save"
                 style="@style/ButtonStyle"
                 android:layout_marginEnd="4dp"
+                android:layout_marginStart="2dp"
                 android:text="@string/save"
-                android:layout_alignParentEnd="true"/>
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@id/url_reset"/>
 
         </RelativeLayout>
 

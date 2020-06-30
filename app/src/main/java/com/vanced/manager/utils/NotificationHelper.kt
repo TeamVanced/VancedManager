@@ -8,7 +8,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.DownloadBroadcastReceiver
 
 object NotificationHelper {
 
