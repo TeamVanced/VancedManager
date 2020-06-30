@@ -37,7 +37,7 @@ class VancedDownloadService: Service() {
 
         }
         stopSelf()
-        return START_STICKY
+        return START_NOT_STICKY
     }
 
     private fun downloadSplits(
