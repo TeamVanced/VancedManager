@@ -3,11 +3,9 @@ package com.vanced.manager.ui.fragments
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import androidx.preference.ListPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceManager
+import androidx.preference.*
 import com.vanced.manager.R
+import com.vanced.manager.utils.MiuiHelper.isMiui
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -17,6 +15,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
 
+        if (!isMiui()) preferenceScreen.removePreference(findPreference("suppress_miui"))
 
         val updateCheck: Preference? = findPreference("update_check")
         updateCheck?.setOnPreferenceClickListener {

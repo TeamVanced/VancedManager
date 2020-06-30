@@ -16,6 +16,7 @@
         <SwitchPreference
             android:title="Auto-Check updates"
             android:key="auto_check_update"
+            android:defaultValue="true"
             android:summary="Check manager updates on app startup" />
 
         <SwitchPreference
@@ -62,6 +63,10 @@
         <Preference
             android:title="@string/update_url"
             android:key="install_url" />
+
+        <SwitchPreference
+            android:title="@string/suppress_miui"
+            android:key="suppress_miui"/>
 
     </PreferenceCategory>
 

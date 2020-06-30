@@ -70,6 +70,7 @@
     <string name="update_url">Update Channel URL</string>
     <string name="push_notifications">Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when update is released</string>
+    <string name="suppress_miui">Suppress MiUI warnings</string>
     <string name="re_check">Re-check</string>
     <string name="update_center">Update Center</string>
     <string name="update_found">Update found!</string>

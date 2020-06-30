@@ -9,7 +9,12 @@ object MiuiHelper {
 
     fun isMiui(): Boolean = !TextUtils.isEmpty(getSystemProps("ro.miui.ui.version.name"))
 
-    fun isMiuiOptimisationsDisabled(): Boolean = isMiui() && getSystemProps("persist.sys.miui_optimization") == "0"
+    fun isMiuiOptimisationsDisabled(): Boolean {
+        return if (isMiui())
+            getSystemProps("persist.sys.miui_optimization") == "0"
+        else
+            false
+    }
 
     private fun getSystemProps(propname: String): String? {
         val line: String

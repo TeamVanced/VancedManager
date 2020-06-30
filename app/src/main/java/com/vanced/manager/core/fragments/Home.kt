@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.navigation.findNavController
+import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
 import com.topjohnwu.superuser.Shell
@@ -52,6 +53,7 @@ open class Home : BaseFragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val defPrefs = getDefaultSharedPreferences(activity)
         val isVancedDownloading: Boolean? = prefs?.getBoolean("isVancedDownloading", false)
         val isMicrogDownloading: Boolean? = prefs?.getBoolean("isMicrogDownloading", false)
         val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
@@ -70,24 +72,20 @@ open class Home : BaseFragment(), View.OnClickListener {
                     } catch (e: Exception) {
                         Log.d("VMCache", "Unable to delete cacheDir")
                     }
-                    if (prefs.getBoolean("valuesModified", false)) {
-                        if (!MiuiHelper.isMiuiOptimisationsDisabled()) {
-                            activity?.let { view?.let { it1 -> secondMiuiDialog(it, it1) } }
-                        } else {
+                    if (!MiuiHelper.isMiuiOptimisationsDisabled() && !defPrefs.getBoolean("suppress_miui", false)) {
+                        activity?.let { view?.let { it1 -> secondMiuiDialog(it, it1) } }
+                    } else {
+                        if (prefs.getBoolean("valuesModified", false)) {
                             activity?.startService(
                                 Intent(
                                     activity,
                                     VancedDownloadService::class.java
                                 )
                             )
-                        }
-                    } else {
-                        if (!MiuiHelper.isMiuiOptimisationsDisabled()) {
-                            activity?.let { view?.let { it1 -> secondMiuiDialog(it, it1) } }
-                        } else
+                        } else {
                             view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
+                        }
                     }
-
                 } else {
                     Toast.makeText(
                         activity,
