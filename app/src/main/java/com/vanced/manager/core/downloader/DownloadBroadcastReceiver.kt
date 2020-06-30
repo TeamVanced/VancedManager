@@ -9,9 +9,8 @@ import com.downloader.PRDownloader
 class DownloadBroadcastReceiver: BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        val tag: Int? = intent?.getIntExtra("dwnldId", 0)
+        val tag: Int? = intent?.getIntExtra("tag", 0)
         PRDownloader.cancel(tag)
-        Log.d("VMNotification", "Canceled ${intent?.getIntExtra("dwnldId", 0)} download")
-
+        Log.d("VMNotification", "Canceled $tag download")
     }
 }

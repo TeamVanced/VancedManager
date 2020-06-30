@@ -17,29 +17,30 @@ object NotificationHelper {
             val notifChannel = NotificationChannel(
                 "69420",
                 context.getString(R.string.notif_channel_name),
-                NotificationManager.IMPORTANCE_LOW
+                NotificationManager.IMPORTANCE_HIGH
             )
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(notifChannel)
         }
     }
 
-    fun displayDownloadNotif(channel: Int, progress:Int, filename: String, downId: Int, context: Context) {
+    fun displayDownloadNotif(channel: Int, progress:Int, filename: String, tag: Int, context: Context) {
         val notifBuilder =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                 Notification.Builder(context, channel.toString()).setChannelId("69420")
             else
-                Notification.Builder(context).setPriority(Notification.PRIORITY_LOW)
+                Notification.Builder(context).setPriority(Notification.PRIORITY_HIGH)
 
-        val cancelDownload = Intent(context, DownloadBroadcastReceiver::class.java).apply {
-            putExtra("dwnldId", downId)
-        }
+        val cancelDownload = Intent(context, DownloadBroadcastReceiver::class.java)
+        cancelDownload.putExtra("tag", tag)
+
         val cancelPendingIntent = PendingIntent.getBroadcast(context, 0, cancelDownload, PendingIntent.FLAG_UPDATE_CURRENT)
 
         notifBuilder.apply {
             setContentTitle(context.getString(R.string.app_name))
             setContentText(context.getString(R.string.downloading_file, filename))
             setSmallIcon(R.drawable.ic_stat_name)
+            setOnlyAlertOnce(true)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
                 addAction(Notification.Action.Builder(null, context.getString(R.string.cancel), cancelPendingIntent).build())
             else
