@@ -1,0 +1,1258 @@
+--------- beginning of main
+06-22 19:13:07.823   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:07.823   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:07.823   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:07.823   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:07.823   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+--------- beginning of system
+06-22 19:13:08.026   459  3675 W NotificationService: Toast already killed. pkg=com.topjohnwu.magisk callback=android.app.ITransientNotification$Stub$Proxy@69f4bc6
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: KeyboardViewController.show():438 Requesting to show sub view with id 2131428318(key_pos_password_header_numbers) which doesn't exist in current keyboard view
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: kby
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kop.a(PG:195)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at bty.a(PG:4)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.latin.keyboard.LatinPasswordKeyboard.a(PG:19)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kiv.a(PG:15)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kiv.a(PG:38)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kiu.a(PG:41)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kiv.a(PG:50)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kiv.a(PG:69)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kij.a(PG:280)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kij.a(PG:279)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kij.c(PG:158)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at dws.a(PG:287)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at kij.a(PG:72)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at edc.a(PG:8)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.keyboard.handler.BasicMotionEventHandler.a(PG:16)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at een.a(PG:54)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at eeu.a(PG:60)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at eeu.a(PG:122)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at eeu.a(PG:23)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at een.a(PG:75)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.keyboard.handler.BasicMotionEventHandler.e(PG:162)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.keyboard.handler.BasicMotionEventHandler.a(PG:95)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at edd.a(PG:54)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.google.android.libraries.inputmethod.widgets.SoftKeyboardView.b(PG:46)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.google.android.libraries.inputmethod.widgets.SoftKeyboardView.dispatchTouchEvent(PG:31)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.core.KeyboardViewHolder.dispatchTouchEvent(PG:20)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.android.internal.policy.DecorView.superDispatchTouchEvent(DecorView.java:440)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.android.internal.policy.PhoneWindow.superDispatchTouchEvent(PhoneWindow.java:1830)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.app.Dialog.dispatchTouchEvent(Dialog.java:847)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.inputmethodservice.SoftInputWindow.dispatchTouchEvent(SoftInputWindow.java:93)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at com.android.internal.policy.DecorView.dispatchTouchEvent(DecorView.java:398)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.View.dispatchPointerEvent(View.java:12752)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:5113)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:4916)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4433)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4486)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4452)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:4592)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4460)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:4649)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4433)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4486)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4452)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4460)
+06-22 19:13:08.139  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4433)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:7099)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:7068)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:7029)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:7202)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:186)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.os.MessageQueue.nativePollOnce(Native Method)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.os.MessageQueue.next(MessageQueue.java:326)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.os.Looper.loop(Looper.java:160)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at android.app.ActivityThread.main(ActivityThread.java:6718)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at java.lang.reflect.Method.invoke(Native Method)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:491)
+06-22 19:13:08.140  4237  4237 E KeyboardViewController: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+06-22 19:13:08.548   286   988 W SurfaceFlinger: Attempting to destroy on removed layer: 3a542d8 Toast#0
+06-22 19:13:08.742   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:08.743   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:09.558   459   482 W WindowManager: Unable to start animation, surface is null or no children.
+06-22 19:13:10.270   640   657 I ndroid.systemu: NativeAlloc concurrent copying GC freed 22781(1258KB) AllocSpace objects, 11(448KB) LOS objects, 68% free, 5MB/17MB, paused 137us total 126.533ms
+06-22 19:13:10.369   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:10.369   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:10.369   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:10.369   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.369   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:10.745   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:10.745   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:11.130   640   640 V StatusBar: mStatusBarWindow: com.android.systemui.statusbar.phone.StatusBarWindowView{61e86e9 V.ED..... ........ 0,0-800,32} canPanelBeCollapsed(): false
+06-22 19:13:11.147   459   547 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10200000 cmp=ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher (has extras)} from uid 1000
+06-22 19:13:11.174 23415 23483 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:11.184 23415 23483 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+06-22 19:13:11.184 23415 23483 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+06-22 19:13:11.187 23415 23483 I OpenGLRenderer: Initialized EGL, version 1.4
+06-22 19:13:11.187 23415 23483 D OpenGLRenderer: Swap behavior 0
+06-22 19:13:11.202   459   547 W InputDispatcher: Excessive delay in interceptKeyBeforeDispatching; took 62 ms
+06-22 19:13:11.203 23415 23483 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:11.221  1166  1166 D Launcher.Utilities: onLauncherStart: 0
+06-22 19:13:11.252   286   814 D SurfaceFlinger: duplicate layer name: changing ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher to ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher#1
+06-22 19:13:11.255  1166  1353 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:11.287 23415 23483 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:11.305 23415 23483 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+06-22 19:13:11.305 23415 23483 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:11.309 23415 23483 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:11.310 23415 23483 E ion     : ioctl c0044901 failed with code -1: Invalid argument
+06-22 19:13:11.314 23415 23483 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:11.322  4237  4237 I AndroidIME: AbstractIme.onDeactivate():161 PasswordIme.onDeactivate()
+06-22 19:13:11.350   640   890 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 37 37  img[37 37] 
+06-22 19:13:11.356   640   890 I chatty  : uid=10028(com.android.systemui) RenderThread identical 1 line
+06-22 19:13:11.359   640   890 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 37 37  img[37 37] 
+06-22 19:13:11.378   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:11.388   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:11.461   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe26725c0 coming from the same process: 286.
+06-22 19:13:11.462   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672d40 coming from the same process: 286.
+06-22 19:13:11.478   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672e00 coming from the same process: 286.
+06-22 19:13:11.494   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672ec0 coming from the same process: 286.
+06-22 19:13:11.523   640   657 I ndroid.systemu: NativeAlloc concurrent copying GC freed 1053(152KB) AllocSpace objects, 0(0B) LOS objects, 68% free, 5MB/17MB, paused 132us total 109.985ms
+06-22 19:13:11.853   286   988 W SurfaceFlinger: Attempting to set client state on removed layer: com.termux/com.termux.app.TermuxActivity#0
+06-22 19:13:11.853   286   988 W SurfaceFlinger: Attempting to destroy on removed layer: com.termux/com.termux.app.TermuxActivity#0
+06-22 19:13:11.856   286   374 W SurfaceFlinger: Attempting to set client state on removed layer: com.termux/com.termux.app.TermuxActivity#0
+06-22 19:13:11.857   286   374 W SurfaceFlinger: Attempting to destroy on removed layer: com.termux/com.termux.app.TermuxActivity#0
+06-22 19:13:11.910   459  2088 I OpenGLRenderer: Initialized EGL, version 1.4
+06-22 19:13:11.910   459  2088 D OpenGLRenderer: Swap behavior 0
+06-22 19:13:11.920   459  2088 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:11.928 23415 23446 D StrictMode: StrictMode policy violation: android.os.strictmode.DiskReadViolation
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1504)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at java.io.FileInputStream.<init>(FileInputStream.java:163)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at java.io.FileInputStream.<init>(FileInputStream.java:112)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.speech.e.b.a.b(SourceFile:3)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.languagepack.v.<init>(SourceFile:1)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.apn.hJ(SourceFile:4138)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.pj.a(SourceFile:54)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.pj.d(SourceFile:26)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.yo.d(SourceFile:923)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.yo.a(SourceFile:166)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.search.core.service.g.a.c.a(Unknown Source:14)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.android.libraries.gsa.l.a.n.a(Unknown Source:8)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.common.v.a.dm.b(Unknown Source:2)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.common.v.a.cg.run(SourceFile:11)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.common.v.a.do.run(SourceFile:8)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.apps.tiktok.concurrent.aq.run(SourceFile:1)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at com.google.apps.tiktok.concurrent.f.run(Unknown Source:24)
+06-22 19:13:11.928 23415 23446 D StrictMode: 	at java.lang.Thread.run(Thread.java:764)
+06-22 19:13:11.929 23415 23446 D StrictMode: StrictMode policy violation: android.os.strictmode.DiskReadViolation
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1504)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at libcore.io.BlockGuardOs.read(BlockGuardOs.java:253)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at libcore.io.IoBridge.read(IoBridge.java:501)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.io.FileInputStream.read(FileInputStream.java:307)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:288)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:351)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:180)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.io.BufferedReader.fill(BufferedReader.java:172)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.io.BufferedReader.readLine(BufferedReader.java:335)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.io.BufferedReader.readLine(BufferedReader.java:400)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.speech.e.b.a.b(SourceFile:4)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.languagepack.v.<init>(SourceFile:1)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.apn.hJ(SourceFile:4138)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.pj.a(SourceFile:54)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.pj.d(SourceFile:26)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.yo.d(SourceFile:923)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.binaries.velvet.app.yo.a(SourceFile:166)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.apps.gsa.search.core.service.g.a.c.a(Unknown Source:14)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.android.libraries.gsa.l.a.n.a(Unknown Source:8)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.common.v.a.dm.b(Unknown Source:2)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.common.v.a.cg.run(SourceFile:11)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.common.v.a.do.run(SourceFile:8)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.apps.tiktok.concurrent.aq.run(SourceFile:1)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at com.google.apps.tiktok.concurrent.f.run(Unknown Source:24)
+06-22 19:13:11.929 23415 23446 D StrictMode: 	at java.lang.Thread.run(Thread.java:764)
+06-22 19:13:11.964 23415 23446 W ThreadPoolDumper: Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
+06-22 19:13:12.124 23415 23415 I BgTaskExecutorImpl: Starting EXCLUSIVE background task TNG_MINUS_ONE_SYNC.
+06-22 19:13:12.251  9183  9721 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=null serviceId=36
+06-22 19:13:12.293 23415 23457 I MicroDetectionState: Should stop hotword detection immediately - false
+06-22 19:13:12.672   459  3673 D ConnectivityService: requestNetwork for uid/pid:10018/23415 NetworkRequest [ TRACK_DEFAULT id=2192, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ]
+06-22 19:13:12.674   459   596 D Ethernet: got request NetworkRequest [ TRACK_DEFAULT id=2192, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ] with score 60
+06-22 19:13:12.674   459   561 D WIFI    : got request NetworkRequest [ TRACK_DEFAULT id=2192, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ] with score 60
+06-22 19:13:12.675   459   561 D WIFI_UT : got request NetworkRequest [ TRACK_DEFAULT id=2192, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ] with score 60
+06-22 19:13:12.689   459   476 I ActivityManager: Start proc 23598:com.google.process.gapps/u0a21 for content provider com.google.android.gsf/.settings.GoogleSettingsProvider
+06-22 19:13:12.692 23415 23457 I TngMinusOneSync: Syncing TNG:-1
+06-22 19:13:12.725   760   760 D PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ TRACK_DEFAULT id=2192, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ] with score 60
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: Exception thrown while unbinding
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: java.lang.IllegalArgumentException: Service not registered: lt@9b4ecb5
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at android.app.LoadedApk.forgetServiceDispatcher(LoadedApk.java:1562)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at android.app.ContextImpl.unbindService(ContextImpl.java:1692)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at android.content.ContextWrapper.unbindService(ContextWrapper.java:717)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at cg.b(:com.google.android.gms.dynamite_measurementdynamite@202413061@20.24.13 (100300-0):1)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at cg.a(:com.google.android.gms.dynamite_measurementdynamite@202413061@20.24.13 (100300-0):6)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at lu.A(:com.google.android.gms.dynamite_measurementdynamite@202413061@20.24.13 (100300-0):10)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at lf.a(:com.google.android.gms.dynamite_measurementdynamite@202413061@20.24.13 (100300-0):3)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at dz.run(:com.google.android.gms.dynamite_measurementdynamite@202413061@20.24.13 (100300-0):3)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:458)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+06-22 19:13:12.728 23415 23570 W ConnectionTracker: 	at ja.run(:com.google.android.gms.dynamite_measurementdynamite@202413061@20.24.13 (100300-0):6)
+06-22 19:13:12.746   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:12.747   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:12.762  9183  9400 I GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=12803
+06-22 19:13:12.781 23415 23451 I cr_CronetLibraryLoader: Cronet version: 85.0.4162.4, arch: armv8l
+06-22 19:13:12.834 23598 23598 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:12.882 23415 23591 E NotificationStore: Error reading notifications from disk
+06-22 19:13:12.896 23415 23591 I EngineIdGenerator: Refusing EXCLUSIVE task 43, it is already pending. Try again in 1428 seconds.
+06-22 19:13:12.927 23598 23598 E e.process.gapp: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:12.944   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:12.944   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:12.944   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:12.944   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.944   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:12.967 23415 23415 I BgTaskExecutorImpl: Starting EXCLUSIVE background task WEAR_STATUS_SYNCER_UPDATE_OPT_IN_STATUS_IF_CHANGED.
+06-22 19:13:13.003  9183  9821 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30
+06-22 19:13:13.194   459  3182 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.vanced.manager/.ui.core.SplashScreenActivity bnds=[272,912][400,1064]} from uid 10093
+06-22 19:13:13.400 23415 23426 I earchbox:searc: Background concurrent copying GC freed 50613(2MB) AllocSpace objects, 7(204KB) LOS objects, 66% free, 5MB/17MB, paused 4.613ms total 293.045ms
+06-22 19:13:13.570   459  5149 W system_server: Long monitor contention with owner Binder:459_F (3182) at int com.android.server.am.ActivityStarter.startActivityMayWait(android.app.IApplicationThread, int, java.lang.String, int, int, android.content.Intent, java.lang.String, android.service.voice.IVoiceInteractionSession, com.android.internal.app.IVoiceInteractor, android.os.IBinder, java.lang.String, int, int, android.app.ProfilerInfo, android.app.WaitResult, android.content.res.Configuration, com.android.server.am.SafeActivityOptions, boolean, int, com.android.server.am.TaskRecord, java.lang.String, boolean, com.android.server.am.PendingIntentRecord)(ActivityStarter.java:1088) waiters=0 in int com.android.server.am.ActivityManagerService.bindService(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, int, java.lang.String, int) for 319ms
+06-22 19:13:13.578   459   459 W system_server: Long monitor contention with owner Binder:459_F (3182) at int com.android.server.am.ActivityStarter.startActivityMayWait(android.app.IApplicationThread, int, java.lang.String, int, int, android.content.Intent, java.lang.String, android.service.voice.IVoiceInteractionSession, com.android.internal.app.IVoiceInteractor, android.os.IBinder, java.lang.String, int, int, android.app.ProfilerInfo, android.app.WaitResult, android.content.res.Configuration, com.android.server.am.SafeActivityOptions, boolean, int, com.android.server.am.TaskRecord, java.lang.String, boolean, com.android.server.am.PendingIntentRecord)(ActivityStarter.java:1088) waiters=1 in int com.android.server.am.ActivityManagerService.broadcastIntent(android.app.IApplicationThread, android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], int, android.os.Bundle, boolean, boolean, int) for 248ms
+06-22 19:13:13.578   459   459 W Looper  : Slow dispatch took 248ms main h=android.os.Handler c=com.android.server.-$$Lambda$BatteryService$2x73lvpB0jctMSVP4qb9sHAqRPw@aefc810 m=0
+06-22 19:13:13.578   459  3673 W system_server: Long monitor contention with owner Binder:459_F (3182) at int com.android.server.am.ActivityStarter.startActivityMayWait(android.app.IApplicationThread, int, java.lang.String, int, int, android.content.Intent, java.lang.String, android.service.voice.IVoiceInteractionSession, com.android.internal.app.IVoiceInteractor, android.os.IBinder, java.lang.String, int, int, android.app.ProfilerInfo, android.app.WaitResult, android.content.res.Configuration, com.android.server.am.SafeActivityOptions, boolean, int, com.android.server.am.TaskRecord, java.lang.String, boolean, com.android.server.am.PendingIntentRecord)(ActivityStarter.java:1088) waiters=2 in android.content.IIntentSender com.android.server.am.ActivityManagerService.getIntentSender(int, java.lang.String, android.os.IBinder, java.lang.String, int, android.content.Intent[], java.lang.String[], int, android.os.Bundle, int) for 114ms
+06-22 19:13:13.578   459   459 W Looper  : Slow delivery took 249ms main h=android.os.Handler c=com.android.server.-$$Lambda$BatteryService$D1kwd7L7yyqN5niz3KWkTepVmUk@36d3f09 m=0
+06-22 19:13:13.579   459   459 W Looper  : Drained
+06-22 19:13:13.664   459   476 I ActivityManager: Start proc 23621:com.google.android.apps.turbo/u0a44 for broadcast com.google.android.apps.turbo/.nudges.broadcasts.BatteryStatusChangedReceiver
+06-22 19:13:13.690   459   476 I ActivityManager: Start proc 23626:com.vanced.manager/u0a207 for activity com.vanced.manager/.ui.core.SplashScreenActivity
+06-22 19:13:13.696 23621 23621 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:13.696 23626 23626 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:13.701 23626 23626 I .vanced.manage: Late-enabling -Xcheck:jni
+06-22 19:13:13.702 23621 23621 E roid.apps.turb: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:13.703   459   459 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@660fe9c
+06-22 19:13:13.716   972   972 I Wear_Controller: Wear requires a companion app to be installed.
+06-22 19:13:13.716   972   972 I WearableService: onCreate: Wearable Services not starting. Wear is not available on this device.
+06-22 19:13:13.791   972  1008 W WearableService: onGetService: Wear is not available on this device.
+06-22 19:13:13.816 23415 23591 W earchbox:searc: Long monitor contention with owner Blocking Thread #4 (23592) at void com.google.android.apps.gsa.l.d.a(com.google.android.apps.gsa.l.c)(SourceFile:7) waiters=0 in void com.google.android.apps.gsa.l.d.a(com.google.android.apps.gsa.l.c) for 663ms
+06-22 19:13:13.890 23598 23598 I GoogleHttpClient: GMS http client unavailable, use old client
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: Error while sending opt-in status
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: com.google.android.apps.gsa.shared.r.b: Failed to connect: 16
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.android.apps.gsa.shared.r.c.a(SourceFile:58)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.android.apps.gsa.staticplugins.z.c.c(SourceFile:6)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.android.apps.gsa.clockwork.b.a(Unknown Source:2)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.android.apps.gsa.staticplugins.t.b.a.a(SourceFile:2)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.android.apps.gsa.staticplugins.t.b.b.a(Unknown Source:8)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.android.libraries.gsa.l.a.n.a(Unknown Source:8)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.common.v.a.dm.b(Unknown Source:2)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.common.v.a.cg.run(SourceFile:11)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.common.v.a.do.run(SourceFile:8)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.apps.tiktok.concurrent.aq.run(SourceFile:1)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at com.google.apps.tiktok.concurrent.f.run(Unknown Source:24)
+06-22 19:13:13.964 23415 23488 W WearStatusSyncerImpl: 	at java.lang.Thread.run(Thread.java:764)
+06-22 19:13:14.125  9183  9400 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.google.android.gms/shared_prefs/usage_stats_manager_prefs.xml: [<1: 0, <2: 0, <4: 0, <8: 0, <16: 2, <32: 0, <64: 1, <128: 0, <256: 1, <512: 2, <1024: 2, <2048: 1, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+06-22 19:13:14.125 23415 23488 W earchbox:searc: Long monitor contention with owner Blocking Thread #5 (23591) at void com.google.android.apps.gsa.l.d.a(com.google.android.apps.gsa.l.c)(SourceFile:7) waiters=0 in void com.google.android.apps.gsa.l.d.a(com.google.android.apps.gsa.l.c) for 150ms
+06-22 19:13:14.426   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2671840 coming from the same process: 286.
+06-22 19:13:14.432   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:14.442  9183  9206 I gle.android.gm: Background concurrent copying GC freed 109100(6MB) AllocSpace objects, 85(3MB) LOS objects, 71% free, 4MB/16MB, paused 2.076ms total 209.981ms
+06-22 19:13:14.566  9183  9400 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+06-22 19:13:14.589  9183  9400 I GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=12803
+06-22 19:13:14.732 23621 23663 W roid.apps.turb: Unsupported class loader
+06-22 19:13:14.749 23621 23663 W roid.apps.turb: Skipping duplicate class check due to unsupported classloader
+06-22 19:13:14.749   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:14.750   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:14.772  9183  9400 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+06-22 19:13:14.917 23621 23663 W DynamiteModule: Local module descriptor class for com.google.android.gms.crash not found.
+06-22 19:13:14.975 23621 23663 W roid.apps.turb: Unsupported class loader
+06-22 19:13:14.986 23621 23663 W roid.apps.turb: Skipping duplicate class check due to unsupported classloader
+06-22 19:13:15.015 23621 23663 I FirebaseCrashApiImpl: FirebaseCrashApiImpl created by ClassLoader ay[DexPathList[[zip file "/data/user_de/0/com.google.android.gms/app_chimera/m/00000014/DynamiteModulesC.apk"],nativeLibraryDirectories=[/data/user_de/0/com.google.android.gms/app_chimera/m/00000014/DynamiteModulesC.apk!/lib/armeabi-v7a, /data/user_de/0/com.google.android.gms/app_chimera/m/00000014/DynamiteModulesC.apk!/lib/armeabi, /system/lib, /vendor/lib]]]
+06-22 19:13:15.029 23621 23664 I DynamiteModule: Considering local module com.google.android.gms.flags:3 and remote module com.google.android.gms.flags:3
+06-22 19:13:15.029 23621 23664 I DynamiteModule: Selected local version of com.google.android.gms.flags
+06-22 19:13:15.038 23621 23664 W DynamiteModule: Local module descriptor class for com.google.android.gms.crash not found.
+06-22 19:13:15.112 23621 23664 I FirebaseCrashApiImpl: FirebaseCrash reporting API initialized
+06-22 19:13:15.114 23621 23664 W FirebaseCrashAnalytics: Unable to log event, missing Google Analytics for Firebase library
+06-22 19:13:15.505   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:15.506   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:15.506   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:15.506   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.506   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:15.589 23626 23626 W .vanced.manage: Accessing hidden method Landroid/graphics/drawable/Drawable;->getOpticalInsets()Landroid/graphics/Insets; (light greylist, linking)
+06-22 19:13:15.589 23626 23626 W .vanced.manage: Accessing hidden field Landroid/graphics/Insets;->left:I (light greylist, linking)
+06-22 19:13:15.589 23626 23626 W .vanced.manage: Accessing hidden field Landroid/graphics/Insets;->right:I (light greylist, linking)
+06-22 19:13:15.589 23626 23626 W .vanced.manage: Accessing hidden field Landroid/graphics/Insets;->top:I (light greylist, linking)
+06-22 19:13:15.589 23626 23626 W .vanced.manage: Accessing hidden field Landroid/graphics/Insets;->bottom:I (light greylist, linking)
+06-22 19:13:15.628   459  3672 I ActivityManager: START u0 {cmp=com.vanced.manager/.ui.MainActivity} from uid 10207
+06-22 19:13:15.770 23626 23626 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@fed44fe
+06-22 19:13:15.863 23626 23626 W .vanced.manage: Accessing hidden method Landroid/view/View;->getAccessibilityDelegate()Landroid/view/View$AccessibilityDelegate; (light greylist, linking)
+06-22 19:13:15.885 23626 23626 W .vanced.manage: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (light greylist, reflection)
+06-22 19:13:15.887 23626 23626 W .vanced.manage: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (light greylist, reflection)
+06-22 19:13:16.186 23626 23626 W .vanced.manage: Accessing hidden method Landroid/widget/TextView;->getTextDirectionHeuristic()Landroid/text/TextDirectionHeuristic; (light greylist, linking)
+06-22 19:13:16.331 23626 23626 W .vanced.manage: Accessing hidden method Landroid/graphics/FontFamily;-><init>()V (light greylist, reflection)
+06-22 19:13:16.331 23626 23626 W .vanced.manage: Accessing hidden method Landroid/graphics/FontFamily;->addFontFromAssetManager(Landroid/content/res/AssetManager;Ljava/lang/String;IZIII[Landroid/graphics/fonts/FontVariationAxis;)Z (light greylist, reflection)
+06-22 19:13:16.331 23626 23626 W .vanced.manage: Accessing hidden method Landroid/graphics/FontFamily;->addFontFromBuffer(Ljava/nio/ByteBuffer;I[Landroid/graphics/fonts/FontVariationAxis;II)Z (light greylist, reflection)
+06-22 19:13:16.331 23626 23626 W .vanced.manage: Accessing hidden method Landroid/graphics/FontFamily;->freeze()Z (light greylist, reflection)
+06-22 19:13:16.332 23626 23626 W .vanced.manage: Accessing hidden method Landroid/graphics/FontFamily;->abortCreation()V (light greylist, reflection)
+06-22 19:13:16.332 23626 23626 W .vanced.manage: Accessing hidden method Landroid/graphics/Typeface;->createFromFamiliesWithDefault([Landroid/graphics/FontFamily;Ljava/lang/String;II)Landroid/graphics/Typeface; (light greylist, reflection)
+06-22 19:13:16.445  9183 10522 I FontLog : Received query name=Exo&weight=600, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+06-22 19:13:16.490  9183 10522 I FontLog : Query [name=Exo&weight=600] resolved to {Exo, wdth 100.0, wght 600, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+06-22 19:13:16.504   459   568 D NsdService: Client disconnected
+06-22 19:13:16.505   459  3672 I ActivityManager: Process com.mgoogle.android.gms (pid 9322) has died: cch+4CEM 
+06-22 19:13:16.515  9183 10522 I FontLog : Fetch {Exo, wdth 100.0, wght 600, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+06-22 19:13:16.524   459   568 D NsdService: Client disconnected
+06-22 19:13:16.525   459   568 D NsdService: mdnssd [stop-service]
+06-22 19:13:16.528   246   246 I Zygote  : Process 9322 exited due to signal (9)
+06-22 19:13:16.528   459   477 W libprocessgroup: kill(-9322, 9) failed: No such process
+06-22 19:13:16.528   459   477 I libprocessgroup: Successfully killed process cgroup uid 10208 pid 9322 in 0ms
+06-22 19:13:16.538   245   365 D MDnsDS  : Stopping MDNSD
+06-22 19:13:16.541  9183 10522 I FontLog : Pulling font file for id = 2, cache size = 2 [CONTEXT service_id=132 ]
+06-22 19:13:16.711  9183 10522 I FontLog : Received query Exo, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+06-22 19:13:16.711  9183 10522 I FontLog : Query [Exo] resolved to {Exo, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+06-22 19:13:16.712  9183 10522 I FontLog : Fetch {Exo, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+06-22 19:13:16.726  9183 10522 I FontLog : Pulling font file for id = 3, cache size = 3 [CONTEXT service_id=132 ]
+06-22 19:13:16.752   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:16.752   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:17.879 23626 23678 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+06-22 19:13:18.064   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:18.065   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:18.065   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:18.065   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.065   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:18.716   459  3672 I ActivityManager: Process com.topjohnwu.magisk (pid 23526) has died: cch+2CEM 
+06-22 19:13:18.716   459   477 W libprocessgroup: kill(-23526, 9) failed: No such process
+06-22 19:13:18.718   246   246 I Zygote  : Process 23526 exited due to signal (9)
+06-22 19:13:18.753   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:18.754   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:18.764   459   477 W libprocessgroup: kill(-23526, 9) failed: No such process
+06-22 19:13:18.764   459   477 I libprocessgroup: Successfully killed process cgroup uid 10138 pid 23526 in 48ms
+06-22 19:13:18.853 23626 23626 W .vanced.manage: Accessing hidden field Landroid/view/View;->mAccessibilityDelegate:Landroid/view/View$AccessibilityDelegate; (light greylist, reflection)
+06-22 19:13:18.984 23626 23626 D OpenGLRenderer: Skia GL Pipeline
+06-22 19:13:19.024   459   459 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@408e69f
+06-22 19:13:19.048 23626 23626 I Choreographer: Skipped 174 frames!  The application may be doing too much work on its main thread.
+06-22 19:13:19.391 23626 23626 W .vanced.manage: Accessing hidden field Landroid/os/Trace;->TRACE_TAG_APP:J (light greylist, reflection)
+06-22 19:13:19.392 23626 23626 W .vanced.manage: Accessing hidden method Landroid/os/Trace;->isTagEnabled(J)Z (light greylist, reflection)
+06-22 19:13:19.392 23626 23626 W .vanced.manage: Accessing hidden method Landroid/os/Trace;->asyncTraceBegin(JLjava/lang/String;I)V (light greylist, reflection)
+06-22 19:13:19.392 23626 23626 W .vanced.manage: Accessing hidden method Landroid/os/Trace;->asyncTraceEnd(JLjava/lang/String;I)V (light greylist, reflection)
+06-22 19:13:19.393 23626 23626 W .vanced.manage: Accessing hidden method Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V (light greylist, reflection)
+06-22 19:13:19.832 23626 23686 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:20.013 23626 23686 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+06-22 19:13:20.013 23626 23686 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+06-22 19:13:20.013 23626 23686 I OpenGLRenderer: Initialized EGL, version 1.4
+06-22 19:13:20.018 23626 23686 D OpenGLRenderer: Swap behavior 0
+06-22 19:13:20.059 23626 23686 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:20.372 23626 23626 I Choreographer: Skipped 75 frames!  The application may be doing too much work on its main thread.
+06-22 19:13:20.623   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:20.623   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:20.623   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:20.623   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.623   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:20.647 23626 23686 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+06-22 19:13:20.648 23626 23686 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:20.649 23626 23686 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:20.650 23626 23686 E ion     : ioctl c0044901 failed with code -1: Invalid argument
+06-22 19:13:20.659 23626 23686 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:20.660 23626 23686 I OpenGLRenderer: Davey! duration=1537ms; Flags=0, IntendedVsync=86297448710919, Vsync=86298698710869, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=86298699000988, AnimationStart=86298699097758, PerformTraversalsStart=86298701455988, DrawStart=86298753767989, SyncQueued=86298936701681, SyncStart=86298936881681, IssueDrawCommandsStart=86298937364219, SwapBuffers=86298984736527, FrameCompleted=86298986798450, DequeueBufferDuration=180000, QueueBufferDuration=291000, 
+06-22 19:13:20.671   459   473 I ActivityManager: Displayed com.vanced.manager/.ui.MainActivity: +7s472ms
+06-22 19:13:20.675   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe26722c0 coming from the same process: 286.
+06-22 19:13:20.756   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:20.756   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:20.844   286   988 W SurfaceFlinger: Attempting to set client state on removed layer: Splash Screen com.vanced.manager#0
+06-22 19:13:20.844   286   988 W SurfaceFlinger: Attempting to destroy on removed layer: Splash Screen com.vanced.manager#0
+06-22 19:13:20.890   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe26716c0 coming from the same process: 286.
+06-22 19:13:20.953   459  3672 E LightsService: Light requested not available on this device. 2
+06-22 19:13:20.974   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2671840 coming from the same process: 286.
+06-22 19:13:21.280 23415 23588 I PBSessionCacheImpl: Deleted sessionId[102981851896280874] from persistence.
+06-22 19:13:21.355 23415 23457 W SearchServiceCore: Abort, client detached.
+06-22 19:13:21.362 23415 23457 I MicroDetectionState: Should stop hotword detection immediately - false
+06-22 19:13:22.299 23621 23701 I FirebaseCrash: Sending crashes
+06-22 19:13:22.758   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:22.758   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:22.947   459   547 E LightsService: Light requested not available on this device. 2
+06-22 19:13:23.095 23626 23626 D VMInstall: Requesting user confirmation for installation
+06-22 19:13:23.096   459  3672 I ActivityManager: START u0 {act=android.intent.action.UNINSTALL_PACKAGE dat=package:com.mgoogle.android.gms flg=0x10000000 cmp=com.google.android.packageinstaller/com.android.packageinstaller.UninstallerActivity (has extras)} from uid 10207
+06-22 19:13:23.169   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:23.169   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:23.169   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:23.169   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.169   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:23.341   640   657 I ndroid.systemu: NativeAlloc concurrent copying GC freed 3047(185KB) AllocSpace objects, 0(0B) LOS objects, 68% free, 5MB/17MB, paused 134us total 184.272ms
+06-22 19:13:23.376 23626 23686 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:23.380   459   476 I ActivityManager: Start proc 23702:com.google.android.packageinstaller/u0a23 for activity com.google.android.packageinstaller/com.android.packageinstaller.UninstallerActivity
+06-22 19:13:23.382 23702 23702 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:23.398 23702 23702 E ackageinstalle: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:23.440   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672800 coming from the same process: 286.
+06-22 19:13:23.441   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 158 67  img[158 67] 
+06-22 19:13:23.615 23702 23702 D OpenGLRenderer: Skia GL Pipeline
+06-22 19:13:23.693 23702 23719 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:23.699 23702 23719 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+06-22 19:13:23.699 23702 23719 I ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+06-22 19:13:23.699 23702 23719 I OpenGLRenderer: Initialized EGL, version 1.4
+06-22 19:13:23.699 23702 23719 D OpenGLRenderer: Swap behavior 0
+06-22 19:13:23.712 23702 23719 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:23.717   286   988 D SurfaceFlinger: duplicate layer name: changing com.google.android.packageinstaller/com.android.packageinstaller.UninstallerActivity to com.google.android.packageinstaller/com.android.packageinstaller.UninstallerActivity#1
+06-22 19:13:23.719 23702 23719 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:23.730 23702 23719 D vndksupport: Loading /vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl.so from current namespace instead of sphal namespace.
+06-22 19:13:23.731 23702 23719 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:23.732 23702 23719 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:23.733 23702 23719 E ion     : ioctl c0044901 failed with code -1: Invalid argument
+06-22 19:13:23.738 23702 23719 D vndksupport: Loading /vendor/lib/hw/gralloc.mt8163.so from current namespace instead of sphal namespace.
+06-22 19:13:23.758   459   473 I ActivityManager: Displayed com.google.android.packageinstaller/com.android.packageinstaller.UninstallerActivity: +650ms
+06-22 19:13:23.791   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672d40 coming from the same process: 286.
+06-22 19:13:23.792   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 725 346  img[725 346] 
+06-22 19:13:24.760   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:24.760   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:24.927   459  5730 I ActivityManager: START u0 {cmp=com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling (has extras)} from uid 10023
+06-22 19:13:24.937 23702 23719 D OpenGLRenderer: endAllActiveAnimators on 0xe39b5880 (RippleDrawable) with handle 0xe39b0ca0
+06-22 19:13:24.940   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672a40 coming from the same process: 286.
+06-22 19:13:24.954 23702 23702 W ActivityThread: handleWindowVisibility: no activity for token android.os.BinderProxy@cdbd47
+06-22 19:13:24.983   459   474 I ActivityManager: Force stopping com.mgoogle.android.gms appid=10208 user=0: deletePackageX
+06-22 19:13:24.991   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 725 346  img[725 346] 
+06-22 19:13:25.030 23702 23719 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:25.037   286   375 D SurfaceFlinger: duplicate layer name: changing com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling to com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling#1
+06-22 19:13:25.041 23702 23719 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.googleapps.permission.GOOGLE_AUTH from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.writely from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: org.mgoogle.permission.FORCE_COARSE_LOCATION from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.c2dm.permission.SEND from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.gtalkservice.permission.GTALK_SERVICE from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.local from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: org.mgoogle.gms.STATUS_BROADCAST from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.cp from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.googleapps.permission.GOOGLE_AUTH.mail from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: org.mgoogle.gms.EXTENDED_ACCESS from package com.mgoogle.android.gms
+06-22 19:13:25.100   459   487 I PackageManager: Removing old permission tree: com.mgoogle.android.c2dm.permission.RECEIVE from package com.mgoogle.android.gms
+06-22 19:13:25.106   459  3672 W NotificationService: Toast already killed. pkg=com.vanced.manager callback=android.app.ITransientNotification$Stub$Proxy@fc2bdde
+06-22 19:13:25.109   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672440 coming from the same process: 286.
+06-22 19:13:25.110   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 725 205  img[725 205] 
+06-22 19:13:25.117   286   375 W SurfaceFlinger: Attempting to set client state on removed layer: com.google.android.packageinstaller/com.android.packageinstaller.UninstallerActivity#0
+06-22 19:13:25.117   286   375 W SurfaceFlinger: Attempting to destroy on removed layer: com.google.android.packageinstaller/com.android.packageinstaller.UninstallerActivity#0
+06-22 19:13:25.123   286   286 W SurfaceFlinger: couldn't log to binary event log: overflow.
+06-22 19:13:25.357   296   296 I keystore: clear_uid 10208
+06-22 19:13:25.642   286   375 W SurfaceFlinger: Attempting to destroy on removed layer: b3a3c85 Toast#0
+06-22 19:13:25.729   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:25.729   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:25.729   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:25.729   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.729   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:25.837   459   487 I system_server: Explicit concurrent copying GC freed 152336(6MB) AllocSpace objects, 40(1772KB) LOS objects, 49% free, 17MB/34MB, paused 166us total 472.817ms
+06-22 19:13:25.873   459   487 I ActivityManager: Force stopping com.mgoogle.android.gms appid=10208 user=0: pkg removed
+06-22 19:13:25.885   459   487 I ActivityManager: Force stopping com.mgoogle.android.gms appid=10208 user=0: pkg removed
+06-22 19:13:25.911   459   476 I ActivityManager: Start proc 23733:com.android.defcontainer/u0a24 for service com.android.defcontainer/.DefaultContainerService
+06-22 19:13:25.933   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:25.946 23733 23733 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:25.964  1087  1087 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) }
+06-22 19:13:25.965   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemanager.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+06-22 19:13:25.966   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.instantapps.appmanagement.InstantAppRemoveMonitor
+06-22 19:13:25.968   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+06-22 19:13:25.968   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+06-22 19:13:25.968   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+06-22 19:13:25.968   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.facebook.katana/com.facebook.feed.platformads.AppInstallReceiver
+06-22 19:13:25.983 23733 23733 E id.defcontaine: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:25.999   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.facebook.katana/com.facebook.games.packagecontroller.PackageChangeReceiver
+06-22 19:13:26.000   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to com.mixplorer/.BroadcastReceiver
+06-22 19:13:26.000   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to flar2.homebutton/a.s
+06-22 19:13:26.000   459   474 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:com.mgoogle.android.gms flg=0x4000010 (has extras) } to ru.WtwwJlfS.GzJAaiwEn/.PackageChangeReceiver
+06-22 19:13:26.006   459   480 E PackageManager: failed to find package com.mgoogle.android.gms
+06-22 19:13:26.007   459   480 E OverlayManager: Failed to change enabled overlays for com.mgoogle.android.gms user 0
+06-22 19:13:26.026   459   459 I ConditionProviders: Disallowing condition provider com.mgoogle.android.gms
+06-22 19:13:26.077 23626 23626 D VMpm    : Successfully uninstalled android.content.pm.extra.PACKAGE_NAME
+06-22 19:13:26.112   459   476 I ActivityManager: Start proc 23740:com.android.keychain/1000 for service com.android.keychain/.KeyChainService
+06-22 19:13:26.119 23740 23740 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:26.125   286   457 W SurfaceFlinger: Attempting to set client state on removed layer: com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling#0
+06-22 19:13:26.125   286   457 W SurfaceFlinger: Attempting to destroy on removed layer: com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling#0
+06-22 19:13:26.139   459   476 I ActivityManager: Start proc 23745:com.android.documentsui/u0a14 for broadcast com.android.documentsui/.PackageReceiver
+06-22 19:13:26.140   286   286 W SurfaceFlinger: couldn't log to binary event log: overflow.
+06-22 19:13:26.142 23745 23745 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:26.160 23740 23740 E ndroid.keychai: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:26.172   286   457 W SurfaceFlinger: Attempting to set client state on removed layer: Dim Layer for - Task=2924#0
+06-22 19:13:26.172   286   457 W SurfaceFlinger: Attempting to destroy on removed layer: Dim Layer for - Task=2924#0
+06-22 19:13:26.179 23745 23745 E oid.documentsu: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:26.186 23415 23457 W SearchServiceCore: Abort, client detached.
+06-22 19:13:26.192   286   457 W SurfaceFlinger: Attempting to set client state on removed layer: com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling#1
+06-22 19:13:26.192   286   457 W SurfaceFlinger: Attempting to destroy on removed layer: com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling#1
+06-22 19:13:26.197   286   988 W SurfaceFlinger: Attempting to destroy on removed layer: AppWindowToken{53aad2e token=Token{3d533a9 ActivityRecord{9222b30 u0 com.google.android.packageinstaller/com.android.packageinstaller.UninstallUninstalling t2924}}}#0
+06-22 19:13:26.197   286   988 W SurfaceFlinger: Attempting to destroy on removed layer: Task=2924#0
+06-22 19:13:26.197   459   459 W Looper  : Slow dispatch took 142ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@84198a7 m=0
+06-22 19:13:26.198   459   459 W Looper  : Slow delivery took 238ms main h=com.android.server.media.MediaRouterService$UserHandler c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@89b1154 m=0
+06-22 19:13:26.351  9183  9206 I gle.android.gm: CollectorTransition concurrent copying GC freed 31515(1445KB) AllocSpace objects, 2(104KB) LOS objects, 74% free, 4MB/16MB, paused 106us total 385.149ms
+06-22 19:13:26.372   640   657 I ndroid.systemu: NativeAlloc concurrent copying GC freed 973(114KB) AllocSpace objects, 0(0B) LOS objects, 68% free, 5MB/17MB, paused 130us total 244.843ms
+06-22 19:13:26.411   459  2088 I OpenGLRenderer: Initialized EGL, version 1.4
+06-22 19:13:26.411   459  2088 D OpenGLRenderer: Swap behavior 0
+06-22 19:13:26.421   459  2088 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:26.461   459   548 I InputReader: Reconfiguring input devices.  changes=0x00000010
+06-22 19:13:26.600   972   972 I GeofencerStateMachine: removeGeofences: removeRequest=RemoveGeofencingRequest[REMOVE_ALL packageName=com.mgoogle.android.gms]
+06-22 19:13:26.761   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:26.761   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:26.776 23415 23426 I earchbox:searc: CollectorTransition concurrent copying GC freed 30984(1389KB) AllocSpace objects, 2(120KB) LOS objects, 68% free, 5MB/17MB, paused 47.535ms total 810.501ms
+06-22 19:13:26.778   459  3182 W system_server: Long monitor contention with owner android.bg (473) at void com.android.server.accessibility.AccessibilityManagerService$1.onSomePackagesChanged()(AccessibilityManagerService.java:327) waiters=0 in long com.android.server.accessibility.AccessibilityManagerService.addClient(android.view.accessibility.IAccessibilityManagerClient, int) for 198ms
+06-22 19:13:26.874   459   482 W WindowManager: Unable to start animation, surface is null or no children.
+06-22 19:13:26.946 23415 23588 I GsaNativeCrashHandler: Loaded shared library: nativecrashreporter
+06-22 19:13:26.968   972   982 I .gms.persisten: CollectorTransition concurrent copying GC freed 135353(7MB) AllocSpace objects, 28(744KB) LOS objects, 59% free, 8MB/20MB, paused 44.133ms total 998.880ms
+06-22 19:13:27.307   972 23785 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_REMOVED [CONTEXT service_id=17 ]
+06-22 19:13:27.368   459   473 W system_server: resources.arsc in APK '/data/app/com.maxmpz.audioplayer-LHOxwmcJXbBYjOEXVsJD4w==/base.apk' is compressed.
+06-22 19:13:27.462   459   473 W system_server: resources.arsc in APK '/data/app/com.mixplorer-bFhaIt0WjAf_RmoIk3RgWQ==/base.apk' is compressed.
+06-22 19:13:28.289   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:28.289   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:28.289   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:28.289   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.289   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:28.404 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.mixplorer-bFhaIt0WjAf_RmoIk3RgWQ==/base.apk' is compressed.
+06-22 19:13:28.688   459  3672 W system_server: Long monitor contention with owner main (459) at void com.android.server.accounts.AccountManagerService.validateAccountsInternal(com.android.server.accounts.AccountManagerService$UserAccounts, boolean)(AccountManagerService.java:1125) waiters=0 in android.accounts.Account[] com.android.server.accounts.AccountManagerService.getAccountsFromCache(com.android.server.accounts.AccountManagerService$UserAccounts, java.lang.String, int, java.lang.String, boolean) for 1.146s
+06-22 19:13:28.699   459   459 W Looper  : Slow dispatch took 2490ms main h=android.os.Handler c=android.content.pm.RegisteredServicesCache$4@8287687 m=0
+06-22 19:13:28.713   972  1503 W .gms.persisten: Long monitor contention with owner Binder:972_3 (985) at android.database.sqlite.SQLiteConnection android.database.sqlite.SQLiteConnectionPool.waitForConnection(java.lang.String, int, android.os.CancellationSignal)(SQLiteConnectionPool.java:682) waiters=0 in void android.database.sqlite.SQLiteConnectionPool.releaseConnection(android.database.sqlite.SQLiteConnection) for 969ms
+06-22 19:13:28.763   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:28.763   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:28.764   972   972 W .gms.persisten: Long monitor contention with owner Thread-1175 (23796) at long android.database.sqlite.SQLiteConnection.nativeOpen(java.lang.String, int, java.lang.String, boolean, boolean, int, int)(SQLiteConnection.java:-2) waiters=0 in android.database.sqlite.SQLiteDatabase android.database.sqlite.SQLiteOpenHelper.getWritableDatabase() for 1.040s
+06-22 19:13:29.091  9183  9821 E WorkSourceUtil: Could not find package: com.mgoogle.android.gms
+06-22 19:13:29.150  9183  9338 I Icing   : doRemovePackageData com.mgoogle.android.gms
+06-22 19:13:29.197  9183  9821 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36
+06-22 19:13:29.333  9183  9338 I GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=12803
+06-22 19:13:29.514 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/base.apk' is compressed.
+06-22 19:13:29.571 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_arservicesoptional.apk' is compressed.
+06-22 19:13:29.585 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2.apk' is compressed.
+06-22 19:13:29.588 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2pytorchsharedmodule.apk' is compressed.
+06-22 19:13:29.600 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_cgnativeplayer.apk' is compressed.
+06-22 19:13:29.602   459   559 W system_server: Long monitor contention with owner NetworkStats (557) at void com.android.server.net.NetworkStatsService$4.onReceive(android.content.Context, android.content.Intent)(NetworkStatsService.java:1020) waiters=0 in void com.android.server.net.NetworkStatsService.setUidForeground(int, boolean) for 3.500s
+06-22 19:13:29.602 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_codegenerator.apk' is compressed.
+06-22 19:13:29.603   459   558 W system_server: Long monitor contention with owner NetworkPolicy.uid (559) at void com.android.server.net.NetworkPolicyManagerService.handleUidChanged(int, int, long)(NetworkPolicyManagerService.java:4439) waiters=0 in boolean com.android.server.net.NetworkPolicyManagerService.isUidNetworkingBlockedInternal(int, boolean) for 3.501s
+06-22 19:13:29.603   459   473 W system_server: Long monitor contention with owner NetworkPolicy.uid (559) at void com.android.server.net.NetworkPolicyManagerService.handleUidChanged(int, int, long)(NetworkPolicyManagerService.java:4439) waiters=1 in void com.android.server.net.NetworkPolicyManagerService$NetworkPolicyManagerInternalImpl.onTempPowerSaveWhitelistChange(int, boolean) for 1.234s
+06-22 19:13:29.604   459  5730 W system_server: Long monitor contention with owner NetworkPolicy.uid (559) at void com.android.server.net.NetworkPolicyManagerService.handleUidChanged(int, int, long)(NetworkPolicyManagerService.java:4439) waiters=3 in boolean com.android.server.net.NetworkPolicyManagerService.isUidNetworkingBlockedInternal(int, boolean) for 398ms
+06-22 19:13:29.604   459   459 W system_server: Long monitor contention with owner NetworkPolicy (558) at void com.android.server.job.controllers.ConnectivityController.updateTrackedJobs(int, android.net.Network)(ConnectivityController.java:244) waiters=0 in void com.android.server.job.JobSchedulerService$JobHandler.handleMessage(android.os.Message) for 905ms
+06-22 19:13:29.604   459   459 W Looper  : Slow dispatch took 906ms main h=com.android.server.job.JobSchedulerService$JobHandler c=null m=4
+06-22 19:13:29.605 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_groupsadmin.apk' is compressed.
+06-22 19:13:29.614 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_rtc.apk' is compressed.
+06-22 19:13:29.640 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_slam.apk' is compressed.
+06-22 19:13:29.646 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_streamingsdk.apk' is compressed.
+06-22 19:13:29.682 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.facebook.orca-0QGmCl4UvCHmjFDI253bmg==/base.apk' is compressed.
+06-22 19:13:29.703   459   561 D WifiConfigManager: Remove all networks for app ApplicationInfo{3f22c13 com.mgoogle.android.gms}
+06-22 19:13:29.730   459   459 W Looper  : Drained
+06-22 19:13:29.828   459   476 I ActivityManager: Start proc 23802:com.android.vending/u0a29 for broadcast com.android.vending/com.google.android.finsky.packagemanager.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+06-22 19:13:29.845  9183 23789 W DriveInitializer: Awaiting to be initialized
+06-22 19:13:29.871  9183  9721 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30
+06-22 19:13:29.932 23802 23802 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:29.970 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.instagram.android-edU1AIyAUotFhjDPL00Cfg==/base.apk' is compressed.
+06-22 19:13:30.057 23802 23802 E android.vendin: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:30.185 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.matteljv.uno-AUJ-IsdVxxfmjVbZyYYI2Q==/base.apk' is compressed.
+06-22 19:13:30.185   285   285 E lowmemorykiller: Error writing /proc/23702/oom_score_adj; errno=22
+06-22 19:13:30.218 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.maxmpz.audioplayer-LHOxwmcJXbBYjOEXVsJD4w==/base.apk' is compressed.
+06-22 19:13:30.261   459  3211 I ActivityManager: Process com.google.android.packageinstaller (pid 23702) has died: cch+2CEM 
+06-22 19:13:30.262   459   477 W libprocessgroup: kill(-23702, 9) failed: No such process
+06-22 19:13:30.262   246   246 I Zygote  : Process 23702 exited due to signal (9)
+06-22 19:13:30.262   459   477 I libprocessgroup: Successfully killed process cgroup uid 10023 pid 23702 in 0ms
+06-22 19:13:30.278   459   482 W ActivityManager: setHasOverlayUi called on unknown pid: 23702
+06-22 19:13:30.312 23415 23452 W earchbox:searc: resources.arsc in APK '/data/app/com.maxmpz.audioplayer.unlock-4GFZMt4dqZM23jQ3kWCXyA==/base.apk' is compressed.
+06-22 19:13:30.725   459  3211 I ActivityManager: Process com.google.android.apps.turbo (pid 23621) has died: cch+6CEM 
+06-22 19:13:30.725   459   477 W libprocessgroup: kill(-23621, 9) failed: No such process
+06-22 19:13:30.725   459   477 I libprocessgroup: Successfully killed process cgroup uid 10044 pid 23621 in 0ms
+06-22 19:13:30.725   246   246 I Zygote  : Process 23621 exited due to signal (9)
+06-22 19:13:30.763   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:30.763   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:30.849   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:30.849   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:30.849   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:30.849   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.849   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:30.957  4237  4237 I AppBase : AppBase.onTrimMemory():615 onTrimMemory(): 15
+06-22 19:13:30.992  4237  4237 I GoogleInputMethodService: GoogleInputMethodService.onTrimMemory():4225 onTrimMemory(): 15
+06-22 19:13:31.004 23802 23802 I Finsky  : [2] ebc.aX(5): Process created at version: 20.4.29-all [0] [PR] 314817885
+06-22 19:13:31.248 23415 23415 I WorkerManager: Unloading disused workers
+06-22 19:13:31.373 23745 23774 I oid.documentsu: Waiting for a blocking GC ProfileSaver
+06-22 19:13:31.472  9183 23799 I ContentMaintenance: Internal cache bytes used: 0; limit: 100000000; download size: 0
+06-22 19:13:31.508 23745 23774 I oid.documentsu: WaitForGcToComplete blocked ProfileSaver on AddRemoveAppImageSpace for 134.102ms
+06-22 19:13:31.564  9183 23799 I RealtimeCacheCleanup: Beginning Realtime garbage collection.
+06-22 19:13:31.747  9183  9338 I Icing   : Usage reports ok 2, Failed Usage reports 0, indexed 0, rejected 0
+06-22 19:13:31.895  9183  9338 I GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=12803
+06-22 19:13:31.899  9183 23799 I RealtimeCacheCleanup: Finished Realtime garbage collection.
+06-22 19:13:31.900  9183  9343 I PinnedContentDownloader: Finished downloading pinned content.
+06-22 19:13:31.936  9183  9338 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+06-22 19:13:32.088  9183  9338 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+06-22 19:13:32.179 23802 23828 I Finsky  : [14055] thj.a(28): Started reading experiment flags from file [0tGUNCGIkbk4o6-fQ335kUYSKwVj4lusnHT-A5Dsy08].
+06-22 19:13:32.221  9183  9338 I Icing   : Indexing done com.google.android.gms-apps
+06-22 19:13:32.244   459   755 E LightsService: Light requested not available on this device. 2
+06-22 19:13:32.245 23802 23828 I Finsky  : [14055] thj.a(43): Finished reading experiment flags from file [0tGUNCGIkbk4o6-fQ335kUYSKwVj4lusnHT-A5Dsy08].
+06-22 19:13:32.407 23802 23828 I Finsky  : [14055] thj.a(28): Started reading experiment flags from file [z5tb42xzJkKyIE-zV-amFKVeZXG_Q74kw1cpFZVL6OI].
+06-22 19:13:32.414   459   547 E LightsService: Light requested not available on this device. 2
+06-22 19:13:32.421 23802 23828 I Finsky  : [14055] thj.a(43): Finished reading experiment flags from file [z5tb42xzJkKyIE-zV-amFKVeZXG_Q74kw1cpFZVL6OI].
+06-22 19:13:32.619 23802 23802 I Finsky  : [2] thj.a(28): Started reading experiment flags from file [Se-xCc4LzNyh3UrKMIU2sUf-PUKz4oQEbpKZDMuaFno].
+06-22 19:13:32.631 23802 23802 I Finsky  : [2] thj.a(43): Finished reading experiment flags from file [Se-xCc4LzNyh3UrKMIU2sUf-PUKz4oQEbpKZDMuaFno].
+06-22 19:13:32.675   640   640 V StatusBar: mStatusBarWindow: com.android.systemui.statusbar.phone.StatusBarWindowView{61e86e9 V.ED..... ........ 0,0-800,32} canPanelBeCollapsed(): false
+06-22 19:13:32.762   459  3492 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher (has extras)} from uid 10093
+06-22 19:13:32.766   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:32.766   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:32.825  1166  1166 D Launcher.Utilities: onLauncherStart: 0
+06-22 19:13:32.830 23415 23483 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:32.872   286   988 D SurfaceFlinger: duplicate layer name: changing ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher to ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher#1
+06-22 19:13:32.883  1154  1154 W System.err: java.lang.NullPointerException: Attempt to invoke interface method 'java.lang.String java.lang.CharSequence.toString()' on a null object reference
+06-22 19:13:32.884  1166  1353 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:32.887  1154  1154 W System.err: 	at a.fn.onAccessibilityEvent(Unknown Source:7)
+06-22 19:13:32.887  1154  1154 W System.err: 	at android.accessibilityservice.AccessibilityService$2.onAccessibilityEvent(AccessibilityService.java:1538)
+06-22 19:13:32.887  1154  1154 W System.err: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.executeMessage(AccessibilityService.java:1724)
+06-22 19:13:32.887  1154  1154 W System.err: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:37)
+06-22 19:13:32.888  1154  1154 W System.err: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+06-22 19:13:32.888  1154  1154 W System.err: 	at android.os.Looper.loop(Looper.java:193)
+06-22 19:13:32.888  1154  1154 W System.err: 	at android.app.ActivityThread.main(ActivityThread.java:6718)
+06-22 19:13:32.888  1154  1154 W System.err: 	at java.lang.reflect.Method.invoke(Native Method)
+06-22 19:13:32.888  1154  1154 W System.err: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:491)
+06-22 19:13:32.888  1154  1154 W System.err: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+06-22 19:13:33.096   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:33.099   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:33.176   246   246 I Zygote  : Process 23733 exited due to signal (9)
+06-22 19:13:33.189   459  3492 I ActivityManager: Process com.android.defcontainer (pid 23733) has died: cch+4CEM 
+06-22 19:13:33.191   459   477 W libprocessgroup: kill(-23733, 9) failed: No such process
+06-22 19:13:33.192   459   477 I libprocessgroup: Successfully killed process cgroup uid 10024 pid 23733 in 0ms
+06-22 19:13:33.249  1166  1353 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:33.253  1166  1190 I .lawnchair.pla: NativeAlloc concurrent copying GC freed 12844(526KB) AllocSpace objects, 0(0B) LOS objects, 62% free, 7MB/19MB, paused 22.837ms total 561.753ms
+06-22 19:13:33.307  1166  1353 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:33.316  1166  1188 W System  : A resource failed to call release. 
+06-22 19:13:33.317  1166  1188 I chatty  : uid=10093(ch.deletescape.lawnchair.plah) FinalizerDaemon identical 4 lines
+06-22 19:13:33.317  1166  1188 W System  : A resource failed to call release. 
+06-22 19:13:33.321  1166  1353 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:33.329   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672980 coming from the same process: 286.
+06-22 19:13:33.329   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672bc0 coming from the same process: 286.
+06-22 19:13:33.341   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672c80 coming from the same process: 286.
+06-22 19:13:33.342   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:33.355   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672d40 coming from the same process: 286.
+06-22 19:13:33.407 23802 23802 I Finsky  : [2] wbh.<init>(20): Resetting scheduler db
+06-22 19:13:33.412   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:33.413   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:33.413   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:33.413   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.413   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:33.459 23626 23626 W .vanced.manage: Verification of void androidx.customview.view.AbsSavedState.<clinit>() took 113.330ms
+06-22 19:13:33.723   640   657 I ndroid.systemu: NativeAlloc concurrent copying GC freed 1348(160KB) AllocSpace objects, 0(0B) LOS objects, 68% free, 5MB/17MB, paused 38.849ms total 548.241ms
+06-22 19:13:33.778 23415 23457 W ThreadPoolDumper: Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
+06-22 19:13:33.799 23802 23826 I Finsky  : [14053] ebc.O(6): Not a unicorn account
+06-22 19:13:33.895   459  2088 I OpenGLRenderer: Initialized EGL, version 1.4
+06-22 19:13:33.895   459  2088 D OpenGLRenderer: Swap behavior 0
+06-22 19:13:33.934 23802 23826 I Finsky  : [14053] ssb.<init>(5): PackageMonitor - Registering in memory receiver for android.intent.action.PACKAGE_ADDED and android.intent.action.PACKAGE_REMOVED
+06-22 19:13:34.061 23802 23826 I Finsky  : [14053] aama.a(2): Disable SystemUpdateActivity, because Android is lower than Q
+06-22 19:13:34.063 23802 23843 I Finsky  : [14067] aalz.run(4): Set SystemUpdateActivity enabled state to 2
+06-22 19:13:34.181   459  3492 D ConnectivityService: requestNetwork for uid/pid:10029/23802 NetworkRequest [ TRACK_DEFAULT id=2195, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ]
+06-22 19:13:34.181   459   561 D WIFI    : got request NetworkRequest [ TRACK_DEFAULT id=2195, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ] with score 60
+06-22 19:13:34.181   459   596 D Ethernet: got request NetworkRequest [ TRACK_DEFAULT id=2195, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ] with score 60
+06-22 19:13:34.181   459   561 D WIFI_UT : got request NetworkRequest [ TRACK_DEFAULT id=2195, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ] with score 60
+06-22 19:13:34.194  1166  1353 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:34.198   760   760 D PhoneSwitcherNetworkRequstListener: got request NetworkRequest [ TRACK_DEFAULT id=2195, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ] with score 60
+06-22 19:13:34.448   459  2088 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:34.474 23802 23827 I cr_CronetLibraryLoader: Cronet version: 84.0.4147.12, arch: armv8l
+06-22 19:13:34.647   459  3211 W system_server: Long monitor contention with owner main (459) at void com.android.server.notification.RankingHelper.writeXml(org.xmlpull.v1.XmlSerializer, boolean)(RankingHelper.java:398) waiters=0 in com.android.server.notification.RankingHelper$Record com.android.server.notification.RankingHelper.getRecord(java.lang.String, int) for 545ms
+06-22 19:13:34.768   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:34.768   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:34.804   459  3492 I ActivityManager: Process com.android.keychain (pid 23740) has died: cch+2CEM 
+06-22 19:13:34.805   459   477 W libprocessgroup: kill(-23740, 9) failed: No such process
+06-22 19:13:34.805   459   477 I libprocessgroup: Successfully killed process cgroup uid 1000 pid 23740 in 0ms
+06-22 19:13:34.805   246   246 I Zygote  : Process 23740 exited due to signal (9)
+06-22 19:13:34.865   459   459 W Looper  : Slow dispatch took 800ms main h=com.android.server.notification.NotificationManagerService$WorkerHandler c=null m=3
+06-22 19:13:34.865   459   459 W Looper  : Slow delivery took 800ms main h=com.android.server.notification.NotificationManagerService$WorkerHandler c=com.android.server.notification.NotificationManagerService$16@750733f m=0
+06-22 19:13:34.888 23415 23415 I BgTaskExecutorImpl: Starting EXCLUSIVE background task TNG_MINUS_ONE_SYNC.
+06-22 19:13:34.907   459  3492 I ActivityManager: Process com.android.documentsui (pid 23745) has died: cch  CEM 
+06-22 19:13:34.907   459   477 W libprocessgroup: kill(-23745, 9) failed: No such process
+06-22 19:13:34.907   459   477 I libprocessgroup: Successfully killed process cgroup uid 10014 pid 23745 in 0ms
+06-22 19:13:34.908   246   246 I Zygote  : Process 23745 exited due to signal (9)
+06-22 19:13:34.912 23802 23826 W Settings: Setting download_manager_max_bytes_over_mobile has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
+06-22 19:13:34.948 23802 23826 I Finsky  : [14053] rpq.a(4): SettingNotFoundException, fall through to G.downloadBytesOverMobileMaximum
+06-22 19:13:34.948 23802 23826 W Settings: Setting download_manager_recommended_max_bytes_over_mobile has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
+06-22 19:13:34.949 23802 23826 I Finsky  : [14053] rpq.a(9): SettingNotFoundException, fall through to G.downloadBytesOverMobileRecommended
+06-22 19:13:35.038   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2671600 coming from the same process: 286.
+06-22 19:13:35.040   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:35.090  1087  1436 W NamedFutures: Timeout future task has been cancelled: 9000 milliseconds
+06-22 19:13:35.146 12164 12202 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:35.180   459   459 W Looper  : Slow dispatch took 304ms main h=com.android.server.notification.NotificationManagerService$WorkerHandler c=null m=3
+06-22 19:13:35.183   459   459 W Looper  : Drained
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: Task 174 failed or timed out. Client 4782269289487433 disconnecting from SearchService!
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: java.util.concurrent.CancellationException: Task was cancelled.
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.google.common.v.a.d.a(SourceFile:124)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.google.common.v.a.d.get(SourceFile:74)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.google.common.v.a.dq.a(SourceFile:1)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.google.common.v.a.bu.a(SourceFile:6)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.google.common.v.a.bq.run(SourceFile:4)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.google.android.apps.gsa.shared.util.c.a.as.run(SourceFile:1)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at android.os.Handler.handleCallback(Handler.java:873)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at android.os.Looper.loop(Looper.java:193)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at android.app.ActivityThread.main(ActivityThread.java:6718)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at java.lang.reflect.Method.invoke(Native Method)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:491)
+06-22 19:13:35.193  1087  1087 E SearchServiceStarter: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+06-22 19:13:35.256   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672b00 coming from the same process: 286.
+06-22 19:13:35.257   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:35.277 23415 23457 I TngMinusOneSync: Syncing TNG:-1
+06-22 19:13:35.324   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672e00 coming from the same process: 286.
+06-22 19:13:35.325   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1280  img[800 1280] 
+06-22 19:13:35.434  4237  4237 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():128 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+06-22 19:13:35.438   286   988 W SurfaceFlinger: Attempting to set client state on removed layer: SnapshotStartingWindow for taskId=2922#0
+06-22 19:13:35.438   286   988 W SurfaceFlinger: Attempting to destroy on removed layer: SnapshotStartingWindow for taskId=2922#0
+06-22 19:13:35.445  1154  1154 W System.err: java.lang.NullPointerException: Attempt to invoke interface method 'java.lang.String java.lang.CharSequence.toString()' on a null object reference
+06-22 19:13:35.464  4237  4237 I AndroidIME: AbstractIme.onActivate():84 PasswordIme.onActivate() : EditorInfo = Package = com.termux : Type = Text : Learning = Disable : Suggestion = Show : AutoCorrection = Disable : Microphone = Show : NoPersonalizedLearning = Disable : AutoStartVoiceInput = Disable, IncognitoMode = false
+06-22 19:13:35.502  1154  1154 W System.err: 	at a.fn.onAccessibilityEvent(Unknown Source:7)
+06-22 19:13:35.502  1154  1154 W System.err: 	at android.accessibilityservice.AccessibilityService$2.onAccessibilityEvent(AccessibilityService.java:1538)
+06-22 19:13:35.502  1154  1154 W System.err: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.executeMessage(AccessibilityService.java:1724)
+06-22 19:13:35.502  1154  1154 W System.err: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:37)
+06-22 19:13:35.502  1154  1154 W System.err: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+06-22 19:13:35.502  1154  1154 W System.err: 	at android.os.Looper.loop(Looper.java:193)
+06-22 19:13:35.502  1154  1154 W System.err: 	at android.app.ActivityThread.main(ActivityThread.java:6718)
+06-22 19:13:35.502  1154  1154 W System.err: 	at java.lang.reflect.Method.invoke(Native Method)
+06-22 19:13:35.502  1154  1154 W System.err: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:491)
+06-22 19:13:35.502  1154  1154 W System.err: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+06-22 19:13:35.677 23415 23605 I PBSessionCacheImpl: Deleted sessionId[102981851896280885] from persistence.
+06-22 19:13:35.679 23802 23817 I android.vendin: Waiting for a blocking GC ProfileSaver
+06-22 19:13:35.806  4237  4237 I KeyboardViewHelper: KeyboardViewHelper.getView():164 Get view with height ratio:1.000000; experiment height ratio:1.000000.
+06-22 19:13:35.895 23415 23457 W SearchServiceCore: Abort, client detached.
+06-22 19:13:35.970   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:35.970   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:35.970   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:35.970   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:35.970   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:36.026 23802 23867 W android.vendin: Accessing hidden field Ljava/util/Collections$SynchronizedCollection;->mutex:Ljava/lang/Object; (dark greylist, reflection)
+06-22 19:13:36.028 23802 23867 W android.vendin: Accessing hidden method Ljava/util/Collections$SynchronizedSet;-><init>(Ljava/util/Set;Ljava/lang/Object;)V (dark greylist, reflection)
+06-22 19:13:36.028 23802 23867 W android.vendin: Accessing hidden method Ljava/util/Collections$SynchronizedCollection;-><init>(Ljava/util/Collection;Ljava/lang/Object;)V (dark greylist, reflection)
+06-22 19:13:36.101 23802 23837 I Finsky  : [14062] vzz.a(5): Resetting scheduler db stage 2
+06-22 19:13:36.102   459   459 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@bd6bd82
+06-22 19:13:36.131 23802 23820 I Finsky  : [14052] qgx.c(5): Enqueuing libraries load for -416008541
+06-22 19:13:36.174 23802 23826 I Finsky  : [14053] hgv.h(7): Subscription detail: N/A
+06-22 19:13:36.196 23802 23827 I Finsky  : [14054] addj.m(3): Setup app restrictions monitor
+06-22 19:13:36.205 23802 23849 I Finsky  : [14069] qgx.a(25): Starting libraries load for -416008541
+06-22 19:13:36.247 23802 23817 I android.vendin: WaitForGcToComplete blocked ProfileSaver on AddRemoveAppImageSpace for 567.336ms
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: KeyboardViewController.show():438 Requesting to show sub view with id 2131428318(key_pos_password_header_numbers) which doesn't exist in current keyboard view
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: kby
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at kop.a(PG:195)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at bty.a(PG:4)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.latin.keyboard.LatinPasswordKeyboard.a(PG:19)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at kiv.a(PG:15)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at kij.a(PG:31)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at kij.H(PG:26)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at kin.d(PG:10)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at kin.b(PG:108)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at com.android.inputmethod.latin.LatinIME.b(PG:339)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at dws.onStartInputView(PG:786)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at android.inputmethodservice.InputMethodService.showWindowInner(InputMethodService.java:1863)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at android.inputmethodservice.InputMethodService.showWindow(InputMethodService.java:1814)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.showSoftInput(InputMethodService.java:575)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:207)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:37)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at android.os.Looper.loop(Looper.java:193)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at android.app.ActivityThread.main(ActivityThread.java:6718)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at java.lang.reflect.Method.invoke(Native Method)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:491)
+06-22 19:13:36.367  4237  4237 E KeyboardViewController: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+06-22 19:13:36.367  4237  4237 W KeyboardModeManager: KeyboardModeManager.setInputView():302 setInputView() : inputView = com.google.android.apps.inputmethod.libs.framework.core.InputView{df473f3 V.E...... ......ID 0,0-800,1184}
+06-22 19:13:36.379  4237  4237 I ConversationToQueryExtension: ConversationToQueryExtension.isEnabledForHostApp():252 Conv2Query not enabled due to current app [com.termux] not in whitelist
+06-22 19:13:36.379  4237  4237 I ConversationToQueryExtension: ConversationToQueryExtension.onActivate():162 onActivate() : Disabled by unsupported host app
+06-22 19:13:36.383  4237  4237 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():336 No private IME option set to start voice input.
+06-22 19:13:36.409  4237  4237 I Choreographer: Skipped 65 frames!  The application may be doing too much work on its main thread.
+06-22 19:13:36.414   640   890 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 37 37  img[37 37] 
+06-22 19:13:36.425  4237 23487 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000
+06-22 19:13:36.427   640   890 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 37 37  img[37 37] 
+06-22 19:13:36.429   640   890 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 37 37  img[37 37] 
+06-22 19:13:36.515 23802 23849 I Finsky  : [14069] qgx.a(43): Loaded library for account: [thWxIG6pnW53R6hj3kR9WC0yhl-MkC4Vl4BKmLKtJ08]
+06-22 19:13:36.520   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2671f00 coming from the same process: 286.
+06-22 19:13:36.522   286   286 D MALI    : eglCreateImageKHR:513: [Crop] 0 0 800 1248  img[800 1248] 
+06-22 19:13:36.531 23802 23849 I Finsky  : [14069] qgx.a(47): Finished loading 1 libraries.
+06-22 19:13:36.554   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672440 coming from the same process: 286.
+06-22 19:13:36.770   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:36.770   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:36.795 23802 23827 I Finsky  : [14054] adfg.a(3): Device wide unknown source restriction is changed.
+06-22 19:13:36.974 23802 23802 I Finsky  : [2] qyi.onTrimMemory(1): Memory trim requested to level 10
+06-22 19:13:37.024 23802 23802 I Finsky  : [2] ssb.a(19): PackageMonitor - Received: android.intent.action.PACKAGE_FULLY_REMOVED, [KWWiCV7z_88zAMqrl4XP-mdE_SSFh184v-5ugOJo2aY]
+06-22 19:13:37.025 23802 23802 I Finsky  : [2] ste.d(9): Invalidating cached PackageState for com.mgoogle.android.gms
+06-22 19:13:37.176 23802 23802 I Finsky  : [2] aeqy.a(4): Do not start WearSupportService due to Wear service optimization
+06-22 19:13:37.180 23802 23802 I Finsky  : [2] aeqy.a(4): Do not start WearSupportService due to Wear service optimization
+06-22 19:13:37.181 23802 23837 E Finsky  : [14062] the.a(9): Unexpected experiment flag type found for flag ContentSync__settle_delay
+06-22 19:13:37.181 23802 23837 E Finsky  : com.google.android.flib.log.WhatATerribleException: java.lang.ClassCastException: Cannot cast [B to atie
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at afdp.b(PG:3)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at com.google.android.finsky.utils.FinskyLog.b(PG:5)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at the.a(PG:9)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at the.j(PG:2)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at hah.a(Unknown Source:6)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arsr.a(PG:2)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arst.run(PG:9)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at aruw.run(Unknown Source:7)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at kqv.execute(PG:1)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arux.execute(PG:1)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arsp.b(PG:20)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arsp.a(PG:16)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arsp.b(PG:27)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arss.a(PG:3)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arst.run(PG:12)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at aruw.run(Unknown Source:7)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at kqv.execute(PG:1)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arux.execute(PG:1)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arsp.b(PG:20)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arsp.a(PG:16)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arsp.b(PG:27)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arvn.a(PG:2)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at aruq.run(PG:11)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at arvo.run(Unknown Source:4)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at kqs.run(Unknown Source:14)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at java.lang.Thread.run(Thread.java:764)
+06-22 19:13:37.181 23802 23837 E Finsky  : Caused by: java.lang.ClassCastException: Cannot cast [B to atie
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at java.lang.Class.cast(Class.java:2441)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	at the.a(PG:8)
+06-22 19:13:37.181 23802 23837 E Finsky  : 	... 25 more
+06-22 19:13:37.218 23802 23802 I Finsky  : [2] xps.a(1): Clearing split related stale data.
+06-22 19:13:37.351 23802 23802 I Finsky  : [2] ste.j(3): Package no longer installed: com.mgoogle.android.gms
+06-22 19:13:37.496 23802 23802 I Finsky  : [2] nrp.<init>(13): Installer: Setting Parallelism[DEFAULT]
+06-22 19:13:37.497 23802 23802 I Finsky  : [2] nnj.b(5): Installer: package com.mgoogle.android.gms was removed. replacing: false
+06-22 19:13:37.501 23802 23802 I Finsky  : [2] nnj.a(217): Installer: Notifying status update. package=com.mgoogle.android.gms, status=UNINSTALLED
+06-22 19:13:37.502 23802 23802 I Finsky  : [2] nnj.a(247): Installer kick - no action, not running yet
+06-22 19:13:37.705 23886 23886 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:37.780   459   476 I ActivityManager: Start proc 23886:com.google.android.apps.wellbeing/u0a38 for broadcast com.google.android.apps.wellbeing/.appconfig.sync.impl.AppSyncPackageRemovedBroadcastReceiver_Receiver
+06-22 19:13:37.784 23886 23886 E .apps.wellbein: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:37.836   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe2672500 coming from the same process: 286.
+06-22 19:13:37.869   286   286 W [MALI][Gralloc-Warning]: int gralloc_register_buffer(const gralloc_module_t *, buffer_handle_t):99 Registering handle 0xe26725c0 coming from the same process: 286.
+06-22 19:13:37.915   459 23877 W DropBoxManagerService: Dropping: system_app_wtf (1488 > 0 bytes)
+06-22 19:13:37.995   459  3211 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ LISTEN id=2196, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ], android.os.BinderProxy@ec78170)
+06-22 19:13:37.995   459  3673 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ TRACK_DEFAULT id=2195, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ], android.os.BinderProxy@1026ce9)
+06-22 19:13:37.995   459  3492 I ActivityManager: Process com.android.vending (pid 23802) has died: cch+2CEM 
+06-22 19:13:37.995   459   566 D ConnectivityService: releasing NetworkRequest [ TRACK_DEFAULT id=2195, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10029] ] (release request)
+06-22 19:13:38.000   459   477 W libprocessgroup: kill(-23802, 9) failed: No such process
+06-22 19:13:38.000   246   246 I Zygote  : Process 23802 exited due to signal (9)
+06-22 19:13:38.044   459   477 W libprocessgroup: kill(-23802, 9) failed: No such process
+06-22 19:13:38.044   459   477 I libprocessgroup: Successfully killed process cgroup uid 10029 pid 23802 in 47ms
+06-22 19:13:38.242 23886 23886 I MultiDex: VM with version 2.1.0 has multidex support
+06-22 19:13:38.246 23886 23886 I MultiDex: install
+06-22 19:13:38.246 23886 23886 I MultiDex: VM has multidex support, MultiDex support library is disabled.
+06-22 19:13:38.524 23886 23886 I kfn     : SslGuard completed installation.
+06-22 19:13:38.545   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:38.545   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:38.545   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:38.546   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.546   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:38.565 23886 23909 W .apps.wellbein: Accessing hidden field Ljava/util/Collections$SynchronizedCollection;->mutex:Ljava/lang/Object; (dark greylist, reflection)
+06-22 19:13:38.565 23886 23909 W .apps.wellbein: Accessing hidden method Ljava/util/Collections$SynchronizedSet;-><init>(Ljava/util/Set;Ljava/lang/Object;)V (dark greylist, reflection)
+06-22 19:13:38.566 23886 23909 W .apps.wellbein: Accessing hidden method Ljava/util/Collections$SynchronizedCollection;-><init>(Ljava/util/Collection;Ljava/lang/Object;)V (dark greylist, reflection)
+06-22 19:13:38.612  4237  4590 W LatinCountersMetricsProcessor: LatinCountersMetricsProcessor$DelightProblemReporter.run():1362 Missing LM for 'en'
+06-22 19:13:38.773   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:38.773   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:39.302  4237  4237 I KeyboardViewHelper: KeyboardViewHelper.getView():164 Get view with height ratio:1.000000; experiment height ratio:1.000000.
+06-22 19:13:39.348  4237  4237 I KeyboardViewHelper: KeyboardViewHelper.getView():164 Get view with height ratio:1.000000; experiment height ratio:1.000000.
+06-22 19:13:39.505   459   477 W libprocessgroup: kill(-23598, 9) failed: No such process
+06-22 19:13:39.505   246   246 I Zygote  : Process 23598 exited due to signal (9)
+06-22 19:13:39.516   459  6397 I ActivityManager: Process com.google.process.gapps (pid 23598) has died: cch  CEM 
+06-22 19:13:39.544   459   477 W libprocessgroup: kill(-23598, 9) failed: No such process
+06-22 19:13:39.544   459   477 I libprocessgroup: Successfully killed process cgroup uid 10021 pid 23598 in 39ms
+06-22 19:13:39.851 23886 23913 W .apps.wellbein: resources.arsc in APK '/data/app/com.maxmpz.audioplayer.unlock-4GFZMt4dqZM23jQ3kWCXyA==/base.apk' is compressed.
+06-22 19:13:40.018   459   476 I ActivityManager: Start proc 23921:com.android.chrome/u0a97 for broadcast com.android.chrome/org.chromium.chrome.browser.browserservices.ClientAppBroadcastReceiver
+06-22 19:13:40.127 23921 23921 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:40.230 23921 23921 E .android.chrom: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: KeyboardViewController.show():438 Requesting to show sub view with id 2131428318(key_pos_password_header_numbers) which doesn't exist in current keyboard view
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: kby
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kop.a(PG:195)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at bty.a(PG:4)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.latin.keyboard.LatinPasswordKeyboard.a(PG:19)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kiv.a(PG:15)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kiv.a(PG:38)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kiu.a(PG:41)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kiv.a(PG:50)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kiv.a(PG:69)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kij.a(PG:280)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kij.a(PG:279)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kij.c(PG:158)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at dws.a(PG:287)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at kij.a(PG:72)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at edc.a(PG:8)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.keyboard.handler.BasicMotionEventHandler.a(PG:16)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at een.a(PG:54)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at eeu.a(PG:60)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at eeu.a(PG:122)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at eeu.a(PG:23)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at een.a(PG:75)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.keyboard.handler.BasicMotionEventHandler.e(PG:162)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.keyboard.handler.BasicMotionEventHandler.a(PG:95)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at edd.a(PG:54)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.google.android.libraries.inputmethod.widgets.SoftKeyboardView.b(PG:46)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.google.android.libraries.inputmethod.widgets.SoftKeyboardView.dispatchTouchEvent(PG:31)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.google.android.apps.inputmethod.libs.framework.core.KeyboardViewHolder.dispatchTouchEvent(PG:20)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3030)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2662)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.android.internal.policy.DecorView.superDispatchTouchEvent(DecorView.java:440)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.android.internal.policy.PhoneWindow.superDispatchTouchEvent(PhoneWindow.java:1830)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.app.Dialog.dispatchTouchEvent(Dialog.java:847)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.inputmethodservice.SoftInputWindow.dispatchTouchEvent(SoftInputWindow.java:93)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.android.internal.policy.DecorView.dispatchTouchEvent(DecorView.java:398)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.View.dispatchPointerEvent(View.java:12752)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:5113)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:4916)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4433)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4486)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4452)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:4592)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4460)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:4649)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4433)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4486)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4452)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4460)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4433)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:7099)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:7068)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:7029)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:7202)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:186)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.os.MessageQueue.nativePollOnce(Native Method)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.os.MessageQueue.next(MessageQueue.java:326)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.os.Looper.loop(Looper.java:160)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at android.app.ActivityThread.main(ActivityThread.java:6718)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at java.lang.reflect.Method.invoke(Native Method)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:491)
+06-22 19:13:40.648  4237  4237 E KeyboardViewController: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+06-22 19:13:40.681 23921 23921 W .android.chrom: JIT profile information will not be recorded: profile file does not exits.
+06-22 19:13:40.773   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:40.774   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:41.105   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:41.105   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:41.105   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:41.107   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.107   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:41.347   285   285 E lowmemorykiller: Error writing /proc/23886/oom_score_adj; errno=22
+06-22 19:13:41.384   459   476 I ActivityManager: Start proc 23945:com.facebook.katana/u0a94 for broadcast com.facebook.katana/com.facebook.games.packagecontroller.PackageChangeReceiver
+06-22 19:13:41.389 23945 23945 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:41.395   459  3673 I ActivityManager: Process com.google.android.apps.wellbeing (pid 23886) has died: cch+2CEM 
+06-22 19:13:41.396   246   246 I Zygote  : Process 23886 exited due to signal (9)
+06-22 19:13:41.396   459   477 W libprocessgroup: kill(-23886, 9) failed: No such process
+06-22 19:13:41.396   459   477 W libprocessgroup: kill(23886, 9) failed: No such process
+06-22 19:13:41.399 23945 23945 E facebook.katan: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:41.434   459   477 W libprocessgroup: kill(-23886, 9) failed: No such process
+06-22 19:13:41.434   459   477 I libprocessgroup: Successfully killed process cgroup uid 10038 pid 23886 in 39ms
+06-22 19:13:41.780 23945 23945 E LoadedApk: Unable to instantiate appComponentFactory
+06-22 19:13:41.780 23945 23945 E LoadedApk: java.lang.ClassNotFoundException: Didn't find class "androidx.core.app.CoreComponentFactory" on path: DexPathList[[zip file "/system/framework/org.apache.http.legacy.boot.jar", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/base.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_arservicesoptional.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2pytorchsharedmodule.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_cgnativeplayer.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_codegenerator.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_groupsadmin.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_rtc.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_slam.apk", zip file "/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_streamingsdk.apk"],nativeLibraryDirectories=[/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/lib/arm, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/base.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_arservicesoptional.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2pytorchsharedmodule.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_cgnativeplayer.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_codegenerator.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_groupsadmin.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_rtc.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_slam.apk!/lib/armeabi-v7a, /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_streamingsdk.apk!/lib/armeabi-v7a, /system/lib, /vendor/lib]]
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:134)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.LoadedApk.createAppFactory(LoadedApk.java:226)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.LoadedApk.createOrUpdateClassLoaderLocked(LoadedApk.java:731)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.LoadedApk.getClassLoader(LoadedApk.java:810)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.LoadedApk.getResources(LoadedApk.java:1032)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2345)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:5798)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.ActivityThread.access$1100(ActivityThread.java:200)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1656)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.os.Looper.loop(Looper.java:193)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at android.app.ActivityThread.main(ActivityThread.java:6718)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at java.lang.reflect.Method.invoke(Native Method)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:491)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 	Suppressed: java.io.IOException: No original dex files found for dex location /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_arservicesoptional.apk
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.DexFile.openDexFileNative(Native Method)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.DexFile.openDexFile(DexFile.java:354)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.DexFile.<init>(DexFile.java:101)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.DexFile.<init>(DexFile.java:75)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.DexPathList.loadDexFile(DexPathList.java:394)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.DexPathList.makeDexElements(DexPathList.java:354)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.DexPathList.<init>(DexPathList.java:164)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.BaseDexClassLoader.<init>(BaseDexClassLoader.java:74)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.BaseDexClassLoader.<init>(BaseDexClassLoader.java:65)
+06-22 19:13:41.780 23945 23945 E LoadedApk: 		at dalvik.system.PathClassLoader.<init>(PathClassLoader.java
+06-22 19:13:41.786 23945 23945 W facebook.katan: JIT profile information will not be recorded: profile file does not exits.
+06-22 19:13:41.786 23945 23945 I chatty  : uid=10094(com.facebook.katana) identical 7 lines
+06-22 19:13:41.787 23945 23945 W facebook.katan: JIT profile information will not be recorded: profile file does not exits.
+06-22 19:13:41.821 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/base.apk' is compressed.
+06-22 19:13:41.852 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_arservicesoptional.apk' is compressed.
+06-22 19:13:41.853 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2.apk' is compressed.
+06-22 19:13:41.853 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_caffe2pytorchsharedmodule.apk' is compressed.
+06-22 19:13:41.853 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_cgnativeplayer.apk' is compressed.
+06-22 19:13:41.853 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_codegenerator.apk' is compressed.
+06-22 19:13:41.854 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_groupsadmin.apk' is compressed.
+06-22 19:13:41.854 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_rtc.apk' is compressed.
+06-22 19:13:41.854 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_slam.apk' is compressed.
+06-22 19:13:41.854 23945 23945 W facebook.katan: resources.arsc in APK '/data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/split_streamingsdk.apk' is compressed.
+06-22 19:13:41.950 23945 23945 W CrashLoopRemedyLog: unable to delete remedy log, instaCrash: false
+06-22 19:13:41.951 23945 23945 W CrashLoopRemedyLog: unable to delete remedy log, instaCrash: true
+06-22 19:13:41.960 23945 23945 W AppReliabilityOps: Errorreporting: Legacy
+06-22 19:13:41.980 23945 23945 I facebook.katana: type=1400 audit(0.0:9108): avc: denied { open } for path="/proc/zoneinfo" dev="proc" ino=4026532214 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1
+06-22 19:13:41.980 23945 23945 I facebook.katana: type=1400 audit(0.0:9109): avc: denied { getattr } for path="/proc/zoneinfo" dev="proc" ino=4026532214 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1
+06-22 19:13:42.060 23962 23962 I AppStateLoggerT: type=1400 audit(0.0:9110): avc: denied { read } for name="osrelease" dev="proc" ino=3085055 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+06-22 19:13:42.060 23962 23962 I AppStateLoggerT: type=1400 audit(0.0:9111): avc: denied { open } for path="/proc/sys/kernel/osrelease" dev="proc" ino=3085055 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+06-22 19:13:42.099 23945 23945 E ACRA    : Initializing ANR detector for process: com.facebook.katana
+06-22 19:13:42.108 23945 23945 W MultiSignalANRDetectorAcra: Starting
+06-22 19:13:42.109 23945 23945 W ProcessAnrErrorMonitor: startMonitoring with delay: 4000
+06-22 19:13:42.127 23945 23945 W SoLoader: context.getApplicationContext returned null, holding reference to original context.
+06-22 19:13:42.391 23945 23945 W dalvik-internals: sigaction succeeded
+06-22 19:13:42.403 23945 23945 I facebook.katan: Waiting for a blocking GC Debugger
+06-22 19:13:42.481 23945 23945 I facebook.katan: WaitForGcToComplete blocked Debugger on AddRemoveAppImageSpace for 78.312ms
+06-22 19:13:42.485 23945 23945 W dalvik-internals: ignoring failure to find _ZN3art12FaultManager35EnsureArtActionInFrontOfSignalChainEv: could not hook _ZN3art12FaultManager35EnsureArtActionInFrontOfSignalChainEv
+06-22 19:13:42.486 23945 23945 V dalvik-internals: hooked signal using trap ()
+06-22 19:13:42.486 23945 23945 V dalvik-internals: hooked sysv_signal using trap ()
+06-22 19:13:42.486 23945 23945 V dalvik-internals: hooked bsd_signal using trap ()
+06-22 19:13:42.486 23945 23945 V dalvik-internals: hooked sigaction using trap ()
+06-22 19:13:42.486 23945 23945 D CACHE_HINTS: Entering madvise file
+06-22 19:13:42.488 23945 23945 D CACHE_HINTS: MADVISE_RAND file 0xe3594000 520191 /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/base.apk
+06-22 19:13:42.488 23945 23945 D CACHE_HINTS: MADVISE_RAND file 0xe3613000 360447 /data/app/com.facebook.katana-Lh4eDaxuWhBcJtrigpsBLw==/base.apk
+06-22 19:13:42.495 23945 23953 W System  : A resource failed to call close. 
+06-22 19:13:42.500 23945 23945 I facebook.katana: type=1400 audit(0.0:9112): avc: denied { open } for path="/proc/vmstat" dev="proc" ino=4026532213 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1
+06-22 19:13:42.569 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.arservicesoptional
+06-22 19:13:42.573 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.codegenerator
+06-22 19:13:42.577 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.rtc
+06-22 19:13:42.581 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.cgnativeplayer
+06-22 19:13:42.584 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.groupsadmin
+06-22 19:13:42.587 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.slam
+06-22 19:13:42.590 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.caffe2pytorchsharedmodule
+06-22 19:13:42.597 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.caffe2
+06-22 19:13:42.598 23945 23945 I LoadedApk: No resource references to update in package com.facebook.katana.streamingsdk
+06-22 19:13:42.776   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:42.776   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:42.929 23945 23970 I dalvik-internals: installed sigmux crash handler for crash log
+06-22 19:13:42.934 23945 23970 V appstatelogger: Registered App State Logger stream with Breakpad
+06-22 19:13:42.995   459   477 W libprocessgroup: kill(-23921, 9) failed: No such process
+06-22 19:13:42.995   459   477 I libprocessgroup: Successfully killed process cgroup uid 10097 pid 23921 in 0ms
+06-22 19:13:42.995   246   246 I Zygote  : Process 23921 exited due to signal (9)
+06-22 19:13:43.014   459  3673 I ActivityManager: Process com.android.chrome (pid 23921) has died: cch  CEM 
+06-22 19:13:43.062 23945 23970 D appstatelogger: Tracking self-SIGKILLs for all of FADv2 rather than just FADv1
+06-22 19:13:43.114 23945 23970 W Ditto   : Ditto initialized, state = DittoState{build id=221372288;in QE=false;enable ditto=false;patch name=;override=none;crash mitigation detected=false}; identifier = null
+06-22 19:13:43.121 23945 23979 I nightwatch-lib: watcher succeeded mmap /data/data/com.facebook.katana/app_watcher/com.facebook.katana_ebeee156-8c4b-4abf-3b48-1bc17b22ff35.txt
+06-22 19:13:43.130 23945 23979 I nightwatch-target: waiting on child pid 23980
+06-22 19:13:43.174 23945 23975 W SigquitDetectorAcra: nativeInit
+06-22 19:13:43.175 23945 23975 D SigquitDetector: Signal catcher tid: 23951
+06-22 19:13:43.188 23945 23975 D SigquitDetector: Initialized [Acra]
+06-22 19:13:43.192 23980 23980 I nightwatch-watcher: I have arisen! pid: 23980
+06-22 19:13:43.193 23980 23980 I nightwatch-lib: watcher succeeded mmap /data/data/com.facebook.katana/app_watcher/com.facebook.katana_ebeee156-8c4b-4abf-3b48-1bc17b22ff35.txt
+06-22 19:13:43.193 23980 23980 I nightwatch-watcher: attached to tid 23979 in pid 23945, ptrace_ret: 0
+06-22 19:13:43.193 23945 23975 D         : Function fsync hooked with result=0
+06-22 19:13:43.193 23980 23980 I nightwatch-watcher: created thread to monitor process resources
+06-22 19:13:43.193 23980 23980 I nightwatch-watcher: created thread to capture logcat
+06-22 19:13:43.193 23980 23980 I nightwatch-watcher: target tid 23979 stopped with signal 19. continuing and delivering signal 0
+06-22 19:13:43.194 23945 23975 D         : Function fdatasync hooked with result=0
+06-22 19:13:43.190 23982 23982 I libwatcher_bina: type=1400 audit(0.0:9113): avc: denied { read } for name="file-nr" dev="proc" ino=3085124 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+06-22 19:13:43.190 23982 23982 I libwatcher_bina: type=1400 audit(0.0:9114): avc: denied { open } for path="/proc/sys/fs/file-nr" dev="proc" ino=3085124 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+06-22 19:13:43.195 23945 23975 D         : Function msync hooked with result=0
+06-22 19:13:43.196 23945 23975 D         : Function sync hooked with result=0
+06-22 19:13:43.209 23945 23970 W DexLibLoader: disabling background optimization
+06-22 19:13:43.218 23945 23976 V AospBugFixOpts: set AOSP bug fix jboolean EnableAospBugFixes: bugFixOpt -> enable = 0. Given 0
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: unable to use native MDCL: falling back to Java impl
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: java.lang.RuntimeException: Invalid API Level
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at |lyra|{/data/data/com.facebook.katana/lib-superpack-xz/libdexload.so}._ZN8facebook4lyra9cxa_throwEPvPKSt9type_infoPFvS1_E(7BF5D6F8-6AC2-78DA-EDE9-C2CE81B8C7F8:397428)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at |lyra|{/data/data/com.facebook.katana/lib-superpack-xz/libdexload.so}.(7BF5D6F8-6AC2-78DA-EDE9-C2CE81B8C7F8:167242)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at |lyra|{/data/data/com.facebook.katana/lib-superpack-xz/libdexload.so}.(7BF5D6F8-6AC2-78DA-EDE9-C2CE81B8C7F8:163310)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at |lyra|{/data/data/com.facebook.katana/lib-superpack-xz/libdexload.so}.(7BF5D6F8-6AC2-78DA-EDE9-C2CE81B8C7F8:174008)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at |lyra|{/data/data/com.facebook.katana/lib-superpack-xz/libdexload.so}.(7BF5D6F8-6AC2-78DA-EDE9-C2CE81B8C7F8:173890)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at |lyra|{/data/data/com.facebook.katana/lib-superpack-xz/libdexload.so}.(7BF5D6F8-6AC2-78DA-EDE9-C2CE81B8C7F8:168764)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.MultiDexClassLoaderArtNative.init(Native Method)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.MultiDexClassLoaderArtNative.<init>(:60)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.MultiDexClassLoader.createMultiDexClassLoader(:71)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.MultiDexClassLoader.install(:97)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.DexStore.loadDexFiles(:186)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.DexStore.loadAllImpl(:866)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.DexStore.loadAll(:1)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.DexLibLoader.loadAllImpl(:178)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.DexLibLoader.loadAll(:10783)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.common.dextricks.DexLibLoader.loadAll(:10779)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at X.00S.A00(:9)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at X.00I.A03(:11)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at X.00I.Aah(:1334)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at com.facebook.katana.app.FacebookApplication.A0A(:4)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at X.002.A06(:5)
+06-22 19:13:43.323 23945 23970 W MultiDexClassLoader: 	at X.04y.run(:13)
+06-22 19:13:43.366 23945 23970 W DexLibLoader: Comparing new 1592523561646 to old 1592523561646
+06-22 19:13:43.395 23945 23945 W facebook.katan: Long monitor contention with owner EnsureDelegate (23970) at int sun.nio.ch.FileDispatcherImpl.pread0(java.io.FileDescriptor, long, int, long)(FileDispatcherImpl.java:-2) waiters=0 in void X.002.A06() for 596ms
+06-22 19:13:43.636   459  6398 I ActivityManager: Process com.google.android.googlequicksearchbox:search (pid 23415) has died: svcb SVC 
+06-22 19:13:43.638   246   246 I Zygote  : Process 23415 exited due to signal (9)
+06-22 19:13:43.651   284  6891 I AUDIOALG: AEC: Vol 0, BeamIdx=0 NumActvRef 2
+06-22 19:13:43.651   284  6891 I AUDIOALG: VoIP = 0, m_SpeakerSelect = 0, isUsingAdaptRef 0
+06-22 19:13:43.651   284  6891 I AUDIOALG: Each number represents average ERLE number of 8 frames(4ms)
+06-22 19:13:43.652   284  6891 I AUDIOALG: AEC ATTN (dB)
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.652   284  6891 I AUDIOALG:  0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00
+06-22 19:13:43.655   459   469 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ TRACK_DEFAULT id=2192, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ], android.os.BinderProxy@f0dbe3d)
+06-22 19:13:43.655   459  3672 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ LISTEN id=2193, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ], android.os.BinderProxy@8fec632)
+06-22 19:13:43.655   459   566 D ConnectivityService: releasing NetworkRequest [ TRACK_DEFAULT id=2192, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Unwanted:  Uid: 10018] ] (release request)
+06-22 19:13:43.657   459   755 I WindowManager: WIN DEATH: Window{d77be18 u0 ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher}
+06-22 19:13:43.659   459  6398 W ActivityManager: Scheduling restart of crashed service com.google.android.googlequicksearchbox/com.google.android.apps.gsa.search.core.service.SearchService in 1024000ms
+06-22 19:13:43.659   459  6398 W ActivityManager: Scheduling restart of crashed service com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nowoverlayservice.DrawerOverlayService in 1000ms
+06-22 19:13:43.659   459  6398 W ActivityManager: Scheduling restart of crashed service com.google.android.googlequicksearchbox/com.google.android.apps.gsa.search.core.BroadcastListenerService in 21504000ms
+06-22 19:13:43.663   459   547 W InputDispatcher: channel 'd77be18 ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+06-22 19:13:43.663   459   547 E InputDispatcher: channel 'd77be18 ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher (server)' ~ Channel is unrecoverably broken and will be disposed!
+06-22 19:13:43.663   459   755 W InputDispatcher: Attempted to unregister already unregistered input channel 'd77be18 ch.deletescape.lawnchair.plah/ch.deletescape.lawnchair.LawnchairLauncher (server)'
+06-22 19:13:43.680   459   482 W ActivityManager: setHasOverlayUi called on unknown pid: 23415
+06-22 19:13:43.689 23945 23990 E fb4a.MobileConfigFactoryImpl: init java manager success: yes, sessionless: yes, expect to use TT: no, but actually use TT: no
+06-22 19:13:43.695 23945 23945 E fb4a.MobileConfigFactoryImpl: init java manager success: yes, sessionless: no, expect to use TT: yes, but actually use TT: no
+06-22 19:13:43.701   459   477 W libprocessgroup: kill(-23415, 9) failed: No such process
+06-22 19:13:43.701   459   477 W libprocessgroup: kill(23415, 9) failed: No such process
+06-22 19:13:43.731 23945 23993 W fb4a.FrscLanguagePackLoader: Loading FRSC strings for locale (en)
+06-22 19:13:43.744   459   477 W libprocessgroup: kill(-23415, 9) failed: No such process
+06-22 19:13:43.745   459   477 I libprocessgroup: Successfully killed process cgroup uid 10018 pid 23415 in 109ms
+06-22 19:13:43.826 23945 23990 D CACHE_HINTS: Entering madvise file
+06-22 19:13:43.827 23945 23990 D CACHE_HINTS: MADVISE_RAND file 0xc8e7d000 4988927 /data/data/com.facebook.katana/app_restricks/layouts.bin
+06-22 19:13:43.941 23945 24002 W facebook.katan: Long monitor contention with owner main (23945) at com.facebook.jni.HybridData com.facebook.xanalytics.XAnalyticsAdapterHolder.initHybrid(com.facebook.xanalytics.XAnalyticsAdapter)(:-2) waiters=0 in com.facebook.quicklog.QuickPerformanceLogger X.0wz.A02(X.0mP) for 111ms
+06-22 19:13:43.952 23945 23945 W facebook.katan: !bang JNI is deprecated. Switch to @FastNative for void com.facebook.yoga.YogaSetup.jni_enableFacebookInstrumentation()
+06-22 19:13:43.952 23945 23945 W facebook.katan: !bang JNI is deprecated. Switch to @FastNative for void com.facebook.yoga.YogaSetup.jni_resetCounters()
+06-22 19:13:43.967 23945 23950 I facebook.katan: Method exceeds compiler instruction limit: 24180 in java.lang.Object X.322.A00(int, X.0mP)
+06-22 19:13:43.995 23945 24002 W fb4a.FrscLanguagePackLoader: FRSC English strings buffer size - (limit : 552740, capacity : 552740)
+06-22 19:13:44.045 23945 23989 I facebook.katan: IncrementDisableThreadFlip blocked for 23.922ms
+06-22 19:13:44.050 23945 23991 W Profilo/BlackBoxApi: UNABLE TO START: No config
+06-22 19:13:44.106 23945 23993 V tigonliger: tigonliger/JNI_OnLoad called
+06-22 19:13:44.190 24014 24014 I CombinedTP9: type=1400 audit(0.0:9115): avc: denied { read } for name="stats" dev="proc" ino=4026533007 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc_qtaguid_stat:s0 tclass=file permissive=1
+06-22 19:13:44.190 24014 24014 I CombinedTP9: type=1400 audit(0.0:9116): avc: denied { open } for path="/proc/23945/net/xt_qtaguid/stats" dev="proc" ino=4026533007 scontext=u:r:untrusted_app:s0:c94,c256,c512,c768 tcontext=u:object_r:proc_qtaguid_stat:s0 tclass=file permissive=1
+06-22 19:13:44.270 23945 23945 W fb4a.DYNA|StartupMetricTracker: Couldn't stop tracing at DD!
+06-22 19:13:44.336   459   476 I ActivityManager: Start proc 24018:com.topjohnwu.magisk/u0a138 for broadcast com.topjohnwu.magisk/a.h
+06-22 19:13:44.344 24018 24018 I Zygote  : seccomp disabled by setenforce 0
+06-22 19:13:44.359 24018 24018 E opjohnwu.magis: Not starting debugger since process cannot load the jdwp agent.
+06-22 19:13:44.473 23945 23953 W System  : A resource failed to call close. 
+06-22 19:13:44.473 23945 23953 W System  : A resource failed to call close. 
+06-22 19:13:44.519 23945 23993 V tigonliger: tigonapi/JNI_OnLoad called
+06-22 19:13:44.569 23945 23965 D         : Function _ZN3art13SignalCatcher6OutputERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE hooked with result=0
+06-22 19:13:44.569 23945 23965 D SigquitDetector: Hooked methods [Acra]
+06-22 19:13:44.783   283   283 I wmt_launcher: fw log ctrl flag has been set
+06-22 19:13:44.783   283   283 I wmt_launcher: fw dynamic ctrl flag has been set
+06-22 19:13:44.848 23945 24013 I mobileconfig: Using OTA mobileconfig resource
+06-22 19:13:44.910 24018 24018 W opjohnwu.magis: resources.arsc in APK '/data/app/com.topjohnwu.magisk-eM30I7R9Y9fBFa_-F-fFqg==/base.apk' is compressed.
+06-22 19:13:45.392 23945 23993 E fb4a.StartupInfraPreloader: Unknown component: feedunittreeserializer
+06-22 19:13:45.394 23945 23993 E fb4a.StartupInfraPreloader: Unknown component: 	
