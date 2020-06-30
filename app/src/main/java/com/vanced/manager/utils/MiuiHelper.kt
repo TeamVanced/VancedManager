@@ -15,7 +15,7 @@ object MiuiHelper {
         return if (isMiui())
             getSystemProps("persist.sys.miui_optimization") == "0"
         else
-            false
+            true
     }
 
     private fun getSystemProps(propname: String): String? {
