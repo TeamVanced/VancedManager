@@ -9,7 +9,10 @@ import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
-import com.downloader.*
+import com.downloader.Error
+import com.downloader.OnDownloadListener
+import com.downloader.OnStartOrResumeListener
+import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
@@ -68,11 +71,8 @@ class VancedDownloadService: Service() {
             .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                displayDownloadNotif(channel, mProgress.toInt(), getFileNameFromUrl(url), this)
+                displayDownloadNotif(channel, mProgress.toInt(), "vanced", getFileNameFromUrl(url), this)
             }
-            .setOnCancelListener { OnCancelListener {
-                cancelNotif(channel, this)
-            } }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     when (type) {
@@ -104,9 +104,21 @@ class VancedDownloadService: Service() {
         intent.action = HomeFragment.VANCED_DOWNLOADED
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
         if (variant == "root")
-            startService(Intent(this, RootSplitInstallerService::class.java))
+            startInstallService(Intent(this, RootSplitInstallerService::class.java))
         else
-            startService(Intent(this, SplitInstaller::class.java))
+            startInstallService(Intent(this, SplitInstaller::class.java))
+    }
+
+    private fun startInstallService(intent: Intent) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+            startForegroundService(intent)
+        else
+            startService(intent)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        cancelNotif(69, this)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

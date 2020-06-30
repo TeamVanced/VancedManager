@@ -3,10 +3,14 @@ package com.vanced.manager.core.downloader
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.IBinder
 import android.widget.Toast
 import com.dezlum.codelabs.getjson.GetJson
-import com.downloader.*
+import com.downloader.Error
+import com.downloader.OnDownloadListener
+import com.downloader.OnStartOrResumeListener
+import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -44,13 +48,11 @@ class MicrogDownloadService: Service() {
                 NotificationHelper.displayDownloadNotif(
                     channel,
                     mProgress.toInt(),
+                    "microg",
                     getFileNameFromUrl(dwnldUrl),
                     this
                 )
             }
-            .setOnCancelListener { OnCancelListener {
-                cancelNotif(channel, this)
-            } }
             .start(object : OnDownloadListener {
                 override fun onDownloadComplete() {
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
@@ -58,13 +60,21 @@ class MicrogDownloadService: Service() {
                     val intent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
                     intent.putExtra("path", "${filesDir.path}/microg.apk")
                     intent.putExtra("pkg", "com.mgoogle.android.gms")
-                    startService(intent)
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                        startForegroundService(intent)
+                    else
+                        startService(intent)
                 }
                 override fun onError(error: Error) {
                     prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
                     createBasicNotif(getString(R.string.error_downloading, "Microg"), channel, this@MicrogDownloadService)
                 }
             })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        cancelNotif(420, this)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

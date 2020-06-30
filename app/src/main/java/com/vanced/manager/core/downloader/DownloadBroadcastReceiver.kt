@@ -4,12 +4,15 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.downloader.PRDownloader
 
 class DownloadBroadcastReceiver: BroadcastReceiver() {
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        PRDownloader.cancelAll()
-        Log.d("VMNotification", "Canceled downloads")
+        val type = intent?.getStringExtra("type")
+        when (type) {
+            "vanced" -> context?.stopService(Intent(context, VancedDownloadService::class.java))
+            "microg" -> context?.stopService(Intent(context, MicrogDownloadService::class.java))
+        }
+        Log.d("VMNotification", "Canceled $type download")
     }
 }
