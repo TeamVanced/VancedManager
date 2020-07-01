@@ -63,7 +63,7 @@ class VancedDownloadService: Service() {
             }
         val url =
             when (type) {
-                "arch" -> "$baseUrl/apks/v$vancedVer/$variant/Config/config.$arch.apk"
+                "arch" -> "$baseUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
                 "theme" -> "$baseUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
                 "lang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.$lang.apk"
                 "enlang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.en.apk"
