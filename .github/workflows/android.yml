@@ -3,11 +3,9 @@ name: Signed APK Builder
 on:
   push:
     branches:
-      - master
       - dev
   pull_request:
     branches:
-      - master
       - dev
 
 jobs:
@@ -43,3 +41,10 @@ jobs:
         with:
           name: 'Vanced-Manager'
           path: ${{ steps.sign-app.outputs.signedReleaseFile }}
+
+      - name: Upload to Discord
+        uses: sinshutsu/upload-todiscord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        with:
+          args: ${{ steps.sign-app.outputs.signedReleaseFile }}
