@@ -4,7 +4,6 @@
     <string name="close">關閉</string>
     <string name="reset">重設</string>
     <string name="save">儲存</string>
-    <string name="cancel">取消</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
     <string name="title_home">主頁</string>
@@ -14,7 +13,6 @@
     <string name="button_fine">好</string>
     <!-- Home Page -->
     <string name="changelogs">更新日誌</string>
-    <string name="check">檢查</string>
     <string name="downloading_file">%1$s 下載中</string>
     <string name="failed_uninstall">%1$s 包裝下載失敗</string>
     <string name="error_downloading">%1$s 下載錯誤</string>
@@ -37,7 +35,6 @@
     <string name="successfully_installed">%1$s 安裝成功</string>
     <string name="network_error">網際網絡無法存取</string>
     <string name="no_microg">沒有 MicroG！</string>
-    <string name="unable_download">無法下載 %1$s</string>
     <string name="unavailable">不可用</string>
     <string name="update">更新</string>
     <string name="useful_links">有用的網址</string>
@@ -96,18 +93,6 @@
     <string name="manager_dev">Manager 的開發人員</string>
     <string name="sources">資源</string>
     <string name="vanced_team">Vanced團隊</string>
-    <string name="unsupported_version_context">我不清楚是怎樣，不過您可能在不支援的安卓版本上下載了Vanced管理員。應用程式即將關閉。</string>
-    <string name="whoops">哎呀！</string>
     <!-- Home Page -->
-    <string name="brave_browser">Brave瀏覽器</string>
-    <string name="installed">已安裝：</string>
-    <string name="n_a">N/A</string>
-    <string name="reddit">Reddit討論區</string>
-    <string name="vanced_medias">Vanced的社交帳戶</string>
-    <string name="website">網頁</string>
-    <string name="choose_preferred_variant">為Vanced選擇您偏好的變體</string>
-    <string name="install_nonroot">正常版</string>
-    <string name="install_root">破解版</string>
     <!-- About Page -->
-    <string name="manager_devs">Manager的開發者</string>
 </resources>

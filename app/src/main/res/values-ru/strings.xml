@@ -4,7 +4,6 @@
     <string name="close">Закрыть</string>
     <string name="reset">Сброс</string>
     <string name="save">Сохранить</string>
-    <string name="cancel">Отмена</string>
     <!-- Main Activity -->
     <string name="title_about">О приложении</string>
     <string name="title_home">Главная</string>
@@ -14,7 +13,6 @@
     <string name="button_fine">Хорошо</string>
     <!-- Home Page -->
     <string name="changelogs">Список изменений</string>
-    <string name="check">Проверить</string>
     <string name="downloading_file">Загрузка %1$s</string>
     <string name="failed_uninstall">Ошибка установки пакета %1$s</string>
     <string name="error_downloading">Ошибка загрузки %1$s</string>
@@ -37,7 +35,6 @@
     <string name="successfully_installed">Успешно установлено %1$s</string>
     <string name="network_error">Нет подключения к интернету</string>
     <string name="no_microg">Нет MicroG</string>
-    <string name="unable_download">Невозможно загрузить %1$s</string>
     <string name="unavailable">Недоступно</string>
     <string name="update">Обновить</string>
     <string name="useful_links">Полезные ссылки</string>
@@ -96,18 +93,6 @@
     <string name="manager_dev">Разработчик</string>
     <string name="sources">Исходники</string>
     <string name="vanced_team">Vanced Team</string>
-    <string name="unsupported_version_context">Я не знаю как, но вы установили Vanced Manager на неподдерживаемую версию Android. Приложение будет закрыто</string>
-    <string name="whoops">Упс!</string>
     <!-- Home Page -->
-    <string name="brave_browser">Brave Browser</string>
-    <string name="installed">Установлено:</string>
-    <string name="n_a">N/A</string>
-    <string name="reddit">Reddit</string>
-    <string name="vanced_medias">Vanced в социальных сетях</string>
-    <string name="website">Сайт</string>
-    <string name="choose_preferred_variant">Выберите предпочтительный вариант для Vanced</string>
-    <string name="install_nonroot">Non-root</string>
-    <string name="install_root">Root</string>
     <!-- About Page -->
-    <string name="manager_devs">Разработчики приложения</string>
 </resources>

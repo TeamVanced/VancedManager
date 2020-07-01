@@ -4,7 +4,6 @@
     <string name="close">Cerrar</string>
     <string name="reset">Resetear</string>
     <string name="save">Guardar</string>
-    <string name="cancel">Cancelar</string>
     <!-- Main Activity -->
     <string name="title_about">Informacion</string>
     <string name="title_home">Hogar</string>
@@ -14,7 +13,6 @@
     <string name="button_fine">Bien</string>
     <!-- Home Page -->
     <string name="changelogs">Actualizaciones</string>
-    <string name="check">Chequear</string>
     <string name="downloading_file">Descargando %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
     <string name="error_downloading">Error Descargando %1$s</string>
@@ -37,7 +35,6 @@
     <string name="successfully_installed">Instalación exitosa %1$s</string>
     <string name="network_error">Conexion a la red no disponible</string>
     <string name="no_microg">"Sin MicroG! "</string>
-    <string name="unable_download">Incapaz de descargar %1$s</string>
     <string name="unavailable">No Disponible</string>
     <string name="update">Actualizar</string>
     <string name="useful_links">Links Utiles</string>
@@ -96,18 +93,6 @@
     <string name="manager_dev">Desarrollador del Manager</string>
     <string name="sources">Fuentes</string>
     <string name="vanced_team">Equipo Vanced</string>
-    <string name="unsupported_version_context">No se como pero probablemente has instalado Vanced Manager en una version de Android sin soporte. La aplicacion se cerrara ahora</string>
-    <string name="whoops">Ups!</string>
     <!-- Home Page -->
-    <string name="brave_browser">Navegador Brave</string>
-    <string name="installed">Instalado:</string>
-    <string name="n_a">N/A</string>
-    <string name="reddit">Reddit</string>
-    <string name="vanced_medias">Vanced en Redes Sociales</string>
-    <string name="website">Sitio Web</string>
-    <string name="choose_preferred_variant">Elije tu variante preferida para Vanced</string>
-    <string name="install_nonroot">Sin root</string>
-    <string name="install_root">Con root</string>
     <!-- About Page -->
-    <string name="manager_devs">Desarrolladores del Manager</string>
 </resources>

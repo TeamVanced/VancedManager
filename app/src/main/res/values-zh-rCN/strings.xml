@@ -4,7 +4,6 @@
     <string name="close">关闭</string>
     <string name="reset">重设</string>
     <string name="save">储存</string>
-    <string name="cancel">取消</string>
     <!-- Main Activity -->
     <string name="title_about">关于</string>
     <string name="title_home">主菜单</string>
@@ -14,7 +13,6 @@
     <string name="button_fine">好</string>
     <!-- Home Page -->
     <string name="changelogs">变更日志</string>
-    <string name="check">检查</string>
     <string name="downloading_file">%1$s 下载中</string>
     <string name="failed_uninstall">%1$s 包装下载失败</string>
     <string name="error_downloading">%1$s 下载错误</string>
@@ -37,7 +35,6 @@
     <string name="successfully_installed">%1$s 成功安装</string>
     <string name="network_error">网络连接不可用</string>
     <string name="no_microg">没有 MicroG！</string>
-    <string name="unable_download">无法下载 %1$s</string>
     <string name="unavailable">不可用</string>
     <string name="update">更新</string>
     <string name="useful_links">有用的链接</string>
@@ -96,18 +93,6 @@
     <string name="manager_dev">Manager 的开发者</string>
     <string name="sources">来源</string>
     <string name="vanced_team">Vanced团队</string>
-    <string name="unsupported_version_context">您可能在不支持的安卓版本上安装了Vanced。软件即将关闭</string>
-    <string name="whoops">哎呀！</string>
     <!-- Home Page -->
-    <string name="brave_browser">Brave 浏览器</string>
-    <string name="installed">已安装</string>
-    <string name="n_a">N/A</string>
-    <string name="reddit">Reddit</string>
-    <string name="vanced_medias">Vanced在社交软件中</string>
-    <string name="website">网站</string>
-    <string name="choose_preferred_variant">选择Vanced的首选类型</string>
-    <string name="install_nonroot">未root</string>
-    <string name="install_root">Root</string>
     <!-- About Page -->
-    <string name="manager_devs">开发者</string>
 </resources>

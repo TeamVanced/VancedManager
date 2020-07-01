@@ -4,7 +4,6 @@
     <string name="close">बंद करे</string>
     <string name="reset">रीसिट</string>
     <string name="save">सेव</string>
-    <string name="cancel">केन्सल</string>
     <!-- Main Activity -->
     <string name="title_about">"बारे में
 "</string>
@@ -15,7 +14,6 @@
     <string name="button_fine">ठीक</string>
     <!-- Home Page -->
     <string name="changelogs">चेंजलॉग</string>
-    <string name="check">जाँच</string>
     <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
     <string name="failed_uninstall">पैकेज की स्थापना रद्द करने में विफल %1$s</string>
     <string name="error_downloading">डाउनलोड करने में इरर %1$s</string>
@@ -40,7 +38,6 @@
     <string name="network_error">"नेटवर्क कनेक्शन अनुपलब्ध है
 "</string>
     <string name="no_microg">कोई माइक्रोग नहीं!</string>
-    <string name="unable_download">"%1$s डाउनलोड करने में असमर्थ "</string>
     <string name="unavailable">अनुपलब्ध</string>
     <string name="update">अपडेट करें</string>
     <string name="useful_links">"उपयोगी लिंक्स "</string>
@@ -100,18 +97,6 @@
     <string name="sources">सूत्रों का</string>
     <string name="vanced_team">"वांसड टीम
 "</string>
-    <string name="unsupported_version_context">मुझे नहीं पता कि आपने असमर्थित Android संस्करण पर कैसे संभवत: Vanced Manager स्थापित किया है। ऐप अब बंद हो जाएगा</string>
-    <string name="whoops">ओह</string>
     <!-- Home Page -->
-    <string name="brave_browser">ब्रेव ब्राउज़र</string>
-    <string name="installed">इन्स्टॉल्ड</string>
-    <string name="n_a">लागू नहीं</string>
-    <string name="reddit">रेडिट</string>
-    <string name="vanced_medias">वांसड सोशल मीडिया पर</string>
-    <string name="website">वेबसाइट</string>
-    <string name="choose_preferred_variant">अपने पसंदीदा विषय को ड्रा के लिए चुनें</string>
-    <string name="install_nonroot">नॉन-रूट</string>
-    <string name="install_root">रूट</string>
     <!-- About Page -->
-    <string name="manager_devs">"मैनेजर देव्स "</string>
 </resources>

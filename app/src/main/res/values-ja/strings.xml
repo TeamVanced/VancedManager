@@ -4,7 +4,6 @@
     <string name="close">閉じる</string>
     <string name="reset">リセット</string>
     <string name="save">保存</string>
-    <string name="cancel">キャンセル</string>
     <!-- Main Activity -->
     <string name="title_about">情報</string>
     <string name="title_home">ホーム</string>
@@ -14,7 +13,6 @@
     <string name="button_fine">良好</string>
     <!-- Home Page -->
     <string name="changelogs">更新履歴</string>
-    <string name="check">チェック</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
     <string name="error_downloading">%1$s のダウンロード中にエラー</string>
@@ -37,7 +35,6 @@
     <string name="successfully_installed">%1$s のインストールに成功しました</string>
     <string name="network_error">インターネット接続が利用できません</string>
     <string name="no_microg">MicroGがありません！</string>
-    <string name="unable_download">%1$s をダウンロードできません</string>
     <string name="unavailable">利用不可</string>
     <string name="update">更新</string>
     <string name="useful_links">リンク集</string>
@@ -96,18 +93,6 @@
     <string name="manager_dev">Manager 開発</string>
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
-    <string name="unsupported_version_context">どのような手段でアプリをインストールしたか不明ですが、サポートされていない Android バージョンに Vanced Manager をインストールした可能性があります。アプリは終了します</string>
-    <string name="whoops">おっと！</string>
     <!-- Home Page -->
-    <string name="brave_browser">Brave ブラウザ</string>
-    <string name="installed">インストール済:</string>
-    <string name="n_a">なし</string>
-    <string name="reddit">Reddit</string>
-    <string name="vanced_medias">Vanced on SNS</string>
-    <string name="website">Webサイト</string>
-    <string name="choose_preferred_variant">Vanced の Variant を選択</string>
-    <string name="install_nonroot">非root</string>
-    <string name="install_root">root</string>
     <!-- About Page -->
-    <string name="manager_devs">Manager 開発者</string>
 </resources>

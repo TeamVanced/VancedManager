@@ -4,7 +4,6 @@
     <string name="close">Tutup</string>
     <string name="reset">Atur ulang</string>
     <string name="save">Simpan</string>
-    <string name="cancel">Batalkan</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
     <string name="title_home">Menu utama</string>
@@ -14,7 +13,6 @@
     <string name="button_fine">Ok</string>
     <!-- Home Page -->
     <string name="changelogs">Catatan perubahan</string>
-    <string name="check">Cek</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
     <string name="error_downloading">Gagal mengunduh %1$s</string>
@@ -37,7 +35,6 @@
     <string name="successfully_installed">Berhasil dipasang %1$s</string>
     <string name="network_error">Jaringan internet tidak tersedia</string>
     <string name="no_microg">Tidak ada MicroG!</string>
-    <string name="unable_download">Tidak bisa mengunduh %1$s</string>
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
     <string name="useful_links">Tautan berguna</string>
@@ -97,19 +94,6 @@
     <string name="manager_dev">Pembuat manager</string>
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
-    <string name="unsupported_version_context">Sepertinya anda menginstal Vanced Manager di versi Android yang tidak didukung. Aplikasi akan tertutup otomatis</string>
-    <string name="whoops">Whoops!</string>
     <!-- Home Page -->
-    <string name="brave_browser">Brave Browser</string>
-    <string name="installed">Terpasang:</string>
-    <string name="n_a">Kosong</string>
-    <string name="reddit">Reddit</string>
-    <string name="vanced_medias">"Media Sosial Vanced
-"</string>
-    <string name="website">Situs</string>
-    <string name="choose_preferred_variant">Pilih varian anda untuk Vanced</string>
-    <string name="install_nonroot">Bukan root</string>
-    <string name="install_root">Root</string>
     <!-- About Page -->
-    <string name="manager_devs">Pembuat manager</string>
 </resources>
