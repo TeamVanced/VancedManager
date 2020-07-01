@@ -14,6 +14,7 @@ import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
@@ -32,19 +33,7 @@ class MicrogDownloadService: Service() {
     private fun downloadMicrog() {
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
-        val apkUrl =
-            try {
-                GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json").get("url").asString
-            } catch (e: ExecutionException) {
-                ""
-            } catch (e: InterruptedException) {
-                ""
-            } catch (e: IllegalStateException) {
-                ""
-            } catch (e: RuntimeException) {
-                ""
-            }
-
+        val apkUrl = getObjectFromJson("https://vanced.app/api/v1/microg.json", "url")
 
         val channel = 420
         PRDownloader.download(apkUrl, filesDir.path, "microg.apk")
