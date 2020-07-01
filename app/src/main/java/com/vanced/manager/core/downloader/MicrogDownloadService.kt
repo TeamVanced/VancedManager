@@ -17,6 +17,8 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
+import java.lang.IllegalStateException
+import java.lang.RuntimeException
 import java.util.concurrent.ExecutionException
 
 class MicrogDownloadService: Service() {
@@ -36,6 +38,10 @@ class MicrogDownloadService: Service() {
             } catch (e: ExecutionException) {
                 ""
             } catch (e: InterruptedException) {
+                ""
+            } catch (e: IllegalStateException) {
+                ""
+            } catch (e: RuntimeException) {
                 ""
             }
 

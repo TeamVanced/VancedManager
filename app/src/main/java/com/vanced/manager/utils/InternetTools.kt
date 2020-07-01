@@ -10,6 +10,7 @@ import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import java.lang.Exception
 import java.lang.IllegalStateException
+import java.lang.RuntimeException
 import java.util.concurrent.ExecutionException
 
 object InternetTools {
@@ -31,6 +32,10 @@ object InternetTools {
             context.getString(R.string.unavailable)
         } catch (e: InterruptedException) {
             context.getString(R.string.unavailable)
+        } catch (e: IllegalStateException) {
+            context.getString(R.string.unavailable)
+        } catch (e: RuntimeException) {
+            context.getString(R.string.unavailable)
         }
     }
 
@@ -41,6 +46,10 @@ object InternetTools {
         } catch (e: ExecutionException) {
             0
         } catch (e: InterruptedException) {
+            0
+        } catch (e: IllegalStateException) {
+            0
+        } catch (e: RuntimeException) {
             0
         }
 

@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
-import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
@@ -22,6 +21,8 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
+import java.lang.IllegalStateException
+import java.lang.RuntimeException
 import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
@@ -43,6 +44,10 @@ class VancedDownloadService: Service() {
             } catch (e: ExecutionException) {
                 ""
             } catch (e: InterruptedException) {
+                ""
+            } catch (e: IllegalStateException) {
+                ""
+            } catch (e: RuntimeException) {
                 ""
             }
 
