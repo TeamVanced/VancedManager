@@ -16,14 +16,12 @@
     <string name="changelogs">ცვლილებები</string>
     <string name="install">ინსტალაცია</string>
     <string name="version_installed">დაინსტალირებული:</string>
-    <string name="button_installed">დაინსტალირებულია</string>
     <string name="latest">უახლესი:</string>
     <string name="loading">იტვირთება…</string>
     <string name="network_error">კავშირი არ არის</string>
     <string name="unavailable">ხელმიუწვდომელია</string>
     <string name="update">განახლება</string>
     <string name="useful_links">საჭირო ლინკები</string>
-    <string name="vanced_medias">Vanced სოციალურ ქსელებზე</string>
     <string name="website_text">Vanced-ის ოფიციალური ვებსაიტი</string>
     <string name="support_us">დაგვიჭირეთ მხარი Brave-ის გადმოწერით</string>
 
@@ -57,7 +55,6 @@
     <string name="next">შემდეგი</string>
 
     <!-- About Page -->
-    <string name="manager_devs">Manager-ის დეველოპერები</string>
     <string name="sources">წყაროები</string>
     <string name="vanced_team">Vanced-ის გუნდი</string>
 

@@ -53,7 +53,7 @@ open class Main: AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        val checkPrefs = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("auto_check_update", false)
+        val checkPrefs = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("auto_check_update", true)
         if (checkPrefs) {
             if (GetJson().isConnected(this) && InternetTools.isUpdateAvailable()) {
                 UpdateCheckFragment().show(supportFragmentManager, "Update")

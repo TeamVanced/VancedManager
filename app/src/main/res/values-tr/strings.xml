@@ -21,7 +21,6 @@
     <string name="network_error">Ağ bağlantısı yok</string>
     <string name="update">Güncellemek</string>
     <string name="useful_links">Faydalı Bağlantılar</string>
-    <string name="vanced_medias">Sosyal Medyada Vanced</string>
     <string name="website_text">Vanced\'in resmi web sitesi</string>
     <string name="support_us">Brave Tarayıcısı\'nı indirerek bizi destekleyebilirsiniz</string>
 
@@ -55,7 +54,6 @@
     <string name="next">Sonraki</string>
 
     <!-- About Page -->
-    <string name="manager_devs">Manager Yapımcıları</string>
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
 </resources>

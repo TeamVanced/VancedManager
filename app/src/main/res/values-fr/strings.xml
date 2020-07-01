@@ -20,7 +20,6 @@
     <string name="network_error">Connection réseau indisponible</string>
     <string name="update">Mettre à jour</string>
     <string name="useful_links">Liens utiles</string>
-    <string name="vanced_medias">Vanced sur les Résaux Sociaux</string>
     <string name="website_text">Le site web officiel de Vanced</string>
     <string name="support_us">Supporte nous en téléchargeant Brave</string>
 
@@ -53,7 +52,6 @@
     <string name="next">Suivant</string>
 
     <!-- About Page -->
-    <string name="manager_devs">Dévéloppeurs du Manager</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application sur vanced.app, le serveur Discord de Vanced ou sur le github officiel.</string>

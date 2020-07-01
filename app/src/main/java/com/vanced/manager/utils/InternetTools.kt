@@ -10,6 +10,7 @@ import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import java.lang.Exception
 import java.lang.IllegalStateException
+import java.util.concurrent.ExecutionException
 
 object InternetTools {
 
@@ -29,7 +30,7 @@ object InternetTools {
                 GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
             } catch (e: Exception) {
                 when (e) {
-                    is InterruptedException, is IllegalStateException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
+                    is InterruptedException, is ExecutionException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
                     else -> throw e
                 }
 
@@ -46,7 +47,7 @@ object InternetTools {
                 GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
             } catch (e: Exception) {
                 when (e) {
-                    is InterruptedException, is IllegalStateException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
+                    is InterruptedException, is ExecutionException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
                     else -> throw e
                 }
 

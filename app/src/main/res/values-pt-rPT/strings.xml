@@ -21,7 +21,6 @@
     <string name="network_error">Conexão de rede indisponível</string>
     <string name="update">Atualizar</string>
     <string name="useful_links">Links Importantes</string>
-    <string name="vanced_medias">Vanced nas Redes Sociais</string>
     <string name="website_text">Site oficial do Vanced</string>
 
 
@@ -55,7 +54,6 @@
     <string name="next">Próximo</string>
 
     <!-- About Page -->
-    <string name="manager_devs">Desenvolvedores Gerentes</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipa Vanced</string>
 </resources>
