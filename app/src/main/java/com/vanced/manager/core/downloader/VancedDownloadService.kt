@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
-import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
@@ -23,9 +22,6 @@ import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
-import java.lang.IllegalStateException
-import java.lang.RuntimeException
-import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
 
@@ -40,7 +36,7 @@ class VancedDownloadService: Service() {
         type: String = "arch"
     ) {
         val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", baseUrl)
-        val vancedVer = getObjectFromJson("https://vanced.app/api/v1/vanced.json", "version")
+        val vancedVer = getObjectFromJson("https://vanced.app/api/v1/vanced.json", "version", this)
 
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val variant = PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "nonroot")

@@ -8,9 +8,6 @@ import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
-import java.lang.IllegalStateException
-import java.lang.RuntimeException
-import java.util.concurrent.ExecutionException
 
 object InternetTools {
 
@@ -25,51 +22,26 @@ object InternetTools {
 
     fun displayJsonString(json: String, obj: String, context: Context): String {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        try {
-            return GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
-        } catch (e: ExecutionException) {
-            e.printStackTrace()
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        } catch (e: IllegalStateException) {
-            e.printStackTrace()
-        } catch (e: RuntimeException) {
-            e.printStackTrace()
-        }
-        return context.getString(R.string.unavailable)
+        return if (GetJson().isConnected(context))
+            GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
+        else
+            context.getString(R.string.unavailable)
     }
 
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        try {
-            return GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
-        } catch (e: ExecutionException) {
-            e.printStackTrace()
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        } catch (e: IllegalStateException) {
-            e.printStackTrace()
-        } catch (e: RuntimeException) {
-            e.printStackTrace()
-        }
-        return 0
+        return if (GetJson().isConnected(context))
+            GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
+        else
+            0
 
     }
 
-    fun getObjectFromJson(url: String, obj: String): String {
-        try {
-            return GetJson().AsJSONObject(url).get(obj).asString
-        } catch (e: ExecutionException) {
-            e.printStackTrace()
-        } catch (e: InterruptedException) {
-            e.printStackTrace()
-        } catch (e: IllegalStateException) {
-            e.printStackTrace()
-        } catch (e: RuntimeException) {
-            e.printStackTrace()
-        }
-
-        return ""
+    fun getObjectFromJson(url: String, obj: String, context: Context): String {
+        return if (GetJson().isConnected(context))
+            GetJson().AsJSONObject(url).get(obj).asString
+        else
+            ""
     }
 
     fun isUpdateAvailable(): Boolean {

@@ -92,12 +92,17 @@ object DialogContainer {
     }
 
     fun installAlertBuilder(msg: String, context: Context) {
-        AlertDialog.Builder(context)
-            .setTitle(context.getString(R.string.error))
-            .setMessage(msg)
-            .setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
-            .create()
-            .show()
+        AlertDialog.Builder(context).apply {
+            setTitle(context.getString(R.string.error))
+            setMessage(msg)
+            setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            if (msg == context.getString(R.string.installation_signature))
+                setNeutralButton(context.getString(R.string.guide)) { _, _ ->
+                    openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, context)
+                }
+            create()
+            show()
+        }
     }
 
     fun regularPackageInstalled(msg: String, activity: MainActivity) {

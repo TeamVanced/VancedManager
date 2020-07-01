@@ -17,6 +17,7 @@ import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
+import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
@@ -104,8 +105,10 @@ open class Home : BaseFragment(), View.OnClickListener {
             R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
             R.id.nonroot_switch -> writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
             R.id.root_switch ->
-                if (Shell.rootAccess())
+                if (Shell.rootAccess()) {
                     writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
+                    activity?.let { showRootDialog(it) }
+                }
                 else {
                     writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
                     Toast.makeText(activity, "Root access not granted", Toast.LENGTH_SHORT).show()
