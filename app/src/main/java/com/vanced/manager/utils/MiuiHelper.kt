@@ -11,7 +11,7 @@ object MiuiHelper {
 
     fun isMiuiOptimisationsDisabled(): Boolean {
         return if (isMiui())
-            getSystemProps("persist.sys.miui_optimization") == "0"
+            getSystemProps("persist.sys.miui_optimization").equals("0")
         else
             true
     }

@@ -4,7 +4,6 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.os.IBinder
-import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
@@ -18,6 +17,7 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
+import java.util.concurrent.ExecutionException
 
 class MicrogDownloadService: Service() {
 
@@ -31,14 +31,14 @@ class MicrogDownloadService: Service() {
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
         val apkUrl =
-            if(GetJson().isConnected(this))
-                try {
-                    GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json").get("url").asString
-                } catch (e: Exception) {
-                    GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json").get("url").asString
-                }
-            else
+            try {
+                GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json").get("url").asString
+            } catch (e: ExecutionException) {
                 ""
+            } catch (e: InterruptedException) {
+                ""
+            }
+
 
         val channel = 420
         PRDownloader.download(apkUrl, filesDir.path, "microg.apk")

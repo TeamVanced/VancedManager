@@ -25,30 +25,29 @@ object InternetTools {
 
     fun displayJsonString(json: String, obj: String, context: Context): String {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context)) {
-            return try {
-                GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
-            } catch (e: Exception) {
-                GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
-            }
-        } else {
+        return try {
+            GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
+        } catch (e: ExecutionException) {
+            context.getString(R.string.unavailable)
+        } catch (e: InterruptedException) {
             context.getString(R.string.unavailable)
         }
     }
 
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context)) {
-            return try {
-                GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
-            } catch (e: Exception) {
-                 GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
-            }
-        } else 0
+        return try {
+            GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
+        } catch (e: ExecutionException) {
+            0
+        } catch (e: InterruptedException) {
+            0
+        }
+
     }
 
     fun isUpdateAvailable(): Boolean {
-        val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
+        val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
         val remoteVersion = checkUrl.get("versionCode").asInt
 
         return remoteVersion > BuildConfig.VERSION_CODE

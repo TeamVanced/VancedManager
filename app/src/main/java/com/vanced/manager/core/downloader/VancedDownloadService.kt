@@ -22,17 +22,13 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
-import java.lang.IllegalStateException
 import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        try {
-            downloadSplits()
-        } catch (e: Exception) {
-            Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
-        }
+
+        downloadSplits()
         stopSelf()
         return START_NOT_STICKY
     }
@@ -42,14 +38,14 @@ class VancedDownloadService: Service() {
     ) {
         val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", baseUrl)
         val vancedVer =
-            if(GetJson().isConnected(this))
-                try {
-                    GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json").get("vanced").asString
-                } catch (e: Exception) {
-                    GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json").get("vanced").asString
-                }
-            else
+            try {
+                GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json").get("url").asString
+            } catch (e: ExecutionException) {
                 ""
+            } catch (e: InterruptedException) {
+                ""
+            }
+
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val variant = PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "nonroot")
         val lang = prefs?.getString("lang", "en")
