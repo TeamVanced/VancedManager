@@ -16,6 +16,6 @@ After 3 months of making, we are finally ready to introduce Vanced Manager to yo
 
 ## Credits
 - topjohnwu for his wonderful [LibSU](https://github.com/topjohnwu/libsu)
-- Mindorks for their amazing [PRDownloader](https://github.com/MindorksOpenOource/PRDownloader)
+- Mindorks for their amazing [PRDownloader](https://github.com/MindorksOpenSource/PRDownloader)
 - aefyr for [SAI](https://github.com/aefyr/SAI), which was inspiration for our Manager
 - 100rabhkr for [GetJson](https://github.com/100rabhkr/getjson) library
