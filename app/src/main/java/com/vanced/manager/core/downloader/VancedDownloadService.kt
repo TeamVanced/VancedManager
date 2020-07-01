@@ -41,7 +41,15 @@ class VancedDownloadService: Service() {
         type: String = "arch"
     ) {
         val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", baseUrl)
-        val vancedVer = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json").get("version").asString
+        val vancedVer =
+            if(GetJson().isConnected(this))
+                try {
+                    GetJson().AsJSONObject("https://vanced.app/api/v1/vanced.json").get("vanced").asString
+                } catch (e: Exception) {
+                    GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/vanced.json").get("vanced").asString
+                }
+            else
+                ""
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val variant = PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "nonroot")
         val lang = prefs?.getString("lang", "en")

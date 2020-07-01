@@ -26,14 +26,10 @@ object InternetTools {
     fun displayJsonString(json: String, obj: String, context: Context): String {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return if (GetJson().isConnected(context)) {
-            try {
+            return try {
                 GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
             } catch (e: Exception) {
-                when (e) {
-                    is InterruptedException, is ExecutionException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
-                    else -> throw e
-                }
-
+                GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
             }
         } else {
             context.getString(R.string.unavailable)
@@ -43,7 +39,7 @@ object InternetTools {
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return if (GetJson().isConnected(context)) {
-            try {
+            return try {
                 GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
             } catch (e: Exception) {
                  GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
@@ -60,6 +56,4 @@ object InternetTools {
 
     const val baseUrl = "https://vanced.app/api/v1"
 
-
 }
-

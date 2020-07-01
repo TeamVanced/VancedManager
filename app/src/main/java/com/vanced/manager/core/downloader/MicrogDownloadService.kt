@@ -3,7 +3,6 @@ package com.vanced.manager.core.downloader
 import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.IBinder
 import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -19,17 +18,11 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
-import java.lang.IllegalStateException
-import java.util.concurrent.ExecutionException
 
 class MicrogDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        try {
-            downloadMicrog()
-        } catch (e: Exception) {
-            Toast.makeText(this, "Unable to download MicroG", Toast.LENGTH_SHORT).show()
-        }
+        downloadMicrog()
         stopSelf()
         return START_NOT_STICKY
     }
@@ -37,10 +30,18 @@ class MicrogDownloadService: Service() {
     private fun downloadMicrog() {
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
-        val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-        val dwnldUrl = apkUrl.get("url").asString
+        val apkUrl =
+            if(GetJson().isConnected(this))
+                try {
+                    GetJson().AsJSONObject("https://vanced.app/api/v1/microg.json").get("url").asString
+                } catch (e: Exception) {
+                    GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json").get("url").asString
+                }
+            else
+                ""
+
         val channel = 420
-        PRDownloader.download(dwnldUrl, filesDir.path, "microg.apk")
+        PRDownloader.download(apkUrl, filesDir.path, "microg.apk")
             .build()
             .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isMicrogDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
@@ -48,7 +49,7 @@ class MicrogDownloadService: Service() {
                 NotificationHelper.displayDownloadNotif(
                     channel,
                     mProgress.toInt(),
-                    getFileNameFromUrl(dwnldUrl),
+                    getFileNameFromUrl(apkUrl),
                     this
                 )
             }
