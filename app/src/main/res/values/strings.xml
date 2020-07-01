@@ -37,7 +37,7 @@
     <string name="microg_installed">MicroG successfully installed</string>
     <string name="successfully_installed">Successfully installed %1$s</string>
     <string name="network_error">Network connection unavailable</string>
-    <string name="no_microg">No Microg!</string>
+    <string name="no_microg">No MicroG!</string>
     <string name="unavailable">Unavailable</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
@@ -75,8 +75,8 @@
     <!-- Dialogs -->
     <string name="guide">Guide</string>
     <string name="hold_on">Hold on!</string>
-    <string name="miui_one_title">Detected MiUI user!</string>
-    <string name="miui_one">Hey! Looks like you\'re a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings\n However, if you are on 20.2.20 ROM that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
+    <string name="miui_one_title">Detected MIUI user!</string>
+    <string name="miui_one">Hey! Looks like you\'re an MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings.\n However, if you are on 20.2.20 ROM that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
     <string name="miui_two_title">I\'m gonna stop you right there!</string>
     <string name="miui_two">Looks like you did NOT disable MiUI optimisations. Please disable it. However, if you are on 20.2.20 ROM that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
     <string name="error">Error</string>

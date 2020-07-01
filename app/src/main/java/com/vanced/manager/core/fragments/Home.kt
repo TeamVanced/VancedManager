@@ -53,7 +53,6 @@ open class Home : BaseFragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val defPrefs = getDefaultSharedPreferences(activity)
         val isVancedDownloading: Boolean? = prefs?.getBoolean("isVancedDownloading", false)
         val isMicrogDownloading: Boolean? = prefs?.getBoolean("isMicrogDownloading", false)
         val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")

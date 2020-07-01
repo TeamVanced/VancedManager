@@ -131,8 +131,8 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     }
 
     init {
-        vancedVersion.value = displayJsonString("vanced.json","version", application)
-        microgVersion.value = displayJsonString("microg.json","version", application)
+        vancedVersion.value = displayJsonString("vanced.json", "version", application)
+        microgVersion.value = displayJsonString("microg.json", "version", application)
         vancedInstalledVersion.value = getPkgInfo(vancedInstalled, vancedPkgName, application)
         microgInstalledVersion.value = getPkgInfo(microgInstalled, "com.mgoogle.android.gms", application)
         vancedInstallButtonIcon.value =

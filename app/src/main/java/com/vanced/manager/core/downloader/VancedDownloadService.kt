@@ -22,6 +22,7 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
+import java.lang.IllegalStateException
 import java.util.concurrent.ExecutionException
 
 class VancedDownloadService: Service() {
@@ -31,7 +32,7 @@ class VancedDownloadService: Service() {
             downloadSplits()
         } catch (e: Exception) {
             when (e) {
-                is ExecutionException, is InterruptedException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
+                is ExecutionException, is InterruptedException, is IllegalStateException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
                 else -> throw e
             }
 
