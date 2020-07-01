@@ -43,7 +43,7 @@ jobs:
           path: ${{ steps.sign-app.outputs.signedReleaseFile }}
 
       - name: Upload to Discord
-        uses: sinshutsu/upload-todiscord@master
+        uses: sinshutu/upload-to-discord@master
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         with:
