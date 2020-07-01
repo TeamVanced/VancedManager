@@ -31,11 +31,7 @@ class VancedDownloadService: Service() {
         try {
             downloadSplits()
         } catch (e: Exception) {
-            when (e) {
-                is ExecutionException, is InterruptedException, is IllegalStateException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
-                else -> throw e
-            }
-
+            Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
         }
         stopSelf()
         return START_NOT_STICKY

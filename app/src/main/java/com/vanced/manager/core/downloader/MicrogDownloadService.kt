@@ -28,10 +28,7 @@ class MicrogDownloadService: Service() {
         try {
             downloadMicrog()
         } catch (e: Exception) {
-            when (e) {
-                is ExecutionException, is InterruptedException, is IllegalStateException -> Toast.makeText(this, "Unable to download MicroG", Toast.LENGTH_SHORT).show()
-                else -> throw e
-            }
+            Toast.makeText(this, "Unable to download MicroG", Toast.LENGTH_SHORT).show()
         }
         stopSelf()
         return START_NOT_STICKY

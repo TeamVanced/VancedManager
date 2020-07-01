@@ -46,11 +46,7 @@ object InternetTools {
             try {
                 GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
             } catch (e: Exception) {
-                when (e) {
-                    is InterruptedException, is ExecutionException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
-                    else -> throw e
-                }
-
+                 GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
             }
         } else 0
     }
