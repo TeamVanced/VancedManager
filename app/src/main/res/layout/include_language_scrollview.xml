@@ -139,6 +139,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/exo_semibold"
             android:text="Tiếng Việt"
+            android:tag="vi"
             android:textSize="18sp" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
