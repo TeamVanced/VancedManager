@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 <string name="abc_action_bar_home_description">Перейти на главный экран</string>
 <string name="abc_action_bar_up_description">Перейти вверх</string>
 <string name="abc_action_menu_overflow_description">Ещё</string>
@@ -193,3 +195,4 @@
 <item type="string" name="dummy_ae_27">false</item>
 <item type="string" name="dummy_ae_61">false</item>
 <item type="string" name="dummy_ae_bb">false</item>
+</resources>
