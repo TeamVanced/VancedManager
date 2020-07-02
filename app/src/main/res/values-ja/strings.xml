@@ -9,7 +9,6 @@
     <string name="title_home">ホーム</string>
     <string name="title_install">インストール</string>
     <string name="title_settings">設定</string>
-    <string name="button_dismiss">閉じる</string>
     <!-- Home Page -->
     <string name="changelogs">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
@@ -65,10 +64,12 @@
     <string name="update_found">アップデートがあります！</string>
     <string name="update_notfound">アップデートはありません</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">閉じる</string>
     <string name="guide">ガイド</string>
     <string name="hold_on">ちょっと待った！</string>
     <string name="miui_one_title">MIUI ユーザーを検知しました！</string>
-    <string name="miui_one">あなたは MIUI ユーザーのようです。Vanced Manager を適切に利用するには、開発者向けオプションから MIUI の最適化を無効にする必要があります。\nただし、xiaomi.eu ベースの 20.2.20 ROM をお使いの場合は、この警告を無視しても問題ありません。</string>
+    <string name="miui_one">あなたは MIUI ユーザーのようです。Vanced Manager を適切に利用するには、開発者向けオプションから MIUI の最適化を無効にする必要があります。
+ただし、xiaomi.eu ベースの 20.2.20 ROM をお使いの場合は、この警告を無視しても問題ありません。</string>
     <string name="error">エラー</string>
     <string name="security_context">vanced.app、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="success">成功！</string>
@@ -88,6 +89,4 @@
     <string name="manager_dev">Manager 開発</string>
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>

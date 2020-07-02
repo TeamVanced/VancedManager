@@ -9,7 +9,6 @@
     <string name="title_home">Startseite</string>
     <string name="title_install">Installieren</string>
     <string name="title_settings">Einstellungen</string>
-    <string name="button_dismiss">Schließen</string>
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
     <string name="downloading_file">%1$s wird heruntergeladen</string>
@@ -18,14 +17,15 @@
     <string name="install">Installieren</string>
     <string name="installing_app">%1$s wird installiert</string>
     <string name="installation_aborted">Operation fehlgeschlagen, da der Nutzer sie abgebrochen hat</string>
-    <string name="installation_blocked">Operation fehlgeschlagen, da der Nutzer Installation nicht gestattet hat</string>
+    <string name="installation_blocked">Operation fehlgeschlagen, da der Nutzer die Installation nicht gestattet hat</string>
     <string name="installation_conflict">Operation fehlgeschlagen, da die App mit einer bereits installierten App im Konflikt steht</string>
-    <string name="installation_failed">Operation aus einem unbekannten Grund fehlgeschlagen</string>
+    <string name="installation_failed">Operation aus einem unbekannten Grund fehlgeschlagen. Bitte trete unserem Telegram Chat oder Discord Server bei, um Support zu erhalten.</string>
     <string name="installation_incompatible">Operation fehlgeschlagen, da die App inkompatibel mit deinem Gerät ist</string>
     <string name="installation_invalid">Operation fehlgeschlagen, da die apks Dateien defekt sind</string>
     <string name="installation_signature">Unerwarteter Fehler während der Installation aufgetreten. Hast du die Signatur-Verifikation deaktiviert?</string>
-    <string name="installation_miui">Unerwarteter Fehler während der Installation aufgetreten. Hast du die MiUI-Optimisierungen deaktiviert?</string>
-    <string name="installation_storage">Operation fehlgeschlagen, da ein Storage-Fehler aufgetreten ist. Warte, wie ist das überhaupt möglich?</string>
+    <string name="installation_miui">Unerwarteter Fehler während der Installation aufgetreten. Hast du die MIUI-Optimisierungen deaktiviert?</string>
+    <string name="installation_storage">Operation fehlgeschlagen, da ein Storage-Fehler aufgetreten ist.</string>
+    <string name="installation_wait">Bitte warte, bis die Installation abgeschlossen ist</string>
     <string name="button_reinstall">Neu installieren</string>
     <string name="version_installed">Installiert:</string>
     <string name="latest">Neueste:</string>
@@ -33,6 +33,7 @@
     <string name="successfully_installed">%1$s erfolgreich installiert</string>
     <string name="network_error">Keine Netzwerkverbindung verfügbar</string>
     <string name="no_microg">Kein MicroG!</string>
+    <string name="root_not_granted">Root-Zugriff nicht erteilt</string>
     <string name="unavailable">Nicht verfügbar</string>
     <string name="update">Update</string>
     <string name="useful_links">Nützliche Links</string>
@@ -65,19 +66,21 @@
     <string name="update_found">Update gefunden!</string>
     <string name="update_notfound">Keine neuen Updates</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">Schließen</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Warte!</string>
-    <string name="miui_one_title">MIUI-Nutzer erkannt!</string>
-    <string name="miui_one">Hey! Du scheinst ein MIUI-Nutzer zu sein. Damit Vanced Manager richtig funktioniert musst du diese in den Entwicklereinstellungen deines Gerätes deaktivieren.\nSolltest du jedoch auf einem 20.2.20 Betriebssystem sein, das auf xiaomi.eu basiert ist, kannst du diese Warnung ignorieren.</string>
+    <string name="magisk_vanced">Du nutzt die Magisk-Version von Vanced. Diese ist nicht mehr unterstützt und es ist nicht möglich, sie zu updaten. Bitte entferne sie erst, indem du das Magisk-Modul entfernst.</string>
+    <string name="miui_one_title">MIUI erkannt!</string>
+    <string name="miui_one">Hey! Du scheinst ein MIUI-Nutzer zu sein. Damit Vanced Manager richtig funktioniert musst du die MIUI-Optimisierungen in den Entwicklereinstellungen deines Gerätes deaktivieren. (Du kannst diese Warnung ignorieren, solltest du ein 20.2.20 Betriebssystem haben, das auf xiaomi.eu basiert ist)</string>
     <string name="error">Fehler</string>
     <string name="security_context">Bitte stelle sicher, dass du die App von vanced.app, dem Vanced Discord Server oder GitHub heruntergeldaden hast.</string>
     <string name="success">Erfolg!</string>
-    <string name="vanced_installed">Vanced wurde erfolgreich installiert. Möchtest du es sofort öffnen?</string>
+    <string name="vanced_installed">Vanced wurde erfolgreich installiert. Jetzt öffnen?</string>
     <string name="launch">Öffnen</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wähle deine bevorzugte Sprache für Vanced</string>
-    <string name="choose_preferred_language_note">Beachte: Solltest du eine andere Sprache als Englisch installieren, wird Englisch trotzdem als zusätzliche Sprache installiert.</string>
+    <string name="choose_preferred_language_note">Beachte: Englisch wird immer als zusätzliche Sprache installiert</string>
     <string name="choose_preferred_theme">Wähle dein bevorzugtes Theme für Vanced</string>
     <string name="disable_signature">Root-Modus erkannt! Um Vanced erfolgreich zu installieren, stelle sicher, dass du die Signatur-Verifikation deaktiviert hast.</string>
     <string name="finish">Abschließen</string>
@@ -88,6 +91,4 @@
     <string name="manager_dev">Manager-Entwickler</string>
     <string name="sources">Quellen</string>
     <string name="vanced_team">Vanced Team</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>

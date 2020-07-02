@@ -9,7 +9,6 @@
     <string name="title_home">Главная</string>
     <string name="title_install">Установить</string>
     <string name="title_settings">Настройки</string>
-    <string name="button_dismiss">Отклонить</string>
     <!-- Home Page -->
     <string name="changelogs">Список изменений</string>
     <string name="downloading_file">Загрузка %1$s</string>
@@ -65,10 +64,12 @@
     <string name="update_found">Найдено обновление!</string>
     <string name="update_notfound">Обновлений не найдено</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">Отклонить</string>
     <string name="guide">Руководство</string>
     <string name="hold_on">Внимание!</string>
     <string name="miui_one_title">Обнаружен пользователь MIUI!</string>
-    <string name="miui_one">Привет! Похоже, вы пользователь MIUI. для правильного использования Vanced Manager вам придется отключить оптимизацию MIUI в настройках разработчика\nЕсли вы используете прошивку версии 20.2.20, основанную на xiaomi.eu, вы можете спокойно проигнорировать это предупреждение.</string>
+    <string name="miui_one">Привет! Похоже, вы пользователь MIUI. для правильного использования Vanced Manager вам придется отключить оптимизацию MIUI в настройках разработчика
+Если вы используете прошивку версии 20.2.20, основанную на xiaomi.eu, вы можете спокойно проигнорировать это предупреждение.</string>
     <string name="error">Ошибка</string>
     <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vanced.app, сервера Discord Vanced или GitHub</string>
     <string name="success">Успешно!</string>
@@ -88,6 +89,4 @@
     <string name="manager_dev">Разработчик</string>
     <string name="sources">Исходники</string>
     <string name="vanced_team">Vanced Team</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>
