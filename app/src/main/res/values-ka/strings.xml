@@ -70,13 +70,10 @@
 
     <!-- Dialogs -->
     <string name="button_dismiss">დახურვა</string>
-    <string name="button_fine">კარგი</string>
     <string name="guide">ინსტრუქცია</string>
     <string name="hold_on">დაიცა!</string>
     <string name="miui_one_title">აღმოჩენილია MIUI-ის მომხმარებელი!</string>
     <string name="miui_one">როგორც ჩანს ტქვენ MIUI-ის მომხმარებელი ხართ. იმისთვის რომ მენეჯერმა სწორედ იმუშავოს, თქვენ უნდა გამორთოთ MIUI-ის ოპტიმიზაციები დეველოპერის პარამეტრებიდან.\n მაგრამ, თუ თქვენ ხართ სისტემის 20.2.20 (ან უფრო მაღალ) ვერსიაზე რომელიც დაფუძნებულია xiaomi.eu-ზე, შეგიძლიათ დააიგნოროთ ეს გაფრთხილება.</string>
-    <string name="miui_two_title">I\'m gonna stop you right there!</string>
-    <string name="miui_two">როგორც ჩანს თქვენ არ გამორთეთ MIUI-ის ოპტიმიზაციები. გთოხოვთ გამორთოთ იგი. მაგრამ, თუ თქვენ ხართ სისტემის 20.2.20 (ან უფრო მაღალ) ვერსიაზე რომელიც დაფუძნებულია xiaomi.eu-ზე, შეგიძლიათ დააიგნოროთ ეს გაფრთხილება.</string>
     <string name="error">შეცდომა</string>
     <string name="security_context">გთხოვთ დარწმუნდით რომ აპი გადმოწერეთ vanced.app-იდან, Vanced Discord სერვერიდან ან GitHub-იდან</string>
     <string name="success">წარმატება!</string>
