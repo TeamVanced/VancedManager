@@ -78,15 +78,17 @@ class UpdateCheckFragment : DialogFragment() {
             .start(object : OnDownloadListener{
                 override fun onDownloadComplete() {
                     activity?.let {
-                        val apk = File(activity!!.filesDir.path, "manager.apk")
+                        val apk = File("${activity?.filesDir?.path}/manager.apk")
                         val uri =
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                                FileProvider.getUriForFile(activity!!, "${activity!!.packageName}.provider", apk)
+                                FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)
                             else
                                 Uri.fromFile(apk)
 
                         val intent = Intent(Intent.ACTION_VIEW)
                         intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                         startActivity(intent)
                     }
                 }
