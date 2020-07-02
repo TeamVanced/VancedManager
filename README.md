@@ -5,6 +5,8 @@ Then we thought, "why don't we make a manager for vanced, which will download, u
 After 3 months of development, we are finally ready to introduce Vanced Manager to the masses. Vanced manager can easily install and uninstall vanced and microg, has various settings for customisation and better experience. The Manager comes with an easy-to-use interface, support for background download and installation*  
 ##### *Due to changes in Android Oreo and up, and because of aggressive battery optimisations in some ROMs, feature may not be available for all devices.  
 
+For anyone who wants to provide translations please submit them to https://vanced.oneskyapp.com as we also use it for YouTube Vanced.
+
 ## Vanced Developers
 - xfileFIN
 - KevinX8
