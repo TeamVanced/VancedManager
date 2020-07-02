@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
@@ -76,7 +78,13 @@ class UpdateCheckFragment : DialogFragment() {
             .start(object : OnDownloadListener{
                 override fun onDownloadComplete() {
                     activity?.let {
-                        val uri = Uri.fromFile(File(activity!!.filesDir.path, "manager.apk"))
+                        val apk = File(activity!!.filesDir.path, "manager.apk")
+                        val uri =
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                                FileProvider.getUriForFile(activity!!, "${activity!!.packageName}.provider", apk)
+                            else
+                                Uri.fromFile(apk)
+
                         val intent = Intent(Intent.ACTION_VIEW)
                         intent.setDataAndType(uri, "application/vnd.android.package-archive")
                         startActivity(intent)
