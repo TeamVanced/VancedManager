@@ -3,11 +3,16 @@ package com.vanced.manager.core
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+import com.dezlum.codelabs.getjson.GetJson
+import com.vanced.manager.R
 import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.showSecurityDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.statementFalse
+import com.vanced.manager.ui.fragments.UpdateCheckFragment
+import com.vanced.manager.utils.InternetTools.isUpdateAvailable
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -18,16 +23,16 @@ open class Main: AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-        val firstStart = prefs.getBoolean("firstStart", true)
-        val falseStatement = prefs.getBoolean("statement", true)
         val variant = prefs.getString("vanced_variant", "nonroot")
         val showRootDialog = prefs.getBoolean("show_root_dialog", true)
 
         when {
-            firstStart -> showSecurityDialog(this)
-            !falseStatement -> statementFalse(this)
+            prefs.getBoolean("firstStart", true) -> showSecurityDialog(this)
+            !prefs.getBoolean("statement", true) -> statementFalse(this)
             variant == "root" && showRootDialog -> showRootDialog(this)
         }
+
+        checkUpdates()
 
     }
 
@@ -36,6 +41,15 @@ open class Main: AppCompatActivity() {
         getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isVancedDownloading", false).apply()
         getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isMicrogDownloading", false).apply()
         super.onPause()
+    }
+
+    private fun checkUpdates() {
+        if (GetJson().isConnected(this) && isUpdateAvailable()) {
+            val fm = supportFragmentManager
+            UpdateCheckFragment().show(fm, "UpdateCheck")
+        } else {
+            Toast.makeText(this, getString(R.string.update_notfound), Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
