@@ -25,7 +25,6 @@ import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.utils.PackageHelper.installApp
 
 class HomeFragment : Home() {
 
