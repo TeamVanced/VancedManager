@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <!-- Global Strings -->
+    <string name="close">Chiudi</string>
+    <string name="welcome">Benvenuto</string>
+
+    <!-- Main Activity -->
+    <string name="title_about">Informazioni</string>
+    <string name="title_home">Inizio</string>
+    <string name="title_install">Installa</string>
+    <string name="title_settings">Impostazioni</string>
+    
+    <!-- Home Page -->
+    <string name="changelogs">Cambiamenti</string>
+    <string name="install">Installa</string>
+    <string name="version_installed">Installata:</string>
+    <string name="latest">Più recente:</string>
+    <string name="loading">Caricamento…</string>
+    <string name="network_error">Connessione di rete non disponibile</string>
+    <string name="update">Aggiorna</string>
+    <string name="useful_links">Link Utili</string>
+    <string name="website_text">Sito Web</string>
+    <string name="support_us">Supportaci!</string>
+
+    <!-- Settings -->
+    <string name="accent_color">Tonalità Colore</string>
+    <string name="accent_color_summary">Seleziona tonalità colore preferita</string>
+    <string name="accent_blue">Blu</string>
+    <string name="accent_green">Verde</string>
+    <string name="accent_purple">Viola</string>
+    <string name="accent_red">Rosso</string>
+    <string name="accent_yellow">Giallo</string>
+    <string name="check_updates">Verifica aggiornamenti</string>
+    <string name="category_interface">Interfaccia</string>
+    <string name="category_manager">Gestione</string>
+    <string name="theme">Tema</string>
+    <string name="theme_dark">Tema Scuro</string>
+    <string name="theme_light">Tema Chiaro</string>
+    <string name="theme_summary">Scegli il tuo tema preferito</string>
+    <string name="push_notifications">Notifiche Push</string>
+    <string name="push_notifications_summary">Ricevi notifiche push ad ogni nuovo aggiornamento</string>
+    <string name="re_check">Ri-controlla</string>
+    <string name="update_center">Centro Aggiornamento</string>
+    
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Seleziona la tua lingua preferita per Vanced</string>
+    <string name="choose_preferred_language_note">Nota: se si installa qualcosa di diverso dall\'Inglese, l\'Inglese verrà comunque installata come lingua aggiuntiva</string>
+    <string name="choose_preferred_theme">Seleziona il tuo tema preferito per Vanced</string>
+    <string name="finish">Termina</string>
+    <string name="install_light_black">Chiaro + Nero</string>
+    <string name="install_light_dark">Chiaro + Scuro</string>
+    <string name="next">Successivo</string>
+
+    <!-- About Page -->
+    <string name="manager_dev">Dev Manager</string>
+    <string name="sources">Risorse</string>
+    <string name="vanced_team">Team Vanced</string>
+    <string name="security_context">Assicurati di aver scaricato l\'applicazione da vanced.app, dal server Discord di Vanced o dalla pagina ufficiale github.</string>
+    <string name="theme_follow">Basato sul sistema</string>
+    
+</resources>
