@@ -10,7 +10,6 @@
     <string name="title_install">安装</string>
     <string name="title_settings">设置</string>
     <string name="button_dismiss">关闭</string>
-    <string name="button_fine">好</string>
     <!-- Home Page -->
     <string name="changelogs">变更日志</string>
     <string name="downloading_file">%1$s 下载中</string>
@@ -70,8 +69,6 @@
     <string name="hold_on">等一下！</string>
     <string name="miui_one_title">检测到 MiUI 用户！</string>
     <string name="miui_one">嘿! 您似乎是 MiUI 用户。为了能够正确地使用 Vanced Manager ，您将需要在开发人员设定中禁用 MiUI 优化\n但是，如果您使用的是基于 xiaomi.eu 的20.2.20 ROM ，则可以放心地忽略此警告。</string>
-    <string name="miui_two_title">我要在这里阻止你！</string>
-    <string name="miui_two">看来您没有禁​​用 MiUI 优化。请把它禁用。但是，如果您使用的是基于 xiaomi.eu 的20.2.20 ROM ，则可以放心地忽略此警告。</string>
     <string name="error">错误</string>
     <string name="security_context">请确保您的软件下载来自于vanced.app，Vanced Discord服务器或Github</string>
     <string name="success">成功！</string>

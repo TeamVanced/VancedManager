@@ -9,13 +9,6 @@ object MiuiHelper {
 
     fun isMiui(): Boolean = !TextUtils.isEmpty(getSystemProps("ro.miui.ui.version.name"))
 
-    fun isMiuiOptimisationsDisabled(): Boolean {
-        return if (isMiui())
-            getSystemProps("persist.sys.miui_optimization").equals("0")
-        else
-            true
-    }
-
     private fun getSystemProps(propname: String): String? {
         val line: String
         var input: BufferedReader? = null

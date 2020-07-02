@@ -10,7 +10,6 @@
     <string name="title_install">Установить</string>
     <string name="title_settings">Настройки</string>
     <string name="button_dismiss">Отклонить</string>
-    <string name="button_fine">Хорошо</string>
     <!-- Home Page -->
     <string name="changelogs">Список изменений</string>
     <string name="downloading_file">Загрузка %1$s</string>
@@ -70,8 +69,6 @@
     <string name="hold_on">Внимание!</string>
     <string name="miui_one_title">Обнаружен пользователь MIUI!</string>
     <string name="miui_one">Привет! Похоже, вы пользователь MIUI. для правильного использования Vanced Manager вам придется отключить оптимизацию MIUI в настройках разработчика\nЕсли вы используете прошивку версии 20.2.20, основанную на xiaomi.eu, вы можете спокойно проигнорировать это предупреждение.</string>
-    <string name="miui_two_title">Я остановлю тебя!</string>
-    <string name="miui_two">Похоже, вы НЕ отключили оптимизацию MIUI. Пожалуйста, отключите её. Однако, если вы используете прошивку версии 20.2.20, основанную на xiaomi.eu, вы можете спокойно проигнорировать это предупреждение.</string>
     <string name="error">Ошибка</string>
     <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vanced.app, сервера Discord Vanced или GitHub</string>
     <string name="success">Успешно!</string>

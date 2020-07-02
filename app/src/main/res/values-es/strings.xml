@@ -10,7 +10,6 @@
     <string name="title_install">Instalar</string>
     <string name="title_settings">Ajustes</string>
     <string name="button_dismiss">Descartar</string>
-    <string name="button_fine">Bien</string>
     <!-- Home Page -->
     <string name="changelogs">Actualizaciones</string>
     <string name="downloading_file">Descargando %1$s</string>
@@ -70,8 +69,6 @@
     <string name="hold_on">Un momento!</string>
     <string name="miui_one_title">Usuario MiUI detectado!</string>
     <string name="miui_one">"Hey! Parece que eres un usuario MiUI. Pará poder usar Vanced Manager apropiadamente necesitarás deshabilitar las Optimizaciones MiUI en configuraciónes de desarrollador.\nSin embargo, si estas en el ROM 20.2.20 que esta basado en xiaomi.eu, entonces puedes ignorar esta advertencia de forma segura. "</string>
-    <string name="miui_two_title">"Te voy a detener allí! "</string>
-    <string name="miui_two">Parece que tu NO has deshabilitado las optimizaciones MiUI. Por favor deshabilitalo. Sin embargo, si estas en el ROM 20.2.20 que esta basado en xiaomi.eu, puedes ignorar esta advertencia de forma segura.</string>
     <string name="error">Error</string>
     <string name="security_context">Porfavor asegurate de haver descargado la aplicacion mediante vanced.app, el server de Vanced en Discord, o Github</string>
     <string name="success">"Éxito! "</string>

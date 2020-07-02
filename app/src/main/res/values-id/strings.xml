@@ -10,7 +10,6 @@
     <string name="title_install">Instal</string>
     <string name="title_settings">Pengaturan</string>
     <string name="button_dismiss">Hilangkan</string>
-    <string name="button_fine">Ok</string>
     <!-- Home Page -->
     <string name="changelogs">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
@@ -71,8 +70,6 @@
     <string name="hold_on">Tahan!</string>
     <string name="miui_one_title">Pengguna MiUI terdeteksi!</string>
     <string name="miui_one">Hai! Sepertinya kamu pengguna MiUI. Untuk dapat menggunakan Vanced Manager dengan benar, anda harus menonaktifkan optimisasi MiUI di pengaturan developer. Walaupun demikian, jika anda berada di ROM versi 20.2.20 berdasarkan xiaomi.eu, anda dapat mengabaikan peringatan ini.</string>
-    <string name="miui_two_title">Aku akan memberhentikanmu disitu!</string>
-    <string name="miui_two">Sepertinya kamu TIDAK menonaktifkan optimisasi MiUI. Tolong nonaktifkan itu. Walaupun demikian, jika anda mempunyai ROM versi 20.2.20 berdasarkan xiaomi.eu, anda dapat mengabaikan peringatan ini.</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi hanya dari vanced.app, Vanced Discord server atau GitHub</string>
     <string name="success">Berhasil!</string>

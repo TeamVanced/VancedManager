@@ -10,7 +10,6 @@
     <string name="title_install">Installa</string>
     <string name="title_settings">Impostazioni</string>
     <string name="button_dismiss">Scarta</string>
-    <string name="button_fine">OK</string>
     <!-- Home Page -->
     <string name="changelogs">Note di rilascio</string>
     <string name="downloading_file">Download in corso di %1$s</string>
@@ -70,8 +69,6 @@
     <string name="hold_on">Aspetta!</string>
     <string name="miui_one_title">Rilevata l\'interfaccia MiUI!</string>
     <string name="miui_one">Ehi! Sembra che tu sia un utente MiUI. Per poter utilizzare correttamente Vanced Manager, devi disattivare le ottimizzazioni di MiUI nelle impostazioni per sviluppatore.\nSe stai utilizzando la ROM 20.2.20 basata su xiaomi.eu, puoi ignorare questo avviso.</string>
-    <string name="miui_two_title">Devo fermarti per un momento di riflessione!</string>
-    <string name="miui_two">Sembra che tu NON abbia disattivato le ottimizzazioni di MiUI. Per favore, disattivale. Se stai utilizzando la ROM 20.2.20 basata su xiaomi.eu, puoi ignorare questo avviso.</string>
     <string name="error">Errore</string>
     <string name="security_context">Assicurati di aver scaricato l\'app da vanced.app, dal server di Discord di Vanced o da GitHub</string>
     <string name="success">Fatto!</string>

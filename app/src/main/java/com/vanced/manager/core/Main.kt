@@ -5,10 +5,9 @@ import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
-import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
+import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.showSecurityDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.statementFalse
-import com.vanced.manager.utils.MiuiHelper.isMiuiOptimisationsDisabled
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -21,11 +20,13 @@ open class Main: AppCompatActivity() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val firstStart = prefs.getBoolean("firstStart", true)
         val falseStatement = prefs.getBoolean("statement", true)
+        val variant = prefs.getString("vanced_variant", "nonroot")
+        val showRootDialog = prefs.getBoolean("show_root_dialog", true)
 
         when {
             firstStart -> showSecurityDialog(this)
             !falseStatement -> statementFalse(this)
-            !firstStart && !isMiuiOptimisationsDisabled() -> secondMiuiDialog(this)
+            variant == "root" && showRootDialog -> showRootDialog(this)
         }
 
     }

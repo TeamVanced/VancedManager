@@ -52,25 +52,11 @@ object DialogContainer {
             .setMessage(activity.getString(R.string.disable_signature))
             .setPositiveButton(activity.getString(R.string.button_dismiss)) { dialog, _ ->
                 dialog.dismiss()
-                PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply()
             }
             .setNeutralButton(activity.getString(R.string.guide)) { _, _ ->
                 openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, activity)
             }
-            .create()
-            .show()
-    }
-
-    fun secondMiuiDialog(context: Context) {
-        AlertDialog.Builder(context)
-            .setTitle(context.getString(R.string.miui_two_title))
-            .setMessage(context.getString(R.string.miui_two))
-            .setPositiveButton(context.getString(R.string.button_fine)) { dialog, _ ->
-                dialog.dismiss()
-            }
-            .setNeutralButton(context.getString(R.string.guide)) { _, _ ->
-                openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
-            }
+            .setOnDismissListener { PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply() }
             .create()
             .show()
     }
@@ -93,10 +79,18 @@ object DialogContainer {
             setTitle(context.getString(R.string.error))
             setMessage(msg)
             setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
-            if (msg == context.getString(R.string.installation_signature))
-                setNeutralButton(context.getString(R.string.guide)) { _, _ ->
-                    openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, context)
+            when (msg) {
+                context.getString(R.string.installation_signature) -> {
+                    setNeutralButton(context.getString(R.string.guide)) { _, _ ->
+                        openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, context)
+                    }
                 }
+                context.getString(R.string.installation_miui) -> {
+                    setNeutralButton(context.getString(R.string.guide)) { _, _ ->
+                        openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
+                    }
+                }
+            }
             create()
             show()
         }

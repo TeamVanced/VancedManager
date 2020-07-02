@@ -10,7 +10,6 @@
     <string name="title_install">Cài đặt</string>
     <string name="title_settings">Tùy chỉnh</string>
     <string name="button_dismiss">Bỏ qua</string>
-    <string name="button_fine">Được</string>
     <!-- Home Page -->
     <string name="changelogs">Lịch sử thay đổi</string>
     <string name="downloading_file">Đang tải %1$s</string>
@@ -70,8 +69,6 @@
     <string name="hold_on">Khoan đã!</string>
     <string name="miui_one_title">Phát hiện người dùng MiUI</string>
     <string name="miui_one">Hình như bạn là 1 người dùng MiUI. Để dùng Vanced hiệu quả, bạn sẽ phải vô hiệu hóa MiUI optimisations trong cài đặt lập trình viên\nTuy nhiên, nếu bạn đang dùng ROM 20.2.20 từ xiaomi.eu, bạn có thể bỏ qua cảnh báo này.</string>
-    <string name="miui_two_title">Tôi sẽ dừng bạn tại đây!</string>
-    <string name="miui_two">Hình như bạn KHÔNG vô hiệu hóa MiUI optimisations. Hãy vô hiệu hóa nó. Tuy nhiên, nếu bạn đang dùng ROM 20.2.20 từ xiaomi.eu, bạn có thể bỏ qua cảnh báo này.</string>
     <string name="error">Lỗi</string>
     <string name="security_context">Hãy đảm bảo bạn tải về app từ vanced.app, Vanced Discord server hoặc GitHub</string>
     <string name="success">Thành công!</string>
