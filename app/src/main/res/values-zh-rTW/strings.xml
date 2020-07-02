@@ -9,28 +9,27 @@
     <string name="title_home">主頁</string>
     <string name="title_install">安裝</string>
     <string name="title_settings">設定</string>
-    <string name="button_dismiss">關閉</string>
     <!-- Home Page -->
     <string name="changelogs">更新日誌</string>
-    <string name="downloading_file">%1$s 下載中</string>
-    <string name="failed_uninstall">%1$s 包裝下載失敗</string>
+    <string name="downloading_file">下載 %1$s 中</string>
+    <string name="failed_uninstall">未能解除安裝 %1$s</string>
     <string name="error_downloading">%1$s 下載錯誤</string>
     <string name="install">安裝</string>
-    <string name="installing_app">%1$s 安裝中</string>
-    <string name="installation_aborted">操作失敗因為用戶放棄安裝</string>
-    <string name="installation_blocked">操作失敗因為用戶封鎖安裝</string>
-    <string name="installation_conflict">操作失敗因為應用程式與已安裝的應用程式出現衝突</string>
-    <string name="installation_failed">操作失敗因為它失敗了，我不清楚</string>
-    <string name="installation_incompatible">操作失敗因為它與您的設備不兼容</string>
-    <string name="installation_invalid">操作失敗因為 APK 檔案無效</string>
+    <string name="installing_app">安裝 %1$s 中</string>
+    <string name="installation_aborted">操作失敗因為用戶放棄安裝。</string>
+    <string name="installation_blocked">操作失敗因為用戶封鎖安裝。</string>
+    <string name="installation_conflict">操作失敗因為應用程式與已安裝的應用程式出現衝突。</string>
+    <string name="installation_failed">因未知原因導致操作失敗，傳送帶有 logcat 的報告。</string>
+    <string name="installation_incompatible">操作失敗因為它與您的裝置不兼容。</string>
+    <string name="installation_invalid">操作失敗因為 APK 檔案無效。</string>
     <string name="installation_signature">安裝 Vanced 時發生意外的錯誤。您有關閉簽名驗證嗎？</string>
-    <string name="installation_miui">安裝 Vanced 時發生意外的錯誤。您有關閉 MiUI 優化嗎？</string>
-    <string name="installation_storage">操作失敗因為存儲錯誤。等等，這怎麼可能呢？</string>
+    <string name="installation_miui">安裝 Vanced 時發生意外的錯誤。您有禁用 MiUI 優化嗎？</string>
+    <string name="installation_storage">操作失敗因為存儲出現錯誤。</string>
     <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
     <string name="loading">正在載入中。。。</string>
-    <string name="successfully_installed">%1$s 安裝成功</string>
+    <string name="successfully_installed">成功安裝 %1$s</string>
     <string name="network_error">網際網絡無法存取</string>
     <string name="no_microg">沒有 MicroG！</string>
     <string name="unavailable">不可用</string>
@@ -48,7 +47,7 @@
     <string name="accent_yellow">黃色</string>
     <string name="check_updates">檢查更新</string>
     <string name="category_interface">介面</string>
-    <string name="category_manager">Manager</string>
+    <string name="category_manager">管理員</string>
     <string name="chosen_install_values">已選擇安裝值</string>
     <string name="chosen_lang">語言： %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
@@ -65,29 +64,28 @@
     <string name="update_found">找到更新！</string>
     <string name="update_notfound">沒有新的更新</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">關閉</string>
     <string name="guide">指南</string>
     <string name="hold_on">等一下！</string>
     <string name="miui_one_title">檢測到 MiUI 用戶！</string>
-    <string name="miui_one">嘿! 您似乎是 MiUI 用戶。 為了能夠正確地使用 Vanced Manager ，您將需要在開發人員設定中禁用 MiUI 優化\n但是，如果您使用的是基於 xiaomi.eu 的20.2.20 ROM ，則可以放心地忽略此警告。</string>
+    <string name="miui_one">嘿! 您似乎是 MiUI 用戶。 為了能夠正確地使用 Vanced Manager ，您將需要在開發人員設定中禁用 MiUI 優化。但是，如果您使用的是基於 xiaomi.eu 的20.2.20 ROM （或更新的版本），則可以放心地忽略此警告。</string>
     <string name="error">錯誤</string>
-    <string name="security_context">請確保您於vanced.app、 Vanced的Discord伺服器或GitHub下載應用程式</string>
+    <string name="security_context">請確保您於 vanced.app 、 Vanced 的 Discord 伺服器或 GitHub 下載應用程式</string>
     <string name="success">成功！</string>
     <string name="vanced_installed">Vanced已成功安裝，您要立即啟動嗎？</string>
     <string name="launch">啟動</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">為Vanced選擇您偏好的語言</string>
+    <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
     <string name="choose_preferred_language_note">備註：如果您安裝了非英語的語言，英語仍然會被安裝作其他語言</string>
-    <string name="choose_preferred_theme">為Vanced選擇您偏好的主題</string>
-    <string name="disable_signature">檢測到 Root 模式！ 為了使 Manager 能夠正確地安裝 Vanced ，請確保您已禁用簽名驗證。</string>
+    <string name="choose_preferred_theme">為 Vanced 選擇您偏好的主題</string>
+    <string name="disable_signature">檢測到 Root ！ 為了使 Manager 能夠正確地安裝 Vanced ，請確保您已禁用簽名驗證。</string>
     <string name="finish">完成</string>
-    <string name="install_light_black">淺色+黑色</string>
-    <string name="install_light_dark">淺色+深色</string>
+    <string name="install_light_black">淺色 + 黑色</string>
+    <string name="install_light_dark">淺色 + 深色</string>
     <string name="next">下一個</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 的開發人員</string>
-    <string name="sources">資源</string>
-    <string name="vanced_team">Vanced團隊</string>
-    <!-- Home Page -->
-    <!-- About Page -->
+    <string name="sources">程式碼</string>
+    <string name="vanced_team">Vanced 團隊</string>
 </resources>

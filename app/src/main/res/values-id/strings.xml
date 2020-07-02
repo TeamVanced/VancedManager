@@ -7,9 +7,8 @@
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
     <string name="title_home">Menu utama</string>
-    <string name="title_install">Instal</string>
+    <string name="title_install">Pasang</string>
     <string name="title_settings">Pengaturan</string>
-    <string name="button_dismiss">Hilangkan</string>
     <!-- Home Page -->
     <string name="changelogs">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
@@ -17,16 +16,16 @@
     <string name="error_downloading">Gagal mengunduh %1$s</string>
     <string name="install">Pasang</string>
     <string name="installing_app">Memasang %1$s</string>
-    <string name="installation_aborted">Proses gagal karena pengguna membatalkan instalasi</string>
-    <string name="installation_blocked">Proses gagal karena pengguna memblokir instalasi</string>
-    <string name="installation_conflict">Proses gagal karena terjadi konflik dengan aplikasi yang sudah terinstal</string>
-    <string name="installation_failed">Proses gagal dengan alasan yang tidak diketahui, kirim isu dengan logcat</string>
-    <string name="installation_incompatible">Proses gagal karena aplikasi tidak didukung oleh perangkat anda</string>
-    <string name="installation_invalid">Proses gagal karena apk files tidak valid</string>
+    <string name="installation_aborted">Proses gagal karena pengguna membatalkan instalasi.</string>
+    <string name="installation_blocked">Proses gagal karena pengguna memblokir instalasi.</string>
+    <string name="installation_conflict">Proses gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang.</string>
+    <string name="installation_failed">Proses gagal dengan alasan yang tidak diketahui, kirim isu dengan logcat.</string>
+    <string name="installation_incompatible">Proses gagal karena aplikasi tidak kompatibel dengan perangkat anda.</string>
+    <string name="installation_invalid">Proses gagal karena apk files tidak valid.</string>
     <string name="installation_signature">Kesalahan tidak diduga saat menginstal Vanced. Apakah anda sudah menonaktifkan signature verification?</string>
-    <string name="installation_miui">Kesalahan tidak terduga terjadi saat menginstal Vanced. Apakah anda sudah menonaktifkan Optimisasi MiUI?</string>
+    <string name="installation_miui">Kesalahan tidak terduga terjadi saat memasang Vanced. Apakah anda sudah menonaktifkan Optimisasi MIUI?</string>
     <string name="installation_storage">Proses gagal karena terjadi kesalahan dengan penyimpanan.</string>
-    <string name="button_reinstall">Instal ulang</string>
+    <string name="button_reinstall">Pasang ulang</string>
     <string name="version_installed">Terpasang:</string>
     <string name="latest">Terbaru:</string>
     <string name="loading">Memuat...</string>
@@ -41,7 +40,7 @@
 "</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
-    <string name="accent_color_summary">Pilih aksen warna anda</string>
+    <string name="accent_color_summary">Pilih aksen warna yang anda inginkan</string>
     <string name="accent_blue">Biru</string>
     <string name="accent_green">Hijau</string>
     <string name="accent_purple">Ungu</string>
@@ -57,7 +56,7 @@
     <string name="theme_follow">Ikuti sistem</string>
     <string name="theme_dark">Tema gelap</string>
     <string name="theme_light">Tema terang</string>
-    <string name="theme_summary">Pilih tema anda</string>
+    <string name="theme_summary">Pilih tema yang anda inginkan</string>
     <string name="update_url">Perbarui URL channel</string>
     <string name="push_notifications">Notifikasi push</string>
     <string name="push_notifications_summary">Terima notifikasi push saat pembaruan tersedia</string>
@@ -66,10 +65,11 @@
     <string name="update_found">Pembaruan ditemukan!</string>
     <string name="update_notfound">Tidak ada pembaruan</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">Hilangkan</string>
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Tahan!</string>
-    <string name="miui_one_title">Pengguna MiUI terdeteksi!</string>
-    <string name="miui_one">Hai! Sepertinya kamu pengguna MiUI. Untuk dapat menggunakan Vanced Manager dengan benar, anda harus menonaktifkan optimisasi MiUI di pengaturan developer. Walaupun demikian, jika anda berada di ROM versi 20.2.20 berdasarkan xiaomi.eu, anda dapat mengabaikan peringatan ini.</string>
+    <string name="miui_one_title">Pengguna MIUI terdeteksi!</string>
+    <string name="miui_one">Hai! Sepertinya kamu pengguna MIUI. Untuk dapat menggunakan Vanced Manager dengan benar, anda harus menonaktifkan optimisasi MiUI di pengaturan developer. Walaupun demikian, jika anda berada di ROM versi 20.2.20 (atau lebih) berdasarkan xiaomi.eu, anda dapat mengabaikan peringatan ini.</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi hanya dari vanced.app, Vanced Discord server atau GitHub</string>
     <string name="success">Berhasil!</string>
@@ -77,10 +77,10 @@
     <string name="launch">Buka</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Pilih bahasa anda untuk Vanced</string>
-    <string name="choose_preferred_language_note">Catatan: jika anda menginstal apapun selain Bahasa Inggris, Bahasa Inggris akan tetap terinstal sebagai bahasa tambahan</string>
-    <string name="choose_preferred_theme">Pilih tema anda untuk Vanced</string>
-    <string name="disable_signature">Root terdeteksi! Agar manager dapat menginstal Vanced dengan benar, pastikan anda sudah menonaktifkan signature verfication.</string>
+    <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
+    <string name="choose_preferred_language_note">Catatan: jika anda memasang bahasa apapun selain Inggris, bahasa Inggris akan tetap terpasang sebagai bahasa tambahan</string>
+    <string name="choose_preferred_theme">Pilih tema yang anda inginkan untuk Vanced</string>
+    <string name="disable_signature">Mode Root terdeteksi! Agar manager dapat memasang Vanced dengan benar, pastikan anda sudah menonaktifkan signature verification.</string>
     <string name="finish">Selesai</string>
     <string name="install_light_black">Terang + Hitam</string>
     <string name="install_light_dark">Terang + Gelap</string>
@@ -89,6 +89,4 @@
     <string name="manager_dev">Pembuat manager</string>
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>

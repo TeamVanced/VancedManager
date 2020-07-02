@@ -9,7 +9,6 @@
     <string name="title_home">主菜单</string>
     <string name="title_install">安装</string>
     <string name="title_settings">设置</string>
-    <string name="button_dismiss">关闭</string>
     <!-- Home Page -->
     <string name="changelogs">变更日志</string>
     <string name="downloading_file">%1$s 下载中</string>
@@ -20,16 +19,16 @@
     <string name="installation_aborted">操作失败因为用户放弃安装</string>
     <string name="installation_blocked">操作失败因为用户封锁安装</string>
     <string name="installation_conflict">操作失败因为软件与已安装的软件出现冲突</string>
-    <string name="installation_failed">操作失败因为它失败了，我不清楚</string>
+    <string name="installation_failed">未知原因导致操作失败，发送 logcat 报告</string>
     <string name="installation_incompatible">操作失败因为它与您的设备不相容</string>
     <string name="installation_invalid">操作失败因为 APK 档案失效</string>
     <string name="installation_signature">安装 Vanced 时发生意外错误。您有关闭签名验证吗？</string>
     <string name="installation_miui">安装 Vanced 时发生意外错误。您有关闭 MiUI 优化吗？</string>
-    <string name="installation_storage">操作失败因为存储错误。等等，这怎么可能呢？</string>
+    <string name="installation_storage">操作失败因为存储发生错误。</string>
     <string name="button_reinstall">重新安装</string>
     <string name="version_installed">已安装：</string>
     <string name="latest">最新</string>
-    <string name="loading">加载中</string>
+    <string name="loading">加载中。。。</string>
     <string name="successfully_installed">%1$s 成功安装</string>
     <string name="network_error">网络连接不可用</string>
     <string name="no_microg">没有 MicroG！</string>
@@ -48,7 +47,7 @@
     <string name="accent_yellow">黄色</string>
     <string name="check_updates">检查更新</string>
     <string name="category_interface">接口</string>
-    <string name="category_manager">Manager</string>
+    <string name="category_manager">管理员</string>
     <string name="chosen_install_values">已选择安装值</string>
     <string name="chosen_lang">语言： %1$s</string>
     <string name="chosen_theme">主题： %1$s</string>
@@ -65,10 +64,11 @@
     <string name="update_found">找到更新！</string>
     <string name="update_notfound">没有新的更新</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">关闭</string>
     <string name="guide">引导</string>
     <string name="hold_on">等一下！</string>
     <string name="miui_one_title">检测到 MiUI 用户！</string>
-    <string name="miui_one">嘿! 您似乎是 MiUI 用户。为了能够正确地使用 Vanced Manager ，您将需要在开发人员设定中禁用 MiUI 优化\n但是，如果您使用的是基于 xiaomi.eu 的20.2.20 ROM ，则可以放心地忽略此警告。</string>
+    <string name="miui_one">嘿! 您似乎是 MiUI 用户。为了能够正确地使用 Vanced Manager ，您将需要在开发人员设定中禁用 MiUI 优化。但是，如果您使用的是基于 xiaomi.eu 的20.2.20 ROM （或更新的版本），则可以放心地忽略此警告。</string>
     <string name="error">错误</string>
     <string name="security_context">请确保您的软件下载来自于vanced.app，Vanced Discord服务器或Github</string>
     <string name="success">成功！</string>
@@ -88,6 +88,4 @@
     <string name="manager_dev">Manager 的开发者</string>
     <string name="sources">来源</string>
     <string name="vanced_team">Vanced团队</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>

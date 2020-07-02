@@ -1,7 +1,10 @@
 package com.vanced.manager.ui.fragments
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +14,7 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
 import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
@@ -19,7 +23,7 @@ import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
-import com.vanced.manager.utils.PackageHelper.installApp
+import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
 
@@ -60,7 +64,7 @@ class UpdateCheckFragment : DialogFragment() {
     }
 
     private fun upgradeManager() {
-        val dwnldUrl = "https://github.com/VancedManager/releases/latest/download/manager.apk"
+        val dwnldUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json").get("url").asString
         val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
 
         PRDownloader.download(dwnldUrl, activity?.filesDir?.path, "manager.apk")
@@ -74,10 +78,18 @@ class UpdateCheckFragment : DialogFragment() {
             .start(object : OnDownloadListener{
                 override fun onDownloadComplete() {
                     activity?.let {
-                        installApp(
-                            it,
-                            it.filesDir.path + "/manager.apk",
-                            "com.vanced.manager")
+                        val apk = File("${activity?.filesDir?.path}/manager.apk")
+                        val uri =
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                                FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)
+                            else
+                                Uri.fromFile(apk)
+
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                        startActivity(intent)
                     }
                 }
 

@@ -9,7 +9,6 @@
     <string name="title_home">Trang chủ</string>
     <string name="title_install">Cài đặt</string>
     <string name="title_settings">Tùy chỉnh</string>
-    <string name="button_dismiss">Bỏ qua</string>
     <!-- Home Page -->
     <string name="changelogs">Lịch sử thay đổi</string>
     <string name="downloading_file">Đang tải %1$s</string>
@@ -65,10 +64,12 @@
     <string name="update_found">Tìm thấy cập nhật!</string>
     <string name="update_notfound">Không có cập nhật mới</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">Bỏ qua</string>
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Khoan đã!</string>
     <string name="miui_one_title">Phát hiện người dùng MiUI</string>
-    <string name="miui_one">Hình như bạn là 1 người dùng MiUI. Để dùng Vanced hiệu quả, bạn sẽ phải vô hiệu hóa MiUI optimisations trong cài đặt lập trình viên\nTuy nhiên, nếu bạn đang dùng ROM 20.2.20 từ xiaomi.eu, bạn có thể bỏ qua cảnh báo này.</string>
+    <string name="miui_one">Hình như bạn là 1 người dùng MiUI. Để dùng Vanced hiệu quả, bạn sẽ phải vô hiệu hóa MiUI optimisations trong cài đặt lập trình viên
+Tuy nhiên, nếu bạn đang dùng ROM 20.2.20 từ xiaomi.eu, bạn có thể bỏ qua cảnh báo này.</string>
     <string name="error">Lỗi</string>
     <string name="security_context">Hãy đảm bảo bạn tải về app từ vanced.app, Vanced Discord server hoặc GitHub</string>
     <string name="success">Thành công!</string>
@@ -85,9 +86,7 @@
     <string name="install_light_dark">Sáng + Tối</string>
     <string name="next">Tiếp theo</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Dev</string>
+    <string name="manager_dev">Quản lý nhà phát triển</string>
     <string name="sources">Nguồn</string>
     <string name="vanced_team">Đội ngũ Vanced</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>

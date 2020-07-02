@@ -25,7 +25,6 @@ import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.utils.PackageHelper.installApp
 
 class HomeFragment : Home() {
 
@@ -92,7 +91,7 @@ class HomeFragment : Home() {
             when (intent.action) {
                 MICROG_DOWNLOADED -> {
                     view?.findViewById<ProgressBar>(R.id.microg_installing)?.visibility = View.VISIBLE
-                    activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
+                    //activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
                 }
                 VANCED_DOWNLOADED -> {
                     view?.findViewById<ProgressBar>(R.id.vanced_installing)?.visibility = View.VISIBLE

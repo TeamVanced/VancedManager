@@ -69,7 +69,7 @@ class MainActivity : Main() {
                     restartActivity()
                     Log.d("VMpm", "test")
                 }
-                APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall) + intent.getStringExtra("pkgName"), this@MainActivity)
+                APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall, intent.getStringExtra("pkgName")), this@MainActivity)
             }
         }
     }

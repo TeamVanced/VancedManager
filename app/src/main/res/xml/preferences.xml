@@ -14,12 +14,6 @@
             android:icon="@drawable/ic_cloud_upload_black_24dp" />
 
         <SwitchPreference
-            android:title="Auto-Check updates"
-            android:key="auto_check_update"
-            android:defaultValue="true"
-            android:summary="Check manager updates on app startup" />
-
-        <SwitchPreference
             android:title="@string/push_notifications"
             android:key="push_notifications_status"
             android:summary="@string/push_notifications_summary"

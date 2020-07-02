@@ -13,11 +13,12 @@ class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        checkUpdates()
+        //checkUpdates()
         PRDownloader.initialize(applicationContext)
         createNotifChannel(this)
     }
 
+    /*
     private fun checkUpdates() {
         val checkPrefs = PreferenceManager.getDefaultSharedPreferences(this).getBoolean("auto_check_update", true)
         if (checkPrefs) {
@@ -27,5 +28,7 @@ class App: Application() {
                 Toast.makeText(this, getString(R.string.update_notfound), Toast.LENGTH_SHORT).show()
         }
     }
+
+     */
 
 }

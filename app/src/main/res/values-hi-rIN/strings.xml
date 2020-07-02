@@ -10,7 +10,6 @@
     <string name="title_home">होम</string>
     <string name="title_install">इंस्टॉल</string>
     <string name="title_settings">सेट्इन्ग</string>
-    <string name="button_dismiss">डिस्मिस</string>
     <!-- Home Page -->
     <string name="changelogs">चेंजलॉग</string>
     <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
@@ -68,10 +67,12 @@
     <string name="update_found">अपडेट मिला!</string>
     <string name="update_notfound">कोई नया अपडेट नहीं</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">डिस्मिस</string>
     <string name="guide">गाइड</string>
     <string name="hold_on">रुको!</string>
     <string name="miui_one_title">पता लगाया MiUI उपयोगकर्ता!</string>
-    <string name="miui_one">अरे! लगता है कि आप MiUI उपयोगकर्ता हैं। Vanced Manager को ठीक से उपयोग करने के लिए, आपको डेवलपर सेटिंग में MiUI ऑप्टिमाइज़ेशन को अक्षम करना होगा\nहालाँकि, यदि आप 20.2.20 ROM पर हैं जो xiaomi.eu पर आधारित है, तो आप इस चेतावनी को सुरक्षित रूप से अनदेखा कर सकते हैं।</string>
+    <string name="miui_one">अरे! लगता है कि आप MiUI उपयोगकर्ता हैं। Vanced Manager को ठीक से उपयोग करने के लिए, आपको डेवलपर सेटिंग में MiUI ऑप्टिमाइज़ेशन को अक्षम करना होगा
+हालाँकि, यदि आप 20.2.20 ROM पर हैं जो xiaomi.eu पर आधारित है, तो आप इस चेतावनी को सुरक्षित रूप से अनदेखा कर सकते हैं।</string>
     <string name="error">इरर</string>
     <string name="security_context">कृपया सुनिश्चित करें कि आपने vanced.app, Vanced Discord सर्वर या GitHub से ऐप डाउनलोड किया है</string>
     <string name="success">सफलता!</string>
@@ -92,6 +93,4 @@
     <string name="sources">सूत्रों का</string>
     <string name="vanced_team">"वांसड टीम
 "</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>

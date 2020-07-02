@@ -106,6 +106,15 @@ object DialogContainer {
             .show()
     }
 
+    fun basicDialog(title: String, msg: String, activity: Activity) {
+        AlertDialog.Builder(activity)
+            .setTitle(title)
+            .setMessage(msg)
+            .setPositiveButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            .create()
+            .show()
+    }
+
     fun launchVanced(activity: MainActivity) {
         val intent = Intent()
         intent.component =

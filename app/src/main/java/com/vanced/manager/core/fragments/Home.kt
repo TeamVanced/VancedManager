@@ -81,22 +81,14 @@ open class Home : BaseFragment(), View.OnClickListener {
                         view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
                     }
                 } else {
-                    Toast.makeText(
-                        activity,
-                        "Please wait until installation finishes",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(activity, activity?.getString(R.string.installation_wait), Toast.LENGTH_SHORT).show()
                 }
             }
             R.id.microg_installbtn -> {
                 if (!isMicrogDownloading!!) {
-                    try {
-                        activity?.startService(Intent(activity, MicrogDownloadService::class.java))
-                    } catch (e: Exception) {
-                        Toast.makeText(activity, "Unable to start installation", Toast.LENGTH_SHORT).show()
-                    }
+                    activity?.startService(Intent(activity, MicrogDownloadService::class.java))
                 } else {
-                    Toast.makeText(activity, "Please wait until installation finishes", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, activity?.getString(R.string.installation_wait), Toast.LENGTH_SHORT).show()
                 }
             }
             R.id.microg_uninstallbtn -> activity?.let { uninstallApk("com.mgoogle.android.gms", it) }
@@ -105,10 +97,9 @@ open class Home : BaseFragment(), View.OnClickListener {
             R.id.root_switch ->
                 if (Shell.rootAccess()) {
                     writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
-                }
-                else {
+                } else {
                     writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
-                    Toast.makeText(activity, "Root access not granted", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, activity?.getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
                 }
         }
     }
@@ -120,7 +111,8 @@ open class Home : BaseFragment(), View.OnClickListener {
             startActivity(Intent(activity, MainActivity::class.java))
             activity?.overridePendingTransition(animIn, animOut)
             activity?.finish()
-        } else Log.d("VMvariant", "$variant is already selected")
+        } else
+            Log.d("VMVariant", "$variant is already selected")
     }
 
 }

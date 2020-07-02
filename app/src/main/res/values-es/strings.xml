@@ -9,30 +9,31 @@
     <string name="title_home">Hogar</string>
     <string name="title_install">Instalar</string>
     <string name="title_settings">Ajustes</string>
-    <string name="button_dismiss">Descartar</string>
     <!-- Home Page -->
     <string name="changelogs">Actualizaciones</string>
     <string name="downloading_file">Descargando %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="error_downloading">Error Descargando %1$s</string>
+    <string name="error_downloading">Error al Descargar %1$s</string>
     <string name="install">Instalar</string>
     <string name="installing_app">Instalando %1$s</string>
     <string name="installation_aborted">La operación fallo porque el usuario abortó la instalación</string>
     <string name="installation_blocked">La operación fallo porque el usuario bloqueo la instalación</string>
     <string name="installation_conflict">La operación fallo porque la app entra en conflicto con una app ya instalada</string>
-    <string name="installation_failed">La operación fallo por no se que wea, simplemente fallo</string>
-    <string name="installation_incompatible">La operación fallo porque la app es incompatible con tu dispositivo</string>
-    <string name="installation_invalid">La operación fallo debido a que los archivos apk son invalidos</string>
+    <string name="installation_failed">La operacion fallo por una razon desconocida, porfavor únete a nuestro grupo de Telegram o Discord para brindar soporte.</string>
+    <string name="installation_incompatible">La operación fallo porque la app es incompatible con tu dispositivo.</string>
+    <string name="installation_invalid">La operación fallo debido a que los archivos apk son inválidos.</string>
     <string name="installation_signature">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado verificación de firmas?(signature verification)</string>
-    <string name="installation_miui">"Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado las Optimizaciones de MiUI? "</string>
-    <string name="installation_storage">"Operación fallo porque hubo un error con almacenamiento. Un momento como es eso siquiera posible? "</string>
+    <string name="installation_miui">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado las Optimizaciones de MiUI?</string>
+    <string name="installation_storage">Operación fallo porque hubo un error con almacenamiento.</string>
+    <string name="installation_wait">Porfavor espera hasta que la instalación termine.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Ultimo:</string>
     <string name="loading">Cargando...</string>
     <string name="successfully_installed">Instalación exitosa %1$s</string>
     <string name="network_error">Conexion a la red no disponible</string>
-    <string name="no_microg">"Sin MicroG! "</string>
+    <string name="no_microg">Sin MicroG!</string>
+    <string name="root_not_granted">Acceso root no concedido</string>
     <string name="unavailable">No Disponible</string>
     <string name="update">Actualizar</string>
     <string name="useful_links">Links Utiles</string>
@@ -65,10 +66,13 @@
     <string name="update_found">Actualización encontrada!</string>
     <string name="update_notfound">Sin actualizaciónes nuevas</string>
     <!-- Dialogs -->
+    <string name="button_dismiss">Descartar</string>
     <string name="guide">Guía</string>
     <string name="hold_on">Un momento!</string>
+    <string name="magisk_vanced">Parece que estas usando la versión Magisk de Vanced, que está descontinuado y no puede ser actualizada utilizando esta app. Porfavor retírelo primero quitando el módulo magisk.</string>
     <string name="miui_one_title">Usuario MiUI detectado!</string>
-    <string name="miui_one">"Hey! Parece que eres un usuario MiUI. Pará poder usar Vanced Manager apropiadamente necesitarás deshabilitar las Optimizaciones MiUI en configuraciónes de desarrollador.\nSin embargo, si estas en el ROM 20.2.20 que esta basado en xiaomi.eu, entonces puedes ignorar esta advertencia de forma segura. "</string>
+    <string name="miui_one">"Hey! Parece que eres un usuario MiUI. Pará poder usar Vanced Manager apropiadamente necesitarás deshabilitar las Optimizaciones MiUI en ajustes de desarrollador.
+Sin embargo, si estas en el ROM 20.2.20 que esta basado en xiaomi.eu, entonces puedes ignorar esta advertencia de forma segura. "</string>
     <string name="error">Error</string>
     <string name="security_context">Porfavor asegurate de haver descargado la aplicacion mediante vanced.app, el server de Vanced en Discord, o Github</string>
     <string name="success">"Éxito! "</string>
@@ -77,7 +81,7 @@
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elije tu lenguaje preferido para Vanced</string>
-    <string name="choose_preferred_language_note">Nota: si instalas cualquier cosa ademas de Ingles, Ingles va estar todavia instalado como un lenguaje adicional</string>
+    <string name="choose_preferred_language_note">Nota: si instalas un idioma ademas de Ingles, Ingles va estar todavia instalado como un lenguaje adicional</string>
     <string name="choose_preferred_theme">Elije tu tema preferido para Vanced</string>
     <string name="disable_signature">"Modo root detectado! Pará que el Manager pueda instalar Vanced correctamente, por favor asegúrate de que hayas deshabilitado verificación de firmas(signature verification). "</string>
     <string name="finish">Finalizar</string>
@@ -88,6 +92,4 @@
     <string name="manager_dev">Desarrollador del Manager</string>
     <string name="sources">Fuentes</string>
     <string name="vanced_team">Equipo Vanced</string>
-    <!-- Home Page -->
-    <!-- About Page -->
 </resources>
