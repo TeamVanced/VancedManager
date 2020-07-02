@@ -12,7 +12,6 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
-import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
 import com.downloader.OnDownloadListener
@@ -74,10 +73,6 @@ class UpdateCheckFragment : DialogFragment() {
             }
             .start(object : OnDownloadListener{
                 override fun onDownloadComplete() {
-                    val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
-                    prefs.getBoolean("isUpgrading", false)
-                    prefs.edit().putBoolean("isUpgrading", true).apply()
-
                     activity?.let {
                         installApp(
                             it,
