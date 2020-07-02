@@ -23,6 +23,7 @@ object PackageHelper {
         }
     }
 
+    /*
     @Throws(IOException::class)
     fun installApp(
         context: Context,
@@ -48,6 +49,7 @@ object PackageHelper {
         outputStream.close()
         session.commit(pendingIntent.intentSender)
     }
+     */
 
     fun uninstallApk(pkg: String, activity: Activity) {
         val callbackIntent = Intent(activity.applicationContext, AppUninstallerService::class.java)

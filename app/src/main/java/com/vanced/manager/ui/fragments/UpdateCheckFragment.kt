@@ -1,7 +1,9 @@
 package com.vanced.manager.ui.fragments
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -20,6 +22,7 @@ import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
 import com.vanced.manager.utils.PackageHelper.installApp
+import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
 
@@ -60,7 +63,7 @@ class UpdateCheckFragment : DialogFragment() {
     }
 
     private fun upgradeManager() {
-        val dwnldUrl = "https://github.com/VancedManager/releases/latest/download/manager.apk"
+        val dwnldUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json").get("url").asString
         val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
 
         PRDownloader.download(dwnldUrl, activity?.filesDir?.path, "manager.apk")
@@ -74,10 +77,10 @@ class UpdateCheckFragment : DialogFragment() {
             .start(object : OnDownloadListener{
                 override fun onDownloadComplete() {
                     activity?.let {
-                        installApp(
-                            it,
-                            it.filesDir.path + "/manager.apk",
-                            "com.vanced.manager")
+                        val uri = Uri.fromFile(File(activity!!.filesDir.path, "manager.apk"))
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                        startActivity(intent)
                     }
                 }
 
