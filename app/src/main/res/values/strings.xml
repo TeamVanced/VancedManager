@@ -28,6 +28,7 @@
     <string name="installation_signature">Unexpected error occurred while installing Vanced. Did you disable signature verification?</string>
     <string name="installation_miui">Unexpected error occurred while installing Vanced. Did you disable MIUI Optimisations?</string>
     <string name="installation_storage">Operation failed because there was an error with storage.</string>
+    <string name="installation_wait">Please wait until installation finishes</string>
     <string name="button_reinstall">Reinstall</string>
     <string name="version_installed">Installed:</string>
     <string name="latest">Latest:</string>
@@ -73,6 +74,7 @@
     <string name="button_dismiss">Dismiss</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Hold on!</string>
+    <string name="magisk_vanced">Looks like you\'re using Magisk version of Vanced. Magisk version is discontinued and manager won\'t be able to update/uninstall it. Please remove module before using manager</string>
     <string name="miui_one_title">Detected MIUI user!</string>
     <string name="miui_one">Hey! Looks like you\'re an MIUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings. However, if you are on 20.2.20 ROM (Or later) that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
     <string name="error">Error</string>

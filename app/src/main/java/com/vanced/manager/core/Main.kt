@@ -8,11 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
+import com.vanced.manager.ui.dialogs.DialogContainer.basicDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.showSecurityDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.statementFalse
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
+import com.vanced.manager.utils.PackageHelper.getPackageVersionName
 
 // This activity will NOT be used in manifest
 // since MainActivity will extend it
@@ -29,7 +31,13 @@ open class Main: AppCompatActivity() {
         when {
             prefs.getBoolean("firstStart", true) -> showSecurityDialog(this)
             !prefs.getBoolean("statement", true) -> statementFalse(this)
-            variant == "root" && showRootDialog -> showRootDialog(this)
+            variant == "root" -> {
+                if (showRootDialog)
+                    showRootDialog(this)
+
+                if (getPackageVersionName("com.google.android.youtube", packageManager) == "14.21.54")
+                    basicDialog(getString(R.string.hold_on), getString(R.string.magisk_vanced), this)
+            }
         }
 
         checkUpdates()
