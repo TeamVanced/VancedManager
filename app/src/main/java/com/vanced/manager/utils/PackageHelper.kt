@@ -2,15 +2,9 @@ package com.vanced.manager.utils
 
 import android.app.Activity
 import android.app.PendingIntent
-import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageInstaller.SessionParams
 import android.content.pm.PackageManager
-import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
-import java.io.FileInputStream
-import java.io.IOException
-import java.io.InputStream
 
 object PackageHelper {
 

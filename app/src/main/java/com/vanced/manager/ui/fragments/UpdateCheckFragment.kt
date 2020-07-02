@@ -21,7 +21,6 @@ import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
-import com.vanced.manager.utils.PackageHelper.installApp
 import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
