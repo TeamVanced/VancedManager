@@ -11,8 +11,8 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 9
-        versionName "1.0.1"
+        versionCode 10
+        versionName "1.0.2"
 
         vectorDrawables.useSupportLibrary = true
     }
