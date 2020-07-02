@@ -30,7 +30,6 @@
             android:icon="@drawable/ic_brush_black_24dp"
             android:key="theme_mode"
             android:title="@string/theme"
-            android:summary="@string/theme_summary"
             android:entries="@array/theme_modes"
             android:entryValues="@array/theme_modes_values"
             android:defaultValue="Follow System"/>
@@ -41,7 +40,6 @@
             android:entryValues="@array/accent_color_values"
             android:icon="@drawable/ic_palette_black_24dp"
             android:key="accent_color"
-            android:summary="@string/accent_color_summary"
             android:title="@string/accent_color" />
 
     </PreferenceCategory>

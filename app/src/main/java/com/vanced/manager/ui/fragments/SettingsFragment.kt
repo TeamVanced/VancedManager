@@ -26,15 +26,30 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
         
         val themeSwitch: ListPreference? = findPreference("theme_mode")
+        val themePref = preferenceScreen.sharedPreferences.getString("theme_mode", "Follow System")
         themeSwitch?.summary =
-            preferenceScreen.sharedPreferences.getString("theme_mode", "Follow System")
+            when (themePref) {
+                "Light" -> getString(R.string.theme_light)
+                "Dark" -> getString(R.string.theme_dark)
+                "Follow System" -> getString(R.string.theme_follow)
+                else -> ""
+            }
         themeSwitch?.setOnPreferenceChangeListener { _, _ ->
             activity?.recreate()
             true
         }
 
         val accentSwitch: ListPreference? = findPreference("accent_color")
-        accentSwitch?.summary = preferenceScreen.sharedPreferences.getString("accent_color", "Blue")
+        val accentPref = preferenceScreen.sharedPreferences.getString("accent_color", "Blue")
+        accentSwitch?.summary =
+            when (accentPref) {
+                "Blue" -> getString(R.string.accent_blue)
+                "Red" -> getString(R.string.accent_red)
+                "Green" -> getString(R.string.accent_green)
+                "Yellow" -> getString(R.string.accent_yellow)
+                "Purple" -> getString(R.string.accent_purple)
+                else -> ""
+            }
         accentSwitch?.setOnPreferenceChangeListener { _, _ ->
             activity?.recreate()
             true

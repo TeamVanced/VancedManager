@@ -66,7 +66,7 @@
     <string name="push_notifications">Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when an update is released</string>
     <string name="re_check">Re-check</string>
-    <string name="update_center">Update Center</string>
+    <string name="update_center">Manager Update Center</string>
     <string name="update_found">Update found!</string>
     <string name="update_notfound">No new updates</string>
 
