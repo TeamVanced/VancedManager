@@ -31,7 +31,6 @@
     <string name="version_installed">Terpasang:</string>
     <string name="latest">Terbaru:</string>
     <string name="loading">Memuat...</string>
-    <string name="microg_installed">MicroG berhasil dipasang</string>
     <string name="successfully_installed">Berhasil dipasang %1$s</string>
     <string name="network_error">Jaringan internet tidak tersedia</string>
     <string name="no_microg">Tidak ada MicroG!</string>
@@ -55,7 +54,6 @@
     <string name="chosen_install_values">Jenis instalasi yang dipilih</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="chosen_preferences">Preferensi yang dipilih</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Ikuti sistem</string>
     <string name="theme_dark">Tema gelap</string>

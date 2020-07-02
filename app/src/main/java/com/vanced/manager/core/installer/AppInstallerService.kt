@@ -1,11 +1,9 @@
 package com.vanced.manager.core.installer
 
-import android.app.Notification
 import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import android.widget.Toast
@@ -14,7 +12,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.MiuiHelper
-import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 
 class AppInstallerService: Service() {

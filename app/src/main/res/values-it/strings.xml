@@ -31,7 +31,6 @@
     <string name="version_installed">Installato:</string>
     <string name="latest">Ultima versione:</string>
     <string name="loading">Caricamento in corso…</string>
-    <string name="microg_installed">MicroG è stato installato con successo</string>
     <string name="successfully_installed">%1$s è stato installato con successo</string>
     <string name="network_error">Connessione alla rete non disponibile</string>
     <string name="no_microg">Senza MicroG!</string>
@@ -54,7 +53,6 @@
     <string name="chosen_install_values">Valori di installazione scelti</string>
     <string name="chosen_lang">Lingua: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="chosen_preferences">Preferenze scelte</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Utilizza quello di sistema</string>
     <string name="theme_dark">Tema scuro</string>

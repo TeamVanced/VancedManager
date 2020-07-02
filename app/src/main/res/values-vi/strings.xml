@@ -4,7 +4,6 @@
     <string name="close">Đóng</string>
     <string name="reset">Khởi động lại</string>
     <string name="save">Lưu</string>
-    <string name="cancel">Hủy bỏ</string>
     <!-- Main Activity -->
     <string name="title_about">Thông tin</string>
     <string name="title_home">Trang chủ</string>
@@ -14,7 +13,6 @@
     <string name="button_fine">Được</string>
     <!-- Home Page -->
     <string name="changelogs">Lịch sử thay đổi</string>
-    <string name="check">Kiểm tra</string>
     <string name="downloading_file">Đang tải %1$s</string>
     <string name="failed_uninstall">Gỡ cài đặt thất bại gói %1$s</string>
     <string name="error_downloading">Lỗi đang tải %1$s</string>
@@ -33,11 +31,9 @@
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
     <string name="loading">Đang tải...</string>
-    <string name="microg_installed">MicroG đã cài đặt thành công</string>
     <string name="successfully_installed">Đã cài đặt thành công %1$s</string>
     <string name="network_error">Không có kết nối mạng</string>
     <string name="no_microg">Không có MicroG!</string>
-    <string name="unable_download">Không thể tải về %1$s</string>
     <string name="unavailable">Không có sẵn</string>
     <string name="update">Cập nhật</string>
     <string name="useful_links">Link hữu ích</string>
@@ -57,7 +53,6 @@
     <string name="chosen_install_values">Giá trị cài đặt đã chọn</string>
     <string name="chosen_lang">Ngôn ngữ: %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_preferences">Giá trị đã chọn</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Như hệ thống</string>
     <string name="theme_dark">Theme tối</string>
@@ -96,18 +91,6 @@
     <string name="manager_dev">Manager Dev</string>
     <string name="sources">Nguồn</string>
     <string name="vanced_team">Đội ngũ Vanced</string>
-    <string name="unsupported_version_context">Tôi không biết sao nhưng bạn có lẽ đã cài Vanced Manager trên phiên bản Android không hỗ trợ. App sẽ đóng ngay</string>
-    <string name="whoops">Whoops!</string>
     <!-- Home Page -->
-    <string name="brave_browser">Brave Browser</string>
-    <string name="installed">Đã cài đặt:</string>
-    <string name="n_a">N/A</string>
-    <string name="reddit">Reddit</string>
-    <string name="vanced_medias">Vanced trên mạng xã hội</string>
-    <string name="website">Website</string>
-    <string name="choose_preferred_variant">Chọn biến thể cho Vanced</string>
-    <string name="install_nonroot">Không root</string>
-    <string name="install_root">Root</string>
     <!-- About Page -->
-    <string name="manager_devs">Manager Dev</string>
 </resources>

@@ -31,7 +31,6 @@
     <string name="version_installed">Установлена:</string>
     <string name="latest">Последняя:</string>
     <string name="loading">Загрузка...</string>
-    <string name="microg_installed">MicroG успешно установлен</string>
     <string name="successfully_installed">Успешно установлено %1$s</string>
     <string name="network_error">Нет подключения к интернету</string>
     <string name="no_microg">Нет MicroG</string>
@@ -54,7 +53,6 @@
     <string name="chosen_install_values">Выбранные значения установки</string>
     <string name="chosen_lang">Язык: %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
-    <string name="chosen_preferences">Выбранные настройки</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Как в системе</string>
     <string name="theme_dark">Тёмная тема</string>

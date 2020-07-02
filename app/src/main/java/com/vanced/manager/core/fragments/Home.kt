@@ -5,9 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.*
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.navigation.findNavController
-import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
 import com.topjohnwu.superuser.Shell
@@ -16,9 +16,7 @@ import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.ui.MainActivity
-import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
-import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 open class Home : BaseFragment(), View.OnClickListener {

@@ -14,7 +14,6 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.displayJsonInt
 import com.vanced.manager.utils.InternetTools.displayJsonString

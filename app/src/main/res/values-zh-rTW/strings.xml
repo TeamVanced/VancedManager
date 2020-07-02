@@ -31,7 +31,6 @@
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
     <string name="loading">正在載入中。。。</string>
-    <string name="microg_installed">MicroG 安裝成功</string>
     <string name="successfully_installed">%1$s 安裝成功</string>
     <string name="network_error">網際網絡無法存取</string>
     <string name="no_microg">沒有 MicroG！</string>
@@ -54,7 +53,6 @@
     <string name="chosen_install_values">已選擇安裝值</string>
     <string name="chosen_lang">語言： %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
-    <string name="chosen_preferences">已選擇偏好</string>
     <string name="theme">主題</string>
     <string name="theme_follow">跟隨系統預設</string>
     <string name="theme_dark">深色主題</string>

@@ -33,7 +33,6 @@
     <string name="latest">लेट्इस्ट</string>
     <string name="loading">"लोड हो रहा है…
 "</string>
-    <string name="microg_installed">माइक्रो जी सफलतापूर्वक स्थापित</string>
     <string name="successfully_installed">सफलतापूर्वक इन्स्टॉल्ड %1$s</string>
     <string name="network_error">"नेटवर्क कनेक्शन अनुपलब्ध है
 "</string>
@@ -57,7 +56,6 @@
     <string name="chosen_install_values">मूल्यों इन्स्टलेशन  को चुना</string>
     <string name="chosen_lang">भाषा: %1$s</string>
     <string name="chosen_theme">थीम: %1$s</string>
-    <string name="chosen_preferences">चुना प्राथमिकताएं</string>
     <string name="theme">थीम</string>
     <string name="theme_follow">सिस्टम का पालन करें</string>
     <string name="theme_dark">डार्क थीम</string>
