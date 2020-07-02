@@ -92,7 +92,7 @@ class HomeFragment : Home() {
             when (intent.action) {
                 MICROG_DOWNLOADED -> {
                     view?.findViewById<ProgressBar>(R.id.microg_installing)?.visibility = View.VISIBLE
-                    activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
+                    //activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
                 }
                 VANCED_DOWNLOADED -> {
                     view?.findViewById<ProgressBar>(R.id.vanced_installing)?.visibility = View.VISIBLE
