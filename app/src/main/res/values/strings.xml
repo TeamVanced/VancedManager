@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+
     <!-- Global Strings -->
     <string name="close">Close</string>
     <string name="reset">Reset</string>
     <string name="save">Save</string>
+
     <!-- Main Activity -->
     <string name="title_about">About</string>
     <string name="title_home">Home</string>
     <string name="title_install">Install</string>
     <string name="title_settings">Settings</string>
+
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
     <string name="downloading_file">Downloading %1$s</string>
@@ -39,6 +42,7 @@
     <string name="useful_links">Useful Links</string>
     <string name="website_text">Website</string>
     <string name="support_us">Support us!</string>
+
     <!-- Settings -->
     <string name="accent_color">Accent Color</string>
     <string name="accent_color_summary">Choose your preferred accent color</string>
@@ -65,6 +69,7 @@
     <string name="update_center">Update Center</string>
     <string name="update_found">Update found!</string>
     <string name="update_notfound">No new updates</string>
+
     <!-- Dialogs -->
     <string name="button_dismiss">Dismiss</string>
     <string name="guide">Guide</string>
@@ -78,6 +83,7 @@
     <string name="vanced_installed">Vanced has successfully been installed! Launch now?</string>
     <string name="launch">Launch</string>
     <string name="welcome">Welcome</string>
+
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
     <string name="choose_preferred_language_note">Note: English will always be installed as an additional language as well.</string>
@@ -87,8 +93,10 @@
     <string name="install_light_black">Light + Black</string>
     <string name="install_light_dark">Light + Dark</string>
     <string name="next">Next</string>
+
     <!-- About Page -->
     <string name="manager_dev">Manager Dev</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Vanced Team</string>
+
 </resources>

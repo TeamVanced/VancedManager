@@ -4,7 +4,7 @@
     <!-- Global Strings -->
     <string name="close">დახურვა</string>
     <string name="reset">Reset</string>
-    <string name="save">Save</string>
+    <string name="save">შენახვა</string>
 
     <!-- Main Activity -->
     <string name="title_about">შესახებ</string>
@@ -28,13 +28,15 @@
     <string name="installation_signature">გაურკვეველი შეცდომა Vanced-ის დაყენების დროს. ნამდვილად გაქვთ ხელმოწერის ვერიფიკაცია გათიშული?</string>
     <string name="installation_miui">გაურკვეველი შეცდომა Vanced-ის დაყენების დროს. ნამდვილად გამორთეთ MIUI-ის ოპტიმიზაციები?</string>
     <string name="installation_storage">პერაცია ჩაიშალა რადგან შეცდომაა მეხსიერებასთან დაკავშირებით.</string>
-    <string name="button_reinstall">Reinstall</string>
+    <string name="installation_wait">გთხოვთ დაიცადოთ ინსტალაციის დასრულებამდე</string>
+    <string name="button_reinstall">რეინსტალაცია</string>
     <string name="version_installed">დაინსტალირებული:</string>
     <string name="latest">უახლესი:</string>
     <string name="loading">იტვირთება…</string>
     <string name="successfully_installed">წარმატებით დაყენდა %1$s</string>
     <string name="network_error">კავშირი არ არის</string>
     <string name="no_microg">დააყენეთ MicroG!</string>
+    <string name="root_not_granted">Root წვდომა არ არის მინიჭებული</string>
     <string name="unavailable">ხელმიუწვდომელია</string>
     <string name="update">განახლება</string>
     <string name="useful_links">საჭირო ლინკები</string>
@@ -72,6 +74,7 @@
     <string name="button_dismiss">დახურვა</string>
     <string name="guide">ინსტრუქცია</string>
     <string name="hold_on">დაიცა!</string>
+    <string name="magisk_vanced">როგორც ჩანს თქვენ იყენებთ Vanced-ის Magisk ვერსიას, რომელიც არ იმუშავებს ამ აპთან. გთხოვთ წაშალოთ მოდული მენეჯერის გამოყენებამდე.</string>
     <string name="miui_one_title">აღმოჩენილია MIUI-ის მომხმარებელი!</string>
     <string name="miui_one">როგორც ჩანს ტქვენ MIUI-ის მომხმარებელი ხართ. იმისთვის რომ მენეჯერმა სწორედ იმუშავოს, თქვენ უნდა გამორთოთ MIUI-ის ოპტიმიზაციები დეველოპერის პარამეტრებიდან.\n მაგრამ, თუ თქვენ ხართ სისტემის 20.2.20 (ან უფრო მაღალ) ვერსიაზე რომელიც დაფუძნებულია xiaomi.eu-ზე, შეგიძლიათ დააიგნოროთ ეს გაფრთხილება.</string>
     <string name="error">შეცდომა</string>
@@ -83,7 +86,7 @@
 
     <!-- Install Page -->
     <string name="choose_preferred_language">აირჩიეთ სასურველი ენა Vanced-ისთვის</string>
-    <string name="choose_preferred_language_note">შენიშვნა: თუ თქვენ აირჩევთ სხვა ენას გარდა ინგლისურისა, ინგლისური მაინც იქნება დაყენებული როგორც დამატებითი ენა</string>
+    <string name="choose_preferred_language_note">შენიშვნა: ინგლისური ყვეალ ვარიანტში იქნება დაყენებული როგორც დამატებითი ენა</string>
     <string name="choose_preferred_theme">აირჩიეთ სასურველი თემა Vanced-ისთვის</string>
     <string name="disable_signature">აღმოჩენილია Root რეჟიმი! იმისთვის რომ მენეჯერმა Vanced-ი შეცდომების გარეშე დააყენოს, გთხოვთ დარწმუნდით რომ ხელმოწერის ვერიფიკაცია გამორთული გაქვთ.</string>
     <string name="finish">დასრულება</string>
