@@ -22,8 +22,8 @@
     <string name="installation_failed">Operation failed for an unknown reason, please join our Telegram or Discord for support.</string>
     <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
     <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
-    <string name="installation_signature">An unexpected error occurred while installing Vanced. Have you disabled the signature verification?</string>
-    <string name="installation_miui">An unexpected error occurred while installing Vanced. Have you disabled MIUI-Optimisations?</string>
+    <string name="installation_signature">An unexpected error occurred while installing Vanced. Have you disabled apk signature verification?</string>
+    <string name="installation_miui">An unexpected error occurred while installing Vanced. Have you disabled MIUI Optimisations?</string>
     <string name="installation_storage">Operation failed due to a storage error.</string>
     <string name="installation_wait">Please wait until the installation finishes</string>
     <string name="button_reinstall">Reinstall</string>
@@ -71,7 +71,7 @@
     <string name="hold_on">Hold on!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module.</string>
     <string name="miui_one_title">MIUI detected!</string>
-    <string name="miui_one">Hey! it looks like you\'re a MIUI user. in order to properly use this application, you will have to disable MiUI optimisations in the developer settings. (You can safely ignore this warning if you are on a 20.2.20 or later ROM based on xiaomi.eu)</string>
+    <string name="miui_one">Hey! it looks like you\'re a MIUI user. in order to properly use this application, you will have to disable MIUI optimisations in the developer settings. (You can safely ignore this warning if you are on a 20.2.20 or later ROM based on xiaomi.eu)</string>
     <string name="error">Error</string>
     <string name="security_context">Please make sure, that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Success!</string>
