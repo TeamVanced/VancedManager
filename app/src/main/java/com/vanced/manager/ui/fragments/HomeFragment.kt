@@ -7,12 +7,10 @@ import android.content.IntentFilter
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
-import android.view.animation.Animation
-import android.view.animation.RotateAnimation
-import android.widget.*
+import android.widget.ImageButton
+import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager

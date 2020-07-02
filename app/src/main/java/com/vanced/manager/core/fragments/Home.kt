@@ -5,9 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.*
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.navigation.findNavController
-import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
 import com.topjohnwu.superuser.Shell
@@ -16,8 +16,7 @@ import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.ui.MainActivity
-import com.vanced.manager.ui.dialogs.DialogContainer.secondMiuiDialog
-import com.vanced.manager.utils.MiuiHelper
+import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 open class Home : BaseFragment(), View.OnClickListener {
@@ -53,7 +52,6 @@ open class Home : BaseFragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val defPrefs = getDefaultSharedPreferences(activity)
         val isVancedDownloading: Boolean? = prefs?.getBoolean("isVancedDownloading", false)
         val isMicrogDownloading: Boolean? = prefs?.getBoolean("isMicrogDownloading", false)
         val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
@@ -105,8 +103,10 @@ open class Home : BaseFragment(), View.OnClickListener {
             R.id.vanced_uninstallbtn -> activity?.let { uninstallApk(vancedPkgName, it) }
             R.id.nonroot_switch -> writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
             R.id.root_switch ->
-                if (Shell.rootAccess())
+                if (Shell.rootAccess()) {
                     writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
+                    activity?.let { showRootDialog(it) }
+                }
                 else {
                     writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
                     Toast.makeText(activity, "Root access not granted", Toast.LENGTH_SHORT).show()

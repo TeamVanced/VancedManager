@@ -20,7 +20,7 @@
         <TextView
             style="@style/CardTitle"
             android:layout_gravity="center"
-            android:text="@string/chosen_preferences"
+            android:text="@string/chosen_install_values"
             android:textAlignment="center"
             android:fontFamily="@font/exo_semibold" />
 

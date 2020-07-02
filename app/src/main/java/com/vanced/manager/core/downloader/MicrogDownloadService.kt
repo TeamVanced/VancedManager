@@ -3,11 +3,8 @@ package com.vanced.manager.core.downloader
 import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.IBinder
-import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.OnStartOrResumeListener
@@ -16,22 +13,15 @@ import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
-import java.util.concurrent.ExecutionException
 
 class MicrogDownloadService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        try {
-            downloadMicrog()
-        } catch (e: Exception) {
-            when (e) {
-                is ExecutionException, is InterruptedException -> Toast.makeText(this, "Unable to download Vanced", Toast.LENGTH_SHORT).show()
-                else -> throw e
-            }
-        }
+        downloadMicrog()
         stopSelf()
         return START_NOT_STICKY
     }
@@ -39,10 +29,10 @@ class MicrogDownloadService: Service() {
     private fun downloadMicrog() {
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
 
-        val apkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-        val dwnldUrl = apkUrl.get("url").asString
+        val apkUrl = getObjectFromJson("https://vanced.app/api/v1/microg.json", "url", this)
+
         val channel = 420
-        PRDownloader.download(dwnldUrl, filesDir.path, "microg.apk")
+        PRDownloader.download(apkUrl, filesDir.path, "microg.apk")
             .build()
             .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isMicrogDownloading", true)?.apply() } }
             .setOnProgressListener { progress ->
@@ -50,7 +40,7 @@ class MicrogDownloadService: Service() {
                 NotificationHelper.displayDownloadNotif(
                     channel,
                     mProgress.toInt(),
-                    getFileNameFromUrl(dwnldUrl),
+                    getFileNameFromUrl(apkUrl),
                     this
                 )
             }

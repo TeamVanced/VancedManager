@@ -1,6 +1,9 @@
 package com.vanced.manager.ui
 
-import android.content.*
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -10,7 +13,6 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.preference.PreferenceManager
 import com.google.android.material.appbar.MaterialToolbar
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
@@ -60,7 +62,7 @@ class MainActivity : Main() {
                     if (intent.getStringExtra("package") == "split")
                         launchVanced(this@MainActivity)
                     else
-                        regularPackageInstalled(getString(R.string.microg_installed), this@MainActivity)
+                        regularPackageInstalled(getString(R.string.successfully_installed, "MicroG"), this@MainActivity)
                 }
                 INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
                 APP_UNINSTALLED -> {

@@ -3,9 +3,11 @@ package com.vanced.manager.ui.fragments
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import androidx.preference.*
+import androidx.preference.ListPreference
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
-import com.vanced.manager.utils.MiuiHelper.isMiui
 
 class SettingsFragment : PreferenceFragmentCompat() {
 

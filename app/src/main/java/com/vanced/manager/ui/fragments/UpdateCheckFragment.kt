@@ -12,14 +12,12 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
-import com.dezlum.codelabs.getjson.GetJson
 import androidx.preference.PreferenceManager
+import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
-import com.vanced.manager.BuildConfig
-
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
 import com.vanced.manager.utils.PackageHelper.installApp

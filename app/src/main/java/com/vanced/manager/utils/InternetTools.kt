@@ -8,8 +8,6 @@ import androidx.preference.PreferenceManager
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
-import java.lang.Exception
-import java.lang.IllegalStateException
 
 object InternetTools {
 
@@ -24,38 +22,30 @@ object InternetTools {
 
     fun displayJsonString(json: String, obj: String, context: Context): String {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context)) {
-            try {
-                GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
-            } catch (e: Exception) {
-                when (e) {
-                    is InterruptedException, is IllegalStateException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asString
-                    else -> throw e
-                }
-
-            }
-        } else {
+        return if (GetJson().isConnected(context))
+            GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
+        else
             context.getString(R.string.unavailable)
-        }
     }
 
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
         val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context)) {
-            try {
-                GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
-            } catch (e: Exception) {
-                when (e) {
-                    is InterruptedException, is IllegalStateException -> GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/$json").get(obj).asInt
-                    else -> throw e
-                }
+        return if (GetJson().isConnected(context))
+            GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
+        else
+            0
 
-            }
-        } else 0
+    }
+
+    fun getObjectFromJson(url: String, obj: String, context: Context): String {
+        return if (GetJson().isConnected(context))
+            GetJson().AsJSONObject(url).get(obj).asString
+        else
+            ""
     }
 
     fun isUpdateAvailable(): Boolean {
-        val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/manager.json")
+        val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
         val remoteVersion = checkUrl.get("versionCode").asInt
 
         return remoteVersion > BuildConfig.VERSION_CODE
@@ -63,6 +53,4 @@ object InternetTools {
 
     const val baseUrl = "https://vanced.app/api/v1"
 
-
 }
-

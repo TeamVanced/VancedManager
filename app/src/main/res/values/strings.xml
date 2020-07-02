@@ -5,42 +5,36 @@
     <string name="close">Close</string>
     <string name="reset">Reset</string>
     <string name="save">Save</string>
-    <string name="cancel">Cancel</string>
 
     <!-- Main Activity -->
     <string name="title_about">About</string>
     <string name="title_home">Home</string>
     <string name="title_install">Install</string>
     <string name="title_settings">Settings</string>
-    <string name="button_dismiss">Dismiss</string>
-    <string name="button_fine">Fine</string>
 
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
-    <string name="check">Check</string>
     <string name="downloading_file">Downloading %1$s</string>
     <string name="failed_uninstall">Failed to uninstall package %1$s</string>
     <string name="error_downloading">Error Downloading %1$s</string>
     <string name="install">Install</string>
     <string name="installing_app">Installing %1$s</string>
-    <string name="installation_aborted">Operation failed because user aborted installation</string>
-    <string name="installation_blocked">Operation failed because user blocked installation</string>
-    <string name="installation_conflict">Operation failed because app conflicts with already installed app</string>
-    <string name="installation_failed">Operation failed because it just failed idk</string>
-    <string name="installation_incompatible">Operation failed because app is incompatible with your device</string>
-    <string name="installation_invalid">Operation failed because apk files are invalid</string>
+    <string name="installation_aborted">Operation failed because the user aborted installation.</string>
+    <string name="installation_blocked">Operation failed because the user blocked installation.</string>
+    <string name="installation_conflict">Operation failed because the app conflicts with already installed app.</string>
+    <string name="installation_failed">Operation failed for an unknown reason, send issue with a logcat.</string>
+    <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
+    <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
     <string name="installation_signature">Unexpected error occurred while installing Vanced. Did you disable signature verification?</string>
-    <string name="installation_miui">Unexpected error occurred while installing Vanced. Did you disable MiUI Optimisations?</string>
-    <string name="installation_storage">Operation failed because there was an error with storage. Hold up how is that even possible?</string>
+    <string name="installation_miui">Unexpected error occurred while installing Vanced. Did you disable MIUI Optimisations?</string>
+    <string name="installation_storage">Operation failed because there was an error with storage.</string>
     <string name="button_reinstall">Reinstall</string>
     <string name="version_installed">Installed:</string>
     <string name="latest">Latest:</string>
     <string name="loading">Loading…</string>
-    <string name="microg_installed">MicroG successfully installed</string>
     <string name="successfully_installed">Successfully installed %1$s</string>
     <string name="network_error">Network connection unavailable</string>
-    <string name="no_microg">No Microg!</string>
-    <string name="unable_download">Unable to download %1$s</string>
+    <string name="no_microg">No MicroG!</string>
     <string name="unavailable">Unavailable</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
@@ -61,7 +55,6 @@
     <string name="chosen_install_values">Chosen Installation values</string>
     <string name="chosen_lang">Language: %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_preferences">Chosen Preferences</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
@@ -76,12 +69,14 @@
     <string name="update_notfound">No new updates</string>
 
     <!-- Dialogs -->
+    <string name="button_dismiss">Dismiss</string>
+    <string name="button_fine">Fine</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Hold on!</string>
-    <string name="miui_one_title">Detected MiUI user!</string>
-    <string name="miui_one">Hey! Looks like you\'re a MiUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings\n However, if you are on 20.2.20 ROM that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
+    <string name="miui_one_title">Detected MIUI user!</string>
+    <string name="miui_one">Hey! Looks like you\'re an MIUI user. in order to properly use Vanced Manager, you will have to disable MiUI optimisations in developer settings. However, if you are on 20.2.20 ROM (Or later) that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
     <string name="miui_two_title">I\'m gonna stop you right there!</string>
-    <string name="miui_two">Looks like you did NOT disable MiUI optimisations. Please disable it. However, if you are on 20.2.20 ROM that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
+    <string name="miui_two">Looks like you did NOT disable MIUI optimisations. Please disable it. However, if you are on 20.2.20 ROM (Or later) that\'s based on xiaomi.eu, you can safely ignore this warning.</string>
     <string name="error">Error</string>
     <string name="security_context">Please make sure you downloaded app from vanced.app, Vanced Discord server or GitHub</string>
     <string name="success">Success!</string>

@@ -21,7 +21,6 @@
     <string name="network_error">Немає з\'єднання з мережею</string>
     <string name="update">Оновлення</string>
     <string name="useful_links">Корисні сторінки</string>
-    <string name="vanced_medias">Vanced в соціальних мережах</string>
     <string name="website_text">Офіційний веб-сайт Vanced</string>
     <string name="support_us">Підтримай нас завантаживши браузер Brave</string>
 
@@ -55,7 +54,6 @@
     <string name="next">Наступна</string>
 
     <!-- About Page -->
-    <string name="manager_devs">Розробники Менеджера</string>
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
 

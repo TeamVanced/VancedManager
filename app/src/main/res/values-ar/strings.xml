@@ -24,7 +24,6 @@
     <string name="network_error">اتصاا الشبكة غير متاح</string>
     <string name="update">تحديث</string>
     <string name="useful_links">روابط المفيدة</string>
-    <string name="vanced_medias">Vanced على توصيل اجتماعي فانسد على توصيل اجتماعي</string>
     <string name="website_text">الموقع رسمي لفانسد</string>
     <string name="support_us">ادعمنا بتريق تنزيل بريف</string>
 
@@ -58,7 +57,6 @@
     <string name="next">ثانية</string>
 
     <!-- About Page -->
-    <string name="manager_devs">مدير مطورين</string>
     <string name="sources">مصادر</string>
     <string name="vanced_team">فريق فانسد</string>
 </resources>

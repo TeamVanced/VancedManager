@@ -4,13 +4,10 @@ import android.app.Activity
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat.startActivity
-import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
@@ -92,12 +89,17 @@ object DialogContainer {
     }
 
     fun installAlertBuilder(msg: String, context: Context) {
-        AlertDialog.Builder(context)
-            .setTitle(context.getString(R.string.error))
-            .setMessage(msg)
-            .setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
-            .create()
-            .show()
+        AlertDialog.Builder(context).apply {
+            setTitle(context.getString(R.string.error))
+            setMessage(msg)
+            setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            if (msg == context.getString(R.string.installation_signature))
+                setNeutralButton(context.getString(R.string.guide)) { _, _ ->
+                    openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, context)
+                }
+            create()
+            show()
+        }
     }
 
     fun regularPackageInstalled(msg: String, activity: MainActivity) {
