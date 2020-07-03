@@ -41,7 +41,6 @@
     <string name="support_us">Sostienici!</string>
     <!-- Settings -->
     <string name="accent_color">Colore evidenziatore</string>
-    <string name="accent_color_summary">Imposta il colore evidenziatore preferito</string>
     <string name="accent_blue">Blu</string>
     <string name="accent_green">Verde</string>
     <string name="accent_purple">Viola</string>
@@ -57,7 +56,6 @@
     <string name="theme_follow">Utilizza quello di sistema</string>
     <string name="theme_dark">Tema scuro</string>
     <string name="theme_light">Tema chiaro</string>
-    <string name="theme_summary">Seleziona il tuo tema preferito</string>
     <string name="update_url">Aggiorna l\'URL del canale</string>
     <string name="push_notifications">Notifiche push</string>
     <string name="push_notifications_summary">Riceverai le notifiche push non appena sarà disponibile un aggiornamento</string>

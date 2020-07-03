@@ -39,7 +39,6 @@
     <string name="support_us">Hỗ trợ chúng tôi!</string>
     <!-- Settings -->
     <string name="accent_color">Màu chính</string>
-    <string name="accent_color_summary">Chọn màu yêu thích của bạn</string>
     <string name="accent_blue">Màu xanh dương</string>
     <string name="accent_green">Màu xanh lá cây</string>
     <string name="accent_purple">Màu tím</string>
@@ -55,7 +54,6 @@
     <string name="theme_follow">Như hệ thống</string>
     <string name="theme_dark">Theme tối</string>
     <string name="theme_light">Theme sáng</string>
-    <string name="theme_summary">Chọn theme yêu thích của bạn</string>
     <string name="update_url">URL nguồn cập nhật</string>
     <string name="push_notifications">Thông báo đẩy</string>
     <string name="push_notifications_summary">Nhận thông báo đẩy khi cập nhật được phát hành</string>

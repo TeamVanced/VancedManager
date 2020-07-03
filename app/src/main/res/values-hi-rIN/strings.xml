@@ -42,7 +42,6 @@
     <string name="support_us">हमें सपॉर्ट कीजिये!</string>
     <!-- Settings -->
     <string name="accent_color">स्वरोंका रंग</string>
-    <string name="accent_color_summary">अपना पसंदीदा उच्चारण रंग चुनें</string>
     <string name="accent_blue">नीला</string>
     <string name="accent_green">हरा</string>
     <string name="accent_purple">बैंगनी</string>
@@ -58,7 +57,6 @@
     <string name="theme_follow">सिस्टम का पालन करें</string>
     <string name="theme_dark">डार्क थीम</string>
     <string name="theme_light">लाइट थीम</string>
-    <string name="theme_summary">अपनी पसंदीदा थीम चुनें</string>
     <string name="update_url">चैनल URL अपडेट करें</string>
     <string name="push_notifications">सूचनाएं भेजना</string>
     <string name="push_notifications_summary">अपडेट जारी होने पर पुश सूचनाएं प्राप्त करें</string>

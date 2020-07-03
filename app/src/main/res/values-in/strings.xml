@@ -40,7 +40,6 @@
 "</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
-    <string name="accent_color_summary">Pilih aksen warna yang anda inginkan</string>
     <string name="accent_blue">Biru</string>
     <string name="accent_green">Hijau</string>
     <string name="accent_purple">Ungu</string>
@@ -56,7 +55,6 @@
     <string name="theme_follow">Ikuti sistem</string>
     <string name="theme_dark">Tema gelap</string>
     <string name="theme_light">Tema terang</string>
-    <string name="theme_summary">Pilih tema yang anda inginkan</string>
     <string name="update_url">Perbarui URL channel</string>
     <string name="push_notifications">Notifikasi push</string>
     <string name="push_notifications_summary">Terima notifikasi push saat pembaruan tersedia</string>

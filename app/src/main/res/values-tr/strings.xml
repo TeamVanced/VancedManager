@@ -26,7 +26,6 @@
 
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
-    <string name="accent_color_summary">Tercih ettiğiniz tema rengini seçin</string>
     <string name="accent_blue">Mavi</string>
     <string name="accent_green">Yeşil</string>
     <string name="accent_red">Kırmızı</string>
@@ -38,7 +37,6 @@
     <string name="theme_follow">Takip Sistemi</string>
     <string name="theme_dark">Karanlık Tema</string>
     <string name="theme_light">Aydınlık Tema</string>
-    <string name="theme_summary">Tercih ettiğiniz temayı seçin</string>
     <string name="push_notifications">Anlık Bildirimler</string>
     <string name="push_notifications_summary">Yeni güncelleme hazır olduğunda anlık bildirim alın</string>
     <string name="re_check">Yeniden kontrol et</string>
