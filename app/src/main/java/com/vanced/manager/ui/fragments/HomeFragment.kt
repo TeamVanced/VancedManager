@@ -65,16 +65,21 @@ class HomeFragment : Home() {
         view.findViewById<MaterialCardView>(R.id.vanced_card).setOnLongClickListener{
             val clip = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             clip.setPrimaryClip(ClipData.newPlainText("vanced", viewModel.vancedInstalledVersion.value))
-            Toast.makeText(activity,"Vanced version was copied!", Toast.LENGTH_LONG).show()
+            versionToast("Vanced")
             true
         }
 
         view.findViewById<MaterialCardView>(R.id.microg_card).setOnLongClickListener{
             val clip = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             clip.setPrimaryClip(ClipData.newPlainText("microg", viewModel.microgInstalledVersion.value))
-            Toast.makeText(activity,"MicroG version was copied!", Toast.LENGTH_LONG).show()
+            versionToast("MicroG")
             true
         }
+    }
+
+    private fun versionToast(name: String)
+    {
+        Toast.makeText(activity, getString(R.string.version_toast, name), Toast.LENGTH_LONG).show()
     }
 
     private fun cardExpandCollapse() {
