@@ -16,7 +16,6 @@ import com.vanced.manager.core.base.BaseFragment
 import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.ui.MainActivity
-import com.vanced.manager.ui.dialogs.DialogContainer.showRootDialog
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 open class Home : BaseFragment(), View.OnClickListener {

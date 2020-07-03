@@ -1,6 +1,5 @@
 package com.vanced.manager.utils
 
-import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
