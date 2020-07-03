@@ -36,8 +36,8 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding true
     }
 
 // To inline the bytecode built with JVM target 1.8 into
