@@ -8,7 +8,6 @@
     <string name="title_about">"बारे में
 "</string>
     <string name="title_home">होम</string>
-    <string name="title_install">इंस्टॉल</string>
     <string name="title_settings">सेट्इन्ग</string>
     <!-- Home Page -->
     <string name="changelogs">चेंजलॉग</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">फिर से इंस्टॉल</string>
     <string name="version_installed">(इन्स्टॉल्ड</string>
     <string name="latest">लेट्इस्ट</string>
-    <string name="loading">"लोड हो रहा है…
-"</string>
     <string name="successfully_installed">सफलतापूर्वक इन्स्टॉल्ड %1$s</string>
     <string name="network_error">"नेटवर्क कनेक्शन अनुपलब्ध है
 "</string>

@@ -7,7 +7,6 @@
     <!-- Main Activity -->
     <string name="title_about">情報</string>
     <string name="title_home">ホーム</string>
-    <string name="title_install">インストール</string>
     <string name="title_settings">設定</string>
     <!-- Home Page -->
     <string name="changelogs">更新履歴</string>
@@ -28,7 +27,6 @@
     <string name="button_reinstall">再インストール</string>
     <string name="version_installed">インストール済み:</string>
     <string name="latest">最新版:</string>
-    <string name="loading">読み込み中…</string>
     <string name="successfully_installed">%1$s のインストールに成功しました</string>
     <string name="network_error">インターネット接続が利用できません</string>
     <string name="no_microg">MicroGがありません！</string>

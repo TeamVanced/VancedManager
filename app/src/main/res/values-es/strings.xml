@@ -7,7 +7,6 @@
     <!-- Main Activity -->
     <string name="title_about">Informacion</string>
     <string name="title_home">Hogar</string>
-    <string name="title_install">Instalar</string>
     <string name="title_settings">Ajustes</string>
     <!-- Home Page -->
     <string name="changelogs">Actualizaciones</string>
@@ -29,7 +28,6 @@
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Ultimo:</string>
-    <string name="loading">Cargando...</string>
     <string name="successfully_installed">Instalación exitosa %1$s</string>
     <string name="network_error">Conexion a la red no disponible</string>
     <string name="no_microg">Sin MicroG!</string>

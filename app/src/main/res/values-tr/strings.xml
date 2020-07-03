@@ -9,7 +9,6 @@
     <!-- Main Activity -->
     <string name="title_about">Hakkında</string>
     <string name="title_home">Ana Sayfa</string>
-    <string name="title_install">Yüklemek</string>
     <string name="title_settings">Ayarlar</string>
 
     <!-- Home Page -->
@@ -17,7 +16,6 @@
     <string name="install">Yüklemek</string>
     <string name="version_installed">Yüklendi:</string>
     <string name="latest">En Son:</string>
-    <string name="loading">Yükleniyor…</string>
     <string name="network_error">Ağ bağlantısı yok</string>
     <string name="update">Güncellemek</string>
     <string name="useful_links">Faydalı Bağlantılar</string>

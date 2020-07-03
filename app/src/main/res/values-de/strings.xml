@@ -7,7 +7,6 @@
     <!-- Main Activity -->
     <string name="title_about">Über</string>
     <string name="title_home">Startseite</string>
-    <string name="title_install">Installieren</string>
     <string name="title_settings">Einstellungen</string>
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
@@ -29,7 +28,6 @@
     <string name="button_reinstall">Neu installieren</string>
     <string name="version_installed">Installiert:</string>
     <string name="latest">Neueste:</string>
-    <string name="loading">Lädt...</string>
     <string name="successfully_installed">%1$s erfolgreich installiert</string>
     <string name="network_error">Keine Netzwerkverbindung verfügbar</string>
     <string name="no_microg">Kein MicroG!</string>

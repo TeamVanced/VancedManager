@@ -9,7 +9,6 @@
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
     <string name="title_home">Додому</string>
-    <string name="title_install">Встановити</string>
     <string name="title_settings">Налаштування</string>
 
     <!-- Home Page -->
@@ -17,7 +16,6 @@
     <string name="install">Встановити</string>
     <string name="version_installed">Встановлено:</string>
     <string name="latest">Найновіші:</string>
-    <string name="loading">Завантаження…</string>
     <string name="network_error">Немає з\'єднання з мережею</string>
     <string name="update">Оновлення</string>
     <string name="useful_links">Корисні сторінки</string>

@@ -12,7 +12,6 @@
     <string name="title_about">"معاومات
 "</string>
     <string name="title_home">بيت</string>
-    <string name="title_install">تثبيت</string>
     <string name="title_settings">اعادات</string>
 
     <!-- Home Page -->
@@ -20,7 +19,6 @@
     <string name="install">تثبيت</string>
     <string name="version_installed">مثبتة</string>
     <string name="latest">آخر:</string>
-    <string name="loading">جار التحميل…</string>
     <string name="network_error">اتصاا الشبكة غير متاح</string>
     <string name="update">تحديث</string>
     <string name="useful_links">روابط المفيدة</string>

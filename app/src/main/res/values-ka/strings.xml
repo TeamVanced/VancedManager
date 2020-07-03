@@ -9,7 +9,6 @@
     <!-- Main Activity -->
     <string name="title_about">შესახებ</string>
     <string name="title_home">საწყისი</string>
-    <string name="title_install">ინსტალაცია</string>
     <string name="title_settings">პარამეტრები</string>
 
     <!-- Home Page -->
@@ -32,7 +31,6 @@
     <string name="button_reinstall">რეინსტალაცია</string>
     <string name="version_installed">დაინსტალირებული:</string>
     <string name="latest">უახლესი:</string>
-    <string name="loading">იტვირთება…</string>
     <string name="successfully_installed">წარმატებით დაყენდა %1$s</string>
     <string name="network_error">კავშირი არ არის</string>
     <string name="no_microg">დააყენეთ MicroG!</string>

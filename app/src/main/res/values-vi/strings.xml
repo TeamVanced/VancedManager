@@ -7,7 +7,6 @@
     <!-- Main Activity -->
     <string name="title_about">Thông tin</string>
     <string name="title_home">Trang chủ</string>
-    <string name="title_install">Cài đặt</string>
     <string name="title_settings">Tùy chỉnh</string>
     <!-- Home Page -->
     <string name="changelogs">Lịch sử thay đổi</string>
@@ -28,7 +27,6 @@
     <string name="button_reinstall">Cài đặt lại</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
-    <string name="loading">Đang tải...</string>
     <string name="successfully_installed">Đã cài đặt thành công %1$s</string>
     <string name="network_error">Không có kết nối mạng</string>
     <string name="no_microg">Không có MicroG!</string>

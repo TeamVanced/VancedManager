@@ -7,7 +7,6 @@
     <!-- Main Activity -->
     <string name="title_about">關於</string>
     <string name="title_home">主頁</string>
-    <string name="title_install">安裝</string>
     <string name="title_settings">設定</string>
     <!-- Home Page -->
     <string name="changelogs">更新日誌</string>
@@ -28,7 +27,6 @@
     <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
-    <string name="loading">正在載入中。。。</string>
     <string name="successfully_installed">成功安裝 %1$s</string>
     <string name="network_error">網際網絡無法存取</string>
     <string name="no_microg">沒有 MicroG！</string>
