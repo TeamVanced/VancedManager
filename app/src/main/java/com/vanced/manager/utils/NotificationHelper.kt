@@ -55,7 +55,7 @@ object NotificationHelper {
         notifBuilder.apply {
             setContentTitle(context.getString(R.string.app_name))
             setContentText(text)
-            setStyle(Notification.BigTextStyle().bigText(text))
+            style = Notification.BigTextStyle().bigText(text)
             setSmallIcon(R.drawable.ic_stat_name)
         }
 

@@ -27,7 +27,7 @@
     <string name="installation_invalid">ოპერაცია ჩაიშალა რადგან apk ფაილები დაზიანებულია.</string>
     <string name="installation_signature">გაურკვეველი შეცდომა Vanced-ის დაყენების დროს. ნამდვილად გაქვთ ხელმოწერის ვერიფიკაცია გათიშული?</string>
     <string name="installation_miui">გაურკვეველი შეცდომა Vanced-ის დაყენების დროს. ნამდვილად გამორთეთ MIUI-ის ოპტიმიზაციები?</string>
-    <string name="installation_storage">პერაცია ჩაიშალა რადგან შეცდომაა მეხსიერებასთან დაკავშირებით.</string>
+    <string name="installation_storage">ოპერაცია ჩაიშალა რადგან შეცდომაა მეხსიერებასთან დაკავშირებით.</string>
     <string name="installation_wait">გთხოვთ დაიცადოთ ინსტალაციის დასრულებამდე</string>
     <string name="button_reinstall">რეინსტალაცია</string>
     <string name="version_installed">დაინსტალირებული:</string>
@@ -40,8 +40,8 @@
     <string name="unavailable">ხელმიუწვდომელია</string>
     <string name="update">განახლება</string>
     <string name="useful_links">საჭირო ლინკები</string>
-    <string name="website_text">Vanced-ის ოფიციალური ვებსაიტი</string>
-    <string name="support_us">დაგვიჭირეთ მხარი Brave-ის გადმოწერით</string>
+    <string name="website_text">ვებსაიტი</string>
+    <string name="support_us">დაგვიჭირეთ მხარი</string>
 
     <!-- Settings -->
     <string name="accent_color">აქცენტის ფერი</string>
