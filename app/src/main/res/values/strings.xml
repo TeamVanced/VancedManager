@@ -40,6 +40,7 @@
     <string name="useful_links">Useful Links</string>
     <string name="website_text">Website</string>
     <string name="support_us">Support us!</string>
+    <string name="version_toast">%1$s\'s version was copied!</string>
 
     <!-- Settings -->
     <string name="accent_color">Accent Color</string>

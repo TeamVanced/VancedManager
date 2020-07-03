@@ -58,7 +58,7 @@ class RootSplitInstallerService: Service() {
             val inputPipe = apkFile.getInputStream()
             try {
                 process.outputStream.use { outputStream -> inputPipe.copyTo(outputStream) }
-            } catch (e: java.lang.Exception) {
+            } catch (e: Exception) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
                     process.destroyForcibly()
                 else

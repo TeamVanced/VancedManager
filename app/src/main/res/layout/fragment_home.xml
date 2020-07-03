@@ -96,7 +96,6 @@
                 bind:viewModel="@{viewModel}"/>
 
             <include
-                android:id="@+id/home_microg_wrapper"
                 layout="@layout/include_microg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,7 +103,7 @@
                 android:layout_marginTop="@dimen/stdp"
                 android:layout_marginEnd="@dimen/stdp"
                 android:visibility="@{viewModel.nonrootModeSelected ? View.VISIBLE : View.GONE}"
-                bind:viewModel="@{viewModel}"/>
+                bind:viewModel="@{viewModel}" />
 
             <include
                 layout="@layout/include_changelogs"
