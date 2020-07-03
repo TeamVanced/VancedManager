@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="close">Close</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <!-- Main Activity -->
+    <string name="title_about">About</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+    <!-- Home Page -->
+    <string name="changelogs">Changelogs</string>
+    <string name="downloading_file">Downloading %1$s</string>
+    <string name="failed_uninstall">Failed to uninstall package %1$s</string>
+    <string name="error_downloading">Error Downloading %1$s</string>
+    <string name="install">Install</string>
+    <string name="installing_app">Installing %1$s</string>
+    <string name="installation_aborted">Operation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Operation failed because the user blocked the installation.</string>
+    <string name="installation_conflict">Operation failed because the app conflicts with an already installed app.</string>
+    <string name="installation_failed">Operation failed for an unknown reason, please join our Telegram or Discord for support.</string>
+    <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
+    <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
+    <string name="installation_signature">An unexpected error occurred while installing Vanced. Have you disabled apk signature verification?</string>
+    <string name="installation_miui">An unexpected error occurred while installing Vanced. Have you disabled MIUI Optimisations?</string>
+    <string name="installation_storage">Operation failed due to a storage error.</string>
+    <string name="installation_wait">Please wait until the installation finishes</string>
+    <string name="button_reinstall">Reinstall</string>
+    <string name="version_installed">Installed:</string>
+    <string name="latest">Latest:</string>
+    <string name="successfully_installed">Successfully installed %1$s</string>
+    <string name="network_error">Network connection unavailable</string>
+    <string name="no_microg">No MicroG!</string>
+    <string name="root_not_granted">Root access not granted</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="update">Update</string>
+    <string name="useful_links">Useful Links</string>
+    <string name="website_text">Website</string>
+    <string name="support_us">Support us!</string>
+    <!-- Settings -->
+    <string name="accent_color">Accent Color</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
+    <string name="check_updates">Check for updates</string>
+    <string name="category_interface">Interface</string>
+    <string name="category_manager">Manager</string>
+    <string name="chosen_install_values">Chosen installation preferences</string>
+    <string name="chosen_lang">Language: %1$s</string>
+    <string name="chosen_theme">Theme: %1$s</string>
+    <string name="theme">Theme</string>
+    <string name="theme_follow">Follow System</string>
+    <string name="theme_dark">Dark Theme</string>
+    <string name="theme_light">Light Theme</string>
+    <string name="update_url">Update Channel URL</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update is released</string>
+    <string name="re_check">Re-check</string>
+    <string name="update_center">Manager Update Center</string>
+    <string name="update_found">Update found!</string>
+    <string name="update_notfound">No new updates</string>
+    <!-- Dialogs -->
+    <string name="button_dismiss">Dismiss</string>
+    <string name="guide">Guide</string>
+    <string name="hold_on">Hold on!</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module.</string>
+    <string name="miui_one_title">MIUI detected!</string>
+    <string name="miui_one">Hey! it looks like you\'re a MIUI user. in order to properly use this application, you will have to disable MIUI optimisations in the developer settings. (You can safely ignore this warning if you are on a 20.2.20 or later ROM based on xiaomi.eu)</string>
+    <string name="error">Error</string>
+    <string name="security_context">Please make sure, that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="success">Success!</string>
+    <string name="vanced_installed">Vanced has successfully been installed! Launch now?</string>
+    <string name="launch">Launch</string>
+    <string name="welcome">Welcome</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
+    <string name="choose_preferred_language_note">Note: English will always be installed as an additional language as well.</string>
+    <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
+    <string name="disable_signature">Root mode detected! To install Vanced, you will need to disable the apk signature verification.</string>
+    <string name="finish">Finish</string>
+    <string name="install_light_black">Light + Black</string>
+    <string name="install_light_dark">Light + Dark</string>
+    <string name="next">Next</string>
+    <!-- About Page -->
+    <string name="manager_dev">Manager Dev</string>
+    <string name="sources">Sources</string>
+    <string name="vanced_team">Vanced Team</string>
+</resources>

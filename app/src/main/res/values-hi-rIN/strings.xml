@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="close">बंद करे</string>
+    <string name="reset">रिसेट</string>
+    <string name="save">सुरक्षित करें</string>
+    <!-- Main Activity -->
+    <string name="title_about">बारे में</string>
+    <string name="title_home">होम</string>
+    <string name="title_settings">सेटिंग्स</string>
+    <!-- Home Page -->
+    <string name="changelogs">चेंजलॉग</string>
+    <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
+    <string name="failed_uninstall">पैकेज की स्थापना रद्द करने में विफल %1$s</string>
+    <string name="error_downloading">डाउनलोड करने में इरर %1$s</string>
+    <string name="install">इंस्टॉल</string>
+    <string name="installing_app">%1$s इन्स्टॉःल कर रहा है </string>
+    <string name="installation_aborted">ऑपरेशन विफल हो गया क्योंकि उपयोगकर्ता ने स्थापना रद्द कर दी थी</string>
+    <string name="installation_blocked">उपयोगकर्ता अवरुद्ध स्थापना के कारण ऑपरेशन विफल हुआ</string>
+    <string name="installation_conflict">ऑपरेशन विफल हो गया क्योंकि ऐप पहले से इंस्टॉल किए गए ऐप के साथ टकराव करता है</string>
+    <string name="installation_failed">ऑपरेशन विफल हो गया क्योंकि यह अभी असफल रहा मुझे नहीं पता</string>
+    <string name="installation_incompatible">ऑपरेशन विफल हो गया क्योंकि ऐप आपके डिवाइस के साथ असंगत है</string>
+    <string name="installation_invalid">ऑपरेशन विफल हो गया क्योंकि एपीके फाइलें अमान्य हैं</string>
+    <string name="installation_signature">Vनाथ स्थापित करते समय अप्रत्याशित त्रुटि हुई। क्या आपने हस्ताक्षर सत्यापन अक्षम कर दिया है?</string>
+    <string name="installation_miui">Vनाथ स्थापित करते समय अप्रत्याशित त्रुटि हुई। क्या आपने MiUI ऑप्टिमाइज़ेशन को अक्षम कर दिया है?</string>
+    <string name="installation_storage">संग्रहण विफल होने के कारण ऑपरेशन विफल हो गया। पकड़ो कि यह कैसे संभव है?</string>
+    <string name="installation_wait">Please wait until the installation finishes</string>
+    <string name="button_reinstall">फिर से इंस्टॉल</string>
+    <string name="version_installed">(इन्स्टॉल्ड</string>
+    <string name="latest">लेट्इस्ट</string>
+    <string name="successfully_installed">सफलतापूर्वक इन्स्टॉल्ड %1$s</string>
+    <string name="network_error">नेटवर्क कनेक्शन अनुपलब्ध है</string>
+    <string name="no_microg">कोई माइक्रोजी नहीं!</string>
+    <string name="root_not_granted">रूट एक्सेस प्रदान नही किया गया</string>
+    <string name="unavailable">अनुपलब्ध</string>
+    <string name="update">अपडेट करें</string>
+    <string name="useful_links">उपयोगी लिंक्स </string>
+    <string name="website_text">वेबसाइट</string>
+    <string name="support_us">हमें सपॉर्ट कीजिये!</string>
+    <!-- Settings -->
+    <string name="accent_color">एक्सेंट रंग</string>
+    <string name="accent_blue">नीला</string>
+    <string name="accent_green">हरा</string>
+    <string name="accent_purple">बैंगनी</string>
+    <string name="accent_red">लाल</string>
+    <string name="accent_yellow">पीला</string>
+    <string name="check_updates">अपडेट के लिए जाँचे</string>
+    <string name="category_interface">इंटरफेस</string>
+    <string name="category_manager">मैनेजर</string>
+    <string name="chosen_install_values">इंस्टालेशन चुनाव</string>
+    <string name="chosen_lang">भाषा: %1$s</string>
+    <string name="chosen_theme">थीम: %1$s</string>
+    <string name="theme">थीम</string>
+    <string name="theme_follow">सिस्टम का पालन करें</string>
+    <string name="theme_dark">डार्क थीम</string>
+    <string name="theme_light">लाइट थीम</string>
+    <string name="update_url">चैनल URL अपडेट करें</string>
+    <string name="push_notifications">सूचनाएं भेजना</string>
+    <string name="push_notifications_summary">अपडेट जारी होने पर पुश सूचनाएं प्राप्त करें</string>
+    <string name="re_check">री-चेक</string>
+    <string name="update_center">अपडेट केंद्र</string>
+    <string name="update_found">अपडेट मिला!</string>
+    <string name="update_notfound">कोई नया अपडेट नहीं</string>
+    <!-- Dialogs -->
+    <string name="button_dismiss">डिस्मिस</string>
+    <string name="guide">गाइड</string>
+    <string name="hold_on">रुको!</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module.</string>
+    <string name="miui_one_title">पता लगाया MiUI उपयोगकर्ता!</string>
+    <string name="miui_one">अरे! लगता है कि आप MiUI उपयोगकर्ता हैं। Vanced Manager को ठीक से उपयोग करने के लिए, आपको डेवलपर सेटिंग में MiUI ऑप्टिमाइज़ेशन को अक्षम करना होगा
+हालाँकि, यदि आप 20.2.20 ROM पर हैं जो xiaomi.eu पर आधारित है, तो आप इस चेतावनी को सुरक्षित रूप से अनदेखा कर सकते हैं।</string>
+    <string name="error">इरर</string>
+    <string name="security_context">कृपया सुनिश्चित करें कि आपने vanced.app, Vanced Discord सर्वर या GitHub से ऐप डाउनलोड किया है</string>
+    <string name="success">सफलता!</string>
+    <string name="vanced_installed">नृत्य सफलतापूर्वक स्थापित किया गया है, क्या आप इसे अभी लॉन्च करना चाहते हैं?</string>
+    <string name="launch">लॉन्च</string>
+    <string name="welcome">स्वागत हे</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">वांसड के लिए अपनी पसंदीदा भाषा चुनें</string>
+    <string name="choose_preferred_language_note">नोट: यदि आप अंग्रेजी के अलावा कुछ भी स्थापित करते हैं, तब भी अंग्रेजी एक अतिरिक्त भाषा के रूप में स्थापित की जाएगी</string>
+    <string name="choose_preferred_theme">अपने पसंदीदा विषय को नृत्य के लिए चुनें</string>
+    <string name="disable_signature">रूट मोड का पता चला! प्रबंधक के लिए Vanced को सही तरीके से स्थापित करने के लिए, कृपया सुनिश्चित करें कि आपने हस्ताक्षर सत्यापन को अक्षम कर दिया है।</string>
+    <string name="finish">अन्त</string>
+    <string name="install_light_black">लाइट + ब्लैक</string>
+    <string name="install_light_dark">लाइट + डार्क</string>
+    <string name="next">आगे</string>
+    <!-- About Page -->
+    <string name="manager_dev">मैनेजर देव</string>
+    <string name="sources">सूत्रों का</string>
+    <string name="vanced_team">वांसड टीम</string>
+</resources>
