@@ -64,17 +64,15 @@ class HomeFragment : Home() {
 
         view.findViewById<MaterialCardView>(R.id.vanced_card).setOnLongClickListener{
             val clip = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val vanced = "Vanced"
-            clip.setPrimaryClip(ClipData.newPlainText(vanced, viewModel.vancedInstalledVersion.value))
-            versionToast(vanced)
+            clip.setPrimaryClip(ClipData.newPlainText("vanced", viewModel.vancedInstalledVersion.value))
+            versionToast("Vanced")
             true
         }
 
         view.findViewById<MaterialCardView>(R.id.microg_card).setOnLongClickListener{
             val clip = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val microg = "MicroG"
-            clip.setPrimaryClip(ClipData.newPlainText(microg, viewModel.microgInstalledVersion.value))
-            versionToast(microg)
+            clip.setPrimaryClip(ClipData.newPlainText("microg", viewModel.microgInstalledVersion.value))
+            versionToast("MicroG")
             true
         }
     }
