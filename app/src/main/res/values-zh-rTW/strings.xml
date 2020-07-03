@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
     <string name="close">關閉</string>
@@ -24,12 +24,14 @@
     <string name="installation_signature">安裝 Vanced 時發生意外的錯誤。您有關閉簽名驗證嗎？</string>
     <string name="installation_miui">安裝 Vanced 時發生意外的錯誤。您有禁用 MiUI 優化嗎？</string>
     <string name="installation_storage">操作失敗因為存儲出現錯誤。</string>
+    <string name="installation_wait">Please wait until the installation finishes</string>
     <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
     <string name="successfully_installed">成功安裝 %1$s</string>
     <string name="network_error">網際網絡無法存取</string>
     <string name="no_microg">沒有 MicroG！</string>
+    <string name="root_not_granted">Root access not granted</string>
     <string name="unavailable">不可用</string>
     <string name="update">更新</string>
     <string name="useful_links">有用的網址</string>
@@ -63,6 +65,7 @@
     <string name="button_dismiss">關閉</string>
     <string name="guide">指南</string>
     <string name="hold_on">等一下！</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module.</string>
     <string name="miui_one_title">檢測到 MiUI 用戶！</string>
     <string name="miui_one">嘿! 您似乎是 MiUI 用戶。 為了能夠正確地使用 Vanced Manager ，您將需要在開發人員設定中禁用 MiUI 優化。但是，如果您使用的是基於 xiaomi.eu 的20.2.20 ROM （或更新的版本），則可以放心地忽略此警告。</string>
     <string name="error">錯誤</string>
