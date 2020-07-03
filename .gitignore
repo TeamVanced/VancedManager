@@ -5,3 +5,4 @@ out/
 app/src/main/java/com/vanced/manager/core/base/DummyJava.java
 local.properties
 /.github/
+*.iml

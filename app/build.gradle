@@ -36,8 +36,8 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding true
     }
 
 // To inline the bytecode built with JVM target 1.8 into
@@ -54,19 +54,24 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+// Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+// AndroidX
     implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.browser:browser:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.core:core-ktx:1.3.0'
     implementation 'androidx.fragment:fragment-ktx:1.2.5'
-    implementation 'androidx.preference:preference-ktx:1.1.1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.browser:browser:1.2.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.2.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation 'com.google.android.material:material:1.1.0'
+
+// Other
     implementation 'com.github.100rabhkr:GetJSON:1.0'
     implementation 'com.github.topjohnwu.libsu:core:2.5.1'
     implementation 'com.mindorks.android:prdownloader:0.6.0'
