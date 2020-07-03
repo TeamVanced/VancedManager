@@ -1,4 +1,4 @@
-For anyone who wants to provide translations please submit them to https://vanced.oneskyapp.com as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
+For anyone who wants to provide translations please submit them to https://translate.vanced.app as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
 ======
 [![Github All Releases](https://img.shields.io/github/downloads/YTVanced/VancedManager/total.svg)]() [![Github All Releases](https://img.shields.io/github/release/YTVanced/VancedManager.svg)]() 
 # Vanced Manager
