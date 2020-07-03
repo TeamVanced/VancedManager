@@ -1,9 +1,6 @@
 package com.vanced.manager.ui.fragments
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.content.*
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -11,12 +8,14 @@ import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageButton
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
@@ -62,6 +61,27 @@ class HomeFragment : Home() {
         view.findViewById<ImageButton>(R.id.changelog_button).setOnClickListener {
             cardExpandCollapse()
         }
+
+        view.findViewById<MaterialCardView>(R.id.vanced_card).setOnLongClickListener{
+            val clip = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+
+            clip.setPrimaryClip(ClipData.newPlainText(activity.getString(R.string.vanced), viewModel.vancedInstalledVersion.value))
+            versionToast(activity.getString(R.string.vanced))
+            true
+        }
+
+        view.findViewById<MaterialCardView>(R.id.microg_card).setOnLongClickListener{
+            val clip = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+
+            clip.setPrimaryClip(ClipData.newPlainText(activity.getString(R.string.microg), viewModel.microgInstalledVersion.value))
+            versionToast(activity.getString(R.string.microg))
+            true
+        }
+    }
+
+    private fun versionToast(name: String)
+    {
+        Toast.makeText(activity, getString(R.string.version_toast, name), Toast.LENGTH_LONG).show()
     }
 
     private fun cardExpandCollapse() {
