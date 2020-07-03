@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="close">Kapat</string>
+    <string name="reset">Tekrar başla </string>
+    <string name="save">Kaydet</string>
+    <!-- Main Activity -->
+    <string name="title_about">Hakkında</string>
+    <string name="title_home">Ana Sayfa</string>
+    <string name="title_settings">Ayarlar</string>
+    <!-- Home Page -->
+    <string name="changelogs">Değişim kaydı</string>
+    <string name="downloading_file">İndiriliyor %1$s</string>
+    <string name="failed_uninstall">%1$s paket yüklemesi başarısız oldu</string>
+    <string name="error_downloading">Indirme hatası %1$s</string>
+    <string name="install">Kur</string>
+    <string name="installing_app">%1$s Kuruluyor</string>
+    <string name="installation_aborted">İşlem başarısız oldu çünkü kullanıcı kurulumu yarıda bıraktı.</string>
+    <string name="installation_blocked">İşlem başarısız oldu çünkü kullanıcı kurulumu engelledi.</string>
+    <string name="installation_conflict">İşlem başarısız oldu çünkü uygulama zaten kurulu olan bir uygulamayla çakışıyor.</string>
+    <string name="installation_failed">İşlem bilinmeyen bir sebepten dolayı başarısız oldu, Destek için lütfen Telegram veya Discord\'a katılın.</string>
+    <string name="installation_incompatible">İşlem başarısız oldu çünkü uygulama cihazınızla uyumlu değil.</string>
+    <string name="installation_invalid">İşlem başarısız çünkü apk dosyaları geçersiz.</string>
+    <string name="installation_signature">Vanced kurulurken beklenmedik bir hata oluştu. İmza doğrulamasını kaldırdınmı?</string>
+    <string name="installation_miui">Vanced kurulurken beklenmedik bir hata oluştu. MIUI Optimizasyonlarını devre dışı bıraktınmı?</string>
+    <string name="installation_storage">İşlem başarısız oldu çünkü depolama ile ilgili bir sorun var.</string>
+    <string name="installation_wait">Lütfen kurulum bitene kadar bekleyin.</string>
+    <string name="button_reinstall">Yeniden kur</string>
+    <string name="version_installed">Kuruldu:</string>
+    <string name="latest">En yeni:</string>
+    <string name="successfully_installed">%1$s Başarıyla kuruldu</string>
+    <string name="network_error">Ağ bağlantısı yok</string>
+    <string name="no_microg">MicroG Yok!</string>
+    <string name="root_not_granted">Root erişimi verilmedi</string>
+    <string name="unavailable">Kullanım dışı</string>
+    <string name="update">Güncelle</string>
+    <string name="useful_links">Yararlı Bağlantılar</string>
+    <string name="website_text">Vanced\'in resmî web sitesi</string>
+    <string name="support_us">Brave İnternet tarayıcısını indirerek bizi destekleyebilirsiniz</string>
+    <!-- Settings -->
+    <string name="accent_color">Tema Rengi</string>
+    <string name="accent_blue">Mavi</string>
+    <string name="accent_green">Yeşil</string>
+    <string name="accent_purple">Mor</string>
+    <string name="accent_red">Kırmızı</string>
+    <string name="accent_yellow">Sarı</string>
+    <string name="check_updates">Güncellemeleri denetle</string>
+    <string name="category_interface">Arayüz</string>
+    <string name="category_manager">Yönetici</string>
+    <string name="chosen_install_values">Seçilen kurulum özellikleri </string>
+    <string name="chosen_lang">Dil: %1$s</string>
+    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="theme">Tema</string>
+    <string name="theme_follow">Sistem karar versin</string>
+    <string name="theme_dark">Koyu Tema</string>
+    <string name="theme_light">Açık Tema</string>
+    <string name="update_url">Kanal URL güncelle </string>
+    <string name="push_notifications">Push Bildirimleri</string>
+    <string name="push_notifications_summary">Yeni güncelleme yayımlandığında push bildirimi alın</string>
+    <string name="re_check">Yeniden kontrol et</string>
+    <string name="update_center">Güncelleme Merkezi</string>
+    <string name="update_found">Güncelleme bulundu!</string>
+    <string name="update_notfound">Yeni güncelleme yok</string>
+    <!-- Dialogs -->
+    <string name="button_dismiss">Kapat</string>
+    <string name="guide">Kılavuz</string>
+    <string name="hold_on">Bekle!</string>
+    <string name="magisk_vanced">Vanced\'in Magisk versiyonunu kullandığın görülüyor, bu sürüm artık kullanılmıyor ve bu uygulama kullanılarak güncellenemez. Lütfen önce uygulamayı magisk modülünden kaldırın.</string>
+    <string name="miui_one_title">MIUI tespit edildi!</string>
+    <string name="miui_one">Hey! Görünüşe göre MIUI kullanıcısın. Bu programı düzgün kullanabilmek için geliştirici seçeneklerinden MIUI optimizasyonunu kapatman gerekir. (Eğer 20.2.20 ya da daha sonraki ROM sürümünü kullanıyorsan bu uyarıyı dikkate almayabilirsin)</string>
+    <string name="error">Hata</string>
+    <string name="security_context">Uygulamayı vanced.app\'den, Vanced Discord sunucusundan veya GitHub\'dan indirdiğinizden emin olun.</string>
+    <string name="success">Başarılı!</string>
+    <string name="vanced_installed">Vanced Başarıyla kuruldu! Başlatılsın mı?</string>
+    <string name="launch">Başlat</string>
+    <string name="welcome">Hoş geldin</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Vanced için tercih ettiğiniz dili seçin</string>
+    <string name="choose_preferred_language_note">Not: Eğer İngilizceden farklı bir dil seçerseniz de İngilizce ek dil olarak kurulacaktır</string>
+    <string name="choose_preferred_theme">Vanced için tercih ettiğiniz temayı seçin</string>
+    <string name="disable_signature">Root modu tespit edildi! Vanced\'ı kurmak için apk imza doğrulamasını devre dışı bırakman gerekiyor.</string>
+    <string name="finish">Bitir</string>
+    <string name="install_light_black">Açık + Kara</string>
+    <string name="install_light_dark">Açık + Koyu</string>
+    <string name="next">Sonraki</string>
+    <!-- About Page -->
+    <string name="manager_dev">Yönetici Geliştirme </string>
+    <string name="sources">Kaynaklar</string>
+    <string name="vanced_team">Vanced Ekibi</string>
+</resources>
