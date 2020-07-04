@@ -32,10 +32,3 @@ jobs:
         with:
           name: 'Vanced-Manager'
           path: app/build/outputs/apk/debug/app-debug.apk
-
-      - name: Upload to Discord
-        uses: sinshutu/upload-to-discord@master
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        with:
-          args: app/build/outputs/apk/debug/app-debug.apk

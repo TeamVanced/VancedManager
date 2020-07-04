@@ -22,7 +22,6 @@ import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
-    //private val connected: Boolean = GetJson().isConnected(application)
 
     private val vancedPkgName: String =
         if (variant== "root") {
@@ -52,7 +51,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private val microgVersionCode = displayJsonInt("microg.json", "versionCode", application)
 
     val microgInstallButtonTxt = compareInt(microgInstalledVersionCode, microgVersionCode, application)
-
     val microgInstallButtonIcon = compareIntDrawable(microgInstalledVersionCode, microgVersionCode, application)
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
@@ -72,6 +70,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun openUrl(Url: String) {
+        val customTabPrefs = getDefaultSharedPreferences(getApplication()).getBoolean("use_customtabs", true)
         val color: Int =
             when (Url) {
                 "https://discord.gg/TUVd7rd" -> R.color.Discord
@@ -83,11 +82,17 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                 else -> R.color.Vanced
             }
 
-        val builder = CustomTabsIntent.Builder()
-        builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
-        val customTabsIntent = builder.build()
-        customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
+        if (customTabPrefs) {
+            val builder = CustomTabsIntent.Builder()
+            builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
+            val customTabsIntent = builder.build()
+            customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
+        } else {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(Url))
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(getApplication(), intent , null)
+        }
     }
 
     private fun getPkgInfo(toCheck: Boolean, pkg: String, application: Application): String  {

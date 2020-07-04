@@ -55,8 +55,6 @@ open class Main: AppCompatActivity() {
         if (GetJson().isConnected(this) && isUpdateAvailable()) {
             val fm = supportFragmentManager
             UpdateCheckFragment().show(fm, "UpdateCheck")
-        } else {
-            Toast.makeText(this, getString(R.string.update_notfound), Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="close">Fechar</string>
+    <string name="reset">Resetar</string>
+    <string name="save">Guardar</string>
+    <!-- Main Activity -->
+    <string name="title_about">Sobre</string>
+    <string name="title_home">Página Principal</string>
+    <string name="title_settings">Configurações</string>
+    <!-- Home Page -->
+    <string name="changelogs">Notas de Lançamento</string>
+    <string name="downloading_file">Transferindo %1$s</string>
+    <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
+    <string name="error_downloading">Erro Transferindo %1$s</string>
+    <string name="install">Instalar</string>
+    <string name="installing_app">Instalando %1$s</string>
+    <string name="installation_aborted">Operação falhou porque o utilizador abortou a instalação.</string>
+    <string name="installation_blocked">Operação falhou porque o utilizador bloquiou a instalação.</string>
+    <string name="installation_conflict">Operação falhou porque a aplicação conflite com uma aplicação já instalada.</string>
+    <string name="installation_failed">Operação falhou por uma razão desconhecida, por-favor entre no nosso Telegram ou Discord para suporte.</string>
+    <string name="installation_incompatible">Operação falhou porque a aplicação é incompatível com o dispositivo. </string>
+    <string name="installation_invalid">Operação falhou porque os ficheiros apk estão inválidos.</string>
+    <string name="installation_signature">Um error inesperado ocorreu enquanto instalando Vanced. Desligaste a verificação de assinatura?</string>
+    <string name="installation_miui">Um erro inesperado ocorreu enquanto instalando Vanced. Desativaste optimizações MIUI?</string>
+    <string name="installation_storage">Operação falhou devido a um erro de armazenamento.</string>
+    <string name="installation_wait">Por-favor espere até a instalação acabar.</string>
+    <string name="button_reinstall">Reinstalar</string>
+    <string name="version_installed">Instalado:</string>
+    <string name="latest">Mais Recente:</string>
+    <string name="successfully_installed">Instalado %1$s</string>
+    <string name="network_error">Conexão de rede indisponível</string>
+    <string name="no_microg">Sem MicroG!</string>
+    <string name="root_not_granted">Acesso root negado.</string>
+    <string name="unavailable">Indisponível</string>
+    <string name="update">Atualizar</string>
+    <string name="useful_links">Links Importantes</string>
+    <string name="website_text">Website</string>
+    <string name="support_us">Suporte-nos!</string>
+    <string name="version_toast">%1$s version was copied!</string>
+    <!-- Settings -->
+    <string name="accent_color">Cor de Destaque</string>
+    <string name="accent_blue">Azul</string>
+    <string name="accent_green">Verde</string>
+    <string name="accent_purple">Roxo</string>
+    <string name="accent_red">Vermelho</string>
+    <string name="accent_yellow">Amarelo</string>
+    <string name="check_updates">Verificar por Atualizações</string>
+    <string name="category_interface">Interface</string>
+    <string name="category_manager">Gerente</string>
+    <string name="chosen_install_values">Predefinições de instalação escolhidas</string>
+    <string name="chosen_lang">Língua: %1$s</string>
+    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="link_title">Use Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="theme">Tema</string>
+    <string name="theme_follow">Seguir Sistema</string>
+    <string name="theme_dark">Tema Escuro</string>
+    <string name="theme_light">Tema Claro</string>
+    <string name="update_url">Atualizar Canal URL</string>
+    <string name="push_notifications">Notificações</string>
+    <string name="push_notifications_summary">Receber notificações quando uma actualização estiver disponível</string>
+    <string name="re_check">Verificar Novamente</string>
+    <string name="update_center">Centro de Actualizações</string>
+    <string name="update_found">Atualização encontrada!</string>
+    <string name="update_notfound">Sem updates novos.</string>
+    <!-- Dialogs -->
+    <string name="button_dismiss">Ignorar</string>
+    <string name="guide">Guia</string>
+    <string name="hold_on">Aguarde!</string>
+    <string name="magisk_vanced">Pareçe que estás a usar a versão Magisk do Vanced, o que está descontinuada e não pode ser atualizada a partir deste app. Porfavor remove-a primeiro removendo o módulo magisk.</string>
+    <string name="miui_one_title">MIUI detetado!</string>
+    <string name="miui_one">Ei! Pareçe que és um utilizador MIUI. Em ordem para utilizares esta aplicação corretamente, terás que desativar optimizações MIUI nas opções de desenvolvedor. (Podes ignorar este aviso se estiveres em alguma versão 20.2.20 ou mais ROM basiado em xiaomi.eu)</string>
+    <string name="error">Erro</string>
+    <string name="security_context">Verifique se você baixou o aplicativo do vanced.app, Vanced Discord ou GitHub</string>
+    <string name="success">Sucesso!</string>
+    <string name="vanced_installed">Vanced foi instalado! Abrir agora?</string>
+    <string name="launch">Abrir</string>
+    <string name="welcome">Bem-Vindo</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Escolhe tua língua preferida para o Vanced</string>
+    <string name="choose_preferred_language_note">Nota: Se você instalar algo diferente de Inglês, Inglês será instalado como um idioma adicional</string>
+    <string name="choose_preferred_theme">Escolhe teu tema preferido para o Vanced</string>
+    <string name="disable_signature">Modo root detetado! Para instalar, terás que desativar a verificação de assinatura apk.</string>
+    <string name="finish">Terminar</string>
+    <string name="install_light_black">Claro + Preto</string>
+    <string name="install_light_dark">Claro + Escuro</string>
+    <string name="next">Próximo</string>
+    <!-- About Page -->
+    <string name="manager_dev">Desenvolvedor Manager</string>
+    <string name="sources">Fontes</string>
+    <string name="vanced_team">Equipa Vanced</string>
+</resources>

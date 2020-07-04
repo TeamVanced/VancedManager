@@ -13,7 +13,7 @@ class VancedThemeSelectionFragment : ThemeInstall() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        activity?.title = getString(R.string.title_install)
+        activity?.title = getString(R.string.install)
         return inflater.inflate(R.layout.fragment_vanced_theme_selection, container, false)
     }
 

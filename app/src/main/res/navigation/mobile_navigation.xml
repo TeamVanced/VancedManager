@@ -67,7 +67,7 @@
     <fragment
         android:id="@+id/install_theme_fragment"
         android:name="com.vanced.manager.ui.fragments.VancedThemeSelectionFragment"
-        android:label="@string/title_install"
+        android:label="@string/install"
         tools:layout="@layout/fragment_vanced_theme_selection">
 
         <action
@@ -83,7 +83,7 @@
     <fragment
         android:id="@+id/install_language_fragment"
         android:name="com.vanced.manager.ui.fragments.VancedLanguageSelectionFragment"
-        android:label="@string/title_install"
+        android:label="@string/install"
         tools:layout="@layout/fragment_vanced_language_selection" >
 
         <action

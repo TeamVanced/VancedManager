@@ -27,33 +27,37 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/websitebtn"
                     style="@style/SocialButtonStyle"
-                    app:icon="@drawable/ic_vanced_nobg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/exo_semibold"
+                    android:onClick='@{()-> viewModel.openUrl("https://vanced.app")}'
                     android:text="@string/website_text"
                     android:textAlignment="textEnd"
                     android:textAllCaps="false"
-                    android:fontFamily="@font/exo_semibold"
                     android:textSize="17sp"
+                    app:icon="@drawable/ic_vanced_nobg"
                     app:iconPadding="7sp"
-                    app:layout_constraintEnd_toStartOf="@id/bravebtn"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:onClick='@{()-> viewModel.openUrl("https://vanced.app")}'/>
+                    app:layout_constraintEnd_toStartOf="@id/bravebtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/bravebtn"
                     style="@style/SocialButtonStyle"
-                    app:icon="@drawable/ic_brave_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/exo_semibold"
+                    android:onClick='@{()-> viewModel.openUrl("https://brave.com/van874")}'
                     android:text="@string/support_us"
                     android:textAllCaps="false"
-                    android:fontFamily="@font/exo_semibold"
-                    app:iconPadding="7dp"
                     android:textSize="17sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/websitebtn"
+                    app:icon="@drawable/ic_brave_logo"
+                    app:iconPadding="7dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:onClick='@{()-> viewModel.openUrl("https://brave.com/van874")}'/>
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/websitebtn"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
