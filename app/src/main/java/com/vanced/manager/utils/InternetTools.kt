@@ -6,7 +6,7 @@ import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import androidx.viewbinding.BuildConfig
+import com.vanced.manager.BuildConfig
 import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
 
