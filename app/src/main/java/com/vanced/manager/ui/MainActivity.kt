@@ -59,7 +59,7 @@ class MainActivity : Main() {
         }
 
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
-            setDisplayHomeAsUpEnabled(currFrag.id == R.id.home_fragment)
+            setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
     }
 
