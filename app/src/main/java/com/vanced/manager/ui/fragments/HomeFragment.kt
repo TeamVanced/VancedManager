@@ -13,8 +13,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
-import com.vanced.manager.adapter.SectionPageAdapter
-import com.vanced.manager.adapter.SectionPageRootAdapter
+import com.vanced.manager.adapter.*
 import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
