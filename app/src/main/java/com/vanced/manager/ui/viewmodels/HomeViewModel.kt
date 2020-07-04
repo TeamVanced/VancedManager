@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.displayJsonInt
@@ -23,7 +22,6 @@ import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
-    //private val connected: Boolean = GetJson().isConnected(application)
 
     private val vancedPkgName: String =
         if (variant== "root") {
@@ -53,7 +51,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private val microgVersionCode = displayJsonInt("microg.json", "versionCode", application)
 
     val microgInstallButtonTxt = compareInt(microgInstalledVersionCode, microgVersionCode, application)
-
     val microgInstallButtonIcon = compareIntDrawable(microgInstalledVersionCode, microgVersionCode, application)
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
