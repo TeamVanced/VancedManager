@@ -37,7 +37,7 @@
     <string name="useful_links">საჭირო ლინკები</string>
     <string name="website_text">Vanced-ის ოფიციალური ვებსაიტი</string>
     <string name="support_us">დაგვიჭირეთ მხარი Brave-ის გადმოწერით</string>
-    <string name="version_toast">%1$s\'s version was copied!</string>
+    <string name="version_toast">%1$s-ის ვერსია დაკოპირდა!</string>
     <!-- Settings -->
     <string name="accent_color">აქცენტის ფერი</string>
     <string name="accent_blue">ლურჯი</string>
@@ -51,6 +51,9 @@
     <string name="chosen_install_values">არჩეული ინსტალაციის რეჟიმები</string>
     <string name="chosen_lang">ენა: %1$s</string>
     <string name="chosen_theme">თემა: %1$s</string>
+    <string name="link_title">გამოიყენეთ Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">ლინკები გაიხსნება Chrome Custom Tabs-ში</string>
+    <string name="link_external_browser">ლინკები გაიხსნება გარე ბრაუზერში</string>
     <string name="theme">თემა</string>
     <string name="theme_follow">სისტემაზე დაფუძნებული</string>
     <string name="theme_dark">მუქი თემა</string>

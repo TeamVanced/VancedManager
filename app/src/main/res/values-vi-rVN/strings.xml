@@ -31,11 +31,11 @@
     <string name="successfully_installed">Đã cài đặt thành công %1$s</string>
     <string name="network_error">Không có kết nối mạng</string>
     <string name="no_microg">Không có MicroG!</string>
-    <string name="root_not_granted">Root access not granted</string>
+    <string name="root_not_granted">Truy cập root không được cấp</string>
     <string name="unavailable">Không có sẵn</string>
     <string name="update">Cập nhật</string>
     <string name="useful_links">Link hữu ích</string>
-    <string name="website_text">Website</string>
+    <string name="website_text">Trang web</string>
     <string name="support_us">Hỗ trợ chúng tôi!</string>
     <string name="version_toast">%1$s\'s version was copied!</string>
     <!-- Settings -->
@@ -51,6 +51,9 @@
     <string name="chosen_install_values">Giá trị cài đặt đã chọn</string>
     <string name="chosen_lang">Ngôn ngữ: %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
+    <string name="link_title">Use Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Như hệ thống</string>
     <string name="theme_dark">Theme tối</string>
