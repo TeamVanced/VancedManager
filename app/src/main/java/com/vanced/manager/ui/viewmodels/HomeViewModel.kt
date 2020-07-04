@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.displayJsonInt
@@ -72,6 +73,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun openUrl(Url: String) {
+        val customTabPrefs = getDefaultSharedPreferences(getApplication()).getBoolean("use_customtabs", true)
         val color: Int =
             when (Url) {
                 "https://discord.gg/TUVd7rd" -> R.color.Discord
@@ -83,11 +85,14 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                 else -> R.color.Vanced
             }
 
-        val builder = CustomTabsIntent.Builder()
-        builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
-        val customTabsIntent = builder.build()
-        customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
+        if (customTabPrefs) {
+            val builder = CustomTabsIntent.Builder()
+            builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
+            val customTabsIntent = builder.build()
+            customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
+        } else
+            startActivity(getApplication(), Intent(Intent.ACTION_VIEW, Uri.parse(Url)), null)
     }
 
     private fun getPkgInfo(toCheck: Boolean, pkg: String, application: Application): String  {

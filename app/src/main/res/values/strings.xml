@@ -55,6 +55,9 @@
     <string name="chosen_install_values">Chosen installation preferences</string>
     <string name="chosen_lang">Language: %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
+    <string name="link_title">Use Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Links will be opened in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will be opened in an External Browser</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>

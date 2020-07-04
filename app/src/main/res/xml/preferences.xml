@@ -14,6 +14,12 @@
             android:icon="@drawable/ic_cloud_upload_black_24dp" />
 
         <SwitchPreference
+            android:key="use_customtabs"
+            android:title="@string/link_title"
+            android:summaryOn="@string/link_custom_tabs"
+            android:summaryOff="@string/link_external_browser" />
+
+        <SwitchPreference
             android:title="@string/push_notifications"
             android:key="push_notifications_status"
             android:summary="@string/push_notifications_summary"

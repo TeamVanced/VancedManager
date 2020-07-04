@@ -1,21 +1,27 @@
 package com.vanced.manager.utils
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.viewbinding.BuildConfig
 import com.dezlum.codelabs.getjson.GetJson
-import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 
 object InternetTools {
 
     fun openUrl(Url: String, color: Int, context: Context) {
-        val builder = CustomTabsIntent.Builder()
-        builder.setToolbarColor(ContextCompat.getColor(context, color))
-        val customTabsIntent = builder.build()
-        customTabsIntent.launchUrl(context, Uri.parse(Url))
+        val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_customtabs", true)
+        if (customTabPrefs) {
+            val builder = CustomTabsIntent.Builder()
+            builder.setToolbarColor(ContextCompat.getColor(context, color))
+            val customTabsIntent = builder.build()
+            customTabsIntent.launchUrl(context, Uri.parse(Url))
+        } else
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Url)))
     }
 
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
