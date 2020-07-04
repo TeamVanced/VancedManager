@@ -14,7 +14,10 @@
 
     <com.google.android.material.card.MaterialCardView
         style="@style/MaterialCard"
-        app:contentPaddingTop="2dp"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:layout_marginEnd="@dimen/card_margin"
+        android:layout_marginBottom="@dimen/card_margin"
         android:animateLayoutChanges="true">
 
         <LinearLayout
@@ -24,13 +27,16 @@
 
             <TextView
                 style="@style/CardTitle"
+                android:layout_marginStart="@dimen/text_header"
+                android:layout_marginTop="@dimen/card_margin"
+                android:layout_marginBottom="@dimen/card_margin"
                 android:text="@string/useful_links" />
 
             <include
                 layout="@layout/include_vanced_medias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                bind:viewModel="@{viewModel}"/>
+                bind:viewModel="@{viewModel}" />
 
         </LinearLayout>
 

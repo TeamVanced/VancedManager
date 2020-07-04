@@ -9,27 +9,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
         android:animateLayoutChanges="true"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_margin"
+            android:layout_marginBottom="@dimen/card_margin">
 
             <TextView
                 style="@style/CardTitle"
-                android:text="@string/changelogs"
-                android:layout_alignParentStart="true"/>
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/text_header"
+                android:text="@string/changelogs" />
 
             <ImageButton
                 android:id="@+id/changelog_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/arrow_down"
                 android:layout_alignParentEnd="true"
-                android:background="@android:color/transparent" />
+                android:background="@android:color/transparent"
+                android:src="@drawable/arrow_down" />
 
         </RelativeLayout>
 
@@ -38,12 +39,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?colorSurfaceVariant"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="parent"
             app:tabIndicatorColor="?colorPrimary"
             app:tabSelectedTextColor="?colorPrimary"
             app:tabTextColor="?colorPrimary"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:visibility="gone"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager"
@@ -51,7 +52,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:visibility="gone"
-            tools:visibility="visible"/>
+            tools:visibility="visible" />
 
     </LinearLayout>
 

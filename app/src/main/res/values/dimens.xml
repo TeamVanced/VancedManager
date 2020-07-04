@@ -4,5 +4,7 @@
     <dimen name="eightdp">8dp</dimen>
     <dimen name="twelvedp">12dp</dimen>
     <dimen name="stdp">16dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="text_header">8dp</dimen>
 
 </resources>
