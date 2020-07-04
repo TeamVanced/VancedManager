@@ -37,6 +37,7 @@
     <string name="useful_links">Tautan Berguna</string>
     <string name="website_text">Situs</string>
     <string name="support_us">Dukung kami!</string>
+    <string name="version_toast">Versi %1$s baru saja disalin!</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
     <string name="accent_blue">Biru</string>
