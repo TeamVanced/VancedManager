@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="close">Close</string>
-    <string name="reset">Reset</string>
-    <string name="save">Save</string>
+    <string name="close">Maak toe</string>
+    <string name="reset">Herstel</string>
+    <string name="save">Stoor</string>
     <!-- Main Activity -->
-    <string name="title_about">About</string>
-    <string name="title_home">Home</string>
+    <string name="title_about">Oor</string>
+    <string name="title_home">Tuiste</string>
     <string name="title_settings">Settings</string>
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
