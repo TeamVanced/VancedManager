@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="close">Close</string>
-    <string name="reset">Reset</string>
-    <string name="save">Save</string>
+    <string name="close">Maak toe</string>
+    <string name="reset">Herstel</string>
+    <string name="save">Stoor</string>
     <!-- Main Activity -->
-    <string name="title_about">About</string>
-    <string name="title_home">Home</string>
+    <string name="title_about">Oor</string>
+    <string name="title_home">Tuiste</string>
     <string name="title_settings">Settings</string>
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
@@ -51,6 +51,9 @@
     <string name="chosen_install_values">Chosen installation preferences</string>
     <string name="chosen_lang">Language: %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
+    <string name="link_title">Use Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>

@@ -51,6 +51,9 @@
     <string name="chosen_install_values">已选择安装偏好</string>
     <string name="chosen_lang">语言： %1$s</string>
     <string name="chosen_theme">主题： %1$s</string>
+    <string name="link_title">使用 Chrome 自定义标签页</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="theme">主题</string>
     <string name="theme_follow">跟随系统</string>
     <string name="theme_dark">夜间模式</string>

@@ -51,6 +51,9 @@
     <string name="chosen_install_values">已選擇安裝偏好</string>
     <string name="chosen_lang">語言： %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
+    <string name="link_title">使用 Chrome 自訂標籤頁</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="theme">主題</string>
     <string name="theme_follow">跟隨系統預設</string>
     <string name="theme_dark">深色主題</string>
