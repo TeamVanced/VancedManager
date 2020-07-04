@@ -19,7 +19,7 @@ class AboutFragment : About() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        activity?.title = getString(R.string.title_about)
+        requireActivity().title = getString(R.string.title_about)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
         return binding.root
     }
