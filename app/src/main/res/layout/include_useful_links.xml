@@ -24,13 +24,18 @@
 
             <TextView
                 style="@style/CardTitle"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/useful_links" />
 
             <include
                 layout="@layout/include_vanced_medias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                bind:viewModel="@{viewModel}"/>
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                bind:viewModel="@{viewModel}" />
 
         </LinearLayout>
 
