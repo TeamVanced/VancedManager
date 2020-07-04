@@ -16,6 +16,7 @@
         <SwitchPreference
             android:key="use_customtabs"
             android:title="@string/link_title"
+            android:defaultValue="true"
             android:summaryOn="@string/link_custom_tabs"
             android:summaryOff="@string/link_external_browser" />
 

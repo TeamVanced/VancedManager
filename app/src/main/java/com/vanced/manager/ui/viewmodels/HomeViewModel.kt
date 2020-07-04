@@ -91,8 +91,11 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
             val customTabsIntent = builder.build()
             customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
-        } else
-            startActivity(getApplication(), Intent(Intent.ACTION_VIEW, Uri.parse(Url)), null)
+        } else {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(Url))
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(getApplication(), intent , null)
+        }
     }
 
     private fun getPkgInfo(toCheck: Boolean, pkg: String, application: Application): String  {
