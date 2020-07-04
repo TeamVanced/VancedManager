@@ -26,12 +26,14 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp">
 
                 <ImageView
                     android:id="@+id/home_microg_logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -39,6 +41,7 @@
 
                 <TextView
                     style="@style/TextAppTitle"
+                    android:layout_marginStart="8dp"
                     android:text="@string/microg"
                     app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier"
                     app:layout_constraintStart_toEndOf="@id/home_microg_logo"
@@ -47,6 +50,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/microg_installbtn"
                     style="@style/ButtonStyle"
+                    android:layout_marginEnd="8dp"
                     android:text="@{viewModel.microgInstallButtonTxt}"
                     app:icon="@{viewModel.microgInstallButtonIcon}"
                     app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn"
@@ -64,6 +68,8 @@
                     android:id="@+id/microg_remote_latest_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintBottom_toTopOf="@id/linearLayout2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/microg_title_buttons_barrier">
@@ -83,6 +89,8 @@
                     android:id="@+id/linearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/microg_remote_latest_version">
@@ -101,7 +109,7 @@
                 <ImageView
                     android:id="@+id/microg_settingsbtn"
                     style="@style/ClickableImageWidget"
-                    android:layout_marginEnd="4dp"
+                    android:layout_marginEnd="8dp"
                     android:onClick="@{()-> viewModel.openMicrogSettings()}"
                     android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -112,6 +120,7 @@
                 <ImageView
                     android:id="@+id/microg_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
+                    android:layout_marginEnd="8dp"
                     android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

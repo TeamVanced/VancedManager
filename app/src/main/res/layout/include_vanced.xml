@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:animateLayoutChanges="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -32,6 +33,7 @@
                     android:id="@+id/home_vanced_logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -39,6 +41,7 @@
 
                 <TextView
                     style="@style/TextAppTitle"
+                    android:layout_marginStart="8dp"
                     android:text="@string/vanced"
                     app:layout_constraintBottom_toTopOf="@id/vanced_title_buttons_barrier"
                     app:layout_constraintStart_toEndOf="@id/home_vanced_logo"
@@ -47,6 +50,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/vanced_installbtn"
                     style="@style/ButtonStyle"
+                    android:layout_marginEnd="8dp"
                     android:text="@{viewModel.vancedInstallButtonTxt}"
                     app:icon="@{viewModel.vancedInstallButtonIcon}"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +66,7 @@
                 <ImageView
                     android:id="@+id/vanced_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
+                    android:layout_marginEnd="8dp"
                     android:visibility="@{viewModel.vancedInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +77,8 @@
                     android:id="@+id/vanced_remote_latest_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintBottom_toTopOf="@id/linearLayout2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/vanced_title_buttons_barrier">
@@ -91,6 +98,8 @@
                     android:id="@+id/linearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version">
 
