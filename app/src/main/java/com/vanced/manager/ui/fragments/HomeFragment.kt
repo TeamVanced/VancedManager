@@ -13,6 +13,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
+import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.databinding.FragmentHomeBinding
@@ -113,7 +114,7 @@ class HomeFragment : Home() {
     }
 
     private fun attachNonrootChangelog() {
-        val sectionPageRootAdapter = SectionPageRootAdapter(this)
+        val sectionPageRootAdapter = SectionPageAdapter(this)
         with(binding.includeChangelogsLayout) {
             viewpager.adapter = sectionPageRootAdapter
             TabLayoutMediator(tablayout, viewpager) { tab, position ->
