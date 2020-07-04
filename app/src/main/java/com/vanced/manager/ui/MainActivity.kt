@@ -13,7 +13,6 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.appbar.MaterialToolbar
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -24,36 +23,9 @@ import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 
 class MainActivity : Main() {
 
-    private var isParent = true
     private lateinit var binding: ActivityMainBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        setFinalTheme(this)
-        super.onCreate(savedInstanceState)
-
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.lifecycleOwner = this
-
-        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
-        setSupportActionBar(toolbar)
-
-        val navHost = findNavController(R.id.bottom_nav_host)
-        val appBarConfiguration = AppBarConfiguration(navHost.graph)
-        toolbar.setupWithNavController(navHost, appBarConfiguration)
-
-        navHost.addOnDestinationChangedListener{_, currFrag: NavDestination, _ ->
-            isParent = when (currFrag.id) {
-                R.id.home_fragment -> true
-                else -> false
-            }
-
-            setDisplayHomeAsUpEnabled(!isParent)
-
-        }
-
-        registerReceivers()
-
-    }
+    private val navHost by lazy { findNavController(R.id.bottom_nav_host) }
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -74,9 +46,26 @@ class MainActivity : Main() {
         }
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setFinalTheme(this)
+        super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        with(binding) {
+            lifecycleOwner = this@MainActivity
+            setSupportActionBar(homeToolbar)
+            val appBarConfiguration = AppBarConfiguration(navHost.graph)
+            homeToolbar.setupWithNavController(navHost, appBarConfiguration)
+        }
+
+        navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
+            setDisplayHomeAsUpEnabled(currFrag.id == R.id.home_fragment)
+        }
+    }
+
     override fun onPause() {
         super.onPause()
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver)
+        localBroadcastManager.unregisterReceiver(broadcastReceiver)
     }
 
     override fun onResume() {
@@ -100,7 +89,7 @@ class MainActivity : Main() {
                 navHost.navigate(R.id.action_settingsFragment)
                 return true
             }
-            R.id.dev_settings -> { 
+            R.id.dev_settings -> {
                 navHost.navigate(R.id.toDevSettingsFragment)
                 return true
             }
@@ -110,11 +99,8 @@ class MainActivity : Main() {
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        val toolbar: MaterialToolbar = findViewById(R.id.home_toolbar)
-        when {
-            isNeeded -> toolbar.setNavigationIcon(R.drawable.ic_keyboard_backspace_black_24dp)
-            else -> toolbar.navigationIcon = null
-        }
+        binding.homeToolbar.navigationIcon = if (isNeeded) getDrawable(R.drawable.ic_keyboard_backspace_black_24dp) else null
+
     }
 
     private fun registerReceivers() {
@@ -123,7 +109,7 @@ class MainActivity : Main() {
         intentFilter.addAction(INSTALL_FAILED)
         intentFilter.addAction(APP_UNINSTALLED)
         intentFilter.addAction(APP_NOT_UNINSTALLED)
-        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, intentFilter)
+        localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
 
     }
 
@@ -134,9 +120,9 @@ class MainActivity : Main() {
     }
 
     companion object {
-        const val INSTALL_COMPLETED = "Installation completed"
-        const val INSTALL_FAILED = "it just failed idk"
-        const val APP_UNINSTALLED = "App uninstalled"
-        const val APP_NOT_UNINSTALLED = "App not uninstalled"
+        const val INSTALL_COMPLETED = "install_completed"
+        const val INSTALL_FAILED = "install_failed"
+        const val APP_UNINSTALLED = "app_uninstalled"
+        const val APP_NOT_UNINSTALLED = "app_not_installed"
     }
 }

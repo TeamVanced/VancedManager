@@ -1,58 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/changelog_card"
-    style="@style/MaterialCard">
+<layout>
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/changelog_card"
+        style="@style/MaterialCard">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:animateLayoutChanges="true"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/CardTitle"
-                android:text="@string/changelogs"
-                android:layout_alignParentStart="true"/>
-
-            <ImageButton
-                android:id="@+id/changelog_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arrow_down"
-                android:layout_alignParentEnd="true"
-                android:background="@android:color/transparent" />
-
-        </RelativeLayout>
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tablayout"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?colorSurfaceVariant"
-            app:tabIndicatorColor="?colorPrimary"
-            app:tabSelectedTextColor="?colorPrimary"
-            app:tabTextColor="?colorPrimary"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:visibility="gone"
-            tools:visibility="visible"/>
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:visibility="gone"
-            tools:visibility="visible"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/title_changelogs"
+                    style="@style/CardTitle"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/changelogs" />
 
-</com.google.android.material.card.MaterialCardView>
+                <ImageButton
+                    android:id="@+id/changelog_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/arrow_down" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?colorSurfaceVariant"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:tabIndicatorColor="?colorPrimary"
+                app:tabSelectedTextColor="?colorPrimary"
+                app:tabTextColor="?colorPrimary"
+                tools:visibility="visible" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -78,7 +78,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
         if (devSettings) {
             inflater.inflate(R.menu.dev_settings_menu, menu)
         }
-        super .onCreateOptionsMenu(menu, inflater)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
 }

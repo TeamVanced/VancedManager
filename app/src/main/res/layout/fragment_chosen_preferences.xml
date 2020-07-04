@@ -1,65 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/MaterialCard"
-    android:layout_width="wrap_content"
-    android:layout_gravity="center"
-    app:contentPaddingTop="0dp"
-    app:contentPaddingBottom="0dp"
-    app:contentPaddingRight="6dp"
-    app:contentPaddingLeft="6dp"
-    tools:context=".ui.fragments.UpdateCheckFragment">
+<layout>
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/MaterialCard"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            style="@style/CardTitle"
-            android:layout_gravity="center"
-            android:text="@string/chosen_install_values"
-            android:textAlignment="center"
-            android:fontFamily="@font/exo_semibold" />
-
-        <TextView
-            android:id="@+id/chosen_theme"
-            style="@style/AppVer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/chosen_lang"
-            style="@style/AppVer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
+        android:layout_gravity="center"
+        app:contentPaddingBottom="0dp"
+        app:contentPaddingLeft="6dp"
+        app:contentPaddingRight="6dp"
+        app:contentPaddingTop="0dp"
+        tools:context=".ui.fragments.UpdateCheckFragment">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:orientation="vertical">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/chosen_prefs_close"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            <TextView
+                style="@style/CardTitle"
+                android:layout_gravity="center"
+                android:fontFamily="@font/exo_semibold"
+                android:text="@string/chosen_install_values"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/chosen_theme"
+                style="@style/AppVer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:text="@string/close"
-                android:textAllCaps="false"/>
+                android:text="" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/chosen_prefs_reset"
-                style="@style/ButtonStyle"
-                android:layout_marginStart="4dp"
-                android:text="@string/reset" />
+            <TextView
+                android:id="@+id/chosen_lang"
+                style="@style/AppVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/chosen_prefs_close"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/close"
+                    android:textAllCaps="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/chosen_prefs_reset"
+                    style="@style/ButtonStyle"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/reset" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-</com.google.android.material.card.MaterialCardView>
+</layout>
