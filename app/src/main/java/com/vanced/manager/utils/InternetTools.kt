@@ -5,7 +5,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
-import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.viewbinding.BuildConfig
 import com.dezlum.codelabs.getjson.GetJson
@@ -27,7 +26,7 @@ object InternetTools {
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
 
     fun displayJsonString(json: String, obj: String, context: Context): String {
-        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
+        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return if (GetJson().isConnected(context))
             GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
         else
@@ -35,7 +34,7 @@ object InternetTools {
     }
 
     fun displayJsonInt(json: String, obj: String, context: Context): Int {
-        val installUrl = PreferenceManager.getDefaultSharedPreferences(context).getString("install_url", baseUrl)
+        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return if (GetJson().isConnected(context))
             GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
         else
