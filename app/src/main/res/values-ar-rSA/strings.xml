@@ -37,7 +37,7 @@
     <string name="useful_links">روابط المفيدة</string>
     <string name="website_text">الموقع رسمي لفانسد</string>
     <string name="support_us">ادعمنا بتريق تنزيل بريف</string>
-    <string name="version_toast">%1$s\'s version was copied!</string>
+    <string name="version_toast">تم نسخ الإصدار %1$s!</string>
     <!-- Settings -->
     <string name="accent_color">الوان</string>
     <string name="accent_blue">ازرق</string>
@@ -51,6 +51,9 @@
     <string name="chosen_install_values">تفضيلات التثبيت المختارة</string>
     <string name="chosen_lang">اللغة: %1$s</string>
     <string name="chosen_theme">المظهر: %1$s</string>
+    <string name="link_title">Use Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
     <string name="theme_dark">الموضوع الاسود</string>
