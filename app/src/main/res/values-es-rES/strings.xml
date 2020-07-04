@@ -37,6 +37,7 @@
     <string name="useful_links">Links Utiles</string>
     <string name="website_text">Sitio Web</string>
     <string name="support_us">Apoyanos!</string>
+    <string name="version_toast">La version de %1$s ha sido copiada!</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
     <string name="accent_blue">Azul</string>
