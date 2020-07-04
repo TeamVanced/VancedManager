@@ -15,21 +15,22 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
 
         <TextView
             style="@style/CardTitle"
             android:layout_gravity="center"
+            android:fontFamily="@font/exo_semibold"
             android:text="@string/update_center"
-            android:textAlignment="center"
-            android:fontFamily="@font/exo_semibold" />
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/update_center_checking"
             style="@style/AppVer.Bold"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="0dp"
             android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
             android:text="Checking For Updates..."
             android:textAlignment="center"
             android:textSize="16sp" />
@@ -54,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:text="@string/close"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <FrameLayout
                 android:layout_width="match_parent"

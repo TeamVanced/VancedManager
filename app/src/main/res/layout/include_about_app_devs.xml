@@ -13,15 +13,17 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/AboutCardTitle"
             android:id="@+id/about_card_vancedTeam"
+            style="@style/AboutCardTitle"
+            android:layout_marginStart="@dimen/text_header"
             android:text="@string/manager_dev"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_content"
             android:text="- Xinto"
             android:textSize="18sp" />
 

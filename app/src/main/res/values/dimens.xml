@@ -6,5 +6,7 @@
     <dimen name="stdp">16dp</dimen>
     <dimen name="card_margin">8dp</dimen>
     <dimen name="text_header">8dp</dimen>
+    <dimen name="text_content">16dp</dimen>
+    <dimen name="dialog_padding">16dp</dimen>
 
 </resources>

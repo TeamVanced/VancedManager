@@ -13,27 +13,28 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
 
         <TextView
             style="@style/CardTitle"
             android:layout_gravity="center"
+            android:fontFamily="@font/exo_semibold"
             android:text="@string/update_url"
-            android:textAlignment="center"
-            android:fontFamily="@font/exo_semibold" />
+            android:textAlignment="center" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:hintEnabled="true"
+            app:boxStrokeColor="?colorPrimary"
             app:boxStrokeWidth="2dp"
-            app:boxStrokeColor="?colorPrimary">
+            app:hintEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/url_input"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,8 +56,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/url_save"
                 style="@style/ButtonStyle"
-                android:layout_marginEnd="4dp"
                 android:layout_marginStart="2dp"
+                android:layout_marginEnd="4dp"
                 android:text="@string/save" />
 
         </LinearLayout>

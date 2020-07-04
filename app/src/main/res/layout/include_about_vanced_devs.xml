@@ -13,33 +13,38 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/AboutCardTitle"
             android:id="@+id/about_card_vancedTeam"
+            style="@style/AboutCardTitle"
+            android:layout_marginStart="@dimen/text_header"
             android:text="@string/vanced_team"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_content"
             android:text="- xfileFIN"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_content"
             android:text="- KevinX8"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_content"
             android:text="- Zanezam"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/text_content"
             android:text="- Laura Almeida"
             android:textSize="18sp" />
 
