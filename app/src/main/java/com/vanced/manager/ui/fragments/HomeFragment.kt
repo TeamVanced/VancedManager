@@ -46,7 +46,7 @@ class HomeFragment : Home() {
             attachRootChangelog()
         else {
             attachNonrootChangelog()
-            if (!viewModel.microgInstalled) {
+            if (!viewModel.microgInstalled.value!!) {
                 disableVancedButton()
             }
         }
