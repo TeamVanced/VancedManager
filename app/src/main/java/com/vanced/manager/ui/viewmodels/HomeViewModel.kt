@@ -57,14 +57,14 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         fetching.value = true
         vancedVersion.value = displayJsonString("vanced.json", "version", getApplication())
         microgVersion.value = displayJsonString("microg.json", "version", getApplication())
+        microgInstalled.value = isPackageInstalled("com.mgoogle.android.gms", pm)
+        vancedInstalled.value = isPackageInstalled(vancedPkgName, pm)
         vancedInstalledVersion.value = getPkgInfo(vancedInstalled.value!!, vancedPkgName, getApplication())
         microgInstalledVersion.value = getPkgInfo(microgInstalled.value!!, "com.mgoogle.android.gms", getApplication())
-        microgInstalled.value = isPackageInstalled("com.mgoogle.android.gms", pm)
         vancedVersionCode.value = displayJsonInt("vanced.json", "versionCode", getApplication())
         microgVersionCode.value = displayJsonInt("microg.json", "versionCode", getApplication())
         vancedInstalledVersionCode.value = getPkgVerCode(vancedInstalled.value!!, vancedPkgName)
-        vancedInstalledVersionCode.value = getPkgVerCode(microgInstalled.value!!, "com.mgoogle.android.gms")
-        vancedInstalled.value = isPackageInstalled(vancedPkgName, pm)
+        microgInstalledVersionCode.value = getPkgVerCode(microgInstalled.value!!, "com.mgoogle.android.gms")
         microgInstallButtonTxt.value = compareInt(microgInstalledVersionCode.value!!, microgVersionCode.value!!, getApplication())
         microgInstallButtonIcon.value = compareIntDrawable(microgInstalledVersionCode.value!!, microgVersionCode.value!!, getApplication())
         vancedInstallButtonIcon.value =
