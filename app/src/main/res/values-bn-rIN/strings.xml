@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="close">Close</string>
+    <string name="close">বন্ধ করুন</string>
     <string name="reset">রিসেট করুন</string>
     <string name="save">সেভ করুন</string>
     <!-- Main Activity -->
-    <string name="title_about">About</string>
-    <string name="title_home">Home</string>
-    <string name="title_settings">Settings</string>
+    <string name="title_about">সম্বন্ধে</string>
+    <string name="title_home">হোম</string>
+    <string name="title_settings">সেটিংস</string>
     <!-- Home Page -->
-    <string name="changelogs">Changelogs</string>
-    <string name="downloading_file">Downloading %1$s</string>
-    <string name="failed_uninstall">Failed to uninstall package %1$s</string>
-    <string name="error_downloading">Error Downloading %1$s</string>
-    <string name="install">Install</string>
-    <string name="installing_app">Installing %1$s</string>
-    <string name="installation_aborted">Operation failed because the user aborted the installation.</string>
-    <string name="installation_blocked">Operation failed because the user blocked the installation.</string>
-    <string name="installation_conflict">Operation failed because the app conflicts with an already installed app.</string>
-    <string name="installation_failed">Operation failed for an unknown reason, please join our Telegram or Discord for support.</string>
-    <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
-    <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
+    <string name="changelogs">পরিবর্তনগুলি</string>
+    <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
+    <string name="failed_uninstall">%1$s পেকেজ আন‌ইনস্টল করা যাইনি</string>
+    <string name="error_downloading">%1$s ডাউনলোড করতে ত্রুটি</string>
+    <string name="install">ইনস্টল করুন</string>
+    <string name="installing_app">%1$s ইনস্টল করা হচ্ছে</string>
+    <string name="installation_aborted">অপারেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী বাতিল করে দিয়েছে।</string>
+    <string name="installation_blocked">অপারেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী আটকিয়ে দিয়েছে।</string>
+    <string name="installation_conflict">অপারেশন ব্যর্থ হয়েছে কারণ অ্যাপটি অন্য একটি ইনস্টল করা অ্যাপের সঙ্গে সংঘর্ষে আছে।</string>
+    <string name="installation_failed">অপারেশন ব্যর্থ হয়েছে অজানা কারণে, দয়া করে আমাদের Telegram বা Discord এ সংযু্ক্ত হ‌ন সাহায্যের জন্য।</string>
+    <string name="installation_incompatible">অপারেশন ব্যর্থ হয়েছে কারণ অ্যাপটি আপনার ডিভাইস এর সঙ্গে ব্যবহারযোগ্য নয়।</string>
+    <string name="installation_invalid">অপারেশন ব্যর্থ হয়েছে কারণ apk ফাইলগুলো অকার্যকর।</string>
     <string name="installation_signature">An unexpected error occurred while installing Vanced. Have you disabled apk signature verification?</string>
     <string name="installation_miui">An unexpected error occurred while installing Vanced. Have you disabled MIUI Optimisations?</string>
     <string name="installation_storage">Operation failed due to a storage error.</string>
