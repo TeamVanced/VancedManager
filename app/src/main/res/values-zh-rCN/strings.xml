@@ -46,13 +46,13 @@
     <string name="accent_red">红色</string>
     <string name="accent_yellow">黄色</string>
     <string name="check_updates">检查更新</string>
-    <string name="category_interface">接口</string>
-    <string name="category_manager">管理员</string>
+    <string name="category_interface">介面</string>
+    <string name="category_manager">Manager</string>
     <string name="chosen_install_values">已选择安装偏好</string>
     <string name="chosen_lang">语言： %1$s</string>
     <string name="chosen_theme">主题： %1$s</string>
-    <string name="link_title">使用 Chrome 自定义标签页</string>
-    <string name="link_custom_tabs">链接将会在 Chrome 自定义标签页中打开</string>
+    <string name="link_title">使用 Chrome 自定义分页</string>
+    <string name="link_custom_tabs">链接将会在 Chrome 自定义分页中打开</string>
     <string name="link_external_browser">链接将会在外部浏览器中打开</string>
     <string name="theme">主题</string>
     <string name="theme_follow">跟随系统</string>
