@@ -5,7 +5,7 @@
     <string name="reset">Сброс</string>
     <string name="save">Сохранить</string>
     <!-- Main Activity -->
-    <string name="title_about">О приложении</string>
+    <string name="title_about">О нас</string>
     <string name="title_home">Главная</string>
     <string name="title_settings">Настройки</string>
     <!-- Home Page -->
@@ -37,9 +37,9 @@
     <string name="useful_links">Полезные ссылки</string>
     <string name="website_text">Сайт</string>
     <string name="support_us">Поддержите нас!</string>
-    <string name="version_toast">%1$s version was copied!</string>
+    <string name="version_toast">%1$s Версия скопирована!</string>
     <!-- Settings -->
-    <string name="accent_color">Акцент</string>
+    <string name="accent_color">Второстепенный цвет</string>
     <string name="accent_blue">Синий</string>
     <string name="accent_green">Зелёный</string>
     <string name="accent_purple">Пурпурный</string>
@@ -51,9 +51,9 @@
     <string name="chosen_install_values">Выбранные значения установки</string>
     <string name="chosen_lang">Язык: %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
-    <string name="link_title">Use Chrome Custom Tabs</string>
-    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="link_title">Использовать Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
+    <string name="link_external_browser">Ссылки откроются во внешнем браузере</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Как в системе</string>
     <string name="theme_dark">Тёмная тема</string>
