@@ -34,26 +34,59 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val vancedInstallButtonTxt: MutableLiveData<String> = MutableLiveData()
     val vancedInstallButtonIcon: MutableLiveData<Drawable> = MutableLiveData()
-
-    val microgInstalled: Boolean = isPackageInstalled("com.mgoogle.android.gms", application.packageManager)
-    val vancedInstalled: Boolean = isPackageInstalled(vancedPkgName, application.packageManager)
-
+    val microgInstalled: MutableLiveData<Boolean> = MutableLiveData()
+    val vancedInstalled: MutableLiveData<Boolean> = MutableLiveData()
     val vancedInstalledVersion: MutableLiveData<String> = MutableLiveData()
     val microgInstalledVersion: MutableLiveData<String> = MutableLiveData()
-
     val vancedVersion: MutableLiveData<String> = MutableLiveData()
     val microgVersion: MutableLiveData<String> = MutableLiveData()
+    val microgInstallButtonTxt: MutableLiveData<String> = MutableLiveData()
+    val microgInstallButtonIcon: MutableLiveData<Drawable> = MutableLiveData()
 
-    private val vancedInstalledVersionCode = getPkgVerCode(vancedInstalled, vancedPkgName)
-    private val microgInstalledVersionCode = getPkgVerCode(microgInstalled, "com.mgoogle.android.gms")
+    private val vancedInstalledVersionCode: MutableLiveData<Int> = MutableLiveData()
+    private val microgInstalledVersionCode: MutableLiveData<Int> = MutableLiveData()
 
-    private val vancedVersionCode = displayJsonInt("vanced.json", "versionCode", application)
-    private val microgVersionCode = displayJsonInt("microg.json", "versionCode", application)
-
-    val microgInstallButtonTxt = compareInt(microgInstalledVersionCode, microgVersionCode, application)
-    val microgInstallButtonIcon = compareIntDrawable(microgInstalledVersionCode, microgVersionCode, application)
+    private val vancedVersionCode: MutableLiveData<Int> = MutableLiveData()
+    private val microgVersionCode: MutableLiveData<Int> = MutableLiveData()
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
+
+    val fetching: MutableLiveData<Boolean> = MutableLiveData()
+
+    fun fetchData() {
+        fetching.value = true
+        vancedVersion.value = displayJsonString("vanced.json", "version", getApplication())
+        microgVersion.value = displayJsonString("microg.json", "version", getApplication())
+        vancedInstalledVersion.value = getPkgInfo(vancedInstalled.value!!, vancedPkgName, getApplication())
+        microgInstalledVersion.value = getPkgInfo(microgInstalled.value!!, "com.mgoogle.android.gms", getApplication())
+        microgInstalled.value = isPackageInstalled("com.mgoogle.android.gms", pm)
+        vancedVersionCode.value = displayJsonInt("vanced.json", "versionCode", getApplication())
+        microgVersionCode.value = displayJsonInt("microg.json", "versionCode", getApplication())
+        vancedInstalledVersionCode.value = getPkgVerCode(vancedInstalled.value!!, vancedPkgName)
+        vancedInstalledVersionCode.value = getPkgVerCode(microgInstalled.value!!, "com.mgoogle.android.gms")
+        vancedInstalled.value = isPackageInstalled(vancedPkgName, pm)
+        microgInstallButtonTxt.value = compareInt(microgInstalledVersionCode.value!!, microgVersionCode.value!!, getApplication())
+        microgInstallButtonIcon.value = compareIntDrawable(microgInstalledVersionCode.value!!, microgVersionCode.value!!, getApplication())
+        vancedInstallButtonIcon.value =
+            if (variant == "nonroot") {
+                if (microgInstalled.value!!)
+                    compareIntDrawable(vancedVersionCode.value!!, vancedInstalledVersionCode.value!!, getApplication())
+                else
+                    null
+            } else
+                compareIntDrawable(vancedVersionCode.value!!, vancedInstalledVersionCode.value!!, getApplication())
+
+        vancedInstallButtonTxt.value =
+            if (variant == "nonroot") {
+                if (microgInstalled.value!!) {
+                    compareInt(vancedVersionCode.value!!, vancedInstalledVersionCode.value!!, getApplication())
+                } else {
+                    getApplication<Application>().getString(R.string.no_microg)
+                }
+            } else
+                compareInt(vancedVersionCode.value!!, vancedInstalledVersionCode.value!!, getApplication())
+        fetching.value = false
+    }
 
     fun openMicrogSettings() {
         try {
@@ -132,29 +165,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     }
 
     init {
-        vancedVersion.value = displayJsonString("vanced.json", "version", application)
-        microgVersion.value = displayJsonString("microg.json", "version", application)
-        vancedInstalledVersion.value = getPkgInfo(vancedInstalled, vancedPkgName, application)
-        microgInstalledVersion.value = getPkgInfo(microgInstalled, "com.mgoogle.android.gms", application)
-        vancedInstallButtonIcon.value =
-            if (variant == "nonroot") {
-                if (microgInstalled)
-                    compareIntDrawable(vancedVersionCode, vancedInstalledVersionCode, application)
-                else
-                    null
-            } else
-                compareIntDrawable(vancedVersionCode, vancedInstalledVersionCode, application)
-
-        vancedInstallButtonTxt.value =
-            if (variant == "nonroot") {
-                if (microgInstalled) {
-                    compareInt(vancedVersionCode, vancedInstalledVersionCode, application)
-                } else {
-                    application.getString(R.string.no_microg)
-                }
-            } else
-                compareInt(vancedVersionCode, vancedInstalledVersionCode, application)
-
+        fetchData()
     }
 
 }

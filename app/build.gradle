@@ -66,12 +66,14 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
     implementation 'androidx.preference:preference-ktx:1.1.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
 
 // Other
+    implementation 'com.crowdin.platform:mobile-sdk:1.1.4'
     implementation 'com.github.100rabhkr:GetJSON:1.0'
     implementation 'com.github.topjohnwu.libsu:core:2.5.1'
     implementation 'com.mindorks.android:prdownloader:0.6.0'
