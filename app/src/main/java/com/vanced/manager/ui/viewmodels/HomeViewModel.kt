@@ -33,6 +33,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private val pm = application.packageManager
 
+    //this is fucking retarded
     val vancedInstallButtonTxt = ObservableField<String>()
     val vancedInstallButtonIcon = ObservableField<Drawable>()
     val microgInstalled = ObservableField<Boolean>()
@@ -54,6 +55,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val fetching = ObservableField<Boolean>()
 
+    //this too
     fun fetchData() {
         fetching.set(true)
         vancedVersion.set(displayJsonString("vanced.json", "version", getApplication()))

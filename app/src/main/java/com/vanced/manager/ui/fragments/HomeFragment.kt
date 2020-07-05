@@ -57,14 +57,14 @@ class HomeFragment : Home() {
 
         binding.includeVancedLayout.vancedCard.setOnLongClickListener {
             val clip = requireActivity().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            clip.setPrimaryClip(ClipData.newPlainText("vanced", this.viewModel.vancedInstalledVersion.value))
+            clip.setPrimaryClip(ClipData.newPlainText("vanced", this.viewModel.vancedInstalledVersion.get()))
             versionToast("Vanced")
             true
         }
 
         binding.includeMicrogLayout.microgCard.setOnLongClickListener {
             val clip = requireActivity().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            clip.setPrimaryClip(ClipData.newPlainText("microg", viewModel.microgInstalledVersion.value))
+            clip.setPrimaryClip(ClipData.newPlainText("microg", viewModel.microgInstalledVersion.get()))
             versionToast("MicroG")
             true
         }
