@@ -15,7 +15,6 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        bind:swipeRefreshLayoutProgressSpinnerBackgroundColor="?colorOnSurface"
         bind:refreshing="@{viewModel.fetching}"
         bind:onRefreshListener="@{()-> viewModel.fetchData()}">
 
