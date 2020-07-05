@@ -74,15 +74,15 @@
     <string name="miui_one">Hey! Parece que eres un usuario MIUI. Para poder usar esta aplicacion correctamente, necesitaras deshabilitar las optimizaciones MIUI en ajustes de desarrollador. (Puedes ignorar esta advertencia con seguridad si estas en un ROM 20.2.20 o posterior basado en xiaomi.eu)</string>
     <string name="error">Error</string>
     <string name="security_context">Porfavor asegurate de haver descargado la aplicacion mediante vanced.app, el server de Vanced en Discord, o Github</string>
-    <string name="success">Éxito! </string>
-    <string name="vanced_installed">Vanced a sido instalado exitosamente, quieres lanzarlo ahora?</string>
+    <string name="success">Éxito!</string>
+    <string name="vanced_installed">Vanced ha sido exitosamente instalado! Lanzar ahora?</string>
     <string name="launch">Lanzar</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elije tu lenguaje preferido para Vanced</string>
-    <string name="choose_preferred_language_note">Nota: si instalas un idioma ademas de Ingles, Ingles va estar todavia instalado como un lenguaje adicional</string>
+    <string name="choose_preferred_language_note">Nota: Ingles va a estar instalado como un lenguaje adicional también.</string>
     <string name="choose_preferred_theme">Elije tu tema preferido para Vanced</string>
-    <string name="disable_signature">Modo root detectado! Pará que el Manager pueda instalar Vanced correctamente, por favor asegúrate de que hayas deshabilitado verificación de firmas(signature verification). </string>
+    <string name="disable_signature">Modo root detectado! Para instalar Vanced, necesitaras deshabilitar verificación de firmas(disable signature verification).</string>
     <string name="finish">Finalizar</string>
     <string name="install_light_black">Claro + Negro</string>
     <string name="install_light_dark">Claro + Oscuro</string>
