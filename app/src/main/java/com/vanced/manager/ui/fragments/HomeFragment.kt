@@ -46,7 +46,7 @@ class HomeFragment : Home() {
             attachRootChangelog()
         else {
             attachNonrootChangelog()
-            if (!viewModel.microgInstalled.value!!) {
+            if (!viewModel.microgInstalled.get()!!) {
                 disableVancedButton()
             }
         }
@@ -94,13 +94,8 @@ class HomeFragment : Home() {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                MICROG_DOWNLOADED -> {
-                    binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
-                    //activity?.let { installApp(it, it.filesDir.path + "/microg.apk", "com.mgoogle.android.gms") }
-                }
-                VANCED_DOWNLOADED -> {
-                    binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
-                }
+                MICROG_DOWNLOADED -> binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
+                VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
             }
         }
     }
