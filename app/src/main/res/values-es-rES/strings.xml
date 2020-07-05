@@ -11,7 +11,7 @@
     <!-- Home Page -->
     <string name="changelogs">Actualizaciones</string>
     <string name="downloading_file">Descargando %1$s</string>
-    <string name="failed_uninstall">Fallo al desinstalar paquete %1$s</string>
+    <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="install">Instalar</string>
     <string name="installing_app">Instalando %1$s</string>
@@ -22,12 +22,12 @@
     <string name="installation_incompatible">La operación fallo porque la app es incompatible con tu dispositivo.</string>
     <string name="installation_invalid">La operación fallo debido a que los archivos apk son inválidos.</string>
     <string name="installation_signature">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado verificación de firmas?(signature verification)</string>
-    <string name="installation_miui">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado las Optimizaciones de MiUI?</string>
+    <string name="installation_miui">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado las Optimizaciones de MIUI?</string>
     <string name="installation_storage">Operación fallo porque hubo un error con almacenamiento.</string>
     <string name="installation_wait">Porfavor espera hasta que la instalación termine.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
-    <string name="latest">Ultimo:</string>
+    <string name="latest">Más reciente:</string>
     <string name="successfully_installed">Instalación exitosa %1$s</string>
     <string name="network_error">Conexion a la red no disponible</string>
     <string name="no_microg">Sin MicroG!</string>
@@ -37,7 +37,7 @@
     <string name="useful_links">Links Utiles</string>
     <string name="website_text">Sitio Web</string>
     <string name="support_us">Apoyanos!</string>
-    <string name="version_toast">%1$s version was copied!</string>
+    <string name="version_toast">Version de %1$s fue copiada!</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
     <string name="accent_blue">Azul</string>
@@ -48,19 +48,19 @@
     <string name="check_updates">Buscar actualizaciones</string>
     <string name="category_interface">Interfaz</string>
     <string name="category_manager">Manager</string>
-    <string name="chosen_install_values">Valores de instalación escojidos </string>
+    <string name="chosen_install_values">Valores de instalación escojidos</string>
     <string name="chosen_lang">Lenguaje: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="link_title">Use Chrome Custom Tabs</string>
-    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="link_title">Usar Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Oscuro</string>
     <string name="theme_light">Tema Claro</string>
     <string name="update_url">URL del canal de actualizacion</string>
     <string name="push_notifications">Notificaciones Push</string>
-    <string name="push_notifications_summary">Recibir notificaciones push cuando una actualizacion sea lanzada</string>
+    <string name="push_notifications_summary">Recibir notificaciones push cuando una actualización sea lanzada</string>
     <string name="re_check">Reintentar</string>
     <string name="update_center">Centro de Actualizaciones</string>
     <string name="update_found">Actualización encontrada!</string>
@@ -69,10 +69,9 @@
     <string name="button_dismiss">Descartar</string>
     <string name="guide">Guía</string>
     <string name="hold_on">Un momento!</string>
-    <string name="magisk_vanced">Parece que estas usando la versión Magisk de Vanced, que está descontinuado y no puede ser actualizada utilizando esta app. Porfavor retírelo primero quitando el módulo magisk.</string>
-    <string name="miui_one_title">Usuario MiUI detectado!</string>
-    <string name="miui_one">Hey! Parece que eres un usuario MiUI. Pará poder usar Vanced Manager apropiadamente necesitarás deshabilitar las Optimizaciones MiUI en ajustes de desarrollador.
-Sin embargo, si estas en el ROM 20.2.20 que esta basado en xiaomi.eu, entonces puedes ignorar esta advertencia de forma segura. </string>
+    <string name="magisk_vanced">Parece que estas usando la versión Magisk de Vanced, la cual esta descontinuada y no puede ser actualizada utilizando esta app. Porfavor retírelo primero quitando el módulo magisk.</string>
+    <string name="miui_one_title">MIUI detectado!</string>
+    <string name="miui_one">Hey! Parece que eres un usuario MIUI. Para poder usar esta aplicacion correctamente, necesitaras deshabilitar las optimizaciones MIUI en ajustes de desarrollador. (Puedes ignorar esta advertencia con seguridad si estas en un ROM 20.2.20 o posterior basado en xiaomi.eu)</string>
     <string name="error">Error</string>
     <string name="security_context">Porfavor asegurate de haver descargado la aplicacion mediante vanced.app, el server de Vanced en Discord, o Github</string>
     <string name="success">Éxito! </string>
