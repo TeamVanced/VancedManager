@@ -11,7 +11,7 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 11
+        versionCode 12
         versionName "1.1.1 (Rotten Eggs)"
 
         vectorDrawables.useSupportLibrary = true

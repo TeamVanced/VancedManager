@@ -18,7 +18,7 @@
     <string name="installation_aborted">La operación fallo porque el usuario abortó la instalación</string>
     <string name="installation_blocked">La operación fallo porque el usuario bloqueo la instalación</string>
     <string name="installation_conflict">La operación fallo porque la app entra en conflicto con una app ya instalada</string>
-    <string name="installation_failed">La operacion fallo por una razon desconocida, porfavor únete a nuestro grupo de Telegram o Discord para brindar soporte.</string>
+    <string name="installation_failed">La operación fallo por una razon desconocida, porfavor únete a nuestro grupo de Telegram o Discord para brindar soporte.</string>
     <string name="installation_incompatible">La operación fallo porque la app es incompatible con tu dispositivo.</string>
     <string name="installation_invalid">La operación fallo debido a que los archivos apk son inválidos.</string>
     <string name="installation_signature">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado verificación de firmas?(signature verification)</string>
