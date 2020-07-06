@@ -15,7 +15,7 @@ import com.vanced.manager.utils.MiuiHelper
 object DialogContainer {
 
     fun showSecurityDialog(context: Context) {
-        AlertDialog.Builder(context, R.style.ThemeOverlay_AppCompat_Dialog_Alert)
+        AlertDialog.Builder(context)
             .setTitle(context.resources.getString(R.string.welcome))
             .setMessage(context.resources.getString(R.string.security_context))
             .setCancelable(false)
