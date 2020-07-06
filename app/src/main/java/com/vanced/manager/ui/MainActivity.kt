@@ -13,6 +13,8 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.crowdin.platform.Crowdin
+import com.crowdin.platform.LoadingStateListener
 import com.vanced.manager.R
 import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -37,13 +39,22 @@ class MainActivity : Main() {
                         regularPackageInstalled(getString(R.string.successfully_installed, "MicroG"), this@MainActivity)
                 }
                 INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
-                APP_UNINSTALLED -> {
-                    restartActivity()
-                    Log.d("VMpm", "test")
-                }
+                APP_UNINSTALLED -> restartActivity()
                 APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall, intent.getStringExtra("pkgName")), this@MainActivity)
             }
         }
+    }
+
+    private val loadingObserver = object : LoadingStateListener {
+        val tag = "VMLocalisation"
+        override fun onDataChanged() {
+            Log.d(tag, "Loaded data")
+        }
+
+        override fun onFailure(throwable: Throwable) {
+            Log.d(tag, "Failed to load data")
+        }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,11 +72,15 @@ class MainActivity : Main() {
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
+
+        Crowdin.registerDataLoadingObserver(loadingObserver)
+
     }
 
     override fun onPause() {
         super.onPause()
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
+        Crowdin.unregisterDataLoadingObserver(loadingObserver)
     }
 
     override fun onResume() {
@@ -100,7 +115,10 @@ class MainActivity : Main() {
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         binding.homeToolbar.navigationIcon = if (isNeeded) getDrawable(R.drawable.ic_keyboard_backspace_black_24dp) else null
+    }
 
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(Crowdin.wrapContext(newBase))
     }
 
     private fun registerReceivers() {
