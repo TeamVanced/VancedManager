@@ -7,23 +7,29 @@ import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import androidx.preference.PreferenceManager
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
+import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
-import com.vanced.manager.core.Main
 import com.vanced.manager.databinding.ActivityMainBinding
+import com.vanced.manager.ui.dialogs.DialogContainer
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
 import com.vanced.manager.ui.dialogs.DialogContainer.regularPackageInstalled
+import com.vanced.manager.ui.fragments.UpdateCheckFragment
+import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 
-class MainActivity : Main() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val navHost by lazy { findNavController(R.id.bottom_nav_host) }
@@ -75,10 +81,15 @@ class MainActivity : Main() {
 
         Crowdin.registerDataLoadingObserver(loadingObserver)
 
+        initDialogs()
+
     }
 
     override fun onPause() {
         super.onPause()
+        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
+        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isVancedDownloading", false).apply()
+        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isMicrogDownloading", false).apply()
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
         Crowdin.unregisterDataLoadingObserver(loadingObserver)
     }
@@ -135,6 +146,40 @@ class MainActivity : Main() {
         startActivity(Intent(this@MainActivity, MainActivity::class.java))
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         finish()
+    }
+
+    private fun initDialogs() {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        val variant = prefs.getString("vanced_variant", "nonroot")
+        val showRootDialog = prefs.getBoolean("show_root_dialog", true)
+
+        when {
+            prefs.getBoolean("firstStart", true) -> DialogContainer.showSecurityDialog(this)
+            !prefs.getBoolean("statement", true) -> DialogContainer.statementFalse(this)
+            variant == "root" -> {
+                if (showRootDialog)
+                    DialogContainer.showRootDialog(this)
+
+                if (PackageHelper.getPackageVersionName(
+                        "com.google.android.youtube",
+                        packageManager
+                    ) == "14.21.54")
+                    DialogContainer.basicDialog(
+                        getString(R.string.hold_on),
+                        getString(R.string.magisk_vanced),
+                        this
+                    )
+            }
+        }
+
+        checkUpdates()
+    }
+
+    private fun checkUpdates() {
+        if (GetJson().isConnected(this) && InternetTools.isUpdateAvailable()) {
+            val fm = supportFragmentManager
+            UpdateCheckFragment().show(fm, "UpdateCheck")
+        }
     }
 
     companion object {
