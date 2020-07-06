@@ -51,7 +51,7 @@
     <string name="chosen_install_values">Préférences d\'installation sélectionnées</string>
     <string name="chosen_lang">Langue : %1$s</string>
     <string name="chosen_theme">Thème: %1$s</string>
-    <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
+    <string name="link_title">Utiliser les onglets personnalisés de Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés de Chrome</string>
     <string name="link_external_browser">Les liens s\'ouvriront dans un navigateur externe</string>
     <string name="theme">Thème</string>
