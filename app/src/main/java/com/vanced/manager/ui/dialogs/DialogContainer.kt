@@ -42,6 +42,7 @@ object DialogContainer {
             .setNeutralButton(context.getString(R.string.guide)) { _, _ ->
                 openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
             }
+            .setCancelable(false)
             .create()
             .show()
     }
@@ -56,6 +57,7 @@ object DialogContainer {
             .setNeutralButton(activity.getString(R.string.guide)) { _, _ ->
                 openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, activity)
             }
+            .setCancelable(false)
             .setOnDismissListener { PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply() }
             .create()
             .show()
