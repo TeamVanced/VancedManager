@@ -51,9 +51,9 @@
     <string name="chosen_install_values">선택된 설치값</string>
     <string name="chosen_lang">언어: %1$s</string>
     <string name="chosen_theme">테마: %1$s</string>
-    <string name="link_title">Use Chrome Custom Tabs</string>
-    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="link_title">Chrome 맞춤 탭 사용</string>
+    <string name="link_custom_tabs">링크가 Chrome 맞춤 탭으로 열립니다</string>
+    <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
     <string name="theme">테마</string>
     <string name="theme_follow">시스템 설정과 같이</string>
     <string name="theme_dark">다크 테마</string>
