@@ -87,9 +87,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isVancedDownloading", false).apply()
-        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isMicrogDownloading", false).apply()
+        with(getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit()) {
+            putBoolean("isInstalling", false).apply()
+            putBoolean("isVancedDownloading", false).apply()
+            putBoolean("isMicrogDownloading", false).apply()
+        }
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
         Crowdin.unregisterDataLoadingObserver(loadingObserver)
     }
