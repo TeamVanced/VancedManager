@@ -1,7 +1,6 @@
 package com.vanced.manager.core
 
 import android.app.Application
-import android.content.res.Configuration
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.remote.NetworkType
@@ -22,9 +21,11 @@ class App: Application() {
             .build())
     }
 
+    /*
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         Crowdin.onConfigurationChanged()
     }
+     */
 
 }
