@@ -15,10 +15,10 @@
     <string name="error_downloading">בעיה בהורדה של %1$s</string>
     <string name="install">התקנה</string>
     <string name="installing_app">מתקין את %1$s</string>
-    <string name="installation_aborted">Operation failed because the user aborted the installation.</string>
-    <string name="installation_blocked">Operation failed because the user blocked the installation.</string>
-    <string name="installation_conflict">Operation failed because the app conflicts with an already installed app.</string>
-    <string name="installation_failed">Operation failed for an unknown reason, please join our Telegram or Discord for support.</string>
+    <string name="installation_aborted">הפעולה נכשלה מכיוון שהמשתמש ביטל את ההתקנה.</string>
+    <string name="installation_blocked">הפעולה נכשלה מכיוון שהמשתמש חסם את ההתקנה.</string>
+    <string name="installation_conflict">הפעולה נכשלה מכיוון שהאפליקציה סותרת עם אפליקציה שכבר מותקנת.</string>
+    <string name="installation_failed">הפעולה נכשלה בגלל סיבה אינה ידועה, בבקשה הצטרפו לטלגרם או דיסקורד שלנו בשביל עזרה.</string>
     <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
     <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
     <string name="installation_signature">An unexpected error occurred while installing Vanced. Have you disabled apk signature verification?</string>
@@ -46,8 +46,8 @@
     <string name="accent_red">אדום</string>
     <string name="accent_yellow">צהוב</string>
     <string name="check_updates">בדוק אחר עדכונים</string>
-    <string name="category_interface">Interface</string>
-    <string name="category_manager">Manager</string>
+    <string name="category_interface">ממשק</string>
+    <string name="category_manager">מנהל</string>
     <string name="chosen_install_values">Chosen installation preferences</string>
     <string name="chosen_lang">Language: %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
@@ -74,9 +74,9 @@
     <string name="miui_one">Hey! it looks like you\'re a MIUI user. in order to properly use this application, you will have to disable MIUI optimisations in the developer settings. (You can safely ignore this warning if you are on a 20.2.20 or later ROM based on xiaomi.eu)</string>
     <string name="error">בעיה</string>
     <string name="security_context">Please make sure, that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
-    <string name="success">Success!</string>
+    <string name="success">הצלחה!</string>
     <string name="vanced_installed">Vanced has successfully been installed! Launch now?</string>
-    <string name="launch">Launch</string>
+    <string name="launch">התחל</string>
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">בחר את השפה המועדפת עליך לVanced</string>
