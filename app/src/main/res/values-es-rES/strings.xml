@@ -2,7 +2,7 @@
 <resources>
     <!-- Global Strings -->
     <string name="close">Cerrar</string>
-    <string name="reset">Resetear</string>
+    <string name="reset">Restablecer</string>
     <string name="save">Guardar</string>
     <!-- Main Activity -->
     <string name="title_about">Información</string>
@@ -23,7 +23,7 @@
     <string name="installation_invalid">La operación fallo debido a que los archivos apk son inválidos.</string>
     <string name="installation_signature">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado verificación de firmas?(signature verification)</string>
     <string name="installation_miui">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado las Optimizaciones de MIUI?</string>
-    <string name="installation_storage">Operación fallo porque hubo un error con almacenamiento.</string>
+    <string name="installation_storage">La operación falló debido a un error de almacenamiento.</string>
     <string name="installation_wait">Porfavor espera hasta que la instalación termine.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
@@ -48,7 +48,7 @@
     <string name="check_updates">Buscar actualizaciones</string>
     <string name="category_interface">Interfaz</string>
     <string name="category_manager">Manager</string>
-    <string name="chosen_install_values">Valores de instalación escojidos</string>
+    <string name="chosen_install_values">Preferencias de instalación elegidas</string>
     <string name="chosen_lang">Lenguaje: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="link_title">Usar Chrome Custom Tabs</string>
@@ -79,9 +79,9 @@
     <string name="launch">Lanzar</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Elije tu lenguaje preferido para Vanced</string>
-    <string name="choose_preferred_language_note">Nota: Ingles va a estar instalado como un lenguaje adicional también.</string>
-    <string name="choose_preferred_theme">Elije tu tema preferido para Vanced</string>
+    <string name="choose_preferred_language">Elige tu idioma preferido para Vanced</string>
+    <string name="choose_preferred_language_note">Nota: Ingles va a estar instalado como un idioma adicional.</string>
+    <string name="choose_preferred_theme">Elige tu tema preferido para Vanced</string>
     <string name="disable_signature">Modo root detectado! Para instalar Vanced, necesitaras deshabilitar verificación de firmas(disable signature verification).</string>
     <string name="finish">Finalizar</string>
     <string name="install_light_black">Claro + Negro</string>
