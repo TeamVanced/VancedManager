@@ -24,7 +24,7 @@
     <string name="installation_signature">Vनाथ स्थापित करते समय अप्रत्याशित त्रुटि हुई। क्या आपने हस्ताक्षर सत्यापन अक्षम कर दिया है?</string>
     <string name="installation_miui">Vनाथ स्थापित करते समय अप्रत्याशित त्रुटि हुई। क्या आपने MiUI ऑप्टिमाइज़ेशन को अक्षम कर दिया है?</string>
     <string name="installation_storage">संग्रहण विफल होने के कारण ऑपरेशन विफल हो गया। पकड़ो कि यह कैसे संभव है?</string>
-    <string name="installation_wait">Please wait until the installation finishes</string>
+    <string name="installation_wait">कृपया स्थापना समाप्त होने तक प्रतीक्षा करें</string>
     <string name="button_reinstall">फिर से इंस्टॉल</string>
     <string name="version_installed">(इन्स्टॉल्ड</string>
     <string name="latest">लेट्इस्ट</string>
@@ -37,7 +37,7 @@
     <string name="useful_links">उपयोगी लिंक्स </string>
     <string name="website_text">वेबसाइट</string>
     <string name="support_us">हमें सपॉर्ट कीजिये!</string>
-    <string name="version_toast">%1$s version was copied!</string>
+    <string name="version_toast">%1$s संस्करण कॉपी किया गया था!</string>
     <!-- Settings -->
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="accent_blue">नीला</string>
@@ -51,9 +51,9 @@
     <string name="chosen_install_values">इंस्टालेशन चुनाव</string>
     <string name="chosen_lang">भाषा: %1$s</string>
     <string name="chosen_theme">थीम: %1$s</string>
-    <string name="link_title">Use Chrome Custom Tabs</string>
-    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="link_title">क्रोम कस्टम टैब का उपयोग करें</string>
+    <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
+    <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
     <string name="theme">थीम</string>
     <string name="theme_follow">सिस्टम का पालन करें</string>
     <string name="theme_dark">डार्क थीम</string>
@@ -69,7 +69,7 @@
     <string name="button_dismiss">डिस्मिस</string>
     <string name="guide">गाइड</string>
     <string name="hold_on">रुको!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module.</string>
+    <string name="magisk_vanced">ऐसा लगता है कि आप Vanced के Magisk संस्करण का उपयोग कर रहे हैं, जिसे बंद कर दिया गया है और इस ऐप का उपयोग करके अपडेट नहीं किया जा सकता है। कृपया इसे पहले मैजिक मॉड्यूल हटाकर हटा दें।</string>
     <string name="miui_one_title">पता लगाया MiUI उपयोगकर्ता!</string>
     <string name="miui_one">अरे! लगता है कि आप MiUI उपयोगकर्ता हैं। Vanced Manager को ठीक से उपयोग करने के लिए, आपको डेवलपर सेटिंग में MiUI ऑप्टिमाइज़ेशन को अक्षम करना होगा
 हालाँकि, यदि आप 20.2.20 ROM पर हैं जो xiaomi.eu पर आधारित है, तो आप इस चेतावनी को सुरक्षित रूप से अनदेखा कर सकते हैं।</string>
