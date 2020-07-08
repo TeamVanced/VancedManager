@@ -2,7 +2,7 @@
 <resources>
     <!-- Global Strings -->
     <string name="close">סגור</string>
-    <string name="reset">אפס</string>
+    <string name="reset">איפוס</string>
     <string name="save">שמור</string>
     <!-- Main Activity -->
     <string name="title_about">אודות</string>
@@ -19,17 +19,17 @@
     <string name="installation_blocked">הפעולה נכשלה מכיוון שהמשתמש חסם את ההתקנה.</string>
     <string name="installation_conflict">הפעולה נכשלה מכיוון שהאפליקציה סותרת עם אפליקציה שכבר מותקנת.</string>
     <string name="installation_failed">הפעולה נכשלה בגלל סיבה אינה ידועה, בבקשה הצטרפו לטלגרם או דיסקורד שלנו בשביל עזרה.</string>
-    <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
-    <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
-    <string name="installation_signature">An unexpected error occurred while installing Vanced. Have you disabled apk signature verification?</string>
-    <string name="installation_miui">An unexpected error occurred while installing Vanced. Have you disabled MIUI Optimisations?</string>
-    <string name="installation_storage">Operation failed due to a storage error.</string>
-    <string name="installation_wait">Please wait until the installation finishes</string>
+    <string name="installation_incompatible">הפעולה נכשלה משום שהאפליקציה אינה תואמת למכשירך.</string>
+    <string name="installation_invalid">הפעולה נכשלה משום שהAPK אינו תקין.</string>
+    <string name="installation_signature">שגיאה לא צפויה התרחשה בזמן ההתקנה. האם ביטלת את וידוא החתימה לAPK?</string>
+    <string name="installation_miui">שגיאה לא צפויה התרחשה בזמן ההתקנה. האם ביטלת את MIUI Optimisations?</string>
+    <string name="installation_storage">הפעולה נכשלה בגלל בעיה באחסון.</string>
+    <string name="installation_wait">אנא המתינו לסיום ההתקנה</string>
     <string name="button_reinstall">התקן מחדש</string>
     <string name="version_installed">מותקן:</string>
     <string name="latest">החדש ביותר:</string>
-    <string name="successfully_installed">Successfully installed %1$s</string>
-    <string name="network_error">Network connection unavailable</string>
+    <string name="successfully_installed">הותקן בהצלחה %1$s</string>
+    <string name="network_error">חיבור לרשת אינו זמין</string>
     <string name="no_microg">MicroG אינו מותקן!</string>
     <string name="root_not_granted">הרשאות Root אינן הוענקו</string>
     <string name="unavailable">אינו זמין</string>
@@ -48,17 +48,17 @@
     <string name="check_updates">בדוק אחר עדכונים</string>
     <string name="category_interface">ממשק</string>
     <string name="category_manager">מנהל</string>
-    <string name="chosen_install_values">Chosen installation preferences</string>
-    <string name="chosen_lang">Language: %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
-    <string name="link_title">Use Chrome Custom Tabs</string>
-    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="chosen_install_values">העדפות התקנה שנבחרו</string>
+    <string name="chosen_lang">שפה: %1$s</string>
+    <string name="chosen_theme">ערכת נושא: %1$s</string>
+    <string name="link_title">השתמש בכרטיסייה מותאמת אישית של Chrome</string>
+    <string name="link_custom_tabs">קישורים יפתחו בכרטיסיות מותאמות אישית של Chrome</string>
     <string name="link_external_browser">קישורים יפתחו בדפדפן חיצוני</string>
     <string name="theme">ערכת נושא</string>
     <string name="theme_follow">בהתאם למערכת</string>
     <string name="theme_dark">ערכת נושא כהה</string>
     <string name="theme_light">ערכת נושא בהירה</string>
-    <string name="update_url">Update Channel URL</string>
+    <string name="update_url">קישור ערוץ עדכון</string>
     <string name="push_notifications">התראות</string>
     <string name="push_notifications_summary">קבל הודעה ברגע שעדכון משתחרר</string>
     <string name="re_check">בדיקה מחדש</string>
@@ -71,18 +71,18 @@
     <string name="hold_on">רק רגע!</string>
     <string name="magisk_vanced">נדמה שאתה משתמש בגרסת הMagisk של Vanced, שתמיכה בה הופסקה והגרסה אינה יכולה להתעדכן בעזרת האפליקציה הזו. אנא מחק אותה קודם על ידי מחיקת מודול בMagisk.</string>
     <string name="miui_one_title">MIUI זוהה!</string>
-    <string name="miui_one">Hey! it looks like you\'re a MIUI user. in order to properly use this application, you will have to disable MIUI optimisations in the developer settings. (You can safely ignore this warning if you are on a 20.2.20 or later ROM based on xiaomi.eu)</string>
+    <string name="miui_one">היי! נראה שאתה משתמש MIUI. בכדי להתשמש באפליקציה זו בצורה מיטבית, תצטרך לבטל את MIUI optimisations באפשרויות מפתחים (ניתן להתעלם מאזהרה זו אם אתה מתשמש ברום מגרסה 20.2.20 ומעלה שמבוסס על xiaomi.eu.)</string>
     <string name="error">בעיה</string>
-    <string name="security_context">Please make sure, that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">אנא וודא שהורדת את האפליקציה מvanced.app, ערוץ הדיסקורד של Vanced או הגיטהאב.</string>
     <string name="success">הצלחה!</string>
-    <string name="vanced_installed">Vanced has successfully been installed! Launch now?</string>
+    <string name="vanced_installed">Vanced הותקן בהצלחה! לפתוח עכשיו?</string>
     <string name="launch">התחל</string>
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">בחר את השפה המועדפת עליך לVanced</string>
     <string name="choose_preferred_language_note">תזכורת: אנגלית תמיד תהיה מותקנת בתור שפה נוספת.</string>
     <string name="choose_preferred_theme">בחר את המראה מועדף שלך בשביל Vanced</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you will need to disable the apk signature verification.</string>
+    <string name="disable_signature">זוהה מצב רוט! על מנת להתקין את Vanced, תצטרך לבטל את ווידוא החתימה לAPK.</string>
     <string name="finish">סיום</string>
     <string name="install_light_black">בהיר + שחור</string>
     <string name="install_light_dark">בהיר + כהה</string>
