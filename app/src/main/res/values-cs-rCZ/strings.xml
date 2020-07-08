@@ -6,21 +6,21 @@
     <string name="save">Uložit</string>
     <!-- Main Activity -->
     <string name="title_about">O aplikaci</string>
-    <string name="title_home">Domů</string>
+    <string name="title_home">Přehled</string>
     <string name="title_settings">Nastavení</string>
     <!-- Home Page -->
     <string name="changelogs">Seznamy změn</string>
     <string name="downloading_file">Stahování %1$s</string>
     <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
     <string name="error_downloading">Chyba při stahování %1$s</string>
-    <string name="install">Nainstalovat</string>
+    <string name="install">Instalace</string>
     <string name="installing_app">Probíhá instalace %1$s</string>
     <string name="installation_aborted">Operace se nezdařila, protože uživatel zrušil instalaci.</string>
     <string name="installation_blocked">Operace se nezdařila, protože uživatel zablokoval instalaci.</string>
     <string name="installation_conflict">Operace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací.</string>
     <string name="installation_failed">Operace se nezdařila z neznámého důvodu, prosím, připojte se k našemu Telegramu nebo Discordu pro podporu.</string>
     <string name="installation_incompatible">Operace se nezdařila, protože aplikace není kompatibilní s vaším zařízením.</string>
-    <string name="installation_invalid">Operace se nezdařila, protože apk soubory jsou neplatné.</string>
+    <string name="installation_invalid">Operace se nezdařila, protože soubory APK jsou neplatné.</string>
     <string name="installation_signature">Při instalaci aplikace Vanced došlo k neočekávané chybě. Máte vypnuto ověření podpisu APK?</string>
     <string name="installation_miui">Při instalaci aplikace Vanced došlo k neočekávané chybě. Máte vypnuty optimalizace MIUI?</string>
     <string name="installation_storage">Operace se nezdařila z důvodu chyby v úložišti.</string>
@@ -48,20 +48,20 @@
     <string name="check_updates">Zkontrolovat aktualizace</string>
     <string name="category_interface">Vzhled</string>
     <string name="category_manager">Manager</string>
-    <string name="chosen_install_values">Zvolené parametry instalace</string>
+    <string name="chosen_install_values">Vybrané předvolby instalace</string>
     <string name="chosen_lang">Jazyk: %1$s</string>
     <string name="chosen_theme">Vzhled: %1$s</string>
-    <string name="link_title">Používat Vlastní karty Chrome</string>
-    <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách Chrome</string>
+    <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
+    <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
     <string name="link_external_browser">Odkazy se otevřou v externím prohlížeči</string>
     <string name="theme">Vzhled</string>
     <string name="theme_follow">Podle systému</string>
-    <string name="theme_dark">Tmavý motiv</string>
-    <string name="theme_light">Světlý motiv</string>
+    <string name="theme_dark">Tmavý vzhled</string>
+    <string name="theme_light">Světlý vzhled</string>
     <string name="update_url">URL aktualizačního kanálu</string>
     <string name="push_notifications">Vyskakovací oznámení</string>
     <string name="push_notifications_summary">Po vydání aktualizace obdržíte vyskakovací oznámení</string>
-    <string name="re_check">Zkontrolovat znovu</string>
+    <string name="re_check">Obnovit</string>
     <string name="update_center">Centrum aktualizací</string>
     <string name="update_found">Nalezena aktualizace!</string>
     <string name="update_notfound">Žádné nové aktualizace</string>
@@ -79,16 +79,16 @@
     <string name="launch">Spustit</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Zvolte preferovaný jazyk pro Vanced</string>
-    <string name="choose_preferred_language_note">Poznámka: Angličtina bude nainstalována jako dodatečný jazyk.</string>
-    <string name="choose_preferred_theme">Zvolte preferovaný motiv pro Vanced</string>
+    <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
+    <string name="choose_preferred_language_note">Poznámka: Angličtina bude vždy nainstalována jako dodatečný jazyk.</string>
+    <string name="choose_preferred_theme">Vyberte preferovaný vzhled pro Vanced</string>
     <string name="disable_signature">Byl zjištěn režim root! Chcete-li nainstalovat Vanced, budete muset vypnout ověření podpisu APK.</string>
     <string name="finish">Dokončit</string>
-    <string name="install_light_black">Světlý + Černý</string>
-    <string name="install_light_dark">Světlý + Tmavý</string>
+    <string name="install_light_black">Světlý + černý</string>
+    <string name="install_light_dark">Světlý + tmavý</string>
     <string name="next">Další</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojář aplikace</string>
-    <string name="sources">Zdrojový kód</string>
+    <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tým Vanced</string>
 </resources>
