@@ -148,6 +148,7 @@ class VancedDownloadService: Service() {
     override fun onDestroy() {
         super.onDestroy()
         cancelNotif(69, this)
+        unregisterReceiver(receiver)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

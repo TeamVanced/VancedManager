@@ -101,6 +101,7 @@ class MicrogDownloadService: Service() {
     override fun onDestroy() {
         super.onDestroy()
         cancelNotif(420, this)
+        unregisterReceiver(receiver)
     }
 
     override fun onBind(intent: Intent?): IBinder? {
