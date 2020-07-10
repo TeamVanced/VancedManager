@@ -6,6 +6,14 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
+    <style name="DialogStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:buttonBarPositiveButtonStyle">@style/ButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/OutlinedButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/OutlinedButtonStyle</item>
+        <item name="backgroundColor">?DialogBG</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
     <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="textAllCaps">false</item>
         <item name="backgroundTint">?colorPrimary</item>
@@ -13,6 +21,16 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="fontFamily">@font/exo_bold</item>
+    </style>
+
+    <style name="OutlinedButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/exo_bold</item>
+        <item name="android:strokeWidth">1dp</item>
+        <item name="android:strokeColor">?colorPrimary</item>
     </style>
 
     <style name="InstallButtonStyle" parent="ButtonStyle">

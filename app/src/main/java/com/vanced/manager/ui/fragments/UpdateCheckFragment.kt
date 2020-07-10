@@ -1,5 +1,9 @@
 package com.vanced.manager.ui.fragments
 
+import android.app.DownloadManager
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Context.DOWNLOAD_SERVICE
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -27,6 +31,8 @@ import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
 
+    private var downloadId: Long = 0
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,9 +45,15 @@ class UpdateCheckFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.registerReceiver(receiver, null)
         checkUpdates()
         view.findViewById<Button>(R.id.update_center_dismiss).setOnClickListener { dismiss() }
         view.findViewById<MaterialButton>(R.id.update_center_recheck).setOnClickListener{ checkUpdates() }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        activity?.unregisterReceiver(receiver)
     }
 
     private fun checkUpdates() {
@@ -64,9 +76,21 @@ class UpdateCheckFragment : DialogFragment() {
     }
 
     private fun upgradeManager() {
-        val dwnldUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json").get("url").asString
-        val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
+        val dwnldUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
+            .get("url").asString
+        //val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
 
+        val request = DownloadManager.Request(Uri.parse(dwnldUrl))
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
+        request.setTitle(activity?.getString(R.string.downloading_file, "Manager"))
+        request.setDestinationUri(Uri.parse("${activity?.filesDir?.path}/manager.apk"))
+
+        val downloadManager = activity?.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
+        downloadId = downloadManager.enqueue(request)
+    }
+
+        /*
         PRDownloader.download(dwnldUrl, activity?.filesDir?.path, "manager.apk")
             .build()
             .setOnProgressListener { progress ->
@@ -98,6 +122,28 @@ class UpdateCheckFragment : DialogFragment() {
                     Log.e("VMUpgrade", error.toString())
                 }
             })
+
+         */
+
+    private val receiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
+                activity?.let {
+                    val apk = File("${activity?.filesDir?.path}/manager.apk")
+                    val uri =
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                            FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)
+                        else
+                            Uri.fromFile(apk)
+
+                    val mIntent = Intent(Intent.ACTION_VIEW)
+                    mIntent.setDataAndType(uri, "application/vnd.android.package-archive")
+                    mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    mIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    startActivity(mIntent)
+                }
+            }
+        }
 
     }
 

@@ -3,12 +3,16 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.BuildConfig
 import com.dezlum.codelabs.getjson.GetJson
+import okhttp3.*
 import com.vanced.manager.R
+import org.json.JSONObject
+import java.io.IOException
 
 object InternetTools {
 
@@ -25,28 +29,55 @@ object InternetTools {
 
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
 
-    fun displayJsonString(json: String, obj: String, context: Context): String {
-        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context))
-            GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
-        else
-            context.getString(R.string.unavailable)
-    }
-
-    fun displayJsonInt(json: String, obj: String, context: Context): Int {
-        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context))
-            GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
-        else
-            0
-
-    }
-
     fun getObjectFromJson(url: String, obj: String, context: Context): String {
         return if (GetJson().isConnected(context))
             GetJson().AsJSONObject(url).get(obj).asString
         else
             ""
+    }
+
+    fun getJsonInt(file: String, obj: String, context: Context): Int {
+        val client = OkHttpClient()
+        val url = "${getDefaultSharedPreferences(context).getString("install_url", baseUrl)}/$file"
+        var toReturn = 0
+
+        val request = Request.Builder().url(url).build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                toReturn = 0
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                toReturn = JSONObject(response.body.toString()).getInt(obj)
+                Log.d("VMResponse", toReturn.toString())
+            }
+
+        })
+
+        return toReturn
+    }
+
+    fun getJsonString(file: String, obj: String, context: Context): String {
+        val client = OkHttpClient()
+        val url = "${getDefaultSharedPreferences(context).getString("install_url", baseUrl)}/$file"
+        var toReturn = ""
+
+        val request = Request.Builder().url(url).build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                toReturn = context.getString(R.string.unavailable)
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                toReturn = JSONObject(response.body.toString()).getString(obj)
+                Log.d("VMResponse", toReturn)
+            }
+
+        })
+
+        return toReturn
     }
 
     fun isUpdateAvailable(): Boolean {

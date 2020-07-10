@@ -1,10 +1,14 @@
 package com.vanced.manager.core.downloader
 
+import android.app.DownloadManager
 import android.app.Service
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.IBinder
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.preference.PreferenceManager
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.OnStartOrResumeListener
@@ -12,6 +16,7 @@ import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper
@@ -20,17 +25,29 @@ import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 
 class MicrogDownloadService: Service() {
 
+    private var downloadId: Long = 0
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        registerReceiver(receiver, null)
         downloadMicrog()
         stopSelf()
         return START_NOT_STICKY
     }
 
     private fun downloadMicrog() {
-        val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        //val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val apkUrl = getObjectFromJson("${PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", baseUrl)}/microg.json", "url", this)
 
-        val apkUrl = getObjectFromJson("https://vanced.app/api/v1/microg.json", "url", this)
+        val request = DownloadManager.Request(Uri.parse(apkUrl))
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
+        request.setTitle(getString(R.string.downloading_file, "MicroG"))
+        request.setDestinationUri(Uri.parse("${filesDir.path}/microg.apk"))
 
+        val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+        downloadId = downloadManager.enqueue(request)
+
+        /*
         val channel = 420
         PRDownloader.download(apkUrl, filesDir.path, "microg.apk")
             .build()
@@ -61,6 +78,24 @@ class MicrogDownloadService: Service() {
                     createBasicNotif(getString(R.string.error_downloading, "Microg"), channel, this@MicrogDownloadService)
                 }
             })
+
+         */
+    }
+
+    private val receiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
+                //prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
+                //cancelNotif(channel, this@MicrogDownloadService)
+                val bIntent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
+                bIntent.putExtra("path", "${filesDir.path}/microg.apk")
+                bIntent.putExtra("pkg", "com.mgoogle.android.gms")
+                val mIntent = Intent(HomeFragment.MICROG_DOWNLOADED)
+                mIntent.action = HomeFragment.MICROG_DOWNLOADED
+                LocalBroadcastManager.getInstance(this@MicrogDownloadService).sendBroadcast(mIntent)
+                startService(bIntent)
+            }
+        }
     }
 
     override fun onDestroy() {

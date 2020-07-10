@@ -1,8 +1,11 @@
 package com.vanced.manager.core.downloader
 
+import android.app.DownloadManager
 import android.app.Service
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.IBinder
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -24,8 +27,10 @@ import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
 
 class VancedDownloadService: Service() {
 
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+    private var downloadId: Long = 0
+    private var apkType: String = "arch"
 
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         downloadSplits()
         stopSelf()
         return START_NOT_STICKY
@@ -34,8 +39,9 @@ class VancedDownloadService: Service() {
     private fun downloadSplits(
         type: String = "arch"
     ) {
-        val baseUrl = PreferenceManager.getDefaultSharedPreferences(this).getString("install_url", baseUrl)
-        val vancedVer = getObjectFromJson("https://vanced.app/api/v1/vanced.json", "version", this)
+        val defPrefs = PreferenceManager.getDefaultSharedPreferences(this)
+        val baseUrl = defPrefs.getString("install_url", baseUrl)
+        val vancedVer = getObjectFromJson("$baseUrl/vanced.json", "version", this)
 
         val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val variant = PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "nonroot")
@@ -56,6 +62,17 @@ class VancedDownloadService: Service() {
                 else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
             }
 
+        apkType = type
+        val request = DownloadManager.Request(Uri.parse(url))
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
+        request.setTitle(getString(R.string.downloading_file, "MicroG"))
+        request.setDestinationUri(Uri.parse("${filesDir.path}/${getFileNameFromUrl(url)}"))
+
+        val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+        downloadId = downloadManager.enqueue(request)
+
+        /*
         val channel = 69
         PRDownloader
             .download(url, cacheDir.path, getFileNameFromUrl(url))
@@ -89,6 +106,33 @@ class VancedDownloadService: Service() {
                     createBasicNotif(getString(R.string.error_downloading, "Vanced"), channel, this@VancedDownloadService)
                 }
             })
+         */
+    }
+
+    private val receiver = object : BroadcastReceiver() {
+        val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val variant = PreferenceManager.getDefaultSharedPreferences(this@VancedDownloadService).getString("vanced_variant", "nonroot")
+        val lang = prefs?.getString("lang", "en")
+        override fun onReceive(context: Context?, intent: Intent?) {
+            if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
+                when (apkType) {
+                    "arch" -> downloadSplits("theme")
+                    "theme" -> downloadSplits("lang")
+                    "lang" -> {
+                        if (lang == "en") {
+                            prepareInstall(variant!!)
+                            //cancelNotif(channel, this@VancedDownloadService)
+                        } else {
+                            downloadSplits("enlang")
+                        }
+                    }
+                    "enlang" -> {
+                        prepareInstall(variant!!)
+                        //cancelNotif(channel, this@VancedDownloadService)
+                    }
+                }
+            }
+        }
     }
 
     private fun prepareInstall(variant: String) {

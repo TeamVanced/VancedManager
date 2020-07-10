@@ -14,9 +14,10 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
-import com.vanced.manager.utils.InternetTools.displayJsonInt
-import com.vanced.manager.utils.InternetTools.displayJsonString
+import com.vanced.manager.utils.InternetTools.getJsonInt
+import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 class HomeViewModel(application: Application): AndroidViewModel(application) {
@@ -57,14 +58,15 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     //this too
     fun fetchData() {
         fetching.set(true)
-        vancedVersion.set(displayJsonString("vanced.json", "version", getApplication()))
-        microgVersion.set(displayJsonString("microg.json", "version", getApplication()))
+        Crowdin.forceUpdate(getApplication())
+        vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
+        microgVersion.set(getJsonString("microg.json", "version", getApplication()))
         microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
         vancedInstalled.set(isPackageInstalled(vancedPkgName, pm))
         vancedInstalledVersion.set(getPkgInfo(vancedInstalled.get()!!, vancedPkgName, getApplication()))
         microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()))
-        vancedVersionCode.set(displayJsonInt("vanced.json", "versionCode", getApplication()))
-        microgVersionCode.set(displayJsonInt("microg.json", "versionCode", getApplication()))
+        vancedVersionCode.set(getJsonInt("vanced.json", "versionCode", getApplication()))
+        microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
         vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
         microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
         microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
