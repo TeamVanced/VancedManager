@@ -51,7 +51,7 @@
     <string name="chosen_install_values">Seçilen kurulum özellikleri </string>
     <string name="chosen_lang">Dil: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="link_title">Chrome özel sekmesini kullan</string>
+    <string name="link_title">Chrome Özel Sekmesini Kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="link_external_browser">Bağlantılar harici tarayıcıda açılacaktır</string>
     <string name="theme">Tema</string>
