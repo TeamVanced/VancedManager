@@ -21,13 +21,15 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
-import com.dezlum.codelabs.getjson.GetJson
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
+import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
@@ -60,8 +62,8 @@ class UpdateCheckFragment : DialogFragment() {
     private fun checkUpdates() {
         val updatebtn = view?.findViewById<Button>(R.id.update_center_update)
         val checkingTxt = view?.findViewById<TextView>(R.id.update_center_checking)
-        if (GetJson().isConnected(requireContext())) {
 
+        runBlocking {
             if (isUpdateAvailable()) {
                 view?.findViewById<Button>(R.id.update_center_recheck)?.visibility = View.GONE
                 checkingTxt?.text = getString(R.string.update_found)
@@ -70,24 +72,27 @@ class UpdateCheckFragment : DialogFragment() {
                     upgradeManager()
                 }
             } else checkingTxt?.text = getString(R.string.update_notfound)
-
-        } else {
-            checkingTxt?.text = getString(R.string.network_error)
         }
     }
 
     private fun upgradeManager() {
-        val dwnldUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json").get("url").asString
-        //val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
+        runBlocking {
+            launch {
+                val changelogTxt = view?.findViewById<TextView>(R.id.microg_changelog)
 
-        val request = DownloadManager.Request(Uri.parse(dwnldUrl))
-        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
-        request.setTitle(activity?.getString(R.string.downloading_file, "Manager"))
-        request.setDestinationUri(Uri.fromFile(File("${activity?.filesDir?.path}/manager.apk")))
+                val dwnldUrl = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "url");
+                //val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
 
-        val downloadManager = activity?.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-        downloadId = downloadManager.enqueue(request)
+                val request = DownloadManager.Request(Uri.parse(dwnldUrl))
+                request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
+                request.setTitle(activity?.getString(R.string.downloading_file, "Manager"))
+                request.setDestinationUri(Uri.fromFile(File("${activity?.filesDir?.path}/manager.apk")))
+
+                val downloadManager = activity?.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
+                downloadId = downloadManager.enqueue(request)
+            }
+        }
     }
 
         /*

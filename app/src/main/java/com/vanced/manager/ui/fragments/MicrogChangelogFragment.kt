@@ -1,13 +1,18 @@
 package com.vanced.manager.ui.fragments
 
 import android.os.Bundle
+import android.text.InputType
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.dezlum.codelabs.getjson.GetJson
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
+import com.vanced.manager.utils.InternetTools
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class MicrogChangelogFragment : Fragment() {
 
@@ -21,12 +26,17 @@ class MicrogChangelogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val changelogTxt = view.findViewById<TextView>(R.id.microg_changelog)
+        runBlocking {
+            launch {
+                val changelogTxt = view.findViewById<TextView>(R.id.microg_changelog)
 
-        if (GetJson().isConnected(activity)) {
-            val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/microg.json")
-            val changelog = checkUrl.get("changelog").asString
-            changelogTxt.text = changelog
+                var baseUrl = PreferenceManager.getDefaultSharedPreferences(context)
+                    .getString("install_url", InternetTools.baseUrl)
+                baseUrl = baseUrl?.trimEnd('/')
+
+                var changelog = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog");
+                changelogTxt.text = changelog
+            }
         }
     }
 }

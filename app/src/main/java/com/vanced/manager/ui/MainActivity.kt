@@ -17,17 +17,24 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
-import com.dezlum.codelabs.getjson.GetJson
+import com.downloader.Error
+import com.downloader.OnDownloadListener
+import com.downloader.PRDownloader
 import com.vanced.manager.R
+import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
 import com.vanced.manager.ui.dialogs.DialogContainer.regularPackageInstalled
+import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
 
@@ -178,9 +185,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        if (GetJson().isConnected(this) && InternetTools.isUpdateAvailable()) {
-            val fm = supportFragmentManager
-            UpdateCheckFragment().show(fm, "UpdateCheck")
+        runBlocking {
+            launch {
+                if (InternetTools.isUpdateAvailable()) {
+                    val fm = supportFragmentManager
+                    UpdateCheckFragment().show(fm, "UpdateCheck")
+                }
+            }
         }
     }
 
