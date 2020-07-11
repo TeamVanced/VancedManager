@@ -5,6 +5,7 @@ import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.net.Uri
 import android.os.Build
 import android.os.IBinder
@@ -31,6 +32,7 @@ class VancedDownloadService: Service() {
     private var apkType: String = "arch"
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
         downloadSplits()
         stopSelf()
         return START_NOT_STICKY

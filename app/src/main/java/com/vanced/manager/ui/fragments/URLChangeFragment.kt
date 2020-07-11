@@ -31,7 +31,12 @@ class URLChangeFragment : DialogFragment() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(activity)
         urlField.hint = prefs.getString("install_url", baseUrl)
         view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
-            prefs.edit().putString("install_url", urlField.text.toString()).apply()
+            if (urlField.text.endsWith("/"))
+                prefs.edit().putString("install_url", urlField.text.removeSuffix("/").toString()).apply()
+
+            if (!urlField.text.startsWith("https://"))
+                prefs.edit().putString("install_url", "https://${urlField.text}").apply()
+
             dismiss()
         }
         view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {

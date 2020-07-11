@@ -5,6 +5,7 @@ import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.net.Uri
 import android.os.IBinder
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -28,7 +29,7 @@ class MicrogDownloadService: Service() {
     private var downloadId: Long = 0
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        registerReceiver(receiver, null)
+        registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
         downloadMicrog()
         stopSelf()
         return START_NOT_STICKY
