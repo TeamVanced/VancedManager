@@ -23,6 +23,7 @@ import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
+import java.io.File
 
 class MicrogDownloadService: Service() {
 
@@ -43,7 +44,7 @@ class MicrogDownloadService: Service() {
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
         request.setTitle(getString(R.string.downloading_file, "MicroG"))
-        request.setDestinationUri(Uri.parse("${filesDir.path}/microg.apk"))
+        request.setDestinationUri(Uri.fromFile(File("${filesDir.path}/microg.apk")))
 
         val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
         downloadId = downloadManager.enqueue(request)

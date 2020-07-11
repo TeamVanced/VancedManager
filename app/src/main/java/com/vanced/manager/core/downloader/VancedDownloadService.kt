@@ -25,6 +25,7 @@ import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
+import java.io.File
 
 class VancedDownloadService: Service() {
 
@@ -69,7 +70,7 @@ class VancedDownloadService: Service() {
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
         request.setTitle(getString(R.string.downloading_file, "MicroG"))
-        request.setDestinationUri(Uri.parse("${filesDir.path}/${getFileNameFromUrl(url)}"))
+        request.setDestinationUri(Uri.fromFile(File("${filesDir.path}/${getFileNameFromUrl(url)}")))
 
         val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
         downloadId = downloadManager.enqueue(request)

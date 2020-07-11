@@ -77,15 +77,14 @@ class UpdateCheckFragment : DialogFragment() {
     }
 
     private fun upgradeManager() {
-        val dwnldUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
-            .get("url").asString
+        val dwnldUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json").get("url").asString
         //val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
 
         val request = DownloadManager.Request(Uri.parse(dwnldUrl))
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
         request.setTitle(activity?.getString(R.string.downloading_file, "Manager"))
-        request.setDestinationUri(Uri.parse("${activity?.filesDir?.path}/manager.apk"))
+        request.setDestinationUri(Uri.fromFile(File("${activity?.filesDir?.path}/manager.apk")))
 
         val downloadManager = activity?.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
         downloadId = downloadManager.enqueue(request)
