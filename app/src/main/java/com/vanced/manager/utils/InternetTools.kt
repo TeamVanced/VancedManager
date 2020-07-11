@@ -46,12 +46,10 @@ object InternetTools {
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 toReturn = 0
-                returnVal(toReturn)
             }
 
             override fun onResponse(call: Call, response: Response) {
                 toReturn = JSONObject(response.body?.string()!!).getInt(obj)
-                returnVal(toReturn)
                 Log.d("VMResponse", toReturn.toString())
             }
         })
@@ -80,10 +78,6 @@ object InternetTools {
         })
 
         return toReturn
-    }
-
-    fun returnVal(value: Any): Any {
-        return value
     }
 
     fun isUpdateAvailable(): Boolean {
