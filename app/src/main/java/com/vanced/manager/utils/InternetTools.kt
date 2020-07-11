@@ -13,6 +13,7 @@ import okhttp3.*
 import com.vanced.manager.R
 import org.json.JSONObject
 import java.io.IOException
+import java.util.concurrent.atomic.AtomicReference
 
 object InternetTools {
 
@@ -39,45 +40,45 @@ object InternetTools {
     fun getJsonInt(file: String, obj: String, context: Context): Int {
         val client = OkHttpClient()
         val url = "${getDefaultSharedPreferences(context).getString("install_url", baseUrl)}/$file"
-        var toReturn = 0
+        val toReturn = AtomicReference<Int>()
 
         val request = Request.Builder().url(url).build()
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-                toReturn = 0
+                toReturn.set(0)
             }
 
             override fun onResponse(call: Call, response: Response) {
-                toReturn = JSONObject(response.body?.string()!!).getInt(obj)
-                Log.d("VMResponse", toReturn.toString())
+                toReturn.set(JSONObject(response.body?.string()!!).getInt(obj))
+                Log.d("VMResponse", toReturn.get().toString())
             }
         })
 
         Log.d("VMResponse", toReturn.toString())
-        return toReturn
+        return toReturn.get()
     }
 
     fun getJsonString(file: String, obj: String, context: Context): String {
         val client = OkHttpClient()
         val url = "${getDefaultSharedPreferences(context).getString("install_url", baseUrl)}/$file"
-        var toReturn = ""
+        val toReturn = AtomicReference<String>()
 
         val request = Request.Builder().url(url).build()
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-                toReturn = context.getString(R.string.unavailable)
+                toReturn.set(context.getString(R.string.unavailable))
             }
 
             override fun onResponse(call: Call, response: Response) {
-                toReturn = JSONObject(response.body?.string()!!).getString(obj)
-                Log.d("VMResponse", toReturn)
+                toReturn.set(JSONObject(response.body?.string()!!).getString(obj))
+                Log.d("VMResponse", toReturn.get())
             }
 
         })
 
-        return toReturn
+        return toReturn.get()
     }
 
     fun isUpdateAvailable(): Boolean {
