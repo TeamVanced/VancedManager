@@ -25,6 +25,8 @@ import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.io.File
 
 class VancedDownloadService: Service() {
@@ -42,39 +44,52 @@ class VancedDownloadService: Service() {
     private fun downloadSplits(
         type: String = "arch"
     ) {
-        val defPrefs = PreferenceManager.getDefaultSharedPreferences(this)
-        val baseUrl = defPrefs.getString("install_url", baseUrl)
-        val vancedVer = getObjectFromJson("$baseUrl/vanced.json", "version", this)
+        val context = this
+        runBlocking {
+            launch {
+                val defPrefs = PreferenceManager.getDefaultSharedPreferences(context)
+                val baseUrl = defPrefs.getString("install_url", baseUrl)
+                val vancedVer = getObjectFromJson("$baseUrl/vanced.json", "version")
 
-        val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val variant = PreferenceManager.getDefaultSharedPreferences(this).getString("vanced_variant", "nonroot")
-        val lang = prefs?.getString("lang", "en")
-        val theme = prefs?.getString("theme", "dark")
-        val arch =
-            when {
-                Build.SUPPORTED_ABIS.contains("x86") -> "x86"
-                Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
-                else -> "armeabi_v7a"
+                val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+                val variant = PreferenceManager.getDefaultSharedPreferences(context)
+                    .getString("vanced_variant", "nonroot")
+                val lang = prefs?.getString("lang", "en")
+                val theme = prefs?.getString("theme", "dark")
+                val arch =
+                    when {
+                        Build.SUPPORTED_ABIS.contains("x86") -> "x86"
+                        Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
+                        else -> "armeabi_v7a"
+                    }
+                val url =
+                    when (type) {
+                        "arch" -> "$baseUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
+                        "theme" -> "$baseUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
+                        "lang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.$lang.apk"
+                        "enlang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.en.apk"
+                        else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
+                    }
+
+                apkType = type
+                val request = DownloadManager.Request(Uri.parse(url))
+                request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
+                request.setTitle(getString(R.string.downloading_file, "MicroG"))
+                request.setDestinationUri(
+                    Uri.fromFile(
+                        File(
+                            "${filesDir.path}/${getFileNameFromUrl(
+                                url
+                            )}"
+                        )
+                    )
+                )
+
+                val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+                downloadId = downloadManager.enqueue(request)
             }
-        val url =
-            when (type) {
-                "arch" -> "$baseUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
-                "theme" -> "$baseUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
-                "lang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.$lang.apk"
-                "enlang" -> "$baseUrl/apks/v$vancedVer/$variant/Language/split_config.en.apk"
-                else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
-            }
-
-        apkType = type
-        val request = DownloadManager.Request(Uri.parse(url))
-        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
-        request.setTitle(getString(R.string.downloading_file, "MicroG"))
-        request.setDestinationUri(Uri.fromFile(File("${filesDir.path}/${getFileNameFromUrl(url)}")))
-
-        val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-        downloadId = downloadManager.enqueue(request)
-
+        }
         /*
         val channel = 69
         PRDownloader

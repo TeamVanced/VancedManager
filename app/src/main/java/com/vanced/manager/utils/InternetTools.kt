@@ -8,14 +8,9 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.BuildConfig
-import com.dezlum.codelabs.getjson.GetJson
-import okhttp3.*
-import com.vanced.manager.R
-import org.json.JSONObject
-import java.io.IOException
-import java.util.concurrent.atomic.AtomicReference
 
 object InternetTools {
+    const val TAG = "VancedManager"
 
     fun openUrl(Url: String, color: Int, context: Context) {
         val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_customtabs", true)
@@ -30,60 +25,41 @@ object InternetTools {
 
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
 
-    fun getObjectFromJson(url: String, obj: String, context: Context): String {
-        return if (GetJson().isConnected(context))
-            GetJson().AsJSONObject(url).get(obj).asString
-        else
+    suspend fun getObjectFromJson(url: String, obj: String): String {
+        return try {
+            val result = JsonHelper.getJson(url)
+            result.string(obj) ?: ""
+        } catch  (e: Exception) {
+            Log.e(TAG, "Error: ", e)
             ""
+        }
     }
 
-    fun getJsonInt(file: String, obj: String, context: Context): Int {
-        val client = OkHttpClient()
-        val url = "${getDefaultSharedPreferences(context).getString("install_url", baseUrl)}/$file"
-        val toReturn = AtomicReference<Int>()
-
-        val request = Request.Builder().url(url).build()
-
-        client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                toReturn.set(0)
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                toReturn.set(JSONObject(response.body?.string()!!).getInt(obj))
-                Log.d("VMResponse", toReturn.toString())
-            }
-        })
-
-        Log.d("VMResponse", toReturn.toString())
-        return toReturn.get()
+    suspend fun getJsonInt(file: String, obj: String, context: Context): Int {
+        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
+        return try {
+            val result = JsonHelper.getJson("$installUrl/$file")
+            result.int(obj) ?: 0
+        } catch  (e: Exception) {
+            Log.e(TAG, "Error: ", e)
+            0
+        }
     }
 
-    fun getJsonString(file: String, obj: String, context: Context): String {
-        val client = OkHttpClient()
-        val url = "${getDefaultSharedPreferences(context).getString("install_url", baseUrl)}/$file"
-        val toReturn = AtomicReference<String>()
-
-        val request = Request.Builder().url(url).build()
-
-        client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                toReturn.set(context.getString(R.string.unavailable))
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                toReturn.set(JSONObject(response.body?.string()!!).getString(obj))
-                Log.d("VMResponse", toReturn.get())
-            }
-
-        })
-
-        return toReturn.get()
+    suspend fun getJsonString(file: String, obj: String, context: Context): String {
+        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
+        return try {
+            val result = JsonHelper.getJson("$installUrl/$file")
+            result.string(obj) ?: ""
+        } catch  (e: Exception) {
+            Log.e(TAG, "Error: ", e)
+            "Unknown"
+        }
     }
 
-    fun isUpdateAvailable(): Boolean {
-        val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
-        val remoteVersion = checkUrl.get("versionCode").asInt
+    suspend fun isUpdateAvailable(): Boolean {
+        val result = JsonHelper.getJson("https://x1nto.github.io/VancedFiles/manager.json")
+        val remoteVersion = result.string("versionCode")?.toInt() ?: 0
 
         return remoteVersion > BuildConfig.VERSION_CODE
     }

@@ -16,9 +16,13 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
+import com.vanced.manager.ui.fragments.UpdateCheckFragment
+import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.getJsonInt
 import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class HomeViewModel(application: Application): AndroidViewModel(application) {
 
@@ -57,41 +61,45 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     //this too
     fun fetchData() {
-        fetching.set(true)
-        Crowdin.forceUpdate(getApplication())
-        vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
-        microgVersion.set(getJsonString("microg.json", "version", getApplication()))
-        microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
-        vancedInstalled.set(isPackageInstalled(vancedPkgName, pm))
-        vancedInstalledVersion.set(getPkgInfo(vancedInstalled.get()!!, vancedPkgName, getApplication()))
-        microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()))
-        vancedVersionCode.set(getJsonInt("vanced.json", "versionCode", getApplication()))
-        microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
-        vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
-        microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
-        microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
-        microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
-        vancedInstallButtonIcon.set(
-            if (variant == "nonroot") {
-                if (microgInstalled.get()!!)
-                    compareIntDrawable(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
-                else
-                    null
-            } else
-                compareIntDrawable(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
-        )
+        runBlocking {
+            launch {
+                fetching.set(true)
+                Crowdin.forceUpdate(getApplication())
+                vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
+                microgVersion.set(getJsonString("microg.json", "version", getApplication()))
+                microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
+                vancedInstalled.set(isPackageInstalled(vancedPkgName, pm))
+                vancedInstalledVersion.set(getPkgInfo(vancedInstalled.get()!!, vancedPkgName, getApplication()))
+                microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()))
+                vancedVersionCode.set(getJsonInt("vanced.json", "versionCode", getApplication()))
+                microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
+                vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
+                microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
+                microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
+                microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
+                vancedInstallButtonIcon.set(
+                    if (variant == "nonroot") {
+                        if (microgInstalled.get()!!)
+                            compareIntDrawable(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
+                        else
+                            null
+                    } else
+                        compareIntDrawable(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
+                )
 
-        vancedInstallButtonTxt.set(
-            if (variant == "nonroot") {
-                if (microgInstalled.get()!!) {
-                    compareInt(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
-                } else {
-                    getApplication<Application>().getString(R.string.no_microg)
-                }
-            } else
-                compareInt(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
-        )
-        fetching.set(false)
+                vancedInstallButtonTxt.set(
+                    if (variant == "nonroot") {
+                        if (microgInstalled.get()!!) {
+                            compareInt(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
+                        } else {
+                            getApplication<Application>().getString(R.string.no_microg)
+                        }
+                    } else
+                        compareInt(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
+                )
+                fetching.set(false)
+            }
+        }
     }
 
     fun openMicrogSettings() {
