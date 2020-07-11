@@ -51,7 +51,7 @@ object InternetTools {
 
             override fun onResponse(call: Call, response: Response) {
                 toReturn.set(JSONObject(response.body?.string()!!).getInt(obj))
-                Log.d("VMResponse", toReturn.get().toString())
+                Log.d("VMResponse", toReturn.toString())
             }
         })
 
