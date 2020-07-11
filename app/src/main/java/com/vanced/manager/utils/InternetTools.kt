@@ -49,7 +49,7 @@ object InternetTools {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                toReturn = JSONObject(response.body.toString()).getInt(obj)
+                toReturn = JSONObject(response.body?.string()!!).getInt(obj)
                 Log.d("VMResponse", toReturn.toString())
             }
 
@@ -71,7 +71,7 @@ object InternetTools {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                toReturn = JSONObject(response.body.toString()).getString(obj)
+                toReturn = JSONObject(response.body?.string()!!).getString(obj)
                 Log.d("VMResponse", toReturn)
             }
 
