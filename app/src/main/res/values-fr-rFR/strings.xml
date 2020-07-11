@@ -37,7 +37,7 @@
     <string name="useful_links">Liens utiles</string>
     <string name="website_text">Site web</string>
     <string name="support_us">Supporte nous !</string>
-    <string name="version_toast">%1$s version was copied!</string>
+    <string name="version_toast">La version de %1$s a été copiée !</string>
     <!-- Settings -->
     <string name="accent_color">Couleur d\'accentuation</string>
     <string name="accent_blue">Bleu</string>
@@ -51,9 +51,9 @@
     <string name="chosen_install_values">Préférences d\'installation sélectionnées</string>
     <string name="chosen_lang">Langue : %1$s</string>
     <string name="chosen_theme">Thème: %1$s</string>
-    <string name="link_title">Use Chrome Custom Tabs</string>
-    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
+    <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
+    <string name="link_external_browser">Les liens s\'ouvriront dans un navigateur externe</string>
     <string name="theme">Thème</string>
     <string name="theme_follow">Suivre le paramètre système</string>
     <string name="theme_dark">Thème sombre</string>
