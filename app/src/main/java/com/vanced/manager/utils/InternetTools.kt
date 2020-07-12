@@ -29,7 +29,7 @@ object InternetTools {
 
     suspend fun getObjectFromJson(url: String, obj: String): String {
         return try {
-            JsonHelper.getJson(url).get(obj).asString ?: ""
+            JsonHelper.getJson(url).string(obj) ?: ""
         } catch  (e: Exception) {
             Log.e(TAG, "Error: ", e)
             ""
@@ -39,7 +39,7 @@ object InternetTools {
     suspend fun getJsonInt(file: String, obj: String, context: Context): Int {
         val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return try {
-            JsonHelper.getJson("$installUrl/$file").get(obj).asInt
+            JsonHelper.getJson("$installUrl/$file").int(obj) ?: 0
         } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
             0
@@ -49,7 +49,7 @@ object InternetTools {
     suspend fun getJsonString(file: String, obj: String, context: Context): String {
         val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return try {
-            JsonHelper.getJson("$installUrl/$file").get(obj).asString ?: context.getString(R.string.unavailable)
+            JsonHelper.getJson("$installUrl/$file").string(obj) ?: context.getString(R.string.unavailable)
         } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
             context.getString(R.string.unavailable)
