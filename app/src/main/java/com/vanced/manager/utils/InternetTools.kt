@@ -58,7 +58,7 @@ object InternetTools {
 
     suspend fun isUpdateAvailable(): Boolean {
         val result = JsonHelper.getJson("https://x1nto.github.io/VancedFiles/manager.json")
-        val remoteVersion = result.int("versionCode")
+        val remoteVersion = result.int("versionCode") ?: 0
 
         return remoteVersion > BuildConfig.VERSION_CODE
     }
