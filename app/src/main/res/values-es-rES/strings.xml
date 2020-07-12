@@ -18,7 +18,7 @@
     <string name="installation_aborted">La operación fallo porque el usuario abortó la instalación</string>
     <string name="installation_blocked">La operación fallo porque el usuario bloqueo la instalación</string>
     <string name="installation_conflict">La operación fallo porque la app entra en conflicto con una app ya instalada</string>
-    <string name="installation_failed">La operación fallo por una razon desconocida, porfavor únete a nuestro grupo de Telegram o Discord para brindar soporte.</string>
+    <string name="installation_failed">La operacion fallo por una razon desconocida, porfavor únete a nuestro grupo de Telegram o Discord para brindar soporte.</string>
     <string name="installation_incompatible">La operación fallo porque la app es incompatible con tu dispositivo.</string>
     <string name="installation_invalid">La operación fallo debido a que los archivos apk son inválidos.</string>
     <string name="installation_signature">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado verificación de firmas?(signature verification)</string>
@@ -37,7 +37,7 @@
     <string name="useful_links">Links Utiles</string>
     <string name="website_text">Sitio Web</string>
     <string name="support_us">Apoyanos!</string>
-    <string name="version_toast">Version de %1$s fue copiada!</string>
+    <string name="version_toast">¡Versión de %1$s copiada al portapeles!</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
     <string name="accent_blue">Azul</string>
@@ -75,7 +75,7 @@
     <string name="error">Error</string>
     <string name="security_context">Porfavor asegurate de haver descargado la aplicacion mediante vanced.app, el server de Vanced en Discord, o Github</string>
     <string name="success">Éxito!</string>
-    <string name="vanced_installed">Vanced ha sido exitosamente instalado! Lanzar ahora?</string>
+    <string name="vanced_installed">¡Vanced ha sido instalado exitosamente! ¿Lanzar ahora?</string>
     <string name="launch">Lanzar</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
