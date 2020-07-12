@@ -11,14 +11,11 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
 import com.downloader.Error
@@ -71,16 +68,15 @@ class UpdateCheckFragment : DialogFragment() {
                 updatebtn?.setOnClickListener {
                     upgradeManager()
                 }
-            } else checkingTxt?.text = getString(R.string.update_notfound)
+            } else
+                checkingTxt?.text = getString(R.string.update_notfound)
         }
     }
 
     private fun upgradeManager() {
         runBlocking {
             launch {
-                val changelogTxt = view?.findViewById<TextView>(R.id.microg_changelog)
-
-                val dwnldUrl = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "url");
+                val dwnldUrl = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "url")
                 //val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
 
                 val request = DownloadManager.Request(Uri.parse(dwnldUrl))

@@ -8,9 +8,11 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.BuildConfig
+import com.vanced.manager.R
 
 object InternetTools {
-    const val TAG = "VancedManager"
+
+    private const val TAG = "VMNetTools"
 
     fun openUrl(Url: String, color: Int, context: Context) {
         val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_customtabs", true)
@@ -27,8 +29,7 @@ object InternetTools {
 
     suspend fun getObjectFromJson(url: String, obj: String): String {
         return try {
-            val result = JsonHelper.getJson(url)
-            result.string(obj) ?: ""
+            JsonHelper.getJson(url).get(obj).asString ?: ""
         } catch  (e: Exception) {
             Log.e(TAG, "Error: ", e)
             ""
@@ -38,9 +39,8 @@ object InternetTools {
     suspend fun getJsonInt(file: String, obj: String, context: Context): Int {
         val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return try {
-            val result = JsonHelper.getJson("$installUrl/$file")
-            result.int(obj) ?: 0
-        } catch  (e: Exception) {
+            JsonHelper.getJson("$installUrl/$file").get(obj).asInt
+        } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
             0
         }
@@ -49,17 +49,16 @@ object InternetTools {
     suspend fun getJsonString(file: String, obj: String, context: Context): String {
         val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return try {
-            val result = JsonHelper.getJson("$installUrl/$file")
-            result.string(obj) ?: ""
-        } catch  (e: Exception) {
+            JsonHelper.getJson("$installUrl/$file").get(obj).asString ?: context.getString(R.string.unavailable)
+        } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
-            "Unknown"
+            context.getString(R.string.unavailable)
         }
     }
 
     suspend fun isUpdateAvailable(): Boolean {
         val result = JsonHelper.getJson("https://x1nto.github.io/VancedFiles/manager.json")
-        val remoteVersion = result.string("versionCode")?.toInt() ?: 0
+        val remoteVersion = result.get("versionCode").asInt
 
         return remoteVersion > BuildConfig.VERSION_CODE
     }
