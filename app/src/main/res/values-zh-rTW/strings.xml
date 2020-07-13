@@ -52,7 +52,7 @@
     <string name="chosen_lang">語言： %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
     <string name="link_title">使用 Chrome 自訂分頁</string>
-    <string name="link_custom_tabs">網址將會在 Chrome 自訂分頁中開啟</string>
+    <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="link_external_browser">連結會使用外部瀏覽器開啟</string>
     <string name="theme">主題</string>
     <string name="theme_follow">跟隨系統</string>
