@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="close">Close</string>
-    <string name="reset">Reset</string>
-    <string name="save">Save</string>
+    <string name="close">Tanca</string>
+    <string name="reset">Restableix</string>
+    <string name="save">Desa</string>
     <!-- Main Activity -->
-    <string name="title_about">About</string>
-    <string name="title_home">Home</string>
-    <string name="title_settings">Settings</string>
+    <string name="title_about">Quant a</string>
+    <string name="title_home">Inici</string>
+    <string name="title_settings">Configuració</string>
     <!-- Home Page -->
-    <string name="changelogs">Changelogs</string>
-    <string name="downloading_file">Downloading %1$s</string>
-    <string name="failed_uninstall">Failed to uninstall package %1$s</string>
-    <string name="error_downloading">Error Downloading %1$s</string>
-    <string name="install">Install</string>
-    <string name="installing_app">Installing %1$s</string>
-    <string name="installation_aborted">Operation failed because the user aborted the installation.</string>
-    <string name="installation_blocked">Operation failed because the user blocked the installation.</string>
-    <string name="installation_conflict">Operation failed because the app conflicts with an already installed app.</string>
-    <string name="installation_failed">Operation failed for an unknown reason, please join our Telegram or Discord for support.</string>
-    <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
-    <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
+    <string name="changelogs">Registres de canvis</string>
+    <string name="downloading_file">Descarregant %1$s</string>
+    <string name="failed_uninstall">Error en instal·lar el paquet %1$s</string>
+    <string name="error_downloading">Error en descarregar %1$s</string>
+    <string name="install">Instal·lar</string>
+    <string name="installing_app">Instal·lant %1$s</string>
+    <string name="installation_aborted">L\'operació ha fallat perquè l\'usuari ha cancel·lat la instal·lació.</string>
+    <string name="installation_blocked">L\'operació ha fallat perquè l\'usuari ha blocat la instal·lació.</string>
+    <string name="installation_conflict">L\'operació ha fallat perquè l\'aplicació coincideix amb altra ja instal·lada.</string>
+    <string name="installation_failed">L\'operació ha fallat per una raó desconeguda, si us plau, uniu-se al Telegram o al Discord per rebre suport tècnic.</string>
+    <string name="installation_incompatible">L\'operació ha fallat perquè l\'aplicació és incompatible amb el vostre dispositiu.</string>
+    <string name="installation_invalid">L\'operació ha fallat perquè els fitxers apk són invàlids.</string>
     <string name="installation_signature">An unexpected error occurred while installing Vanced. Have you disabled apk signature verification?</string>
     <string name="installation_miui">An unexpected error occurred while installing Vanced. Have you disabled MIUI Optimisations?</string>
     <string name="installation_storage">Operation failed due to a storage error.</string>
