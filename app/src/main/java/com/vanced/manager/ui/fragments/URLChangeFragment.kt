@@ -31,12 +31,13 @@ class URLChangeFragment : DialogFragment() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(activity)
         urlField.hint = prefs.getString("install_url", baseUrl)
         view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
-            if (urlField.text.endsWith("/"))
-                prefs.edit().putString("install_url", urlField.text.removeSuffix("/").toString()).apply()
+            val finalUrl =
+                if (!urlField.text.startsWith("https://"))
+                    "https://${urlField.text}".removeSuffix("/")
+                else
+                    urlField.text.removeSuffix("/").toString()
 
-            if (!urlField.text.startsWith("https://"))
-                prefs.edit().putString("install_url", "https://${urlField.text}").apply()
-
+            prefs.edit().putString("install_url", finalUrl).apply()
             dismiss()
         }
         view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {

@@ -6,28 +6,20 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.net.Uri
 import android.os.Build
 import android.os.IBinder
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
-import com.downloader.Error
-import com.downloader.OnDownloadListener
-import com.downloader.OnStartOrResumeListener
-import com.downloader.PRDownloader
-import com.vanced.manager.R
 import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
-import com.vanced.manager.utils.NotificationHelper.createBasicNotif
-import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import java.io.File
 
 class VancedDownloadService: Service() {
 
@@ -52,8 +44,7 @@ class VancedDownloadService: Service() {
                 val vancedVer = getObjectFromJson("$baseUrl/vanced.json", "version")
 
                 val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-                val variant = PreferenceManager.getDefaultSharedPreferences(context)
-                    .getString("vanced_variant", "nonroot")
+                val variant = PreferenceManager.getDefaultSharedPreferences(context).getString("vanced_variant", "nonroot")
                 val lang = prefs?.getString("lang", "en")
                 val theme = prefs?.getString("theme", "dark")
                 val arch =
@@ -72,22 +63,7 @@ class VancedDownloadService: Service() {
                     }
 
                 apkType = type
-                val request = DownloadManager.Request(Uri.parse(url))
-                request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
-                request.setTitle(getString(R.string.downloading_file, "MicroG"))
-                request.setDestinationUri(
-                    Uri.fromFile(
-                        File(
-                            "${filesDir.path}/${getFileNameFromUrl(
-                                url
-                            )}"
-                        )
-                    )
-                )
-
-                val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-                downloadId = downloadManager.enqueue(request)
+                downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
             }
         }
         /*

@@ -6,26 +6,17 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.net.Uri
 import android.os.IBinder
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
-import com.downloader.Error
-import com.downloader.OnDownloadListener
-import com.downloader.OnStartOrResumeListener
-import com.downloader.PRDownloader
-import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.InternetTools.baseUrl
-import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
-import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.NotificationHelper.cancelNotif
-import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import java.io.File
 
 class MicrogDownloadService: Service() {
 
@@ -43,18 +34,11 @@ class MicrogDownloadService: Service() {
         runBlocking {
             launch {
                 //val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-                val apkUrl = getObjectFromJson(
+                val url = getObjectFromJson(
                     "${PreferenceManager.getDefaultSharedPreferences(context)
                         .getString("install_url", baseUrl)}/microg.json", "url")
 
-                val request = DownloadManager.Request(Uri.parse(apkUrl))
-                request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
-                request.setTitle(getString(R.string.downloading_file, "MicroG"))
-                request.setDestinationUri(Uri.fromFile(File("${filesDir.path}/microg.apk")))
-
-                val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-                downloadId = downloadManager.enqueue(request)
+                downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
             }
         }
         /*

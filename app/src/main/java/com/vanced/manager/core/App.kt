@@ -5,6 +5,8 @@ import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
+import com.vanced.manager.utils.AppUtils.isPermissionGranted
+import com.vanced.manager.utils.AppUtils.requestPermission
 import com.vanced.manager.utils.NotificationHelper.createNotifChannel
 
 class App: Application() {
@@ -19,6 +21,9 @@ class App: Application() {
             .withDistributionHash("36c51aed3180a4f43073d28j4s6")
             .withNetworkType(NetworkType.WIFI)
             .build())
+
+        if (!isPermissionGranted(this))
+            requestPermission()
     }
 
     /*

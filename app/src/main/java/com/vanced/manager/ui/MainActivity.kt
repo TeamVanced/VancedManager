@@ -17,20 +17,11 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
-import com.downloader.Error
-import com.downloader.OnDownloadListener
-import com.downloader.PRDownloader
 import com.vanced.manager.R
-import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
-import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
-import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
-import com.vanced.manager.ui.dialogs.DialogContainer.regularPackageInstalled
-import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.InternetTools
-import com.vanced.manager.utils.NotificationHelper
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 import kotlinx.coroutines.launch
@@ -47,13 +38,13 @@ class MainActivity : AppCompatActivity() {
             when (intent.action) {
                 INSTALL_COMPLETED -> {
                     if (intent.getStringExtra("package") == "split")
-                        launchVanced(this@MainActivity)
+                        DialogContainer.launchVanced(this@MainActivity)
                     else
-                        regularPackageInstalled(getString(R.string.successfully_installed, "MicroG"), this@MainActivity)
+                        DialogContainer.regularPackageInstalled(getString(R.string.successfully_installed, "MicroG"), this@MainActivity)
                 }
-                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
+                INSTALL_FAILED -> DialogContainer.installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
                 APP_UNINSTALLED -> restartActivity()
-                APP_NOT_UNINSTALLED -> installAlertBuilder(getString(R.string.failed_uninstall, intent.getStringExtra("pkgName")), this@MainActivity)
+                APP_NOT_UNINSTALLED -> DialogContainer.installAlertBuilder(getString(R.string.failed_uninstall, intent.getStringExtra("pkgName")), this@MainActivity)
             }
         }
     }

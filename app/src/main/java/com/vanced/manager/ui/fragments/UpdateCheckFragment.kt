@@ -3,7 +3,6 @@ package com.vanced.manager.ui.fragments
 import android.app.DownloadManager
 import android.content.BroadcastReceiver
 import android.content.Context
-import android.content.Context.DOWNLOAD_SERVICE
 import android.content.Intent
 import android.content.IntentFilter
 import android.graphics.Color
@@ -18,11 +17,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
-import com.downloader.Error
-import com.downloader.OnDownloadListener
-import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
+import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
 import kotlinx.coroutines.launch
@@ -76,17 +73,8 @@ class UpdateCheckFragment : DialogFragment() {
     private fun upgradeManager() {
         runBlocking {
             launch {
-                val dwnldUrl = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "url")
-                //val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
-
-                val request = DownloadManager.Request(Uri.parse(dwnldUrl))
-                request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
-                request.setTitle(activity?.getString(R.string.downloading_file, "Manager"))
-                request.setDestinationUri(Uri.fromFile(File("${activity?.filesDir?.path}/manager.apk")))
-
-                val downloadManager = activity?.getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-                downloadId = downloadManager.enqueue(request)
+                val url = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "url")
+                downloadId = activity?.let { download(url, "apk", "manager.apk", it) }!!
             }
         }
     }
