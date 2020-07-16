@@ -13,6 +13,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.utils.AppUtils
 import com.vanced.manager.utils.FileInfo
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import java.io.File
@@ -77,10 +78,7 @@ class RootSplitInstallerService: Service() {
         Log.d("AppLog", "succeeded installing?${installResult.isSuccess}")
         getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
         if (installResult.isSuccess) {
-            val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
-            mIntent.action = MainActivity.INSTALL_COMPLETED
-            mIntent.putExtra("package", "split")
-            LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+            AppUtils.sendRefreshHome(this)
             createBasicNotif(getString(R.string.successfully_installed, "Vanced"), notifId, this)
         } else {
             val mIntent = Intent(MainActivity.INSTALL_FAILED)

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -48,7 +49,10 @@
                     android:id="@+id/vanced_installbtn"
                     style="@style/ButtonStyle"
                     android:text="@{viewModel.vancedInstallButtonTxt}"
+                    android:textColor="@{viewModel.shouldBeDisabled ? @color/LightGray : @color/White}"
+                    android:backgroundTint="@{viewModel.shouldBeDisabled ? @color/Gray : ?colorPrimary}"
                     app:icon="@{viewModel.vancedInstallButtonIcon}"
+                    android:clickable="@{!viewModel.shouldBeDisabled}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

@@ -16,8 +16,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
-import com.vanced.manager.ui.fragments.UpdateCheckFragment
-import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.getJsonInt
 import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
@@ -57,7 +55,11 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
 
+    val expanded = ObservableField<Boolean>()
+
     val fetching = ObservableField<Boolean>()
+
+    val shouldBeDisabled = ObservableField<Boolean>()
 
     //this too
     fun fetchData() {
@@ -65,6 +67,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
             launch {
                 fetching.set(true)
                 Crowdin.forceUpdate(getApplication())
+                shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
                 vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
                 microgVersion.set(getJsonString("microg.json", "version", getApplication()))
                 microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
@@ -78,22 +81,14 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                 microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
                 microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
                 vancedInstallButtonIcon.set(
-                    if (variant == "nonroot") {
-                        if (microgInstalled.get()!!)
-                            compareIntDrawable(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
-                        else
-                            null
+                    if (shouldBeDisabled.get()!!) {
+                        null
                     } else
                         compareIntDrawable(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
                 )
-
                 vancedInstallButtonTxt.set(
-                    if (variant == "nonroot") {
-                        if (microgInstalled.get()!!) {
-                            compareInt(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
-                        } else {
-                            getApplication<Application>().getString(R.string.no_microg)
-                        }
+                    if (shouldBeDisabled.get()!!) {
+                        getApplication<Application>().getString(R.string.no_microg)
                     } else
                         compareInt(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
                 )
@@ -150,6 +145,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    @Suppress("DEPRECATION")
     private fun getPkgVerCode(toCheck: Boolean, pkg: String): Int {
         return if (toCheck) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
@@ -162,7 +158,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private fun compareInt(int1: Int, int2: Int, application: Application): String {
         return when {
             int2 == 0 -> application.getString(R.string.install)
-            int1 > int2 -> application.getString(R.string.update)
+            int2 > int1 -> application.getString(R.string.update)
             int2 == int1 -> application.getString(R.string.button_reinstall)
             else -> application.getString(R.string.install)
         }
@@ -172,7 +168,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
         return when {
             int2 == 0 -> application.getDrawable(R.drawable.ic_download)
-            int1 > int2 -> application.getDrawable(R.drawable.ic_update)
+            int2 > int1 -> application.getDrawable(R.drawable.ic_update)
             int2 == int1 -> application.getDrawable(R.drawable.ic_done)
             else -> application.getDrawable(R.drawable.ic_download)
         }

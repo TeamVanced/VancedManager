@@ -1,8 +1,6 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.*
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -26,8 +24,8 @@ class HomeFragment : Home() {
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
@@ -42,14 +40,14 @@ class HomeFragment : Home() {
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
         registerReceivers()
 
-        if (variantPref == "root")
-            attachRootChangelog()
-        else {
-            attachNonrootChangelog()
+        /*
+        if (variantPref == "nonroot") {
             if (!viewModel.microgInstalled.get()!!) {
                 disableVancedButton()
             }
         }
+
+         */
 
         binding.includeChangelogsLayout.changelogButton.setOnClickListener {
             cardExpandCollapse()
@@ -68,6 +66,25 @@ class HomeFragment : Home() {
             versionToast("MicroG")
             true
         }
+
+        with(binding.includeChangelogsLayout) {
+            viewpager.adapter = if (variantPref == "root") SectionPageRootAdapter(this@HomeFragment) else SectionPageAdapter(this@HomeFragment)
+            TabLayoutMediator(tablayout, viewpager) { tab, position ->
+                if (variantPref == "root")
+                    when (position) {
+                        0 -> tab.text = "Vanced"
+                        1 -> tab.text = "Manager"
+                    }
+
+                else
+                    when (position) {
+                        0 -> tab.text = "Vanced"
+                        1 -> tab.text = "MicroG"
+                        2 -> tab.text = "Manager"
+                    }
+
+            }.attach()
+        }
     }
 
     private fun versionToast(name: String) {
@@ -76,8 +93,7 @@ class HomeFragment : Home() {
 
     private fun cardExpandCollapse() {
         with(binding.includeChangelogsLayout) {
-            viewpager.visibility = if (isExpanded) View.GONE else View.VISIBLE
-            tablayout.visibility = if (isExpanded) View.GONE else View.VISIBLE
+            viewModel.expanded.set(!isExpanded)
             changelogButton.animate().apply {
                 rotation(if (isExpanded) 0F else 180F)
                 interpolator = AccelerateDecelerateInterpolator()
@@ -96,6 +112,7 @@ class HomeFragment : Home() {
             when (intent.action) {
                 MICROG_DOWNLOADED -> binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
                 VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
+                REFRESH_HOME -> viewModel.fetchData()
             }
         }
     }
@@ -104,34 +121,8 @@ class HomeFragment : Home() {
         val intentFilter = IntentFilter()
         intentFilter.addAction(VANCED_DOWNLOADED)
         intentFilter.addAction(MICROG_DOWNLOADED)
+        intentFilter.addAction(REFRESH_HOME)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
-    }
-
-    private fun attachNonrootChangelog() {
-        val sectionPageRootAdapter = SectionPageAdapter(this)
-        with(binding.includeChangelogsLayout) {
-            viewpager.adapter = sectionPageRootAdapter
-            TabLayoutMediator(tablayout, viewpager) { tab, position ->
-                when (position) {
-                    0 -> tab.text = "Vanced"
-                    1 -> tab.text = "MicroG"
-                    2 -> tab.text = "Manager"
-                }
-            }.attach()
-        }
-    }
-
-    private fun attachRootChangelog() {
-        val sectionPageRootAdapter = SectionPageRootAdapter(this)
-        with(binding.includeChangelogsLayout) {
-            viewpager.adapter = sectionPageRootAdapter
-            TabLayoutMediator(tablayout, viewpager) { tab, position ->
-                when (position) {
-                    0 -> tab.text = "Vanced"
-                    1 -> tab.text = "Manager"
-                }
-            }.attach()
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -139,6 +130,7 @@ class HomeFragment : Home() {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
+    /*
     private fun disableVancedButton() {
         binding.includeVancedLayout.vancedInstallbtn.apply {
             icon = null
@@ -147,10 +139,12 @@ class HomeFragment : Home() {
             setTextColor(ColorStateList.valueOf(Color.GRAY))
         }
     }
+     */
 
     companion object {
         const val VANCED_DOWNLOADED = "vanced_downloaded"
         const val MICROG_DOWNLOADED = "microg_downloaded"
+        const val REFRESH_HOME = "refresh_home"
     }
 }
 

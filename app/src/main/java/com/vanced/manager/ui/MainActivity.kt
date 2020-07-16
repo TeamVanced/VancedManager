@@ -43,8 +43,6 @@ class MainActivity : AppCompatActivity() {
                         DialogContainer.regularPackageInstalled(getString(R.string.successfully_installed, "MicroG"), this@MainActivity)
                 }
                 INSTALL_FAILED -> DialogContainer.installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
-                APP_UNINSTALLED -> restartActivity()
-                APP_NOT_UNINSTALLED -> DialogContainer.installAlertBuilder(getString(R.string.failed_uninstall, intent.getStringExtra("pkgName")), this@MainActivity)
             }
         }
     }
@@ -85,11 +83,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        with(getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit()) {
-            putBoolean("isInstalling", false).apply()
-            putBoolean("isVancedDownloading", false).apply()
-            putBoolean("isMicrogDownloading", false).apply()
-        }
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
         Crowdin.unregisterDataLoadingObserver(loadingObserver)
     }
@@ -134,10 +127,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
-        intentFilter.addAction(INSTALL_COMPLETED)
+        //intentFilter.addAction(INSTALL_COMPLETED)
         intentFilter.addAction(INSTALL_FAILED)
-        intentFilter.addAction(APP_UNINSTALLED)
-        intentFilter.addAction(APP_NOT_UNINSTALLED)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
 
     }
@@ -189,7 +180,5 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val INSTALL_COMPLETED = "install_completed"
         const val INSTALL_FAILED = "install_failed"
-        const val APP_UNINSTALLED = "app_uninstalled"
-        const val APP_NOT_UNINSTALLED = "app_not_installed"
     }
 }

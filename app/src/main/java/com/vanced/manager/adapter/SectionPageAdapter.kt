@@ -8,19 +8,15 @@ import com.vanced.manager.ui.fragments.VancedChangelogFragment
 
 class SectionPageAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
-    private val fragmentItems = 3
-    override fun getItemCount(): Int {
-        return fragmentItems
-    }
+    override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {
-        var fragment: Fragment? = null
-        when (position) {
-            0 -> fragment = VancedChangelogFragment()
-            1 -> fragment = MicrogChangelogFragment()
-            2 -> fragment = ManagerChangelogFragment()
+        return when (position) {
+            0 -> VancedChangelogFragment()
+            1 -> MicrogChangelogFragment()
+            2 -> ManagerChangelogFragment()
+            else -> throw NotImplementedError()
         }
-        return fragment!!
     }
 
 }
