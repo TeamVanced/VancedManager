@@ -54,8 +54,10 @@ android {
 }
 
 dependencies {
+
 // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
 // AndroidX
     implementation 'androidx.activity:activity:1.1.0'
@@ -78,10 +80,7 @@ dependencies {
     implementation 'com.github.topjohnwu.libsu:core:2.5.1'
     implementation 'com.mindorks.android:prdownloader:0.6.0'
     implementation 'com.beust:klaxon:5.0.1'
-
-    //core
     implementation 'com.github.kittinunf.fuel:fuel:2.2.3'
-    //packages
     implementation 'com.github.kittinunf.fuel:fuel-json:2.2.3'
     implementation 'com.github.kittinunf.fuel:fuel-coroutines:2.2.3'
 
