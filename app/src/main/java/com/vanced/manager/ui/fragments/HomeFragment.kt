@@ -93,7 +93,7 @@ class HomeFragment : Home() {
 
     private fun cardExpandCollapse() {
         with(binding.includeChangelogsLayout) {
-            viewModel.expanded.set(!isExpanded)
+            viewModel?.expanded?.set(!isExpanded)
             changelogButton.animate().apply {
                 rotation(if (isExpanded) 0F else 180F)
                 interpolator = AccelerateDecelerateInterpolator()
