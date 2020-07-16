@@ -69,26 +69,26 @@
     <string name="button_dismiss">Bezár</string>
     <string name="guide">Útmutató</string>
     <string name="hold_on">Figyelem!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module.</string>
-    <string name="miui_one_title">MIUI detected!</string>
-    <string name="miui_one">Hey! it looks like you\'re a MIUI user. in order to properly use this application, you will have to disable MIUI optimisations in the developer settings. (You can safely ignore this warning if you are on a 20.2.20 or later ROM based on xiaomi.eu)</string>
-    <string name="error">Error</string>
-    <string name="security_context">Please make sure, that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
-    <string name="success">Success!</string>
-    <string name="vanced_installed">Vanced has successfully been installed! Launch now?</string>
-    <string name="launch">Launch</string>
-    <string name="welcome">Welcome</string>
+    <string name="magisk_vanced">Úgy néz ki, a Vanced Magisk verzióját használod, ami már nem támogatott és nem frissíthető az app használatával. Távolítsd el először a Magisk modul eltávolításával.</string>
+    <string name="miui_one_title">MIUI észlelve!</string>
+    <string name="miui_one">Hey! Úgy néz ki MIUI felhasználó vagy. Hogy megfelelően működjön az alkalmazás, kapcsold ki a MIUI-optimalizációt a Fejlesztői beállításokban. (Figyelmen kívül hagyhatod xiaomi.eu 20.2.20 vagy későbbi verzió használata esetén)</string>
+    <string name="error">Hiba</string>
+    <string name="security_context">Arra kérünk, győződj meg róla, hogy ezt az alkalmazást a vanced.app oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötted le</string>
+    <string name="success">Kész!</string>
+    <string name="vanced_installed">Vanced sikeresen telepítve! Elindítod most?</string>
+    <string name="launch">Indítás</string>
+    <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
-    <string name="choose_preferred_language_note">Note: English will always be installed as an additional language as well.</string>
-    <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you will need to disable the apk signature verification.</string>
-    <string name="finish">Finish</string>
-    <string name="install_light_black">Light + Black</string>
-    <string name="install_light_dark">Light + Dark</string>
-    <string name="next">Next</string>
+    <string name="choose_preferred_language">Preferált nyelv választása</string>
+    <string name="choose_preferred_language_note">Az angol mindíg telepítve lesz, mint választható nyelv.</string>
+    <string name="choose_preferred_theme">Vanced téma kiválasztása</string>
+    <string name="disable_signature">Root jogosultság észlelve! A Vanced telepítéséhez kapcsold ki a csomagaláírás ellenőrzést.</string>
+    <string name="finish">Kész</string>
+    <string name="install_light_black">Világos + Sötét</string>
+    <string name="install_light_dark">Világos + Fekete</string>
+    <string name="next">Következő</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Dev</string>
-    <string name="sources">Sources</string>
-    <string name="vanced_team">Vanced Team</string>
+    <string name="manager_dev">Vezető fejlesztő</string>
+    <string name="sources">Források</string>
+    <string name="vanced_team">Vanced csapat</string>
 </resources>
