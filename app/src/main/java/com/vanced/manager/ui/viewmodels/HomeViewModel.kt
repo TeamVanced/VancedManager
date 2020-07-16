@@ -67,7 +67,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
             launch {
                 fetching.set(true)
                 Crowdin.forceUpdate(getApplication())
-                shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
                 vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
                 microgVersion.set(getJsonString("microg.json", "version", getApplication()))
                 microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
@@ -80,6 +79,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                 microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
                 microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
                 microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
+                shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
                 vancedInstallButtonIcon.set(
                     if (shouldBeDisabled.get()!!) {
                         null
@@ -175,6 +175,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     }
 
     init {
+        expanded.set(false)
         fetchData()
     }
 
