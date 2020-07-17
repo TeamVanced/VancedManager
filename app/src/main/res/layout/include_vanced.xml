@@ -7,6 +7,7 @@
     <data>
 
         <import type="android.view.View" />
+        <import type="com.vanced.manager.R" />
 
         <variable
             name="viewModel"
@@ -50,7 +51,7 @@
                     style="@style/ButtonStyle"
                     android:text="@{viewModel.vancedInstallButtonTxt}"
                     android:textColor="@{viewModel.shouldBeDisabled ? @color/LightGray : @color/White}"
-                    android:backgroundTint="@{viewModel.shouldBeDisabled ? @color/Gray : @color/Accent}"
+                    android:backgroundTint="@{viewModel.shouldBeDisabled ? R.attr.colorDisabled : R.attr.colorPrimary}"
                     app:icon="@{viewModel.vancedInstallButtonIcon}"
                     android:clickable="@{!viewModel.shouldBeDisabled}"
                     app:layout_constraintEnd_toEndOf="parent"
