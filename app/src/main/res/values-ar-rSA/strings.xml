@@ -51,8 +51,8 @@
     <string name="chosen_install_values">تفضيلات التثبيت المختارة</string>
     <string name="chosen_lang">اللغة: %1$s</string>
     <string name="chosen_theme">المظهر: %1$s</string>
-    <string name="link_title">استخدم علامات التبويب لـ Chrome المخصصة</string>
-    <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لـ Chrome</string>
+    <string name="link_title">إستخدم علامات التبويب المخصصة لكروم</string>
+    <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لـكروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
