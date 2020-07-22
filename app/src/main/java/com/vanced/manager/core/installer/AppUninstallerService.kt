@@ -6,8 +6,6 @@ import android.content.pm.PackageInstaller
 import android.os.Handler
 import android.os.IBinder
 import android.util.Log
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.AppUtils.sendRefreshHome
 
 class AppUninstallerService: Service() {

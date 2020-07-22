@@ -10,10 +10,9 @@ import com.vanced.manager.ui.fragments.HomeFragment
 object AppUtils {
 
     fun sendRefreshHome(context: Context) {
-        val mIntent = Intent()
-        mIntent.action = HomeFragment.REFRESH_HOME
-        mIntent.putExtra("package", "normal")
-        LocalBroadcastManager.getInstance(context).sendBroadcast(mIntent)
+        val intent = Intent()
+        intent.action = HomeFragment.REFRESH_HOME
+        LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
     }
 
     fun getErrorMessage(status: Int, context: Context): String {

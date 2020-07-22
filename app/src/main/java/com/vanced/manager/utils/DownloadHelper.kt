@@ -12,7 +12,7 @@ object DownloadHelper {
             setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
             setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
             setTitle(context.getString(R.string.downloading_file, child))
-            setDestinationInExternalPublicDir(context.getExternalFilesDir(dir)?.path, child)
+            setDestinationInExternalFilesDir(context, dir, child)
         }
 
         val downloadManager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager

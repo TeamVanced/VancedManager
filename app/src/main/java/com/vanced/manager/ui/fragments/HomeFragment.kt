@@ -93,7 +93,7 @@ class HomeFragment : Home() {
 
     private fun cardExpandCollapse() {
         with(binding.includeChangelogsLayout) {
-            viewModel?.expanded?.set(!isExpanded)
+            activity?.runOnUiThread { viewModel?.expanded?.set(!isExpanded) }
             changelogButton.animate().apply {
                 rotation(if (isExpanded) 0F else 180F)
                 interpolator = AccelerateDecelerateInterpolator()
@@ -112,7 +112,7 @@ class HomeFragment : Home() {
             when (intent.action) {
                 MICROG_DOWNLOADED -> binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
                 VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
-                REFRESH_HOME -> viewModel.fetchData()
+                REFRESH_HOME -> activity?.runOnUiThread { viewModel.fetchData() }
             }
         }
     }

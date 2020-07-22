@@ -14,6 +14,6 @@
     <color name="LightGray">#908E8E</color>
     <color name="Gray">#5F5E5E</color>
 
-    <color name="Accent">?colorPrimary</color>
+    <color name="Accent">?attr/colorPrimary</color>
 
 </resources>

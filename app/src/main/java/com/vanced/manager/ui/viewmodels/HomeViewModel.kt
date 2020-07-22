@@ -27,13 +27,19 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     private val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
 
     private val vancedPkgName: String =
-        if (variant== "root") {
+        if (variant == "root") {
             "com.google.android.youtube"
         } else {
             "com.vanced.android.youtube"
         }
 
     private val pm = application.packageManager
+
+    private val vancedInstalledVersionCode = ObservableField<Int>()
+    private val microgInstalledVersionCode = ObservableField<Int>()
+
+    private val vancedVersionCode = ObservableField<Int>()
+    private val microgVersionCode = ObservableField<Int>()
 
     //this is fucking retarded
     val vancedInstallButtonTxt = ObservableField<String>()
@@ -46,12 +52,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     val microgVersion = ObservableField<String>()
     val microgInstallButtonTxt = ObservableField<String>()
     val microgInstallButtonIcon = ObservableField<Drawable>()
-
-    private val vancedInstalledVersionCode = ObservableField<Int>()
-    private val microgInstalledVersionCode = ObservableField<Int>()
-
-    private val vancedVersionCode = ObservableField<Int>()
-    private val microgVersionCode = ObservableField<Int>()
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
 
@@ -77,8 +77,8 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                 microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
                 vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
                 microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
-                microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
-                microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
+                microgInstallButtonTxt.set(compareInt(microgVersionCode.get()!!, microgInstalledVersionCode.get()!!, getApplication()))
+                microgInstallButtonIcon.set(compareIntDrawable(microgVersionCode.get()!!, microgInstalledVersionCode.get()!!, getApplication()))
                 shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
                 vancedInstallButtonIcon.set(
                     if (shouldBeDisabled.get()!!) {
