@@ -5,11 +5,11 @@
     <string name="reset">Visszaállítás</string>
     <string name="save">Mentés</string>
     <!-- Main Activity -->
-    <string name="title_about">A programról</string>
+    <string name="title_about">Rólunk</string>
     <string name="title_home">Kezdőlap</string>
     <string name="title_settings">Beállítások</string>
     <!-- Home Page -->
-    <string name="changelogs">Változások listája</string>
+    <string name="changelogs">Változtatások</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
     <string name="error_downloading">%1$s letöltése nem sikerült</string>
