@@ -76,7 +76,7 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
                 activity?.let {
-                    val apk = File("${activity?.filesDir?.path}/manager.apk")
+                    val apk = File("${activity?.getExternalFilesDir("apk")}/manager.apk")
                     val uri =
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                             FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)

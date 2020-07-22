@@ -81,12 +81,12 @@ class MicrogDownloadService: Service() {
             if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
                 //prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
                 //cancelNotif(channel, this@MicrogDownloadService)
-                val bIntent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
-                bIntent.putExtra("path", "${filesDir.path}/microg.apk")
-                bIntent.putExtra("pkg", "com.mgoogle.android.gms")
-                val mIntent = Intent(HomeFragment.MICROG_DOWNLOADED)
+                val mIntent = Intent()
                 mIntent.action = HomeFragment.MICROG_DOWNLOADED
                 LocalBroadcastManager.getInstance(this@MicrogDownloadService).sendBroadcast(mIntent)
+                val bIntent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
+                bIntent.putExtra("path", "${getExternalFilesDir("apk")}/microg.apk")
+                bIntent.putExtra("pkg", "com.mgoogle.android.gms")
                 startService(bIntent)
             }
         }
