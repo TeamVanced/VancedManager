@@ -104,10 +104,10 @@ class VancedDownloadService: Service() {
     }
 
     private val receiver = object : BroadcastReceiver() {
-        val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val variant = PreferenceManager.getDefaultSharedPreferences(this@VancedDownloadService).getString("vanced_variant", "nonroot")
-        val lang = prefs?.getString("lang", "en")
         override fun onReceive(context: Context?, intent: Intent?) {
+            val prefs = context?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+            val variant = PreferenceManager.getDefaultSharedPreferences(this@VancedDownloadService).getString("vanced_variant", "nonroot")
+            val lang = prefs?.getString("lang", "en")
             if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
                 when (apkType) {
                     "arch" -> downloadSplits("theme")

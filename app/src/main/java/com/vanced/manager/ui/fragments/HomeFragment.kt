@@ -102,7 +102,8 @@ class HomeFragment : Home(), View.OnClickListener {
 
     private fun cardExpandCollapse() {
         with(binding.includeChangelogsLayout) {
-            binding.viewModel?.expanded?.set(!isExpanded)
+            viewpager.visibility = if (isExpanded) View.GONE else View.VISIBLE
+            tablayout.visibility = if (isExpanded) View.GONE else View.VISIBLE
             changelogButton.animate().apply {
                 rotation(if (isExpanded) 0F else 180F)
                 interpolator = AccelerateDecelerateInterpolator()
@@ -122,7 +123,8 @@ class HomeFragment : Home(), View.OnClickListener {
                 MICROG_DOWNLOADED -> binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
                 VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
                 REFRESH_HOME ->  {
-                    binding.viewModel?.fetchData()
+                    //viewModel.fetchData()
+                    binding.homeRefresh.isRefreshing = true
                     Log.d("VMRefresh", "Refreshing home page")
                 }
             }
