@@ -49,10 +49,9 @@
                     android:id="@+id/vanced_installbtn"
                     style="@style/ButtonStyle"
                     android:text="@{viewModel.vancedInstallButtonTxt}"
-                    android:textColor="@{viewModel.shouldBeDisabled ? @color/LightGray : @color/White}"
-                    android:backgroundTint="@{viewModel.shouldBeDisabled ? @drawable/Gray : @drawable/Accent}"
+                    android:textColor="@color/White"
+                    android:backgroundTint="?colorPrimary"
                     app:icon="@{viewModel.vancedInstallButtonIcon}"
-                    android:clickable="@{!viewModel.shouldBeDisabled}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

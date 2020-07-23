@@ -23,19 +23,7 @@ open class Home : BaseFragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val microginstallbtn = view.findViewById<MaterialButton>(R.id.microg_installbtn)
-        val vancedinstallbtn = view.findViewById<MaterialButton>(R.id.vanced_installbtn)
-        val microguninstallbtn = view.findViewById<ImageView>(R.id.microg_uninstallbtn)
-        val vanceduninstallbtn = view.findViewById<ImageView>(R.id.vanced_uninstallbtn)
-        val rootswitch = view.findViewById<MaterialButton>(R.id.root_switch)
-        val nonrootswitch = view.findViewById<MaterialButton>(R.id.nonroot_switch)
 
-        vancedinstallbtn.setOnClickListener(this)
-        microginstallbtn.setOnClickListener(this)
-        microguninstallbtn.setOnClickListener(this)
-        vanceduninstallbtn.setOnClickListener(this)
-        rootswitch.setOnClickListener(this)
-        nonrootswitch.setOnClickListener(this)
 
     }
 

@@ -16,7 +16,4 @@
 
     <color name="Accent">?attr/colorPrimary</color>
 
-    <drawable name="Accent">?attr/colorPrimary</drawable>
-    <drawable name="Gray">@color/Gray</drawable>
-
 </resources>

@@ -130,7 +130,7 @@ class VancedDownloadService: Service() {
     }
 
     private fun prepareInstall(variant: String) {
-        val intent = Intent(HomeFragment.VANCED_DOWNLOADED)
+        val intent = Intent()
         intent.action = HomeFragment.VANCED_DOWNLOADED
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
         if (variant == "root")

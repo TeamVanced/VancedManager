@@ -2,6 +2,7 @@ package com.vanced.manager.ui.fragments
 
 import android.content.*
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.Toast
@@ -16,7 +17,7 @@ import com.vanced.manager.core.fragments.Home
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 
-class HomeFragment : Home() {
+class HomeFragment : Home(), View.OnClickListener {
 
     private lateinit var binding: FragmentHomeBinding
     private var isExpanded: Boolean = false
@@ -48,6 +49,15 @@ class HomeFragment : Home() {
         }
 
          */
+        with(binding) {
+            rootSwitch.setOnClickListener(this@HomeFragment)
+            nonrootSwitch.setOnClickListener(this@HomeFragment)
+
+            includeVancedLayout.vancedInstallbtn.setOnClickListener(this@HomeFragment)
+            includeVancedLayout.vancedUninstallbtn.setOnClickListener(this@HomeFragment)
+            includeMicrogLayout.microgInstallbtn.setOnClickListener(this@HomeFragment)
+            includeMicrogLayout.microgUninstallbtn.setOnClickListener(this@HomeFragment)
+        }
 
         binding.includeChangelogsLayout.changelogButton.setOnClickListener {
             cardExpandCollapse()
@@ -55,7 +65,7 @@ class HomeFragment : Home() {
 
         binding.includeVancedLayout.vancedCard.setOnLongClickListener {
             val clip = requireActivity().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            clip.setPrimaryClip(ClipData.newPlainText("vanced", this.viewModel.vancedInstalledVersion.get()))
+            clip.setPrimaryClip(ClipData.newPlainText("vanced", viewModel.vancedInstalledVersion.get()))
             versionToast("Vanced")
             true
         }
@@ -75,7 +85,6 @@ class HomeFragment : Home() {
                         0 -> tab.text = "Vanced"
                         1 -> tab.text = "Manager"
                     }
-
                 else
                     when (position) {
                         0 -> tab.text = "Vanced"
@@ -93,7 +102,7 @@ class HomeFragment : Home() {
 
     private fun cardExpandCollapse() {
         with(binding.includeChangelogsLayout) {
-            activity?.runOnUiThread { viewModel?.expanded?.set(!isExpanded) }
+            binding.viewModel.expanded.set(!isExpanded)
             changelogButton.animate().apply {
                 rotation(if (isExpanded) 0F else 180F)
                 interpolator = AccelerateDecelerateInterpolator()
@@ -112,7 +121,10 @@ class HomeFragment : Home() {
             when (intent.action) {
                 MICROG_DOWNLOADED -> binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
                 VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
-                REFRESH_HOME -> activity?.runOnUiThread { viewModel.fetchData() }
+                REFRESH_HOME ->  {
+                    binding.viewModel.fetchData()
+                    Log.d("VMRefresh", "Refreshing home page")
+                }
             }
         }
     }

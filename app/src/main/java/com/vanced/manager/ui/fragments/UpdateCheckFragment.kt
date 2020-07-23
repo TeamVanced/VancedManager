@@ -62,9 +62,7 @@ class UpdateCheckFragment : DialogFragment() {
                 view?.findViewById<Button>(R.id.update_center_recheck)?.visibility = View.GONE
                 checkingTxt?.text = getString(R.string.update_found)
 
-                updatebtn?.setOnClickListener {
-                    upgradeManager()
-                }
+                updatebtn?.setOnClickListener { upgradeManager() }
             } else
                 checkingTxt?.text = getString(R.string.update_notfound)
         }
@@ -118,7 +116,7 @@ class UpdateCheckFragment : DialogFragment() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
                 activity?.let {
-                    val apk = File("${activity?.filesDir?.path}/manager.apk")
+                    val apk = File("${activity?.getExternalFilesDir("apk")}/manager.apk")
                     val uri =
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                             FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)
