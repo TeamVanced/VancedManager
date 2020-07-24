@@ -52,7 +52,7 @@
     <string name="chosen_lang">언어: %1$s</string>
     <string name="chosen_theme">테마: %1$s</string>
     <string name="link_title">Chrome 맞춤 탭 사용</string>
-    <string name="link_custom_tabs">링크가 Chrome 맞춤 탭으로 열립니다</string>
+    <string name="link_custom_tabs">링크가 Chrome 으로 열립니다</string>
     <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
     <string name="theme">테마</string>
     <string name="theme_follow">시스템 설정과 같이</string>
