@@ -30,7 +30,7 @@
     <string name="latest">Uusin:</string>
     <string name="successfully_installed">%1$s asennus onnistui</string>
     <string name="network_error">Verkkoyhteys ei ole käytettävissä</string>
-    <string name="no_microg">Ei MicroG pakettia!</string>
+    <string name="no_microg">Ei MicroG:tä!</string>
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
     <string name="update">Päivitä</string>
