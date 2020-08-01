@@ -51,7 +51,7 @@
     <string name="chosen_install_values">Preferensi instalasi yang dipilih</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="link_title">Gunakan Chrome Kustom Tab</string>
+    <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="link_external_browser">Tautan akan terbuka di Browser Eksternal</string>
     <string name="theme">Tema</string>
