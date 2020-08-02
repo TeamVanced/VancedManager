@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import android.widget.CheckBox
 import android.widget.LinearLayout
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
@@ -17,6 +16,7 @@ import com.beust.klaxon.Parser
 import com.github.kittinunf.fuel.coroutines.awaitString
 import com.github.kittinunf.fuel.httpGet
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
 import kotlinx.coroutines.launch
@@ -45,12 +45,11 @@ class VancedLanguageSelectionFragment : Fragment() {
                 launch {
                     val chosenLangs = mutableListOf("en")
                     for (lang in getLangs()!!) {
-                        if (view.findViewWithTag<CheckBox>(lang).isChecked) {
+                        if (view.findViewWithTag<MaterialCheckBox>(lang).isChecked) {
                             chosenLangs.add(lang)
                         }
                     }
-                    PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                        ?.putString("lang", chosenLangs.joinToString())?.apply()
+                    PreferenceManager.getDefaultSharedPreferences(activity).edit()?.putString("lang", chosenLangs.joinToString())?.apply()
                     view.findNavController().navigate(R.id.action_installTo_homeFragment)
                 }
             }
@@ -70,7 +69,7 @@ class VancedLanguageSelectionFragment : Fragment() {
     private suspend fun loadBoxes(ll: LinearLayout) {
         if (getLangs() != null) {
             for (lang in getLangs()!!) {
-                val box: CheckBox = CheckBox(activity).apply {
+                val box: MaterialCheckBox = MaterialCheckBox(activity).apply {
                     tag = lang
                     text = Locale(lang).displayLanguage
                     textSize = 16F
