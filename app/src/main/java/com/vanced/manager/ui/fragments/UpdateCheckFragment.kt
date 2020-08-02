@@ -10,13 +10,18 @@ import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
+import com.downloader.OnDownloadListener
+import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.utils.DownloadHelper.download
@@ -71,44 +76,46 @@ class UpdateCheckFragment : DialogFragment() {
     private fun upgradeManager() {
         runBlocking {
             launch {
-                val url = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "url")
-                downloadId = activity?.let { download(url, "apk", "manager.apk", it) }!!
+                val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
+                val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
+                //downloadId = activity?.let { download(url, "apk", "manager.apk", it) }!!
+                PRDownloader.download(url, activity?.filesDir?.path, "manager.apk")
+                    .build()
+                    .setOnProgressListener { progress ->
+                        val mProgress = progress.currentBytes * 100 / progress.totalBytes
+                        loadBar?.visibility = View.VISIBLE
+                        loadBar?.progress = mProgress.toInt()
+                    }
+                    .start(object : OnDownloadListener {
+                        override fun onDownloadComplete() {
+                            activity?.let {
+                                val apk = File("${activity?.filesDir?.path}/manager.apk")
+                                val uri =
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                                        FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)
+                                    else
+                                        Uri.fromFile(apk)
+
+                                val intent = Intent(Intent.ACTION_VIEW)
+                                intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                                startActivity(intent)
+                            }
+                        }
+
+                        override fun onError(error: com.downloader.Error?) {
+                            Toast.makeText(activity, error.toString(), Toast.LENGTH_SHORT).show()
+                            Log.e("VMUpgrade", error.toString())
+                        }
+
+                    })
             }
         }
     }
 
         /*
-        PRDownloader.download(dwnldUrl, activity?.filesDir?.path, "manager.apk")
-            .build()
-            .setOnProgressListener { progress ->
-                val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                loadBar?.visibility = View.VISIBLE
-                loadBar?.progress = mProgress.toInt()
 
-            }
-            .start(object : OnDownloadListener{
-                override fun onDownloadComplete() {
-                    activity?.let {
-                        val apk = File("${activity?.filesDir?.path}/manager.apk")
-                        val uri =
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                                FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)
-                            else
-                                Uri.fromFile(apk)
-
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.setDataAndType(uri, "application/vnd.android.package-archive")
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                        startActivity(intent)
-                    }
-                }
-
-                override fun onError(error: Error?) {
-                    Toast.makeText(activity, error.toString(), Toast.LENGTH_SHORT).show()
-                    Log.e("VMUpgrade", error.toString())
-                }
-            })
 
          */
 

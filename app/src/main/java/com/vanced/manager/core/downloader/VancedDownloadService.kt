@@ -44,7 +44,7 @@ class VancedDownloadService: Service() {
         runBlocking {
             launch {
                 val defPrefs = PreferenceManager.getDefaultSharedPreferences(context)
-                val insallUrl = defPrefs.getString("install_url", baseUrl)
+                val installUrl = defPrefs.getString("install_url", baseUrl)
                 val vancedVer = getObjectFromJson("$installUrl/vanced.json", "version")
 
                 val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
@@ -70,9 +70,9 @@ class VancedDownloadService: Service() {
 
             val channel = 69
             PRDownloader
-                .download(url, cacheDir.path, getFileNameFromUrl(url))
+                .download(url, getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
                 .build()
-                .setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply() } }
+                //.setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply() } }
                 .setOnProgressListener { progress ->
                     val mProgress = progress.currentBytes * 100 / progress.totalBytes
                     displayDownloadNotif(channel, mProgress.toInt(), getFileNameFromUrl(url), this@VancedDownloadService)
@@ -83,8 +83,8 @@ class VancedDownloadService: Service() {
                             "arch" -> downloadSplits("theme")
                             "theme" -> downloadSplits("lang")
                             "lang" -> {
+                                count++
                                 if (count < lang?.count()!!) {
-                                    count++
                                     downloadSplits("lang")
                                 } else {
                                     prepareInstall(variant!!)
