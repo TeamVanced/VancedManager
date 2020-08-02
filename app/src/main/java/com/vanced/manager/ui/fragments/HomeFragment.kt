@@ -77,6 +77,8 @@ class HomeFragment : Home(), View.OnClickListener {
             true
         }
 
+        binding.homeRefresh.isRefreshing = true
+
         with(binding.includeChangelogsLayout) {
             viewpager.adapter = if (variantPref == "root") SectionPageRootAdapter(this@HomeFragment) else SectionPageAdapter(this@HomeFragment)
             TabLayoutMediator(tablayout, viewpager) { tab, position ->

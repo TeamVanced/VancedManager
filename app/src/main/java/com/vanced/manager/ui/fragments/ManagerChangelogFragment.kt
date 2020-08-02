@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools
 import kotlinx.coroutines.launch
@@ -23,17 +22,10 @@ class ManagerChangelogFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         runBlocking {
             launch {
-                val changelogTxt = view.findViewById<TextView>(R.id.manager_changelog)
-
-                var baseUrl = PreferenceManager.getDefaultSharedPreferences(context)
-                    .getString("install_url", InternetTools.baseUrl)
-                baseUrl = baseUrl?.trimEnd('/')
-
-                val changelog = InternetTools.getObjectFromJson("$baseUrl/manager.json", "changelog");
-                changelogTxt.text = changelog
+                val changelog = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "changelog")
+                view.findViewById<TextView>(R.id.manager_changelog).text = changelog
             }
         }
     }

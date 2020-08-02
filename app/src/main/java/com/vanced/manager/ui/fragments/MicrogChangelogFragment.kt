@@ -1,8 +1,6 @@
 package com.vanced.manager.ui.fragments
 
 import android.os.Bundle
-import android.text.InputType
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,17 +23,12 @@ class MicrogChangelogFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         runBlocking {
             launch {
-                val changelogTxt = view.findViewById<TextView>(R.id.microg_changelog)
+                val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
 
-                var baseUrl = PreferenceManager.getDefaultSharedPreferences(context)
-                    .getString("install_url", InternetTools.baseUrl)
-                baseUrl = baseUrl?.trimEnd('/')
-
-                var changelog = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog");
-                changelogTxt.text = changelog
+                val changelog = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog")
+                view.findViewById<TextView>(R.id.vanced_changelog).text = changelog
             }
         }
     }

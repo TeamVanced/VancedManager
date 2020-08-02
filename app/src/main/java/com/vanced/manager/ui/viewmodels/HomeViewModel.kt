@@ -55,8 +55,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val nonrootModeSelected: Boolean = variant == "nonroot"
 
-    val expanded = ObservableField<Boolean>()
-
     val fetching = ObservableField<Boolean>()
 
     val shouldBeDisabled = ObservableField<Boolean>()
@@ -77,20 +75,20 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
                 microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
                 vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
                 microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
-                microgInstallButtonTxt.set(compareInt(microgVersionCode.get()!!, microgInstalledVersionCode.get()!!, getApplication()))
-                microgInstallButtonIcon.set(compareIntDrawable(microgVersionCode.get()!!, microgInstalledVersionCode.get()!!, getApplication()))
+                microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
+                microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
                 shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
                 vancedInstallButtonIcon.set(
                     if (shouldBeDisabled.get()!!) {
                         null
                     } else
-                        compareIntDrawable(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
+                        compareIntDrawable(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication())
                 )
                 vancedInstallButtonTxt.set(
                     if (shouldBeDisabled.get()!!) {
                         getApplication<Application>().getString(R.string.no_microg)
                     } else
-                        compareInt(vancedVersionCode.get()!!, vancedInstalledVersionCode.get()!!, getApplication())
+                        compareInt(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication())
                 )
                 fetching.set(false)
             }
@@ -175,8 +173,8 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     }
 
     init {
-        expanded.set(false)
-        fetchData()
+        //expanded.set(false)
+        //fetchData()
     }
 
 }

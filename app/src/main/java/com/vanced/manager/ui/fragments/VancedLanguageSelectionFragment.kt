@@ -19,6 +19,7 @@ import com.github.kittinunf.fuel.httpGet
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.util.*
 
@@ -35,18 +36,23 @@ class VancedLanguageSelectionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         runBlocking {
-            loadBoxes(view.findViewById(R.id.lang_button_ll))
+            launch {
+                loadBoxes(view.findViewById(R.id.lang_button_ll))
+            }
         }
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             runBlocking {
-                val chosenLangs = mutableListOf("en")
-                for (lang in getLangs()!!) {
-                    if (view.findViewWithTag<CheckBox>(lang).isChecked) {
-                        chosenLangs.add(lang)
+                launch {
+                    val chosenLangs = mutableListOf("en")
+                    for (lang in getLangs()!!) {
+                        if (view.findViewWithTag<CheckBox>(lang).isChecked) {
+                            chosenLangs.add(lang)
+                        }
                     }
+                    PreferenceManager.getDefaultSharedPreferences(activity).edit()
+                        ?.putString("lang", chosenLangs.joinToString())?.apply()
+                    view.findNavController().navigate(R.id.action_installTo_homeFragment)
                 }
-                PreferenceManager.getDefaultSharedPreferences(activity).edit()?.putString("lang", chosenLangs.joinToString())?.apply()
-                view.findNavController().navigate(R.id.action_installTo_homeFragment)
             }
 
         }
