@@ -51,9 +51,9 @@
     <string name="chosen_install_values">Διαλέξτε επιλογές εγκατάστασης</string>
     <string name="chosen_lang">Γλώσσα: %1$s</string>
     <string name="chosen_theme">Χρώματα: %1$s</string>
-    <string name="link_title">Use Chrome Custom Tabs</string>
-    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
+    <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
+    <string name="link_external_browser">Οι σύνδεσμοι θα ανοίγουν σε εξωτερικό φυλλομετρητή</string>
     <string name="theme">Χρώματα</string>
     <string name="theme_follow">Χρώμα συστήματος</string>
     <string name="theme_dark">Σκούρο Χρώμα</string>
