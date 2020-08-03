@@ -30,9 +30,11 @@ class RootSplitInstallerService: Service() {
             val isRoot = it.isRoot
             Log.d("AppLog", "isRoot ?$isRoot ")
             AsyncTask.execute {
-                val apkFilesPath = cacheDir.path
-                val fileInfoList = getFileInfoList(apkFilesPath)
-                installSplitApkFiles(fileInfoList)
+                val apkFilesPath = getExternalFilesDir("apks")?.path
+                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                if (fileInfoList != null) {
+                    installSplitApkFiles(fileInfoList)
+                }
             }
         }
         stopSelf()

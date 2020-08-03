@@ -21,7 +21,7 @@ class SplitInstaller: Service() {
     }
 
     private fun installSplitApk(context: Context): Int {
-        val apkFolderPath = context.cacheDir.path + "/"
+        val apkFolderPath = context.getExternalFilesDir("apks")?.path + "/"
         val nameSizeMap = HashMap<String, Long>()
         var totalSize: Long = 0
         var sessionId = 0

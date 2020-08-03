@@ -61,7 +61,7 @@ class VancedLanguageSelectionFragment : Fragment() {
             val box: MaterialCheckBox = MaterialCheckBox(activity).apply {
                 tag = lang
                 text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
-                textSize = 16F
+                textSize = 18F
                 typeface = activity?.let { ResourcesCompat.getFont(it, R.font.exo_bold) }
             }
             ll.addView(box, MATCH_PARENT, WRAP_CONTENT)
