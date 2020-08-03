@@ -27,8 +27,7 @@ class MicrogChangelogFragment : Fragment() {
             launch {
                 val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
 
-                val changelog = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog")
-                view.findViewById<TextView>(R.id.vanced_changelog).text = changelog
+                view.findViewById<TextView>(R.id.microg_changelog).text = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog")
             }
         }
     }

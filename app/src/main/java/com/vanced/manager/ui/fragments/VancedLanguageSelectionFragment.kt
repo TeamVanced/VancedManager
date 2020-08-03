@@ -19,11 +19,15 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.util.*
 
 class VancedLanguageSelectionFragment : Fragment() {
+
+    private val langs: Array<String>? = runBlocking { getLangs() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,40 +39,33 @@ class VancedLanguageSelectionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        runBlocking {
-            launch {
-                loadBoxes(view.findViewById(R.id.lang_button_ll))
-            }
-        }
+        loadBoxes(view.findViewById(R.id.lang_button_ll))
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
-            runBlocking {
-                launch {
-                    val chosenLangs = mutableListOf("en")
-                    for (lang in getLangs()!!) {
-                        if (view.findViewWithTag<MaterialCheckBox>(lang).isChecked) {
-                            chosenLangs.add(lang)
-                        }
+            val chosenLangs = mutableListOf("en")
+            if (langs != null) {
+                for (lang in langs) {
+                    if (view.findViewWithTag<MaterialCheckBox>(lang).isChecked) {
+                        chosenLangs.add(lang)
                     }
-                    PreferenceManager.getDefaultSharedPreferences(activity).edit()?.putString("lang", chosenLangs.joinToString())?.apply()
-                    view.findNavController().navigate(R.id.action_installTo_homeFragment)
                 }
             }
-
+            PreferenceManager.getDefaultSharedPreferences(activity).edit()?.putString("lang", chosenLangs.joinToString())?.apply()
+            view.findNavController().navigate(R.id.action_installTo_homeFragment)
         }
     }
 
     private suspend fun getLangs(): Array<String>? {
         val langObj = Parser.default().parse(
             StringBuilder(
-                "https://${PreferenceManager.getDefaultSharedPreferences(activity).getString("update_url", baseUrl)}/vanced.json".httpGet().awaitString()
+                "https://${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json".httpGet().awaitString()
             )
         ) as JsonObject
         return langObj.array<String>("langs")?.toTypedArray()
     }
 
-    private suspend fun loadBoxes(ll: LinearLayout) {
-        if (getLangs() != null) {
-            for (lang in getLangs()!!) {
+    private fun loadBoxes(ll: LinearLayout) = CoroutineScope(Dispatchers.Main).launch {
+        if (langs != null) {
+            for (lang in langs) {
                 val box: MaterialCheckBox = MaterialCheckBox(activity).apply {
                     tag = lang
                     text = Locale(lang).displayLanguage
