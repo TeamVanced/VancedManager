@@ -17,7 +17,7 @@
             android:id="@+id/en"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?colorDisabled"
+            android:buttonTint="?colorDisabled"
             android:fontFamily="@font/exo_semibold"
             android:text="English (default)"
             android:tag="en"

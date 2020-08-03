@@ -77,7 +77,7 @@ class HomeFragment : Home(), View.OnClickListener {
             true
         }
 
-        binding.homeRefresh.isRefreshing = true
+        viewModel.fetchData()
 
         with(binding.includeChangelogsLayout) {
             viewpager.adapter = if (variantPref == "root") SectionPageRootAdapter(this@HomeFragment) else SectionPageAdapter(this@HomeFragment)

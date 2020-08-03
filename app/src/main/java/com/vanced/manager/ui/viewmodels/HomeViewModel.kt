@@ -22,7 +22,7 @@ import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-class HomeViewModel(application: Application): AndroidViewModel(application) {
+open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
 
