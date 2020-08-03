@@ -17,16 +17,6 @@ import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 open class Home : BaseFragment(), View.OnClickListener {
 
-    override fun onResume() {
-        super.onResume()
-        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val isInstalling = prefs?.getBoolean("isInstalling", false)
-        if (isInstalling!!) {
-            activity?.startService(Intent(activity, VancedDownloadService::class.java))
-            prefs.edit().putBoolean("isInstalling", false).apply()
-        }
-    }
-
     override fun onClick(v: View?) {
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")

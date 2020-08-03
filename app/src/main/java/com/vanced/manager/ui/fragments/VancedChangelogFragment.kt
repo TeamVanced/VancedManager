@@ -25,10 +25,10 @@ class VancedChangelogFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         runBlocking {
             launch {
-                val vancedVersion = activity?.let { InternetTools.getJsonString("vanced.json", "version", it) }
+                val vancedVersion = activity?.let { InternetTools.getJsonString("vanced.json", "version", it).replace('.', '_') }
                 val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
 
-                val changelog = InternetTools.getObjectFromJson("$baseUrl/changelog/$vancedVersion.json", "message");
+                val changelog = InternetTools.getObjectFromJson("$baseUrl/changelog/$vancedVersion.json", "message")
                 view.findViewById<TextView>(R.id.vanced_changelog).text = changelog
             }
         }

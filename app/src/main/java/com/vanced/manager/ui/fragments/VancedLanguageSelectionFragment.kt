@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import androidx.preference.PreferenceManager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.JsonHelper.getJson
 import kotlinx.coroutines.*
@@ -47,9 +49,8 @@ class VancedLanguageSelectionFragment : Fragment() {
                         chosenLangs.add(lang)
                     }
                 }
-            val sharedPrefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)?.edit()
-            sharedPrefs?.putString("lang", chosenLangs.joinToString())?.apply()
-            sharedPrefs?.putBoolean("isInstalling", true)?.apply()
+            activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)?.edit()?.putString("lang", chosenLangs.joinToString())?.apply()
+            activity?.startService(Intent(activity, VancedDownloadService::class.java))
             view.findNavController().navigate(R.id.action_installTo_homeFragment)
         }
     }

@@ -2,9 +2,10 @@ package com.vanced.manager.ui.core
 
 import android.content.Context
 import android.util.AttributeSet
-import androidx.core.widget.NestedScrollView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
-open class SlidingNestedScrollView : NestedScrollView {
+open class SlidingSwipeRefreshLayout : SwipeRefreshLayout {
+
     constructor(context: Context?) : super(context!!)
     constructor(context: Context?, attrs: AttributeSet?) : super(
         context!!,
