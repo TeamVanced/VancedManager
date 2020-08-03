@@ -16,13 +16,13 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
-import com.vanced.manager.utils.JsonHelper.getJsonArray
+import com.vanced.manager.utils.JsonHelper.getJson
 import kotlinx.coroutines.*
 import java.util.*
 
 class VancedLanguageSelectionFragment : Fragment() {
 
-    private lateinit var langs: MutableList<String?>
+    private lateinit var langs: MutableList<String>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,15 +34,13 @@ class VancedLanguageSelectionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        langs = runBlocking { getJsonArray("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json").string("langs").value }
+        langs = runBlocking { getJson("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json").array<String>("langs")?.value }!!
         loadBoxes(view.findViewById(R.id.lang_button_ll))
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             val chosenLangs = mutableListOf("en")
             for (lang in langs) {
                 if (view.findViewWithTag<MaterialCheckBox>(lang).isChecked) {
-                    if (lang != null) {
-                        chosenLangs.add(lang)
-                    }
+                    chosenLangs.add(lang)
                 }
             }
             activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)?.edit()?.putString("lang", chosenLangs.joinToString())?.apply()
@@ -52,15 +50,13 @@ class VancedLanguageSelectionFragment : Fragment() {
 
     private fun loadBoxes(ll: LinearLayout) = CoroutineScope(Dispatchers.Main).launch {
         for (lang in langs) {
-            if (lang != null) {
-                val box: MaterialCheckBox = MaterialCheckBox(activity).apply {
-                    tag = lang
-                    text = Locale(lang).displayLanguage
-                    textSize = 16F
-                    typeface = activity?.let { ResourcesCompat.getFont(it, R.font.exo_bold) }
-                }
-                ll.addView(box, MATCH_PARENT, WRAP_CONTENT)
+            val box: MaterialCheckBox = MaterialCheckBox(activity).apply {
+                tag = lang
+                text = Locale(lang).displayLanguage
+                textSize = 16F
+                typeface = activity?.let { ResourcesCompat.getFont(it, R.font.exo_bold) }
             }
+            ll.addView(box, MATCH_PARENT, WRAP_CONTENT)
         }
     }
 
