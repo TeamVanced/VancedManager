@@ -9,7 +9,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.downloader.Error
 import com.downloader.OnDownloadListener
-import com.downloader.OnStartOrResumeListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.RootSplitInstallerService

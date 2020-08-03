@@ -24,7 +24,7 @@ jobs:
       - name: Build project with Gradle
         run: ./gradlew build
 
-      - name: Build Release APK with Gradle
+      - name: Build Debug APK with Gradle
         run: ./gradlew assembleDebug
 
       - name: Upload to GitHub

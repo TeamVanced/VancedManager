@@ -155,7 +155,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private fun compareInt(int1: Int, int2: Int, application: Application): String {
         return when {
-            int2 == 0 -> application.getString(R.string.install)
+            int1 == 0 -> application.getString(R.string.install)
             int2 > int1 -> application.getString(R.string.update)
             int2 == int1 -> application.getString(R.string.button_reinstall)
             else -> application.getString(R.string.install)
@@ -165,7 +165,7 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
         return when {
-            int2 == 0 -> application.getDrawable(R.drawable.ic_download)
+            int1 == 0 -> application.getDrawable(R.drawable.ic_download)
             int2 > int1 -> application.getDrawable(R.drawable.ic_update)
             int2 == int1 -> application.getDrawable(R.drawable.ic_done)
             else -> application.getDrawable(R.drawable.ic_download)

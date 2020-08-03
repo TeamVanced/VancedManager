@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,15 +17,12 @@ import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.JsonHelper.getJsonArray
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import java.util.*
 
 class VancedLanguageSelectionFragment : Fragment() {
 
-    private val langs: MutableList<String?> = runBlocking { getJsonArray("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json").string("langs").value }
+    private lateinit var langs: MutableList<String?>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +34,7 @@ class VancedLanguageSelectionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        langs = runBlocking { getJsonArray("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json").string("langs").value }
         loadBoxes(view.findViewById(R.id.lang_button_ll))
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             val chosenLangs = mutableListOf("en")
@@ -46,12 +45,10 @@ class VancedLanguageSelectionFragment : Fragment() {
                     }
                 }
             }
-            PreferenceManager.getDefaultSharedPreferences(activity).edit()?.putString("lang", chosenLangs.joinToString())?.apply()
+            activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)?.edit()?.putString("lang", chosenLangs.joinToString())?.apply()
             view.findNavController().navigate(R.id.action_installTo_homeFragment)
         }
     }
-
-
 
     private fun loadBoxes(ll: LinearLayout) = CoroutineScope(Dispatchers.Main).launch {
         for (lang in langs) {
