@@ -1,5 +1,6 @@
 package com.vanced.manager.utils
 
+import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
 import com.github.kittinunf.fuel.coroutines.awaitString
@@ -7,13 +8,14 @@ import com.github.kittinunf.fuel.httpGet
 
 object JsonHelper {
 
-    suspend fun getJson(url: String): JsonObject {
-        val result = url.httpGet().awaitString()
+    suspend fun getJson(url: String): JsonObject =
+        Parser.default().parse(
+            StringBuilder(url.httpGet().awaitString())
+        ) as JsonObject
 
-        val parser: Parser = Parser.default()
-        val stringBuilder: StringBuilder = StringBuilder(result)
-
-        return parser.parse(stringBuilder) as JsonObject
-    }
+    suspend fun getJsonArray(url: String): JsonArray<*> =
+        Parser.default().parse(
+            StringBuilder(url.httpGet().awaitString())
+        ) as JsonArray<*>
 
 }
