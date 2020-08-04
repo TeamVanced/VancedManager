@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
-        //intentFilter.addAction(INSTALL_COMPLETED)
+        intentFilter.addAction(INSTALL_COMPLETED)
         intentFilter.addAction(INSTALL_FAILED)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
 

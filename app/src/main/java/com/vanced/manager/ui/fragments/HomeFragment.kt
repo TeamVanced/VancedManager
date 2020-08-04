@@ -195,9 +195,10 @@ class HomeFragment : Fragment(), View.OnClickListener {
             when (intent.action) {
                 MICROG_DOWNLOADED -> binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
                 VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
-                REFRESH_HOME ->  {
-                    viewModel.fetchData()
+                REFRESH_HOME -> {
                     Log.d("VMRefresh", "Refreshing home page")
+                    binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
+                    //viewModel.fetchData()
                 }
             }
         }

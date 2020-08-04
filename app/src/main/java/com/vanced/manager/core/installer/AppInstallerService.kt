@@ -32,7 +32,6 @@ class AppInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
                 LocalBroadcastManager.getInstance(this).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                 createBasicNotif(getString(
                         R.string.successfully_installed,
