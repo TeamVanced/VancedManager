@@ -33,7 +33,7 @@ class AppInstallerService: Service() {
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                sendRefreshHome()
+                LocalBroadcastManager.getInstance(this).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                 createBasicNotif(getString(
                         R.string.successfully_installed,
                         "Microg"
@@ -57,12 +57,6 @@ class AppInstallerService: Service() {
         mIntent.action = MainActivity.INSTALL_FAILED
         mIntent.putExtra("errorMsg", getErrorMessage(status, this))
         LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-    }
-
-    private fun sendRefreshHome() {
-        val intent = Intent()
-        intent.action = HomeFragment.REFRESH_HOME
-        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

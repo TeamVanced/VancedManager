@@ -130,9 +130,7 @@ class VancedDownloadService: Service() {
      */
 
     private fun prepareInstall(variant: String) {
-        val intent = Intent()
-        intent.action = HomeFragment.VANCED_DOWNLOADED
-        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+        LocalBroadcastManager.getInstance(this).sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADED))
         if (variant == "root")
             startService(Intent(this, RootSplitInstallerService::class.java))
         else
