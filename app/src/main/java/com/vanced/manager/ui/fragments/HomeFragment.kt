@@ -127,7 +127,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     Snackbar.make(binding.homeRefresh, R.string.no_microg, Snackbar.LENGTH_LONG)
                         .setAction(R.string.install) {
                             activity?.startService(Intent(activity, MicrogDownloadService::class.java))
-                        }
+                        }.show()
 
             }
             R.id.microg_installbtn -> {
