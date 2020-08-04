@@ -36,6 +36,15 @@ object InternetTools {
         }
     }
 
+    suspend fun getArrayFromJson(url: String, array: String): MutableList<String> {
+        return try {
+            JsonHelper.getJson(url).array<String>(array)?.value ?: mutableListOf("null")
+        } catch (e: Exception) {
+            Log.e(TAG, "Error: ", e)
+            mutableListOf("null")
+        }
+    }
+
     suspend fun getJsonInt(file: String, obj: String, context: Context): Int {
         val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return try {
@@ -57,10 +66,13 @@ object InternetTools {
     }
 
     suspend fun isUpdateAvailable(): Boolean {
-        val result = JsonHelper.getJson("https://x1nto.github.io/VancedFiles/manager.json")
-        val remoteVersion = result.int("versionCode") ?: 0
+        val result = try {
+            JsonHelper.getJson("https://x1nto.github.io/VancedFiles/manager.json").int("versionCode") ?: 0
+        } catch (e: Exception) {
+            0
+        }
 
-        return remoteVersion > BuildConfig.VERSION_CODE
+        return result > BuildConfig.VERSION_CODE
     }
 
     const val baseUrl = "https://vanced.app/api/v1"

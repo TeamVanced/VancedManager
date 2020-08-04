@@ -78,18 +78,8 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
                 microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
                 microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
                 shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
-                vancedInstallButtonIcon.set(
-                    if (shouldBeDisabled.get()!!) {
-                        null
-                    } else
-                        compareIntDrawable(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication())
-                )
-                vancedInstallButtonTxt.set(
-                    if (shouldBeDisabled.get()!!) {
-                        getApplication<Application>().getString(R.string.no_microg)
-                    } else
-                        compareInt(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication())
-                )
+                vancedInstallButtonIcon.set(compareIntDrawable(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
+                vancedInstallButtonTxt.set(compareInt(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
                 fetching.set(false)
             }
         }
@@ -170,11 +160,6 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             int2 == int1 -> application.getDrawable(R.drawable.ic_done)
             else -> application.getDrawable(R.drawable.ic_download)
         }
-    }
-
-    init {
-        //expanded.set(false)
-        //fetchData()
     }
 
 }
