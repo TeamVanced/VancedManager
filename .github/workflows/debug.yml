@@ -27,8 +27,8 @@ jobs:
       - name: Build Debug APK with Gradle
         run: ./gradlew assembleDebug
 
-      - name: Upload to GitHub
+      - name: Upload Debug
         uses: actions/upload-artifact@v2
         with:
-          name: 'Vanced-Manager'
+          name: 'Manager'
           path: app/build/outputs/apk/debug/app-debug.apk

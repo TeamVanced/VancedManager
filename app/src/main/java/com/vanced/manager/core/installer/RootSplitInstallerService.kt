@@ -1,7 +1,6 @@
 package com.vanced.manager.core.installer
 
 import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.Build
@@ -13,7 +12,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
-import com.vanced.manager.utils.AppUtils
+import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.FileInfo
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import java.io.File
@@ -43,6 +42,7 @@ class RootSplitInstallerService: Service() {
 
     @WorkerThread
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>) {
+        val broadcast = LocalBroadcastManager.getInstance(this)
         var sessionId: Int?
         val notifId = 666
         Log.d("AppLog", "installing split apk files:$apkFiles")
@@ -77,16 +77,14 @@ class RootSplitInstallerService: Service() {
         }
         Log.d("AppLog", "committing...")
         val installResult = Shell.su("pm install-commit $sessionId").exec()
-        Log.d("AppLog", "succeeded installing?${installResult.isSuccess}")
-        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
         if (installResult.isSuccess) {
-            AppUtils.sendRefreshHome(this)
+            broadcast.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+            broadcast.sendBroadcast(Intent(MainActivity.INSTALL_COMPLETED).putExtra("pkg", "vanced"))
             createBasicNotif(getString(R.string.successfully_installed, "Vanced"), notifId, this)
         } else {
             val mIntent = Intent(MainActivity.INSTALL_FAILED)
-            mIntent.action = MainActivity.INSTALL_FAILED
             mIntent.putExtra("errorMsg", getString(R.string.installation_signature))
-            LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+            broadcast.sendBroadcast(mIntent)
             createBasicNotif(getString(R.string.installation_signature), notifId, this)
         }
     }

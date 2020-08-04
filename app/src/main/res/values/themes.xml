@@ -29,6 +29,7 @@
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">#787777</item>
         <item name="materialAlertDialogTheme">@style/DialogStyle</item>
+        <item name="snackbarStyle">@style/SnackBar</item>
 
     </style>
 
@@ -97,6 +98,7 @@
         <item name="android:statusBarColor">?colorSurface</item>
         <item name="android:navigationBarColor">#000000</item>
         <item name="materialAlertDialogTheme">@style/DialogStyle</item>
+        <item name="snackbarStyle">@style/SnackBar</item>
 
     </style>
 

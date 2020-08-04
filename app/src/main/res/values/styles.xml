@@ -142,4 +142,9 @@
         <item name="tint">@color/Red</item>
     </style>
 
+    <style name="SnackBar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:backgroundTint">?colorSurface</item>
+        <item name="android:textColor">?colorOnSurfaceVariant</item>
+    </style>
+
 </resources>

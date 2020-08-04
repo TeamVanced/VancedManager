@@ -9,6 +9,7 @@ import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.AppUtils.getErrorMessage
 import com.vanced.manager.utils.AppUtils.sendRefreshHome
 import com.vanced.manager.utils.NotificationHelper.createBasicNotif
@@ -30,8 +31,7 @@ class SplitInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
-                sendRefreshHome(this)
+                LocalBroadcastManager.getInstance(this).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                 createBasicNotif(
                     getString(R.string.successfully_installed, "Vanced"),
                     notifId,
@@ -53,7 +53,6 @@ class SplitInstallerService: Service() {
 
     private fun sendFailure(status: Int) {
         val mIntent = Intent(MainActivity.INSTALL_FAILED)
-        mIntent.action = MainActivity.INSTALL_FAILED
         mIntent.putExtra("errorMsg", getErrorMessage(status, this))
         LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
     }

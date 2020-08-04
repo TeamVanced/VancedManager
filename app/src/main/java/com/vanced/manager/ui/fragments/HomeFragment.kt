@@ -202,8 +202,8 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
-        intentFilter.addAction(VANCED_DOWNLOADED)
-        intentFilter.addAction(MICROG_DOWNLOADED)
+        //intentFilter.addAction(VANCED_DOWNLOADED)
+        //intentFilter.addAction(MICROG_DOWNLOADED)
         intentFilter.addAction(REFRESH_HOME)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
     }
