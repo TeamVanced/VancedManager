@@ -8,14 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
-import com.vanced.manager.core.fragments.About
 import com.vanced.manager.databinding.FragmentAboutBinding
 import com.vanced.manager.ui.viewmodels.AboutViewModel
 
-class AboutFragment : About() {
+class AboutFragment : Fragment() {
 
     private lateinit var binding: FragmentAboutBinding
     private var count = 0
