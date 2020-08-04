@@ -46,16 +46,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         binding.viewModel = viewModel
 
         val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
-        registerReceivers()
 
-        /*
-        if (variantPref == "nonroot") {
-            if (!viewModel.microgInstalled.get()!!) {
-                disableVancedButton()
-            }
-        }
-
-         */
         with(binding) {
             rootSwitch.setOnClickListener(this@HomeFragment)
             nonrootSwitch.setOnClickListener(this@HomeFragment)
@@ -188,6 +179,11 @@ class HomeFragment : Fragment(), View.OnClickListener {
     override fun onPause() {
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
         super.onPause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        registerReceivers()
     }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
