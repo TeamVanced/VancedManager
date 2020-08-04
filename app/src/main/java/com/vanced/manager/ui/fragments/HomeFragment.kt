@@ -193,8 +193,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
                 REFRESH_HOME -> {
                     Log.d("VMRefresh", "Refreshing home page")
-                    binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
-                    //viewModel.fetchData()
+                    viewModel.fetchData()
                 }
             }
         }

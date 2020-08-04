@@ -60,12 +60,12 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
                 launch {
                     val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
                     //downloadId = activity?.let { download(url, "apk", "manager.apk", it) }!!
-                    PRDownloader.download(url, activity?.filesDir?.path, "manager.apk")
+                    PRDownloader.download(url, activity?.getExternalFilesDir("apk")?.path, "manager.apk")
                         .build()
                         .start(object : OnDownloadListener {
                             override fun onDownloadComplete() {
                                 activity?.let {
-                                    val apk = File("${activity?.filesDir?.path}/manager.apk")
+                                    val apk = File("${activity?.getExternalFilesDir("apk")?.path}/manager.apk")
                                     val uri =
                                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                                             FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)

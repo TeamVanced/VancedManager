@@ -1,10 +1,6 @@
 package com.vanced.manager.ui.fragments
 
-import android.app.DownloadManager
-import android.content.BroadcastReceiver
-import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -24,8 +20,6 @@ import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
-import com.vanced.manager.utils.DownloadHelper.download
-import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -33,7 +27,7 @@ import java.io.File
 
 class UpdateCheckFragment : DialogFragment() {
 
-    private var downloadId: Long = 0
+    //private var downloadId: Long = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,16 +41,18 @@ class UpdateCheckFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        activity?.registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
+        //activity?.registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
         checkUpdates()
         view.findViewById<Button>(R.id.update_center_dismiss).setOnClickListener { dismiss() }
         view.findViewById<MaterialButton>(R.id.update_center_recheck).setOnClickListener{ checkUpdates() }
     }
 
+    /*
     override fun onPause() {
         super.onPause()
         activity?.unregisterReceiver(receiver)
     }
+     */
 
     private fun checkUpdates() {
         val updatebtn = view?.findViewById<Button>(R.id.update_center_update)
@@ -79,7 +75,7 @@ class UpdateCheckFragment : DialogFragment() {
                 val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
                 val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
                 //downloadId = activity?.let { download(url, "apk", "manager.apk", it) }!!
-                PRDownloader.download(url, activity?.filesDir?.path, "manager.apk")
+                PRDownloader.download(url, activity?.getExternalFilesDir("apk")?.path, "manager.apk")
                     .build()
                     .setOnProgressListener { progress ->
                         val mProgress = progress.currentBytes * 100 / progress.totalBytes
@@ -89,7 +85,7 @@ class UpdateCheckFragment : DialogFragment() {
                     .start(object : OnDownloadListener {
                         override fun onDownloadComplete() {
                             activity?.let {
-                                val apk = File("${activity?.filesDir?.path}/manager.apk")
+                                val apk = File("${activity?.getExternalFilesDir("apk")?.path}/manager.apk")
                                 val uri =
                                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                                         FileProvider.getUriForFile(activity!!, "${activity?.packageName}.provider", apk)
@@ -114,10 +110,7 @@ class UpdateCheckFragment : DialogFragment() {
         }
     }
 
-        /*
-
-
-         */
+    /*
 
     private val receiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
@@ -140,6 +133,7 @@ class UpdateCheckFragment : DialogFragment() {
         }
 
     }
+     */
 
 
 

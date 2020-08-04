@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <style name="LightTheme.Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">#1490D7</item>
@@ -30,6 +29,8 @@
         <item name="android:statusBarColor">#ffffff</item>
         <item name="materialAlertDialogTheme">@style/DialogStyle</item>
         <item name="snackbarStyle">@style/SnackBar</item>
+        <item name="snackbarButtonStyle">@style/ButtonStyle</item>
+        <item name="snackbarTextViewStyle">@style/SnackBarText</item>
 
     </style>
 
