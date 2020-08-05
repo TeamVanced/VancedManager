@@ -6,9 +6,12 @@ import android.content.pm.PackageInstaller
 import android.os.Handler
 import android.os.IBinder
 import android.util.Log
-import com.vanced.manager.utils.AppUtils.sendRefreshHome
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.vanced.manager.ui.fragments.HomeFragment
 
 class AppUninstallerService: Service() {
+
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val pkgName = intent?.getStringExtra("pkg")
@@ -24,13 +27,13 @@ class AppUninstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Handler().postDelayed({
-                    sendRefreshHome(this)
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                     Log.d("VMpm", "Successfully uninstalled $pkgName")
                 }, 500)
             }
             PackageInstaller.STATUS_FAILURE -> {
                 Handler().postDelayed({
-                    sendRefreshHome(this)
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                     Log.d("VMpm", "Failed to uninstall $pkgName")
                 }, 500)
             }

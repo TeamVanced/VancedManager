@@ -5,14 +5,12 @@ import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
-import com.vanced.manager.utils.NotificationHelper.createNotifChannel
 
 class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
         PRDownloader.initialize(this)
-        createNotifChannel(this)
 
         Crowdin.init(this,
         CrowdinConfig.Builder()
