@@ -30,7 +30,7 @@
         <item name="android:statusBarColor">#787777</item>
         <item name="materialAlertDialogTheme">@style/DialogStyle</item>
         <item name="snackbarStyle">@style/SnackBar</item>
-        <item name="snackbarButtonStyle">@style/ButtonStyle</item>
+        <item name="snackbarButtonStyle">@style/SnackButton</item>
         <item name="snackbarTextViewStyle">@style/SnackBarText</item>
 
     </style>
@@ -88,7 +88,7 @@
         <item name="colorOnBackground">?colorOnSurface</item>
         <item name="colorError">#CC0047</item>
         <item name="colorOnError">#F9F9F9</item>
-        <item name="colorOnSurface">#ffffff</item>
+        <item name="colorOnSurface">#444444</item>
         <item name="colorOnSurfaceVariant">#FFFFFF</item>
         <item name="colorDisabled">@color/Gray</item>
         <item name="colorDisabledVariant">#66808080</item>
@@ -101,7 +101,7 @@
         <item name="android:navigationBarColor">#000000</item>
         <item name="materialAlertDialogTheme">@style/DialogStyle</item>
         <item name="snackbarStyle">@style/SnackBar</item>
-        <item name="snackbarButtonStyle">@style/ButtonStyle</item>
+        <item name="snackbarButtonStyle">@style/SnackButton</item>
         <item name="snackbarTextViewStyle">@style/SnackBarText</item>
 
     </style>

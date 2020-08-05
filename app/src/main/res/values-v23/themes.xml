@@ -29,7 +29,7 @@
         <item name="android:statusBarColor">#ffffff</item>
         <item name="materialAlertDialogTheme">@style/DialogStyle</item>
         <item name="snackbarStyle">@style/SnackBar</item>
-        <item name="snackbarButtonStyle">@style/ButtonStyle</item>
+        <item name="snackbarButtonStyle">@style/SnackButton</item>
         <item name="snackbarTextViewStyle">@style/SnackBarText</item>
 
     </style>

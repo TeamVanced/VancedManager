@@ -145,11 +145,15 @@
     <style name="SnackBar" parent="Widget.MaterialComponents.Snackbar">
         <item name="android:backgroundTint">?colorSurfaceVariant</item>
         <item name="cornerRadius">8dp</item>
-        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
     </style>
 
     <style name="SnackBarText" parent="Widget.MaterialComponents.Snackbar.TextView">
         <item name="android:textColor">?colorOnSurfaceVariant</item>
+    </style>
+
+    <style name="SnackButton" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">?colorPrimary</item>
     </style>
 
 </resources>
