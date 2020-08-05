@@ -1,26 +1,22 @@
 package com.vanced.manager.core.installer
 
 import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.vanced.manager.R
-import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.fragments.HomeFragment
-import com.vanced.manager.utils.AppUtils.getErrorMessage
-import com.vanced.manager.utils.AppUtils.sendRefreshHome
-import com.vanced.manager.utils.NotificationHelper.createBasicNotif
+import com.vanced.manager.utils.AppUtils.sendFailure
 
 class SplitInstallerService: Service() {
 
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
+
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
-        val notifId = 666
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
-                createBasicNotif(getString(R.string.installing_app, "Vanced"), notifId, this)
+                localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_INSTALLING))
                 Log.d(TAG, "Requesting user confirmation for installation")
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -31,30 +27,13 @@ class SplitInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                LocalBroadcastManager.getInstance(this).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                createBasicNotif(
-                    getString(R.string.successfully_installed, "Vanced"),
-                    notifId,
-                    this
-                )
+                localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
             }
-            else -> {
-                sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
-                createBasicNotif(
-                    getErrorMessage(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this),
-                    notifId,
-                    this
-                )
-            }
+            else -> sendFailure(this, intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
+
         }
         stopSelf()
         return START_NOT_STICKY
-    }
-
-    private fun sendFailure(status: Int) {
-        val mIntent = Intent(MainActivity.INSTALL_FAILED)
-        mIntent.putExtra("errorMsg", getErrorMessage(status, this))
-        LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

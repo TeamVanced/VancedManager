@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
+import android.widget.Toast
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.downloader.Error
@@ -17,9 +18,6 @@ import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
-import com.vanced.manager.utils.NotificationHelper.cancelNotif
-import com.vanced.manager.utils.NotificationHelper.createBasicNotif
-import com.vanced.manager.utils.NotificationHelper.displayDownloadNotif
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -28,6 +26,7 @@ class VancedDownloadService: Service() {
     //private var downloadId: Long = 0
     //private var apkType: String = "arch"
     private var count: Int = 0
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
@@ -67,14 +66,12 @@ class VancedDownloadService: Service() {
                 //apkType = type
                 //downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
 
-            val channel = 69
             PRDownloader
                 .download(url, getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
                 .build()
-                //.setOnStartOrResumeListener { OnStartOrResumeListener { prefs?.edit()?.putBoolean("isVancedDownloading", true)?.apply() } }
                 .setOnProgressListener { progress ->
                     val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                    displayDownloadNotif(channel, mProgress.toInt(), getFileNameFromUrl(url), this@VancedDownloadService)
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADING).putExtra("progress", mProgress).putExtra("file", getFileNameFromUrl(url)))
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
@@ -83,18 +80,16 @@ class VancedDownloadService: Service() {
                             "theme" -> downloadSplits("lang")
                             "lang" -> {
                                 count++
-                                if (count < lang?.count()!!) {
+                                if (count < lang?.count()!!)
                                     downloadSplits("lang")
-                                } else {
+                                else
                                     prepareInstall(variant!!)
-                                    cancelNotif(channel, this@VancedDownloadService)
-                                }
                             }
                         }
                     }
 
                     override fun onError(error: Error?) {
-                        createBasicNotif(getString(R.string.error_downloading, "Vanced"), channel, this@VancedDownloadService)
+                       Toast.makeText(this@VancedDownloadService, getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
                     }
                 })
             }
@@ -130,17 +125,11 @@ class VancedDownloadService: Service() {
      */
 
     private fun prepareInstall(variant: String) {
-        //LocalBroadcastManager.getInstance(this).sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADED))
+        localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_INSTALLING))
         if (variant == "root")
             startService(Intent(this, RootSplitInstallerService::class.java))
         else
             startService(Intent(this, SplitInstaller::class.java))
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        cancelNotif(69, this)
-        //unregisterReceiver(receiver)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

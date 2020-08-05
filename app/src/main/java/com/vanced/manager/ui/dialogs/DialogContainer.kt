@@ -8,7 +8,6 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
-import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
 
@@ -97,16 +96,6 @@ object DialogContainer {
         }
     }
 
-    fun regularPackageInstalled(msg: String, activity: MainActivity) {
-        MaterialAlertDialogBuilder(activity)
-            .setTitle(activity.getString(R.string.success))
-            .setMessage(msg)
-            .setPositiveButton(activity.getString(R.string.close)) { _, _ -> activity.restartActivity() }
-            .setCancelable(false)
-            .create()
-            .show()
-    }
-
     fun basicDialog(title: String, msg: String, activity: Activity) {
         MaterialAlertDialogBuilder(activity)
             .setTitle(title)
@@ -116,7 +105,7 @@ object DialogContainer {
             .show()
     }
 
-    fun launchVanced(activity: MainActivity) {
+    fun launchVanced(activity: Activity) {
         val intent = Intent()
         intent.component =
             if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") == "root")
@@ -133,10 +122,6 @@ object DialogContainer {
                 }
             }
             .setNegativeButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
-            .setOnDismissListener {
-                activity.restartActivity()
-            }
-            .setCancelable(false)
             .create()
             .show()
     }

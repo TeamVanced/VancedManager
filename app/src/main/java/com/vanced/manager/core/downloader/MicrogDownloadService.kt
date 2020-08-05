@@ -1,27 +1,27 @@
 package com.vanced.manager.core.downloader
 
 import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.os.IBinder
+import android.widget.Toast
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
+import com.downloader.Error
 import com.downloader.OnDownloadListener
-import com.downloader.OnStartOrResumeListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
+import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
-import com.vanced.manager.utils.NotificationHelper
-import com.vanced.manager.utils.NotificationHelper.cancelNotif
-import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 class MicrogDownloadService: Service() {
 
     //private var downloadId: Long = 0
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
@@ -34,7 +34,6 @@ class MicrogDownloadService: Service() {
         val context = this
         runBlocking {
             launch {
-                val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
                 val url = getObjectFromJson(
                     "${PreferenceManager.getDefaultSharedPreferences(context)
                         .getString("install_url", baseUrl)}/microg.json", "url"
@@ -42,43 +41,23 @@ class MicrogDownloadService: Service() {
 
                 //downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
 
-                val channel = 420
                 PRDownloader.download(url, getExternalFilesDir("apk")?.path, "microg.apk")
                     .build()
-                    .setOnStartOrResumeListener {
-                        OnStartOrResumeListener {
-                            prefs?.edit()?.putBoolean("isMicrogDownloading", true)?.apply()
-                        }
-                    }
                     .setOnProgressListener { progress ->
                         val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                        NotificationHelper.displayDownloadNotif(
-                            channel,
-                            mProgress.toInt(),
-                            getFileNameFromUrl(url),
-                            this@MicrogDownloadService
-                        )
+                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_DOWNLOADING).putExtra("progress", mProgress).putExtra("file", getFileNameFromUrl(url)))
                     }
                     .start(object : OnDownloadListener {
                         override fun onDownloadComplete() {
-                            prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
-                            cancelNotif(channel, this@MicrogDownloadService)
                             val intent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
                             intent.putExtra("path", "${getExternalFilesDir("apk")}/microg.apk")
                             intent.putExtra("pkg", "com.mgoogle.android.gms")
-                            //val mIntent = Intent(HomeFragment.MICROG_DOWNLOADED)
-                            //mIntent.action = HomeFragment.MICROG_DOWNLOADED
-                            //LocalBroadcastManager.getInstance(this@MicrogDownloadService).sendBroadcast(mIntent)
+                            localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_INSTALLING))
                             startService(intent)
                         }
 
-                        override fun onError(error: com.downloader.Error?) {
-                            prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
-                            createBasicNotif(
-                                getString(R.string.error_downloading, "Microg"),
-                                channel,
-                                this@MicrogDownloadService
-                            )
+                        override fun onError(error: Error?) {
+                            Toast.makeText(this@MicrogDownloadService, getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
                         }
                     })
 
@@ -102,11 +81,6 @@ class MicrogDownloadService: Service() {
     }
      */
 
-    override fun onDestroy() {
-        super.onDestroy()
-        cancelNotif(420, this)
-        //unregisterReceiver(receiver)
-    }
 
     override fun onBind(intent: Intent?): IBinder? {
         return null

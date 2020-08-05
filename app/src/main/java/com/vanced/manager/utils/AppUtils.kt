@@ -1,5 +1,6 @@
 package com.vanced.manager.utils
 
+import android.app.ActivityManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
@@ -9,10 +10,26 @@ import com.vanced.manager.ui.fragments.HomeFragment
 
 object AppUtils {
 
-    fun sendRefreshHome(context: Context) {
-        val intent = Intent()
-        intent.action = HomeFragment.REFRESH_HOME
-        LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+    @Suppress("DEPRECATION")
+    fun isInstallationRunning(context: Context): Boolean {
+        val services = arrayOf("VancedDownloadService", "MicrogDownloadService", "AppInstaller", "SplitInstaller", "RootSplitInstallerService")
+        val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+        val runningServices = activityManager.getRunningServices(Int.MAX_VALUE)
+
+        services.forEach { name ->
+            runningServices.forEach { info ->
+                if (info.service.className == name) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
+    fun sendFailure(context: Context, status: Int) {
+        val mIntent = Intent(HomeFragment.INSTALL_FAILED)
+        mIntent.putExtra("errorMsg", getErrorMessage(status, context))
+        LocalBroadcastManager.getInstance(context).sendBroadcast(mIntent)
     }
 
     fun getErrorMessage(status: Int, context: Context): String {

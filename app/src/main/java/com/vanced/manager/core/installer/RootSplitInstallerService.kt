@@ -11,10 +11,8 @@ import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
-import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.FileInfo
-import com.vanced.manager.utils.NotificationHelper.createBasicNotif
 import java.io.File
 import java.nio.charset.Charset
 import java.text.SimpleDateFormat
@@ -24,10 +22,10 @@ import kotlin.collections.ArrayList
 
 class RootSplitInstallerService: Service() {
 
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Shell.getShell {
-            val isRoot = it.isRoot
-            Log.d("AppLog", "isRoot ?$isRoot ")
             AsyncTask.execute {
                 val apkFilesPath = getExternalFilesDir("apks")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
@@ -42,9 +40,7 @@ class RootSplitInstallerService: Service() {
 
     @WorkerThread
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>) {
-        val broadcast = LocalBroadcastManager.getInstance(this)
         var sessionId: Int?
-        val notifId = 666
         Log.d("AppLog", "installing split apk files:$apkFiles")
         run {
             val sessionIdResult = Shell.su("pm install-create -r -t").exec().out
@@ -55,7 +51,6 @@ class RootSplitInstallerService: Service() {
         }
         for (apkFile in apkFiles) {
             Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
-            createBasicNotif(getString(R.string.installing_app, "Vanced"), notifId, this)
             val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
             val process: Process = Runtime.getRuntime().exec(command)
             val inputPipe = apkFile.getInputStream()
@@ -78,14 +73,12 @@ class RootSplitInstallerService: Service() {
         Log.d("AppLog", "committing...")
         val installResult = Shell.su("pm install-commit $sessionId").exec()
         if (installResult.isSuccess) {
-            broadcast.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-            broadcast.sendBroadcast(Intent(MainActivity.INSTALL_COMPLETED).putExtra("pkg", "vanced"))
-            createBasicNotif(getString(R.string.successfully_installed, "Vanced"), notifId, this)
+            localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+            localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED).putExtra("pkg", "vanced"))
         } else {
-            val mIntent = Intent(MainActivity.INSTALL_FAILED)
+            val mIntent = Intent(HomeFragment.INSTALL_FAILED)
             mIntent.putExtra("errorMsg", getString(R.string.installation_signature))
-            broadcast.sendBroadcast(mIntent)
-            createBasicNotif(getString(R.string.installation_signature), notifId, this)
+            localBroadcastManager.sendBroadcast(mIntent)
         }
     }
 

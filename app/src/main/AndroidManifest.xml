@@ -37,7 +37,7 @@
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MaterialComponents"/>
+            android:theme="@style/DarkTheme.Blue"/>
 
         <meta-data
             android:name="preloaded_fonts"

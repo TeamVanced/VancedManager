@@ -21,6 +21,7 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
+import com.vanced.manager.utils.AppUtils.isInstallationRunning
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
@@ -36,13 +37,6 @@ class MainActivity : AppCompatActivity() {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                INSTALL_COMPLETED -> {
-                    if (intent.getStringExtra("package") == "split")
-                        DialogContainer.launchVanced(this@MainActivity)
-                    else
-                        DialogContainer.regularPackageInstalled(getString(R.string.successfully_installed, "MicroG"), this@MainActivity)
-                }
-                INSTALL_FAILED -> DialogContainer.installAlertBuilder(intent.getStringExtra("errorMsg") as String, this@MainActivity)
             }
         }
     }
@@ -94,25 +88,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val navHost = findNavController(R.id.bottom_nav_host)
-        when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressed()
-                return true
+        if (!isInstallationRunning(this)) {
+            when (item.itemId) {
+                android.R.id.home -> {
+                    onBackPressed()
+                    return true
+                }
+                R.id.toolbar_about -> {
+                    navHost.navigate(R.id.toAboutFragment)
+                    return true
+                }
+                R.id.toolbar_settings -> {
+                    navHost.navigate(R.id.action_settingsFragment)
+                    return true
+                }
+                R.id.dev_settings -> {
+                    navHost.navigate(R.id.toDevSettingsFragment)
+                    return true
+                }
+                else -> super.onOptionsItemSelected(item)
             }
-            R.id.toolbar_about -> {
-                navHost.navigate(R.id.toAboutFragment)
-                return true
-            }
-            R.id.toolbar_settings -> {
-                navHost.navigate(R.id.action_settingsFragment)
-                return true
-            }
-            R.id.dev_settings -> {
-                navHost.navigate(R.id.toDevSettingsFragment)
-                return true
-            }
-            else -> super.onOptionsItemSelected(item)
         }
         return false
     }
@@ -127,8 +122,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
-        intentFilter.addAction(INSTALL_COMPLETED)
-        intentFilter.addAction(INSTALL_FAILED)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
 
     }
@@ -178,7 +171,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val INSTALL_COMPLETED = "install_completed"
-        const val INSTALL_FAILED = "install_failed"
     }
 }

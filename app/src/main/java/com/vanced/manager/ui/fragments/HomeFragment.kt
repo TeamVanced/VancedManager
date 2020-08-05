@@ -21,7 +21,10 @@ import com.vanced.manager.core.downloader.MicrogDownloadService
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
+import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
 import com.vanced.manager.ui.viewmodels.HomeViewModel
+import com.vanced.manager.utils.AppUtils.isInstallationRunning
 import com.vanced.manager.utils.PackageHelper
 
 class HomeFragment : Fragment(), View.OnClickListener {
@@ -45,7 +48,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
 
-        val variantPref = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        val variantPref = getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot")
 
         with(binding) {
             rootSwitch.setOnClickListener(this@HomeFragment)
@@ -92,8 +95,8 @@ class HomeFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
+        val prefs = requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+        val variant = getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot")
         val vancedPkgName =
             if (variant == "root") {
                 "com.google.android.youtube"
@@ -103,46 +106,44 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         when (v?.id) {
             R.id.vanced_installbtn -> {
-                if (viewModel.microgInstalled.get()!!) {
-                    if (prefs?.getBoolean("valuesModified", false)!!) {
-                        activity?.startService(
-                            Intent(
-                                activity,
-                                VancedDownloadService::class.java
+                if (!isInstallationRunning(requireActivity())) {
+                    if (viewModel.microgInstalled.get()!!) {
+                        if (prefs?.getBoolean("valuesModified", false)!!) {
+                            requireActivity().startService(
+                                Intent(
+                                    requireActivity(),
+                                    VancedDownloadService::class.java
+                                )
                             )
-                        )
-                    } else {
-                        view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
-                    }
-                } else
-                    Snackbar.make(binding.homeRefresh, R.string.no_microg, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.install) {
-                            activity?.startService(Intent(activity, MicrogDownloadService::class.java))
-                        }.show()
+                        } else {
+                            view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
+                        }
+                    } else
+                        Snackbar.make(binding.homeRefresh, R.string.no_microg, Snackbar.LENGTH_LONG)
+                            .setAction(R.string.install) {
+                                requireActivity().startService(
+                                    Intent(
+                                        requireActivity(),
+                                        MicrogDownloadService::class.java
+                                    )
+                                )
+                            }.show()
+                }
 
             }
             R.id.microg_installbtn -> {
-                activity?.startService(Intent(activity, MicrogDownloadService::class.java))
+                if (!isInstallationRunning(requireActivity()))
+                    requireActivity().startService(Intent(requireActivity(), MicrogDownloadService::class.java))
             }
-            R.id.microg_uninstallbtn -> activity?.let {
-                PackageHelper.uninstallApk(
-                    "com.mgoogle.android.gms",
-                    it
-                )
-            }
-            R.id.vanced_uninstallbtn -> activity?.let {
-                PackageHelper.uninstallApk(
-                    vancedPkgName,
-                    it
-                )
-            }
+            R.id.microg_uninstallbtn -> PackageHelper.uninstallApk("com.mgoogle.android.gms", requireActivity())
+            R.id.vanced_uninstallbtn -> PackageHelper.uninstallApk(vancedPkgName, requireActivity())
             R.id.nonroot_switch -> writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
             R.id.root_switch ->
                 if (Shell.rootAccess()) {
                     writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
                 } else {
                     writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
-                    Toast.makeText(activity, activity?.getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireActivity(), activity?.getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
                 }
         }
     }
@@ -189,8 +190,42 @@ class HomeFragment : Fragment(), View.OnClickListener {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                MICROG_DOWNLOADED -> binding.includeMicrogLayout.microgInstalling.visibility = View.VISIBLE
-                VANCED_DOWNLOADED -> binding.includeVancedLayout.vancedInstalling.visibility = View.VISIBLE
+                VANCED_DOWNLOADING -> {
+                    with(binding.includeVancedLayout) {
+                        vancedDownloading.visibility = View.VISIBLE
+                        vancedDownloading.progress = intent.getIntExtra("progress", 0)
+                        vancedDownloadingTxt.visibility = View.VISIBLE
+                        vancedDownloadingTxt.text = requireActivity().getString(R.string.downloading_file, intent.getStringExtra("file"))
+                    }
+                }
+                MICROG_DOWNLOADING -> {
+                    with(binding.includeMicrogLayout) {
+                        microgDownloading.visibility = View.VISIBLE
+                        microgDownloading.progress = intent.getIntExtra("progress", 0)
+                        microgDownloadingTxt.visibility = View.VISIBLE
+                        microgDownloadingTxt.text = requireActivity().getString(R.string.downloading_file, "microg.apk")
+                    }
+                }
+                MICROG_INSTALLING ->  {
+                    with (binding.includeMicrogLayout) {
+                        microgDownloading.visibility = View.GONE
+                        microgDownloadingTxt.visibility = View.GONE
+                        microgInstalling.visibility = View.VISIBLE
+                    }
+                }
+                VANCED_INSTALLING -> {
+                    with (binding.includeVancedLayout) {
+                        vancedDownloading.visibility = View.GONE
+                        vancedDownloadingTxt.visibility = View.GONE
+                        vancedInstalling.visibility = View.VISIBLE
+                    }
+                }
+                VANCED_INSTALLED -> {
+                    binding.includeVancedLayout.vancedInstalling.visibility = View.GONE
+                    launchVanced(requireActivity())
+                }
+                MICROG_INSTALLED -> binding.includeMicrogLayout.microgInstalling.visibility = View.GONE
+                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
                 REFRESH_HOME -> {
                     Log.d("VMRefresh", "Refreshing home page")
                     viewModel.fetchData()
@@ -201,8 +236,12 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
-        //intentFilter.addAction(VANCED_DOWNLOADED)
-        //intentFilter.addAction(MICROG_DOWNLOADED)
+        intentFilter.addAction(VANCED_DOWNLOADING)
+        intentFilter.addAction(MICROG_DOWNLOADING)
+        intentFilter.addAction(VANCED_INSTALLING)
+        intentFilter.addAction(MICROG_INSTALLING)
+        intentFilter.addAction(VANCED_INSTALLED)
+        intentFilter.addAction(MICROG_INSTALLED)
         intentFilter.addAction(REFRESH_HOME)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
     }
@@ -212,20 +251,14 @@ class HomeFragment : Fragment(), View.OnClickListener {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    /*
-    private fun disableVancedButton() {
-        binding.includeVancedLayout.vancedInstallbtn.apply {
-            icon = null
-            isEnabled = false
-            backgroundTintList = ColorStateList.valueOf(Color.DKGRAY)
-            setTextColor(ColorStateList.valueOf(Color.GRAY))
-        }
-    }
-     */
-
     companion object {
-        const val VANCED_DOWNLOADED = "vanced_downloaded"
-        const val MICROG_DOWNLOADED = "microg_downloaded"
+        const val VANCED_DOWNLOADING = "vanced_downloading"
+        const val MICROG_DOWNLOADING = "microg_downloading"
+        const val VANCED_INSTALLING = "vanced_installing"
+        const val MICROG_INSTALLING = "microg_installing"
+        const val VANCED_INSTALLED = "vanced_installed"
+        const val MICROG_INSTALLED = "microg_installed"
+        const val INSTALL_FAILED = "install_failed"
         const val REFRESH_HOME = "refresh_home"
     }
 }
