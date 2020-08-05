@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -76,12 +77,13 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0-rc01'
 
 // Other
-    implementation 'com.crowdin.platform:mobile-sdk:1.1.6'
-    implementation 'com.github.topjohnwu.libsu:core:3.0.1'
-    implementation 'com.mindorks.android:prdownloader:0.6.0'
     implementation 'com.beust:klaxon:5.3'
+    implementation 'com.crowdin.platform:mobile-sdk:1.1.6'
     implementation 'com.github.kittinunf.fuel:fuel:2.2.3'
-    implementation 'com.github.kittinunf.fuel:fuel-json:2.2.3'
     implementation 'com.github.kittinunf.fuel:fuel-coroutines:2.2.3'
+    implementation 'com.github.kittinunf.fuel:fuel-json:2.2.3'
+    implementation 'com.github.topjohnwu.libsu:core:3.0.1'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
 
 }
