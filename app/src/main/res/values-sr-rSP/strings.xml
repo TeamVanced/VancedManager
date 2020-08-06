@@ -30,7 +30,7 @@
     <string name="latest">Најновија:</string>
     <string name="successfully_installed">Успешно инсталирана %1$s</string>
     <string name="network_error">Повезивање на мрежу није могуће</string>
-    <string name="no_microg">Нема MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root приступ није омогућен</string>
     <string name="unavailable">Недоступно</string>
     <string name="update">Ажурирај</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Тамна Тема</string>
     <string name="theme_light">Светла Тема</string>
     <string name="update_url">Ажурирај URL канала</string>
-    <string name="push_notifications">Обавештења</string>
-    <string name="push_notifications_summary">Прими обавештења уколико постоји нова верзија</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Провери</string>
     <string name="update_center">Менаџер ажурирања</string>
     <string name="update_found">Ажурирање је пронађено!</string>
