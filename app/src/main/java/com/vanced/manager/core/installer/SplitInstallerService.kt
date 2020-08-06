@@ -27,7 +27,10 @@ class SplitInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                with(localBroadcastManager) {
+                    sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                    sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
+                }
             }
             else -> sendFailure(this, intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
 

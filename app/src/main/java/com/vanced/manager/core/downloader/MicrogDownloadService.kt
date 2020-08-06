@@ -31,11 +31,10 @@ class MicrogDownloadService: Service() {
     }
 
     private fun downloadMicrog() {
-        val context = this
         runBlocking {
             launch {
                 val url = getObjectFromJson(
-                    "${PreferenceManager.getDefaultSharedPreferences(context)
+                    "${PreferenceManager.getDefaultSharedPreferences(this@MicrogDownloadService)
                         .getString("install_url", baseUrl)}/microg.json", "url"
                 )
 

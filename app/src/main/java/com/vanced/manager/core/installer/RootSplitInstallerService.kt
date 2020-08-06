@@ -10,11 +10,10 @@ import androidx.annotation.Nullable
 import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
-import com.vanced.manager.R
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.FileInfo
 import java.io.File
-import java.nio.charset.Charset
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
@@ -49,7 +48,7 @@ class RootSplitInstallerService: Service() {
             sessionIdMatcher.find()
             sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
         }
-        for (apkFile in apkFiles) {
+        apkFiles.forEach { apkFile ->
             Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
             val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
             val process: Process = Runtime.getRuntime().exec(command)
@@ -65,20 +64,21 @@ class RootSplitInstallerService: Service() {
                 throw RuntimeException(e)
             }
             process.waitFor()
-            val inputStr = process.inputStream.readBytes().toString(Charset.defaultCharset())
-            val errStr = process.errorStream.readBytes().toString(Charset.defaultCharset())
-            val isSucceeded = process.exitValue() == 0
-            Log.d("AppLog", "isSucceeded?$isSucceeded inputStr:$inputStr errStr:$errStr")
         }
         Log.d("AppLog", "committing...")
         val installResult = Shell.su("pm install-commit $sessionId").exec()
         if (installResult.isSuccess) {
-            localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-            localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED).putExtra("pkg", "vanced"))
+            with(localBroadcastManager) {
+                sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
+            }
         } else {
+            sendFailure(this, installResult.code)
+            /*
             val mIntent = Intent(HomeFragment.INSTALL_FAILED)
             mIntent.putExtra("errorMsg", getString(R.string.installation_signature))
             localBroadcastManager.sendBroadcast(mIntent)
+             */
         }
     }
 

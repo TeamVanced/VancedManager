@@ -1,6 +1,7 @@
 package com.vanced.manager.utils
 
 import android.app.ActivityManager
+import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
@@ -13,18 +14,22 @@ import com.vanced.manager.ui.fragments.HomeFragment
 
 object AppUtils {
 
-    @Suppress("DEPRECATION")
     fun isInstallationRunning(context: Context): Boolean {
         val serviceClasses = listOf(VancedDownloadService::class.java, MicrogDownloadService::class.java, AppInstaller::class.java, AppInstallerService::class.java, SplitInstaller::class.java, SplitInstallerService::class.java, RootSplitInstallerService::class.java)
+        serviceClasses.forEach { service ->
+            return isServiceRunning(service, context)
+        }
+        return false
+    }
+
+    @Suppress("DEPRECATION")
+    private fun isServiceRunning(cls: Class<out Service>, context: Context): Boolean {
         val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val runningServices = activityManager.getRunningServices(Int.MAX_VALUE)
-
-        serviceClasses.forEach { service ->
-            runningServices.forEach { info ->
-                if (info.service.className == service.name) {
-                    Log.d("VMService", "${service.name} is already running")
-                    return true
-                }
+        runningServices.forEach { info ->
+            if (info.service.className == cls.name) {
+                Log.d("VMService", "${cls.name} is running")
+                return true
             }
         }
         return false
