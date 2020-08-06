@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -11,14 +10,13 @@ import com.vanced.manager.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
-    @SuppressLint("StringFormatInvalid")
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
 
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
 
-            findPreference<Preference>("update_check")?.setOnPreferenceClickListener {
+        findPreference<Preference>("update_check")?.setOnPreferenceClickListener {
             UpdateCheckFragment().show(childFragmentManager.beginTransaction(), "Update Center")
             true
         }
@@ -55,6 +53,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     "Dark" -> getString(R.string.theme_dark)
                     else -> getString(R.string.theme_follow)
                 }
+
             setOnPreferenceChangeListener { _, newValue ->
                 if (themePref != newValue) {
                     requireActivity().recreate()
@@ -73,6 +72,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     "Yellow" -> getString(R.string.accent_yellow)
                     else -> getString(R.string.accent_purple)
                 }
+
             setOnPreferenceChangeListener { _, newValue ->
                 if (accentPref != newValue) {
                     requireActivity().recreate()
@@ -82,14 +82,12 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
         }
 
-        val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
-        chosenPrefs?.setOnPreferenceClickListener {
+        findPreference<Preference>("vanced_chosen_modes")?.setOnPreferenceClickListener {
             ChosenPreferenceDialogFragment().show(childFragmentManager.beginTransaction(), "Chosen Preferences")
             true
         }
 
-        val installUrl: Preference? = findPreference("install_url")
-        installUrl?.setOnPreferenceClickListener {
+        findPreference<Preference>("install_url")?.setOnPreferenceClickListener {
             URLChangeFragment().show(childFragmentManager.beginTransaction(), "Install URL")
             true
         }
