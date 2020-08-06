@@ -30,7 +30,7 @@
     <string name="latest">En yeni:</string>
     <string name="successfully_installed">%1$s Başarıyla kuruldu</string>
     <string name="network_error">Ağ bağlantısı yok</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">microG yüklü değil</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Kullanım dışı</string>
     <string name="update">Güncelle</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
     <string name="update_url">Kanal URL güncelle </string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s Anlık Bildirimleri</string>
+    <string name="push_notifications_summary">%1$s için bir güncelleme yayınlandığında anlık bildirimler alın</string>
     <string name="re_check">Yeniden kontrol et</string>
     <string name="update_center">Güncelleme Merkezi</string>
     <string name="update_found">Güncelleme bulundu!</string>
