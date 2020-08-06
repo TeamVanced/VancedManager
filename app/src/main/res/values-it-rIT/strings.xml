@@ -30,7 +30,7 @@
     <string name="latest">Ultima versione:</string>
     <string name="successfully_installed">%1$s installato con successo</string>
     <string name="network_error">Connessione alla rete non disponibile</string>
-    <string name="no_microg">Senza MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Non è stato fornito l\'accesso di root</string>
     <string name="unavailable">Non disponibile</string>
     <string name="update">Aggiorna</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Tema scuro</string>
     <string name="theme_light">Tema chiaro</string>
     <string name="update_url">Aggiorna l\'URL del canale</string>
-    <string name="push_notifications">Notifiche push</string>
-    <string name="push_notifications_summary">Riceverai le notifiche push non appena sarà disponibile un aggiornamento</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Ricontrolla</string>
     <string name="update_center">Centro aggiornamenti</string>
     <string name="update_found">Aggiornamento trovato!</string>
