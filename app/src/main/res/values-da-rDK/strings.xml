@@ -30,7 +30,7 @@
     <string name="latest">Seneste:</string>
     <string name="successfully_installed">Installerede %1$s succesfuldt</string>
     <string name="network_error">Netværksforbindelse utilgængelig</string>
-    <string name="no_microg">Ingen MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root adgang ikke tildelt</string>
     <string name="unavailable">Utilgængelig</string>
     <string name="update">Opdater</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Mørkt tema</string>
     <string name="theme_light">Lyst tema</string>
     <string name="update_url">Opdateringskanal URL</string>
-    <string name="push_notifications">Push notifikationer</string>
-    <string name="push_notifications_summary">Modtag en push meddelelse, når der kommer en ny opdatering</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Check igen</string>
     <string name="update_center">Manager opdaterings center</string>
     <string name="update_found">Opdatering fundet!</string>
