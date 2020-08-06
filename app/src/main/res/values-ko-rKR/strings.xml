@@ -30,7 +30,7 @@
     <string name="latest">최신:</string>
     <string name="successfully_installed">%1$s 설치가 완료되었습니다</string>
     <string name="network_error">네크워크 연결을 사용할 수 없음</string>
-    <string name="no_microg">MicroG를 먼저 설치해주세요!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">루트 권한이 부여되지 않았습니다</string>
     <string name="unavailable">사용 불가</string>
     <string name="update">업데이트</string>
@@ -51,7 +51,7 @@
     <string name="chosen_install_values">선택된 설치값</string>
     <string name="chosen_lang">언어: %1$s</string>
     <string name="chosen_theme">테마: %1$s</string>
-    <string name="link_title">커스텀 Chrome 탭으로 열기</string>
+    <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
     <string name="theme">테마</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">다크 테마</string>
     <string name="theme_light">라이트 테마</string>
     <string name="update_url">업데이트 채널 URL</string>
-    <string name="push_notifications">푸시 알림</string>
-    <string name="push_notifications_summary">업데이트가 출시되면 알림 받기</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">재확인</string>
     <string name="update_center">업데이트 센터</string>
     <string name="update_found">업데이트를 찾았습니다!</string>
