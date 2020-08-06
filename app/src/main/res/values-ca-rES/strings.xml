@@ -30,7 +30,7 @@
     <string name="latest">Darrera:</string>
     <string name="successfully_installed">Instal·lat amb èxit %1$s</string>
     <string name="network_error">No hi ha connexió a xarxa disponible</string>
-    <string name="no_microg">No hi ha MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">L\'accés arrel no s\'ha concedit</string>
     <string name="unavailable">No disponible</string>
     <string name="update">Actualitza</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Tema fosc</string>
     <string name="theme_light">Tema clar</string>
     <string name="update_url">Actualitza la URL del canal</string>
-    <string name="push_notifications">Notificacions emergents</string>
-    <string name="push_notifications_summary">Rebre notificacions emergents quan es llanci una actualització</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Comprovar de nou</string>
     <string name="update_center">Gestor d\'actualitzacions</string>
     <string name="update_found">Actualització disponible!</string>
