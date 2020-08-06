@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -10,6 +11,7 @@ import com.vanced.manager.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
+    @SuppressLint("StringFormatInvalid")
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
 
