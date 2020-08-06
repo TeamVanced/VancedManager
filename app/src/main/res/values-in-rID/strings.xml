@@ -30,7 +30,7 @@
     <string name="latest">Terbaru:</string>
     <string name="successfully_installed">Berhasil dipasang %1$s</string>
     <string name="network_error">Koneksi internet tidak tersedia</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">microG tidak terpasang</string>
     <string name="root_not_granted">Akses Root tidak diberikan</string>
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
     <string name="update_url">Perbarui URL Channel</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s Notifikasi Push</string>
+    <string name="push_notifications_summary">Terima notifikasi push saat pembaruan untuk %1$s dirilis</string>
     <string name="re_check">Cek ulang</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
     <string name="update_found">Pembaruan ditemukan!</string>
