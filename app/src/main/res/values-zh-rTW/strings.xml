@@ -30,7 +30,7 @@
     <string name="latest">最新：</string>
     <string name="successfully_installed">成功安裝 %1$s</string>
     <string name="network_error">無法存取網絡</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">未安裝 MicroG</string>
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="unavailable">無法使用</string>
     <string name="update">更新</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">深色主題</string>
     <string name="theme_light">淺色主題</string>
     <string name="update_url">更新路徑網址</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s 推送通知</string>
+    <string name="push_notifications_summary">有可用更新時接收 %1$s 推送通知</string>
     <string name="re_check">重新檢查</string>
     <string name="update_center">Manager 更新中心</string>
     <string name="update_found">有可用的更新！</string>
