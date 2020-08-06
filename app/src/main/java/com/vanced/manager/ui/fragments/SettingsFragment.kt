@@ -41,7 +41,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     true -> FirebaseMessaging.getInstance().subscribeToTopic("MicroG-Update")
                     false -> FirebaseMessaging.getInstance().unsubscribeFromTopic("MicroG-Update")
                 }
-                Toast.makeText(requireActivity(), "Set value to $newValue", Toast.LENGTH_SHORT).show()
                 true
             }
         }
