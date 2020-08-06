@@ -30,7 +30,7 @@
     <string name="latest">Laatste:</string>
     <string name="successfully_installed">%1$s is succesvol geinstalleerd</string>
     <string name="network_error">Netwerkverbinding niet beschikbaar</string>
-    <string name="no_microg">Geen MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root-toegang niet verleend</string>
     <string name="unavailable">Niet beschikbaar</string>
     <string name="update">Bijwerken</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht Thema</string>
     <string name="update_url">Kanaal URL bijwerken</string>
-    <string name="push_notifications">Push meldingen</string>
-    <string name="push_notifications_summary">Ontvang push-meldingen wanneer een update is uitgebracht</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Opnieuw controleren</string>
     <string name="update_center">Manager updatecenter</string>
     <string name="update_found">Updates gevonden</string>
