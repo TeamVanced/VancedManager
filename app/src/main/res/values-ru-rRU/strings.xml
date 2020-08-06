@@ -30,7 +30,7 @@
     <string name="latest">Последняя:</string>
     <string name="successfully_installed">Успешно установлено %1$s</string>
     <string name="network_error">Нет подключения к интернету</string>
-    <string name="no_microg">Нет MicroG</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Рут-доступ не предоставлен</string>
     <string name="unavailable">Недоступно</string>
     <string name="update">Обновить</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Тёмная тема</string>
     <string name="theme_light">Светлая тема</string>
     <string name="update_url">Ссылка на канал обновлений</string>
-    <string name="push_notifications">Push-уведомления</string>
-    <string name="push_notifications_summary">Получать push-уведомление при выходе обновлений</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Перепроверить</string>
     <string name="update_center">Центр обновлений</string>
     <string name="update_found">Найдено обновление!</string>
