@@ -1,15 +1,11 @@
 package com.vanced.manager.ui
 
-import android.content.BroadcastReceiver
 import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -17,6 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
+import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
@@ -32,14 +29,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val navHost by lazy { findNavController(R.id.bottom_nav_host) }
-    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
-
-    private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context, intent: Intent) {
-            when (intent.action) {
-            }
-        }
-    }
 
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
@@ -69,46 +58,45 @@ class MainActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
 
-        Crowdin.registerDataLoadingObserver(loadingObserver)
-
         initDialogs()
 
     }
 
     override fun onPause() {
         super.onPause()
-        localBroadcastManager.unregisterReceiver(broadcastReceiver)
         Crowdin.unregisterDataLoadingObserver(loadingObserver)
     }
 
     override fun onResume() {
         setFinalTheme(this)
         super.onResume()
-        registerReceivers()
+        Crowdin.registerDataLoadingObserver(loadingObserver)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (!isInstallationRunning(this)) {
-            when (item.itemId) {
-                android.R.id.home -> {
-                    onBackPressed()
-                    return true
-                }
-                R.id.toolbar_about -> {
-                    navHost.navigate(R.id.toAboutFragment)
-                    return true
-                }
-                R.id.toolbar_settings -> {
-                    navHost.navigate(R.id.action_settingsFragment)
-                    return true
-                }
-                R.id.dev_settings -> {
-                    navHost.navigate(R.id.toDevSettingsFragment)
-                    return true
-                }
-                else -> super.onOptionsItemSelected(item)
+        if (isInstallationRunning(this))
+            return false
+
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
             }
+            R.id.toolbar_about -> {
+                navHost.navigate(R.id.toAboutFragment)
+                return true
+            }
+            R.id.toolbar_settings -> {
+                navHost.navigate(R.id.action_settingsFragment)
+                return true
+            }
+            R.id.dev_settings -> {
+                navHost.navigate(R.id.toDevSettingsFragment)
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
+
         return false
     }
 
@@ -120,25 +108,19 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(Crowdin.wrapContext(newBase))
     }
 
-    private fun registerReceivers() {
-        val intentFilter = IntentFilter()
-        localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
-
-    }
-
-    fun restartActivity() {
-        startActivity(Intent(this@MainActivity, MainActivity::class.java))
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        finish()
-    }
-
     private fun initDialogs() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
         val showRootDialog = prefs.getBoolean("show_root_dialog", true)
 
         when {
-            prefs.getBoolean("firstStart", true) -> DialogContainer.showSecurityDialog(this)
+            prefs.getBoolean("firstStart", true) -> {
+                DialogContainer.showSecurityDialog(this)
+                with(FirebaseMessaging.getInstance()) {
+                    subscribeToTopic("Vanced-Update")
+                    subscribeToTopic("MicroG-Update")
+                }
+            }
             !prefs.getBoolean("statement", true) -> DialogContainer.statementFalse(this)
             variant == "root" -> {
                 if (showRootDialog)
@@ -170,6 +152,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    companion object {
-    }
 }

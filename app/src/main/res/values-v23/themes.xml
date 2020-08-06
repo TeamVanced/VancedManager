@@ -6,7 +6,7 @@
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
         <item name="colorSecondary">#3E78AF</item>
-        <item name="colorSecondaryVariant">#803E78AF</item>
+        <item name="colorSecondaryVariant">?colorPrimary</item>
         <item name="colorSurface">#ffffff</item>
         <item name="colorSurfaceVariant">#F3F3F3</item>
         <item name="colorSurfaceSurfaceVariant">?colorSurface</item>

@@ -71,7 +71,7 @@ class VancedDownloadService: Service() {
                 .build()
                 .setOnProgressListener { progress ->
                     val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADING).putExtra("progress", mProgress).putExtra("file", getFileNameFromUrl(url)))
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {

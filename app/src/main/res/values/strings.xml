@@ -33,7 +33,7 @@
     <string name="latest">Latest:</string>
     <string name="successfully_installed">Successfully installed %1$s</string>
     <string name="network_error">Network connection unavailable</string>
-    <string name="no_microg">No MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root access not granted</string>
     <string name="unavailable">Unavailable</string>
     <string name="update">Update</string>
@@ -63,8 +63,8 @@
     <string name="theme_dark">Dark Theme</string>
     <string name="theme_light">Light Theme</string>
     <string name="update_url">Update Channel URL</string>
-    <string name="push_notifications">Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update is released</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Re-check</string>
     <string name="update_center">Manager Update Center</string>
     <string name="update_found">Update found!</string>

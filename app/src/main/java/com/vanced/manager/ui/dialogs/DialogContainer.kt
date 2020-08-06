@@ -17,13 +17,17 @@ object DialogContainer {
         MaterialAlertDialogBuilder(context)
             .setTitle(context.resources.getString(R.string.welcome))
             .setMessage(context.resources.getString(R.string.security_context))
-            .setCancelable(false)
             .setPositiveButton(context.resources.getString(R.string.close)) { dialog, _ ->
-                run {
-                    dialog.dismiss()
-                    if (MiuiHelper.isMiui()) {
-                        showMiuiDialog(context)
-                    }
+                dialog.dismiss()
+            }
+            .setOnDismissListener {
+                if (MiuiHelper.isMiui()) {
+                    showMiuiDialog(context)
+                }
+            }
+            .setOnCancelListener {
+                if (MiuiHelper.isMiui()) {
+                    showMiuiDialog(context)
                 }
             }
             .create()
@@ -57,6 +61,7 @@ object DialogContainer {
                 openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, activity)
             }
             .setOnDismissListener { PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply() }
+            .setOnCancelListener { PreferenceManager.getDefaultSharedPreferences(activity).edit().putBoolean("show_root_dialog", false).apply() }
             .create()
             .show()
     }
