@@ -30,7 +30,7 @@
     <string name="latest">Последняя:</string>
     <string name="successfully_installed">Успешно установлено %1$s</string>
     <string name="network_error">Нет подключения к интернету</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">microG не установлен</string>
     <string name="root_not_granted">Рут-доступ не предоставлен</string>
     <string name="unavailable">Недоступно</string>
     <string name="update">Обновить</string>
