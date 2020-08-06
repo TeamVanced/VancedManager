@@ -228,7 +228,13 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     launchVanced(requireActivity())
                 }
                 MICROG_INSTALLED -> binding.includeMicrogLayout.microgInstalling.visibility = View.GONE
-                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
+                INSTALL_FAILED -> {
+                    with(binding) {
+                        includeMicrogLayout.microgInstalling.visibility = View.GONE
+                        includeVancedLayout.vancedInstalling.visibility = View.GONE
+                    }
+                    installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
+                }
                 REFRESH_HOME -> {
                     Log.d("VMRefresh", "Refreshing home page")
                     viewModel.fetchData()
@@ -246,6 +252,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         intentFilter.addAction(VANCED_INSTALLED)
         intentFilter.addAction(MICROG_INSTALLED)
         intentFilter.addAction(REFRESH_HOME)
+        intentFilter.addAction(INSTALL_FAILED)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
     }
 

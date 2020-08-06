@@ -36,9 +36,9 @@ object AppUtils {
     }
 
     fun sendFailure(context: Context, status: Int) {
-        val mIntent = Intent(HomeFragment.INSTALL_FAILED)
-        mIntent.putExtra("errorMsg", getErrorMessage(status, context))
-        LocalBroadcastManager.getInstance(context).sendBroadcast(mIntent)
+        val intent = Intent(HomeFragment.INSTALL_FAILED)
+        intent.putExtra("errorMsg", getErrorMessage(status, context))
+        LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
     }
 
     private fun getErrorMessage(status: Int, context: Context): String {
