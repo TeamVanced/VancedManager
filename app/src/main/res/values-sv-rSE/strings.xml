@@ -30,7 +30,7 @@
     <string name="latest">Senaste:</string>
     <string name="successfully_installed">%1$s laddades ner</string>
     <string name="network_error">Inget nätverk</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">microG är inte installerat</string>
     <string name="root_not_granted">Root-åtkomst inte beviljat</string>
     <string name="unavailable">Ej tillgänglig</string>
     <string name="update">Uppdatera</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Mörkt tema</string>
     <string name="theme_light">Ljust tema</string>
     <string name="update_url">Uppdatera källa</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s push-meddelanden</string>
+    <string name="push_notifications_summary">Få push-meddelanden när en uppdatering för %1$s släpps</string>
     <string name="re_check">Kontrollera igen</string>
     <string name="update_center">Ansvarig uppdateringscenter</string>
     <string name="update_found">Uppdateringen hittades!</string>
