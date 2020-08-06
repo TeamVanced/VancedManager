@@ -30,7 +30,7 @@
     <string name="latest">Terbaru:</string>
     <string name="successfully_installed">Berhasil dipasang %1$s</string>
     <string name="network_error">Koneksi internet tidak tersedia</string>
-    <string name="no_microg">Tidak ada MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Akses Root tidak diberikan</string>
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
@@ -51,7 +51,7 @@
     <string name="chosen_install_values">Preferensi instalasi yang dipilih</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="link_title">Pakai Chrome Custom Tabs</string>
+    <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="link_external_browser">Tautan akan terbuka di Browser Eksternal</string>
     <string name="theme">Tema</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
     <string name="update_url">Perbarui URL Channel</string>
-    <string name="push_notifications">Notifikasi Push</string>
-    <string name="push_notifications_summary">Terima notifikasi push saat pembaruan dirilis</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Cek ulang</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
     <string name="update_found">Pembaruan ditemukan!</string>

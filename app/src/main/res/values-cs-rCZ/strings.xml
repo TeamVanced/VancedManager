@@ -15,7 +15,7 @@
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="install">Instalace</string>
     <string name="installing_app">Probíhá instalace %1$s</string>
-    <string name="installation_aborted">Operace se nezdařila, protože uživatel zrušil instalaci.</string>
+    <string name="installation_aborted">Operace se nezdařila, protože uživatel přerušil instalaci.</string>
     <string name="installation_blocked">Operace se nezdařila, protože uživatel zablokoval instalaci.</string>
     <string name="installation_conflict">Operace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací.</string>
     <string name="installation_failed">Operace se nezdařila z neznámého důvodu, prosím, připojte se k našemu Telegramu nebo Discordu pro podporu.</string>
@@ -30,7 +30,7 @@
     <string name="latest">Nejnovější:</string>
     <string name="successfully_installed">Úspěšně nainstalováno %1$s</string>
     <string name="network_error">Nelze se připojit k Internetu</string>
-    <string name="no_microg">Chybí MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root přístup nebyl udělen</string>
     <string name="unavailable">Není k dispozici</string>
     <string name="update">Aktualizovat</string>
@@ -46,7 +46,7 @@
     <string name="accent_red">Červená</string>
     <string name="accent_yellow">Žlutá</string>
     <string name="check_updates">Zkontrolovat aktualizace</string>
-    <string name="category_interface">Vzhled</string>
+    <string name="category_interface">Rozhraní</string>
     <string name="category_manager">Manager</string>
     <string name="chosen_install_values">Vybrané předvolby instalace</string>
     <string name="chosen_lang">Jazyk: %1$s</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Tmavý vzhled</string>
     <string name="theme_light">Světlý vzhled</string>
     <string name="update_url">URL aktualizačního kanálu</string>
-    <string name="push_notifications">Vyskakovací oznámení</string>
-    <string name="push_notifications_summary">Po vydání aktualizace obdržíte vyskakovací oznámení</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Obnovit</string>
     <string name="update_center">Centrum aktualizací</string>
     <string name="update_found">Nalezena aktualizace!</string>

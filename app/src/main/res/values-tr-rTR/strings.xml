@@ -30,7 +30,7 @@
     <string name="latest">En yeni:</string>
     <string name="successfully_installed">%1$s Başarıyla kuruldu</string>
     <string name="network_error">Ağ bağlantısı yok</string>
-    <string name="no_microg">MicroG Yok!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Kullanım dışı</string>
     <string name="update">Güncelle</string>
@@ -51,7 +51,7 @@
     <string name="chosen_install_values">Seçilen kurulum özellikleri </string>
     <string name="chosen_lang">Dil: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="link_title">Chrome Özel Sekmesini Kullan</string>
+    <string name="link_title">Chrome Özel Sekmelerini Kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="link_external_browser">Bağlantılar harici tarayıcıda açılacaktır</string>
     <string name="theme">Tema</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
     <string name="update_url">Kanal URL güncelle </string>
-    <string name="push_notifications">Push Bildirimleri</string>
-    <string name="push_notifications_summary">Yeni güncelleme yayımlandığında push bildirimi alın</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Yeniden kontrol et</string>
     <string name="update_center">Güncelleme Merkezi</string>
     <string name="update_found">Güncelleme bulundu!</string>

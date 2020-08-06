@@ -30,7 +30,7 @@
     <string name="latest">最新版:</string>
     <string name="successfully_installed">%1$s のインストールに成功しました</string>
     <string name="network_error">インターネット接続が利用できません</string>
-    <string name="no_microg">MicroGがありません！</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root アクセスは許可されていません</string>
     <string name="unavailable">利用不可</string>
     <string name="update">更新</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">ダークテーマ</string>
     <string name="theme_light">ライトテーマ</string>
     <string name="update_url">アップデート チャンネル URL</string>
-    <string name="push_notifications">プッシュ通知</string>
-    <string name="push_notifications_summary">アップデートがリリースされたときに通知を受け取る</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">再チェック</string>
     <string name="update_center">アップデート センター</string>
     <string name="update_found">アップデートがあります！</string>

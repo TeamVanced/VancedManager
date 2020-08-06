@@ -30,7 +30,7 @@
     <string name="latest">लेट्इस्ट</string>
     <string name="successfully_installed">सफलतापूर्वक इन्स्टॉल्ड %1$s</string>
     <string name="network_error">नेटवर्क कनेक्शन अनुपलब्ध है</string>
-    <string name="no_microg">कोई माइक्रोजी नहीं!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">रूट एक्सेस प्रदान नही किया गया</string>
     <string name="unavailable">अनुपलब्ध</string>
     <string name="update">अपडेट करें</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">डार्क थीम</string>
     <string name="theme_light">लाइट थीम</string>
     <string name="update_url">चैनल URL अपडेट करें</string>
-    <string name="push_notifications">सूचनाएं भेजना</string>
-    <string name="push_notifications_summary">अपडेट जारी होने पर पुश सूचनाएं प्राप्त करें</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">री-चेक</string>
     <string name="update_center">अपडेट केंद्र</string>
     <string name="update_found">अपडेट मिला!</string>
