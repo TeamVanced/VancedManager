@@ -8,7 +8,7 @@
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
         <item name="colorSecondary">#3E78AF</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#803E78AF</item>
         <item name="colorSurface">#ffffff</item>
         <item name="colorSurfaceVariant">#F3F3F3</item>
         <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
@@ -40,7 +40,7 @@
         <item name="colorPrimary">#D71414</item>
         <item name="colorPrimaryVariant">#B92C2C</item>
         <item name="colorSecondary">#AF3E3E</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#80AF3E3E</item>
 
     </style>
 
@@ -49,7 +49,7 @@
         <item name="colorPrimary">#3ED714</item>
         <item name="colorPrimaryVariant">#2CB943</item>
         <item name="colorSecondary">#3EAF51</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#803EAF44</item>
 
     </style>
 
@@ -58,7 +58,7 @@
         <item name="colorPrimary">#ffd500</item>
         <item name="colorPrimaryVariant">#A6FFD500</item>
         <item name="colorSecondary">#D3B418</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#B7D3B418</item>
 
     </style>
 
@@ -67,7 +67,7 @@
         <item name="colorPrimary">#6D49B7</item>
         <item name="colorPrimaryVariant">#563C8D</item>
         <item name="colorSecondary">#734BC7</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#9A734BC7</item>
 
     </style>
 
@@ -78,7 +78,7 @@
         <item name="colorPrimary">#1490D7</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
         <item name="colorSecondary">#3E78AF</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#803E78AF</item>
         <item name="colorSurface">#000000</item>
         <item name="colorSurfaceVariant">#111111</item>
         <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
@@ -111,7 +111,7 @@
         <item name="colorPrimary">#D71414</item>
         <item name="colorPrimaryVariant">#B92C2C</item>
         <item name="colorSecondary">#AF3E3E</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#80AF3E3E</item>
 
     </style>
 
@@ -120,7 +120,7 @@
         <item name="colorPrimary">#3ED714</item>
         <item name="colorPrimaryVariant">#2CB943</item>
         <item name="colorSecondary">#3EAF51</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#803EAF44</item>
 
     </style>
 
@@ -129,7 +129,7 @@
         <item name="colorPrimary">#ffd500</item>
         <item name="colorPrimaryVariant">#A6FFD500</item>
         <item name="colorSecondary">#D3B418</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#B7D3B418</item>
 
     </style>
 
@@ -138,7 +138,7 @@
         <item name="colorPrimary">#6D49B7</item>
         <item name="colorPrimaryVariant">#563C8D</item>
         <item name="colorSecondary">#734BC7</item>
-        <item name="colorSecondaryVariant">?colorPrimary</item>
+        <item name="colorSecondaryVariant">#9A734BC7</item>
 
     </style>
 
