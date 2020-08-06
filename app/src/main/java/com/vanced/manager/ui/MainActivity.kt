@@ -74,8 +74,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (isInstallationRunning(this))
+        if (isInstallationRunning(this)) {
+            Log.d("VMService", "Installation is already running")
             return false
+        }
 
         when (item.itemId) {
             android.R.id.home -> {

@@ -8,6 +8,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.VancedDownloadService
+import com.vanced.manager.core.installer.SplitInstaller
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
 
@@ -48,6 +50,22 @@ object DialogContainer {
             .setCancelable(false)
             .create()
             .show()
+    }
+
+    //TODO
+    fun installOrDownload(context: Context) {
+        MaterialAlertDialogBuilder(context).apply {
+            setTitle("")
+            setMessage("")
+            setNegativeButton("") { dialog, _ ->
+                context.startService(Intent(context, VancedDownloadService::class.java))
+                dialog.dismiss()
+            }
+            setPositiveButton(context.getString(R.string.button_reinstall)) { dialog, _ ->
+                context.startService(Intent(context, SplitInstaller::class.java))
+                dialog.dismiss()
+            }
+        }
     }
 
     fun showRootDialog(activity: Activity) {
