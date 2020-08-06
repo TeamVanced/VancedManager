@@ -30,7 +30,7 @@
     <string name="latest">Πιο πρόσφατο:</string>
     <string name="successfully_installed">Εγκαταστάθηκε επιτυχώς %1$s</string>
     <string name="network_error">Δεν υπάρχει σύνδεση στο διαδίκτυο</string>
-    <string name="no_microg">Δεν υπάρχουν MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Δεν δόθηκαν Root άδειες</string>
     <string name="unavailable">Μη διαθέσιμο</string>
     <string name="update">Ενημέρωση</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Σκούρο Χρώμα</string>
     <string name="theme_light">Ανοιχτό Χρώμα</string>
     <string name="update_url">Ενημερώστε το URL του καναλιού ενημέρωσης</string>
-    <string name="push_notifications">Ειδοποιήσεις</string>
-    <string name="push_notifications_summary">Λάβεται ειδοποίηση όταν βγαίνει νέα ενημέρωση</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Επανέλεγχος</string>
     <string name="update_center">Κέντρο ενημέρωσης</string>
     <string name="update_found">Διαθέσιμη ενημέρωση!</string>
