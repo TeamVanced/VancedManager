@@ -30,7 +30,7 @@
     <string name="latest">Uusin:</string>
     <string name="successfully_installed">%1$s asennus onnistui</string>
     <string name="network_error">Verkkoyhteys ei ole käytettävissä</string>
-    <string name="no_microg">Ei MicroG pakettia!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
     <string name="update">Päivitä</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Tumma teema</string>
     <string name="theme_light">Vaalea teema</string>
     <string name="update_url">Päivityskanavan URL-osoite</string>
-    <string name="push_notifications">Push-ilmoitukset</string>
-    <string name="push_notifications_summary">Vastaanota ilmoitus, kun päivitys on saatavilla</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Tarkista uudelleen</string>
     <string name="update_center">Managerin päivityskeskus</string>
     <string name="update_found">Päivitys löytyi!</string>

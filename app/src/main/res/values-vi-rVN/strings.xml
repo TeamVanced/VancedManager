@@ -30,7 +30,7 @@
     <string name="latest">Mới nhất:</string>
     <string name="successfully_installed">Đã cài đặt thành công %1$s</string>
     <string name="network_error">Không có kết nối mạng</string>
-    <string name="no_microg">Không có MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Truy cập root không được cấp</string>
     <string name="unavailable">Chưa cài đặt</string>
     <string name="update">Cập nhật</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Nền Tối</string>
     <string name="theme_light">Nền Sáng</string>
     <string name="update_url">URL Kênh Cập Nhật</string>
-    <string name="push_notifications">Thông Báo Đẩy</string>
-    <string name="push_notifications_summary">Nhận thông báo đẩy khi một bản cập nhật được phát hành</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Kiểm tra lại</string>
     <string name="update_center">Trung tâm cập nhật</string>
     <string name="update_found">Có bản cập nhật mới!</string>

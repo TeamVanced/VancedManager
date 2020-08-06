@@ -30,7 +30,7 @@
     <string name="latest">უახლესი:</string>
     <string name="successfully_installed">წარმატებით დაყენდა %1$s</string>
     <string name="network_error">კავშირი არ არის</string>
-    <string name="no_microg">დააყენეთ MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root წვდომა არ არის მინიჭებული</string>
     <string name="unavailable">ხელმიუწვდომელია</string>
     <string name="update">განახლება</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">მუქი თემა</string>
     <string name="theme_light">ღია თემა</string>
     <string name="update_url">განახლების არხის URL</string>
-    <string name="push_notifications">შეტყობინებები</string>
-    <string name="push_notifications_summary">მიიღეთ შეტყობინება როდესაც განახლება გამოვა</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">გადამოწმება</string>
     <string name="update_center">განახლების ცენტრი</string>
     <string name="update_found">ნაპოვნია განახლება!</string>
