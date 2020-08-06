@@ -30,7 +30,7 @@
     <string name="latest">החדש ביותר:</string>
     <string name="successfully_installed">הותקן בהצלחה %1$s</string>
     <string name="network_error">חיבור לרשת אינו זמין</string>
-    <string name="no_microg">MicroG אינו מותקן!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">הרשאות Root אינן הוענקו</string>
     <string name="unavailable">אינו זמין</string>
     <string name="update">עדכן</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">ערכת נושא כהה</string>
     <string name="theme_light">ערכת נושא בהירה</string>
     <string name="update_url">קישור ערוץ עדכון</string>
-    <string name="push_notifications">התראות</string>
-    <string name="push_notifications_summary">קבל הודעה ברגע שעדכון משתחרר</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">בדיקה מחדש</string>
     <string name="update_center">מרכז העדכונים</string>
     <string name="update_found">עדכון נמצא!</string>
