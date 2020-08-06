@@ -30,7 +30,7 @@
     <string name="latest">Ultima:</string>
     <string name="successfully_installed">Instalat cu succes %1$s</string>
     <string name="network_error">Conexiune la rețea indisponibilă</string>
-    <string name="no_microg">Fără MicroG!</string>
+    <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
     <string name="update">Actualizare</string>
@@ -59,8 +59,8 @@
     <string name="theme_dark">Temă întunecată</string>
     <string name="theme_light">Temă deschisă</string>
     <string name="update_url">URL canal de actualizare</string>
-    <string name="push_notifications">Notificări push</string>
-    <string name="push_notifications_summary">Primiți notificări push atunci când o actualizare este lansată</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="re_check">Re-verifică</string>
     <string name="update_center">Actualizator</string>
     <string name="update_found">Actualizare găsită!</string>
