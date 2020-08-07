@@ -45,12 +45,14 @@
     <string name="accent_purple">Љубичаста</string>
     <string name="accent_red">Црвена</string>
     <string name="accent_yellow">Жута</string>
-    <string name="check_updates">Провери ажурирања</string>
     <string name="category_interface">Интерфејс</string>
     <string name="category_manager">Менаџер</string>
+    <string name="check_updates">Провери ажурирања</string>
     <string name="chosen_install_values">Изабрана инсталациона подешавања</string>
-    <string name="chosen_lang">Језик: %1$s</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
     <string name="link_title">Користите Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="link_external_browser">Линкови ће бити отвотрни у екстерном претраживачу</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">Одбаци</string>
     <string name="guide">Водич</string>
     <string name="hold_on">Сачекај!</string>
-    <string name="magisk_vanced">Изгледа да користите Magisk верзију Vanced апликације која је обустављена, због тога није могуће ажурирати апликацију. Молимо вас да прво обришете magisk модул.</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI је детектован!</string>
     <string name="miui_one">Хеј! Изгледа да сте корисник MIUI. Са циљем да апликација ради без грешака, мораћете да онемогућите MIUI оптимизацију у опцијама за програмере. (Можете занемарити ово упозорење ако сте на 20.2.20 или неком од последњих верзија оперативног система на xiaomi.eu)</string>
     <string name="error">Грешка</string>
