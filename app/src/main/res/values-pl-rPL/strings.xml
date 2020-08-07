@@ -30,7 +30,7 @@
     <string name="latest">Najnowsza:</string>
     <string name="successfully_installed">Pomyślnie zainstalowano %1$s</string>
     <string name="network_error">Połączenie sieciowe niedostępne</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">microG nie jest zainstalowany</string>
     <string name="root_not_granted">Root nie został przyznany</string>
     <string name="unavailable">Niedostępne</string>
     <string name="update">Aktualizuj</string>
@@ -49,10 +49,10 @@
     <string name="category_manager">Menedżer</string>
     <string name="check_updates">Sprawdź aktualizacje</string>
     <string name="chosen_install_values">Wybrane preferencje instalacji</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">Język(i): %1$s</string>
     <string name="chosen_theme">Motyw: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">Wyczyść pobrane pliki</string>
+    <string name="cleared_files">Pomyślnie wyczyszczono pliki</string>
     <string name="link_title">Używaj niestandardowych kart Chrome</string>
     <string name="link_custom_tabs">Linki zostaną otwarte w niestandardowych kartach Chrome</string>
     <string name="link_external_browser">Linki zostaną otwarte w zewnętrznej przeglądarce</string>
@@ -61,8 +61,8 @@
     <string name="theme_dark">Ciemny Motyw</string>
     <string name="theme_light">Jasny Motyw</string>
     <string name="update_url">Zaktualizuj URL kanału</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s Powiadomień Push</string>
+    <string name="push_notifications_summary">Otrzymuj powiadomienia push po wydaniu aktualizacji dla %1$s</string>
     <string name="re_check">Sprawdź ponownie</string>
     <string name="update_center">Centrum aktualizacji</string>
     <string name="update_found">Znaleziono aktualizację!</string>
@@ -71,7 +71,7 @@
     <string name="button_dismiss">Oddalić</string>
     <string name="guide">Przewodnik</string>
     <string name="hold_on">Czekaj!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Wygląda na to, że korzystasz z Vanced w wersji Magisk/TWRP, która została wycofana i nie można jej zaktualizować za pomocą tej aplikacji. Najpierw usuń moduł magisk/używając deinstalatora TWRP Vanced.</string>
     <string name="miui_one_title">MIUI wykryte!</string>
     <string name="miui_one">Hej! Wygląda na to, że jesteś użytkownikiem MIUI. Aby prawidłowo korzystać z tej aplikacji, musisz wyłączyć optymalizacje MIUI w ustawieniach programisty. (Możesz bezpiecznie zignorować to ostrzeżenie, jeśli korzystasz z ROMu 20.2.20 lub nowszego opartego na xiaomi.eu)</string>
     <string name="error">Błąd</string>
