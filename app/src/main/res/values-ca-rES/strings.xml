@@ -45,12 +45,14 @@
     <string name="accent_purple">Porpra</string>
     <string name="accent_red">Vermell</string>
     <string name="accent_yellow">Groc</string>
-    <string name="check_updates">Busca actualitzacions</string>
     <string name="category_interface">Interfície</string>
     <string name="category_manager">Gestor</string>
+    <string name="check_updates">Busca actualitzacions</string>
     <string name="chosen_install_values">Preferències d\'instal·lació triades</string>
-    <string name="chosen_lang">Idioma: %1$s</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
     <string name="link_title">Utilitza pestanyes personalitzades del Chrome</string>
     <string name="link_custom_tabs">Els enllaços s\'obriran en pestanyes personalitzades del Chrome</string>
     <string name="link_external_browser">Els enllaços s\'obriran en un navegador extern</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">Descartar</string>
     <string name="guide">Guia</string>
     <string name="hold_on">Espereu!</string>
-    <string name="magisk_vanced">Sembla que esteu utilitzant la versió Magick de Vanced, que està obsoleta i no pot ser actualitzada mitjançant aquesta aplicació. Borreu-la primer eliminant el mòdul magisk.</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI detectat!</string>
     <string name="miui_one">Sembla que sou un usuari de MIUI. Per a utilitzar aquesta aplicació, heu de desactivar les optimitzacions de MIUI en la configuració de desenvolupadors. (Podeu ignorar aquest avís si teniu la ROM 20.2.20 o posteriors de xiaomi.eu.)</string>
     <string name="error">Error</string>
