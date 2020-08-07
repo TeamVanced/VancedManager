@@ -7,9 +7,7 @@ import android.os.IBinder
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.ui.fragments.HomeFragment
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 class AppUninstallerService: Service() {
 
@@ -27,22 +25,19 @@ class AppUninstallerService: Service() {
                 } catch (e: Exception) {
                 }
             }
+            //Delay broadcast until activity (and fragment) show up on screen
             PackageInstaller.STATUS_SUCCESS -> {
-                runBlocking {
-                    launch {
-                        delay(500)
-                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                        Log.d("VMpm", "Successfully uninstalled $pkgName")
-                    }
+                CoroutineScope(Dispatchers.IO).launch {
+                    delay(500)
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                    Log.d("VMpm", "Successfully uninstalled $pkgName")
                 }
             }
             PackageInstaller.STATUS_FAILURE -> {
-                runBlocking {
-                    launch {
-                        delay(500)
-                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                        Log.d("VMpm", "Failed to uninstall $pkgName")
-                    }
+                CoroutineScope(Dispatchers.IO).launch {
+                    delay(500)
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                    Log.d("VMpm", "Failed to uninstall $pkgName")
                 }
             }
         }
