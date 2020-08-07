@@ -49,10 +49,10 @@
     <string name="category_manager">Gerenciador</string>
     <string name="check_updates">Verificar se há atualizações</string>
     <string name="chosen_install_values">Valores de instalação escolhidos</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">Idioma(s): %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">Limpar arquivos baixados</string>
+    <string name="cleared_files">Arquivos limpos com sucesso</string>
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos nas abas personalizadas do Chrome</string>
     <string name="link_external_browser">Os links serão abertos em um navegador externo</string>
@@ -71,7 +71,7 @@
     <string name="button_dismiss">Dispensar</string>
     <string name="guide">Guia</string>
     <string name="hold_on">Aguente!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Parece que você está usando a versão Magisk/TWRP do Vanced, que foi descontinuada e não pode ser atualizada usando este aplicativo. Remova-o primeiro em Módulo no Magisk/usando o desinstalador do TWRP Vanced.</string>
     <string name="miui_one_title">MiUI detectado!</string>
     <string name="miui_one">Ei! Parece que você é um usuário da MiUI. Para usar corretamente o Vanced Manager, você irá precisar desativar as otimizações do MiUI nas configurações de desenvolvedor.
 No entanto, se você estiver na ROM 20.2.20 baseado em xiaomi.eu, poderá ignorar com segurança este aviso.</string>
