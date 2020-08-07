@@ -45,12 +45,14 @@
     <string name="accent_purple">Violet</string>
     <string name="accent_red">Rouge</string>
     <string name="accent_yellow">Jaune</string>
-    <string name="check_updates">Vérifier les mises à jour</string>
     <string name="category_interface">Interface</string>
     <string name="category_manager">Gestion</string>
+    <string name="check_updates">Vérifier les mises à jour</string>
     <string name="chosen_install_values">Préférences d\'installation sélectionnées</string>
-    <string name="chosen_lang">Langue : %1$s</string>
+    <string name="chosen_lang">Langue(s) : %1$s</string>
     <string name="chosen_theme">Thème: %1$s</string>
+    <string name="clear_files">Effacer les fichiers téléchargés</string>
+    <string name="cleared_files">Données effacées avec succès</string>
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="link_external_browser">Les liens s\'ouvriront dans un navigateur externe</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">Faire disparaître</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Attends une seconde!</string>
-    <string name="magisk_vanced">Il semble que tu utilise la version Magisk de Vanced, qui n\'est plus supportée et ne peut être mise à jour avec cette application. Veuillez la supprimer en supprimant le module Magisk.</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI détecté!</string>
     <string name="miui_one">Hey! Tu as l\'air d\'un utilisateur MIUI. Pour utiliser Vanced Manager correctement, te vas devoir désactiver les optimisations MIUI dans les options pour les développeurs. (Tu peux ignorer cet avertissement si tu est sur une ROM 20.2.20 et ultérieur basée sur xiaomi.eu)</string>
     <string name="error">Erreur</string>
