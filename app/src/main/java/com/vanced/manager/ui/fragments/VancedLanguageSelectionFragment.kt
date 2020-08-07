@@ -25,6 +25,7 @@ import java.util.*
 class VancedLanguageSelectionFragment : Fragment() {
 
     private lateinit var langs: MutableList<String>
+    private lateinit var langcor: Deferred<Unit>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +38,7 @@ class VancedLanguageSelectionFragment : Fragment() {
     @ExperimentalStdlibApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        CoroutineScope(Dispatchers.IO).launch {
+        langcor = CoroutineScope(Dispatchers.IO).async {
             langs = getArrayFromJson("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json", "langs")
         }
         loadBoxes(view.findViewById(R.id.lang_button_ll))
@@ -60,6 +61,7 @@ class VancedLanguageSelectionFragment : Fragment() {
 
     @ExperimentalStdlibApi
     private fun loadBoxes(ll: LinearLayout) = CoroutineScope(Dispatchers.Main).launch {
+        langcor.await()
         if (!langs.contains("null")) {
             langs.forEach { lang ->
                 val loc = Locale(lang)
