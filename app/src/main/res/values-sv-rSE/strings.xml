@@ -30,7 +30,7 @@
     <string name="latest">Senaste:</string>
     <string name="successfully_installed">%1$s laddades ner</string>
     <string name="network_error">Inget nätverk</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">microG är inte installerat</string>
     <string name="root_not_granted">Root-åtkomst inte beviljat</string>
     <string name="unavailable">Ej tillgänglig</string>
     <string name="update">Uppdatera</string>
@@ -45,12 +45,14 @@
     <string name="accent_purple">Lila</string>
     <string name="accent_red">Röd</string>
     <string name="accent_yellow">Gul</string>
-    <string name="check_updates">Sök uppdateringar</string>
     <string name="category_interface">Gränssnitt</string>
     <string name="category_manager">Hanterare</string>
+    <string name="check_updates">Sök uppdateringar</string>
     <string name="chosen_install_values">Valda installationsinställningar</string>
     <string name="chosen_lang">Språk: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
+    <string name="clear_files">Rensa nedladdade filer</string>
+    <string name="cleared_files">Rensade data</string>
     <string name="link_title">Använd Chrome-anpassade flikar</string>
     <string name="link_custom_tabs">Länkar öppnas i Chrome Custom Tabs</string>
     <string name="link_external_browser">Länkar öppnas i en extern webbläsare</string>
@@ -59,8 +61,8 @@
     <string name="theme_dark">Mörkt tema</string>
     <string name="theme_light">Ljust tema</string>
     <string name="update_url">Uppdatera källa</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s push-meddelanden</string>
+    <string name="push_notifications_summary">Få push-meddelanden när en uppdatering för %1$s släpps</string>
     <string name="re_check">Kontrollera igen</string>
     <string name="update_center">Ansvarig uppdateringscenter</string>
     <string name="update_found">Uppdateringen hittades!</string>

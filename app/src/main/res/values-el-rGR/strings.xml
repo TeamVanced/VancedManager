@@ -30,7 +30,7 @@
     <string name="latest">Πιο πρόσφατο:</string>
     <string name="successfully_installed">Εγκαταστάθηκε επιτυχώς %1$s</string>
     <string name="network_error">Δεν υπάρχει σύνδεση στο διαδίκτυο</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">το microG δεν είναι εγκατεστημένο</string>
     <string name="root_not_granted">Δεν δόθηκαν Root άδειες</string>
     <string name="unavailable">Μη διαθέσιμο</string>
     <string name="update">Ενημέρωση</string>
@@ -45,12 +45,14 @@
     <string name="accent_purple">Μωβ</string>
     <string name="accent_red">Κόκκινο</string>
     <string name="accent_yellow">Κίτρινο</string>
-    <string name="check_updates">Έλεγχος για ενημερώσεις</string>
     <string name="category_interface">Περιβάλλον</string>
     <string name="category_manager">Διαχειριστής</string>
+    <string name="check_updates">Έλεγχος για ενημερώσεις</string>
     <string name="chosen_install_values">Διαλέξτε επιλογές εγκατάστασης</string>
-    <string name="chosen_lang">Γλώσσα: %1$s</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">Χρώματα: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
     <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="link_external_browser">Οι σύνδεσμοι θα ανοίγουν σε εξωτερικό φυλλομετρητή</string>
@@ -59,8 +61,8 @@
     <string name="theme_dark">Σκούρο Χρώμα</string>
     <string name="theme_light">Ανοιχτό Χρώμα</string>
     <string name="update_url">Ενημερώστε το URL του καναλιού ενημέρωσης</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s Ειδοποιήσεις Push</string>
+    <string name="push_notifications_summary">Λάβεται ειδοποιήσεις push όταν υπάρχουν διαθέσιμες ενημερώσεις για το %1$s</string>
     <string name="re_check">Επανέλεγχος</string>
     <string name="update_center">Κέντρο ενημέρωσης</string>
     <string name="update_found">Διαθέσιμη ενημέρωση!</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">Αγνόηση</string>
     <string name="guide">Οδηγός</string>
     <string name="hold_on">Περιμένετε!</string>
-    <string name="magisk_vanced">Φαίνεται πως χρησιμοποιήτε την Magisk έκδοση του Vanced, η οποία δεν υποστηρίζεται πια και δεν μπορεί να ενημερωθεί μέσω αυτής της εφαρμογής. Παρακαλούμε διαγράψτε αυτή την έκδοση αφαιρώντας το Magisk Module.</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Ανιχνεύτηκε MIUI!</string>
     <string name="miui_one">Φαίνεται πως είστε χρήστης MIUI. Για να δουλέψει σωστά αυτή η εφαρμογή, θα πρέπει να απενεργοποιήσετε τα MIUI Optimisations στα Developer Settings. (Μπορείτε να αγνοήσετε αυτή την προειδοποίηση αν είστε στην έκδοση 20.2.20 ή νεότερη λειτουργικού βασισμένο στο Xiami.eu)</string>
     <string name="error">Πρόβλημα</string>
