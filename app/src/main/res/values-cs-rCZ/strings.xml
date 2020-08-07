@@ -45,12 +45,14 @@
     <string name="accent_purple">Fialová</string>
     <string name="accent_red">Červená</string>
     <string name="accent_yellow">Žlutá</string>
-    <string name="check_updates">Zkontrolovat aktualizace</string>
     <string name="category_interface">Rozhraní</string>
     <string name="category_manager">Manager</string>
+    <string name="check_updates">Zkontrolovat aktualizace</string>
     <string name="chosen_install_values">Vybrané předvolby instalace</string>
     <string name="chosen_lang">Jazyk: %1$s</string>
     <string name="chosen_theme">Vzhled: %1$s</string>
+    <string name="clear_files">Vymazat stažené soubory</string>
+    <string name="cleared_files">Vymazání souborů proběhlo úspěšně</string>
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
     <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
     <string name="link_external_browser">Odkazy se otevřou v externím prohlížeči</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">Zavřít</string>
     <string name="guide">Návod</string>
     <string name="hold_on">Počkejte!</string>
-    <string name="magisk_vanced">Vypadá to, že používáte verzi Vanced pro Magisk, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk.</string>
+    <string name="magisk_vanced">Vypadá to, že používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
     <string name="miui_one_title">Zjištěno MIUI!</string>
     <string name="miui_one">Ahoj! Vypadá to, že používáte MIUI. Abyste mohli správně používat tuto aplikaci, budete muset vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete bezpečně ignorovat, pokud máte ROM z 20.2.20 nebo pozdější založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
