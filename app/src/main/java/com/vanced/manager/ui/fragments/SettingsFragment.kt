@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.preference.*
 import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
+import java.io.File
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -93,9 +94,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         findPreference<Preference>("clear_files")?.setOnPreferenceClickListener {
             with(requireActivity()) {
-                getExternalFilesDir("apk")?.delete()
-                getExternalFilesDir("apks")?.delete()
-                Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT)
+                listOf("apk", "apks").forEach { dir ->
+                    File(getExternalFilesDir(dir)?.path as String).deleteRecursively()
+                }
+                Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT).show()
             }
             true
         }

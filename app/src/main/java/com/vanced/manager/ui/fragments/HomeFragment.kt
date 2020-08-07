@@ -58,10 +58,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
             includeVancedLayout.vancedUninstallbtn.setOnClickListener(this@HomeFragment)
             includeMicrogLayout.microgInstallbtn.setOnClickListener(this@HomeFragment)
             includeMicrogLayout.microgUninstallbtn.setOnClickListener(this@HomeFragment)
-        }
-
-        binding.includeChangelogsLayout.changelogButton.setOnClickListener {
-            cardExpandCollapse()
+            includeChangelogsLayout.changelogButton.setOnClickListener(this@HomeFragment)
         }
 
         binding.includeVancedLayout.vancedCard.setOnLongClickListener {
@@ -148,6 +145,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
                     Toast.makeText(requireActivity(), activity?.getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
                 }
+            R.id.changelog_button -> cardExpandCollapse()
         }
     }
 

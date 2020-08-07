@@ -20,6 +20,7 @@ import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import java.io.File
 
 class VancedDownloadService: Service() {
 
@@ -41,7 +42,7 @@ class VancedDownloadService: Service() {
         val context = this
         runBlocking {
             launch {
-                getExternalFilesDir("apks")?.delete()
+                File(getExternalFilesDir("apk")?.path as String).deleteRecursively()
                 val defPrefs = PreferenceManager.getDefaultSharedPreferences(context)
                 val installUrl = defPrefs.getString("install_url", baseUrl)
                 val vancedVer = getObjectFromJson("$installUrl/vanced.json", "version")

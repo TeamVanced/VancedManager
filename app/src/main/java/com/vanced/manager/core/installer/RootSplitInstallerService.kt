@@ -2,7 +2,6 @@ package com.vanced.manager.core.installer
 
 import android.app.Service
 import android.content.Intent
-import android.os.AsyncTask
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
@@ -13,6 +12,8 @@ import com.topjohnwu.superuser.Shell
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.FileInfo
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -25,11 +26,13 @@ class RootSplitInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Shell.getShell {
-            AsyncTask.execute {
-                val apkFilesPath = getExternalFilesDir("apks")?.path
-                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                if (fileInfoList != null) {
-                    installSplitApkFiles(fileInfoList)
+            runBlocking {
+                launch {
+                    val apkFilesPath = getExternalFilesDir("apks")?.path
+                    val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                    if (fileInfoList != null) {
+                        installSplitApkFiles(fileInfoList)
+                    }
                 }
             }
         }

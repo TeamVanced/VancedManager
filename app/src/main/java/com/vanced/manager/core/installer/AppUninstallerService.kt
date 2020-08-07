@@ -3,11 +3,13 @@ package com.vanced.manager.core.installer
 import android.app.Service
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import android.os.Handler
 import android.os.IBinder
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.ui.fragments.HomeFragment
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class AppUninstallerService: Service() {
 
@@ -26,16 +28,22 @@ class AppUninstallerService: Service() {
                 }
             }
             PackageInstaller.STATUS_SUCCESS -> {
-                Handler().postDelayed({
-                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                    Log.d("VMpm", "Successfully uninstalled $pkgName")
-                }, 500)
+                runBlocking {
+                    launch {
+                        delay(500)
+                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                        Log.d("VMpm", "Successfully uninstalled $pkgName")
+                    }
+                }
             }
             PackageInstaller.STATUS_FAILURE -> {
-                Handler().postDelayed({
-                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                    Log.d("VMpm", "Failed to uninstall $pkgName")
-                }, 500)
+                runBlocking {
+                    launch {
+                        delay(500)
+                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                        Log.d("VMpm", "Failed to uninstall $pkgName")
+                    }
+                }
             }
         }
         stopSelf()

@@ -5,12 +5,14 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import android.os.Handler
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.*
 import com.vanced.manager.core.installer.*
 import com.vanced.manager.ui.fragments.HomeFragment
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 object AppUtils {
 
@@ -34,11 +36,14 @@ object AppUtils {
 
     fun sendFailure(status: Int, context: Context) {
         //Delay error broadcast until activity (and fragment) get back to the screen
-        Handler().postDelayed({
-            val intent = Intent(HomeFragment.INSTALL_FAILED)
-            intent.putExtra("errorMsg", getErrorMessage(status, context))
-            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
-        }, 500)
+        runBlocking {
+            launch {
+                delay(500)
+                val intent = Intent(HomeFragment.INSTALL_FAILED)
+                intent.putExtra("errorMsg", getErrorMessage(status, context))
+                LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+            }
+        }
     }
 
     private fun getErrorMessage(status: Int, context: Context): String {
