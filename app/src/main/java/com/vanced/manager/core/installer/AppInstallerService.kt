@@ -33,7 +33,7 @@ class AppInstallerService: Service() {
                     sendBroadcast(Intent(HomeFragment.MICROG_INSTALLED))
                 }
             }
-            else -> sendFailure(this, intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
+            else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
         }
         stopSelf()
         return START_NOT_STICKY

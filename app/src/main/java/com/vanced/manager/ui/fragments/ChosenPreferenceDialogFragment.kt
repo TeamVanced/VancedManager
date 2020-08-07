@@ -40,7 +40,7 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
                 newPrefs.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
         }
-        binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")).capitalize(Locale.ROOT)
+        binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.capitalize(Locale.ROOT))
         binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, newPrefs.joinToString())
 
         binding.chosenPrefsClose.setOnClickListener { dismiss() }

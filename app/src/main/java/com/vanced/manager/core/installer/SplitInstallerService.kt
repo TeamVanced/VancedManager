@@ -32,7 +32,7 @@ class SplitInstallerService: Service() {
                     sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
                 }
             }
-            else -> sendFailure(this, intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999))
+            else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
 
         }
         stopSelf()

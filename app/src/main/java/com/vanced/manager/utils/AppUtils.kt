@@ -5,7 +5,7 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import android.util.Log
+import android.os.Handler
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.*
@@ -27,18 +27,18 @@ object AppUtils {
         val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val runningServices = activityManager.getRunningServices(Int.MAX_VALUE)
         runningServices.forEach { info ->
-            if (info.service.className == cls.name) {
-                Log.d("VMService", "${cls.name} is running")
-                return true
-            }
+            return info.service.className == cls.name
         }
         return false
     }
 
-    fun sendFailure(context: Context, status: Int) {
-        val intent = Intent(HomeFragment.INSTALL_FAILED)
-        intent.putExtra("errorMsg", getErrorMessage(status, context))
-        LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+    fun sendFailure(status: Int, context: Context) {
+        //Delay error broadcast until activity (and fragment) get back to the screen
+        Handler().postDelayed({
+            val intent = Intent(HomeFragment.INSTALL_FAILED)
+            intent.putExtra("errorMsg", getErrorMessage(status, context))
+            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+        }, 500)
     }
 
     private fun getErrorMessage(status: Int, context: Context): String {

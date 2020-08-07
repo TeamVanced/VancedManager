@@ -72,14 +72,8 @@ class RootSplitInstallerService: Service() {
                 sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                 sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
             }
-        } else {
-            sendFailure(this, installResult.code)
-            /*
-            val mIntent = Intent(HomeFragment.INSTALL_FAILED)
-            mIntent.putExtra("errorMsg", getString(R.string.installation_signature))
-            localBroadcastManager.sendBroadcast(mIntent)
-             */
-        }
+        } else
+            sendFailure(installResult.code, this)
     }
 
     private fun SimpleDateFormat.tryParse(str: String) = try {
