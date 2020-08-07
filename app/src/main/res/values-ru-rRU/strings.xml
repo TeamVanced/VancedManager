@@ -49,7 +49,7 @@
     <string name="category_manager">Менеджер</string>
     <string name="check_updates">Проверить обновления</string>
     <string name="chosen_install_values">Выбранные значения установки</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">Язык(и): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
     <string name="clear_files">Clear downloaded files</string>
     <string name="cleared_files">Successfully cleared files</string>
