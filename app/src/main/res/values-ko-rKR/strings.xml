@@ -45,12 +45,14 @@
     <string name="accent_purple">보라색</string>
     <string name="accent_red">빨간색</string>
     <string name="accent_yellow">노란색</string>
-    <string name="check_updates">업데이트 확인하기</string>
     <string name="category_interface">인터페이스</string>
     <string name="category_manager">관리자</string>
+    <string name="check_updates">업데이트 확인하기</string>
     <string name="chosen_install_values">선택된 설치값</string>
-    <string name="chosen_lang">언어: %1$s</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">테마: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">무시</string>
     <string name="guide">가이드</string>
     <string name="hold_on">잠시만요!</string>
-    <string name="magisk_vanced">현재 설치되어 있는 Vanced의 Magisk 버전은 더 이상 지원되지 않으며 이 앱으로 업데이트할 수 없습니다. 먼저 Magisk 모듈을 제거하여 주시기 바랍니다.</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI 사용자로 보입니다!</string>
     <string name="miui_one">잠시만요! MIUI 사용자로 보입니다. Vanced Manager를 완전하게 사용하려면 개발자 설정에서 MIUI 최적화를 비활성화 해주셔야 합니다
 하지만 xiaomi.eu 기반의 20.2.20 ROM (또는 이후)을 사용하신다면 이 경고를 무시하셔도 됩니다.</string>
