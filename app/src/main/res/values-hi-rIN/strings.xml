@@ -45,12 +45,14 @@
     <string name="accent_purple">बैंगनी</string>
     <string name="accent_red">लाल</string>
     <string name="accent_yellow">पीला</string>
-    <string name="check_updates">अपडेट के लिए जाँचे</string>
     <string name="category_interface">इंटरफेस</string>
     <string name="category_manager">मैनेजर</string>
+    <string name="check_updates">अपडेट के लिए जाँचे</string>
     <string name="chosen_install_values">इंस्टालेशन चुनाव</string>
-    <string name="chosen_lang">भाषा: %1$s</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">थीम: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
     <string name="link_title">क्रोम कस्टम टैब का उपयोग करें</string>
     <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
     <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">डिस्मिस</string>
     <string name="guide">गाइड</string>
     <string name="hold_on">रुको!</string>
-    <string name="magisk_vanced">ऐसा लगता है कि आप Vanced के Magisk संस्करण का उपयोग कर रहे हैं, जिसे बंद कर दिया गया है और इस ऐप का उपयोग करके अपडेट नहीं किया जा सकता है। कृपया इसे पहले मैजिक मॉड्यूल हटाकर हटा दें।</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">पता लगाया MiUI उपयोगकर्ता!</string>
     <string name="miui_one">अरे! लगता है कि आप MiUI उपयोगकर्ता हैं। Vanced Manager को ठीक से उपयोग करने के लिए, आपको डेवलपर सेटिंग में MiUI ऑप्टिमाइज़ेशन को अक्षम करना होगा
 हालाँकि, यदि आप 20.2.20 ROM पर हैं जो xiaomi.eu पर आधारित है, तो आप इस चेतावनी को सुरक्षित रूप से अनदेखा कर सकते हैं।</string>
