@@ -45,12 +45,14 @@
     <string name="accent_purple">Lila</string>
     <string name="accent_red">Röd</string>
     <string name="accent_yellow">Gul</string>
-    <string name="check_updates">Sök uppdateringar</string>
     <string name="category_interface">Gränssnitt</string>
     <string name="category_manager">Hanterare</string>
+    <string name="check_updates">Sök uppdateringar</string>
     <string name="chosen_install_values">Valda installationsinställningar</string>
     <string name="chosen_lang">Språk: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
+    <string name="clear_files">Rensa nedladdade filer</string>
+    <string name="cleared_files">Rensade data</string>
     <string name="link_title">Använd Chrome-anpassade flikar</string>
     <string name="link_custom_tabs">Länkar öppnas i Chrome Custom Tabs</string>
     <string name="link_external_browser">Länkar öppnas i en extern webbläsare</string>
