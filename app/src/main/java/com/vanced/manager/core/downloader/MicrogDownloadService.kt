@@ -33,6 +33,7 @@ class MicrogDownloadService: Service() {
     private fun downloadMicrog() {
         runBlocking {
             launch {
+                getExternalFilesDir("apk")?.delete()
                 val url = getObjectFromJson(
                     "${PreferenceManager.getDefaultSharedPreferences(this@MicrogDownloadService)
                         .getString("install_url", baseUrl)}/microg.json", "url"

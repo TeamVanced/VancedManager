@@ -49,12 +49,14 @@
     <string name="accent_purple">Purple</string>
     <string name="accent_red">Red</string>
     <string name="accent_yellow">Yellow</string>
-    <string name="check_updates">Check for updates</string>
     <string name="category_interface">Interface</string>
     <string name="category_manager">Manager</string>
+    <string name="check_updates">Check for updates</string>
     <string name="chosen_install_values">Chosen installation preferences</string>
     <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
     <string name="link_title">Use Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>

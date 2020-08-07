@@ -41,6 +41,7 @@ class VancedDownloadService: Service() {
         val context = this
         runBlocking {
             launch {
+                getExternalFilesDir("apks")?.delete()
                 val defPrefs = PreferenceManager.getDefaultSharedPreferences(context)
                 val installUrl = defPrefs.getString("install_url", baseUrl)
                 val vancedVer = getObjectFromJson("$installUrl/vanced.json", "version")

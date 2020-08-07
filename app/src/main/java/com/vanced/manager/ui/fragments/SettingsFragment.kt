@@ -91,6 +91,15 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
+        findPreference<Preference>("clear_files")?.setOnPreferenceClickListener {
+            with(requireActivity()) {
+                getExternalFilesDir("apk")?.delete()
+                getExternalFilesDir("apks")?.delete()
+                Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT)
+            }
+            true
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
