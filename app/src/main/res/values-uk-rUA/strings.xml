@@ -45,12 +45,14 @@
     <string name="accent_purple">Фіолетовий</string>
     <string name="accent_red">Червоний</string>
     <string name="accent_yellow">Жовтий</string>
-    <string name="check_updates">Перевірити на оновлення</string>
     <string name="category_interface">Інтерфейс</string>
     <string name="category_manager">Менеджер</string>
+    <string name="check_updates">Перевірити на оновлення</string>
     <string name="chosen_install_values">Вибрані налаштування встановлення</string>
-    <string name="chosen_lang">Мова: %1$s</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">Відхилити</string>
     <string name="guide">Гайд</string>
     <string name="hold_on">Зачекайте!</string>
-    <string name="magisk_vanced">Схоже, ви використовуєте Magisk-версію Vanced, яка припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Виявлено користувача MIUI!</string>
     <string name="miui_one">Привіт! Схоже, що ви використовуєте MIUI. Для того, щоб користуватися цим додатком, вам доведеться відключити MIUI оптимізацію. (Ви можете спокійно ігнорувати це попередження, якщо ви знаходитесь на 20.2.20 або новішому ПЗУ на основі xiaomi.eu)</string>
     <string name="error">Помилка</string>
