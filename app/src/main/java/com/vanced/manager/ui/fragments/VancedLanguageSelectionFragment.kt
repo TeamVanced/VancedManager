@@ -37,9 +37,10 @@ class VancedLanguageSelectionFragment : Fragment() {
     @ExperimentalStdlibApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        langs = runBlocking { getArrayFromJson("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json", "langs") }
+        CoroutineScope(Dispatchers.IO).launch {
+            langs = getArrayFromJson("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json", "langs")
+        }
         loadBoxes(view.findViewById(R.id.lang_button_ll))
-
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             val chosenLangs = mutableListOf("en")
             if (!langs.contains("null"))

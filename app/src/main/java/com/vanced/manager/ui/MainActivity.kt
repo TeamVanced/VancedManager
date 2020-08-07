@@ -22,8 +22,9 @@ import com.vanced.manager.utils.AppUtils.isInstallationRunning
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
 
@@ -143,12 +144,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        runBlocking {
-            launch {
-                if (InternetTools.isUpdateAvailable()) {
-                    val fm = supportFragmentManager
-                    UpdateCheckFragment().show(fm, "UpdateCheck")
-                }
+        CoroutineScope(Dispatchers.IO).launch {
+            if (InternetTools.isUpdateAvailable()) {
+                val fm = supportFragmentManager
+                UpdateCheckFragment().show(fm, "UpdateCheck")
             }
         }
     }

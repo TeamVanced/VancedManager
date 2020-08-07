@@ -88,7 +88,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
             }.attach()
         }
-        viewModel.fetchData()
+
     }
 
     override fun onClick(v: View?) {

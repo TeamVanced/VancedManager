@@ -7,6 +7,7 @@ import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
+import android.util.Log
 import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
@@ -19,8 +20,9 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.getJsonInt
 import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
@@ -57,31 +59,33 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val fetching = ObservableField<Boolean>()
 
-    val shouldBeDisabled = ObservableField<Boolean>()
+    private val shouldBeDisabled = ObservableField<Boolean>()
 
     //this too
     fun fetchData() {
-        runBlocking {
-            launch {
-                fetching.set(true)
+        CoroutineScope(Dispatchers.IO).launch {
+            fetching.set(true)
+            try {
                 Crowdin.forceUpdate(getApplication())
-                vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
-                microgVersion.set(getJsonString("microg.json", "version", getApplication()))
-                microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
-                vancedInstalled.set(isPackageInstalled(vancedPkgName, pm))
-                vancedInstalledVersion.set(getPkgInfo(vancedInstalled.get()!!, vancedPkgName, getApplication()))
-                microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()))
-                vancedVersionCode.set(getJsonInt("vanced.json", "versionCode", getApplication()))
-                microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
-                vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
-                microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
-                microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
-                microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
-                shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
-                vancedInstallButtonIcon.set(compareIntDrawable(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
-                vancedInstallButtonTxt.set(compareInt(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
-                fetching.set(false)
+            } catch (e: Exception) {
+                Log.d("VMLocalisation", "Error: ", e)
             }
+            vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
+            microgVersion.set(getJsonString("microg.json", "version", getApplication()))
+            microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
+            vancedInstalled.set(isPackageInstalled(vancedPkgName, pm))
+            vancedInstalledVersion.set(getPkgInfo(vancedInstalled.get()!!, vancedPkgName, getApplication()))
+            microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()))
+            vancedVersionCode.set(getJsonInt("vanced.json", "versionCode", getApplication()))
+            microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
+            vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
+            microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
+            microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
+            microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
+            shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
+            vancedInstallButtonIcon.set(compareIntDrawable(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
+            vancedInstallButtonTxt.set(compareInt(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
+            fetching.set(false)
         }
     }
 
@@ -160,6 +164,10 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             int2 == int1 -> application.getDrawable(R.drawable.ic_done)
             else -> application.getDrawable(R.drawable.ic_download)
         }
+    }
+
+    init {
+        fetchData()
     }
 
 }
