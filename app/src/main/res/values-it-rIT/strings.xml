@@ -30,7 +30,7 @@
     <string name="latest">Ultima versione:</string>
     <string name="successfully_installed">%1$s installato con successo</string>
     <string name="network_error">Connessione alla rete non disponibile</string>
-    <string name="no_microg">i microG non sono installati</string>
+    <string name="no_microg">microG non è installato</string>
     <string name="root_not_granted">Non è stato fornito l\'accesso di root</string>
     <string name="unavailable">Non disponibile</string>
     <string name="update">Aggiorna</string>
@@ -45,12 +45,14 @@
     <string name="accent_purple">Viola</string>
     <string name="accent_red">Rosso</string>
     <string name="accent_yellow">Giallo</string>
-    <string name="check_updates">Verifica aggiornamenti</string>
     <string name="category_interface">Interfaccia</string>
     <string name="category_manager">Manager</string>
+    <string name="check_updates">Verifica aggiornamenti</string>
     <string name="chosen_install_values">Preferenze di installazione scelte</string>
     <string name="chosen_lang">Lingua: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
+    <string name="clear_files">Cancella file scaricati</string>
+    <string name="cleared_files">File cancellati con successo</string>
     <string name="link_title">Utilizza le schede personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
     <string name="link_external_browser">I link verranno aperti in un browser esterno</string>
@@ -69,7 +71,7 @@
     <string name="button_dismiss">Ignora</string>
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
-    <string name="magisk_vanced">Sembra che tu stia utilizzando la versione di Vanced ottenuta con Magisk. La versione Magisk non riceve più aggiornamenti e non può essere aggiornata con quest\'app. Per favore, rimuovi il modulo di Magisk prima di installare la versione con Vanced Manager.</string>
+    <string name="magisk_vanced">Sembra che tu stia utilizzando la versione di Vanced ottenuta con Magisk/TWRP, che è obsoleta e non può essere aggiornata con questa app. Per favore, rimuovila eliminando il modulo di Magisk/utilizzando TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Rilevata l\'interfaccia MIUI!</string>
     <string name="miui_one">Ehi! Sembra che tu sia un utente MIUI. Per poter utilizzare correttamente questa applicazione, devi disattivare le ottimizzazioni di MIUI nelle impostazioni per sviluppatore (se stai utilizzando la ROM 20.2.20 basata su xiaomi.eu, puoi ignorare questo avviso).</string>
     <string name="error">Errore</string>
