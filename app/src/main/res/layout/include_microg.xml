@@ -16,6 +16,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/microg_card"
+        app:contentPaddingTop="1dp"
         style="@style/MaterialCard">
 
         <LinearLayout
@@ -40,6 +41,7 @@
                 <TextView
                     style="@style/TextAppTitle"
                     android:text="@string/microg"
+                    android:layout_marginTop="3dp"
                     app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier"
                     app:layout_constraintStart_toEndOf="@id/home_microg_logo"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -47,6 +49,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/microg_installbtn"
                     style="@style/ButtonStyle"
+                    android:paddingTop="3dp"
                     android:text="@{viewModel.microgInstallButtonTxt}"
                     app:icon="@{viewModel.microgInstallButtonIcon}"
                     app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn"
