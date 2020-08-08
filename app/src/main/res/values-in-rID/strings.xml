@@ -17,11 +17,12 @@
     <string name="installing_app">Memasang %1$s</string>
     <string name="installation_aborted">Proses gagal karena pengguna membatalkan instalasi.</string>
     <string name="installation_blocked">Proses gagal karena pengguna memblokir instalasi.</string>
+    <string name="installation_downgrade">Proses gagal karena pengguna mencoba untuk menurunkan versi paket. Apakah anda mempunyai YouTube bawaan terpasang?</string>
     <string name="installation_conflict">Proses gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang.</string>
     <string name="installation_failed">Proses gagal karena alasan yang tidak diketahui, mohon gabung Telegram atau Discord kami untuk bantuan.</string>
     <string name="installation_incompatible">Proses gagal karena aplikasi tidak kompatibel dengan perangkat anda.</string>
     <string name="installation_invalid">Proses gagal karena apk files tidak valid.</string>
-    <string name="installation_signature">Kesalahan tidak diduga saat memasang Vanced. Apakah anda sudah menonaktifkan apk signature verification?</string>
+    <string name="installation_signature">Proses gagal karena pengguna tidak menonaktifkan apk signature verification</string>
     <string name="installation_miui">Kesalahan tidak terduga terjadi saat memasang Vanced. Apakah anda sudah menonaktifkan Optimisasi MIUI.</string>
     <string name="installation_storage">Proses gagal karena kesalahan penyimpanan.</string>
     <string name="installation_wait">Mohon tunggu sampai instalasi selesai</string>
