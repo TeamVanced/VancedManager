@@ -25,10 +25,9 @@ object AppUtils {
     private fun isServiceRunning(cls: Class<out Service>, context: Context): Boolean {
         val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
         val runningServices = activityManager.getRunningServices(Int.MAX_VALUE)
-        runningServices.forEach { info ->
-            return info.service.className == cls.name
+        return runningServices.any { info ->
+            info.service.className == cls.name
         }
-        return false
     }
 
     fun sendFailure(status: Int, context: Context) {
