@@ -57,6 +57,7 @@ object AppUtils {
             status.contains("INSTALL_FAILED_CPU_ABI_INCOMPATIBLE") -> context.getString(R.string.installation_incompatible)
             status.contains("INSTALL_FAILED_INSUFFICIENT_STORAGE") -> context.getString(R.string.installation_storage)
             status.contains("INSTALL_FAILED_INVALID_APK") -> context.getString(R.string.installation_invalid)
+            status.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> context.getString(R.string.installation_downgrade)
             status.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> context.getString(R.string.installation_signature)
             else ->
                 if (MiuiHelper.isMiui())
@@ -70,10 +71,10 @@ object AppUtils {
         return when (status) {
             PackageInstaller.STATUS_FAILURE_ABORTED -> context.getString(R.string.installation_aborted)
             PackageInstaller.STATUS_FAILURE_BLOCKED -> context.getString(R.string.installation_blocked)
-            PackageInstaller.STATUS_FAILURE_STORAGE -> context.getString(R.string.installation_storage)
-            PackageInstaller.STATUS_FAILURE_INVALID -> context.getString(R.string.installation_invalid)
-            PackageInstaller.STATUS_FAILURE_INCOMPATIBLE -> context.getString(R.string.installation_incompatible)
             PackageInstaller.STATUS_FAILURE_CONFLICT -> context.getString(R.string.installation_conflict)
+            PackageInstaller.STATUS_FAILURE_INCOMPATIBLE -> context.getString(R.string.installation_incompatible)
+            PackageInstaller.STATUS_FAILURE_INVALID -> context.getString(R.string.installation_invalid)
+            PackageInstaller.STATUS_FAILURE_STORAGE -> context.getString(R.string.installation_storage)
             else ->
                 if (MiuiHelper.isMiui())
                     context.getString(R.string.installation_miui)

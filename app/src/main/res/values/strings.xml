@@ -20,6 +20,7 @@
     <string name="installing_app">Installing %1$s</string>
     <string name="installation_aborted">Operation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Operation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Operation failed because the app conflicts with an already installed app.</string>
     <string name="installation_failed">Operation failed for an unknown reason, please join our Telegram or Discord for support.</string>
     <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
