@@ -16,8 +16,8 @@ object AppUtils {
 
     fun isInstallationRunning(context: Context): Boolean {
         val serviceClasses = listOf(VancedDownloadService::class.java, MicrogDownloadService::class.java, AppInstaller::class.java, AppInstallerService::class.java, SplitInstaller::class.java, SplitInstallerService::class.java, RootSplitInstallerService::class.java)
-        serviceClasses.forEach { service ->
-            return isServiceRunning(service, context)
+        serviceClasses.any { service ->
+            isServiceRunning(service, context)
         }
         return false
     }
@@ -82,5 +82,6 @@ object AppUtils {
                     context.getString(R.string.installation_failed)
         }
     }
+
 
 }
