@@ -17,11 +17,12 @@
     <string name="installing_app">%1$s をインストールしています</string>
     <string name="installation_aborted">ユーザーがインストールを中断したため操作に失敗しました</string>
     <string name="installation_blocked">ユーザーがインストールをブロックしたため操作に失敗しました</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">すでにインストールされているアプリと競合したため操作に失敗しました</string>
     <string name="installation_failed">何らかの理由により操作に失敗しました</string>
     <string name="installation_incompatible">お使いのデバイスと互換性がないため操作に失敗しました</string>
     <string name="installation_invalid">APK ファイルが正しくないため操作に失敗しました</string>
-    <string name="installation_signature">予期されないエラーが Vanced のインストール中に発生しました。署名検証を無効化しましたか？</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">予期されないエラーが Vanced のインストール中に発生しました。MIUI の最適化を無効にしましたか？</string>
     <string name="installation_storage">ストレージのエラーにより操作に失敗しました</string>
     <string name="installation_wait">インストールが完了するまでお待ちください</string>
