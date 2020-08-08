@@ -17,11 +17,12 @@
     <string name="installing_app">Asennetaan %1$s</string>
     <string name="installation_aborted">Operaatio epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Operaatio epäonnistui, koska käyttäjä esti asennuksen.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Operaatio epäonnistui, koska sovellus on ristiriidassa toisen sovelluksen kanssa.</string>
     <string name="installation_failed">Operaatio epäonnistui tuntemattomasta syystä, ole hyvä ja liity Telegram tai Discord kanaviimme halutessasi tukea.</string>
     <string name="installation_incompatible">Operaatio epäonnistui, koska sovellus ei ole yhteensopiva laitteesi kanssa.</string>
     <string name="installation_invalid">Operaatio epäonnistui, koska APK tiedostot ovat viallisia.</string>
-    <string name="installation_signature">Odottamaton virhe asentaessa Vanced-pakettia. Oletko varmasti ottanut APK-paketin allekirjoituksen tarkastuksen pois käytöstä?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Odottamaton virhe asentaessa Vanced-pakettia. Oletko varmasti ottanut MIUI optimisaatiot pois käytöstä?</string>
     <string name="installation_storage">Haku epäonnistui tallennustilan virheen vuoksi.</string>
     <string name="installation_wait">Ole hyvä ja odota, että asennus suoritetaan loppuun.</string>
