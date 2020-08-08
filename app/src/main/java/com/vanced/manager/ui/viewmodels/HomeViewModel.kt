@@ -75,7 +75,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
             vancedInstalled.set(isPackageInstalled(vancedPkgName, pm))
             vancedInstalledVersion.set(getPkgInfo(vancedInstalled.get()!!, vancedPkgName, getApplication()))
-            microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()))
+            microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()).removeSuffix("-vanced"))
             vancedVersionCode.set(getJsonInt("vanced.json", "versionCode", getApplication()))
             microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
             vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
@@ -167,6 +167,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     }
 
     init {
+        fetching.set(false)
         fetchData()
     }
 

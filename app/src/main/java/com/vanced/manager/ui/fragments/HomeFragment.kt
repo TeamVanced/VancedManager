@@ -104,29 +104,34 @@ class HomeFragment : Fragment(), View.OnClickListener {
         when (v?.id) {
             R.id.vanced_installbtn -> {
                 if (!isInstallationRunning(requireActivity())) {
-                    if (variant == "nonroot" && !viewModel.microgInstalled.get()!!) {
-                        Snackbar.make(binding.homeRefresh, R.string.no_microg, Snackbar.LENGTH_LONG)
-                            .setAction(R.string.install) {
+                    if (!viewModel.fetching.get()!!) {
+                        if (variant == "nonroot" && !viewModel.microgInstalled.get()!!) {
+                            Snackbar.make(
+                                binding.homeRefresh,
+                                R.string.no_microg,
+                                Snackbar.LENGTH_LONG
+                            )
+                                .setAction(R.string.install) {
+                                    requireActivity().startService(
+                                        Intent(
+                                            requireActivity(),
+                                            MicrogDownloadService::class.java
+                                        )
+                                    )
+                                }.show()
+                        } else {
+                            if (prefs?.getBoolean("valuesModified", false)!!) {
                                 requireActivity().startService(
                                     Intent(
                                         requireActivity(),
-                                        MicrogDownloadService::class.java
+                                        VancedDownloadService::class.java
                                     )
                                 )
-                            }.show()
-                    } else {
-                        if (prefs?.getBoolean("valuesModified", false)!!) {
-                            requireActivity().startService(
-                                Intent(
-                                    requireActivity(),
-                                    VancedDownloadService::class.java
-                                )
-                            )
-                        } else {
-                            view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
+                            } else {
+                                view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
+                            }
                         }
                     }
-
                 } else
                     Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT)
 
