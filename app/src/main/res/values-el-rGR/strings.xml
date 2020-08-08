@@ -17,11 +17,12 @@
     <string name="installing_app">Εγκατάσταση %1$s</string>
     <string name="installation_aborted">Η διαδικασία απέτυχε λόγω ακύρωσης από τον χρήστη.</string>
     <string name="installation_blocked">Η διαδικασία απέτυχε λόγω απόκλεισης από τον χρήστη.</string>
+    <string name="installation_downgrade">Η διεργασία απέτυχε διότι ο χρήστης προσπάθησε να υποβαθμίσει το πακέτο. Έχετε εγκαταστήσει το κανονικό YouTube;</string>
     <string name="installation_conflict">Η διαδικασία απέτυχε επειδή η εφαρμογή είναι ήδη εγκατεστημένη.</string>
     <string name="installation_failed">Η διαδικασία απέτυχε για άγνωστο λόγω, παρακαλούμε μπείτε στο Telegram ή στο Discord μας για βοήθεια.</string>
     <string name="installation_incompatible">Η διαδικασία απέτυχε επείδη η εφαρμογή δεν είναι συμβατή με την συσκευή.</string>
     <string name="installation_invalid">Η διαδικασία απέτυχε επειδή τα αρχεία APK δεν είναι σωστά.</string>
-    <string name="installation_signature">Προέκυψε ένα πρόβλημα στην εγκατάσταση του Vanced. Έχετε απενεργοποιήσει το Signature Verification;</string>
+    <string name="installation_signature">Η διεργασία απέτυχε διότι ο χρήστης δεν έκλεισε την επαλήθευση υπογραφής των apk</string>
     <string name="installation_miui">Πρόεκυψε ένα πρόβλημα στην εγκατάσταση του Vanced. Έχετε επενεργοποιήσει το MIUI-Optimisations;</string>
     <string name="installation_storage">Η διαδικασία απέτυχε λόγω προβλήματος του αποθηκευτικού χώρου.</string>
     <string name="installation_wait">Παρακαλώ περιμένετε να ολοκληρωθεί η εγκατάσταση.</string>
