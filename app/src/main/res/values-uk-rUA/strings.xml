@@ -17,11 +17,12 @@
     <string name="installing_app">Встановлення %1$s</string>
     <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Операція не вдалася, оскільки додаток суперечить вже встановленому додатку.</string>
     <string name="installation_failed">Операція не вдалася через невідому причину, приєднайтеся до нашого Telegram або Discord сервера для допомоги.</string>
     <string name="installation_incompatible">Операція не вдалася, оскільки додаток несумісний із вашим пристроєм.</string>
     <string name="installation_invalid">Операція не вдалася, оскільки файли apk недійсні.</string>
-    <string name="installation_signature">Під час встановлення Vanced сталася несподівана помилка. Ви впевнені що вимкнули підтвердження підпису apk?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Під час встановлення Vanced сталася несподівана помилка. Ви впевнені що вимкнули оптимізацію MIUI?</string>
     <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
     <string name="installation_wait">Будь ласка, зачекайте доки встановлення не закінчиться.</string>
