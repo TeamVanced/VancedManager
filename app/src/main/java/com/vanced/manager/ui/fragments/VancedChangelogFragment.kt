@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 class VancedChangelogFragment : Fragment() {
 
@@ -23,14 +24,12 @@ class VancedChangelogFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        runBlocking {
-            launch {
-                val vancedVersion = activity?.let { InternetTools.getJsonString("vanced.json", "version", it).replace('.', '_') }
-                val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
+        CoroutineScope(Dispatchers.IO).launch {
+            val vancedVersion = activity?.let { InternetTools.getJsonString("vanced.json", "version", it).replace('.', '_') }
+            val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
 
-                val changelog = InternetTools.getObjectFromJson("$baseUrl/changelog/$vancedVersion.json", "message")
-                view.findViewById<TextView>(R.id.vanced_changelog).text = changelog
-            }
+            val changelog = InternetTools.getObjectFromJson("$baseUrl/changelog/$vancedVersion.json", "message")
+            view.findViewById<TextView>(R.id.vanced_changelog).text = changelog
         }
     }
 }

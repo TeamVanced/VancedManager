@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 class MicrogChangelogFragment : Fragment() {
 
@@ -23,12 +24,9 @@ class MicrogChangelogFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        runBlocking {
-            launch {
-                val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
-
-                view.findViewById<TextView>(R.id.microg_changelog).text = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog")
-            }
+        CoroutineScope(Dispatchers.IO).launch {
+            val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
+            view.findViewById<TextView>(R.id.microg_changelog).text = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog")
         }
     }
 }
