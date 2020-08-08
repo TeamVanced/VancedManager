@@ -133,13 +133,13 @@ class HomeFragment : Fragment(), View.OnClickListener {
                         }
                     }
                 } else
-                    Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT)
+                    Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT).show()
             }
             R.id.microg_installbtn -> {
                 if (!installing)
                     requireActivity().startService(Intent(requireActivity(), MicrogDownloadService::class.java))
                 else
-                    Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT)
+                    Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT).show()
             }
             R.id.microg_uninstallbtn -> PackageHelper.uninstallApk("com.mgoogle.android.gms", requireActivity())
             R.id.vanced_uninstallbtn -> PackageHelper.uninstallApk(vancedPkgName, requireActivity())
