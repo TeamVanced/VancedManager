@@ -6,14 +6,14 @@
         android:duration="@android:integer/config_shortAnimTime"
         android:propertyName="scaleX"
         android:valueFrom="1"
-        android:valueTo="1.1"
+        android:valueTo="0.9"
         android:valueType="floatType"/>
 
     <objectAnimator
         android:duration="@android:integer/config_shortAnimTime"
-        android:propertyName="scaleX"
+        android:propertyName="scaleY"
         android:valueFrom="1"
-        android:valueTo="1.1"
+        android:valueTo="0.9"
         android:valueType="floatType"/>
 
     <objectAnimator

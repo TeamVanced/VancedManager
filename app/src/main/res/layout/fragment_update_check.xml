@@ -30,7 +30,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginStart="0dp"
             android:layout_gravity="center"
-            android:text="Checking For Updates..."
+            android:text=""
             android:textAlignment="center"
             android:textSize="16sp" />
 
@@ -45,7 +45,8 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/update_center_dismiss"
@@ -64,7 +65,7 @@
                     android:id="@+id/update_center_update"
                     style="@style/ButtonStyle"
                     android:layout_marginStart="4dp"
-                    android:text="Update" />
+                    android:text="@string/update" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/update_center_recheck"

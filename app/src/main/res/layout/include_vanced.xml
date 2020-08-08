@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -48,6 +49,8 @@
                     android:id="@+id/vanced_installbtn"
                     style="@style/ButtonStyle"
                     android:text="@{viewModel.vancedInstallButtonTxt}"
+                    android:textColor="@color/White"
+                    android:backgroundTint="?colorPrimary"
                     app:icon="@{viewModel.vancedInstallButtonIcon}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -106,6 +109,21 @@
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/vanced_downloading_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/vanced_downloading"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible" />
 
             <ProgressBar
                 android:id="@+id/vanced_installing"

@@ -3,13 +3,15 @@ package com.vanced.manager.core.installer
 import android.app.Service
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import android.os.Handler
 import android.os.IBinder
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.fragments.HomeFragment
+import kotlinx.coroutines.*
 
 class AppUninstallerService: Service() {
+
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val pkgName = intent?.getStringExtra("pkg")
@@ -23,22 +25,20 @@ class AppUninstallerService: Service() {
                 } catch (e: Exception) {
                 }
             }
+            //Delay broadcast until activity (and fragment) show up on screen
             PackageInstaller.STATUS_SUCCESS -> {
-                Handler().postDelayed({
-                    val mIntent = Intent()
-                    mIntent.action = MainActivity.APP_UNINSTALLED
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+                CoroutineScope(Dispatchers.IO).launch {
+                    delay(500)
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                     Log.d("VMpm", "Successfully uninstalled $pkgName")
-                }, 500)
+                }
             }
             PackageInstaller.STATUS_FAILURE -> {
-                Handler().postDelayed({
-                    val mIntent = Intent()
-                    mIntent.action = MainActivity.APP_NOT_UNINSTALLED
-                    mIntent.putExtra("pkgName", pkgName)
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
+                CoroutineScope(Dispatchers.IO).launch {
+                    delay(500)
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                     Log.d("VMpm", "Failed to uninstall $pkgName")
-                }, 500)
+                }
             }
         }
         stopSelf()

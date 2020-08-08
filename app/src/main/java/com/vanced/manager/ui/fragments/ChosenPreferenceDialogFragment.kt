@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import com.vanced.manager.R
 import com.vanced.manager.databinding.FragmentChosenPreferencesBinding
+import java.util.*
 
 class ChosenPreferenceDialogFragment : DialogFragment() {
 
@@ -26,13 +27,21 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
         return binding.root
     }
 
+    @ExperimentalStdlibApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val prefs = requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-
-        binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark"))
-        binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, prefs.getString("lang", "en"))
+        val langPrefs = prefs.getString("lang", "en")?.split(", ")?.toTypedArray()
+        val newPrefs = mutableListOf<String>()
+        if (langPrefs != null) {
+            for (lang in langPrefs) {
+                val loc = Locale(lang)
+                newPrefs.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
+            }
+        }
+        binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.capitalize(Locale.ROOT))
+        binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, newPrefs.joinToString())
 
         binding.chosenPrefsClose.setOnClickListener { dismiss() }
         binding.chosenPrefsReset.setOnClickListener {

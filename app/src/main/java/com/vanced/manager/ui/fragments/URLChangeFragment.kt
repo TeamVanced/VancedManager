@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import androidx.preference.PreferenceManager
 import com.google.android.material.button.MaterialButton
@@ -29,9 +30,16 @@ class URLChangeFragment : DialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         val urlField = view.findViewById<EditText>(R.id.url_input)
         val prefs = PreferenceManager.getDefaultSharedPreferences(activity)
-        urlField.hint = prefs.getString("install_url", baseUrl)
+        urlField.setText(prefs.getString("install_url", baseUrl), TextView.BufferType.EDITABLE)
         view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
-            prefs.edit().putString("install_url", urlField.text.toString()).apply()
+            val finalUrl =
+                if (urlField.text.startsWith("https://") || urlField.text.startsWith("http://"))
+                    urlField.text.removeSuffix("/").toString()
+                else
+                    "https://${urlField.text}".removeSuffix("/")
+
+
+            prefs.edit().putString("install_url", finalUrl).apply()
             dismiss()
         }
         view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {

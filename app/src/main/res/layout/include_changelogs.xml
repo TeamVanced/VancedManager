@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/changelog_card"
         style="@style/MaterialCard">
 
@@ -57,4 +69,5 @@
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
 </layout>

@@ -29,6 +29,7 @@ class AppInstaller: Service() {
         inputStream.close()
         outputStream.close()
         session.commit(pendingIntent.intentSender)
+        stopSelf()
         return START_NOT_STICKY
     }
 

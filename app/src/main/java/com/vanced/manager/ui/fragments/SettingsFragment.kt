@@ -3,11 +3,11 @@ package com.vanced.manager.ui.fragments
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
-import androidx.preference.ListPreference
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceManager
+import android.widget.Toast
+import androidx.preference.*
+import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
+import java.io.File
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
@@ -17,57 +17,88 @@ class SettingsFragment : PreferenceFragmentCompat() {
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
 
-        val updateCheck: Preference? = findPreference("update_check")
-        updateCheck?.setOnPreferenceClickListener {
-            val fm = childFragmentManager.beginTransaction()
-            val updateDialog = UpdateCheckFragment()
-            updateDialog.show(fm, "Update Center")
+        findPreference<Preference>("update_check")?.setOnPreferenceClickListener {
+            UpdateCheckFragment().show(childFragmentManager.beginTransaction(), "Update Center")
             true
         }
-        
-        val themeSwitch: ListPreference? = findPreference("theme_mode")
+
+        findPreference<SwitchPreference>("vanced_notifs")?.apply {
+            title = getString(R.string.push_notifications, "Vanced")
+            summary = getString(R.string.push_notifications_summary, "Vanced")
+            setOnPreferenceChangeListener { _, newValue ->
+                when (newValue) {
+                    true -> FirebaseMessaging.getInstance().subscribeToTopic("Vanced-Update")
+                    false -> FirebaseMessaging.getInstance().unsubscribeFromTopic("Vanced-Update")
+                }
+                true
+            }
+        }
+
+        findPreference<SwitchPreference>("microg_notifs")?.apply {
+            title = getString(R.string.push_notifications, "microG")
+            summary = getString(R.string.push_notifications_summary, "microG")
+            setOnPreferenceChangeListener { _, newValue ->
+                when (newValue) {
+                    true -> FirebaseMessaging.getInstance().subscribeToTopic("MicroG-Update")
+                    false -> FirebaseMessaging.getInstance().unsubscribeFromTopic("MicroG-Update")
+                }
+                true
+            }
+        }
+
         val themePref = preferenceScreen.sharedPreferences.getString("theme_mode", "Follow System")
-        themeSwitch?.summary =
-            when (themePref) {
-                "Light" -> getString(R.string.theme_light)
-                "Dark" -> getString(R.string.theme_dark)
-                "Follow System" -> getString(R.string.theme_follow)
-                else -> ""
+        findPreference<ListPreference>("theme_mode")?.apply {
+            summary = when (themePref) {
+                    "Light" -> getString(R.string.theme_light)
+                    "Dark" -> getString(R.string.theme_dark)
+                    else -> getString(R.string.theme_follow)
+                }
+
+            setOnPreferenceChangeListener { _, newValue ->
+                if (themePref != newValue) {
+                    requireActivity().recreate()
+                    return@setOnPreferenceChangeListener true
+                }
+                false
             }
-        themeSwitch?.setOnPreferenceChangeListener { _, _ ->
-            activity?.recreate()
-            true
         }
 
-        val accentSwitch: ListPreference? = findPreference("accent_color")
         val accentPref = preferenceScreen.sharedPreferences.getString("accent_color", "Blue")
-        accentSwitch?.summary =
-            when (accentPref) {
-                "Blue" -> getString(R.string.accent_blue)
-                "Red" -> getString(R.string.accent_red)
-                "Green" -> getString(R.string.accent_green)
-                "Yellow" -> getString(R.string.accent_yellow)
-                "Purple" -> getString(R.string.accent_purple)
-                else -> ""
+        findPreference<ListPreference>("accent_color")?.apply {
+            summary = when (accentPref) {
+                    "Blue" -> getString(R.string.accent_blue)
+                    "Red" -> getString(R.string.accent_red)
+                    "Green" -> getString(R.string.accent_green)
+                    "Yellow" -> getString(R.string.accent_yellow)
+                    else -> getString(R.string.accent_purple)
+                }
+
+            setOnPreferenceChangeListener { _, newValue ->
+                if (accentPref != newValue) {
+                    requireActivity().recreate()
+                    return@setOnPreferenceChangeListener true
+                }
+                false
             }
-        accentSwitch?.setOnPreferenceChangeListener { _, _ ->
-            activity?.recreate()
+        }
+
+        findPreference<Preference>("vanced_chosen_modes")?.setOnPreferenceClickListener {
+            ChosenPreferenceDialogFragment().show(childFragmentManager.beginTransaction(), "Chosen Preferences")
             true
         }
 
-        val chosenPrefs: Preference? = findPreference("vanced_chosen_modes")
-        chosenPrefs?.setOnPreferenceClickListener {
-            val fm = childFragmentManager.beginTransaction()
-            val chosenPrefsDialog = ChosenPreferenceDialogFragment()
-            chosenPrefsDialog.show(fm, "Chosen Preferences")
+        findPreference<Preference>("install_url")?.setOnPreferenceClickListener {
+            URLChangeFragment().show(childFragmentManager.beginTransaction(), "Install URL")
             true
         }
 
-        val installUrl: Preference? = findPreference("install_url")
-        installUrl?.setOnPreferenceClickListener {
-            val fm = childFragmentManager.beginTransaction()
-            val chosenPrefsDialog = URLChangeFragment()
-            chosenPrefsDialog.show(fm, "Install URL")
+        findPreference<Preference>("clear_files")?.setOnPreferenceClickListener {
+            with(requireActivity()) {
+                listOf("apk", "apks").forEach { dir ->
+                    File(getExternalFilesDir(dir)?.path as String).deleteRecursively()
+                }
+                Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT).show()
+            }
             true
         }
 

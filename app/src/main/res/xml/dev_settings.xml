@@ -7,6 +7,11 @@
         android:title="First start switcher"
         android:summary="Dev only please"/>
 
+    <Preference
+        android:key="force_update"
+        android:title="Force Manager Update"
+        android:summary="Update manager without comparing versionCode"/>
+
     <PreferenceCategory
         android:title="Device info">
 

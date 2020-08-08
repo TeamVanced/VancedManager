@@ -21,11 +21,9 @@
             <RadioGroup
                 android:id="@+id/theme_radiogroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:checkedButton="@id/dark">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:id="@+id/dark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"

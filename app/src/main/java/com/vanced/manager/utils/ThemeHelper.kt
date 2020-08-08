@@ -1,13 +1,13 @@
 package com.vanced.manager.utils
 
+import android.app.Activity
 import android.content.res.Configuration
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
-import com.vanced.manager.ui.MainActivity
 
 object ThemeHelper {
 
-    fun setFinalTheme(activity: MainActivity) {
+    fun setFinalTheme(activity: Activity) {
         val currentAccent = PreferenceManager.getDefaultSharedPreferences(activity).getString("accent_color", "Blue")
         when (PreferenceManager.getDefaultSharedPreferences(activity)
             .getString("theme_mode", "Follow System")) {

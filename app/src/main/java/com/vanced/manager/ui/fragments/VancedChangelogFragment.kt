@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.dezlum.codelabs.getjson.GetJson
+import androidx.preference.PreferenceManager
 import com.vanced.manager.R
+import com.vanced.manager.utils.InternetTools
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class VancedChangelogFragment : Fragment() {
 
@@ -20,15 +24,12 @@ class VancedChangelogFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        CoroutineScope(Dispatchers.Main).launch {
+            val vancedVersion = activity?.let { InternetTools.getJsonString("vanced.json", "version", it).replace('.', '_') }
+            val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
 
-        val changelogTxt = view.findViewById<TextView>(R.id.vanced_changelog)
-
-        if (GetJson().isConnected(activity)) {
-            val checkUrl = GetJson().AsJSONObject("https://vanced.app/api/v1/changelog/15_05_54.json")
-            val changelog = checkUrl.get("message").asString
-            changelogTxt.text = changelog
+            val changelog = InternetTools.getObjectFromJson("$baseUrl/changelog/$vancedVersion.json", "message")
+            view.findViewById<TextView>(R.id.vanced_changelog).text = changelog
         }
-
     }
-
 }

@@ -1,9 +1,7 @@
 package com.vanced.manager.core.installer
 
 import android.app.Service
-import android.content.Context
 import android.content.Intent
-import android.os.AsyncTask
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
@@ -11,12 +9,13 @@ import androidx.annotation.Nullable
 import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
-import com.vanced.manager.R
-import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.FileInfo
-import com.vanced.manager.utils.NotificationHelper.createBasicNotif
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.io.File
-import java.nio.charset.Charset
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
@@ -24,15 +23,18 @@ import kotlin.collections.ArrayList
 
 class RootSplitInstallerService: Service() {
 
+    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Shell.getShell {
-            val isRoot = it.isRoot
-            Log.d("AppLog", "isRoot ?$isRoot ")
-            AsyncTask.execute {
-                val apkFilesPath = cacheDir.path
-                val fileInfoList = getFileInfoList(apkFilesPath)
-                installSplitApkFiles(fileInfoList)
+            CoroutineScope(Dispatchers.IO).launch {
+                val apkFilesPath = getExternalFilesDir("apks")?.path
+                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                if (fileInfoList != null) {
+                    installSplitApkFiles(fileInfoList)
+                }
             }
+
         }
         stopSelf()
         return START_NOT_STICKY
@@ -41,7 +43,6 @@ class RootSplitInstallerService: Service() {
     @WorkerThread
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>) {
         var sessionId: Int?
-        val notifId = 666
         Log.d("AppLog", "installing split apk files:$apkFiles")
         run {
             val sessionIdResult = Shell.su("pm install-create -r -t").exec().out
@@ -50,9 +51,8 @@ class RootSplitInstallerService: Service() {
             sessionIdMatcher.find()
             sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
         }
-        for (apkFile in apkFiles) {
+        apkFiles.forEach { apkFile ->
             Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
-            createBasicNotif(getString(R.string.installing_app, "Vanced"), notifId, this)
             val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
             val process: Process = Runtime.getRuntime().exec(command)
             val inputPipe = apkFile.getInputStream()
@@ -67,28 +67,16 @@ class RootSplitInstallerService: Service() {
                 throw RuntimeException(e)
             }
             process.waitFor()
-            val inputStr = process.inputStream.readBytes().toString(Charset.defaultCharset())
-            val errStr = process.errorStream.readBytes().toString(Charset.defaultCharset())
-            val isSucceeded = process.exitValue() == 0
-            Log.d("AppLog", "isSucceeded?$isSucceeded inputStr:$inputStr errStr:$errStr")
         }
         Log.d("AppLog", "committing...")
         val installResult = Shell.su("pm install-commit $sessionId").exec()
-        Log.d("AppLog", "succeeded installing?${installResult.isSuccess}")
-        getSharedPreferences("installPrefs", Context.MODE_PRIVATE).edit().putBoolean("isInstalling", false).apply()
         if (installResult.isSuccess) {
-            val mIntent = Intent(MainActivity.INSTALL_COMPLETED)
-            mIntent.action = MainActivity.INSTALL_COMPLETED
-            mIntent.putExtra("package", "split")
-            LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            createBasicNotif(getString(R.string.successfully_installed, "Vanced"), notifId, this)
-        } else {
-            val mIntent = Intent(MainActivity.INSTALL_FAILED)
-            mIntent.action = MainActivity.INSTALL_FAILED
-            mIntent.putExtra("errorMsg", getString(R.string.installation_signature))
-            LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent)
-            createBasicNotif(getString(R.string.installation_signature), notifId, this)
-        }
+            with(localBroadcastManager) {
+                sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
+            }
+        } else
+            sendFailure(installResult.out, this)
     }
 
     private fun SimpleDateFormat.tryParse(str: String) = try {

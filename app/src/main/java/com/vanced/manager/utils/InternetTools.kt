@@ -3,14 +3,16 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.BuildConfig
-import com.dezlum.codelabs.getjson.GetJson
 import com.vanced.manager.R
 
 object InternetTools {
+
+    private const val TAG = "VMNetTools"
 
     fun openUrl(Url: String, color: Int, context: Context) {
         val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_customtabs", true)
@@ -25,35 +27,52 @@ object InternetTools {
 
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
 
-    fun displayJsonString(json: String, obj: String, context: Context): String {
-        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context))
-            GetJson().AsJSONObject("$installUrl/$json").get(obj).asString
-        else
-            context.getString(R.string.unavailable)
-    }
-
-    fun displayJsonInt(json: String, obj: String, context: Context): Int {
-        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
-        return if (GetJson().isConnected(context))
-            GetJson().AsJSONObject("$installUrl/$json").get(obj).asInt
-        else
-            0
-
-    }
-
-    fun getObjectFromJson(url: String, obj: String, context: Context): String {
-        return if (GetJson().isConnected(context))
-            GetJson().AsJSONObject(url).get(obj).asString
-        else
+    suspend fun getObjectFromJson(url: String, obj: String): String {
+        return try {
+            JsonHelper.getJson(url).string(obj) ?: ""
+        } catch  (e: Exception) {
+            Log.e(TAG, "Error: ", e)
             ""
+        }
     }
 
-    fun isUpdateAvailable(): Boolean {
-        val checkUrl = GetJson().AsJSONObject("https://x1nto.github.io/VancedFiles/manager.json")
-        val remoteVersion = checkUrl.get("versionCode").asInt
+    suspend fun getArrayFromJson(url: String, array: String): MutableList<String> {
+        return try {
+            JsonHelper.getJson(url).array<String>(array)?.value ?: mutableListOf("null")
+        } catch (e: Exception) {
+            Log.e(TAG, "Error: ", e)
+            mutableListOf("null")
+        }
+    }
 
-        return remoteVersion > BuildConfig.VERSION_CODE
+    suspend fun getJsonInt(file: String, obj: String, context: Context): Int {
+        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
+        return try {
+            JsonHelper.getJson("$installUrl/$file").int(obj) ?: 0
+        } catch (e: Exception) {
+            Log.e(TAG, "Error: ", e)
+            0
+        }
+    }
+
+    suspend fun getJsonString(file: String, obj: String, context: Context): String {
+        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
+        return try {
+            JsonHelper.getJson("$installUrl/$file").string(obj) ?: context.getString(R.string.unavailable)
+        } catch (e: Exception) {
+            Log.e(TAG, "Error: ", e)
+            context.getString(R.string.unavailable)
+        }
+    }
+
+    suspend fun isUpdateAvailable(): Boolean {
+        val result = try {
+            JsonHelper.getJson("https://x1nto.github.io/VancedFiles/manager.json").int("versionCode") ?: 0
+        } catch (e: Exception) {
+            0
+        }
+
+        return result > BuildConfig.VERSION_CODE
     }
 
     const val baseUrl = "https://vanced.app/api/v1"

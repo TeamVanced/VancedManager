@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="close">বন্ধ</string>
+    <string name="reset">আবার শুরু করো</string>
+    <string name="save">সংরক্ষণ করো</string>
+    <!-- Main Activity -->
+    <string name="title_about">সম্পর্কে</string>
+    <string name="title_home">মূল পাতা</string>
+    <string name="title_settings">সেটিংস</string>
+    <!-- Home Page -->
+    <string name="changelogs">পরিবর্তন নথি</string>
+    <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
+    <string name="failed_uninstall">Failed to uninstall package %1$s</string>
+    <string name="error_downloading">Error Downloading %1$s</string>
+    <string name="install">ইনস্টল</string>
+    <string name="installing_app">%1$s ইনস্টল করা হচ্ছে</string>
+    <string name="installation_aborted">Operation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Operation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
+    <string name="installation_conflict">Operation failed because the app conflicts with an already installed app.</string>
+    <string name="installation_failed">Operation failed for an unknown reason, please join our Telegram or Discord for support.</string>
+    <string name="installation_incompatible">Operation failed because the app is incompatible with your device.</string>
+    <string name="installation_invalid">Operation failed because the apk files are invalid.</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
+    <string name="installation_miui">An unexpected error occurred while installing Vanced. Have you disabled MIUI Optimisations?</string>
+    <string name="installation_storage">Operation failed due to a storage error.</string>
+    <string name="installation_wait">Please wait until the installation finishes</string>
+    <string name="button_reinstall">পুনঃইনস্টল</string>
+    <string name="version_installed">ইনস্টলকৃত:</string>
+    <string name="latest">সর্বশেষ:</string>
+    <string name="successfully_installed">সফলভাবে ইন্সটলকৃত %1$s</string>
+    <string name="network_error">Network connection unavailable</string>
+    <string name="no_microg">microG isn\'t installed</string>
+    <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
+    <string name="unavailable">অনুপলব্ধ</string>
+    <string name="update">হালনাগাদ</string>
+    <string name="useful_links">উপকারী লিংক</string>
+    <string name="website_text">ওয়েবসাইট</string>
+    <string name="support_us">আমাদের সমর্থন করো!</string>
+    <string name="version_toast">%1$s সংস্করণ অনুলিপিত!</string>
+    <!-- Settings -->
+    <string name="accent_color">রঙের ধরন</string>
+    <string name="accent_blue">নীল</string>
+    <string name="accent_green">সবুজ</string>
+    <string name="accent_purple">গাঢ় বেগুনী</string>
+    <string name="accent_red">লাল</string>
+    <string name="accent_yellow">হলুদ</string>
+    <string name="category_interface">ইন্টারফেস</string>
+    <string name="category_manager">ব্যবস্থাপক</string>
+    <string name="check_updates">হালনাগাদ আছে কিনা দেখো</string>
+    <string name="chosen_install_values">Chosen installation preferences</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_theme">থিম: %1$s</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
+    <string name="link_title">Use Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_external_browser">Links will open in an External Browser</string>
+    <string name="theme">Theme</string>
+    <string name="theme_follow">Follow System</string>
+    <string name="theme_dark">Dark Theme</string>
+    <string name="theme_light">Light Theme</string>
+    <string name="update_url">Update Channel URL</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="re_check">Re-check</string>
+    <string name="update_center">Manager Update Center</string>
+    <string name="update_found">Update found!</string>
+    <string name="update_notfound">No new updates</string>
+    <!-- Dialogs -->
+    <string name="button_dismiss">Dismiss</string>
+    <string name="guide">সহায়িকা</string>
+    <string name="hold_on">দাঁড়াও!</string>
+    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="miui_one_title">মিইউআই শনাক্তকৃত!</string>
+    <string name="miui_one">Hey! it looks like you\'re a MIUI user. in order to properly use this application, you will have to disable MIUI optimisations in the developer settings. (You can safely ignore this warning if you are on a 20.2.20 or later ROM based on xiaomi.eu)</string>
+    <string name="error">ত্রুটি</string>
+    <string name="security_context">Please make sure, that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="success">সফলতা!</string>
+    <string name="vanced_installed">Vanced has successfully been installed! Launch now?</string>
+    <string name="launch">শুরু করো</string>
+    <string name="welcome">স্বাগতম</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
+    <string name="choose_preferred_language_note">Note: English will always be installed as an additional language as well.</string>
+    <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
+    <string name="disable_signature">Root mode detected! To install Vanced, you will need to disable the apk signature verification.</string>
+    <string name="finish">শেষ</string>
+    <string name="install_light_black">আলো + কালো</string>
+    <string name="install_light_dark">আলো + অন্ধকার</string>
+    <string name="next">পরেরটা</string>
+    <!-- About Page -->
+    <string name="manager_dev">Manager Dev</string>
+    <string name="sources">সূত্রসমূহ</string>
+    <string name="vanced_team">ভান্সড দল</string>
+</resources>

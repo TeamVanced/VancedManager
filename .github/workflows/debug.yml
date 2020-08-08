@@ -18,17 +18,22 @@ jobs:
         with:
           java-version: 1.8
 
+      - name: Write firebase config to file
+        run: echo $FIREBASE_CONFIG > app/google-services.json
+        env:
+          FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
+
       - name: Grant rights
         run: chmod +x ./gradlew
 
       - name: Build project with Gradle
         run: ./gradlew build
 
-      - name: Build Release APK with Gradle
+      - name: Build Debug APK with Gradle
         run: ./gradlew assembleDebug
 
-      - name: Upload to GitHub
+      - name: Upload Debug
         uses: actions/upload-artifact@v2
         with:
-          name: 'Vanced-Manager'
+          name: 'Manager'
           path: app/build/outputs/apk/debug/app-debug.apk
