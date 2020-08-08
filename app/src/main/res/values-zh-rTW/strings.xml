@@ -49,10 +49,10 @@
     <string name="category_manager">Manager</string>
     <string name="check_updates">檢查更新</string>
     <string name="chosen_install_values">已選擇安裝偏好</string>
-    <string name="chosen_lang">語言：%1$s</string>
+    <string name="chosen_lang">語言: %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">清除已下載的檔案</string>
+    <string name="cleared_files">成功清除檔案</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="link_external_browser">連結會使用外部瀏覽器開啟</string>
@@ -71,7 +71,7 @@
     <string name="button_dismiss">關閉</string>
     <string name="guide">說明</string>
     <string name="hold_on">等一下！</string>
-    <string name="magisk_vanced">嘿！看來您正使用 Magisk/TWRP 版的 Vanced ，它已停止支援且無法透過此應用程式更新。請透過移除 Magisk 模組 / 使用 TWRP 解除安裝來移除它。</string>
+    <string name="magisk_vanced">您似乎正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此應用程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
     <string name="miui_one_title">已偵測到 MIUI！</string>
     <string name="miui_one">嘿! 您似乎是 MIUI 用戶。 為了能夠正確地使用此應用程式 ，您將需要在開發人員設定中停用 MIUI 優化。（如果您使用的是基於 xiaomi.eu 的20.2.20或更新的 ROM ，則可以放心地忽略此警告。）</string>
     <string name="error">錯誤</string>
