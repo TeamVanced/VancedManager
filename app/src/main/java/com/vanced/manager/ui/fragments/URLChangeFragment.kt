@@ -33,10 +33,11 @@ class URLChangeFragment : DialogFragment() {
         urlField.setText(prefs.getString("install_url", baseUrl), TextView.BufferType.EDITABLE)
         view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
             val finalUrl =
-                if (!urlField.text.startsWith("https://") || !urlField.text.startsWith("http://"))
-                    "https://${urlField.text}".removeSuffix("/")
-                else
+                if (urlField.text.startsWith("https://") || urlField.text.startsWith("http://"))
                     urlField.text.removeSuffix("/").toString()
+                else
+                    "https://${urlField.text}".removeSuffix("/")
+
 
             prefs.edit().putString("install_url", finalUrl).apply()
             dismiss()
