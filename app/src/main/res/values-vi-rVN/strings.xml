@@ -17,11 +17,12 @@
     <string name="installing_app">Đang cài đặt %1$s</string>
     <string name="installation_aborted">Cài đặt thất bại do người dùng hủy.</string>
     <string name="installation_blocked">Cài đặt thất bại do người dùng chặn.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Cài đặt thất bại do xung đột với ứng dụng đã cài đặt.</string>
     <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, tham gia Telegram hoặc Discord để được hỗ trợ.</string>
     <string name="installation_incompatible">Cài đặt thất bại do ứng dụng không tương thích với thiết bị.</string>
     <string name="installation_invalid">Cài đặt thất bại do file apk bị lỗi.</string>
-    <string name="installation_signature">Một lỗi bất ngờ đã xảy ra khi cài đặt Vanced. Bạn đã vô hiệu hóa Xác thực chứng chỉ apk chưa?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Một lỗi bất ngờ đã xảy ra khi cài đặt Vanced. Bạn đã vô hiệu hóa Tối ưu hóa của MIUI chưa?</string>
     <string name="installation_storage">Cài đặt thất bại do lỗi bộ nhớ.</string>
     <string name="installation_wait">Hãy đợi cho đến khi quá trình cài đặt hoàn tất</string>
