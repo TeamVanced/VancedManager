@@ -16,10 +16,9 @@ object AppUtils {
 
     fun isInstallationRunning(context: Context): Boolean {
         val serviceClasses = listOf(VancedDownloadService::class.java, MicrogDownloadService::class.java, AppInstaller::class.java, AppInstallerService::class.java, SplitInstaller::class.java, SplitInstallerService::class.java, RootSplitInstallerService::class.java)
-        serviceClasses.any { service ->
+        return serviceClasses.any { service ->
             isServiceRunning(service, context)
         }
-        return false
     }
 
     @Suppress("DEPRECATION")
