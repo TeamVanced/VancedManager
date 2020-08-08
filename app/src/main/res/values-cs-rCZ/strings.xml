@@ -17,11 +17,12 @@
     <string name="installing_app">Probíhá instalace %1$s</string>
     <string name="installation_aborted">Operace se nezdařila, protože uživatel přerušil instalaci.</string>
     <string name="installation_blocked">Operace se nezdařila, protože uživatel zablokoval instalaci.</string>
+    <string name="installation_downgrade">Operace se nezdařila, protože se uživatel pokusil downgradovat balíček. Máte nainstalovánu standardní aplikaci YouTube?</string>
     <string name="installation_conflict">Operace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací.</string>
-    <string name="installation_failed">Operace se nezdařila z neznámého důvodu, prosím, připojte se k našemu Telegramu nebo Discordu pro podporu.</string>
+    <string name="installation_failed">Operace se nezdařila z neznámého důvodu. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
     <string name="installation_incompatible">Operace se nezdařila, protože aplikace není kompatibilní s vaším zařízením.</string>
     <string name="installation_invalid">Operace se nezdařila, protože soubory APK jsou neplatné.</string>
-    <string name="installation_signature">Při instalaci aplikace Vanced došlo k neočekávané chybě. Máte vypnuto ověření podpisu APK?</string>
+    <string name="installation_signature">Operace se nezdařila, protože uživatel nezakázal ověření podpisu APK</string>
     <string name="installation_miui">Při instalaci aplikace Vanced došlo k neočekávané chybě. Máte vypnuty optimalizace MIUI?</string>
     <string name="installation_storage">Operace se nezdařila z důvodu chyby v úložišti.</string>
     <string name="installation_wait">Počkejte prosím na dokončení instalace</string>
@@ -63,7 +64,7 @@
     <string name="update_url">URL aktualizačního kanálu</string>
     <string name="push_notifications">%1$s vyskakovací oznámení</string>
     <string name="push_notifications_summary">Po vydání aktualizace pro %1$s obdržíte vyskakovací oznámení</string>
-    <string name="re_check">Obnovit</string>
+    <string name="re_check">Opakovat</string>
     <string name="update_center">Centrum aktualizací</string>
     <string name="update_found">Nalezena aktualizace!</string>
     <string name="update_notfound">Žádné nové aktualizace</string>
@@ -73,7 +74,7 @@
     <string name="hold_on">Počkejte!</string>
     <string name="magisk_vanced">Vypadá to, že používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
     <string name="miui_one_title">Zjištěno MIUI!</string>
-    <string name="miui_one">Ahoj! Vypadá to, že používáte MIUI. Abyste mohli správně používat tuto aplikaci, budete muset vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete bezpečně ignorovat, pokud máte ROM z 20.2.20 nebo pozdější založenou na xiaomi.eu)</string>
+    <string name="miui_one">Ahoj! Vypadá to, že používáte MIUI. Abyste mohli správně používat tuto aplikaci, budete muset vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete bezpečně ignorovat, pokud máte ROM z 20.2.2020 nebo pozdější, založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
     <string name="security_context">Prosím ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu.</string>
     <string name="success">Hotovo!</string>
