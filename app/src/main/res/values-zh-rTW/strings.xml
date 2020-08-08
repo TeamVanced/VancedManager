@@ -17,11 +17,12 @@
     <string name="installing_app">正在安裝 %1$s</string>
     <string name="installation_aborted">作業失敗，使用者終止了安裝程序。</string>
     <string name="installation_blocked">作業失敗，使用者封鎖了安裝程序。</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">作業失敗，與已安裝的應用程式發生衝突。</string>
     <string name="installation_failed">作業失敗，發生未知錯誤，請至我們的 Telegram 或 Discord 取得支援。</string>
     <string name="installation_incompatible">作業失敗，應用程式與裝置不相容。</string>
     <string name="installation_invalid">作業失敗，APK 檔案無效。</string>
-    <string name="installation_signature">安裝 Vanced 時發生預料外的錯誤。您有停用 APK 簽名驗證嗎？</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">安裝 Vanced 時發生預料外的錯誤。您有停用 MIUI 優化嗎？</string>
     <string name="installation_storage">作業失敗，儲存空間發生錯誤。</string>
     <string name="installation_wait">請等待安裝程序完成</string>
