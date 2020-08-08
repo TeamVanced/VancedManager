@@ -17,11 +17,12 @@
     <string name="installing_app">%1$s 설치 중</string>
     <string name="installation_aborted">사용자가 설치를 중단했기 때문에 작업이 실패했습니다.</string>
     <string name="installation_blocked">사용자가 설치를 차단했기 때문에 작업이 실패했습니다.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">앱이 이미 설치된 앱과 충돌하기 때문에 작업이 실패했습니다.</string>
     <string name="installation_failed">알 수 없는 이유로 작업이 실패했습니다. 저희 텔레그램 또는 디스코드에 문제를 제보해주시면 해결해드리겠습니다.</string>
     <string name="installation_incompatible">앱이 기기와 호환되지 않기 때문에 작업이 실패했습니다.</string>
     <string name="installation_invalid">apk 파일이 유효하지 않기 때문에 작업이 실패했습니다.</string>
-    <string name="installation_signature">Vanced 설치 도중 오류가 발생했습니다. 서명 검증을 비활성화하셨나요?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Vanced를 설치하는 도중에 알 수 없는 오류가 발생했습니다. MIUI 최적화를 비활성화하셨나요?</string>
     <string name="installation_storage">저장 공간에 오류가 있어서 작업에 실패했습니다.</string>
     <string name="installation_wait">설치가 완료될 때까지 기다려주세요.</string>
