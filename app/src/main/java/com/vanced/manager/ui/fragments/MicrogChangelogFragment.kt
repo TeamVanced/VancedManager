@@ -24,7 +24,7 @@ class MicrogChangelogFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(Dispatchers.Main).launch {
             val baseUrl = PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", InternetTools.baseUrl)
             view.findViewById<TextView>(R.id.microg_changelog).text = InternetTools.getObjectFromJson("$baseUrl/microg.json", "changelog")
         }

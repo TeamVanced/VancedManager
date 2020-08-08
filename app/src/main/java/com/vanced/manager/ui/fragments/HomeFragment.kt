@@ -104,7 +104,17 @@ class HomeFragment : Fragment(), View.OnClickListener {
         when (v?.id) {
             R.id.vanced_installbtn -> {
                 if (!isInstallationRunning(requireActivity())) {
-                    if (viewModel.microgInstalled.get()!!) {
+                    if (variant == "nonroot" && !viewModel.microgInstalled.get()!!) {
+                        Snackbar.make(binding.homeRefresh, R.string.no_microg, Snackbar.LENGTH_LONG)
+                            .setAction(R.string.install) {
+                                requireActivity().startService(
+                                    Intent(
+                                        requireActivity(),
+                                        MicrogDownloadService::class.java
+                                    )
+                                )
+                            }.show()
+                    } else {
                         if (prefs?.getBoolean("valuesModified", false)!!) {
                             requireActivity().startService(
                                 Intent(
@@ -115,16 +125,8 @@ class HomeFragment : Fragment(), View.OnClickListener {
                         } else {
                             view?.findNavController()?.navigate(R.id.toInstallThemeFragment)
                         }
-                    } else
-                        Snackbar.make(binding.homeRefresh, R.string.no_microg, Snackbar.LENGTH_LONG)
-                            .setAction(R.string.install) {
-                                requireActivity().startService(
-                                    Intent(
-                                        requireActivity(),
-                                        MicrogDownloadService::class.java
-                                    )
-                                )
-                            }.show()
+                    }
+
                 } else
                     Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT)
 

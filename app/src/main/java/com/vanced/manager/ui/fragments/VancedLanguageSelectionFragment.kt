@@ -25,7 +25,6 @@ import java.util.*
 class VancedLanguageSelectionFragment : Fragment() {
 
     private lateinit var langs: MutableList<String>
-    private lateinit var langcor: Deferred<Unit>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,10 +37,25 @@ class VancedLanguageSelectionFragment : Fragment() {
     @ExperimentalStdlibApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        langcor = CoroutineScope(Dispatchers.IO).async {
-            langs = getArrayFromJson("${PreferenceManager.getDefaultSharedPreferences(activity).getString("install_url", baseUrl)}/vanced.json", "langs")
+        val langcor = CoroutineScope(Dispatchers.IO).async {
+            langs = getArrayFromJson("${PreferenceManager.getDefaultSharedPreferences(requireActivity()).getString("install_url", baseUrl)}/vanced.json", "langs")
         }
-        loadBoxes(view.findViewById(R.id.lang_button_ll))
+        CoroutineScope(Dispatchers.Main).launch {
+            langcor.await()
+            if (!langs.contains("null")) {
+                langs.forEach { lang ->
+                    val loc = Locale(lang)
+                    val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
+                        tag = lang
+                        text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
+                        textSize = 18F
+                        typeface = ResourcesCompat.getFont(requireActivity(), R.font.exo_bold)
+                    }
+                    view.findViewById<LinearLayout>(R.id.lang_button_ll)
+                        .addView(box, MATCH_PARENT, WRAP_CONTENT)
+                }
+            }
+        }
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             val chosenLangs = mutableListOf("en")
             if (!langs.contains("null"))
@@ -50,29 +64,14 @@ class VancedLanguageSelectionFragment : Fragment() {
                         chosenLangs.add(lang)
                     }
                 }
-            activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)?.edit()?.apply {
-                putString("lang", chosenLangs.joinToString())?.apply()
-                putBoolean("valuesModified", true).apply()
-            }
-            activity?.startService(Intent(activity, VancedDownloadService::class.java))
-            view.findNavController().navigate(R.id.action_installTo_homeFragment)
-        }
-    }
-
-    @ExperimentalStdlibApi
-    private fun loadBoxes(ll: LinearLayout) = CoroutineScope(Dispatchers.Main).launch {
-        langcor.await()
-        if (!langs.contains("null")) {
-            langs.forEach { lang ->
-                val loc = Locale(lang)
-                val box: MaterialCheckBox = MaterialCheckBox(activity).apply {
-                    tag = lang
-                    text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
-                    textSize = 18F
-                    typeface = activity?.let { ResourcesCompat.getFont(it, R.font.exo_bold) }
+            with(requireActivity()) {
+                getSharedPreferences("installPrefs", Context.MODE_PRIVATE)?.edit()?.apply {
+                        putString("lang", chosenLangs.joinToString())?.apply()
+                        putBoolean("valuesModified", true).apply()
                 }
-                ll.addView(box, MATCH_PARENT, WRAP_CONTENT)
+                startService(Intent(this, VancedDownloadService::class.java))
             }
+            view.findNavController().navigate(R.id.action_installTo_homeFragment)
         }
     }
 
