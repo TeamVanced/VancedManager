@@ -17,11 +17,12 @@
     <string name="installing_app">Installazione in corso di %1$s</string>
     <string name="installation_aborted">Operazione fallita, l\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Operazione fallita, l\'utente ha bloccato l\'installazione.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Operazione fallita, app in conflitto con un\'app già installata.</string>
     <string name="installation_failed">Operazione fallita, motivo sconosciuto. Unisciti al gruppo di Telegram o su Discord per ricevere assistenza.</string>
     <string name="installation_incompatible">Operazione fallita, l\'app non è compatibile con il dispositivo</string>
     <string name="installation_invalid">Operazione fallita, i file apk non sono validi.</string>
-    <string name="installation_signature">Si è verificato un errore imprevisto durante l\'installazione di Vanced. Hai disattivato la verifica della firma degli apk?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Si è verificato un errore imprevisto durante l\'installazione di Vanced. Hai disattivato le ottimizzazioni di MIUI?</string>
     <string name="installation_storage">Operazione fallita, si è verificato un errore con lo spazio di archiviazione.</string>
     <string name="installation_wait">Per favore, attendi la conclusione dell\'installazione</string>
