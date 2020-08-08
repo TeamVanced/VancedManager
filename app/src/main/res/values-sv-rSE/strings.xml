@@ -17,11 +17,12 @@
     <string name="installing_app">Installerar %1$s</string>
     <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Åtgärden misslyckades eftersom appen står i konflikt med en redan installerad app.</string>
     <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
     <string name="installation_incompatible">Åtgärden misslyckades eftersom appen är inkompatibel med din enhet.</string>
     <string name="installation_invalid">Åtgärden misslyckades eftersom apk-filerna är ogiltiga.</string>
-    <string name="installation_signature">Ett oväntat fel inträffade när du installerade Vanced. Har du inaktiverat apk signaturverifiering?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Ett oväntat fel inträffade när du installerade Vanced. Har du inaktiverat apk signaturverifiering?</string>
     <string name="installation_storage">Åtgärden misslyckades på grund av ett lagringsfel.</string>
     <string name="installation_wait">Vänta tills installationen är klar</string>
