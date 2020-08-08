@@ -42,6 +42,14 @@ object AppUtils {
         }
     }
 
+    fun sendFailure(error: MutableList<String>, context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val intent = Intent(HomeFragment.INSTALL_FAILED)
+            intent.putExtra("errorMsg", error.joinToString())
+            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+        }
+    }
+
     private fun getErrorMessage(status: Int, context: Context): String {
         return when (status) {
             PackageInstaller.STATUS_FAILURE_ABORTED -> context.getString(R.string.installation_aborted)

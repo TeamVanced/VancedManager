@@ -12,8 +12,9 @@ import com.topjohnwu.superuser.Shell
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.FileInfo
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -26,15 +27,14 @@ class RootSplitInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Shell.getShell {
-            runBlocking {
-                launch {
-                    val apkFilesPath = getExternalFilesDir("apks")?.path
-                    val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                    if (fileInfoList != null) {
-                        installSplitApkFiles(fileInfoList)
-                    }
+            CoroutineScope(Dispatchers.IO).launch {
+                val apkFilesPath = getExternalFilesDir("apks")?.path
+                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                if (fileInfoList != null) {
+                    installSplitApkFiles(fileInfoList)
                 }
             }
+
         }
         stopSelf()
         return START_NOT_STICKY
@@ -76,7 +76,7 @@ class RootSplitInstallerService: Service() {
                 sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
             }
         } else
-            sendFailure(installResult.code, this)
+            sendFailure(installResult.err, this)
     }
 
     private fun SimpleDateFormat.tryParse(str: String) = try {
