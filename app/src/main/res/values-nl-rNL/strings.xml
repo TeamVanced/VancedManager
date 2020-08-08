@@ -17,11 +17,12 @@
     <string name="installing_app">Installeren %1$s</string>
     <string name="installation_aborted">Bewerking mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_blocked">Bewerking mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Bewerking mislukt omdat de app conflicteert met een reeds geïnstalleerde app.</string>
     <string name="installation_failed">Operatie mislukt om een onbekende reden, neem dan deel aan onze Telegram of Discord voor ondersteuning.</string>
     <string name="installation_incompatible">Bewerking mislukt omdat de app niet compatibel is met uw apparaat.</string>
     <string name="installation_invalid">Bewerking mislukt omdat de apk-bestanden ongeldig zijn.</string>
-    <string name="installation_signature">Er is een onverwachte fout opgetreden tijdens het installeren van Vanced. Heeft u apk-signature verificatie uitgeschakeld?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Er is een onverwachte fout opgetreden tijdens het installeren van Vanced. Heb je MIUI optimalisaties uitgeschakeld?</string>
     <string name="installation_storage">Bewerking is mislukt door een opslagfout.</string>
     <string name="installation_wait">Wacht tot de installatie is voltooid</string>
