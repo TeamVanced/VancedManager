@@ -45,8 +45,24 @@ object AppUtils {
     fun sendFailure(error: MutableList<String>, context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
             val intent = Intent(HomeFragment.INSTALL_FAILED)
-            intent.putExtra("errorMsg", error.joinToString())
+            intent.putExtra("errorMsg", getErrorMessage(error.joinToString(), context))
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+        }
+    }
+
+    private fun getErrorMessage(status: String, context: Context): String {
+        return when {
+            status.contains("INSTALL_FAILED_ABORTED") -> context.getString(R.string.installation_aborted)
+            status.contains("INSTALL_FAILED_ALREADY_EXISTS") -> context.getString(R.string.installation_conflict)
+            status.contains("INSTALL_FAILED_CPU_ABI_INCOMPATIBLE") -> context.getString(R.string.installation_incompatible)
+            status.contains("INSTALL_FAILED_INSUFFICIENT_STORAGE") -> context.getString(R.string.installation_storage)
+            status.contains("INSTALL_FAILED_INVALID_APK") -> context.getString(R.string.installation_invalid)
+            status.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> context.getString(R.string.installation_signature)
+            else ->
+                if (MiuiHelper.isMiui())
+                    context.getString(R.string.installation_miui)
+                else
+                    context.getString(R.string.installation_failed)
         }
     }
 
