@@ -76,7 +76,7 @@ class RootSplitInstallerService: Service() {
                 sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
             }
         } else
-            sendFailure(installResult.err, this)
+            sendFailure(installResult.out, this)
     }
 
     private fun SimpleDateFormat.tryParse(str: String) = try {
