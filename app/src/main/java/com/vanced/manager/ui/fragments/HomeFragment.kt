@@ -24,7 +24,7 @@ import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.dialogs.DialogContainer.launchVanced
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.utils.AppUtils.isInstallationRunning
+import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.PackageHelper
 
 class HomeFragment : Fragment(), View.OnClickListener {
@@ -103,7 +103,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         when (v?.id) {
             R.id.vanced_installbtn -> {
-                if (!isInstallationRunning(requireActivity())) {
+                if (!installing) {
                     if (!viewModel.fetching.get()!!) {
                         if (variant == "nonroot" && !viewModel.microgInstalled.get()!!) {
                             Snackbar.make(
@@ -134,10 +134,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     }
                 } else
                     Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT)
-
             }
             R.id.microg_installbtn -> {
-                if (!isInstallationRunning(requireActivity()))
+                if (!installing)
                     requireActivity().startService(Intent(requireActivity(), MicrogDownloadService::class.java))
                 else
                     Toast.makeText(requireActivity(), R.string.installation_wait, Toast.LENGTH_SHORT)
@@ -231,14 +230,19 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 VANCED_INSTALLED -> {
                     binding.includeVancedLayout.vancedInstalling.visibility = View.GONE
                     launchVanced(requireActivity())
+                    installing = false
                 }
-                MICROG_INSTALLED -> binding.includeMicrogLayout.microgInstalling.visibility = View.GONE
+                MICROG_INSTALLED -> {
+                    binding.includeMicrogLayout.microgInstalling.visibility = View.GONE
+                    installing = false
+                }
                 INSTALL_FAILED -> {
                     with(binding) {
                         includeMicrogLayout.microgInstalling.visibility = View.GONE
                         includeVancedLayout.vancedInstalling.visibility = View.GONE
                     }
                     installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
+                    installing = false
                 }
                 REFRESH_HOME -> {
                     Log.d("VMRefresh", "Refreshing home page")

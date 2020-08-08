@@ -15,11 +15,13 @@ import com.vanced.manager.R
 import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import java.io.File
 
 class VancedDownloadService: Service() {
@@ -39,62 +41,61 @@ class VancedDownloadService: Service() {
     private fun downloadSplits(
         type: String = "arch"
     ) {
-        val context = this
-        runBlocking {
-            launch {
-                File(getExternalFilesDir("apk")?.path as String).deleteRecursively()
-                val defPrefs = PreferenceManager.getDefaultSharedPreferences(context)
-                val installUrl = defPrefs.getString("install_url", baseUrl)
-                val vancedVer = getObjectFromJson("$installUrl/vanced.json", "version")
+        CoroutineScope(Dispatchers.IO).launch {
+            File(getExternalFilesDir("apk")?.path as String).deleteRecursively()
+            val defPrefs = PreferenceManager.getDefaultSharedPreferences(this@VancedDownloadService)
+            val installUrl = defPrefs.getString("install_url", baseUrl)
+            val vancedVer = getObjectFromJson("$installUrl/vanced.json", "version")
 
-                val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-                val variant = defPrefs.getString("vanced_variant", "nonroot")
-                val lang = prefs?.getString("lang", "en")?.split(", ")?.toTypedArray()
-                val theme = prefs?.getString("theme", "dark")
-                val arch =
-                    when {
-                        Build.SUPPORTED_ABIS.contains("x86") -> "x86"
-                        Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
-                        else -> "armeabi_v7a"
-                    }
-                val url =
-                    when (type) {
-                        "arch" -> "$installUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
-                        "theme" -> "$installUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
-                        "lang" -> "$installUrl/apks/v$vancedVer/$variant/Language/split_config.${lang?.get(count)}.apk"
-                        else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
-                    }
-
-                //apkType = type
-                //downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
-
-            PRDownloader
-                .download(url, getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
-                .build()
-                .setOnProgressListener { progress ->
-                    val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
+            val prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+            val variant = defPrefs.getString("vanced_variant", "nonroot")
+            val lang = prefs?.getString("lang", "en")?.split(", ")?.toTypedArray()
+            val theme = prefs?.getString("theme", "dark")
+            val arch =
+                when {
+                    Build.SUPPORTED_ABIS.contains("x86") -> "x86"
+                    Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
+                    else -> "armeabi_v7a"
                 }
-                .start(object : OnDownloadListener {
-                    override fun onDownloadComplete() {
-                        when (type) {
-                            "arch" -> downloadSplits("theme")
-                            "theme" -> downloadSplits("lang")
-                            "lang" -> {
-                                count++
-                                if (count < lang?.count()!!)
-                                    downloadSplits("lang")
-                                else
-                                    prepareInstall(variant!!)
-                            }
+            val url =
+                when (type) {
+                    "arch" -> "$installUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
+                    "theme" -> "$installUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
+                    "lang" -> "$installUrl/apks/v$vancedVer/$variant/Language/split_config.${lang?.get(count)}.apk"
+                    else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
+                }
+
+            //apkType = type
+            //downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
+
+        PRDownloader
+            .download(url, getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
+            .build()
+            .setOnStartOrResumeListener{ installing = true }
+            .setOnProgressListener { progress ->
+                val mProgress = progress.currentBytes * 100 / progress.totalBytes
+                localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
+            }
+            .start(object : OnDownloadListener {
+                override fun onDownloadComplete() {
+                    when (type) {
+                        "arch" -> downloadSplits("theme")
+                        "theme" -> downloadSplits("lang")
+                        "lang" -> {
+                            count++
+                            if (count < lang?.count()!!)
+                                downloadSplits("lang")
+                            else
+                                prepareInstall(variant!!)
                         }
                     }
+                }
 
-                    override fun onError(error: Error?) {
-                       Toast.makeText(this@VancedDownloadService, getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
-                    }
-                })
-            }
+                override fun onError(error: Error?) {
+                    installing = false
+                    Toast.makeText(this@VancedDownloadService, getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
+                }
+            })
         }
     }
 

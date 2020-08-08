@@ -18,7 +18,7 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
-import com.vanced.manager.utils.AppUtils.isInstallationRunning
+import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
@@ -75,10 +75,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (isInstallationRunning(this)) {
+        if (installing) {
             return false
         }
-
         when (item.itemId) {
             android.R.id.home -> {
                 onBackPressed()
@@ -144,10 +143,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(Dispatchers.Main).launch {
             if (InternetTools.isUpdateAvailable()) {
-                val fm = supportFragmentManager
-                UpdateCheckFragment().show(fm, "UpdateCheck")
+                UpdateCheckFragment().show(supportFragmentManager, "UpdateCheck")
             }
         }
     }

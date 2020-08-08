@@ -12,11 +12,13 @@ import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 class MicrogDownloadService: Service() {
 
@@ -31,36 +33,36 @@ class MicrogDownloadService: Service() {
     }
 
     private fun downloadMicrog() {
-        runBlocking {
-            launch {
-                val url = getObjectFromJson(
-                    "${PreferenceManager.getDefaultSharedPreferences(this@MicrogDownloadService)
-                        .getString("install_url", baseUrl)}/microg.json", "url"
-                )
+        CoroutineScope(Dispatchers.IO).launch {
+            val url = getObjectFromJson(
+                "${PreferenceManager.getDefaultSharedPreferences(this@MicrogDownloadService)
+                    .getString("install_url", baseUrl)}/microg.json", "url"
+            )
 
-                //downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
+            //downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
 
-                PRDownloader.download(url, getExternalFilesDir("apk")?.path, "microg.apk")
-                    .build()
-                    .setOnProgressListener { progress ->
-                        val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
+            PRDownloader.download(url, getExternalFilesDir("apk")?.path, "microg.apk")
+                .build()
+                .setOnStartOrResumeListener { installing = true }
+                .setOnProgressListener { progress ->
+                    val mProgress = progress.currentBytes * 100 / progress.totalBytes
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
+                }
+                .start(object : OnDownloadListener {
+                    override fun onDownloadComplete() {
+                        val intent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
+                        intent.putExtra("path", "${getExternalFilesDir("apk")}/microg.apk")
+                        intent.putExtra("pkg", "com.mgoogle.android.gms")
+                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_INSTALLING))
+                        startService(intent)
                     }
-                    .start(object : OnDownloadListener {
-                        override fun onDownloadComplete() {
-                            val intent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
-                            intent.putExtra("path", "${getExternalFilesDir("apk")}/microg.apk")
-                            intent.putExtra("pkg", "com.mgoogle.android.gms")
-                            localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_INSTALLING))
-                            startService(intent)
-                        }
 
-                        override fun onError(error: Error?) {
-                            Toast.makeText(this@MicrogDownloadService, getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
-                        }
-                    })
+                    override fun onError(error: Error?) {
+                        installing = false
+                        Toast.makeText(this@MicrogDownloadService, getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
+                    }
+                })
 
-            }
         }
 
     }

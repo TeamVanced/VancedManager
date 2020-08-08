@@ -1,34 +1,16 @@
 package com.vanced.manager.utils
 
-import android.app.ActivityManager
-import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.*
-import com.vanced.manager.core.installer.*
 import com.vanced.manager.ui.fragments.HomeFragment
 import kotlinx.coroutines.*
 
 object AppUtils {
 
-    fun isInstallationRunning(context: Context): Boolean {
-        val serviceClasses = listOf(VancedDownloadService::class.java, MicrogDownloadService::class.java, AppInstaller::class.java, AppInstallerService::class.java, SplitInstaller::class.java, SplitInstallerService::class.java, RootSplitInstallerService::class.java)
-        return serviceClasses.any { service ->
-            isServiceRunning(service, context)
-        }
-    }
-
-    @Suppress("DEPRECATION")
-    private fun isServiceRunning(cls: Class<out Service>, context: Context): Boolean {
-        val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-        val runningServices = activityManager.getRunningServices(Int.MAX_VALUE)
-        return runningServices.any { info ->
-            info.service.className == cls.name
-        }
-    }
+    var installing = false
 
     fun sendFailure(status: Int, context: Context) {
         //Delay error broadcast until activity (and fragment) get back to the screen
