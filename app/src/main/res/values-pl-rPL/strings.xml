@@ -17,11 +17,12 @@
     <string name="installing_app">Instalowanie %1$s</string>
     <string name="installation_aborted">Operacja nie powiodła się, bo użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Operacja nie powiodła się, bo użytkownik zablokował instalację.</string>
+    <string name="installation_downgrade">Operacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Czy masz zainstalowany oryginalny YouTube?</string>
     <string name="installation_conflict">Operacja nie powiodła się, bo aplikacja powoduje konflikt z już zainstalowaną aplikacją.</string>
     <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
     <string name="installation_incompatible">Operacja nie powiodła się, bo aplikacja jest niezgodna z urządzeniem.</string>
     <string name="installation_invalid">Operacja nie powiodła się, bo pliki apk są nieprawidłowe.</string>
-    <string name="installation_signature">Wystąpił nieoczekiwany błąd podczas instalowania Vanced. Czy wyłączyłeś weryfikację podpisu APK?</string>
+    <string name="installation_signature">Operacja nie powiodła się, ponieważ użytkownik nie wyłączył weryfikacji podpisu apk</string>
     <string name="installation_miui">Wystąpił nieoczekiwany błąd podczas instalowania Vanced. Czy wyłączyłeś Optymalizacje MIUI?</string>
     <string name="installation_storage">Operacja nie powiodła się z powodu błędu pamięci.</string>
     <string name="installation_wait">Poczekaj na zakończenie instalacji</string>
