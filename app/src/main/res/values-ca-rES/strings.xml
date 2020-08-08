@@ -17,11 +17,12 @@
     <string name="installing_app">Instal·lant %1$s</string>
     <string name="installation_aborted">L\'operació ha fallat perquè l\'usuari ha cancel·lat la instal·lació.</string>
     <string name="installation_blocked">L\'operació ha fallat perquè l\'usuari ha blocat la instal·lació.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">L\'operació ha fallat perquè l\'aplicació coincideix amb altra ja instal·lada.</string>
     <string name="installation_failed">L\'operació ha fallat per una raó desconeguda, si us plau, uniu-se al Telegram o al Discord per rebre suport tècnic.</string>
     <string name="installation_incompatible">L\'operació ha fallat perquè l\'aplicació és incompatible amb el vostre dispositiu.</string>
     <string name="installation_invalid">L\'operació ha fallat perquè els fitxers apk són invàlids.</string>
-    <string name="installation_signature">S\'ha produït un error inesperat mentre s\'instal·lava Vanced. Heu desactivat la verificació de signatura de les apk?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">S\'ha produït un error inesperat mentre s\'instal·lava Vanced. Heu desactivat les optimitzacions de MIUI?</string>
     <string name="installation_storage">L\'operació ha fallat degut a un error d\'emmagatzematge.</string>
     <string name="installation_wait">Espereu fins que es completi la instal·lació</string>

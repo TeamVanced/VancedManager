@@ -17,11 +17,12 @@
     <string name="installing_app">Instalando %1$s</string>
     <string name="installation_aborted">La operación fallo porque el usuario abortó la instalación</string>
     <string name="installation_blocked">La operación fallo porque el usuario bloqueo la instalación</string>
+    <string name="installation_downgrade">Operación fallida porque el usuario intentó degradar el paquete. ¿Tienes instalado YouTube original?</string>
     <string name="installation_conflict">La operación fallo porque la app entra en conflicto con una app ya instalada</string>
     <string name="installation_failed">La operacion fallo por una razon desconocida, porfavor únete a nuestro grupo de Telegram o Discord para brindar soporte.</string>
     <string name="installation_incompatible">La operación fallo porque la app es incompatible con tu dispositivo.</string>
     <string name="installation_invalid">La operación fallo debido a que los archivos apk son inválidos.</string>
-    <string name="installation_signature">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado verificación de firmas?(signature verification)</string>
+    <string name="installation_signature">Operación fallida porque el usuario no deshabilitado verificación de firmas apk</string>
     <string name="installation_miui">Un error inesperado ocurrió durante la instalación de Vanced. Has deshabilitado las Optimizaciones de MIUI?</string>
     <string name="installation_storage">La operación falló debido a un error de almacenamiento.</string>
     <string name="installation_wait">Porfavor espera hasta que la instalación termine.</string>
@@ -49,10 +50,10 @@
     <string name="category_manager">Manager</string>
     <string name="check_updates">Buscar actualizaciones</string>
     <string name="chosen_install_values">Preferencias de instalación elegidas</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">Idioma(s): %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">Limpiar archivos descargados</string>
+    <string name="cleared_files">Archivos limpiados exitosamente</string>
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
@@ -62,7 +63,7 @@
     <string name="theme_light">Tema Claro</string>
     <string name="update_url">URL del canal de actualizacion</string>
     <string name="push_notifications">Notificaciones push de %1$s</string>
-    <string name="push_notifications_summary">Recibir notificaciones push cuando exista una actualización para %1$s</string>
+    <string name="push_notifications_summary">Recibir notificaciones push cuando una actualización para %1$s sea lanzada</string>
     <string name="re_check">Reintentar</string>
     <string name="update_center">Centro de Actualizaciones</string>
     <string name="update_found">Actualización encontrada!</string>
@@ -71,7 +72,7 @@
     <string name="button_dismiss">Descartar</string>
     <string name="guide">Guía</string>
     <string name="hold_on">Un momento!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Parece que estas usando la versión Magisk/TWRP de Vanced, la cual está descontinuada y no puede ser actualizada utilizando esta app. Por favor, elimínalo primero quitando el módulo magisk/usando el desinstalador para vanced de TWRP.</string>
     <string name="miui_one_title">MIUI detectado!</string>
     <string name="miui_one">Hey! Parece que eres un usuario MIUI. Para poder usar esta aplicacion correctamente, necesitaras deshabilitar las optimizaciones MIUI en ajustes de desarrollador. (Puedes ignorar esta advertencia con seguridad si estas en un ROM 20.2.20 o posterior basado en xiaomi.eu)</string>
     <string name="error">Error</string>

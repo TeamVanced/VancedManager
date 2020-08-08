@@ -17,11 +17,12 @@
     <string name="installing_app">正在安装 %1$s</string>
     <string name="installation_aborted">操作失败，用户中断了安装程序。</string>
     <string name="installation_blocked">操作失败，用户封锁了安装程序。</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">操作失败，与已安装的软件發生冲突。</string>
     <string name="installation_failed">操作失败，出现未知错误，请到我们的 Telegram 或 Discord 寻求支援。</string>
     <string name="installation_incompatible">操作失败，软件与设备不相容。</string>
     <string name="installation_invalid">操作失败， APK 档案失效。</string>
-    <string name="installation_signature">安装 Vanced 时发生预期外的错误。您有关闭 APK 签名验证吗？</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">安装 Vanced 时发生预期外的错误。您有关闭 MIUI 优化吗？</string>
     <string name="installation_storage">操作失败，存储错误。</string>
     <string name="installation_wait">请等待安装程序完成</string>
@@ -49,10 +50,10 @@
     <string name="category_manager">Manager</string>
     <string name="check_updates">检查更新</string>
     <string name="chosen_install_values">已选择安装偏好</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">语言: %1$s</string>
     <string name="chosen_theme">主题： %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">清除已下载的档案</string>
+    <string name="cleared_files">成功清除档案</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">链接会使用 Chrome Custom Tabs 打开</string>
     <string name="link_external_browser">链接会使用外部浏览器打开</string>
@@ -71,7 +72,7 @@
     <string name="button_dismiss">关闭</string>
     <string name="guide">说明</string>
     <string name="hold_on">等一下！</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">您似乎正在使用 Magisk/TWRP 版的 Vanced ，它已停止支援且无法透过此应用程式更新。请透过移除 Magisk 模块/ TWRP Vanced 卸载程式来移除它。</string>
     <string name="miui_one_title">检测到 MIUI ！</string>
     <string name="miui_one">嘿! 您似乎是 MIUI 用户。为了能够正确地使用此软件，您将需要在开发人员设置中关闭 MIUI 优化。（如果您使用的是基于 xiaomi.eu 的20.2.20或更新的 ROM ，则可以放心地忽略此警告。）</string>
     <string name="error">错误</string>

@@ -17,11 +17,12 @@
     <string name="installing_app">%1$s telepítése</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
     <string name="installation_blocked">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Művelet végrehajtása nem sikerült, mert egy másik hasonló alkalmazás telepítve van.</string>
     <string name="installation_failed">Művelet végrehajtása ismeretlen okok miatt nem sikerült, támogatásért csatlakozzon a Telegram vagy a Discord csoportunkhoz.</string>
     <string name="installation_incompatible">Művelet végrehajtása nem sikerült, mert az alkalmazás nem kompatibilis az eszközével.</string>
     <string name="installation_invalid">Művelet végrehajtása nem sikerült, mert a telepítőcsomagok érvénytelenek.</string>
-    <string name="installation_signature">Váratlan hiba történt a Vanced telepítése közben. Kikapcsolta az alkalmazás aláírás ellenőrzést?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Váratlan hiba történt a Vanced telepítése közben. Kikapcsolta a MIUI-optimalizációt?</string>
     <string name="installation_storage">Tárhely hiba miatt a művelet megszakadt.</string>
     <string name="installation_wait">Várj míg a telepítés befejeződik…</string>

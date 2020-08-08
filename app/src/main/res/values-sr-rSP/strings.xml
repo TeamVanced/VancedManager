@@ -17,11 +17,12 @@
     <string name="installing_app">Инсталирање %1$s</string>
     <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
     <string name="installation_blocked">Инсталација није успешна, корисник је блокирао инсталацију.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Операција није успешна због конфликта са већ инсталираном апликацијом.</string>
     <string name="installation_failed">Операција није успешна из непознатог разлога, молимо вас да се придружите Телеграм или Дискорд групи за подршку.</string>
     <string name="installation_incompatible">Операција није успешна, апликација није компактибилна са вашим уређајем.</string>
     <string name="installation_invalid">Операција није успешна, фајлови апликације нису валидни.</string>
-    <string name="installation_signature">Дошло је до непознате грешке приликом инсталирања Vanced апликације. Да ли сте онемогућили Apk signature verification?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Дошло је до непознате грешке приликом инсталирања Vanced апликације. Да ли сте онемогућили MIUI Оптимизацију?</string>
     <string name="installation_storage">Операција није успешна због недовољно простора на меморији.</string>
     <string name="installation_wait">Молимо сачекајте док се инсталација не заврши</string>

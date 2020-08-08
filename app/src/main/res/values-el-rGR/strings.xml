@@ -17,11 +17,12 @@
     <string name="installing_app">Εγκατάσταση %1$s</string>
     <string name="installation_aborted">Η διαδικασία απέτυχε λόγω ακύρωσης από τον χρήστη.</string>
     <string name="installation_blocked">Η διαδικασία απέτυχε λόγω απόκλεισης από τον χρήστη.</string>
+    <string name="installation_downgrade">Η διεργασία απέτυχε διότι ο χρήστης προσπάθησε να υποβαθμίσει το πακέτο. Έχετε εγκαταστήσει το κανονικό YouTube;</string>
     <string name="installation_conflict">Η διαδικασία απέτυχε επειδή η εφαρμογή είναι ήδη εγκατεστημένη.</string>
     <string name="installation_failed">Η διαδικασία απέτυχε για άγνωστο λόγω, παρακαλούμε μπείτε στο Telegram ή στο Discord μας για βοήθεια.</string>
     <string name="installation_incompatible">Η διαδικασία απέτυχε επείδη η εφαρμογή δεν είναι συμβατή με την συσκευή.</string>
     <string name="installation_invalid">Η διαδικασία απέτυχε επειδή τα αρχεία APK δεν είναι σωστά.</string>
-    <string name="installation_signature">Προέκυψε ένα πρόβλημα στην εγκατάσταση του Vanced. Έχετε απενεργοποιήσει το Signature Verification;</string>
+    <string name="installation_signature">Η διεργασία απέτυχε διότι ο χρήστης δεν έκλεισε την επαλήθευση υπογραφής των apk</string>
     <string name="installation_miui">Πρόεκυψε ένα πρόβλημα στην εγκατάσταση του Vanced. Έχετε επενεργοποιήσει το MIUI-Optimisations;</string>
     <string name="installation_storage">Η διαδικασία απέτυχε λόγω προβλήματος του αποθηκευτικού χώρου.</string>
     <string name="installation_wait">Παρακαλώ περιμένετε να ολοκληρωθεί η εγκατάσταση.</string>
@@ -49,10 +50,10 @@
     <string name="category_manager">Διαχειριστής</string>
     <string name="check_updates">Έλεγχος για ενημερώσεις</string>
     <string name="chosen_install_values">Διαλέξτε επιλογές εγκατάστασης</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">Γλώσσα(/ες): %1$s</string>
     <string name="chosen_theme">Χρώματα: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">Εκκαθάριση κατεβασμένων αρχείων</string>
+    <string name="cleared_files">Επιτυχής εκκαθάριση αρχείων</string>
     <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="link_external_browser">Οι σύνδεσμοι θα ανοίγουν σε εξωτερικό φυλλομετρητή</string>
@@ -71,7 +72,7 @@
     <string name="button_dismiss">Αγνόηση</string>
     <string name="guide">Οδηγός</string>
     <string name="hold_on">Περιμένετε!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Φαίνεται πως χρησιμοποιήτε την Magisk/TWRP έκδοση του Vanced, η οποία δεν υποστηρίζεται πλέον και δεν μπορεί να ενημερωθεί μέσω αυτής της εφαρμογής. Παρακαλούμε διαγράψτε αυτή την έκδοση αφαιρώντας το Magisk Module/χρησιμοποιόντας το πρόγραμμα κατάργησης TWRP Vanced.</string>
     <string name="miui_one_title">Ανιχνεύτηκε MIUI!</string>
     <string name="miui_one">Φαίνεται πως είστε χρήστης MIUI. Για να δουλέψει σωστά αυτή η εφαρμογή, θα πρέπει να απενεργοποιήσετε τα MIUI Optimisations στα Developer Settings. (Μπορείτε να αγνοήσετε αυτή την προειδοποίηση αν είστε στην έκδοση 20.2.20 ή νεότερη λειτουργικού βασισμένο στο Xiami.eu)</string>
     <string name="error">Πρόβλημα</string>

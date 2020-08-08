@@ -17,11 +17,12 @@
     <string name="installing_app">Installerer %1$s</string>
     <string name="installation_aborted">Operationen fejlede fordi brugeren lukkede installationen.</string>
     <string name="installation_blocked">Operationen fejlede fordi brugeren blokerede installationen.</string>
+    <string name="installation_downgrade">Operationen fejlede fordi brugeren prøvede at nedgradere pakken. Har du YouTube appen installeret?</string>
     <string name="installation_conflict">Operationen fejlede fordi appen konflikter med en anden installeret app.</string>
     <string name="installation_failed">Operationen fejlede af ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
     <string name="installation_incompatible">Operationen fejlede fordi appen ikke er kompatibel med din enhed.</string>
     <string name="installation_invalid">Operationen fejlede fordi apk filerne er ugyldige.</string>
-    <string name="installation_signature">En uventet fejl skete under installationen af Vanced. Har du disabled appsignatur verifikation?</string>
+    <string name="installation_signature">Operationen fejlede fordi brugeren ikke har disabled apk signatur verifikation</string>
     <string name="installation_miui">En uventet fejl skete under installationen af Vanced. Har du disabled MIUI Optimering?</string>
     <string name="installation_storage">Operationen fejlede på grund af lagerfejl.</string>
     <string name="installation_wait">Vent venligst til installationen bliver færdiggjort</string>
@@ -30,7 +31,7 @@
     <string name="latest">Seneste:</string>
     <string name="successfully_installed">Installerede %1$s succesfuldt</string>
     <string name="network_error">Netværksforbindelse utilgængelig</string>
-    <string name="no_microg">microG isn\'t installed</string>
+    <string name="no_microg">microG er ikke installeret</string>
     <string name="root_not_granted">Root adgang ikke tildelt</string>
     <string name="unavailable">Utilgængelig</string>
     <string name="update">Opdater</string>
@@ -49,10 +50,10 @@
     <string name="category_manager">Manager</string>
     <string name="check_updates">Søg efter opdateringer</string>
     <string name="chosen_install_values">Valgte installations præferencer</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">Sprog:%1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">Ryd hentede filer</string>
+    <string name="cleared_files">Filer ryddet succesfuldt</string>
     <string name="link_title">Brug Chrome Custom Faner</string>
     <string name="link_custom_tabs">Links vil åbne i Chrome Custom Faner</string>
     <string name="link_external_browser">Links vil åbne i en ekstern browser</string>
@@ -61,8 +62,8 @@
     <string name="theme_dark">Mørkt tema</string>
     <string name="theme_light">Lyst tema</string>
     <string name="update_url">Opdateringskanal URL</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
-    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="push_notifications">%1$s Push Notifikationer</string>
+    <string name="push_notifications_summary">Modtag push meddelelser når der er en ny opdatering til %1$s</string>
     <string name="re_check">Check igen</string>
     <string name="update_center">Manager opdaterings center</string>
     <string name="update_found">Opdatering fundet!</string>
@@ -71,7 +72,7 @@
     <string name="button_dismiss">Luk</string>
     <string name="guide">Vejledning</string>
     <string name="hold_on">Et øjeblik!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Det ser ud som om du bruger Magisk/TWRP versionen af Vanced. Den er ikke længere understøttet og kan derfor ikke opdateres igennem denne app. Vær venlig at fjerne magisk modulet/brug TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI fundet!</string>
     <string name="miui_one">Hey! Det ser ud som om du er MIUI bruger. For at kunne bruge denne app ordenligt skal du deaktivere MIUI optimeringer i udvikler indstillingerne (Du kan trygt ignorere denne advarsel hvis du bruger 20.2.20 eller nyere ROM baseret på xiaomi.eu)</string>
     <string name="error">Fejl</string>

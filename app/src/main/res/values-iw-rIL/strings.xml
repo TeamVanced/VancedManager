@@ -17,11 +17,12 @@
     <string name="installing_app">מתקין את %1$s</string>
     <string name="installation_aborted">הפעולה נכשלה מכיוון שהמשתמש ביטל את ההתקנה.</string>
     <string name="installation_blocked">הפעולה נכשלה מכיוון שהמשתמש חסם את ההתקנה.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">הפעולה נכשלה מכיוון שהאפליקציה סותרת עם אפליקציה שכבר מותקנת.</string>
     <string name="installation_failed">הפעולה נכשלה בגלל סיבה אינה ידועה, בבקשה הצטרפו לטלגרם או דיסקורד שלנו בשביל עזרה.</string>
     <string name="installation_incompatible">הפעולה נכשלה משום שהאפליקציה אינה תואמת למכשירך.</string>
     <string name="installation_invalid">הפעולה נכשלה משום שהAPK אינו תקין.</string>
-    <string name="installation_signature">שגיאה לא צפויה התרחשה בזמן ההתקנה. האם ביטלת את וידוא החתימה לAPK?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">שגיאה לא צפויה התרחשה בזמן ההתקנה. האם ביטלת את MIUI Optimisations?</string>
     <string name="installation_storage">הפעולה נכשלה בגלל בעיה באחסון.</string>
     <string name="installation_wait">אנא המתינו לסיום ההתקנה</string>
