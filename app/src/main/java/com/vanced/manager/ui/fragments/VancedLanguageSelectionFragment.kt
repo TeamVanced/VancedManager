@@ -37,25 +37,10 @@ class VancedLanguageSelectionFragment : Fragment() {
     @ExperimentalStdlibApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val langcor = CoroutineScope(Dispatchers.IO).async {
+        CoroutineScope(Dispatchers.IO).launch {
             langs = getArrayFromJson("${PreferenceManager.getDefaultSharedPreferences(requireActivity()).getString("install_url", baseUrl)}/vanced.json", "langs")
         }
-        CoroutineScope(Dispatchers.Main).launch {
-            langcor.await()
-            if (!langs.contains("null")) {
-                langs.forEach { lang ->
-                    val loc = Locale(lang)
-                    val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
-                        tag = lang
-                        text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
-                        textSize = 18F
-                        typeface = ResourcesCompat.getFont(requireActivity(), R.font.exo_bold)
-                    }
-                    view.findViewById<LinearLayout>(R.id.lang_button_ll)
-                        .addView(box, MATCH_PARENT, WRAP_CONTENT)
-                }
-            }
-        }
+        loadBoxes(view.findViewById(R.id.lang_button_ll))
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             val chosenLangs = mutableListOf("en")
             if (!langs.contains("null"))
@@ -72,6 +57,27 @@ class VancedLanguageSelectionFragment : Fragment() {
                 startService(Intent(this, VancedDownloadService::class.java))
             }
             view.findNavController().navigate(R.id.action_installTo_homeFragment)
+        }
+    }
+
+    @ExperimentalStdlibApi
+    private fun loadBoxes(ll: LinearLayout) {
+        CoroutineScope(Dispatchers.Main).launch {
+            if (this@VancedLanguageSelectionFragment::langs.isInitialized) {
+                if (!langs.contains("null")) {
+                    langs.forEach { lang ->
+                        val loc = Locale(lang)
+                        val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
+                            tag = lang
+                            text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
+                            textSize = 18F
+                            typeface = ResourcesCompat.getFont(requireActivity(), R.font.exo_bold)
+                        }
+                        ll.addView(box, MATCH_PARENT, WRAP_CONTENT)
+                    }
+                }
+            } else
+                loadBoxes(ll)
         }
     }
 
