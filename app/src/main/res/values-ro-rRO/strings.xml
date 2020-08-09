@@ -17,11 +17,12 @@
     <string name="installing_app">Se Instalează %1$s</string>
     <string name="installation_aborted">Operația a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_blocked">Operația a eșuat deoarece utilizatorul a blocat instalarea.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Operația a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată.</string>
     <string name="installation_failed">Operația a eșuat dintr-un motiv necunoscut, te rugăm să te alături Telegramului nostru sau Discord pentru suport.</string>
     <string name="installation_incompatible">Operația a eșuat deoarece aplicația este incompatibilă cu dispozitivul dvs.</string>
     <string name="installation_invalid">Operația a eșuat deoarece fișierele apk nu sunt valide.</string>
-    <string name="installation_signature">A apărut o eroare neașteptată în timpul instalării Vanced. Ați dezactivat verificarea semnăturii apk?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">O eroare neașteptată a apărut în timpul instalării Vanced. Ați dezactivat optimizarea MIUI?</string>
     <string name="installation_storage">Operația a eșuat datorită unei erori de stocare.</string>
     <string name="installation_wait">Vă rugăm să așteptați până la finalizarea instalării</string>

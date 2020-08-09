@@ -17,11 +17,12 @@
     <string name="installing_app">%1$s wird installiert</string>
     <string name="installation_aborted">Operation fehlgeschlagen, da der Nutzer sie abgebrochen hat</string>
     <string name="installation_blocked">Operation fehlgeschlagen, da der Nutzer die Installation nicht gestattet hat</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Operation fehlgeschlagen, da die App mit einer bereits installierten App im Konflikt steht</string>
     <string name="installation_failed">Operation aus einem unbekannten Grund fehlgeschlagen. Bitte trete unserem Telegram Chat oder Discord Server bei, um Support zu erhalten.</string>
     <string name="installation_incompatible">Operation fehlgeschlagen, da die App inkompatibel mit deinem Gerät ist</string>
     <string name="installation_invalid">Operation fehlgeschlagen, da die apks Dateien defekt sind</string>
-    <string name="installation_signature">Unerwarteter Fehler während der Installation aufgetreten. Hast du die Signatur-Verifikation deaktiviert?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Unerwarteter Fehler während der Installation aufgetreten. Hast du die MIUI-Optimisierungen deaktiviert?</string>
     <string name="installation_storage">Operation fehlgeschlagen, da ein Storage-Fehler aufgetreten ist.</string>
     <string name="installation_wait">Bitte warte, bis die Installation abgeschlossen ist</string>

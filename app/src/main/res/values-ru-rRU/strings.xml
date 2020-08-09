@@ -17,11 +17,12 @@
     <string name="installing_app">Установка %1$s</string>
     <string name="installation_aborted">Операция не выполнена, поскольку пользователь прервал установку</string>
     <string name="installation_blocked">Операция не выполнена, поскольку пользователь заблокировал установку</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Операция не выполнена, поскольку приложение конфликтует с уже установленным приложением</string>
     <string name="installation_failed">Операция не выполнена по неизвестной причине, отправьте отчёт об ошибке снятый с помощью logcat</string>
     <string name="installation_incompatible">Операция не выполнена, так как приложение несовместимо с вашим устройством</string>
     <string name="installation_invalid">Операция завершилась неудачно, потому что apk-файлы оказались повреждены</string>
-    <string name="installation_signature">Произошла непредвиденная ошибка при установке Vanced. Вы отключили проверку подписи?</string>
+    <string name="installation_signature">Операция не удалась, потому что пользователь не отключил проверку подписи apk</string>
     <string name="installation_miui">Произошла непредвиденная ошибка при установке Vanced. Вы отключили Оптимизацию MIUI?</string>
     <string name="installation_storage">Операция не выполнена, так как произошла ошибка с доступом к памяти.</string>
     <string name="installation_wait">Пожалуйста, дождитесь окончания установки</string>
@@ -49,7 +50,7 @@
     <string name="category_manager">Менеджер</string>
     <string name="check_updates">Проверить обновления</string>
     <string name="chosen_install_values">Выбранные значения установки</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">Язык(и): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
     <string name="clear_files">Clear downloaded files</string>
     <string name="cleared_files">Successfully cleared files</string>

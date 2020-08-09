@@ -17,11 +17,12 @@
     <string name="installing_app">მიმდინარეობს %1$s-ის ინსტალაცია</string>
     <string name="installation_aborted">ოპერაცია ჩაიშალა რადგან მომხმარებელმა შეაჩერა ინსტალაცია.</string>
     <string name="installation_blocked">ოპერაცია ჩაიშალა რადგან მომხმარებელმა დაბლოკა ინსტალაცია.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">ოპერაცია ჩაიშალა რადგან აპი შეესაბამება უკვე დაყენებულ აპს.</string>
     <string name="installation_failed">ოპერაცია ჩაიშალა გაურკვეველი მიზეზის გამო, გთხოვთ გამოგვიგზავნეთ logcat.</string>
     <string name="installation_incompatible">ოპერაცია ჩაიშალა რადგან აპი შეუთავსებელია თქვნს მოწყობილობასთან.</string>
     <string name="installation_invalid">ოპერაცია ჩაიშალა რადგან apk ფაილები დაზიანებულია.</string>
-    <string name="installation_signature">გაურკვეველი შეცდომა Vanced-ის დაყენების დროს. ნამდვილად გაქვთ ხელმოწერის ვერიფიკაცია გათიშული?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">გაურკვეველი შეცდომა Vanced-ის დაყენების დროს. ნამდვილად გამორთეთ MIUI-ის ოპტიმიზაციები?</string>
     <string name="installation_storage">ოპერაცია ჩაიშალა რადგან შეცდომაა მეხსიერებასთან დაკავშირებით.</string>
     <string name="installation_wait">გთხოვთ დაიცადოთ ინსტალაციის დასრულებამდე</string>

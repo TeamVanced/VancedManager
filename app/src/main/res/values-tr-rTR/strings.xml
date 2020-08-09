@@ -17,11 +17,12 @@
     <string name="installing_app">%1$s Kuruluyor</string>
     <string name="installation_aborted">İşlem başarısız oldu çünkü kullanıcı kurulumu yarıda bıraktı.</string>
     <string name="installation_blocked">İşlem başarısız oldu çünkü kullanıcı kurulumu engelledi.</string>
+    <string name="installation_downgrade">İşlem başarısız çünkü kullanıcı paketi düşürmeye çalıştı. Yüklü stok YouTube var mı?</string>
     <string name="installation_conflict">İşlem başarısız oldu çünkü uygulama zaten kurulu olan bir uygulamayla çakışıyor.</string>
     <string name="installation_failed">İşlem bilinmeyen bir sebepten dolayı başarısız oldu, Destek için lütfen Telegram veya Discord\'a katılın.</string>
     <string name="installation_incompatible">İşlem başarısız oldu çünkü uygulama cihazınızla uyumlu değil.</string>
     <string name="installation_invalid">İşlem başarısız çünkü apk dosyaları geçersiz.</string>
-    <string name="installation_signature">Vanced kurulurken beklenmedik bir hata oluştu. İmza doğrulamasını kaldırdınmı?</string>
+    <string name="installation_signature">Kullanıcı apk imza doğrulamasını devre dışı bırakmadığı için işlem başarısız oldu</string>
     <string name="installation_miui">Vanced kurulurken beklenmedik bir hata oluştu. MIUI Optimizasyonlarını devre dışı bıraktınmı?</string>
     <string name="installation_storage">İşlem başarısız oldu çünkü depolama ile ilgili bir sorun var.</string>
     <string name="installation_wait">Lütfen kurulum bitene kadar bekleyin.</string>

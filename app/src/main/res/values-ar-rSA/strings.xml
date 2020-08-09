@@ -17,11 +17,12 @@
     <string name="installing_app">جاري التثبيت %1$s</string>
     <string name="installation_aborted">فشلت العملية لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشلت العملية لأن المستخدم قام بحظر التثبيت.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">فشلت العملية لأن التطبيق يتعارض مع تطبيق مثبت بالفعل.</string>
     <string name="installation_failed">فشلت العملية لسبب غير معروف، يرجى الانضمام إلى تيليجرام أو ديسكورد للحصول على الدعم.</string>
     <string name="installation_incompatible">فشلت العملية لأن التطبيق غير متوافق مع جهازك.</string>
     <string name="installation_invalid">فشلت العملية لأن ملفات apk غير صالحة.</string>
-    <string name="installation_signature">حدث خطأ غير متوقع أثناء تثبيت Vanced. هل قمت بتعطيل التحقق من توقيع apk؟</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">حدث خطأ غير متوقع أثناء تثبيت Vanced. هل قمت بتعطيل تحسينات MIUI؟</string>
     <string name="installation_storage">فشلت العملية بسبب خطأ في التخزين.</string>
     <string name="installation_wait">الرجاء الانتظار حتى ينتهي التثبيت</string>

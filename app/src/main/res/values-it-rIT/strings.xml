@@ -17,11 +17,12 @@
     <string name="installing_app">Installazione in corso di %1$s</string>
     <string name="installation_aborted">Operazione fallita, l\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Operazione fallita, l\'utente ha bloccato l\'installazione.</string>
+    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
     <string name="installation_conflict">Operazione fallita, app in conflitto con un\'app già installata.</string>
     <string name="installation_failed">Operazione fallita, motivo sconosciuto. Unisciti al gruppo di Telegram o su Discord per ricevere assistenza.</string>
     <string name="installation_incompatible">Operazione fallita, l\'app non è compatibile con il dispositivo</string>
     <string name="installation_invalid">Operazione fallita, i file apk non sono validi.</string>
-    <string name="installation_signature">Si è verificato un errore imprevisto durante l\'installazione di Vanced. Hai disattivato la verifica della firma degli apk?</string>
+    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
     <string name="installation_miui">Si è verificato un errore imprevisto durante l\'installazione di Vanced. Hai disattivato le ottimizzazioni di MIUI?</string>
     <string name="installation_storage">Operazione fallita, si è verificato un errore con lo spazio di archiviazione.</string>
     <string name="installation_wait">Per favore, attendi la conclusione dell\'installazione</string>
@@ -49,9 +50,9 @@
     <string name="category_manager">Manager</string>
     <string name="check_updates">Verifica aggiornamenti</string>
     <string name="chosen_install_values">Preferenze di installazione scelte</string>
-    <string name="chosen_lang">Lingua: %1$s</string>
+    <string name="chosen_lang">Lingue: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
-    <string name="clear_files">Cancella file scaricati</string>
+    <string name="clear_files">Cancella i file scaricati</string>
     <string name="cleared_files">File cancellati con successo</string>
     <string name="link_title">Utilizza le schede personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
@@ -61,7 +62,7 @@
     <string name="theme_dark">Tema scuro</string>
     <string name="theme_light">Tema chiaro</string>
     <string name="update_url">Aggiorna l\'URL del canale</string>
-    <string name="push_notifications">%1$s Notifiche Push</string>
+    <string name="push_notifications">Notifiche push di %1$s</string>
     <string name="push_notifications_summary">Ricevi notifiche push quando un aggiornamento per %1$s è disponibile</string>
     <string name="re_check">Ricontrolla</string>
     <string name="update_center">Centro aggiornamenti</string>
