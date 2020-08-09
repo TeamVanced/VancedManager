@@ -17,7 +17,7 @@
     <string name="installing_app">Установка %1$s</string>
     <string name="installation_aborted">Операция не выполнена, поскольку пользователь прервал установку</string>
     <string name="installation_blocked">Операция не выполнена, поскольку пользователь заблокировал установку</string>
-    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
+    <string name="installation_downgrade">Операция не удалась, так как пользователь попытался понизить пакет. У вас установлен оригинальный YouTube?</string>
     <string name="installation_conflict">Операция не выполнена, поскольку приложение конфликтует с уже установленным приложением</string>
     <string name="installation_failed">Операция не выполнена по неизвестной причине, отправьте отчёт об ошибке снятый с помощью logcat</string>
     <string name="installation_incompatible">Операция не выполнена, так как приложение несовместимо с вашим устройством</string>
@@ -52,8 +52,8 @@
     <string name="chosen_install_values">Выбранные значения установки</string>
     <string name="chosen_lang">Язык(и): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">Удалить загруженные файлы</string>
+    <string name="cleared_files">Файлы успешно удалены</string>
     <string name="link_title">Использовать Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
     <string name="link_external_browser">Ссылки откроются во внешнем браузере</string>
@@ -62,7 +62,7 @@
     <string name="theme_dark">Тёмная тема</string>
     <string name="theme_light">Светлая тема</string>
     <string name="update_url">Ссылка на канал обновлений</string>
-    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications">%1$s Push Уведомления</string>
     <string name="push_notifications_summary">Получать уведомления о выходе обновления для %1$s</string>
     <string name="re_check">Перепроверить</string>
     <string name="update_center">Центр обновлений</string>
@@ -72,7 +72,7 @@
     <string name="button_dismiss">Отклонить</string>
     <string name="guide">Руководство</string>
     <string name="hold_on">Внимание!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Похоже, вы используете версию Magisk/TWRP Vanced, которая недоступна и не может быть обновлена с помощью этого приложения. Пожалуйста, сначала удалите его, удалив модуль magisk/используя TWRP Vanced деинсталлятор.</string>
     <string name="miui_one_title">Обнаружен пользователь MIUI!</string>
     <string name="miui_one">Привет! Похоже, вы пользователь MIUI. для правильного использования Vanced Manager вам придется отключить оптимизацию MIUI в настройках разработчика
 Если вы используете прошивку версии 20.2.20, основанную на xiaomi.eu, вы можете спокойно проигнорировать это предупреждение.</string>
