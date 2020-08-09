@@ -22,7 +22,7 @@
     <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
     <string name="installation_incompatible">Åtgärden misslyckades eftersom appen är inkompatibel med din enhet.</string>
     <string name="installation_invalid">Åtgärden misslyckades eftersom apk-filerna är ogiltiga.</string>
-    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
+    <string name="installation_signature">Åtgärden misslyckades eftersom användaren inte inaktiverade apk signaturverifiering</string>
     <string name="installation_miui">Ett oväntat fel inträffade när du installerade Vanced. Har du inaktiverat apk signaturverifiering?</string>
     <string name="installation_storage">Åtgärden misslyckades på grund av ett lagringsfel.</string>
     <string name="installation_wait">Vänta tills installationen är klar</string>
