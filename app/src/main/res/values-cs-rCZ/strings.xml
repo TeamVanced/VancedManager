@@ -15,17 +15,17 @@
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="install">Instalace</string>
     <string name="installing_app">Probíhá instalace %1$s</string>
-    <string name="installation_aborted">Operace se nezdařila, protože uživatel přerušil instalaci.</string>
-    <string name="installation_blocked">Operace se nezdařila, protože uživatel zablokoval instalaci.</string>
-    <string name="installation_downgrade">Operace se nezdařila, protože se uživatel pokusil downgradovat balíček. Máte nainstalovánu standardní aplikaci YouTube?</string>
-    <string name="installation_conflict">Operace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací.</string>
-    <string name="installation_failed">Operace se nezdařila z neznámého důvodu. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
-    <string name="installation_incompatible">Operace se nezdařila, protože aplikace není kompatibilní s vaším zařízením.</string>
-    <string name="installation_invalid">Operace se nezdařila, protože soubory APK jsou neplatné.</string>
-    <string name="installation_signature">Operace se nezdařila, protože uživatel nezakázal ověření podpisu APK</string>
-    <string name="installation_miui">Při instalaci aplikace Vanced došlo k neočekávané chybě. Máte vypnuty optimalizace MIUI?</string>
-    <string name="installation_storage">Operace se nezdařila z důvodu chyby v úložišti.</string>
-    <string name="installation_wait">Počkejte prosím na dokončení instalace</string>
+    <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
+    <string name="installation_blocked">Instalace se nezdařila, protože uživatel zablokoval instalaci.</string>
+    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace YouTube a zkuste to znovu.</string>
+    <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a zkuste to znovu.</string>
+    <string name="installation_failed">Instalace se nezdařila z neznámých důvodů. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
+    <string name="installation_incompatible">Instalace se nezdařila, protože instalační soubor není kompatibilní s vaším zařízením. Vymažte stažené soubory v Nastavení a zkuste to znovu.</string>
+    <string name="installation_invalid">Instalace se nezdařila, protože soubory APK jsou poškozeny.</string>
+    <string name="installation_signature">Instalace se nezdařila, protože je povoleno ověření podpisu APK. Zakažte ověření podpisu APK a zkuste to znovu.</string>
+    <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a zkuste to znovu.</string>
+    <string name="installation_storage">Instalace se nezdařila z důvodu chyby v úložišti.</string>
+    <string name="installation_wait">NEOPOUŠTĚJTE aplikaci, dokud nebude instalace dokončena.</string>
     <string name="button_reinstall">Přeinstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
@@ -38,7 +38,7 @@
     <string name="useful_links">Užitečné odkazy</string>
     <string name="website_text">Webová stránka</string>
     <string name="support_us">Podpořte nás!</string>
-    <string name="version_toast">Verze %1$s byla zkopírována!</string>
+    <string name="version_toast">Verze číslo %1$s byla zkopírována!</string>
     <!-- Settings -->
     <string name="accent_color">Doplňková barva</string>
     <string name="accent_blue">Modrá</string>
@@ -71,21 +71,21 @@
     <!-- Dialogs -->
     <string name="button_dismiss">Zavřít</string>
     <string name="guide">Návod</string>
-    <string name="hold_on">Počkejte!</string>
-    <string name="magisk_vanced">Vypadá to, že používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
+    <string name="hold_on">Zastavit!</string>
+    <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
     <string name="miui_one_title">Zjištěno MIUI!</string>
-    <string name="miui_one">Ahoj! Vypadá to, že používáte MIUI. Abyste mohli správně používat tuto aplikaci, budete muset vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete bezpečně ignorovat, pokud máte ROM z 20.2.2020 nebo pozdější, založenou na xiaomi.eu)</string>
+    <string name="miui_one">Chcete-li správně nainstalovat Vanced, MUSÍTE vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud máte ROM z 20.2.2020 nebo novější založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
-    <string name="security_context">Prosím ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu.</string>
+    <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu</string>
     <string name="success">Hotovo!</string>
-    <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji spustit?</string>
-    <string name="launch">Spustit</string>
+    <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji otevřít?</string>
+    <string name="launch">Otevřít</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
     <string name="choose_preferred_language_note">Poznámka: Angličtina bude vždy nainstalována jako dodatečný jazyk.</string>
     <string name="choose_preferred_theme">Vyberte preferovaný vzhled pro Vanced</string>
-    <string name="disable_signature">Byl zjištěn režim root! Chcete-li nainstalovat Vanced, budete muset vypnout ověření podpisu APK.</string>
+    <string name="disable_signature">Byl zjištěn režim root! Chcete-li Vanced nainstalovat, MUSÍTE vypnout ověření podpisu APK.</string>
     <string name="finish">Dokončit</string>
     <string name="install_light_black">Světlý + černý</string>
     <string name="install_light_dark">Světlý + tmavý</string>
