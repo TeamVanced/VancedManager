@@ -15,17 +15,17 @@
     <string name="error_downloading">Indirme hatası %1$s</string>
     <string name="install">Kur</string>
     <string name="installing_app">%1$s Kuruluyor</string>
-    <string name="installation_aborted">İşlem başarısız oldu çünkü kullanıcı kurulumu yarıda bıraktı.</string>
-    <string name="installation_blocked">İşlem başarısız oldu çünkü kullanıcı kurulumu engelledi.</string>
-    <string name="installation_downgrade">İşlem başarısız çünkü kullanıcı paketi düşürmeye çalıştı. Yüklü stok YouTube var mı?</string>
-    <string name="installation_conflict">İşlem başarısız oldu çünkü uygulama zaten kurulu olan bir uygulamayla çakışıyor.</string>
-    <string name="installation_failed">İşlem bilinmeyen bir sebepten dolayı başarısız oldu, Destek için lütfen Telegram veya Discord\'a katılın.</string>
-    <string name="installation_incompatible">İşlem başarısız oldu çünkü uygulama cihazınızla uyumlu değil.</string>
-    <string name="installation_invalid">İşlem başarısız çünkü apk dosyaları geçersiz.</string>
-    <string name="installation_signature">Kullanıcı apk imza doğrulamasını devre dışı bırakmadığı için işlem başarısız oldu</string>
-    <string name="installation_miui">Vanced kurulurken beklenmedik bir hata oluştu. MIUI Optimizasyonlarını devre dışı bıraktınmı?</string>
-    <string name="installation_storage">İşlem başarısız oldu çünkü depolama ile ilgili bir sorun var.</string>
-    <string name="installation_wait">Lütfen kurulum bitene kadar bekleyin.</string>
+    <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
+    <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
+    <string name="installation_downgrade">Kullanıcı paketi eski sürüme düşürmeye çalıştığı için yükleme başarısız oldu. Stok YouTube uygulamasından güncellemeleri kaldırın, ardından tekrar deneyin.</string>
+    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırın ve ardından tekrar deneyin.</string>
+    <string name="installation_failed">Yükleme bilinmeyen nedenlerle başarısız oldu, daha fazla destek için Telegram veya Discord\'a katılın.</string>
+    <string name="installation_incompatible">Yükleme dosyası cihazınızla uyumlu olmadığından yükleme başarısız oldu. İndirilen dosyaları Ayarlar\'dan temizleyin, ardından tekrar deneyin.</string>
+    <string name="installation_invalid">Apk dosyaları bozuk olduğundan yükleme başarısız oldu.</string>
+    <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakın, ardından tekrar deneyin.</string>
+    <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakın, ardından tekrar deneyin.</string>
+    <string name="installation_storage">Bir depolama hatası nedeniyle kurulum başarısız oldu.</string>
+    <string name="installation_wait">Yükleme bitene kadar uygulamadan AYRILMAYIN.</string>
     <string name="button_reinstall">Yeniden kur</string>
     <string name="version_installed">Kuruldu:</string>
     <string name="latest">En yeni:</string>
@@ -38,7 +38,7 @@
     <string name="useful_links">Yararlı Bağlantılar</string>
     <string name="website_text">Vanced\'in resmî web sitesi</string>
     <string name="support_us">Brave İnternet tarayıcısını indirerek bizi destekleyebilirsiniz</string>
-    <string name="version_toast">%1$s sürümü kopyalandı!</string>
+    <string name="version_toast">%1$s sürüm numarası kopyalandı!</string>
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
     <string name="accent_blue">Mavi</string>
@@ -71,21 +71,21 @@
     <!-- Dialogs -->
     <string name="button_dismiss">Kapat</string>
     <string name="guide">Kılavuz</string>
-    <string name="hold_on">Bekle!</string>
-    <string name="magisk_vanced">Görünüşe göre artık Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz ve bu sürüm bu uygulama kullanılarak güncellenemiyor. Lütfen önce magisk modülünü kaldırarak veya TWRP Vanced uninstaller\'ı kullanarak kaldırın.</string>
+    <string name="hold_on">Durdur!</string>
+    <string name="magisk_vanced">Üretimi durdurulan ve bu uygulama kullanılarak güncellenemeyen Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen magisk modülünü/TWRP Vanced kaldırıcıyı kullanarak kaldırın.</string>
     <string name="miui_one_title">MIUI tespit edildi!</string>
-    <string name="miui_one">Hey! Görünüşe göre MIUI kullanıcısın. Bu programı düzgün kullanabilmek için geliştirici seçeneklerinden MIUI optimizasyonunu kapatman gerekir. (Eğer 20.2.20 ya da daha sonraki ROM sürümünü kullanıyorsan bu uyarıyı dikkate almayabilirsin)</string>
+    <string name="miui_one">Vanced\'i doğru şekilde kurmak için geliştirici ayarlarından MIUI Optimizasyonlarını devre dışı bırakmalısınız. (20.2.20 veya sonraki bir xiaomi.eu tabanlı ROM kullanıyorsanız bu uyarıyı göz ardı edebilirsiniz)</string>
     <string name="error">Hata</string>
-    <string name="security_context">Uygulamayı vanced.app\'den, Vanced Discord sunucusundan veya GitHub\'dan indirdiğinizden emin olun.</string>
+    <string name="security_context">Uygulamayı vanced.app, Vanced Discord sunucusu veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
     <string name="success">Başarılı!</string>
-    <string name="vanced_installed">Vanced Başarıyla kuruldu! Başlatılsın mı?</string>
-    <string name="launch">Başlat</string>
+    <string name="vanced_installed">Vanced başarıyla kuruldu! Şimdi açılsın mı?</string>
+    <string name="launch">Aç</string>
     <string name="welcome">Hoş geldin</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Vanced için tercih ettiğiniz dili seçin</string>
+    <string name="choose_preferred_language">Vanced için tercih ettiğiniz dil(ler)i seçin</string>
     <string name="choose_preferred_language_note">Not: Eğer İngilizceden farklı bir dil seçerseniz de İngilizce ek dil olarak kurulacaktır</string>
     <string name="choose_preferred_theme">Vanced için tercih ettiğiniz temayı seçin</string>
-    <string name="disable_signature">Root modu tespit edildi! Vanced\'ı kurmak için apk imza doğrulamasını devre dışı bırakman gerekiyor.</string>
+    <string name="disable_signature">Root modu algılandı! Vanced\'i yüklemek için apk imza doğrulamasını devre dışı bırakmanız GEREKİR.</string>
     <string name="finish">Bitir</string>
     <string name="install_light_black">Açık + Kara</string>
     <string name="install_light_dark">Açık + Koyu</string>
