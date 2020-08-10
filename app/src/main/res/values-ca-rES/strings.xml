@@ -15,17 +15,17 @@
     <string name="error_downloading">Error en descarregar %1$s</string>
     <string name="install">Instal·lar</string>
     <string name="installing_app">Instal·lant %1$s</string>
-    <string name="installation_aborted">L\'operació ha fallat perquè l\'usuari ha cancel·lat la instal·lació.</string>
-    <string name="installation_blocked">L\'operació ha fallat perquè l\'usuari ha blocat la instal·lació.</string>
-    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
-    <string name="installation_conflict">L\'operació ha fallat perquè l\'aplicació coincideix amb altra ja instal·lada.</string>
-    <string name="installation_failed">L\'operació ha fallat per una raó desconeguda, si us plau, uniu-se al Telegram o al Discord per rebre suport tècnic.</string>
-    <string name="installation_incompatible">L\'operació ha fallat perquè l\'aplicació és incompatible amb el vostre dispositiu.</string>
-    <string name="installation_invalid">L\'operació ha fallat perquè els fitxers apk són invàlids.</string>
-    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
-    <string name="installation_miui">S\'ha produït un error inesperat mentre s\'instal·lava Vanced. Heu desactivat les optimitzacions de MIUI?</string>
-    <string name="installation_storage">L\'operació ha fallat degut a un error d\'emmagatzematge.</string>
-    <string name="installation_wait">Espereu fins que es completi la instal·lació</string>
+    <string name="installation_aborted">Installation failed because user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because user tried to downgrade the package. Uninstall updates from stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for futher support.</string>
+    <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>
+    <string name="installation_invalid">Installation failed because the apk files are corrupted.</string>
+    <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
+    <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
+    <string name="installation_storage">Installation failed due to a storage error.</string>
+    <string name="installation_wait">DO NOT leave the app until the installation finishes.</string>
     <string name="button_reinstall">Reinstal·la</string>
     <string name="version_installed">Instal·lat:</string>
     <string name="latest">Darrera:</string>
@@ -38,7 +38,7 @@
     <string name="useful_links">Enllaços d\'interès</string>
     <string name="website_text">Lloc web</string>
     <string name="support_us">Doneu-nos suport!</string>
-    <string name="version_toast">La versió %1$s s\'ha copiat!</string>
+    <string name="version_toast">%1$s version number was copied!</string>
     <!-- Settings -->
     <string name="accent_color">Color d\'èmfasi</string>
     <string name="accent_blue">Blau</string>
@@ -71,21 +71,21 @@
     <!-- Dialogs -->
     <string name="button_dismiss">Descartar</string>
     <string name="guide">Guia</string>
-    <string name="hold_on">Espereu!</string>
-    <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="hold_on">Stop!</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI detectat!</string>
-    <string name="miui_one">Sembla que sou un usuari de MIUI. Per a utilitzar aquesta aplicació, heu de desactivar les optimitzacions de MIUI en la configuració de desenvolupadors. (Podeu ignorar aquest avís si teniu la ROM 20.2.20 o posteriors de xiaomi.eu.)</string>
+    <string name="miui_one">In order to properly install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are on a 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Error</string>
-    <string name="security_context">Comproveu que heu descarregat l\'aplicació des de vanced.app, el servidor Discord de Vanced o el GitHub de Vanced</string>
+    <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Èxit!</string>
-    <string name="vanced_installed">Vanced s\'ha instal·lat correctament. Obrir?</string>
-    <string name="launch">Launch</string>
+    <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
+    <string name="launch">Open</string>
     <string name="welcome">Welcome</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
+    <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
     <string name="choose_preferred_language_note">Note: English will always be installed as an additional language as well.</string>
     <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you will need to disable the apk signature verification.</string>
+    <string name="disable_signature">Root mode detected! To install Vanced, you MUST disable the apk signature verification.</string>
     <string name="finish">Finish</string>
     <string name="install_light_black">Light + Black</string>
     <string name="install_light_dark">Light + Dark</string>
