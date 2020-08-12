@@ -65,13 +65,10 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     fun fetchData() {
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
-            //Crowdin has problems with R, skip fetching
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R)
-                try {
-                    Crowdin.forceUpdate(getApplication())
-                } catch (e: Exception) {
-                    Log.d("VMLocalisation", "Error: ", e)
-                }
+            try {
+                Crowdin.forceUpdate(getApplication())
+            } catch (e: Exception) {
+                Log.d("VMLocalisation", "Error: ", e)
             vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
             microgVersion.set(getJsonString("microg.json", "version", getApplication()))
             microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
