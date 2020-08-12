@@ -19,9 +19,9 @@
     <string name="installation_blocked">Installationen fejlede fordi brugeren blokerede installationen.</string>
     <string name="installation_downgrade">Installationen fejlede fordi brugeren prøvede at nedgradere pakken. Fjern opdateringer fra Youtube appen og prøv igen.</string>
     <string name="installation_conflict">Installationen fejlede fordi appen konflikter med en allerede installeret app. Fjern den nuværende version af Vanced og prøv igen.</string>
-    <string name="installation_failed">Operationen fejlede af en ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
+    <string name="installation_failed">Installationen fejlede af en ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
     <string name="installation_incompatible">Installationen fejlede fordi installationsfilen er inkompatibel med din enhed. Ryd de downloadede filer i indstillingerne og prøv igen.</string>
-    <string name="installation_invalid">Installationen fejlede fordi apk filerne er beskadiget.</string>
+    <string name="installation_invalid">Installationen fejlede fordi apk filerne er beskadiget, prøv igen.</string>
     <string name="installation_signature">Installationen fejlede fordi apk signatur verifikation er slået til. Slå apk signatur verifikation fra og prøv igen.</string>
     <string name="installation_miui">Installationen fejlede fordi MIUI optimering er slået til. Slå MIUI optimering fra og prøv igen.</string>
     <string name="installation_storage">Installationen fejlede på grund af pladsmangel.</string>
