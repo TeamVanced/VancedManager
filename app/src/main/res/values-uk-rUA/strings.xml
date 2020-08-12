@@ -19,9 +19,9 @@
     <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
     <string name="installation_conflict">Помилка встановлення, оскільки додаток конфліктує із уже встановленою програмою. Видаліть поточну версію Vanced, а потім спробуйте знову.</string>
-    <string name="installation_failed">Операція не вдалася через невідому причину, приєднайтеся до нашого Telegram або Discord сервера для допомоги.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
-    <string name="installation_invalid">Встановлення не вдалося, оскільки файли apk пошкоджені.</string>
+    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
     <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">Зупинись!</string>
     <string name="magisk_vanced">Схоже, ви використовуєте Magisk/TWRP-версію Vanced, підтримка якої була припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
     <string name="miui_one_title">Виявлено користувача MIUI!</string>
-    <string name="miui_one">Для того, щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI в налаштуваннях розробника. (Ви можете проігнорувати це попередження, якщо ви знаходитесь 20.2.20 або пізніші xiaomi.eu based ROM)</string>
+    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Помилка</string>
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vanced.app, Vanced Discord сервера або Vanced GitHub</string>
     <string name="success">Успіх!</string>
