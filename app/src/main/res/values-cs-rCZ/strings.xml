@@ -21,7 +21,7 @@
     <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a zkuste to znovu.</string>
     <string name="installation_failed">Instalace se nezdařila z neznámých důvodů. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
     <string name="installation_incompatible">Instalace se nezdařila, protože instalační soubor není kompatibilní s vaším zařízením. Vymažte stažené soubory v Nastavení a zkuste to znovu.</string>
-    <string name="installation_invalid">Instalace se nezdařila, protože soubory APK jsou poškozeny.</string>
+    <string name="installation_invalid">Instalace se nezdařila, protože soubory APK jsou poškozeny. Zkuste to znovu.</string>
     <string name="installation_signature">Instalace se nezdařila, protože je povoleno ověření podpisu APK. Zakažte ověření podpisu APK a zkuste to znovu.</string>
     <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a zkuste to znovu.</string>
     <string name="installation_storage">Instalace se nezdařila z důvodu chyby v úložišti.</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">Zastavit!</string>
     <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
     <string name="miui_one_title">Zjištěno MIUI!</string>
-    <string name="miui_one">Chcete-li správně nainstalovat Vanced, MUSÍTE vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud máte ROM z 20.2.2020 nebo novější založenou na xiaomi.eu)</string>
+    <string name="miui_one">Chcete-li nainstalovat Vanced, MUSÍTE vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM z 20.2.2020 nebo novější založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu</string>
     <string name="success">Hotovo!</string>
