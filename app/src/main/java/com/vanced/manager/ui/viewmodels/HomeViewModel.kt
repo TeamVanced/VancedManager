@@ -69,6 +69,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
                 Crowdin.forceUpdate(getApplication())
             } catch (e: Exception) {
                 Log.d("VMLocalisation", "Error: ", e)
+            }
             vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
             microgVersion.set(getJsonString("microg.json", "version", getApplication()))
             microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
