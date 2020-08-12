@@ -21,7 +21,7 @@
     <string name="installation_conflict">Instalacja nie powiodła się, ponieważ aplikacja koliduje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję Vanced, a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
-    <string name="installation_invalid">Instalacja nie powiodła się, ponieważ pliki apk są uszkodzone.</string>
+    <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>
     <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
     <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Korzystasz z Vanced w wersji Magisk/TWRP, która została wycofana i nie można jej zaktualizować za pomocą tej aplikacji. Najpierw usuń moduł magisk/używając deinstalatora TWRP Vanced.</string>
     <string name="miui_one_title">MIUI wykryte!</string>
-    <string name="miui_one">Aby poprawnie zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli korzystasz z ROM 20.2.20 lub późniejszego xiaomi.eu)</string>
+    <string name="miui_one">Aby zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli korzystasz z ROM 20.2.20 lub późniejszego xiaomi.eu)</string>
     <string name="error">Błąd</string>
     <string name="security_context">Upewnij się, że pobrałeś aplikację z vanced.app, serwera Vanced Discord lub GitHub</string>
     <string name="success">Sukces!</string>
