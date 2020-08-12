@@ -2,6 +2,7 @@ package com.vanced.manager.core
 
 import android.app.Application
 import android.util.Log
+import android.os.Build
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.remote.NetworkType
@@ -14,16 +15,15 @@ class App: Application() {
         super.onCreate()
         PRDownloader.initialize(this)
 
-        try {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
             Crowdin.init(this,
             CrowdinConfig.Builder()
                 .withDistributionHash("36c51aed3180a4f43073d28j4s6")
                 .withNetworkType(NetworkType.WIFI)
                 .build()
             )
-        } catch (e: Exception) {
-            Log.d("VMLocalisation", "Failed to initialize Crowdin")
         }
+        
     }
 
     /*
