@@ -66,7 +66,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
             //Crowdin has problems with R, skip fetching
-            if (Build.SDK_INT < Build.VERSION_CODES.R)
+            if (Build.VERSION_SDK_INT < Build.VERSION_CODES.R)
                 try {
                     Crowdin.forceUpdate(getApplication())
                 } catch (e: Exception) {
@@ -153,7 +153,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         return when {
             int1 == 0 -> application.getString(R.string.install)
             int2 > int1 -> application.getString(R.string.update)
-            int2 == int1 -> application.getString(R.string.button_reinstall)
+            int2 == int1 || int1 > int2 -> application.getString(R.string.button_reinstall)
             else -> application.getString(R.string.install)
         }
 
