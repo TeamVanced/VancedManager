@@ -19,9 +19,9 @@
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。ストックの YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
     <string name="installation_conflict">既にインストールされたアプリと競合したためインストールに失敗しました。Vanced の現在のバージョンをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
-    <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました。</string>
+    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
     <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
     <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">ストップ！</string>
     <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
     <string name="miui_one_title">MIUI ユーザーを検知しました！</string>
-    <string name="miui_one">Vanced を正しくインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
+    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">エラー</string>
     <string name="security_context">vanced.app、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="success">成功！</string>
