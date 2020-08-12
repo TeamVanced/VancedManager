@@ -19,9 +19,9 @@
     <string name="installation_blocked">Installation failed because user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because user tried to downgrade the package. Uninstall updates from stock YouTube app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for futher support.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
     <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>
-    <string name="installation_invalid">Installation failed because the apk files are corrupted.</string>
+    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
     <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
     <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
     <string name="installation_storage">Installation failed due to a storage error.</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">पता लगाया MiUI उपयोगकर्ता!</string>
-    <string name="miui_one">In order to properly install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are on a 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">इरर</string>
     <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">सफलता!</string>
