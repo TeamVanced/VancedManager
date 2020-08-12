@@ -7,7 +7,6 @@ import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
-import java.lang.Exception
 
 class App: Application() {
 
