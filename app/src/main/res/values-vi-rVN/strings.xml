@@ -19,9 +19,9 @@
     <string name="installation_blocked">Cài đặt thất bại do người dùng chặn.</string>
     <string name="installation_downgrade">Cài đặt thất bại do người dùng hạ cấp ứng dụng. Gỡ các bản cập nhật từ ứng dụng YouTube gốc rồi thử lại.</string>
     <string name="installation_conflict">Cài đặt thất bại do ứng dụng xung đột với một ứng dụng đã được cài đặt trước đó. Gỡ cài đặt phiên bản hiện tại của Vanced rồi thử lại.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
+    <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, tham gia Telegram hoặc Discord để được hỗ trợ sâu hơn.</string>
     <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
-    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
+    <string name="installation_invalid">Cài đặt thất bại do các tệp tin apk bị lỗi, xin hãy thử lại.</string>
     <string name="installation_signature">Cài đặt thất bại do xác minh chứng chỉ apk được kích hoạt. Vô hiệu hóa xác minh chứng chỉ apk rồi thử lại.</string>
     <string name="installation_miui">Cài đặt thất bại do Tối ưu hóa MIUI được kích hoạt. Vô hiệu hóa Tối ưu hóa MIUI rồi thử lại.</string>
     <string name="installation_storage">Cài đặt thất bại do lỗi bộ nhớ.</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">Dừng lại!</string>
     <string name="magisk_vanced">Bạn đang dùng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ nó bằng cách gỡ mô-đun Magisk/sử dụng trình gỡ cài đặt TWRP Vanced.</string>
     <string name="miui_one_title">Phát hiện MIUI!</string>
-    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Để có thể cài đặt Vanced, bạn PHẢI vô hiệu hoá tối ưu hoá MIUI trong cài đặt nhà phát triển. (Bạn có thể bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="error">Lỗi</string>
     <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vanced.app, server Discord Vanced hoặc Github Vanced</string>
     <string name="success">Thành công!</string>
