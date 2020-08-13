@@ -19,9 +19,9 @@
     <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
     <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
     <string name="installation_conflict">Pemasangan gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang. Hapus versi Vanced yang sekarang, lalu coba lagi.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
+    <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
     <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
-    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
+    <string name="installation_invalid">Pemasangan gagal karena file apk rusak, mohon coba lagi.</string>
     <string name="installation_signature">Pemasangan gagal karena apk signature verification diaktifkan. Nonaktifkan apk signature verification, lalu coba lagi.</string>
     <string name="installation_miui">Pemasangan gagal karena Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
     <string name="installation_storage">Pemasangan gagal karena kesalahan pada penyimpanan.</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">Berhenti!</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapus itu dengan menghapus modul magisk/gunakan pencopot Vanced TWRP.</string>
     <string name="miui_one_title">MIUI terdeteksi!</string>
-    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi dari vanced.app, Vanced Discord server atau dari Vanced GitHub</string>
     <string name="success">Berhasil!</string>
