@@ -15,9 +15,9 @@
     <string name="error_downloading">Download von %1$s fehlgeschlagen</string>
     <string name="install">Installieren</string>
     <string name="installing_app">%1$s wird installiert</string>
-    <string name="installation_aborted">Installation failed because user aborted the installation.</string>
-    <string name="installation_blocked">Installation failed because user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because user tried to downgrade the package. Uninstall updates from stock YouTube app, then try again.</string>
+    <string name="installation_aborted">Operation fehlgeschlagen, da der Nutzer diese abgebrochen hat.</string>
+    <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer diese blockiert hat.</string>
+    <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstsllieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
     <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>
