@@ -79,7 +79,7 @@
     <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Onnistui!</string>
     <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
-    <string name="launch">Open</string>
+    <string name="launch">Avaa</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
