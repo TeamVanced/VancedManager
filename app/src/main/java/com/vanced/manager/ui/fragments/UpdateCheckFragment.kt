@@ -45,6 +45,8 @@ class UpdateCheckFragment : DialogFragment() {
         checkUpdates()
         view.findViewById<Button>(R.id.update_center_dismiss).setOnClickListener { dismiss() }
         view.findViewById<MaterialButton>(R.id.update_center_recheck).setOnClickListener{ checkUpdates() }
+
+        downLoadingState(false)
     }
 
     /*
@@ -74,6 +76,9 @@ class UpdateCheckFragment : DialogFragment() {
             launch {
                 val loadBar = view?.findViewById<ProgressBar>(R.id.update_center_progressbar)
                 val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
+
+                downLoadingState(true)
+
                 //downloadId = activity?.let { download(url, "apk", "manager.apk", it) }!!
                 PRDownloader.download(url, activity?.getExternalFilesDir("apk")?.path, "manager.apk")
                     .build()
@@ -102,11 +107,23 @@ class UpdateCheckFragment : DialogFragment() {
 
                         override fun onError(error: com.downloader.Error?) {
                             Toast.makeText(activity, error.toString(), Toast.LENGTH_SHORT).show()
+                            downLoadingState(false)
                             Log.e("VMUpgrade", error.toString())
                         }
 
                     })
             }
+        }
+    }
+
+    private fun downLoadingState(isDownloading: Boolean) {
+        if (isDownloading) {
+            dialog?.setCancelable(false)
+            view?.findViewById<MaterialButton>(R.id.update_center_update)?.isEnabled = false
+        }
+        else {
+            dialog?.setCancelable(true)
+            view?.findViewById<MaterialButton>(R.id.update_center_update)?.isEnabled = true
         }
     }
 
