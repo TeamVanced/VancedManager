@@ -15,8 +15,8 @@
     <string name="error_downloading">خطأ في تحميل %1$s</string>
     <string name="install">تثبيت</string>
     <string name="installing_app">جاري التثبيت %1$s</string>
-    <string name="installation_aborted">Installation failed because user aborted the installation.</string>
-    <string name="installation_blocked">Installation failed because user blocked the installation.</string>
+    <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
+    <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
     <string name="installation_downgrade">Installation failed because user tried to downgrade the package. Uninstall updates from stock YouTube app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
