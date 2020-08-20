@@ -19,9 +19,9 @@
     <string name="installation_blocked">Инсталација није успешна, корисник је блокирао инсталацију.</string>
     <string name="installation_downgrade">Инсталација није успешна, корисник је покушао да инсталира старију верзију преко новије верзије апликације. Деинсталирајте све до предодређене инсталиране верзије YouTubе апликације, затим покушајте поново.</string>
     <string name="installation_conflict">Инсталација није успешна, зато што је дошло до конфликта са већ инсталираном верзијом. Деинсталирајте тренутну верзију Vanced-а и затим покушајте поново.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
+    <string name="installation_failed">Инсталација није успеla, услед непознатог разлога, прикључите нам се на Telegram и Discord апликацијама за даљу подршку.</string>
     <string name="installation_incompatible">Инсталација је неуспешна јер инсталациона датотека није компатибилна са вашим уређајем. Очистите преузете датотеке у Подешавањима и затим покушајте поново.</string>
-    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
+    <string name="installation_invalid">Инсталација није успеla јер је apk датотека оштећена, покушајте поново.</string>
     <string name="installation_signature">Инсталација неуспешна јер је укључена провера потписа преузете apk датотеке. Искључите apk проверу и затим покушајте поново.</string>
     <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
     <string name="installation_storage">Инсталација неуспешна услед грешке у меоријском простору.</string>
@@ -74,7 +74,7 @@
     <string name="hold_on">Заустави!</string>
     <string name="magisk_vanced">Користите Magisk/TWRP верзију Vanced апликације, која више није подржана и чије коришћење није могуће. Молимо Вас да уклоните ову апликацију из Magisk/TWRP-а путем Vanced апликације за деинсталацију.</string>
     <string name="miui_one_title">MIUI је детектован!</string>
-    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Да би апликација Vanced била исправно инсталирана морате да искључите оптимизацију за ову апликацију у MIUI подешавањима за програмере.( Ову напомену можете да занемарите у случају ако користите верзију 20.2.20 и новију xiaomi.eu ROM-а)</string>
     <string name="error">Грешка</string>
     <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта, Vanced Discord сервера или Vanced GitHub-а</string>
     <string name="success">Успешно!</string>
