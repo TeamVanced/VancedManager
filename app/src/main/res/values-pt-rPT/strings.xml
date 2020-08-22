@@ -15,7 +15,7 @@
     <string name="error_downloading">Erro Transferindo %1$s</string>
     <string name="install">Instalar</string>
     <string name="installing_app">Instalando %1$s</string>
-    <string name="installation_aborted">Installation failed because user aborted the installation.</string>
+    <string name="installation_aborted">Falha na instalação porque o usuário cancelou a instalação.</string>
     <string name="installation_blocked">Installation failed because user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because user tried to downgrade the package. Uninstall updates from stock YouTube app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
