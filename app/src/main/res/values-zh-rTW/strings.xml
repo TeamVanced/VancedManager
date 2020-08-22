@@ -49,7 +49,7 @@
     <string name="category_interface">介面</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">檢查更新</string>
-    <string name="chosen_install_values">已選擇安裝偏好</string>
+    <string name="chosen_install_values">已選安裝偏好設定</string>
     <string name="chosen_lang">語言: %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
     <string name="clear_files">清除已下載的檔案</string>
@@ -71,7 +71,7 @@
     <!-- Dialogs -->
     <string name="button_dismiss">關閉</string>
     <string name="guide">說明</string>
-    <string name="hold_on">停止！</string>
+    <string name="hold_on">警告！</string>
     <string name="magisk_vanced">您正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
     <string name="miui_one_title">已偵測到 MIUI！</string>
     <string name="miui_one">為了能夠正確安裝 Vanced ，您必須在開發人員設定中停用 MIUI 優化。 (如果您使用基於 xiomi.eu 20.2.20 或更新的 ROM ，則可以忽略此警告)</string>
