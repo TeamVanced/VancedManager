@@ -73,28 +73,6 @@ object DialogContainer {
         }
     }
 
-    fun showRootDialog(activity: Activity) {
-        MaterialAlertDialogBuilder(activity).apply {
-            setTitle(activity.getString(R.string.hold_on))
-            setMessage(activity.getString(R.string.disable_signature))
-            setNeutralButton(activity.getString(R.string.button_dismiss)) { dialog, _ ->
-                dialog.dismiss()
-            }
-            setPositiveButton(activity.getString(R.string.guide)) { _, _ ->
-                openUrl(
-                    "https://lmgtfy.com/?q=andnixsh+apk+verification+disable",
-                    R.color.Twitter,
-                    activity
-                )
-            }
-            setCancelable(false)
-            create()
-            show()
-        }
-        PreferenceManager.getDefaultSharedPreferences(activity).edit()
-            .putBoolean("show_root_dialog", false).apply()
-    }
-
     //Easter Egg
     fun statementFalse(context: Context) {
         MaterialAlertDialogBuilder(context).apply {

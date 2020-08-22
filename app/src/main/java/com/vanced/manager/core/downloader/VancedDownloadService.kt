@@ -61,6 +61,8 @@ class VancedDownloadService: Service() {
                 when (type) {
                     "arch" -> "$installUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
                     "theme" -> "$installUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
+                    "stock" ->  "$installUrl/apks/v$vancedVer/$variant/Theme/stock.apk"
+                    "dpi" ->  "$installUrl/apks/v$vancedVer/$variant/Theme/dpi.apk"
                     "lang" -> "$installUrl/apks/v$vancedVer/$variant/Language/split_config.${lang?.get(count)}.apk"
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
                 }
@@ -80,7 +82,9 @@ class VancedDownloadService: Service() {
                 override fun onDownloadComplete() {
                     when (type) {
                         "arch" -> downloadSplits("theme")
-                        "theme" -> downloadSplits("lang")
+                        "theme" -> downloadSplits("stock")
+                        "stock" -> downloadSplits("dpi")
+                        "dpi" -> downloadSplits("lang")
                         "lang" -> {
                             count++
                             if (count < lang?.count()!!)
@@ -88,6 +92,7 @@ class VancedDownloadService: Service() {
                             else
                                 prepareInstall(variant!!)
                         }
+
                     }
                 }
 

@@ -124,8 +124,6 @@ class MainActivity : AppCompatActivity() {
             }
             !prefs.getBoolean("statement", true) -> DialogContainer.statementFalse(this)
             variant == "root" -> {
-                if (showRootDialog)
-                    DialogContainer.showRootDialog(this)
 
                 if (PackageHelper.getPackageVersionName(
                         "com.google.android.youtube",
