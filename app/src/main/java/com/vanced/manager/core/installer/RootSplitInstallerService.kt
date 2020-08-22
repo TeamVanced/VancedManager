@@ -39,24 +39,31 @@ class RootSplitInstallerService: Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-
+        logDebug("RunBlockBefore");
         runBlocking { getVer() }
-
+        logDebug("RunBlockAfter");
         Shell.getShell {
             CoroutineScope(Dispatchers.IO).launch {
                 val apkFilesPath = getExternalFilesDir("apks")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                logDebug("GotFileInfoList")
                 if (fileInfoList != null) {
                     var modApk: FileInfo? = null
+                    logDebug("FileInfoListIsNotEmpty")
                     for (fil in fileInfoList)
                     {
+                        logDebug(fil.name)
                         if(fil.name == "dark.apk" || fil.name == "black.apk")
                         {
+                            logDebug("found " + fil.name)
                             modApk = fil
                         }
                     }
+                    logDebug("Before modApk Check")
                     if (modApk != null) {
+                        logDebug("modApkCheck Passed")
                         overwriteBase(modApk, fileInfoList,vancedVersionCode)
+                        logDebug("Finished Patching")
                     }
                     else
                     {
@@ -69,6 +76,10 @@ class RootSplitInstallerService: Service() {
         }
         stopSelf()
         return START_NOT_STICKY
+    }
+
+    private fun logDebug(s: String) {
+        Log.d("ZLog", s)
     }
 
     @WorkerThread
@@ -167,11 +178,18 @@ class RootSplitInstallerService: Service() {
 
     private fun overwriteBase(apkFile: FileInfo, baseApkFiles: ArrayList<FileInfo>, versionCode: Int)
     {
+        logDebug("check version")
         checkVersion(versionCode,baseApkFiles)
+        logDebug("Version Check Done, next getting apk path")
         var path = getVPath()
-        apkFile.file?.absolutePath?.let {
-            moveAPK(it, path)
+        logDebug("Path: $path")
+        apkFile.file?.let {
+            var apath = it.absolutePath
+            logDebug("Moving $apath to: $path")
+            moveAPK(apath, path)
+            logDebug("Move done setting chConv $path")
             chConV(path)
+            logDebug("Done with chConv $path")
         }
 
 
@@ -179,16 +197,19 @@ class RootSplitInstallerService: Service() {
 
     private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>) {
         val path = getVPath()
+        logDebug("checking if path is in /data/app")
         if(path.contains("/data/app/"))
         {
+            logDebug("Path is in /data/app: $path" )
             when(compareVersion(getPkgVerCode(yPkg),versionCode))
             {
-                1 -> fixHigherVer(baseApkFiles)
-                -1 -> fixLowerVer(baseApkFiles)
+                1 -> {fixHigherVer(baseApkFiles);logDebug("higher version uninstalling then installing base + patched");}
+                -1 -> {fixLowerVer(baseApkFiles);logDebug("Lower Version installing base + patched");}
             }
         }
         else
         {
+            logDebug("No install in /data/app/ now installing")
             fixNoInstall(baseApkFiles)
         }
     }
