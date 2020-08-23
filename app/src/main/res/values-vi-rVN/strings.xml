@@ -19,7 +19,7 @@
     <string name="installation_blocked">Cài đặt thất bại do người dùng chặn.</string>
     <string name="installation_downgrade">Cài đặt thất bại do người dùng hạ cấp ứng dụng. Gỡ các bản cập nhật từ ứng dụng YouTube gốc rồi thử lại.</string>
     <string name="installation_conflict">Cài đặt thất bại do ứng dụng xung đột với một ứng dụng đã được cài đặt trước đó. Gỡ cài đặt phiên bản hiện tại của Vanced rồi thử lại.</string>
-    <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, hãy tham gia Telegram hoặc Discord để được hỗ trợ thêm.</string>
+    <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, hãy tham gia Telegram hoặc Discord của chúng tôi để được hỗ trợ thêm.</string>
     <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
     <string name="installation_invalid">Cài đặt thất bại do tệp apk bị lỗi, xin hãy thử lại.</string>
     <string name="installation_signature">Cài đặt thất bại do xác minh chứng chỉ apk được kích hoạt. Vô hiệu hóa xác minh chứng chỉ apk rồi thử lại.</string>
