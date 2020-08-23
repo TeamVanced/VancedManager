@@ -23,14 +23,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import java.io.File
-import java.io.IOException
-import java.io.InputStream
-import java.io.OutputStream
+import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
+
 
 class RootSplitInstallerService: Service() {
 
@@ -71,6 +69,10 @@ class RootSplitInstallerService: Service() {
                     if (modApk != null) {
                         if(overwriteBase(modApk, fileInfoList,vancedVersionCode))
                         {
+                            val launchIntent = packageManager.getLaunchIntentForPackage("com.google.android.youtube")
+                            startActivity(launchIntent)
+                            Thread.sleep(500)
+
                             with(localBroadcastManager) {
                                 sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                                 sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
@@ -193,12 +195,12 @@ class RootSplitInstallerService: Service() {
     {
         if(checkVersion(versionCode,baseApkFiles))
         {
-            Thread.sleep(1000)
             val path = getVPath()
             apkFile.file?.let {
                 val apath = it.absolutePath
                 if(path?.let { it1 -> moveAPK(apath, it1) }!!)
                 {
+                    val fpath = SuFile.open(path).parent!!
                     return chConV(path)
                 }
 
@@ -278,7 +280,8 @@ class RootSplitInstallerService: Service() {
     }
 
     private fun chConV(path: String): Boolean {
-        val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
+        val response = Shell.su("chcon -R u:object_r:apk_data_file:s0 $path").exec()
+        //val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
         return if(response.isSuccess) {
             true
         } else {
@@ -295,6 +298,7 @@ class RootSplitInstallerService: Service() {
         if(apkinF.exists())
         {
             try {
+                Shell.su("am force-stop $yPkg").exec()
                 copy(apkinF,apkoutF)
                 Shell.su("chmod 644 $path").exec().isSuccess
                 return if(Shell.su("chown system:system $path").exec().isSuccess) {
@@ -316,20 +320,24 @@ class RootSplitInstallerService: Service() {
             return false
         }
     }
+    private val BUFFER = 8192
 
     @Throws(IOException::class)
     fun copy(src: File?, dst: File?) {
-        val finputStrem: InputStream = SuFileInputStream(src)
-        finputStrem.use { finputStrem ->
-            val out: OutputStream = SuFileOutputStream(dst)
-            out.use { out ->
-                // Transfer bytes from in to out
-                val buf = ByteArray(1024)
-                var len: Int
-                while (finputStrem.read(buf).also { len = it } > 0) {
-                    out.write(buf, 0, len)
-                }
+        var fis: InputStream? = null
+        var fos: OutputStream? = null
+        try {
+            fis = BufferedInputStream(SuFileInputStream(src))
+            fos = BufferedOutputStream(SuFileOutputStream(dst))
+            val buf = ByteArray(BUFFER)
+            var i: Int
+            while (fis.read(buf).also { i = it } != -1)
+            {
+                fos.write(buf, 0, i)
             }
+        } finally {
+            fis?.close()
+            fos?.close()
         }
         
     }
