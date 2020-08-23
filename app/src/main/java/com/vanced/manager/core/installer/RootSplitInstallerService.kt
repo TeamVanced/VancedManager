@@ -193,6 +193,7 @@ class RootSplitInstallerService: Service() {
     {
         if(checkVersion(versionCode,baseApkFiles))
         {
+            Thread.sleep(1000)
             val path = getVPath()
             apkFile.file?.let {
                 val apath = it.absolutePath
@@ -296,7 +297,13 @@ class RootSplitInstallerService: Service() {
             try {
                 copy(apkinF,apkoutF)
                 Shell.su("chmod 644 $path").exec().isSuccess
-                return true
+                return if(Shell.su("chown system:system $path").exec().isSuccess) {
+                    true
+                } else {
+                    sendFailure(listOf("Failed To Chown, Try Again").toMutableList(), applicationContext)
+                    false
+                }
+
             }
             catch (e: IOException)
             {
