@@ -15,13 +15,13 @@
     <string name="error_downloading">Ошибка загрузки %1$s</string>
     <string name="install">Установить</string>
     <string name="installing_app">Установка %1$s</string>
-    <string name="installation_aborted">Установка не была выполнена, поскольку пользователь прервал установку</string>
-    <string name="installation_blocked">Установка не была выполнена, поскольку пользователь заблокировал установку</string>
+    <string name="installation_aborted">Установка не была выполнена, поскольку пользователь прервал установку.</string>
+    <string name="installation_blocked">Установка не была выполнена, поскольку пользователь заблокировал установку.</string>
     <string name="installation_downgrade">Установка не удалась, так как пользователь попытался понизить версию приложения. Удалите обновления обычного приложения YouTube, затем повторите попытку.</string>
     <string name="installation_conflict">Установка не удалась, так как приложение конфликтует с уже установленным приложением. Удалите текущую версию Vanced, затем повторите попытку.</string>
     <string name="installation_failed">Установка не удалась по неизвестным причинам. Присоединяйтесь к нашей группе в Telegram или Discord для дальнейшей поддержки.</string>
     <string name="installation_incompatible">Установка не удалась, так как установочный файл несовместим с вашим устройством. Очистите загруженные файлы в настройках, затем повторите попытку.</string>
-    <string name="installation_invalid">Установка не удалась, так как файлы apk повреждены, попробуйте еще раз.</string>
+    <string name="installation_invalid">Установка не удалась, так как установочные файлы повреждены, попробуйте еще раз.</string>
     <string name="installation_signature">Установка не удалась, так как включена проверка подписи apk. Отключите проверку подписи apk, а затем повторите попытку.</string>
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
     <string name="installation_storage">Установка не была выполнена, так как произошла ошибка с доступом к памяти.</string>
