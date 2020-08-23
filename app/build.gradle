@@ -85,6 +85,7 @@ dependencies {
     implementation 'com.github.kittinunf.fuel:fuel-coroutines:2.2.3'
     implementation 'com.github.kittinunf.fuel:fuel-json:2.2.3'
     implementation 'com.github.topjohnwu.libsu:core:3.0.1'
+    implementation 'com.github.topjohnwu.libsu:io:3.0.1'
     implementation 'com.google.firebase:firebase-messaging:20.2.4'
     implementation 'com.google.firebase:firebase-perf:19.0.8'
     implementation 'com.mindorks.android:prdownloader:0.6.0'
