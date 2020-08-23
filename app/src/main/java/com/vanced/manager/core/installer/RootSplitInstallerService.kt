@@ -10,6 +10,10 @@ import androidx.annotation.Nullable
 import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.topjohnwu.superuser.Shell
+import com.topjohnwu.superuser.io.SuFile
+import com.topjohnwu.superuser.io.SuFileInputStream
+import com.topjohnwu.superuser.io.SuFileOutputStream
+import com.vanced.manager.BuildConfig
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.FileInfo
@@ -20,11 +24,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.io.File
+import java.io.IOException
+import java.io.InputStream
+import java.io.OutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
-
 
 class RootSplitInstallerService: Service() {
 
@@ -33,43 +39,55 @@ class RootSplitInstallerService: Service() {
 
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
+
     suspend fun getVer()
     {
         vancedVersionCode = getJsonInt("vanced.json","versionCode", application)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        logDebug("RunBlockBefore");
+
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
+        Shell.setDefaultBuilder(
+            Shell.Builder.create()
+                .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                .setTimeout(10)
+        )
+
         runBlocking { getVer() }
-        logDebug("RunBlockAfter");
         Shell.getShell {
-            CoroutineScope(Dispatchers.IO).launch {
+            var job = CoroutineScope(Dispatchers.IO).launch{
                 val apkFilesPath = getExternalFilesDir("apks")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                logDebug("GotFileInfoList")
                 if (fileInfoList != null) {
                     var modApk: FileInfo? = null
-                    logDebug("FileInfoListIsNotEmpty")
                     for (fil in fileInfoList)
                     {
-                        logDebug(fil.name)
                         if(fil.name == "dark.apk" || fil.name == "black.apk")
                         {
-                            logDebug("found " + fil.name)
                             modApk = fil
                         }
                     }
-                    logDebug("Before modApk Check")
                     if (modApk != null) {
-                        logDebug("modApkCheck Passed")
-                        overwriteBase(modApk, fileInfoList,vancedVersionCode)
-                        logDebug("Finished Patching")
+                        if(overwriteBase(modApk, fileInfoList,vancedVersionCode))
+                        {
+                            with(localBroadcastManager) {
+                                sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                                sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
+                            }
+                        }
+                        else
+                        {
+                            sendFailure(listOf("Install Failed").toMutableList(), applicationContext)
+                        }
                     }
                     else
                     {
-                        throw IllegalArgumentException("modApk Is Null Cause Missing (dark.apk/black.apk) In apks Folder")
+                        sendFailure(listOf("modApk Is Null Missing (dark.apk/black.apk) In apks Folder").toMutableList(), applicationContext)
                     }
                     //installSplitApkFiles(fileInfoList)
+
+
                 }
             }
 
@@ -78,12 +96,9 @@ class RootSplitInstallerService: Service() {
         return START_NOT_STICKY
     }
 
-    private fun logDebug(s: String) {
-        Log.d("ZLog", s)
-    }
 
     @WorkerThread
-    private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>) {
+    private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>) : Boolean {
         var sessionId: Int?
         Log.d("AppLog", "installing split apk files:$apkFiles")
         run {
@@ -116,12 +131,10 @@ class RootSplitInstallerService: Service() {
         Log.d("AppLog", "committing...")
         val installResult = Shell.su("pm install-commit $sessionId").exec()
         if (installResult.isSuccess) {
-            with(localBroadcastManager) {
-                sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
-            }
+            return true
         } else
             sendFailure(installResult.out, this)
+        return false
     }
 
     private fun SimpleDateFormat.tryParse(str: String) = try {
@@ -176,60 +189,63 @@ class RootSplitInstallerService: Service() {
 
 
 
-    private fun overwriteBase(apkFile: FileInfo, baseApkFiles: ArrayList<FileInfo>, versionCode: Int)
+    private fun overwriteBase(apkFile: FileInfo, baseApkFiles: ArrayList<FileInfo>, versionCode: Int): Boolean
     {
-        logDebug("check version")
-        checkVersion(versionCode,baseApkFiles)
-        logDebug("Version Check Done, next getting apk path")
-        var path = getVPath()
-        logDebug("Path: $path")
-        apkFile.file?.let {
-            var apath = it.absolutePath
-            logDebug("Moving $apath to: $path")
-            moveAPK(apath, path)
-            logDebug("Move done setting chConv $path")
-            chConV(path)
-            logDebug("Done with chConv $path")
-        }
-
-
-    }
-
-    private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>) {
-        val path = getVPath()
-        logDebug("checking if path is in /data/app")
-        if(path.contains("/data/app/"))
+        if(checkVersion(versionCode,baseApkFiles))
         {
-            logDebug("Path is in /data/app: $path" )
-            when(compareVersion(getPkgVerCode(yPkg),versionCode))
-            {
-                1 -> {fixHigherVer(baseApkFiles);logDebug("higher version uninstalling then installing base + patched");}
-                -1 -> {fixLowerVer(baseApkFiles);logDebug("Lower Version installing base + patched");}
+            val path = getVPath()
+            apkFile.file?.let {
+                val apath = it.absolutePath
+                if(path?.let { it1 -> moveAPK(apath, it1) }!!)
+                {
+                    return chConV(path)
+                }
+
             }
         }
-        else
-        {
-            logDebug("No install in /data/app/ now installing")
-            fixNoInstall(baseApkFiles)
+        return false
+    }
+
+    private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>): Boolean {
+        val path = getVPath()
+        if (path != null) {
+            if(path.contains("/data/app/"))
+            {
+                when(getPkgVerCode(yPkg)?.let { compareVersion(it,versionCode) })
+                {
+                    1 -> {return fixHigherVer(baseApkFiles) }
+                    -1 -> {return fixLowerVer(baseApkFiles) }
+                }
+                return true
+            }
+            else
+            {
+                return fixNoInstall(baseApkFiles)
+            }
         }
+        return fixNoInstall(baseApkFiles)
     }
 
 
 
-    private fun getPkgVerCode(pkg: String): Int {
+    private fun getPkgVerCode(pkg: String): Int? {
         val pm = packageManager
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-            pm.getPackageInfo(pkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()
+            pm.getPackageInfo(pkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
         else
-            pm.getPackageInfo(pkg, 0).versionCode
+            pm.getPackageInfo(pkg, 0)?.versionCode
 
     }
 
-    private fun getPkgInfo(pkg: String): PackageInfo
+    private fun getPkgInfo(pkg: String): PackageInfo?
     {
-        val m = packageManager
-        val p: PackageInfo = m.getPackageInfo(pkg, 0)
-        return p
+        return try {
+            val m = packageManager
+            val info = m.getPackageInfo(pkg, 0)
+            info
+        } catch (e:Exception) {
+            null
+        }
     }
 
     private fun compareVersion(pkgVerCode: Int, versionCode: Int): Int
@@ -242,33 +258,88 @@ class RootSplitInstallerService: Service() {
             0
     }
 
-    private fun fixHigherVer(apkFiles: ArrayList<FileInfo>) {
+    private fun fixHigherVer(apkFiles: ArrayList<FileInfo>) : Boolean {
 
-        PackageHelper.uninstallApk(yPkg, applicationContext)
-        installSplitApkFiles(apkFiles)
+        if(PackageHelper.uninstallApk(yPkg, applicationContext))
+        {
+            return installSplitApkFiles(apkFiles)
+        }
+        with(localBroadcastManager) {sendFailure(listOf("Failed Uninstall Of Installed Version, Try Manually").toMutableList(), applicationContext)}
+        return false
     }
 
-    private fun fixLowerVer(apkFiles: ArrayList<FileInfo>) {
-        installSplitApkFiles(apkFiles)
+    private fun fixLowerVer(apkFiles: ArrayList<FileInfo>): Boolean {
+        return installSplitApkFiles(apkFiles)
     }
 
-    private fun fixNoInstall(baseApkFiles: ArrayList<FileInfo>) {
-        installSplitApkFiles(baseApkFiles)
+    private fun fixNoInstall(baseApkFiles: ArrayList<FileInfo>): Boolean {
+        return installSplitApkFiles(baseApkFiles)
     }
 
-    private fun chConV(path: String) {
-        Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
+    private fun chConV(path: String): Boolean {
+        val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
+        return if(response.isSuccess) {
+            true
+        } else {
+            sendFailure(response.out, applicationContext)
+            false
+        }
     }
 
-    private fun moveAPK(apkFile: String, path: String) {
-        Shell.su("cp $apkFile $path").exec()
-        Shell.su("chmod 644 $path").exec()
+    private fun moveAPK(apkFile: String, path: String) : Boolean {
+
+        val apkinF = SuFile.open(apkFile)
+        val apkoutF = SuFile.open(path)
+
+        if(apkinF.exists())
+        {
+            try {
+                copy(apkinF,apkoutF)
+            }
+            catch (e: IOException)
+            {
+                sendFailure(listOf("${e.message}").toMutableList(), applicationContext)
+            }
+        }
+        else {
+            sendFailure(listOf("Input File Missing").toMutableList(), applicationContext)
+            return false
+        }
+
+        val resultmv = Shell.su("mv $apkFile $path").exec().isSuccess
+        return if(resultmv) {
+            Shell.su("chmod 644 $path").exec().isSuccess
+        } else {
+            sendFailure(listOf("Failed To Apply Mod").toMutableList(), applicationContext)
+            false
+        }
 
     }
 
-    private fun getVPath(): String {
-        val p = getPkgInfo(yPkg)
-        return p.applicationInfo.sourceDir
+    @Throws(IOException::class)
+    fun copy(src: File?, dst: File?) {
+        val finputStrem: InputStream = SuFileInputStream(src)
+        finputStrem.use { finputStrem ->
+            val out: OutputStream = SuFileOutputStream(dst)
+            out.use { out ->
+                // Transfer bytes from in to out
+                val buf = ByteArray(1024)
+                var len: Int
+                while (finputStrem.read(buf).also { len = it } > 0) {
+                    out.write(buf, 0, len)
+                }
+            }
+        }
+        
+    }
+    private fun getVPath(): String? {
+        return try {
+            val p = getPkgInfo(yPkg)
+            p?.applicationInfo?.sourceDir
+        } catch (e: Exception) {
+            null
+        }
+
     }
 
 }

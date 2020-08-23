@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import com.vanced.manager.core.installer.AppUninstallerService
+import java.lang.Exception
 
 object PackageHelper {
 
@@ -32,10 +33,18 @@ object PackageHelper {
         activity.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
     }
 
-    fun uninstallApk(pkg: String, applicationContext: Context) {
+    fun uninstallApk(pkg: String, applicationContext: Context): Boolean {
         val callbackIntent = Intent(applicationContext, AppUninstallerService::class.java)
         callbackIntent.putExtra("pkg", pkg)
         val pendingIntent = PendingIntent.getService(applicationContext, 0, callbackIntent, 0)
-        applicationContext.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
+        try {
+            applicationContext.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
+            return true
+        }
+        catch (e: Exception)
+        {
+            e.printStackTrace()
+            return false;
+        }
     }
 }
