@@ -295,25 +295,19 @@ class RootSplitInstallerService: Service() {
         {
             try {
                 copy(apkinF,apkoutF)
+                Shell.su("chmod 644 $path").exec().isSuccess
+                return true
             }
             catch (e: IOException)
             {
                 sendFailure(listOf("${e.message}").toMutableList(), applicationContext)
+                return false
             }
         }
         else {
             sendFailure(listOf("Input File Missing").toMutableList(), applicationContext)
             return false
         }
-
-        val resultmv = Shell.su("mv $apkFile $path").exec().isSuccess
-        return if(resultmv) {
-            Shell.su("chmod 644 $path").exec().isSuccess
-        } else {
-            sendFailure(listOf("Failed To Apply Mod").toMutableList(), applicationContext)
-            false
-        }
-
     }
 
     @Throws(IOException::class)
