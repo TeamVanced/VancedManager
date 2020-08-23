@@ -299,6 +299,9 @@ class RootSplitInstallerService: Service() {
         {
             try {
                 Shell.su("am force-stop $yPkg").exec()
+
+                //Shell.su("rm -r SuFile.open(path).parent")
+
                 copy(apkinF,apkoutF)
                 Shell.su("chmod 644 $path").exec().isSuccess
                 return if(Shell.su("chown system:system $path").exec().isSuccess) {
@@ -324,6 +327,9 @@ class RootSplitInstallerService: Service() {
 
     @Throws(IOException::class)
     fun copy(src: File?, dst: File?) {
+        val cmd = Shell.su("mv ${src!!.absolutePath} ${dst!!.absolutePath}").exec().isSuccess
+        Log.d("ZLog", cmd.toString())
+        /*
         var fis: InputStream? = null
         var fos: OutputStream? = null
         try {
@@ -339,7 +345,7 @@ class RootSplitInstallerService: Service() {
             fis?.close()
             fos?.close()
         }
-        
+        */
     }
     private fun getVPath(): String? {
         return try {

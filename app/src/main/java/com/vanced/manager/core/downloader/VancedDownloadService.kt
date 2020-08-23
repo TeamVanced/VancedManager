@@ -83,7 +83,7 @@ class VancedDownloadService: Service() {
                 override fun onDownloadComplete() {
                     when (type) {
                         "arch" -> downloadSplits("theme")
-                        "theme" -> downloadSplits("stock")
+                        "theme" -> if(variant=="root") downloadSplits("stock") else downloadSplits("lang")
                         "stock" -> downloadSplits("dpi")
                         "dpi" -> downloadSplits("lang")
                         "lang" -> {
