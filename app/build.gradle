@@ -7,15 +7,15 @@ apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.vanced.manager"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 12
-        versionName "1.2.0 (Niko)"
+        targetSdkVersion 29
+        versionCode 13
+        versionName "1.2.1 (Niko)"
 
         vectorDrawables.useSupportLibrary = true
     }
