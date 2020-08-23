@@ -67,7 +67,7 @@ class RootSplitInstallerService: Service() {
                     }
                     else
                     {
-                        throw RuntimeException("Missing dark.apk or black.apk")
+                        throw IllegalArgumentException("modApk Is Null Cause Missing (dark.apk/black.apk) In apks Folder")
                     }
                     //installSplitApkFiles(fileInfoList)
                 }
