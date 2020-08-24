@@ -69,9 +69,9 @@ class RootSplitInstallerService: Service() {
                     if (modApk != null) {
                         if(overwriteBase(modApk, fileInfoList,vancedVersionCode))
                         {
-                            val launchIntent = packageManager.getLaunchIntentForPackage("com.google.android.youtube")
-                            startActivity(launchIntent)
-                            Thread.sleep(500)
+                            //val launchIntent = packageManager.getLaunchIntentForPackage("com.google.android.youtube")
+                            //startActivity(launchIntent)
+                            //Thread.sleep(500)
 
                             with(localBroadcastManager) {
                                 sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
