@@ -6,8 +6,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 
 open class SlidingConstraintLayout : ConstraintLayout {
 
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(
+    constructor(context: Context) : super(context)
+    constructor(context: Context, attrs: AttributeSet?) : super(
         context,
         attrs
     )
