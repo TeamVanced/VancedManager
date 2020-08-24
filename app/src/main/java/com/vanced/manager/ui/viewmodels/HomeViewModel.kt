@@ -65,7 +65,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     fun fetchData() {
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R)
+            //if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R)
                 Crowdin.forceUpdate(getApplication())
             vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
             microgVersion.set(getJsonString("microg.json", "version", getApplication()))

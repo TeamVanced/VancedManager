@@ -24,7 +24,7 @@ class ManagerChangelogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         CoroutineScope(Dispatchers.Main).launch {
-            val changelog = InternetTools.getObjectFromJson("https://x1nto.github.io/VancedFiles/manager.json", "changelog")
+            val changelog = InternetTools.getObjectFromJson("https://ytvanced.github.io/VancedBackend/manager.json", "changelog")
             view.findViewById<TextView>(R.id.manager_changelog).text = changelog
         }
     }

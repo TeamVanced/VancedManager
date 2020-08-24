@@ -7,15 +7,15 @@ apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.vanced.manager"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 12
-        versionName "1.2.0 (Niko)"
+        targetSdkVersion 29
+        versionCode 13
+        versionName "1.2.1 (Niko)"
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -85,6 +85,7 @@ dependencies {
     implementation 'com.github.kittinunf.fuel:fuel-coroutines:2.2.3'
     implementation 'com.github.kittinunf.fuel:fuel-json:2.2.3'
     implementation 'com.github.topjohnwu.libsu:core:3.0.1'
+    implementation 'com.github.topjohnwu.libsu:io:3.0.1'
     implementation 'com.google.firebase:firebase-messaging:20.2.4'
     implementation 'com.google.firebase:firebase-perf:19.0.8'
     implementation 'com.mindorks.android:prdownloader:0.6.0'

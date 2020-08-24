@@ -57,10 +57,14 @@ class VancedDownloadService: Service() {
                     Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                     else -> "armeabi_v7a"
                 }
+            val themePath = "$installUrl/apks/v$vancedVer/$variant/Theme"
             val url =
                 when (type) {
                     "arch" -> "$installUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
-                    "theme" -> "$installUrl/apks/v$vancedVer/$variant/Theme/$theme.apk"
+                    "hash" -> "$themePath/hash.json"
+                    "theme" -> "$themePath/$theme.apk"
+                    "stock" ->  "$themePath/stock.apk"
+                    "dpi" ->  "$themePath/dpi.apk"
                     "lang" -> "$installUrl/apks/v$vancedVer/$variant/Language/split_config.${lang?.get(count)}.apk"
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
                 }
@@ -80,7 +84,10 @@ class VancedDownloadService: Service() {
                 override fun onDownloadComplete() {
                     when (type) {
                         "arch" -> downloadSplits("theme")
-                        "theme" -> downloadSplits("lang")
+                        "theme" -> if(variant=="root") downloadSplits("stock") else downloadSplits("lang")
+                        "stock" -> downloadSplits("dpi")
+                        "dpi" -> downloadSplits("hash")
+                        "hash" -> downloadSplits("lang")
                         "lang" -> {
                             count++
                             if (count < lang?.count()!!)
@@ -88,6 +95,7 @@ class VancedDownloadService: Service() {
                             else
                                 prepareInstall(variant!!)
                         }
+
                     }
                 }
 

@@ -67,7 +67,7 @@ object InternetTools {
 
     suspend fun isUpdateAvailable(): Boolean {
         val result = try {
-            JsonHelper.getJson("https://x1nto.github.io/VancedFiles/manager.json").int("versionCode") ?: 0
+            JsonHelper.getJson("https://ytvanced.github.io/VancedBackend/manager.json").int("versionCode") ?: 0
         } catch (e: Exception) {
             0
         }

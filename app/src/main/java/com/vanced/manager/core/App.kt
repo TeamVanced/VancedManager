@@ -14,15 +14,15 @@ class App: Application() {
         super.onCreate()
         PRDownloader.initialize(this)
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
+        //if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
             Crowdin.init(this,
             CrowdinConfig.Builder()
                 .withDistributionHash("36c51aed3180a4f43073d28j4s6")
                 .withNetworkType(NetworkType.WIFI)
                 .build()
             )
-        }
-        
+        //}
+
     }
 
     /*
