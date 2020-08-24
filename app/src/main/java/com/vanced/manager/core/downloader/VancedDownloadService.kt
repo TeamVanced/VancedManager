@@ -57,11 +57,12 @@ class VancedDownloadService: Service() {
                     Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                     else -> "armeabi_v7a"
                 }
-            val themePath = "$installUrl/apks/v$vancedVer/$variant/Theme/"
+            val themePath = "$installUrl/apks/v$vancedVer/$variant/Theme"
             val url =
                 when (type) {
                     "arch" -> "$installUrl/apks/v$vancedVer/$variant/Arch/split_config.$arch.apk"
-                    "theme" -> "$themePath$theme.apk"
+                    "hash" -> "$themePath/hash.json"
+                    "theme" -> "$themePath/$theme.apk"
                     "stock" ->  "$themePath/stock.apk"
                     "dpi" ->  "$themePath/dpi.apk"
                     "lang" -> "$installUrl/apks/v$vancedVer/$variant/Language/split_config.${lang?.get(count)}.apk"
@@ -85,7 +86,8 @@ class VancedDownloadService: Service() {
                         "arch" -> downloadSplits("theme")
                         "theme" -> if(variant=="root") downloadSplits("stock") else downloadSplits("lang")
                         "stock" -> downloadSplits("dpi")
-                        "dpi" -> downloadSplits("lang")
+                        "dpi" -> downloadSplits("hash")
+                        "hash" -> downloadSplits("lang")
                         "lang" -> {
                             count++
                             if (count < lang?.count()!!)
