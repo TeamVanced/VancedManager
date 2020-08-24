@@ -15,7 +15,7 @@
     <string name="error_downloading">Download von %1$s fehlgeschlagen</string>
     <string name="install">Installieren</string>
     <string name="installing_app">%1$s wird installiert</string>
-    <string name="installation_aborted">Operation fehlgeschlagen, da der Nutzer diese abgebrochen hat.</string>
+    <string name="installation_aborted">Installation fehlgeschlagen, da der Nutzer diese abgebrochen hat.</string>
     <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer diese blockiert hat.</string>
     <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
     <string name="installation_conflict">Installation aufgrund von Konflikten mit einer bereits installierten App fehlgeschlagen. Deinstallieren Sie die Aktuelle Version von Vanced und versuchen Sie es erneut.</string>
