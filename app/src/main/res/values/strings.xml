@@ -101,5 +101,11 @@
     <string name="manager_dev">Manager Dev</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Vanced Team</string>
+    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
+    <string name="Chown_Fail">Failed To Chown, Try Again</string>
+    <string name="IFile_Missing">Input File Missing</string>
+    <string name="ModApk_Missing">modApk Is Null Missing (dark.apk/black.apk) In apks Folder</string>
+    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <string name="Corrupt_Data">Download Went Corrupt, Retry or clear VanM Data</string>
 
 </resources>
