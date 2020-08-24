@@ -39,6 +39,12 @@ object AppUtils {
             status.contains("INSTALL_FAILED_INVALID_APK") -> context.getString(R.string.installation_invalid)
             status.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> context.getString(R.string.installation_downgrade)
             status.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> context.getString(R.string.installation_signature)
+            status.contains("Failed_Uninstall") -> "Failed Uninstall Of Installed Version, Try Manually"
+            status.contains("Chown_Fail") -> "Failed To Chown, Try Again"
+            status.contains("IFile_Missing") -> "Input File Missing"
+            status.contains("ModApk_Missing") -> "modApk Is Null Missing (dark.apk/black.apk) In apks Folder"
+            status.contains("Files_Missing_VA") -> "Files are missing, Failed Download?"
+            status.contains("Corrupt_Data") -> "Download Went Corrupt, Retry or clear VanM Data"
             else ->
                 if (MiuiHelper.isMiui())
                     context.getString(R.string.installation_miui)

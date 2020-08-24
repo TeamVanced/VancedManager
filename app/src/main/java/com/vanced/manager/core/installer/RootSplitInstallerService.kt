@@ -86,20 +86,16 @@ class RootSplitInstallerService: Service() {
                                 sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
                             }
                         }
-                        else
-                        {
-                            sendFailure(listOf("Install Failed").toMutableList(), applicationContext)
-                        }
                     }
                     else
                     {
-                        sendFailure(listOf("modApk Is Null Missing (dark.apk/black.apk) In apks Folder").toMutableList(), applicationContext)
+                        sendFailure(listOf("ModApk_Missing").toMutableList(), applicationContext)
                     }
                     //installSplitApkFiles(fileInfoList)
                 }
                 else
                 {
-                    sendFailure(listOf("Files are missing, Failed Download?").toMutableList(), applicationContext)
+                    sendFailure(listOf("Files_Missing_VA").toMutableList(), applicationContext)
                 }
             }
 
@@ -224,7 +220,7 @@ class RootSplitInstallerService: Service() {
                 }
                 else
                 {
-                    sendFailure(listOf("Download Went Corrupt, Retry or clear VanM Data").toMutableList(), applicationContext)
+                    sendFailure(listOf("Corrupt_Data").toMutableList(), applicationContext)
 
                 }
 
@@ -298,7 +294,7 @@ class RootSplitInstallerService: Service() {
         {
             return installSplitApkFiles(apkFiles)
         }
-        with(localBroadcastManager) {sendFailure(listOf("Failed Uninstall Of Installed Version, Try Manually").toMutableList(), applicationContext)}
+        with(localBroadcastManager) {sendFailure(listOf("Failed_Uninstall").toMutableList(), applicationContext)}
         return false
     }
 
@@ -342,7 +338,7 @@ class RootSplitInstallerService: Service() {
                 return if(Shell.su("chown system:system $path").exec().isSuccess) {
                     true
                 } else {
-                    sendFailure(listOf("Failed To Chown, Try Again").toMutableList(), applicationContext)
+                    sendFailure(listOf("Chown_Fail").toMutableList(), applicationContext)
                     false
                 }
 
@@ -354,7 +350,7 @@ class RootSplitInstallerService: Service() {
             }
         }
         else {
-            sendFailure(listOf("Input File Missing").toMutableList(), applicationContext)
+            sendFailure(listOf("IFile_Missing").toMutableList(), applicationContext)
             return false
         }
     }
@@ -379,20 +375,19 @@ class RootSplitInstallerService: Service() {
 
     private fun checkSHA256(sha256: String, updateFile: File?): Boolean {
         try {
-            // get the raw file data of the photo
             val mInputPFD = contentResolver.openFileDescriptor(updateFile!!.toUri() , "r")
             val mContentFileDescriptor = mInputPFD!!.fileDescriptor
             val fIS = FileInputStream(mContentFileDescriptor)
-            val mGraphicBuffer = ByteArrayOutputStream()
+            val dataBuffer = ByteArrayOutputStream()
             val buf = ByteArray(1024)
             while (true) {
                 val readNum = fIS.read(buf)
                 if (readNum == -1) break
-                mGraphicBuffer.write(buf, 0, readNum)
+                dataBuffer.write(buf, 0, readNum)
             }
 
             // Generate the checksum
-            val sum = generateChecksum(mGraphicBuffer)
+            val sum = generateChecksum(dataBuffer)
 
             return sum == sha256
         } catch (e: Exception) {
