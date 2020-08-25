@@ -94,4 +94,9 @@
     <string name="manager_dev">Hanteraren Dev</string>
     <string name="sources">Källor</string>
     <string name="vanced_team">Vanced Team</string>
+    <string name="Failed_Uninstall">Misslyckad avinstallation av installerad version, försök manuellt</string>
+    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="Files_Missing_VA">Filer saknas, nedladdningen misslyckades?</string>
 </resources>
