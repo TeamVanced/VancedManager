@@ -94,9 +94,9 @@
     <string name="manager_dev">Desenvolvedor do Manager</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipe Vanced</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <string name="Failed_Uninstall">Falha ao desinstalar a versão instalada, tente manualmente</string>
+    <string name="Chown_Fail">Falha ao enviar o Apk para o proprietário do sistema, tente novamente</string>
+    <string name="IFile_Missing">Dark/Black.apk não pode ser lido (O armazenamento foi bloqueado?) Ou arquivo ausente</string>
+    <string name="ModApk_Missing">Apk Black/Dark está ausente do instalador. Isso não deve acontecer. Limpe os dados do aplicativo Vanced Manager</string>
+    <string name="Files_Missing_VA">Arquivos faltando. Falha no download?</string>
 </resources>
