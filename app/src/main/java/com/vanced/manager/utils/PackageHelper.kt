@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import com.vanced.manager.core.installer.AppUninstallerService
 import java.lang.Exception
 
@@ -24,6 +25,14 @@ object PackageHelper {
             packageManager.getPackageInfo(packageName, 0).versionName
         else
             ""
+    }
+
+    fun getPkgVerCode(pkg: String, pm:PackageManager): Int? {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+            pm.getPackageInfo(pkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
+        else
+            pm.getPackageInfo(pkg, 0)?.versionCode
+
     }
 
     fun uninstallApk(pkg: String, activity: Activity) {
