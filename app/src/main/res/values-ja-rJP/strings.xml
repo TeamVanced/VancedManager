@@ -94,4 +94,9 @@
     <string name="manager_dev">Manager 開発</string>
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
+    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
+    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
 </resources>
