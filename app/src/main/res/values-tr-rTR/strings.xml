@@ -94,9 +94,9 @@
     <string name="manager_dev">Yönetici Geliştirme </string>
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <string name="Failed_Uninstall">Yüklü Sürüm Kaldırılamadı, Manuel Olarak Deneyin</string>
+    <string name="Chown_Fail">Apk sistem sahibine verilemedi, Tekrar Deneyin</string>
+    <string name="IFile_Missing">Dark/Black.apk Okunamıyor(Depolama mı Engellendi?) veya Dosya Yok</string>
+    <string name="ModApk_Missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen yöneticinin uygulama verilerini temizleyin</string>
+    <string name="Files_Missing_VA">Dosyalar eksik, İndirme Başarısız mı oldu?</string>
 </resources>
