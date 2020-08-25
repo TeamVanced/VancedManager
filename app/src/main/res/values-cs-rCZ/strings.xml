@@ -95,8 +95,8 @@
     <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tým Vanced</string>
     <string name="Failed_Uninstall">Odinstalace nainstalované verze se nezdařila, zkuste to ručně</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="Chown_Fail">Vlastníka APK se nepodařilo změnit, zkuste to znovu</string>
+    <string name="IFile_Missing">Soubor dark/black.apk nelze přečíst (je blokováno úložiště?) nebo soubor chybí</string>
+    <string name="ModApk_Missing">V instalačním souboru chybí black/dark.apk. To by se nemělo stát. Vymažte prosím data aplikace Vanced Manager</string>
     <string name="Files_Missing_VA">Chybí soubory. Stahování se nezdařilo?</string>
 </resources>
