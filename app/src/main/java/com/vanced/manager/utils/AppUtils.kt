@@ -39,6 +39,12 @@ object AppUtils {
             status.contains("INSTALL_FAILED_INVALID_APK") -> context.getString(R.string.installation_invalid)
             status.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> context.getString(R.string.installation_downgrade)
             status.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> context.getString(R.string.installation_signature)
+            status.contains("Failed_Uninstall") -> context.getString(R.string.Failed_Uninstall)
+            status.contains("Chown_Fail") -> context.getString(R.string.Chown_Fail)
+            status.contains("IFile_Missing") -> context.getString(R.string.IFile_Missing)
+            status.contains("ModApk_Missing") -> context.getString(R.string.ModApk_Missing)
+            status.contains("Files_Missing_VA") -> context.getString(R.string.Files_Missing_VA)
+            status.contains("Corrupt_Data") -> context.getString(R.string.Corrupt_Data)
             else ->
                 if (MiuiHelper.isMiui())
                     context.getString(R.string.installation_miui)

@@ -8,10 +8,7 @@ import android.os.IBinder
 import android.util.Log
 import androidx.annotation.Nullable
 import androidx.annotation.WorkerThread
-import androidx.core.net.toUri
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.beust.klaxon.JsonObject
-import com.beust.klaxon.Parser
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
@@ -20,15 +17,13 @@ import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.FileInfo
 import com.vanced.manager.utils.InternetTools.getJsonInt
 import com.vanced.manager.utils.PackageHelper
+import com.vanced.manager.utils.PackageHelper.getPkgVerCode
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import java.io.ByteArrayOutputStream
 import java.io.File
-import java.io.FileInputStream
 import java.io.IOException
-import java.security.MessageDigest
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.regex.Pattern
@@ -37,7 +32,6 @@ import kotlin.collections.ArrayList
 
 class RootSplitInstallerService: Service() {
 
-    private var hashjson: FileInfo? = null
     private var vancedVersionCode: Int = 0
     val yPkg = "com.google.android.youtube"
 
@@ -71,35 +65,26 @@ class RootSplitInstallerService: Service() {
                         {
                             modApk = fil
                         }
-                        if(fil.name == "hash.json")
-                        {
-                            hashjson = fil
-                        }
                     }
-                    if (modApk != null && hashjson != null) {
+                    if (modApk != null) {
 
-                        val hash = parseJson(modApk.name.split(".")[0], hashjson!!)
-                        if(overwriteBase(modApk, fileInfoList, vancedVersionCode,hash))
+                        if(overwriteBase(modApk, fileInfoList, vancedVersionCode))
                         {
                             with(localBroadcastManager) {
                                 sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                                 sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
                             }
                         }
-                        else
-                        {
-                            sendFailure(listOf("Install Failed").toMutableList(), applicationContext)
-                        }
                     }
                     else
                     {
-                        sendFailure(listOf("modApk Is Null Missing (dark.apk/black.apk) In apks Folder").toMutableList(), applicationContext)
+                        sendFailure(listOf("ModApk_Missing").toMutableList(), applicationContext)
                     }
                     //installSplitApkFiles(fileInfoList)
                 }
                 else
                 {
-                    sendFailure(listOf("Files are missing, Failed Download?").toMutableList(), applicationContext)
+                    sendFailure(listOf("Files_Missing_VA").toMutableList(), applicationContext)
                 }
             }
 
@@ -107,14 +92,6 @@ class RootSplitInstallerService: Service() {
         stopSelf()
         return START_NOT_STICKY
     }
-
-    private fun parseJson(s: String, hashjson: FileInfo): String
-    {
-        val jsonData = SuFile.open(hashjson.file!!.absolutePath).readText(Charsets.UTF_8)
-        val jsonObject = Parser.default().parse(StringBuilder(jsonData)) as JsonObject
-        return jsonObject.string(s)!!
-    }
-
 
     @WorkerThread
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>) : Boolean {
@@ -207,35 +184,22 @@ class RootSplitInstallerService: Service() {
     }
 
     //install Vanced
-    private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int,hash: String): Boolean
+    private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int): Boolean
     {
         if(checkVersion(versionCode,baseApkFiles))
         {
             val path = getVPath()
             apkFile.file?.let {
                 val apath = it.absolutePath
-                if(sha256Check(apath,hash))
+                if(path?.let { it1 -> moveAPK(apath, it1) }!!)
                 {
-                    if(path?.let { it1 -> moveAPK(apath, it1) }!!)
-                    {
-                        val fpath = SuFile.open(path).parent!!
-                        return chConV(path)
-                    }
-                }
-                else
-                {
-                    sendFailure(listOf("Download Went Corrupt, Retry or clear VanM Data").toMutableList(), applicationContext)
-
+                    val fpath = SuFile.open(path).parent!!
+                    return chConV(path)
                 }
 
             }
         }
         return false
-    }
-    //do sha256 check on downloaded apk
-    private fun sha256Check(apath: String, hash: String): Boolean {
-        val sfile = SuFile.open(apath)
-        return checkSHA256(hash,sfile)
     }
 
     //check version and perform action based on result
@@ -244,7 +208,7 @@ class RootSplitInstallerService: Service() {
         if (path != null) {
             if(path.contains("/data/app/"))
             {
-                when(getPkgVerCode(yPkg)?.let { compareVersion(it,versionCode) })
+                when(getPkgVerCode(yPkg,packageManager)?.let { compareVersion(it,versionCode) })
                 {
                     1 -> {return fixHigherVer(baseApkFiles) }
                     -1 -> {return fixLowerVer(baseApkFiles) }
@@ -257,17 +221,6 @@ class RootSplitInstallerService: Service() {
             }
         }
         return fixNoInstall(baseApkFiles)
-    }
-
-
-
-    private fun getPkgVerCode(pkg: String): Int? {
-        val pm = packageManager
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-            pm.getPackageInfo(pkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
-        else
-            pm.getPackageInfo(pkg, 0)?.versionCode
-
     }
 
     private fun getPkgInfo(pkg: String): PackageInfo?
@@ -298,7 +251,7 @@ class RootSplitInstallerService: Service() {
         {
             return installSplitApkFiles(apkFiles)
         }
-        with(localBroadcastManager) {sendFailure(listOf("Failed Uninstall Of Installed Version, Try Manually").toMutableList(), applicationContext)}
+        with(localBroadcastManager) {sendFailure(listOf("Failed_Uninstall").toMutableList(), applicationContext)}
         return false
     }
 
@@ -314,7 +267,7 @@ class RootSplitInstallerService: Service() {
 
     //set chcon to apk_data_file
     private fun chConV(path: String): Boolean {
-        val response = Shell.su("chcon -R u:object_r:apk_data_file:s0 $path").exec()
+        val response = Shell.su("chcon u:object_r:apk_data_file:s0 $path").exec()
         //val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
         return if(response.isSuccess) {
             true
@@ -342,7 +295,7 @@ class RootSplitInstallerService: Service() {
                 return if(Shell.su("chown system:system $path").exec().isSuccess) {
                     true
                 } else {
-                    sendFailure(listOf("Failed To Chown, Try Again").toMutableList(), applicationContext)
+                    sendFailure(listOf("Chown_Fail").toMutableList(), applicationContext)
                     false
                 }
 
@@ -354,7 +307,7 @@ class RootSplitInstallerService: Service() {
             }
         }
         else {
-            sendFailure(listOf("Input File Missing").toMutableList(), applicationContext)
+            sendFailure(listOf("IFile_Missing").toMutableList(), applicationContext)
             return false
         }
     }
@@ -377,55 +330,6 @@ class RootSplitInstallerService: Service() {
 
     }
 
-    private fun checkSHA256(sha256: String, updateFile: File?): Boolean {
-        try {
-            // get the raw file data of the photo
-            val mInputPFD = contentResolver.openFileDescriptor(updateFile!!.toUri() , "r")
-            val mContentFileDescriptor = mInputPFD!!.fileDescriptor
-            val fIS = FileInputStream(mContentFileDescriptor)
-            val mGraphicBuffer = ByteArrayOutputStream()
-            val buf = ByteArray(1024)
-            while (true) {
-                val readNum = fIS.read(buf)
-                if (readNum == -1) break
-                mGraphicBuffer.write(buf, 0, readNum)
-            }
-
-            // Generate the checksum
-            val sum = generateChecksum(mGraphicBuffer)
-
-            return sum == sha256
-        } catch (e: Exception) {
-            e.printStackTrace()
-            return false
-        }
-    }
-
-    @Throws(IOException::class)
-    private fun generateChecksum(data: ByteArrayOutputStream): String {
-        try {
-            val digest: MessageDigest = MessageDigest.getInstance("SHA-256")
-            val hash: ByteArray = digest.digest(data.toByteArray())
-            return printableHexString(hash)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-        return ""
-    }
-
-
-    private fun printableHexString(data: ByteArray): String {
-        // Create Hex String
-        val hexString: StringBuilder = StringBuilder()
-        for (aMessageDigest:Byte in data) {
-            var h: String = Integer.toHexString(0xFF and aMessageDigest.toInt())
-            while (h.length < 2)
-                h = "0$h"
-            hexString.append(h)
-        }
-        return hexString.toString()
-    }
 
 
 }
