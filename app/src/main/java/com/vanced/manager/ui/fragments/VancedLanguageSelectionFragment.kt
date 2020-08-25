@@ -51,8 +51,8 @@ class VancedLanguageSelectionFragment : Fragment() {
                 }
             with(requireActivity()) {
                 getSharedPreferences("installPrefs", Context.MODE_PRIVATE)?.edit()?.apply {
-                        putString("lang", chosenLangs.joinToString())?.apply()
-                        putBoolean("valuesModified", true).apply()
+                    putString("lang", chosenLangs.joinToString())?.apply()
+                    putBoolean("valuesModified", true).apply()
                 }
                 startService(Intent(this, VancedDownloadService::class.java))
             }

@@ -27,6 +27,7 @@ object PackageHelper {
             ""
     }
 
+    @Suppress("DEPRECATION")
     fun getPkgVerCode(pkg: String, pm:PackageManager): Int? {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
             pm.getPackageInfo(pkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()

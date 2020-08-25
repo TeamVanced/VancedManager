@@ -29,22 +29,14 @@ import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 
-
 class RootSplitInstallerService: Service() {
 
-    private var vancedVersionCode: Int = 0
+    private var vancedVersionCode: Int = runBlocking { getJsonInt("vanced.json","versionCode", application) }
     val yPkg = "com.google.android.youtube"
 
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
-
-    suspend fun getVer()
-    {
-        vancedVersionCode = getJsonInt("vanced.json","versionCode", application)
-    }
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-
         Shell.enableVerboseLogging = BuildConfig.DEBUG
         Shell.setDefaultBuilder(
             Shell.Builder.create()
@@ -52,24 +44,19 @@ class RootSplitInstallerService: Service() {
                 .setTimeout(10)
         )
 
-        runBlocking { getVer() }
         Shell.getShell {
-            var job = CoroutineScope(Dispatchers.IO).launch{
+            CoroutineScope(Dispatchers.IO).launch {
                 val apkFilesPath = getExternalFilesDir("apks")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
                 if (fileInfoList != null) {
                     var modApk: FileInfo? = null
-                    for (fil in fileInfoList)
-                    {
-                        if(fil.name == "dark.apk" || fil.name == "black.apk")
-                        {
-                            modApk = fil
+                    for (file in fileInfoList) {
+                        if (file.name == "dark.apk" || file.name == "black.apk") {
+                            modApk = file
                         }
                     }
                     if (modApk != null) {
-
-                        if(overwriteBase(modApk, fileInfoList, vancedVersionCode))
-                        {
+                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode)) {
                             with(localBroadcastManager) {
                                 sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
                                 sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
@@ -184,16 +171,13 @@ class RootSplitInstallerService: Service() {
     }
 
     //install Vanced
-    private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int): Boolean
-    {
-        if(checkVersion(versionCode,baseApkFiles))
-        {
+    private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int): Boolean {
+        if (checkVersion(versionCode,baseApkFiles)) {
             val path = getVPath()
             apkFile.file?.let {
                 val apath = it.absolutePath
-                if(path?.let { it1 -> moveAPK(apath, it1) }!!)
-                {
-                    val fpath = SuFile.open(path).parent!!
+                if(path?.let { it1 -> moveAPK(apath, it1) }!!) {
+                    SuFile.open(path).parent!!
                     return chConV(path)
                 }
 
@@ -223,35 +207,31 @@ class RootSplitInstallerService: Service() {
         return fixNoInstall(baseApkFiles)
     }
 
-    private fun getPkgInfo(pkg: String): PackageInfo?
-    {
+    private fun getPkgInfo(pkg: String): PackageInfo? {
         return try {
-            val m = packageManager
-            val info = m.getPackageInfo(pkg, 0)
-            info
+            packageManager.getPackageInfo(pkg, 0)
         } catch (e:Exception) {
+            Log.d("VMpm", "Unable to get package info")
             null
         }
     }
 
-    private fun compareVersion(pkgVerCode: Int, versionCode: Int): Int
-    {
-        return if(pkgVerCode > versionCode)
-            1
-        else if (pkgVerCode < versionCode)
-            -1
-        else
-            0
+    private fun compareVersion(pkgVerCode: Int, versionCode: Int): Int {
+        return when {
+            pkgVerCode > versionCode -> 1
+            pkgVerCode < versionCode -> -1
+            else -> 0
+        }
     }
 
     //uninstall current update and install base that works with patch
     private fun fixHigherVer(apkFiles: ArrayList<FileInfo>) : Boolean {
-
-        if(PackageHelper.uninstallApk(yPkg, applicationContext))
-        {
+        if(PackageHelper.uninstallApk(yPkg, applicationContext)) {
             return installSplitApkFiles(apkFiles)
         }
-        with(localBroadcastManager) {sendFailure(listOf("Failed_Uninstall").toMutableList(), applicationContext)}
+        with(localBroadcastManager) {
+            sendFailure(listOf("Failed_Uninstall").toMutableList(), applicationContext)
+        }
         return false
     }
 
@@ -269,7 +249,7 @@ class RootSplitInstallerService: Service() {
     private fun chConV(path: String): Boolean {
         val response = Shell.su("chcon u:object_r:apk_data_file:s0 $path").exec()
         //val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
-        return if(response.isSuccess) {
+        return if (response.isSuccess) {
             true
         } else {
             sendFailure(response.out, applicationContext)
@@ -283,8 +263,7 @@ class RootSplitInstallerService: Service() {
         val apkinF = SuFile.open(apkFile)
         val apkoutF = SuFile.open(path)
 
-        if(apkinF.exists())
-        {
+        if(apkinF.exists()) {
             try {
                 Shell.su("am force-stop $yPkg").exec()
 
@@ -330,6 +309,6 @@ class RootSplitInstallerService: Service() {
 
     }
 
-
-
 }
+
+
