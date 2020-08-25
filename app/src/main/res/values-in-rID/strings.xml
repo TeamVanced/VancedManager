@@ -6,7 +6,7 @@
     <string name="save">Simpan</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
-    <string name="title_home">Menu Utama</string>
+    <string name="title_home">Beranda</string>
     <string name="title_settings">Pengaturan</string>
     <!-- Home Page -->
     <string name="changelogs">Catatan perubahan</string>
@@ -49,7 +49,7 @@
     <string name="category_interface">Antarmuka</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Cek pembaruan</string>
-    <string name="chosen_install_values">Preferensi instalasi yang dipilih</string>
+    <string name="chosen_install_values">Preferensi pemasangan yang dipilih</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Hapus file yang diunduh</string>
@@ -72,7 +72,7 @@
     <string name="button_dismiss">Hilangkan</string>
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
-    <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapusnya dengan cara menghapus modul pada Magisk/gunakan TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapus itu dengan menghapus modul magisk/gunakan pencopot Vanced TWRP.</string>
     <string name="miui_one_title">MIUI terdeteksi!</string>
     <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
     <string name="error">Terjadi kesalahan</string>
@@ -94,4 +94,9 @@
     <string name="manager_dev">Pengembang Manager</string>
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
+    <string name="Failed_Uninstall">Gagal Mencopot Versi Yang Terpasang, Coba Secara Manual</string>
+    <string name="Chown_Fail">Gagal Untuk Chown Apk untuk pemilik sistem, Coba Lagi</string>
+    <string name="IFile_Missing">Dark/Black.apk Tidak Bisa Dibaca (Apakah Penyimpanan Diblokir?) atau File Hilang</string>
+    <string name="ModApk_Missing">Black/Dark apk hilang dari installer, Ini seharusnya tidak terjadi, mohon hapus data aplikasi manager</string>
+    <string name="Files_Missing_VA">File hilang, Gagal Mengunduh?</string>
 </resources>
