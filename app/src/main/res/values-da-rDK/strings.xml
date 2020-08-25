@@ -94,9 +94,9 @@
     <string name="manager_dev">Manager udvikler</string>
     <string name="sources">Kilder</string>
     <string name="vanced_team">Vanced holdet</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <string name="Failed_Uninstall">Kunne ikke afinstaller den installerede version, prøv manuelt</string>
+    <string name="Chown_Fail">Kunne ikke vælge Apk til systemejer, Prøv igen</string>
+    <string name="IFile_Missing">Mørk/Sort.apk kan ikke læses eller fil mangler (Er lageradgang blokeret?)</string>
+    <string name="ModApk_Missing">Sort/mørk apk mangler i installationsprogrammet, dette bør ikke ske, venligst ryd app data for manageren</string>
+    <string name="Files_Missing_VA">Filer mangler, fejlede downloaden?</string>
 </resources>
