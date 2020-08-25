@@ -94,4 +94,9 @@
     <string name="manager_dev">Deweloperzy Menedżera</string>
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
+    <string name="Failed_Uninstall">Nie udało się odinstalować zainstalowanej wersji, spróbuj ręcznie</string>
+    <string name="Chown_Fail">Nie udało się zmienić właściciela Apk, spróbuj ponownie</string>
+    <string name="IFile_Missing">Dark/Black.apk nie może być odczytany (Czy pamięć została zablokowana?) czy brakuje pliku</string>
+    <string name="ModApk_Missing">Brak czarnej/ciemnej apk w instalatorze. To nie powinno się zdarzyć, wyczyść dane menedżera</string>
+    <string name="Files_Missing_VA">Brakuje plików, Pobieranie nie powiodło się?</string>
 </resources>
