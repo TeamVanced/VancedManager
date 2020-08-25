@@ -94,4 +94,9 @@
     <string name="manager_dev">Manager 開發者</string>
     <string name="sources">原始碼</string>
     <string name="vanced_team">Vanced 團隊</string>
+    <string name="Failed_Uninstall">已安裝的版本解除安裝失敗，請手動重試</string>
+    <string name="Chown_Fail">Chown Apk 到系統擁有者失敗，請重試</string>
+    <string name="IFile_Missing">無法存取 Dark/Black.apk (儲存空間被封鎖了？) 或檔案已丟失</string>
+    <string name="ModApk_Missing">安裝程式缺乏黑色/深色 apk ，這不應該發生的，請清除 Manager 數據</string>
+    <string name="Files_Missing_VA">檔案已丟失，下載失敗嗎？</string>
 </resources>
