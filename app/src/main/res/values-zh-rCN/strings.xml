@@ -11,7 +11,7 @@
     <!-- Home Page -->
     <string name="changelogs">变更日志</string>
     <string name="downloading_file">正在下载 %1$s</string>
-    <string name="failed_uninstall">%1$s 解除安装失败</string>
+    <string name="failed_uninstall">%1$s 卸载失败</string>
     <string name="error_downloading">%1$s 下载错误</string>
     <string name="install">安装</string>
     <string name="installing_app">正在安装 %1$s</string>
@@ -94,4 +94,9 @@
     <string name="manager_dev">Manager 开发人员</string>
     <string name="sources">程式码</string>
     <string name="vanced_team">Vanced 团队</string>
+    <string name="Failed_Uninstall">已安装的版本卸载失败，请手动重试</string>
+    <string name="Chown_Fail">Chown Apk 到系统拥有者失败，请重试</string>
+    <string name="IFile_Missing">无法读取 Dark/Black.apk (存储被封锁了？) 或档案已丢失</string>
+    <string name="ModApk_Missing">安装程式缺少黑/暗 apk ，这不应该发生的，请清除 Manager 数据</string>
+    <string name="Files_Missing_VA">档案已丢失，下载失败吗？</string>
 </resources>
