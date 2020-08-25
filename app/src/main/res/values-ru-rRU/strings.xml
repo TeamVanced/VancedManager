@@ -94,4 +94,9 @@
     <string name="manager_dev">Разработчик</string>
     <string name="sources">Исходники</string>
     <string name="vanced_team">Команда Vanced</string>
+    <string name="Failed_Uninstall">Ошибка при удалении установленной версии, попробуйте сделать это вручную</string>
+    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="Files_Missing_VA">Файлы отсутствуют, ошибка при скачивании?</string>
 </resources>
