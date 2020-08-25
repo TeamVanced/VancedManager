@@ -127,7 +127,8 @@ class VancedDownloadService: Service() {
 
     private fun downloadStockCheck():Boolean
     {
-        return getPkgVerCode(yPkg, packageManager) != vancedVersionCode
+
+        return try {getPkgVerCode(yPkg, packageManager) != vancedVersionCode}catch (e: Exception) {true}
     }
     suspend fun getSha256(obj: String) {
         sha256Val = InternetTools.getJsonString(hashUrl,obj,applicationContext)
