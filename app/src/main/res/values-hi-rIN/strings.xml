@@ -53,7 +53,7 @@
     <string name="chosen_lang">भाषा (एं): %1$s</string>
     <string name="chosen_theme">थीम: %1$s</string>
     <string name="clear_files">डाउनलोड की गई फ़ाइलें साफ़ करें</string>
-    <string name="cleared_files">सफलतापूर्वक साफ़ की गई फ़ाइलें</string>
+    <string name="cleared_files">फ़ाइलें सफलतापूर्वक साफ़ की गई</string>
     <string name="link_title">क्रोम कस्टम टैब का उपयोग करें</string>
     <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
     <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
@@ -94,4 +94,9 @@
     <string name="manager_dev">मैनेजर देव</string>
     <string name="sources">सूत्रों का</string>
     <string name="vanced_team">वांसड टीम</string>
+    <string name="Failed_Uninstall">स्थापित संस्करण की स्थापना रद्द करने में विफल, मैन्युअल रूप से प्रयास करें</string>
+    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="Files_Missing_VA">फाइलें गायब हैं, डाउनलोड में विफल?</string>
 </resources>
