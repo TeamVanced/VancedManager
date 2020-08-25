@@ -97,6 +97,6 @@
     <string name="Failed_Uninstall">Gỡ cài đặt thất bại, hãy thử gỡ cài đặt thủ công</string>
     <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
     <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="ModApk_Missing">Thiếu Apk màu Black/Dark trong trình cài đặt, Điều này không nên xảy ra, vui lòng xoá dữ liệu của Vanced Manager</string>
     <string name="Files_Missing_VA">Tập tin bị thiếu, download lỗi?</string>
 </resources>
