@@ -15,8 +15,8 @@
     <string name="error_downloading">Erreur en téléchargeant %1$s</string>
     <string name="install">Installer</string>
     <string name="installing_app">Installation de %1$s</string>
-    <string name="installation_aborted">L\'opération à échouée, l\'utilisateur à abandonné l\'installation.</string>
-    <string name="installation_blocked">L\'opération à échouée, l\'utilisateur à abandonné l\'installation.</string>
+    <string name="installation_aborted">L\'opération a échouée, l\'utilisateur a abandonné l\'installation.</string>
+    <string name="installation_blocked">L\'opération a échouée, l\'utilisateur a bloqué l\'installation.</string>
     <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le package. Désinstallez les mises à jour depuis l\'application YouTube d\'origine, puis réessayez.</string>
     <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
     <string name="installation_failed">L\'installation a échouée pour une raison inconnue, rejoignez notre Telegram ou Discord pour obtenir de l\'aide.</string>
@@ -94,4 +94,10 @@
     <string name="manager_dev">Développeur du Manager</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
+    <string name="Failed_Uninstall">Échec de la désinstallation de la version installée, essayez manuellement</string>
+    <string name="Chown_Fail">Impossible de modifier le propriétaire de l\'Apk, réessayez</string>
+    <string name="IFile_Missing">Dark/Black.apk ne peut pas être lu (L\'accès aux permissions de stockage est-il révoqué ?) ou un Fichier 
+est manquant</string>
+    <string name="ModApk_Missing">L\'apk Black/Dark est absent de l\'installateur, cela ne devrait pas se produire, veuillez effacer les données de l\'application Vanced Manager</string>
+    <string name="Files_Missing_VA">Les fichiers sont manquants, Téléchargement échoué ?</string>
 </resources>
