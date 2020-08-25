@@ -95,8 +95,8 @@
     <string name="sources">सूत्रों का</string>
     <string name="vanced_team">वांसड टीम</string>
     <string name="Failed_Uninstall">स्थापित संस्करण की स्थापना रद्द करने में विफल, मैन्युअल रूप से प्रयास करें</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="Chown_Fail">सिस्टम के मालिक को एपीके को Chown करने में विफल, फिर से प्रयास करें</string>
+    <string name="IFile_Missing">Dark/Black.apk नहीं पढ़ा जा सकता है (क्या स्टोरेज ब्लॉक हो गया है?) या फाइल मिसिंग है</string>
+    <string name="ModApk_Missing">इंस्टॉलर से Black/Dark apk गायब है, ऐसा नहीं होना चाहिए, कृपया प्रबंधक का ऐप डेटा हटा दें</string>
     <string name="Files_Missing_VA">फाइलें गायब हैं, डाउनलोड में विफल?</string>
 </resources>
