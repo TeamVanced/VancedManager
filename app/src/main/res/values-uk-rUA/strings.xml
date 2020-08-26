@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
-    <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
-    <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="install">Встановити</string>
     <string name="installing_app">Встановлення %1$s</string>
-    <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
-    <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
-    <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
-    <string name="installation_conflict">Помилка встановлення, оскільки додаток конфліктує із уже встановленою програмою. Видаліть поточну версію Vanced, а потім спробуйте знову.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
-    <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
-    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
-    <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
-    <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
-    <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
     <string name="installation_wait">Не виходьте з додатку, поки встановлення не закінчиться.</string>
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Розробники Менеджера</string>
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
-    <string name="Failed_Uninstall">Не вдалося видалити встановлену версію, спробуйте вручну</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Файли відсутні, Невдале завантаження?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">Помилка Завантаження %1$s</string>
+    <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
+    <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
+    <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
+    <string name="installation_conflict">Помилка встановлення, оскільки додаток конфліктує із уже встановленою програмою. Видаліть поточну версію Vanced, а потім спробуйте знову.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
+    <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
+    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
+    <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
+    <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
+    <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
