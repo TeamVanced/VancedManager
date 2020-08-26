@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Actualizaciones</string>
     <string name="downloading_file">Descargando %1$s</string>
-    <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="error_downloading">Error al descargar %1$s</string>
     <string name="install">Instalar</string>
     <string name="installing_app">Instalando %1$s</string>
-    <string name="installation_aborted">La instalación falló porque el usuario abortó la instalación.</string>
-    <string name="installation_blocked">Instalación fallida porque el usuario bloqueó la instalación.</string>
-    <string name="installation_downgrade">La instalación falló porque el usuario intentó degradar el paquete. Desinstale las actualizaciones de stock YouTube, y vuelva a intentarlo.</string>
-    <string name="installation_conflict">La instalación falló porque la aplicación entra en conflicto con una aplicación ya instalada. Desinstale la versión actual de Vanced, y vuelva a intentarlo.</string>
-    <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
-    <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
-    <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
-    <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de apk está habilitada. Desactiva la verificación de la firmas de apk, y vuelve a intentarlo.</string>
-    <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
-    <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
     <string name="installation_wait">NO SALGA de la aplicación hasta que termine la instalación.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Oscuro</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Desarrollador del Manager</string>
     <string name="sources">Fuentes</string>
     <string name="vanced_team">Equipo Vanced</string>
-    <string name="Failed_Uninstall">Desinstalación fallida de la versión instalada, intente manualmente</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">Error al descargar %1$s</string>
+    <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="installation_aborted">La instalación falló porque el usuario abortó la instalación.</string>
+    <string name="installation_blocked">Instalación fallida porque el usuario bloqueó la instalación.</string>
+    <string name="installation_downgrade">La instalación falló porque el usuario intentó degradar el paquete. Desinstale las actualizaciones de stock YouTube, y vuelva a intentarlo.</string>
+    <string name="installation_conflict">La instalación falló porque la aplicación entra en conflicto con una aplicación ya instalada. Desinstale la versión actual de Vanced, y vuelva a intentarlo.</string>
+    <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
+    <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
+    <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
+    <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de apk está habilitada. Desactiva la verificación de la firmas de apk, y vuelve a intentarlo.</string>
+    <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
+    <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
