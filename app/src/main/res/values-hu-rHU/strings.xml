@@ -11,22 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Változtatások</string>
     <string name="downloading_file">%1$s letöltése</string>
-    <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
-    <string name="error_downloading">%1$s letöltése nem sikerült</string>
     <string name="install">Telepítés</string>
     <string name="installing_app">%1$s telepítése</string>
-    <string name="installation_aborted">A telepítés nem sikerült, mert a felhasználó elutasította azt.</string>
-    <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
-    <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó régebbi verziót próbált telepíteni.
-Távolítsd el a gyári YouTube app frissítéseit, majd próld újra.</string>
-    <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy már telepített alkalmazással ütközik. Távolítsd el a jelenlegi Vanced-et és próbáld újra.</string>
-    <string name="installation_failed">A telepítés ismeretlen okok miatt nem sikerült, támogatásért csatlakozz a Telegram vagy a Discord csoportunkhoz.</string>
-    <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
-    <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok korruptak, próbáld újra.</string>
-    <string name="installation_signature">A telepítés nem sikerült, mert az apk aláírás ellenőrzés engedélyezve van.
-Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
-    <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsold ki a MIUI Optimalizációt és próbáld újra.</string>
-    <string name="installation_storage">Tárhely hiba miatt a telepítés nem sikerült.</string>
     <string name="installation_wait">VÁRJ, amíg a telepítés befejeződik.</string>
     <string name="button_reinstall">Újratelepítés</string>
     <string name="version_installed">Telepítve:</string>
@@ -59,6 +45,8 @@ Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="link_external_browser">A linkek egy külső böngészőben nyílnak meg</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
     <string name="theme">Kinézet</string>
     <string name="theme_follow">Rendszertéma követése</string>
     <string name="theme_dark">Sötét téma</string>
@@ -96,9 +84,23 @@ Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
     <string name="manager_dev">Vezető fejlesztő</string>
     <string name="sources">Források</string>
     <string name="vanced_team">Vanced csapat</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">%1$s letöltése nem sikerült</string>
+    <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="installation_aborted">A telepítés nem sikerült, mert a felhasználó elutasította azt.</string>
+    <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
+    <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó régebbi verziót próbált telepíteni.
+Távolítsd el a gyári YouTube app frissítéseit, majd próld újra.</string>
+    <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy már telepített alkalmazással ütközik. Távolítsd el a jelenlegi Vanced-et és próbáld újra.</string>
+    <string name="installation_failed">A telepítés ismeretlen okok miatt nem sikerült, támogatásért csatlakozz a Telegram vagy a Discord csoportunkhoz.</string>
+    <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
+    <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok korruptak, próbáld újra.</string>
+    <string name="installation_signature">A telepítés nem sikerült, mert az apk aláírás ellenőrzés engedélyezve van.
+Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
+    <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsold ki a MIUI Optimalizációt és próbáld újra.</string>
+    <string name="installation_storage">Tárhely hiba miatt a telepítés nem sikerült.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
