@@ -4,6 +4,7 @@
     <string name="app_name" translatable="false">Vanced Manager</string>
     <string name="vanced" translatable="false">Vanced</string>
     <string name="microg" translatable="false">microG</string>
+    <string name="music" translatable="false">Music</string>
     <string name="root" translatable="false">root</string>
     <string name="nonroot" translatable="false">nonroot</string>
     <string name="notif_channel_name">App Downloads</string>

@@ -40,6 +40,16 @@
                     android:layout_marginTop="@dimen/stdp"
                     android:layout_marginEnd="@dimen/stdp"
                     bind:viewModel="@{viewModel}" />
+                
+                <include
+                    android:id="@+id/include_music_layout"
+                    layout="@layout/include_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/stdp"
+                    android:layout_marginTop="@dimen/stdp"
+                    android:layout_marginEnd="@dimen/stdp"
+                    bind:viewModel="@{viewModel}" />
 
                 <include
                     android:id="@+id/include_microg_layout"
