@@ -96,7 +96,7 @@
     <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
     <string name="error_downloading">Error Downloading %1$s</string>
     <string name="failed_uninstall">Failed to uninstall package %1$s</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
     <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
     <string name="installation_aborted">Installation failed because user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because user blocked the installation.</string>
@@ -108,6 +108,6 @@
     <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
     <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
     <string name="installation_storage">Installation failed due to a storage error.</string>
-    <string name="modapk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 
 </resources>

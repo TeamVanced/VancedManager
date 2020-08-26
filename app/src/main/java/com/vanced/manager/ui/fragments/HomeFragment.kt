@@ -49,7 +49,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         binding.viewModel = viewModel
 
         val arg = "variant"
-        val variant = getDefaultSharedPreferences(requireActivity()).getString("vanced_variant")
+        val variant = getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot")
 
         with(binding) {
             when (variant) {
@@ -63,9 +63,6 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }
 
         with(binding) {
-            rootSwitch.setOnClickListener(this@HomeFragment)
-            nonrootSwitch.setOnClickListener(this@HomeFragment)
-
             includeVancedLayout.vancedInstallbtn.setOnClickListener(this@HomeFragment)
             includeVancedLayout.vancedUninstallbtn.setOnClickListener(this@HomeFragment)
             includeMicrogLayout.microgInstallbtn.setOnClickListener(this@HomeFragment)
@@ -74,12 +71,12 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }
 
         binding.includeVancedLayout.vancedCard.setOnLongClickListener {
-            versionToast("Vanced", viewModel.vancedInstalledVersion.get())
+            versionToast("Vanced", viewModel.vanced.get()?.getInstalledVersionName()!!)
             true
         }
 
         binding.includeMicrogLayout.microgCard.setOnLongClickListener {
-            versionToast("MicroG", viewModel.microgInstalledVersion.get())
+            versionToast("MicroG", viewModel.microg.get()?.getInstalledVersionName()!!)
             true
         }
 
@@ -117,7 +114,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
             R.id.vanced_installbtn -> {
                 if (!installing) {
                     if (!viewModel.fetching.get()!!) {
-                        if (variant == "nonroot" && !viewModel.microgInstalled.get()!!) {
+                        if (variant == "nonroot" && !viewModel.microg.get()?.isAppInstalled()!!) {
                             Snackbar.make(
                                 binding.homeRefresh,
                                 R.string.no_microg,
@@ -155,27 +152,8 @@ class HomeFragment : Fragment(), View.OnClickListener {
             }
             R.id.microg_uninstallbtn -> PackageHelper.uninstallApk("com.mgoogle.android.gms", requireActivity())
             R.id.vanced_uninstallbtn -> PackageHelper.uninstallApk(vancedPkgName, requireActivity())
-            R.id.nonroot_switch -> writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
-            R.id.root_switch ->
-                if (Shell.rootAccess()) {
-                    writeToVariantPref("root", R.anim.slide_in_right, R.anim.slide_out_left)
-                } else {
-                    writeToVariantPref("nonroot", R.anim.slide_in_left, R.anim.slide_out_right)
-                    Toast.makeText(requireActivity(), activity?.getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
-                }
             R.id.changelog_button -> cardExpandCollapse()
         }
-    }
-
-    private fun writeToVariantPref(variant: String, animIn: Int, animOut: Int) {
-        val prefs = getDefaultSharedPreferences(activity)
-        if (prefs.getString("vanced_variant", "nonroot") != variant) {
-            prefs.edit().putString("vanced_variant", variant).apply()
-            startActivity(Intent(activity, MainActivity::class.java))
-            activity?.overridePendingTransition(animIn, animOut)
-            activity?.finish()
-        } else
-            Log.d("VMVariant", "$variant is already selected")
     }
 
     private fun versionToast(name: String, app: String?) {

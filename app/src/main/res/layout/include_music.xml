@@ -61,10 +61,10 @@
                     app:constraint_referenced_ids="music_installbtn" />
 
                 <LinearLayout
-                    android:id="@+id/music_remote_latest_version"
+                    android:id="@+id/music_remote_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+                    app:layout_constraintBottom_toTopOf="@id/music_installed_container"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/music_title_buttons_barrier">
 
@@ -80,12 +80,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout2"
+                    android:id="@+id/music_installed_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/music_remote_latest_version">
+                    app:layout_constraintTop_toBottomOf="@id/music_remote_container">
 
                     <TextView
                         style="@style/AppVer"
@@ -94,7 +94,7 @@
                     <TextView
                         android:id="@+id/music_installed_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.music.installedVersion}" />
+                        android:text="@{viewModel.music.installedVersionName}" />
 
                 </LinearLayout>
 

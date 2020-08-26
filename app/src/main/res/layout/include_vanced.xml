@@ -72,10 +72,10 @@
                     app:srcCompat="@drawable/ic_delete_black_24dp" />
 
                 <LinearLayout
-                    android:id="@+id/vanced_remote_latest_version"
+                    android:id="@+id/vanced_remote_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+                    app:layout_constraintBottom_toTopOf="@id/vanced_installed_container"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/vanced_title_buttons_barrier">
 
@@ -91,11 +91,11 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout2"
+                    android:id="@+id/vanced_installed_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/vanced_remote_latest_version">
+                    app:layout_constraintTop_toBottomOf="@id/vanced_remote_container">
 
                     <TextView
                         style="@style/AppVer"
