@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
-    <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
-    <string name="error_downloading">%1$s のダウンロード中にエラー</string>
     <string name="install">インストール</string>
     <string name="installing_app">%1$s をインストールしています</string>
-    <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
-    <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
-    <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。ストックの YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_conflict">既にインストールされたアプリと競合したためインストールに失敗しました。Vanced の現在のバージョンをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
-    <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
-    <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>
-    <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
-    <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
-    <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
     <string name="installation_wait">インストールが完了するまで待ってください。</string>
     <string name="button_reinstall">再インストール</string>
     <string name="version_installed">インストール済み:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Chrome カスタムタブを使用する</string>
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
     <string name="link_external_browser">外部ブラウザでリンクを開く</string>
+    <string name="new_installer_title">新しい Root インストーラーを使用する (実験的)</string>
+    <string name="new_installer_summary">インストーラーは署名検証ステータスに依存しません</string>
     <string name="theme">テーマ</string>
     <string name="theme_follow">システムに従う</string>
     <string name="theme_dark">ダークテーマ</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Manager 開発</string>
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">システム所有者への APK の Chownができませんでした、もう一度やり直してください</string>
+    <string name="error_downloading">%1$s のダウンロード中にエラー</string>
+    <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk が読み込みできない (ストレージがブロック？) またはファイルがありません</string>
+    <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
+    <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
+    <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。ストックの YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
+    <string name="installation_conflict">既にインストールされたアプリと競合したためインストールに失敗しました。Vanced の現在のバージョンをアンインストールしてから、もう一度やり直してください。</string>
+    <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
+    <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
+    <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>
+    <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
+    <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
+    <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
