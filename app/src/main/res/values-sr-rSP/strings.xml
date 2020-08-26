@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Измене</string>
     <string name="downloading_file">Преузимање %1$s</string>
-    <string name="failed_uninstall">Неуспешно деинсталирање пакета %1$s</string>
-    <string name="error_downloading">Грешка приликом преузимања %1$s</string>
     <string name="install">Инсталација</string>
     <string name="installing_app">Инсталирање %1$s</string>
-    <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
-    <string name="installation_blocked">Инсталација није успешна, корисник је блокирао инсталацију.</string>
-    <string name="installation_downgrade">Инсталација није успешна, корисник је покушао да инсталира старију верзију преко новије верзије апликације. Деинсталирајте све до предодређене инсталиране верзије YouTubе апликације, затим покушајте поново.</string>
-    <string name="installation_conflict">Инсталација није успешна, зато што је дошло до конфликта са већ инсталираном верзијом. Деинсталирајте тренутну верзију Vanced-а и затим покушајте поново.</string>
-    <string name="installation_failed">Инсталација није успеla, услед непознатог разлога, прикључите нам се на Telegram и Discord апликацијама за даљу подршку.</string>
-    <string name="installation_incompatible">Инсталација је неуспешна јер инсталациона датотека није компатибилна са вашим уређајем. Очистите преузете датотеке у Подешавањима и затим покушајте поново.</string>
-    <string name="installation_invalid">Инсталација није успеla јер је apk датотека оштећена, покушајте поново.</string>
-    <string name="installation_signature">Инсталација неуспешна јер је укључена провера потписа преузете apk датотеке. Искључите apk проверу и затим покушајте поново.</string>
-    <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
-    <string name="installation_storage">Инсталација неуспешна услед грешке у меоријском простору.</string>
     <string name="installation_wait">НЕ ИЗЛАЗИТЕ из апликације док се инсталација не заврши.</string>
     <string name="button_reinstall">Реинсталирај</string>
     <string name="version_installed">Инсталирана:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Користите Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="link_external_browser">Линкови ће бити отвотрни у екстерном претраживачу</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Као у систему</string>
     <string name="theme_dark">Тамна Тема</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Менаџер развоја</string>
     <string name="sources">Извор</string>
     <string name="vanced_team">Vanced Тим</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">Грешка приликом преузимања %1$s</string>
+    <string name="failed_uninstall">Неуспешно деинсталирање пакета %1$s</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
+    <string name="installation_blocked">Инсталација није успешна, корисник је блокирао инсталацију.</string>
+    <string name="installation_downgrade">Инсталација није успешна, корисник је покушао да инсталира старију верзију преко новије верзије апликације. Деинсталирајте све до предодређене инсталиране верзије YouTubе апликације, затим покушајте поново.</string>
+    <string name="installation_conflict">Инсталација није успешна, зато што је дошло до конфликта са већ инсталираном верзијом. Деинсталирајте тренутну верзију Vanced-а и затим покушајте поново.</string>
+    <string name="installation_failed">Инсталација није успеla, услед непознатог разлога, прикључите нам се на Telegram и Discord апликацијама за даљу подршку.</string>
+    <string name="installation_incompatible">Инсталација је неуспешна јер инсталациона датотека није компатибилна са вашим уређајем. Очистите преузете датотеке у Подешавањима и затим покушајте поново.</string>
+    <string name="installation_invalid">Инсталација није успеla јер је apk датотека оштећена, покушајте поново.</string>
+    <string name="installation_signature">Инсталација неуспешна јер је укључена провера потписа преузете apk датотеке. Искључите apk проверу и затим покушајте поново.</string>
+    <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
+    <string name="installation_storage">Инсталација неуспешна услед грешке у меоријском простору.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
