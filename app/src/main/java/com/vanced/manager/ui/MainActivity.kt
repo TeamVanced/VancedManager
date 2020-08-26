@@ -4,13 +4,15 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.preference.PreferenceManager
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.android.material.tabs.TabLayoutMediator
@@ -46,6 +48,35 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private val tabListener = object : TabLayout.OnTabSelectedListener {
+
+        override fun onTabSelected(tab: TabLayout.Tab) {
+            getDefaultSharedPreferences(this@MainActivity).edit().apply {
+                when (tab.position) {
+                    0 -> putString("vanced_variant", "nonroot").apply()
+                    1 -> putString("vanced_variant", "music").apply()
+                    2 -> putString("vanced_variant", "root").apply()
+                }
+            }
+
+        }
+
+        override fun onTabUnselected(tab: TabLayout.Tab) {
+            TODO("There's nothing to do here actually")
+        }
+
+        override fun onTabReselected(tab: TabLayout.Tab) {
+            getDefaultSharedPreferences(this@MainActivity).edit().apply {
+                when (tab.position) {
+                    0 -> putString("vanced_variant", "nonroot").apply()
+                    1 -> putString("vanced_variant", "music").apply()
+                    2 -> putString("vanced_variant", "root").apply()
+                }
+            }
+        }
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setFinalTheme(this)
         super.onCreate(savedInstanceState)
@@ -56,7 +87,7 @@ class MainActivity : AppCompatActivity() {
             setSupportActionBar(homeToolbar)
             val appBarConfiguration = AppBarConfiguration(navHost.graph)
             homeToolbar.setupWithNavController(navHost, appBarConfiguration)
-            mainViewpager.adapter = SectionVariantAdapter()
+            mainViewpager.adapter = SectionVariantAdapter(this@MainActivity)
             TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
                 when (position) {
                     0 -> tab.text = "nonroot"
@@ -65,38 +96,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }.attach()
             
-            when (variant) {
-                "nonroot" -> mainTablayout.getTabAt(0).select()
-                "music" -> mainTablayout.getTabAt(1).select()
-                "nonroot" -> mainTablayout.getTabAt(2).select()
+            when (getDefaultSharedPreferences(this@MainActivity).getString("vanced_variant", "nonroot")) {
+                "nonroot" -> mainTablayout.getTabAt(0)?.select()
+                "music" -> mainTablayout.getTabAt(1)?.select()
+                "root" -> mainTablayout.getTabAt(2)?.select()
             }
             
-            mainTablayout.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {            
-                
-                override fun onTabSelected(tab: TabLayout.Tab) {
-                    getDefaultSharedPreferences(requireActivity()).edit().apply {
-                        when (tab.position) {
-                            0 -> putString("vanced_variant", "nonroot")
-                            0 -> putString("vanced_variant", "music")
-                            0 -> putString("vanced_variant", "root")
-                        }
-                    }
-                    
-                }
-                
-                override fun onTabUnselected(tab: TabLayout.Tab) {}
-                
-                override fun onTabReselected(tab: TabLayout.Tab) {
-                    getDefaultSharedPreferences(requireActivity()).edit().apply {
-                        when (tab.position) {
-                            0 -> putString("vanced_variant", "nonroot")
-                            0 -> putString("vanced_variant", "music")
-                            0 -> putString("vanced_variant", "root")
-                        }
-                    }
-                }
-                
-            }
+            mainTablayout.addOnTabSelectedListener(tabListener)
             
         }
 
@@ -119,6 +125,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
+        binding.mainTablayout.removeOnTabSelectedListener(tabListener)
         Crowdin.unregisterDataLoadingObserver(loadingObserver)
     }
 
@@ -164,7 +171,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initDialogs() {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        val prefs = getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
         val showRootDialog = prefs.getBoolean("show_root_dialog", true)
 
@@ -178,7 +185,6 @@ class MainActivity : AppCompatActivity() {
             }
             !prefs.getBoolean("statement", true) -> DialogContainer.statementFalse(this)
             variant == "root" -> {
-
                 if (PackageHelper.getPackageVersionName(
                         "com.google.android.youtube",
                         packageManager

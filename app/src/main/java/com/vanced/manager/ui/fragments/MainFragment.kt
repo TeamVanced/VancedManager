@@ -1,8 +1,13 @@
 package com.vanced.manager.ui.fragments
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.vanced.manager.R
 
-class HomeFragment : Fragment() {
+class MainFragment : Fragment() {
     
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -10,7 +15,7 @@ class HomeFragment : Fragment() {
     ): View? {
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        return inflater.inflate(inflater, R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_main, container, false)
     }
     
 }
