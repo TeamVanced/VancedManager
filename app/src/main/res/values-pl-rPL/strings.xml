@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Listy zmian</string>
     <string name="downloading_file">Pobieranie %1$s</string>
-    <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
-    <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="install">Zainstaluj</string>
     <string name="installing_app">Instalowanie %1$s</string>
-    <string name="installation_aborted">Instalacja nie powiodła się, bo użytkownik przerwał instalację.</string>
-    <string name="installation_blocked">Instalacja nie powiodła się, bo użytkownik zablokował instalację.</string>
-    <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć wersję paczki. Odinstaluj aktualizacje z oryginalnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
-    <string name="installation_conflict">Instalacja nie powiodła się, ponieważ aplikacja koliduje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję Vanced, a następnie spróbuj ponownie.</string>
-    <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
-    <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
-    <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>
-    <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
-    <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
-    <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
     <string name="installation_wait">NIE opuszczaj aplikacji aż do zakończenia instalacji.</string>
     <string name="button_reinstall">Przeinstaluj</string>
     <string name="version_installed">Zainstalowano:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Używaj niestandardowych kart Chrome</string>
     <string name="link_custom_tabs">Linki zostaną otwarte w niestandardowych kartach Chrome</string>
     <string name="link_external_browser">Linki zostaną otwarte w zewnętrznej przeglądarce</string>
+    <string name="new_installer_title">Użyj nowego instalatora root (Eksperymentalnego)</string>
+    <string name="new_installer_summary">Ten instalator nie zależy od statusu weryfikacji podpisu</string>
     <string name="theme">Motyw</string>
     <string name="theme_follow">Śledź system</string>
     <string name="theme_dark">Ciemny Motyw</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Deweloperzy Menedżera</string>
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
-    <string name="Failed_Uninstall">Nie udało się odinstalować zainstalowanej wersji, spróbuj ręcznie</string>
-    <string name="Chown_Fail">Nie udało się zmienić właściciela Apk, spróbuj ponownie</string>
-    <string name="IFile_Missing">Dark/Black.apk nie może być odczytany (Czy pamięć została zablokowana?) czy brakuje pliku</string>
-    <string name="ModApk_Missing">Brak czarnej/ciemnej apk w instalatorze. To nie powinno się zdarzyć, wyczyść dane menedżera</string>
-    <string name="Files_Missing_VA">Brakuje plików, Pobieranie nie powiodło się?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Nie udało się zmienić właściciela Apk, spróbuj ponownie</string>
+    <string name="error_downloading">Błąd pobierania %1$s</string>
+    <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk nie może być odczytany (Czy pamięć została zablokowana?) czy brakuje pliku</string>
+    <string name="installation_aborted">Instalacja nie powiodła się, bo użytkownik przerwał instalację.</string>
+    <string name="installation_blocked">Instalacja nie powiodła się, bo użytkownik zablokował instalację.</string>
+    <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć wersję paczki. Odinstaluj aktualizacje z oryginalnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
+    <string name="installation_conflict">Instalacja nie powiodła się, ponieważ aplikacja koliduje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję Vanced, a następnie spróbuj ponownie.</string>
+    <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
+    <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
+    <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>
+    <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
+    <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
+    <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
