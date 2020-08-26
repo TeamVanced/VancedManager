@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Änderungsverlauf</string>
     <string name="downloading_file">%1$s wird heruntergeladen</string>
-    <string name="failed_uninstall">Entfernen von %1$s fehlgeschlagen</string>
-    <string name="error_downloading">Download von %1$s fehlgeschlagen</string>
     <string name="install">Installieren</string>
     <string name="installing_app">%1$s wird installiert</string>
-    <string name="installation_aborted">Installation fehlgeschlagen, da der Nutzer diese abgebrochen hat.</string>
-    <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer diese blockiert hat.</string>
-    <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
-    <string name="installation_conflict">Installation aufgrund von Konflikten mit einer bereits installierten App fehlgeschlagen. Deinstallieren Sie die Aktuelle Version von Vanced und versuchen Sie es erneut.</string>
-    <string name="installation_failed">Installation aus unbekannten Grund fehlgeschlagen. Treten Sie bitte unserem Telegram-Chat oder Discord-Server bei, um Support zu erhalten.</string>
-    <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
-    <string name="installation_invalid">Installation fehlgeschlagen, da die apk-Dateien beschädigt sind, bitte versuchen Sie es erneut.</string>
-    <string name="installation_signature">Installation fehlgeschlagen, da die apk Signaturüberprüfung aktiviert ist. Deaktivieren Sie die apk Signaturüberprüfung, dann versuchen Sie es erneut.</string>
-    <string name="installation_miui">Installation fehlgeschlagen, da die MIUI-Optimierung aktiviert ist. Deaktivieren Sie die MIUI-Optimierung, und versuchen Sie es erneut.</string>
-    <string name="installation_storage">Die Installation ist aufgrund eines Speicherfehlers fehlgeschlagen.</string>
     <string name="installation_wait">Verlassen Sie die App NICHT bis die Installation abgeschlossen ist.</string>
     <string name="button_reinstall">Neu installieren</string>
     <string name="version_installed">Installiert:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Verwende Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="link_external_browser">Links werden in einem externen Browser geöffnet</string>
+    <string name="new_installer_title">Neuen Root-Installer verwenden (Experimentell)</string>
+    <string name="new_installer_summary">Dieser Installer hängt nicht von Signaturprüfungsstus ab</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Folge Systemeinstellung</string>
     <string name="theme_dark">Dunkles Theme</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Manager-Entwickler</string>
     <string name="sources">Quellen</string>
     <string name="vanced_team">Vanced Team</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">Download von %1$s fehlgeschlagen</string>
+    <string name="failed_uninstall">Entfernen von %1$s fehlgeschlagen</string>
+    <string name="files_missing_va">Dateien fehlen, Download fehlgeschlagen?</string>
+    <string name="ifile_missing">Dark/Black.apk kann nicht gelesen werden Datei fehlt (oder Wurde der Speicher blockiert?)</string>
+    <string name="installation_aborted">Installation fehlgeschlagen, da der Nutzer diese abgebrochen hat.</string>
+    <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer diese blockiert hat.</string>
+    <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
+    <string name="installation_conflict">Installation aufgrund von Konflikten mit einer bereits installierten App fehlgeschlagen. Deinstallieren Sie die Aktuelle Version von Vanced und versuchen Sie es erneut.</string>
+    <string name="installation_failed">Installation aus unbekannten Grund fehlgeschlagen. Treten Sie bitte unserem Telegram-Chat oder Discord-Server bei, um Support zu erhalten.</string>
+    <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
+    <string name="installation_invalid">Installation fehlgeschlagen, da die apk-Dateien beschädigt sind, bitte versuchen Sie es erneut.</string>
+    <string name="installation_signature">Installation fehlgeschlagen, da die apk Signaturüberprüfung aktiviert ist. Deaktivieren Sie die apk Signaturüberprüfung, dann versuchen Sie es erneut.</string>
+    <string name="installation_miui">Installation fehlgeschlagen, da die MIUI-Optimierung aktiviert ist. Deaktivieren Sie die MIUI-Optimierung, und versuchen Sie es erneut.</string>
+    <string name="installation_storage">Die Installation ist aufgrund eines Speicherfehlers fehlgeschlagen.</string>
+    <string name="modapk_missing">Schwarz/Dunkel apk fehlt im Installer. Dies sollte nicht passieren, bitte löschen Sie die App-Daten des Managers</string>
 </resources>
