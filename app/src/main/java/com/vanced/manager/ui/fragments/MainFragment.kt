@@ -1,3 +1,5 @@
+package com.vanced.manager.ui.fragments
+
 import androidx.fragment.app.Fragment
 
 class HomeFragment : Fragment() {

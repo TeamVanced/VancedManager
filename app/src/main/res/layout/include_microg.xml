@@ -47,8 +47,8 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/microg_installbtn"
                     style="@style/ButtonStyle"
-                    android:text="@{viewModel.microgInstallButtonTxt}"
-                    app:icon="@{viewModel.microgInstallButtonIcon}"
+                    android:text="@{viewModel.microg.buttonTxt}"
+                    app:icon="@{viewModel.microg.buttonIcon}"
                     app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -75,7 +75,7 @@
                     <TextView
                         android:id="@+id/microg_latest_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.microgVersion}" />
+                        android:text="@{viewModel.microg.versionName}" />
 
                 </LinearLayout>
 
@@ -94,7 +94,7 @@
                     <TextView
                         android:id="@+id/microg_installed_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.microgInstalledVersion}" />
+                        android:text="@{viewModel.microg.installedVersionCode}" />
 
                 </LinearLayout>
 
@@ -103,7 +103,7 @@
                     style="@style/ClickableImageWidget"
                     android:layout_marginEnd="4dp"
                     android:onClick="@{()-> viewModel.openMicrogSettings()}"
-                    android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
+                    android:visibility="@{viewModel.microg.appInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/microg_uninstallbtn"
                     app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
@@ -112,7 +112,7 @@
                 <ImageView
                     android:id="@+id/microg_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
-                    android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
+                    android:visibility="@{viewModel.microg.appInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"

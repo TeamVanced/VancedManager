@@ -15,7 +15,7 @@
     </data>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/microg_card"
+        android:id="@+id/music_card"
         style="@style/MaterialCard">
 
         <LinearLayout
@@ -29,53 +29,53 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/home_microg_logo"
+                    android:id="@+id/home_music_logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier"
+                    app:layout_constraintBottom_toTopOf="@id/music_title_buttons_barrier"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_microg" />
+                    app:srcCompat="@drawable/ic_music" />
 
                 <TextView
                     style="@style/TextAppTitle"
-                    android:text="@string/microg"
-                    app:layout_constraintBottom_toTopOf="@id/microg_title_buttons_barrier"
-                    app:layout_constraintStart_toEndOf="@id/home_microg_logo"
+                    android:text="@string/music"
+                    app:layout_constraintBottom_toTopOf="@id/music_title_buttons_barrier"
+                    app:layout_constraintStart_toEndOf="@id/home_music_logo"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/microg_installbtn"
+                    android:id="@+id/music_installbtn"
                     style="@style/ButtonStyle"
-                    android:text="@{viewModel.microgInstallButtonTxt}"
-                    app:icon="@{viewModel.microgInstallButtonIcon}"
-                    app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn"
+                    android:text="@{viewModel.music.buttonTxt}"
+                    app:icon="@{viewModel.music.buttonIcon}"
+                    app:layout_constraintBottom_toTopOf="@id/music_uninstallbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.constraintlayout.widget.Barrier
-                    android:id="@+id/microg_title_buttons_barrier"
+                    android:id="@+id/music_title_buttons_barrier"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:barrierDirection="bottom"
-                    app:constraint_referenced_ids="microg_installbtn" />
+                    app:constraint_referenced_ids="music_installbtn" />
 
                 <LinearLayout
-                    android:id="@+id/microg_remote_latest_version"
+                    android:id="@+id/music_remote_latest_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toTopOf="@id/linearLayout2"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/microg_title_buttons_barrier">
+                    app:layout_constraintTop_toBottomOf="@+id/music_title_buttons_barrier">
 
                     <TextView
                         style="@style/AppVer"
                         android:text="@string/latest" />
 
                     <TextView
-                        android:id="@+id/microg_latest_version"
+                        android:id="@+id/music_latest_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.microgVersion}" />
+                        android:text="@{viewModel.music.versionName}" />
 
                 </LinearLayout>
 
@@ -85,50 +85,39 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/microg_remote_latest_version">
+                    app:layout_constraintTop_toBottomOf="@id/music_remote_latest_version">
 
                     <TextView
                         style="@style/AppVer"
                         android:text="@string/version_installed" />
 
                     <TextView
-                        android:id="@+id/microg_installed_version"
+                        android:id="@+id/music_installed_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.microgInstalledVersion}" />
+                        android:text="@{viewModel.music.installedVersion}" />
 
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/microg_settingsbtn"
-                    style="@style/ClickableImageWidget"
-                    android:layout_marginEnd="4dp"
-                    android:onClick="@{()-> viewModel.openMicrogSettings()}"
-                    android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/microg_uninstallbtn"
-                    app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
-                    app:srcCompat="@drawable/ic_microg_settings" />
-
-                <ImageView
-                    android:id="@+id/microg_uninstallbtn"
+                    android:id="@+id/music_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
-                    android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
+                    android:visibility="@{viewModel.music.appInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
+                    app:layout_constraintTop_toBottomOf="@id/music_title_buttons_barrier"
                     app:srcCompat="@drawable/ic_delete_black_24dp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/microg_downloading_txt"
+                android:id="@+id/music_downloading_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
             <ProgressBar
-                android:id="@+id/microg_downloading"
+                android:id="@+id/music_downloading"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,7 +125,7 @@
                 tools:visibility="visible" />
 
             <ProgressBar
-                android:id="@+id/microg_installing"
+                android:id="@+id/music_installing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
