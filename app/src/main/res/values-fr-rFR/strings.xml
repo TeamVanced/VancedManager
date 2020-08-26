@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Journal des modifications</string>
     <string name="downloading_file">Téléchargement de %1$s</string>
-    <string name="failed_uninstall">N\'a pas pu désinstaller le paquet %1$s</string>
-    <string name="error_downloading">Erreur en téléchargeant %1$s</string>
     <string name="install">Installer</string>
     <string name="installing_app">Installation de %1$s</string>
-    <string name="installation_aborted">L\'opération a échouée, l\'utilisateur a abandonné l\'installation.</string>
-    <string name="installation_blocked">L\'opération a échouée, l\'utilisateur a bloqué l\'installation.</string>
-    <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le package. Désinstallez les mises à jour depuis l\'application YouTube d\'origine, puis réessayez.</string>
-    <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
-    <string name="installation_failed">L\'installation a échouée pour une raison inconnue, rejoignez notre Telegram ou Discord pour obtenir de l\'aide.</string>
-    <string name="installation_incompatible">L\'installation a échoué parce que le fichier d\'installation est incompatible avec votre appareil. Effacer les fichiers téléchargés dans les paramètres, puis réessayer.</string>
-    <string name="installation_invalid">L\'installation a échoué car les fichiers apk sont corrompus, veuillez réessayer.</string>
-    <string name="installation_signature">L\'installation a échoué car la vérification de la signature apk est activée. Désactivez la vérification de la signature apk, puis réessayez.</string>
-    <string name="installation_miui">L\'installation a échoué car l\'optimisation MIUI est activée. Désactivez l\'optimisation MIUI, puis réessayez.</string>
-    <string name="installation_storage">L\'opération à échouée, une erreur de stockage s\'est produite.</string>
     <string name="installation_wait">NE PAS quitter l\'application jusqu\'à la fin de l\'installation.</string>
     <string name="button_reinstall">Réinstaller</string>
     <string name="version_installed">Version installée:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="link_external_browser">Les liens s\'ouvriront dans un navigateur externe</string>
+    <string name="new_installer_title">Utiliser le nouvel installateur root (expérimental)</string>
+    <string name="new_installer_summary">Cet installateur ne dépend pas du statut de vérification de signature</string>
     <string name="theme">Thème</string>
     <string name="theme_follow">Suivre le paramètre système</string>
     <string name="theme_dark">Thème sombre</string>
@@ -94,10 +84,21 @@
     <string name="manager_dev">Développeur du Manager</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
-    <string name="Failed_Uninstall">Échec de la désinstallation de la version installée, essayez manuellement</string>
-    <string name="Chown_Fail">Impossible de modifier le propriétaire de l\'Apk, réessayez</string>
-    <string name="IFile_Missing">Dark/Black.apk ne peut pas être lu (L\'accès aux permissions de stockage est-il révoqué ?) ou un Fichier 
-est manquant</string>
-    <string name="ModApk_Missing">L\'apk Black/Dark est absent de l\'installateur, cela ne devrait pas se produire, veuillez effacer les données de l\'application Vanced Manager</string>
-    <string name="Files_Missing_VA">Les fichiers sont manquants, Téléchargement échoué ?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Impossible de modifier le propriétaire de l\'Apk, réessayez</string>
+    <string name="error_downloading">Erreur en téléchargeant %1$s</string>
+    <string name="failed_uninstall">N\'a pas pu désinstaller le paquet %1$s</string>
+    <string name="files_missing_va">Des fichiers sont manquants, Téléchargement échoué ?</string>
+    <string name="ifile_missing">Dark/Black.apk ne peut pas être lu (L\'accès aux permissions de stockage est-il révoqué ?) ou un Fichier est manquant</string>
+    <string name="installation_aborted">L\'opération a échouée, l\'utilisateur a abandonné l\'installation.</string>
+    <string name="installation_blocked">L\'opération a échouée, l\'utilisateur a bloqué l\'installation.</string>
+    <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le package. Désinstallez les mises à jour depuis l\'application YouTube d\'origine, puis réessayez.</string>
+    <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
+    <string name="installation_failed">L\'installation a échouée pour une raison inconnue, rejoignez notre Telegram ou Discord pour obtenir de l\'aide.</string>
+    <string name="installation_incompatible">L\'installation a échoué parce que le fichier d\'installation est incompatible avec votre appareil. Effacer les fichiers téléchargés dans les paramètres, puis réessayer.</string>
+    <string name="installation_invalid">L\'installation a échouée car les fichiers apk sont corrompus, veuillez réessayer.</string>
+    <string name="installation_signature">L\'installation a échoué car la vérification de la signature apk est activée. Désactivez la vérification de la signature apk, puis réessayez.</string>
+    <string name="installation_miui">L\'installation a échouée car l\'optimisation MIUI est activée. Désactivez l\'optimisation MIUI, puis réessayez.</string>
+    <string name="installation_storage">L\'opération à échouée, une erreur de stockage s\'est produite.</string>
+    <string name="modapk_missing">L\'apk Black/Dark est absent de l\'installateur, cela ne devrait pas se produire, veuillez effacer les données de l\'application Vanced Manager</string>
 </resources>
