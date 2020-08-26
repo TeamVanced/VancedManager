@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
-    <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
-    <string name="error_downloading">Gagal Mengunduh %1$s</string>
     <string name="install">Pasang</string>
     <string name="installing_app">Memasang %1$s</string>
-    <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
-    <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
-    <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
-    <string name="installation_conflict">Pemasangan gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang. Hapus versi Vanced yang sekarang, lalu coba lagi.</string>
-    <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
-    <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
-    <string name="installation_invalid">Pemasangan gagal karena file apk rusak, mohon coba lagi.</string>
-    <string name="installation_signature">Pemasangan gagal karena apk signature verification diaktifkan. Nonaktifkan apk signature verification, lalu coba lagi.</string>
-    <string name="installation_miui">Pemasangan gagal karena Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
-    <string name="installation_storage">Pemasangan gagal karena kesalahan pada penyimpanan.</string>
     <string name="installation_wait">Mohon untuk TIDAK meninggalkan aplikasi sampai pemasangan selesai.</string>
     <string name="button_reinstall">Pasang ulang</string>
     <string name="version_installed">Terpasang:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="link_external_browser">Tautan akan terbuka di Browser Eksternal</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Ikuti Sistem</string>
     <string name="theme_dark">Tema Gelap</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Pengembang Manager</string>
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
-    <string name="Failed_Uninstall">Gagal Mencopot Versi Yang Terpasang, Coba Secara Manual</string>
-    <string name="Chown_Fail">Gagal Untuk Chown Apk untuk pemilik sistem, Coba Lagi</string>
-    <string name="IFile_Missing">Dark/Black.apk Tidak Bisa Dibaca (Apakah Penyimpanan Diblokir?) atau File Hilang</string>
-    <string name="ModApk_Missing">Black/Dark apk hilang dari installer, Ini seharusnya tidak terjadi, mohon hapus data aplikasi manager</string>
-    <string name="Files_Missing_VA">File hilang, Gagal Mengunduh?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">Gagal Mengunduh %1$s</string>
+    <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
+    <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
+    <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
+    <string name="installation_conflict">Pemasangan gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang. Hapus versi Vanced yang sekarang, lalu coba lagi.</string>
+    <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
+    <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
+    <string name="installation_invalid">Pemasangan gagal karena file apk rusak, mohon coba lagi.</string>
+    <string name="installation_signature">Pemasangan gagal karena apk signature verification diaktifkan. Nonaktifkan apk signature verification, lalu coba lagi.</string>
+    <string name="installation_miui">Pemasangan gagal karena Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
+    <string name="installation_storage">Pemasangan gagal karena kesalahan pada penyimpanan.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
