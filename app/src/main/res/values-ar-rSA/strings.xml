@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">سجل التغييرات</string>
     <string name="downloading_file">جارٍ تنزيل %1$s</string>
-    <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
-    <string name="error_downloading">خطأ في تحميل %1$s</string>
     <string name="install">تثبيت</string>
     <string name="installing_app">جاري التثبيت %1$s</string>
-    <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
-    <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
-    <string name="installation_downgrade">فشل التثبيت لان المستخدم حاول تثبيت اصدار اقدم. قم بحذف التحديثات الخاصيه باليوتيوب الاصلي، ثم حاول مره اخرى</string>
-    <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
-    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم.</string>
-    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. مسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
-    <string name="installation_invalid">فشل التثبيت لأن ملفات apk تالفة، الرجاء المحاولة مرة أخرى.</string>
-    <string name="installation_signature">فشل التثبيت بسبب تمكين التحقق من توقيع apk. تعطيل التحقق من توقيع apk، ثم حاول مرة أخرى.</string>
-    <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
-    <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
     <string name="installation_wait">لا تترك التطبيق حتى ينتهي التثبيت.</string>
     <string name="button_reinstall">إعادة التثبيت</string>
     <string name="version_installed">مثبت:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">إستخدم علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
     <string name="theme_dark">الموضوع الاسود</string>
@@ -95,9 +85,21 @@
     <string name="manager_dev">مدير ديف</string>
     <string name="sources">مصادر</string>
     <string name="vanced_team">فريق فانسد</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">خطأ في تحميل %1$s</string>
+    <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
+    <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
+    <string name="installation_downgrade">فشل التثبيت لان المستخدم حاول تثبيت اصدار اقدم. قم بحذف التحديثات الخاصيه باليوتيوب الاصلي، ثم حاول مره اخرى</string>
+    <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
+    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم.</string>
+    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. مسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
+    <string name="installation_invalid">فشل التثبيت لأن ملفات apk تالفة، الرجاء المحاولة مرة أخرى.</string>
+    <string name="installation_signature">فشل التثبيت بسبب تمكين التحقق من توقيع apk. تعطيل التحقق من توقيع apk، ثم حاول مرة أخرى.</string>
+    <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
+    <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
