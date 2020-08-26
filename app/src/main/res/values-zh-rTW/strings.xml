@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
-    <string name="failed_uninstall">%1$s 解除安裝失敗</string>
-    <string name="error_downloading">%1$s 下載錯誤</string>
     <string name="install">安裝</string>
     <string name="installing_app">正在安裝 %1$s</string>
-    <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
-    <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
-    <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原廠 YouTube 的更新，然後重試。</string>
-    <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前版本的 Vanced ，然後重試。</string>
-    <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
-    <string name="installation_incompatible">安裝檔案與您的手機不兼容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
-    <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
-    <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
-    <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
-    <string name="installation_storage">儲存空間發生錯誤導致安裝失敗。</string>
     <string name="installation_wait">請勿在安裝程序完成前離開本程式。</string>
     <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
@@ -57,6 +45,8 @@
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="link_external_browser">連結會使用外部瀏覽器開啟</string>
+    <string name="new_installer_title">使用新 root 安裝程式 (實驗性質)</string>
+    <string name="new_installer_summary">這個安裝程式不依靠簽名認證狀態</string>
     <string name="theme">主題</string>
     <string name="theme_follow">跟隨系統</string>
     <string name="theme_dark">深色主題</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Manager 開發者</string>
     <string name="sources">原始碼</string>
     <string name="vanced_team">Vanced 團隊</string>
-    <string name="Failed_Uninstall">已安裝的版本解除安裝失敗，請手動重試</string>
-    <string name="Chown_Fail">Chown Apk 到系統擁有者失敗，請重試</string>
-    <string name="IFile_Missing">無法存取 Dark/Black.apk (儲存空間被封鎖了？) 或檔案已丟失</string>
-    <string name="ModApk_Missing">安裝程式缺乏黑色/深色 apk ，這不應該發生的，請清除 Manager 數據</string>
-    <string name="Files_Missing_VA">檔案已丟失，下載失敗嗎？</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Chown Apk 到系統擁有者失敗，請重試</string>
+    <string name="error_downloading">%1$s 下載錯誤</string>
+    <string name="failed_uninstall">%1$s 解除安裝失敗</string>
+    <string name="files_missing_va">檔案已丟失，下載失敗嗎？</string>
+    <string name="ifile_missing">無法讀取 Dark/Black.apk (儲存空間被封鎖了？) 或檔案已丟失</string>
+    <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
+    <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
+    <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原廠 YouTube 的更新，然後重試。</string>
+    <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前版本的 Vanced ，然後重試。</string>
+    <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
+    <string name="installation_incompatible">安裝檔案與您的手機不兼容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
+    <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
+    <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
+    <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
+    <string name="installation_storage">儲存空間發生錯誤導致安裝失敗。</string>
+    <string name="modapk_missing">安裝程式缺乏黑色/深色 apk ，這不應該發生的，請清除 Manager 數據</string>
 </resources>
