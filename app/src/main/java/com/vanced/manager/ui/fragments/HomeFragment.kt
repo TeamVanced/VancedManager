@@ -48,7 +48,19 @@ class HomeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
 
-        val variantPref = getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot")
+        val arg = "variant"
+        val variant = getDefaultSharedPreferences(requireActivity()).getString("vanced_variant")
+
+        with(binding) {
+            when (variant) {
+                "nonroot" -> includeMusicLayout.musicCard.visibility = View.GONE
+                "music" -> includeVancedLayout.vancedCard.visibility = View.GONE
+                "root" -> {
+                    includeMusicLayout.musicCard.visibility = View.GONE
+                    includeMicrogLayout.microgCard.visibility = View.GONE
+                }
+            }
+        }
 
         with(binding) {
             rootSwitch.setOnClickListener(this@HomeFragment)
@@ -72,9 +84,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }
 
         with(binding.includeChangelogsLayout) {
-            viewpager.adapter = if (variantPref == "root") SectionPageRootAdapter(this@HomeFragment) else SectionPageAdapter(this@HomeFragment)
+            viewpager.adapter = if (variant == "root") SectionPageRootAdapter(this@HomeFragment) else SectionPageAdapter(this@HomeFragment)
             TabLayoutMediator(tablayout, viewpager) { tab, position ->
-                if (variantPref == "root")
+                if (variant == "root")
                     when (position) {
                         0 -> tab.text = "Vanced"
                         1 -> tab.text = "Manager"

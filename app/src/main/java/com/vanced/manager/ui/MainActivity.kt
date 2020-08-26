@@ -13,6 +13,8 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
+import com.google.android.material.tabs.TabLayoutMediator
+import com.google.android.material.tabs.TabLayout
 import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -22,6 +24,7 @@ import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
+import com.vanced.manager.adapter.SectionVariantAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -53,10 +56,61 @@ class MainActivity : AppCompatActivity() {
             setSupportActionBar(homeToolbar)
             val appBarConfiguration = AppBarConfiguration(navHost.graph)
             homeToolbar.setupWithNavController(navHost, appBarConfiguration)
+            mainViewpager.adapter = SectionVariantAdapter()
+            TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
+                when (position) {
+                    0 -> tab.text = "nonroot"
+                    1 -> tab.text = "Music"
+                    2 -> tab.text = "root"
+                }
+            }.attach()
+            
+            when (variant) {
+                "nonroot" -> mainTablayout.getTabAt(0).select()
+                "music" -> mainTablayout.getTabAt(1).select()
+                "nonroot" -> mainTablayout.getTabAt(2).select()
+            }
+            
+            mainTablayout.setOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {            
+                
+                override fun onTabSelected(tab: TabLayout.Tab) {
+                    getDefaultSharedPreferences(requireActivity()).edit().apply {
+                        when (tab.position) {
+                            0 -> putString("vanced_variant", "nonroot")
+                            0 -> putString("vanced_variant", "music")
+                            0 -> putString("vanced_variant", "root")
+                        }
+                    }
+                    
+                }
+                
+                override fun onTabUnselected(tab: TabLayout.Tab) {}
+                
+                override fun onTabReselected(tab: TabLayout.Tab) {
+                    getDefaultSharedPreferences(requireActivity()).edit().apply {
+                        when (tab.position) {
+                            0 -> putString("vanced_variant", "nonroot")
+                            0 -> putString("vanced_variant", "music")
+                            0 -> putString("vanced_variant", "root")
+                        }
+                    }
+                }
+                
+            }
+            
         }
 
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
+            val tabHide = AnimationUtils.loadAnimation(this, R.anim.tablayout_exit)
+            val tabShow = AnimationUtils.loadAnimation(this, R.anim.tablayout_enter)
+            if (currFrag.id != R.id.home_fragment) {
+                binding.variantTabContainer.startAnimation(tabHide)
+                binding.variantTabContainer.visibility = View.GONE
+            } else {
+                binding.variantTabContainer.visibility = View.VISIBLE
+                binding.variantTabContainer.startAnimation(tabShow)
+            }
         }
 
         initDialogs()

@@ -29,68 +29,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="4dp"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:orientation="horizontal">
-
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true">
-
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/nonroot"
-                            android:textAllCaps="false"
-                            android:visibility="@{viewModel.nonrootModeSelected ? View.VISIBLE : View.GONE}"
-                            bind:strokeColor="?colorPrimary"
-                            bind:strokeWidth="2dp" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/nonroot_switch"
-                            style="@style/ButtonStyle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/nonroot"
-                            android:visibility="@{viewModel.nonrootModeSelected ? View.GONE : View.VISIBLE}" />
-
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true">
-
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/root"
-                            android:textAllCaps="false"
-                            android:visibility="@{viewModel.nonrootModeSelected ? View.GONE : View.VISIBLE}"
-                            bind:strokeColor="?colorPrimary"
-                            bind:strokeWidth="2dp" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/root_switch"
-                            style="@style/ButtonStyle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/root"
-                            android:visibility="@{viewModel.nonrootModeSelected ? View.VISIBLE : View.GONE}" />
-
-                    </FrameLayout>
-
-                </RelativeLayout>
+                android:orientation="horizontal">
 
                 <include
                     android:id="@+id/include_vanced_layout"
@@ -110,7 +49,6 @@
                     android:layout_marginStart="@dimen/stdp"
                     android:layout_marginTop="@dimen/stdp"
                     android:layout_marginEnd="@dimen/stdp"
-                    android:visibility="@{viewModel.nonrootModeSelected ? View.VISIBLE : View.GONE}"
                     bind:viewModel="@{viewModel}" />
 
                 <include
