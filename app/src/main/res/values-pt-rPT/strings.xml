@@ -11,21 +11,9 @@
     <!-- Home Page -->
     <string name="changelogs">Notas de Lançamento</string>
     <string name="downloading_file">Transferindo %1$s</string>
-    <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
-    <string name="error_downloading">Erro Transferindo %1$s</string>
     <string name="install">Instalar</string>
     <string name="installing_app">Instalando %1$s</string>
-    <string name="installation_aborted">Falha na instalação porque o usuário cancelou a instalação.</string>
-    <string name="installation_blocked">Falha na instalação porque o usuário bloqueou a instalação.</string>
-    <string name="installation_downgrade">Falha na instalação porque o usuário tentou instalar uma versão passada do pacote. Desinstale as atualizações do aplicativo YouTube original e tente novamente.</string>
-    <string name="installation_conflict">Falha na instalação porque o aplicativo está em conflito com um aplicativo já instalado. Desinstale a versão atual do Vanced, e tente novamente.</string>
-    <string name="installation_failed">Falha na instalação por razões desconhecidas, por favor entre no nosso Telegram ou Discord para suporte.</string>
-    <string name="installation_incompatible">Falha na instalação porque o pacote de instalação é incompatível com o seu dispositivo. Limpe os pacotes transferidos nas Configurações e tente novamente.</string>
-    <string name="installation_invalid">Falha na instalação porque os pacotes apk estão corrompidos, por favor tente novamente.</string>
-    <string name="installation_signature">Falha na instalação porque a verificação de assinatura apk está ativa. Desative-a e tente novamente.</string>
-    <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI, e tente novamente.</string>
-    <string name="installation_storage">Falha na instalação devido a um erro de armazenamento.</string>
-    <string name="installation_wait">NÃO SAIA do aplicativo até que a instalação termine.</string>
+    <string name="installation_wait">NÃO SAIA do app até que a instalação finalize.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais Recente:</string>
@@ -56,7 +44,9 @@
     <string name="cleared_files">Arquivos limpos com sucesso</string>
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos em abas personalizadas do Chrome</string>
-    <string name="link_external_browser">Os Links serão abertos em um navegador externo</string>
+    <string name="link_external_browser">Os Links serão abertos em um Navegador Externo</string>
+    <string name="new_installer_title">Usar novo instalador com root (Experimental)</string>
+    <string name="new_installer_summary">Este instalador não depende do stus da Verificação de Assinatura</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Escuro</string>
@@ -71,7 +61,7 @@
     <!-- Dialogs -->
     <string name="button_dismiss">Ignorar</string>
     <string name="guide">Guia</string>
-    <string name="hold_on">Pare!</string>
+    <string name="hold_on">Parar!</string>
     <string name="magisk_vanced">Estás a utilizar a versão Magisk/TWRP do Vanced, que foi descontinuada e não podera ser atualizada a partir deste aplicativo. Por favor remove-o ao remover o módulo magisk ou usando o desinstalador TWRP Vanced.</string>
     <string name="miui_one_title">MIUI detetado!</string>
     <string name="miui_one">Para instalar o Vanced, você DEVE desativar as Otimizações MIUI nas configurações do desenvolvedor. (Você pode ignorar este aviso se você estiver usando ROM baseado em xiaomi.eu de versão 20.2.20 ou maior)</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Desenvolvedor Manager</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipa Vanced</string>
-    <string name="Failed_Uninstall">Falha ao desinstalar da versão instalada, Tente Manualmente</string>
-    <string name="Chown_Fail">Falha Ao Mudar O Proprietário Do Apk do sistema, Tente Novamente</string>
-    <string name="IFile_Missing">Dark/Black.apk Não Pode Ser Lida (O Armazenamento ficou Bloqueado?) ou Arquivo Em Falta</string>
-    <string name="ModApk_Missing">Black/Dark.apk em falta pelo instalador, Isto não deve acontecer, por favor limpe o armazenamento do Vanced Manager</string>
-    <string name="Files_Missing_VA">Arquivos em falta, Transferência Falhada?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Falha Ao Mudar Apk para o proprietário do sistema, Tente Novamente</string>
+    <string name="error_downloading">Erro Transferindo %1$s</string>
+    <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
+    <string name="files_missing_va">Arquivos em falta, Transferência Falhada?</string>
+    <string name="ifile_missing">Black/Dark.apk Não pode ser lida(Será que o armazenamento ficou Bloqueado?) ou Arquivo Em Falta</string>
+    <string name="installation_aborted">A instalação falhou porque o usuário cancelou a abortou.</string>
+    <string name="installation_blocked">Falha na instalação porque o usuário bloqueou a instalação.</string>
+    <string name="installation_downgrade">A instalação falhou porque o usuário tentou instalar o pacote de uma versão passada. Desinstale as atualizações do aplicativo YouTube original e tente novamente.</string>
+    <string name="installation_conflict">A instalação falhou porque o aplicativo está em conflito com um aplicativo já instalado. Desinstale a versão atual do Vanced, e tente novamente.</string>
+    <string name="installation_failed">A instalação falhou por razões desconhecidas, por favor entre no nosso Telegram ou Discord para suporte.</string>
+    <string name="installation_incompatible">Falha na instalação porque o pacote de instalação é incompatível com o seu dispositivo. Limpe os pacotes transferidos nas Configurações e tente novamente.</string>
+    <string name="installation_invalid">A instalação falhou porque os pacotes apk estão corrompidos, por favor tente novamente.</string>
+    <string name="installation_signature">A instalação falhou porque a verificação de assinatura apk está ativa. Desative a verificação de assinatura apk e tente novamente.</string>
+    <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
+    <string name="installation_storage">A instalação falhou devido a um erro de armazenamento.</string>
+    <string name="modapk_missing">Black/Dark apk em falta pelo instalador, Isto não devia acontecer, por favor limpe o armazenamento do Manager</string>
 </resources>
