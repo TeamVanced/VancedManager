@@ -41,6 +41,7 @@ class VancedDownloadService: Service() {
     private var variant: String? = null
     private var theme: String? = null
     private var lang: Array<String>? = null
+    private var newInstaller: Boolean? = null
 
     private lateinit var themePath: String
     
@@ -65,6 +66,7 @@ class VancedDownloadService: Service() {
         theme = prefs.getString("theme", "dark")
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
+        newInstaller = defPrefs.getBoolean("new_installer", false)
         arch = 
             when {
                 Build.SUPPORTED_ABIS.contains("x86") -> "x86"
@@ -105,7 +107,7 @@ class VancedDownloadService: Service() {
                 override fun onDownloadComplete() {
                     when (type) {
                         "theme" -> 
-                            if (variant == "root") {
+                            if (variant == "root" && newInstaller == true) {
                                 if (ValidateTheme()) {
                                     if(downloadStockCheck())
                                         downloadSplits("arch") 
@@ -115,7 +117,7 @@ class VancedDownloadService: Service() {
                                     downloadSplits("theme")
                             } else 
                                 downloadSplits("arch")
-                        "arch" -> if (variant == "root") downloadSplits("stock") else downloadSplits("lang")
+                        "arch" -> if (variant == "root" && newInstaller == true) downloadSplits("stock") else downloadSplits("lang")
                         "stock" -> downloadSplits("dpi")
                         "dpi" -> downloadSplits("lang")
                         "lang" -> {

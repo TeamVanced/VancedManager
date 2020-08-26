@@ -9,6 +9,7 @@ import android.util.Log
 import androidx.annotation.Nullable
 import androidx.annotation.WorkerThread
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
@@ -32,7 +33,7 @@ import kotlin.collections.ArrayList
 class RootSplitInstallerService: Service() {
 
     private var vancedVersionCode: Int = runBlocking { getJsonInt("vanced.json","versionCode", application) }
-    val yPkg = "com.google.android.youtube"
+    private val yPkg = "com.google.android.youtube"
 
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
@@ -56,12 +57,16 @@ class RootSplitInstallerService: Service() {
                         }
                     }
                     if (modApk != null) {
-                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode)) {
-                            with(localBroadcastManager) {
-                                sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                                sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
+                        if (getDefaultSharedPreferences(this@RootSplitInstallerService).getBoolean("new_installer", false)) {
+                            if (overwriteBase(modApk, fileInfoList, vancedVersionCode)) {
+                                with(localBroadcastManager) {
+                                    sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+                                    sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
+                                }
                             }
-                        }
+                        } else
+                            installSplitApkFiles(fileInfoList)
+
                     }
                     else
                     {
@@ -229,9 +234,7 @@ class RootSplitInstallerService: Service() {
         if(PackageHelper.uninstallApk(yPkg, applicationContext)) {
             return installSplitApkFiles(apkFiles)
         }
-        with(localBroadcastManager) {
-            sendFailure(listOf("Failed_Uninstall").toMutableList(), applicationContext)
-        }
+        sendFailure(listOf("Failed_Uninstall").toMutableList(), this)
         return false
     }
 
