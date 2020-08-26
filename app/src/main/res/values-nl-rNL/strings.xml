@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Veranderingen</string>
     <string name="downloading_file">Downloaden %1$s</string>
-    <string name="failed_uninstall">Gefaalt om app te deinstalleren %1$s</string>
-    <string name="error_downloading">Fout opgetreden bij downloaden %1$s</string>
     <string name="install">Installeer</string>
     <string name="installing_app">Installeren %1$s</string>
-    <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
-    <string name="installation_blocked">Installatie mislukt omdat de gebruiker de installatie heeft geblokkeerd.</string>
-    <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates uit de standaard YouTube app en probeer het daarna opnieuw.</string>
-    <string name="installation_conflict">Installatie mislukt omdat de app conflicteert met een al geïnstalleerde app. Verwijder de huidige versie van Vanced, en probeer het opnieuw.</string>
-    <string name="installation_failed">Installatie mislukt om onbekende redenen, neem dan deel aan onze Telegram of Discord voor verdere ondersteuning.</string>
-    <string name="installation_incompatible">Installatie mislukt omdat het installatiebestand niet compatibel is met uw apparaat. Wis gedownloade bestanden in de instellingen en probeer het opnieuw.</string>
-    <string name="installation_invalid">Installatie is mislukt omdat de apkbestanden beschadigd zijn, probeer het opnieuw.</string>
-    <string name="installation_signature">Installatie mislukt omdat apk handtekeningverificatie is ingeschakeld. Schakel apk-signature verificatie uit en probeer het opnieuw.</string>
-    <string name="installation_miui">Installatie mislukt omdat MIUI optimalisatie is ingeschakeld. Schakel MIUI optimalisatie uit en probeer het opnieuw.</string>
-    <string name="installation_storage">Installatie is mislukt door een opslagfout.</string>
     <string name="installation_wait">Verlaat de app NIET totdat de installatie is voltooid.</string>
     <string name="button_reinstall">Herïnstalleer</string>
     <string name="version_installed">Geïnstalleerd:</string>
@@ -57,6 +45,8 @@
     <string name="link_title">Gebruik Chrome aangepast tabblad</string>
     <string name="link_custom_tabs">Links zullen openen in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links worden geopend in een externe browser</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
     <string name="theme">Thema</string>
     <string name="theme_follow">Volg systeem</string>
     <string name="theme_dark">Donker thema</string>
@@ -94,9 +84,21 @@
     <string name="manager_dev">Manager Dev</string>
     <string name="sources">Links</string>
     <string name="vanced_team">Vanced Team</string>
-    <string name="Failed_Uninstall">Failed Uninstall Of Installed Version, Try Manually</string>
-    <string name="Chown_Fail">Failed To Chown Apk to system owner, Try Again</string>
-    <string name="IFile_Missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
-    <string name="ModApk_Missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="Files_Missing_VA">Files are missing, Failed Download?</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="error_downloading">Fout opgetreden bij downloaden %1$s</string>
+    <string name="failed_uninstall">Gefaalt om app te deinstalleren %1$s</string>
+    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
+    <string name="installation_blocked">Installatie mislukt omdat de gebruiker de installatie heeft geblokkeerd.</string>
+    <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates uit de standaard YouTube app en probeer het daarna opnieuw.</string>
+    <string name="installation_conflict">Installatie mislukt omdat de app conflicteert met een al geïnstalleerde app. Verwijder de huidige versie van Vanced, en probeer het opnieuw.</string>
+    <string name="installation_failed">Installatie mislukt om onbekende redenen, neem dan deel aan onze Telegram of Discord voor verdere ondersteuning.</string>
+    <string name="installation_incompatible">Installatie mislukt omdat het installatiebestand niet compatibel is met uw apparaat. Wis gedownloade bestanden in de instellingen en probeer het opnieuw.</string>
+    <string name="installation_invalid">Installatie is mislukt omdat de apkbestanden beschadigd zijn, probeer het opnieuw.</string>
+    <string name="installation_signature">Installatie mislukt omdat apk handtekeningverificatie is ingeschakeld. Schakel apk-signature verificatie uit en probeer het opnieuw.</string>
+    <string name="installation_miui">Installatie mislukt omdat MIUI optimalisatie is ingeschakeld. Schakel MIUI optimalisatie uit en probeer het opnieuw.</string>
+    <string name="installation_storage">Installatie is mislukt door een opslagfout.</string>
+    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
 </resources>
