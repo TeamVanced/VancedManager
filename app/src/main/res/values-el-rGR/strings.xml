@@ -94,9 +94,9 @@
     <string name="manager_dev">Δημιουργός Διαχειριστή Vanced</string>
     <string name="sources">Πηγές</string>
     <string name="vanced_team">Η ομάδα του Vanced</string>
-    <string name="Failed_Uninstall">Αποτυχία απεγκατάστασης της εγκατεστημένης έκδοσης, δοκιμάστε χειροκίνητα</string>
-    <string name="Chown_Fail">Αποτυχία Chown του Apk σε system owner, δοκιμάστε ξανά</string>
-    <string name="IFile_Missing">Αποτυχία ανάγνωσης Dark/Black.apk (Ο αποθηκευτικός χώρος μπλόκαρε;) ή το αρχείο λείπει</string>
-    <string name="ModApk_Missing">Το Black/Dark apk λείπει από τον installer, Αυτό δεν πρέπει να συμβεί, παρακαλώ κάντε εκκαθάριση δεδομένων του manager</string>
-    <string name="Files_Missing_VA">Τα αρχεία λείπουν, αποτυχία κατεβάσματος;</string>
+    <string name="Failed_Uninstall">Αποτυχία απεγκατάστασης της εγκατεστημένης έκδοσης, προσπαθείστε χειροκίνητα</string>
+    <string name="Chown_Fail">Αποτυχία αλλαγής του κατόχου του Apk σε system owner, προσπαθείστε ξανά</string>
+    <string name="IFile_Missing">Αποτυχία ανάγνωσης Dark/Black.apk (μπλόκαρε ο αποθηκευτικός χώρος;) ή το αρχείο λείπει</string>
+    <string name="ModApk_Missing">Το Black/Dark apk λείπει από το πρόγραμμα εγκατάστασης, αυτό δεν θα έπρεπε να συμβαίνει, παρακαλώ κάντε εκκαθάριση δεδομένων του διαχειριστή vanced</string>
+    <string name="Files_Missing_VA">Τα αρχεία λείπουν, αποτυχία λήψης;</string>
 </resources>
