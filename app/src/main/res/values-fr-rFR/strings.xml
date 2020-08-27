@@ -13,7 +13,7 @@
     <string name="downloading_file">Téléchargement de %1$s</string>
     <string name="install">Installer</string>
     <string name="installing_app">Installation de %1$s</string>
-    <string name="installation_wait">NE PAS quitter l\'application jusqu\'à la fin de l\'installation.</string>
+    <string name="installation_wait">Ne quitter l\'application qu\'après fin de l\'installation.</string>
     <string name="button_reinstall">Réinstaller</string>
     <string name="version_installed">Version installée:</string>
     <string name="latest">Dernière version:</string>
