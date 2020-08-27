@@ -88,7 +88,7 @@
     <string name="chown_fail">सिस्टम के मालिक को एपीके को Chown करने में विफल, फिर से प्रयास करें</string>
     <string name="error_downloading">डाउनलोड करने में त्रुटि %1$s</string>
     <string name="failed_uninstall">पैकेज की स्थापना रद्द करने में विफल %1$s</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="files_missing_va">फाइलें गायब हैं, डाउनलोड में विफल?</string>
     <string name="ifile_missing">डार्क / ब्लैक.पैक रीड नहीं हो सकता (क्या स्टोरेज ब्लॉक हो गया?) या फाइल मिसिंग है</string>
     <string name="installation_aborted">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना रद्द कर दी थी</string>
     <string name="installation_blocked">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना को अवरुद्ध कर दिया।</string>
@@ -100,5 +100,5 @@
     <string name="installation_signature">स्थापना विफल रही क्योंकि एपीके हस्ताक्षर सत्यापन सक्षम है। एपीके हस्ताक्षर सत्यापन अक्षम करें, फिर प्रयास करें।</string>
     <string name="installation_miui">MIUI ऑप्टिमाइज़ेशन सक्षम होने के कारण स्थापना विफल रही। MIUI ऑप्टिमाइज़ेशन अक्षम करें, फिर प्रयास करें।</string>
     <string name="installation_storage">संग्रहण त्रुटि के कारण स्थापना विफल रही।</string>
-    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="modapk_missing">इंस्टॉलर से Black/Dark apk गायब है, ऐसा नहीं होना चाहिए, कृपया प्रबंधक का ऐप डेटा हटा दें</string>
 </resources>
