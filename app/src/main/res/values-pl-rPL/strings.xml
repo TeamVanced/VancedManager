@@ -88,8 +88,8 @@
     <string name="chown_fail">Nie udało się zmienić właściciela Apk, spróbuj ponownie</string>
     <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
-    <string name="ifile_missing">Dark/Black.apk nie może być odczytany (Czy pamięć została zablokowana?) czy brakuje pliku</string>
+    <string name="files_missing_va">Brakuje plików, Pobieranie nie powiodło się?</string>
+    <string name="ifile_missing">Dark/Black.apk nie może być odczytany (Czy pamięć została zablokowana?) lub brakuje pliku</string>
     <string name="installation_aborted">Instalacja nie powiodła się, bo użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Instalacja nie powiodła się, bo użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć wersję paczki. Odinstaluj aktualizacje z oryginalnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
@@ -100,5 +100,5 @@
     <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
     <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
-    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="modapk_missing">Brak czarnej/ciemnej apk w instalatorze. To nie powinno się zdarzyć, wyczyść dane menedżera</string>
 </resources>
