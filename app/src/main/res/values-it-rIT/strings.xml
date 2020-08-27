@@ -45,8 +45,8 @@
     <string name="link_title">Utilizza le schede personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
     <string name="link_external_browser">I link verranno aperti in un browser esterno</string>
-    <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_title">Usa la nuova installazione root (Sperimentale)</string>
+    <string name="new_installer_summary">Questa installazione non dipende dallo stato della Firma di verifica</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Utilizza quello di sistema</string>
     <string name="theme_dark">Tema scuro</string>
@@ -88,7 +88,7 @@
     <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
     <string name="error_downloading">Errore nel download di %1$s</string>
     <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="files_missing_va">File mancanti, download non riuscito?</string>
     <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
     <string name="installation_aborted">Installazione non riuscita, l\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Installazione non riuscita, l\'utente ha bloccato l\'installazione.</string>
