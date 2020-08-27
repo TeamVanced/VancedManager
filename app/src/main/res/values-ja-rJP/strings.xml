@@ -88,7 +88,7 @@
     <string name="chown_fail">システム所有者への APK の Chownができませんでした、もう一度やり直してください</string>
     <string name="error_downloading">%1$s のダウンロード中にエラー</string>
     <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="files_missing_va">ファイルがありません、ダウンロードに失敗しましたか？</string>
     <string name="ifile_missing">Dark/Black.apk が読み込みできない (ストレージがブロック？) またはファイルがありません</string>
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
@@ -100,5 +100,5 @@
     <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
     <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
-    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="modapk_missing">Dark/Black の APK がインストーラーから見つかりません、想定外のことです、Manager のアプリのデータを削除してください</string>
 </resources>
