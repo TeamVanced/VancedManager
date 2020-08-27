@@ -5,13 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.NavDestination
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
@@ -34,8 +29,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val navHost by lazy { findNavController(R.id.bottom_nav_host) }
-
+    
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
         override fun onDataChanged() {
@@ -85,8 +79,6 @@ class MainActivity : AppCompatActivity() {
         with(binding) {
             lifecycleOwner = this@MainActivity
             setSupportActionBar(homeToolbar)
-            val appBarConfiguration = AppBarConfiguration(navHost.graph)
-            homeToolbar.setupWithNavController(navHost, appBarConfiguration)
             mainViewpager.adapter = SectionVariantAdapter(this@MainActivity)
             TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
                 when (position) {
@@ -104,19 +96,6 @@ class MainActivity : AppCompatActivity() {
             
             mainTablayout.addOnTabSelectedListener(tabListener)
             
-        }
-
-        navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
-            setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
-            val tabHide = AnimationUtils.loadAnimation(this, R.anim.tablayout_exit)
-            val tabShow = AnimationUtils.loadAnimation(this, R.anim.tablayout_enter)
-            if (currFrag.id != R.id.home_fragment) {
-                binding.variantTabContainer.startAnimation(tabHide)
-                binding.variantTabContainer.visibility = View.GONE
-            } else {
-                binding.variantTabContainer.visibility = View.VISIBLE
-                binding.variantTabContainer.startAnimation(tabShow)
-            }
         }
 
         initDialogs()
@@ -145,25 +124,18 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.toolbar_about -> {
-                navHost.navigate(R.id.toAboutFragment)
-                return true
+                return false
             }
             R.id.toolbar_settings -> {
-                navHost.navigate(R.id.action_settingsFragment)
-                return true
+                return false
             }
             R.id.dev_settings -> {
-                navHost.navigate(R.id.toDevSettingsFragment)
-                return true
+                return false
             }
             else -> super.onOptionsItemSelected(item)
         }
 
         return false
-    }
-
-    private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        binding.homeToolbar.navigationIcon = if (isNeeded) getDrawable(R.drawable.ic_keyboard_backspace_black_24dp) else null
     }
 
     override fun attachBaseContext(newBase: Context) {
