@@ -18,7 +18,7 @@
     <string name="version_installed">Instalado:</string>
     <string name="latest">Más reciente:</string>
     <string name="successfully_installed">Instalación exitosa %1$s</string>
-    <string name="network_error">Conexion a la red no disponible</string>
+    <string name="network_error">Conexión a la red no disponible</string>
     <string name="no_microg">microG no está instalado</string>
     <string name="root_not_granted">Acceso root no concedido</string>
     <string name="unavailable">No Disponible</string>
@@ -88,7 +88,7 @@
     <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
+    <string name="files_missing_va">Faltan los archivos, descarga fallada?</string>
     <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
     <string name="installation_aborted">La instalación falló porque el usuario abortó la instalación.</string>
     <string name="installation_blocked">Instalación fallida porque el usuario bloqueó la instalación.</string>
