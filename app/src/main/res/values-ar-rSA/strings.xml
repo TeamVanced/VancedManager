@@ -45,8 +45,8 @@
     <string name="link_title">إستخدم علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
-    <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_title">استخدام مثبت الروت الجديد (تجريبي)</string>
+    <string name="new_installer_summary">لا تعتمد أداة التثبيت هذه على حالة التحقق من صحة التوقيع</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
     <string name="theme_dark">الموضوع الاسود</string>
@@ -61,7 +61,7 @@
     <!-- Dialogs -->
     <string name="button_dismiss">إزالة</string>
     <string name="guide">المعالج</string>
-    <string name="hold_on">Stop!</string>
+    <string name="hold_on">توقف!</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">تم اكتشاف MIUI!</string>
     <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
