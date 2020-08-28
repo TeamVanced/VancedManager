@@ -45,7 +45,7 @@
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
-    <string name="new_installer_title">Usar el nuevo instalador de root (experimental)</string>
+    <string name="new_installer_title">Use new root installer (Experimental)</string>
     <string name="new_installer_summary">Este instalador no requiere la verificación de la firma</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
