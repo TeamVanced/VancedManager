@@ -45,7 +45,7 @@
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
-    <string name="new_installer_title">Use new root installer (Experimental)</string>
+    <string name="new_installer_title">Usar el nuevo instalador root (Experimental)</string>
     <string name="new_installer_summary">Este instalador no requiere la verificación de la firma</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
@@ -88,7 +88,7 @@
     <string name="chown_fail">No se pudo conectar a Chown Apk con el propietario del sistema, inténtalo de nuevo</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="files_missing_va">Los archivos han desaparecido, ¿falló la descarga?</string>
+    <string name="files_missing_va">Faltan los archivos, ¿Descarga Fallida?</string>
     <string name="ifile_missing">Dark/Black.apk no puede ser leído (¿su almacenamiento fue bloqueado?) o el archivo desapareció</string>
     <string name="installation_aborted">La instalación falló porque el usuario abortó la instalación.</string>
     <string name="installation_blocked">Instalación fallida porque el usuario bloqueó la instalación.</string>
