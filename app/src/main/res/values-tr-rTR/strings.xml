@@ -13,7 +13,7 @@
     <string name="downloading_file">İndiriliyor %1$s</string>
     <string name="install">Kur</string>
     <string name="installing_app">%1$s Kuruluyor</string>
-    <string name="installation_wait">Yükleme bitene kadar uygulamadan AYRILMAYIN.</string>
+    <string name="installation_wait">Yükleme bitene kadar uygulamadan ayrılMAyın.</string>
     <string name="button_reinstall">Yeniden kur</string>
     <string name="version_installed">Kuruldu:</string>
     <string name="latest">En yeni:</string>
@@ -87,7 +87,7 @@
     <!-- Error messages -->
     <string name="chown_fail">Apk sistem sahibine değiştirilemedi, Tekrar Deneyin</string>
     <string name="error_downloading">Indirme hatası %1$s</string>
-    <string name="failed_uninstall">%1$s paket yüklemesi başarısız oldu</string>
+    <string name="failed_uninstall">%1$s paketi kaldırılamadı</string>
     <string name="files_missing_va">Dosyalar eksik, İndirme Başarısız mı oldu?</string>
     <string name="ifile_missing">Dark/Black.apk Okunamıyor(Depolama mı Engellendi?) veya Dosya Yok</string>
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
@@ -97,8 +97,8 @@
     <string name="installation_failed">Yükleme bilinmeyen nedenlerle başarısız oldu, daha fazla destek için Telegram veya Discord\'a katılın.</string>
     <string name="installation_incompatible">Yükleme dosyası cihazınızla uyumlu olmadığından yükleme başarısız oldu. İndirilen dosyaları Ayarlar\'dan temizleyin, ardından tekrar deneyin.</string>
     <string name="installation_invalid">Apk dosyaları bozuk olduğundan yükleme başarısız oldu, lütfen tekrar deneyin.</string>
-    <string name="installation_signature">Yükleme, imza doğrulaması etinleştirildiği için başarısız oldu. İmza doğrulamasını devre dışı bırakıp tekrar deneyin.</string>
-    <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp tekrar deneyin.</string>
+    <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakın, ardından tekrar deneyin.</string>
+    <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakın, ardından tekrar deneyin.</string>
     <string name="installation_storage">Bir depolama hatası nedeniyle kurulum başarısız oldu.</string>
     <string name="modapk_missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen yöneticinin uygulama verilerini temizleyin</string>
 </resources>
