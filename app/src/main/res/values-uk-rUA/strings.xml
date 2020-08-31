@@ -13,7 +13,7 @@
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
     <string name="installing_app">Встановлення %1$s</string>
-    <string name="installation_wait">Не виходьте з додатку, поки встановлення не закінчиться.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
     <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
     <string name="modapk_missing">Чорний/Темний apk відсутній, Цього не повинно статися, будь ласка, очистіть дані програми від менеджера</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
