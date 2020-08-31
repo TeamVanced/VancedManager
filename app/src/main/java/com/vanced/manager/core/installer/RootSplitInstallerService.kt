@@ -343,36 +343,22 @@ class RootSplitInstallerService: Service() {
 
     private fun getPackageDir(): String?
     {
-        val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
-        if(execRes.isSuccess)
-        {
-            val result = execRes.out
-            for (line in result)
-            {
-                if(line.contains("data/app")) return "${line.substringAfter("=")}/base.apk"
-            }
-
-        }
-        return null
-
-        /*
         return try {
             val p = getPkgInfo(yPkg)
             p?.applicationInfo?.sourceDir
         } catch (e: Exception) {
-            val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
+             val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
             if(execRes.isSuccess)
             {
                 val result = execRes.out
                 for (line in result)
                 {
-                    if(line.contains("data/app")) return line.substringAfter("=")
+                    if(line.contains("data/app")) "${line.substringAfter("=")}/base.apk"
                 }
 
             }
             null
         }
-        */
     }
 
 }
