@@ -16,7 +16,7 @@
     <string name="downloading_file">Downloading %1$s</string>
     <string name="install">Install</string>
     <string name="installing_app">Installing %1$s</string>
-    <string name="installation_wait">DO NOT leave the app until the installation finishes.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">Reinstall</string>
     <string name="version_installed">Installed:</string>
     <string name="latest">Latest:</string>
@@ -50,7 +50,7 @@
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
