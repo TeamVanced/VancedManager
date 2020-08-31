@@ -13,7 +13,7 @@
     <string name="downloading_file">%1$s ஐப் பதிவிறக்குகிறது</string>
     <string name="install">நிறுவு</string>
     <string name="installing_app">%1$s ஐ நிறுவுகிறது</string>
-    <string name="installation_wait">நிறுவல் முடியும் வரை பயன்பாட்டை விட்டு வெளியேற வேண்டாம்.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">மீண்டும் நிறுவவும்</string>
     <string name="version_installed">நிறுவப்பட்டது:</string>
     <string name="latest">சமீபத்தியது:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">MIUI உகப்பாக்கம் இயக்கப்பட்டிருப்பதால் நிறுவல் தோல்வியடைந்தது. MIUI உகப்பாக்கத்தை முடக்கு, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_storage">சேமிப்பக பிழை காரணமாக நிறுவல் தோல்வியடைந்தது.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
