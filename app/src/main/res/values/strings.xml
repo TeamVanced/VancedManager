@@ -109,5 +109,6 @@
     <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
     <string name="installation_storage">Installation failed due to a storage error.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 
 </resources>

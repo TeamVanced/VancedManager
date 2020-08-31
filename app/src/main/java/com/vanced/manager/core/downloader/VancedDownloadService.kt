@@ -52,8 +52,8 @@ class VancedDownloadService: Service() {
     private var hashUrl = ""
 
     private val yPkg = "com.google.android.youtube"
-    private val vancedVersionCode: Int = runBlocking { InternetTools.getJsonInt("vanced.json", "versionCode", application) }
-    private val vancedVersion = runBlocking { getObjectFromJson("$installUrl/vanced.json", "version") }
+    private val vancedVersionCode by lazy {runBlocking { InternetTools.getJsonInt("vanced.json", "versionCode", applicationContext) }}
+    private val vancedVersion by lazy { runBlocking { getObjectFromJson("$installUrl/vanced.json", "version") }}
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
