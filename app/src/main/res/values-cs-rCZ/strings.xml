@@ -13,7 +13,7 @@
     <string name="downloading_file">Stahování %1$s</string>
     <string name="install">Instalace</string>
     <string name="installing_app">Probíhá instalace %1$s</string>
-    <string name="installation_wait">NEOPOUŠTĚJTE aplikaci, dokud nebude instalace dokončena.</string>
+    <string name="installation_wait">Počkejte prosím na dokončení instalace.</string>
     <string name="button_reinstall">Přeinstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a zkuste to znovu.</string>
     <string name="installation_storage">Instalace se nezdařila z důvodu chyby v úložišti.</string>
     <string name="modapk_missing">V instalačním souboru chybí black/dark.apk. To by se nemělo stát. Vymažte prosím data aplikace Vanced Manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
