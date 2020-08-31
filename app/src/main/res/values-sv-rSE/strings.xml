@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Länkar öppnas i Chrome Custom Tabs</string>
     <string name="link_external_browser">Länkar öppnas i en extern webbläsare</string>
     <string name="new_installer_title">Använd ny root-installer (Experimentell)</string>
-    <string name="new_installer_summary">Detta installationsprogram beror inte på signaturverifiering stststus</string>
+    <string name="new_installer_summary">Detta installationsprogram beror inte på status för signaturverifiering</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Följ system</string>
     <string name="theme_dark">Mörkt tema</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Installationen misslyckades eftersom MIUI-optimering är aktiverad. Inaktivera MIUI-optimering och försök igen.</string>
     <string name="installation_storage">Åtgärden misslyckades på grund av ett lagringsfel.</string>
     <string name="modapk_missing">Svart/Mörk apk saknas från installeringen, Detta bör inte hända, vänligen rensa appdata från manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
