@@ -13,7 +13,7 @@
     <string name="downloading_file">Downloaden %1$s</string>
     <string name="install">Installeer</string>
     <string name="installing_app">Installeren %1$s</string>
-    <string name="installation_wait">Verlaat de app NIET totdat de installatie is voltooid.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">Herïnstalleer</string>
     <string name="version_installed">Geïnstalleerd:</string>
     <string name="latest">Laatste:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Links zullen openen in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links worden geopend in een externe browser</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Thema</string>
     <string name="theme_follow">Volg systeem</string>
     <string name="theme_dark">Donker thema</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Installatie mislukt omdat MIUI optimalisatie is ingeschakeld. Schakel MIUI optimalisatie uit en probeer het opnieuw.</string>
     <string name="installation_storage">Installatie is mislukt door een opslagfout.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
