@@ -44,6 +44,7 @@ object AppUtils {
             status.contains("IFile_Missing") -> context.getString(R.string.ifile_missing)
             status.contains("ModApk_Missing") -> context.getString(R.string.modapk_missing)
             status.contains("Files_Missing_VA") -> context.getString(R.string.files_missing_va)
+            status.contains("Path_Missing") -> context.getString(R.string.path_missing)
             else ->
                 if (MiuiHelper.isMiui())
                     context.getString(R.string.installation_miui)

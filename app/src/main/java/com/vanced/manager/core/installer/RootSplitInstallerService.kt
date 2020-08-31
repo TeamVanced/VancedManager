@@ -32,7 +32,7 @@ import kotlin.collections.ArrayList
 
 class RootSplitInstallerService: Service() {
 
-    private var vancedVersionCode: Int = runBlocking { getJsonInt("vanced.json","versionCode", application) }
+    private val vancedVersionCode by lazy{ runBlocking { getJsonInt("vanced.json","versionCode", applicationContext) }}
     private val yPkg = "com.google.android.youtube"
 
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
@@ -178,11 +178,10 @@ class RootSplitInstallerService: Service() {
     //install Vanced
     private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int): Boolean {
         if (checkVersion(versionCode,baseApkFiles)) {
-            val path = getVPath()
+            val path = getPackageDir()
             apkFile.file?.let {
                 val apath = it.absolutePath
                 if(path?.let { it1 -> moveAPK(apath, it1) }!!) {
-                    SuFile.open(path).parent!!
                     return chConV(path)
                 }
 
@@ -193,11 +192,11 @@ class RootSplitInstallerService: Service() {
 
     //check version and perform action based on result
     private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>): Boolean {
-        val path = getVPath()
+        val path = getPackageDir()
         if (path != null) {
             if(path.contains("/data/app/"))
             {
-                when(getPkgVerCode(yPkg,packageManager)?.let { compareVersion(it,versionCode) })
+                when(getVersionNumber()?.let { compareVersion(it,versionCode) })
                 {
                     1 -> {return fixHigherVer(baseApkFiles) }
                     -1 -> {return fixLowerVer(baseApkFiles) }
@@ -310,6 +309,70 @@ class RootSplitInstallerService: Service() {
             null
         }
 
+    }
+
+    private fun getVersionNumber(): Int?
+    {
+        try {
+            return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
+                packageManager.getPackageInfo(yPkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
+            else
+                packageManager.getPackageInfo(yPkg, 0)?.versionCode
+        }
+        catch (e : Exception)
+        {
+            val execRes = Shell.su("dumpsys package com.google.android.youtube | grep versionCode").exec()
+            if(execRes.isSuccess)
+            {
+                val result = execRes.out
+                var version: Int = 0
+                for(line in result)
+                {
+                    val versionCode = line.substringAfter("=")
+                    val versionCodeFiltered = versionCode.substringBefore(" ")
+                    if(version < Integer.valueOf(versionCodeFiltered))
+                    {
+                        version = Integer.valueOf(versionCodeFiltered)
+                    }
+                }
+                return version
+            }
+        }
+        return null
+    }
+
+    private fun getPackageDir(): String?
+    {
+        val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
+        if(execRes.isSuccess)
+        {
+            val result = execRes.out
+            for (line in result)
+            {
+                if(line.contains("data/app")) return "${line.substringAfter("=")}/base.apk"
+            }
+
+        }
+        return null
+
+        /*
+        return try {
+            val p = getPkgInfo(yPkg)
+            p?.applicationInfo?.sourceDir
+        } catch (e: Exception) {
+            val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
+            if(execRes.isSuccess)
+            {
+                val result = execRes.out
+                for (line in result)
+                {
+                    if(line.contains("data/app")) return line.substringAfter("=")
+                }
+
+            }
+            null
+        }
+        */
     }
 
 }
