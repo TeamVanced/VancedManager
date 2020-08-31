@@ -13,7 +13,7 @@
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="install">インストール</string>
     <string name="installing_app">%1$s をインストールしています</string>
-    <string name="installation_wait">インストールが完了するまで待ってください。</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">再インストール</string>
     <string name="version_installed">インストール済み:</string>
     <string name="latest">最新版:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
     <string name="link_external_browser">外部ブラウザでリンクを開く</string>
     <string name="new_installer_title">新しい Root インストーラーを使用する (実験的)</string>
-    <string name="new_installer_summary">インストーラーは署名検証ステータスに依存しません</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">テーマ</string>
     <string name="theme_follow">システムに従う</string>
     <string name="theme_dark">ダークテーマ</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
     <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
     <string name="modapk_missing">Dark/Black の APK がインストーラーから見つかりません、想定外のことです、Manager のアプリのデータを削除してください</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
