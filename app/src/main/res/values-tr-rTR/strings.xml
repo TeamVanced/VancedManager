@@ -13,7 +13,7 @@
     <string name="downloading_file">İndiriliyor %1$s</string>
     <string name="install">Kur</string>
     <string name="installing_app">%1$s Kuruluyor</string>
-    <string name="installation_wait">Yükleme bitene kadar uygulamadan ayrılMAyın.</string>
+    <string name="installation_wait">Lütfen kurulum bitene kadar bekleyin.</string>
     <string name="button_reinstall">Yeniden kur</string>
     <string name="version_installed">Kuruldu:</string>
     <string name="latest">En yeni:</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakın, ardından tekrar deneyin.</string>
     <string name="installation_storage">Bir depolama hatası nedeniyle kurulum başarısız oldu.</string>
     <string name="modapk_missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen yöneticinin uygulama verilerini temizleyin</string>
+    <string name="path_missing">Stok Youtube Yükleme Yolu, Stok Bölünmüş Kurulumdan Sonra Erişilemiyor Veya Yok</string>
 </resources>
