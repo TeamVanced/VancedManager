@@ -13,7 +13,7 @@
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
     <string name="installing_app">正在安裝 %1$s</string>
-    <string name="installation_wait">請勿在安裝程序完成前離開本程式。</string>
+    <string name="installation_wait">請等待安裝程序完成.</string>
     <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
@@ -92,7 +92,7 @@
     <string name="ifile_missing">無法讀取 Dark/Black.apk (儲存空間被封鎖了？) 或檔案已丟失</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
-    <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原廠 YouTube 的更新，然後重試。</string>
+    <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生 YouTube 的更新，然後重試。</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前版本的 Vanced ，然後重試。</string>
     <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
     <string name="installation_incompatible">安裝檔案與您的手機不兼容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
     <string name="installation_storage">儲存空間發生錯誤導致安裝失敗。</string>
     <string name="modapk_missing">安裝程式缺乏黑色/深色 apk ，這不應該發生的，請清除 Manager 數據</string>
+    <string name="path_missing">未能訪問原生 YouTube 安裝路徑，或在原生 Split 安裝後丟失</string>
 </resources>
