@@ -13,7 +13,7 @@
     <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
     <string name="install">इंस्टॉल</string>
     <string name="installing_app">%1$s इन्स्टॉल कर रहा है</string>
-    <string name="installation_wait">स्थापना समाप्त होने तक ऐप को न छोड़ें।</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">फिर से इंस्टॉल</string>
     <string name="version_installed">इन्स्टॉल्ड:</string>
     <string name="latest">नवीनतम</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
     <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
     <string name="new_installer_title">नए रूट इंस्टॉलर (प्रायोगिक) का उपयोग करें</string>
-    <string name="new_installer_summary">यह इंस्टॉलर हस्ताक्षर सत्यापन की स्थिति पर निर्भर नहीं करता है</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">थीम</string>
     <string name="theme_follow">सिस्टम का पालन करें</string>
     <string name="theme_dark">डार्क थीम</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">MIUI ऑप्टिमाइज़ेशन सक्षम होने के कारण स्थापना विफल रही। MIUI ऑप्टिमाइज़ेशन अक्षम करें, फिर प्रयास करें।</string>
     <string name="installation_storage">संग्रहण त्रुटि के कारण स्थापना विफल रही।</string>
     <string name="modapk_missing">इंस्टॉलर से Black/Dark apk गायब है, ऐसा नहीं होना चाहिए, कृपया प्रबंधक का ऐप डेटा हटा दें</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
