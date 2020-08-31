@@ -13,7 +13,7 @@
     <string name="downloading_file">%1$s 다운로드 중</string>
     <string name="install">설치</string>
     <string name="installing_app">%1$s 설치 중</string>
-    <string name="installation_wait">설치가 완료될 때까지 절대 앱을 종료하지 말고 잠시 기다려주세요.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">재설치</string>
     <string name="version_installed">설치됨:</string>
     <string name="latest">최신:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
     <string name="new_installer_title">새로운 버전의 루트 설치 프로그램 사용 (실험적 기능)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">테마</string>
     <string name="theme_follow">시스템 설정과 같이</string>
     <string name="theme_dark">다크 테마</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">MIUI 최적화 기능이 켜져 있어 앱을 설치하지 못했습니다. MIUI 최적화 기능을 끄고, 설치를 다시 진행해주세요.</string>
     <string name="installation_storage">저장 공간에 오류가 있어서 설치에 실패했습니다.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
