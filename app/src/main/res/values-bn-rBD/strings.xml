@@ -13,7 +13,7 @@
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="install">ইনস্টল</string>
     <string name="installing_app">%1$s ইনস্টল করা হচ্ছে</string>
-    <string name="installation_wait">DO NOT leave the app until the installation finishes.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">পুনঃইনস্টল</string>
     <string name="version_installed">ইনস্টলকৃত:</string>
     <string name="latest">সর্বশেষ:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">থিম</string>
     <string name="theme_follow">সিস্টেমকে অনুসরণ করো</string>
     <string name="theme_dark">অন্ধকার থিম</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
     <string name="installation_storage">Installation failed due to a storage error.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
