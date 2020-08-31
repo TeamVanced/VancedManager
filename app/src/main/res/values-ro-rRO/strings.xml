@@ -13,7 +13,7 @@
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
     <string name="installing_app">Se Instalează %1$s</string>
-    <string name="installation_wait">NU părăsiţi aplicaţia până când instalarea nu se termină.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">Reinstalare</string>
     <string name="version_installed">Instalat:</string>
     <string name="latest">Ultima:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="link_external_browser">Link-urile se vor deschide într-un browser extern</string>
     <string name="new_installer_title">Folosește noul instalator root (Experimental)</string>
-    <string name="new_installer_summary">Acest instalator nu depinde de statusul de verificare a semnăturii</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Temă</string>
     <string name="theme_follow">Urmăreşte sistemul</string>
     <string name="theme_dark">Temă întunecată</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Instalarea a eșuat deoarece este activată optimizarea MIUI. Dezactivați optimizarea MIUI, apoi încercați din nou.</string>
     <string name="installation_storage">Instalarea a eșuat din cauza unei erori de stocare.</string>
     <string name="modapk_missing">Aplicația neagră lipsește din instalator, acest lucru nu ar trebui să se întâmple, vă rugăm să ștergeți datele aplicației din manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
