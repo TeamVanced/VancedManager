@@ -13,7 +13,7 @@
     <string name="downloading_file">正在下载 %1$s</string>
     <string name="install">安装</string>
     <string name="installing_app">正在安装 %1$s</string>
-    <string name="installation_wait">请勿在安装程序完成前离开本应用。</string>
+    <string name="installation_wait">请等待安装程序完成.</string>
     <string name="button_reinstall">重新安装</string>
     <string name="version_installed">已安装：</string>
     <string name="latest">最新：</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">MIUI 优化已被启用导致安装失败。禁用 MIUI 优化，然后重试。</string>
     <string name="installation_storage">存储错误导致安装失败。</string>
     <string name="modapk_missing">安装程式缺少黑/暗 apk ，这不应该发生的，请清除 Manager 数据</string>
+    <string name="path_missing">原厂 YouTube 安装路径不可访问，或在原厂 Split 安装后丢失</string>
 </resources>
