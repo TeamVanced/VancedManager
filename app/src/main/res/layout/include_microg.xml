@@ -94,7 +94,7 @@
                     <TextView
                         android:id="@+id/microg_installed_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.microg.installedVersionCode}" />
+                        android:text="@{viewModel.microg.installedVersionName}" />
 
                 </LinearLayout>
 

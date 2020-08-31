@@ -28,14 +28,15 @@
         <LinearLayout
             android:id="@+id/variant_tab_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_appbar"
+            android:orientation="vertical">
             
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/main_tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?colorSurfaceVariant"
+                android:background="?colorSurface"
                 app:tabIndicatorColor="?colorPrimary"
                 app:tabSelectedTextColor="?colorPrimary"
                 app:tabTextColor="?colorPrimary" />
@@ -46,7 +47,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
             
-        </LinearLayout>
+        </LinearLayout> 
 
     </RelativeLayout>
 

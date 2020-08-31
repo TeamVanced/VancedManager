@@ -13,6 +13,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
@@ -47,53 +48,61 @@ class HomeFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
-
-        val arg = "variant"
+        
         val variant = getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot")
-
+        val selectedTab = requireActivity().findViewById<TabLayout>(R.id.main_tablayout).getSelectedTabPosition()
+        
         with(binding) {
-            when (variant) {
-                "nonroot" -> includeMusicLayout.musicCard.visibility = View.GONE
-                "music" -> includeVancedLayout.vancedCard.visibility = View.GONE
-                "root" -> {
+            when (selectedTab) {
+                1 -> includeVancedLayout.vancedCard.visibility = View.GONE
+                2 -> {
                     includeMusicLayout.musicCard.visibility = View.GONE
                     includeMicrogLayout.microgCard.visibility = View.GONE
                 }
+                else -> includeMusicLayout.musicCard.visibility = View.GONE
             }
-        }
-
-        with(binding) {
+            
             includeVancedLayout.vancedInstallbtn.setOnClickListener(this@HomeFragment)
             includeVancedLayout.vancedUninstallbtn.setOnClickListener(this@HomeFragment)
             includeMicrogLayout.microgInstallbtn.setOnClickListener(this@HomeFragment)
             includeMicrogLayout.microgUninstallbtn.setOnClickListener(this@HomeFragment)
             includeChangelogsLayout.changelogButton.setOnClickListener(this@HomeFragment)
-        }
 
-        binding.includeVancedLayout.vancedCard.setOnLongClickListener {
-            versionToast("Vanced", viewModel.vanced.get()?.getInstalledVersionName()!!)
-            true
-        }
+            includeVancedLayout.vancedCard.setOnLongClickListener {
+                versionToast("Vanced", viewModel?.vanced?.get()?.getInstalledVersionName()!!)
+                true
+            }
 
-        binding.includeMicrogLayout.microgCard.setOnLongClickListener {
-            versionToast("MicroG", viewModel.microg.get()?.getInstalledVersionName()!!)
-            true
+            includeMicrogLayout.microgCard.setOnLongClickListener {
+                versionToast("MicroG", viewModel?.microg?.get()?.getInstalledVersionName()!!)
+                true
+            }
         }
 
         with(binding.includeChangelogsLayout) {
-            viewpager.adapter = if (variant == "root") SectionPageRootAdapter(this@HomeFragment) else SectionPageAdapter(this@HomeFragment)
+            viewpager.adapter = 
+            when (selectedTab) {
+                1 -> SectionPageMusicAdapter(this@HomeFragment)
+                2 -> SectionPageRootAdapter(this@HomeFragment)
+                else -> SectionPageAdapter(this@HomeFragment)
+            }
             TabLayoutMediator(tablayout, viewpager) { tab, position ->
-                if (variant == "root")
-                    when (position) {
-                        0 -> tab.text = "Vanced"
-                        1 -> tab.text = "Manager"
-                    }
-                else
-                    when (position) {
-                        0 -> tab.text = "Vanced"
-                        1 -> tab.text = "MicroG"
-                        2 -> tab.text = "Manager"
-                    }
+                tab.text = 
+                when (selectedTab) {
+                    1 -> when (position) {
+                            0 -> "Vanced"
+                            else -> "Manager"
+                         }
+                    2 -> when (position) {
+                            0 -> "Music"
+                            else -> "MicroG"
+                         }
+                    else -> when (position) {
+                                0 -> "Vanced"
+                                1 -> "MicroG"
+                                else -> "Manager"
+                            }
+                }
 
             }.attach()
         }

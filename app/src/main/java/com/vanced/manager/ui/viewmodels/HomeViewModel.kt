@@ -12,6 +12,7 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableField
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
@@ -25,19 +26,21 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     //val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
     
-    val fetching = ObservableField<Boolean>()
+    val fetching = ObservableBoolean()
     
     val vanced = ObservableField<DataModel>()
     val microg = ObservableField<DataModel>()
     val music = ObservableField<DataModel>()
+    val manager = ObservableField<DataModel>()
     
     fun fetchData() {
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
             Crowdin.forceUpdate(getApplication())
-            vanced.set(DataModel("vanced.json", getApplication()))
-            microg.set(DataModel("microg.json", getApplication()))
-            music.set(DataModel("music.json", getApplication()))
+            vanced.set(DataModel("vanced", getApplication()))
+            microg.set(DataModel("microg", getApplication()))
+            music.set(DataModel("music", getApplication()))
+            manager.set(DataModel("manager", getApplication()))
             fetching.set(false)
         }
     }

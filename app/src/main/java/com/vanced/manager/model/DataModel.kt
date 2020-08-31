@@ -4,11 +4,19 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getJsonInt
 import com.vanced.manager.utils.InternetTools.getJsonString
+import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import com.vanced.manager.R
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 open class DataModel(
     private val jsonName: String, 
@@ -24,30 +32,54 @@ open class DataModel(
             else -> "com.vanced.android.youtube.music"
         }
     
+    /*
+    private var versionName: String = ""
+    private var installedVersionName: String = ""
+    private var changelog: String = ""
+        
+    private var versionCode: Int = 0
+    private var installedVersionCode: Int = 0
+    */
+    
     open fun isAppInstalled(): Boolean = isPackageInstalled(appPkg, context.packageManager)
     
-    open fun getVersionName(): String = runBlocking { getJsonString("$jsonName.json", "version", context) }
+    open fun getVersionName(): String = runBlocking(Dispatchers.IO) {
+        getJsonString("$jsonName.json", "version", context)
+    }
     
-    open fun getVersionCode(): Int = runBlocking { getJsonInt("$jsonName.json", "versionCode", context) }
+    open fun getVersionCode(): Int = runBlocking(Dispatchers.IO) {
+        getJsonInt("$jsonName.json", "versionCode", context)
+    }
     
-    open fun getInstalledVersionName(): String = getPkgVersion(isAppInstalled(), appPkg)
+    open fun getInstalledVersionName(): String = runBlocking(Dispatchers.IO) {
+        getPkgVersionName(isAppInstalled(), appPkg)
+    }
     
-    open fun getInstalledVersionCode(): Int = runBlocking { getJsonInt("$jsonName.json", "versionCode", context) }
+    open fun getInstalledVersionCode(): Int = runBlocking(Dispatchers.IO) {
+        getPkgVersionCode(isAppInstalled(), appPkg)
+    }
     
     open fun getButtonTxt(): String = compareInt(getInstalledVersionCode(), getVersionCode())
     
     open fun getButtonIcon(): Drawable? = compareIntDrawable(getInstalledVersionCode(), getVersionCode())
+
+    open fun getChangelog(): String = runBlocking(Dispatchers.IO) {
+        if (jsonName == "vanced")
+            getObjectFromJson("$baseUrl/changelog/${getVersionName().replace('.', '_')}.json", "message")
+        else
+            getObjectFromJson("https://ytvanced.github.io/VancedBackend/$jsonName.json", "changelog")
+    }
     
-    private fun getPkgVersion(toCheck: Boolean, pkg: String): String  {
+    private fun getPkgVersionName(toCheck: Boolean, pkg: String): String  {
         return if (toCheck) {
-            context.packageManager.getPackageInfo(pkg, 0).versionName
+            context.packageManager.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
         } else {
             context.getString(R.string.unavailable)
         }
     }
 
     @Suppress("DEPRECATION")
-    private fun getPkgVerCode(toCheck: Boolean, pkg: String): Int {
+    private fun getPkgVersionCode(toCheck: Boolean, pkg: String): Int {
         return if (toCheck) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
                 context.packageManager.getPackageInfo(pkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()

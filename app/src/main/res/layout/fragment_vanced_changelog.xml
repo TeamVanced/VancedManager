@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragments.VancedChangelogFragment">
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
 
-    <TextView
-        android:id="@+id/vanced_changelog"
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+    </data>
+    
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="16sp" />
+        tools:context=".ui.fragments.VancedChangelogFragment">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="@{viewModel.vanced.changelog}"/>
+
+    </LinearLayout>
+    
+</layout>
+

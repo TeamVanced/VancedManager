@@ -12,6 +12,7 @@ import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.android.material.tabs.TabLayout
+import com.vanced.manager.adapter.SectionVariantAdapter
 import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -21,7 +22,6 @@ import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
-import com.vanced.manager.adapter.SectionVariantAdapter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -41,32 +41,26 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
+    
     private val tabListener = object : TabLayout.OnTabSelectedListener {
 
         override fun onTabSelected(tab: TabLayout.Tab) {
-            getDefaultSharedPreferences(this@MainActivity).edit().apply {
+            getDefaultSharedPreferences(this@MainActivity).edit().putString("vanced_variant", 
                 when (tab.position) {
-                    0 -> putString("vanced_variant", "nonroot").apply()
-                    1 -> putString("vanced_variant", "music").apply()
-                    2 -> putString("vanced_variant", "root").apply()
+                    1 -> "music"
+                    2 -> "root"
+                    else -> "nonroot"
                 }
-            }
+            )
 
         }
 
         override fun onTabUnselected(tab: TabLayout.Tab) {
-            TODO("There's nothing to do here actually")
+            return
         }
 
         override fun onTabReselected(tab: TabLayout.Tab) {
-            getDefaultSharedPreferences(this@MainActivity).edit().apply {
-                when (tab.position) {
-                    0 -> putString("vanced_variant", "nonroot").apply()
-                    1 -> putString("vanced_variant", "music").apply()
-                    2 -> putString("vanced_variant", "root").apply()
-                }
-            }
+            return
         }
 
     }
@@ -75,27 +69,26 @@ class MainActivity : AppCompatActivity() {
         setFinalTheme(this)
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        val tabToSelect = 
+        when (getDefaultSharedPreferences(this@MainActivity).getString("vanced_variant", "nonroot")) {
+            "music" -> 1
+            "root" -> 2
+            else -> 0
+        }
 
         with(binding) {
             lifecycleOwner = this@MainActivity
             setSupportActionBar(homeToolbar)
             mainViewpager.adapter = SectionVariantAdapter(this@MainActivity)
+            mainViewpager.setUserInputEnabled(false)
             TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
-                when (position) {
-                    0 -> tab.text = "nonroot"
-                    1 -> tab.text = "Music"
-                    2 -> tab.text = "root"
+                tab.text = when (position) {
+                    1 -> "music"
+                    2 -> "root"
+                    else -> "nonroot"
                 }
             }.attach()
-            
-            when (getDefaultSharedPreferences(this@MainActivity).getString("vanced_variant", "nonroot")) {
-                "nonroot" -> mainTablayout.getTabAt(0)?.select()
-                "music" -> mainTablayout.getTabAt(1)?.select()
-                "root" -> mainTablayout.getTabAt(2)?.select()
-            }
-            
-            mainTablayout.addOnTabSelectedListener(tabListener)
-            
+            mainTablayout.getTabAt(tabToSelect)?.select()
         }
 
         initDialogs()
@@ -104,14 +97,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        binding.mainTablayout.removeOnTabSelectedListener(tabListener)
         Crowdin.unregisterDataLoadingObserver(loadingObserver)
+        binding.mainTablayout.removeOnTabSelectedListener(tabListener)
     }
 
     override fun onResume() {
         setFinalTheme(this)
         super.onResume()
         Crowdin.registerDataLoadingObserver(loadingObserver)
+        binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -14,13 +14,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragments.MicrogChangelogFragment">
+        tools:context=".ui.fragments.MusicChangelogFragment">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="16sp"
-            android:text="@{viewModel.microg.changelog}"/>
+            android:text="@{viewModel.music.changelog}"/>
 
     </LinearLayout>
     
