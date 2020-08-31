@@ -13,7 +13,7 @@
     <string name="downloading_file">جارٍ تنزيل %1$s</string>
     <string name="install">تثبيت</string>
     <string name="installing_app">جاري التثبيت %1$s</string>
-    <string name="installation_wait">لا تترك التطبيق حتى ينتهي التثبيت.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">إعادة التثبيت</string>
     <string name="version_installed">مثبت:</string>
     <string name="latest">آخر:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
     <string name="new_installer_title">استخدام مثبت الروت الجديد (تجريبي)</string>
-    <string name="new_installer_summary">لا تعتمد أداة التثبيت هذه على حالة التحقق من صحة التوقيع</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
     <string name="theme_dark">الموضوع الاسود</string>
@@ -102,4 +102,5 @@
     <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
     <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
