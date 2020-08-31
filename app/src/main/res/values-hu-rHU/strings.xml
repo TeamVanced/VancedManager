@@ -9,11 +9,11 @@
     <string name="title_home">Kezdőlap</string>
     <string name="title_settings">Beállítások</string>
     <!-- Home Page -->
-    <string name="changelogs">Változtatások</string>
+    <string name="changelogs">Változások listája</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="install">Telepítés</string>
     <string name="installing_app">%1$s telepítése</string>
-    <string name="installation_wait">VÁRJ, amíg a telepítés befejeződik.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">Újratelepítés</string>
     <string name="version_installed">Telepítve:</string>
     <string name="latest">Legújabb:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="link_external_browser">A linkek egy külső böngészőben nyílnak meg</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Kinézet</string>
     <string name="theme_follow">Rendszertéma követése</string>
     <string name="theme_dark">Sötét téma</string>
@@ -103,4 +103,5 @@ Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
     <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsold ki a MIUI Optimalizációt és próbáld újra.</string>
     <string name="installation_storage">Tárhely hiba miatt a telepítés nem sikerült.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
