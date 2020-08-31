@@ -13,7 +13,7 @@
     <string name="downloading_file">Downloading %1$s</string>
     <string name="install">ස්ථාපනය</string>
     <string name="installing_app">Installing %1$s</string>
-    <string name="installation_wait">මුදෘකාංගය ස්ථාපනය වන තුරු ඉවත් නොවන්න.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">නැවත් ස්ථාපනය කරන්න</string>
     <string name="version_installed">ස්ථාපනය:</string>
     <string name="latest">අලුත්</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification ststus</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
     <string name="installation_storage">Installation failed due to a storage error.</string>
     <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
