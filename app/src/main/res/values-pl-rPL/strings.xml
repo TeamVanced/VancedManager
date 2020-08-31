@@ -13,7 +13,7 @@
     <string name="downloading_file">Pobieranie %1$s</string>
     <string name="install">Zainstaluj</string>
     <string name="installing_app">Instalowanie %1$s</string>
-    <string name="installation_wait">NIE opuszczaj aplikacji aż do zakończenia instalacji.</string>
+    <string name="installation_wait">Poczekaj na zakończenie instalacji.</string>
     <string name="button_reinstall">Przeinstaluj</string>
     <string name="version_installed">Zainstalowano:</string>
     <string name="latest">Najnowsza:</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
     <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
     <string name="modapk_missing">Brak czarnej/ciemnej apk w instalatorze. To nie powinno się zdarzyć, wyczyść dane menedżera</string>
+    <string name="path_missing">Ścieżka instalacji Youtube nie jest dostępna lub brakuje po instalacji systemowego split</string>
 </resources>
