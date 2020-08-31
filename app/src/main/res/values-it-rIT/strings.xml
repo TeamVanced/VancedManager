@@ -13,7 +13,7 @@
     <string name="downloading_file">Download in corso di %1$s</string>
     <string name="install">Installa</string>
     <string name="installing_app">Installazione in corso di %1$s</string>
-    <string name="installation_wait">NON USCIRE dall\'app fino al termine dell\'installazione.</string>
+    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">Reinstalla</string>
     <string name="version_installed">Versione installata:</string>
     <string name="latest">Ultima versione:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
     <string name="link_external_browser">I link verranno aperti in un browser esterno</string>
     <string name="new_installer_title">Usa la nuova installazione root (Sperimentale)</string>
-    <string name="new_installer_summary">Questa installazione non dipende dallo stato della Firma di verifica</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Utilizza quello di sistema</string>
     <string name="theme_dark">Tema scuro</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Installazione non riuscita, le ottimizzazioni di MIUI sono attivate. Disattiva le ottimizzazioni di MIUI, poi riprova.</string>
     <string name="installation_storage">Installazione non riuscita, errore dello spazio di archiviazione.</string>
     <string name="modapk_missing">L\'apk nera/scura manca dal programma di installazione. Non dovrebbe succedere, pulisci i dati dell\'app Manager</string>
+    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
 </resources>
