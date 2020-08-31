@@ -13,7 +13,7 @@
     <string name="downloading_file">Загрузка %1$s</string>
     <string name="install">Установить</string>
     <string name="installing_app">Установка %1$s</string>
-    <string name="installation_wait">НЕ покидайте приложение пока установка не закончится.</string>
+    <string name="installation_wait">Пожалуйста, дождитесь окончания установки.</string>
     <string name="button_reinstall">Переустановить</string>
     <string name="version_installed">Установлена:</string>
     <string name="latest">Последняя:</string>
@@ -101,4 +101,5 @@
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
     <string name="installation_storage">Установка не была выполнена, так как произошла ошибка с доступом к памяти.</string>
     <string name="modapk_missing">Black/Dark apk отсутствует в установщике, этого не должно происходить, пожалуйста, очистите данные приложения</string>
+    <string name="path_missing">Путь для установки стандартного Youtube недоступен или отсутствует после раздельной установки</string>
 </resources>
