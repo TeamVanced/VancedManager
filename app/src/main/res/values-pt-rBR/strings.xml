@@ -13,7 +13,7 @@
     <string name="downloading_file">Baixando %1$s</string>
     <string name="install">Instalar</string>
     <string name="installing_app">Instalando %1$s</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">Aguarde até que a instalação terminar.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais recente:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Os links serão abertos nas abas personalizadas do Chrome</string>
     <string name="link_external_browser">Os links serão abertos em um navegador externo</string>
     <string name="new_installer_title">Usar novo instalador root (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
+    <string name="new_installer_summary">Este instalador não depende do status de verificação de assinatura</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Padrão do sistema</string>
     <string name="theme_dark">Escuro</string>
@@ -101,5 +101,5 @@
     <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
     <string name="installation_storage">A instalação falhou devido a um erro do armazenamento.</string>
     <string name="modapk_missing">Black/Dark apk está ausente do instalador. Isso não deve acontecer.Por favor, limpe os dados do aplicativo</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">O Caminho de Instalação do YouTube Stock Não Está Acessível Ou Está Ausente Após a Instalação Stock Dividida</string>
 </resources>
