@@ -13,7 +13,7 @@
     <string name="downloading_file">Преузимање %1$s</string>
     <string name="install">Инсталација</string>
     <string name="installing_app">Инсталирање %1$s</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">Молимо сачекајте док се инсталација не заврши.</string>
     <string name="button_reinstall">Реинсталирај</string>
     <string name="version_installed">Инсталирана:</string>
     <string name="latest">Најновија:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="link_external_browser">Линкови ће бити отвотрни у екстерном претраживачу</string>
     <string name="new_installer_title">Користи нови root installer апликацију ( Експериментално)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
+    <string name="new_installer_summary">Ова апликација за инсталацију не зависи од стања верификационог потписа</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Као у систему</string>
     <string name="theme_dark">Тамна Тема</string>
@@ -101,5 +101,5 @@
     <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
     <string name="installation_storage">Инсталација неуспешна услед грешке у меоријском простору.</string>
     <string name="modapk_missing">Тамна/Црна \"apk\" недостаје у инсталационим датотекама. Ово не би требало да се дешава, очистите податке у менаџеру</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">Путања до инсталиране \"Stock Youtube \" апликације није доступна или недостаје након \"Stock Split \" инсталације</string>
 </resources>
