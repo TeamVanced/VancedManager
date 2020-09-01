@@ -101,5 +101,5 @@
     <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a zkuste to znovu.</string>
     <string name="installation_storage">Instalace se nezdařila z důvodu chyby v úložišti.</string>
     <string name="modapk_missing">V instalačním souboru chybí black/dark.apk. To by se nemělo stát. Vymažte prosím data aplikace Vanced Manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">Cesta instalace výchozí aplikace YouTube není k dispozici nebo chybí po instalaci rozdělení systému</string>
 </resources>
