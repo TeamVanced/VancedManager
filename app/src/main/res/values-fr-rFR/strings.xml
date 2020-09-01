@@ -101,5 +101,5 @@
     <string name="installation_miui">L\'installation a échouée car l\'optimisation MIUI est activée. Désactivez l\'optimisation MIUI, puis réessayez.</string>
     <string name="installation_storage">L\'opération à échouée, une erreur de stockage s\'est produite.</string>
     <string name="modapk_missing">L\'apk Black/Dark est absent de l\'installateur, cela ne devrait pas se produire, veuillez effacer les données de l\'application Vanced Manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">Le chemin d\'installation de YouTube n\'est pas accessible ou manquant après l\'installation de Stock Split</string>
 </resources>
