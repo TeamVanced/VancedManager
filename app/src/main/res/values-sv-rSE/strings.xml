@@ -101,5 +101,5 @@
     <string name="installation_miui">Installationen misslyckades eftersom MIUI-optimering är aktiverad. Inaktivera MIUI-optimering och försök igen.</string>
     <string name="installation_storage">Åtgärden misslyckades på grund av ett lagringsfel.</string>
     <string name="modapk_missing">Svart/Mörk apk saknas från installeringen, Detta bör inte hända, vänligen rensa appdata från manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">Stock Youtube installationsvägen är inte tillgänglig eller saknas efter att ha delat upp installationen</string>
 </resources>
