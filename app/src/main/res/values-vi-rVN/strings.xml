@@ -13,7 +13,7 @@
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
     <string name="installing_app">Đang cài đặt %1$s</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">Vui lòng đợi cho đến khi quá trình cài đặt kết thúc.</string>
     <string name="button_reinstall">Cài đặt lại</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Các đường link sẽ mở trong Custom Tabs của Chrome</string>
     <string name="link_external_browser">Các đường link sẽ mở trong một trình duyệt ngoài</string>
     <string name="new_installer_title">Sử dụng trình cài đặt root mới (Thử nghiệm)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
+    <string name="new_installer_summary">Trình cài đặt này không phụ thuộc vào trạng thái Xác minh Chữ ký</string>
     <string name="theme">Nền</string>
     <string name="theme_follow">Theo Hệ Thống</string>
     <string name="theme_dark">Nền Tối</string>
@@ -101,5 +101,5 @@
     <string name="installation_miui">Cài đặt thất bại do Tối ưu hóa MIUI được kích hoạt. Vô hiệu hóa Tối ưu hóa MIUI rồi thử lại.</string>
     <string name="installation_storage">Cài đặt thất bại do lỗi bộ nhớ.</string>
     <string name="modapk_missing">Thiếu Black/Dark apk trong trình cài đặt, Điều này không nên xảy ra, vui lòng xoá dữ liệu của Vanced Manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">Đường dẫn cài đặt Stock Youtube không thể truy cập được hoặc bị thiếu sau khi cài đặt Stock Split</string>
 </resources>
