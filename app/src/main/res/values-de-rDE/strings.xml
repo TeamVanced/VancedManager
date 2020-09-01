@@ -13,7 +13,7 @@
     <string name="downloading_file">%1$s wird heruntergeladen</string>
     <string name="install">Installieren</string>
     <string name="installing_app">%1$s wird installiert</string>
-    <string name="installation_wait">Bitte warten, bis die Installation beendet ist.</string>
+    <string name="installation_wait">Bitte warte, bis die Installation abgeschlossen ist.</string>
     <string name="button_reinstall">Neu installieren</string>
     <string name="version_installed">Installiert:</string>
     <string name="latest">Neueste:</string>
@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="link_external_browser">Links werden in einem externen Browser geöffnet</string>
     <string name="new_installer_title">Neuen Root-Installer verwenden (Experimentell)</string>
-    <string name="new_installer_summary">Esta instalación no depende del estado actual de la verificación de firma</string>
+    <string name="new_installer_summary">Dieser Installer hängt nicht vom Status der Signaturüberprüfung ab</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Folge Systemeinstellung</string>
     <string name="theme_dark">Dunkles Theme</string>
