@@ -13,7 +13,7 @@
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
     <string name="installing_app">Встановлення %1$s</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">Будь ласка, дочекайтеся закінчення установки.</string>
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
@@ -45,8 +45,8 @@
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
-    <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
+    <string name="new_installer_title">Використовуйте новий root інсталятор (експериментальний)</string>
+    <string name="new_installer_summary">Цей інсталятор не залежить від статусу \"Перевірка підпису завжди вірна\"</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
@@ -64,7 +64,7 @@
     <string name="hold_on">Зупинись!</string>
     <string name="magisk_vanced">Схоже, ви використовуєте Magisk/TWRP-версію Vanced, підтримка якої була припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
     <string name="miui_one_title">Виявлено користувача MIUI!</string>
-    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI в налаштуваннях розробника. (Ви можете проігнорувати це попередження, якщо ви використовуєте прошивку xiaomi.eu на версії 20.2.20+)</string>
     <string name="error">Помилка</string>
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vanced.app, Vanced Discord сервера або Vanced GitHub</string>
     <string name="success">Успіх!</string>
@@ -85,21 +85,21 @@
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="chown_fail">Не вдалося Chown Apk для власника системи, спробуйте ще раз</string>
     <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
     <string name="files_missing_va">Файли відсутні, Невдале завантаження?</string>
-    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="ifile_missing">Dark/Black.apk не зчитується (доступ до сховища був заблокований?) або файл відсутній</string>
     <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
     <string name="installation_conflict">Помилка встановлення, оскільки додаток конфліктує із уже встановленою програмою. Видаліть поточну версію Vanced, а потім спробуйте знову.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
+    <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
-    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
+    <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
     <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
     <string name="modapk_missing">Чорний/Темний apk відсутній, Цього не повинно статися, будь ласка, очистіть дані програми від менеджера</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">Шлях для встановлення звичайного Youtube не є допустимим, або відсутній після того, як був викорастаний SAI</string>
 </resources>
