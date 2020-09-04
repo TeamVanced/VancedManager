@@ -69,6 +69,7 @@
     <string name="security_context">vanced.app、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="success">成功！</string>
     <string name="vanced_installed">Vanced のインストールに成功しました。今すぐ開きますか？</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">開く</string>
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">ライト + ダーク</string>
     <string name="next">次へ</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager 開発</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
     <!-- Error messages -->
