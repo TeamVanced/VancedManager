@@ -69,6 +69,7 @@
     <string name="security_context">Σιγουρευτείτε πως κατεβάσατε την εφαρμογή από το vanced.app, τον διακομιστή Discord του Vanced ή το GitHub του Vanced</string>
     <string name="success">Επιτυχία!</string>
     <string name="vanced_installed">Το Vanced έχει εγκατασταθεί επιτυχώς! Εκκίνηση τώρα;</string>
+    <string name="music_installed">Η εγκατάσταση του Vanced Music ολοκληρώθηκε επιτυχώς! Εκκίνηση τώρα;</string>
     <string name="launch">Εκκίνηση</string>
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Ανοιχτόχρωμο + Σκούροχρωμο</string>
     <string name="next">Επόμενο</string>
     <!-- About Page -->
-    <string name="manager_dev">Δημιουργός Διαχειριστή Vanced</string>
+    <string name="manager_dev">Προγραμματιστές Διαχειριστή Vanced</string>
     <string name="sources">Πηγές</string>
     <string name="vanced_team">Η ομάδα του Vanced</string>
     <!-- Error messages -->
