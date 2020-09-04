@@ -69,6 +69,7 @@
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application sur vanced.app, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="success">Succès!</string>
     <string name="vanced_installed">Vanced a été installé avec succès ! Ouvrir maintenant ?</string>
+    <string name="music_installed">Vanced Music a été installé avec succès ! Voulez-vous l\'ouvrir maintenant ?</string>
     <string name="launch">Ouvrir</string>
     <string name="welcome">Bienvenue</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Clair + Sombre</string>
     <string name="next">Suivant</string>
     <!-- About Page -->
-    <string name="manager_dev">Développeur du Manager</string>
+    <string name="manager_dev">Manager pour les développeurs</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
     <!-- Error messages -->
