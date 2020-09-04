@@ -50,6 +50,7 @@
                     android:layout_marginStart="@dimen/stdp"
                     android:layout_marginTop="@dimen/stdp"
                     android:layout_marginEnd="@dimen/stdp"
+                    android:visibility="@{viewModel.variant.equals(`nonroot`) ? View.VISIBLE : View.GONE}"
                     bind:viewModel="@{viewModel}" />
 
                 <include
@@ -60,6 +61,7 @@
                     android:layout_marginStart="@dimen/stdp"
                     android:layout_marginTop="@dimen/stdp"
                     android:layout_marginEnd="@dimen/stdp"
+                    android:visibility="@{viewModel.variant.equals(`nonroot`) ? View.VISIBLE : View.GONE}"
                     bind:viewModel="@{viewModel}" />
 
                 <include

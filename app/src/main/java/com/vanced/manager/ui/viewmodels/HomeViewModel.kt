@@ -25,6 +25,7 @@ import kotlinx.coroutines.launch
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     //val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
+    var variant = "nonroot"
     
     val fetching = ObservableBoolean()
     
@@ -37,10 +38,10 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
             Crowdin.forceUpdate(getApplication())
-            vanced.set(DataModel("vanced", getApplication()))
-            microg.set(DataModel("microg", getApplication()))
-            music.set(DataModel("music", getApplication()))
-            manager.set(DataModel("manager", getApplication()))
+            vanced.set(DataModel("vanced", variant, getApplication()))
+            microg.set(DataModel("microg", context = getApplication()))
+            music.set(DataModel("music", context = getApplication()))
+            manager.set(DataModel("manager", context = getApplication()))
             fetching.set(false)
         }
     }
@@ -55,7 +56,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(getApplication(), intent, null)
         } catch (e: ActivityNotFoundException) {
-            Toast.makeText(getApplication(), "App not installed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(getApplication(), "Error", Toast.LENGTH_SHORT).show()
         }
     }
 

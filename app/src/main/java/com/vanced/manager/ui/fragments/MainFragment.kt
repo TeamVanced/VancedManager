@@ -43,7 +43,7 @@ class MainFragment : Fragment() {
         requireActivity().findViewById<MaterialToolbar>(R.id.home_toolbar).setupWithNavController(navHost, appBarConfiguration)
         val tabLayout = requireActivity().findViewById<TabLayout>(R.id.main_tablayout)
         
-        navHost?.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
+        navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
             with (requireActivity()) {
                 val tabHide = AnimationUtils.loadAnimation(this, R.anim.tablayout_exit)
@@ -71,6 +71,10 @@ class MainFragment : Fragment() {
     
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            android.R.id.home -> {
+                navHost.popBackStack()
+                return true
+            }
             R.id.toolbar_about -> {
                 navHost.navigate(R.id.toAboutFragment)
                 return true

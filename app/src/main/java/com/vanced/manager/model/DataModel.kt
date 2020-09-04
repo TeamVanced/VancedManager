@@ -19,17 +19,16 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 open class DataModel(
-    private val jsonName: String, 
+    private val jsonName: String,
+    private val variant: String = "nonroot",
     private val context: Context
 ) {
-    
-    private val variant = getDefaultSharedPreferences(context).getString("vanced_variant", "nonroot")
     
     private val appPkg = 
         when (jsonName) {
             "vanced" -> if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube"
             "microg" -> "com.mgoogle.android.gms"
-            else -> "com.vanced.android.youtube.music"
+            else -> "com.vanced.android.apps.youtube.music"
         }
     
     /*
@@ -64,10 +63,11 @@ open class DataModel(
     open fun getButtonIcon(): Drawable? = compareIntDrawable(getInstalledVersionCode(), getVersionCode())
 
     open fun getChangelog(): String = runBlocking(Dispatchers.IO) {
-        if (jsonName == "vanced")
-            getObjectFromJson("$baseUrl/changelog/${getVersionName().replace('.', '_')}.json", "message")
-        else
-            getObjectFromJson("https://ytvanced.github.io/VancedBackend/$jsonName.json", "changelog")
+        when (jsonName) {
+            "vanced" -> getObjectFromJson("$baseUrl/changelog/${getVersionName().replace('.', '_')}.json", "message")
+            "music" -> getJsonString("$jsonName.json", "changelog", context)
+            else -> getObjectFromJson("https://ytvanced.github.io/VancedBackend/$jsonName.json", "changelog")
+        }
     }
     
     private fun getPkgVersionName(toCheck: Boolean, pkg: String): String  {

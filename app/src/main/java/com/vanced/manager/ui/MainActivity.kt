@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     2 -> "root"
                     else -> "nonroot"
                 }
-            )
+            ).apply()
 
         }
 
@@ -68,27 +68,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setFinalTheme(this)
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        val tabToSelect = 
-        when (getDefaultSharedPreferences(this@MainActivity).getString("vanced_variant", "nonroot")) {
-            "music" -> 1
-            "root" -> 2
-            else -> 0
-        }
-
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main) 
+        
         with(binding) {
             lifecycleOwner = this@MainActivity
             setSupportActionBar(homeToolbar)
             mainViewpager.adapter = SectionVariantAdapter(this@MainActivity)
             mainViewpager.setUserInputEnabled(false)
             TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
-                tab.text = when (position) {
-                    1 -> "music"
-                    2 -> "root"
-                    else -> "nonroot"
-                }
+                tab.text = if (position == 1) "root" else "nonroot"
             }.attach()
-            mainTablayout.getTabAt(tabToSelect)?.select()
+            
+            mainTablayout.getTabAt(
+                if (getDefaultSharedPreferences(this@MainActivity).getString("vanced_variant", "nonroot") == "root")
+                    1
+                else
+                    0
+            )?.select()
+            
         }
 
         initDialogs()
@@ -114,8 +111,7 @@ class MainActivity : AppCompatActivity() {
         }
         when (item.itemId) {
             android.R.id.home -> {
-                onBackPressed()
-                return true
+                return false
             }
             R.id.toolbar_about -> {
                 return false

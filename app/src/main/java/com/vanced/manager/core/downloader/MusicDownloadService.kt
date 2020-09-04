@@ -20,43 +20,44 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MicrogDownloadService: Service() {
+class MusicDownloadService: Service() {
 
     //private var downloadId: Long = 0
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
-        downloadMicrog()
+        downloadMusic()
         stopSelf()
         return START_NOT_STICKY
     }
 
-    private fun downloadMicrog() {
+    private fun downloadMusic() {
         CoroutineScope(Dispatchers.IO).launch {
-            val url = getJsonString("microg.json", "url", this@MicrogDownloadService)
+            val version = getJsonString("music.json", "version", this@MusicDownloadService)
+            val url = "https://vanced.app/api/v1/music/v$version.apk"
 
-            //downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
+            //downloadId = download(url, "apk", "music.apk", this@MusicDownloadService)
 
-            PRDownloader.download(url, getExternalFilesDir("apk")?.path, "microg.apk")
+            PRDownloader.download(url, getExternalFilesDir("apk")?.path, "music.apk")
                 .build()
                 .setOnStartOrResumeListener { installing = true }
                 .setOnProgressListener { progress ->
                     val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
+                    localBroadcastManager.sendBroadcast(Intent(HomeFragment.MUSIC_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
-                        val intent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
-                        intent.putExtra("path", "${getExternalFilesDir("apk")}/microg.apk")
-                        intent.putExtra("pkg", "com.mgoogle.android.gms")
-                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_INSTALLING))
+                        val intent = Intent(this@MusicDownloadService, AppInstaller::class.java)
+                        intent.putExtra("path", "${getExternalFilesDir("apk")}/music.apk")
+                        intent.putExtra("pkg", "com.vanced.android.apps.youtube.music")
+                        localBroadcastManager.sendBroadcast(Intent(HomeFragment.MUSIC_INSTALLING))
                         startService(intent)
                     }
 
                     override fun onError(error: Error?) {
                         installing = false
-                        Toast.makeText(this@MicrogDownloadService, getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MusicDownloadService, getString(R.string.error_downloading, "music"), Toast.LENGTH_SHORT).show()
                     }
                 })
 
@@ -68,10 +69,10 @@ class MicrogDownloadService: Service() {
     private val receiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
-                //prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
-                //cancelNotif(channel, this@MicrogDownloadService)
-                val bIntent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
-                bIntent.putExtra("path", "${getExternalFilesDir("apk")}/microg.apk")
+                //prefs?.edit()?.putBoolean("isMusicDownloading", false)?.apply()
+                //cancelNotif(channel, this@MusicDownloadService)
+                val bIntent = Intent(this@MusicDownloadService, AppInstaller::class.java)
+                bIntent.putExtra("path", "${getExternalFilesDir("apk")}/music.apk")
                 bIntent.putExtra("pkg", "com.mgoogle.android.gms")
                 startService(bIntent)
             }

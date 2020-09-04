@@ -98,7 +98,7 @@ class VancedDownloadService: Service() {
         PRDownloader
             .download(url, getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
             .build()
-            .setOnStartOrResumeListener{ installing = true }
+            .setOnStartOrResumeListener { installing = true }
             .setOnProgressListener { progress ->
                 val mProgress = progress.currentBytes * 100 / progress.totalBytes
                 localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
@@ -131,8 +131,16 @@ class VancedDownloadService: Service() {
                     }
                 }
                 override fun onError(error: Error?) {
-                    installing = false
-                    Toast.makeText(this@VancedDownloadService, getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
+                    if (type == "lang") {
+                        count++
+                        if (count < lang?.count()!!)
+                            downloadSplits("lang")
+                        else
+                            prepareInstall(variant!!)
+                    } else {
+                        installing = false
+                        Toast.makeText(this@VancedDownloadService, getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
+                    }
                 }
             })
         }

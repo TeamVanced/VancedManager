@@ -11,7 +11,7 @@ import java.io.InputStream
 class AppInstaller: Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        val callbackIntent = Intent(applicationContext, AppInstallerService::class.java)
+        val callbackIntent = Intent(applicationContext, AppInstallerService::class.java).putExtra("app", if (intent.getStringExtra("pkg").contains("mgoogle")) "microg" else "music"))
         val pendingIntent = PendingIntent.getService(applicationContext, 0, callbackIntent, 0)
         val packageInstaller = packageManager.packageInstaller
         val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)

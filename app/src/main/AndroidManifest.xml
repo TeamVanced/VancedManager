@@ -78,6 +78,7 @@
         <service android:name=".core.installer.AppInstaller" />
         <service android:name=".core.downloader.VancedDownloadService" />
         <service android:name=".core.downloader.MicrogDownloadService" />
+        <service android:name=".core.downloader.MusicDownloadService" />
 
     </application>
 

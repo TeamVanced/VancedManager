@@ -132,10 +132,22 @@ object DialogContainer {
             setTitle(activity.getString(R.string.success))
             setMessage(activity.getString(R.string.vanced_installed))
             setPositiveButton(activity.getString(R.string.launch)) { _, _ ->
-                run {
-                    startActivity(activity, intent, null)
-                    activity.finish()
-                }
+                startActivity(activity, intent, null)
+            }
+            setNegativeButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            create()
+            show()
+        }
+    }
+    
+    fun launchMusic(activity: Activity) {
+        val intent = Intent()
+        intent.component = ComponentName("com.vanced.android.youtube.music", "com.vanced.android.youtube.music.MusicActivity")
+        MaterialAlertDialogBuilder(activity).apply {
+            setTitle(activity.getString(R.string.success))
+            setMessage(activity.getString(R.string.music_installed))
+            setPositiveButton(activity.getString(R.string.launch)) { _, _ ->
+                startActivity(activity, intent, null)
             }
             setNegativeButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()

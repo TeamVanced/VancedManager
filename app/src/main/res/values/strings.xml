@@ -74,6 +74,7 @@
     <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Success!</string>
     <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Open</string>
     <string name="welcome">Welcome</string>
 
@@ -88,7 +89,7 @@
     <string name="next">Next</string>
 
     <!-- About Page -->
-    <string name="manager_dev">Manager Dev</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Vanced Team</string>
 
