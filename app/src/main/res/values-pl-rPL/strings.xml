@@ -69,6 +69,7 @@
     <string name="security_context">Upewnij się, że pobrałeś aplikację z vanced.app, serwera Vanced Discord lub GitHub</string>
     <string name="success">Sukces!</string>
     <string name="vanced_installed">Vanced został pomyślnie zainstalowany! Uruchomić teraz?</string>
+    <string name="music_installed">Vanced Music został pomyślnie zainstalowany! Uruchomić teraz?</string>
     <string name="launch">Uruchom</string>
     <string name="welcome">Witaj</string>
     <!-- Install Page -->
