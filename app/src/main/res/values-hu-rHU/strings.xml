@@ -69,6 +69,7 @@
     <string name="security_context">Bizonyosodj meg róla, hogy az alkalmazást a vanced.app oldalról, a Vanced Discord szerverről vagy a Vanced GitHub-ról töltötted le</string>
     <string name="success">Kész!</string>
     <string name="vanced_installed">Vanced sikeresen telepítve! Elindítod most?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Megnyitás</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Világos + Fekete</string>
     <string name="next">Következő</string>
     <!-- About Page -->
-    <string name="manager_dev">Vezető fejlesztő</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">Források</string>
     <string name="vanced_team">Vanced csapat</string>
     <!-- Error messages -->
