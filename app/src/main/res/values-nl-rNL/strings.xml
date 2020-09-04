@@ -69,6 +69,7 @@
     <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vanced.app, de Vanced Discord server of de Vanced GitHub</string>
     <string name="success">Gelukt!</string>
     <string name="vanced_installed">Vanced is succesvol geïnstalleerd! Nu starten?</string>
+    <string name="music_installed">Vanced Music is met succes geïnstalleerd! Nu openen?</string>
     <string name="launch">Openen</string>
     <string name="welcome">Welkom</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Licht + Donker</string>
     <string name="next">Volgende</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Dev</string>
+    <string name="manager_dev">Manager-ontwikkelaars</string>
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced-team</string>
     <!-- Error messages -->
