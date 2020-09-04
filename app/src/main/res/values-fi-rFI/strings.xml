@@ -69,6 +69,7 @@
     <string name="security_context">Varmista, että latasit sovelluksen vanced.app -sivustolta, Vancedin Discord-palvelimelta tai Vancedin GitHubista</string>
     <string name="success">Onnistui!</string>
     <string name="vanced_installed">Vanced on asennettu onnistuneesti! Avaa nyt?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Avaa</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Vaalea + Tumma</string>
     <string name="next">Seuraava</string>
     <!-- About Page -->
-    <string name="manager_dev">Managerin kehittäjä</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
