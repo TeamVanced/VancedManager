@@ -69,6 +69,7 @@
     <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">সফলতা!</string>
     <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Open</string>
     <string name="welcome">স্বাগতম</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">আলো + অন্ধকার</string>
     <string name="next">পরেরটা</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Dev</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">সূত্রসমূহ</string>
     <string name="vanced_team">ভান্সড দল</string>
     <!-- Error messages -->
