@@ -69,6 +69,7 @@
     <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vanced.app, server Discord Vanced hoặc Github Vanced</string>
     <string name="success">Thành công!</string>
     <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Mở</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Sáng + Tối</string>
     <string name="next">Tiếp theo</string>
     <!-- About Page -->
-    <string name="manager_dev">Nhà phát triển Manager</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">Nguồn</string>
     <string name="vanced_team">Đội ngũ Vanced</string>
     <!-- Error messages -->
