@@ -17,7 +17,7 @@ class AppInstallerService: Service() {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Log.d(TAG, "Requesting user confirmation for installation")
-                localBroadcastManager.sendBroadcast(Intent(if (intent.getStringExtra("app")) HomeFragment.MICROG_INSTALLING else HomeFragment.MUSIC_INSTALLING))
+                localBroadcastManager.sendBroadcast(Intent(if (intent.getStringExtra("app") == "microg") HomeFragment.MICROG_INSTALLING else HomeFragment.MUSIC_INSTALLING))
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
@@ -30,7 +30,7 @@ class AppInstallerService: Service() {
                 Log.d(TAG, "Installation succeed")
                 with(localBroadcastManager) {
                     sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                    sendBroadcast(Intent(if (intent.getStringExtra("app")) HomeFragment.MICROG_INSTALLING else HomeFragment.MUSIC_INSTALLING))
+                    sendBroadcast(Intent(if (intent.getStringExtra("app") == "microg") HomeFragment.MICROG_INSTALLING else HomeFragment.MUSIC_INSTALLING))
                 }
             }
             else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
