@@ -69,6 +69,7 @@
     <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">نجاح!</string>
     <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Open</string>
     <string name="welcome">مرحبا
 اهلا</string>
@@ -82,7 +83,7 @@
     <string name="install_light_dark">ابيض + داكن</string>
     <string name="next">ثانية</string>
     <!-- About Page -->
-    <string name="manager_dev">مدير ديف</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">مصادر</string>
     <string name="vanced_team">فريق فانسد</string>
     <!-- Error messages -->
