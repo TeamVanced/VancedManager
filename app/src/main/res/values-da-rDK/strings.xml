@@ -69,6 +69,7 @@
     <string name="security_context">Venligst sørg for kun at have downloaded appen fra vanced.app, Vanced Discord serveren eller Vanced GitHub siden</string>
     <string name="success">Succes!</string>
     <string name="vanced_installed">Vanced er nu installeret! Åben appen?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Åbn</string>
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Lyst + Mørkt</string>
     <string name="next">Næste</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager udvikler</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">Kilder</string>
     <string name="vanced_team">Vanced holdet</string>
     <!-- Error messages -->
