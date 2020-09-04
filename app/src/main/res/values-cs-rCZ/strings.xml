@@ -69,6 +69,7 @@
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu</string>
     <string name="success">Hotovo!</string>
     <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji otevřít?</string>
+    <string name="music_installed">Aplikace Vanced Music byla úspěšně nainstalována! Chcete ji otevřít?</string>
     <string name="launch">Otevřít</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Světlý + tmavý</string>
     <string name="next">Další</string>
     <!-- About Page -->
-    <string name="manager_dev">Vývojář aplikace</string>
+    <string name="manager_dev">Vývojáři aplikace</string>
     <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tým Vanced</string>
     <!-- Error messages -->
