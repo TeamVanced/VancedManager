@@ -69,6 +69,7 @@
     <string name="security_context">請確保您從 vanced.app、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="success">成功！</string>
     <string name="vanced_installed">成功安裝 Vanced ，現在啟動嗎？</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">啟動</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">淺色 + 深色</string>
     <string name="next">下一步</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager 開發者</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">原始碼</string>
     <string name="vanced_team">Vanced 團隊</string>
     <!-- Error messages -->
