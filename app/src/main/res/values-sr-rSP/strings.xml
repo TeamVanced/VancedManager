@@ -69,6 +69,7 @@
     <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта, Vanced Discord сервера или Vanced GitHub-а</string>
     <string name="success">Успешно!</string>
     <string name="vanced_installed">Vanced је успешно инсталиран! Желите да га одмах отворите?</string>
+    <string name="music_installed">Vanced Music је успешно инсталиран! Желите да га одмах отворите?</string>
     <string name="launch">Отвори</string>
     <string name="welcome">Добро дошли</string>
     <!-- Install Page -->
