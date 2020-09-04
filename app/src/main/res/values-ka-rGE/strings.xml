@@ -69,6 +69,7 @@
     <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">წარმატება!</string>
     <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Open</string>
     <string name="welcome">მოგესალმებით</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">ღია + მუქი</string>
     <string name="next">შემდეგი</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager-ის დეველოპერი</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">წყაროები</string>
     <string name="vanced_team">Vanced-ის გუნდი</string>
     <!-- Error messages -->
