@@ -69,6 +69,7 @@
     <string name="security_context">항상 vanced.app, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 앱을 다운로드했는지 확인해주세요.</string>
     <string name="success">성공!</string>
     <string name="vanced_installed">Vanced가 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">열기</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">라이트 + 다크</string>
     <string name="next">다음</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager 개발자</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">소스</string>
     <string name="vanced_team">Vanced 팀</string>
     <!-- Error messages -->
