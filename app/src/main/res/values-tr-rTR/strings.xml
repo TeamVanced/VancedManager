@@ -69,6 +69,7 @@
     <string name="security_context">Uygulamayı vanced.app, Vanced Discord sunucusu veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
     <string name="success">Başarılı!</string>
     <string name="vanced_installed">Vanced başarıyla kuruldu! Şimdi açılsın mı?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Aç</string>
     <string name="welcome">Hoş geldin</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Açık + Koyu</string>
     <string name="next">Sonraki</string>
     <!-- About Page -->
-    <string name="manager_dev">Yönetici Geliştirme </string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->
