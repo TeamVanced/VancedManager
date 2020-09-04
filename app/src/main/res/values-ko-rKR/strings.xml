@@ -13,7 +13,7 @@
     <string name="downloading_file">%1$s 다운로드 중</string>
     <string name="install">설치</string>
     <string name="installing_app">%1$s 설치 중</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">설치가 완료될 때까지 기다려주세요.</string>
     <string name="button_reinstall">재설치</string>
     <string name="version_installed">설치됨:</string>
     <string name="latest">최신:</string>
