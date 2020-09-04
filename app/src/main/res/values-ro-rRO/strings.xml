@@ -69,6 +69,7 @@
     <string name="security_context">Asigură-te că ai descărcat aplicația de pe vanced.app, serverul Discord Vanced sau GitHub Vanced</string>
     <string name="success">Succes!</string>
     <string name="vanced_installed">Vanced a fost instalat cu succes! Deschideți acum?</string>
+    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">Deschideți</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
@@ -81,7 +82,7 @@
     <string name="install_light_dark">Luminos + Întunecat</string>
     <string name="next">Continuare</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager dezvoltator</string>
+    <string name="manager_dev">Manager Devs</string>
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
