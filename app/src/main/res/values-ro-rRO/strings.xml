@@ -69,7 +69,7 @@
     <string name="security_context">Asigură-te că ai descărcat aplicația de pe vanced.app, serverul Discord Vanced sau GitHub Vanced</string>
     <string name="success">Succes!</string>
     <string name="vanced_installed">Vanced a fost instalat cu succes! Deschideți acum?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Music a fost instalat cu succes! Deschizi acum?</string>
     <string name="launch">Deschideți</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
