@@ -69,7 +69,7 @@
     <string name="security_context">Verifique se você baixou o aplicativo em Vanced.app, Servidor do Discord ou GitHub</string>
     <string name="success">Sucesso!</string>
     <string name="vanced_installed">O Vanced foi instalado com sucesso. Deseja iniciá-lo agora?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
+    <string name="music_installed">O Vanced Music foi instalado com sucesso! Abrir agora?</string>
     <string name="launch">Abrir</string>
     <string name="welcome">Bem-vindo</string>
     <!-- Install Page -->
@@ -82,7 +82,7 @@
     <string name="install_light_dark">Claro + Escuro</string>
     <string name="next">Próximo</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">Gerenciador de Desenvolvedor</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipe Vanced</string>
     <!-- Error messages -->
