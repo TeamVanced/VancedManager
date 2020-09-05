@@ -82,7 +82,7 @@
     <string name="install_light_dark">Светлая + Тёмная</string>
     <string name="next">Далее</string>
     <!-- About Page -->
-    <string name="manager_dev">Разработчики программы</string>
+    <string name="manager_dev">Разработчики Менеджера</string>
     <string name="sources">Исходники</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
