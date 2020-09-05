@@ -69,7 +69,7 @@
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vanced.app, Vanced Discord сервера або Vanced GitHub</string>
     <string name="success">Успіх!</string>
     <string name="vanced_installed">Vanced був успішно встановлений! Відкрити зараз?</string>
-    <string name="music_installed">Vanced Music успешно установлен! Открыть сейчас?</string>
+    <string name="music_installed">Vanced Music успішно встановлений! Відкрити зараз?</string>
     <string name="launch">Відкрити</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
@@ -82,7 +82,7 @@
     <string name="install_light_dark">Світла + Темна</string>
     <string name="next">Далі</string>
     <!-- About Page -->
-    <string name="manager_dev">Разработчики программы</string>
+    <string name="manager_dev">Розробники інсталятора</string>
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
