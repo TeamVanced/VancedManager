@@ -69,7 +69,7 @@
     <string name="security_context">Se till att du laddade ner appen från vanced.app, den Vanced Discord-servern eller den Vanced GitHub</string>
     <string name="success">Framgång!</string>
     <string name="vanced_installed">Vanced har installerats! Starta nu?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Music har installerats! Öppna nu?</string>
     <string name="launch">Öppna</string>
     <string name="welcome">Välkommen</string>
     <!-- Install Page -->
@@ -82,7 +82,7 @@
     <string name="install_light_dark">Ljus + svart</string>
     <string name="next">Nästa</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">Hanteraren Dev</string>
     <string name="sources">Källor</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
