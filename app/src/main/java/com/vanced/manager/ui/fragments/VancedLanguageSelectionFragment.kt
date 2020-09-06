@@ -19,7 +19,9 @@ import com.vanced.manager.R
 import com.vanced.manager.core.downloader.VancedDownloadService
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getArrayFromJson
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.util.*
 
 class VancedLanguageSelectionFragment : Fragment() {

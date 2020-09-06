@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+            type="com.music.manager.ui.viewmodels.HomeViewModel" />
 
     </data>
 
@@ -48,6 +48,7 @@
                     android:id="@+id/music_installbtn"
                     style="@style/ButtonStyle"
                     android:text="@{viewModel.music.buttonTxt}"
+                    android:onClick="@{()-> viewModel.installMusic()}"
                     app:icon="@{viewModel.music.buttonIcon}"
                     app:layout_constraintBottom_toTopOf="@id/music_uninstallbtn"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +103,7 @@
                     android:id="@+id/music_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
                     android:visibility="@{viewModel.music.appInstalled ? View.VISIBLE : View.GONE}"
+                    android:onClick="@{()-> viewModel.uninstallMusic()}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/music_title_buttons_barrier"
@@ -113,7 +115,8 @@
                 android:id="@+id/music_downloading_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.musicProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                android:text="@{viewModel.Companion.musicProgress.downloadingFile}"
                 tools:visibility="visible" />
 
             <ProgressBar
@@ -121,14 +124,15 @@
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.musicProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                android:progress="@{viewModel.Companion.musicProgress.downloadProgress}"
                 tools:visibility="visible" />
 
             <ProgressBar
                 android:id="@+id/music_installing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.musicProgress.showInstallCircle ? View.VISIBLE : View.GONE}"
                 tools:visibility="visible" />
 
         </LinearLayout>

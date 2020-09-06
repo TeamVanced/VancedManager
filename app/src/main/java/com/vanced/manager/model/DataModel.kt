@@ -3,20 +3,14 @@ package com.vanced.manager.model
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getJsonInt
 import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
-import com.vanced.manager.R
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.runBlocking
 
 open class DataModel(
     private val jsonName: String,

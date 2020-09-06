@@ -121,20 +121,21 @@ object DialogContainer {
         }
     }
 
-    fun launchVanced(activity: Activity) {
+    fun launchVanced(context: Context) {
         val intent = Intent()
         intent.component =
-            if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") == "root")
+            if (PreferenceManager.getDefaultSharedPreferences(context).getString("vanced_variant", "nonroot") == "root")
                 ComponentName("com.google.android.youtube", "com.google.android.youtube.HomeActivity")
             else
                 ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
-        MaterialAlertDialogBuilder(activity).apply {
-            setTitle(activity.getString(R.string.success))
-            setMessage(activity.getString(R.string.vanced_installed))
-            setPositiveButton(activity.getString(R.string.launch)) { _, _ ->
-                startActivity(activity, intent, null)
+                
+        MaterialAlertDialogBuilder(context).apply {
+            setTitle(context.getString(R.string.success))
+            setMessage(context.getString(R.string.vanced_installed))
+            setPositiveButton(context.getString(R.string.launch)) { _, _ ->
+                startActivity(context, intent, null)
             }
-            setNegativeButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            setNegativeButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()
             show()
         }

@@ -6,19 +6,17 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.tabs.TabLayout
-import com.vanced.manager.databinding.FragmentMainBinding
 import com.vanced.manager.R
+import com.vanced.manager.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     

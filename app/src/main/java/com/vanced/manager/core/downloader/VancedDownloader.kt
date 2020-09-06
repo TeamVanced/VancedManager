@@ -1,13 +1,11 @@
 package com.vanced.manager.core.downloader
 
-import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
 import android.os.IBinder
 import android.widget.Toast
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import com.downloader.Error
 import com.downloader.OnDownloadListener
@@ -15,13 +13,15 @@ import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.installer.RootSplitInstallerService
 import com.vanced.manager.core.installer.SplitInstaller
-import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.PackageHelper.getPkgVerCode
+import com.vanced.manager.utils.PackageHelper.installVanced
+import com.vanced.manager.utils.PackageHelper.installvancedRoot
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -30,7 +30,7 @@ import java.io.File
 import java.io.IOException
 import java.security.MessageDigest
 
-class VancedDownloadService: Service() {
+object VancedDownloader {
 
     private var sha256Val: String? = null
     
@@ -48,16 +48,15 @@ class VancedDownloadService: Service() {
     //private var downloadId: Long = 0
     //private var apkType: String = "arch"
     private var count: Int = 0
-    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
     private var hashUrl = ""
 
     private val yPkg = "com.google.android.youtube"
     private val vancedVersionCode by lazy {runBlocking { InternetTools.getJsonInt("vanced.json", "versionCode", applicationContext) }}
     private val vancedVersion by lazy { runBlocking { getObjectFromJson("$installUrl/vanced.json", "version") }}
 
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+    fun downloadVanced(context: Context) {
         //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
-        File(getExternalFilesDir("apks")?.path as String).deleteRecursively()
+        File(context.getExternalFilesDir("apks")?.path as String).deleteRecursively()
         defPrefs = PreferenceManager.getDefaultSharedPreferences(this)
         installUrl = defPrefs.getString("install_url", baseUrl)
         prefs = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
@@ -73,12 +72,11 @@ class VancedDownloadService: Service() {
                 Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                 else -> "armeabi_v7a"
             }
-        downloadSplits()
-        stopSelf()
-        return START_NOT_STICKY
+        downloadSplits(context)
     }
 
-    private fun downloadSplits(
+    private fun downloadSplits(context, 
+        context: Context,
         type: String = "theme"
     ) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -95,54 +93,57 @@ class VancedDownloadService: Service() {
             //apkType = type
             //downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
 
-        PRDownloader
-            .download(url, getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
-            .build()
-            .setOnStartOrResumeListener { installing = true }
-            .setOnProgressListener { progress ->
-                val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_DOWNLOADING).putExtra("progress", mProgress.toInt()).putExtra("file", getFileNameFromUrl(url)))
-            }
-            .start(object : OnDownloadListener {
-                override fun onDownloadComplete() {
-                    when (type) {
-                        "theme" -> 
-                            if (variant == "root" && newInstaller == true) {
-                                if (ValidateTheme()) {
-                                    if(downloadStockCheck())
-                                        downloadSplits("arch") 
-                                    else 
-                                        prepareInstall(variant!!)
+            PRDownloader
+                .download(url, getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
+                .build()
+                .setOnStartOrResumeListener { 
+                    installing = true 
+                    vancedProgress.get()?.setDownloadingFile(getFileNameFromUrl(url))
+                    vancedProgress.get()?.showDownloadBar = true
+                }
+                .setOnProgressListener { progress ->
+                    vancedProgress.get()?.setDownloadProgress(progress.currentBytes * 100 / progress.totalBytes)
+                }
+                .start(object : OnDownloadListener {
+                    override fun onDownloadComplete() {
+                        when (type) {
+                            "theme" -> 
+                                if (variant == "root" && newInstaller == true) {
+                                    if (ValidateTheme()) {
+                                        if(downloadStockCheck())
+                                            downloadSplits(context, "arch") 
+                                        else 
+                                            prepareInstall(variant!!)
+                                    } else 
+                                        downloadSplits(context, "theme")
                                 } else 
-                                    downloadSplits("theme")
-                            } else 
-                                downloadSplits("arch")
-                        "arch" -> if (variant == "root" && newInstaller == true) downloadSplits("stock") else downloadSplits("lang")
-                        "stock" -> downloadSplits("dpi")
-                        "dpi" -> downloadSplits("lang")
-                        "lang" -> {
+                                    downloadSplits(context, "arch")
+                            "arch" -> if (variant == "root" && newInstaller == true) downloadSplits(context, "stock") else downloadSplits(context, "lang")
+                            "stock" -> downloadSplits(context, "dpi")
+                            "dpi" -> downloadSplits(context, "lang")
+                            "lang" -> {
+                                count++
+                                if (count < lang?.count()!!)
+                                    downloadSplits(context, "lang")
+                                else
+                                    prepareInstall(variant!!)
+                            }
+
+                        }
+                    }
+                    override fun onError(error: Error?) {
+                        if (type == "lang") {
                             count++
                             if (count < lang?.count()!!)
-                                downloadSplits("lang")
+                                downloadSplits(context, "lang")
                             else
                                 prepareInstall(variant!!)
+                        } else {
+                            installing = false
+                            Toast.makeText(context, getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
                         }
-
                     }
-                }
-                override fun onError(error: Error?) {
-                    if (type == "lang") {
-                        count++
-                        if (count < lang?.count()!!)
-                            downloadSplits("lang")
-                        else
-                            prepareInstall(variant!!)
-                    } else {
-                        installing = false
-                        Toast.makeText(this@VancedDownloadService, getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
-                    }
-                }
-            })
+                })
         }
     }
 
@@ -176,14 +177,14 @@ class VancedDownloadService: Service() {
             val lang = prefs?.getString("lang", "en")
             if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
                 when (apkType) {
-                    "arch" -> downloadSplits("theme")
-                    "theme" -> downloadSplits("lang")
+                    "arch" -> downloadSplits(context, "theme")
+                    "theme" -> downloadSplits(context, "lang")
                     "lang" -> {
                         if (lang == "en") {
                             prepareInstall(variant!!)
                             //cancelNotif(channel, this@VancedDownloadService)
                         } else {
-                            downloadSplits("enlang")
+                            downloadSplits(context, "enlang")
                         }
                     }
                     "enlang" -> {
@@ -196,12 +197,13 @@ class VancedDownloadService: Service() {
     }
      */
 
-    private fun prepareInstall(variant: String) {
-        localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_INSTALLING))
+    private fun prepareInstall(variant: String, context: Context) {
+        vancedProgress.get()?.showDownloadBar = false
+        vancedProgress.get()?.showInstallCircle = true
         if (variant == "root")
-            startService(Intent(this, RootSplitInstallerService::class.java))
+            installVancedRoot(context)
         else
-            startService(Intent(this, SplitInstaller::class.java))
+            installvanced(context)
     }
 
     override fun onBind(intent: Intent?): IBinder? {

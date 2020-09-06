@@ -6,7 +6,10 @@ import android.content.pm.PackageInstaller
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.fragments.HomeFragment
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 object AppUtils {
 

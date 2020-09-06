@@ -51,6 +51,7 @@
                     android:text="@{viewModel.vanced.buttonTxt}"
                     android:textColor="@color/White"
                     android:backgroundTint="?colorPrimary"
+                    android:onClick="@{()-> viewModel.installVanced()}"
                     app:icon="@{viewModel.vanced.buttonIcon}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -65,6 +66,7 @@
                 <ImageView
                     android:id="@+id/vanced_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
+                    android:onClick="@{()-> viewModel.uninstallVanced()}"
                     android:visibility="@{viewModel.vanced.appInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +116,8 @@
                 android:id="@+id/vanced_downloading_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.vancedProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                android:text="@{viewModel.Companion.vancedProgress.downloadingFile}"
                 tools:visibility="visible" />
 
             <ProgressBar
@@ -122,14 +125,15 @@
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.vancedProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                android:progress="@{viewModel.Companion.vancedProgress.downloadProgress}"
                 tools:visibility="visible" />
 
             <ProgressBar
                 android:id="@+id/vanced_installing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.vancedProgress.showInstallCircle ? View.VISIBLE : View.GONE}"
                 tools:visibility="visible" />
 
         </LinearLayout>

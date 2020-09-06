@@ -71,14 +71,8 @@
             android:resource="@drawable/ic_stat_name" />
 
         <service android:name=".core.installer.SplitInstallerService" />
-        <service android:name=".core.installer.RootSplitInstallerService" />
-        <service android:name=".core.installer.SplitInstaller" />
         <service android:name=".core.installer.AppUninstallerService" />
         <service android:name=".core.installer.AppInstallerService" />
-        <service android:name=".core.installer.AppInstaller" />
-        <service android:name=".core.downloader.VancedDownloadService" />
-        <service android:name=".core.downloader.MicrogDownloadService" />
-        <service android:name=".core.downloader.MusicDownloadService" />
 
     </application>
 
