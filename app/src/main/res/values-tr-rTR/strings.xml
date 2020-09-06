@@ -82,7 +82,7 @@
     <string name="install_light_dark">Açık + Koyu</string>
     <string name="next">Sonraki</string>
     <!-- About Page -->
-    <string name="manager_dev">Yönetici Geliştirme</string>
+    <string name="manager_dev">Yönetici Geliştiriciler</string>
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->
