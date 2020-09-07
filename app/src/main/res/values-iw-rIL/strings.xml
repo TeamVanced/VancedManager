@@ -11,7 +11,7 @@
     <!-- Home Page -->
     <string name="changelogs">שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
-    <string name="install">התקנה</string>
+    <string name="install">התקן</string>
     <string name="installing_app">מתקין את %1$s</string>
     <string name="installation_wait">אנא המתינו לסיום ההתקנה...</string>
     <string name="button_reinstall">התקן מחדש</string>
@@ -19,14 +19,14 @@
     <string name="latest">החדש ביותר:</string>
     <string name="successfully_installed">הותקן בהצלחה %1$s</string>
     <string name="network_error">חיבור לרשת אינו זמין</string>
-    <string name="no_microg">microG isn\'t installed</string>
-    <string name="root_not_granted">הרשאות Root אינן הוענקו</string>
+    <string name="no_microg">microG לא הותקן</string>
+    <string name="root_not_granted">לא הוענקו הרשאות Root</string>
     <string name="unavailable">אינו זמין</string>
     <string name="update">עדכן</string>
     <string name="useful_links">קישורים שימושיים</string>
     <string name="website_text">אתר</string>
     <string name="support_us">תמכו בנו!</string>
-    <string name="version_toast">%1$s version number was copied!</string>
+    <string name="version_toast">מספר הגרסה של %1$s הועתקה!</string>
     <!-- Settings -->
     <string name="accent_color">צבע הדגשה</string>
     <string name="accent_blue">כחול</string>
@@ -38,10 +38,10 @@
     <string name="category_manager">מנהל</string>
     <string name="check_updates">בדוק אחר עדכונים</string>
     <string name="chosen_install_values">העדפות התקנה שנבחרו</string>
-    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_lang">שפה: %1$s</string>
     <string name="chosen_theme">ערכת נושא: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">מחק קבצים שהורדו</string>
+    <string name="cleared_files">מחיקת הקבצים הסתיימה בהצלחה</string>
     <string name="link_title">השתמש בכרטיסייה מותאמת אישית של Chrome</string>
     <string name="link_custom_tabs">קישורים יפתחו בכרטיסיות מותאמות אישית של Chrome</string>
     <string name="link_external_browser">קישורים יפתחו בדפדפן חיצוני</string>
@@ -68,7 +68,7 @@
     <string name="error">בעיה</string>
     <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">הצלחה!</string>
-    <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
+    <string name="vanced_installed">Vanced הותקן בהצלחה! לפתוח עכשיו?</string>
     <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="launch">פתח</string>
     <string name="welcome">ברוכים הבאים</string>
