@@ -62,14 +62,14 @@
     <string name="button_dismiss">Отклонить</string>
     <string name="guide">Руководство</string>
     <string name="hold_on">Стойте!</string>
-    <string name="magisk_vanced">Похоже, вы используете Magisk/TWRP версию Vanced, которая больше не поддерживается и не может быть обновлена с помощью этого приложения. Пожалуйста, удалите модуль для Magisk или с помощью деинсталлятора Vanced для TWRP.</string>
+    <string name="magisk_vanced">Похоже, вы используете Magisk/TWRP версию Vanced, которая больше не поддерживается и не может быть обновлена с помощью этого приложения. Пожалуйста, удалите модуль Vanced через Magisk или с помощью деинсталлятора Vanced для TWRP.</string>
     <string name="miui_one_title">Обнаружен пользователь MIUI!</string>
-    <string name="miui_one">Чтобы установить Vanced, вы ДОЛЖНЫ отключите оптимизацию MIUI в настройках разработчика. (Вы можете проигнорировать это предупреждение, если вы используете прошивку на xiaomi.eu версии 20.2.20+)</string>
+    <string name="miui_one">Чтобы установить Vanced, вы ДОЛЖНЫ отключить оптимизацию MIUI в настройках разработчика. (Вы можете проигнорировать это предупреждение, если вы используете прошивку на xiaomi.eu версии 20.2.20+)</string>
     <string name="error">Ошибка</string>
     <string name="security_context">Пожалуйста, убедитесь в том, что вы скачали это приложение с vanced.app, сервера Vanced в Discord или с GitHub</string>
     <string name="success">Успешно!</string>
-    <string name="vanced_installed">Vanced успешно установлен, хотите запустить его сейчас?</string>
-    <string name="music_installed">Vanced успешно установлен, хотите запустить его сейчас?</string>
+    <string name="vanced_installed">Vanced успешно установлен! Хотите запустить его сейчас?</string>
+    <string name="music_installed">Vanced Music успешно установлен! Хотите запустить его сейчас?</string>
     <string name="launch">Открыть</string>
     <string name="welcome">Добро пожаловать</string>
     <!-- Install Page -->
