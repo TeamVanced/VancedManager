@@ -69,7 +69,7 @@
     <string name="security_context">Pastikan anda mengunduh aplikasi dari vanced.app, Vanced Discord server atau dari Vanced GitHub</string>
     <string name="success">Berhasil!</string>
     <string name="vanced_installed">Vanced berhasil dipasang! Buka sekarang?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Musik berhasil dipasang! Buka sekarang?</string>
     <string name="launch">Buka</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
@@ -82,7 +82,7 @@
     <string name="install_light_dark">Terang + Gelap</string>
     <string name="next">Selanjutnya</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">Pengembang Manager</string>
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
     <!-- Error messages -->
