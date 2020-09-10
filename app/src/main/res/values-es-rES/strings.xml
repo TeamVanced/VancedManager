@@ -102,5 +102,5 @@
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
     <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
     <string name="modapk_missing">Falta el Dark/Black.apk en el instalador. Esto no debería pasar, por favor, borra los datos de la aplicación del Manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">La ruta de instalación de Youtube no es accesible o no está disponible después de la instalación del Split</string>
 </resources>
