@@ -76,7 +76,7 @@
     <string name="miui_one_title">MIUI detectado!</string>
     <string name="miui_one">Hey! Parece que eres un usuario MIUI. Para poder usar esta aplicacion correctamente, necesitaras deshabilitar las optimizaciones MIUI en ajustes de desarrollador. (Puedes ignorar esta advertencia con seguridad si estas en un ROM 20.2.20 o posterior basado en xiaomi.eu)</string>
     <string name="error">Error</string>
-    <string name="security_context">Porfavor asegurate de haver descargado la aplicacion mediante vanced.app, el server de Vanced en Discord, o Github</string>
+    <string name="security_context">Porfavor asegurate de haber descargado la aplicacion mediante vanced.app, el server de Vanced en Discord, o Github</string>
     <string name="success">Éxito!</string>
     <string name="vanced_installed">¡Vanced ha sido instalado exitosamente! ¿Lanzar ahora?</string>
     <string name="launch">Lanzar</string>
