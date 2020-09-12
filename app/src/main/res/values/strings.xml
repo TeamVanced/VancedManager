@@ -50,7 +50,7 @@
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may dissapear on reboot if you install it using this installer
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may dissapear on reboot if you install it using this installer</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
