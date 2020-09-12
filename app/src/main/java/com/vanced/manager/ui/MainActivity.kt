@@ -47,8 +47,7 @@ class MainActivity : AppCompatActivity() {
         override fun onTabSelected(tab: TabLayout.Tab) {
             getDefaultSharedPreferences(this@MainActivity).edit().putString("vanced_variant", 
                 when (tab.position) {
-                    1 -> "music"
-                    2 -> "root"
+                    1 -> "root"
                     else -> "nonroot"
                 }
             ).apply()
