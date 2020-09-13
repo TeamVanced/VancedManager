@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="link_external_browser">Bağlantılar harici tarayıcıda açılacaktır</string>
     <string name="new_installer_title">Yeni root yükleyiciyi kullan (Deneysel)</string>
-    <string name="new_installer_summary">Bu yükleyici, İmza Doğrulama durumuna bağlı değildir</string>
+    <string name="new_installer_summary">Bu yükleyici, İmza Doğrulama durumuna bağlı değildir. UYARI: Bu yükleyiciyi kullanarak kurarsanız, yeniden başlattıktan sonra Vanced kaybolabilir</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Sistem karar versin</string>
     <string name="theme_dark">Koyu Tema</string>
