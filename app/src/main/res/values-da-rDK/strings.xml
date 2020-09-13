@@ -45,8 +45,8 @@
     <string name="link_title">Brug Chrome Custom Faner</string>
     <string name="link_custom_tabs">Links vil åbne i Chrome Custom Faner</string>
     <string name="link_external_browser">Links vil åbne i en ekstern browser</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">Brug den nye root installer (Eksperimental)</string>
+    <string name="new_installer_summary">Dette installationsprogram er ikke afhængig af Signatur Verifikation status. ADVARSEL: Vanced kan forsvinde efter genstart, hvis du installerer den ved hjælp af dette</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Følg systemet</string>
     <string name="theme_dark">Mørkt tema</string>
