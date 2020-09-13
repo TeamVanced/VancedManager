@@ -45,8 +45,8 @@
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
-    <string name="new_installer_title">Usar el nuevo instalador root (Experimental)</string>
-    <string name="new_installer_summary">Este instalador no depende del estado de Verificación de Firmas</string>
+    <string name="new_installer_title">Usar el nuevo instalador root (experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Oscuro</string>
