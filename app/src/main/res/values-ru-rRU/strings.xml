@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
     <string name="link_external_browser">Ссылки откроются во внешнем браузере</string>
     <string name="new_installer_title">Используйте новый root установщик (экспериментальный)</string>
-    <string name="new_installer_summary">Этот установщик не зависит от статуса проверки подписи</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Как в системе</string>
     <string name="theme_dark">Тёмная тема</string>
