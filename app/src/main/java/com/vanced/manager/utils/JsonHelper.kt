@@ -12,10 +12,10 @@ import kotlinx.coroutines.withContext
 
 object JsonHelper {
 
-    suspend fun getJson(url: String): JsonObject =
-        Parser.default().parse(
-            StringBuilder(url.httpGet().awaitString())
-        ) as JsonObject
+    suspend fun getJson(url: String): JsonObject
+    {
+        return DataManager.getCheckJson(url)
+    }
 
     suspend fun getJsonArray(url: String): JsonArray<String> =
         Klaxon().parseArray<String>(

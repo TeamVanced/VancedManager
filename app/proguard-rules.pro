@@ -13,7 +13,8 @@
 #}
 
 -keep class com.vanced.manager.core.App
-
+-keep class androidx.navigation.fragment.NavHostFragment
+-keep class androidx.fragment.app.FragmentContainerView
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
 #-keepattributes SourceFile,LineNumberTable
