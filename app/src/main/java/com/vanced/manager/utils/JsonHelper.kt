@@ -12,10 +12,25 @@ import kotlinx.coroutines.withContext
 
 object JsonHelper {
 
+    var dataMap: HashMap<String, JsonObject> = HashMap()
+
     suspend fun getJson(url: String): JsonObject
     {
-        return DataManager.getCheckJson(url)
+        if(dataMap.containsKey(url))
+        {
+            return dataMap[url]!!
+        }
+        else
+        {
+            dataMap[url] = getSuspendJson(url)
+            return dataMap[url]!!
+        }
     }
+
+    suspend fun getSuspendJson(url: String): com.beust.klaxon.JsonObject =
+        Parser.default().parse(
+            StringBuilder(url.httpGet().awaitString())
+        ) as com.beust.klaxon.JsonObject
 
     suspend fun getJsonArray(url: String): JsonArray<String> =
         Klaxon().parseArray<String>(
