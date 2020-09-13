@@ -13,7 +13,7 @@
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="install">インストール</string>
     <string name="installing_app">%1$s をインストールしています</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">インストールが完了するまでお待ちください。</string>
     <string name="button_reinstall">再インストール</string>
     <string name="version_installed">インストール済み:</string>
     <string name="latest">最新版:</string>
@@ -45,7 +45,7 @@
     <string name="link_title">Chrome カスタムタブを使用する</string>
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
     <string name="link_external_browser">外部ブラウザでリンクを開く</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_title">新しい root インストーラーを使用する (実験的)</string>
     <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">テーマ</string>
     <string name="theme_follow">システムに従う</string>
