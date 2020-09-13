@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="link_external_browser">Link-urile se vor deschide într-un browser extern</string>
     <string name="new_installer_title">Folosește noul instalator root (Experimental)</string>
-    <string name="new_installer_summary">Acest instalator nu depinde de starea de verificare a semnăturii</string>
+    <string name="new_installer_summary">Această instalare nu depinde de starea de verificare a semnăturilor. AVERTISMENT: Vanced poate dispărea după repornire dacă instalați folosind această procedură</string>
     <string name="theme">Temă</string>
     <string name="theme_follow">Urmăreşte sistemul</string>
     <string name="theme_dark">Temă întunecată</string>
@@ -82,7 +82,7 @@
     <string name="install_light_dark">Luminos + Întunecat</string>
     <string name="next">Continuare</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">Dezvoltatori</string>
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
