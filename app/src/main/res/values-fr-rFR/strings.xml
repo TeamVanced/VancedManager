@@ -45,8 +45,8 @@
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="link_external_browser">Les liens s\'ouvriront dans un navigateur externe</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">Utiliser le nouvel installateur root (expérimental)</string>
+    <string name="new_installer_summary">Cette méthode d\'installation ne dépend pas du statut de vérification de signature. ATTENTION : Vanced peut disparaître après le redémarrage si vous l\'installez à l\'aide de ce statut</string>
     <string name="theme">Thème</string>
     <string name="theme_follow">Suivre le paramètre système</string>
     <string name="theme_dark">Thème sombre</string>
