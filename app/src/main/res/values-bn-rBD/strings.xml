@@ -45,8 +45,8 @@
     <string name="link_title">Use Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>
-    <string name="new_installer_title">Use new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">থিম</string>
     <string name="theme_follow">সিস্টেমকে অনুসরণ করো</string>
     <string name="theme_dark">অন্ধকার থিম</string>
