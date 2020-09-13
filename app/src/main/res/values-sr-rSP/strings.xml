@@ -45,8 +45,8 @@
     <string name="link_title">Користите Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="link_external_browser">Линкови ће бити отвотрни у екстерном претраживачу</string>
-    <string name="new_installer_title">Користи нови root installer апликацију ( Експериментално)</string>
-    <string name="new_installer_summary">Ова апликација за инсталацију не зависи од стања верификационог потписа</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Као у систему</string>
     <string name="theme_dark">Тамна Тема</string>
