@@ -45,8 +45,8 @@
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
-    <string name="new_installer_title">새로운 버전의 루트 설치 프로그램 사용 (실험적 기능)</string>
-    <string name="new_installer_summary">설치 관리자는 서명 검증 상태에 영향을 받지 않습니다</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">테마</string>
     <string name="theme_follow">시스템 설정과 같이</string>
     <string name="theme_dark">다크 테마</string>
