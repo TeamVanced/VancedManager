@@ -34,7 +34,7 @@ class RootSplitInstallerService: Service() {
 
     private val vancedVersionCode by lazy{ runBlocking { getJsonInt("vanced.json","versionCode", applicationContext) }}
     private val yPkg = "com.google.android.youtube"
-
+    private val apkInstallPath = "/data/adb/Vanced/"
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -181,13 +181,50 @@ class RootSplitInstallerService: Service() {
             val path = getPackageDir()
             apkFile.file?.let {
                 val apath = it.absolutePath
-                if(path?.let { it1 -> moveAPK(apath, it1) }!!) {
-                    return chConV(path)
+
+                setupFolder(apkInstallPath)
+                if(path != null)
+                {
+                    val apkFPath = apkInstallPath + "base.apk"
+                    if(moveAPK(apath, apkFPath))
+                    {
+                        if(chConV(apkFPath))
+                        {
+                            if(setupScript(apkFPath,path))
+                            {
+                                return linkVanced(apkFPath,path)
+                            }
+
+                        }
+                    }
+
                 }
 
             }
         }
         return false
+    }
+
+    private fun setupScript(apkFPath: String, path: String): Boolean
+    {
+        if(Shell.su("""echo  "#!/system/bin/sh\nsleep 1m\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
+        {
+            return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
+        }
+        return false
+    }
+
+    private fun linkVanced(apkFPath: String, path: String): Boolean
+    {
+        Shell.su("am force-stop $yPkg").exec()
+        Thread.sleep(500)
+        val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
+
+        return response.isSuccess
+    }
+
+    private fun setupFolder(apkInstallPath: String): Boolean {
+        return Shell.su("mkdir -p $apkInstallPath").exec().isSuccess
     }
 
     //check version and perform action based on result
@@ -355,7 +392,6 @@ class RootSplitInstallerService: Service() {
                 {
                     if(line.contains("data/app")) "${line.substringAfter("=")}/base.apk"
                 }
-
             }
             null
         }
