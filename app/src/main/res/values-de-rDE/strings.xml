@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="link_external_browser">Links werden in einem externen Browser geöffnet</string>
     <string name="new_installer_title">Neuen root Installer verwenden (experimentell)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_summary">Dieser Installer hängt nicht vom Status der Signatur Verifizierung ab. WARNUNG: Vanced kann nach dem Neustart verschwinden, wenn Sie es mit diesem Installer installieren</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Folge Systemeinstellung</string>
     <string name="theme_dark">Dunkles Theme</string>
@@ -69,7 +69,7 @@
     <string name="security_context">Bitte stellen Sie sicher, dass Sie die App von vanced.app, dem Vanced Discord Server oder GitHub heruntergeldaden haben.</string>
     <string name="success">Erfolg!</string>
     <string name="vanced_installed">Vanced wurde erfolgreich installiert. Jetzt öffnen?</string>
-    <string name="music_installed">Vanced wurde erfolgreich installiert. Jetzt starten?</string>
+    <string name="music_installed">Vanced Musik wurde erfolgreich installiert. Jetzt starten?</string>
     <string name="launch">Öffnen</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
