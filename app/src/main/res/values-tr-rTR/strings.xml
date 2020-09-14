@@ -10,14 +10,14 @@
     <string name="title_settings">Ayarlar</string>
     <!-- Home Page -->
     <string name="changelogs">Değişiklikler</string>
-    <string name="downloading_file">İndiriliyor %1$s</string>
-    <string name="install">Kur</string>
-    <string name="installing_app">%1$s Kuruluyor</string>
-    <string name="installation_wait">Lütfen kurulum bitene kadar bekleyin.</string>
-    <string name="button_reinstall">Yeniden kur</string>
-    <string name="version_installed">Kuruldu:</string>
+    <string name="downloading_file">%1$s indiriliyor</string>
+    <string name="install">Yükle</string>
+    <string name="installing_app">%1$s yükleniyor</string>
+    <string name="installation_wait">Lütfen yükleme bitene kadar bekleyin.</string>
+    <string name="button_reinstall">Yeniden yükle</string>
+    <string name="version_installed">Yüklü:</string>
     <string name="latest">En son:</string>
-    <string name="successfully_installed">%1$s Başarıyla kuruldu</string>
+    <string name="successfully_installed">%1$s başarıyla yüklendi</string>
     <string name="network_error">Ağ bağlantısı yok</string>
     <string name="no_microg">microG yüklü değil</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
@@ -37,7 +37,7 @@
     <string name="category_interface">Arayüz</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Güncellemeleri denetle</string>
-    <string name="chosen_install_values">Seçilen kurulum özellikleri </string>
+    <string name="chosen_install_values">Seçilen yükleme tercihleri </string>
     <string name="chosen_lang">Dil(ler): %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
@@ -46,15 +46,15 @@
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="link_external_browser">Bağlantılar harici tarayıcıda açılacaktır</string>
     <string name="new_installer_title">Yeni root yükleyiciyi kullan (Deneysel)</string>
-    <string name="new_installer_summary">Bu yükleyici, İmza Doğrulama durumuna bağlı değildir. UYARI: Bu yükleyiciyi kullanarak kurarsanız, yeniden başlattıktan sonra Vanced kaybolabilir</string>
+    <string name="new_installer_summary">Bu yükleyici, İmza Doğrulama durumuna bağlı değildir. UYARI: Bu yükleyiciyi kullanarak yüklerseniz, yeniden başlattıktan sonra Vanced kaybolabilir</string>
     <string name="theme">Tema</string>
-    <string name="theme_follow">Sistem karar versin</string>
+    <string name="theme_follow">Sistem Karar Versin</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
-    <string name="update_url">Kanal URL\'sini güncelle </string>
+    <string name="update_url">Güncelleme Kanalı URL\'si</string>
     <string name="push_notifications">%1$s Anlık Bildirimleri</string>
     <string name="push_notifications_summary">%1$s için bir güncelleme yayınlandığında anlık bildirimler alın</string>
-    <string name="re_check">Yeniden kontrol et</string>
+    <string name="re_check">Yeniden denetle</string>
     <string name="update_center">Manager Güncelleme Merkezi</string>
     <string name="update_found">Güncelleme bulundu!</string>
     <string name="update_notfound">Yeni güncelleme yok</string>
@@ -64,17 +64,17 @@
     <string name="hold_on">Durdur!</string>
     <string name="magisk_vanced">Üretimi durdurulan ve bu uygulama kullanılarak güncellenemeyen Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen magisk modülünü/TWRP Vanced kaldırıcıyı kullanarak kaldırın.</string>
     <string name="miui_one_title">MIUI tespit edildi!</string>
-    <string name="miui_one">Vanced\'i kurmak için geliştirici ayarlarından MIUI Optimizasyonlarını devre dışı bırakmanız GEREKİR. (20.2.20 veya üzeri xiaomi.eu tabanlı ROM kullanıyorsanız bu uyarıyı göz ardı edebilirsiniz)</string>
+    <string name="miui_one">Vanced\'i yüklemek için geliştirici ayarlarından MIUI Optimizasyonlarını devre dışı bırakmanız GEREKİR. (20.2.20 veya üzeri xiaomi.eu tabanlı ROM kullanıyorsanız bu uyarıyı göz ardı edebilirsiniz)</string>
     <string name="error">Hata</string>
     <string name="security_context">Uygulamayı vanced.app, Vanced Discord sunucusu veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
     <string name="success">Başarılı!</string>
-    <string name="vanced_installed">Vanced başarıyla kuruldu! Şimdi açılsın mı?</string>
-    <string name="music_installed">Vanced Music başarıyla kuruldu! Şimdi açılsın mı?</string>
+    <string name="vanced_installed">Vanced başarıyla yüklendi! Şimdi açılsın mı?</string>
+    <string name="music_installed">Vanced Music başarıyla yüklendi! Şimdi açılsın mı?</string>
     <string name="launch">Aç</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced için tercih ettiğiniz dil(ler)i seçin</string>
-    <string name="choose_preferred_language_note">Not: Eğer İngilizceden farklı bir dil seçerseniz de İngilizce ek dil olarak kurulacaktır</string>
+    <string name="choose_preferred_language_note">Not: İngilizce her zaman ek bir dil olarak yüklenecektir.</string>
     <string name="choose_preferred_theme">Vanced için tercih ettiğiniz temayı seçin</string>
     <string name="disable_signature">Root modu algılandı! Vanced\'i yüklemek için apk imza doğrulamasını devre dışı bırakmanız GEREKİR.</string>
     <string name="finish">Bitir</string>
@@ -87,12 +87,12 @@
     <string name="vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->
     <string name="chown_fail">Apk sistem sahibine değiştirilemedi, Tekrar Deneyin</string>
-    <string name="error_downloading">Indirme hatası %1$s</string>
+    <string name="error_downloading">%1$s İndirilemedi</string>
     <string name="failed_uninstall">%1$s paketi kaldırılamadı</string>
     <string name="files_missing_va">Dosyalar eksik, İndirme Başarısız mı oldu?</string>
     <string name="ifile_missing">Dark/Black.apk Okunamıyor(Depolama mı Engellendi?) veya Dosya Yok</string>
-    <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
-    <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
+    <string name="installation_aborted">Kullanıcı yüklemeyi iptal ettiği için yükleme başarısız oldu.</string>
+    <string name="installation_blocked">Kullanıcı yüklemeyi engellediği için yükleme başarısız oldu.</string>
     <string name="installation_downgrade">Kullanıcı paketi eski sürüme düşürmeye çalıştığı için yükleme başarısız oldu. Stok YouTube uygulamasından güncellemeleri kaldırın, ardından tekrar deneyin.</string>
     <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırın ve ardından tekrar deneyin.</string>
     <string name="installation_failed">Yükleme bilinmeyen nedenlerle başarısız oldu, daha fazla destek için Telegram veya Discord\'a katılın.</string>
@@ -100,7 +100,7 @@
     <string name="installation_invalid">Apk dosyaları bozuk olduğundan yükleme başarısız oldu, lütfen tekrar deneyin.</string>
     <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakın, ardından tekrar deneyin.</string>
     <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakın, ardından tekrar deneyin.</string>
-    <string name="installation_storage">Bir depolama hatası nedeniyle kurulum başarısız oldu.</string>
+    <string name="installation_storage">Bir depolama hatası nedeniyle yükleme başarısız oldu.</string>
     <string name="modapk_missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen yöneticinin uygulama verilerini temizleyin</string>
-    <string name="path_missing">Stok Youtube Yükleme Yolu, Stok Bölünmüş Kurulumdan Sonra Erişilemiyor Veya Yok</string>
+    <string name="path_missing">Stok Youtube Yükleme Yolu, Stok Bölünmüş Yüklemeden Sonra Erişilemiyor Veya Yok</string>
 </resources>
