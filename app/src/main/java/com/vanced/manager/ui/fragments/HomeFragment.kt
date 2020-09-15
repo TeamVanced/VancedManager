@@ -8,7 +8,10 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
@@ -16,6 +19,7 @@ import com.vanced.manager.adapter.SectionPageAdapter
 import com.vanced.manager.adapter.SectionPageRootAdapter
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
+import com.vanced.manager.ui.events.Event
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.AppUtils.installing
 
@@ -42,6 +46,13 @@ open class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.navigateDestination.observe(this, Observer<Event<Int>> {
+            val content = it.getContentIfNotHandled()
+            if(content != null){
+                view.findNavController().navigate(content)
+            }
+        })
         
         with(binding) {
             includeChangelogsLayout.changelogButton.setOnClickListener(this@HomeFragment)
