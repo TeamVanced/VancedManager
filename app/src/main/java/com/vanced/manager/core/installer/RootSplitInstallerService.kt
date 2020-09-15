@@ -96,8 +96,9 @@ class RootSplitInstallerService: Service() {
             sessionIdMatcher.find()
             sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
         }
+        var useNew = (getDefaultSharedPreferences(this@RootSplitInstallerService).getBoolean("new_installer", false))
         apkFiles.forEach { apkFile ->
-            if(apkFile.name != "black.apk" && apkFile.name != "dark.apk" && apkFile.name != "hash.json")
+            if(((apkFile.name != "black.apk" && apkFile.name != "dark.apk") || !useNew) && apkFile.name != "hash.json")
             {
                 Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
                 val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
@@ -207,7 +208,7 @@ class RootSplitInstallerService: Service() {
 
     private fun setupScript(apkFPath: String, path: String): Boolean
     {
-        if(Shell.su("""echo  "#!/system/bin/sh\nsleep 1m\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
+        if(Shell.su(""" echo  "#!/system/bin/sh\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh """).exec().isSuccess)
         {
             return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
         }
@@ -217,8 +218,8 @@ class RootSplitInstallerService: Service() {
     private fun linkVanced(apkFPath: String, path: String): Boolean
     {
         Shell.su("am force-stop $yPkg").exec()
-        Thread.sleep(500)
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
+        Thread.sleep(500)
 
         return response.isSuccess
     }
