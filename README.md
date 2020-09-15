@@ -19,7 +19,7 @@ After 3 months of development, we are finally ready to introduce Vanced Manager 
 
 ## Vanced Manager Developers
 - Xinto (X1nto)
-- Koopah
+- Koopah (ostajic)
 
 ## Contributors
 - AioiLight
