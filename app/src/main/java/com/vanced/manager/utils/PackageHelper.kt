@@ -20,7 +20,6 @@ import com.vanced.manager.utils.AppUtils.sendFailure
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -67,7 +66,7 @@ object PackageHelper {
             true
         } catch (e: Exception) {
             e.printStackTrace()
-            false;
+            false
         }
     }
     
@@ -488,6 +487,7 @@ object PackageHelper {
 
     }
 
+    @Suppress("DEPRECATION")
     private fun getVersionNumber(context: Context): Int? {
         try {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
