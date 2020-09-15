@@ -22,7 +22,7 @@ After 3 months of development, we are finally ready to introduce Vanced Manager 
 - Koopah
 
 ## Contributors
-- AioiLights
+- AioiLight
 
 ## Credits
 - topjohnwu for his wonderful [LibSU](https://github.com/topjohnwu/libsu)
