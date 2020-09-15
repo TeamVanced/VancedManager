@@ -1,13 +1,11 @@
 package com.vanced.manager.core.downloader
 
-import android.content.Intent
-import android.os.IBinder
+import android.content.Context
 import android.widget.Toast
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
-import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.musicProgress
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -28,7 +26,7 @@ object MusicDownloader {
 
             //downloadId = download(url, "apk", "music.apk", this@MusicDownloadService)
 
-            PRDownloader.download(url, getExternalFilesDir("apk")?.path, "music.apk")
+            PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "music.apk")
                 .build()
                 .setOnStartOrResumeListener { 
                     installing = true 
@@ -36,18 +34,18 @@ object MusicDownloader {
                     musicProgress.get()?.showDownloadBar = true
                 }
                 .setOnProgressListener { progress ->
-                    musicProgress.get()?.setDownloadProgress(progress.currentBytes * 100 / progress.totalBytes)
+                    musicProgress.get()?.setDownloadProgress((progress.currentBytes * 100 / progress.totalBytes).toInt())
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         install("music", "${context.getExternalFilesDir("apk")}/music.apk", context)
-                        musicProgress.get().showDownloadBar = false
-                        musicProgress.get().showInstallCircle = true
+                        musicProgress.get()?.showDownloadBar = false
+                        musicProgress.get()?.showInstallCircle = true
                     }
 
                     override fun onError(error: Error?) {
                         installing = false
-                        Toast.makeText(context, getString(R.string.error_downloading, "Music"), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, context.getString(R.string.error_downloading, "Music"), Toast.LENGTH_SHORT).show()
                     }
                 })
 
@@ -70,8 +68,4 @@ object MusicDownloader {
     }
      */
 
-
-    override fun onBind(intent: Intent?): IBinder? {
-        return null
-    }
 }

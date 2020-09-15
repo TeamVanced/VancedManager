@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <data>
 
         <variable
             name="viewModel"
             type="com.vanced.manager.ui.viewmodels.AboutViewModel" />
+
     </data>
 
     <com.google.android.material.card.MaterialCardView

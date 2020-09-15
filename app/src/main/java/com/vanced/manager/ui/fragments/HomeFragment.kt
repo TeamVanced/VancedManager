@@ -2,7 +2,6 @@ package com.vanced.manager.ui.fragments
 
 import android.content.*
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.Toast
@@ -10,8 +9,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import androidx.navigation.findNavController
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
@@ -21,7 +18,6 @@ import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.AppUtils.installing
-import com.vanced.manager.utils.PackageHelper
 
 open class HomeFragment : Fragment(), View.OnClickListener {
 
@@ -37,7 +33,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
     ): View? {
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).getSelectedTabPosition() == 1) "root" else "nonroot"
+        variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).selectedTabPosition == 1) "root" else "nonroot"
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.viewModel = viewModel
         viewModel.variant = variant
@@ -139,6 +135,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
                     installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
                     installing = false
                 }
+                REFRESH_HOME -> viewModel.fetchData()
             }
         }
     }
@@ -156,6 +153,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
 
     companion object {      
         const val INSTALL_FAILED = "install_failed"
+        const val REFRESH_HOME = "refresh_home"
     }
 }
 

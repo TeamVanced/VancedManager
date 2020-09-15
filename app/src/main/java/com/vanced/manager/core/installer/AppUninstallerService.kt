@@ -5,11 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
-import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.fetchData
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.vanced.manager.utils.AppUtils.sendRefresh
 
 class AppUninstallerService: Service() {
 
@@ -27,18 +23,12 @@ class AppUninstallerService: Service() {
             }
             //Delay broadcast until activity (and fragment) show up on the screen
             PackageInstaller.STATUS_SUCCESS -> {
-                CoroutineScope(Dispatchers.IO).launch {
-                    delay(500)
-                    fetchData()
-                    Log.d("VMpm", "Successfully uninstalled $pkgName")
-                }
+                sendRefresh(this)
+                Log.d("VMpm", "Successfully uninstalled $pkgName")
             }
             PackageInstaller.STATUS_FAILURE -> {
-                CoroutineScope(Dispatchers.IO).launch {
-                    delay(500)
-                    fetchData()
-                    Log.d("VMpm", "Failed to uninstall $pkgName")
-                }
+                sendRefresh(this)
+                Log.d("VMpm", "Failed to uninstall $pkgName")
             }
         }
         stopSelf()

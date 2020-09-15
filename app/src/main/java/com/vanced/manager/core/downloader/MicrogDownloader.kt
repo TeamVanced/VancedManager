@@ -6,7 +6,6 @@ import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
-import com.vanced.manager.core.installer.AppInstaller
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.microgProgress
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -34,18 +33,18 @@ object MicrogDownloader {
                     microgProgress.get()?.showDownloadBar = true
                 }
                 .setOnProgressListener { progress ->
-                    microgProgress.get()?.setDownloadProgress(progress.currentBytes * 100 / progress.totalBytes)
+                    microgProgress.get()?.setDownloadProgress((progress.currentBytes * 100 / progress.totalBytes).toInt())
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         install("microg", "${context.getExternalFilesDir("apk")}/microg.apk", context)
-                        microgProgress.showDownloadBar = false
-                        microgProgress.showInstallCircle = true
+                        microgProgress.get()?.showDownloadBar = false
+                        microgProgress.get()?.showInstallCircle = true
                     }
 
                     override fun onError(error: Error?) {
                         installing = false
-                        Toast.makeText(context, getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, context.getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
                     }
                 })
 

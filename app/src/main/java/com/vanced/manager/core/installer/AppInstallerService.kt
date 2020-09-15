@@ -7,10 +7,9 @@ import android.os.IBinder
 import android.util.Log
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.microgProgress
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.musicProgress
+import com.vanced.manager.utils.AppUtils.sendFailure
 
 class AppInstallerService: Service() {
-
-    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
@@ -26,7 +25,7 @@ class AppInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                if (intent?.getStringExtra("app") == "microg") microgProgress.showInstallCircle = false else musicProgress.showInstallCircle = false
+                if (intent.getStringExtra("app") == "microg") microgProgress.get()?.showInstallCircle = false else musicProgress.get()?.showInstallCircle = false
             }
             else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
         }

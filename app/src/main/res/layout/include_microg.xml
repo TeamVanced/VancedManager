@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.microg.manager.ui.viewmodels.HomeViewModel" />
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
 
     </data>
 

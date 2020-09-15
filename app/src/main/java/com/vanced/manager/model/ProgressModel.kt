@@ -2,7 +2,7 @@ package com.vanced.manager.model
 
 open class ProgressModel {
     
-    private var downloadProgres = 0
+    private var downloadProgress = 0
     private var downloadingFile = ""
     
     var showInstallCircle = false
@@ -12,12 +12,12 @@ open class ProgressModel {
         return downloadProgress
     }
     
-    open fun setDownloadProgress(progresss: Int) {
+    open fun setDownloadProgress(progress: Int) {
         downloadProgress = progress
     }
     
     open fun getDownloadingFile(): String {
-        return downloadProgress
+        return downloadingFile
     }
     
     open fun setDownloadingFile(file: String) {

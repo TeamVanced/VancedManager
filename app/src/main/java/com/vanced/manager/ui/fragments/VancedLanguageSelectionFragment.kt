@@ -1,7 +1,6 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +15,7 @@ import androidx.preference.PreferenceManager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.VancedDownloadService
+import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getArrayFromJson
 import kotlinx.coroutines.CoroutineScope
@@ -56,7 +55,7 @@ class VancedLanguageSelectionFragment : Fragment() {
                     putString("lang", chosenLangs.joinToString())?.apply()
                     putBoolean("valuesModified", true).apply()
                 }
-                startService(Intent(this, VancedDownloadService::class.java))
+                downloadVanced(requireActivity())
             }
             view.findNavController().navigate(R.id.action_installTo_homeFragment)
         }

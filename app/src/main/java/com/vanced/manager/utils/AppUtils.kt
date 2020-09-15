@@ -15,6 +15,13 @@ object AppUtils {
 
     var installing = false
 
+    fun sendRefresh(context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            delay(500)
+            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+        }
+    }
+
     fun sendFailure(status: Int, context: Context) {
         //Delay error broadcast until activity (and fragment) get back to the screen
         CoroutineScope(Dispatchers.IO).launch {

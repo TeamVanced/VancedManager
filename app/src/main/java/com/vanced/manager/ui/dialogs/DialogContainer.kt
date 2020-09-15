@@ -8,10 +8,10 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.VancedDownloadService
-import com.vanced.manager.core.installer.SplitInstaller
+import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
+import com.vanced.manager.utils.PackageHelper.installVanced
 
 object DialogContainer {
 
@@ -63,11 +63,11 @@ object DialogContainer {
             setTitle("")
             setMessage("")
             setNegativeButton("") { dialog, _ ->
-                context.startService(Intent(context, VancedDownloadService::class.java))
+                downloadVanced(context)
                 dialog.dismiss()
             }
             setPositiveButton(context.getString(R.string.button_reinstall)) { dialog, _ ->
-                context.startService(Intent(context, SplitInstaller::class.java))
+                installVanced(context)
                 dialog.dismiss()
             }
         }

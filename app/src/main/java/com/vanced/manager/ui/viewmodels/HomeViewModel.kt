@@ -5,25 +5,20 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.widget.Toast
-import androidx.browser.customtabs.CustomTabsIntent
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
-import androidx.navigation.Navigation.findNavController
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.crowdin.platform.Crowdin
-import com.google.android.material.snackbar.Snackbar
+import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
 import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
 import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
-import com.vanced.manager.R
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.model.ProgressModel
-import com.vanced.manager.ui.MainActivity
+import com.vanced.manager.ui.fragments.MainFragment
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper.uninstallApk
@@ -56,7 +51,8 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         }
     }
     
-    private val microgSnackbar = Snackbar.make(, R.string.no_microg, Snackbar.LENGTH_LONG).setAction(R.string.install) { downloadMicrog(getApplication()) }
+    //private val microgSnackbar = Snackbar.make(, R.string.no_microg, Snackbar.LENGTH_LONG).setAction(R.string.install) { downloadMicrog(getApplication()) }
+    private val microgToast = Toast.makeText(app, R.string.no_microg, Toast.LENGTH_LONG)
     
     private val vancedPkgName =
         if (variant == "root") 
@@ -97,12 +93,12 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         if (!installing) {
             if (!fetching.get()) {
                 if (variant == "nonroot" && !microg.get()?.isAppInstalled()!!) {
-                    microgSnackbar.show()
+                    microgToast.show()
                 } else {
-                    if (app.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false)!!) {
-                        downloadVanced()
+                    if (app.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false)) {
+                        downloadVanced(app)
                     } else {
-                        findNavController(MainActivity, R.id.nav_host).navigate(R.id.toInstallThemeFragment)
+                        findNavController(MainFragment()).navigate(R.id.toInstallThemeFragment)
                     }
                 }
             }
@@ -114,7 +110,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
         if (!installing) {
             if (!fetching.get()) {
                 if (!microg.get()?.isAppInstalled()!!) {
-                    microgSnackbar.show()
+                    microgToast.show()
                 } else {
                     downloadMusic(getApplication())
                 }

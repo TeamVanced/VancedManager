@@ -1,17 +1,32 @@
 package com.vanced.manager.utils
 
-import android.app.Activity
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageInfo
+import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.os.Build
 import android.util.Log
-import com.vanced.manager.core.installer.AppUninstallerService
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.topjohnwu.superuser.Shell
+import com.topjohnwu.superuser.io.SuFile
+import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
+import com.vanced.manager.core.installer.AppUninstallerService
 import com.vanced.manager.core.installer.SplitInstallerService
-import java.io.FileInputStream
-import java.io.InputStream
+import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.AppUtils.sendFailure
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import java.io.*
+import java.text.SimpleDateFormat
+import java.util.*
+import java.util.regex.Pattern
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 object PackageHelper {
     
@@ -43,25 +58,16 @@ object PackageHelper {
 
     }
 
-    fun uninstallApk(pkg: String, activity: Activity) {
-        val callbackIntent = Intent(activity.context, AppUninstallerService::class.java)
-        callbackIntent.putExtra("pkg", pkg)
-        val pendingIntent = PendingIntent.getService(activity.context, 0, callbackIntent, 0)
-        activity.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
-    }
-
     fun uninstallApk(pkg: String, context: Context): Boolean {
         val callbackIntent = Intent(context, AppUninstallerService::class.java)
         callbackIntent.putExtra("pkg", pkg)
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
-        try {
+        return try {
             context.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
-            return true
-        }
-        catch (e: Exception)
-        {
+            true
+        } catch (e: Exception) {
             e.printStackTrace()
-            return false;
+            false;
         }
     }
     
@@ -70,7 +76,7 @@ object PackageHelper {
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
         val packageInstaller = context.packageManager.packageInstaller
         val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
-        params.setAppPackageName(intent?.getStringExtra("pkg"))
+        params.setAppPackageName(if (app == "microg") "com.mgoogle.android.gms" else "com.vanced.android.music")
         val sessionId = packageInstaller.createSession(params)
         val session = packageInstaller.openSession(sessionId)
         val inputStream: InputStream = FileInputStream(path)
@@ -172,8 +178,8 @@ object PackageHelper {
         try {
             try {
                 session = context.packageManager.packageInstaller.openSession(sessionId)
-                val callbackIntent = Intent(context.context, SplitInstallerService::class.java)
-                val pendingIntent = PendingIntent.getService(context.context, 0, callbackIntent, 0)
+                val callbackIntent = Intent(context, SplitInstallerService::class.java)
+                val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
                 session.commit(pendingIntent.intentSender)
                 session.close()
                 Log.d("AppLog", "install request sent")
@@ -188,7 +194,7 @@ object PackageHelper {
         }
     }
     
-    fun insallVancedRoot(context: Context) {
+    fun installVancedRoot(context: Context) {
         Shell.enableVerboseLogging = BuildConfig.DEBUG
         Shell.setDefaultBuilder(
             Shell.Builder.create()
@@ -198,7 +204,8 @@ object PackageHelper {
 
         Shell.getShell {
             CoroutineScope(Dispatchers.IO).launch {
-                val apkFilesPath = getExternalFilesDir("apks")?.path
+                val vancedVersionCode = InternetTools.getJsonInt("vanced.json", "versionCode", context)
+                val apkFilesPath = context.getExternalFilesDir("apks")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
                 if (fileInfoList != null) {
                     var modApk: FileInfo? = null
@@ -208,22 +215,14 @@ object PackageHelper {
                         }
                     }
                     if (modApk != null) {
-                        if (getDefaultSharedPreferences(this@RootSplitInstallerService).getBoolean("new_installer", false)) {
-                            if (overwriteBase(modApk, fileInfoList, vancedVersionCode)) {
-                                with(localBroadcastManager) {
-                                    sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                                    sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
-                                }
-                            }
-                        } else
-                            installSplitApkFiles(fileInfoList)
-
+                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode, context)) {
+                            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(
+                                HomeFragment.REFRESH_HOME))
+                        }
                     }
-                    else
-                    {
+                    else {
                         sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                     }
-                    //installSplitApkFiles(fileInfoList)
                 }
                 else
                 {
@@ -234,7 +233,7 @@ object PackageHelper {
         }
     }
     
-    private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>) : Boolean {
+    private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
         Log.d("AppLog", "installing split apk files:$apkFiles")
         run {
@@ -269,7 +268,7 @@ object PackageHelper {
         if (installResult.isSuccess) {
             return true
         } else
-            sendFailure(installResult.out, this)
+            sendFailure(installResult.out, context)
         return false
     }
 
@@ -318,9 +317,9 @@ object PackageHelper {
     }
 
     //install Vanced
-    private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int): Boolean {
-        if (checkVersion(versionCode,baseApkFiles)) {
-            val path = getPackageDir()
+    private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int, context: Context): Boolean {
+        if (checkVersion(versionCode, baseApkFiles, context)) {
+            val path = getPackageDir(context)
             apkFile.file?.let {
                 val apath = it.absolutePath
 
@@ -328,9 +327,9 @@ object PackageHelper {
                 if(path != null)
                 {
                     val apkFPath = apkInstallPath + "base.apk"
-                    if(moveAPK(apath, apkFPath))
+                    if(moveAPK(apath, apkFPath, context))
                     {
-                        if(chConV(apkFPath))
+                        if(chConV(apkFPath, context))
                         {
                             if(setupScript(apkFPath,path))
                             {
@@ -370,29 +369,29 @@ object PackageHelper {
     }
 
     //check version and perform action based on result
-    private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>): Boolean {
-        val path = getPackageDir()
+    private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>, context: Context): Boolean {
+        val path = getPackageDir(context)
         if (path != null) {
             if(path.contains("/data/app/"))
             {
-                when(getVersionNumber()?.let { compareVersion(it,versionCode) })
+                when(getVersionNumber(context)?.let { compareVersion(it,versionCode) })
                 {
-                    1 -> {return fixHigherVer(baseApkFiles) }
-                    -1 -> {return fixLowerVer(baseApkFiles) }
+                    1 -> {return fixHigherVer(baseApkFiles, context) }
+                    -1 -> {return fixLowerVer(baseApkFiles, context) }
                 }
                 return true
             }
             else
             {
-                return fixNoInstall(baseApkFiles)
+                return fixNoInstall(baseApkFiles, context)
             }
         }
-        return fixNoInstall(baseApkFiles)
+        return fixNoInstall(baseApkFiles, context)
     }
 
-    private fun getPkgInfo(pkg: String): PackageInfo? {
+    private fun getPkgInfo(pkg: String, context: Context): PackageInfo? {
         return try {
-            packageManager.getPackageInfo(pkg, 0)
+            context.packageManager.getPackageInfo(pkg, 0)
         } catch (e:Exception) {
             Log.d("VMpm", "Unable to get package info")
             null
@@ -408,26 +407,26 @@ object PackageHelper {
     }
 
     //uninstall current update and install base that works with patch
-    private fun fixHigherVer(apkFiles: ArrayList<FileInfo>) : Boolean {
-        if(PackageHelper.uninstallApk(yPkg, context)) {
-            return installSplitApkFiles(apkFiles)
+    private fun fixHigherVer(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
+        if (uninstallApk(yPkg, context)) {
+            return installSplitApkFiles(apkFiles, context)
         }
-        sendFailure(listOf("Failed_Uninstall").toMutableList(), this)
+        sendFailure(listOf("Failed_Uninstall").toMutableList(), context)
         return false
     }
 
     //install newer stock youtube
-    private fun fixLowerVer(apkFiles: ArrayList<FileInfo>): Boolean {
-        return installSplitApkFiles(apkFiles)
+    private fun fixLowerVer(apkFiles: ArrayList<FileInfo>, context: Context): Boolean {
+        return installSplitApkFiles(apkFiles, context)
     }
 
     //install stock youtube since no install was found
-    private fun fixNoInstall(baseApkFiles: ArrayList<FileInfo>): Boolean {
-        return installSplitApkFiles(baseApkFiles)
+    private fun fixNoInstall(baseApkFiles: ArrayList<FileInfo>, context: Context): Boolean {
+        return installSplitApkFiles(baseApkFiles, context)
     }
 
     //set chcon to apk_data_file
-    private fun chConV(path: String): Boolean {
+    private fun chConV(path: String, context: Context): Boolean {
         val response = Shell.su("chcon u:object_r:apk_data_file:s0 $path").exec()
         //val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
         return if (response.isSuccess) {
@@ -439,7 +438,7 @@ object PackageHelper {
     }
 
     //move patch to data/app
-    private fun moveAPK(apkFile: String, path: String) : Boolean {
+    private fun moveAPK(apkFile: String, path: String, context: Context) : Boolean {
         val apkinF = SuFile.open(apkFile)
         val apkoutF = SuFile.open(path)
 
@@ -479,9 +478,9 @@ object PackageHelper {
     }
 
     //get path of the installed youtube
-    private fun getVPath(): String? {
+    private fun getVPath(context: Context): String? {
         return try {
-            val p = getPkgInfo(yPkg)
+            val p = getPkgInfo(yPkg, context)
             p?.applicationInfo?.sourceDir
         } catch (e: Exception) {
             null
@@ -489,23 +488,19 @@ object PackageHelper {
 
     }
 
-    private fun getVersionNumber(): Int?
-    {
+    private fun getVersionNumber(context: Context): Int? {
         try {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-                packageManager.getPackageInfo(yPkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
+                context.packageManager.getPackageInfo(yPkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
             else
-                packageManager.getPackageInfo(yPkg, 0)?.versionCode
+                context.packageManager.getPackageInfo(yPkg, 0)?.versionCode
         }
-        catch (e : Exception)
-        {
+        catch (e : Exception) {
             val execRes = Shell.su("dumpsys package com.google.android.youtube | grep versionCode").exec()
-            if(execRes.isSuccess)
-            {
+            if(execRes.isSuccess) {
                 val result = execRes.out
-                var version: Int = 0
-                for(line in result)
-                {
+                var version = 0
+                for(line in result) {
                     val versionCode = line.substringAfter("=")
                     val versionCodeFiltered = versionCode.substringBefore(" ")
                     if(version < Integer.valueOf(versionCodeFiltered))
@@ -519,10 +514,10 @@ object PackageHelper {
         return null
     }
 
-    private fun getPackageDir(): String?
+    private fun getPackageDir(context: Context): String?
     {
         return try {
-            val p = getPkgInfo(yPkg)
+            val p = getPkgInfo(yPkg, context)
             p?.applicationInfo?.sourceDir
         } catch (e: Exception) {
              val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
