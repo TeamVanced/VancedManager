@@ -10,7 +10,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
-import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
@@ -18,7 +19,7 @@ import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
 import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.model.ProgressModel
-import com.vanced.manager.ui.fragments.MainFragment
+import com.vanced.manager.ui.events.Event
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper.uninstallApk
@@ -38,6 +39,11 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     val music = ObservableField<DataModel>()
     val manager = ObservableField<DataModel>()
     val fetching = ObservableBoolean()
+
+    var _navigateDestination = MutableLiveData<Event<Int>>()
+
+    val navigateDestination : LiveData<Event<Int>>
+        get() = _navigateDestination
 
     fun fetchData() {
         CoroutineScope(Dispatchers.IO).launch {
@@ -88,7 +94,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             
         InternetTools.openUrl(url, color, getApplication())
     }
-    
+
     fun installVanced() {
         if (!installing) {
             if (!fetching.get()) {
@@ -98,7 +104,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
                     if (app.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false)) {
                         downloadVanced(app)
                     } else {
-                        findNavController(MainFragment()).navigate(R.id.toInstallThemeFragment)
+                        _navigateDestination.value = Event(R.id.toInstallThemeFragment)
                     }
                 }
             }
