@@ -145,7 +145,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
                     installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
                     installing = false
                 }
-                REFRESH_HOME -> viewModel.fetchData()
+                REFRESH_HOME -> viewModel.fetchData(false)
             }
         }
     }
