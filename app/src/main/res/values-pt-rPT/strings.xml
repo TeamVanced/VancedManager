@@ -13,7 +13,7 @@
     <string name="downloading_file">Transferindo %1$s</string>
     <string name="install">Instalar</string>
     <string name="installing_app">Instalando %1$s</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">Por favor aguarde, enquanto a instalação acaba.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais Recente:</string>
@@ -45,8 +45,8 @@
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos em abas personalizadas do Chrome</string>
     <string name="link_external_browser">Os Links serão abertos em um Navegador Externo</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">Utilizar o novo instalador root (experimental)</string>
+    <string name="new_installer_summary">Este instalador não depende do estado da verificação de assinatura. AVISO: O Vanced pode desaparecer depois de um reínicio se o instalar desta forma</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Escuro</string>
@@ -69,7 +69,7 @@
     <string name="security_context">Por favor certifique-se que você transferiu o aplicativo do site vanced.app, o server Discord do Vanced ou o GitHub do Vanced</string>
     <string name="success">Sucesso!</string>
     <string name="vanced_installed">O Vanced foi instalado com sucesso! Abrir agora?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
+    <string name="music_installed">O Vanced Music foi instalado com sucesso! Pretende abrí-lo?</string>
     <string name="launch">Abrir</string>
     <string name="welcome">Bem-Vindo</string>
     <!-- Install Page -->
@@ -82,7 +82,7 @@
     <string name="install_light_dark">Claro + Escuro</string>
     <string name="next">Próximo</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">Programadores do Manager</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipa Vanced</string>
     <!-- Error messages -->
@@ -102,5 +102,5 @@
     <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
     <string name="installation_storage">A instalação falhou devido a um erro de armazenamento.</string>
     <string name="modapk_missing">Black/Dark apk em falta pelo instalador, Isto não devia acontecer, por favor limpe o armazenamento do Manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">O diretório do YouTube original não está acessível ou em falta devido a uma instalação Split do YouTube Original</string>
 </resources>
