@@ -6,6 +6,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
@@ -63,7 +64,7 @@ class MainFragment : Fragment() {
     
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         with(requireActivity()) {
-            findViewById<MaterialToolbar>(R.id.home_toolbar).navigationIcon = if (isNeeded) getDrawable(R.drawable.ic_keyboard_backspace_black_24dp) else null
+            findViewById<MaterialToolbar>(R.id.home_toolbar).navigationIcon = if (isNeeded) ContextCompat.getDrawable(requireActivity(), R.drawable.ic_keyboard_backspace_black_24dp) else null
         }
     }
     

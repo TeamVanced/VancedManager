@@ -17,8 +17,11 @@
 
         <Preference
             android:key="device_arch"
-            android:title="Kernel Architecture"
-            android:summary="Arch" />
+            android:title="Kernel Architecture" />
+
+        <Preference
+            android:key="device_os"
+            android:title="Android Version" />
 
     </PreferenceCategory>
 

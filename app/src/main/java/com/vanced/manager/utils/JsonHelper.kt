@@ -13,21 +13,18 @@ object JsonHelper {
 
     suspend fun getJson(url: String): JsonObject
     {
-        if(dataMap.containsKey(url))
-        {
-            return dataMap[url]!!
-        }
-        else
-        {
+        return if(dataMap.containsKey(url)) {
+            dataMap[url]!!
+        } else {
             dataMap[url] = getSuspendJson(url)
-            return dataMap[url]!!
+            dataMap[url]!!
         }
     }
 
-    suspend fun getSuspendJson(url: String): com.beust.klaxon.JsonObject =
+    private suspend fun getSuspendJson(url: String): JsonObject =
         Parser.default().parse(
             StringBuilder(url.httpGet().awaitString())
-        ) as com.beust.klaxon.JsonObject
+        ) as JsonObject
 
     suspend fun getJsonArray(url: String): JsonArray<String> =
         Klaxon().parseArray<String>(

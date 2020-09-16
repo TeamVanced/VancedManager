@@ -14,6 +14,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
+import com.vanced.manager.core.App
 import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
 import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
 import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
@@ -30,6 +31,7 @@ import kotlinx.coroutines.launch
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val app = application
+    private val managerApp = application as App
 
     //val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
     var variant = "nonroot"
@@ -40,19 +42,19 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     val manager = ObservableField<DataModel>()
     val fetching = ObservableBoolean()
 
-    var _navigateDestination = MutableLiveData<Event<Int>>()
+    private var _navigateDestination = MutableLiveData<Event<Int>>()
 
-    val navigateDestination : LiveData<Event<Int>>
-        get() = _navigateDestination
+    val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
-    fun fetchData() {
+    fun fetchData(firstInit: Boolean = false) {
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
+            if (!firstInit) managerApp.loadJson()
             Crowdin.forceUpdate(getApplication())
-            vanced.set(DataModel("vanced", variant, app))
-            microg.set(DataModel("microg", context = app))
-            music.set(DataModel("music", context = app))
-            manager.set(DataModel("manager", context = app))
+            vanced.set(DataModel(managerApp.vanced, variant, app))
+            microg.set(DataModel(managerApp.microg, context = app))
+            music.set(DataModel(managerApp.music, context = app))
+            manager.set(DataModel(managerApp.manager, context = app))
             fetching.set(false)
         }
     }
@@ -144,7 +146,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     init {
         fetching.set(false)
-        fetchData()
+        fetchData(true)
     }
 
 }

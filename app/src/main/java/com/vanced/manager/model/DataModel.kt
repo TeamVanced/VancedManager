@@ -3,23 +3,23 @@ package com.vanced.manager.model
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
+import androidx.core.content.ContextCompat
+import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
-import com.vanced.manager.utils.InternetTools.getJsonInt
-import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 
 open class DataModel(
-    private val jsonName: String,
-    private val variant: String = "nonroot",
+    private val jsonObject: JsonObject,
+    variant: String = "nonroot",
     private val context: Context
 ) {
     
     private val appPkg = 
-        when (jsonName) {
+        when (jsonObject.toString()) {
             "vanced" -> if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube"
             "microg" -> "com.mgoogle.android.gms"
             else -> "com.vanced.android.apps.youtube.music"
@@ -36,13 +36,9 @@ open class DataModel(
     
     open fun isAppInstalled(): Boolean = isPackageInstalled(appPkg, context.packageManager)
     
-    open fun getVersionName(): String = runBlocking(Dispatchers.IO) {
-        getJsonString("$jsonName.json", "version", context)
-    }
+    open fun getVersionName(): String = jsonObject.string("version")!!
     
-    open fun getVersionCode(): Int = runBlocking(Dispatchers.IO) {
-        getJsonInt("$jsonName.json", "versionCode", context)
-    }
+    open fun getVersionCode(): Int = jsonObject.int("versionCode")!!
     
     open fun getInstalledVersionName(): String = runBlocking(Dispatchers.IO) {
         getPkgVersionName(isAppInstalled(), appPkg)
@@ -57,10 +53,10 @@ open class DataModel(
     open fun getButtonIcon(): Drawable? = compareIntDrawable(getInstalledVersionCode(), getVersionCode())
 
     open fun getChangelog(): String = runBlocking(Dispatchers.IO) {
-        when (jsonName) {
+        when (jsonObject.toString()) {
             "vanced" -> getObjectFromJson("$baseUrl/changelog/${getVersionName().replace('.', '_')}.json", "message")
-            "music" -> getJsonString("$jsonName.json", "changelog", context)
-            else -> getObjectFromJson("https://ytvanced.github.io/VancedBackend/$jsonName.json", "changelog")
+            "music" -> jsonObject.string("changelog")!!
+            else -> getObjectFromJson("https://ytvanced.github.io/VancedBackend/$jsonObject.json", "changelog")
         }
     }
     
@@ -94,10 +90,10 @@ open class DataModel(
 
     private fun compareIntDrawable(int1: Int, int2: Int): Drawable? {
         return when {
-            int1 == 0 -> context.getDrawable(R.drawable.ic_download)
-            int2 > int1 -> context.getDrawable(R.drawable.ic_update)
-            int2 == int1 -> context.getDrawable(R.drawable.ic_done)
-            else -> context.getDrawable(R.drawable.ic_download)
+            int1 == 0 -> ContextCompat.getDrawable(context, R.drawable.ic_download)
+            int2 > int1 -> ContextCompat.getDrawable(context, R.drawable.ic_update)
+            int2 == int1 -> ContextCompat.getDrawable(context, R.drawable.ic_done)
+            else -> ContextCompat.getDrawable(context, R.drawable.ic_download)
         }
     }
     
