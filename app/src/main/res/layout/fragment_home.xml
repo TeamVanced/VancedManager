@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         bind:refreshing="@{viewModel.fetching}"
-        bind:onRefreshListener="@{()-> viewModel.fetchData()}">
+        bind:onRefreshListener="@{()-> viewModel.fetchData(false)}">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"

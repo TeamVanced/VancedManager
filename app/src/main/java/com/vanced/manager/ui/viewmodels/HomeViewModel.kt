@@ -46,7 +46,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
-    fun fetchData(firstInit: Boolean = false) {
+    fun fetchData(firstInit: Boolean) {
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
             if (!firstInit) managerApp.loadJson()
