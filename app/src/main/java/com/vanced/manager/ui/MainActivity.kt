@@ -14,6 +14,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionVariantAdapter
+import com.vanced.manager.core.App
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
@@ -66,13 +67,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setFinalTheme(this)
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main) 
-        
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
         with(binding) {
             lifecycleOwner = this@MainActivity
             setSupportActionBar(homeToolbar)
             mainViewpager.adapter = SectionVariantAdapter(this@MainActivity)
-            mainViewpager.setUserInputEnabled(false)
+            mainViewpager.isUserInputEnabled = false
             TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
                 tab.text = if (position == 1) "root" else "nonroot"
             }.attach()

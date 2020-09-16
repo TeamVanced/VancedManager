@@ -45,3 +45,6 @@ Isn't this lovely and beautiful?
 ![Zanezam](https://i.imgur.com/QVcXA6q.png)
 - Laura Almeida  
 ![Laura Almeida](https://i.imgur.com/ovVD939.png)
+
+###### If someone is reading this pls help me, KevinX8 is bullying me and forces me to develop manager. please send bobs and veganas and call 911
+

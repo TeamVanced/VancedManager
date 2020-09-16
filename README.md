@@ -30,5 +30,3 @@ After 3 months of development, we are finally ready to introduce Vanced Manager 
 - aefyr for [SAI](https://github.com/aefyr/SAI), which was an inspiration for our Manager
 - kittinunf for [Fuel](https://github.com/kittinunf/Fuel) HTTP client
 - cbeust for [klaxon](https://github.com/cbeust/klaxon) JSON parser
-
-###### If someone is reading this pls help me, KevinX8 is bullying me and forces me to develop manager. please someone call 911 this is serious. 
