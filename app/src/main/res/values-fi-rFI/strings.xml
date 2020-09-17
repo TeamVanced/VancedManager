@@ -13,7 +13,7 @@
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
     <string name="installing_app">Asennetaan %1$s</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
+    <string name="installation_wait">Odota, kunnes asennus on valmis.</string>
     <string name="button_reinstall">Uudelleenasenna</string>
     <string name="version_installed">Asennettu:</string>
     <string name="latest">Uusin:</string>
@@ -45,8 +45,8 @@
     <string name="link_title">Käytä Chromen mukautettuja välilehtiä</string>
     <string name="link_custom_tabs">Linkit aukeavat Chromen mukautetuissa välilehdissä</string>
     <string name="link_external_browser">Linkit aukeavat ulkoisessa selaimessa</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">Käytä uutta juuriasenninta (kokeellinen)</string>
+    <string name="new_installer_summary">Tämä asennusohjelma ei ole riippuvainen allekirjoituksen vahvistuksen tilasta. VAROITUS: Vanced saattaa kadota uudelleenkäynnistyksen jälkeen, jos asennat sen tällä tavalla</string>
     <string name="theme">Teema</string>
     <string name="theme_follow">Järjestelmän teema</string>
     <string name="theme_dark">Tumma teema</string>
@@ -62,35 +62,35 @@
     <string name="button_dismiss">Ohita</string>
     <string name="guide">Opas</string>
     <string name="hold_on">Pysähdy!</string>
-    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Käytät Vancedin Magisk / TWRP-versiota, joka on lopetettu eikä sitä voi päivittää tällä sovelluksella. Poista se poistamalla magisk-moduuli / käyttämällä TWRP Vanced -asennusohjelmaa.</string>
     <string name="miui_one_title">MIUI tunnistettu!</string>
-    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Vancedin asentamiseksi TÄYTYY poistaa MIUI-optimoinnit käytöstä kehittäjäasetuksissa. (Voit ohittaa tämän varoituksen, jos käytät 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM-levyä)</string>
     <string name="error">Virhe</string>
     <string name="security_context">Varmista, että latasit sovelluksen vanced.app -sivustolta, Vancedin Discord-palvelimelta tai Vancedin GitHubista</string>
     <string name="success">Onnistui!</string>
     <string name="vanced_installed">Vanced on asennettu onnistuneesti! Avaa nyt?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
+    <string name="music_installed">Vanced Music on asennettu onnistuneesti! Avoinna nyt?</string>
     <string name="launch">Avaa</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
     <string name="choose_preferred_language_note">Huom: Englanti asennetaan rinnalle aina.</string>
     <string name="choose_preferred_theme">Valitse haluamasi teema</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you MUST disable the apk signature verification.</string>
+    <string name="disable_signature">Root-tila havaittu! Vancedin asentamiseksi sinun on poistettava apk-allekirjoituksen vahvistus käytöstä.</string>
     <string name="finish">Valmis</string>
     <string name="install_light_black">Vaalea + Musta</string>
     <string name="install_light_dark">Vaalea + Tumma</string>
     <string name="next">Seuraava</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">Kehittäjäpäällikkö</string>
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="chown_fail">Apk: n lähettäminen järjestelmän omistajalle epäonnistui, yritä uudelleen</string>
     <string name="error_downloading">%1$s lataus epäonnistui</string>
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
-    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="files_missing_va">Tiedostot puuttuvat, lataaminen epäonnistui?</string>
+    <string name="ifile_missing">Dark / Black.apk-tiedostoa ei voi lukea (estettiinkö tallennustila?) Tai tiedosto puuttuu</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä esti asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
@@ -101,6 +101,6 @@
     <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
     <string name="installation_storage">Asennus epäonnistui tallennustilan virheen vuoksi.</string>
-    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="modapk_missing">Musta / tumma apk puuttuu asennusohjelmasta. Tämän ei pitäisi tapahtua. Tyhjennä managerin sovellustiedot</string>
+    <string name="path_missing">Osakkeen YouTube-asennuspolku ei ole käytettävissä tai puuttuu osakkeiden jaon asennuksen jälkeen</string>
 </resources>
