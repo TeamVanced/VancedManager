@@ -11,6 +11,7 @@ import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.JsonHelper.getJson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 open class App: Application() {
@@ -21,20 +22,23 @@ open class App: Application() {
     var manager: JsonObject? = null
 
     override fun onCreate() {
-        loadJson()
-        super.onCreate()
-        PRDownloader.initialize(this)
+        CoroutineScope(Dispatchers.IO).launch {
+            loadJsonAsync().await()
+            super.onCreate()
+            PRDownloader.initialize(this@App)
 
-        Crowdin.init(this,
-        CrowdinConfig.Builder()
-            .withDistributionHash("36c51aed3180a4f43073d28j4s6")
-            .withNetworkType(NetworkType.WIFI)
-            .build()
-        )
+            Crowdin.init(this@App,
+                CrowdinConfig.Builder()
+                    .withDistributionHash("36c51aed3180a4f43073d28j4s6")
+                    .withNetworkType(NetworkType.WIFI)
+                    .build()
+            )
+        }
+
 
     }
 
-    fun loadJson() = CoroutineScope(Dispatchers.IO).launch {
+    fun loadJsonAsync() = CoroutineScope(Dispatchers.IO).async {
         val latest = getJson("$baseUrl/latest.json")
         vanced = latest.obj("vanced")
         music = latest.obj("music")

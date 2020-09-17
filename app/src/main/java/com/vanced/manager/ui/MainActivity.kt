@@ -4,17 +4,19 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.NavHostFragment
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.messaging.FirebaseMessaging
+import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionVariantAdapter
-import com.vanced.manager.core.App
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
@@ -45,6 +47,12 @@ class MainActivity : AppCompatActivity() {
     private val tabListener = object : TabLayout.OnTabSelectedListener {
 
         override fun onTabSelected(tab: TabLayout.Tab) {
+            if (tab.position == 1 && !Shell.rootAccess()) {
+                tab.select(0)
+                Toast.makeText(this@MainActivity, getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
+                return
+            }
+
             getDefaultSharedPreferences(this@MainActivity).edit().putString("vanced_variant", 
                 when (tab.position) {
                     1 -> "root"
@@ -104,6 +112,12 @@ class MainActivity : AppCompatActivity() {
         binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val navHost = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
+        navHost.navController.popBackStack()
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (installing) {
             return false
@@ -131,10 +145,14 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(Crowdin.wrapContext(newBase))
     }
 
+    fun TabLayout.Tab.select(position: Int) {
+        this.parent?.getTabAt(position)?.select()
+    }
+
     private fun initDialogs() {
         val prefs = getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
-        val showRootDialog = prefs.getBoolean("show_root_dialog", true)
+        prefs.getBoolean("show_root_dialog", true)
 
         when {
             prefs.getBoolean("firstStart", true) -> {

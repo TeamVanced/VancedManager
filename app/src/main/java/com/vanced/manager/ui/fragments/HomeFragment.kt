@@ -153,6 +153,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
         intentFilter.addAction(INSTALL_FAILED)
+        intentFilter.addAction(REFRESH_HOME)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
     }
 

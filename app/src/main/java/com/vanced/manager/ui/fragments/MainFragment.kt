@@ -67,6 +67,8 @@ class MainFragment : Fragment() {
             findViewById<MaterialToolbar>(R.id.home_toolbar).navigationIcon = if (isNeeded) ContextCompat.getDrawable(requireActivity(), R.drawable.ic_keyboard_backspace_black_24dp) else null
         }
     }
+
+
     
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {

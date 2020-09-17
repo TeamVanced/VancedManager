@@ -12,7 +12,7 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 open class DataModel(
-    jsonObject: JsonObject?,
+    private val jsonObject: JsonObject?,
     variant: String = "nonroot",
     app: String,
     private val context: Context
@@ -35,7 +35,7 @@ open class DataModel(
     val buttonIcon = ObservableField<Drawable>()
     val changelog = ObservableField<String>()
 
-    init {
+    fun fetch() {
         isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
         versionName.set(jsonObject?.string("version")?.removeSuffix("-vanced")  ?: context.getString(R.string.unavailable))
         installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))
@@ -44,6 +44,10 @@ open class DataModel(
         buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
         buttonIcon.set(compareIntDrawable(installedVersionCode.get(), versionCode.get()))
         changelog.set(jsonObject?.string("changelog") ?: context.getString(R.string.unavailable))
+    }
+
+    init {
+        fetch()
     }
     
     private fun getPkgVersionName(toCheck: Boolean, pkg: String): String  {

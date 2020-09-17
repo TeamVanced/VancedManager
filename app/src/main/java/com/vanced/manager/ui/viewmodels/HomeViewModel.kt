@@ -27,7 +27,6 @@ import com.vanced.manager.utils.PackageHelper.uninstallApk
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.internal.wait
 
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
@@ -47,13 +46,15 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
-    fun fetchData() {
-        CoroutineScope(Dispatchers.IO).launch {
-            fetching.set(true)
-            managerApp.loadJson()
-            Crowdin.forceUpdate(getApplication())
-            fetching.set(false)
-        }
+    fun fetchData() = CoroutineScope(Dispatchers.IO).launch {
+        fetching.set(true)
+        managerApp.loadJsonAsync().await()
+        vanced.get()?.fetch()
+        music.get()?.fetch()
+        microg.get()?.fetch()
+        manager.get()?.fetch()
+        Crowdin.forceUpdate(getApplication())
+        fetching.set(false)
     }
     
     //private val microgSnackbar = Snackbar.make(, R.string.no_microg, Snackbar.LENGTH_LONG).setAction(R.string.install) { downloadMicrog(getApplication()) }
@@ -143,8 +144,9 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     init {
         fetching.set(true)
-        while (managerApp.manager == null)
-            this.wait()
+        //while (managerApp.manager == null)
+            //this.wait()
+
         vanced.set(DataModel(managerApp.vanced, variant, "vanced", app))
         microg.set(DataModel(managerApp.microg, app = "microg", context = app))
         music.set(DataModel(managerApp.music, app = "music", context = app))
