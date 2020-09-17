@@ -75,7 +75,7 @@ object PackageHelper {
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
         val packageInstaller = context.packageManager.packageInstaller
         val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
-        params.setAppPackageName(if (app == "microg") "com.mgoogle.android.gms" else "com.vanced.android.music")
+        params.setAppPackageName(if (app == "microg") "com.mgoogle.android.gms" else "com.vanced.android.apps.youtube.music")
         val sessionId = packageInstaller.createSession(params)
         val session = packageInstaller.openSession(sessionId)
         val inputStream: InputStream = FileInputStream(path)

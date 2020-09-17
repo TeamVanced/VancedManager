@@ -24,7 +24,7 @@ class SplitInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                vancedProgress.get()?.showInstallCircle = false
+                vancedProgress.get()?.showInstallCircle?.set(false)
                 sendRefresh(this)
             }
             else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)

@@ -29,21 +29,22 @@ object MicrogDownloader {
                 .build()
                 .setOnStartOrResumeListener { 
                     installing = true
-                    microgProgress.get()?.setDownloadingFile(getFileNameFromUrl(url))
-                    microgProgress.get()?.showDownloadBar = true
+                    microgProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
+                    microgProgress.get()?.showDownloadBar?.set(true)
                 }
                 .setOnProgressListener { progress ->
-                    microgProgress.get()?.setDownloadProgress((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                    microgProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         install("microg", "${context.getExternalFilesDir("apk")}/microg.apk", context)
-                        microgProgress.get()?.showDownloadBar = false
-                        microgProgress.get()?.showInstallCircle = true
+                        microgProgress.get()?.showDownloadBar?.set(false)
+                        microgProgress.get()?.showInstallCircle?.set(true)
                     }
 
                     override fun onError(error: Error?) {
                         installing = false
+                        microgProgress.get()?.showDownloadBar?.set(false)
                         Toast.makeText(context, context.getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
                     }
                 })

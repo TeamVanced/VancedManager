@@ -8,6 +8,7 @@ import android.util.Log
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.microgProgress
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.musicProgress
 import com.vanced.manager.utils.AppUtils.sendFailure
+import com.vanced.manager.utils.AppUtils.sendRefresh
 
 class AppInstallerService: Service() {
 
@@ -25,7 +26,8 @@ class AppInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                if (intent.getStringExtra("app") == "microg") microgProgress.get()?.showInstallCircle = false else musicProgress.get()?.showInstallCircle = false
+                if (intent.getStringExtra("app") == "microg") microgProgress.get()?.showInstallCircle?.set(false) else musicProgress.get()?.showInstallCircle?.set(false)
+                sendRefresh(this)
             }
             else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
         }

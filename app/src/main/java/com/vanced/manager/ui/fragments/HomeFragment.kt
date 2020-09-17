@@ -57,17 +57,17 @@ open class HomeFragment : Fragment(), View.OnClickListener {
             includeChangelogsLayout.changelogButton.setOnClickListener(this@HomeFragment)
 
             includeVancedLayout.vancedCard.setOnLongClickListener {
-                versionToast("Vanced", viewModel?.vanced?.get()?.getInstalledVersionName()!!)
+                versionToast("Vanced", viewModel?.vanced?.get()?.installedVersionName?.get()!!)
                 true
             }
             
             includeMusicLayout.musicCard.setOnLongClickListener {
-                versionToast("Music", viewModel?.music?.get()?.getInstalledVersionName()!!)
+                versionToast("Music", viewModel?.music?.get()?.installedVersionName?.get()!!)
                 true
             }
 
             includeMicrogLayout.microgCard.setOnLongClickListener {
-                versionToast("MicroG", viewModel?.microg?.get()?.getInstalledVersionName()!!)
+                versionToast("MicroG", viewModel?.microg?.get()?.installedVersionName?.get()!!)
                 true
             }
         }
@@ -145,7 +145,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
                     installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
                     installing = false
                 }
-                REFRESH_HOME -> viewModel.fetchData(false)
+                REFRESH_HOME -> viewModel.fetchData()
             }
         }
     }

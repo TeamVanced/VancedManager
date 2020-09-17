@@ -27,6 +27,7 @@ import com.vanced.manager.utils.PackageHelper.uninstallApk
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import okhttp3.internal.wait
 
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
@@ -46,15 +47,11 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
-    fun fetchData(firstInit: Boolean) {
+    fun fetchData() {
         CoroutineScope(Dispatchers.IO).launch {
             fetching.set(true)
-            if (!firstInit) managerApp.loadJson()
+            managerApp.loadJson()
             Crowdin.forceUpdate(getApplication())
-            vanced.set(DataModel(managerApp.vanced, variant, app))
-            microg.set(DataModel(managerApp.microg, context = app))
-            music.set(DataModel(managerApp.music, context = app))
-            manager.set(DataModel(managerApp.manager, context = app))
             fetching.set(false)
         }
     }
@@ -100,7 +97,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     fun installVanced() {
         if (!installing) {
             if (!fetching.get()) {
-                if (variant == "nonroot" && !microg.get()?.isAppInstalled()!!) {
+                if (variant == "nonroot" && !microg.get()?.isAppInstalled?.get()!!) {
                     microgToast.show()
                 } else {
                     if (app.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false)) {
@@ -117,7 +114,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     fun installMusic() {
         if (!installing) {
             if (!fetching.get()) {
-                if (!microg.get()?.isAppInstalled()!!) {
+                if (!microg.get()?.isAppInstalled?.get()!!) {
                     microgToast.show()
                 } else {
                     downloadMusic(getApplication())
@@ -145,8 +142,17 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     }
 
     init {
+        fetching.set(true)
+        while (managerApp.manager == null)
+            this.wait()
+        vanced.set(DataModel(managerApp.vanced, variant, "vanced", app))
+        microg.set(DataModel(managerApp.microg, app = "microg", context = app))
+        music.set(DataModel(managerApp.music, app = "music", context = app))
+        manager.set(DataModel(managerApp.manager, app = "manager", context = app))
+        vancedProgress.set(ProgressModel())
+        musicProgress.set(ProgressModel())
+        microgProgress.set(ProgressModel())
         fetching.set(false)
-        fetchData(true)
     }
 
 }

@@ -37,7 +37,7 @@ object VancedDownloader {
     private var variant: String? = null
     private var theme: String? = null
     private var lang: Array<String>? = null
-    private var newInstaller: Boolean? = null
+    //private var newInstaller: Boolean? = null
 
     private lateinit var themePath: String
     
@@ -61,7 +61,7 @@ object VancedDownloader {
         theme = prefs.getString("theme", "dark")
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
-        newInstaller = defPrefs.getBoolean("new_installer", false)
+        //newInstaller = defPrefs.getBoolean("new_installer", false)
         arch = 
             when {
                 Build.SUPPORTED_ABIS.contains("x86") -> "x86"
@@ -94,18 +94,18 @@ object VancedDownloader {
                 .download(url, context.getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener { 
-                    installing = true 
-                    vancedProgress.get()?.setDownloadingFile(getFileNameFromUrl(url))
-                    vancedProgress.get()?.showDownloadBar = true
+                    installing = true
+                    vancedProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
+                    vancedProgress.get()?.showDownloadBar?.set(true)
                 }
                 .setOnProgressListener { progress ->
-                    vancedProgress.get()?.setDownloadProgress((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                    vancedProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         when (type) {
                             "theme" -> 
-                                if (variant == "root" && newInstaller == true) {
+                                if (variant == "root") {
                                     if (validateTheme(context)) {
                                         if(downloadStockCheck(context))
                                             downloadSplits(context, "arch") 
@@ -115,7 +115,7 @@ object VancedDownloader {
                                         downloadSplits(context, "theme")
                                 } else 
                                     downloadSplits(context, "arch")
-                            "arch" -> if (variant == "root" && newInstaller == true) downloadSplits(context, "stock") else downloadSplits(context, "lang")
+                            "arch" -> if (variant == "root") downloadSplits(context, "stock") else downloadSplits(context, "lang")
                             "stock" -> downloadSplits(context, "dpi")
                             "dpi" -> downloadSplits(context, "lang")
                             "lang" -> {
@@ -137,6 +137,7 @@ object VancedDownloader {
                                 prepareInstall(variant!!, context)
                         } else {
                             installing = false
+                            vancedProgress.get()?.showDownloadBar?.set(false)
                             Toast.makeText(context, context.getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
                         }
                     }
@@ -194,8 +195,8 @@ object VancedDownloader {
      */
 
     private fun prepareInstall(variant: String, context: Context) {
-        vancedProgress.get()?.showDownloadBar = false
-        vancedProgress.get()?.showInstallCircle = true
+        vancedProgress.get()?.showDownloadBar?.set(false)
+        vancedProgress.get()?.showInstallCircle?.set(true)
         if (variant == "root")
             installVancedRoot(context)
         else

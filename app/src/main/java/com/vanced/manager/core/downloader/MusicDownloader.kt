@@ -30,21 +30,22 @@ object MusicDownloader {
                 .build()
                 .setOnStartOrResumeListener { 
                     installing = true 
-                    musicProgress.get()?.setDownloadingFile(getFileNameFromUrl(url))
-                    musicProgress.get()?.showDownloadBar = true
+                    musicProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
+                    musicProgress.get()?.showDownloadBar?.set(true)
                 }
                 .setOnProgressListener { progress ->
-                    musicProgress.get()?.setDownloadProgress((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                    musicProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         install("music", "${context.getExternalFilesDir("apk")}/music.apk", context)
-                        musicProgress.get()?.showDownloadBar = false
-                        musicProgress.get()?.showInstallCircle = true
+                        musicProgress.get()?.showDownloadBar?.set(false)
+                        musicProgress.get()?.showInstallCircle?.set(true)
                     }
 
                     override fun onError(error: Error?) {
                         installing = false
+                        musicProgress.get()?.showDownloadBar?.set(false)
                         Toast.makeText(context, context.getString(R.string.error_downloading, "Music"), Toast.LENGTH_SHORT).show()
                     }
                 })

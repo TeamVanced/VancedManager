@@ -1,27 +1,21 @@
 package com.vanced.manager.model
 
+import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
+import androidx.databinding.ObservableInt
+
 open class ProgressModel {
     
-    private var downloadProgress = 0
-    private var downloadingFile = ""
-    
-    var showInstallCircle = false
-    var showDownloadBar = false
-    
-    open fun getDownloadProgress(): Int {
-        return downloadProgress
-    }
-    
-    open fun setDownloadProgress(progress: Int) {
-        downloadProgress = progress
-    }
-    
-    open fun getDownloadingFile(): String {
-        return downloadingFile
-    }
-    
-    open fun setDownloadingFile(file: String) {
-        downloadingFile = file
+    val downloadProgress = ObservableInt()
+    val downloadingFile = ObservableField<String>()
+    val showInstallCircle = ObservableBoolean()
+    var showDownloadBar = ObservableBoolean()
+
+    init {
+        downloadProgress.set(0)
+        downloadingFile.set("")
+        showInstallCircle.set(false)
+        showDownloadBar.set(false)
     }
     
 }
