@@ -45,8 +45,8 @@
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">Використовуйте новий кореневий інсталятор (експериментальний)</string>
+    <string name="new_installer_summary">Цей інсталятор не залежить від статусу перевірки підпису. ПОПЕРЕДЖЕННЯ: Vanced може зникнути після перезавантаження, якщо ви встановите його за допомогою цього</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
