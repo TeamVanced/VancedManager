@@ -45,8 +45,8 @@
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="link_external_browser">A linkek egy külső böngészőben nyílnak meg</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">Használja az új root telepítőt (kísérleti)</string>
+    <string name="new_installer_summary">Ez a telepítő nem függ az aláírás-ellenőrzés állapotától. FIGYELEM: A Vanced újraindítás után eltűnhet, ha ezzel telepíti</string>
     <string name="theme">Kinézet</string>
     <string name="theme_follow">Rendszertéma követése</string>
     <string name="theme_dark">Sötét téma</string>
@@ -86,7 +86,7 @@
     <string name="sources">Források</string>
     <string name="vanced_team">Vanced csapat</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="chown_fail">Nem sikerült az Apk megosztása a rendszer tulajdonosával. Próbálja újra</string>
     <string name="error_downloading">%1$s letöltése nem sikerült</string>
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
     <string name="files_missing_va">Hiányzó fájlok, újra tölti?</string>
@@ -104,5 +104,5 @@ Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
     <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsold ki a MIUI Optimalizációt és próbáld újra.</string>
     <string name="installation_storage">Tárhely hiba miatt a telepítés nem sikerült.</string>
     <string name="modapk_missing">Balck/Dark apk hiányzik a telepítőből, ez nem történhet meg, kérjük törölje az alkamazás adatait</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="path_missing">A részvény Youtube telepítési útvonala nem érhető el vagy hiányzik a részvények felosztása után</string>
 </resources>
