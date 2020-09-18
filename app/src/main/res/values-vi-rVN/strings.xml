@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Gỡ cài đặt thất bại %1$s</string>
     <string name="error_downloading">Lỗi khi tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
-    <string name="installing_app">Đang cài đặt %1$s</string>
     <string name="installation_aborted">Cài đặt thất bại do người dùng hủy.</string>
     <string name="installation_blocked">Cài đặt thất bại do người dùng chặn.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Cài đặt lại</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
-    <string name="successfully_installed">Đã cài đặt thành công %1$s</string>
-    <string name="network_error">Không có kết nối mạng</string>
     <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Truy cập root không được cấp</string>
     <string name="unavailable">Chưa cài đặt</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Có bản cập nhật mới!</string>
     <string name="update_notfound">Không có bản cập nhật mới</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Bỏ qua</string>
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Khoan đã!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
     <string name="choose_preferred_language_note">Chú ý: Tiếng Anh sẽ luôn được cài đặt thêm.</string>
     <string name="choose_preferred_theme">Chọn nền mong muốn cho Vanced</string>
-    <string name="disable_signature">Chế độ root được phát hiện! Để cài đặt Vanced, bạn sẽ phải vô hiệu hóa Xác thực chứng chỉ apk.</string>
     <string name="finish">Hoàn tất</string>
     <string name="install_light_black">Sáng + Đen</string>
     <string name="install_light_dark">Sáng + Tối</string>

@@ -60,15 +60,14 @@ class MainFragment : Fragment() {
                 }
             }
         }
+
     }
     
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         with(requireActivity()) {
-            findViewById<MaterialToolbar>(R.id.home_toolbar).navigationIcon = if (isNeeded) ContextCompat.getDrawable(requireActivity(), R.drawable.ic_keyboard_backspace_black_24dp) else null
+            findViewById<MaterialToolbar>(R.id.home_toolbar).navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
         }
     }
-
-
     
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -77,15 +76,15 @@ class MainFragment : Fragment() {
                 return true
             }
             R.id.toolbar_about -> {
-                navHost.navigate(R.id.toAboutFragment)
+                navHost.navigate(HomeFragmentDirections.toAboutFragment())
                 return true
             }
             R.id.toolbar_settings -> {
-                navHost.navigate(R.id.action_settingsFragment)
+                navHost.navigate(HomeFragmentDirections.toSettingsFragment())
                 return true
             }
             R.id.dev_settings -> {
-                navHost.navigate(R.id.toDevSettingsFragment)
+                navHost.navigate(SettingsFragmentDirections.toDevSettingsFragment())
                 return true
             }
             else -> super.onOptionsItemSelected(item)

@@ -14,7 +14,6 @@
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
     <string name="error_downloading">%1$s letöltése nem sikerült</string>
     <string name="install">Telepítés</string>
-    <string name="installing_app">%1$s telepítése</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
     <string name="installation_blocked">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Újratelepítés</string>
     <string name="version_installed">Telepítve:</string>
     <string name="latest">Legújabb:</string>
-    <string name="successfully_installed">%1$s sikeresen telepítve</string>
-    <string name="network_error">Nincs internetkapcsolat</string>
     <string name="no_microg">microG nincs telepítve</string>
     <string name="root_not_granted">Nincs root jogosultság</string>
     <string name="unavailable">Nem elérhető</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Frissítés érhető el!</string>
     <string name="update_notfound">Nincsenek új frissítések</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Bezár</string>
     <string name="guide">Útmutató</string>
     <string name="hold_on">Figyelem!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Preferált nyelv választása</string>
     <string name="choose_preferred_language_note">Az angol mindíg telepítve lesz, mint választható nyelv.</string>
     <string name="choose_preferred_theme">Vanced téma kiválasztása</string>
-    <string name="disable_signature">Root jogosultság észlelve! A Vanced telepítéséhez kapcsold ki a csomagaláírás ellenőrzést.</string>
     <string name="finish">Kész</string>
     <string name="install_light_black">Világos + Sötét</string>
     <string name="install_light_dark">Világos + Fekete</string>

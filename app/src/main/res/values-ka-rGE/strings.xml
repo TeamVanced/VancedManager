@@ -14,7 +14,6 @@
     <string name="failed_uninstall">პაკეტი %1$s ვერ დეინსტალირდა</string>
     <string name="error_downloading">შეცდომა %1$s-ის გადმოწერის დროს</string>
     <string name="install">ინსტალაცია</string>
-    <string name="installing_app">მიმდინარეობს %1$s-ის ინსტალაცია</string>
     <string name="installation_aborted">ოპერაცია ჩაიშალა რადგან მომხმარებელმა შეაჩერა ინსტალაცია.</string>
     <string name="installation_blocked">ოპერაცია ჩაიშალა რადგან მომხმარებელმა დაბლოკა ინსტალაცია.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">რეინსტალაცია</string>
     <string name="version_installed">დაინსტალირებული:</string>
     <string name="latest">უახლესი:</string>
-    <string name="successfully_installed">წარმატებით დაყენდა %1$s</string>
-    <string name="network_error">კავშირი არ არის</string>
     <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root წვდომა არ არის მინიჭებული</string>
     <string name="unavailable">ხელმიუწვდომელია</string>
@@ -69,7 +66,6 @@
     <string name="update_found">ნაპოვნია განახლება!</string>
     <string name="update_notfound">განახლება არ არის აღმოჩენილი</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">დახურვა</string>
     <string name="guide">ინსტრუქცია</string>
     <string name="hold_on">დაიცა!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -86,7 +82,6 @@
     <string name="choose_preferred_language">აირჩიეთ სასურველი ენა Vanced-ისთვის</string>
     <string name="choose_preferred_language_note">შენიშვნა: თუ თქვენ აირჩევთ სხვა ენას გარდა ინგლისურისა, ინგლისური მაინც იქნება დაყენებული როგორც დამატებითი ენა</string>
     <string name="choose_preferred_theme">აირჩიეთ სასურველი თემა Vanced-ისთვის</string>
-    <string name="disable_signature">აღმოჩენილია Root რეჟიმი! იმისთვის რომ მენეჯერმა Vanced-ი შეცდომების გარეშე დააყენოს, გთხოვთ დარწმუნდით რომ ხელმოწერის ვერიფიკაცია გამორთული გაქვთ.</string>
     <string name="finish">დასრულება</string>
     <string name="install_light_black">ღია + შავი</string>
     <string name="install_light_dark">ღია + მუქი</string>

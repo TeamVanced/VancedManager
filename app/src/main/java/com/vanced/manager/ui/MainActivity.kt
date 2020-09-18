@@ -7,7 +7,6 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.fragment.NavHostFragment
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
@@ -31,7 +30,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    
+
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
         override fun onDataChanged() {
@@ -48,7 +47,6 @@ class MainActivity : AppCompatActivity() {
 
         override fun onTabSelected(tab: TabLayout.Tab) {
             if (tab.position == 1 && !Shell.rootAccess()) {
-                tab.select(0)
                 Toast.makeText(this@MainActivity, getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
                 return
             }
@@ -112,12 +110,6 @@ class MainActivity : AppCompatActivity() {
         binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val navHost = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
-        navHost.navController.popBackStack()
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (installing) {
             return false
@@ -143,10 +135,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(Crowdin.wrapContext(newBase))
-    }
-
-    fun TabLayout.Tab.select(position: Int) {
-        this.parent?.getTabAt(position)?.select()
     }
 
     private fun initDialogs() {

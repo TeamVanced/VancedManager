@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Dezinstalarea pachetului %1$s a eșuat</string>
     <string name="error_downloading">Eroare la descărcarea %1$s</string>
     <string name="install">Instalează</string>
-    <string name="installing_app">Se Instalează %1$s</string>
     <string name="installation_aborted">Operația a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_blocked">Operația a eșuat deoarece utilizatorul a blocat instalarea.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Reinstalare</string>
     <string name="version_installed">Instalat:</string>
     <string name="latest">Ultima:</string>
-    <string name="successfully_installed">Instalat cu succes %1$s</string>
-    <string name="network_error">Conexiune la rețea indisponibilă</string>
     <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Actualizare găsită!</string>
     <string name="update_notfound">Nu există actualizări noi</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Renunţaţi</string>
     <string name="guide">Ghid</string>
     <string name="hold_on">Stai așa!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Alegeți limba preferată pentru Vanced</string>
     <string name="choose_preferred_language_note">Notă: Engleza va fi întotdeauna instalată și ca limbă suplimentară.</string>
     <string name="choose_preferred_theme">Alegeți tema preferată pentru Vanced</string>
-    <string name="disable_signature">Modul Root detectat! Pentru a instala Vanced, va trebui să dezactivați verificarea semnăturii apk.</string>
     <string name="finish">Terminat</string>
     <string name="install_light_black">Luminos + Negru</string>
     <string name="install_light_dark">Luminos + Întunecat</string>

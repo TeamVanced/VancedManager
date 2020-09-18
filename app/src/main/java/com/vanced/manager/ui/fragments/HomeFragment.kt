@@ -30,16 +30,20 @@ open class HomeFragment : Fragment(), View.OnClickListener {
     private val viewModel: HomeViewModel by viewModels()
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
 
+    override fun onStart() {
+        super.onStart()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).selectedTabPosition == 1) "root" else "nonroot"
+        viewModel.variant = variant
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).selectedTabPosition == 1) "root" else "nonroot"
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.viewModel = viewModel
-        viewModel.variant = variant
         return binding.root
     }
 

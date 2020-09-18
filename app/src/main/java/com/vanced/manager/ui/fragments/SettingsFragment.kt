@@ -101,7 +101,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
             true
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

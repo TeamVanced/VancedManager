@@ -24,7 +24,7 @@
                 android:background="?colorSurface"/>
 
         </com.google.android.material.appbar.AppBarLayout>
-        
+
         <LinearLayout
             android:id="@+id/variant_tab_container"
             android:layout_width="match_parent"
@@ -47,7 +47,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
             
-        </LinearLayout> 
+        </LinearLayout>
 
     </RelativeLayout>
 

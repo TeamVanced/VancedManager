@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Failed to uninstall package %1$s</string>
     <string name="error_downloading">Error Downloading %1$s</string>
     <string name="install">ইনস্টল</string>
-    <string name="installing_app">%1$s ইনস্টল করা হচ্ছে</string>
     <string name="installation_aborted">Operation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Operation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">পুনঃইনস্টল</string>
     <string name="version_installed">ইনস্টলকৃত:</string>
     <string name="latest">সর্বশেষ:</string>
-    <string name="successfully_installed">সফলভাবে ইন্সটলকৃত %1$s</string>
-    <string name="network_error">Network connection unavailable</string>
     <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
     <string name="unavailable">অনুপলব্ধ</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Update found!</string>
     <string name="update_notfound">No new updates</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Dismiss</string>
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">দাঁড়াও!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Choose your preferred language for Vanced</string>
     <string name="choose_preferred_language_note">Note: English will always be installed as an additional language as well.</string>
     <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you will need to disable the apk signature verification.</string>
     <string name="finish">শেষ</string>
     <string name="install_light_black">আলো + কালো</string>
     <string name="install_light_dark">আলো + অন্ধকার</string>

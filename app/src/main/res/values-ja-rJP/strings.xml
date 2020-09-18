@@ -14,7 +14,6 @@
     <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
     <string name="error_downloading">%1$s のダウンロード中にエラー</string>
     <string name="install">インストール</string>
-    <string name="installing_app">%1$s をインストールしています</string>
     <string name="installation_aborted">ユーザーがインストールを中断したため操作に失敗しました</string>
     <string name="installation_blocked">ユーザーがインストールをブロックしたため操作に失敗しました</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">再インストール</string>
     <string name="version_installed">インストール済み:</string>
     <string name="latest">最新版:</string>
-    <string name="successfully_installed">%1$s のインストールに成功しました</string>
-    <string name="network_error">インターネット接続が利用できません</string>
     <string name="no_microg">microG はインストールされていません</string>
     <string name="root_not_granted">Root アクセスは許可されていません</string>
     <string name="unavailable">利用不可</string>
@@ -69,7 +66,6 @@
     <string name="update_found">アップデートがあります！</string>
     <string name="update_notfound">アップデートはありません</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">閉じる</string>
     <string name="guide">ガイド</string>
     <string name="hold_on">ちょっと待った！</string>
     <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
@@ -86,7 +82,6 @@
     <string name="choose_preferred_language">Vanced で使用する言語を選択</string>
     <string name="choose_preferred_language_note">注意: 英語以外の言語をインストールしても、英語は追加の言語としてインストールされます</string>
     <string name="choose_preferred_theme">Vanced のテーマを選択</string>
-    <string name="disable_signature">Root モードが検出されました！Vanced のインストールを正しく行うために、署名検証が無効であるかどうか確認してください。</string>
     <string name="finish">完了</string>
     <string name="install_light_black">ライト + ブラック</string>
     <string name="install_light_dark">ライト + ダーク</string>

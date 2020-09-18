@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Falha ao desinstalar o pacote %1$s</string>
     <string name="error_downloading">Erro ao baixar %1$s</string>
     <string name="install">Instalar</string>
-    <string name="installing_app">Instalando %1$s</string>
     <string name="installation_aborted">Falha na operação porque a instalação foi interrompida pelo usuário</string>
     <string name="installation_blocked">Falha na operação porque o usuário bloqueou a instalação</string>
     <string name="installation_downgrade">A operação falhou porque o usuário tentou fazer o downgrade do pacote. Você tem o YouTube stock instalado?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais recente:</string>
-    <string name="successfully_installed">Instalado com sucesso %1$s</string>
-    <string name="network_error">Conexão de rede indisponível</string>
     <string name="no_microg">O microG não está instalado</string>
     <string name="root_not_granted">Acesso root não concedido</string>
     <string name="unavailable">Indisponível</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Atualização encontrada!</string>
     <string name="update_notfound">Não há novas atualizações</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Dispensar</string>
     <string name="guide">Guia</string>
     <string name="hold_on">Aguente!</string>
     <string name="magisk_vanced">Parece que você está usando a versão Magisk/TWRP do Vanced, que foi descontinuada e não pode ser atualizada usando este aplicativo. Remova-o primeiro em Módulo no Magisk/usando o desinstalador do TWRP Vanced.</string>
@@ -86,7 +82,6 @@ No entanto, se você estiver na ROM 20.2.20 baseado em xiaomi.eu, poderá ignora
     <string name="choose_preferred_language">Escolha o seu idioma preferido para o Vanced</string>
     <string name="choose_preferred_language_note">Nota: O inglês sempre será instalado, independentemente da sua escolha</string>
     <string name="choose_preferred_theme">Escolha o seu tema preferido para o Vanced</string>
-    <string name="disable_signature">Modo root detectado! Para instalar o Vanced, você precisará desativar a verificação de assinatura apk.</string>
     <string name="finish">Finalizar</string>
     <string name="install_light_black">Claro + Preto</string>
     <string name="install_light_dark">Claro + Escuro</string>

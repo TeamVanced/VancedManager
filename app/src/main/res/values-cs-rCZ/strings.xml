@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="install">Instalace</string>
-    <string name="installing_app">Probíhá instalace %1$s</string>
     <string name="installation_aborted">Operace se nezdařila, protože uživatel přerušil instalaci.</string>
     <string name="installation_blocked">Operace se nezdařila, protože uživatel zablokoval instalaci.</string>
     <string name="installation_downgrade">Operace se nezdařila, protože se uživatel pokusil downgradovat balíček. Máte nainstalovánu standardní aplikaci YouTube?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Přeinstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
-    <string name="successfully_installed">Úspěšně nainstalováno %1$s</string>
-    <string name="network_error">Nelze se připojit k Internetu</string>
     <string name="no_microg">microG není nainstalováno</string>
     <string name="root_not_granted">Root přístup nebyl udělen</string>
     <string name="unavailable">Není k dispozici</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Nalezena aktualizace!</string>
     <string name="update_notfound">Žádné nové aktualizace</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Zavřít</string>
     <string name="guide">Návod</string>
     <string name="hold_on">Počkejte!</string>
     <string name="magisk_vanced">Vypadá to, že používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
     <string name="choose_preferred_language_note">Poznámka: Angličtina bude vždy nainstalována jako dodatečný jazyk.</string>
     <string name="choose_preferred_theme">Vyberte preferovaný vzhled pro Vanced</string>
-    <string name="disable_signature">Byl zjištěn režim root! Chcete-li nainstalovat Vanced, budete muset vypnout ověření podpisu APK.</string>
     <string name="finish">Dokončit</string>
     <string name="install_light_black">Světlý + černý</string>
     <string name="install_light_dark">Světlý + tmavý</string>

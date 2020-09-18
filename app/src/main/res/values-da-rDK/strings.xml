@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Fejlede i at fjerne pakke %1$s</string>
     <string name="error_downloading">Fejl i download af %1$s</string>
     <string name="install">Installer</string>
-    <string name="installing_app">Installerer %1$s</string>
     <string name="installation_aborted">Operationen fejlede fordi brugeren lukkede installationen.</string>
     <string name="installation_blocked">Operationen fejlede fordi brugeren blokerede installationen.</string>
     <string name="installation_downgrade">Operationen fejlede fordi brugeren prøvede at nedgradere pakken. Har du YouTube appen installeret?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Geninstaller</string>
     <string name="version_installed">Installeret:</string>
     <string name="latest">Seneste:</string>
-    <string name="successfully_installed">Installerede %1$s succesfuldt</string>
-    <string name="network_error">Netværksforbindelse utilgængelig</string>
     <string name="no_microg">microG er ikke installeret</string>
     <string name="root_not_granted">Root adgang ikke tildelt</string>
     <string name="unavailable">Utilgængelig</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Opdatering fundet!</string>
     <string name="update_notfound">Ingen nye opdateringer</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Luk</string>
     <string name="guide">Vejledning</string>
     <string name="hold_on">Et øjeblik!</string>
     <string name="magisk_vanced">Det ser ud som om du bruger Magisk/TWRP versionen af Vanced. Den er ikke længere understøttet og kan derfor ikke opdateres igennem denne app. Vær venlig at fjerne magisk modulet/brug TWRP Vanced uninstaller.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Vælg dit fortrukne sprog til Vanced</string>
     <string name="choose_preferred_language_note">Note: Engelsk vil altid blive installeret som et alternativt sprog også.</string>
     <string name="choose_preferred_theme">Vælg dit fortrukne tema til Vanced</string>
-    <string name="disable_signature">Root mode fundet! For at installere Vanced er du nødt til at disable appsignatur verifikation.</string>
     <string name="finish">Afslut</string>
     <string name="install_light_black">Lyst + Sort</string>
     <string name="install_light_dark">Lyst + Mørkt</string>
