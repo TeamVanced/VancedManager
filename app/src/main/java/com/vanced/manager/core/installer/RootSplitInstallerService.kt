@@ -218,6 +218,7 @@ class RootSplitInstallerService: Service() {
     private fun linkVanced(apkFPath: String, path: String): Boolean
     {
         Shell.su("am force-stop $yPkg").exec()
+        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """)
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
         Thread.sleep(500)
 
