@@ -6,19 +6,18 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.tabs.TabLayout
-import com.vanced.manager.databinding.FragmentMainBinding
 import com.vanced.manager.R
+import com.vanced.manager.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
     
@@ -65,9 +64,11 @@ class MainFragment : Fragment() {
     
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
         with(requireActivity()) {
-            findViewById<MaterialToolbar>(R.id.home_toolbar).navigationIcon = if (isNeeded) getDrawable(R.drawable.ic_keyboard_backspace_black_24dp) else null
+            findViewById<MaterialToolbar>(R.id.home_toolbar).navigationIcon = if (isNeeded) ContextCompat.getDrawable(requireActivity(), R.drawable.ic_keyboard_backspace_black_24dp) else null
         }
     }
+
+
     
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {

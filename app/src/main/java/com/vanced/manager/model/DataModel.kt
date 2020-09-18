@@ -3,71 +3,51 @@ package com.vanced.manager.model
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.vanced.manager.utils.InternetTools.baseUrl
-import com.vanced.manager.utils.InternetTools.getJsonInt
-import com.vanced.manager.utils.InternetTools.getJsonString
-import com.vanced.manager.utils.InternetTools.getObjectFromJson
-import com.vanced.manager.utils.PackageHelper.isPackageInstalled
+import androidx.core.content.ContextCompat
+import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
+import androidx.databinding.ObservableInt
+import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 open class DataModel(
-    private val jsonName: String,
-    private val variant: String = "nonroot",
+    private val jsonObject: JsonObject?,
+    variant: String = "nonroot",
+    app: String,
     private val context: Context
 ) {
     
     private val appPkg = 
-        when (jsonName) {
+        when (app) {
             "vanced" -> if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube"
             "microg" -> "com.mgoogle.android.gms"
             else -> "com.vanced.android.apps.youtube.music"
         }
-    
-    /*
-    private var versionName: String = ""
-    private var installedVersionName: String = ""
-    private var changelog: String = ""
-        
-    private var versionCode: Int = 0
-    private var installedVersionCode: Int = 0
-    */
-    
-    open fun isAppInstalled(): Boolean = isPackageInstalled(appPkg, context.packageManager)
-    
-    open fun getVersionName(): String = runBlocking(Dispatchers.IO) {
-        getJsonString("$jsonName.json", "version", context)
-    }
-    
-    open fun getVersionCode(): Int = runBlocking(Dispatchers.IO) {
-        getJsonInt("$jsonName.json", "versionCode", context)
-    }
-    
-    open fun getInstalledVersionName(): String = runBlocking(Dispatchers.IO) {
-        getPkgVersionName(isAppInstalled(), appPkg)
-    }
-    
-    open fun getInstalledVersionCode(): Int = runBlocking(Dispatchers.IO) {
-        getPkgVersionCode(isAppInstalled(), appPkg)
-    }
-    
-    open fun getButtonTxt(): String = compareInt(getInstalledVersionCode(), getVersionCode())
-    
-    open fun getButtonIcon(): Drawable? = compareIntDrawable(getInstalledVersionCode(), getVersionCode())
 
-    open fun getChangelog(): String = runBlocking(Dispatchers.IO) {
-        when (jsonName) {
-            "vanced" -> getObjectFromJson("$baseUrl/changelog/${getVersionName().replace('.', '_')}.json", "message")
-            "music" -> getJsonString("$jsonName.json", "changelog", context)
-            else -> getObjectFromJson("https://ytvanced.github.io/VancedBackend/$jsonName.json", "changelog")
-        }
+    private val versionCode = ObservableInt()
+    private val installedVersionCode = ObservableInt()
+
+    val isAppInstalled = ObservableBoolean()
+    val versionName = ObservableField<String>()
+    val installedVersionName = ObservableField<String>()
+    val buttonTxt = ObservableField<String>()
+    val buttonIcon = ObservableField<Drawable>()
+    val changelog = ObservableField<String>()
+
+    fun fetch() {
+        isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
+        versionName.set(jsonObject?.string("version")?.removeSuffix("-vanced")  ?: context.getString(R.string.unavailable))
+        installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))
+        versionCode.set(jsonObject?.int("versionCode")?: 0)
+        installedVersionCode.set(getPkgVersionCode(isAppInstalled.get(), appPkg))
+        buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
+        buttonIcon.set(compareIntDrawable(installedVersionCode.get(), versionCode.get()))
+        changelog.set(jsonObject?.string("changelog") ?: context.getString(R.string.unavailable))
+    }
+
+    init {
+        fetch()
     }
     
     private fun getPkgVersionName(toCheck: Boolean, pkg: String): String  {
@@ -100,10 +80,10 @@ open class DataModel(
 
     private fun compareIntDrawable(int1: Int, int2: Int): Drawable? {
         return when {
-            int1 == 0 -> context.getDrawable(R.drawable.ic_download)
-            int2 > int1 -> context.getDrawable(R.drawable.ic_update)
-            int2 == int1 -> context.getDrawable(R.drawable.ic_done)
-            else -> context.getDrawable(R.drawable.ic_download)
+            int1 == 0 -> ContextCompat.getDrawable(context, R.drawable.ic_download)
+            int2 > int1 -> ContextCompat.getDrawable(context, R.drawable.ic_update)
+            int2 == int1 -> ContextCompat.getDrawable(context, R.drawable.ic_done)
+            else -> ContextCompat.getDrawable(context, R.drawable.ic_download)
         }
     }
     

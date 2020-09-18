@@ -21,16 +21,21 @@ Isn't this lovely and beautiful?
 
 - 1337Potato: shit  
 - Response: Yes  
+
+===================
   
 - Noobbot: The app is not useful because I have YT Premium. Thank you bye  
-- Response: I hope you get sucked by a di-  
+- Response: I hope you get sucked by a di- 
+
+=================== 
   
 - Vortextriangle: The app is so useful that I uninstalled it after installing Vanced  
 - Response: yo that's finna woke  
 
 ## Credits
 ### Vanced Manager developers  
-- X1nto (UI, UX, Downloader, Installer, Signature Checker, PussiSlayer69, Collector of 400 BAT, Professional Liar)
+- X1nto (UI, UX, Downloader, Installer, Signature Checker, PussiSlayer69, Collector of 400 BAT, A great liar)
+- Koopah (Unix lord, Unmounter of /system, Code criticizer)
 ### The Vanced Team  
 - xfileFIN  
 ![xfileFIN](https://i.imgur.com/hLdzTVq.png)
@@ -40,3 +45,6 @@ Isn't this lovely and beautiful?
 ![Zanezam](https://i.imgur.com/QVcXA6q.png)
 - Laura Almeida  
 ![Laura Almeida](https://i.imgur.com/ovVD939.png)
+
+###### If someone is reading this pls help me, KevinX8 is bullying me and forces me to develop manager. please send bobs and veganas and call 911
+

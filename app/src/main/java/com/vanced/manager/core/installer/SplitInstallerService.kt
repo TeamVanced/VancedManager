@@ -5,18 +5,15 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.sendFailure
+import com.vanced.manager.utils.AppUtils.sendRefresh
 
 class SplitInstallerService: Service() {
-
-    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
-                localBroadcastManager.sendBroadcast(Intent(HomeFragment.VANCED_INSTALLING))
                 Log.d(TAG, "Requesting user confirmation for installation")
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -27,10 +24,8 @@ class SplitInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                with(localBroadcastManager) {
-                    sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                    sendBroadcast(Intent(HomeFragment.VANCED_INSTALLED))
-                }
+                vancedProgress.get()?.showInstallCircle?.set(false)
+                sendRefresh(this)
             }
             else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
 

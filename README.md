@@ -17,8 +17,12 @@ After 3 months of development, we are finally ready to introduce Vanced Manager 
 - Zanezam
 - Laura Almeida
 
-## Vanced Manager Developer
+## Vanced Manager Developers
 - Xinto (X1nto)
+- Koopah (ostajic)
+
+## Contributors
+- AioiLight
 
 ## Credits
 - topjohnwu for his wonderful [LibSU](https://github.com/topjohnwu/libsu)

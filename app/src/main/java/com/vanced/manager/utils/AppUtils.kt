@@ -6,11 +6,21 @@ import android.content.pm.PackageInstaller
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.fragments.HomeFragment
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 object AppUtils {
 
     var installing = false
+
+    fun sendRefresh(context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            delay(500)
+            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+        }
+    }
 
     fun sendFailure(status: Int, context: Context) {
         //Delay error broadcast until activity (and fragment) get back to the screen
