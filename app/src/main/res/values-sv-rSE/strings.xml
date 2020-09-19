@@ -12,13 +12,10 @@
     <string name="changelogs">Ändringslogg</string>
     <string name="downloading_file">Laddar ned %1$s</string>
     <string name="install">Install</string>
-    <string name="installing_app">Installerar %1$s</string>
     <string name="installation_wait">Vänta tills installationen är klar.</string>
     <string name="button_reinstall">Installera om</string>
     <string name="version_installed">Installerad:</string>
     <string name="latest">Senaste:</string>
-    <string name="successfully_installed">%1$s laddades ner</string>
-    <string name="network_error">Inget nätverk</string>
     <string name="no_microg">microG är inte installerat</string>
     <string name="root_not_granted">Root-åtkomst inte beviljat</string>
     <string name="unavailable">Ej tillgänglig</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Använd Chrome-anpassade flikar</string>
     <string name="link_custom_tabs">Länkar öppnas i Chrome Custom Tabs</string>
     <string name="link_external_browser">Länkar öppnas i en extern webbläsare</string>
-    <string name="new_installer_title">Använd det nya rootinstallatören (Experimental)</string>
-    <string name="new_installer_summary">Detta installationsprogram beror inte på status signaturverifiering. VARNING: Vanced kan försvinna efter omstart om du installerar det med hjälp av detta</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Följ system</string>
     <string name="theme_dark">Mörkt tema</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Uppdateringen hittades!</string>
     <string name="update_notfound">Inga nya uppdateringar</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Avfärda</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Stopp!</string>
     <string name="magisk_vanced">Ser ut som om du använder Magisk versionen av Vanced, som är avbruten och inte kan uppdateras med den här appen. Ta bort den först genom att ta bort magisk modulen.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Välj önskade språk för Vanced</string>
     <string name="choose_preferred_language_note">Obs: Engelska kommer alltid att installeras som ytterligare språk.</string>
     <string name="choose_preferred_theme">Välj ditt förvalda språk</string>
-    <string name="disable_signature">Rotläge upptäckt! För att installera Vanced, måste du inaktivera apk signaturverifiering.</string>
     <string name="finish">Slutför</string>
     <string name="install_light_black">Ljus + svart</string>
     <string name="install_light_dark">Ljus + svart</string>
