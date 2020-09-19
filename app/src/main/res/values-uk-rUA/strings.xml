@@ -12,13 +12,10 @@
     <string name="changelogs">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
-    <string name="installing_app">Встановлення %1$s</string>
     <string name="installation_wait">Будь ласка, дочекайтеся закінчення установки.</string>
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
-    <string name="successfully_installed">Успішно встановлено  %1$s</string>
-    <string name="network_error">Немає з\'єднання з мережею</string>
     <string name="no_microg">microG не встановлено</string>
     <string name="root_not_granted">Права суперкористувача не були надані</string>
     <string name="unavailable">Недоступно</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
-    <string name="new_installer_title">Використовуйте новий кореневий інсталятор (експериментальний)</string>
-    <string name="new_installer_summary">Цей інсталятор не залежить від статусу перевірки підпису. ПОПЕРЕДЖЕННЯ: Vanced може зникнути після перезавантаження, якщо ви встановите його за допомогою цього</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Знайдено оновлення!</string>
     <string name="update_notfound">Нових оновлень не виявлено</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Відхилити</string>
     <string name="guide">Гайд</string>
     <string name="hold_on">Зупинись!</string>
     <string name="magisk_vanced">Схоже, ви використовуєте Magisk/TWRP-версію Vanced, підтримка якої була припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
     <string name="choose_preferred_language_note">Примітка: Якщо ви встановите що-небудь, крім Англійської, Англійська мова все одно буде встановлена як додаткова мова</string>
     <string name="choose_preferred_theme">Виберіть вашу головну тему для Vanced</string>
-    <string name="disable_signature">Виявлено root права! Щоб встановити Vanced вам ПОТРІБНО відключити перевірку підпису apk.</string>
     <string name="finish">Завершити</string>
     <string name="install_light_black">Світла + Чорна</string>
     <string name="install_light_dark">Світла + Темна</string>
