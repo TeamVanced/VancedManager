@@ -12,13 +12,10 @@
     <string name="changelogs">Journal des modifications</string>
     <string name="downloading_file">Téléchargement de %1$s</string>
     <string name="install">Installer</string>
-    <string name="installing_app">Installation de %1$s</string>
     <string name="installation_wait">S\'il vous plaît veuillez attendre la fin de l\'installation.</string>
     <string name="button_reinstall">Réinstaller</string>
     <string name="version_installed">Version installée:</string>
     <string name="latest">Dernière version:</string>
-    <string name="successfully_installed">%1$s installé avec succès</string>
-    <string name="network_error">Connection réseau indisponible</string>
     <string name="no_microg">microG n\'est pas installé</string>
     <string name="root_not_granted">Accès root non autorisé</string>
     <string name="unavailable">Indisponible</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="link_external_browser">Les liens s\'ouvriront dans un navigateur externe</string>
-    <string name="new_installer_title">Utiliser le nouvel installateur root (expérimental)</string>
-    <string name="new_installer_summary">Cette méthode d\'installation ne dépend pas du statut de vérification de signature. ATTENTION : Vanced peut disparaître après le redémarrage si vous l\'installez à l\'aide de ce statut</string>
     <string name="theme">Thème</string>
     <string name="theme_follow">Suivre le paramètre système</string>
     <string name="theme_dark">Thème sombre</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Mise à jour disponible!</string>
     <string name="update_notfound">Aucune mise à jour disponible</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Faire disparaître</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Vous utilisez la version Magisk/TWRP de Vanced, qui n\'est plus entretenu et ne peut pas être mise à jour à l\'aide de cette application. Veuillez la retirer en supprimant le module Magisk/en utilisant le désinstallateur TWRP pour Vanced.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Choisir votre langage(s) préféré(s) pour Vanced</string>
     <string name="choose_preferred_language_note">Note: l\'Anglais sera toujours installé en tant que langue additionnelle, quel que soit votre choix</string>
     <string name="choose_preferred_theme">Choisis le thème de Vanced</string>
-    <string name="disable_signature">Mode root détecté! Pour installer Vanced, vous devez désactiver la vérification des signatures des apk.</string>
     <string name="finish">Terminer</string>
     <string name="install_light_black">Clair + Noir</string>
     <string name="install_light_dark">Clair + Sombre</string>
