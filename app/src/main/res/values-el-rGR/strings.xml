@@ -12,13 +12,10 @@
     <string name="changelogs">Λίστα Αλλαγών</string>
     <string name="downloading_file">Λήψη %1$s</string>
     <string name="install">Εγκατάσταση</string>
-    <string name="installing_app">Εγκατάσταση του %1$s</string>
     <string name="installation_wait">Παρακαλώ περιμένετε να ολοκληρωθεί η εγκατάσταση.</string>
     <string name="button_reinstall">Επανεγκατάσταση</string>
     <string name="version_installed">Εγκατεστημένη έκδοση:</string>
     <string name="latest">Τελευταία έκδοση:</string>
-    <string name="successfully_installed">Επιτυχία εγκατάστασης του %1$s</string>
-    <string name="network_error">Δεν υπάρχει σύνδεση στο διαδίκτυο</string>
     <string name="no_microg">το microG δεν είναι εγκατεστημένο</string>
     <string name="root_not_granted">Δεν επιτράπηκε η πρόσβαση Root</string>
     <string name="unavailable">Μη διαθέσιμο</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="link_external_browser">Οι σύνδεσμοι θα ανοίγουν σε εξωτερικό φυλλομετρητή</string>
-    <string name="new_installer_title">Χρησιμοποιήστε το καινούργιο πρόγραμμα εγκατάστασης μέσω root (Πειραματικό)</string>
-    <string name="new_installer_summary">Αυτό το πρόγραμμα εγκατάστασης δεν εξαρτάται από την κατάσταση της Επαλήθευσης Υπογραφής των apk. ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Το Vanced μπορεί να εξαφανιστεί μετά από επανεκκίνηση εάν το εγκαταστήσετε με αυτόν τον τρόπο</string>
     <string name="theme">Θέμα</string>
     <string name="theme_follow">Σύμφωνα με το θέμα συστήματος</string>
     <string name="theme_dark">Σκουρόχρωμο Θέμα</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Διαθέσιμη ενημέρωση!</string>
     <string name="update_notfound">Δεν υπάρχουν διαθέσιμες ενημερώσεις</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Απόρριψη</string>
     <string name="guide">Οδηγίες</string>
     <string name="hold_on">Σταματήστε!</string>
     <string name="magisk_vanced">Χρησιμοποιείτε την έκδοση Magisk/TWRP του Vanced, η οποία δεν υποστηρίζεται πλέον και δεν μπορεί να ενημερωθεί μέσω αυτής της εφαρμογής. Παρακαλούμε αφαιρέστε αυτή την έκδοση αφαιρώντας το Magisk Module/χρησιμοποιόντας το πρόγραμμα κατάργησης TWRP Vanced.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Επιλέξτε την(/ις) γλώσσα(/ες) που επιθυμείτε για το Vanced</string>
     <string name="choose_preferred_language_note">Σημείωση: Τα αγγλικά θα εγκατασταθούν ως δεύτερη γλώσσα ούτως ή άλλως.</string>
     <string name="choose_preferred_theme">Επιλέξτε το θέμα που επιθυμείτε για το Vanced</string>
-    <string name="disable_signature">Ανιχνεύθηκε λειτουργία Root! Για να εγκαταστήσετε το Vanced, ΠΡΕΠΕΙ να απενεργοποιήσετε την επαλήθευση υπογραφής των apk.</string>
     <string name="finish">Τέλος</string>
     <string name="install_light_black">Ανοιχτόχρωμο + Μαύρο</string>
     <string name="install_light_dark">Ανοιχτόχρωμο + Σκούροχρωμο</string>
