@@ -73,4 +73,8 @@
 
     </PreferenceCategory>
 
+    <Preference
+        android:key="open_about"
+        android:title="@string/title_about" />
+
 </PreferenceScreen>

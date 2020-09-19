@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
     <string name="error_downloading">%1$s lataus epäonnistui</string>
     <string name="install">Asenna</string>
-    <string name="installing_app">Asennetaan %1$s</string>
     <string name="installation_aborted">Operaatio epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Operaatio epäonnistui, koska käyttäjä esti asennuksen.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Uudelleenasenna</string>
     <string name="version_installed">Asennettu:</string>
     <string name="latest">Uusin:</string>
-    <string name="successfully_installed">%1$s asennus onnistui</string>
-    <string name="network_error">Verkkoyhteys ei ole käytettävissä</string>
     <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Päivitys löytyi!</string>
     <string name="update_notfound">Ei uusia päivityksiä</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Ohita</string>
     <string name="guide">Opas</string>
     <string name="hold_on">Odotas vähän!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Valitse haluamasi kieli</string>
     <string name="choose_preferred_language_note">Huom: Englanti asennetaan rinnalle aina.</string>
     <string name="choose_preferred_theme">Valitse haluamasi teema</string>
-    <string name="disable_signature">Pääkäyttäjän tila tunnistettu! Asentaaksei Vanced-sovelluksen, ole hyvä ja poista APK-paketin allekirjoituksen tarkistus pois käytöstä.</string>
     <string name="finish">Valmis</string>
     <string name="install_light_black">Vaalea + Musta</string>
     <string name="install_light_dark">Vaalea + Tumma</string>

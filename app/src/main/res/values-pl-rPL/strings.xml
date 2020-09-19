@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
     <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="install">Zainstaluj</string>
-    <string name="installing_app">Instalowanie %1$s</string>
     <string name="installation_aborted">Operacja nie powiodła się, bo użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Operacja nie powiodła się, bo użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Operacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Czy masz zainstalowany oryginalny YouTube?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Przeinstaluj</string>
     <string name="version_installed">Zainstalowano:</string>
     <string name="latest">Najnowsza:</string>
-    <string name="successfully_installed">Pomyślnie zainstalowano %1$s</string>
-    <string name="network_error">Połączenie sieciowe niedostępne</string>
     <string name="no_microg">microG nie jest zainstalowany</string>
     <string name="root_not_granted">Root nie został przyznany</string>
     <string name="unavailable">Niedostępne</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Znaleziono aktualizację!</string>
     <string name="update_notfound">Brak nowych aktualizacji</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Oddalić</string>
     <string name="guide">Przewodnik</string>
     <string name="hold_on">Czekaj!</string>
     <string name="magisk_vanced">Wygląda na to, że korzystasz z Vanced w wersji Magisk/TWRP, która została wycofana i nie można jej zaktualizować za pomocą tej aplikacji. Najpierw usuń moduł magisk/używając deinstalatora TWRP Vanced.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Wybierz preferowany język dla Vanced</string>
     <string name="choose_preferred_language_note">Uwaga: jeśli zainstalujesz coś innego niż angielski, angielski będzie nadal instalowany jako dodatkowy język</string>
     <string name="choose_preferred_theme">Wybierz preferowany motyw dla Vanced</string>
-    <string name="disable_signature">Wykryto tryb root! Aby zainstalować Vanced, musisz wyłączyć weryfikację podpisu apk.</string>
     <string name="finish">Zakończ</string>
     <string name="install_light_black">Jasny + Czarny</string>
     <string name="install_light_dark">Jasny + Ciemny</string>

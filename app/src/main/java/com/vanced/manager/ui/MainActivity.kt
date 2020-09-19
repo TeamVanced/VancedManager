@@ -37,7 +37,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    
+
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
         override fun onDataChanged() {
@@ -54,7 +54,6 @@ class MainActivity : AppCompatActivity() {
 
         override fun onTabSelected(tab: TabLayout.Tab) {
             if (tab.position == 1 && !Shell.rootAccess()) {
-                tab.select(0)
                 Toast.makeText(this@MainActivity, getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
                 return
             }
@@ -143,10 +142,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(Crowdin.wrapContext(newBase))
-    }
-
-    fun TabLayout.Tab.select(position: Int) {
-        this.parent?.getTabAt(position)?.select()
     }
 
     private fun initDialogs() {

@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
     <string name="error_downloading">Errore nel download di %1$s</string>
     <string name="install">Installa</string>
-    <string name="installing_app">Installazione in corso di %1$s</string>
     <string name="installation_aborted">Operazione fallita, l\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Operazione fallita, l\'utente ha bloccato l\'installazione.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Reinstalla</string>
     <string name="version_installed">Versione installata:</string>
     <string name="latest">Ultima versione:</string>
-    <string name="successfully_installed">%1$s installato con successo</string>
-    <string name="network_error">Connessione alla rete non disponibile</string>
     <string name="no_microg">microG non è installato</string>
     <string name="root_not_granted">Non è stato fornito l\'accesso di root</string>
     <string name="unavailable">Non disponibile</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Aggiornamento trovato!</string>
     <string name="update_notfound">Non ci sono nuovi aggiornamenti</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Ignora</string>
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
     <string name="magisk_vanced">Sembra che tu stia utilizzando la versione di Vanced ottenuta con Magisk/TWRP, che è obsoleta e non può essere aggiornata con questa app. Per favore, rimuovila eliminando il modulo di Magisk/utilizzando TWRP Vanced uninstaller.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Seleziona la tua lingua preferita per Vanced</string>
     <string name="choose_preferred_language_note">Nota: l\'inglese sarà comunque installato, indipendentemente dalla tua scelta.</string>
     <string name="choose_preferred_theme">Seleziona il tuo tema preferito per Vanced</string>
-    <string name="disable_signature">Modalità root rilevata! Per poter installare correttamente Vanced, assicurati di disattivare la verifica della firma per gli apk.</string>
     <string name="finish">Concludi</string>
     <string name="install_light_black">Chiaro + nero</string>
     <string name="install_light_dark">Chiaro + scuro</string>

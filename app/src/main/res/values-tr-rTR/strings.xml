@@ -14,7 +14,6 @@
     <string name="failed_uninstall">%1$s paket yüklemesi başarısız oldu</string>
     <string name="error_downloading">Indirme hatası %1$s</string>
     <string name="install">Kur</string>
-    <string name="installing_app">%1$s Kuruluyor</string>
     <string name="installation_aborted">İşlem başarısız oldu çünkü kullanıcı kurulumu yarıda bıraktı.</string>
     <string name="installation_blocked">İşlem başarısız oldu çünkü kullanıcı kurulumu engelledi.</string>
     <string name="installation_downgrade">İşlem başarısız çünkü kullanıcı paketi düşürmeye çalıştı. Yüklü stok YouTube var mı?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Yeniden kur</string>
     <string name="version_installed">Kuruldu:</string>
     <string name="latest">En yeni:</string>
-    <string name="successfully_installed">%1$s Başarıyla kuruldu</string>
-    <string name="network_error">Ağ bağlantısı yok</string>
     <string name="no_microg">microG yüklü değil</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Kullanım dışı</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Güncelleme bulundu!</string>
     <string name="update_notfound">Yeni güncelleme yok</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Kapat</string>
     <string name="guide">Kılavuz</string>
     <string name="hold_on">Bekle!</string>
     <string name="magisk_vanced">Görünüşe göre artık Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz ve bu sürüm bu uygulama kullanılarak güncellenemiyor. Lütfen önce magisk modülünü kaldırarak veya TWRP Vanced uninstaller\'ı kullanarak kaldırın.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Vanced için tercih ettiğiniz dili seçin</string>
     <string name="choose_preferred_language_note">Not: Eğer İngilizceden farklı bir dil seçerseniz de İngilizce ek dil olarak kurulacaktır</string>
     <string name="choose_preferred_theme">Vanced için tercih ettiğiniz temayı seçin</string>
-    <string name="disable_signature">Root modu tespit edildi! Vanced\'ı kurmak için apk imza doğrulamasını devre dışı bırakman gerekiyor.</string>
     <string name="finish">Bitir</string>
     <string name="install_light_black">Açık + Kara</string>
     <string name="install_light_dark">Açık + Koyu</string>

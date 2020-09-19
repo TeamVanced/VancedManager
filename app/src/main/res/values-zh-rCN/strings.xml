@@ -14,7 +14,6 @@
     <string name="failed_uninstall">%1$s 解除安装失败</string>
     <string name="error_downloading">%1$s 下载错误</string>
     <string name="install">安装</string>
-    <string name="installing_app">正在安装 %1$s</string>
     <string name="installation_aborted">操作失败，用户中断了安装程序。</string>
     <string name="installation_blocked">操作失败，用户封锁了安装程序。</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">重新安装</string>
     <string name="version_installed">已安装：</string>
     <string name="latest">最新：</string>
-    <string name="successfully_installed">成功安装 %1$s</string>
-    <string name="network_error">无法存取网路连接</string>
     <string name="no_microg">没有安装 MicroG</string>
     <string name="root_not_granted">未授予 Root 权限</string>
     <string name="unavailable">不可用</string>
@@ -69,7 +66,6 @@
     <string name="update_found">有可用的更新！</string>
     <string name="update_notfound">没有新的更新</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">关闭</string>
     <string name="guide">说明</string>
     <string name="hold_on">等一下！</string>
     <string name="magisk_vanced">您似乎正在使用 Magisk/TWRP 版的 Vanced ，它已停止支援且无法透过此应用程式更新。请透过移除 Magisk 模块/ TWRP Vanced 卸载程式来移除它。</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">选择Vanced的首选语言</string>
     <string name="choose_preferred_language_note">注意：英语仍将作为其他语言安装。</string>
     <string name="choose_preferred_theme">选择Vanced的首选主题</string>
-    <string name="disable_signature">检测到 Root 模式！若需要安装 Vanced ，您将需要关闭 APK 签名验证。</string>
     <string name="finish">结束</string>
     <string name="install_light_black">浅 + 黑</string>
     <string name="install_light_dark">浅 + 深</string>

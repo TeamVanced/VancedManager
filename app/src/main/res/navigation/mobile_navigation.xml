@@ -13,7 +13,7 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_settingsFragment"
+            android:id="@+id/toSettingsFragment"
             app:destination="@id/settings_fragment"
             app:enterAnim="@animator/fragment_enter"
             app:exitAnim="@animator/fragment_exit"

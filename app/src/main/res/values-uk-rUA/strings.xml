@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
     <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="install">Встановити</string>
-    <string name="installing_app">Встановлення %1$s</string>
     <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
-    <string name="successfully_installed">Успішно встановлено  %1$s</string>
-    <string name="network_error">Немає з\'єднання з мережею</string>
     <string name="no_microg">microG не встановлено</string>
     <string name="root_not_granted">Права суперкористувача не були надані</string>
     <string name="unavailable">Недоступно</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Знайдено оновлення!</string>
     <string name="update_notfound">Нових оновлень не виявлено</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Відхилити</string>
     <string name="guide">Гайд</string>
     <string name="hold_on">Зачекайте!</string>
     <string name="magisk_vanced">Схоже, ви використовуєте Magisk/TWRP-версію Vanced, підтримка якої була припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
@@ -85,7 +81,6 @@
     <string name="choose_preferred_language">Виберіть вашу головну мову для Vanced</string>
     <string name="choose_preferred_language_note">Примітка: Якщо ви встановите що-небудь, крім Англійської, Англійська мова все одно буде встановлена як додаткова мова</string>
     <string name="choose_preferred_theme">Виберіть вашу головну тему для Vanced</string>
-    <string name="disable_signature">Виявлено root права! Щоб встановити Vanced вам потрібно відключити перевірку підпису apk.</string>
     <string name="finish">Завершити</string>
     <string name="install_light_black">Світла + Чорна</string>
     <string name="install_light_dark">Світла + Темна</string>

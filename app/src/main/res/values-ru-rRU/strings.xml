@@ -14,7 +14,6 @@
     <string name="failed_uninstall">Ошибка установки пакета %1$s</string>
     <string name="error_downloading">Ошибка загрузки %1$s</string>
     <string name="install">Установить</string>
-    <string name="installing_app">Установка %1$s</string>
     <string name="installation_aborted">Операция не выполнена, поскольку пользователь прервал установку</string>
     <string name="installation_blocked">Операция не выполнена, поскольку пользователь заблокировал установку</string>
     <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
@@ -29,8 +28,6 @@
     <string name="button_reinstall">Переустановить</string>
     <string name="version_installed">Установлена:</string>
     <string name="latest">Последняя:</string>
-    <string name="successfully_installed">Успешно установлено %1$s</string>
-    <string name="network_error">Нет подключения к интернету</string>
     <string name="no_microg">microG не установлен</string>
     <string name="root_not_granted">Рут-доступ не предоставлен</string>
     <string name="unavailable">Недоступно</string>
@@ -69,7 +66,6 @@
     <string name="update_found">Найдено обновление!</string>
     <string name="update_notfound">Обновлений не найдено</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Отклонить</string>
     <string name="guide">Руководство</string>
     <string name="hold_on">Внимание!</string>
     <string name="magisk_vanced">Looks like you\'re using the Magisk/TWRP version of Vanced, which is discontinued and can not be updated using this app. Please remove it first by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -86,7 +82,6 @@
     <string name="choose_preferred_language">Выберите предпочитаемый язык для Vanced</string>
     <string name="choose_preferred_language_note">Примечание: если вы выберите не английский язык, то он все равно будет установлен как дополнительный язык</string>
     <string name="choose_preferred_theme">Выберите предпочитаемую тему для Vanced</string>
-    <string name="disable_signature">Обнаружен ROOT. Для того, чтобы менеджер правильно установил Vanced, убедитесь, что вы отключили проверку подписи.</string>
     <string name="finish">Готово</string>
     <string name="install_light_black">Светлая + Чёрная</string>
     <string name="install_light_dark">Светлая + Тёмная</string>
