@@ -7,21 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.tabs.TabLayout
 import com.vanced.manager.R
 import com.vanced.manager.databinding.FragmentMainBinding
-import com.vanced.manager.ui.MainActivity
 import kotlin.system.exitProcess
 
 class MainFragment : Fragment() {
@@ -45,16 +42,13 @@ class MainFragment : Fragment() {
 
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if(!navHost.popBackStack())
-                {
+                if(!navHost.popBackStack()) {
                     exitProcess(0)
                 }
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
-        val appBarConfiguration = AppBarConfiguration(navHost.graph)
-        requireActivity().findViewById<MaterialToolbar>(R.id.home_toolbar).setupWithNavController(navHost, appBarConfiguration)
         val tabLayout = requireActivity().findViewById<TabLayout>(R.id.main_tablayout)
         
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
@@ -87,7 +81,7 @@ class MainFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                navHost.popBackStack()
+                requireActivity().onBackPressedDispatcher.onBackPressed()
                 return true
             }
             R.id.toolbar_about -> {
