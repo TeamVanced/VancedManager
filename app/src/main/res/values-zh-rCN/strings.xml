@@ -12,13 +12,10 @@
     <string name="changelogs">变更日志</string>
     <string name="downloading_file">正在下载 %1$s</string>
     <string name="install">安装</string>
-    <string name="installing_app">正在安装 %1$s</string>
     <string name="installation_wait">请等待安装程序完成.</string>
     <string name="button_reinstall">重新安装</string>
     <string name="version_installed">已安装：</string>
     <string name="latest">最新：</string>
-    <string name="successfully_installed">成功安装 %1$s</string>
-    <string name="network_error">无法存取网路连接</string>
     <string name="no_microg">没有安装 MicroG</string>
     <string name="root_not_granted">未授予 Root 权限</string>
     <string name="unavailable">不可用</string>
@@ -45,8 +42,6 @@
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">链接会使用 Chrome Custom Tabs 打开</string>
     <string name="link_external_browser">链接会使用外部浏览器打开</string>
-    <string name="new_installer_title">使用新 root 安装程式 (实验性)</string>
-    <string name="new_installer_summary">此安装程序不依赖签名验证状态。警告: 如果您使用此安装程序安装， Vanced 可能会在重启后消失</string>
     <string name="theme">主题</string>
     <string name="theme_follow">跟随系统</string>
     <string name="theme_dark">深色主题</string>
@@ -59,7 +54,6 @@
     <string name="update_found">有可用的更新！</string>
     <string name="update_notfound">没有新的更新</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">关闭</string>
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
     <string name="magisk_vanced">您正在使用 Magisk/TWRP 版的 Vanced ，它已停止支援且无法透过此应用更新。请透过移除 Magisk 模块 /使用 TWRP Vanced 卸载程式来移除它。</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">为 Vanced 选择您的首选语言</string>
     <string name="choose_preferred_language_note">注意：英语仍将作为其他语言安装。</string>
     <string name="choose_preferred_theme">选择Vanced的首选主题</string>
-    <string name="disable_signature">检测到 Root ！若要安装 Vanced ，您必须关闭 apk 签名验证。</string>
     <string name="finish">结束</string>
     <string name="install_light_black">浅 + 黑</string>
     <string name="install_light_dark">浅 + 深</string>
