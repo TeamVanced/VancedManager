@@ -12,13 +12,10 @@
     <string name="changelogs">Измене</string>
     <string name="downloading_file">Преузимање %1$s</string>
     <string name="install">Инсталација</string>
-    <string name="installing_app">Инсталирање %1$s</string>
     <string name="installation_wait">Молимо сачекајте док се инсталација не заврши.</string>
     <string name="button_reinstall">Реинсталирај</string>
     <string name="version_installed">Инсталирана:</string>
     <string name="latest">Најновија:</string>
-    <string name="successfully_installed">Успешно инсталирана %1$s</string>
-    <string name="network_error">Повезивање на мрежу није могуће</string>
     <string name="no_microg">microG апликација није инсталирана</string>
     <string name="root_not_granted">Root приступ није омогућен</string>
     <string name="unavailable">Недоступно</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Користите Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="link_external_browser">Линкови ће бити отвотрни у екстерном претраживачу</string>
-    <string name="new_installer_title">Користи нову root installer апликацију ( Експериментално)</string>
-    <string name="new_installer_summary">Installer апликација не зависи од статуса верификационог потписа. УПОЗОРЕЊЕ: Ако користите ову опцију може да се деси да Vanced апликација се обрише после рестарта</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Као у систему</string>
     <string name="theme_dark">Тамна Тема</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Ажурирање је пронађено!</string>
     <string name="update_notfound">Нема нове верзије</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Одбаци</string>
     <string name="guide">Водич</string>
     <string name="hold_on">Заустави!</string>
     <string name="magisk_vanced">Користите Magisk/TWRP верзију Vanced апликације, која више није подржана и чије коришћење није могуће. Молимо Вас да уклоните ову апликацију из Magisk/TWRP-а путем Vanced апликације за деинсталацију.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Одаберите језик за коришћење Vanced апликације</string>
     <string name="choose_preferred_language_note">Напомена: Енглески ће такође бити инсталиран као додатани језик.</string>
     <string name="choose_preferred_theme">Одаберите тему Vanced апликације</string>
-    <string name="disable_signature">Root мод је детектован! Да би сте инсталирали Vanced, потребно је да онемогућите apk проверу потписа.</string>
     <string name="finish">Заврши</string>
     <string name="install_light_black">Светла + Црна</string>
     <string name="install_light_dark">Светла + Тамна</string>
