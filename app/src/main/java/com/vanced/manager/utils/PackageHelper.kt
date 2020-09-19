@@ -347,7 +347,7 @@ object PackageHelper {
 
     private fun setupScript(apkFPath: String, path: String): Boolean
     {
-        if(Shell.su("""echo  "#!/system/bin/sh\nsleep 1m\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
+        if(Shell.su("""echo "#!/system/bin/sh\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
         {
             return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
         }
@@ -357,9 +357,9 @@ object PackageHelper {
     private fun linkVanced(apkFPath: String, path: String): Boolean
     {
         Shell.su("am force-stop $yPkg").exec()
-        Thread.sleep(500)
+        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """)
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
-
+        Thread.sleep(500)
         return response.isSuccess
     }
 
