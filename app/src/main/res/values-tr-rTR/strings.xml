@@ -12,13 +12,10 @@
     <string name="changelogs">Değişiklikler</string>
     <string name="downloading_file">%1$s indiriliyor</string>
     <string name="install">Yükle</string>
-    <string name="installing_app">%1$s yükleniyor</string>
     <string name="installation_wait">Lütfen yükleme bitene kadar bekleyin.</string>
     <string name="button_reinstall">Yeniden yükle</string>
     <string name="version_installed">Yüklü:</string>
     <string name="latest">En son:</string>
-    <string name="successfully_installed">%1$s başarıyla yüklendi</string>
-    <string name="network_error">Ağ bağlantısı yok</string>
     <string name="no_microg">microG yüklü değil</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Mevcut değil</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Chrome Özel Sekmelerini kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="link_external_browser">Bağlantılar harici tarayıcıda açılacaktır</string>
-    <string name="new_installer_title">Yeni root yükleyiciyi kullan (Deneysel)</string>
-    <string name="new_installer_summary">Bu yükleyici, İmza Doğrulama durumuna bağlı değildir. UYARI: Bu yükleyiciyi kullanarak yüklerseniz, yeniden başlattıktan sonra Vanced kaybolabilir</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Sistem Karar Versin</string>
     <string name="theme_dark">Koyu Tema</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Güncelleme bulundu!</string>
     <string name="update_notfound">Yeni güncelleme yok</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Kapat</string>
     <string name="guide">Kılavuz</string>
     <string name="hold_on">Durdur!</string>
     <string name="magisk_vanced">Üretimi durdurulan ve bu uygulama kullanılarak güncellenemeyen Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen magisk modülünü/TWRP Vanced kaldırıcıyı kullanarak kaldırın.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Vanced için tercih ettiğiniz dil(ler)i seçin</string>
     <string name="choose_preferred_language_note">Not: İngilizce her zaman ek bir dil olarak yüklenecektir.</string>
     <string name="choose_preferred_theme">Vanced için tercih ettiğiniz temayı seçin</string>
-    <string name="disable_signature">Root modu algılandı! Vanced\'i yüklemek için apk imza doğrulamasını devre dışı bırakmanız GEREKİR.</string>
     <string name="finish">Bitir</string>
     <string name="install_light_black">Açık + Siyah</string>
     <string name="install_light_dark">Açık + Koyu</string>
