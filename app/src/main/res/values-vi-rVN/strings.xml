@@ -12,13 +12,10 @@
     <string name="changelogs">Bản ghi các thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
-    <string name="installing_app">Đang cài đặt %1$s</string>
     <string name="installation_wait">Vui lòng đợi cho đến khi quá trình cài đặt kết thúc.</string>
     <string name="button_reinstall">Cài đặt lại</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
-    <string name="successfully_installed">Đã cài đặt thành công %1$s</string>
-    <string name="network_error">Không có kết nối mạng</string>
     <string name="no_microg">microG chưa được cài đặt</string>
     <string name="root_not_granted">Quyền root không được cấp</string>
     <string name="unavailable">Chưa cài đặt</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
     <string name="link_custom_tabs">Các đường link sẽ mở trong Custom Tabs của Chrome</string>
     <string name="link_external_browser">Các đường link sẽ mở trong một trình duyệt ngoài</string>
-    <string name="new_installer_title">Sử dụng trình cài đặt root mới (Thử nghiệm)</string>
-    <string name="new_installer_summary">Trình cài đặt này không phụ thuộc vào trạng thái Xác minh Chữ ký. CẢNH BÁO: Vanced có thể biến mất sau khi khởi động lại nếu bạn cài đặt nó bằng cách này</string>
     <string name="theme">Nền</string>
     <string name="theme_follow">Theo Hệ Thống</string>
     <string name="theme_dark">Nền Tối</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Có bản cập nhật mới!</string>
     <string name="update_notfound">Không có bản cập nhật mới</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Bỏ qua</string>
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Dừng lại!</string>
     <string name="magisk_vanced">Bạn đang dùng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ nó bằng cách gỡ mô-đun Magisk/sử dụng trình gỡ cài đặt TWRP Vanced.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
     <string name="choose_preferred_language_note">Chú ý: Tiếng Anh sẽ luôn được cài đặt thêm.</string>
     <string name="choose_preferred_theme">Chọn nền mong muốn cho Vanced</string>
-    <string name="disable_signature">Chế độ root được phát hiện! Để cài đặt Vanced, bạn PHẢI vô hiệu hóa xác minh chứng chỉ apk.</string>
     <string name="finish">Hoàn tất</string>
     <string name="install_light_black">Sáng + Đen</string>
     <string name="install_light_dark">Sáng + Tối</string>
