@@ -12,13 +12,10 @@
     <string name="changelogs">שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
     <string name="install">התקן</string>
-    <string name="installing_app">מתקין את %1$s</string>
     <string name="installation_wait">אנא המתינו לסיום ההתקנה...</string>
     <string name="button_reinstall">התקן מחדש</string>
     <string name="version_installed">מותקן:</string>
     <string name="latest">החדש ביותר:</string>
-    <string name="successfully_installed">הותקן בהצלחה %1$s</string>
-    <string name="network_error">חיבור לרשת אינו זמין</string>
     <string name="no_microg">microG לא הותקן</string>
     <string name="root_not_granted">לא הוענקו הרשאות Root</string>
     <string name="unavailable">אינו זמין</string>
@@ -45,8 +42,6 @@
     <string name="link_title">השתמש בכרטיסייה מותאמת אישית של Chrome</string>
     <string name="link_custom_tabs">קישורים יפתחו בכרטיסיות מותאמות אישית של Chrome</string>
     <string name="link_external_browser">קישורים יפתחו בדפדפן חיצוני</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">ערכת נושא</string>
     <string name="theme_follow">בהתאם למערכת</string>
     <string name="theme_dark">ערכת נושא כהה</string>
@@ -59,7 +54,6 @@
     <string name="update_found">עדכון נמצא!</string>
     <string name="update_notfound">אין עדכונים חדשים</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">התעלם</string>
     <string name="guide">מדריך</string>
     <string name="hold_on">עצור!</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
     <string name="choose_preferred_language_note">תזכורת: אנגלית תמיד תהיה מותקנת בתור שפה נוספת.</string>
     <string name="choose_preferred_theme">בחר את המראה המועדף שלך בשביל Vanced</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you MUST disable the apk signature verification.</string>
     <string name="finish">סיים</string>
     <string name="install_light_black">בהיר + שחור</string>
     <string name="install_light_dark">בהיר + כהה</string>
