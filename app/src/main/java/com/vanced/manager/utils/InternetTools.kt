@@ -20,9 +20,10 @@ object InternetTools {
             val builder = CustomTabsIntent.Builder()
             builder.setToolbarColor(ContextCompat.getColor(context, color))
             val customTabsIntent = builder.build()
+            customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             customTabsIntent.launchUrl(context, Uri.parse(Url))
         } else
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Url)))
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Url)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
