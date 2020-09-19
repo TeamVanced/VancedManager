@@ -22,6 +22,7 @@ import com.google.android.material.tabs.TabLayout
 import com.vanced.manager.R
 import com.vanced.manager.databinding.FragmentMainBinding
 import com.vanced.manager.ui.MainActivity
+import kotlin.system.exitProcess
 
 class MainFragment : Fragment() {
     
@@ -44,7 +45,10 @@ class MainFragment : Fragment() {
 
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                requireActivity().finish()
+                if(!navHost.popBackStack())
+                {
+                    exitProcess(0)
+                }
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)

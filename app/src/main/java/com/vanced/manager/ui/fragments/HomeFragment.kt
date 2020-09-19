@@ -5,14 +5,12 @@ import android.os.Bundle
 import android.view.*
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
@@ -32,20 +30,16 @@ open class HomeFragment : Fragment(), View.OnClickListener {
     private val viewModel: HomeViewModel by viewModels()
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
 
-    override fun onStart() {
-        super.onStart()
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).selectedTabPosition == 1) "root" else "nonroot"
-        viewModel.variant = variant
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
+        variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).selectedTabPosition == 1) "root" else "nonroot"
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.viewModel = viewModel
+        viewModel.variant = variant
         return binding.root
     }
 
@@ -58,13 +52,6 @@ open class HomeFragment : Fragment(), View.OnClickListener {
                 view.findNavController().navigate(content)
             }
         })
-
-        val callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                requireActivity().finish()
-            }
-        }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
         with(binding) {
             includeChangelogsLayout.changelogButton.setOnClickListener(this@HomeFragment)

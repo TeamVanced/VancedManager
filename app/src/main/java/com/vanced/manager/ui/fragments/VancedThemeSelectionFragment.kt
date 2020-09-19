@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RadioGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
 
@@ -26,12 +24,7 @@ class VancedThemeSelectionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                findNavController().popBackStack()
-            }
-        }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
+
         val nextButton = view.findViewById<Button>(R.id.vanced_next_to_variant)
         val themeGroup = view.findViewById<RadioGroup>(R.id.theme_radiogroup)
         val prefs = activity?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
