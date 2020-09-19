@@ -14,12 +14,12 @@ import androidx.navigation.findNavController
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
-import com.vanced.manager.adapter.SectionPageAdapter
-import com.vanced.manager.adapter.SectionPageRootAdapter
+import com.vanced.manager.adapter.ChangelogAdapter
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.events.Event
 import com.vanced.manager.ui.viewmodels.HomeViewModel
+import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
 import com.vanced.manager.utils.AppUtils.installing
 
 open class HomeFragment : Fragment(), View.OnClickListener {
@@ -27,7 +27,9 @@ open class HomeFragment : Fragment(), View.OnClickListener {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var variant: String
     private var isExpanded: Boolean = false
-    private val viewModel: HomeViewModel by viewModels()
+    private val viewModel: HomeViewModel by viewModels {
+        HomeViewModelFactory(requireActivity().application, variant)
+    }
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
 
     override fun onCreateView(
@@ -39,13 +41,11 @@ open class HomeFragment : Fragment(), View.OnClickListener {
         variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).selectedTabPosition == 1) "root" else "nonroot"
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.viewModel = viewModel
-        viewModel.variant = variant
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         viewModel.navigateDestination.observe(viewLifecycleOwner, Observer<Event<Int>> {
             val content = it.getContentIfNotHandled()
             if(content != null){
@@ -73,27 +73,17 @@ open class HomeFragment : Fragment(), View.OnClickListener {
         }
 
         with(binding.includeChangelogsLayout) {
-            viewpager.adapter = 
-            if (variant == "root") 
-                SectionPageRootAdapter(this@HomeFragment)
-            else
-                SectionPageAdapter(this@HomeFragment)
+            viewpager.adapter = ChangelogAdapter(variant, this@HomeFragment.viewModel)
+            val nonrootTitles = arrayOf("Vanced", "Music", "microG", "Manager")
+            val rootTitles = arrayOf("Vanced", "Manager")
 
             TabLayoutMediator(tablayout, viewpager) { tab, position ->
                 tab.text = 
-                if (variant == "root") {
-                    when (position) {
-                        0 -> "Vanced"
-                        else -> "Manager"
+                    if (variant == "root") {
+                        rootTitles[position]
+                    } else {
+                        nonrootTitles[position]
                     }
-                } else {
-                    when (position) {
-                        0 -> "Vanced"
-                        1 -> "Music"
-                        2 -> "MicroG"
-                        else -> "Manager"
-                    }
-                }
             }.attach()
         }
 

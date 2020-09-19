@@ -3,6 +3,7 @@ package com.vanced.manager.model
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.util.Log
 import androidx.core.content.ContextCompat
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
@@ -37,9 +38,9 @@ open class DataModel(
 
     fun fetch() {
         isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
-        versionName.set(jsonObject?.string("version")?.removeSuffix("-vanced")  ?: context.getString(R.string.unavailable))
+        versionName.set(jsonObject?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
         installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))
-        versionCode.set(jsonObject?.int("versionCode")?: 0)
+        versionCode.set(jsonObject?.int("versionCode") ?: 0)
         installedVersionCode.set(getPkgVersionCode(isAppInstalled.get(), appPkg))
         buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
         buttonIcon.set(compareIntDrawable(installedVersionCode.get(), versionCode.get()))

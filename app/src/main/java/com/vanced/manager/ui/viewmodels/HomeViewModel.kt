@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableBoolean
@@ -28,13 +29,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-open class HomeViewModel(application: Application): AndroidViewModel(application) {
+open class HomeViewModel(application: Application, val variant: String): AndroidViewModel(application) {
 
     val app = application
     private val managerApp = application as App
 
     //val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
-    var variant = "nonroot"
 
     val vanced = ObservableField<DataModel>()
     val microg = ObservableField<DataModel>()
@@ -61,7 +61,7 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     private val microgToast = Toast.makeText(app, R.string.no_microg, Toast.LENGTH_LONG)
     
     private val vancedPkgName =
-        if (variant == "root") 
+        if (variant == "root")
             "com.google.android.youtube"
         else 
             "com.vanced.android.youtube"
@@ -144,16 +144,14 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
 
     init {
         fetching.set(true)
-        //while (managerApp.manager == null)
-            //this.wait()
-
         vanced.set(DataModel(managerApp.vanced, variant, "vanced", app))
-        microg.set(DataModel(managerApp.microg, app = "microg", context = app))
         music.set(DataModel(managerApp.music, app = "music", context = app))
+        microg.set(DataModel(managerApp.microg, app = "microg", context = app))
         manager.set(DataModel(managerApp.manager, app = "manager", context = app))
         vancedProgress.set(ProgressModel())
         musicProgress.set(ProgressModel())
         microgProgress.set(ProgressModel())
+        Log.d("Test", variant)
         fetching.set(false)
     }
 
