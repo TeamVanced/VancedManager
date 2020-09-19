@@ -12,13 +12,10 @@
     <string name="changelogs">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
-    <string name="installing_app">正在安裝 %1$s</string>
     <string name="installation_wait">請等待安裝程序完成.</string>
     <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
-    <string name="successfully_installed">成功安裝 %1$s</string>
-    <string name="network_error">無法存取網絡</string>
     <string name="no_microg">未安裝 MicroG</string>
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="unavailable">無法使用</string>
@@ -45,8 +42,6 @@
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="link_external_browser">連結會使用外部瀏覽器開啟</string>
-    <string name="new_installer_title">使用新 root 安裝程式 (實驗性質)</string>
-    <string name="new_installer_summary">安裝程式不依賴簽名認證狀態。警告：如果您使用這個程式安裝 Vanced，它有可能會在裝置重啟後消失</string>
     <string name="theme">主題</string>
     <string name="theme_follow">跟隨系統</string>
     <string name="theme_dark">深色主題</string>
@@ -59,7 +54,6 @@
     <string name="update_found">有可用的更新！</string>
     <string name="update_notfound">沒有新的更新</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">關閉</string>
     <string name="guide">說明</string>
     <string name="hold_on">警告！</string>
     <string name="magisk_vanced">您正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
     <string name="choose_preferred_language_note">備註：英文仍會當作附加語言安裝</string>
     <string name="choose_preferred_theme">為 Vanced 選擇您偏好的主題</string>
-    <string name="disable_signature">檢測到 Root ！若要安裝 Vanced ，您需要停用 apk 簽名驗證。</string>
     <string name="finish">完成</string>
     <string name="install_light_black">淺色 + 黑色</string>
     <string name="install_light_dark">淺色 + 深色</string>
