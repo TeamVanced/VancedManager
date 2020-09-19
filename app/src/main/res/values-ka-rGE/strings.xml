@@ -12,13 +12,10 @@
     <string name="changelogs">ცვლილებები</string>
     <string name="downloading_file">მიმდინარეობს %1$s-ის გადმოწერა</string>
     <string name="install">ინსტალაცია</string>
-    <string name="installing_app">მიმდინარეობს %1$s-ის ინსტალაცია</string>
     <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">რეინსტალაცია</string>
     <string name="version_installed">დაინსტალირებული:</string>
     <string name="latest">უახლესი:</string>
-    <string name="successfully_installed">წარმატებით დაყენდა %1$s</string>
-    <string name="network_error">კავშირი არ არის</string>
     <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root წვდომა არ არის მინიჭებული</string>
     <string name="unavailable">ხელმიუწვდომელია</string>
@@ -45,8 +42,6 @@
     <string name="link_title">გამოიყენეთ Chrome Custom Tabs</string>
     <string name="link_custom_tabs">ლინკები გაიხსნება Chrome Custom Tabs-ში</string>
     <string name="link_external_browser">ლინკები გაიხსნება გარე ბრაუზერში</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">თემა</string>
     <string name="theme_follow">სისტემაზე დაფუძნებული</string>
     <string name="theme_dark">მუქი თემა</string>
@@ -59,7 +54,6 @@
     <string name="update_found">ნაპოვნია განახლება!</string>
     <string name="update_notfound">განახლება არ არის აღმოჩენილი</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">დახურვა</string>
     <string name="guide">ინსტრუქცია</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the magisk module/using TWRP Vanced uninstaller.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
     <string name="choose_preferred_language_note">შენიშვნა: თუ თქვენ აირჩევთ სხვა ენას გარდა ინგლისურისა, ინგლისური მაინც იქნება დაყენებული როგორც დამატებითი ენა</string>
     <string name="choose_preferred_theme">აირჩიეთ სასურველი თემა Vanced-ისთვის</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you MUST disable the apk signature verification.</string>
     <string name="finish">დასრულება</string>
     <string name="install_light_black">ღია + შავი</string>
     <string name="install_light_dark">ღია + მუქი</string>
