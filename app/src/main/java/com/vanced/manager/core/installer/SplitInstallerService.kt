@@ -6,6 +6,7 @@ import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
+import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 
@@ -25,6 +26,7 @@ class SplitInstallerService: Service() {
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
                 vancedProgress.get()?.showInstallCircle?.set(false)
+                installing = false
                 sendRefresh(this)
             }
             else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)

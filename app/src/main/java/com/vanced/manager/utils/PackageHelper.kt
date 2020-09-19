@@ -16,7 +16,9 @@ import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
 import com.vanced.manager.core.installer.SplitInstallerService
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.sendFailure
+import com.vanced.manager.utils.AppUtils.sendRefresh
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -215,16 +217,15 @@ object PackageHelper {
                     }
                     if (modApk != null) {
                         if (overwriteBase(modApk, fileInfoList, vancedVersionCode, context)) {
-                            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(
-                                HomeFragment.REFRESH_HOME))
+                            sendRefresh(context)
+                            vancedProgress.get()?.showInstallCircle?.set(false)
                         }
                     }
                     else {
                         sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                     }
                 }
-                else
-                {
+                else {
                     sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
                 }
             }
@@ -243,8 +244,7 @@ object PackageHelper {
             sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
         }
         apkFiles.forEach { apkFile ->
-            if(apkFile.name != "black.apk" && apkFile.name != "dark.apk" && apkFile.name != "hash.json")
-            {
+            if(apkFile.name != "black.apk" && apkFile.name != "dark.apk" && apkFile.name != "hash.json") {
                 Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
                 val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
                 val process: Process = Runtime.getRuntime().exec(command)
