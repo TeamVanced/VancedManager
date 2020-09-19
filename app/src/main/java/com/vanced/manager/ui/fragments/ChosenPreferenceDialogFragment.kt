@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
+import androidx.navigation.fragment.findNavController
 import com.vanced.manager.R
 import com.vanced.manager.databinding.FragmentChosenPreferencesBinding
 import java.util.*
@@ -40,6 +42,14 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
                 newPrefs.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
         }
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+
         binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.capitalize(Locale.ROOT))
         binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, newPrefs.joinToString())
 

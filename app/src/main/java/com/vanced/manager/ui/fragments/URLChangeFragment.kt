@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.DialogFragment
+import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
@@ -42,6 +44,14 @@ class URLChangeFragment : DialogFragment() {
             prefs.edit().putString("install_url", finalUrl).apply()
             dismiss()
         }
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
+
         view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {
             prefs.edit().putString("install_url", baseUrl).apply()
             dismiss()

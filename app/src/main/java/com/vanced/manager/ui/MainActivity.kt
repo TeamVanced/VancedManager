@@ -7,7 +7,11 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
@@ -19,11 +23,13 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.SectionVariantAdapter
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
+import com.vanced.manager.ui.fragments.MainFragment
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
+import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -110,12 +116,6 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         Crowdin.registerDataLoadingObserver(loadingObserver)
         binding.mainTablayout.addOnTabSelectedListener(tabListener)
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val navHost = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
-        navHost.navController.popBackStack()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
