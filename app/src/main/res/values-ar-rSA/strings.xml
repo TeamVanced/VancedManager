@@ -12,13 +12,10 @@
     <string name="changelogs">سجل التغييرات</string>
     <string name="downloading_file">جارٍ تنزيل %1$s</string>
     <string name="install">تثبيت</string>
-    <string name="installing_app">جاري التثبيت %1$s</string>
     <string name="installation_wait">الرجاء الانتظار حتى ينتهي التثبيت.</string>
     <string name="button_reinstall">إعادة التثبيت</string>
     <string name="version_installed">مثبت:</string>
     <string name="latest">آخر:</string>
-    <string name="successfully_installed">تم تثبيت %1$s بنجاح</string>
-    <string name="network_error">اتصاا الشبكة غير متاح</string>
     <string name="no_microg">لم يتم تثبيت microG</string>
     <string name="root_not_granted">لم يتم منح الوصول للجذر</string>
     <string name="unavailable">غير متاح</string>
@@ -45,8 +42,6 @@
     <string name="link_title">إستخدم علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
-    <string name="new_installer_title">استخدم مثبت الروت الجديد (تجريبي)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
     <string name="theme_dark">الموضوع الاسود</string>
@@ -59,7 +54,6 @@
     <string name="update_found">تم العثور على التحديث!</string>
     <string name="update_notfound">لا يوجد تحديثات جديدة</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">إزالة</string>
     <string name="guide">المعالج</string>
     <string name="hold_on">توقف!</string>
     <string name="magisk_vanced">يبدو أنك تستخدم إصدار Magisk/TWRP من Vanced، الذي تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً عن طريق إزالة وحدة الـ Magisk / بإستخدام أداة إلغاء تثبيت TWRP Vanced.</string>
@@ -77,7 +71,6 @@
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
     <string name="choose_preferred_language_note">لاحظة: اذا قمت تثبيت بأي لغة غير الانجليزية، سيكون اللغة الانجليزية مثبتة بللغة اضافية</string>
     <string name="choose_preferred_theme">اختر موضوع اللون المفضلة لفانسد</string>
-    <string name="disable_signature">Root mode detected! To install Vanced, you MUST disable the apk signature verification.</string>
     <string name="finish">نهاية</string>
     <string name="install_light_black">ابيض + اسود</string>
     <string name="install_light_dark">ابيض + داكن</string>
