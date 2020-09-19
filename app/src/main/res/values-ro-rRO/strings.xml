@@ -12,13 +12,10 @@
     <string name="changelogs">Istoric modificări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
-    <string name="installing_app">Se Instalează %1$s</string>
     <string name="installation_wait">Vă rugăm să aşteptaţi până la finalizarea instalării.</string>
     <string name="button_reinstall">Reinstalare</string>
     <string name="version_installed">Instalat:</string>
     <string name="latest">Ultima:</string>
-    <string name="successfully_installed">Instalat cu succes %1$s</string>
-    <string name="network_error">Conexiune la rețea indisponibilă</string>
     <string name="no_microg">microG nu este instalat</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Utilizează file personalizate Chrome</string>
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="link_external_browser">Link-urile se vor deschide într-un browser extern</string>
-    <string name="new_installer_title">Folosește noul instalator root (Experimental)</string>
-    <string name="new_installer_summary">Această instalare nu depinde de starea de verificare a semnăturilor. AVERTISMENT: Vanced poate dispărea după repornire dacă instalați folosind această procedură</string>
     <string name="theme">Temă</string>
     <string name="theme_follow">Urmăreşte sistemul</string>
     <string name="theme_dark">Temă întunecată</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Actualizare găsită!</string>
     <string name="update_notfound">Nu există actualizări noi</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Renunţaţi</string>
     <string name="guide">Ghid</string>
     <string name="hold_on">Oprește!</string>
     <string name="magisk_vanced">Folosiți versiunea Magisk/TWRP a Vanced, care este întreruptă și nu poate fi actualizată folosind această aplicație. Vă rugăm să o eliminați eliminând modulul magisk/utilizând dezinstalare Vanced TWRP.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Alegeți limba preferată pentru Vanced</string>
     <string name="choose_preferred_language_note">Notă: Engleza va fi întotdeauna instalată și ca limbă suplimentară.</string>
     <string name="choose_preferred_theme">Alegeți tema preferată pentru Vanced</string>
-    <string name="disable_signature">Modul Root detectat! Pentru a instala Vanced, va trebui să dezactivați verificarea semnăturii apk.</string>
     <string name="finish">Terminat</string>
     <string name="install_light_black">Luminos + Negru</string>
     <string name="install_light_dark">Luminos + Întunecat</string>
