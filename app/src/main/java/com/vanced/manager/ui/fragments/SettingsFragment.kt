@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.preference.*
 import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
+import kotlinx.android.synthetic.main.fragment_main.*
 import java.io.File
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -16,6 +20,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
         activity?.title = getString(R.string.title_settings)
         setHasOptionsMenu(true)
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
 
         findPreference<Preference>("update_check")?.setOnPreferenceClickListener {
             UpdateCheckFragment().show(childFragmentManager.beginTransaction(), "Update Center")

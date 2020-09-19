@@ -14,8 +14,10 @@ import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
+import androidx.navigation.fragment.findNavController
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.google.android.material.button.MaterialButton
@@ -45,6 +47,13 @@ class UpdateCheckFragment : DialogFragment() {
         checkUpdates()
         view.findViewById<Button>(R.id.update_center_dismiss).setOnClickListener { dismiss() }
         view.findViewById<MaterialButton>(R.id.update_center_recheck).setOnClickListener{ checkUpdates() }
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().popBackStack()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
         downLoadingState(false)
     }

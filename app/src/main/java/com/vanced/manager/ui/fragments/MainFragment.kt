@@ -6,18 +6,22 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.tabs.TabLayout
 import com.vanced.manager.R
 import com.vanced.manager.databinding.FragmentMainBinding
+import com.vanced.manager.ui.MainActivity
 
 class MainFragment : Fragment() {
     
@@ -32,12 +36,19 @@ class MainFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
         return binding.root
     }
-    
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val navHostFragment = childFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         navHost = navHostFragment.navController
-    
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                requireActivity().finish()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
+
         val appBarConfiguration = AppBarConfiguration(navHost.graph)
         requireActivity().findViewById<MaterialToolbar>(R.id.home_toolbar).setupWithNavController(navHost, appBarConfiguration)
         val tabLayout = requireActivity().findViewById<TabLayout>(R.id.main_tablayout)
