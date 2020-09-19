@@ -12,13 +12,10 @@
     <string name="changelogs">Registres de canvis</string>
     <string name="downloading_file">Descarregant %1$s</string>
     <string name="install">Instal·lar</string>
-    <string name="installing_app">Instal·lant %1$s</string>
     <string name="installation_wait">Espereu fins que es completi la instal·lació.</string>
     <string name="button_reinstall">Reinstal·la</string>
     <string name="version_installed">Instal·lat:</string>
     <string name="latest">Darrera:</string>
-    <string name="successfully_installed">Instal·lat amb èxit %1$s</string>
-    <string name="network_error">No hi ha connexió a xarxa disponible</string>
     <string name="no_microg">microG no està instal·lat</string>
     <string name="root_not_granted">L\'accés arrel no s\'ha concedit</string>
     <string name="unavailable">No disponible</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Utilitza pestanyes personalitzades del Chrome</string>
     <string name="link_custom_tabs">Els enllaços s\'obriran en pestanyes personalitzades del Chrome</string>
     <string name="link_external_browser">Els enllaços s\'obriran en un navegador extern</string>
-    <string name="new_installer_title">Utilitzeu el nou instal·lador d\'arrel (experimental)</string>
-    <string name="new_installer_summary">Aquest instal·lador no depèn de l\'estat de verificació de signatura. ADVERTÈNCIA: Vanced pot desaparèixer després de reiniciar-lo si ho instal·leu amb això</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Segueix el sistema</string>
     <string name="theme_dark">Tema fosc</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Actualització disponible!</string>
     <string name="update_notfound">Cap actualització</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Descartar</string>
     <string name="guide">Guia</string>
     <string name="hold_on">Atura!</string>
     <string name="magisk_vanced">Esteu utilitzant la versió Magisk / TWRP de Vanced, que està descatalogada i no es pot actualitzar mitjançant aquesta aplicació. Elimineu-lo traient el mòdul magisk / utilitzant el programa de desinstal·lació de TWRP Vanced.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Trieu els vostres idiomes preferits per a Vanced</string>
     <string name="choose_preferred_language_note">Nota: l\'anglès també s\'instal·larà sempre com a idioma addicional.</string>
     <string name="choose_preferred_theme">Trieu el vostre tema preferit per a Vanced</string>
-    <string name="disable_signature">S\'ha detectat el mode arrel. Per instal·lar Vanced, heu de desactivar la verificació de la signatura apk.</string>
     <string name="finish">Finalitzar</string>
     <string name="install_light_black">Clar + Negre</string>
     <string name="install_light_dark">Clar + Fosc</string>
