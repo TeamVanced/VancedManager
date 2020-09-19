@@ -12,13 +12,10 @@
     <string name="changelogs">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
-    <string name="installing_app">Memasang %1$s</string>
     <string name="installation_wait">Mohon tunggu sampai instalasi selesai.</string>
     <string name="button_reinstall">Pasang ulang</string>
     <string name="version_installed">Terpasang:</string>
     <string name="latest">Terbaru:</string>
-    <string name="successfully_installed">Berhasil dipasang %1$s</string>
-    <string name="network_error">Koneksi internet tidak tersedia</string>
     <string name="no_microg">microG tidak terpasang</string>
     <string name="root_not_granted">Akses Root tidak diberikan</string>
     <string name="unavailable">Tidak tersedia</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="link_external_browser">Tautan akan terbuka di Browser Eksternal</string>
-    <string name="new_installer_title">Gunakan pemasang root yang baru (Eksperimental)</string>
-    <string name="new_installer_summary">Pemasang ini tidak bergantung pada status Signature Verification. WARNING: Vanced mungkin menghilang setelah reboot jika anda memasang menggunakan ini</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Ikuti Sistem</string>
     <string name="theme_dark">Tema Gelap</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Pembaruan ditemukan!</string>
     <string name="update_notfound">Tidak ada pembaruan</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Hilangkan</string>
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapus itu dengan menghapus modul magisk/gunakan pencopot Vanced TWRP.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
     <string name="choose_preferred_language_note">Catatan: Inggris akan selalu terpasang sebagai bahasa tambahan.</string>
     <string name="choose_preferred_theme">Pilih tema yang anda inginkan untuk Vanced</string>
-    <string name="disable_signature">Mode Root terdeteksi! Untuk memasang Vanced, anda HARUS menonaktifkan apk signature verification.</string>
     <string name="finish">Selesai</string>
     <string name="install_light_black">Terang + Hitam</string>
     <string name="install_light_dark">Terang + Gelap</string>
