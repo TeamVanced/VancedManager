@@ -12,13 +12,10 @@
     <string name="changelogs">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
-    <string name="installing_app">Asennetaan %1$s</string>
     <string name="installation_wait">Odota, kunnes asennus on valmis.</string>
     <string name="button_reinstall">Uudelleenasenna</string>
     <string name="version_installed">Asennettu:</string>
     <string name="latest">Uusin:</string>
-    <string name="successfully_installed">%1$s asennus onnistui</string>
-    <string name="network_error">Verkkoyhteys ei ole käytettävissä</string>
     <string name="no_microg">microG:tä ei ole asennettu</string>
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Käytä Chromen mukautettuja välilehtiä</string>
     <string name="link_custom_tabs">Linkit aukeavat Chromen mukautetuissa välilehdissä</string>
     <string name="link_external_browser">Linkit aukeavat ulkoisessa selaimessa</string>
-    <string name="new_installer_title">Käytä uutta juuriasenninta (kokeellinen)</string>
-    <string name="new_installer_summary">Tämä asennusohjelma ei ole riippuvainen allekirjoituksen vahvistuksen tilasta. VAROITUS: Vanced saattaa kadota uudelleenkäynnistyksen jälkeen, jos asennat sen tällä tavalla</string>
     <string name="theme">Teema</string>
     <string name="theme_follow">Järjestelmän teema</string>
     <string name="theme_dark">Tumma teema</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Päivitys löytyi!</string>
     <string name="update_notfound">Ei uusia päivityksiä</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Ohita</string>
     <string name="guide">Opas</string>
     <string name="hold_on">Pysähdy!</string>
     <string name="magisk_vanced">Käytät Vancedin Magisk / TWRP-versiota, joka on lopetettu eikä sitä voi päivittää tällä sovelluksella. Poista se poistamalla magisk-moduuli / käyttämällä TWRP Vanced -asennusohjelmaa.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
     <string name="choose_preferred_language_note">Huom: Englanti asennetaan rinnalle aina.</string>
     <string name="choose_preferred_theme">Valitse haluamasi teema</string>
-    <string name="disable_signature">Root-tila havaittu! Vancedin asentamiseksi sinun on poistettava apk-allekirjoituksen vahvistus käytöstä.</string>
     <string name="finish">Valmis</string>
     <string name="install_light_black">Vaalea + Musta</string>
     <string name="install_light_dark">Vaalea + Tumma</string>
