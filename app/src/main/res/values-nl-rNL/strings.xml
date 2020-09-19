@@ -12,13 +12,10 @@
     <string name="changelogs">Wijzigingen</string>
     <string name="downloading_file">%1$s downloaden</string>
     <string name="install">Installeren</string>
-    <string name="installing_app">%1$s installeren</string>
     <string name="installation_wait">Wachten tot de installatie is voltooid.</string>
     <string name="button_reinstall">Herinstalleren</string>
     <string name="version_installed">Geïnstalleerd:</string>
     <string name="latest">Recentste:</string>
-    <string name="successfully_installed">%1$s succesvol geïnstalleerd</string>
-    <string name="network_error">Netwerkverbinding niet beschikbaar</string>
     <string name="no_microg">microG is niet geïnstalleerd</string>
     <string name="root_not_granted">Root-toegang niet toegestaan</string>
     <string name="unavailable">Niet beschikbaar</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Aangepaste Chrome-tabs gebruiken</string>
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
     <string name="link_external_browser">Links zullen openen in een externe browser</string>
-    <string name="new_installer_title">Het nieuwe root-installatieprogramma gebruiken (experimenteel)</string>
-    <string name="new_installer_summary">Dit installatieprogramma is niet afhankelijk van de status van de handtekeningverificatie. WAARSCHUWING: Vanced kan na het opnieuw opstarten verdwijnen als u het hiermee installeert</string>
     <string name="theme">Thema</string>
     <string name="theme_follow">Systeeminstelling</string>
     <string name="theme_dark">Donker thema</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Update gevonden!</string>
     <string name="update_notfound">Geen nieuwe updates</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Afwijzen</string>
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>
     <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die stopgezet is en niet kan bijgewerkt worden met deze app. Verwijder deze eerst door het verwijderen van de magisk-module / door de TWRP Vanced uninstaller te gebruiken.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Kies je gewenste taal/talen voor Vanced</string>
     <string name="choose_preferred_language_note">Opmerking: Engels zal altijd als extra taal worden geïnstalleerd.</string>
     <string name="choose_preferred_theme">Kies je gewenste thema voor Vanced</string>
-    <string name="disable_signature">Root-modus gedetecteerd! Om Vanced te installeren MOET je de apk-handtekeningverificatie uitschakelen.</string>
     <string name="finish">Voltooien</string>
     <string name="install_light_black">Licht + Zwart</string>
     <string name="install_light_dark">Licht + Donker</string>
