@@ -12,13 +12,10 @@
     <string name="changelogs">Változások listája</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="install">Telepítés</string>
-    <string name="installing_app">%1$s telepítése</string>
     <string name="installation_wait">Várjon amíg a telepítés befejeződik.</string>
     <string name="button_reinstall">Újratelepítés</string>
     <string name="version_installed">Telepítve:</string>
     <string name="latest">Legújabb:</string>
-    <string name="successfully_installed">%1$s sikeresen telepítve</string>
-    <string name="network_error">Nincs internetkapcsolat</string>
     <string name="no_microg">microG nincs telepítve</string>
     <string name="root_not_granted">Nincs root jogosultság</string>
     <string name="unavailable">Nem elérhető</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="link_external_browser">A linkek egy külső böngészőben nyílnak meg</string>
-    <string name="new_installer_title">Használja az új root telepítőt (kísérleti)</string>
-    <string name="new_installer_summary">Ez a telepítő nem függ az aláírás-ellenőrzés állapotától. FIGYELEM: A Vanced újraindítás után eltűnhet, ha ezzel telepíti</string>
     <string name="theme">Kinézet</string>
     <string name="theme_follow">Rendszertéma követése</string>
     <string name="theme_dark">Sötét téma</string>
@@ -59,7 +54,6 @@
     <string name="update_found">Frissítés érhető el!</string>
     <string name="update_notfound">Nincsenek új frissítések</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Bezár</string>
     <string name="guide">Útmutató</string>
     <string name="hold_on">Állj!</string>
     <string name="magisk_vanced">A Vanced Magisk/TWRP verzióját használod, ami már nem támogatott és nem frissíthető ezzel az alkalmazással. Távolítsd el a Magisk modul eltávolításával vagy TWRP Vanced eltávolítóval.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">Vanced nyelvének kiválasztása</string>
     <string name="choose_preferred_language_note">Az angol mindíg telepítve lesz, mint választható nyelv.</string>
     <string name="choose_preferred_theme">Vanced téma kiválasztása</string>
-    <string name="disable_signature">Root jogosultság észlelve! A Vanced telepítéséhez kapcsold ki a csomagaláírás ellenőrzést.</string>
     <string name="finish">Kész</string>
     <string name="install_light_black">Világos + Sötét</string>
     <string name="install_light_dark">Világos + Fekete</string>
