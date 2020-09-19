@@ -12,13 +12,10 @@
     <string name="changelogs">चेंजलॉग</string>
     <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
     <string name="install">इंस्टॉल</string>
-    <string name="installing_app">%1$s इन्स्टॉल कर रहा है</string>
     <string name="installation_wait">कृपया स्थापना समाप्त होने तक प्रतीक्षा करें।</string>
     <string name="button_reinstall">फिर से इंस्टॉल</string>
     <string name="version_installed">इन्स्टॉल्ड:</string>
     <string name="latest">नवीनतम</string>
-    <string name="successfully_installed">सफलतापूर्वक इन्स्टॉल्ड %1$s</string>
-    <string name="network_error">नेटवर्क कनेक्शन अनुपलब्ध है</string>
     <string name="no_microg">microG स्थापित नहीं है</string>
     <string name="root_not_granted">रूट एक्सेस प्रदान नही किया गया</string>
     <string name="unavailable">अनुपलब्ध</string>
@@ -45,9 +42,6 @@
     <string name="link_title">क्रोम कस्टम टैब का उपयोग करें</string>
     <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
     <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
-    <string name="new_installer_title">नए रूट इंस्टॉलर (प्रायोगिक) का उपयोग करें</string>
-    <string name="new_installer_summary">यह इंस्टॉलर हस्ताक्षर सत्यापन की स्थिति पर निर्भर नहीं करता है।
-चेतावनी: यदि आप इसका उपयोग करके इसे स्थापित करते हैं तो रिबूट के बाद Vanced गायब हो सकता है</string>
     <string name="theme">थीम</string>
     <string name="theme_follow">सिस्टम का पालन करें</string>
     <string name="theme_dark">डार्क थीम</string>
@@ -60,7 +54,6 @@
     <string name="update_found">अपडेट मिला!</string>
     <string name="update_notfound">कोई नया अपडेट नहीं</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">डिस्मिस</string>
     <string name="guide">गाइड</string>
     <string name="hold_on">रुकें!</string>
     <string name="magisk_vanced">आप Vanced के Magisk / TWRP संस्करण का उपयोग कर रहे हैं, जिसे बंद कर दिया गया है और इस ऐप का उपयोग करके अपडेट नहीं किया जा सकता है। कृपया इस Magisk मॉड्यूल को हटाकर / TWRP Vanced uninstaller का उपयोग करके हटा दें।</string>
@@ -77,7 +70,6 @@
     <string name="choose_preferred_language">Vanced के लिए अपनी पसंदीदा भाषा (ए) चुनें</string>
     <string name="choose_preferred_language_note">नोट: यदि आप अंग्रेजी के अलावा कुछ भी स्थापित करते हैं, तब भी अंग्रेजी एक अतिरिक्त भाषा के रूप में स्थापित की जाएगी</string>
     <string name="choose_preferred_theme">Vanced के लिए अपना पसंदीदा थीम चुनें</string>
-    <string name="disable_signature">रूट मोड का पता चला! Vanced इनस्टॉल करने के लिए, आपको एपीके सिग्नेचर वेरिफिकेशन को निष्क्रिय करना होगा।</string>
     <string name="finish">समाप्त करें</string>
     <string name="install_light_black">लाइट + ब्लैक</string>
     <string name="install_light_dark">लाइट + डार्क</string>
