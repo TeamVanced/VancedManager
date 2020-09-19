@@ -12,13 +12,10 @@
     <string name="changelogs">மாற்றங்களின் பதிவு</string>
     <string name="downloading_file">%1$s ஐப் பதிவிறக்குகிறது</string>
     <string name="install">நிறுவு</string>
-    <string name="installing_app">%1$s ஐ நிறுவுகிறது</string>
     <string name="installation_wait">நிறுவல் முடியும் வரை காத்திருக்கவும்.</string>
     <string name="button_reinstall">மீண்டும் நிறுவவும்</string>
     <string name="version_installed">நிறுவப்பட்டது:</string>
     <string name="latest">சமீபத்தியது:</string>
-    <string name="successfully_installed">%1$s வெற்றிகரமாக நிறுவப்பட்டது</string>
-    <string name="network_error">இணையம் கிடைக்கவில்லை</string>
     <string name="no_microg">microG நிறுவப்படவில்லை</string>
     <string name="root_not_granted">ரூட் அக்சஸ் வழங்கப்படவில்லை</string>
     <string name="unavailable">கிடைக்கவில்லை</string>
@@ -45,8 +42,6 @@
     <string name="link_title">Chrome தனிப்பயன் தாவல்களைப் பயன்படுத்தவும்</string>
     <string name="link_custom_tabs">Chrome தனிப்பயன் தாவல்களில் இணைப்புகள் திறக்கப்படும்</string>
     <string name="link_external_browser">இணைப்புகள் வெளிப்புற உலாவியில் திறக்கப்படும்</string>
-    <string name="new_installer_title">புதிய ரூட் நிறுவியைப் பயன்படுத்தவும் (சோதனை)</string>
-    <string name="new_installer_summary">இந்த நிறுவி கையொப்ப சரிபார்ப்பு நிலையை சார்ந்தது அல்ல. எச்சரிக்கை: இதைப் பயன்படுத்தி நீங்கள் நிறுவினால் மறுதொடக்கம் செய்த பிறகு வேன்ஸ் மறைந்துவிடும்</string>
     <string name="theme">தீம்</string>
     <string name="theme_follow">கணினியைப் பின்தொடரவும்</string>
     <string name="theme_dark">இருண்ட தீம்</string>
@@ -59,7 +54,6 @@
     <string name="update_found">புதுப்பிப்பு கிடைத்தது!</string>
     <string name="update_notfound">புதிய புதுப்பிப்புகள் இல்லை</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">தள்ளுபடி</string>
     <string name="guide">வழிகாட்டி</string>
     <string name="hold_on">நிறுத்து!</string>
     <string name="magisk_vanced">நீங்கள் வேன்ஸ்ட்டின் மேகிஸ்க் / டி.டபிள்யூ.ஆர்.பி பதிப்பைப் பயன்படுத்துகிறீர்கள், இது நிறுத்தப்பட்டது மற்றும் இந்த பயன்பாட்டைப் பயன்படுத்தி புதுப்பிக்க முடியாது. மேஜிஸ்க் தொகுதியை அகற்றி / TWRP Vanced uninstaller ஐப் பயன்படுத்தி அதை அகற்றவும்.</string>
@@ -76,7 +70,6 @@
     <string name="choose_preferred_language">வேன்ஸ்டுக்காக உங்களுக்கு விருப்பமான மொழியைத் தேர்வுசெய்க</string>
     <string name="choose_preferred_language_note">குறிப்பு: ஆங்கிலம் எப்போதும் கூடுதல் மொழியாக நிறுவப்படும்.</string>
     <string name="choose_preferred_theme">Vanced க்கு நீங்கள் விரும்பும் தீம் தேர்வு செய்யவும்</string>
-    <string name="disable_signature">ரூட் பயன்முறை கண்டறியப்பட்டது! Vanced ஐ நிறுவ, நீங்கள் APK கையொப்ப சரிபார்ப்பை முடக்க வேண்டும்.</string>
     <string name="finish">முடி</string>
     <string name="install_light_black">ஒளி + கருப்பு</string>
     <string name="install_light_dark">ஒளி + கருப்பு</string>
