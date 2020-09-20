@@ -42,6 +42,8 @@
     <string name="link_title">Chrome தனிப்பயன் தாவல்களைப் பயன்படுத்தவும்</string>
     <string name="link_custom_tabs">Chrome தனிப்பயன் தாவல்களில் இணைப்புகள் திறக்கப்படும்</string>
     <string name="link_external_browser">இணைப்புகள் வெளிப்புற உலாவியில் திறக்கப்படும்</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">தீம்</string>
     <string name="theme_follow">கணினியைப் பின்தொடரவும்</string>
     <string name="theme_dark">இருண்ட தீம்</string>
