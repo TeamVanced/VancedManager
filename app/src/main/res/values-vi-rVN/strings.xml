@@ -42,6 +42,8 @@
     <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
     <string name="link_custom_tabs">Các đường link sẽ mở trong Custom Tabs của Chrome</string>
     <string name="link_external_browser">Các đường link sẽ mở trong một trình duyệt ngoài</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">Nền</string>
     <string name="theme_follow">Theo Hệ Thống</string>
     <string name="theme_dark">Nền Tối</string>
