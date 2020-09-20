@@ -42,6 +42,8 @@
     <string name="link_title">क्रोम कस्टम टैब का उपयोग करें</string>
     <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
     <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">थीम</string>
     <string name="theme_follow">सिस्टम का पालन करें</string>
     <string name="theme_dark">डार्क थीम</string>
