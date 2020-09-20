@@ -42,6 +42,8 @@
     <string name="link_title">השתמש בכרטיסייה מותאמת אישית של Chrome</string>
     <string name="link_custom_tabs">קישורים יפתחו בכרטיסיות מותאמות אישית של Chrome</string>
     <string name="link_external_browser">קישורים יפתחו בדפדפן חיצוני</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="theme">ערכת נושא</string>
     <string name="theme_follow">בהתאם למערכת</string>
     <string name="theme_dark">ערכת נושא כהה</string>
