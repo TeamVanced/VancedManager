@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
 import com.google.android.material.tabs.TabLayout
@@ -17,10 +16,8 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.ChangelogAdapter
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
-import com.vanced.manager.ui.events.Event
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
-import com.vanced.manager.utils.AppUtils.installing
 
 open class HomeFragment : Fragment(), View.OnClickListener {
 
@@ -46,7 +43,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.navigateDestination.observe(viewLifecycleOwner, Observer<Event<Int>> {
+        viewModel.navigateDestination.observe(viewLifecycleOwner, {
             val content = it.getContentIfNotHandled()
             if(content != null){
                 view.findNavController().navigate(content)
@@ -126,15 +123,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                INSTALL_FAILED -> {
-                    with(binding) {
-                        includeMicrogLayout.microgInstalling.visibility = View.GONE
-                        includeVancedLayout.vancedInstalling.visibility = View.GONE
-                        includeMusicLayout.musicInstalling.visibility = View.GONE
-                    }
-                    installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
-                    installing = false
-                }
+                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
                 REFRESH_HOME -> viewModel.fetchData()
             }
         }

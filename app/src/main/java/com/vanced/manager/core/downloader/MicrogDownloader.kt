@@ -7,7 +7,7 @@ import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.microgProgress
-import com.vanced.manager.utils.AppUtils.installing
+import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.PackageHelper.install
@@ -28,7 +28,7 @@ object MicrogDownloader {
             PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "microg.apk")
                 .build()
                 .setOnStartOrResumeListener { 
-                    installing = true
+                    mutableInstall.value = true
                     microgProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
                     microgProgress.get()?.showDownloadBar?.set(true)
                 }
@@ -43,7 +43,7 @@ object MicrogDownloader {
                     }
 
                     override fun onError(error: Error?) {
-                        installing = false
+                        mutableInstall.value = false
                         microgProgress.get()?.showDownloadBar?.set(false)
                         Toast.makeText(context, context.getString(R.string.error_downloading, "microG"), Toast.LENGTH_SHORT).show()
                     }

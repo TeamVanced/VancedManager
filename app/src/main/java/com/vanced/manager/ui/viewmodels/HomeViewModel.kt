@@ -5,7 +5,6 @@ import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableBoolean
@@ -25,9 +24,8 @@ import com.vanced.manager.ui.events.Event
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper.uninstallApk
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 open class HomeViewModel(application: Application, val variant: String): AndroidViewModel(application) {
 
@@ -46,9 +44,9 @@ open class HomeViewModel(application: Application, val variant: String): Android
 
     val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
-    fun fetchData() = CoroutineScope(Dispatchers.IO).launch {
+    fun fetchData() {
         fetching.set(true)
-        managerApp.loadJsonAsync().await()
+        managerApp.loadJsonAsync()
         vanced.get()?.fetch()
         music.get()?.fetch()
         microg.get()?.fetch()
@@ -96,7 +94,7 @@ open class HomeViewModel(application: Application, val variant: String): Android
     }
 
     fun installVanced() {
-        if (!installing) {
+        if (!installing.value!!) {
             if (!fetching.get()) {
                 if (variant == "nonroot" && !microg.get()?.isAppInstalled?.get()!!) {
                     microgToast.show()
@@ -113,7 +111,7 @@ open class HomeViewModel(application: Application, val variant: String): Android
     }
     
     fun installMusic() {
-        if (!installing) {
+        if (!installing.value!!) {
             if (!fetching.get()) {
                 if (!microg.get()?.isAppInstalled?.get()!!) {
                     microgToast.show()
@@ -126,7 +124,7 @@ open class HomeViewModel(application: Application, val variant: String): Android
     }
     
     fun installMicrog() {
-        if (!installing)
+        if (!installing.value!!)
             downloadMicrog(getApplication())
         else
             Toast.makeText(getApplication(), R.string.installation_wait, Toast.LENGTH_SHORT).show()
@@ -151,7 +149,6 @@ open class HomeViewModel(application: Application, val variant: String): Android
         vancedProgress.set(ProgressModel())
         musicProgress.set(ProgressModel())
         microgProgress.set(ProgressModel())
-        Log.d("Test", variant)
         fetching.set(false)
     }
 

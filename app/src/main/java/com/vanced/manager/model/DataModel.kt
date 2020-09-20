@@ -10,6 +10,9 @@ import androidx.databinding.ObservableInt
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 open class DataModel(
     private val jsonObject: JsonObject?,
@@ -35,7 +38,7 @@ open class DataModel(
     val buttonIcon = ObservableField<Drawable>()
     val changelog = ObservableField<String>()
 
-    fun fetch() {
+    fun fetch() = CoroutineScope(Dispatchers.IO).launch {
         isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
         versionName.set(jsonObject?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
         installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))

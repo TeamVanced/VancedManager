@@ -8,15 +8,16 @@ import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.os.Build
 import android.util.Log
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
+import com.vanced.manager.core.App
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
 import com.vanced.manager.core.installer.SplitInstallerService
-import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
+import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 import kotlinx.coroutines.CoroutineScope
@@ -204,30 +205,29 @@ object PackageHelper {
         )
 
         Shell.getShell {
-            CoroutineScope(Dispatchers.IO).launch {
-                val vancedVersionCode = InternetTools.getJsonInt("vanced.json", "versionCode", context)
-                val apkFilesPath = context.getExternalFilesDir("apks")?.path
-                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                if (fileInfoList != null) {
-                    var modApk: FileInfo? = null
-                    for (file in fileInfoList) {
-                        if (file.name == "dark.apk" || file.name == "black.apk") {
-                            modApk = file
-                        }
+            val vancedVersionCode = (context.applicationContext as App).vanced?.int("versionCode") ?: 0
+            val apkFilesPath = context.getExternalFilesDir("apks")?.path
+            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+            if (fileInfoList != null) {
+                var modApk: FileInfo? = null
+                for (file in fileInfoList) {
+                    if (file.name == "dark.apk" || file.name == "black.apk") {
+                        modApk = file
                     }
-                    if (modApk != null) {
-                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode, context)) {
-                            sendRefresh(context)
-                            vancedProgress.get()?.showInstallCircle?.set(false)
-                        }
-                    }
-                    else {
-                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+                }
+                if (modApk != null) {
+                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode, context)) {
+                        sendRefresh(context)
+                        vancedProgress.get()?.showInstallCircle?.set(false)
+                        mutableInstall.value = false
                     }
                 }
                 else {
-                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                 }
+            }
+            else {
+                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
             }
 
         }
@@ -244,7 +244,7 @@ object PackageHelper {
             sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
         }
         apkFiles.forEach { apkFile ->
-            if(apkFile.name != "black.apk" && apkFile.name != "dark.apk" && apkFile.name != "hash.json") {
+            if (apkFile.name != "black.apk" && apkFile.name != "dark.apk" && apkFile.name != "hash.json") {
                 Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
                 val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
                 val process: Process = Runtime.getRuntime().exec(command)
@@ -268,6 +268,7 @@ object PackageHelper {
             return true
         } else
             sendFailure(installResult.out, context)
+
         return false
     }
 
@@ -357,7 +358,8 @@ object PackageHelper {
     private fun linkVanced(apkFPath: String, path: String): Boolean
     {
         Shell.su("am force-stop $yPkg").exec()
-        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """)
+        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
+        Log.d("umountTest", Shell.su("grep com.google.android.youtube").exec().out.joinToString(" "))
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
         Thread.sleep(500)
         return response.isSuccess

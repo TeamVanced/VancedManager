@@ -3,6 +3,8 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.fragments.HomeFragment
@@ -13,7 +15,12 @@ import kotlinx.coroutines.launch
 
 object AppUtils {
 
-    var installing = false
+    val mutableInstall = MutableLiveData<Boolean>()
+    val installing: LiveData<Boolean> = mutableInstall
+
+    init {
+        mutableInstall.value = false
+    }
 
     fun sendRefresh(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -23,6 +30,7 @@ object AppUtils {
     }
 
     fun sendFailure(status: Int, context: Context) {
+        mutableInstall.value = false
         //Delay error broadcast until activity (and fragment) get back to the screen
         CoroutineScope(Dispatchers.IO).launch {
             delay(500)

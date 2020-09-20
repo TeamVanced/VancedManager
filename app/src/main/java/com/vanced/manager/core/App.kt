@@ -9,10 +9,7 @@ import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.JsonHelper.getJson
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 open class App: Application() {
 
@@ -22,24 +19,21 @@ open class App: Application() {
     var manager: JsonObject? = null
 
     override fun onCreate() {
-        CoroutineScope(Dispatchers.IO).launch {
-            loadJsonAsync().await()
-            super.onCreate()
-            PRDownloader.initialize(this@App)
+        loadJsonAsync()
+        super.onCreate()
+        PRDownloader.initialize(this)
 
-            Crowdin.init(this@App,
-                CrowdinConfig.Builder()
-                    .withDistributionHash("36c51aed3180a4f43073d28j4s6")
-                    .withNetworkType(NetworkType.WIFI)
-                    .build()
-            )
-        }
-
+        Crowdin.init(this,
+            CrowdinConfig.Builder()
+                .withDistributionHash("36c51aed3180a4f43073d28j4s6")
+                .withNetworkType(NetworkType.WIFI)
+                .build()
+        )
 
     }
 
-    fun loadJsonAsync() = CoroutineScope(Dispatchers.IO).async {
-        val latest = getJson("$baseUrl/latest.json")
+    fun loadJsonAsync() {
+        val latest = runBlocking { getJson("$baseUrl/latest.json") }
         vanced = latest.obj("vanced")
         music = latest.obj("music")
         microg = latest.obj("microg")

@@ -1,6 +1,7 @@
 package com.vanced.manager.ui
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -29,7 +30,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
 
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
@@ -79,7 +80,6 @@ class MainActivity : AppCompatActivity() {
             lifecycleOwner = this@MainActivity
             setSupportActionBar(homeToolbar)
             mainViewpager.adapter = VariantAdapter(this@MainActivity)
-            mainViewpager.isUserInputEnabled = false
             TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
                 tab.text = if (position == 1) "root" else "nonroot"
             }.attach()
@@ -110,10 +110,12 @@ class MainActivity : AppCompatActivity() {
         binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
+    override fun recreate() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (installing) {
-            return false
-        }
         when (item.itemId) {
             android.R.id.home -> {
                 return false

@@ -5,12 +5,15 @@ import android.content.SharedPreferences
 import android.os.Build
 import android.widget.Toast
 import androidx.preference.PreferenceManager
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
+import com.vanced.manager.core.App
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.installing
+import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -53,7 +56,7 @@ object VancedDownloader {
     fun downloadVanced(context: Context) {
         //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
         File(context.getExternalFilesDir("apks")?.path as String).deleteRecursively()
-        defPrefs = PreferenceManager.getDefaultSharedPreferences(context)
+        defPrefs = getDefaultSharedPreferences(context)
         installUrl = defPrefs.getString("install_url", baseUrl)
         prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         variant = defPrefs.getString("vanced_variant", "nonroot")
@@ -68,7 +71,8 @@ object VancedDownloader {
                 Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                 else -> "armeabi_v7a"
             }
-        vancedVersionCode = runBlocking { InternetTools.getJsonInt("vanced.json", "versionCode", context) }
+        val app = context.applicationContext as App
+        vancedVersionCode = app.vanced?.int("versionCode") ?: 0
         downloadSplits(context)
     }
 
@@ -94,7 +98,7 @@ object VancedDownloader {
                 .download(url, context.getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener { 
-                    installing = true
+                    mutableInstall.value = true
                     vancedProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
                     vancedProgress.get()?.showDownloadBar?.set(true)
                 }
@@ -136,7 +140,7 @@ object VancedDownloader {
                             else
                                 prepareInstall(variant!!, context)
                         } else {
-                            installing = false
+                            mutableInstall.value = false
                             vancedProgress.get()?.showDownloadBar?.set(false)
                             Toast.makeText(context, context.getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
                         }
@@ -158,8 +162,6 @@ object VancedDownloader {
     }
     
     private fun validateTheme(context: Context): Boolean {
-        val prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val theme = prefs?.getString("theme", "dark")
         val themeS = context.getExternalFilesDir("apks")?.path + "/${theme}.apk"
         val themeF = File(themeS)
         runBlocking { getSha256(theme!!, context) }
