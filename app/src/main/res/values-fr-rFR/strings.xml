@@ -39,6 +39,8 @@
     <string name="chosen_theme">Thème: %1$s</string>
     <string name="clear_files">Effacer les fichiers téléchargés</string>
     <string name="cleared_files">Données effacées avec succès</string>
+    <string name="firebase_title">Analytiques Firebase</string>
+    <string name="firebase_summary">Cela nous permet de collecter des informations sur les performances de l\'application et des journaux de plantage</string>
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="link_external_browser">Les liens s\'ouvriront dans un navigateur externe</string>
