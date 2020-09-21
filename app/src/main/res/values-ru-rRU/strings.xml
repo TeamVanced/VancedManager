@@ -39,6 +39,8 @@
     <string name="chosen_theme">Тема: %1$s</string>
     <string name="clear_files">Удалить загруженные файлы</string>
     <string name="cleared_files">Файлы успешно удалены</string>
+    <string name="firebase_title">Аналитика Firebase</string>
+    <string name="firebase_summary">Это позволяет нам собирать информацию о производительности приложения и журналах сбоев</string>
     <string name="link_title">Использовать Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
     <string name="link_external_browser">Ссылки откроются во внешнем браузере</string>
