@@ -39,6 +39,8 @@
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Esborrar fitxers descarregats</string>
     <string name="cleared_files">Fitxers netejats correctament</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Utilitza pestanyes personalitzades del Chrome</string>
     <string name="link_custom_tabs">Els enllaços s\'obriran en pestanyes personalitzades del Chrome</string>
     <string name="link_external_browser">Els enllaços s\'obriran en un navegador extern</string>
