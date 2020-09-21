@@ -39,11 +39,13 @@
     <string name="chosen_theme">테마: %1$s</string>
     <string name="clear_files">다운로드된 파일 모두 지우기</string>
     <string name="cleared_files">다운로드된 파일을 모두 삭제했습니다</string>
+    <string name="firebase_title">Firebase 분석</string>
+    <string name="firebase_summary">앱 성능과 충돌 기록에 대한 정보를 수집할 수 있게 해줍니다</string>
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">새로운 루트 설치 관리자 사용하기 (실험적)</string>
+    <string name="new_installer_summary">이 설치 관리자는 서명 검증 상태의 영향을 받지 않습니다. 경고: 이걸 설치할 경우 Vanced가 재부팅 후에 제거될 수도 있음</string>
     <string name="theme">테마</string>
     <string name="theme_follow">시스템 설정과 같이</string>
     <string name="theme_dark">다크 테마</string>
