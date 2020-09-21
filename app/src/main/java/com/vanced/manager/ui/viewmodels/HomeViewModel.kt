@@ -24,10 +24,8 @@ import com.vanced.manager.ui.events.Event
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper.uninstallApk
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
 
-open class HomeViewModel(application: Application, val variant: String): AndroidViewModel(application) {
+open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
     val app = application
     private val managerApp = application as App
@@ -35,6 +33,7 @@ open class HomeViewModel(application: Application, val variant: String): Android
     //val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
 
     val vanced = ObservableField<DataModel>()
+    val vancedRoot = ObservableField<DataModel>()
     val microg = ObservableField<DataModel>()
     val music = ObservableField<DataModel>()
     val manager = ObservableField<DataModel>()
@@ -48,6 +47,7 @@ open class HomeViewModel(application: Application, val variant: String): Android
         fetching.set(true)
         managerApp.loadJsonAsync()
         vanced.get()?.fetch()
+        vancedRoot.get()?.fetch()
         music.get()?.fetch()
         microg.get()?.fetch()
         manager.get()?.fetch()
@@ -57,12 +57,6 @@ open class HomeViewModel(application: Application, val variant: String): Android
     
     //private val microgSnackbar = Snackbar.make(, R.string.no_microg, Snackbar.LENGTH_LONG).setAction(R.string.install) { downloadMicrog(getApplication()) }
     private val microgToast = Toast.makeText(app, R.string.no_microg, Toast.LENGTH_LONG)
-    
-    private val vancedPkgName =
-        if (variant == "root")
-            "com.google.android.youtube"
-        else 
-            "com.vanced.android.youtube"
 
     fun openMicrogSettings() {
         try {
@@ -93,7 +87,7 @@ open class HomeViewModel(application: Application, val variant: String): Android
         InternetTools.openUrl(url, color, getApplication())
     }
 
-    fun installVanced() {
+    fun installVanced(variant: String) {
         if (!installing.value!!) {
             if (!fetching.get()) {
                 if (variant == "nonroot" && !microg.get()?.isAppInstalled?.get()!!) {
@@ -130,7 +124,7 @@ open class HomeViewModel(application: Application, val variant: String): Android
             Toast.makeText(getApplication(), R.string.installation_wait, Toast.LENGTH_SHORT).show()
     }
     
-    fun uninstallVanced() = uninstallApk(vancedPkgName, app)
+    fun uninstallVanced(variant: String) = uninstallApk(if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube", app)
     fun uninstallMusic() = uninstallApk("com.vanced.android.apps.youtube.music", app)
     fun uninstallMicrog() = uninstallApk("com.mgoogle.android.gms", app)
     
@@ -142,10 +136,11 @@ open class HomeViewModel(application: Application, val variant: String): Android
 
     init {
         fetching.set(true)
-        vanced.set(DataModel(managerApp.vanced, variant, "vanced", app))
-        music.set(DataModel(managerApp.music, app = "music", context = app))
-        microg.set(DataModel(managerApp.microg, app = "microg", context = app))
-        manager.set(DataModel(managerApp.manager, app = "manager", context = app))
+        vanced.set(DataModel(managerApp.vanced, "vanced", app))
+        vancedRoot.set(DataModel(managerApp.vanced, "vancedRoot", app))
+        music.set(DataModel(managerApp.music, "music", app))
+        microg.set(DataModel(managerApp.microg, "microg", app))
+        manager.set(DataModel(managerApp.manager, "manager", app))
         vancedProgress.set(ProgressModel())
         musicProgress.set(ProgressModel())
         microgProgress.set(ProgressModel())

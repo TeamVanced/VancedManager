@@ -1,90 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout 
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-        <import type="android.view.View" />
-
-        <variable
-            name="viewModel"
-            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
-
-    </data>
-
-    <com.vanced.manager.ui.core.SlidingSwipeRefreshLayout
-        android:id="@+id/home_refresh"
+    <com.vanced.manager.ui.core.SlidingWidthLinearLayout
+        android:id="@+id/variant_tab_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        bind:refreshing="@{viewModel.fetching}"
-        bind:onRefreshListener="@{()-> viewModel.fetchData()}">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <androidx.core.widget.NestedScrollView
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/main_tablayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
-            android:scrollbars="none">
+            android:layout_height="wrap_content"
+            android:background="?colorSurface"
+            app:tabIndicatorColor="?colorPrimary"
+            app:tabSelectedTextColor="?colorPrimary"
+            app:tabTextColor="?colorPrimary" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-                <include
-                    android:id="@+id/include_vanced_layout"
-                    layout="@layout/include_vanced"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    bind:viewModel="@{viewModel}" />
-                
-                <include
-                    android:id="@+id/include_music_layout"
-                    layout="@layout/include_music"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    android:visibility="@{viewModel.variant.equals(`nonroot`) ? View.VISIBLE : View.GONE}"
-                    bind:viewModel="@{viewModel}" />
-
-                <include
-                    android:id="@+id/include_microg_layout"
-                    layout="@layout/include_microg"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    android:visibility="@{viewModel.variant.equals(`nonroot`) ? View.VISIBLE : View.GONE}"
-                    bind:viewModel="@{viewModel}" />
-
-                <include
-                    android:id="@+id/include_changelogs_layout"
-                    layout="@layout/include_changelogs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp" />
-
-                <include
-                    layout="@layout/include_useful_links"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/stdp"
-                    android:layout_marginTop="@dimen/stdp"
-                    android:layout_marginEnd="@dimen/stdp"
-                    bind:viewModel="@{viewModel}" />
-
-            </LinearLayout>
-
-        </androidx.core.widget.NestedScrollView>
-
-    </com.vanced.manager.ui.core.SlidingSwipeRefreshLayout>
+    </com.vanced.manager.ui.core.SlidingWidthLinearLayout>
 
 </layout>

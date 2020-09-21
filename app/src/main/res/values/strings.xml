@@ -43,6 +43,8 @@
     <string name="chosen_theme">Theme: %1$s</string>
     <string name="clear_files">Clear downloaded files</string>
     <string name="cleared_files">Successfully cleared files</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Use Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>

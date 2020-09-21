@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+        <variable
+            name="variant"
+            type="String" />
+
+    </data>
+
+    <com.vanced.manager.ui.core.SlidingSwipeRefreshLayout
+        android:id="@+id/home_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        bind:refreshing="@{viewModel.fetching}"
+        bind:onRefreshListener="@{()-> viewModel.fetchData()}">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/include_vanced_layout"
+                    layout="@layout/include_vanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/stdp"
+                    android:layout_marginTop="@dimen/stdp"
+                    android:layout_marginEnd="@dimen/stdp"
+                    bind:viewModel="@{viewModel}"
+                    bind:vancedVariant="@{variant}"/>
+
+                <include
+                    android:id="@+id/include_music_layout"
+                    layout="@layout/include_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/stdp"
+                    android:layout_marginTop="@dimen/stdp"
+                    android:layout_marginEnd="@dimen/stdp"
+                    android:visibility="@{variant.equals(`nonroot`) ? View.VISIBLE : View.GONE}"
+                    bind:viewModel="@{viewModel}" />
+
+                <include
+                    android:id="@+id/include_microg_layout"
+                    layout="@layout/include_microg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/stdp"
+                    android:layout_marginTop="@dimen/stdp"
+                    android:layout_marginEnd="@dimen/stdp"
+                    android:visibility="@{variant.equals(`nonroot`) ? View.VISIBLE : View.GONE}"
+                    bind:viewModel="@{viewModel}" />
+
+                <include
+                    android:id="@+id/include_changelogs_layout"
+                    layout="@layout/include_changelogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/stdp"
+                    android:layout_marginTop="@dimen/stdp"
+                    android:layout_marginEnd="@dimen/stdp" />
+
+                <include
+                    layout="@layout/include_useful_links"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/stdp"
+                    android:layout_marginTop="@dimen/stdp"
+                    android:layout_marginEnd="@dimen/stdp"
+                    bind:viewModel="@{viewModel}" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.vanced.manager.ui.core.SlidingSwipeRefreshLayout>
+
+</layout>

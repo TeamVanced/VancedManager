@@ -12,6 +12,10 @@
             name="viewModel"
             type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
 
+        <variable
+            name="vancedVariant"
+            type="String" />
+
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -47,11 +51,11 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/vanced_installbtn"
                     style="@style/ButtonStyle"
-                    android:text="@{viewModel.vanced.buttonTxt}"
+                    android:text="@{vancedVariant.equals(`root`) ? viewModel.vancedRoot.buttonTxt : viewModel.vanced.buttonTxt}"
                     android:textColor="@color/White"
                     android:backgroundTint="?colorPrimary"
-                    android:onClick="@{()-> viewModel.installVanced()}"
-                    app:icon="@{viewModel.vanced.buttonIcon}"
+                    android:onClick="@{()-> viewModel.installVanced(vancedVariant)}"
+                    app:icon="@{vancedVariant.equals(`root`) ? viewModel.vancedRoot.buttonIcon : viewModel.vanced.buttonIcon}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,8 +69,8 @@
                 <ImageView
                     android:id="@+id/vanced_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
-                    android:onClick="@{()-> viewModel.uninstallVanced()}"
-                    android:visibility="@{viewModel.vanced.appInstalled ? View.VISIBLE : View.GONE}"
+                    android:onClick="@{()-> viewModel.uninstallVanced(vancedVariant)}"
+                    android:visibility="@{vancedVariant.equals(`root`) ? (viewModel.vancedRoot.appInstalled ? View.VISIBLE : View.GONE) : (viewModel.vanced.appInstalled ? View.VISIBLE : View.GONE)}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/vanced_title_buttons_barrier"
@@ -105,7 +109,7 @@
                     <TextView
                         android:id="@+id/vanced_installed_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.vanced.installedVersionName}" />
+                        android:text="@{vancedVariant.equals(`root`) ? viewModel.vancedRoot.installedVersionName : viewModel.vanced.installedVersionName}" />
 
                 </LinearLayout>
 

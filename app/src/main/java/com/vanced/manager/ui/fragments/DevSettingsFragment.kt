@@ -24,8 +24,6 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.dev_settings, rootKey)
 
-        
-
         val ftSwitch: Preference? = findPreference("firststart_switch")
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
@@ -56,7 +54,7 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
                 "32bit"
             }
 
-        findPreference<Preference>("device_os")?.summary = "${Build.VERSION.CODENAME} (API ${Build.VERSION.SDK_INT})"
+        findPreference<Preference>("device_os")?.summary = "${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})"
 
         val forceUpdate: Preference? = findPreference("force_update")
         forceUpdate?.setOnPreferenceClickListener {

@@ -25,29 +25,15 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
-            android:id="@+id/variant_tab_container"
+        <fragment
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_below="@id/home_appbar"
-            android:orientation="vertical">
-            
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/main_tablayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="?colorSurface"
-                app:tabIndicatorColor="?colorPrimary"
-                app:tabSelectedTextColor="?colorPrimary"
-                app:tabTextColor="?colorPrimary" />
-
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/main_viewpager"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-            
-        </LinearLayout>
+            android:layout_alignParentBottom="true"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/mobile_navigation" />
 
     </RelativeLayout>
 

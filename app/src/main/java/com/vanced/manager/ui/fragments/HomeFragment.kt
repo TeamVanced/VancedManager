@@ -1,33 +1,54 @@
 package com.vanced.manager.ui.fragments
 
-import android.content.*
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.view.*
-import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
-import com.vanced.manager.adapter.ChangelogAdapter
+import com.vanced.manager.adapter.VariantAdapter
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
+import com.vanced.manager.utils.AppUtils
 
-open class HomeFragment : Fragment(), View.OnClickListener {
+open class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-    private lateinit var variant: String
-    private var isExpanded: Boolean = false
-    private val viewModel: HomeViewModel by viewModels {
-        HomeViewModelFactory(requireActivity().application, variant)
-    }
+    private val viewModel: HomeViewModel by viewModels()
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
+
+    private val tabListener = object : TabLayout.OnTabSelectedListener {
+
+        override fun onTabSelected(tab: TabLayout.Tab) {
+            if (tab.position == 1 && !Shell.rootAccess()) {
+                Toast.makeText(requireActivity(), getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
+            }
+            val variant = if (tab.position == 1) "root" else "nonroot"
+            getDefaultSharedPreferences(requireActivity()).edit().putString("vanced_variant", variant).apply()
+        }
+
+        override fun onTabUnselected(tab: TabLayout.Tab) {
+            return
+        }
+
+        override fun onTabReselected(tab: TabLayout.Tab) {
+            return
+        }
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,9 +56,7 @@ open class HomeFragment : Fragment(), View.OnClickListener {
     ): View? {
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        variant = if (requireActivity().findViewById<TabLayout>(R.id.main_tablayout).selectedTabPosition == 1) "root" else "nonroot"
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
-        binding.viewModel = viewModel
         return binding.root
     }
 
@@ -51,73 +70,30 @@ open class HomeFragment : Fragment(), View.OnClickListener {
         })
 
         with(binding) {
-            includeChangelogsLayout.changelogButton.setOnClickListener(this@HomeFragment)
-
-            includeVancedLayout.vancedCard.setOnLongClickListener {
-                versionToast("Vanced", viewModel?.vanced?.get()?.installedVersionName?.get()!!)
-                true
-            }
-            
-            includeMusicLayout.musicCard.setOnLongClickListener {
-                versionToast("Music", viewModel?.music?.get()?.installedVersionName?.get()!!)
-                true
-            }
-
-            includeMicrogLayout.microgCard.setOnLongClickListener {
-                versionToast("MicroG", viewModel?.microg?.get()?.installedVersionName?.get()!!)
-                true
-            }
-        }
-
-        with(binding.includeChangelogsLayout) {
-            viewpager.adapter = ChangelogAdapter(variant, this@HomeFragment.viewModel)
-            val nonrootTitles = arrayOf("Vanced", "Music", "microG", "Manager")
-            val rootTitles = arrayOf("Vanced", "Manager")
-
-            TabLayoutMediator(tablayout, viewpager) { tab, position ->
-                tab.text = 
-                    if (variant == "root") {
-                        rootTitles[position]
-                    } else {
-                        nonrootTitles[position]
-                    }
+            mainViewpager.adapter = VariantAdapter(viewModel, requireActivity())
+            TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
+                val variants = arrayOf("nonroot", "root")
+                tab.text = variants[position]
             }.attach()
+            mainTablayout.getTabAt(if (getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot") == "root") 1 else 0)?.select()
         }
 
-    }
+        AppUtils.installing.observe(viewLifecycleOwner, { value ->
+            if (value) hideTab() else showTab()
+        })
 
-    override fun onClick(v: View?) {
-        when (v?.id) {
-            R.id.changelog_button -> cardExpandCollapse()
-        }
-    }
-
-    private fun versionToast(name: String, app: String?) {
-        val clip = requireActivity().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        clip.setPrimaryClip(ClipData.newPlainText(name, app))
-        Toast.makeText(activity, getString(R.string.version_toast, name), Toast.LENGTH_LONG).show()
-    }
-
-    private fun cardExpandCollapse() {
-        with(binding.includeChangelogsLayout) {
-            viewpager.visibility = if (isExpanded) View.GONE else View.VISIBLE
-            tablayout.visibility = if (isExpanded) View.GONE else View.VISIBLE
-            changelogButton.animate().apply {
-                rotation(if (isExpanded) 0F else 180F)
-                interpolator = AccelerateDecelerateInterpolator()
-            }
-            isExpanded = !isExpanded
-        }
     }
     
     override fun onPause() {
-        localBroadcastManager.unregisterReceiver(broadcastReceiver)
         super.onPause()
+        localBroadcastManager.unregisterReceiver(broadcastReceiver)
+        binding.mainTablayout.removeOnTabSelectedListener(tabListener)
     }
 
     override fun onResume() {
         super.onResume()
         registerReceivers()
+        binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
@@ -126,6 +102,28 @@ open class HomeFragment : Fragment(), View.OnClickListener {
                 INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg") as String, requireActivity())
                 REFRESH_HOME -> viewModel.fetchData()
             }
+        }
+    }
+
+    private fun hideTab() {
+        val tabHide = AnimationUtils.loadAnimation(requireActivity(), R.anim.tablayout_exit)
+        with(binding) {
+            if (mainTablayout.visibility != View.GONE) {
+                mainTablayout.startAnimation(tabHide)
+                mainTablayout.visibility = View.GONE
+            }
+            mainViewpager.isUserInputEnabled = false
+        }
+    }
+
+    private fun showTab() {
+        val tabShow = AnimationUtils.loadAnimation(requireActivity(), R.anim.tablayout_enter)
+        with(binding) {
+            if (mainTablayout.visibility != View.VISIBLE) {
+                mainTablayout.visibility = View.VISIBLE
+                mainTablayout.startAnimation(tabShow)
+            }
+            mainViewpager.isUserInputEnabled = true
         }
     }
 

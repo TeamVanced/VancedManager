@@ -16,14 +16,14 @@ import kotlinx.coroutines.launch
 
 open class DataModel(
     private val jsonObject: JsonObject?,
-    variant: String = "nonroot",
     app: String,
     private val context: Context
 ) {
     
     private val appPkg = 
         when (app) {
-            "vanced" -> if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube"
+            "vanced" -> "com.vanced.android.youtube"
+            "vancedRoot" -> "com.google.android.youtube"
             "microg" -> "com.mgoogle.android.gms"
             else -> "com.vanced.android.apps.youtube.music"
         }

@@ -5,7 +5,10 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.widget.Toast
 import androidx.preference.*
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.perf.FirebasePerformance
 import com.vanced.manager.R
 import java.io.File
 
@@ -44,6 +47,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 }
                 true
             }
+        }
+
+        findPreference<SwitchPreference>("firebase_analytics")?.setOnPreferenceChangeListener { _, newValue ->
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(newValue as Boolean)
+            FirebasePerformance.getInstance().isPerformanceCollectionEnabled = newValue
+            FirebaseAnalytics.getInstance(requireActivity()).setAnalyticsCollectionEnabled(newValue)
+            true
         }
 
         val themePref = preferenceScreen.sharedPreferences.getString("theme_mode", "Follow System")

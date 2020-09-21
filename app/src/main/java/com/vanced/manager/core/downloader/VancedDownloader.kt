@@ -4,15 +4,15 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Build
 import android.widget.Toast
-import androidx.preference.PreferenceManager
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.logEvent
 import com.vanced.manager.R
 import com.vanced.manager.core.App
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
-import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
@@ -199,6 +199,10 @@ object VancedDownloader {
     private fun prepareInstall(variant: String, context: Context) {
         vancedProgress.get()?.showDownloadBar?.set(false)
         vancedProgress.get()?.showInstallCircle?.set(true)
+        FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
+            param("Vanced Variant", variant)
+            theme?.let { param("Vanced Theme", it) }
+        }
         if (variant == "root")
             installVancedRoot(context)
         else

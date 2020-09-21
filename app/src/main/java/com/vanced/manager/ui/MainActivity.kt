@@ -5,20 +5,22 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavDestination
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.messaging.FirebaseMessaging
-import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
-import com.vanced.manager.adapter.VariantAdapter
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
+import com.vanced.manager.ui.fragments.HomeFragmentDirections
+import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
@@ -31,6 +33,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+    private val navHost by lazy { findNavController(R.id.nav_host) }
 
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
@@ -43,33 +46,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    
-    private val tabListener = object : TabLayout.OnTabSelectedListener {
-
-        override fun onTabSelected(tab: TabLayout.Tab) {
-            if (tab.position == 1 && !Shell.rootAccess()) {
-                Toast.makeText(this@MainActivity, getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
-                return
-            }
-
-            getDefaultSharedPreferences(this@MainActivity).edit().putString("vanced_variant", 
-                when (tab.position) {
-                    1 -> "root"
-                    else -> "nonroot"
-                }
-            ).apply()
-
-        }
-
-        override fun onTabUnselected(tab: TabLayout.Tab) {
-            return
-        }
-
-        override fun onTabReselected(tab: TabLayout.Tab) {
-            return
-        }
-
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setFinalTheme(this)
@@ -79,35 +55,34 @@ class MainActivity : AppCompatActivity() {
         with(binding) {
             lifecycleOwner = this@MainActivity
             setSupportActionBar(homeToolbar)
-            mainViewpager.adapter = VariantAdapter(this@MainActivity)
-            TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
-                tab.text = if (position == 1) "root" else "nonroot"
-            }.attach()
-            
-            mainTablayout.getTabAt(
-                if (getDefaultSharedPreferences(this@MainActivity).getString("vanced_variant", "nonroot") == "root")
-                    1
-                else
-                    0
-            )?.select()
-            
+            homeToolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
+        }
+        navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
+            setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
 
         initDialogs()
 
     }
 
+    override fun onBackPressed() {
+        if (!navHost.popBackStack())
+            finish()
+    }
+
+    private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
+        binding.homeToolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
+    }
+
     override fun onPause() {
         super.onPause()
         Crowdin.unregisterDataLoadingObserver(loadingObserver)
-        binding.mainTablayout.removeOnTabSelectedListener(tabListener)
     }
 
     override fun onResume() {
         setFinalTheme(this)
         super.onResume()
         Crowdin.registerDataLoadingObserver(loadingObserver)
-        binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
     override fun recreate() {
@@ -116,18 +91,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (installing.value!!)
+            return false
+
         when (item.itemId) {
             android.R.id.home -> {
-                return false
+                onBackPressedDispatcher.onBackPressed()
+                return true
             }
             R.id.toolbar_about -> {
-                return false
+                navHost.navigate(HomeFragmentDirections.toAboutFragment())
+                return true
             }
             R.id.toolbar_settings -> {
-                return false
+                navHost.navigate(HomeFragmentDirections.toSettingsFragment())
+                return true
             }
             R.id.dev_settings -> {
-                return false
+                navHost.navigate(SettingsFragmentDirections.toDevSettingsFragment())
+                return true
             }
             else -> super.onOptionsItemSelected(item)
         }
