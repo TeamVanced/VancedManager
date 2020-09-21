@@ -39,6 +39,8 @@
     <string name="chosen_theme">Nền: %1$s</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
     <string name="link_custom_tabs">Các đường link sẽ mở trong Custom Tabs của Chrome</string>
     <string name="link_external_browser">Các đường link sẽ mở trong một trình duyệt ngoài</string>
