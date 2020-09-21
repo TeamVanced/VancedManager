@@ -39,6 +39,8 @@
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Ryd hentede filer</string>
     <string name="cleared_files">Filer ryddet succesfuldt</string>
+    <string name="firebase_title">Firebase analyse</string>
+    <string name="firebase_summary">Dette giver os mulighed for at indsamle oplysninger om appens ydeevne og nedbruds logs</string>
     <string name="link_title">Brug Chrome Custom Faner</string>
     <string name="link_custom_tabs">Links vil åbne i Chrome Custom Faner</string>
     <string name="link_external_browser">Links vil åbne i en ekstern browser</string>
