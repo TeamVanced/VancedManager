@@ -19,6 +19,7 @@
         style="@style/MaterialCard">
 
         <LinearLayout
+            android:id="@+id/changelog_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
