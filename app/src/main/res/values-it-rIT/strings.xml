@@ -39,6 +39,8 @@
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Cancella i file scaricati</string>
     <string name="cleared_files">File cancellati con successo</string>
+    <string name="firebase_title">Analitica Firebase</string>
+    <string name="firebase_summary">Questo ci consente di raccogliere informazioni sulle prestazioni dell\'app e sui registri degli arresti anomali</string>
     <string name="link_title">Utilizza le schede personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
     <string name="link_external_browser">I link verranno aperti in un browser esterno</string>
