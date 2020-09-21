@@ -39,6 +39,8 @@
     <string name="chosen_theme">Θέμα: %1$s</string>
     <string name="clear_files">Εκκαθάριση ληφθέντων αρχείων</string>
     <string name="cleared_files">Επιτυχής εκκαθάριση αρχείων</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="link_external_browser">Οι σύνδεσμοι θα ανοίγουν σε εξωτερικό φυλλομετρητή</string>
