@@ -39,6 +39,8 @@
     <string name="chosen_theme">Temă: %1$s</string>
     <string name="clear_files">Ştergeţi fişierele descărcate</string>
     <string name="cleared_files">Fişiere şterse cu succes</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Utilizează file personalizate Chrome</string>
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="link_external_browser">Link-urile se vor deschide într-un browser extern</string>
