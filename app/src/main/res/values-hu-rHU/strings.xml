@@ -39,6 +39,8 @@
     <string name="chosen_theme">Téma: %1$s</string>
     <string name="clear_files">Letöltött fájlok törlése</string>
     <string name="cleared_files">Sikeresen törölte a fájlokat</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="link_external_browser">A linkek egy külső böngészőben nyílnak meg</string>
