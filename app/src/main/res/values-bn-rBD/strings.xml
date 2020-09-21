@@ -39,6 +39,8 @@
     <string name="chosen_theme">থিম: %1$s</string>
     <string name="clear_files">ডাউনলোড করা ফাইল সাফ করুন</string>
     <string name="cleared_files">সাফল্যের সাথে ফাইলগুলি সাফ করা হয়েছে</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Chrome কাস্টম ট্যাব ব্যবহার করুন</string>
     <string name="link_custom_tabs">লিঙ্কগুলি Chrome কাস্টম ট্যাবগুলিতে খোলা হবে</string>
     <string name="link_external_browser">লিঙ্কগুলি একটি বাহ্যিক ব্রাউজারে খুলবে</string>
