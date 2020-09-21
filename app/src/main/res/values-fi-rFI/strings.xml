@@ -39,6 +39,8 @@
     <string name="chosen_theme">Teema: %1$s</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
     <string name="cleared_files">Tiedostot tyhjennettiin onnistuneesti</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">Käytä Chromen mukautettuja välilehtiä</string>
     <string name="link_custom_tabs">Linkit aukeavat Chromen mukautetuissa välilehdissä</string>
     <string name="link_external_browser">Linkit aukeavat ulkoisessa selaimessa</string>
