@@ -39,6 +39,8 @@
     <string name="chosen_theme">المظهر: %1$s</string>
     <string name="clear_files">مسح الملفات التي تم تنزيلها</string>
     <string name="cleared_files">تم مسح الملفات بنجاح</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">إستخدم علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
