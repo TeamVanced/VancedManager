@@ -39,6 +39,8 @@
     <string name="chosen_theme">ערכת נושא: %1$s</string>
     <string name="clear_files">מחק קבצים שהורדו</string>
     <string name="cleared_files">מחיקת הקבצים הסתיימה בהצלחה</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="link_title">השתמש בכרטיסייה מותאמת אישית של Chrome</string>
     <string name="link_custom_tabs">קישורים יפתחו בכרטיסיות מותאמות אישית של Chrome</string>
     <string name="link_external_browser">קישורים יפתחו בדפדפן חיצוני</string>
