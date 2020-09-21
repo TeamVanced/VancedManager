@@ -39,6 +39,8 @@
     <string name="chosen_theme">Vzhled: %1$s</string>
     <string name="clear_files">Vymazat stažené soubory</string>
     <string name="cleared_files">Vymazání souborů proběhlo úspěšně</string>
+    <string name="firebase_title">Firebase analytika</string>
+    <string name="firebase_summary">To nám umožňuje shromažďovat informace o výkonu aplikace a o protokolech o selhání</string>
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
     <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
     <string name="link_external_browser">Odkazy se otevřou v externím prohlížeči</string>
