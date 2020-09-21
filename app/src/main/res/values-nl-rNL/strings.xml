@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="close">Afsluiten</string>
+    <string name="close">Sluiten</string>
     <string name="reset">Herstellen</string>
     <string name="save">Bewaren</string>
     <!-- Main Activity -->
@@ -19,7 +19,7 @@
     <string name="no_microg">microG is niet geïnstalleerd</string>
     <string name="root_not_granted">Root-toegang niet toegestaan</string>
     <string name="unavailable">Niet beschikbaar</string>
-    <string name="update">Updaten</string>
+    <string name="update">Bijwerken</string>
     <string name="useful_links">Handige links</string>
     <string name="website_text">Website</string>
     <string name="support_us">Steun ons!</string>
@@ -39,6 +39,8 @@
     <string name="chosen_theme">Thema: %1$s</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
     <string name="cleared_files">Bestanden succesvol verwijderd</string>
+    <string name="firebase_title">Firebase analyse</string>
+    <string name="firebase_summary">Dit laat ons toe informatie te verzamelen over app-prestaties en crashlogs</string>
     <string name="link_title">Aangepaste Chrome-tabs gebruiken</string>
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
     <string name="link_external_browser">Links zullen openen in een externe browser</string>
@@ -48,11 +50,11 @@
     <string name="theme_follow">Systeeminstelling</string>
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht thema</string>
-    <string name="update_url">Update kanaal URL</string>
+    <string name="update_url">Kanaal-URL bijwerken</string>
     <string name="push_notifications">%1$s push-meldingen</string>
     <string name="push_notifications_summary">Push-meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
     <string name="re_check">Opnieuw controleren</string>
-    <string name="update_center">Manager updatecenter</string>
+    <string name="update_center">Manager Update Center</string>
     <string name="update_found">Update gevonden!</string>
     <string name="update_notfound">Geen nieuwe updates</string>
     <!-- Dialogs -->
