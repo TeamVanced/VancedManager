@@ -39,6 +39,8 @@
     <string name="chosen_theme">テーマ: %1$s</string>
     <string name="clear_files">ダウンロード済みファイルを消去</string>
     <string name="cleared_files">ファイルを消去しました</string>
+    <string name="firebase_title">Firebase アナリティクス</string>
+    <string name="firebase_summary">アプリのパフォーマンスとクラッシュログに関する情報を収集できます</string>
     <string name="link_title">Chrome カスタムタブを使用する</string>
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
     <string name="link_external_browser">外部ブラウザでリンクを開く</string>
