@@ -39,6 +39,8 @@
     <string name="chosen_theme">थीम: %1$s</string>
     <string name="clear_files">डाउनलोड की गई फ़ाइलें साफ़ करें</string>
     <string name="cleared_files">फ़ाइलें सफलतापूर्वक साफ़ की गई</string>
+    <string name="firebase_title">फायरबेस वैश्लेषिकी</string>
+    <string name="firebase_summary">इससे हम एप्लिकेशन प्रदर्शन और क्रैश लॉग के बारे में जानकारी एकत्र कर सकते हैं</string>
     <string name="link_title">क्रोम कस्टम टैब का उपयोग करें</string>
     <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
     <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
