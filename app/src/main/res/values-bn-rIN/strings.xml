@@ -42,8 +42,8 @@
     <string name="link_title">ক্রোম কাস্টম ট্যাবস ব্যবহার করুন</string>
     <string name="link_custom_tabs">লিঙ্কগুলি ক্রোম কাস্টম ট্যাবসে খুলবে</string>
     <string name="link_external_browser">লিঙ্কগুলি একটি বাহ্যিক ব্রাউজারে খুলবে</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">নতুন রুট ইনস্টলার ব্যবহার করুন (পরীক্ষামূলক)</string>
+    <string name="new_installer_summary">এই ইনস্টলারটি এপিকে স্বাক্ষর যাচাইকরণের স্থিতির উপর নির্ভর করে না। সতর্কতা: এটি ব্যবহার করে ভ্যান্সড ইনস্টল করা হলে, রিবুটের পর ভ্যান্সড মুছে যেতে পারে</string>
     <string name="theme">থিম</string>
     <string name="theme_follow">সিস্টেমকে অনুসরণ করুন</string>
     <string name="theme_dark">অন্ধকার থিম</string>
@@ -65,7 +65,7 @@
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vanced.app, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
     <string name="success">সফল!</string>
     <string name="vanced_installed">ভ্যান্সড সফলভাবে ইনস্টল করা হয়েছে! এখন চালু করুন?</string>
-    <string name="music_installed">ভ্যান্সড মিউজিক সফলভাবে ইনস্টল করা হয়েছে! এখন খোল?</string>
+    <string name="music_installed">ভ্যান্সড মিউজিক সফলভাবে ইনস্টল করা হয়েছে! এখন খুলুন?</string>
     <string name="launch">খুলুন</string>
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
@@ -77,7 +77,7 @@
     <string name="install_light_dark">হালকা + অন্ধকার</string>
     <string name="next">পরবর্তী</string>
     <!-- About Page -->
-    <string name="manager_dev">পরিচালক বিকাশকারী</string>
+    <string name="manager_dev">ম্যানেজার বিকাশকারীরা</string>
     <string name="sources">উৎসগুলি</string>
     <string name="vanced_team">ভান্সড টীম</string>
     <!-- Error messages -->
