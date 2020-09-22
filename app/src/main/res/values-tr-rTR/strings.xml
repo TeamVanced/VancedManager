@@ -40,7 +40,7 @@
     <string name="clear_files">İndirilen dosyaları temizle</string>
     <string name="cleared_files">Dosyalar başarıyla temizlendi</string>
     <string name="firebase_title">Firebase Analizi</string>
-    <string name="firebase_summary">Bu uygulama performansı ve çökme kayıtları hakkında bilgi toplamamıza yarar</string>
+    <string name="firebase_summary">Bu, uygulama performansı ve çökme kayıtları hakkında bilgi toplamamızı sağlar</string>
     <string name="link_title">Chrome Özel Sekmelerini kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="link_external_browser">Bağlantılar harici tarayıcıda açılacaktır</string>
