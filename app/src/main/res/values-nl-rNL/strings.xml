@@ -12,12 +12,12 @@
     <string name="changelogs">Wijzigingen</string>
     <string name="downloading_file">%1$s downloaden</string>
     <string name="install">Installeren</string>
-    <string name="installation_wait">Wachten tot de installatie is voltooid.</string>
+    <string name="installation_wait">Wacht tot de installatie is voltooid.</string>
     <string name="button_reinstall">Herinstalleren</string>
     <string name="version_installed">Geïnstalleerd:</string>
     <string name="latest">Recentste:</string>
     <string name="no_microg">microG is niet geïnstalleerd</string>
-    <string name="root_not_granted">Root-toegang niet toegestaan</string>
+    <string name="root_not_granted">Root toegang niet toegestaan</string>
     <string name="unavailable">Niet beschikbaar</string>
     <string name="update">Bijwerken</string>
     <string name="useful_links">Handige links</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Interface</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Controleren op updates</string>
-    <string name="chosen_install_values">Gekozen installatie voorkeuren</string>
+    <string name="chosen_install_values">Gekozen installatievoorkeuren</string>
     <string name="chosen_lang">Talen: %1$s</string>
     <string name="chosen_theme">Thema: %1$s</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
@@ -45,14 +45,14 @@
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
     <string name="link_external_browser">Links zullen openen in een externe browser</string>
     <string name="new_installer_title">Het nieuwe root-installatieprogramma gebruiken (experimenteel)</string>
-    <string name="new_installer_summary">Dit installatieprogramma is niet afhankelijk van de status van de handtekeningverificatie. WAARSCHUWING: Vanced kan na het opnieuw opstarten verdwijnen als u het hiermee installeert</string>
+    <string name="new_installer_summary">Dit installatieprogramma is niet afhankelijk van de status van de handtekeningverificatie. WAARSCHUWING: Vanced kan na het opnieuw opstarten verdwijnen als je het hiermee installeert</string>
     <string name="theme">Thema</string>
     <string name="theme_follow">Systeeminstelling</string>
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht thema</string>
-    <string name="update_url">Kanaal-URL bijwerken</string>
-    <string name="push_notifications">%1$s push-meldingen</string>
-    <string name="push_notifications_summary">Push-meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
+    <string name="update_url">URL update kanaal</string>
+    <string name="push_notifications">%1$s push meldingen</string>
+    <string name="push_notifications_summary">Push meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
     <string name="re_check">Opnieuw controleren</string>
     <string name="update_center">Manager Update Center</string>
     <string name="update_found">Update gevonden!</string>
@@ -60,7 +60,7 @@
     <!-- Dialogs -->
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>
-    <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die stopgezet is en niet kan bijgewerkt worden met deze app. Verwijder deze eerst door het verwijderen van de magisk-module / door de TWRP Vanced uninstaller te gebruiken.</string>
+    <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die stopgezet is en niet kan bijgewerkt worden met deze app. Verwijder deze eerst door het verwijderen van de Magisk module / door de TWRP Vanced uninstaller te gebruiken.</string>
     <string name="miui_one_title">MIUI gedetecteerd!</string>
     <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kunt deze waarschuwing negeren als je 20.2.20 of later xiaomi.eu gebaseerde ROM gebruikt)</string>
     <string name="error">Fout</string>
@@ -83,7 +83,7 @@
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
-    <string name="chown_fail">Wijzigen van apk naar systeemeigenaar mislukt. Opnieuw proberen</string>
+    <string name="chown_fail">Wijzigen van apk naar systeemeigenaar mislukt. Probeer het opnieuw</string>
     <string name="error_downloading">Fout bij downloaden van %1$s</string>
     <string name="failed_uninstall">Deïnstalleren van pakket %1$s mislukt</string>
     <string name="files_missing_va">Bestanden ontbreken. Downloaden mislukt?</string>
@@ -98,6 +98,6 @@
     <string name="installation_signature">Installatie mislukt omdat apk-handtekeningverificatie is ingeschakeld. Schakel apk-handtekeningverificatie uit en probeer het opnieuw.</string>
     <string name="installation_miui">Installatie mislukt omdat MIUI-optimalisatie is ingeschakeld. Schakel MIUI-optimalisatie uit en probeer het opnieuw.</string>
     <string name="installation_storage">Installatie mislukt door een opslagfout.</string>
-    <string name="modapk_missing">Zwart/Donker apk ontbreekt in installatiebestand. Dit mag niet gebeuren, verwijder de app-gegevens van de manager</string>
-    <string name="path_missing">Standaard Youtube-installatiepad is niet toegankelijk of ontbreekt na gesplitste installatie van de standaard</string>
+    <string name="modapk_missing">Zwart/Donker.apk ontbreekt in installatiebestand. Dit mag niet gebeuren, verwijder de app-gegevens van de manager</string>
+    <string name="path_missing">Standaard Youtube-installatiepad is niet toegankelijk of ontbreekt na gesplitste installatie van de standaard app</string>
 </resources>
