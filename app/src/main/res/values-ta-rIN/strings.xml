@@ -39,8 +39,8 @@
     <string name="chosen_theme">தீம்: %1$s</string>
     <string name="clear_files">பதிவிறக்கிய கோப்புகளை அழிக்கவும்</string>
     <string name="cleared_files">கோப்புகளை வெற்றிகரமாக அழித்துவிட்டது</string>
-    <string name="firebase_title">Firebase Analytics</string>
-    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="firebase_title">ஃபயர்பேஸ் அனலிட்டிக்ஸ்</string>
+    <string name="firebase_summary">பயன்பாட்டு செயல்திறன் மற்றும் செயலிழப்பு பதிவுகள் பற்றிய தகவல்களை சேகரிக்க இது எங்களுக்கு உதவுகிறது</string>
     <string name="link_title">Chrome தனிப்பயன் தாவல்களைப் பயன்படுத்தவும்</string>
     <string name="link_custom_tabs">Chrome தனிப்பயன் தாவல்களில் இணைப்புகள் திறக்கப்படும்</string>
     <string name="link_external_browser">இணைப்புகள் வெளிப்புற உலாவியில் திறக்கப்படும்</string>
