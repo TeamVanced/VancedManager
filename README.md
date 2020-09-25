@@ -5,9 +5,9 @@ For anyone who wants to provide translations please submit them to https://trans
 [![Github All Releases](https://img.shields.io/github/downloads/YTVanced/VancedManager/total.svg)]() [![Github All Releases](https://img.shields.io/github/release/YTVanced/VancedManager.svg)]() 
 # Vanced Manager
 Hi, when we released Vanced 15.05.54, people were upset because it used the .apks format, which was way harder to install than a traditional .apk file. Even though we wrote clear instructions on how to install the new Vanced build, people still couldn't figure it out.  
-Then we thought, "why don't we make a manager for vanced, which will download, update and uninstall Vanced and MicroG, have an easy and understandable UI and be less than 5mb?" and that's how Vanced Manager was born.  
+Then we thought, "why don't we make a manager for vanced, which will download, update and uninstall Vanced and MicroG, have an easy and understandable UI and be less than 10mb?" and that's how Vanced Manager was born.  
   
-After 3 months of development, we are finally ready to introduce Vanced Manager to the masses. Vanced manager can easily install and uninstall vanced and microg, has various settings for customisation and better experience. The Manager comes with an easy-to-use interface*  
+After 3 months of development, we are finally ready to introduce Vanced Manager to the masses. Vanced manager can easily install and uninstall vanced and microg, has various settings for customisation and better experience. The Manager comes with an easy-to-use interface  
 
 ##### Background download/installation feature is no longer supported due to problems with some ROMs, please do NOT report problems regarding background activity.  
 
