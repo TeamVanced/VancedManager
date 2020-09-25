@@ -8,7 +8,6 @@ import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.os.Build
 import android.util.Log
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
@@ -20,9 +19,6 @@ import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -205,7 +201,9 @@ object PackageHelper {
         )
 
         Shell.getShell {
-            val vancedVersionCode = (context.applicationContext as App).vanced?.int("versionCode") ?: 0
+            val application = context.applicationContext as App
+            val vancedApplication = application.vanced?.int("versionCode")
+            val vancedVersionCode = if (vancedApplication != null) vancedApplication else { application.loadJsonAsync(); vancedApplication }
             val apkFilesPath = context.getExternalFilesDir("apks")?.path
             val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
             if (fileInfoList != null) {
@@ -216,7 +214,7 @@ object PackageHelper {
                     }
                 }
                 if (modApk != null) {
-                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode, context)) {
+                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, context)) {
                         sendRefresh(context)
                         vancedProgress.get()?.showInstallCircle?.set(false)
                         mutableInstall.value = false
@@ -324,18 +322,13 @@ object PackageHelper {
                 val apath = it.absolutePath
 
                 setupFolder(apkInstallPath)
-                if(path != null)
-                {
+                if (path != null) {
                     val apkFPath = apkInstallPath + "base.apk"
-                    if(moveAPK(apath, apkFPath, context))
-                    {
-                        if(chConV(apkFPath, context))
-                        {
-                            if(setupScript(apkFPath,path))
-                            {
+                    if (moveAPK(apath, apkFPath, context)) {
+                        if (chConV(apkFPath, context)) {
+                            if (setupScript(apkFPath,path)) {
                                 return linkVanced(apkFPath,path)
                             }
-
                         }
                     }
 
@@ -346,17 +339,14 @@ object PackageHelper {
         return false
     }
 
-    private fun setupScript(apkFPath: String, path: String): Boolean
-    {
-        if(Shell.su("""echo "#!/system/bin/sh\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
-        {
+    private fun setupScript(apkFPath: String, path: String): Boolean {
+        if (Shell.su("""echo "#!/system/bin/sh\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess) {
             return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
         }
         return false
     }
 
-    private fun linkVanced(apkFPath: String, path: String): Boolean
-    {
+    private fun linkVanced(apkFPath: String, path: String): Boolean {
         Shell.su("am force-stop $yPkg").exec()
         val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
         //Log.d("umountTest", Shell.su("grep com.google.android.youtube").exec().out.joinToString(" "))
@@ -374,17 +364,14 @@ object PackageHelper {
     private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>, context: Context): Boolean {
         val path = getPackageDir(context)
         if (path != null) {
-            if(path.contains("/data/app/"))
-            {
-                when(getVersionNumber(context)?.let { compareVersion(it,versionCode) })
-                {
-                    1 -> {return fixHigherVer(baseApkFiles, context) }
-                    -1 -> {return fixLowerVer(baseApkFiles, context) }
+            if (path.contains("/data/app/")) {
+                when (getVersionNumber(context)?.let { compareVersion(it,versionCode) } ) {
+                    1 -> return fixHigherVer(baseApkFiles, context)
+                    -1 -> return fixLowerVer(baseApkFiles, context)
                 }
                 return true
             }
-            else
-            {
+            else {
                 return fixNoInstall(baseApkFiles, context)
             }
         }

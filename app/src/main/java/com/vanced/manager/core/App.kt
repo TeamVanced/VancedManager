@@ -2,6 +2,7 @@ package com.vanced.manager.core
 
 import android.app.Application
 import android.content.res.Configuration
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.beust.klaxon.JsonObject
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
@@ -33,7 +34,7 @@ open class App: Application() {
     }
 
     fun loadJsonAsync() {
-        val latest = runBlocking { getJson("$baseUrl/latest.json") }
+        val latest = runBlocking { getJson("${getDefaultSharedPreferences(this@App).getString("update_url", baseUrl)}/latest.json") }
         vanced = latest.obj("vanced")
         music = latest.obj("music")
         microg = latest.obj("microg")
