@@ -13,6 +13,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.crowdin.platform.Crowdin
+import com.downloader.PRDownloader
+import com.downloader.Status
 import com.vanced.manager.R
 import com.vanced.manager.core.App
 import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
@@ -127,6 +129,17 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
     fun uninstallVanced(variant: String) = uninstallApk(if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube", app)
     fun uninstallMusic() = uninstallApk("com.vanced.android.apps.youtube.music", app)
     fun uninstallMicrog() = uninstallApk("com.mgoogle.android.gms", app)
+
+    fun cancelDownload(downloadId: Int) {
+        PRDownloader.cancel(downloadId)
+    }
+
+    fun pauseResumeDownload(downloadId: Int) {
+        if (PRDownloader.getStatus(downloadId) == Status.PAUSED)
+            PRDownloader.resume(downloadId)
+        else
+            PRDownloader.pause(downloadId)
+    }
     
     companion object {
         val vancedProgress = ObservableField<ProgressModel>()

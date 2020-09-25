@@ -41,6 +41,14 @@
         <item name="iconGravity">end</item>
     </style>
 
+    <style name="PauseResumeButtonStyle" parent="android:Widget.Button.Toggle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+        <item name="android:background">@drawable/ic_pause_resume</item>
+    </style>
+
     <style name="SocialButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

@@ -129,14 +129,49 @@
                 android:text="@{viewModel.Companion.microgProgress.downloadingFile}"
                 tools:visibility="visible" />
 
-            <ProgressBar
-                android:id="@+id/microg_downloading"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
-                android:progress="@{viewModel.Companion.microgProgress.downloadProgress}"
-                tools:visibility="visible" />
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/microg_downloading"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    app:layout_constraintHorizontal_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                    android:progress="@{viewModel.Companion.microgProgress.downloadProgress}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/microg_download_pause_resume"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:visibility="visible" />
+
+                <ToggleButton
+                    android:id="@+id/microg_download_pause_resume"
+                    style="@style/PauseResumeButtonStyle"
+                    android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/microg_downloading"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/microg_download_cancel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:onClick="@{()-> viewModel.pauseResumeDownload(viewModel.Companion.microgProgress.currentDownload)}"
+                    android:checked="@{!viewModel.Companion.microgProgress.showDownloadBar}"/>
+
+                <ImageButton
+                    android:id="@+id/microg_download_cancel"
+                    app:layout_constraintStart_toEndOf="@id/microg_download_pause_resume"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()-> viewModel.cancelDownload(viewModel.Companion.microgProgress.currentDownload)}"
+                    android:src="@drawable/ic_baseline_clear_24"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ProgressBar
                 android:id="@+id/microg_installing"

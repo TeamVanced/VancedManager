@@ -53,7 +53,7 @@ object VancedDownloader {
     private var vancedVersionCode = 0
     private val vancedVersion by lazy { runBlocking { getObjectFromJson("$installUrl/vanced.json", "version") }}
 
-    fun downloadVanced(context: Context) {
+    fun downloadVanced(context: Context){
         //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
         File(context.getExternalFilesDir("apks")?.path as String).deleteRecursively()
         defPrefs = getDefaultSharedPreferences(context)
@@ -94,7 +94,7 @@ object VancedDownloader {
             //apkType = type
             //downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
 
-            PRDownloader
+            vancedProgress.get()?.currentDownload = PRDownloader
                 .download(url, context.getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener { 
@@ -104,6 +104,10 @@ object VancedDownloader {
                 }
                 .setOnProgressListener { progress ->
                     vancedProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                }
+                .setOnCancelListener {
+                    mutableInstall.value = false
+                    vancedProgress.get()?.showDownloadBar?.set(false)
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {

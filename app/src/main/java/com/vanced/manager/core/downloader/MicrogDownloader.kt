@@ -22,16 +22,19 @@ object MicrogDownloader {
     fun downloadMicrog(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
             val url = getJsonString("microg.json", "url", context)
-
             //downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
 
-            PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "microg.apk")
+             microgProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "microg.apk")
                 .build()
                 .setOnStartOrResumeListener { 
                     mutableInstall.value = true
                     microgProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
                     microgProgress.get()?.showDownloadBar?.set(true)
                 }
+                 .setOnCancelListener {
+                     mutableInstall.value = false
+                     microgProgress.get()?.showDownloadBar?.set(false)
+                 }
                 .setOnProgressListener { progress ->
                     microgProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
                 }
@@ -50,7 +53,6 @@ object MicrogDownloader {
                 })
 
         }
-
     }
 
     /*

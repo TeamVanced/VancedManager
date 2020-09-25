@@ -19,14 +19,14 @@ object MusicDownloader {
 
     //private var downloadId: Long = 0
 
-    fun downloadMusic(context: Context) {
+    fun downloadMusic(context: Context){
         CoroutineScope(Dispatchers.IO).launch {
             val version = getJsonString("music.json", "version", context)
             val url = "https://vanced.app/api/v1/music/v$version.apk"
 
             //downloadId = download(url, "apk", "music.apk", this@MusicDownloadService)
 
-            PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "music.apk")
+            musicProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "music.apk")
                 .build()
                 .setOnStartOrResumeListener { 
                     mutableInstall.value = true
@@ -35,6 +35,10 @@ object MusicDownloader {
                 }
                 .setOnProgressListener { progress ->
                     musicProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                }
+                .setOnCancelListener {
+                    mutableInstall.value = false
+                    musicProgress.get()?.showDownloadBar?.set(false)
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {

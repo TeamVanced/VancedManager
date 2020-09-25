@@ -11,6 +11,8 @@ open class ProgressModel {
     val showInstallCircle = ObservableBoolean()
     val showDownloadBar = ObservableBoolean()
 
+    var currentDownload: Int = 0
+
     init {
         downloadProgress.set(0)
         downloadingFile.set("")
