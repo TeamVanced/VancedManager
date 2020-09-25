@@ -359,9 +359,10 @@ object PackageHelper {
     {
         Shell.su("am force-stop $yPkg").exec()
         val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
-        Log.d("umountTest", Shell.su("grep com.google.android.youtube").exec().out.joinToString(" "))
+        //Log.d("umountTest", Shell.su("grep com.google.android.youtube").exec().out.joinToString(" "))
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
         Thread.sleep(500)
+        Shell.su("am force-stop $yPkg").exec()
         return response.isSuccess
     }
 
@@ -478,24 +479,13 @@ object PackageHelper {
         Log.d("ZLog", cmd.toString())
     }
 
-    //get path of the installed youtube
-    private fun getVPath(context: Context): String? {
-        return try {
-            val p = getPkgInfo(yPkg, context)
-            p?.applicationInfo?.sourceDir
-        } catch (e: Exception) {
-            null
-        }
-
-    }
-
     @Suppress("DEPRECATION")
     private fun getVersionNumber(context: Context): Int? {
         try {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-                context.packageManager.getPackageInfo(yPkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt()
+                context.packageManager.getPackageInfo(yPkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()
             else
-                context.packageManager.getPackageInfo(yPkg, 0)?.versionCode
+                context.packageManager.getPackageInfo(yPkg, 0).versionCode
         }
         catch (e : Exception) {
             val execRes = Shell.su("dumpsys package com.google.android.youtube | grep versionCode").exec()
@@ -516,11 +506,12 @@ object PackageHelper {
         return null
     }
 
+    //get path of the installed youtube
     private fun getPackageDir(context: Context): String?
     {
         return try {
             val p = getPkgInfo(yPkg, context)
-            p?.applicationInfo?.sourceDir
+            p!!.applicationInfo.sourceDir
         } catch (e: Exception) {
              val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
             if(execRes.isSuccess)
