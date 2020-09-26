@@ -12,7 +12,7 @@
     <string name="changelogs">Registro de alterações</string>
     <string name="downloading_file">Baixando %1$s</string>
     <string name="install">Instalar</string>
-    <string name="installation_wait">Aguarde até que a instalação terminar.</string>
+    <string name="installation_wait">Aguarde até que a instalação termine.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais recente:</string>
