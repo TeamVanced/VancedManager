@@ -79,7 +79,7 @@
     <string name="install_light_dark">Claro + Escuro</string>
     <string name="next">Próximo</string>
     <!-- About Page -->
-    <string name="manager_dev">Gerenciador de desenvolvedor</string>
+    <string name="manager_dev">Desenvolvedores do Manager</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipe Vanced</string>
     <!-- Error messages -->
