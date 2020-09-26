@@ -24,6 +24,7 @@ import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 import kotlinx.coroutines.CoroutineScope
@@ -85,11 +86,6 @@ class MainActivity : AppCompatActivity() {
         Crowdin.registerDataLoadingObserver(loadingObserver)
     }
 
-    override fun recreate() {
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (installing.value!!)
             return false
@@ -118,7 +114,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(Crowdin.wrapContext(newBase))
+        super.attachBaseContext(LanguageContextWrapper.wrap(newBase))
     }
 
     private fun initDialogs() {

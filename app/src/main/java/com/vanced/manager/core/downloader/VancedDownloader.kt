@@ -40,7 +40,6 @@ object VancedDownloader {
     private var variant: String? = null
     private var theme: String? = null
     private var lang: Array<String>? = null
-    //private var newInstaller: Boolean? = null
 
     private lateinit var themePath: String
     
@@ -85,7 +84,7 @@ object VancedDownloader {
                 when (type) {
                     "theme" -> "$themePath/$theme.apk"
                     "arch" -> "$installUrl/apks/v$vancedVersion/$variant/Arch/split_config.$arch.apk"
-                    "stock" ->  "$themePath/stock.apk"
+                    "stock" -> "$themePath/stock.apk"
                     "dpi" ->  "$themePath/dpi.apk"
                     "lang" -> "$installUrl/apks/v$vancedVersion/$variant/Language/split_config.${lang?.get(count)}.apk"
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
@@ -146,7 +145,7 @@ object VancedDownloader {
                         } else {
                             mutableInstall.value = false
                             vancedProgress.get()?.showDownloadBar?.set(false)
-                            Toast.makeText(context, context.getString(R.string.error_downloading, "Vanced"), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, context.getString(R.string.error_downloading, getFileNameFromUrl(url)), Toast.LENGTH_SHORT).show()
                         }
                     }
                 })

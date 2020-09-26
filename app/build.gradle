@@ -1,3 +1,6 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -6,6 +9,8 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+ext.langs = getLanguages()
 
 android {
     compileSdkVersion 30
@@ -19,6 +24,9 @@ android {
         versionName "1.3.0b (Arcturus)"
 
         vectorDrawables.useSupportLibrary = true
+
+        buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(langs) + "}"
+        buildConfigField "String[]", "MANAGER_LANGUAGE_NAMES", "{" + surroundWithQuotes(getLanguageNames()) + "}"
     }
 
     lintOptions {
@@ -57,6 +65,48 @@ android {
 
 }
 
+def getLanguages() {
+    List<String> langs = new ArrayList<String>()
+    langs.add("en")
+    Pattern pattern = Pattern.compile("-(\\w+)-")
+    new File("${projectDir}/src/main/res").eachDir { dir ->
+        if (dir.name.startsWith("values-") && !dir.name.contains("v23")) {
+            Matcher matcher = pattern.matcher(dir.name)
+            if (matcher.find()) {
+                if (langs.contains(matcher.group(1)))
+                    langs.add(matcher.group(1) + "_${dir.name.substring(dir.name.length() - 2)}")
+                else
+                    langs.add(matcher.group(1))
+            }
+        }
+    }
+    return langs.toArray()
+}
+
+def getLanguageNames() {
+    List<String> langnames = new ArrayList<String>()
+    for (int i = 0; i < langs.size(); i++) {
+        if (langs[i].length() > 2) {
+            Locale loc = new Locale(langs[i].substring(0, langs[i].length() - 3), langs[i].substring(langs[i].length() - 2))
+            project.logger.lifecycle(loc.getDisplayLanguage(loc).capitalize() + " (" + loc.getDisplayCountry(loc).capitalize() + ")")
+            langnames.add(loc.getDisplayLanguage(loc).capitalize() + " (" + loc.getDisplayCountry(loc).capitalize() + ")")
+        } else {
+            Locale loc = new Locale(langs[i])
+            project.logger.lifecycle(loc.getDisplayLanguage(loc).capitalize())
+            langnames.add(loc.getDisplayLanguage(loc).capitalize())
+        }
+    }
+    return langnames.toArray()
+}
+
+def surroundWithQuotes(Object[] arr) {
+    String[] dummyArr = arr
+    for (int i = 0; i < arr.length; i++) {
+        dummyArr[i] = "\"" + arr[i] + "\""
+    }
+    return dummyArr.join(", ")
+}
+
 dependencies {
 
 // Kotlin
@@ -64,7 +114,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
 // AndroidX
-    implementation 'androidx.activity:activity:1.1.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.browser:browser:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
