@@ -40,11 +40,11 @@
     <string name="clear_files">Удалить загруженные файлы</string>
     <string name="cleared_files">Файлы успешно удалены</string>
     <string name="firebase_title">Аналитика Firebase</string>
-    <string name="firebase_summary">Это позволяет нам собирать информацию о производительности приложения и журналах сбоев</string>
+    <string name="firebase_summary">Это позволяет нам собирать информацию о производительности приложения и журналы сбоев</string>
     <string name="link_title">Использовать Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
     <string name="link_external_browser">Ссылки откроются во внешнем браузере</string>
-    <string name="new_installer_title">Используйте новый root установщик (экспериментальный)</string>
+    <string name="new_installer_title">Использовать новый root установщик (экспериментальный)</string>
     <string name="new_installer_summary">Этот установщик не зависит от статуса проверки подписи. ВНИМАНИЕ: Vanced может пропасть после перезагрузки, если вы установите его с помощью этого установщика</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Как в системе</string>
