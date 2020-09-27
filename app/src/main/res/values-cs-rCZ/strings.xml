@@ -41,11 +41,13 @@
     <string name="cleared_files">Vymazání souborů proběhlo úspěšně</string>
     <string name="firebase_title">Firebase analytika</string>
     <string name="firebase_summary">To nám umožňuje shromažďovat informace o výkonu aplikace a o protokolech o selhání</string>
+    <string name="language_title">Jazyk</string>
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
     <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
     <string name="link_external_browser">Odkazy se otevřou v externím prohlížeči</string>
     <string name="new_installer_title">Použít nový instalátor vyžadující root (experimentální)</string>
     <string name="new_installer_summary">Tento instalační program není závislý na stavu ověření podpisu. VAROVÁNÍ: Pokud nainstalujete Vanced pomocí tohoto programu, může po restartu zmizet</string>
+    <string name="system_default">Výchozí systémové nastavení</string>
     <string name="theme">Vzhled</string>
     <string name="theme_follow">Podle systému</string>
     <string name="theme_dark">Tmavý vzhled</string>
