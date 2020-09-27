@@ -41,11 +41,13 @@
     <string name="cleared_files">Filer ryddet succesfuldt</string>
     <string name="firebase_title">Firebase analyse</string>
     <string name="firebase_summary">Dette giver os mulighed for at indsamle oplysninger om appens ydeevne og nedbruds logs</string>
+    <string name="language_title">Sprog</string>
     <string name="link_title">Brug Chrome Custom Faner</string>
     <string name="link_custom_tabs">Links vil åbne i Chrome Custom Faner</string>
     <string name="link_external_browser">Links vil åbne i en ekstern browser</string>
     <string name="new_installer_title">Brug den nye root installer (Eksperimentel)</string>
     <string name="new_installer_summary">Denne installer er ikke afhængig af Signatur Verifikation status. ADVARSEL: Vanced kan forsvinde efter genstart, hvis du installerer den ved hjælp af dette</string>
+    <string name="system_default">System Standard</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Følg systemet</string>
     <string name="theme_dark">Mørkt tema</string>
