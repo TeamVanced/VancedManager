@@ -41,11 +41,13 @@
     <string name="cleared_files">Daten erfolgreich gelöscht</string>
     <string name="firebase_title">Firebase Analytics</string>
     <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="language_title">Language</string>
     <string name="link_title">Verwende Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="link_external_browser">Links werden in einem externen Browser geöffnet</string>
     <string name="new_installer_title">Use the new root installer (Experimental)</string>
     <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="system_default">System Default</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Folge Systemeinstellung</string>
     <string name="theme_dark">Dunkles Theme</string>
