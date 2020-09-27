@@ -41,11 +41,13 @@
     <string name="cleared_files">Archivos limpiados exitosamente</string>
     <string name="firebase_title">Analíticas de Firebase</string>
     <string name="firebase_summary">Esto nos permite recopilar información sobre el rendimiento de la aplicación y los registros de errores</string>
+    <string name="language_title">Idioma</string>
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
     <string name="new_installer_title">Usar el nuevo instalador root (Experimental)</string>
     <string name="new_installer_summary">Este instalador no depende del estado de Verificación de Firmas. ADVERTENCIA: Vanced puede desaparecer al reiniciar si lo instala utilizando esto</string>
+    <string name="system_default">Predeterminado del sistema</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Oscuro</string>
@@ -99,5 +101,5 @@
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
     <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
     <string name="modapk_missing">Falta el Dark/Black.apk en el instalador. Esto no debería pasar, por favor, borra los datos de la aplicación del Manager</string>
-    <string name="path_missing">La ruta de instalación de Youtube no es accesible o no está disponible luego de la instalación del Split</string>
+    <string name="path_missing">La ruta de instalación de Youtube no es accesible o no está disponible después de la instalación del Split</string>
 </resources>
