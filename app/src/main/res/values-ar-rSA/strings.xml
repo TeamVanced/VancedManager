@@ -41,11 +41,13 @@
     <string name="cleared_files">تم مسح الملفات بنجاح</string>
     <string name="firebase_title">Firebase Analytics</string>
     <string name="firebase_summary">هذا يتيح لنا جمع معلومات عن أداء التطبيق وسجلات الأعطال</string>
+    <string name="language_title">Language</string>
     <string name="link_title">إستخدم علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
     <string name="new_installer_title">استخدم مثبت الروت الجديد (تجريبي)</string>
     <string name="new_installer_summary">لا تعتمد أداة التثبيت هذه على حالة التحقق من صحة التوقيع. تحذير: قد يختفي Vanced بعد إعادة التشغيل إذا قمت بتثبيته باستخدام هذا</string>
+    <string name="system_default">System Default</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
     <string name="theme_dark">الموضوع الاسود</string>
