@@ -41,11 +41,13 @@
     <string name="cleared_files">Fişiere şterse cu succes</string>
     <string name="firebase_title">Statistici Firebase</string>
     <string name="firebase_summary">Acest lucru ne permite să colectăm informații despre performanța aplicației și jurnale de eroare</string>
+    <string name="language_title">Limbă</string>
     <string name="link_title">Utilizează file personalizate Chrome</string>
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="link_external_browser">Link-urile se vor deschide într-un browser extern</string>
     <string name="new_installer_title">Folosește noul instalator root (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_summary">Acest instalator nu depinde de starea de verificare a semnăturii. ATENȚIE: Vanced poate dispărea după repornire dacă îl instalați utilizând această opțiune</string>
+    <string name="system_default">Setarea implicită a sistemului</string>
     <string name="theme">Temă</string>
     <string name="theme_follow">Urmăreşte sistemul</string>
     <string name="theme_dark">Temă întunecată</string>
