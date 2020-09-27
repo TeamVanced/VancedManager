@@ -41,13 +41,13 @@
     <string name="cleared_files">Berhasil menghapus file</string>
     <string name="firebase_title">Analisis Firebase</string>
     <string name="firebase_summary">Ini menginjinkan kami mengumpulkan informasi tentang performa aplikasi dan catatan crash</string>
-    <string name="language_title">Language</string>
+    <string name="language_title">Bahasa</string>
     <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="link_external_browser">Tautan akan terbuka di Browser Eksternal</string>
     <string name="new_installer_title">Gunakan pemasang root yang baru (Eksperimental)</string>
     <string name="new_installer_summary">Pemasang ini tidak bergantung pada status Signature Verification. PERINGATAN: Vanced mungkin menghilang setelah reboot jika Anda memasangnya menggunakan ini</string>
-    <string name="system_default">System Default</string>
+    <string name="system_default">Default Sistem</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Ikuti Sistem</string>
     <string name="theme_dark">Tema Gelap</string>
