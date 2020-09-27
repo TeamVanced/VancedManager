@@ -41,11 +41,13 @@
     <string name="cleared_files">Επιτυχής εκκαθάριση αρχείων</string>
     <string name="firebase_title">Firebase Analytics</string>
     <string name="firebase_summary">Αυτό μας επιτρέπει να συλλέγουμε πληροφορίες σχετικά με την επίδοση της εφαρμογής και σχετικά με καταγραφές σφαλμάτων λογισμικού</string>
+    <string name="language_title">Γλώσσα</string>
     <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="link_external_browser">Οι σύνδεσμοι θα ανοίγουν σε εξωτερικό φυλλομετρητή</string>
     <string name="new_installer_title">Χρησιμοποιήστε το καινούργιο πρόγραμμα εγκατάστασης μέσω root (Πειραματικό)</string>
     <string name="new_installer_summary">Αυτό το πρόγραμμα εγκατάστασης δεν εξαρτάται από την κατάσταση της Επαλήθευσης Υπογραφής των apk. ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Το Vanced μπορεί να εξαφανιστεί μετά από επανεκκίνηση εάν το εγκαταστήσετε με αυτόν τον τρόπο</string>
+    <string name="system_default">Προεπιλογή Συστήματος</string>
     <string name="theme">Θέμα</string>
     <string name="theme_follow">Σύμφωνα με το θέμα συστήματος</string>
     <string name="theme_dark">Σκουρόχρωμο Θέμα</string>
