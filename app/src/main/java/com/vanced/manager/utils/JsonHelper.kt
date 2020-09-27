@@ -6,13 +6,22 @@ import com.beust.klaxon.Klaxon
 import com.beust.klaxon.Parser
 import com.github.kittinunf.fuel.coroutines.awaitString
 import com.github.kittinunf.fuel.httpGet
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 object JsonHelper {
 
-    suspend fun getJson(url: String): JsonObject =
+    var dataMap: HashMap<String, JsonObject> = HashMap()
+
+    suspend fun getJson(url: String): JsonObject
+    {
+        return if(dataMap.containsKey(url)) {
+            dataMap[url]!!
+        } else {
+            dataMap[url] = getSuspendJson(url)
+            dataMap[url]!!
+        }
+    }
+
+    private suspend fun getSuspendJson(url: String): JsonObject =
         Parser.default().parse(
             StringBuilder(url.httpGet().awaitString())
         ) as JsonObject

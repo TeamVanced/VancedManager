@@ -11,26 +11,11 @@
     <!-- Home Page -->
     <string name="changelogs">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
-    <string name="failed_uninstall">%1$s 解除安裝失敗</string>
-    <string name="error_downloading">%1$s 下載錯誤</string>
     <string name="install">安裝</string>
-    <string name="installing_app">正在安裝 %1$s</string>
-    <string name="installation_aborted">作業失敗，使用者終止了安裝程序。</string>
-    <string name="installation_blocked">作業失敗，使用者封鎖了安裝程序。</string>
-    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
-    <string name="installation_conflict">作業失敗，與已安裝的應用程式發生衝突。</string>
-    <string name="installation_failed">作業失敗，發生未知錯誤，請至我們的 Telegram 或 Discord 取得支援。</string>
-    <string name="installation_incompatible">作業失敗，應用程式與裝置不相容。</string>
-    <string name="installation_invalid">作業失敗，APK 檔案無效。</string>
-    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
-    <string name="installation_miui">安裝 Vanced 時發生預料外的錯誤。您有停用 MIUI 優化嗎？</string>
-    <string name="installation_storage">作業失敗，儲存空間發生錯誤。</string>
-    <string name="installation_wait">請等待安裝程序完成</string>
+    <string name="installation_wait">請等待安裝程序完成.</string>
     <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
-    <string name="successfully_installed">成功安裝 %1$s</string>
-    <string name="network_error">無法存取網絡</string>
     <string name="no_microg">未安裝 MicroG</string>
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="unavailable">無法使用</string>
@@ -38,7 +23,7 @@
     <string name="useful_links">相關連結</string>
     <string name="website_text">網站</string>
     <string name="support_us">支持我們！</string>
-    <string name="version_toast">%1$s 版本已複製！</string>
+    <string name="version_toast">%1$s 版本已被複製！</string>
     <!-- Settings -->
     <string name="accent_color">輔色</string>
     <string name="accent_blue">藍色</string>
@@ -49,14 +34,20 @@
     <string name="category_interface">介面</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">檢查更新</string>
-    <string name="chosen_install_values">已選擇安裝偏好</string>
+    <string name="chosen_install_values">已選安裝偏好設定</string>
     <string name="chosen_lang">語言: %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
     <string name="clear_files">清除已下載的檔案</string>
     <string name="cleared_files">成功清除檔案</string>
+    <string name="firebase_title">Firebase 分析</string>
+    <string name="firebase_summary">這讓我們收集有關應用程式表現和崩潰日誌的資訊</string>
+    <string name="language_title">語言</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="link_external_browser">連結會使用外部瀏覽器開啟</string>
+    <string name="new_installer_title">使用新 root 安裝程式 (實驗性質)</string>
+    <string name="new_installer_summary">安裝程式不依賴簽名認證狀態。警告：如果您使用這個程式安裝 Vanced，它有可能會在裝置重啟後消失</string>
+    <string name="system_default">系統預設</string>
     <string name="theme">主題</string>
     <string name="theme_follow">跟隨系統</string>
     <string name="theme_dark">深色主題</string>
@@ -69,23 +60,22 @@
     <string name="update_found">有可用的更新！</string>
     <string name="update_notfound">沒有新的更新</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">關閉</string>
     <string name="guide">說明</string>
-    <string name="hold_on">等一下！</string>
-    <string name="magisk_vanced">您似乎正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此應用程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
+    <string name="hold_on">警告！</string>
+    <string name="magisk_vanced">您正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
     <string name="miui_one_title">已偵測到 MIUI！</string>
-    <string name="miui_one">嘿! 您似乎是 MIUI 用戶。 為了能夠正確地使用此應用程式 ，您將需要在開發人員設定中停用 MIUI 優化。（如果您使用的是基於 xiaomi.eu 的20.2.20或更新的 ROM ，則可以放心地忽略此警告。）</string>
+    <string name="miui_one">為了能夠正確安裝 Vanced ，您必須在開發人員設定中停用 MIUI 優化。 (如果您使用基於 xiomi.eu 20.2.20 或更新的 ROM ，則可以忽略此警告)</string>
     <string name="error">錯誤</string>
-    <string name="security_context">請確保您是從 vanced.app、Vanced Discord 伺服器或 Vanced GitHub 下載本應用程式</string>
+    <string name="security_context">請確保您從 vanced.app、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="success">成功！</string>
-    <string name="vanced_installed">Vanced 已成功安裝，現在啟動嗎？</string>
+    <string name="vanced_installed">成功安裝 Vanced ，現在啟動嗎？</string>
+    <string name="music_installed">成功安裝 Vanced Music ！現在啟動嗎？</string>
     <string name="launch">啟動</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
     <string name="choose_preferred_language_note">備註：英文仍會當作附加語言安裝</string>
     <string name="choose_preferred_theme">為 Vanced 選擇您偏好的主題</string>
-    <string name="disable_signature">檢測到 Root 模式！ 若需要安裝 Vanced ，您將需要停用 APK 簽名驗證。</string>
     <string name="finish">完成</string>
     <string name="install_light_black">淺色 + 黑色</string>
     <string name="install_light_dark">淺色 + 深色</string>
@@ -94,4 +84,22 @@
     <string name="manager_dev">Manager 開發者</string>
     <string name="sources">原始碼</string>
     <string name="vanced_team">Vanced 團隊</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Chown Apk 到系統擁有者失敗，請重試</string>
+    <string name="error_downloading">%1$s 下載錯誤</string>
+    <string name="failed_uninstall">%1$s 解除安裝失敗</string>
+    <string name="files_missing_va">檔案已丟失，下載失敗嗎？</string>
+    <string name="ifile_missing">無法讀取 Dark/Black.apk (儲存空間被封鎖了？) 或檔案已丟失</string>
+    <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
+    <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
+    <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生 YouTube 的更新，然後重試。</string>
+    <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前版本的 Vanced ，然後重試。</string>
+    <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
+    <string name="installation_incompatible">安裝檔案與您的手機不兼容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
+    <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
+    <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
+    <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
+    <string name="installation_storage">儲存空間發生錯誤導致安裝失敗。</string>
+    <string name="modapk_missing">安裝程式缺乏黑色/深色 apk ，這不應該發生的，請清除 Manager 數據</string>
+    <string name="path_missing">未能訪問原生 YouTube 安裝路徑，或在原生 Split 安裝後丟失</string>
 </resources>

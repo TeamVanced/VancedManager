@@ -11,26 +11,11 @@
     <!-- Home Page -->
     <string name="changelogs">Changelogs</string>
     <string name="downloading_file">Downloader %1$s</string>
-    <string name="failed_uninstall">Fejlede i at fjerne pakke %1$s</string>
-    <string name="error_downloading">Fejl i download af %1$s</string>
     <string name="install">Installer</string>
-    <string name="installing_app">Installerer %1$s</string>
-    <string name="installation_aborted">Operationen fejlede fordi brugeren lukkede installationen.</string>
-    <string name="installation_blocked">Operationen fejlede fordi brugeren blokerede installationen.</string>
-    <string name="installation_downgrade">Operationen fejlede fordi brugeren prøvede at nedgradere pakken. Har du YouTube appen installeret?</string>
-    <string name="installation_conflict">Operationen fejlede fordi appen konflikter med en anden installeret app.</string>
-    <string name="installation_failed">Operationen fejlede af ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
-    <string name="installation_incompatible">Operationen fejlede fordi appen ikke er kompatibel med din enhed.</string>
-    <string name="installation_invalid">Operationen fejlede fordi apk filerne er ugyldige.</string>
-    <string name="installation_signature">Operationen fejlede fordi brugeren ikke har disabled apk signatur verifikation</string>
-    <string name="installation_miui">En uventet fejl skete under installationen af Vanced. Har du disabled MIUI Optimering?</string>
-    <string name="installation_storage">Operationen fejlede på grund af lagerfejl.</string>
-    <string name="installation_wait">Vent venligst til installationen bliver færdiggjort</string>
+    <string name="installation_wait">Vent venligst til installationen er færdig.</string>
     <string name="button_reinstall">Geninstaller</string>
     <string name="version_installed">Installeret:</string>
     <string name="latest">Seneste:</string>
-    <string name="successfully_installed">Installerede %1$s succesfuldt</string>
-    <string name="network_error">Netværksforbindelse utilgængelig</string>
     <string name="no_microg">microG er ikke installeret</string>
     <string name="root_not_granted">Root adgang ikke tildelt</string>
     <string name="unavailable">Utilgængelig</string>
@@ -38,7 +23,7 @@
     <string name="useful_links">Nyttige Links</string>
     <string name="website_text">Hjemmeside</string>
     <string name="support_us">Støt os!</string>
-    <string name="version_toast">%1$s version blev kopieret!</string>
+    <string name="version_toast">%1$s versions nummer er kopieret!</string>
     <!-- Settings -->
     <string name="accent_color">Sekundær farve</string>
     <string name="accent_blue">Blå</string>
@@ -54,9 +39,15 @@
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Ryd hentede filer</string>
     <string name="cleared_files">Filer ryddet succesfuldt</string>
+    <string name="firebase_title">Firebase analyse</string>
+    <string name="firebase_summary">Dette giver os mulighed for at indsamle oplysninger om appens ydeevne og nedbruds logs</string>
+    <string name="language_title">Sprog</string>
     <string name="link_title">Brug Chrome Custom Faner</string>
     <string name="link_custom_tabs">Links vil åbne i Chrome Custom Faner</string>
     <string name="link_external_browser">Links vil åbne i en ekstern browser</string>
+    <string name="new_installer_title">Brug den nye root installer (Eksperimentel)</string>
+    <string name="new_installer_summary">Denne installer er ikke afhængig af Signatur Verifikation status. ADVARSEL: Vanced kan forsvinde efter genstart, hvis du installerer den ved hjælp af dette</string>
+    <string name="system_default">System Standard</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Følg systemet</string>
     <string name="theme_dark">Mørkt tema</string>
@@ -69,29 +60,46 @@
     <string name="update_found">Opdatering fundet!</string>
     <string name="update_notfound">Ingen nye opdateringer</string>
     <!-- Dialogs -->
-    <string name="button_dismiss">Luk</string>
     <string name="guide">Vejledning</string>
-    <string name="hold_on">Et øjeblik!</string>
+    <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Det ser ud som om du bruger Magisk/TWRP versionen af Vanced. Den er ikke længere understøttet og kan derfor ikke opdateres igennem denne app. Vær venlig at fjerne magisk modulet/brug TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI fundet!</string>
-    <string name="miui_one">Hey! Det ser ud som om du er MIUI bruger. For at kunne bruge denne app ordenligt skal du deaktivere MIUI optimeringer i udvikler indstillingerne (Du kan trygt ignorere denne advarsel hvis du bruger 20.2.20 eller nyere ROM baseret på xiaomi.eu)</string>
+    <string name="miui_one">For at kunne installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
     <string name="error">Fejl</string>
     <string name="security_context">Venligst sørg for kun at have downloaded appen fra vanced.app, Vanced Discord serveren eller Vanced GitHub siden</string>
     <string name="success">Succes!</string>
     <string name="vanced_installed">Vanced er nu installeret! Åben appen?</string>
-    <string name="launch">Start</string>
+    <string name="music_installed">Vanced Music er nu installeret! Åben appen?</string>
+    <string name="launch">Åbn</string>
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vælg dit fortrukne sprog til Vanced</string>
     <string name="choose_preferred_language_note">Note: Engelsk vil altid blive installeret som et alternativt sprog også.</string>
     <string name="choose_preferred_theme">Vælg dit fortrukne tema til Vanced</string>
-    <string name="disable_signature">Root mode fundet! For at installere Vanced er du nødt til at disable appsignatur verifikation.</string>
     <string name="finish">Afslut</string>
     <string name="install_light_black">Lyst + Sort</string>
     <string name="install_light_dark">Lyst + Mørkt</string>
     <string name="next">Næste</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager udvikler</string>
+    <string name="manager_dev">Manager udviklere</string>
     <string name="sources">Kilder</string>
     <string name="vanced_team">Vanced holdet</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Kunne ikke vælge Apk til systemejer, Prøv igen</string>
+    <string name="error_downloading">Fejl i download af %1$s</string>
+    <string name="failed_uninstall">Fejlede i at fjerne pakke %1$s</string>
+    <string name="files_missing_va">Filer mangler, fejlede downloaden?</string>
+    <string name="ifile_missing">Mørk/Sort.apk kan ikke læses eller fil mangler (Er lageradgang blokeret?)</string>
+    <string name="installation_aborted">Installationen fejlede fordi brugeren lukkede installationen.</string>
+    <string name="installation_blocked">Installationen fejlede fordi brugeren blokerede installationen.</string>
+    <string name="installation_downgrade">Installationen fejlede fordi brugeren prøvede at nedgradere pakken. Fjern opdateringer fra Youtube appen og prøv igen.</string>
+    <string name="installation_conflict">Installationen fejlede fordi appen konflikter med en allerede installeret app. Fjern den nuværende version af Vanced og prøv igen.</string>
+    <string name="installation_failed">Installationen fejlede af en ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
+    <string name="installation_incompatible">Installationen fejlede fordi installationsfilen er inkompatibel med din enhed. Ryd de downloadede filer i indstillingerne og prøv igen.</string>
+    <string name="installation_invalid">Installationen fejlede fordi apk filerne er beskadiget, prøv igen.</string>
+    <string name="installation_signature">Installationen fejlede fordi apk signatur verifikation er slået til. Slå apk signatur verifikation fra og prøv igen.</string>
+    <string name="installation_miui">Installationen fejlede fordi MIUI optimering er slået til. Slå MIUI optimering fra og prøv igen.</string>
+    <string name="installation_storage">Installationen fejlede på grund af pladsmangel.</string>
+    <string name="modapk_missing">Sort/mørk apk mangler i installationsprogrammet, dette bør ikke ske, venligst ryd app data for manageren</string>
+    <string name="path_missing">Standard Youtube installations mappe er ikke tilgængelig eller mangler efter standard Split installering</string>
 </resources>

@@ -3,16 +3,34 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.R
 import com.vanced.manager.ui.fragments.HomeFragment
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 object AppUtils {
 
-    var installing = false
+    val mutableInstall = MutableLiveData<Boolean>()
+    val installing: LiveData<Boolean> = mutableInstall
+
+    init {
+        mutableInstall.value = false
+    }
+
+    fun sendRefresh(context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            delay(500)
+            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+        }
+    }
 
     fun sendFailure(status: Int, context: Context) {
+        mutableInstall.value = false
         //Delay error broadcast until activity (and fragment) get back to the screen
         CoroutineScope(Dispatchers.IO).launch {
             delay(500)
@@ -39,6 +57,12 @@ object AppUtils {
             status.contains("INSTALL_FAILED_INVALID_APK") -> context.getString(R.string.installation_invalid)
             status.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> context.getString(R.string.installation_downgrade)
             status.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> context.getString(R.string.installation_signature)
+            status.contains("Failed_Uninstall") -> context.getString(R.string.failed_uninstall)
+            status.contains("Chown_Fail") -> context.getString(R.string.chown_fail)
+            status.contains("IFile_Missing") -> context.getString(R.string.ifile_missing)
+            status.contains("ModApk_Missing") -> context.getString(R.string.modapk_missing)
+            status.contains("Files_Missing_VA") -> context.getString(R.string.files_missing_va)
+            status.contains("Path_Missing") -> context.getString(R.string.path_missing)
             else ->
                 if (MiuiHelper.isMiui())
                     context.getString(R.string.installation_miui)

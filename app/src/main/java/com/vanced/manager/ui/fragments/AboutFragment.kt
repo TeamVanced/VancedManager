@@ -18,6 +18,7 @@ import com.vanced.manager.ui.viewmodels.AboutViewModel
 class AboutFragment : Fragment() {
 
     private lateinit var binding: FragmentAboutBinding
+    private val viewModel: AboutViewModel by viewModels()
     private var count = 0
     private var startMillSec: Long = 0
 
@@ -27,6 +28,7 @@ class AboutFragment : Fragment() {
     ): View? {
         requireActivity().title = getString(R.string.title_about)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
+        binding.viewModel = viewModel
         return binding.root
     }
 
@@ -34,9 +36,6 @@ class AboutFragment : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val viewModel: AboutViewModel by viewModels()
-        binding.viewModel = viewModel
 
         view.setOnTouchListener { _, event: MotionEvent ->
 

@@ -21,7 +21,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:animateLayoutChanges="true"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,8 +46,9 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/microg_installbtn"
                     style="@style/ButtonStyle"
-                    android:text="@{viewModel.microgInstallButtonTxt}"
-                    app:icon="@{viewModel.microgInstallButtonIcon}"
+                    android:text="@{viewModel.microg.buttonTxt}"
+                    android:onClick="@{()-> viewModel.installMicrog()}"
+                    app:icon="@{viewModel.microg.buttonIcon}"
                     app:layout_constraintBottom_toTopOf="@id/microg_uninstallbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -61,10 +61,10 @@
                     app:constraint_referenced_ids="microg_installbtn" />
 
                 <LinearLayout
-                    android:id="@+id/microg_remote_latest_version"
+                    android:id="@+id/microg_remote_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@id/linearLayout2"
+                    app:layout_constraintBottom_toTopOf="@id/microg_installed_container"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/microg_title_buttons_barrier">
 
@@ -75,17 +75,17 @@
                     <TextView
                         android:id="@+id/microg_latest_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.microgVersion}" />
+                        android:text="@{viewModel.microg.versionName}" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/linearLayout2"
+                    android:id="@+id/microg_installed_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/microg_remote_latest_version">
+                    app:layout_constraintTop_toBottomOf="@id/microg_remote_container">
 
                     <TextView
                         style="@style/AppVer"
@@ -94,7 +94,7 @@
                     <TextView
                         android:id="@+id/microg_installed_version"
                         style="@style/AppVer.Bold"
-                        android:text="@{viewModel.microgInstalledVersion}" />
+                        android:text="@{viewModel.microg.installedVersionName}" />
 
                 </LinearLayout>
 
@@ -103,7 +103,7 @@
                     style="@style/ClickableImageWidget"
                     android:layout_marginEnd="4dp"
                     android:onClick="@{()-> viewModel.openMicrogSettings()}"
-                    android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
+                    android:visibility="@{viewModel.microg.appInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/microg_uninstallbtn"
                     app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
@@ -112,7 +112,8 @@
                 <ImageView
                     android:id="@+id/microg_uninstallbtn"
                     style="@style/ClickableImageWidget.Red"
-                    android:visibility="@{viewModel.microgInstalled ? View.VISIBLE : View.GONE}"
+                    android:onClick="@{()-> viewModel.uninstallMicrog()}"
+                    android:visibility="@{viewModel.microg.appInstalled ? View.VISIBLE : View.GONE}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/microg_title_buttons_barrier"
@@ -124,22 +125,59 @@
                 android:id="@+id/microg_downloading_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                android:text="@{viewModel.Companion.microgProgress.downloadingFile}"
                 tools:visibility="visible" />
 
-            <ProgressBar
-                android:id="@+id/microg_downloading"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                tools:visibility="visible" />
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/microg_downloading"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    app:layout_constraintHorizontal_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                    android:progress="@{viewModel.Companion.microgProgress.downloadProgress}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/microg_download_pause_resume"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:visibility="visible" />
+
+                <ToggleButton
+                    android:id="@+id/microg_download_pause_resume"
+                    style="@style/PauseResumeButtonStyle"
+                    android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintStart_toEndOf="@id/microg_downloading"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/microg_download_cancel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:onClick="@{()-> viewModel.pauseResumeDownload(viewModel.Companion.microgProgress.currentDownload)}"
+                    android:checked="@{!viewModel.Companion.microgProgress.showDownloadBar}"/>
+
+                <ImageButton
+                    android:id="@+id/microg_download_cancel"
+                    app:layout_constraintStart_toEndOf="@id/microg_download_pause_resume"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.Companion.microgProgress.showDownloadBar ? View.VISIBLE : View.GONE}"
+                    android:background="@android:color/transparent"
+                    android:onClick="@{()-> viewModel.cancelDownload(viewModel.Companion.microgProgress.currentDownload)}"
+                    android:src="@drawable/ic_baseline_clear_24"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ProgressBar
                 android:id="@+id/microg_installing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
+                android:visibility="@{viewModel.Companion.microgProgress.showInstallCircle ? View.VISIBLE : View.GONE}"
                 tools:visibility="visible" />
 
         </LinearLayout>

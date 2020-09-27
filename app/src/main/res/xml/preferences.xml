@@ -30,6 +30,13 @@
             android:defaultValue="true"
             android:icon="@drawable/ic_notifications_black_24dp"/>
 
+        <SwitchPreference
+            android:key="firebase_analytics"
+            android:defaultValue="true"
+            android:title="@string/firebase_title"
+            android:summary="@string/firebase_summary"
+            android:icon="@drawable/ic_baseline_bug_report_24" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -52,6 +59,12 @@
             android:icon="@drawable/ic_palette_black_24dp"
             android:key="accent_color"
             android:title="@string/accent_color" />
+
+       <ListPreference
+           android:defaultValue="System Default"
+           android:key="manager_lang"
+           android:title="@string/language_title"
+           android:icon="@drawable/ic_baseline_language_24"/>
 
     </PreferenceCategory>
 

@@ -3,91 +3,62 @@ package com.vanced.manager.ui.viewmodels
 import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.net.Uri
-import android.os.Build
-import android.util.Log
 import android.widget.Toast
-import androidx.browser.customtabs.CustomTabsIntent
-import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
+import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.crowdin.platform.Crowdin
+import com.downloader.PRDownloader
+import com.downloader.Status
 import com.vanced.manager.R
-import com.vanced.manager.utils.InternetTools.getJsonInt
-import com.vanced.manager.utils.InternetTools.getJsonString
-import com.vanced.manager.utils.PackageHelper.isPackageInstalled
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.vanced.manager.core.App
+import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
+import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
+import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
+import com.vanced.manager.model.DataModel
+import com.vanced.manager.model.ProgressModel
+import com.vanced.manager.ui.events.Event
+import com.vanced.manager.utils.AppUtils.installing
+import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 open class HomeViewModel(application: Application): AndroidViewModel(application) {
 
-    private val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
+    val app = application
+    private val managerApp = application as App
 
-    private val vancedPkgName: String =
-        if (variant == "root") {
-            "com.google.android.youtube"
-        } else {
-            "com.vanced.android.youtube"
-        }
+    //val variant = getDefaultSharedPreferences(application).getString("vanced_variant", "nonroot")
 
-    private val pm = application.packageManager
+    val vanced = ObservableField<DataModel>()
+    val vancedRoot = ObservableField<DataModel>()
+    val microg = ObservableField<DataModel>()
+    val music = ObservableField<DataModel>()
+    val manager = ObservableField<DataModel>()
+    val fetching = ObservableBoolean()
 
-    private val vancedInstalledVersionCode = ObservableField<Int>()
-    private val microgInstalledVersionCode = ObservableField<Int>()
+    private var _navigateDestination = MutableLiveData<Event<Int>>()
 
-    private val vancedVersionCode = ObservableField<Int>()
-    private val microgVersionCode = ObservableField<Int>()
+    val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
-    //this is fucking retarded
-    val vancedInstallButtonTxt = ObservableField<String>()
-    val vancedInstallButtonIcon = ObservableField<Drawable>()
-    val microgInstalled = ObservableField<Boolean>()
-    val vancedInstalled = ObservableField<Boolean>()
-    val vancedInstalledVersion = ObservableField<String>()
-    val microgInstalledVersion = ObservableField<String>()
-    val vancedVersion = ObservableField<String>()
-    val microgVersion = ObservableField<String>()
-    val microgInstallButtonTxt = ObservableField<String>()
-    val microgInstallButtonIcon = ObservableField<Drawable>()
-
-    val nonrootModeSelected: Boolean = variant == "nonroot"
-
-    val fetching = ObservableField<Boolean>()
-
-    private val shouldBeDisabled = ObservableField<Boolean>()
-
-    //this too
     fun fetchData() {
-        CoroutineScope(Dispatchers.IO).launch {
-            fetching.set(true)
-            try {
-                Crowdin.forceUpdate(getApplication())
-            } catch (e: Exception) {
-                Log.d("VMLocalisation", "Error: ", e)
-            }
-            vancedVersion.set(getJsonString("vanced.json", "version", getApplication()))
-            microgVersion.set(getJsonString("microg.json", "version", getApplication()))
-            microgInstalled.set(isPackageInstalled("com.mgoogle.android.gms", pm))
-            vancedInstalled.set(isPackageInstalled(vancedPkgName, pm))
-            vancedInstalledVersion.set(getPkgInfo(vancedInstalled.get()!!, vancedPkgName, getApplication()))
-            microgInstalledVersion.set(getPkgInfo(microgInstalled.get()!!, "com.mgoogle.android.gms", getApplication()).removeSuffix("-vanced"))
-            vancedVersionCode.set(getJsonInt("vanced.json", "versionCode", getApplication()))
-            microgVersionCode.set(getJsonInt("microg.json", "versionCode", getApplication()))
-            vancedInstalledVersionCode.set(getPkgVerCode(vancedInstalled.get()!!, vancedPkgName))
-            microgInstalledVersionCode.set(getPkgVerCode(microgInstalled.get()!!, "com.mgoogle.android.gms"))
-            microgInstallButtonTxt.set(compareInt(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
-            microgInstallButtonIcon.set(compareIntDrawable(microgInstalledVersionCode.get()!!, microgVersionCode.get()!!, getApplication()))
-            shouldBeDisabled.set(nonrootModeSelected && !microgInstalled.get()!!)
-            vancedInstallButtonIcon.set(compareIntDrawable(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
-            vancedInstallButtonTxt.set(compareInt(vancedInstalledVersionCode.get()!!, vancedVersionCode.get()!!, getApplication()))
-            fetching.set(false)
-        }
+        fetching.set(true)
+        managerApp.loadJsonAsync()
+        vanced.get()?.fetch()
+        vancedRoot.get()?.fetch()
+        music.get()?.fetch()
+        microg.get()?.fetch()
+        manager.get()?.fetch()
+        Crowdin.forceUpdate(getApplication())
+        fetching.set(false)
     }
+    
+    //private val microgSnackbar = Snackbar.make(, R.string.no_microg, Snackbar.LENGTH_LONG).setAction(R.string.install) { downloadMicrog(getApplication()) }
+    private val microgToast = Toast.makeText(app, R.string.no_microg, Toast.LENGTH_LONG)
 
     fun openMicrogSettings() {
         try {
@@ -99,14 +70,13 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(getApplication(), intent, null)
         } catch (e: ActivityNotFoundException) {
-            Toast.makeText(getApplication(), "App not installed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(getApplication(), "Error", Toast.LENGTH_SHORT).show()
         }
     }
 
-    fun openUrl(Url: String) {
-        val customTabPrefs = getDefaultSharedPreferences(getApplication()).getBoolean("use_customtabs", true)
+    fun openUrl(url: String) {
         val color: Int =
-            when (Url) {
+            when (url) {
                 "https://discord.gg/TUVd7rd" -> R.color.Discord
                 "https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w" -> R.color.Telegram
                 "https://twitter.com/YTVanced" -> R.color.Twitter
@@ -115,60 +85,79 @@ open class HomeViewModel(application: Application): AndroidViewModel(application
                 "https://brave.com/van874" -> R.color.Brave
                 else -> R.color.Vanced
             }
-
-        if (customTabPrefs) {
-            val builder = CustomTabsIntent.Builder()
-            builder.setToolbarColor(ContextCompat.getColor(getApplication(), color))
-            val customTabsIntent = builder.build()
-            customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            customTabsIntent.launchUrl(getApplication(), Uri.parse(Url))
-        } else {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(Url))
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(getApplication(), intent , null)
-        }
+            
+        InternetTools.openUrl(url, color, getApplication())
     }
 
-    private fun getPkgInfo(toCheck: Boolean, pkg: String, application: Application): String  {
-        return if (toCheck) {
-            pm.getPackageInfo(pkg, 0).versionName
-        } else {
-            application.getString(R.string.unavailable)
-        }
+    fun installVanced(variant: String) {
+        if (!installing.value!!) {
+            if (!fetching.get()) {
+                if (variant == "nonroot" && !microg.get()?.isAppInstalled?.get()!!) {
+                    microgToast.show()
+                } else {
+                    if (app.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false)) {
+                        downloadVanced(app)
+                    } else {
+                        _navigateDestination.value = Event(R.id.toInstallThemeFragment)
+                    }
+                }
+            }
+        } else
+            Toast.makeText(getApplication(), R.string.installation_wait, Toast.LENGTH_SHORT).show()
+    }
+    
+    fun installMusic() {
+        if (!installing.value!!) {
+            if (!fetching.get()) {
+                if (!microg.get()?.isAppInstalled?.get()!!) {
+                    microgToast.show()
+                } else {
+                    downloadMusic(getApplication())
+                }
+            }
+        } else
+            Toast.makeText(getApplication(), R.string.installation_wait, Toast.LENGTH_SHORT).show()
+    }
+    
+    fun installMicrog() {
+        if (!installing.value!!)
+            downloadMicrog(getApplication())
+        else
+            Toast.makeText(getApplication(), R.string.installation_wait, Toast.LENGTH_SHORT).show()
+    }
+    
+    fun uninstallVanced(variant: String) = uninstallApk(if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube", app)
+    fun uninstallMusic() = uninstallApk("com.vanced.android.apps.youtube.music", app)
+    fun uninstallMicrog() = uninstallApk("com.mgoogle.android.gms", app)
+
+    fun cancelDownload(downloadId: Int) {
+        PRDownloader.cancel(downloadId)
     }
 
-    @Suppress("DEPRECATION")
-    private fun getPkgVerCode(toCheck: Boolean, pkg: String): Int {
-        return if (toCheck) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-                pm.getPackageInfo(pkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()
-            else
-                pm.getPackageInfo(pkg, 0).versionCode
-        } else 0
+    fun pauseResumeDownload(downloadId: Int) {
+        if (PRDownloader.getStatus(downloadId) == Status.PAUSED)
+            PRDownloader.resume(downloadId)
+        else
+            PRDownloader.pause(downloadId)
     }
-
-    private fun compareInt(int1: Int, int2: Int, application: Application): String {
-        return when {
-            int1 == 0 -> application.getString(R.string.install)
-            int2 > int1 -> application.getString(R.string.update)
-            int2 == int1 -> application.getString(R.string.button_reinstall)
-            else -> application.getString(R.string.install)
-        }
-
-    }
-
-    private fun compareIntDrawable(int1: Int, int2: Int, application: Application): Drawable? {
-        return when {
-            int1 == 0 -> application.getDrawable(R.drawable.ic_download)
-            int2 > int1 -> application.getDrawable(R.drawable.ic_update)
-            int2 == int1 -> application.getDrawable(R.drawable.ic_done)
-            else -> application.getDrawable(R.drawable.ic_download)
-        }
+    
+    companion object {
+        val vancedProgress = ObservableField<ProgressModel>()
+        val musicProgress = ObservableField<ProgressModel>()
+        val microgProgress = ObservableField<ProgressModel>()
     }
 
     init {
+        fetching.set(true)
+        vanced.set(DataModel(managerApp.vanced, "vanced", app))
+        vancedRoot.set(DataModel(managerApp.vanced, "vancedRoot", app))
+        music.set(DataModel(managerApp.music, "music", app))
+        microg.set(DataModel(managerApp.microg, "microg", app))
+        manager.set(DataModel(managerApp.manager, "manager", app))
+        vancedProgress.set(ProgressModel())
+        musicProgress.set(ProgressModel())
+        microgProgress.set(ProgressModel())
         fetching.set(false)
-        fetchData()
     }
 
 }

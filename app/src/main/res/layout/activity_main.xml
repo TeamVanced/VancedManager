@@ -9,15 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <fragment
-            android:id="@+id/bottom_nav_host"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/home_appbar"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/mobile_navigation"/>
-
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/home_appbar"
             android:layout_width="match_parent"
@@ -30,9 +21,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:titleTextColor="?attr/toolbarIconColor"
-                android:background="@android:color/transparent"/>
+                android:background="?colorSurface"/>
 
         </com.google.android.material.appbar.AppBarLayout>
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_below="@id/home_appbar"
+            android:layout_alignParentBottom="true"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/mobile_navigation" />
 
     </RelativeLayout>
 

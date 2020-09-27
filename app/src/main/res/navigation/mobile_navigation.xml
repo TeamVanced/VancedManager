@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
     app:startDestination="@id/home_fragment">
 
     <fragment
@@ -12,7 +13,7 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_settingsFragment"
+            android:id="@+id/toSettingsFragment"
             app:destination="@id/settings_fragment"
             app:enterAnim="@animator/fragment_enter"
             app:exitAnim="@animator/fragment_exit"

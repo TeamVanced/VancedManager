@@ -24,6 +24,18 @@
             android:layout_height="wrap_content"
             android:text="- Xinto"
             android:textSize="18sp" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Koopah"
+            android:textSize="18sp" />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- AioiLight"
+            android:textSize="18sp" />
 
     </LinearLayout>
 

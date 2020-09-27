@@ -1,25 +1,30 @@
 package com.vanced.manager.ui
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.preference.PreferenceManager
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
+import com.vanced.manager.ui.fragments.HomeFragmentDirections
+import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.ui.fragments.UpdateCheckFragment
 import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 import kotlinx.coroutines.CoroutineScope
@@ -28,8 +33,8 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private val navHost by lazy { findNavController(R.id.bottom_nav_host) }
+    lateinit var binding: ActivityMainBinding
+    private val navHost by lazy { findNavController(R.id.nav_host) }
 
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
@@ -51,16 +56,23 @@ class MainActivity : AppCompatActivity() {
         with(binding) {
             lifecycleOwner = this@MainActivity
             setSupportActionBar(homeToolbar)
-            val appBarConfiguration = AppBarConfiguration(navHost.graph)
-            homeToolbar.setupWithNavController(navHost, appBarConfiguration)
+            homeToolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
         }
-
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
 
         initDialogs()
 
+    }
+
+    override fun onBackPressed() {
+        if (!navHost.popBackStack())
+            finish()
+    }
+
+    private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
+        binding.homeToolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
     }
 
     override fun onPause() {
@@ -75,24 +87,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (installing) {
+        if (installing.value!!)
             return false
-        }
+
         when (item.itemId) {
             android.R.id.home -> {
-                onBackPressed()
+                onBackPressedDispatcher.onBackPressed()
                 return true
             }
             R.id.toolbar_about -> {
-                navHost.navigate(R.id.toAboutFragment)
+                navHost.navigate(HomeFragmentDirections.toAboutFragment())
                 return true
             }
             R.id.toolbar_settings -> {
-                navHost.navigate(R.id.action_settingsFragment)
+                navHost.navigate(HomeFragmentDirections.toSettingsFragment())
                 return true
             }
             R.id.dev_settings -> {
-                navHost.navigate(R.id.toDevSettingsFragment)
+                navHost.navigate(SettingsFragmentDirections.toDevSettingsFragment())
                 return true
             }
             else -> super.onOptionsItemSelected(item)
@@ -101,18 +113,14 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        binding.homeToolbar.navigationIcon = if (isNeeded) getDrawable(R.drawable.ic_keyboard_backspace_black_24dp) else null
-    }
-
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(Crowdin.wrapContext(newBase))
+        super.attachBaseContext(LanguageContextWrapper.wrap(newBase))
     }
 
     private fun initDialogs() {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+        val prefs = getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
-        val showRootDialog = prefs.getBoolean("show_root_dialog", true)
+        prefs.getBoolean("show_root_dialog", true)
 
         when {
             prefs.getBoolean("firstStart", true) -> {
@@ -124,9 +132,6 @@ class MainActivity : AppCompatActivity() {
             }
             !prefs.getBoolean("statement", true) -> DialogContainer.statementFalse(this)
             variant == "root" -> {
-                if (showRootDialog)
-                    DialogContainer.showRootDialog(this)
-
                 if (PackageHelper.getPackageVersionName(
                         "com.google.android.youtube",
                         packageManager

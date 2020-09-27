@@ -5,19 +5,19 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.microgProgress
+import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.musicProgress
+import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.AppUtils.sendFailure
+import com.vanced.manager.utils.AppUtils.sendRefresh
 
 class AppInstallerService: Service() {
 
-    private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(this) }
-
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
+        val app = intent.getStringExtra("app")
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Log.d(TAG, "Requesting user confirmation for installation")
-                localBroadcastManager.sendBroadcast(Intent(HomeFragment.MICROG_INSTALLING))
                 val confirmationIntent = intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT)
                 confirmationIntent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 try {
@@ -28,12 +28,14 @@ class AppInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                with(localBroadcastManager) {
-                    sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
-                    sendBroadcast(Intent(HomeFragment.MICROG_INSTALLED))
-                }
+                if (app == "microg") microgProgress.get()?.showInstallCircle?.set(false) else musicProgress.get()?.showInstallCircle?.set(false)
+                mutableInstall.postValue(false)
+                sendRefresh(this)
             }
-            else -> sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
+            else -> {
+                sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
+                if (app == "microg") microgProgress.get()?.showInstallCircle?.set(false) else musicProgress.get()?.showInstallCircle?.set(false)
+            }
         }
         stopSelf()
         return START_NOT_STICKY

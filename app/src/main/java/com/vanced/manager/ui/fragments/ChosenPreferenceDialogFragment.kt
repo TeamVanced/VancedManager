@@ -19,8 +19,8 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
     private lateinit var binding: FragmentChosenPreferencesBinding
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         dialog?.window?.apply { setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) }
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_chosen_preferences, container, false)
@@ -40,6 +40,9 @@ class ChosenPreferenceDialogFragment : DialogFragment() {
                 newPrefs.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
         }
+
+
+
         binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.capitalize(Locale.ROOT))
         binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, newPrefs.joinToString())
 

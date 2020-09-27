@@ -45,14 +45,16 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
             true
 
         }
-        val archPref: Preference? = findPreference("device_arch")
         val supportedAbis: Array<String> = Build.SUPPORTED_ABIS
 
-        if (supportedAbis.contains("arm64-v8a") || supportedAbis.contains("x86_64")) {
-            archPref?.summary = "64bit"
-        } else {
-            archPref?.summary = "32bit"
-        }
+        findPreference<Preference>("device_arch")?.summary =
+            if (supportedAbis.contains("arm64-v8a") || supportedAbis.contains("x86_64")) {
+                "64bit"
+            } else {
+                "32bit"
+            }
+
+        findPreference<Preference>("device_os")?.summary = "${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})"
 
         val forceUpdate: Preference? = findPreference("force_update")
         forceUpdate?.setOnPreferenceClickListener {

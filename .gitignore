@@ -3,7 +3,8 @@
 build/
 out/
 app/src/main/java/com/vanced/manager/core/base/DummyJava.java
-app/google-services.json
+app/build/
+app/release
 local.properties
 /.github/
 *.iml

@@ -8,10 +8,10 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.VancedDownloadService
-import com.vanced.manager.core.installer.SplitInstaller
+import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
+import com.vanced.manager.utils.PackageHelper.installVanced
 
 object DialogContainer {
 
@@ -63,36 +63,14 @@ object DialogContainer {
             setTitle("")
             setMessage("")
             setNegativeButton("") { dialog, _ ->
-                context.startService(Intent(context, VancedDownloadService::class.java))
+                downloadVanced(context)
                 dialog.dismiss()
             }
             setPositiveButton(context.getString(R.string.button_reinstall)) { dialog, _ ->
-                context.startService(Intent(context, SplitInstaller::class.java))
+                installVanced(context)
                 dialog.dismiss()
             }
         }
-    }
-
-    fun showRootDialog(activity: Activity) {
-        MaterialAlertDialogBuilder(activity).apply {
-            setTitle(activity.getString(R.string.hold_on))
-            setMessage(activity.getString(R.string.disable_signature))
-            setNeutralButton(activity.getString(R.string.button_dismiss)) { dialog, _ ->
-                dialog.dismiss()
-            }
-            setPositiveButton(activity.getString(R.string.guide)) { _, _ ->
-                openUrl(
-                    "https://lmgtfy.com/?q=andnixsh+apk+verification+disable",
-                    R.color.Twitter,
-                    activity
-                )
-            }
-            setCancelable(false)
-            create()
-            show()
-        }
-        PreferenceManager.getDefaultSharedPreferences(activity).edit()
-            .putBoolean("show_root_dialog", false).apply()
     }
 
     //Easter Egg
@@ -143,21 +121,34 @@ object DialogContainer {
         }
     }
 
-    fun launchVanced(activity: Activity) {
+    fun launchVanced(context: Context) {
         val intent = Intent()
         intent.component =
-            if (PreferenceManager.getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot") == "root")
+            if (PreferenceManager.getDefaultSharedPreferences(context).getString("vanced_variant", "nonroot") == "root")
                 ComponentName("com.google.android.youtube", "com.google.android.youtube.HomeActivity")
             else
                 ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
+                
+        MaterialAlertDialogBuilder(context).apply {
+            setTitle(context.getString(R.string.success))
+            setMessage(context.getString(R.string.vanced_installed))
+            setPositiveButton(context.getString(R.string.launch)) { _, _ ->
+                startActivity(context, intent, null)
+            }
+            setNegativeButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            create()
+            show()
+        }
+    }
+    
+    fun launchMusic(activity: Activity) {
+        val intent = Intent()
+        intent.component = ComponentName("com.vanced.android.youtube.music", "com.vanced.android.youtube.music.MusicActivity")
         MaterialAlertDialogBuilder(activity).apply {
             setTitle(activity.getString(R.string.success))
-            setMessage(activity.getString(R.string.vanced_installed))
+            setMessage(activity.getString(R.string.music_installed))
             setPositiveButton(activity.getString(R.string.launch)) { _, _ ->
-                run {
-                    startActivity(activity, intent, null)
-                    activity.finish()
-                }
+                startActivity(activity, intent, null)
             }
             setNegativeButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()

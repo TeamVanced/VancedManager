@@ -5,8 +5,14 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.widget.Toast
 import androidx.preference.*
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.perf.FirebasePerformance
+import com.vanced.manager.BuildConfig.MANAGER_LANGUAGES
+import com.vanced.manager.BuildConfig.MANAGER_LANGUAGE_NAMES
 import com.vanced.manager.R
+import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
 import java.io.File
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -46,6 +52,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
         }
 
+        findPreference<SwitchPreference>("firebase_analytics")?.setOnPreferenceChangeListener { _, newValue ->
+            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(newValue as Boolean)
+            FirebasePerformance.getInstance().isPerformanceCollectionEnabled = newValue
+            FirebaseAnalytics.getInstance(requireActivity()).setAnalyticsCollectionEnabled(newValue)
+            true
+        }
+
         val themePref = preferenceScreen.sharedPreferences.getString("theme_mode", "Follow System")
         findPreference<ListPreference>("theme_mode")?.apply {
             summary = when (themePref) {
@@ -75,6 +88,21 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
             setOnPreferenceChangeListener { _, newValue ->
                 if (accentPref != newValue) {
+                    requireActivity().recreate()
+                    return@setOnPreferenceChangeListener true
+                }
+                false
+            }
+        }
+
+        val langPref = preferenceScreen.sharedPreferences.getString("manager_lang", "System Default")
+        preferenceScreen.findPreference<ListPreference>("manager_lang")?.apply {
+            summary = langPref?.let { getLanguageFormat(requireActivity(), it) }
+            entries = arrayOf(getString(R.string.system_default)) + MANAGER_LANGUAGE_NAMES
+            entryValues = arrayOf("System Default") + MANAGER_LANGUAGES
+
+            setOnPreferenceChangeListener { _, newValue ->
+                if (langPref != newValue) {
                     requireActivity().recreate()
                     return@setOnPreferenceChangeListener true
                 }

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "840099702732",
+    "firebase_url": "https://vanced-manager-official.firebaseio.com",
+    "project_id": "vanced-manager-official",
+    "storage_bucket": "vanced-manager-official.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840099702732:android:ca65567b49f622bc359f69",
+        "android_client_info": {
+          "package_name": "com.vanced.manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840099702732-4fjjofq6on2bpd7jb6f96bk0mkrjkkf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPI1RUaoCHmmWz9-TLvTKYPYs0ZVKkS2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840099702732-4fjjofq6on2bpd7jb6f96bk0mkrjkkf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
