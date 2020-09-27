@@ -41,11 +41,13 @@
     <string name="cleared_files">கோப்புகளை வெற்றிகரமாக அழித்துவிட்டது</string>
     <string name="firebase_title">ஃபயர்பேஸ் அனலிட்டிக்ஸ்</string>
     <string name="firebase_summary">பயன்பாட்டு செயல்திறன் மற்றும் செயலிழப்பு பதிவுகள் பற்றிய தகவல்களை சேகரிக்க இது எங்களுக்கு உதவுகிறது</string>
+    <string name="language_title">Language</string>
     <string name="link_title">Chrome தனிப்பயன் தாவல்களைப் பயன்படுத்தவும்</string>
     <string name="link_custom_tabs">Chrome தனிப்பயன் தாவல்களில் இணைப்புகள் திறக்கப்படும்</string>
     <string name="link_external_browser">இணைப்புகள் வெளிப்புற உலாவியில் திறக்கப்படும்</string>
     <string name="new_installer_title">புதிய ரூட் நிறுவியைப் பயன்படுத்தவும் (சோதனை)</string>
     <string name="new_installer_summary">இந்த நிறுவி கையொப்ப சரிபார்ப்பு நிலையை சார்ந்தது அல்ல. எச்சரிக்கை: இதைப் பயன்படுத்தி நீங்கள் நிறுவினால் மறுதொடக்கம் செய்த பிறகு வேன்ட் மறைந்துவிடும்</string>
+    <string name="system_default">System Default</string>
     <string name="theme">தீம்</string>
     <string name="theme_follow">கணினியைப் பின்தொடரவும்</string>
     <string name="theme_dark">இருண்ட தீம்</string>
