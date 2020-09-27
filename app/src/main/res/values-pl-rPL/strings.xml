@@ -41,11 +41,13 @@
     <string name="cleared_files">Pomyślnie wyczyszczono pliki</string>
     <string name="firebase_title">Analityka Firebase</string>
     <string name="firebase_summary">To pozwala nam zbierać informacje o wydajności aplikacji i dziennikach awarii</string>
+    <string name="language_title">Language</string>
     <string name="link_title">Używaj niestandardowych kart Chrome</string>
     <string name="link_custom_tabs">Linki zostaną otwarte w niestandardowych kartach Chrome</string>
     <string name="link_external_browser">Linki zostaną otwarte w zewnętrznej przeglądarce</string>
     <string name="new_installer_title">Użyj nowego instalatora root (Eksperymentalnego)</string>
     <string name="new_installer_summary">Ten instalator nie zależy od statusu weryfikacji podpisu. UWAGA: Vanced może zniknąć po ponownym uruchomieniu telefonu, jeśli zainstalujesz go za pomocą tego sposobu</string>
+    <string name="system_default">System Default</string>
     <string name="theme">Motyw</string>
     <string name="theme_follow">Śledź system</string>
     <string name="theme_dark">Ciemny Motyw</string>
