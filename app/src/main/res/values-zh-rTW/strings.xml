@@ -41,11 +41,13 @@
     <string name="cleared_files">成功清除檔案</string>
     <string name="firebase_title">Firebase 分析</string>
     <string name="firebase_summary">這讓我們收集有關應用程式表現和崩潰日誌的資訊</string>
+    <string name="language_title">語言</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="link_external_browser">連結會使用外部瀏覽器開啟</string>
     <string name="new_installer_title">使用新 root 安裝程式 (實驗性質)</string>
     <string name="new_installer_summary">安裝程式不依賴簽名認證狀態。警告：如果您使用這個程式安裝 Vanced，它有可能會在裝置重啟後消失</string>
+    <string name="system_default">系統預設</string>
     <string name="theme">主題</string>
     <string name="theme_follow">跟隨系統</string>
     <string name="theme_dark">深色主題</string>
