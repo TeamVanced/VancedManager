@@ -41,11 +41,13 @@
     <string name="cleared_files">File cancellati con successo</string>
     <string name="firebase_title">Analitica Firebase</string>
     <string name="firebase_summary">Questo ci consente di raccogliere informazioni sulle prestazioni dell\'app e sui registri degli arresti anomali</string>
+    <string name="language_title">Lingua</string>
     <string name="link_title">Utilizza le schede personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
     <string name="link_external_browser">I link verranno aperti in un browser esterno</string>
     <string name="new_installer_title">Utilizza il nuovo metodo di installazione root (Sperimentale)</string>
     <string name="new_installer_summary">Questo programma di installazione non dipende dallo stato di Verifica della Firma. ATTENZIONE: Vanced potrebbe essere rimosso dopo il riavvio se installato con questo metodo</string>
+    <string name="system_default">Predefinito di Sistema</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Utilizza quello di sistema</string>
     <string name="theme_dark">Tema scuro</string>
