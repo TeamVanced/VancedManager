@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Ändringslogg</string>
     <string name="downloading_file">Laddar ned %1$s</string>
-    <string name="failed_uninstall">Det gick inte att avinstallera paket %1$s</string>
-    <string name="error_downloading">Laddar ned %1$s</string>
     <string name="install">Install</string>
-    <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
-    <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
-    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
-    <string name="installation_conflict">Åtgärden misslyckades eftersom appen står i konflikt med en redan installerad app.</string>
-    <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
-    <string name="installation_incompatible">Åtgärden misslyckades eftersom appen är inkompatibel med din enhet.</string>
-    <string name="installation_invalid">Åtgärden misslyckades eftersom apk-filerna är ogiltiga.</string>
-    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
-    <string name="installation_miui">Ett oväntat fel inträffade när du installerade Vanced. Har du inaktiverat apk signaturverifiering?</string>
-    <string name="installation_storage">Åtgärden misslyckades på grund av ett lagringsfel.</string>
-    <string name="installation_wait">Vänta tills installationen är klar</string>
+    <string name="installation_wait">Vänta tills installationen är klar.</string>
     <string name="button_reinstall">Installera om</string>
     <string name="version_installed">Installerad:</string>
     <string name="latest">Senaste:</string>
@@ -51,9 +39,15 @@
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Rensa nedladdade filer</string>
     <string name="cleared_files">Rensade data</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="language_title">Språk</string>
     <string name="link_title">Använd Chrome-anpassade flikar</string>
     <string name="link_custom_tabs">Länkar öppnas i Chrome Custom Tabs</string>
     <string name="link_external_browser">Länkar öppnas i en extern webbläsare</string>
+    <string name="new_installer_title">Use the new root installer (Experimental)</string>
+    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="system_default">Systemstandard</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Följ system</string>
     <string name="theme_dark">Mörkt tema</string>
@@ -67,18 +61,19 @@
     <string name="update_notfound">Inga nya uppdateringar</string>
     <!-- Dialogs -->
     <string name="guide">Guide</string>
-    <string name="hold_on">Vänta på!</string>
+    <string name="hold_on">Stopp!</string>
     <string name="magisk_vanced">Ser ut som om du använder Magisk versionen av Vanced, som är avbruten och inte kan uppdateras med den här appen. Ta bort den först genom att ta bort magisk modulen.</string>
     <string name="miui_one_title">MIUI upptäckt!</string>
-    <string name="miui_one">Hej! det ser ut som om du är en MIUI-användare. För att kunna använda programmet korrekt, måste du inaktivera MIUI-optimeringar i utvecklarinställningarna. (Du kan säkert ignorera denna varning om du är på en 20.2.20 eller senare ROM baserat på xiaomi.eu)</string>
+    <string name="miui_one">För att installera Vanced, måste du inaktivera MIUI Optimisations i utvecklarinställningarna. (Du kan ignorera denna varning om du använder 20.2.20 eller senare xiaomi.eu-baserad ROM)</string>
     <string name="error">Fel</string>
     <string name="security_context">Se till att du laddade ner appen från vanced.app, den Vanced Discord-servern eller den Vanced GitHub</string>
     <string name="success">Framgång!</string>
     <string name="vanced_installed">Vanced har installerats! Starta nu?</string>
+    <string name="music_installed">Vanced Music har installerats! Öppna nu?</string>
     <string name="launch">Öppna</string>
     <string name="welcome">Välkommen</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Välj ditt förvalda språk</string>
+    <string name="choose_preferred_language">Välj önskade språk för Vanced</string>
     <string name="choose_preferred_language_note">Obs: Engelska kommer alltid att installeras som ytterligare språk.</string>
     <string name="choose_preferred_theme">Välj ditt förvalda språk</string>
     <string name="finish">Slutför</string>
@@ -89,4 +84,22 @@
     <string name="manager_dev">Hanteraren Dev</string>
     <string name="sources">Källor</string>
     <string name="vanced_team">Vanced Team</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Misslyckades att Chown Apk till systemägare, Försök igen</string>
+    <string name="error_downloading">Laddar ned %1$s</string>
+    <string name="failed_uninstall">Det gick inte att avinstallera paket %1$s</string>
+    <string name="files_missing_va">Filer saknas, nedladdningen misslyckades?</string>
+    <string name="ifile_missing">Dark/Black.apk kan inte läsas (Blockerade lagring?) eller fil saknas</string>
+    <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
+    <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
+    <string name="installation_downgrade">Installationen misslyckades eftersom användaren försökte nedgradera paketet. Avinstallera uppdateringar från lagerappen YouTube, försök sedan igen.</string>
+    <string name="installation_conflict">Installationen misslyckades eftersom appen står i konflikt med en redan installerad app. Avinstallera den aktuella versionen av Vanced, försök sedan igen.</string>
+    <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
+    <string name="installation_incompatible">Installationen misslyckades eftersom installationsfilen är inkompatibel med din enhet. Rensa nedladdade filer i Inställningarna och försök igen.</string>
+    <string name="installation_invalid">Installationen misslyckades eftersom apk-filerna är skadade, försök igen.</string>
+    <string name="installation_signature">Installationen misslyckades eftersom apk signaturverifiering är aktiverad. Inaktivera apk signaturverifiering och försök igen.</string>
+    <string name="installation_miui">Installationen misslyckades eftersom MIUI-optimering är aktiverad. Inaktivera MIUI-optimering och försök igen.</string>
+    <string name="installation_storage">Åtgärden misslyckades på grund av ett lagringsfel.</string>
+    <string name="modapk_missing">Svart/Mörk apk saknas från installeringen, Detta bör inte hända, vänligen rensa appdata från manager</string>
+    <string name="path_missing">Stock Youtube installationsvägen är inte tillgänglig eller saknas efter att ha delat upp installationen</string>
 </resources>
