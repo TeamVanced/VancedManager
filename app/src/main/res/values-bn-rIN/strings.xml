@@ -41,13 +41,13 @@
     <string name="cleared_files">সফলভাবে ফাইলগুলি মুছে ফেলা হয়েছে</string>
     <string name="firebase_title">ফায়ারবেস বিশ্লেষণ</string>
     <string name="firebase_summary">এটি আমাদের অ্যাপ্লিকেশন কর্মক্ষমতা এবং ক্র্যাশ লগ সম্পর্কিত তথ্য সংগ্রহ করতে দেয়</string>
-    <string name="language_title">Language</string>
+    <string name="language_title">ভাষা</string>
     <string name="link_title">ক্রোম কাস্টম ট্যাবস ব্যবহার করুন</string>
     <string name="link_custom_tabs">লিঙ্কগুলি ক্রোম কাস্টম ট্যাবসে খুলবে</string>
     <string name="link_external_browser">লিঙ্কগুলি একটি বাহ্যিক ব্রাউজারে খুলবে</string>
     <string name="new_installer_title">নতুন রুট ইনস্টলার ব্যবহার করুন (পরীক্ষামূলক)</string>
     <string name="new_installer_summary">এই ইনস্টলারটি এপিকে স্বাক্ষর যাচাইকরণের স্থিতির উপর নির্ভর করে না। সতর্কতা: এটি ব্যবহার করে ভ্যান্সড ইনস্টল করা হলে, রিবুটের পর ভ্যান্সড মুছে যেতে পারে</string>
-    <string name="system_default">System Default</string>
+    <string name="system_default">সিস্টেমের ডিফল্ট</string>
     <string name="theme">থিম</string>
     <string name="theme_follow">সিস্টেমকে অনুসরণ করুন</string>
     <string name="theme_dark">অন্ধকার থিম</string>
