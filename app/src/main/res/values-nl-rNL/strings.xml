@@ -41,11 +41,13 @@
     <string name="cleared_files">Bestanden succesvol verwijderd</string>
     <string name="firebase_title">Firebase analyse</string>
     <string name="firebase_summary">Dit laat ons toe informatie te verzamelen over app-prestaties en crashlogs</string>
+    <string name="language_title">Taal</string>
     <string name="link_title">Aangepaste Chrome-tabs gebruiken</string>
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
     <string name="link_external_browser">Links zullen openen in een externe browser</string>
     <string name="new_installer_title">Het nieuwe root-installatieprogramma gebruiken (experimenteel)</string>
     <string name="new_installer_summary">Dit installatieprogramma is niet afhankelijk van de status van de handtekeningverificatie. WAARSCHUWING: Vanced kan na het opnieuw opstarten verdwijnen als je het hiermee installeert</string>
+    <string name="system_default">Systeemstandaard</string>
     <string name="theme">Thema</string>
     <string name="theme_follow">Systeeminstelling</string>
     <string name="theme_dark">Donker thema</string>
