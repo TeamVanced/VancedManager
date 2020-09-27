@@ -41,11 +41,13 @@
     <string name="cleared_files">Dosyalar başarıyla temizlendi</string>
     <string name="firebase_title">Firebase Analizi</string>
     <string name="firebase_summary">Bu, uygulama performansı ve çökme kayıtları hakkında bilgi toplamamızı sağlar</string>
+    <string name="language_title">Dil</string>
     <string name="link_title">Chrome Özel Sekmelerini kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="link_external_browser">Bağlantılar harici tarayıcıda açılacaktır</string>
     <string name="new_installer_title">Yeni root yükleyiciyi kullan (Deneysel)</string>
     <string name="new_installer_summary">Bu yükleyici, İmza Doğrulama durumuna bağlı değildir. UYARI: Bunu kullanarak yüklerseniz, yeniden başlattıktan sonra Vanced kaybolabilir</string>
+    <string name="system_default">Sistem Varsayılanı</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Sistem Karar Versin</string>
     <string name="theme_dark">Koyu Tema</string>
