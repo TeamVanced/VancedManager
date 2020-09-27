@@ -41,11 +41,13 @@
     <string name="cleared_files">ਫਾਇਲਾਂ ਸਫਲਤਾਪੂਰਵਕ ਸਾਫ਼ ਕੀਤੀ ਗਈ</string>
     <string name="firebase_title">ਫਾਇਰਬੇਸ ਵਿਸ਼ਲੇਸ਼ਣ</string>
     <string name="firebase_summary">ਇਹ ਸਾਨੂੰ ਐਪ ਪ੍ਰਦਰਸ਼ਨ ਅਤੇ ਕਰੈਸ਼ ਲੌਗਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਇਕੱਠੀ ਕਰਨ ਦਿੰਦਾ ਹੈ</string>
+    <string name="language_title">ਭਾਸ਼ਾ</string>
     <string name="link_title">ਕਰੋਮ ਕਸਟੰਮ ਟੈਬ ਦਾ ਉਪਯੋਗ ਕਰੋ</string>
     <string name="link_custom_tabs">ਕਰੋਮ ਕਸਟੰਮ ਟੈਬ ਵਿੱਚ ਲਿੰਕ ਖੁਲਣਗੇ</string>
     <string name="link_external_browser">ਲਿੰਕ ਇੱਕ ਬਾਹਰੀ ਬਰਾਉਸਰ ਵਿੱਚ ਖੁਲਣਗੇ</string>
     <string name="new_installer_title">ਨਵਾਂ ਰੂਟ ਸਥਾਪਕ (ਪ੍ਰਯੋਗਾਤਮਕ) ਵਰਤੋ</string>
     <string name="new_installer_summary">ਇਹ ਸਥਾਪਕ ਕਰਨ ਵਾਲੇ ਦਸਤਖਤ ਤਸਦੀਕ ਸਥਿਤੀ \'ਤੇ ਨਿਰਭਰ ਨਹੀਂ ਕਰਦੇ. ਚੇਤਾਵਨੀ: ਜੇਕਰ ਤੁਸੀਂ ਇਸਨੂੰ ਵਰਤਦੇ ਹੋਏ ਇਸ ਨੂੰ ਸਥਾਪਤ ਕਰਦੇ ਹੋ ਤਾਂ ਮੁੜ ਚਾਲੂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਗਾਇਬ ਹੋ ਸਕਦਾ ਹੈ</string>
+    <string name="system_default">ਮੂਲ ਰੂਪ</string>
     <string name="theme">ਥੀਮ</string>
     <string name="theme_follow">ਸਿਸਟਮ ਦਾ ਪਾਲਣ ਕਰੋ</string>
     <string name="theme_dark">ਡਾਰਕ ਥੀਮ</string>
