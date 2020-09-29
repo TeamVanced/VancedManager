@@ -15,18 +15,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 open class DataModel(
-    private val jsonObject: JsonObject?,
-    app: String,
+    private val jsonObject: ObservableField<JsonObject?>,
+    private val appPkg: String,
     private val context: Context
 ) {
-    
-    private val appPkg = 
-        when (app) {
-            "vanced" -> "com.vanced.android.youtube"
-            "vancedRoot" -> "com.google.android.youtube"
-            "microg" -> "com.mgoogle.android.gms"
-            else -> "com.vanced.android.apps.youtube.music"
-        }
 
     private val versionCode = ObservableInt()
     private val installedVersionCode = ObservableInt()
@@ -40,13 +32,13 @@ open class DataModel(
 
     fun fetch() = CoroutineScope(Dispatchers.IO).launch {
         isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
-        versionName.set(jsonObject?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
+        versionName.set(jsonObject.get()?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
         installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))
-        versionCode.set(jsonObject?.int("versionCode") ?: 0)
+        versionCode.set(jsonObject.get()?.int("versionCode") ?: 0)
         installedVersionCode.set(getPkgVersionCode(isAppInstalled.get(), appPkg))
         buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
         buttonIcon.set(compareIntDrawable(installedVersionCode.get(), versionCode.get()))
-        changelog.set(jsonObject?.string("changelog") ?: context.getString(R.string.unavailable))
+        changelog.set(jsonObject.get()?.string("changelog") ?: context.getString(R.string.unavailable))
     }
 
     init {

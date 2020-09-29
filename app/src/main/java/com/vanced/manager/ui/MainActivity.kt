@@ -2,6 +2,7 @@ package com.vanced.manager.ui
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -115,6 +116,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(LanguageContextWrapper.wrap(newBase))
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        recreate() //restarting activity to recreate viewmodels, otherwise some text won't update
+    }
+
+    override fun recreate() {
+        //needed for setting language smh
+        startActivity(Intent(this, this::class.java))
+        finish()
     }
 
     private fun initDialogs() {

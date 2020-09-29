@@ -17,7 +17,6 @@ import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.PackageHelper.getPkgVerCode
 import com.vanced.manager.utils.PackageHelper.installVanced
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
@@ -50,10 +49,11 @@ object VancedDownloader {
 
     private const val yPkg = "com.google.android.youtube"
     private var vancedVersionCode = 0
-    private val vancedVersion by lazy { runBlocking { getObjectFromJson("$installUrl/vanced.json", "version") }}
+    private var vancedVersion: String? = null
 
     fun downloadVanced(context: Context){
-        //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
+        //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))val app = context.applicationContext as App
+        val app = context.applicationContext as App
         File(context.getExternalFilesDir("apks")?.path as String).deleteRecursively()
         defPrefs = getDefaultSharedPreferences(context)
         installUrl = defPrefs.getString("install_url", baseUrl)
@@ -61,6 +61,7 @@ object VancedDownloader {
         variant = defPrefs.getString("vanced_variant", "nonroot")
         lang = prefs.getString("lang", "en")?.split(", ")?.toTypedArray()
         theme = prefs.getString("theme", "dark")
+        vancedVersion = app.vanced.get()?.string("version")
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         //newInstaller = defPrefs.getBoolean("new_installer", false)
@@ -70,8 +71,8 @@ object VancedDownloader {
                 Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                 else -> "armeabi_v7a"
             }
-        val app = context.applicationContext as App
-        vancedVersionCode = app.vanced?.int("versionCode") ?: 0
+
+        vancedVersionCode = app.vanced.get()?.int("versionCode") ?: 0
         downloadSplits(context)
     }
 

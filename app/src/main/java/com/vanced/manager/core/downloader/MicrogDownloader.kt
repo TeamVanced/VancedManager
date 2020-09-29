@@ -6,10 +6,10 @@ import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
+import com.vanced.manager.core.App
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.microgProgress
 import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.PackageHelper.install
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -21,14 +21,14 @@ object MicrogDownloader {
     
     fun downloadMicrog(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
-            val url = getJsonString("microg.json", "url", context)
+            val url = (context.applicationContext as App).microg.get()?.string("url")
             //downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
 
              microgProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "microg.apk")
                 .build()
                 .setOnStartOrResumeListener { 
                     mutableInstall.value = true
-                    microgProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
+                    microgProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, url?.let { getFileNameFromUrl(it) }))
                     microgProgress.get()?.showDownloadBar?.set(true)
                 }
                  .setOnCancelListener {

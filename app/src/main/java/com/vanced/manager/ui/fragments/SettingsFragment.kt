@@ -115,11 +115,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-        findPreference<Preference>("install_url")?.setOnPreferenceClickListener {
-            URLChangeFragment().show(childFragmentManager.beginTransaction(), "Install URL")
-            true
-        }
-
         findPreference<Preference>("clear_files")?.setOnPreferenceClickListener {
             with(requireActivity()) {
                 listOf("apk", "apks").forEach { dir ->

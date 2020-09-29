@@ -7,15 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateDecelerateInterpolator
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewHomeBinding
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import kotlinx.android.synthetic.main.include_changelogs.view.*
 
 class VariantAdapter(private val viewModel: HomeViewModel, private val context: Context) : RecyclerView.Adapter<VariantAdapter.VariantAdapterHolder>() {
 

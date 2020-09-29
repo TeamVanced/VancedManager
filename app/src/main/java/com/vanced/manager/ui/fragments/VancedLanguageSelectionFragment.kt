@@ -37,7 +37,7 @@ class VancedLanguageSelectionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val app = activity?.application as App
-        langs = app.vanced?.array<String>("langs")?.value ?: mutableListOf("null")
+        langs = app.vanced?.get()?.array<String>("langs")?.value ?: mutableListOf("null")
         loadBoxes(view.findViewById(R.id.lang_button_ll))
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             val chosenLangs = mutableListOf("en")

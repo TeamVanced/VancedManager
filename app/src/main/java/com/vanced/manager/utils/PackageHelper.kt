@@ -202,7 +202,7 @@ object PackageHelper {
 
         Shell.getShell {
             val application = context.applicationContext as App
-            val vancedApplication = application.vanced?.int("versionCode")
+            val vancedApplication = application.vanced.get()?.int("versionCode")
             val vancedVersionCode = if (vancedApplication != null) vancedApplication else { application.loadJsonAsync(); vancedApplication }
             val apkFilesPath = context.getExternalFilesDir("apks")?.path
             val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }

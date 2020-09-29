@@ -12,6 +12,10 @@
         android:title="Force Manager Update"
         android:summary="Update manager without comparing versionCode"/>
 
+    <Preference
+        android:title="@string/update_url"
+        android:key="install_url" />
+
     <PreferenceCategory
         android:title="Device info">
 

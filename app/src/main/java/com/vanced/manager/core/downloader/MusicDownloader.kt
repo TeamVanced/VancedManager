@@ -6,10 +6,10 @@ import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
+import com.vanced.manager.core.App
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.musicProgress
 import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.getJsonString
 import com.vanced.manager.utils.PackageHelper.install
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -21,8 +21,7 @@ object MusicDownloader {
 
     fun downloadMusic(context: Context){
         CoroutineScope(Dispatchers.IO).launch {
-            val version = getJsonString("music.json", "version", context)
-            val url = "https://vanced.app/api/v1/music/v$version.apk"
+            val url = "https://vanced.app/api/v1/music/v${(context.applicationContext as App).music.get()?.string("version")}.apk"
 
             //downloadId = download(url, "apk", "music.apk", this@MusicDownloadService)
 

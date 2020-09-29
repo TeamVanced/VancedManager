@@ -11,13 +11,16 @@ object JsonHelper {
 
     var dataMap: HashMap<String, JsonObject> = HashMap()
 
-    suspend fun getJson(url: String): JsonObject
-    {
-        return if(dataMap.containsKey(url)) {
-            dataMap[url]!!
-        } else {
-            dataMap[url] = getSuspendJson(url)
-            dataMap[url]!!
+    suspend fun getJson(url: String): JsonObject? {
+        return try {
+            if(dataMap.containsKey(url)) {
+                dataMap[url]!!
+            } else {
+                dataMap[url] = getSuspendJson(url)
+                dataMap[url]!!
+            }
+        } catch (e: Exception) {
+            null
         }
     }
 
