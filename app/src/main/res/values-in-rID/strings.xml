@@ -40,7 +40,7 @@
     <string name="clear_files">Hapus file yang diunduh</string>
     <string name="cleared_files">Berhasil menghapus file</string>
     <string name="firebase_title">Analisis Firebase</string>
-    <string name="firebase_summary">Ini menginjinkan kami mengumpulkan informasi tentang performa aplikasi dan catatan crash</string>
+    <string name="firebase_summary">Ini mengijinkan kami mengumpulkan informasi tentang performa aplikasi dan catatan crash</string>
     <string name="language_title">Bahasa</string>
     <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
