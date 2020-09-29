@@ -5,7 +5,7 @@
     <Preference
         android:key="firststart_switch"
         android:title="First start switcher"
-        android:summary="Dev only please"/>
+        android:summary="No reason to touch this, seriously"/>
 
     <Preference
         android:key="force_update"

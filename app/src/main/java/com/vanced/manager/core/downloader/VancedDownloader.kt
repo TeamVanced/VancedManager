@@ -27,6 +27,7 @@ import kotlinx.coroutines.runBlocking
 import java.io.File
 import java.io.IOException
 import java.security.MessageDigest
+import java.util.*
 
 object VancedDownloader {
 
@@ -115,7 +116,7 @@ object VancedDownloader {
                             "theme" -> 
                                 if (variant == "root") {
                                     if (validateTheme(context)) {
-                                        if(downloadStockCheck(context))
+                                        if (downloadStockCheck(context))
                                             downloadSplits(context, "arch") 
                                         else 
                                             prepareInstall(variant!!, context)
@@ -172,34 +173,6 @@ object VancedDownloader {
         return checkSHA256(sha256Val!!,themeF)
     }
 
-    /*
-    private val receiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context?, intent: Intent?) {
-            val prefs = context?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-            val variant = PreferenceManager.getDefaultSharedPreferences(this@VancedDownloadService).getString("vanced_variant", "nonroot")
-            val lang = prefs?.getString("lang", "en")
-            if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
-                when (apkType) {
-                    "arch" -> downloadSplits(context, "theme")
-                    "theme" -> downloadSplits(context, "lang")
-                    "lang" -> {
-                        if (lang == "en") {
-                            prepareInstall(variant!!)
-                            //cancelNotif(channel, this@VancedDownloadService)
-                        } else {
-                            downloadSplits(context, "enlang")
-                        }
-                    }
-                    "enlang" -> {
-                        prepareInstall(variant!!)
-                        //cancelNotif(channel, this@VancedDownloadService)
-                    }
-                }
-            }
-        }
-    }
-     */
-
     private fun prepareInstall(variant: String, context: Context) {
         vancedProgress.get()?.showDownloadBar?.set(false)
         vancedProgress.get()?.showInstallCircle?.set(true)
@@ -219,7 +192,7 @@ object VancedDownloader {
             // Generate the checksum
             val sum = generateChecksum(dataBuffer)
 
-            sum == sha256
+            sum.toLowerCase(Locale.ENGLISH) == sha256.toLowerCase(Locale.ENGLISH)
         } catch (e: Exception) {
             e.printStackTrace()
             false
