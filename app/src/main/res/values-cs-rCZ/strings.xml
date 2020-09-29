@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Seznamy změn</string>
     <string name="downloading_file">Stahování %1$s</string>
-    <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
-    <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="install">Instalace</string>
-    <string name="installation_aborted">Operace se nezdařila, protože uživatel přerušil instalaci.</string>
-    <string name="installation_blocked">Operace se nezdařila, protože uživatel zablokoval instalaci.</string>
-    <string name="installation_downgrade">Operace se nezdařila, protože se uživatel pokusil downgradovat balíček. Máte nainstalovánu standardní aplikaci YouTube?</string>
-    <string name="installation_conflict">Operace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací.</string>
-    <string name="installation_failed">Operace se nezdařila z neznámého důvodu. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
-    <string name="installation_incompatible">Operace se nezdařila, protože aplikace není kompatibilní s vaším zařízením.</string>
-    <string name="installation_invalid">Operace se nezdařila, protože soubory APK jsou neplatné.</string>
-    <string name="installation_signature">Operace se nezdařila, protože uživatel nezakázal ověření podpisu APK</string>
-    <string name="installation_miui">Při instalaci aplikace Vanced došlo k neočekávané chybě. Máte vypnuty optimalizace MIUI?</string>
-    <string name="installation_storage">Operace se nezdařila z důvodu chyby v úložišti.</string>
-    <string name="installation_wait">Počkejte prosím na dokončení instalace</string>
+    <string name="installation_wait">Počkejte prosím na dokončení instalace.</string>
     <string name="button_reinstall">Přeinstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
@@ -35,7 +23,7 @@
     <string name="useful_links">Užitečné odkazy</string>
     <string name="website_text">Webová stránka</string>
     <string name="support_us">Podpořte nás!</string>
-    <string name="version_toast">Verze %1$s byla zkopírována!</string>
+    <string name="version_toast">Verze číslo %1$s byla zkopírována!</string>
     <!-- Settings -->
     <string name="accent_color">Doplňková barva</string>
     <string name="accent_blue">Modrá</string>
@@ -51,9 +39,15 @@
     <string name="chosen_theme">Vzhled: %1$s</string>
     <string name="clear_files">Vymazat stažené soubory</string>
     <string name="cleared_files">Vymazání souborů proběhlo úspěšně</string>
+    <string name="firebase_title">Firebase analytika</string>
+    <string name="firebase_summary">To nám umožňuje shromažďovat informace o výkonu aplikace a o protokolech o selhání</string>
+    <string name="language_title">Jazyk</string>
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
     <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
     <string name="link_external_browser">Odkazy se otevřou v externím prohlížeči</string>
+    <string name="new_installer_title">Použít nový instalátor vyžadující root (experimentální)</string>
+    <string name="new_installer_summary">Tento instalační program není závislý na stavu ověření podpisu. VAROVÁNÍ: Pokud nainstalujete Vanced pomocí tohoto programu, může po restartu zmizet</string>
+    <string name="system_default">Výchozí systémové nastavení</string>
     <string name="theme">Vzhled</string>
     <string name="theme_follow">Podle systému</string>
     <string name="theme_dark">Tmavý vzhled</string>
@@ -67,15 +61,16 @@
     <string name="update_notfound">Žádné nové aktualizace</string>
     <!-- Dialogs -->
     <string name="guide">Návod</string>
-    <string name="hold_on">Počkejte!</string>
-    <string name="magisk_vanced">Vypadá to, že používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
+    <string name="hold_on">Zastavit!</string>
+    <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
     <string name="miui_one_title">Zjištěno MIUI!</string>
-    <string name="miui_one">Ahoj! Vypadá to, že používáte MIUI. Abyste mohli správně používat tuto aplikaci, budete muset vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete bezpečně ignorovat, pokud máte ROM z 20.2.2020 nebo pozdější, založenou na xiaomi.eu)</string>
+    <string name="miui_one">Chcete-li nainstalovat Vanced, MUSÍTE vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM z 20.2.2020 nebo novější založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
-    <string name="security_context">Prosím ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu.</string>
+    <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu</string>
     <string name="success">Hotovo!</string>
-    <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji spustit?</string>
-    <string name="launch">Spustit</string>
+    <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji otevřít?</string>
+    <string name="music_installed">Aplikace Vanced Music byla úspěšně nainstalována! Chcete ji otevřít?</string>
+    <string name="launch">Otevřít</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
@@ -86,7 +81,25 @@
     <string name="install_light_dark">Světlý + tmavý</string>
     <string name="next">Další</string>
     <!-- About Page -->
-    <string name="manager_dev">Vývojář aplikace</string>
+    <string name="manager_dev">Vývojáři aplikace</string>
     <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tým Vanced</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Vlastníka APK se nepodařilo změnit, zkuste to znovu</string>
+    <string name="error_downloading">Chyba při stahování %1$s</string>
+    <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
+    <string name="files_missing_va">Chybí soubory. Stahování se nezdařilo?</string>
+    <string name="ifile_missing">Soubor dark/black.apk nelze přečíst (je blokováno úložiště?) nebo soubor chybí</string>
+    <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
+    <string name="installation_blocked">Instalace se nezdařila, protože uživatel zablokoval instalaci.</string>
+    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace YouTube a zkuste to znovu.</string>
+    <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a zkuste to znovu.</string>
+    <string name="installation_failed">Instalace se nezdařila z neznámých důvodů. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
+    <string name="installation_incompatible">Instalace se nezdařila, protože instalační soubor není kompatibilní s vaším zařízením. Vymažte stažené soubory v Nastavení a zkuste to znovu.</string>
+    <string name="installation_invalid">Instalace se nezdařila, protože soubory APK jsou poškozeny. Zkuste to znovu.</string>
+    <string name="installation_signature">Instalace se nezdařila, protože je povoleno ověření podpisu APK. Zakažte ověření podpisu APK a zkuste to znovu.</string>
+    <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a zkuste to znovu.</string>
+    <string name="installation_storage">Instalace se nezdařila z důvodu chyby v úložišti.</string>
+    <string name="modapk_missing">V instalačním souboru chybí black/dark.apk. To by se nemělo stát. Vymažte prosím data aplikace Vanced Manager</string>
+    <string name="path_missing">Cesta instalace výchozí aplikace YouTube není k dispozici nebo chybí po instalaci rozdělení systému</string>
 </resources>

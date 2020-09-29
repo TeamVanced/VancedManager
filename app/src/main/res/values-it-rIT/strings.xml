@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Note di rilascio</string>
     <string name="downloading_file">Download in corso di %1$s</string>
-    <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
-    <string name="error_downloading">Errore nel download di %1$s</string>
     <string name="install">Installa</string>
-    <string name="installation_aborted">Operazione fallita, l\'utente ha annullato l\'installazione.</string>
-    <string name="installation_blocked">Operazione fallita, l\'utente ha bloccato l\'installazione.</string>
-    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
-    <string name="installation_conflict">Operazione fallita, app in conflitto con un\'app già installata.</string>
-    <string name="installation_failed">Operazione fallita, motivo sconosciuto. Unisciti al gruppo di Telegram o su Discord per ricevere assistenza.</string>
-    <string name="installation_incompatible">Operazione fallita, l\'app non è compatibile con il dispositivo</string>
-    <string name="installation_invalid">Operazione fallita, i file apk non sono validi.</string>
-    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
-    <string name="installation_miui">Si è verificato un errore imprevisto durante l\'installazione di Vanced. Hai disattivato le ottimizzazioni di MIUI?</string>
-    <string name="installation_storage">Operazione fallita, si è verificato un errore con lo spazio di archiviazione.</string>
-    <string name="installation_wait">Per favore, attendi la conclusione dell\'installazione</string>
+    <string name="installation_wait">Attendere il completamento dell\'installazione</string>
     <string name="button_reinstall">Reinstalla</string>
     <string name="version_installed">Versione installata:</string>
     <string name="latest">Ultima versione:</string>
@@ -35,7 +23,7 @@
     <string name="useful_links">Link utili</string>
     <string name="website_text">Sito web</string>
     <string name="support_us">Sostienici!</string>
-    <string name="version_toast">La versione %1$s è stata copiata!</string>
+    <string name="version_toast">Il numero di versione di %1$s è stato copiato!</string>
     <!-- Settings -->
     <string name="accent_color">Colore evidenziatore</string>
     <string name="accent_blue">Blu</string>
@@ -51,9 +39,15 @@
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Cancella i file scaricati</string>
     <string name="cleared_files">File cancellati con successo</string>
+    <string name="firebase_title">Analitica Firebase</string>
+    <string name="firebase_summary">Questo ci consente di raccogliere informazioni sulle prestazioni dell\'app e sui registri degli arresti anomali</string>
+    <string name="language_title">Lingua</string>
     <string name="link_title">Utilizza le schede personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
     <string name="link_external_browser">I link verranno aperti in un browser esterno</string>
+    <string name="new_installer_title">Utilizza il nuovo metodo di installazione root (Sperimentale)</string>
+    <string name="new_installer_summary">Questo programma di installazione non dipende dallo stato di Verifica della Firma. ATTENZIONE: Vanced potrebbe essere rimosso dopo il riavvio se installato con questo metodo</string>
+    <string name="system_default">Predefinito di Sistema</string>
     <string name="theme">Tema</string>
     <string name="theme_follow">Utilizza quello di sistema</string>
     <string name="theme_dark">Tema scuro</string>
@@ -68,17 +62,18 @@
     <!-- Dialogs -->
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
-    <string name="magisk_vanced">Sembra che tu stia utilizzando la versione di Vanced ottenuta con Magisk/TWRP, che è obsoleta e non può essere aggiornata con questa app. Per favore, rimuovila eliminando il modulo di Magisk/utilizzando TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Stai utilizzando la versione di Vanced ottenuta con Magisk/TWRP, ormai è obsoleta e non può essere aggiornata con questa app. Per favore, rimuovila eliminando il modulo di Magisk oppure utilizzando TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Rilevata l\'interfaccia MIUI!</string>
-    <string name="miui_one">Ehi! Sembra che tu sia un utente MIUI. Per poter utilizzare correttamente questa applicazione, devi disattivare le ottimizzazioni di MIUI nelle impostazioni per sviluppatore (se stai utilizzando la ROM 20.2.20 basata su xiaomi.eu, puoi ignorare questo avviso).</string>
+    <string name="miui_one">Per poter installare Vanced, DEVI PER FORZA disattivare le ottimizzazioni di MIUI nelle impostazioni da sviluppatore (puoi ignorare questo avviso se stai utilizzando la versione 20.2.20 o successive di una ROM basata su xiaomi.eu).</string>
     <string name="error">Errore</string>
     <string name="security_context">Assicurati di aver scaricato l\'app da vanced.app, dal server di Discord di Vanced o dalla pagina GitHub di Vanced</string>
     <string name="success">Fatto!</string>
     <string name="vanced_installed">Vanced è stato installato con successo. Vuoi avviarlo ora?</string>
+    <string name="music_installed">Vanced Music è stato installato con successo! Vuoi eseguirlo ora?</string>
     <string name="launch">Avvia</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Seleziona la tua lingua preferita per Vanced</string>
+    <string name="choose_preferred_language">Scegli le tue lingue preferite per Vanced</string>
     <string name="choose_preferred_language_note">Nota: l\'inglese sarà comunque installato, indipendentemente dalla tua scelta.</string>
     <string name="choose_preferred_theme">Seleziona il tuo tema preferito per Vanced</string>
     <string name="finish">Concludi</string>
@@ -89,4 +84,22 @@
     <string name="manager_dev">Sviluppatori di Manager</string>
     <string name="sources">Codice sorgente</string>
     <string name="vanced_team">Il team di Vanced</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Impossibile modificare il proprietario dell\'apk, riprova</string>
+    <string name="error_downloading">Errore nel download di %1$s</string>
+    <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
+    <string name="files_missing_va">File mancanti, download non riuscito?</string>
+    <string name="ifile_missing">L\'apk scura/nera non può essere letta (permesso di archiviazione bloccato?) oppure il file è mancante</string>
+    <string name="installation_aborted">Installazione non riuscita, l\'utente ha annullato l\'installazione.</string>
+    <string name="installation_blocked">Installazione non riuscita, l\'utente ha bloccato l\'installazione.</string>
+    <string name="installation_downgrade">Installazione non riuscita, l\'utente ha provato a eseguire il downgrade del pacchetto. Disinstalla gli aggiornamenti dell\'app predefinita di YouTube, poi riprova.</string>
+    <string name="installation_conflict">Installazione non riuscita, l\'app va in conflitto con un\'app già installata. Disinstalla la versione attuale di Vanced, poi riprova.</string>
+    <string name="installation_failed">Installazione non riuscita a causa di un errore sconosciuto, unisciti al nostro gruppo Telegram o al server di Discord per ricevere ulteriore assistenza.</string>
+    <string name="installation_incompatible">Installazione non riuscita, il file di installazione non è compatibile con il tuo dispositivo. Elimina i file scaricati nelle impostazioni, poi riprova.</string>
+    <string name="installation_invalid">Installazione non riuscita a causa di file apk corrotti, si prega di riprovare.</string>
+    <string name="installation_signature">Installazione non riuscita, la verifica della firma apk è attivata. Disattiva la verifica della firma apk, poi riprova.</string>
+    <string name="installation_miui">Installazione non riuscita, le ottimizzazioni di MIUI sono attivate. Disattiva le ottimizzazioni di MIUI, poi riprova.</string>
+    <string name="installation_storage">Installazione non riuscita, errore dello spazio di archiviazione.</string>
+    <string name="modapk_missing">L\'apk nera/scura manca dal programma di installazione. Non dovrebbe succedere, pulisci i dati dell\'app Manager</string>
+    <string name="path_missing">Percorso predefinito di installazione YouTube non accessibile o mancante dopo dopo l\'installazione di Stock Split</string>
 </resources>
