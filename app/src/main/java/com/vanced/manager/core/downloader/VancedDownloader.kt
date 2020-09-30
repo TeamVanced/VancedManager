@@ -145,6 +145,7 @@ object VancedDownloader {
                             else
                                 prepareInstall(variant!!, context)
                         } else {
+                            count = 0
                             mutableInstall.value = false
                             vancedProgress.get()?.showDownloadBar?.set(false)
                             Toast.makeText(context, context.getString(R.string.error_downloading, getFileNameFromUrl(url)), Toast.LENGTH_SHORT).show()
@@ -174,6 +175,7 @@ object VancedDownloader {
     }
 
     private fun prepareInstall(variant: String, context: Context) {
+        count = 0
         vancedProgress.get()?.showDownloadBar?.set(false)
         vancedProgress.get()?.showInstallCircle?.set(true)
         FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
