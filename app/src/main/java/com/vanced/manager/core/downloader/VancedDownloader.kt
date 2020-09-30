@@ -179,8 +179,8 @@ object VancedDownloader {
         vancedProgress.get()?.showDownloadBar?.set(false)
         vancedProgress.get()?.showInstallCircle?.set(true)
         FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
-            param("Vanced Variant", variant)
-            theme?.let { param("Vanced Theme", it) }
+            param("vanced_variant", variant)
+            theme?.let { param("vanced_theme", it) }
         }
         if (variant == "root")
             installVancedRoot(context)
