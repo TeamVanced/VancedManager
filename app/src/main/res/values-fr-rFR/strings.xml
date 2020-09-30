@@ -39,8 +39,8 @@
     <string name="chosen_theme">Thème: %1$s</string>
     <string name="clear_files">Effacer les fichiers téléchargés</string>
     <string name="cleared_files">Données effacées avec succès</string>
-    <string name="firebase_title">Analytiques Firebase</string>
-    <string name="firebase_summary">Cela nous permet de collecter des informations sur les performances de l\'application et des journaux de plantage</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">Cela nous permet de recueillir des informations sur les performances de l\'application et les journaux de bord</string>
     <string name="language_title">Langue</string>
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
@@ -69,7 +69,7 @@
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application sur vanced.app, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="success">Succès!</string>
     <string name="vanced_installed">Vanced a été installé avec succès ! Ouvrir maintenant ?</string>
-    <string name="music_installed">Vanced Music a été installé avec succès ! Voulez-vous l\'ouvrir maintenant ?</string>
+    <string name="music_installed">Vanced Music a été installé avec succès ! Ouvrir maintenant ?</string>
     <string name="launch">Ouvrir</string>
     <string name="welcome">Bienvenue</string>
     <!-- Install Page -->
