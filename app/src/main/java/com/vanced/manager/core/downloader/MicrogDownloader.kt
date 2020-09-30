@@ -17,12 +17,9 @@ import kotlinx.coroutines.launch
 
 object MicrogDownloader {
 
-    //private var downloadId: Long = 0
-    
     fun downloadMicrog(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
             val url = (context.applicationContext as App).microg.get()?.string("url")
-            //downloadId = download(url, "apk", "microg.apk", this@MicrogDownloadService)
 
              microgProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "microg.apk")
                 .build()
@@ -54,20 +51,5 @@ object MicrogDownloader {
 
         }
     }
-
-    /*
-    private val receiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context?, intent: Intent?) {
-            if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
-                //prefs?.edit()?.putBoolean("isMicrogDownloading", false)?.apply()
-                //cancelNotif(channel, this@MicrogDownloadService)
-                val bIntent = Intent(this@MicrogDownloadService, AppInstaller::class.java)
-                bIntent.putExtra("path", "${getExternalFilesDir("apk")}/microg.apk")
-                bIntent.putExtra("pkg", "com.mgoogle.android.gms")
-                startService(bIntent)
-            }
-        }
-    }
-     */
 
 }

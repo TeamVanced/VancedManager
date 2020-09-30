@@ -42,9 +42,7 @@ object VancedDownloader {
     private var lang: Array<String>? = null
 
     private lateinit var themePath: String
-    
-    //private var downloadId: Long = 0
-    //private var apkType: String = "arch"
+
     private var count: Int = 0
     private var hashUrl = ""
 
@@ -53,7 +51,6 @@ object VancedDownloader {
     private var vancedVersion: String? = null
 
     fun downloadVanced(context: Context){
-        //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))val app = context.applicationContext as App
         val app = context.applicationContext as App
         File(context.getExternalFilesDir("apks")?.path as String).deleteRecursively()
         defPrefs = getDefaultSharedPreferences(context)
@@ -92,11 +89,7 @@ object VancedDownloader {
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
                 }
 
-            //apkType = type
-            //downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
-
-            vancedProgress.get()?.currentDownload = PRDownloader
-                .download(url, context.getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
+            vancedProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener { 
                     mutableInstall.value = true

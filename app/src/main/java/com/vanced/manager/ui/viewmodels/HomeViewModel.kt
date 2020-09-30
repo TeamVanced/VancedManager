@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModel
 import com.crowdin.platform.Crowdin
 import com.downloader.PRDownloader
 import com.downloader.Status
+import com.topjohnwu.superuser.Shell
 import com.vanced.manager.R
 import com.vanced.manager.core.App
 import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
@@ -29,7 +30,7 @@ import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 open class HomeViewModel(private val activity: Activity): ViewModel() {
     
-    private val manageractivity = activity.application as App
+    private val app = activity.application as App
 
     //val variant = getDefaultSharedPreferences(activity).getString("vanced_variant", "nonroot")
 
@@ -46,7 +47,7 @@ open class HomeViewModel(private val activity: Activity): ViewModel() {
 
     fun fetchData() {
         fetching.set(true)
-        manageractivity.loadJsonAsync()
+        app.loadJsonAsync()
         vanced.get()?.fetch()
         vancedRoot.get()?.fetch()
         music.get()?.fetch()
@@ -91,13 +92,15 @@ open class HomeViewModel(private val activity: Activity): ViewModel() {
     fun installVanced(variant: String) {
         if (!installing.value!!) {
             if (!fetching.get()) {
-                if (variant == "nonroot" && !microg.get()?.isAppInstalled?.get()!!) {
-                    microgToast.show()
-                } else {
-                    if (activity.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false)) {
-                        downloadVanced(activity)
-                    } else {
-                        _navigateDestination.value = Event(R.id.toInstallThemeFragment)
+                when {
+                    variant == "nonroot" && !microg.get()?.isAppInstalled?.get()!! -> microgToast.show()
+                    variant == "root" && !Shell.rootAccess() -> Toast.makeText(activity, R.string.root_not_granted, Toast.LENGTH_SHORT).show()
+                    else -> {
+                        if (activity.getSharedPreferences("installPrefs", Context.MODE_PRIVATE).getBoolean("valuesModified", false)) {
+                            downloadVanced(activity)
+                        } else {
+                            _navigateDestination.value = Event(R.id.toInstallThemeFragment)
+                        }
                     }
                 }
             }
@@ -126,7 +129,7 @@ open class HomeViewModel(private val activity: Activity): ViewModel() {
     }
     
     fun uninstallVanced(variant: String) = uninstallApk(if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube", activity)
-    fun uninstallMusic() = uninstallApk("com.vanced.android.activitys.youtube.music", activity)
+    fun uninstallMusic() = uninstallApk("com.vanced.android.apps.youtube.music", activity)
     fun uninstallMicrog() = uninstallApk("com.mgoogle.android.gms", activity)
 
     fun cancelDownload(downloadId: Int) {
@@ -148,11 +151,11 @@ open class HomeViewModel(private val activity: Activity): ViewModel() {
 
     init {
         fetching.set(true)
-        vanced.set(DataModel(manageractivity.vanced, "com.vanced.android.youtube", activity))
-        vancedRoot.set(DataModel(manageractivity.vanced, "com.google.android.youtube", activity))
-        music.set(DataModel(manageractivity.music, "com.vanced.android.apps.youtube.music", activity))
-        microg.set(DataModel(manageractivity.microg, "com.mgoogle.android.gms", activity))
-        manager.set(DataModel(manageractivity.manager, "com.vanced.manager", activity))
+        vanced.set(DataModel(app.vanced, "com.vanced.android.youtube", activity))
+        vancedRoot.set(DataModel(app.vanced, "com.google.android.youtube", activity))
+        music.set(DataModel(app.music, "com.vanced.android.apps.youtube.music", activity))
+        microg.set(DataModel(app.microg, "com.mgoogle.android.gms", activity))
+        manager.set(DataModel(app.manager, "com.vanced.manager", activity))
         vancedProgress.set(ProgressModel())
         musicProgress.set(ProgressModel())
         microgProgress.set(ProgressModel())
