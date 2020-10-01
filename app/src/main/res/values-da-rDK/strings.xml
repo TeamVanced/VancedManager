@@ -19,8 +19,12 @@
     <string name="no_microg">microG er ikke installeret</string>
     <string name="root_not_granted">Root adgang ikke tildelt</string>
     <string name="unavailable">Utilgængelig</string>
+    <string name="uninstall">Afinstaller</string>
+    <string name="unofficial">Uofficiel</string>
+    <string name="unofficial_app_installed">Versionen af %1$s på din enhed er ikke lavet af Vanced Team, for din egen sikkerhed anbefaler vi at afinstallere denne version. Vil du fortsætte?</string>
     <string name="update">Opdater</string>
     <string name="useful_links">Nyttige Links</string>
+    <string name="warning">Advarsel!</string>
     <string name="website_text">Hjemmeside</string>
     <string name="support_us">Støt os!</string>
     <string name="version_toast">%1$s versions nummer er kopieret!</string>
