@@ -19,8 +19,12 @@
     <string name="no_microg">microG நிறுவப்படவில்லை</string>
     <string name="root_not_granted">ரூட் அக்சஸ் வழங்கப்படவில்லை</string>
     <string name="unavailable">கிடைக்கவில்லை</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="unofficial">Unofficial</string>
+    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
     <string name="update">புதுப்பை</string>
     <string name="useful_links">பயனுள்ள இணைப்புகள்</string>
+    <string name="warning">Warning!</string>
     <string name="website_text">இணையதளம்</string>
     <string name="support_us">எங்களை ஆதரித்திடுக!</string>
     <string name="version_toast">%1$s பதிப்பு எண் நகலெடுக்கப்பட்டது!</string>
