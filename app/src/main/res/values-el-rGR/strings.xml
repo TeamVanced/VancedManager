@@ -19,8 +19,12 @@
     <string name="no_microg">το microG δεν είναι εγκατεστημένο</string>
     <string name="root_not_granted">Δεν επιτράπηκε η πρόσβαση Root</string>
     <string name="unavailable">Μη διαθέσιμο</string>
+    <string name="uninstall">Απεγκατάσταση</string>
+    <string name="unofficial">Ανεπίσημη</string>
+    <string name="unofficial_app_installed">Η έκδοση του %1$s της συσκευή σας δεν προέρχεται από την ομάδα του Vanced, για την δική σας ασφάλεια, σας προτείνουμε να καταργήσετε αυτήν την έκδοση. Θέλετε να προχωρήσετε;</string>
     <string name="update">Ενημέρωση</string>
     <string name="useful_links">Χρήσιμοι σύνδεσμοι</string>
+    <string name="warning">Προειδοποίηση!</string>
     <string name="website_text">Ιστοσελίδα</string>
     <string name="support_us">Υποστηρίξτε μας!</string>
     <string name="version_toast">Ο αριθμός έκδοσης του %1$s αντιγράφηκε!</string>
