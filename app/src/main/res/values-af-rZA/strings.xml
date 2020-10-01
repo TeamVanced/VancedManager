@@ -19,8 +19,12 @@
     <string name="no_microg">microG isn\'t installed</string>
     <string name="root_not_granted">Root access not granted</string>
     <string name="unavailable">Unavailable</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="unofficial">Unofficial</string>
+    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
     <string name="update">Update</string>
     <string name="useful_links">Useful Links</string>
+    <string name="warning">Warning!</string>
     <string name="website_text">Website</string>
     <string name="support_us">Support us!</string>
     <string name="version_toast">%1$s version number was copied!</string>
