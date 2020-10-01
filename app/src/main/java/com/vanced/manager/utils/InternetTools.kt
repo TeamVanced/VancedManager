@@ -76,6 +76,6 @@ object InternetTools {
         return result > BuildConfig.VERSION_CODE
     }
 
-    const val baseUrl = "https://vanced.app/api/v1"
+    const val baseUrl = "https://vancedapp.com/api/v1"
 
 }

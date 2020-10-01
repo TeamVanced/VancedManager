@@ -1,6 +1,7 @@
 package com.vanced.manager.model
 
 import android.content.Context
+import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.core.content.ContextCompat
@@ -8,7 +9,9 @@ import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.databinding.ObservableInt
 import com.beust.klaxon.JsonObject
+import com.vanced.manager.BuildConfig.ENABLE_SIGNATURE_CHECK
 import com.vanced.manager.R
+import com.vanced.manager.utils.AppUtils.managerPkg
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,11 +32,13 @@ open class DataModel(
     val buttonTxt = ObservableField<String>()
     val buttonIcon = ObservableField<Drawable>()
     val changelog = ObservableField<String>()
+    val isOfficial = ObservableBoolean()
 
     fun fetch() = CoroutineScope(Dispatchers.IO).launch {
         isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
         versionName.set(jsonObject.get()?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
         installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))
+        isOfficial.set(doSignaturesMatch(managerPkg, appPkg))
         versionCode.set(jsonObject.get()?.int("versionCode") ?: 0)
         installedVersionCode.set(getPkgVersionCode(isAppInstalled.get(), appPkg))
         buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
@@ -46,12 +51,25 @@ open class DataModel(
     }
     
     private fun getPkgVersionName(toCheck: Boolean, pkg: String): String  {
+        val pm = context.packageManager
         return if (toCheck) {
-            context.packageManager.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
+            if (ENABLE_SIGNATURE_CHECK) {
+                if (doSignaturesMatch(managerPkg, pkg))
+                    pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
+                else
+                    pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced") + " (${context.getString(R.string.unofficial)})"
+            } else
+                pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
         } else {
             context.getString(R.string.unavailable)
         }
     }
+
+    private fun doSignaturesMatch(pkg1: String, pkg2: String): Boolean =
+        if (isPackageInstalled(pkg2, context.packageManager))
+            context.packageManager.checkSignatures(pkg1, pkg2) == PackageManager.SIGNATURE_MATCH
+        else
+            true
 
     @Suppress("DEPRECATION")
     private fun getPkgVersionCode(toCheck: Boolean, pkg: String): Int {

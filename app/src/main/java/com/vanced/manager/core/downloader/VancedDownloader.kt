@@ -14,6 +14,7 @@ import com.vanced.manager.R
 import com.vanced.manager.core.App
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.mutableInstall
+import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -46,7 +47,6 @@ object VancedDownloader {
     private var count: Int = 0
     private var hashUrl = ""
 
-    private const val yPkg = "com.google.android.youtube"
     private var vancedVersionCode = 0
     private var vancedVersion: String? = null
 
@@ -150,7 +150,7 @@ object VancedDownloader {
 
     private fun downloadStockCheck(context: Context) :Boolean {
         return try {
-            getPkgVerCode(yPkg,context.packageManager) != vancedVersionCode
+            getPkgVerCode(vancedRootPkg, context.packageManager) != vancedVersionCode
         } catch (e: Exception) {
             true
         }

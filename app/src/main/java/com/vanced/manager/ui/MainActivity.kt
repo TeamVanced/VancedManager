@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
     private fun initDialogs() {
         val prefs = getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
-        prefs.getBoolean("show_root_dialog", true)
+        //prefs.getBoolean("show_root_dialog", true)
 
         when {
             prefs.getBoolean("firstStart", true) -> {
