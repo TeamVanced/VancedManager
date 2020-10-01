@@ -19,11 +19,15 @@
     <string name="no_microg">microG ਸਥਾਪਿਤ ਨਹੀਂ ਹੈ</string>
     <string name="root_not_granted">ਰੂਟ ਵਿੱਚ ਦਖ਼ਲ ਮੰਜੂਰ ਨਹੀਂ ਹੈ</string>
     <string name="unavailable">ਮੋਜੂਦ ਨਹੀਂ ਹੈ</string>
+    <string name="uninstall">ਅਣ-ਇੰਸਟਾਲ ਕਰੋ</string>
+    <string name="unofficial">ਅਣਅਧਿਕਾਰਤ</string>
+    <string name="unofficial_app_installed">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਤੇ %1$s ਦਾ ਵਰਜਨ Vanced ਟੀਮ ਦੁਆਰਾ ਨਹੀਂ ਬਣਾਇਆ ਗਿਆ ਹੈ, ਤੁਹਾਡੀ ਆਪਣੀ ਸੁਰੱਖਿਆ ਲਈ, ਅਸੀਂ ਇਸ ਵਰਜਨ ਨੂੰ ਅਨਇੰਸਟੌਲ ਕਰਨ ਦੀ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ. ਕੀ ਤੁਸੀਂ ਅੱਗੇ ਵੱਧਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="update">ਅੱਪਡੇਟ</string>
     <string name="useful_links">ਉਪਯੋਗੀ ਲਿੰਕ</string>
+    <string name="warning">ਚੇਤਾਵਨੀ!</string>
     <string name="website_text">ਵੇਬਸਾਇਟ</string>
     <string name="support_us">ਸਾਨੂੰ ਸਹਿਯੋਗ ਕਰੋ!</string>
-    <string name="version_toast">%1$s ਸੰਸਕਰਣ ਸੰਖਿਆ ਕਾਪੀ ਕੀਤੀ ਗਈ ਸੀ!</string>
+    <string name="version_toast">%1$s ਵਰਜਨ ਸੰਖਿਆ ਕਾਪੀ ਕੀਤੀ ਗਈ ਸੀ!</string>
     <!-- Settings -->
     <string name="accent_color">ਐੱਕਸੈਂਟ ਰੰਗ</string>
     <string name="accent_blue">ਨੀਲਾ</string>
