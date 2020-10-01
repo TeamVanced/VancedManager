@@ -91,9 +91,6 @@ open class HomeFragment : Fragment() {
             if (!viewModel.vanced.get()?.isOfficial?.get()!!)
                 showUnofficialAppInstalledDialog(getString(R.string.vanced), vancedPkg, requireActivity())
 
-            if (!viewModel.vancedRoot.get()?.isOfficial?.get()!!)
-                showUnofficialAppInstalledDialog(getString(R.string.vanced), vancedRootPkg, requireActivity())
-
             if (!viewModel.music.get()?.isOfficial?.get()!!)
                 showUnofficialAppInstalledDialog(getString(R.string.music), musicPkg, requireActivity())
 

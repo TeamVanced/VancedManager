@@ -12,6 +12,7 @@ import com.beust.klaxon.JsonObject
 import com.vanced.manager.BuildConfig.ENABLE_SIGNATURE_CHECK
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.managerPkg
+import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -54,7 +55,7 @@ open class DataModel(
         val pm = context.packageManager
         return if (toCheck) {
             if (ENABLE_SIGNATURE_CHECK) {
-                if (doSignaturesMatch(managerPkg, pkg))
+                if (doSignaturesMatch(managerPkg, pkg) || appPkg == vancedRootPkg)
                     pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
                 else
                     pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced") + " (${context.getString(R.string.unofficial)})"
