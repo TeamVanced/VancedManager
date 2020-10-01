@@ -19,8 +19,12 @@
     <string name="no_microg">microG tidak terpasang</string>
     <string name="root_not_granted">Akses Root tidak diberikan</string>
     <string name="unavailable">Tidak tersedia</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="unofficial">Unofficial</string>
+    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
     <string name="update">Perbarui</string>
     <string name="useful_links">Tautan Berguna</string>
+    <string name="warning">Warning!</string>
     <string name="website_text">Situs</string>
     <string name="support_us">Dukung kami!</string>
     <string name="version_toast">Nomor versi %1$s telah disalin!</string>
