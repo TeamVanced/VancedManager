@@ -19,12 +19,12 @@
     <string name="no_microg">microG가 설치되지 않았습니다</string>
     <string name="root_not_granted">루트 권한이 부여되지 않았습니다</string>
     <string name="unavailable">사용 불가</string>
-    <string name="uninstall">Uninstall</string>
-    <string name="unofficial">Unofficial</string>
+    <string name="uninstall">제거</string>
+    <string name="unofficial">비공식</string>
     <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
     <string name="update">업데이트</string>
     <string name="useful_links">참고할 만한 링크</string>
-    <string name="warning">Warning!</string>
+    <string name="warning">경고!</string>
     <string name="website_text">웹사이트</string>
     <string name="support_us">우리를 지원해주세요!</string>
     <string name="version_toast">%1$s의 버전 정보가 복사되었습니다.</string>
@@ -93,7 +93,7 @@
     <string name="error_downloading">%1$s 다운로드 중 오류 발생</string>
     <string name="failed_uninstall">%1$s 패키지 제거에 실패하였습니다</string>
     <string name="files_missing_va">파일이 없습니다. 다운로드에 실패했나요?</string>
-    <string name="ifile_missing">Dark/Black.apk를 읽을 수 없거나(저장장치 접근이 차단됐나요?) 파일이 없습니다</string>
+    <string name="ifile_missing">Dark/Black.apk를 읽을 수 없거나(저장소 접근이 차단됐나요?) 파일이 없습니다</string>
     <string name="installation_aborted">사용자가 설치를 중단했기 때문에 앱을 설치하지 못했습니다.</string>
     <string name="installation_blocked">사용자가 설치를 차단했기 때문에 앱을 설치하지 못했습니다.</string>
     <string name="installation_downgrade">사용자가 패키지를 이전 버전으로 변경하려고 하여 앱을 설치하지 못했습니다. 기본 YouTube 앱을 초기 버전으로 변경한 다음, 설치를 다시 진행해주세요.</string>
