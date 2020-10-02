@@ -1,7 +1,6 @@
 package com.vanced.manager.model
 
 import android.content.Context
-import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.core.content.ContextCompat
@@ -11,6 +10,7 @@ import androidx.databinding.ObservableInt
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.BuildConfig.ENABLE_SIGNATURE_CHECK
 import com.vanced.manager.R
+import com.vanced.manager.utils.AppUtils.doSignaturesMatch
 import com.vanced.manager.utils.AppUtils.managerPkg
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
@@ -37,9 +37,9 @@ open class DataModel(
 
     fun fetch() = CoroutineScope(Dispatchers.IO).launch {
         isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
+        isOfficial.set(doSignaturesMatch(managerPkg, appPkg, context))
         versionName.set(jsonObject.get()?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
         installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))
-        isOfficial.set(doSignaturesMatch(managerPkg, appPkg))
         versionCode.set(jsonObject.get()?.int("versionCode") ?: 0)
         installedVersionCode.set(getPkgVersionCode(isAppInstalled.get(), appPkg))
         buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
@@ -55,7 +55,7 @@ open class DataModel(
         val pm = context.packageManager
         return if (toCheck) {
             if (ENABLE_SIGNATURE_CHECK) {
-                if (doSignaturesMatch(managerPkg, pkg) || appPkg == vancedRootPkg)
+                if (isOfficial.get() || appPkg == vancedRootPkg)
                     pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
                 else
                     pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced") + " (${context.getString(R.string.unofficial)})"
@@ -66,11 +66,14 @@ open class DataModel(
         }
     }
 
+    /*
     private fun doSignaturesMatch(pkg1: String, pkg2: String): Boolean =
         if (isPackageInstalled(pkg2, context.packageManager))
             context.packageManager.checkSignatures(pkg1, pkg2) == PackageManager.SIGNATURE_MATCH
         else
             true
+
+     */
 
     @Suppress("DEPRECATION")
     private fun getPkgVersionCode(toCheck: Boolean, pkg: String): Int {
