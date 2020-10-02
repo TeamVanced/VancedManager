@@ -19,12 +19,12 @@
     <string name="no_microg">microG är inte installerat</string>
     <string name="root_not_granted">Root-åtkomst inte beviljat</string>
     <string name="unavailable">Ej tillgänglig</string>
-    <string name="uninstall">Uninstall</string>
-    <string name="unofficial">Unofficial</string>
-    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
+    <string name="uninstall">Avinstallera</string>
+    <string name="unofficial">Inofficiella</string>
+    <string name="unofficial_app_installed">Versionen av %1$s på din enhet är inte gjord av Vanced Team, för din egen säkerhet, rekommenderar vi att du avinstallerar denna version. Vill du fortsätta?</string>
     <string name="update">Uppdatera</string>
     <string name="useful_links">Användbara länkar</string>
-    <string name="warning">Warning!</string>
+    <string name="warning">Varning!</string>
     <string name="website_text">Webbplats</string>
     <string name="support_us">Stöd oss!</string>
     <string name="version_toast">%1$s versionen har kopierats!</string>
