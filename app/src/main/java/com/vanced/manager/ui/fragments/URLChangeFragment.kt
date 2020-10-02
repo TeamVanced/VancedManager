@@ -38,12 +38,12 @@ class URLChangeFragment : DialogFragment() {
                 else
                     "https://${urlField.text}".removeSuffix("/")
 
-            saveUrl(finalUrl, requireActivity())
+            saveUrl(finalUrl)
         }
-        view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {saveUrl(baseUrl, requireActivity())}
+        view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener {saveUrl(baseUrl)}
     }
 
-    private fun saveUrl(url: String, context: Context) {
+    private fun saveUrl(url: String) {
         getDefaultSharedPreferences(requireActivity()).edit().putString("install_url", url).apply()
         dismiss()
     }
