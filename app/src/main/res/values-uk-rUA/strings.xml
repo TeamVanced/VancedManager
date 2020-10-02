@@ -19,12 +19,12 @@
     <string name="no_microg">microG не встановлено</string>
     <string name="root_not_granted">Права суперкористувача не були надані</string>
     <string name="unavailable">Недоступно</string>
-    <string name="uninstall">Uninstall</string>
-    <string name="unofficial">Unofficial</string>
-    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
+    <string name="uninstall">Видалити</string>
+    <string name="unofficial">Неофіційний</string>
+    <string name="unofficial_app_installed">Версія %1$s на вашому пристрої не була створена командою Vanced. Ми рекомендуємо видалити цю версію з міркувань безпеки. Продовжити?</string>
     <string name="update">Оновити</string>
     <string name="useful_links">Корисні сторінки</string>
-    <string name="warning">Warning!</string>
+    <string name="warning">Увага!</string>
     <string name="website_text">Вебсайт</string>
     <string name="support_us">Підтримай нас!</string>
     <string name="version_toast">версія %1$s скопійована!</string>
