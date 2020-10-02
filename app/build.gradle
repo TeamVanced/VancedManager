@@ -27,7 +27,6 @@ android {
 
         buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(langs) + "}"
         buildConfigField "String[]", "MANAGER_LANGUAGE_NAMES", "{" + surroundWithQuotes(getLanguageNames()) + "}"
-        buildConfigField "Boolean", "ENABLE_SIGNATURE_CHECK", "true"
     }
 
     lintOptions {

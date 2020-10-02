@@ -12,15 +12,14 @@ import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
 import com.vanced.manager.utils.PackageHelper.installVanced
-import com.vanced.manager.utils.PackageHelper.uninstallApk
 
 object DialogContainer {
 
     fun showSecurityDialog(context: Context) {
         MaterialAlertDialogBuilder(context).apply {
-            setTitle(R.string.welcome)
-            setMessage(R.string.security_context)
-            setPositiveButton(R.string.close) { dialog, _ ->
+            setTitle(context.resources.getString(R.string.welcome))
+            setMessage(context.resources.getString(R.string.security_context))
+            setPositiveButton(context.resources.getString(R.string.close)) { dialog, _ ->
                 dialog.dismiss()
             }
             setOnDismissListener {
@@ -42,31 +41,15 @@ object DialogContainer {
 
     private fun showMiuiDialog(context: Context) {
         MaterialAlertDialogBuilder(context).apply {
-            setTitle(R.string.miui_one_title)
-            setMessage(R.string.miui_one)
-            setNeutralButton(R.string.close) { dialog, _ -> dialog.dismiss() }
-            setPositiveButton(R.string.guide) { _, _ ->
+            setTitle(context.getString(R.string.miui_one_title))
+            setMessage(context.getString(R.string.miui_one))
+            setNeutralButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            setPositiveButton(context.getString(R.string.guide)) { _, _ ->
                 openUrl(
                     "https://telegra.ph/How-to-install-v15-on-MIUI-02-11",
                     R.color.Telegram,
                     context
                 )
-            }
-            setCancelable(false)
-            create()
-            show()
-        }
-    }
-
-    fun showUnofficialAppInstalledDialog(app: String, appPkg: String, context: Context) {
-        MaterialAlertDialogBuilder(context).apply {
-            setTitle(R.string.warning)
-            setMessage(context.getString(R.string.unofficial_app_installed, app))
-            setPositiveButton(context.getString(R.string.uninstall)) { _, _ ->
-                uninstallApk(appPkg, context)
-            }
-            setNeutralButton(context.getString(R.string.close)) { dialog, _ ->
-                dialog.dismiss()
             }
             setCancelable(false)
             create()

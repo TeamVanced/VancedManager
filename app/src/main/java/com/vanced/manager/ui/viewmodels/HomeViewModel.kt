@@ -25,11 +25,6 @@ import com.vanced.manager.model.DataModel
 import com.vanced.manager.model.ProgressModel
 import com.vanced.manager.ui.events.Event
 import com.vanced.manager.utils.AppUtils.installing
-import com.vanced.manager.utils.AppUtils.managerPkg
-import com.vanced.manager.utils.AppUtils.microgPkg
-import com.vanced.manager.utils.AppUtils.musicPkg
-import com.vanced.manager.utils.AppUtils.vancedPkg
-import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 
@@ -133,7 +128,7 @@ open class HomeViewModel(private val activity: Activity): ViewModel() {
             Toast.makeText(activity, R.string.installation_wait, Toast.LENGTH_SHORT).show()
     }
     
-    fun uninstallVanced(variant: String) = uninstallApk(if (variant == "root") vancedRootPkg else vancedPkg, activity)
+    fun uninstallVanced(variant: String) = uninstallApk(if (variant == "root") "com.google.android.youtube" else "com.vanced.android.youtube", activity)
     fun uninstallMusic() = uninstallApk("com.vanced.android.apps.youtube.music", activity)
     fun uninstallMicrog() = uninstallApk("com.mgoogle.android.gms", activity)
 
@@ -156,11 +151,11 @@ open class HomeViewModel(private val activity: Activity): ViewModel() {
 
     init {
         fetching.set(true)
-        vanced.set(DataModel(app.vanced, vancedPkg, activity))
-        vancedRoot.set(DataModel(app.vanced, vancedRootPkg, activity))
-        music.set(DataModel(app.music, musicPkg, activity))
-        microg.set(DataModel(app.microg, microgPkg, activity))
-        manager.set(DataModel(app.manager, managerPkg, activity))
+        vanced.set(DataModel(app.vanced, "com.vanced.android.youtube", activity))
+        vancedRoot.set(DataModel(app.vanced, "com.google.android.youtube", activity))
+        music.set(DataModel(app.music, "com.vanced.android.apps.youtube.music", activity))
+        microg.set(DataModel(app.microg, "com.mgoogle.android.gms", activity))
+        manager.set(DataModel(app.manager, "com.vanced.manager", activity))
         vancedProgress.set(ProgressModel())
         musicProgress.set(ProgressModel())
         microgProgress.set(ProgressModel())
