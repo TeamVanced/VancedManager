@@ -17,19 +17,13 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.topjohnwu.superuser.Shell
-import com.vanced.manager.BuildConfig.ENABLE_SIGNATURE_CHECK
 import com.vanced.manager.R
 import com.vanced.manager.adapter.VariantAdapter
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
-import com.vanced.manager.ui.dialogs.DialogContainer.showUnofficialAppInstalledDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
-import com.vanced.manager.utils.AppUtils
-import com.vanced.manager.utils.AppUtils.microgPkg
-import com.vanced.manager.utils.AppUtils.musicPkg
-import com.vanced.manager.utils.AppUtils.vancedPkg
-import com.vanced.manager.utils.AppUtils.vancedRootPkg
+import com.vanced.manager.utils.AppUtils.installing
 
 open class HomeFragment : Fragment() {
 
@@ -87,19 +81,7 @@ open class HomeFragment : Fragment() {
             mainTablayout.getTabAt(if (getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot") == "root") 1 else 0)?.select()
         }
 
-        if (ENABLE_SIGNATURE_CHECK) {
-            if (!viewModel.vanced.get()?.isOfficial?.get()!!)
-                showUnofficialAppInstalledDialog(getString(R.string.vanced), vancedPkg, requireActivity())
-
-            if (!viewModel.music.get()?.isOfficial?.get()!!)
-                showUnofficialAppInstalledDialog(getString(R.string.music), musicPkg, requireActivity())
-
-            if (!viewModel.microg.get()?.isOfficial?.get()!!)
-                showUnofficialAppInstalledDialog(getString(R.string.microg), microgPkg, requireActivity())
-
-        }
-
-        AppUtils.installing.observe(viewLifecycleOwner, { value ->
+        installing.observe(viewLifecycleOwner, { value ->
             if (value) hideTab() else showTab()
         })
 

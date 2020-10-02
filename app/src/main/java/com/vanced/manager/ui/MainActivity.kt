@@ -28,9 +28,6 @@ import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -160,10 +157,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        CoroutineScope(Dispatchers.Main).launch {
-            if (InternetTools.isUpdateAvailable()) {
-                UpdateCheckFragment().show(supportFragmentManager, "UpdateCheck")
-            }
+        if (InternetTools.isUpdateAvailable(this)) {
+            UpdateCheckFragment().show(supportFragmentManager, "UpdateCheck")
         }
     }
 

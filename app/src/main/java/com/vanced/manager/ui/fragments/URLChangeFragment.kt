@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.fragments
 
-import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle

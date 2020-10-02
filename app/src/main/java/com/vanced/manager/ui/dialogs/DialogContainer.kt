@@ -73,7 +73,6 @@ object DialogContainer {
         }
     }
 
-    //Easter Egg
     fun statementFalse(context: Context) {
         MaterialAlertDialogBuilder(context).apply {
             setTitle("Wait what?")

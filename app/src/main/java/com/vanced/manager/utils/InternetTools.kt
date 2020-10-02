@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
+import com.vanced.manager.core.App
 
 object InternetTools {
 
@@ -66,16 +67,12 @@ object InternetTools {
         }
     }
 
-    suspend fun isUpdateAvailable(): Boolean {
-        val result = try {
-            JsonHelper.getJson("https://ytvanced.github.io/VancedBackend/manager.json")?.int("versionCode") ?: 0
-        } catch (e: Exception) {
-            0
-        }
+    fun isUpdateAvailable(context: Context): Boolean {
+        val result = (context.applicationContext as App).manager.get()?.int("versionCode") ?: 0
 
         return result > BuildConfig.VERSION_CODE
     }
 
-    const val baseUrl = "https://vancedapp.com/api/v1"
+    const val baseUrl = "https://vanced.app/api/v1"
 
 }
