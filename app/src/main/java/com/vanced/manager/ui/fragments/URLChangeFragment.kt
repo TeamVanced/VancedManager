@@ -13,7 +13,6 @@ import androidx.fragment.app.DialogFragment
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
-import com.vanced.manager.core.App
 import com.vanced.manager.utils.InternetTools.baseUrl
 
 class URLChangeFragment : DialogFragment() {
@@ -46,7 +45,6 @@ class URLChangeFragment : DialogFragment() {
 
     private fun saveUrl(url: String, context: Context) {
         getDefaultSharedPreferences(requireActivity()).edit().putString("install_url", url).apply()
-        (context.applicationContext as App).loadJsonAsync()
         dismiss()
     }
 
