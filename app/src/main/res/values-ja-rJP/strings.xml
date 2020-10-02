@@ -19,12 +19,12 @@
     <string name="no_microg">microG はインストールされていません</string>
     <string name="root_not_granted">Root アクセスは許可されていません</string>
     <string name="unavailable">利用不可</string>
-    <string name="uninstall">Uninstall</string>
-    <string name="unofficial">Unofficial</string>
-    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
+    <string name="uninstall">アンインストール</string>
+    <string name="unofficial">非公式</string>
+    <string name="unofficial_app_installed">バージョン %1$s は Vanced チームによって作られていません。安全のため、このバージョンをアンインストールすることをお勧めします。 続行しますか？</string>
     <string name="update">更新</string>
     <string name="useful_links">リンク集</string>
-    <string name="warning">Warning!</string>
+    <string name="warning">警告！</string>
     <string name="website_text">Vanced の公式Webサイト</string>
     <string name="support_us">Brave をダウンロードして支援する</string>
     <string name="version_toast">%1$s のバージョン番号がコピーされました！</string>
@@ -49,8 +49,8 @@
     <string name="link_title">Chrome カスタムタブを使用する</string>
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
     <string name="link_external_browser">外部ブラウザでリンクを開く</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="new_installer_title">新しい root インストーラーを使用する (実験的)</string>
+    <string name="new_installer_summary">このインストーラは、署名検証ステータスに依存しません。 警告：これを使用してインストールした場合、再起動後に Vanced が表示されなくなる可能性があります</string>
     <string name="system_default">システム標準</string>
     <string name="theme">テーマ</string>
     <string name="theme_follow">システムに従う</string>
@@ -105,5 +105,5 @@
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
     <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
     <string name="modapk_missing">Dark/Black の APK がインストーラーから見つかりません、想定外のことです、Manager のアプリのデータを削除してください</string>
-    <string name="path_missing">株式分割インストール後、株式のYouTubeインストールパスにアクセスできない、またはインストールされない</string>
+    <string name="path_missing">ストック版 YouTube のインスオール先にアクセスできないか、ストック版の分割インストール後に欠落しています</string>
 </resources>
