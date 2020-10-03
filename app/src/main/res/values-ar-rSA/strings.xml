@@ -19,12 +19,8 @@
     <string name="no_microg">لم يتم تثبيت microG</string>
     <string name="root_not_granted">لم يتم منح الوصول للجذر</string>
     <string name="unavailable">غير متاح</string>
-    <string name="uninstall">Uninstall</string>
-    <string name="unofficial">Unofficial</string>
-    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
     <string name="update">تحديث</string>
     <string name="useful_links">روابط المفيدة</string>
-    <string name="warning">Warning!</string>
     <string name="website_text">الموقع رسمي لفانسد</string>
     <string name="support_us">ادعمنا بتريق تنزيل بريف</string>
     <string name="version_toast">تم نسخ رقم الإصدار %1$s!</string>
