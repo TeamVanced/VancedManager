@@ -19,12 +19,8 @@
     <string name="no_microg">মাইক্রোজি ইনস্টল করা নেই</string>
     <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
     <string name="unavailable">অনুপলব্ধ</string>
-    <string name="uninstall">আনইনস্টল করুন</string>
-    <string name="unofficial">অফিসিয়াল নয়</string>
-    <string name="unofficial_app_installed">The version of %1$s on your device is not made by Vanced Team, for your own safety, we recommend uninstalling this version. Do you want to proceed?</string>
     <string name="update">হালনাগাদ</string>
     <string name="useful_links">উপকারী লিংক</string>
-    <string name="warning">Warning!</string>
     <string name="website_text">ওয়েবসাইট</string>
     <string name="support_us">আমাদের সমর্থন করো!</string>
     <string name="version_toast">%1$s সংস্করণ নম্বরটি অনুলিপি করা হয়েছিল!</string>
