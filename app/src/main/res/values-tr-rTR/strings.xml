@@ -19,12 +19,8 @@
     <string name="no_microg">microG yüklü değil</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Mevcut değil</string>
-    <string name="uninstall">Kaldır</string>
-    <string name="unofficial">Resmi olmayan</string>
-    <string name="unofficial_app_installed">Cihazınızdaki %1$s sürümü Vanced Ekibi tarafından yapılmadı, kişisel güvenliğiniz için bu sürümü kaldırmanızı öneririz. Devam etmek ister misiniz?</string>
     <string name="update">Güncelle</string>
     <string name="useful_links">Yararlı Bağlantılar</string>
-    <string name="warning">Uyarı!</string>
     <string name="website_text">Web sitesi</string>
     <string name="support_us">Bizi destekle!</string>
     <string name="version_toast">%1$s sürüm numarası kopyalandı!</string>
