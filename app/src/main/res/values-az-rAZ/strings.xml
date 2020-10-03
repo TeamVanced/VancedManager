@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="close">Qapat</string>
+    <string name="reset">Təzələ</string>
+    <string name="save">Saxıa</string>
+    <!-- Main Activity -->
+    <string name="title_about">Haqqında</string>
+    <string name="title_home">Ev</string>
+    <string name="title_settings">Tənzimləmələr</string>
+    <!-- Home Page -->
+    <string name="changelogs">Yeniliklər</string>
+    <string name="downloading_file">%1$s yüklənir</string>
+    <string name="install">Qur</string>
+    <string name="installation_wait">Qurma bitənə qədər gözləyin.</string>
+    <string name="button_reinstall">Yenidən qur</string>
+    <string name="version_installed">Quruldu:</string>
+    <string name="latest">Ən son:</string>
+    <string name="no_microg">microG qurulmayıb</string>
+    <string name="root_not_granted">Root icazəsi verilməyib</string>
+    <string name="unavailable">Yoxdur</string>
+    <string name="update">Təzələ</string>
+    <string name="useful_links">Lazımı keçidlər</string>
+    <string name="website_text">Veb-sayt</string>
+    <string name="support_us">Bizi dəstəklə!</string>
+    <string name="version_toast">%1$s versiya nömrəsi köçürüldü!</string>
+    <!-- Settings -->
+    <string name="accent_color">İkinci Rəng</string>
+    <string name="accent_blue">Mavi</string>
+    <string name="accent_green">Yaşıl</string>
+    <string name="accent_purple">Bənövşəyi</string>
+    <string name="accent_red">Qırmızı</string>
+    <string name="accent_yellow">Sarı</string>
+    <string name="category_interface">Araüz</string>
+    <string name="category_manager">Menecer</string>
+    <string name="check_updates">Yeniləmələri yoxla</string>
+    <string name="chosen_install_values">Seçilmiş qurma tənzimləmələri</string>
+    <string name="chosen_lang">Dil(lər): %1$s</string>
+    <string name="chosen_theme">Mövzu: %1$s</string>
+    <string name="clear_files">Yüklənmiş faylları təmizlə</string>
+    <string name="cleared_files">Fayllar uğurla təmizləndi</string>
+    <string name="firebase_title">Analitiklər</string>
+    <string name="firebase_summary">Bu bizə tətbiq performansı və çökmə loqları haqda məlumat toplamağa imkan verir</string>
+    <string name="language_title">Dil</string>
+    <string name="link_title">Chrome Özəl Tablarını işlət</string>
+    <string name="link_custom_tabs">Keçidlər Chrome Özəl Tablarında açılacaq</string>
+    <string name="link_external_browser">Linklər Xarici Brauzerdə açılacaq</string>
+    <string name="new_installer_title">Yeni root qurmanı yoxla (Yoxlama)</string>
+    <string name="new_installer_summary">Bu qurucu İmza Təsdiqləmə vəziyyətindən asılı deyil. XƏBƏRDARLIQ: Vanced bu cür qurulmadan sonra yenidən başlatmada itə bilər</string>
+    <string name="system_default">Sistem Tənzimləsin</string>
+    <string name="theme">Mövzu</string>
+    <string name="theme_follow">Sistemə Görə</string>
+    <string name="theme_dark">Qaranlıq Mövzu</string>
+    <string name="theme_light">İşıqlı Mövzu</string>
+    <string name="update_url">Yeniləmə Kanal URL\'\ı</string>
+    <string name="push_notifications">%1$s Bildirişləri</string>
+    <string name="push_notifications_summary">%1$s üçün yeniləmə gəldikdə bildiriş al</string>
+    <string name="re_check">Yenidən yoxla</string>
+    <string name="update_center">Menecer Yeniləmə</string>
+    <string name="update_found">Yeniləmə var!</string>
+    <string name="update_notfound">Yeniləmə yoxdur</string>
+    <!-- Dialogs -->
+    <string name="guide">Bələdçi</string>
+    <string name="hold_on">Dayan!</string>
+    <string name="magisk_vanced">Vanced\'\ın atılmış və bu tətbiqlə yenilənməyən Magisk/TWRP versiyasından istifadə edirsiniz. Xahiş edirik onu magisk əlavəsindən yaxud TWRP Vanced silicidən istifadə edərək silin.</string>
+    <string name="miui_one_title">MIUI təyin edildi!</string>
+    <string name="miui_one">Vanced\'\ı yükləmək üçün, təkmilləşdirmə tənzimləmələridən MIUI Optimizasiyanı mütləq qapatmalısınz. (20.2.20 və ya sonrasından xiaomi.eu xımlı ROM istifadə edirsinizsə, bu mesajı keçə bilərsiniz)</string>
+    <string name="error">Xəta</string>
+    <string name="security_context">Tətbiqləri Vanced App, Vanced Discord server və Vanced GitHub səhifəsindən yüklədiyinizdən əmin olun</string>
+    <string name="success">Uğur!</string>
+    <string name="vanced_installed">Vanced uğurla quruldu! İndi açılsın?</string>
+    <string name="music_installed">Vanced Music uğurla quruldu! İndi açılsın?</string>
+    <string name="launch">Aç</string>
+    <string name="welcome">Xoş gəlmisiniz</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Vanced üçün istədiyiniz dili seçin</string>
+    <string name="choose_preferred_language_note">Qeyd: İngiliscə həmişə əlavə dil olaraq yüklənəcək.</string>
+    <string name="choose_preferred_theme">Vanced üçün istədiyiniz mövzunu seçin</string>
+    <string name="finish">Son</string>
+    <string name="install_light_black">İşıqlı + Qara</string>
+    <string name="install_light_dark">İşıqlı + Qaranlıq</string>
+    <string name="next">Sonrakı</string>
+    <!-- About Page -->
+    <string name="manager_dev">Menecer Təkmilcilər</string>
+    <string name="sources">Mənbələr</string>
+    <string name="vanced_team">Vanced Birliyi</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Apk\'nı sistemə yedirə bilmədik, Bir də yoxlayın</string>
+    <string name="error_downloading">%1$s Yüklənərkən xəta</string>
+    <string name="failed_uninstall">%1$s paketini silmək olmur</string>
+    <string name="files_missing_va">Fayllar yoxdur, Bəlkə yükləmə uğursuz olub?</string>
+    <string name="ifile_missing">Qaranlıq/Qara.apk Oxunmur (Yaddaşmə Əngəlləndi?) yoxsa Fayl Yoxdur?</string>
+    <string name="installation_aborted">Istifadəçi qurmanı ləğv etdiyi üçün qurma alınmadı.</string>
+    <string name="installation_blocked">İstifadəçi qurmanı əngəllədiyi üçün qurma alınmadı.</string>
+    <string name="installation_downgrade">İstifadəçi mövcud olandan köhnə versiya qurmağa çalışdığı üçün qurma alınmadı. YouTube tətbiqinin yeniləmələrini silin, və bir də yoxlayın.</string>
+    <string name="installation_conflict">Tətbiq hazırda yüklü olan başqa tətbiqlə çaxışdığı üçün qurma alınmadı. Vanced\'\ın hazırkı versiyasını silin və bir də yoxlayın.</string>
+    <string name="installation_failed">Qurma bilinməyən səbəbdən alınmadı, əlavə dəstək üçün Telegram və ya Discordumuza qoşulun.</string>
+    <string name="installation_incompatible">Fayl cihazınıza uyğun olmadığı üçün qurma alınmadı. Yüklənən faylları təmizləyin və bir də yoxlayın.</string>
+    <string name="installation_invalid">APK faylları xarab olduğu üçün qurma alınmadı, xahiş olunur bir də yoxlayın.</string>
+    <string name="installation_signature">APK imza təsdiqləmə açıq olduğu üçün qurma alınmadı. APK imza təsdiqləməni qapadıb bir də yoxlayın.</string>
+    <string name="installation_miui">MIUI Optimizasiya açıq olduğu üçün qurma alınmadı. MIUI Optimizasiyanı qapadıb bir də yoxlayın.</string>
+    <string name="installation_storage">Yaddaş xətası üzündən qurma alınmadı.</string>
+    <string name="modapk_missing">Qara/Qaranlıq apk qurmada yoxdur, bunun olmağı düzgün deyil, xahiş edirik menecerin tətbiq məlumatını təmizləyin</string>
+    <string name="path_missing">Standart YouTube Qurma Yolu Ya Əlçatan Deyil Ya Da Bölməli Qurmadan Sonra Yoxa Çıxıb</string>
+</resources>
