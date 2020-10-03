@@ -19,12 +19,8 @@
     <string name="no_microg">microG není nainstalováno</string>
     <string name="root_not_granted">Root přístup nebyl udělen</string>
     <string name="unavailable">Není k dispozici</string>
-    <string name="uninstall">Odinstalovat</string>
-    <string name="unofficial">Neoficiální</string>
-    <string name="unofficial_app_installed">Verze %1$s ve vašem zařízení není vytvořena týmem Vanced. Z důvodu vlastní bezpečnosti doporučujeme tuto verzi odinstalovat. Chcete pokračovat?</string>
     <string name="update">Aktualizovat</string>
     <string name="useful_links">Užitečné odkazy</string>
-    <string name="warning">Varování!</string>
     <string name="website_text">Webová stránka</string>
     <string name="support_us">Podpořte nás!</string>
     <string name="version_toast">Verze číslo %1$s byla zkopírována!</string>
