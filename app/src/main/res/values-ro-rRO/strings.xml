@@ -19,12 +19,8 @@
     <string name="no_microg">microG nu este instalat</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
-    <string name="uninstall">Dezinstalează</string>
-    <string name="unofficial">Neoficial</string>
-    <string name="unofficial_app_installed">Versiunea %1$s de pe dispozitivul tău nu este făcută de Vanced Team, pentru propria ta siguranță, îți recomandăm dezinstalarea acestei versiuni. Vrei să continui?</string>
     <string name="update">Actualizare</string>
     <string name="useful_links">Link-uri folositoare</string>
-    <string name="warning">Atentie!</string>
     <string name="website_text">Website</string>
     <string name="support_us">Ajutați-ne!</string>
     <string name="version_toast">Versiunea %1$s a fost copiată!</string>
