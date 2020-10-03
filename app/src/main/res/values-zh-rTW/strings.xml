@@ -19,12 +19,8 @@
     <string name="no_microg">未安裝 MicroG</string>
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="unavailable">無法使用</string>
-    <string name="uninstall">解除安裝</string>
-    <string name="unofficial">非官方</string>
-    <string name="unofficial_app_installed">%1$s 在您裝置的版本並非來自 Vanced 團隊。為了您的安全，建議解除安裝這個版本。要繼續嗎？</string>
     <string name="update">更新</string>
     <string name="useful_links">相關連結</string>
-    <string name="warning">警告！</string>
     <string name="website_text">網站</string>
     <string name="support_us">支持我們！</string>
     <string name="version_toast">%1$s 版本已被複製！</string>
