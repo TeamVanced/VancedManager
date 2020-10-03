@@ -2,6 +2,7 @@ package com.vanced.manager.ui
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -27,9 +28,6 @@ import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -117,6 +115,17 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(LanguageContextWrapper.wrap(newBase))
     }
 
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        recreate() //restarting activity to recreate viewmodels, otherwise some text won't update
+    }
+
+    override fun recreate() {
+        //needed for setting language smh
+        startActivity(Intent(this, this::class.java))
+        finish()
+    }
+
     private fun initDialogs() {
         val prefs = getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
@@ -148,10 +157,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        CoroutineScope(Dispatchers.Main).launch {
-            if (InternetTools.isUpdateAvailable()) {
-                UpdateCheckFragment().show(supportFragmentManager, "UpdateCheck")
-            }
+        if (InternetTools.isUpdateAvailable(this)) {
+            UpdateCheckFragment().show(supportFragmentManager, "UpdateCheck")
         }
     }
 

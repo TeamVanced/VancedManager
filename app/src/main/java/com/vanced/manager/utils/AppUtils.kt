@@ -6,6 +6,7 @@ import android.content.pm.PackageInstaller
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
 import com.vanced.manager.ui.fragments.HomeFragment
 import kotlinx.coroutines.CoroutineScope
@@ -17,6 +18,12 @@ object AppUtils {
 
     val mutableInstall = MutableLiveData<Boolean>()
     val installing: LiveData<Boolean> = mutableInstall
+
+    const val vancedPkg = "com.vanced.android.youtube"
+    const val vancedRootPkg = "com.google.android.youtube"
+    const val musicPkg = "com.vanced.android.apps.youtube.music"
+    const val microgPkg = "com.mgoogle.android.gms"
+    const val managerPkg = APPLICATION_ID
 
     init {
         mutableInstall.value = false

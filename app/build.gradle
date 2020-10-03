@@ -20,8 +20,8 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 13
-        versionName "1.3.0b (Arcturus)"
+        versionCode 131
+        versionName "1.3.1 (Arcturus)"
 
         vectorDrawables.useSupportLibrary = true
 
@@ -88,11 +88,9 @@ def getLanguageNames() {
     for (int i = 0; i < langs.size(); i++) {
         if (langs[i].length() > 2) {
             Locale loc = new Locale(langs[i].substring(0, langs[i].length() - 3), langs[i].substring(langs[i].length() - 2))
-            project.logger.lifecycle(loc.getDisplayLanguage(loc).capitalize() + " (" + loc.getDisplayCountry(loc).capitalize() + ")")
             langnames.add(loc.getDisplayLanguage(loc).capitalize() + " (" + loc.getDisplayCountry(loc).capitalize() + ")")
         } else {
             Locale loc = new Locale(langs[i])
-            project.logger.lifecycle(loc.getDisplayLanguage(loc).capitalize())
             langnames.add(loc.getDisplayLanguage(loc).capitalize())
         }
     }

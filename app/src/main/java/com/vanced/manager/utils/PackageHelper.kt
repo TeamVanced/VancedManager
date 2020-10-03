@@ -19,6 +19,7 @@ import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.mutableInstall
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
+import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -28,7 +29,6 @@ import kotlin.collections.HashMap
 
 object PackageHelper {
     
-    private const val yPkg = "com.google.android.youtube"
     private const val apkInstallPath = "/data/adb/Vanced/"
 
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
@@ -202,7 +202,7 @@ object PackageHelper {
 
         Shell.getShell {
             val application = context.applicationContext as App
-            val vancedApplication = application.vanced?.int("versionCode")
+            val vancedApplication = application.vanced.get()?.int("versionCode")
             val vancedVersionCode = if (vancedApplication != null) vancedApplication else { application.loadJsonAsync(); vancedApplication }
             val apkFilesPath = context.getExternalFilesDir("apks")?.path
             val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
@@ -347,12 +347,12 @@ object PackageHelper {
     }
 
     private fun linkVanced(apkFPath: String, path: String): Boolean {
-        Shell.su("am force-stop $yPkg").exec()
+        Shell.su("am force-stop $vancedRootPkg").exec()
         val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
         //Log.d("umountTest", Shell.su("grep com.google.android.youtube").exec().out.joinToString(" "))
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
         Thread.sleep(500)
-        Shell.su("am force-stop $yPkg").exec()
+        Shell.su("am force-stop $vancedRootPkg").exec()
         return response.isSuccess
     }
 
@@ -397,7 +397,7 @@ object PackageHelper {
 
     //uninstall current update and install base that works with patch
     private fun fixHigherVer(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
-        if (uninstallApk(yPkg, context)) {
+        if (uninstallApk(vancedRootPkg, context)) {
             return installSplitApkFiles(apkFiles, context)
         }
         sendFailure(listOf("Failed_Uninstall").toMutableList(), context)
@@ -433,7 +433,7 @@ object PackageHelper {
 
         if(apkinF.exists()) {
             try {
-                Shell.su("am force-stop $yPkg").exec()
+                Shell.su("am force-stop $vancedRootPkg").exec()
 
                 //Shell.su("rm -r SuFile.open(path).parent")
 
@@ -470,9 +470,9 @@ object PackageHelper {
     private fun getVersionNumber(context: Context): Int? {
         try {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-                context.packageManager.getPackageInfo(yPkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()
+                context.packageManager.getPackageInfo(vancedRootPkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()
             else
-                context.packageManager.getPackageInfo(yPkg, 0).versionCode
+                context.packageManager.getPackageInfo(vancedRootPkg, 0).versionCode
         }
         catch (e : Exception) {
             val execRes = Shell.su("dumpsys package com.google.android.youtube | grep versionCode").exec()
@@ -497,7 +497,7 @@ object PackageHelper {
     private fun getPackageDir(context: Context): String?
     {
         return try {
-            val p = getPkgInfo(yPkg, context)
+            val p = getPkgInfo(vancedRootPkg, context)
             p!!.applicationInfo.sourceDir
         } catch (e: Exception) {
              val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()

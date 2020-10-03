@@ -77,10 +77,6 @@
             android:key="vanced_chosen_modes" />
 
         <Preference
-            android:title="@string/update_url"
-            android:key="install_url" />
-
-        <Preference
             android:title="@string/clear_files"
             android:key="clear_files"/>
 

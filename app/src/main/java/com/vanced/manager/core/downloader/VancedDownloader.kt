@@ -14,10 +14,10 @@ import com.vanced.manager.R
 import com.vanced.manager.core.App
 import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
 import com.vanced.manager.utils.AppUtils.mutableInstall
+import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.getObjectFromJson
 import com.vanced.manager.utils.PackageHelper.getPkgVerCode
 import com.vanced.manager.utils.PackageHelper.installVanced
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
@@ -28,6 +28,7 @@ import kotlinx.coroutines.runBlocking
 import java.io.File
 import java.io.IOException
 import java.security.MessageDigest
+import java.util.*
 
 object VancedDownloader {
 
@@ -42,18 +43,15 @@ object VancedDownloader {
     private var lang: Array<String>? = null
 
     private lateinit var themePath: String
-    
-    //private var downloadId: Long = 0
-    //private var apkType: String = "arch"
+
     private var count: Int = 0
     private var hashUrl = ""
 
-    private const val yPkg = "com.google.android.youtube"
     private var vancedVersionCode = 0
-    private val vancedVersion by lazy { runBlocking { getObjectFromJson("$installUrl/vanced.json", "version") }}
+    private var vancedVersion: String? = null
 
     fun downloadVanced(context: Context){
-        //registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
+        val app = context.applicationContext as App
         File(context.getExternalFilesDir("apks")?.path as String).deleteRecursively()
         defPrefs = getDefaultSharedPreferences(context)
         installUrl = defPrefs.getString("install_url", baseUrl)
@@ -61,6 +59,7 @@ object VancedDownloader {
         variant = defPrefs.getString("vanced_variant", "nonroot")
         lang = prefs.getString("lang", "en")?.split(", ")?.toTypedArray()
         theme = prefs.getString("theme", "dark")
+        vancedVersion = app.vanced.get()?.string("version")
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         //newInstaller = defPrefs.getBoolean("new_installer", false)
@@ -70,8 +69,8 @@ object VancedDownloader {
                 Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
                 else -> "armeabi_v7a"
             }
-        val app = context.applicationContext as App
-        vancedVersionCode = app.vanced?.int("versionCode") ?: 0
+
+        vancedVersionCode = app.vanced.get()?.int("versionCode") ?: 0
         downloadSplits(context)
     }
 
@@ -90,11 +89,7 @@ object VancedDownloader {
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
                 }
 
-            //apkType = type
-            //downloadId = download(url, "apks", getFileNameFromUrl(url), this@VancedDownloadService)
-
-            vancedProgress.get()?.currentDownload = PRDownloader
-                .download(url, context.getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
+            vancedProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apks")?.path, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener { 
                     mutableInstall.value = true
@@ -114,7 +109,7 @@ object VancedDownloader {
                             "theme" -> 
                                 if (variant == "root") {
                                     if (validateTheme(context)) {
-                                        if(downloadStockCheck(context))
+                                        if (downloadStockCheck(context))
                                             downloadSplits(context, "arch") 
                                         else 
                                             prepareInstall(variant!!, context)
@@ -143,6 +138,7 @@ object VancedDownloader {
                             else
                                 prepareInstall(variant!!, context)
                         } else {
+                            count = 0
                             mutableInstall.value = false
                             vancedProgress.get()?.showDownloadBar?.set(false)
                             Toast.makeText(context, context.getString(R.string.error_downloading, getFileNameFromUrl(url)), Toast.LENGTH_SHORT).show()
@@ -154,7 +150,7 @@ object VancedDownloader {
 
     private fun downloadStockCheck(context: Context) :Boolean {
         return try {
-            getPkgVerCode(yPkg,context.packageManager) != vancedVersionCode
+            getPkgVerCode(vancedRootPkg, context.packageManager) != vancedVersionCode
         } catch (e: Exception) {
             true
         }
@@ -171,40 +167,13 @@ object VancedDownloader {
         return checkSHA256(sha256Val!!,themeF)
     }
 
-    /*
-    private val receiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context?, intent: Intent?) {
-            val prefs = context?.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-            val variant = PreferenceManager.getDefaultSharedPreferences(this@VancedDownloadService).getString("vanced_variant", "nonroot")
-            val lang = prefs?.getString("lang", "en")
-            if (intent?.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1) == downloadId) {
-                when (apkType) {
-                    "arch" -> downloadSplits(context, "theme")
-                    "theme" -> downloadSplits(context, "lang")
-                    "lang" -> {
-                        if (lang == "en") {
-                            prepareInstall(variant!!)
-                            //cancelNotif(channel, this@VancedDownloadService)
-                        } else {
-                            downloadSplits(context, "enlang")
-                        }
-                    }
-                    "enlang" -> {
-                        prepareInstall(variant!!)
-                        //cancelNotif(channel, this@VancedDownloadService)
-                    }
-                }
-            }
-        }
-    }
-     */
-
     private fun prepareInstall(variant: String, context: Context) {
+        count = 0
         vancedProgress.get()?.showDownloadBar?.set(false)
         vancedProgress.get()?.showInstallCircle?.set(true)
         FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
-            param("Vanced Variant", variant)
-            theme?.let { param("Vanced Theme", it) }
+            param("vanced_variant", variant)
+            theme?.let { param("vanced_theme", it) }
         }
         if (variant == "root")
             installVancedRoot(context)
@@ -218,7 +187,7 @@ object VancedDownloader {
             // Generate the checksum
             val sum = generateChecksum(dataBuffer)
 
-            sum == sha256
+            sum.toLowerCase(Locale.ENGLISH) == sha256.toLowerCase(Locale.ENGLISH)
         } catch (e: Exception) {
             e.printStackTrace()
             false
