@@ -19,12 +19,8 @@
     <string name="no_microg">microG nie jest zainstalowany</string>
     <string name="root_not_granted">Root nie został przyznany</string>
     <string name="unavailable">Niedostępne</string>
-    <string name="uninstall">Odinstaluj</string>
-    <string name="unofficial">Nieoficjalne</string>
-    <string name="unofficial_app_installed">Wersja %1$s na twoim urządzeniu nie jest wykonana przez Team Vanced, ze względów bezpieczeństwa zalecamy odinstalowanie tej wersji. Czy chcesz kontynuować?</string>
     <string name="update">Aktualizuj</string>
     <string name="useful_links">Przydatne linki</string>
-    <string name="warning">Uwaga!</string>
     <string name="website_text">Oficjalna strona Vanced</string>
     <string name="support_us">Wesprzyj nas, pobierając Brave</string>
     <string name="version_toast">Numer wersji %1$s został skopiowany!</string>
