@@ -19,12 +19,8 @@
     <string name="no_microg">microG не установлен</string>
     <string name="root_not_granted">Рут-доступ не предоставлен</string>
     <string name="unavailable">Недоступно</string>
-    <string name="uninstall">Удалить</string>
-    <string name="unofficial">Неофициальный</string>
-    <string name="unofficial_app_installed">Версия %1$s на вашем устройстве не была создана командой Vanced. Мы рекомендуем удалить эту версию из-за соображений безопасности. Продолжить?</string>
     <string name="update">Обновить</string>
     <string name="useful_links">Полезные ссылки</string>
-    <string name="warning">Внимание!</string>
     <string name="website_text">Сайт</string>
     <string name="support_us">Поддержите нас!</string>
     <string name="version_toast">Версия %1$s была скопирована!</string>
