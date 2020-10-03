@@ -19,12 +19,8 @@
     <string name="no_microg">মাইক্রোজি ইনস্টল করা নেই</string>
     <string name="root_not_granted">রুট অ্যাক্সেস দেওয়া হয়নি</string>
     <string name="unavailable">অনুপলব্ধ</string>
-    <string name="uninstall">আনইনস্টল করুন</string>
-    <string name="unofficial">অফিসিয়াল নয়</string>
-    <string name="unofficial_app_installed">আপনার ডিভাইসে থাকা অ্যাপটির %1$s সংস্করণ ভ্যান্সড টিম তৈরি করেনি, আপনার নিজের সুরক্ষার জন্য আমরা এই সংস্করণটি আনইনস্টল করার পরামর্শ দিচ্ছি। আপনি কি রাজি আছেন?</string>
     <string name="update">হালনাগাদ</string>
     <string name="useful_links">উপকারী লিংকসমূহ</string>
-    <string name="warning">সতর্কবাণী!</string>
     <string name="website_text">ওয়েবসাইট</string>
     <string name="support_us">আমাদের সমর্থন করুন!</string>
     <string name="version_toast">%1$s সংস্করণ নম্বরটি অনুলিপি করা হয়েছিল!</string>
