@@ -100,6 +100,6 @@
     <string name="installation_signature">APK 서명 검증 기능이 활성화되어 있어 앱을 설치하지 못했습니다. 먼저 APK 서명 검증 기능을 비활성화한 다음, 설치를 다시 진행해주세요.</string>
     <string name="installation_miui">MIUI 최적화 기능이 켜져 있어 앱을 설치하지 못했습니다. MIUI 최적화 기능을 끄고, 설치를 다시 진행해주세요.</string>
     <string name="installation_storage">저장 공간에 오류가 있어서 설치에 실패했습니다.</string>
-    <string name="modapk_missing">블랙/다크 apk가 설치 관리자에 없습니다. 발생해서는 안되는 일이며, 매니저의 앱 데이터를 지워주셔야 합니다</string>
+    <string name="modapk_missing">Black/Dark apk가 설치 관리자에 없습니다. 발생해서는 안되는 일이며, 매니저의 앱 데이터를 지워주셔야 합니다</string>
     <string name="path_missing">YouTube 설치 경로에 접근할 수 없거나 분할 설치된 위치를 찾을 수 없습니다</string>
 </resources>
