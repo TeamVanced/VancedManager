@@ -2,7 +2,7 @@
 <resources>
     <!-- Global Strings -->
     <string name="close">වසන්න</string>
-    <string name="reset">Reset</string>
+    <string name="reset">ප්‍රතිස්ථාපනය කරන්න</string>
     <string name="save">සුරකින්න</string>
     <!-- Main Activity -->
     <string name="title_about">මේ ගැන</string>
