@@ -40,8 +40,8 @@
     <string name="clear_files">Heruntergeladene Dateien löschen</string>
     <string name="cleared_files">Daten erfolgreich gelöscht</string>
     <string name="firebase_title">Firebase-Analyse</string>
-    <string name="firebase_summary">So können wir Informationen über die Performance der App und Absturzprotokolle sammeln</string>
-    <string name="language_title">Sprache</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="language_title">Sprache auswählen</string>
     <string name="link_title">Verwende Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="link_external_browser">Links werden in einem externen Browser geöffnet</string>
