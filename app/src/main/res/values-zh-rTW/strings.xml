@@ -85,11 +85,11 @@
     <string name="sources">原始碼</string>
     <string name="vanced_team">Vanced 團隊</string>
     <!-- Error messages -->
-    <string name="chown_fail">Chown Apk 到系統擁有者失敗，請重試</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">%1$s 下載錯誤</string>
     <string name="failed_uninstall">%1$s 解除安裝失敗</string>
-    <string name="files_missing_va">檔案已丟失，下載失敗嗎？</string>
-    <string name="ifile_missing">無法讀取 Dark/Black.apk (儲存空間被封鎖了？) 或檔案已丟失</string>
+    <string name="files_missing_va">找不到安裝所需的文件。請重新下載安裝文件，然後再試一次。</string>
+    <string name="ifile_missing">無法在儲存空間中找到 black/dark 主題的 apk 檔案，請再試一次。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
     <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生 YouTube 的更新，然後重試。</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
     <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
     <string name="installation_storage">儲存空間發生錯誤導致安裝失敗。</string>
-    <string name="modapk_missing">安裝程式缺乏黑色/深色 apk ，這不應該發生的，請清除 Manager 數據</string>
-    <string name="path_missing">未能訪問原生 YouTube 安裝路徑，或在原生 Split 安裝後丟失</string>
+    <string name="modapk_missing">在安裝器中找不到 black/dark 主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試一次。</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
