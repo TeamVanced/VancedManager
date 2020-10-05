@@ -86,11 +86,11 @@
     <string name="sources">مصادر</string>
     <string name="vanced_team">فريق فانسد</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">خطأ في تحميل %1$s</string>
     <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
-    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
     <string name="installation_downgrade">فشل التثبيت لان المستخدم حاول تثبيت اصدار اقدم. قم بحذف التحديثات الخاصيه باليوتيوب الاصلي، ثم حاول مره اخرى</string>
@@ -101,6 +101,6 @@
     <string name="installation_signature">فشل التثبيت بسبب تمكين التحقق من توقيع apk. تعطيل التحقق من توقيع apk، ثم حاول مرة أخرى.</string>
     <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
     <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
-    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
