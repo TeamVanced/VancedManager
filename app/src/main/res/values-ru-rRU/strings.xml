@@ -85,11 +85,11 @@
     <string name="sources">Исходники</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Не удалось Chown Apk для владельца системы, попробуйте еще раз</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Ошибка загрузки %1$s</string>
     <string name="failed_uninstall">Ошибка установки пакета %1$s</string>
-    <string name="files_missing_va">Файлы отсутствуют, загрузка не удалась?</string>
-    <string name="ifile_missing">Dark/Black.apk не читается (доступ к хранилищу был заблокирован?) или файл отсутствует</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Установка не была выполнена, поскольку пользователь прервал установку.</string>
     <string name="installation_blocked">Установка не была выполнена, поскольку пользователь заблокировал установку.</string>
     <string name="installation_downgrade">Установка не удалась, так как пользователь попытался понизить версию приложения. Удалите обновления обычного приложения YouTube, затем повторите попытку.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Установка не удалась, так как включена проверка подписи apk. Отключите проверку подписи apk, а затем повторите попытку.</string>
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
     <string name="installation_storage">Установка не была выполнена, так как произошла ошибка с доступом к памяти.</string>
-    <string name="modapk_missing">Black/Dark apk отсутствует в установщике, этого не должно происходить, пожалуйста, очистите данные приложения</string>
-    <string name="path_missing">Путь для установки стандартного Youtube недоступен или отсутствует после раздельной установки</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
