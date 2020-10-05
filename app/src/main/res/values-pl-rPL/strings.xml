@@ -85,11 +85,11 @@
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Nie udało się zmienić właściciela Apk, spróbuj ponownie</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
-    <string name="files_missing_va">Brakuje plików, Pobieranie nie powiodło się?</string>
-    <string name="ifile_missing">Dark/Black.apk nie może być odczytany (Czy pamięć została zablokowana?) lub brakuje pliku</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Instalacja nie powiodła się, bo użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Instalacja nie powiodła się, bo użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć wersję paczki. Odinstaluj aktualizacje z oryginalnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
     <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
-    <string name="modapk_missing">Brak czarnej/ciemnej apk w instalatorze. To nie powinno się zdarzyć, wyczyść dane menedżera</string>
-    <string name="path_missing">Ścieżka instalacji Youtube nie jest dostępna lub brakuje po instalacji systemowego split</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
