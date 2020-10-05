@@ -85,21 +85,21 @@
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->
-    <string name="chown_fail">Apk sistem sahibine değiştirilemedi, Tekrar Deneyin</string>
+    <string name="chown_fail">Apk sistem sahibine değiştirilemedi, lütfen tekrar deneyin.</string>
     <string name="error_downloading">%1$s İndirilemedi</string>
     <string name="failed_uninstall">%1$s paketi kaldırılamadı</string>
-    <string name="files_missing_va">Dosyalar eksik, İndirme Başarısız mı oldu?</string>
-    <string name="ifile_missing">Dark/Black.apk Okunamıyor(Depolama mı Engellendi?) veya Dosya Yok</string>
+    <string name="files_missing_va">Yükleme için gerekli dosyalar bulunamadı. Yükleme dosyalarını yeniden indirip tekrar deneyin.</string>
+    <string name="ifile_missing">Depolamada siyah/koyu tema için apk dosyası bulunamadı, lütfen tekrar deneyin.</string>
     <string name="installation_aborted">Kullanıcı yüklemeyi iptal ettiği için yükleme başarısız oldu.</string>
     <string name="installation_blocked">Kullanıcı yüklemeyi engellediği için yükleme başarısız oldu.</string>
-    <string name="installation_downgrade">Kullanıcı paketi eski sürüme düşürmeye çalıştığı için yükleme başarısız oldu. Stok YouTube uygulamasından güncellemeleri kaldırın, ardından tekrar deneyin.</string>
-    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırın ve ardından tekrar deneyin.</string>
+    <string name="installation_downgrade">Kullanıcı paketi eski sürüme düşürmeye çalıştığı için yükleme başarısız oldu. Stok YouTube uygulamasından güncellemeleri kaldırıp tekrar deneyin.</string>
+    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırıp tekrar deneyin.</string>
     <string name="installation_failed">Yükleme bilinmeyen nedenlerle başarısız oldu, daha fazla destek için Telegram veya Discord\'a katılın.</string>
-    <string name="installation_incompatible">Yükleme dosyası cihazınızla uyumlu olmadığından yükleme başarısız oldu. İndirilen dosyaları Ayarlar\'dan temizleyin, ardından tekrar deneyin.</string>
+    <string name="installation_incompatible">Yükleme dosyası cihazınızla uyumlu olmadığından yükleme başarısız oldu. İndirilen dosyaları Ayarlar\'dan temizleyip tekrar deneyin.</string>
     <string name="installation_invalid">Apk dosyaları bozuk olduğundan yükleme başarısız oldu, lütfen tekrar deneyin.</string>
-    <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakın, ardından tekrar deneyin.</string>
-    <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakın, ardından tekrar deneyin.</string>
+    <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakıp tekrar deneyin.</string>
+    <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp tekrar deneyin.</string>
     <string name="installation_storage">Bir depolama hatası nedeniyle yükleme başarısız oldu.</string>
-    <string name="modapk_missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen manager\'ın uygulama verilerini temizleyin</string>
-    <string name="path_missing">Stok Youtube Yükleme Yolu, Stok Bölünmüş Yüklemeden Sonra Erişilemiyor Veya Yok</string>
+    <string name="modapk_missing">Yükleyiciden siyah/koyu tema için apk dosyası bulunamadı. Manager\'ın uygulama verilerini temizleyip tekrar deneyin.</string>
+    <string name="path_missing">Bölünmüş yüklemeden sonra stok YouTube yükleme yolu bulunamadı.</string>
 </resources>
