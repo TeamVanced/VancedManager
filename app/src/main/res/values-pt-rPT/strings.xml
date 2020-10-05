@@ -85,11 +85,11 @@
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipa Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Falha Ao Mudar Apk para o proprietário do sistema, Tente Novamente</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Erro Transferindo %1$s</string>
     <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
-    <string name="files_missing_va">Arquivos em falta, Transferência Falhada?</string>
-    <string name="ifile_missing">Black/Dark.apk Não pode ser lida(Será que o armazenamento ficou Bloqueado?) ou Arquivo Em Falta</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário cancelou a abortou.</string>
     <string name="installation_blocked">Falha na instalação porque o usuário bloqueou a instalação.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou instalar o pacote de uma versão passada. Desinstale as atualizações do aplicativo YouTube original e tente novamente.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">A instalação falhou porque a verificação de assinatura apk está ativa. Desative a verificação de assinatura apk e tente novamente.</string>
     <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
     <string name="installation_storage">A instalação falhou devido a um erro de armazenamento.</string>
-    <string name="modapk_missing">Black/Dark apk em falta pelo instalador, Isto não devia acontecer, por favor limpe o armazenamento do Manager</string>
-    <string name="path_missing">O diretório do YouTube original não está acessível ou em falta devido a uma instalação Split do YouTube Original</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
