@@ -85,11 +85,11 @@
     <string name="sources">Извор</string>
     <string name="vanced_team">Vanced Тим</string>
     <!-- Error messages -->
-    <string name="chown_fail">Грешка при додели \"Apk\" власнику система, Покушај поново</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Грешка приликом преузимања %1$s</string>
     <string name="failed_uninstall">Неуспешно деинсталирање пакета %1$s</string>
-    <string name="files_missing_va">Недостају датотеке, Грешка при преузимању?</string>
-    <string name="ifile_missing">Тамна/Црна \"apk\" није доступна ( Да ли је приступ меморијском простору блокиран?) или датотека недостаје</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
     <string name="installation_blocked">Инсталација није успешна, корисник је блокирао инсталацију.</string>
     <string name="installation_downgrade">Инсталација није успешна, корисник је покушао да инсталира старију верзију преко новије верзије апликације. Деинсталирајте све до предодређене инсталиране верзије YouTubе апликације, затим покушајте поново.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Инсталација неуспешна јер је укључена провера потписа преузете apk датотеке. Искључите apk проверу и затим покушајте поново.</string>
     <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
     <string name="installation_storage">Инсталација неуспешна услед грешке у меоријском простору.</string>
-    <string name="modapk_missing">Тамна/Црна \"apk\" недостаје у инсталационим датотекама. Ово не би требало да се дешава, очистите податке у менаџеру</string>
-    <string name="path_missing">Путања до инсталиране \"Stock Youtube \" апликације није доступна или недостаје након \"Stock Split \" инсталације</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
