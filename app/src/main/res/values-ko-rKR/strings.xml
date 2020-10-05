@@ -85,7 +85,7 @@
     <string name="sources">소스</string>
     <string name="vanced_team">Vanced 팀</string>
     <!-- Error messages -->
-    <string name="chown_fail">시스템 소유자에게 Apk를 Chown하지 못했습니다, 다시 시도해주세요</string>
+    <string name="chown_fail">시스템 소유자에게 Apk의 소유권 변경을 실패했습니다, 다시 시도해주세요</string>
     <string name="error_downloading">%1$s 다운로드 중 오류 발생</string>
     <string name="failed_uninstall">%1$s 패키지 제거에 실패하였습니다</string>
     <string name="files_missing_va">파일이 없습니다. 다운로드에 실패했나요?</string>
