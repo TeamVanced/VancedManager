@@ -85,11 +85,11 @@
     <string name="sources">উৎসগুলি</string>
     <string name="vanced_team">ভান্সড টীম</string>
     <!-- Error messages -->
-    <string name="chown_fail">সিস্টেমের মালিককে এপিকে chown করতে ব্যর্থ, আবার চেষ্টা করুন</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">%1$s ডাউনলোড করার সময় ত্রুটি</string>
     <string name="failed_uninstall">%1$s পেকেজ আন‌ইনস্টল করা যাইনি</string>
-    <string name="files_missing_va">ফাইলগুলি অনুপস্থিত, ডাউনলোড ব্যর্থ হয়েছে?</string>
-    <string name="ifile_missing">অন্ধকার/কালো এপিকে পড়া যাচ্ছে না (স্টোরেজ ব্লক হয়ে গেছে?) বা ফাইলটি নেই</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী ইনস্টলেশনটি বাতিল করে দিয়েছেন।</string>
     <string name="installation_blocked">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী ইনস্টলেশন অবরুদ্ধ করেছেন।</string>
     <string name="installation_downgrade">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করছিলেন। স্টক ইউটিউব অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এপিকে স্বাক্ষর যাচাইকরণ সক্ষম করা আছে। এপিকে স্বাক্ষর যাচাইকরণ অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_miui">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এমআইইউআই অপটিমাইজেশন সক্ষম আছে। এমআইইউআই অপ্টিমাইজেশন অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_storage">স্টোরেজ ত্রুটির কারণে ইনস্টলেশন ব্যর্থ হয়েছে।</string>
-    <string name="modapk_missing">ইনস্টলারের থেকে কালো/অন্ধকার এপিকে অনুপস্থিত, এটি হওয়া উচিত নয়, দয়া করে ম্যানেজারের অ্যাপ্লিকেশন ডেটা সাফ করুন</string>
-    <string name="path_missing">স্টক ইউটিউব ইনস্টল করার পথটি প্রবেশযোগ্য নয় বা স্টক স্প্লিট ইনস্টলের পরে অনুপস্থিত</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
