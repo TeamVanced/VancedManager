@@ -41,13 +41,13 @@
     <string name="cleared_files">Sikeresen törölte a fájlokat</string>
     <string name="firebase_title">Firebase Analytics</string>
     <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
-    <string name="language_title">Language</string>
+    <string name="language_title">Nyelv</string>
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="link_external_browser">A linkek egy külső böngészőben nyílnak meg</string>
     <string name="new_installer_title">Use the new root installer (Experimental)</string>
     <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
-    <string name="system_default">System Default</string>
+    <string name="system_default">Rendszer alapértelmezett</string>
     <string name="theme">Kinézet</string>
     <string name="theme_follow">Rendszertéma követése</string>
     <string name="theme_dark">Sötét téma</string>
