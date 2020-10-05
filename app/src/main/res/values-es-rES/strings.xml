@@ -85,11 +85,11 @@
     <string name="sources">Fuentes</string>
     <string name="vanced_team">Equipo Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">No se pudo conectar a Chown Apk con el propietario del sistema, inténtalo de nuevo</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="files_missing_va">Faltan los archivos, ¿Descarga Fallida?</string>
-    <string name="ifile_missing">Dark/Black.apk no puede ser leído (¿su almacenamiento fue bloqueado?) o el archivo desapareció</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">La instalación falló porque el usuario abortó la instalación.</string>
     <string name="installation_blocked">Instalación fallida porque el usuario bloqueó la instalación.</string>
     <string name="installation_downgrade">La instalación falló porque el usuario intentó degradar el paquete. Desinstale las actualizaciones de stock YouTube, y vuelva a intentarlo.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de apk está habilitada. Desactiva la verificación de la firmas de apk, y vuelve a intentarlo.</string>
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
     <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
-    <string name="modapk_missing">Falta el Dark/Black.apk en el instalador. Esto no debería pasar, por favor, borra los datos de la aplicación del Manager</string>
-    <string name="path_missing">La ruta de instalación de Youtube no es accesible o no está disponible después de la instalación del Split</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
