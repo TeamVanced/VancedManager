@@ -85,11 +85,11 @@
     <string name="sources">Mənbələr</string>
     <string name="vanced_team">Vanced Birliyi</string>
     <!-- Error messages -->
-    <string name="chown_fail">Apk\'nı sistemə yedirə bilmədik, Bir də yoxlayın</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">%1$s Yüklənərkən xəta</string>
     <string name="failed_uninstall">%1$s paketini silmək olmur</string>
-    <string name="files_missing_va">Fayllar yoxdur, Bəlkə yükləmə uğursuz olub?</string>
-    <string name="ifile_missing">Qaranlıq/Qara.apk Oxunmur (Yaddaşmə Əngəlləndi?) yoxsa Fayl Yoxdur?</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Istifadəçi qurmanı ləğv etdiyi üçün qurma alınmadı.</string>
     <string name="installation_blocked">İstifadəçi qurmanı əngəllədiyi üçün qurma alınmadı.</string>
     <string name="installation_downgrade">İstifadəçi mövcud olandan köhnə versiya qurmağa çalışdığı üçün qurma alınmadı. YouTube tətbiqinin yeniləmələrini silin, və bir də yoxlayın.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">APK imza təsdiqləmə açıq olduğu üçün qurma alınmadı. APK imza təsdiqləməni qapadıb bir də yoxlayın.</string>
     <string name="installation_miui">MIUI Optimizasiya açıq olduğu üçün qurma alınmadı. MIUI Optimizasiyanı qapadıb bir də yoxlayın.</string>
     <string name="installation_storage">Yaddaş xətası üzündən qurma alınmadı.</string>
-    <string name="modapk_missing">Qara/Qaranlıq apk qurmada yoxdur, bunun olmağı düzgün deyil, xahiş edirik menecerin tətbiq məlumatını təmizləyin</string>
-    <string name="path_missing">Standart YouTube Qurma Yolu Ya Əlçatan Deyil Ya Da Bölməli Qurmadan Sonra Yoxa Çıxıb</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
