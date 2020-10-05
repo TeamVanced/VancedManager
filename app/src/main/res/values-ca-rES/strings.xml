@@ -85,11 +85,11 @@
     <string name="sources">Fonts</string>
     <string name="vanced_team">Equip avançat</string>
     <!-- Error messages -->
-    <string name="chown_fail">No s\'ha pogut suprimir l\'App al propietari del sistema. Torneu-ho a provar</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Error en descarregar %1$s</string>
     <string name="failed_uninstall">Error en instal·lar el paquet %1$s</string>
-    <string name="files_missing_va">Falten fitxers, no s\'ha pogut baixar?</string>
-    <string name="ifile_missing">Dark / Black.apk no es pot llegir (l’emmagatzematge es va bloquejar?) O falta un fitxer</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">La instal·lació ha fallat perquè l\'usuari ha interromput la instal·lació.</string>
     <string name="installation_blocked">La instal·lació ha fallat perquè l\'usuari ha bloquejat la instal·lació.</string>
     <string name="installation_downgrade">La instal·lació ha fallat perquè l\'usuari ha intentat actualitzar el paquet. Desinstal·leu les actualitzacions de l\'aplicació YouTube existent i torneu-ho a provar.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">La instal·lació ha fallat perquè la verificació de la signatura apk està activada. Desactiveu la verificació de la signatura apk i torneu-ho a provar.</string>
     <string name="installation_miui">La instal·lació ha fallat perquè l\'optimització MIUI està activada. Desactiveu l\'optimització MIUI i torneu-ho a provar.</string>
     <string name="installation_storage">La instal·lació ha fallat a causa d\'un error d\'emmagatzematge.</string>
-    <string name="modapk_missing">Falta l’apk Black / Dark a l’instal·lador. Això no hauria de passar, esborreu les dades de l’aplicació del gestor</string>
-    <string name="path_missing">El camí d’instal·lació de Youtube d’estoc no és accessible ni falta després de la instal·lació dividida d’estoc</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
