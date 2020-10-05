@@ -85,11 +85,11 @@
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Gagal untuk Chown Apk untuk pemilik sistem, Coba Lagi</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Gagal Mengunduh %1$s</string>
     <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
-    <string name="files_missing_va">File menghilang, Gagal Mengunduh?</string>
-    <string name="ifile_missing">Dark/Black.apk Tidak Bisa Dibaca (Apakah Penyimpanan Diblokir?) atau File Menghilang</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
     <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
     <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Pemasangan gagal karena apk signature verification diaktifkan. Nonaktifkan apk signature verification, lalu coba lagi.</string>
     <string name="installation_miui">Pemasangan gagal karena Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
     <string name="installation_storage">Pemasangan gagal karena kesalahan pada penyimpanan.</string>
-    <string name="modapk_missing">Black/Dark apk hilang dari pemasang, Ini seharusnya tidak terjadi, mohon hapus data aplikasi manager</string>
-    <string name="path_missing">Install Path Youtube Bawaan Tidak Dapat Diakses Atau Menghilang Setelah Stock Split Install</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
