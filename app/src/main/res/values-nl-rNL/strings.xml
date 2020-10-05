@@ -77,19 +77,19 @@
     <string name="choose_preferred_language_note">Opmerking: Engels zal altijd als extra taal worden geïnstalleerd.</string>
     <string name="choose_preferred_theme">Kies je gewenste thema voor Vanced</string>
     <string name="finish">Voltooien</string>
-    <string name="install_light_black">Licht + Zwart</string>
-    <string name="install_light_dark">Licht + Donker</string>
+    <string name="install_light_black">Licht + zwart</string>
+    <string name="install_light_dark">Licht + donker</string>
     <string name="next">Volgende</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Ontwikkelaars</string>
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
-    <string name="chown_fail">Wijzigen van apk naar systeemeigenaar mislukt. Probeer het opnieuw</string>
+    <string name="chown_fail">Wijzigen van apk-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
     <string name="error_downloading">Fout bij downloaden van %1$s</string>
     <string name="failed_uninstall">Deïnstalleren van pakket %1$s mislukt</string>
-    <string name="files_missing_va">Bestanden ontbreken. Downloaden mislukt?</string>
-    <string name="ifile_missing">Donker/Zwart.apk kan niet gelezen worden (Opslag geblokkeerd?) of het bestand ontbreekt</string>
+    <string name="files_missing_va">Kan de vereiste bestanden voor de installatie niet vinden. Download de installatiebestanden opnieuw en probeer het opnieuw.</string>
+    <string name="ifile_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in opslag. Probeer het opnieuw.</string>
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_blocked">Installatie mislukt omdat de gebruiker de installatie heeft geblokkeerd.</string>
     <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard YouTube app en probeer het daarna opnieuw.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Installatie mislukt omdat apk-handtekeningverificatie is ingeschakeld. Schakel apk-handtekeningverificatie uit en probeer het opnieuw.</string>
     <string name="installation_miui">Installatie mislukt omdat MIUI-optimalisatie is ingeschakeld. Schakel MIUI-optimalisatie uit en probeer het opnieuw.</string>
     <string name="installation_storage">Installatie mislukt door een opslagfout.</string>
-    <string name="modapk_missing">Zwart/Donker.apk ontbreekt in installatiebestand. Dit mag niet gebeuren, verwijder de app-gegevens van de manager</string>
-    <string name="path_missing">Standaard Youtube-installatiepad is niet toegankelijk of ontbreekt na gesplitste installatie van de standaard app</string>
+    <string name="modapk_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in het installatiebestand. Verwijder de appdata van Vanced Manager en probeer het opnieuw.</string>
+    <string name="path_missing">Kan het standaard YouTube-installatiepad niet vinden na de gesplitste installatie.</string>
 </resources>
