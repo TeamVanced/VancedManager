@@ -81,7 +81,7 @@
     <string name="install_light_dark">Açık + Koyu</string>
     <string name="next">Sonraki</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Geliştiricisi</string>
+    <string name="manager_dev">Manager Geliştiricileri</string>
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->
@@ -100,6 +100,6 @@
     <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakın, ardından tekrar deneyin.</string>
     <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakın, ardından tekrar deneyin.</string>
     <string name="installation_storage">Bir depolama hatası nedeniyle yükleme başarısız oldu.</string>
-    <string name="modapk_missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen yöneticinin uygulama verilerini temizleyin</string>
+    <string name="modapk_missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen manager\'ın uygulama verilerini temizleyin</string>
     <string name="path_missing">Stok Youtube Yükleme Yolu, Stok Bölünmüş Yüklemeden Sonra Erişilemiyor Veya Yok</string>
 </resources>
