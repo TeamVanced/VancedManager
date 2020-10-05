@@ -85,11 +85,11 @@
     <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tým Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Vlastníka APK se nepodařilo změnit, zkuste to znovu</string>
+    <string name="chown_fail">Nelze změnit soubor apk na vlastníka systému, zkuste to prosím znovu.</string>
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
-    <string name="files_missing_va">Chybí soubory. Stahování se nezdařilo?</string>
-    <string name="ifile_missing">Soubor dark/black.apk nelze přečíst (je blokováno úložiště?) nebo soubor chybí</string>
+    <string name="files_missing_va">Nepodařilo se najít požadované soubory pro instalaci. Stáhněte znovu instalační soubory a pokus opakujte.</string>
+    <string name="ifile_missing">Nepodařilo se najít soubor apk pro černý/tmavý motiv v úložišti, zkuste to prosím znovu.</string>
     <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
     <string name="installation_blocked">Instalace se nezdařila, protože uživatel zablokoval instalaci.</string>
     <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace YouTube a zkuste to znovu.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Instalace se nezdařila, protože je povoleno ověření podpisu APK. Zakažte ověření podpisu APK a zkuste to znovu.</string>
     <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a zkuste to znovu.</string>
     <string name="installation_storage">Instalace se nezdařila z důvodu chyby v úložišti.</string>
-    <string name="modapk_missing">V instalačním souboru chybí black/dark.apk. To by se nemělo stát. Vymažte prosím data aplikace Vanced Manager</string>
-    <string name="path_missing">Cesta instalace výchozí aplikace YouTube není k dispozici nebo chybí po instalaci rozdělení systému</string>
+    <string name="modapk_missing">Nepodařilo se najít soubor apk pro černý/tmavý motiv z instalátoru. Vymažte data aplikace Manager a pokus opakujte.</string>
+    <string name="path_missing">Nepodařilo se najít výchozí cestu instalace YouTube po rozdělené instalaci.</string>
 </resources>
