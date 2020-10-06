@@ -85,11 +85,11 @@
     <string name="sources">Quellen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">Fehler bei der `chown` apk an den Systembesitzer, bitte versuchen Sie es erneut.</string>
     <string name="error_downloading">Download von %1$s fehlgeschlagen</string>
     <string name="failed_uninstall">Entfernen von %1$s fehlgeschlagen</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">Die benötigten Dateien für die Installation konnten nicht gefunden werden. Laden Sie die Installationsdateien erneut herunter und versuchen Sie es erneut.</string>
+    <string name="ifile_missing">Apk-Datei für schwarz/dunkles Theme konnte nicht gefunden werden, bitte versuchen Sie es erneut.</string>
     <string name="installation_aborted">Installation fehlgeschlagen, da der Nutzer diese abgebrochen hat.</string>
     <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer diese blockiert hat.</string>
     <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Installation fehlgeschlagen, da die apk Signaturüberprüfung aktiviert ist. Deaktivieren Sie die apk Signaturüberprüfung, dann versuchen Sie es erneut.</string>
     <string name="installation_miui">Installation fehlgeschlagen, da die MIUI-Optimierung aktiviert ist. Deaktivieren Sie die MIUI-Optimierung, und versuchen Sie es erneut.</string>
     <string name="installation_storage">Die Installation ist aufgrund eines Speicherfehlers fehlgeschlagen.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">Apk-Datei für schwarz/dunkles Theme konnte nicht gefunden werden. Löschen Sie die App-Daten des Managers und versuchen Sie es erneut.</string>
+    <string name="path_missing">Fehler beim Auffinden des YouTube-Installationspfades nach der geteilten Installation.</string>
 </resources>
