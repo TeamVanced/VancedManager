@@ -88,8 +88,8 @@
     <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">Error al encontrar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
+    <string name="ifile_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del almacenamiento, por favor inténtelo de nuevo.</string>
     <string name="installation_aborted">La instalación falló porque el usuario abortó la instalación.</string>
     <string name="installation_blocked">Instalación fallida porque el usuario bloqueó la instalación.</string>
     <string name="installation_downgrade">La instalación falló porque el usuario intentó degradar el paquete. Desinstale las actualizaciones de stock YouTube, y vuelva a intentarlo.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de apk está habilitada. Desactiva la verificación de la firmas de apk, y vuelve a intentarlo.</string>
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
     <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del instalador. Borrar los datos de la aplicación del Administrador y vuelva a intentarlo.</string>
+    <string name="path_missing">No se pudo encontrar la ruta de instalación de YouTube después de dividir la instalación.</string>
 </resources>
