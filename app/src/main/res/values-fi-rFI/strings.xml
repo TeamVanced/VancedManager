@@ -81,7 +81,7 @@
     <string name="install_light_dark">Vaalea + Tumma</string>
     <string name="next">Seuraava</string>
     <!-- About Page -->
-    <string name="manager_dev">Kehittäjäpäällikkö</string>
+    <string name="manager_dev">Managerin kehittäjät</string>
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
