@@ -85,11 +85,11 @@
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">システム所有者への APK の Chown ができませんでした、もう一度やり直してください.</string>
     <string name="error_downloading">%1$s のダウンロード中にエラー</string>
     <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">インストールに必要なファイルが見つかりませんでした。再ダウンロードし、もう一度お試しください。</string>
+    <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルを見つけることができませんでした。もう一度やり直してください。</string>
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。ストックの YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
     <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">インストーラーからブラック/ダークテーマの APK ファイルが見つかりませんでした。Manager のアプリデータを消去してから、もう一度お試しください。</string>
     <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
