@@ -85,11 +85,11 @@
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">APK:n omistajuuden siirto järjestelmän omistajalle epäonnistui, yritä uudelleen.</string>
     <string name="error_downloading">%1$s lataus epäonnistui</string>
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">Asennukseen vaadittavien tiedostojen paikannus epäonnistui. Yritä ladata asennustiedostot uudelleen.</string>
+    <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä esti asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
     <string name="installation_storage">Asennus epäonnistui tallennustilan virheen vuoksi.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">APK-tiedostoa mustalle/tummalle teemalle ei löytynyt asentajalta. Tyhjennä Managerin sovellustiedot ja yritä uudelleen.</string>
+    <string name="path_missing">Youtube-sovelluksen asennuspolkua ei voitu paikantaa jaetun asennuksen jälkeen.</string>
 </resources>
