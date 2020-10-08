@@ -85,7 +85,7 @@
     <string name="sources">程式码</string>
     <string name="vanced_team">Vanced 团队</string>
     <!-- Error messages -->
-    <string name="chown_fail">无法设置apk属性为系统拥有者，请重试</string>
+    <string name="chown_fail">无法 `chown` apk 为系统拥有者，请重试。</string>
     <string name="error_downloading">%1$s 下载错误</string>
     <string name="failed_uninstall">%1$s 卸载失败</string>
     <string name="files_missing_va">无法找到需要安装的文件。重新下载安装文件，然后重试。</string>
