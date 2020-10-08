@@ -85,7 +85,7 @@
     <string name="sources">Nguồn</string>
     <string name="vanced_team">Đội ngũ Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">Wijzigen van apk-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
     <string name="error_downloading">Lỗi khi tải xuống %1$s</string>
     <string name="failed_uninstall">Gỡ cài đặt thất bại %1$s</string>
     <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
