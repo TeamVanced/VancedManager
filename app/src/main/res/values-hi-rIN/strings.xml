@@ -86,11 +86,11 @@
     <string name="sources">स्रोत</string>
     <string name="vanced_team">वांसड टीम</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">सिस्टम स्वामी को `chown` apk में विफल, कृपया पुनः प्रयास करें।</string>
     <string name="error_downloading">डाउनलोड करने में त्रुटि %1$s</string>
     <string name="failed_uninstall">पैकेज की स्थापना रद्द करने में विफल %1$s</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">स्थापना के लिए आवश्यक फ़ाइलों का पता लगाने में विफल। स्थापना फ़ाइलों को फिर से डाउनलोड करें, फिर पुनः प्रयास करें।</string>
+    <string name="ifile_missing">भंडारण से काले / अंधेरे विषय के लिए apk फ़ाइल खोजने में विफल, कृपया पुनः प्रयास करें।</string>
     <string name="installation_aborted">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना रद्द कर दी थी</string>
     <string name="installation_blocked">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना को अवरुद्ध कर दिया।</string>
     <string name="installation_downgrade">स्थापना विफल रही क्योंकि उपयोगकर्ता ने पैकेज को डाउनग्रेड करने का प्रयास किया। स्टॉक YouTube ऐप से अपडेट अनइंस्टॉल करें, फिर प्रयास करें।</string>
@@ -101,6 +101,6 @@
     <string name="installation_signature">स्थापना विफल रही क्योंकि एपीके हस्ताक्षर सत्यापन सक्षम है। एपीके हस्ताक्षर सत्यापन अक्षम करें, फिर प्रयास करें।</string>
     <string name="installation_miui">MIUI ऑप्टिमाइज़ेशन सक्षम होने के कारण स्थापना विफल रही। MIUI ऑप्टिमाइज़ेशन अक्षम करें, फिर प्रयास करें।</string>
     <string name="installation_storage">संग्रहण त्रुटि के कारण स्थापना विफल रही।</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">इंस्टॉलर से ब्लैक / डार्क थीम के लिए एपीके फ़ाइल खोजने में विफल। प्रबंधक का एप्लिकेशन डेटा साफ़ करें, फिर प्रयास करें।</string>
+    <string name="path_missing">विभाजन स्थापना के बाद स्टॉक YouTube इंस्टॉलेशन पथ का पता लगाने में विफल</string>
 </resources>
