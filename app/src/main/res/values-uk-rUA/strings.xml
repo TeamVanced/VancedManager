@@ -85,11 +85,11 @@
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">Не вдалося передати apk власнику системи, спробуйте ще раз.</string>
     <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">Не вдалося знайти необхідні файли для встановлення. Повторно завантажте файли і спробуйте ще раз.</string>
+    <string name="ifile_missing">Не вдалося знайти apk-файл для чорної/темної теми зі сховища, спробуйте ще раз.</string>
     <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
     <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">Не вдалося знайти apk-файл для чорної/темної теми в програмі встановлення. Видаліть дані додатка з Менеджера і спробуйте ще раз.</string>
+    <string name="path_missing">Не вдалося знайти стандартний шлях встановлення YouTube після роздільного встановлення.</string>
 </resources>
