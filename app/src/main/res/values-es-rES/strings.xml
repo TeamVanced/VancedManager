@@ -64,7 +64,7 @@
     <string name="hold_on">¡Detente!</string>
     <string name="magisk_vanced">Estás utilizando la versión Magisk/TWRP de Vanced, la cual está descontinuada y no puede ser actualizada mediante esta app. Por favor elimínala quitando el módulo de Magisk o utilizando el desinstalador TWRP.</string>
     <string name="miui_one_title">MIUI detectado!</string>
-    <string name="miui_one">Para instalar Vanced, DEBES desactivar las Optimizaciones MIUI en los ajustes de desarrollador. (Puede ignorar esta advertencia si está utilizando el ROM 20.2.20 o posterior de xiaomi.eu)</string>
+    <string name="miui_one">Para instalar Vanced, DEBES desactivar las Optimizaciones MIUI en los ajustes de desarrollador. (Puedes ignorar esta advertencia si estas utilizando el ROM 20.2.20 o posterior de xiaomi.eu)</string>
     <string name="error">Error</string>
     <string name="security_context">Asegúrate de haber descargado la aplicación desde vanced.app, Servidor de discord o el GitHub de Vanced</string>
     <string name="success">Éxito!</string>
@@ -85,7 +85,7 @@
     <string name="sources">Fuentes</string>
     <string name="vanced_team">Equipo Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">No se pudo conectar a Chown Apk con el propietario del sistema, inténtalo de nuevo.</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
     <string name="files_missing_va">Error al encontrar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
