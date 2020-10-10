@@ -30,7 +30,7 @@ import kotlin.collections.HashMap
 object PackageHelper {
     
     private const val apkInstallPath = "/data/adb/Vanced/"
-    private const val ypkg = "com.google.android.youtube"
+    private const val yPkg = "com.google.android.youtube"
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
             packageManager.getPackageInfo(packageName, 0)
