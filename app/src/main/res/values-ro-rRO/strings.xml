@@ -85,11 +85,11 @@
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">Comanda \'chown\' apk pentru proprietarul sistemului a eșuat, încercați din nou.</string>
     <string name="error_downloading">Eroare la descărcarea %1$s</string>
     <string name="failed_uninstall">Dezinstalarea pachetului %1$s a eșuat</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">Nu s-a reuşit localizarea fişierelor necesare pentru instalare. Redescărcaţi fişierele de instalare, apoi încercaţi din nou.</string>
+    <string name="ifile_missing">Nu s-a reuşit localizarea fişierului apk pentru tema neagră/întunecată din stocare, vă rugăm să încercaţi din nou.</string>
     <string name="installation_aborted">Operația a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_blocked">Operația a eșuat deoarece utilizatorul a blocat instalarea.</string>
     <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările de pe aplicația YouTube stocată, apoi încercați din nou.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Instalarea a eșuat deoarece verificarea semnăturii apk este activată. Dezactivați verificarea semnăturii apk, apoi încercați din nou.</string>
     <string name="installation_miui">Instalarea a eșuat deoarece este activată optimizarea MIUI. Dezactivați optimizarea MIUI, apoi încercați din nou.</string>
     <string name="installation_storage">Instalarea a eșuat din cauza unei erori de stocare.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">Nu s-a putut găsi fișierul apk pentru tema neagră/întunecată din instalator. Ștergeți datele aplicației Manager, apoi încercați din nou.</string>
+    <string name="path_missing">Localizarea instalarii YouTube-ului stock a eșuat dupa instalarea divizată.</string>
 </resources>
