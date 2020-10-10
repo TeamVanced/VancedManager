@@ -339,8 +339,10 @@ object PackageHelper {
         return false
     }
 
-    private fun setupScript(apkFPath: String, path: String): Boolean {
-        if (Shell.su("""echo "#!/system/bin/sh\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess) {
+    private fun setupScript(apkFPath: String, path: String): Boolean
+    {
+        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ \"${'$'}(getprop sys.boot_completed)\" != 1 ];\ndo sleep 1;\ndone;\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
+        {
             return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
         }
         return false
@@ -496,11 +498,14 @@ object PackageHelper {
     //get path of the installed youtube
     private fun getPackageDir(context: Context): String?
     {
-        return try {
-            val p = getPkgInfo(vancedRootPkg, context)
-            p!!.applicationInfo.sourceDir
-        } catch (e: Exception) {
-             val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
+        val p = getPkgInfo(yPkg, context)
+        return if(p != null)
+        {
+            p.applicationInfo.sourceDir
+        }
+        else
+        {
+            val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
             if(execRes.isSuccess)
             {
                 val result = execRes.out
