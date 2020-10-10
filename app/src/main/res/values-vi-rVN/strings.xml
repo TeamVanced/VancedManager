@@ -39,7 +39,7 @@
     <string name="chosen_theme">Nền: %1$s</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
-    <string name="firebase_title">Việt Nam</string>
+    <string name="firebase_title">Phân tích Firebase</string>
     <string name="firebase_summary">Điều này cho phép chúng tôi thu thập thông tin về hiệu suất ứng dụng và nhật ký sự cố</string>
     <string name="language_title">Ngôn ngữ</string>
     <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
@@ -69,7 +69,7 @@
     <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vanced.app, server Discord Vanced hoặc Github Vanced</string>
     <string name="success">Thành công!</string>
     <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
-    <string name="music_installed">Cài đặt thành công Vanced Music! Mở nó?</string>
+    <string name="music_installed">Vanced Music vừa được cài đặt thành công! Mở ngay?</string>
     <string name="launch">Mở</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
@@ -85,11 +85,11 @@
     <string name="sources">Nguồn</string>
     <string name="vanced_team">Đội ngũ Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Wijzigen van apk-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
+    <string name="chown_fail">Không thể \"chown\" tập tin apk cho người sở hữu hệ thống, vui lòng thử lại lần nữa.</string>
     <string name="error_downloading">Lỗi khi tải xuống %1$s</string>
     <string name="failed_uninstall">Gỡ cài đặt thất bại %1$s</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">Không thể xác định vị trí các tập tin cần thiết cho việc cài đặt. Hãy tải lại tập tin cài đặt, sau đó thử lại lần nữa.</string>
+    <string name="ifile_missing">Không thể tìm thấy tập tin apk cho giao diện tối từ ổ lưu trữ, vui lòng thử lại lần nữa.</string>
     <string name="installation_aborted">Cài đặt thất bại do người dùng hủy.</string>
     <string name="installation_blocked">Cài đặt thất bại do người dùng chặn.</string>
     <string name="installation_downgrade">Cài đặt thất bại do người dùng hạ cấp ứng dụng. Gỡ các bản cập nhật từ ứng dụng YouTube gốc rồi thử lại.</string>
@@ -100,6 +100,6 @@
     <string name="installation_signature">Cài đặt thất bại do xác minh chứng chỉ apk được kích hoạt. Vô hiệu hóa xác minh chứng chỉ apk rồi thử lại.</string>
     <string name="installation_miui">Cài đặt thất bại do Tối ưu hóa MIUI được kích hoạt. Vô hiệu hóa Tối ưu hóa MIUI rồi thử lại.</string>
     <string name="installation_storage">Cài đặt thất bại do lỗi bộ nhớ.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Không thể tìm thấy tập tin apk cho giao diện tối từ trình cài đặt. Xóa hết dữ liệu ứng dụng của Manager, sau đó thử lại lần nữa.</string>
     <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
