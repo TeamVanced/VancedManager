@@ -9,7 +9,10 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.perf.FirebasePerformance
+import com.vanced.manager.BuildConfig.MANAGER_LANGUAGES
+import com.vanced.manager.BuildConfig.MANAGER_LANGUAGE_NAMES
 import com.vanced.manager.R
+import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
 import java.io.File
 
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -92,13 +95,23 @@ class SettingsFragment : PreferenceFragmentCompat() {
             }
         }
 
-        findPreference<Preference>("vanced_chosen_modes")?.setOnPreferenceClickListener {
-            ChosenPreferenceDialogFragment().show(childFragmentManager.beginTransaction(), "Chosen Preferences")
-            true
+        val langPref = preferenceScreen.sharedPreferences.getString("manager_lang", "System Default")
+        preferenceScreen.findPreference<ListPreference>("manager_lang")?.apply {
+            summary = langPref?.let { getLanguageFormat(requireActivity(), it) }
+            entries = arrayOf(getString(R.string.system_default)) + MANAGER_LANGUAGE_NAMES
+            entryValues = arrayOf("System Default") + MANAGER_LANGUAGES
+
+            setOnPreferenceChangeListener { _, newValue ->
+                if (langPref != newValue) {
+                    requireActivity().recreate()
+                    return@setOnPreferenceChangeListener true
+                }
+                false
+            }
         }
 
-        findPreference<Preference>("install_url")?.setOnPreferenceClickListener {
-            URLChangeFragment().show(childFragmentManager.beginTransaction(), "Install URL")
+        findPreference<Preference>("vanced_chosen_modes")?.setOnPreferenceClickListener {
+            ChosenPreferenceDialogFragment().show(childFragmentManager.beginTransaction(), "Chosen Preferences")
             true
         }
 

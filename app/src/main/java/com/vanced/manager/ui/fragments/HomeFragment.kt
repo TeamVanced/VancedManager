@@ -22,12 +22,15 @@ import com.vanced.manager.adapter.VariantAdapter
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.utils.AppUtils
+import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
+import com.vanced.manager.utils.AppUtils.installing
 
 open class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-    private val viewModel: HomeViewModel by viewModels()
+    private val viewModel: HomeViewModel by viewModels {
+        HomeViewModelFactory(requireActivity())
+    }
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
 
     private val tabListener = object : TabLayout.OnTabSelectedListener {
@@ -78,7 +81,7 @@ open class HomeFragment : Fragment() {
             mainTablayout.getTabAt(if (getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot") == "root") 1 else 0)?.select()
         }
 
-        AppUtils.installing.observe(viewLifecycleOwner, { value ->
+        installing.observe(viewLifecycleOwner, { value ->
             if (value) hideTab() else showTab()
         })
 

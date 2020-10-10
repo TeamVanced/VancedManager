@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
+import com.vanced.manager.core.App
 
 object InternetTools {
 
@@ -30,7 +31,7 @@ object InternetTools {
 
     suspend fun getObjectFromJson(url: String, obj: String): String {
         return try {
-            JsonHelper.getJson(url).string(obj) ?: ""
+            JsonHelper.getJson(url)?.string(obj) ?: ""
         } catch  (e: Exception) {
             Log.e(TAG, "Error: ", e)
             ""
@@ -39,7 +40,7 @@ object InternetTools {
 
     suspend fun getArrayFromJson(url: String, array: String): MutableList<String> {
         return try {
-            JsonHelper.getJson(url).array<String>(array)?.value ?: mutableListOf("null")
+            JsonHelper.getJson(url)?.array<String>(array)?.value ?: mutableListOf("null")
         } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
             mutableListOf("null")
@@ -49,7 +50,7 @@ object InternetTools {
     suspend fun getJsonInt(file: String, obj: String, context: Context): Int {
         val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return try {
-            JsonHelper.getJson("$installUrl/$file").int(obj) ?: 0
+            JsonHelper.getJson("$installUrl/$file")?.int(obj) ?: 0
         } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
             0
@@ -59,23 +60,19 @@ object InternetTools {
     suspend fun getJsonString(file: String, obj: String, context: Context): String {
         val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
         return try {
-            JsonHelper.getJson("$installUrl/$file").string(obj) ?: context.getString(R.string.unavailable)
+            JsonHelper.getJson("$installUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
         } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
             context.getString(R.string.unavailable)
         }
     }
 
-    suspend fun isUpdateAvailable(): Boolean {
-        val result = try {
-            JsonHelper.getJson("https://ytvanced.github.io/VancedBackend/manager.json").int("versionCode") ?: 0
-        } catch (e: Exception) {
-            0
-        }
+    fun isUpdateAvailable(context: Context): Boolean {
+        val result = (context.applicationContext as App).manager.get()?.int("versionCode") ?: 0
 
         return result > BuildConfig.VERSION_CODE
     }
 
-    const val baseUrl = "https://vanced.app/api/v1"
+    const val baseUrl = "https://vancedapp.com/api/v1"
 
 }

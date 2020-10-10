@@ -45,11 +45,13 @@
     <string name="cleared_files">Successfully cleared files</string>
     <string name="firebase_title">Firebase Analytics</string>
     <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="language_title">Language</string>
     <string name="link_title">Use Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
     <string name="link_external_browser">Links will open in an External Browser</string>
     <string name="new_installer_title">Use the new root installer (Experimental)</string>
     <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
+    <string name="system_default">System Default</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
@@ -91,11 +93,11 @@
     <string name="vanced_team">Vanced Team</string>
 
     <!-- Error messages -->
-    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
     <string name="error_downloading">Error Downloading %1$s</string>
     <string name="failed_uninstall">Failed to uninstall package %1$s</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
-    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Installation failed because user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because user tried to downgrade the package. Uninstall updates from stock YouTube app, then try again.</string>
@@ -106,7 +108,7 @@
     <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
     <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
     <string name="installation_storage">Installation failed due to a storage error.</string>
-    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 
 </resources>

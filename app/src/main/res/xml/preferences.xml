@@ -60,6 +60,12 @@
             android:key="accent_color"
             android:title="@string/accent_color" />
 
+       <ListPreference
+           android:defaultValue="System Default"
+           android:key="manager_lang"
+           android:title="@string/language_title"
+           android:icon="@drawable/ic_baseline_language_24"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -69,10 +75,6 @@
         <Preference
             android:title="@string/chosen_install_values"
             android:key="vanced_chosen_modes" />
-
-        <Preference
-            android:title="@string/update_url"
-            android:key="install_url" />
 
         <Preference
             android:title="@string/clear_files"

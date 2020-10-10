@@ -11,20 +11,8 @@
     <!-- Home Page -->
     <string name="changelogs">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
-    <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
-    <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="install">Встановити</string>
-    <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
-    <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
-    <string name="installation_downgrade">Operation failed because the user tried to downgrade the package. Do you have stock YouTube Installed?</string>
-    <string name="installation_conflict">Операція не вдалася, оскільки додаток суперечить вже встановленому додатку.</string>
-    <string name="installation_failed">Операція не вдалася через невідому причину, приєднайтеся до нашого Telegram або Discord сервера для допомоги.</string>
-    <string name="installation_incompatible">Операція не вдалася, оскільки додаток несумісний із вашим пристроєм.</string>
-    <string name="installation_invalid">Операція не вдалася, оскільки файли apk недійсні.</string>
-    <string name="installation_signature">Operation failed because the user didn\'t disable apk signature verification</string>
-    <string name="installation_miui">Під час встановлення Vanced сталася несподівана помилка. Ви впевнені що вимкнули оптимізацію MIUI?</string>
-    <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
-    <string name="installation_wait">Будь ласка, зачекайте доки встановлення не закінчиться.</string>
+    <string name="installation_wait">Будь ласка, дочекайтеся закінчення установки.</string>
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
@@ -49,11 +37,17 @@
     <string name="chosen_install_values">Вибрані налаштування встановлення</string>
     <string name="chosen_lang">Мова(и): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
-    <string name="clear_files">Clear downloaded files</string>
-    <string name="cleared_files">Successfully cleared files</string>
+    <string name="clear_files">Очистити завантажені файли</string>
+    <string name="cleared_files">Файли було успішно очищено</string>
+    <string name="firebase_title">Аналітика Firebase</string>
+    <string name="firebase_summary">Це дозволяє нам збирати інформацію про продуктивність додатка й журнали збоїв</string>
+    <string name="language_title">Мова</string>
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
+    <string name="new_installer_title">Використовувати новий root інсталятор (експериментальний)</string>
+    <string name="new_installer_summary">Цей інсталятор не залежить від статусу перевірки підпису. УВАГА: Vanced може пропасти після перезавантаження, якщо ви встановите його за допомогою цього інсталятора</string>
+    <string name="system_default">Системний за замовчуванням</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
@@ -67,18 +61,19 @@
     <string name="update_notfound">Нових оновлень не виявлено</string>
     <!-- Dialogs -->
     <string name="guide">Гайд</string>
-    <string name="hold_on">Зачекайте!</string>
+    <string name="hold_on">Зупинись!</string>
     <string name="magisk_vanced">Схоже, ви використовуєте Magisk/TWRP-версію Vanced, підтримка якої була припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
     <string name="miui_one_title">Виявлено користувача MIUI!</string>
-    <string name="miui_one">Привіт! Схоже, що ви використовуєте MIUI. Для того, щоб користуватися цим додатком, вам доведеться відключити MIUI оптимізацію. (Ви можете спокійно ігнорувати це попередження, якщо ви знаходитесь на 20.2.20 або новішому ПЗУ на основі xiaomi.eu)</string>
+    <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI в налаштуваннях розробника. (Ви можете проігнорувати це попередження, якщо ви використовуєте прошивку xiaomi.eu на версії 20.2.20+)</string>
     <string name="error">Помилка</string>
-    <string name="security_context">Будь ласка, переконайтеся, що ви завантажили додаток з Vanced.app, Vanced Discord серверу або з Vanced GitHub</string>
+    <string name="security_context">Переконайтеся, що ви завантажили додаток з vanced.app, Vanced Discord сервера або Vanced GitHub</string>
     <string name="success">Успіх!</string>
-    <string name="vanced_installed">Vanced був успішно встановлений, відкрити його прямо зараз?</string>
+    <string name="vanced_installed">Vanced був успішно встановлений! Відкрити зараз?</string>
+    <string name="music_installed">Vanced Music успішно встановлений! Відкрити зараз?</string>
     <string name="launch">Відкрити</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Виберіть вашу головну мову для Vanced</string>
+    <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
     <string name="choose_preferred_language_note">Примітка: Якщо ви встановите що-небудь, крім Англійської, Англійська мова все одно буде встановлена як додаткова мова</string>
     <string name="choose_preferred_theme">Виберіть вашу головну тему для Vanced</string>
     <string name="finish">Завершити</string>
@@ -86,7 +81,25 @@
     <string name="install_light_dark">Світла + Темна</string>
     <string name="next">Далі</string>
     <!-- About Page -->
-    <string name="manager_dev">Розробники Менеджера</string>
+    <string name="manager_dev">Розробники інсталятора</string>
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Не вдалося Chown Apk для власника системи, спробуйте ще раз</string>
+    <string name="error_downloading">Помилка Завантаження %1$s</string>
+    <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
+    <string name="files_missing_va">Файли відсутні, Невдале завантаження?</string>
+    <string name="ifile_missing">Dark/Black.apk не зчитується (доступ до сховища був заблокований?) або файл відсутній</string>
+    <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
+    <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
+    <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
+    <string name="installation_conflict">Помилка встановлення, оскільки додаток конфліктує із уже встановленою програмою. Видаліть поточну версію Vanced, а потім спробуйте знову.</string>
+    <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
+    <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
+    <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>
+    <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
+    <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
+    <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
+    <string name="modapk_missing">Чорний/Темний apk відсутній, Цього не повинно статися, будь ласка, очистіть дані програми від менеджера</string>
+    <string name="path_missing">Шлях для встановлення звичайного Youtube не є допустимим, або відсутній після того, як був викорастаний SAI</string>
 </resources>

@@ -5,12 +5,16 @@
     <Preference
         android:key="firststart_switch"
         android:title="First start switcher"
-        android:summary="Dev only please"/>
+        android:summary="No reason to touch this, seriously"/>
 
     <Preference
         android:key="force_update"
         android:title="Force Manager Update"
         android:summary="Update manager without comparing versionCode"/>
+
+    <Preference
+        android:title="@string/update_url"
+        android:key="install_url" />
 
     <PreferenceCategory
         android:title="Device info">
