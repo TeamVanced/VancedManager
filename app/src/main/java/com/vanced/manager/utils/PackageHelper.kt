@@ -30,7 +30,6 @@ import kotlin.collections.HashMap
 object PackageHelper {
     
     private const val apkInstallPath = "/data/adb/Vanced/"
-
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
             packageManager.getPackageInfo(packageName, 0)
@@ -498,7 +497,7 @@ object PackageHelper {
     //get path of the installed youtube
     private fun getPackageDir(context: Context): String?
     {
-        val p = getPkgInfo(yPkg, context)
+        val p = getPkgInfo(vancedRootPkg, context)
         return if(p != null)
         {
             p.applicationInfo.sourceDir
