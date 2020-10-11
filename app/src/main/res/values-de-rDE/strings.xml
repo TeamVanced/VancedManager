@@ -47,7 +47,7 @@
     <string name="link_external_browser">Links werden in einem externen Browser geöffnet</string>
     <string name="new_installer_title">Neuen Root-Installer verwenden (Experimentell)</string>
     <string name="new_installer_summary">Dieser Installer ist unabhängig vom Status der Signaturverifizierung. ACHTUNG: Vanced könnte nach dem Neustart verschwinden, wenn Sie es mit dem Installer installieren</string>
-    <string name="system_default">Standardeinstellung</string>
+    <string name="system_default">Systemstandard</string>
     <string name="theme">Theme</string>
     <string name="theme_follow">Folge Systemeinstellung</string>
     <string name="theme_dark">Dunkles Theme</string>
@@ -85,7 +85,7 @@
     <string name="sources">Quellen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
-    <string name="chown_fail">Fehler bei der `chown` apk an den Systembesitzer, bitte versuchen Sie es erneut.</string>
+    <string name="chown_fail">Fehler bei `chown` der apk an den Systembesitzer, bitte versuchen Sie es erneut.</string>
     <string name="error_downloading">Download von %1$s fehlgeschlagen</string>
     <string name="failed_uninstall">Entfernen von %1$s fehlgeschlagen</string>
     <string name="files_missing_va">Die benötigten Dateien für die Installation konnten nicht gefunden werden. Laden Sie die Installationsdateien erneut herunter und versuchen Sie es erneut.</string>
