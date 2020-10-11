@@ -85,7 +85,7 @@
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">Nie udało się zmienić właściciela apk, spróbuj ponownie.</string>
     <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
     <string name="files_missing_va">Nie udało się zlokalizować wymaganych plików do instalacji. Pobierz ponownie pliki instalacyjne, a następnie spróbuj ponownie.</string>
