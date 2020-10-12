@@ -40,7 +40,7 @@
     <string name="clear_files">清除已下載的檔案</string>
     <string name="cleared_files">成功清除檔案</string>
     <string name="firebase_title">Firebase 分析</string>
-    <string name="firebase_summary">這讓我們收集有關應用程式表現和崩潰日誌的資訊</string>
+    <string name="firebase_summary">這讓我們可以收集關於應用程式效能和崩潰日誌的資訊</string>
     <string name="language_title">語言</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
