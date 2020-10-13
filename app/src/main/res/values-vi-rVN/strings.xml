@@ -9,10 +9,10 @@
     <string name="title_home">Trang chủ</string>
     <string name="title_settings">Cài đặt</string>
     <!-- Home Page -->
-    <string name="changelogs">Bản ghi các thay đổi</string>
+    <string name="changelogs">Các thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
-    <string name="installation_wait">Vui lòng đợi cho đến khi quá trình cài đặt kết thúc.</string>
+    <string name="installation_wait">Vui lòng đợi cho đến khi quá trình cài đặt hoàn tất.</string>
     <string name="button_reinstall">Cài đặt lại</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
@@ -40,14 +40,14 @@
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
     <string name="firebase_title">Phân tích Firebase</string>
-    <string name="firebase_summary">Điều này cho phép chúng tôi thu thập thông tin về hiệu suất ứng dụng và nhật ký sự cố</string>
+    <string name="firebase_summary">Điều này cho phép chúng tôi thu thập thông tin về hiệu suất và bản ghi sự cố của ứng dụng</string>
     <string name="language_title">Ngôn ngữ</string>
     <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
     <string name="link_custom_tabs">Các đường link sẽ mở trong Custom Tabs của Chrome</string>
     <string name="link_external_browser">Các đường link sẽ mở trong một trình duyệt ngoài</string>
     <string name="new_installer_title">Sử dụng trình cài đặt root mới (Thử nghiệm)</string>
-    <string name="new_installer_summary">Trình cài đặt này không phụ thuộc vào trạng thái Xác minh Chữ ký. CẢNH BÁO: Vanced có thể biến mất sau khi khởi động lại nếu bạn cài đặt nó bằng cách này</string>
-    <string name="system_default">Mặc định hệ thống</string>
+    <string name="new_installer_summary">Trình cài đặt này không phụ thuộc vào trạng thái của Xác Minh Chữ Ký. CẢNH BÁO: Vanced có thể biến mất sau khi khởi động lại nếu bạn cài đặt nó bằng cách này</string>
+    <string name="system_default">Mặc Định Hệ Thống</string>
     <string name="theme">Nền</string>
     <string name="theme_follow">Theo Hệ Thống</string>
     <string name="theme_dark">Nền Tối</string>
@@ -64,7 +64,7 @@
     <string name="hold_on">Dừng lại!</string>
     <string name="magisk_vanced">Bạn đang dùng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ nó bằng cách gỡ mô-đun Magisk/sử dụng trình gỡ cài đặt TWRP Vanced.</string>
     <string name="miui_one_title">Phát hiện MIUI!</string>
-    <string name="miui_one">Để có thể cài đặt Vanced, bạn PHẢI vô hiệu hoá tính năng \"Tối ưu hoá MIUI\" trong cài đặt nhà phát triển. (Bạn có thể bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
+    <string name="miui_one">Để cài đặt Vanced, bạn PHẢI vô hiệu hóa Tối Ưu Hóa MIUI trong cài đặt nhà phát triển. (Bạn có thể bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="error">Lỗi</string>
     <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vanced.app, server Discord Vanced hoặc Github Vanced</string>
     <string name="success">Thành công!</string>
@@ -101,5 +101,5 @@
     <string name="installation_miui">Cài đặt thất bại do Tối ưu hóa MIUI được kích hoạt. Vô hiệu hóa Tối ưu hóa MIUI rồi thử lại.</string>
     <string name="installation_storage">Cài đặt thất bại do lỗi bộ nhớ.</string>
     <string name="modapk_missing">Không thể tìm thấy tập tin apk cho giao diện tối từ trình cài đặt. Xóa hết dữ liệu ứng dụng của Manager, sau đó thử lại lần nữa.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="path_missing">Không thể xác định thư mục cài đặt của YouTube gốc sau khi tải split.</string>
 </resources>
