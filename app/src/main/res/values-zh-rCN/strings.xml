@@ -37,10 +37,10 @@
     <string name="chosen_install_values">已选择安装偏好</string>
     <string name="chosen_lang">语言: %1$s</string>
     <string name="chosen_theme">主题： %1$s</string>
-    <string name="clear_files">清除已下载的档案</string>
-    <string name="cleared_files">成功清除档案</string>
+    <string name="clear_files">清除已下载文件</string>
+    <string name="cleared_files">成功清除文件</string>
     <string name="firebase_title">Firebase 分析</string>
-    <string name="firebase_summary">这让我们收集有关应用性能和崩溃日志的信息</string>
+    <string name="firebase_summary">这允许我们收集有关应用性能和崩溃日志的信息</string>
     <string name="language_title">语言</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">链接会使用 Chrome Custom Tabs 打开</string>
@@ -58,7 +58,7 @@
     <string name="re_check">重新检查</string>
     <string name="update_center">Manager 更新中心</string>
     <string name="update_found">有可用的更新！</string>
-    <string name="update_notfound">没有新的更新</string>
+    <string name="update_notfound">无更新</string>
     <!-- Dialogs -->
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
@@ -69,7 +69,7 @@
     <string name="security_context">请确保您是从来自 vanced.app 、 Vanced Discord 服务器或 Vanced Github 下载本应用</string>
     <string name="success">成功！</string>
     <string name="vanced_installed">成功安装 Vanced ，现在打开吗？</string>
-    <string name="music_installed">成功安装 Vanced Music! 现在打开吗?</string>
+    <string name="music_installed">成功安装 Vanced 音乐! 现在打开吗？</string>
     <string name="launch">打开</string>
     <string name="welcome">欢迎</string>
     <!-- Install Page -->
