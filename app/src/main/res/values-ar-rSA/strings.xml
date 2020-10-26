@@ -46,7 +46,7 @@
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_external_browser">سيتم فتح الروابط في متصفح خارجي</string>
     <string name="new_installer_title">استخدم مثبت الروت الجديد (تجريبي)</string>
-    <string name="new_installer_summary">لا تعتمد أداة التثبيت هذه على حالة التحقق من صحة التوقيع. تحذير: قد يختفي Vanced بعد إعادة التشغيل إذا قمت بتثبيته باستخدام هذا</string>
+    <string name="new_installer_summary">لا تعتمد أداة التثبيت هذه على حالة التحقق من صحة التوقيع. تحذير: قد يختفي ڤانسد بعد إعادة التشغيل إذا قمت بتثبيته باستخدام هذه الأداة</string>
     <string name="system_default">الوضع الافتراضي للنظام</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_follow">اتبع النظام</string>
@@ -89,8 +89,8 @@
     <string name="chown_fail">Wijzigen van apk-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
     <string name="error_downloading">خطأ في تحميل %1$s</string>
     <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
+    <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
     <string name="installation_downgrade">فشل التثبيت لان المستخدم حاول تثبيت اصدار اقدم. قم بحذف التحديثات الخاصيه باليوتيوب الاصلي، ثم حاول مره اخرى</string>
@@ -101,6 +101,6 @@
     <string name="installation_signature">فشل التثبيت بسبب تمكين التحقق من توقيع apk. تعطيل التحقق من توقيع apk، ثم حاول مرة أخرى.</string>
     <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
     <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">فشل العثور على حزمة التثبيت للسمة السوداء/المظلمة من المثبت. إمسح بيانات التطبيق لمدير فانسد، ثم حاول مرة أخرى.</string>
+    <string name="path_missing">فشل العثور على موقع تثبيت اليوتيوب الأصلي بعد تثبيت الحزم المفصلة.</string>
 </resources>
