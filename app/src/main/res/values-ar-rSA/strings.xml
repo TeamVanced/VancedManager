@@ -64,17 +64,17 @@
     <string name="hold_on">توقف!</string>
     <string name="magisk_vanced">يبدو أنك تستخدم إصدار Magisk/TWRP من Vanced، الذي تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً عن طريق إزالة وحدة الـ Magisk / بإستخدام أداة إلغاء تثبيت TWRP Vanced.</string>
     <string name="miui_one_title">تم اكتشاف MIUI!</string>
-    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة اذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند الى نظام ROM شاومي أوروبا)</string>
     <string name="error">خطأ</string>
-    <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vanced.app، أو خادم ديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="success">نجاح!</string>
-    <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
+    <string name="vanced_installed">تم تثبيت ڤانسد بنجاح! افتح الآن؟</string>
+    <string name="music_installed">تم تثبيت موسيقى ڤانسد بنجاح! افتح الآن؟</string>
     <string name="launch">فتح</string>
     <string name="welcome">مرحبا
 اهلا</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
+    <string name="choose_preferred_language">اختر لغتك المفضلة لڤانسد</string>
     <string name="choose_preferred_language_note">لاحظة: اذا قمت تثبيت بأي لغة غير الانجليزية، سيكون اللغة الانجليزية مثبتة بللغة اضافية</string>
     <string name="choose_preferred_theme">اختر موضوع اللون المفضلة لفانسد</string>
     <string name="finish">نهاية</string>
@@ -82,22 +82,22 @@
     <string name="install_light_dark">ابيض + داكن</string>
     <string name="next">ثانية</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">مطوري المدير</string>
     <string name="sources">مصادر</string>
     <string name="vanced_team">فريق فانسد</string>
     <!-- Error messages -->
-    <string name="chown_fail">Wijzigen van apk-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
+    <string name="chown_fail">فشل تغيير ملكية حزمة التثبيت الى مالك النظام، الرجاء المحاولة مرة أخرى. </string>
     <string name="error_downloading">خطأ في تحميل %1$s</string>
     <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
     <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
-    <string name="installation_downgrade">فشل التثبيت لان المستخدم حاول تثبيت اصدار اقدم. قم بحذف التحديثات الخاصيه باليوتيوب الاصلي، ثم حاول مره اخرى</string>
-    <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
-    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم.</string>
-    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. مسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
-    <string name="installation_invalid">فشل التثبيت لأن ملفات apk تالفة، الرجاء المحاولة مرة أخرى.</string>
+    <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار أقدم. قم بحذف التحديثات الخاصة باليوتيوب الاصلي، ثم حاول مرة اخرى.</string>
+    <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من ڤانسد، ثم حاول مرة أخرى.</string>
+    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد الخاص بنا لمزيد من الدعم.</string>
+    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. إمسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
+    <string name="installation_invalid">فشل التثبيت لأن حزم التثبيت تالفة، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_signature">فشل التثبيت بسبب تمكين التحقق من توقيع apk. تعطيل التحقق من توقيع apk، ثم حاول مرة أخرى.</string>
     <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
     <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
