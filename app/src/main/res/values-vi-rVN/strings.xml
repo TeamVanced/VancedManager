@@ -39,7 +39,7 @@
     <string name="chosen_theme">Nền: %1$s</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
-    <string name="firebase_title">Phân tích Firebase</string>
+    <string name="firebase_title">Firebase Analytics</string>
     <string name="firebase_summary">Điều này cho phép chúng tôi thu thập thông tin về hiệu suất và bản ghi sự cố của ứng dụng</string>
     <string name="language_title">Ngôn ngữ</string>
     <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
