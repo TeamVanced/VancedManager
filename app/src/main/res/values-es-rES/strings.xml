@@ -4,15 +4,23 @@
     <string name="close">Cerrar</string>
     <string name="reset">Restablecer</string>
     <string name="save">Guardar</string>
+    <string name="select_apps">Select Your Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Información</string>
-    <string name="title_home">Hogar</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
-    <string name="changelogs">Actualizaciones</string>
+    <string name="about_app">About %1$s</string>
+    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">Descargando %1$s</string>
     <string name="install">Instalar</string>
-    <string name="installation_wait">Por favor espere hasta que la instalación termine.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Más reciente:</string>
@@ -21,9 +29,7 @@
     <string name="unavailable">No Disponible</string>
     <string name="update">Actualizar</string>
     <string name="useful_links">Links Utiles</string>
-    <string name="website_text">Sitio Web</string>
-    <string name="support_us">Apoyanos!</string>
-    <string name="version_toast">¡Versión de %1$s copiada al portapeles!</string>
+    <string name="support_us">Support US!</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
     <string name="accent_blue">Azul</string>
@@ -31,12 +37,8 @@
     <string name="accent_purple">Purpura</string>
     <string name="accent_red">Rojo</string>
     <string name="accent_yellow">Amarillo</string>
-    <string name="category_interface">Interfaz</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Buscar actualizaciones</string>
-    <string name="chosen_install_values">Preferencias de instalación elegidas</string>
-    <string name="chosen_lang">Idioma(s): %1$s</string>
-    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">Limpiar archivos descargados</string>
     <string name="cleared_files">Archivos limpiados exitosamente</string>
     <string name="firebase_title">Analíticas de Firebase</string>
@@ -44,42 +46,42 @@
     <string name="language_title">Idioma</string>
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links serán abiertos en un Navegador Externo</string>
-    <string name="new_installer_title">Usar el nuevo instalador root (Experimental)</string>
-    <string name="new_installer_summary">Este instalador no depende del estado de Verificación de Firmas. ADVERTENCIA: Vanced puede desaparecer al reiniciar si lo instala utilizando esto</string>
     <string name="system_default">Predeterminado del sistema</string>
     <string name="theme">Tema</string>
-    <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Oscuro</string>
     <string name="theme_light">Tema Claro</string>
     <string name="update_url">URL del canal de actualizacion</string>
     <string name="push_notifications">Notificaciones push de %1$s</string>
     <string name="push_notifications_summary">Recibir notificaciones push cuando una actualización para %1$s sea lanzada</string>
-    <string name="re_check">Reintentar</string>
     <string name="update_center">Centro de Actualizaciones</string>
-    <string name="update_found">Actualización encontrada!</string>
-    <string name="update_notfound">Sin actualizaciónes nuevas</string>
+    <string name="update_not_found">No new updates</string>
+    <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="checking_updates">Checking for updates…</string>
+    <string name="chosen_lang">Idioma(s): %1$s</string>
     <string name="guide">Guía</string>
     <string name="hold_on">¡Detente!</string>
+    <string name="installing_app">Installing %1$s</string>
     <string name="magisk_vanced">Estás utilizando la versión Magisk/TWRP de Vanced, la cual está descontinuada y no puede ser actualizada mediante esta app. Por favor elimínala quitando el módulo de Magisk o utilizando el desinstalador TWRP.</string>
     <string name="miui_one_title">MIUI detectado!</string>
     <string name="miui_one">Para instalar Vanced, DEBES desactivar las Optimizaciones MIUI en los ajustes de desarrollador. (Puedes ignorar esta advertencia si estas utilizando el ROM 20.2.20 o posterior de xiaomi.eu)</string>
     <string name="error">Error</string>
+    <string name="redownload">Redownload</string>
     <string name="security_context">Asegúrate de haber descargado la aplicación desde vanced.app, Servidor de discord o el GitHub de Vanced</string>
     <string name="success">Éxito!</string>
+    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
     <string name="vanced_installed">¡Vanced se ha instalado correctamente! ¿Abrir ahora?</string>
     <string name="music_installed">¡Vanced Music se ha instalado correctamente! ¿Abrir ahora?</string>
+    <string name="please_be_patient">Please be patient…</string>
     <string name="launch">Abrir</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>
-    <string name="choose_preferred_language_note">Nota: Ingles va a estar instalado como un idioma adicional.</string>
-    <string name="choose_preferred_theme">Elige tu tema preferido para Vanced</string>
-    <string name="finish">Finalizar</string>
     <string name="install_light_black">Claro + Negro</string>
     <string name="install_light_dark">Claro + Oscuro</string>
-    <string name="next">Siguiente</string>
+    <string name="select_at_least_one_lang">Select at least one language!</string>
     <!-- About Page -->
     <string name="manager_dev">Desarrolladores del Manager</string>
     <string name="sources">Fuentes</string>
