@@ -4,15 +4,23 @@
     <string name="close">Zavřít</string>
     <string name="reset">Resetovat</string>
     <string name="save">Uložit</string>
+    <string name="select_apps">Select Your Apps</string>
     <!-- Main Activity -->
     <string name="title_about">O aplikaci</string>
-    <string name="title_home">Přehled</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Nastavení</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
-    <string name="changelogs">Seznamy změn</string>
+    <string name="about_app">About %1$s</string>
+    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">Stahování %1$s</string>
     <string name="install">Instalace</string>
-    <string name="installation_wait">Počkejte prosím na dokončení instalace.</string>
     <string name="button_reinstall">Přeinstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
@@ -21,9 +29,7 @@
     <string name="unavailable">Není k dispozici</string>
     <string name="update">Aktualizovat</string>
     <string name="useful_links">Užitečné odkazy</string>
-    <string name="website_text">Webová stránka</string>
-    <string name="support_us">Podpořte nás!</string>
-    <string name="version_toast">Verze číslo %1$s byla zkopírována!</string>
+    <string name="support_us">Support US!</string>
     <!-- Settings -->
     <string name="accent_color">Doplňková barva</string>
     <string name="accent_blue">Modrá</string>
@@ -31,12 +37,8 @@
     <string name="accent_purple">Fialová</string>
     <string name="accent_red">Červená</string>
     <string name="accent_yellow">Žlutá</string>
-    <string name="category_interface">Rozhraní</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Zkontrolovat aktualizace</string>
-    <string name="chosen_install_values">Vybrané předvolby instalace</string>
-    <string name="chosen_lang">Jazyk: %1$s</string>
-    <string name="chosen_theme">Vzhled: %1$s</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">Vymazat stažené soubory</string>
     <string name="cleared_files">Vymazání souborů proběhlo úspěšně</string>
     <string name="firebase_title">Firebase analytika</string>
@@ -44,42 +46,42 @@
     <string name="language_title">Jazyk</string>
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
     <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
-    <string name="link_external_browser">Odkazy se otevřou v externím prohlížeči</string>
-    <string name="new_installer_title">Použít nový instalátor vyžadující root (experimentální)</string>
-    <string name="new_installer_summary">Tento instalační program není závislý na stavu ověření podpisu. VAROVÁNÍ: Pokud nainstalujete Vanced pomocí tohoto programu, může po restartu zmizet</string>
     <string name="system_default">Výchozí systémové nastavení</string>
     <string name="theme">Vzhled</string>
-    <string name="theme_follow">Podle systému</string>
     <string name="theme_dark">Tmavý vzhled</string>
     <string name="theme_light">Světlý vzhled</string>
     <string name="update_url">URL aktualizačního kanálu</string>
     <string name="push_notifications">%1$s vyskakovací oznámení</string>
     <string name="push_notifications_summary">Po vydání aktualizace pro %1$s obdržíte vyskakovací oznámení</string>
-    <string name="re_check">Opakovat</string>
     <string name="update_center">Centrum aktualizací</string>
-    <string name="update_found">Nalezena aktualizace!</string>
-    <string name="update_notfound">Žádné nové aktualizace</string>
+    <string name="update_not_found">No new updates</string>
+    <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="checking_updates">Checking for updates…</string>
+    <string name="chosen_lang">Jazyk: %1$s</string>
     <string name="guide">Návod</string>
     <string name="hold_on">Zastavit!</string>
+    <string name="installing_app">Installing %1$s</string>
     <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
     <string name="miui_one_title">Zjištěno MIUI!</string>
     <string name="miui_one">Chcete-li nainstalovat Vanced, MUSÍTE vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM z 20.2.2020 nebo novější založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
+    <string name="redownload">Redownload</string>
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu</string>
     <string name="success">Hotovo!</string>
+    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
     <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji otevřít?</string>
     <string name="music_installed">Aplikace Vanced Music byla úspěšně nainstalována! Chcete ji otevřít?</string>
+    <string name="please_be_patient">Please be patient…</string>
     <string name="launch">Otevřít</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
-    <string name="choose_preferred_language_note">Poznámka: Angličtina bude vždy nainstalována jako dodatečný jazyk.</string>
-    <string name="choose_preferred_theme">Vyberte preferovaný vzhled pro Vanced</string>
-    <string name="finish">Dokončit</string>
     <string name="install_light_black">Světlý + černý</string>
     <string name="install_light_dark">Světlý + tmavý</string>
-    <string name="next">Další</string>
+    <string name="select_at_least_one_lang">Select at least one language!</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojáři aplikace</string>
     <string name="sources">Zdrojové kódy</string>
