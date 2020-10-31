@@ -21,8 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:nestedScrollingEnabled="false"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:itemCount="2"
             tools:listitem="@layout/view_app_checkbox" />
 
@@ -32,8 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="45dp"
             android:layout_marginBottom="45dp"
-            android:src="@drawable/ic_baseline_navigate_next_48"
             android:backgroundTint="?colorPrimary"
+            android:src="@drawable/ic_baseline_navigate_next_48"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:maxImageSize="48dp" />

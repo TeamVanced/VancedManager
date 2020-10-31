@@ -12,7 +12,6 @@
     <string name="changelog">Seznamy změn</string>
     <string name="downloading_file">Stahování %1$s</string>
     <string name="install">Instalace</string>
-    <string name="installation_wait">Počkejte prosím na dokončení instalace.</string>
     <string name="button_reinstall">Přeinstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">Není k dispozici</string>
     <string name="update">Aktualizovat</string>
     <string name="useful_links">Užitečné odkazy</string>
-    <string name="website_text">Webová stránka</string>
     <string name="support_us">Podpořte nás!</string>
-    <string name="version_toast">Verze číslo %1$s byla zkopírována!</string>
     <!-- Settings -->
     <string name="accent_color">Doplňková barva</string>
     <string name="accent_blue">Modrá</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">Fialová</string>
     <string name="accent_red">Červená</string>
     <string name="accent_yellow">Žlutá</string>
-    <string name="category_interface">Rozhraní</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Zkontrolovat aktualizace</string>
     <string name="vanced_installation_preferences">Vybrané předvolby instalace</string>
     <string name="chosen_lang">Jazyk: %1$s</string>
-    <string name="chosen_theme">Vzhled: %1$s</string>
     <string name="clear_files">Vymazat stažené soubory</string>
     <string name="cleared_files">Vymazání souborů proběhlo úspěšně</string>
     <string name="firebase_title">Firebase analytika</string>
@@ -44,20 +37,14 @@
     <string name="language_title">Jazyk</string>
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
     <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
-    <string name="link_external_browser">Odkazy se otevřou v externím prohlížeči</string>
-    <string name="new_installer_title">Použít nový instalátor vyžadující root (experimentální)</string>
-    <string name="new_installer_summary">Tento instalační program není závislý na stavu ověření podpisu. VAROVÁNÍ: Pokud nainstalujete Vanced pomocí tohoto programu, může po restartu zmizet</string>
     <string name="system_default">Výchozí systémové nastavení</string>
     <string name="theme">Vzhled</string>
-    <string name="theme_follow">Podle systému</string>
     <string name="theme_dark">Tmavý vzhled</string>
     <string name="theme_light">Světlý vzhled</string>
     <string name="update_url">URL aktualizačního kanálu</string>
     <string name="push_notifications">%1$s vyskakovací oznámení</string>
     <string name="push_notifications_summary">Po vydání aktualizace pro %1$s obdržíte vyskakovací oznámení</string>
-    <string name="re_check">Opakovat</string>
     <string name="update_center">Centrum aktualizací</string>
-    <string name="update_found">Nalezena aktualizace!</string>
     <string name="update_not_found">Žádné nové aktualizace</string>
     <!-- Dialogs -->
     <string name="guide">Návod</string>
@@ -74,12 +61,8 @@
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
-    <string name="choose_preferred_language_note">Poznámka: Angličtina bude vždy nainstalována jako dodatečný jazyk.</string>
-    <string name="choose_preferred_theme">Vyberte preferovaný vzhled pro Vanced</string>
-    <string name="finish">Dokončit</string>
     <string name="install_light_black">Světlý + černý</string>
     <string name="install_light_dark">Světlý + tmavý</string>
-    <string name="next">Další</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojáři aplikace</string>
     <string name="sources">Zdrojové kódy</string>

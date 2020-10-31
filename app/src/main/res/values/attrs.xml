@@ -16,9 +16,6 @@
     <attr name="colorSettingsTitle" format="reference|color" />
     <attr name="colorSecondaryText" format="reference|color" />
 
-    <bool name="defFalseVal">false</bool>
-    <bool name="defTrueVal">true</bool>
-
     <declare-styleable name="PreferenceSwitch">
         <attr name="switch_title" format="reference|string" />
         <attr name="switch_summary" format="reference|string" />

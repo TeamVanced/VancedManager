@@ -51,8 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="45dp"
             android:layout_marginBottom="45dp"
-            android:src="@drawable/ic_baseline_navigate_next_48"
             android:backgroundTint="?colorPrimary"
+            android:src="@drawable/ic_baseline_navigate_next_48"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:maxImageSize="48dp" />

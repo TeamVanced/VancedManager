@@ -12,7 +12,6 @@
     <string name="changelog">שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
     <string name="install">התקן</string>
-    <string name="installation_wait">אנא המתינו לסיום ההתקנה...</string>
     <string name="button_reinstall">התקן מחדש</string>
     <string name="version_installed">מותקן:</string>
     <string name="latest">החדש ביותר:</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">אינו זמין</string>
     <string name="update">עדכן</string>
     <string name="useful_links">קישורים שימושיים</string>
-    <string name="website_text">אתר</string>
     <string name="support_us">תמכו בנו!</string>
-    <string name="version_toast">מספר הגרסה של %1$s הועתקה!</string>
     <!-- Settings -->
     <string name="accent_color">צבע הדגשה</string>
     <string name="accent_blue">כחול</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">סגול</string>
     <string name="accent_red">אדום</string>
     <string name="accent_yellow">צהוב</string>
-    <string name="category_interface">ממשק</string>
-    <string name="category_manager">מנהל</string>
-    <string name="check_updates">בדוק אחר עדכונים</string>
     <string name="vanced_installation_preferences">העדפות התקנה שנבחרו</string>
     <string name="chosen_lang">שפה: %1$s</string>
-    <string name="chosen_theme">ערכת נושא: %1$s</string>
     <string name="clear_files">מחק קבצים שהורדו</string>
     <string name="cleared_files">מחיקת הקבצים הסתיימה בהצלחה</string>
     <string name="firebase_title">ניתוח מידע משתמש</string>
@@ -44,20 +37,14 @@
     <string name="language_title">שפה</string>
     <string name="link_title">השתמש בכרטיסייה מותאמת אישית של Chrome</string>
     <string name="link_custom_tabs">קישורים יפתחו בכרטיסיות מותאמות אישית של Chrome</string>
-    <string name="link_external_browser">קישורים יפתחו בדפדפן חיצוני</string>
-    <string name="new_installer_title">השתמש במתקין הרוט החדש (נסיוני)</string>
-    <string name="new_installer_summary">המתקין הזה לא תלוי בסטטוס אימות חתימה. אזהרה: Vanced יכול להיעלם אחרי אתחול אם אתה משתמש בהתקנה הזאת</string>
     <string name="system_default">ברירת מחדל</string>
     <string name="theme">ערכת נושא</string>
-    <string name="theme_follow">בהתאם למערכת</string>
     <string name="theme_dark">ערכת נושא כהה</string>
     <string name="theme_light">ערכת נושא בהירה</string>
     <string name="update_url">קישור ערוץ עדכון</string>
     <string name="push_notifications">%1$s התראות דחיפה</string>
     <string name="push_notifications_summary">קבל התראות דחיפה כשעדכון ל %1$s משתחרר</string>
-    <string name="re_check">בדיקה מחדש</string>
     <string name="update_center">מרכז העדכונים</string>
-    <string name="update_found">עדכון נמצא!</string>
     <string name="update_not_found">אין עדכונים חדשים</string>
     <!-- Dialogs -->
     <string name="guide">מדריך</string>
@@ -74,12 +61,8 @@
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">בחר את השפה המועדפת עליך לVanced</string>
-    <string name="choose_preferred_language_note">תזכורת: אנגלית תמיד תהיה מותקנת בתור שפה נוספת.</string>
-    <string name="choose_preferred_theme">בחר את המראה המועדף שלך בשביל Vanced</string>
-    <string name="finish">סיים</string>
     <string name="install_light_black">בהיר + שחור</string>
     <string name="install_light_dark">בהיר + כהה</string>
-    <string name="next">הבא</string>
     <!-- About Page -->
     <string name="manager_dev">מנהל המפתחים</string>
     <string name="sources">מקורות</string>

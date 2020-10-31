@@ -58,23 +58,6 @@
         <item name="cardPreventCornerOverlap">true</item>
     </style>
 
-    <style name="InstallMaterialCard" parent="MaterialCard">
-        <item name="contentPaddingLeft">0dp</item>
-        <item name="contentPaddingRight">0dp</item>
-        <item name="contentPaddingTop">0dp</item>
-        <item name="contentPaddingBottom">0dp</item>
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:layout_marginEnd">16dp</item>
-        <item name="android:layout_marginTop">12dp</item>
-    </style>
-
-    <style name="InnerMaterialCard" parent="MaterialCard">
-        <item name="contentPaddingTop">0dp</item>
-        <item name="contentPaddingBottom">0dp</item>
-        <item name="contentPaddingLeft">0dp</item>
-        <item name="contentPaddingRight">0dp</item>
-    </style>
-
     <style name="CardTextHeader" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -83,15 +66,6 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="TextAppTitle" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">?colorPrimary</item>
-        <item name="fontFamily">@font/exo_bold</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:layout_marginStart">8dp</item>
     </style>
 
     <style name="DialogCardTitle" parent="Widget.AppCompat.TextView">
@@ -138,24 +112,6 @@
         <item name="cardBackgroundColor">?colorLinkBG</item>
     </style>
 
-    <style name="InstallCardTitle" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">?colorOnSurfaceVariant</item>
-        <item name="fontFamily">@font/exo_bold</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">18sp</item>
-    </style>
-
-    <style name="AboutCardTitle" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">?colorOnSurfaceVariant</item>
-        <item name="fontFamily">@font/exo_semibold</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">24sp</item>
-    </style>
-
     <style name="WelcomeHeaderTitle" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -187,19 +143,6 @@
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="AppVer" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">?colorOnSurfaceVariant</item>
-        <item name="android:textSize">13sp</item>
-        <item name="fontFamily">@font/exo</item>
-    </style>
-
-    <style name="AppVer.Bold" parent="AppVer">
-        <item name="fontFamily">@font/exo_semibold</item>
-        <item name="android:layout_marginStart">8dp</item>
-    </style>
-
     <style name="BottomDialogCard" parent="DialogCard">
         <item name="cardCornerRadius">0dp</item>
         <item name="contentPaddingLeft">8dp</item>
@@ -216,18 +159,6 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="ClickableImageWidget">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:clickable">true</item>
-        <item name="tint">?colorLinkImage</item>
-        <item name="iconPadding">0dp</item>
-    </style>
-
-    <style name="ClickableImageWidget.Red" parent="ClickableImageWidget">
-        <item name="tint">@color/Red</item>
     </style>
 
     <style name="PreferenceSwitch">

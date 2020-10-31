@@ -9,8 +9,7 @@
 
     </data>
 
-    <com.google.android.material.card.MaterialCardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -28,18 +27,18 @@
             <TextView
                 android:id="@+id/about_card_vancedTeam"
                 style="@style/CardTextHeader"
-                android:text="@string/sources"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:text="@string/sources"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.flexbox.FlexboxLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:alignItems="center"
                 app:flexDirection="row"
-                app:justifyContent="space_evenly"
-                app:alignItems="center">
+                app:justifyContent="space_evenly">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/about_github_button"

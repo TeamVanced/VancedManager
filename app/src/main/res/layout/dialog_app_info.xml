@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -8,9 +7,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorLinkBG"
+        app:cardCornerRadius="8dp"
         app:cardElevation="0dp"
         app:contentPaddingBottom="8dp"
-        app:cardCornerRadius="8dp"
         app:contentPaddingLeft="16dp"
         app:contentPaddingRight="16dp">
 

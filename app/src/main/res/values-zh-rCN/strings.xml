@@ -12,7 +12,6 @@
     <string name="changelog">变更日志</string>
     <string name="downloading_file">正在下载 %1$s</string>
     <string name="install">安装</string>
-    <string name="installation_wait">请等待安装程序完成.</string>
     <string name="button_reinstall">重新安装</string>
     <string name="version_installed">已安装：</string>
     <string name="latest">最新：</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">不可用</string>
     <string name="update">更新</string>
     <string name="useful_links">相关链接</string>
-    <string name="website_text">网站</string>
     <string name="support_us">支持我们！</string>
-    <string name="version_toast">%1$s 版本已被复制！</string>
     <!-- Settings -->
     <string name="accent_color">辅色</string>
     <string name="accent_blue">蓝色</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">紫色</string>
     <string name="accent_red">红色</string>
     <string name="accent_yellow">黄色</string>
-    <string name="category_interface">介面</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">检查更新</string>
     <string name="vanced_installation_preferences">已选择安装偏好</string>
     <string name="chosen_lang">语言: %1$s</string>
-    <string name="chosen_theme">主题： %1$s</string>
     <string name="clear_files">清除已下载的档案</string>
     <string name="cleared_files">成功清除档案</string>
     <string name="firebase_title">Firebase 分析</string>
@@ -44,20 +37,14 @@
     <string name="language_title">语言</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">链接会使用 Chrome Custom Tabs 打开</string>
-    <string name="link_external_browser">链接会使用外部浏览器打开</string>
-    <string name="new_installer_title">使用新 root 安装程式 (实验性)</string>
-    <string name="new_installer_summary">此安装程序不依赖签名验证状态。警告: 如果您使用此安装程序安装， Vanced 可能会在重启后消失</string>
     <string name="system_default">系统默认</string>
     <string name="theme">主题</string>
-    <string name="theme_follow">跟随系统</string>
     <string name="theme_dark">深色主题</string>
     <string name="theme_light">浅色主题</string>
     <string name="update_url">更新路径链接</string>
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">有可用更新时接收 %1$s 推送通知</string>
-    <string name="re_check">重新检查</string>
     <string name="update_center">Manager 更新中心</string>
-    <string name="update_found">有可用的更新！</string>
     <string name="update_not_found">没有新的更新</string>
     <!-- Dialogs -->
     <string name="guide">说明</string>
@@ -74,12 +61,8 @@
     <string name="welcome">欢迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">为 Vanced 选择您的首选语言</string>
-    <string name="choose_preferred_language_note">注意：英语仍将作为其他语言安装。</string>
-    <string name="choose_preferred_theme">选择Vanced的首选主题</string>
-    <string name="finish">结束</string>
     <string name="install_light_black">浅 + 黑</string>
     <string name="install_light_dark">浅 + 深</string>
-    <string name="next">下一步</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 开发人员</string>
     <string name="sources">程式码</string>

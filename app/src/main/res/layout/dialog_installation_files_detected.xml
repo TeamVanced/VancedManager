@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-    <com.google.android.material.card.MaterialCardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         style="@style/BottomDialogCard">
 
@@ -14,18 +13,18 @@
             <TextView
                 android:id="@+id/installation_detected_title"
                 style="@style/BottomDialogCardTitle"
-                tools:text="@string/app_install_files_detected"/>
+                tools:text="@string/app_install_files_detected" />
 
             <TextView
                 android:id="@+id/installation_detected_summary"
                 style="@style/DialogCardSubtitle"
-                tools:text="@string/app_install_files_detected_summary"/>
+                tools:text="@string/app_install_files_detected_summary" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/installation_detected_install"
-                android:layout_marginTop="16dp"
                 style="@style/BottomDialogButtonStyle"
-                android:text="@string/install"/>
+                android:layout_marginTop="16dp"
+                android:text="@string/install" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/installation_detected_redownload"

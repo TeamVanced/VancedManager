@@ -12,7 +12,6 @@
     <string name="changelog">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
-    <string name="installation_wait">Будь ласка, дочекайтеся закінчення установки.</string>
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">Недоступно</string>
     <string name="update">Оновити</string>
     <string name="useful_links">Корисні сторінки</string>
-    <string name="website_text">Вебсайт</string>
     <string name="support_us">Підтримай нас!</string>
-    <string name="version_toast">версія %1$s скопійована!</string>
     <!-- Settings -->
     <string name="accent_color">Вторинний колір</string>
     <string name="accent_blue">Синій</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">Фіолетовий</string>
     <string name="accent_red">Червоний</string>
     <string name="accent_yellow">Жовтий</string>
-    <string name="category_interface">Інтерфейс</string>
-    <string name="category_manager">Менеджер</string>
-    <string name="check_updates">Перевірити на оновлення</string>
     <string name="vanced_installation_preferences">Вибрані налаштування встановлення</string>
     <string name="chosen_lang">Мова(и): %1$s</string>
-    <string name="chosen_theme">Тема: %1$s</string>
     <string name="clear_files">Очистити завантажені файли</string>
     <string name="cleared_files">Файли було успішно очищено</string>
     <string name="firebase_title">Аналітика Firebase</string>
@@ -44,20 +37,14 @@
     <string name="language_title">Мова</string>
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
-    <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
-    <string name="new_installer_title">Використовувати новий root інсталятор (експериментальний)</string>
-    <string name="new_installer_summary">Цей інсталятор не залежить від статусу перевірки підпису. УВАГА: Vanced може пропасти після перезавантаження, якщо ви встановите його за допомогою цього інсталятора</string>
     <string name="system_default">Системний за замовчуванням</string>
     <string name="theme">Тема</string>
-    <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
     <string name="theme_light">Світла тема</string>
     <string name="update_url">URL-адреса до каналу з оновленнями</string>
     <string name="push_notifications">%1$s Спливаючі Сповіщення</string>
     <string name="push_notifications_summary">Отримувати спливаючі сповіщення, коли доступне оновлення для %1$s</string>
-    <string name="re_check">Перепровірити</string>
     <string name="update_center">Центр Оновлень</string>
-    <string name="update_found">Знайдено оновлення!</string>
     <string name="update_not_found">Нових оновлень не виявлено</string>
     <!-- Dialogs -->
     <string name="guide">Гайд</string>
@@ -74,12 +61,8 @@
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
-    <string name="choose_preferred_language_note">Примітка: Якщо ви встановите що-небудь, крім Англійської, Англійська мова все одно буде встановлена як додаткова мова</string>
-    <string name="choose_preferred_theme">Виберіть вашу головну тему для Vanced</string>
-    <string name="finish">Завершити</string>
     <string name="install_light_black">Світла + Чорна</string>
     <string name="install_light_dark">Світла + Темна</string>
-    <string name="next">Далі</string>
     <!-- About Page -->
     <string name="manager_dev">Розробники інсталятора</string>
     <string name="sources">Джерела</string>

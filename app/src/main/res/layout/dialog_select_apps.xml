@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-    <com.google.android.material.card.MaterialCardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         style="@style/BottomDialogCard">
 
@@ -13,14 +12,14 @@
 
             <TextView
                 style="@style/BottomDialogCardTitle"
-                android:text="@string/select_apps"/>
+                android:text="@string/select_apps" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/select_apps_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/view_app_checkbox"
-                tools:itemCount="2"/>
+                tools:itemCount="2"
+                tools:listitem="@layout/view_app_checkbox" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/select_apps_save"

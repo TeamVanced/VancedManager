@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/MaterialCard"
     app:cardBackgroundColor="?colorLinkBG"
-    app:contentPaddingTop="8dp"
-    app:contentPaddingRight="16dp"
     app:contentPaddingLeft="16dp"
+    app:contentPaddingRight="16dp"
+    app:contentPaddingTop="8dp"
     tools:ignore="HardcodedText">
 
     <LinearLayout
@@ -25,13 +24,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="xfileFIN"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:text="xfileFIN" />
 
         <TextView
+            style="@style/AboutDevNames"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/AboutDevNames"
             android:text="KevinX8" />
 
         <TextView

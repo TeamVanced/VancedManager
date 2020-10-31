@@ -12,7 +12,6 @@
     <string name="changelog">Notas de Lançamento</string>
     <string name="downloading_file">Transferindo %1$s</string>
     <string name="install">Instalar</string>
-    <string name="installation_wait">Por favor aguarde, enquanto a instalação acaba.</string>
     <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais Recente:</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">Indisponível</string>
     <string name="update">Atualizar</string>
     <string name="useful_links">Links Importantes</string>
-    <string name="website_text">Website</string>
     <string name="support_us">Suporte-nos!</string>
-    <string name="version_toast">Número da versão %1$s foi copiado!</string>
     <!-- Settings -->
     <string name="accent_color">Cor de Destaque</string>
     <string name="accent_blue">Azul</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">Roxo</string>
     <string name="accent_red">Vermelho</string>
     <string name="accent_yellow">Amarelo</string>
-    <string name="category_interface">Interface</string>
-    <string name="category_manager">Gerente</string>
-    <string name="check_updates">Verificar por Atualizações</string>
     <string name="vanced_installation_preferences">Predefinições de instalação escolhidas</string>
     <string name="chosen_lang">Língua(s): %1$s</string>
-    <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Limpar ficheiros descarregados</string>
     <string name="cleared_files">Arquivos limpos com sucesso</string>
     <string name="firebase_title">Firebase Analytics</string>
@@ -44,20 +37,14 @@
     <string name="language_title">Language</string>
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos em abas personalizadas do Chrome</string>
-    <string name="link_external_browser">Os Links serão abertos em um Navegador Externo</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="system_default">System Default</string>
     <string name="theme">Tema</string>
-    <string name="theme_follow">Seguir Sistema</string>
     <string name="theme_dark">Tema Escuro</string>
     <string name="theme_light">Tema Claro</string>
     <string name="update_url">Atualizar Canal URL</string>
     <string name="push_notifications">Notificações Push %1$s</string>
     <string name="push_notifications_summary">Receber notificações Push quando uma actualização para %1$s estiver disponível</string>
-    <string name="re_check">Verificar Novamente</string>
     <string name="update_center">Centro de Actualizações</string>
-    <string name="update_found">Atualização encontrada!</string>
     <string name="update_not_found">Sem updates novos.</string>
     <!-- Dialogs -->
     <string name="guide">Guia</string>
@@ -74,12 +61,8 @@
     <string name="welcome">Bem-Vindo</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Escolha a(s) sua(s) língua(s) de preferência para o Vanced</string>
-    <string name="choose_preferred_language_note">Nota: Se você instalar algo diferente de Inglês, Inglês será instalado como um idioma adicional</string>
-    <string name="choose_preferred_theme">Escolhe teu tema preferido para o Vanced</string>
-    <string name="finish">Terminar</string>
     <string name="install_light_black">Claro + Preto</string>
     <string name="install_light_dark">Claro + Escuro</string>
-    <string name="next">Próximo</string>
     <!-- About Page -->
     <string name="manager_dev">Programadores do Manager</string>
     <string name="sources">Fontes</string>
