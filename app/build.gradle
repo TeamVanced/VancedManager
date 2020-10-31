@@ -21,7 +21,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 200
-        versionName "2.0.0 (.nomagisk)"
+        versionName "2.0.0 (.nomagiskui)"
 
         vectorDrawables.useSupportLibrary = true
 
@@ -82,7 +82,7 @@ def getLanguages() {
     return langs.toArray()
 }
 
-def surroundWithQuotes(Object[] arr) {
+static def surroundWithQuotes(Object[] arr) {
     String[] dummyArr = arr
     for (int i = 0; i < arr.length; i++) {
         dummyArr[i] = "\"" + arr[i] + "\""
