@@ -4,15 +4,23 @@
     <string name="close">Đóng</string>
     <string name="reset">Đặt lại</string>
     <string name="save">Lưu</string>
+    <string name="select_apps">Select Your Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Giới thiệu</string>
-    <string name="title_home">Trang chủ</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Cài đặt</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
-    <string name="changelogs">Các thay đổi</string>
+    <string name="about_app">About %1$s</string>
+    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
-    <string name="installation_wait">Vui lòng đợi cho đến khi quá trình cài đặt hoàn tất.</string>
     <string name="button_reinstall">Cài đặt lại</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
@@ -21,9 +29,7 @@
     <string name="unavailable">Chưa cài đặt</string>
     <string name="update">Cập nhật</string>
     <string name="useful_links">Đường link hữu ích</string>
-    <string name="website_text">Trang web</string>
-    <string name="support_us">Hỗ trợ chúng tôi!</string>
-    <string name="version_toast">Số phiên bản của %1$s đã được sao chép!</string>
+    <string name="support_us">Support US!</string>
     <!-- Settings -->
     <string name="accent_color">Màu Chính</string>
     <string name="accent_blue">Xanh dương</string>
@@ -31,12 +37,8 @@
     <string name="accent_purple">Tím</string>
     <string name="accent_red">Đỏ</string>
     <string name="accent_yellow">Vàng</string>
-    <string name="category_interface">Giao diện</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Kiểm tra cập nhật</string>
-    <string name="chosen_install_values">Kiểu cài đặt ưa thích</string>
-    <string name="chosen_lang">Ngôn ngữ: %1$s</string>
-    <string name="chosen_theme">Nền: %1$s</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
     <string name="firebase_title">Firebase Analytics</string>
@@ -44,42 +46,42 @@
     <string name="language_title">Ngôn ngữ</string>
     <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
     <string name="link_custom_tabs">Các đường link sẽ mở trong Custom Tabs của Chrome</string>
-    <string name="link_external_browser">Các đường link sẽ mở trong một trình duyệt ngoài</string>
-    <string name="new_installer_title">Sử dụng trình cài đặt root mới (Thử nghiệm)</string>
-    <string name="new_installer_summary">Trình cài đặt này không phụ thuộc vào trạng thái của Xác Minh Chữ Ký. CẢNH BÁO: Vanced có thể biến mất sau khi khởi động lại nếu bạn cài đặt nó bằng cách này</string>
     <string name="system_default">Mặc Định Hệ Thống</string>
     <string name="theme">Nền</string>
-    <string name="theme_follow">Theo Hệ Thống</string>
     <string name="theme_dark">Nền Tối</string>
     <string name="theme_light">Nền Sáng</string>
     <string name="update_url">URL Kênh Cập Nhật</string>
     <string name="push_notifications">Thông báo đẩy %1$s</string>
     <string name="push_notifications_summary">Nhận thông báo đẩy khi một bản cập nhật của %1$s được phát hành</string>
-    <string name="re_check">Kiểm tra lại</string>
     <string name="update_center">Trung tâm cập nhật</string>
-    <string name="update_found">Có bản cập nhật mới!</string>
-    <string name="update_notfound">Không có bản cập nhật mới</string>
+    <string name="update_not_found">No new updates</string>
+    <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="checking_updates">Checking for updates…</string>
+    <string name="chosen_lang">Ngôn ngữ: %1$s</string>
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Dừng lại!</string>
+    <string name="installing_app">Installing %1$s</string>
     <string name="magisk_vanced">Bạn đang dùng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ nó bằng cách gỡ mô-đun Magisk/sử dụng trình gỡ cài đặt TWRP Vanced.</string>
     <string name="miui_one_title">Phát hiện MIUI!</string>
     <string name="miui_one">Để cài đặt Vanced, bạn PHẢI vô hiệu hóa Tối Ưu Hóa MIUI trong cài đặt nhà phát triển. (Bạn có thể bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="error">Lỗi</string>
+    <string name="redownload">Redownload</string>
     <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vanced.app, server Discord Vanced hoặc Github Vanced</string>
     <string name="success">Thành công!</string>
+    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
     <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
     <string name="music_installed">Vanced Music đã được cài đặt thành công! Mở ứng dụng?</string>
+    <string name="please_be_patient">Please be patient…</string>
     <string name="launch">Mở</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
-    <string name="choose_preferred_language_note">Chú ý: Tiếng Anh sẽ luôn được cài đặt thêm.</string>
-    <string name="choose_preferred_theme">Chọn nền mong muốn cho Vanced</string>
-    <string name="finish">Hoàn tất</string>
     <string name="install_light_black">Sáng + Đen</string>
     <string name="install_light_dark">Sáng + Tối</string>
-    <string name="next">Tiếp theo</string>
+    <string name="select_at_least_one_lang">Select at least one language!</string>
     <!-- About Page -->
     <string name="manager_dev">Đội ngũ phát triển</string>
     <string name="sources">Nguồn</string>
