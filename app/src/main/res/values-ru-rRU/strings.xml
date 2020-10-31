@@ -47,7 +47,7 @@
     <string name="link_external_browser">Ссылки откроются во внешнем браузере</string>
     <string name="new_installer_title">Использовать новый root установщик (экспериментальный)</string>
     <string name="new_installer_summary">Этот установщик не зависит от статуса проверки подписи. ВНИМАНИЕ: Vanced может пропасть после перезагрузки, если вы установите его с помощью этого установщика</string>
-    <string name="system_default">Системный по-умолчанию</string>
+    <string name="system_default">Системный по умолчанию</string>
     <string name="theme">Тема</string>
     <string name="theme_follow">Как в системе</string>
     <string name="theme_dark">Тёмная тема</string>
