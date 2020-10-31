@@ -9,7 +9,7 @@
     <string name="title_home">होम</string>
     <string name="title_settings">सेटिंग्स</string>
     <!-- Home Page -->
-    <string name="changelogs">चेंजलॉग</string>
+    <string name="changelog">चेंजलॉग</string>
     <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
     <string name="install">इंस्टॉल</string>
     <string name="installation_wait">कृपया स्थापना समाप्त होने तक प्रतीक्षा करें।</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">इंटरफेस</string>
     <string name="category_manager">मैनेजर</string>
     <string name="check_updates">अद्यतनों के लिए जाँचें</string>
-    <string name="chosen_install_values">स्थापना प्राथमिकताएँ चुना</string>
+    <string name="vanced_installation_preferences">स्थापना प्राथमिकताएँ चुना</string>
     <string name="chosen_lang">भाषा (एं): %1$s</string>
     <string name="chosen_theme">थीम: %1$s</string>
     <string name="clear_files">डाउनलोड की गई फ़ाइलें साफ़ करें</string>
@@ -59,7 +59,7 @@
     <string name="re_check">री-चेक</string>
     <string name="update_center">अपडेट केंद्र</string>
     <string name="update_found">अपडेट मिला!</string>
-    <string name="update_notfound">कोई नया अपडेट नहीं</string>
+    <string name="update_not_found">कोई नया अपडेट नहीं</string>
     <!-- Dialogs -->
     <string name="guide">गाइड</string>
     <string name="hold_on">रुकें!</string>

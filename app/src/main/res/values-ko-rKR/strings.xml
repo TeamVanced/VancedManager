@@ -9,7 +9,7 @@
     <string name="title_home">홈</string>
     <string name="title_settings">설정</string>
     <!-- Home Page -->
-    <string name="changelogs">변경사항</string>
+    <string name="changelog">변경사항</string>
     <string name="downloading_file">%1$s 다운로드 중</string>
     <string name="install">설치</string>
     <string name="installation_wait">설치가 완료될 때까지 기다려주세요.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">인터페이스</string>
     <string name="category_manager">관리자</string>
     <string name="check_updates">업데이트 확인하기</string>
-    <string name="chosen_install_values">선택된 설치값</string>
+    <string name="vanced_installation_preferences">선택된 설치값</string>
     <string name="chosen_lang">언어: %1$s</string>
     <string name="chosen_theme">테마: %1$s</string>
     <string name="clear_files">다운로드된 파일 모두 지우기</string>
@@ -58,7 +58,7 @@
     <string name="re_check">재확인</string>
     <string name="update_center">업데이트 센터</string>
     <string name="update_found">업데이트를 찾았습니다!</string>
-    <string name="update_notfound">새로운 업데이트 없음</string>
+    <string name="update_not_found">새로운 업데이트 없음</string>
     <!-- Dialogs -->
     <string name="guide">가이드</string>
     <string name="hold_on">잠깐만요!</string>

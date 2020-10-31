@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vanced.manager.ui.core.SlidingConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.vanced.manager.ui.core.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -26,24 +25,24 @@
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="@string/install_light_dark"
+                    android:fontFamily="@font/exo_semibold"
                     android:tag="dark"
-                    android:fontFamily="@font/exo_semibold"/>
+                    android:text="@string/install_light_dark"
+                    android:textSize="18sp" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:fontFamily="@font/exo_semibold"
                     android:tag="black"
-                    android:text="@string/install_light_black"/>
+                    android:text="@string/install_light_black"
+                    android:textSize="18sp" />
 
             </RadioGroup>
 
             <com.google.android.material.button.MaterialButton
-                style="@style/InstallButtonStyle"
                 android:id="@+id/vanced_next_to_variant"
+                style="@style/BottomDialogButtonStyle"
                 android:text="@string/next"
                 app:icon="@drawable/ic_keyboard_next" />
 

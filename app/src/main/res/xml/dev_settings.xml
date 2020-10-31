@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Preference
-        android:key="firststart_switch"
+        android:key="firstlaunch_switch"
         android:title="First start switcher"
         android:summary="No reason to touch this, seriously"/>
 

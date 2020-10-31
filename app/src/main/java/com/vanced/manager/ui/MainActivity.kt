@@ -20,10 +20,9 @@ import com.google.firebase.messaging.FirebaseMessaging
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
+import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
-import com.vanced.manager.ui.fragments.UpdateCheckFragment
-import com.vanced.manager.utils.AppUtils.installing
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.PackageHelper
@@ -53,15 +52,14 @@ class MainActivity : AppCompatActivity() {
 
         with(binding) {
             lifecycleOwner = this@MainActivity
-            setSupportActionBar(homeToolbar)
-            homeToolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
+            setSupportActionBar(toolbar)
+            toolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
         }
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
 
-        initDialogs()
-
+        initDialogs(intent.getBooleanExtra("firstLaunch", false))
     }
 
     override fun onBackPressed() {
@@ -70,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        binding.homeToolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
+        binding.toolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
     }
 
     override fun onPause() {
@@ -85,8 +83,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (installing.value!!)
-            return false
 
         when (item.itemId) {
             android.R.id.home -> {
@@ -100,6 +96,9 @@ class MainActivity : AppCompatActivity() {
             R.id.toolbar_settings -> {
                 navHost.navigate(HomeFragmentDirections.toSettingsFragment())
                 return true
+            }
+            R.id.toolbar_update_manager -> {
+                ManagerUpdateDialog(false).show(supportFragmentManager, "manager_update")
             }
             R.id.dev_settings -> {
                 navHost.navigate(SettingsFragmentDirections.toDevSettingsFragment())
@@ -126,13 +125,13 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun initDialogs() {
+    private fun initDialogs(firstLaunch: Boolean) {
         val prefs = getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
         prefs.getBoolean("show_root_dialog", true)
 
         when {
-            prefs.getBoolean("firstStart", true) -> {
+            firstLaunch -> {
                 DialogContainer.showSecurityDialog(this)
                 with(FirebaseMessaging.getInstance()) {
                     subscribeToTopic("Vanced-Update")
@@ -158,7 +157,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkUpdates() {
         if (InternetTools.isUpdateAvailable(this)) {
-            UpdateCheckFragment().show(supportFragmentManager, "UpdateCheck")
+            ManagerUpdateDialog(false).show(supportFragmentManager, "UpdateCheck")
         }
     }
 

@@ -1,14 +1,14 @@
 package com.vanced.manager.core.downloader
 
 import android.content.Context
-import android.widget.Toast
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.App
-import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.musicProgress
-import com.vanced.manager.utils.AppUtils.mutableInstall
+import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.PackageHelper.install
 import kotlinx.coroutines.CoroutineScope
@@ -17,40 +17,40 @@ import kotlinx.coroutines.launch
 
 object MusicDownloader {
 
+    private var variant: String? = null
+
     fun downloadMusic(context: Context){
         CoroutineScope(Dispatchers.IO).launch {
-            val url = "https://vanced.app/api/v1/music/v${(context.applicationContext as App).music.get()?.string("version")}.apk"
+            val prefs = getDefaultSharedPreferences(context)
+            variant = prefs.getString("vanced_variant", "nonroot")
+            val url = "${prefs.getString("install_url", baseUrl)}/music/v${(context.applicationContext as App).music.get()?.string("version")}.apk"
 
-            musicProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "music.apk")
+            downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("music/$variant")?.path, "music.apk")
                 .build()
-                .setOnStartOrResumeListener { 
-                    mutableInstall.value = true
-                    musicProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
-                    musicProgress.get()?.showDownloadBar?.set(true)
+                .setOnStartOrResumeListener {
+                    downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
                 }
                 .setOnProgressListener { progress ->
-                    musicProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
-                }
-                .setOnCancelListener {
-                    mutableInstall.value = false
-                    musicProgress.get()?.showDownloadBar?.set(false)
+                    downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
-                        install("music", "${context.getExternalFilesDir("apk")}/music.apk", context)
-                        musicProgress.get()?.showDownloadBar?.set(false)
-                        musicProgress.get()?.showInstallCircle?.set(true)
+                        startMusicInstall(context)
                     }
 
                     override fun onError(error: Error?) {
-                        mutableInstall.value = false
-                        musicProgress.get()?.showDownloadBar?.set(false)
-                        Toast.makeText(context, context.getString(R.string.error_downloading, "Music"), Toast.LENGTH_SHORT).show()
+                        downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.error_downloading, "Music"))
                     }
                 })
 
         }
 
+    }
+
+    fun startMusicInstall(context: Context) {
+        downloadProgress.get()?.installing?.set(true)
+        downloadProgress.get()?.reset()
+        install("${context.getExternalFilesDir("music/$variant")}/music.apk", context)
     }
 
 }

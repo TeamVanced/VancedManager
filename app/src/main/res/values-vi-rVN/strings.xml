@@ -9,7 +9,7 @@
     <string name="title_home">Trang chủ</string>
     <string name="title_settings">Cài đặt</string>
     <!-- Home Page -->
-    <string name="changelogs">Bản ghi các thay đổi</string>
+    <string name="changelog">Bản ghi các thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
     <string name="installation_wait">Vui lòng đợi cho đến khi quá trình cài đặt kết thúc.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Giao diện</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Kiểm tra cập nhật</string>
-    <string name="chosen_install_values">Kiểu cài đặt ưa thích</string>
+    <string name="vanced_installation_preferences">Kiểu cài đặt ưa thích</string>
     <string name="chosen_lang">Ngôn ngữ: %1$s</string>
     <string name="chosen_theme">Nền: %1$s</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Kiểm tra lại</string>
     <string name="update_center">Trung tâm cập nhật</string>
     <string name="update_found">Có bản cập nhật mới!</string>
-    <string name="update_notfound">Không có bản cập nhật mới</string>
+    <string name="update_not_found">Không có bản cập nhật mới</string>
     <!-- Dialogs -->
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Dừng lại!</string>

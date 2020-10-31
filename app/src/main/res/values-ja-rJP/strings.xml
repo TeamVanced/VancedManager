@@ -9,7 +9,7 @@
     <string name="title_home">ホーム</string>
     <string name="title_settings">設定</string>
     <!-- Home Page -->
-    <string name="changelogs">更新履歴</string>
+    <string name="changelog">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="install">インストール</string>
     <string name="installation_wait">インストールが完了するまでお待ちください。</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">インターフェース</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">アップデートの確認</string>
-    <string name="chosen_install_values">選択されたインストール設定</string>
+    <string name="vanced_installation_preferences">選択されたインストール設定</string>
     <string name="chosen_lang">言語: %1$s</string>
     <string name="chosen_theme">テーマ: %1$s</string>
     <string name="clear_files">ダウンロード済みファイルを消去</string>
@@ -58,7 +58,7 @@
     <string name="re_check">再チェック</string>
     <string name="update_center">アップデート センター</string>
     <string name="update_found">アップデートがあります！</string>
-    <string name="update_notfound">アップデートはありません</string>
+    <string name="update_not_found">アップデートはありません</string>
     <!-- Dialogs -->
     <string name="guide">ガイド</string>
     <string name="hold_on">ストップ！</string>

@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/MaterialCard"
-    app:contentPaddingTop="2dp"
+    app:cardBackgroundColor="?colorLinkBG"
+    app:contentPaddingTop="8dp"
+    app:contentPaddingRight="16dp"
+    app:contentPaddingLeft="16dp"
     tools:ignore="HardcodedText">
 
     <LinearLayout
@@ -13,29 +16,33 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/AboutCardTitle"
             android:id="@+id/about_card_vancedTeam"
+            style="@style/CardTextHeader"
             android:text="@string/manager_dev"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Xinto"
-            android:textSize="18sp" />
-        
+            android:text="Xinto (Main stuff)"
+            android:layout_marginTop="8dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Koopah"
-            android:textSize="18sp" />
-        
+            style="@style/AboutDevNames"
+            android:text="Koopah (Shell God)" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- AioiLight"
-            android:textSize="18sp" />
+            android:text="AioiLight (GitHub)" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logan (UI)" />
 
     </LinearLayout>
 

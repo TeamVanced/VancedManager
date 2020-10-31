@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+        <variable
+            name="linkModel"
+            type="com.vanced.manager.model.LinkModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/link_bg"
+        android:layout_width="80dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="@{()-> viewModel.openUrl(linkModel.linkUrl)}"
+        app:cardBackgroundColor="?colorLinkBG"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:contentPaddingBottom="4dp"
+        app:contentPaddingLeft="8dp"
+        app:contentPaddingRight="8dp"
+        app:contentPaddingTop="2dp">
+
+        <ImageView
+            android:id="@+id/link_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@{linkModel.linkIcon}"
+            app:tint="?colorLinkImage"
+            tools:src="@drawable/ic_instagram" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

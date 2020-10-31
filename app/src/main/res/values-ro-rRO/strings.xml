@@ -9,7 +9,7 @@
     <string name="title_home">Start</string>
     <string name="title_settings">Configurări</string>
     <!-- Home Page -->
-    <string name="changelogs">Istoric modificări</string>
+    <string name="changelog">Istoric modificări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
     <string name="installation_wait">Vă rugăm să aşteptaţi până la finalizarea instalării.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Interfață</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Verifică pentru actualizări</string>
-    <string name="chosen_install_values">Preferințe de instalare selectate</string>
+    <string name="vanced_installation_preferences">Preferințe de instalare selectate</string>
     <string name="chosen_lang">Limbă: %1$s</string>
     <string name="chosen_theme">Temă: %1$s</string>
     <string name="clear_files">Ştergeţi fişierele descărcate</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Re-verifică</string>
     <string name="update_center">Actualizator</string>
     <string name="update_found">Actualizare găsită!</string>
-    <string name="update_notfound">Nu există actualizări noi</string>
+    <string name="update_not_found">Nu există actualizări noi</string>
     <!-- Dialogs -->
     <string name="guide">Ghid</string>
     <string name="hold_on">Oprește!</string>

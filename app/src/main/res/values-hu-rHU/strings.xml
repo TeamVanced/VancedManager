@@ -9,7 +9,7 @@
     <string name="title_home">Kezdőlap</string>
     <string name="title_settings">Beállítások</string>
     <!-- Home Page -->
-    <string name="changelogs">Változások listája</string>
+    <string name="changelog">Változások listája</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="install">Telepítés</string>
     <string name="installation_wait">Várjon amíg a telepítés befejeződik.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Kezelőfelület</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Frissítések ellenőrzése</string>
-    <string name="chosen_install_values">Telepítési preferencia</string>
+    <string name="vanced_installation_preferences">Telepítési preferencia</string>
     <string name="chosen_lang">Nyelv: %1$s</string>
     <string name="chosen_theme">Téma: %1$s</string>
     <string name="clear_files">Letöltött fájlok törlése</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Ellenőrizze újra</string>
     <string name="update_center">Frissítő központ</string>
     <string name="update_found">Frissítés érhető el!</string>
-    <string name="update_notfound">Nincsenek új frissítések</string>
+    <string name="update_not_found">Nincsenek új frissítések</string>
     <!-- Dialogs -->
     <string name="guide">Útmutató</string>
     <string name="hold_on">Állj!</string>

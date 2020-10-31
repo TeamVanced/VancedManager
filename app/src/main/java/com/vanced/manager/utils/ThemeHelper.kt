@@ -8,18 +8,18 @@ import com.vanced.manager.R
 object ThemeHelper {
 
     fun setFinalTheme(activity: Activity) {
-        val currentAccent = PreferenceManager.getDefaultSharedPreferences(activity).getString("accent_color", "Blue")
+        val currentAccent = PreferenceManager.getDefaultSharedPreferences(activity).getString("manager_accent", "Blue")
         when (PreferenceManager.getDefaultSharedPreferences(activity)
-            .getString("theme_mode", "Follow System")) {
+            .getString("manager_theme", "System Default")) {
             "Light" -> activity.setTheme(getLightAccent(currentAccent))
             "Dark" -> activity.setTheme(getDarkAccent(currentAccent))
-            "Follow System" -> {
+            "System Default" -> {
                 when (activity.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                     Configuration.UI_MODE_NIGHT_YES -> activity.setTheme(getDarkAccent(currentAccent))
                     Configuration.UI_MODE_NIGHT_NO -> activity.setTheme(getLightAccent(currentAccent))
                 }
             }
-            else -> getLightAccent("Blue")
+            else -> activity.setTheme(getLightAccent("Blue"))
         }
     }
 

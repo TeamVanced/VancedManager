@@ -17,36 +17,21 @@
     </style>
 
     <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
-        <item name="textAllCaps">false</item>
         <item name="backgroundTint">?colorPrimary</item>
-        <item name="android:textColor">#ffffff</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="fontFamily">@font/exo_bold</item>
     </style>
 
     <style name="OutlinedButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="textAllCaps">false</item>
-        <item name="android:textColor">#ffffff</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="fontFamily">@font/exo_bold</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="strokeColor">?colorPrimary</item>
     </style>
 
-    <style name="InstallButtonStyle" parent="ButtonStyle">
+    <style name="BottomDialogButtonStyle" parent="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:layout_marginStart">6dp</item>
         <item name="android:layout_marginEnd">6dp</item>
-        <item name="android:layout_gravity">end</item>
-        <item name="iconGravity">end</item>
-    </style>
-
-    <style name="PauseResumeButtonStyle" parent="android:Widget.Button.Toggle">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
-        <item name="android:textOn"></item>
-        <item name="android:textOff"></item>
-        <item name="android:background">@drawable/ic_pause_resume</item>
     </style>
 
     <style name="SocialButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
@@ -54,10 +39,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="backgroundTint">@android:color/transparent</item>
         <item name="background">@android:color/transparent</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">?colorLinkImage</item>
         <item name="iconPadding">0dp</item>
         <item name="iconGravity">textStart</item>
-        <item name="iconTint">#ffffff</item>
+        <item name="iconTint">?colorLinkImage</item>
     </style>
 
     <style name="MaterialCard" parent="Widget.MaterialComponents.CardView">
@@ -90,6 +75,16 @@
         <item name="contentPaddingRight">0dp</item>
     </style>
 
+    <style name="CardTextHeader" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextAppTitle" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -99,12 +94,48 @@
         <item name="android:layout_marginStart">8dp</item>
     </style>
 
-    <style name="CardTitle" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">wrap_content</item>
+    <style name="DialogCardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">?colorOnSurfaceVariant</item>
-        <item name="fontFamily">@font/exo_bold</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">?colorSettingsTitle</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DialogCardSubtitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">?colorSecondaryText</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SettingsItemSummary" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constrainedWidth">true</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textColor">?colorWelcomeHeaderSubtitle</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="SettingsItemTitle" parent="SettingsItemSummary">
+        <item name="android:textColor">?colorSettingsTitle</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DialogCard" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="contentPaddingLeft">16dp</item>
+        <item name="contentPaddingRight">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">?colorLinkBG</item>
     </style>
 
     <style name="InstallCardTitle" parent="Widget.AppCompat.TextView">
@@ -112,7 +143,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">?colorOnSurfaceVariant</item>
         <item name="fontFamily">@font/exo_bold</item>
-        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
     </style>
 
@@ -123,6 +154,37 @@
         <item name="fontFamily">@font/exo_semibold</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="WelcomeHeaderTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:layout_marginTop">@dimen/top_header_margin</item>
+    </style>
+
+    <style name="AboutDevNames" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?colorWelcomeHeaderSubtitle</item>
+    </style>
+
+    <style name="WelcomeHeaderSubtitle" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?colorWelcomeHeaderSubtitle</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">64dp</item>
+        <item name="android:layout_marginEnd">64dp</item>
+    </style>
+
+    <style name="ToolbarTextTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="AppVer" parent="Widget.AppCompat.TextView">
@@ -138,16 +200,38 @@
         <item name="android:layout_marginStart">8dp</item>
     </style>
 
+    <style name="BottomDialogCard" parent="DialogCard">
+        <item name="cardCornerRadius">0dp</item>
+        <item name="contentPaddingLeft">8dp</item>
+        <item name="contentPaddingRight">8dp</item>
+        <item name="contentPaddingBottom">4dp</item>
+    </style>
+
+    <style name="BottomDialogCardTitle" parent="DialogCardTitle">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="BottomDialogCardTextItem" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="ClickableImageWidget">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:clickable">true</item>
-        <item name="tint">?colorPrimary</item>
+        <item name="tint">?colorLinkImage</item>
         <item name="iconPadding">0dp</item>
     </style>
 
     <style name="ClickableImageWidget.Red" parent="ClickableImageWidget">
         <item name="tint">@color/Red</item>
+    </style>
+
+    <style name="PreferenceSwitch">
+        <item name="colorControlActivated">?colorPrimary</item>
     </style>
 
     <style name="SnackBar" parent="Widget.MaterialComponents.Snackbar">

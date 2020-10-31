@@ -9,7 +9,7 @@
     <string name="title_home">முகப்பு</string>
     <string name="title_settings">அமைப்புகள்</string>
     <!-- Home Page -->
-    <string name="changelogs">மாற்றங்களின் பதிவு</string>
+    <string name="changelog">மாற்றங்களின் பதிவு</string>
     <string name="downloading_file">%1$s ஐப் பதிவிறக்குகிறது</string>
     <string name="install">நிறுவு</string>
     <string name="installation_wait">நிறுவல் முடியும் வரை காத்திருக்கவும்.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">இடைமுகம்</string>
     <string name="category_manager">மேலாளர்</string>
     <string name="check_updates">புதுப்பிப்புகள் உள்ளதா பார்</string>
-    <string name="chosen_install_values">நிறுவல் விருப்பத்தேர்வுகளைத் தேர்ந்தெடுத்தது</string>
+    <string name="vanced_installation_preferences">நிறுவல் விருப்பத்தேர்வுகளைத் தேர்ந்தெடுத்தது</string>
     <string name="chosen_lang">மொழி: %1$s</string>
     <string name="chosen_theme">தீம்: %1$s</string>
     <string name="clear_files">பதிவிறக்கிய கோப்புகளை அழிக்கவும்</string>
@@ -58,7 +58,7 @@
     <string name="re_check">மீண்டும் சரிபார்க்கவும்</string>
     <string name="update_center">மேலாளர் புதுப்பிப்பு மையம்</string>
     <string name="update_found">புதுப்பிப்பு கிடைத்தது!</string>
-    <string name="update_notfound">புதிய புதுப்பிப்புகள் இல்லை</string>
+    <string name="update_not_found">புதிய புதுப்பிப்புகள் இல்லை</string>
     <!-- Dialogs -->
     <string name="guide">வழிகாட்டி</string>
     <string name="hold_on">நிறுத்து!</string>

@@ -9,7 +9,7 @@
     <string name="title_home">Hjem</string>
     <string name="title_settings">Indstillinger</string>
     <!-- Home Page -->
-    <string name="changelogs">Changelogs</string>
+    <string name="changelog">Changelogs</string>
     <string name="downloading_file">Downloader %1$s</string>
     <string name="install">Installer</string>
     <string name="installation_wait">Vent venligst til installationen er færdig.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Brugerflade</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Søg efter opdateringer</string>
-    <string name="chosen_install_values">Valgte installations præferencer</string>
+    <string name="vanced_installation_preferences">Valgte installations præferencer</string>
     <string name="chosen_lang">Sprog:%1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Ryd hentede filer</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Check igen</string>
     <string name="update_center">Manager opdaterings center</string>
     <string name="update_found">Opdatering fundet!</string>
-    <string name="update_notfound">Ingen nye opdateringer</string>
+    <string name="update_not_found">Ingen nye opdateringer</string>
     <!-- Dialogs -->
     <string name="guide">Vejledning</string>
     <string name="hold_on">Stop!</string>

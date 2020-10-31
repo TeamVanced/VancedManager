@@ -8,10 +8,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
-import com.vanced.manager.utils.PackageHelper.installVanced
 
 object DialogContainer {
 
@@ -36,7 +34,7 @@ object DialogContainer {
             show()
         }
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        prefs.edit().putBoolean("firstStart", false).apply()
+        prefs.edit().putBoolean("firstLaunch", false).apply()
     }
 
     private fun showMiuiDialog(context: Context) {
@@ -54,22 +52,6 @@ object DialogContainer {
             setCancelable(false)
             create()
             show()
-        }
-    }
-
-    //TODO
-    fun installOrDownload(context: Context) {
-        MaterialAlertDialogBuilder(context).apply {
-            setTitle("")
-            setMessage("")
-            setNegativeButton("") { dialog, _ ->
-                downloadVanced(context)
-                dialog.dismiss()
-            }
-            setPositiveButton(context.getString(R.string.button_reinstall)) { dialog, _ ->
-                installVanced(context)
-                dialog.dismiss()
-            }
         }
     }
 

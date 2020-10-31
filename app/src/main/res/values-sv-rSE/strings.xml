@@ -9,7 +9,7 @@
     <string name="title_home">Startsida</string>
     <string name="title_settings">Inställningar</string>
     <!-- Home Page -->
-    <string name="changelogs">Ändringslogg</string>
+    <string name="changelog">Ändringslogg</string>
     <string name="downloading_file">Laddar ned %1$s</string>
     <string name="install">Install</string>
     <string name="installation_wait">Vänta tills installationen är klar.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Gränssnitt</string>
     <string name="category_manager">Hanterare</string>
     <string name="check_updates">Sök uppdateringar</string>
-    <string name="chosen_install_values">Valda installationsinställningar</string>
+    <string name="vanced_installation_preferences">Valda installationsinställningar</string>
     <string name="chosen_lang">Språk: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Rensa nedladdade filer</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Kontrollera igen</string>
     <string name="update_center">Ansvarig uppdateringscenter</string>
     <string name="update_found">Uppdateringen hittades!</string>
-    <string name="update_notfound">Inga nya uppdateringar</string>
+    <string name="update_not_found">Inga nya uppdateringar</string>
     <!-- Dialogs -->
     <string name="guide">Guide</string>
     <string name="hold_on">Stopp!</string>

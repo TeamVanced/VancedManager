@@ -9,7 +9,7 @@
     <string name="title_home">בית</string>
     <string name="title_settings">הגדרות</string>
     <!-- Home Page -->
-    <string name="changelogs">שינויים</string>
+    <string name="changelog">שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
     <string name="install">התקן</string>
     <string name="installation_wait">אנא המתינו לסיום ההתקנה...</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">ממשק</string>
     <string name="category_manager">מנהל</string>
     <string name="check_updates">בדוק אחר עדכונים</string>
-    <string name="chosen_install_values">העדפות התקנה שנבחרו</string>
+    <string name="vanced_installation_preferences">העדפות התקנה שנבחרו</string>
     <string name="chosen_lang">שפה: %1$s</string>
     <string name="chosen_theme">ערכת נושא: %1$s</string>
     <string name="clear_files">מחק קבצים שהורדו</string>
@@ -58,7 +58,7 @@
     <string name="re_check">בדיקה מחדש</string>
     <string name="update_center">מרכז העדכונים</string>
     <string name="update_found">עדכון נמצא!</string>
-    <string name="update_notfound">אין עדכונים חדשים</string>
+    <string name="update_not_found">אין עדכונים חדשים</string>
     <!-- Dialogs -->
     <string name="guide">מדריך</string>
     <string name="hold_on">עצור!</string>

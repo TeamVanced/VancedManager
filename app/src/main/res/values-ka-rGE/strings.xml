@@ -9,7 +9,7 @@
     <string name="title_home">საწყისი</string>
     <string name="title_settings">პარამეტრები</string>
     <!-- Home Page -->
-    <string name="changelogs">ცვლილებები</string>
+    <string name="changelog">ცვლილებები</string>
     <string name="downloading_file">მიმდინარეობს %1$s-ის გადმოწერა</string>
     <string name="install">ინსტალაცია</string>
     <string name="installation_wait">Please wait until installation finishes.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">ინტერფეისი</string>
     <string name="category_manager">მენეჯერი</string>
     <string name="check_updates">განახლებების შემოწმება</string>
-    <string name="chosen_install_values">არჩეული ინსტალაციის რეჟიმები</string>
+    <string name="vanced_installation_preferences">არჩეული ინსტალაციის რეჟიმები</string>
     <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">თემა: %1$s</string>
     <string name="clear_files">Clear downloaded files</string>
@@ -58,7 +58,7 @@
     <string name="re_check">გადამოწმება</string>
     <string name="update_center">განახლების ცენტრი</string>
     <string name="update_found">ნაპოვნია განახლება!</string>
-    <string name="update_notfound">განახლება არ არის აღმოჩენილი</string>
+    <string name="update_not_found">განახლება არ არის აღმოჩენილი</string>
     <!-- Dialogs -->
     <string name="guide">ინსტრუქცია</string>
     <string name="hold_on">Stop!</string>

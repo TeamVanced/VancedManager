@@ -9,7 +9,7 @@
     <string name="title_home">Tuiste</string>
     <string name="title_settings">Settings</string>
     <!-- Home Page -->
-    <string name="changelogs">Changelogs</string>
+    <string name="changelog">Changelogs</string>
     <string name="downloading_file">Downloading %1$s</string>
     <string name="install">Install</string>
     <string name="installation_wait">Please wait until installation finishes.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Interface</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Check for updates</string>
-    <string name="chosen_install_values">Chosen installation preferences</string>
+    <string name="vanced_installation_preferences">Chosen installation preferences</string>
     <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
     <string name="clear_files">Clear downloaded files</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Re-check</string>
     <string name="update_center">Manager Update Center</string>
     <string name="update_found">Update found!</string>
-    <string name="update_notfound">No new updates</string>
+    <string name="update_not_found">No new updates</string>
     <!-- Dialogs -->
     <string name="guide">Guide</string>
     <string name="hold_on">Stop!</string>

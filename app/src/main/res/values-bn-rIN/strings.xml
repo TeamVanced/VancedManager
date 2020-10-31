@@ -9,7 +9,7 @@
     <string name="title_home">হোম</string>
     <string name="title_settings">সেটিংস</string>
     <!-- Home Page -->
-    <string name="changelogs">পরিবর্তন নথি</string>
+    <string name="changelog">পরিবর্তন নথি</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="install">ইনস্টল</string>
     <string name="installation_wait">ইনস্টলেশন শেষ হওয়া পর্যন্ত অপেক্ষা করুন।</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">ইন্টারফেস</string>
     <string name="category_manager">ম্যানেজার</string>
     <string name="check_updates">হালনাগাদ এর জন্য অনুসন্ধান করুন</string>
-    <string name="chosen_install_values">নির্বাচিত ইনস্টলেশন পছন্দগুলি</string>
+    <string name="vanced_installation_preferences">নির্বাচিত ইনস্টলেশন পছন্দগুলি</string>
     <string name="chosen_lang">ভাষা(গুলি): %1$s</string>
     <string name="chosen_theme">থিম: %1$s</string>
     <string name="clear_files">ডাউনলোড করা ফাইলগুলি মুছে ফেলুন</string>
@@ -58,7 +58,7 @@
     <string name="re_check">পুনরায় চেক করুন</string>
     <string name="update_center">পরিচালক আপডেট কেন্দ্র</string>
     <string name="update_found">আপডেট পাওয়া গেল!</string>
-    <string name="update_notfound">কোনো নতুন আপডেট নেই</string>
+    <string name="update_not_found">কোনো নতুন আপডেট নেই</string>
     <!-- Dialogs -->
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামুন!</string>

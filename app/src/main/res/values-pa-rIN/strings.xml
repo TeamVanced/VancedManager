@@ -9,7 +9,7 @@
     <string name="title_home">ਘਰ</string>
     <string name="title_settings">ਸੇਟਿੰਗਸ</string>
     <!-- Home Page -->
-    <string name="changelogs">ਤਬਦੀਲੀਆਂ</string>
+    <string name="changelog">ਤਬਦੀਲੀਆਂ</string>
     <string name="downloading_file">ਡਾਉਨਲੋਡ ਕਰ ਰਿਹਾ ਹੈ %1$s</string>
     <string name="install">ਸਥਾਪਨਾ</string>
     <string name="installation_wait">ਕਿਰਪਾ ਸਥਾਪਨਾ ਹੋਣ ਤੱਕ ਰੁਕੋ</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">ਇੰਟਰਫੇਸ</string>
     <string name="category_manager">ਮਨੈਜ਼ਰ</string>
     <string name="check_updates">ਅੱਪਡੇਟ ਲਈ ਦੇਖੋ</string>
-    <string name="chosen_install_values">ਸਥਾਪਨਾ ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
+    <string name="vanced_installation_preferences">ਸਥਾਪਨਾ ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
     <string name="chosen_lang">ਭਾਸ਼ਾ (ਇ): %1$s</string>
     <string name="chosen_theme">ਥੀਮ: %1$s</string>
     <string name="clear_files">ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਸਾਫ਼ ਕਰੋ</string>
@@ -58,7 +58,7 @@
     <string name="re_check">ਰਿ-ਚੈੱਕ</string>
     <string name="update_center">ਅੱਪਡੇਟ ਕੇਂਦਰ</string>
     <string name="update_found">ਅੱਪਡੇਟ ਮਿਲਿਆ!</string>
-    <string name="update_notfound">ਕੋਈ ਨਵਾਂ ਅੱਪਡੇਟ ਨਹੀਂ</string>
+    <string name="update_not_found">ਕੋਈ ਨਵਾਂ ਅੱਪਡੇਟ ਨਹੀਂ</string>
     <!-- Dialogs -->
     <string name="guide">ਗਾਇਡ</string>
     <string name="hold_on">ਉਡੀਕੋ!</string>

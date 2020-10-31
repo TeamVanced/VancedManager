@@ -9,7 +9,7 @@
     <string name="title_home">Inici</string>
     <string name="title_settings">Configuració</string>
     <!-- Home Page -->
-    <string name="changelogs">Registres de canvis</string>
+    <string name="changelog">Registres de canvis</string>
     <string name="downloading_file">Descarregant %1$s</string>
     <string name="install">Instal·lar</string>
     <string name="installation_wait">Espereu fins que es completi la instal·lació.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Interfície</string>
     <string name="category_manager">Gestor</string>
     <string name="check_updates">Busca actualitzacions</string>
-    <string name="chosen_install_values">Preferències d\'instal·lació triades</string>
+    <string name="vanced_installation_preferences">Preferències d\'instal·lació triades</string>
     <string name="chosen_lang">Idioma: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Esborrar fitxers descarregats</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Comprovar de nou</string>
     <string name="update_center">Gestor d\'actualitzacions</string>
     <string name="update_found">Actualització disponible!</string>
-    <string name="update_notfound">Cap actualització</string>
+    <string name="update_not_found">Cap actualització</string>
     <!-- Dialogs -->
     <string name="guide">Guia</string>
     <string name="hold_on">Atura!</string>

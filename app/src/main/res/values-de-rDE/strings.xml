@@ -9,7 +9,7 @@
     <string name="title_home">Startseite</string>
     <string name="title_settings">Einstellungen</string>
     <!-- Home Page -->
-    <string name="changelogs">Änderungsverlauf</string>
+    <string name="changelog">Änderungsverlauf</string>
     <string name="downloading_file">%1$s wird heruntergeladen</string>
     <string name="install">Installieren</string>
     <string name="installation_wait">Bitte warte, bis die Installation abgeschlossen ist.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Benutzeroberfläche</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Prüfe nach Updates</string>
-    <string name="chosen_install_values">Ausgewählte Installationsoptionen</string>
+    <string name="vanced_installation_preferences">Ausgewählte Installationsoptionen</string>
     <string name="chosen_lang">Sprache(n): %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
     <string name="clear_files">Heruntergeladene Dateien löschen</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Erneut überprüfen</string>
     <string name="update_center">Update Center</string>
     <string name="update_found">Update gefunden!</string>
-    <string name="update_notfound">Keine neuen Updates</string>
+    <string name="update_not_found">Keine neuen Updates</string>
     <!-- Dialogs -->
     <string name="guide">Erklärung</string>
     <string name="hold_on">Stop!</string>

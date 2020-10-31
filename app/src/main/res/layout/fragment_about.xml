@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:bind="http://schemas.android.com/tools">
 
     <data>
@@ -23,7 +22,6 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="@dimen/twelvedp"
             android:layout_marginEnd="16dp"
-            android:background="?colorSurface"
             android:clipToPadding="false"
             android:orientation="vertical">
 
@@ -49,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/stdp"
-                bind:viewModel="@{viewModel}"/>
+                bind:viewModel="@{viewModel}" />
 
         </LinearLayout>
 

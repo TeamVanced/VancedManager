@@ -28,14 +28,6 @@
             app:popEnterAnim="@animator/fragment_enter_pop"
             app:popExitAnim="@animator/fragment_exit_pop"  />
 
-        <action
-            android:id="@+id/toInstallThemeFragment"
-            app:destination="@id/install_theme_fragment"
-            app:enterAnim="@animator/fragment_enter_right"
-            app:exitAnim="@animator/fragment_exit_left"
-            app:popEnterAnim="@animator/fragment_enter_left"
-            app:popExitAnim="@animator/fragment_exit_right" />
-
     </fragment>
 
     <fragment
@@ -66,52 +58,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/install_theme_fragment"
-        android:name="com.vanced.manager.ui.fragments.VancedThemeSelectionFragment"
-        android:label="@string/install"
-        tools:layout="@layout/fragment_vanced_theme_selection">
-
-        <action
-            android:id="@+id/toInstallLanguageFragment"
-            app:destination="@id/install_language_fragment"
-            app:enterAnim="@animator/fragment_enter_right"
-            app:exitAnim="@animator/fragment_exit_left"
-            app:popEnterAnim="@animator/fragment_enter_left"
-            app:popExitAnim="@animator/fragment_exit_right" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/install_language_fragment"
-        android:name="com.vanced.manager.ui.fragments.VancedLanguageSelectionFragment"
-        android:label="@string/install"
-        tools:layout="@layout/fragment_vanced_language_selection" >
-
-        <action
-            android:id="@+id/action_installTo_homeFragment"
-            app:destination="@id/home_fragment"
-            app:enterAnim="@animator/fragment_enter_left"
-            app:exitAnim="@animator/fragment_exit_right"
-            app:popEnterAnim="@animator/fragment_enter_right"
-            app:popExitAnim="@animator/fragment_exit_left"
-            app:popUpTo="@id/home_fragment"
-            app:popUpToInclusive="true"/>
-
-    </fragment>
-
-    <fragment
         android:id="@+id/dev_settings_fragment"
         android:name="com.vanced.manager.ui.fragments.DevSettingsFragment"
         android:label="Dev Settings" />
-
-    <action
-        android:id="@+id/toHomeFragment"
-        app:destination="@id/home_fragment"
-        app:enterAnim="@animator/fragment_enter"
-        app:exitAnim="@animator/fragment_exit"
-        app:popEnterAnim="@animator/fragment_enter_pop"
-        app:popExitAnim="@animator/fragment_exit_pop"
-        app:popUpTo="@id/home_fragment"
-        app:popUpToInclusive="true" />
 
 </navigation>

@@ -9,7 +9,7 @@
     <string name="title_home">Startpagina</string>
     <string name="title_settings">Instellingen</string>
     <!-- Home Page -->
-    <string name="changelogs">Wijzigingen</string>
+    <string name="changelog">Wijzigingen</string>
     <string name="downloading_file">%1$s downloaden</string>
     <string name="install">Installeren</string>
     <string name="installation_wait">Wacht tot de installatie is voltooid.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Interface</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Controleren op updates</string>
-    <string name="chosen_install_values">Gekozen installatievoorkeuren</string>
+    <string name="vanced_installation_preferences">Gekozen installatievoorkeuren</string>
     <string name="chosen_lang">Talen: %1$s</string>
     <string name="chosen_theme">Thema: %1$s</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Opnieuw controleren</string>
     <string name="update_center">Manager Update Center</string>
     <string name="update_found">Update gevonden!</string>
-    <string name="update_notfound">Geen nieuwe updates</string>
+    <string name="update_not_found">Geen nieuwe updates</string>
     <!-- Dialogs -->
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>

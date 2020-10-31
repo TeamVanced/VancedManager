@@ -9,7 +9,7 @@
     <string name="title_home">Beranda</string>
     <string name="title_settings">Pengaturan</string>
     <!-- Home Page -->
-    <string name="changelogs">Catatan perubahan</string>
+    <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
     <string name="installation_wait">Mohon tunggu sampai instalasi selesai.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Antarmuka</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Cek pembaruan</string>
-    <string name="chosen_install_values">Preferensi pemasangan yang dipilih</string>
+    <string name="vanced_installation_preferences">Preferensi pemasangan yang dipilih</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">Hapus file yang diunduh</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Cek ulang</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
     <string name="update_found">Pembaruan ditemukan!</string>
-    <string name="update_notfound">Tidak ada pembaruan</string>
+    <string name="update_not_found">Tidak ada pembaruan</string>
     <!-- Dialogs -->
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>

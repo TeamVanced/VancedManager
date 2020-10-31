@@ -21,9 +21,10 @@ class LanguageContextWrapper(base: Context?) : ContextWrapper(base) {
 
         private fun setLocale(config: Configuration, context: Context): Configuration {
             val pref = PreferenceManager.getDefaultSharedPreferences(context).getString("manager_lang", "System Default")
+            val sysLocale = Resources.getSystem().configuration.locale
             val locale =
                 when {
-                    pref == "System Default" -> Locale(Resources.getSystem().configuration.locale.language)
+                    pref == "System Default" -> Locale(sysLocale.language, sysLocale.country)
                     pref?.length!! > 2 -> Locale(pref.substring(0, pref.length - 3), pref.substring(pref.length - 2))
                     else -> Locale(pref)
                 }

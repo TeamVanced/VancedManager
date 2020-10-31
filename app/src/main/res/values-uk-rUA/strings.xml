@@ -9,7 +9,7 @@
     <string name="title_home">Головна</string>
     <string name="title_settings">Налаштування</string>
     <!-- Home Page -->
-    <string name="changelogs">Список змін</string>
+    <string name="changelog">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
     <string name="installation_wait">Будь ласка, дочекайтеся закінчення установки.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Інтерфейс</string>
     <string name="category_manager">Менеджер</string>
     <string name="check_updates">Перевірити на оновлення</string>
-    <string name="chosen_install_values">Вибрані налаштування встановлення</string>
+    <string name="vanced_installation_preferences">Вибрані налаштування встановлення</string>
     <string name="chosen_lang">Мова(и): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
     <string name="clear_files">Очистити завантажені файли</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Перепровірити</string>
     <string name="update_center">Центр Оновлень</string>
     <string name="update_found">Знайдено оновлення!</string>
-    <string name="update_notfound">Нових оновлень не виявлено</string>
+    <string name="update_not_found">Нових оновлень не виявлено</string>
     <!-- Dialogs -->
     <string name="guide">Гайд</string>
     <string name="hold_on">Зупинись!</string>

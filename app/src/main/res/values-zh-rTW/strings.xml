@@ -9,7 +9,7 @@
     <string name="title_home">主頁</string>
     <string name="title_settings">設定</string>
     <!-- Home Page -->
-    <string name="changelogs">更新日誌</string>
+    <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
     <string name="installation_wait">請等待安裝程序完成.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">介面</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">檢查更新</string>
-    <string name="chosen_install_values">已選安裝偏好設定</string>
+    <string name="vanced_installation_preferences">已選安裝偏好設定</string>
     <string name="chosen_lang">語言: %1$s</string>
     <string name="chosen_theme">主題： %1$s</string>
     <string name="clear_files">清除已下載的檔案</string>
@@ -58,7 +58,7 @@
     <string name="re_check">重新檢查</string>
     <string name="update_center">Manager 更新中心</string>
     <string name="update_found">有可用的更新！</string>
-    <string name="update_notfound">沒有新的更新</string>
+    <string name="update_not_found">沒有新的更新</string>
     <!-- Dialogs -->
     <string name="guide">說明</string>
     <string name="hold_on">警告！</string>

@@ -9,7 +9,7 @@
     <string name="title_home">Почетна</string>
     <string name="title_settings">Подешавања</string>
     <!-- Home Page -->
-    <string name="changelogs">Измене</string>
+    <string name="changelog">Измене</string>
     <string name="downloading_file">Преузимање %1$s</string>
     <string name="install">Инсталација</string>
     <string name="installation_wait">Молимо сачекајте док се инсталација не заврши.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Интерфејс</string>
     <string name="category_manager">Менаџер</string>
     <string name="check_updates">Провери ажурирања</string>
-    <string name="chosen_install_values">Изабрана инсталациона подешавања</string>
+    <string name="vanced_installation_preferences">Изабрана инсталациона подешавања</string>
     <string name="chosen_lang">Језик (Језици):%1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
     <string name="clear_files">Обриши преузете датотеке</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Провери</string>
     <string name="update_center">Менаџер ажурирања</string>
     <string name="update_found">Ажурирање је пронађено!</string>
-    <string name="update_notfound">Нема нове верзије</string>
+    <string name="update_not_found">Нема нове верзије</string>
     <!-- Dialogs -->
     <string name="guide">Водич</string>
     <string name="hold_on">Заустави!</string>

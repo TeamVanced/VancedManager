@@ -9,7 +9,7 @@
     <string name="title_home">Koti</string>
     <string name="title_settings">Asetukset</string>
     <!-- Home Page -->
-    <string name="changelogs">Muutoshistoria</string>
+    <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
     <string name="installation_wait">Odota, kunnes asennus on valmis.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Ulkoasu</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Tarkista päivitykset</string>
-    <string name="chosen_install_values">Valitut asennusasetukset</string>
+    <string name="vanced_installation_preferences">Valitut asennusasetukset</string>
     <string name="chosen_lang">Kieli: %1$s</string>
     <string name="chosen_theme">Teema: %1$s</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Tarkista uudelleen</string>
     <string name="update_center">Managerin päivityskeskus</string>
     <string name="update_found">Päivitys löytyi!</string>
-    <string name="update_notfound">Ei uusia päivityksiä</string>
+    <string name="update_not_found">Ei uusia päivityksiä</string>
     <!-- Dialogs -->
     <string name="guide">Opas</string>
     <string name="hold_on">Pysähdy!</string>

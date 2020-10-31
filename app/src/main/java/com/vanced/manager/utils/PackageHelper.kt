@@ -14,9 +14,7 @@ import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.App
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
-import com.vanced.manager.core.installer.SplitInstallerService
-import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
-import com.vanced.manager.utils.AppUtils.mutableInstall
+import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
@@ -56,6 +54,103 @@ object PackageHelper {
 
     }
 
+    fun apkExist(context: Context, apk: String): Boolean {
+        val apkPath = File(context.getExternalFilesDir(apk.substring(0, apk.length - 4))?.path, apk)
+        if (apkPath.exists())
+            return true
+
+        return false
+    }
+
+    fun musicApkExists(context: Context): Boolean {
+        val apkPath = File(context.getExternalFilesDir("music/nonroot")?.path, "music.apk")
+        if (apkPath.exists()) {
+            return true
+        }
+
+        return false
+    }
+
+    fun musicRootApkExists(context: Context): Boolean {
+        val apkPath = File(context.getExternalFilesDir("music/root")?.path as String)
+        val apkList = mutableListOf<String>()
+        if (apkPath.exists()) {
+            val files = apkPath.listFiles()
+            if (files?.isNotEmpty() == true) {
+                for (file in files) {
+                    if (apkList.size == 2)
+                        return true
+
+                    when (file.name) {
+                        "music.apk"  -> apkList.add("music")
+                        "stock.apk" -> apkList.add("stock")
+                    }
+                }
+            }
+        }
+
+        return false
+    }
+
+    fun vancedInstallFilesExist(context: Context): Boolean {
+        val apksPath = File(context.getExternalFilesDir("vanced/nonroot")?.path.toString())
+        val splitFiles = mutableListOf<String>()
+        if (apksPath.exists()) {
+            val files = apksPath.listFiles()
+            if (files?.isNotEmpty() == true) {
+                for (file in files) {
+
+                    when {
+                        (file.name == "black.apk" || file.name == "dark.apk") && !splitFiles.contains("base") -> splitFiles.add("base")
+                        file.name.matches(Regex("split_config\\.(..)\\.apk")) && !splitFiles.contains("lang") -> splitFiles.add("lang")
+                        (file.name.startsWith("split_config.arm") || file.name.startsWith("split_config.x86")) && !splitFiles.contains("arch") -> splitFiles.add("arch")
+                    }
+
+                    Log.d("test", splitFiles.joinToString())
+
+                    if (splitFiles.size == 3) {
+                        return true
+                    }
+
+                }
+
+            }
+
+            return false
+        }
+        return false
+    }
+
+    fun vancedRootInstallFilesExist(context: Context): Boolean {
+        val apksPath = File(context.getExternalFilesDir("vanced/root")?.path.toString())
+        val splitFiles = mutableListOf<String>()
+        if (apksPath.exists()) {
+            val files = apksPath.listFiles()
+            if (files?.isNotEmpty() == true) {
+                for (file in files) {
+
+                    when {
+                        (file.name == "black.apk" || file.name == "dark.apk") && !splitFiles.contains("base") -> splitFiles.add("base")
+                        file.name == "stock.apk" && !splitFiles.contains("stock") -> splitFiles.add("stock")
+                        file.name == "dpi.apk" && !splitFiles.contains("dpi") -> splitFiles.add("dpi")
+                        file.name.matches(Regex("split_config\\.(..)\\.apk")) && !splitFiles.contains("lang") -> splitFiles.add("lang")
+                        (file.name.startsWith("split_config.arm") || file.name.startsWith("split_config.x86")) && !splitFiles.contains("arch") -> splitFiles.add("arch")
+                    }
+
+                    Log.d("test", splitFiles.joinToString())
+
+                    if (splitFiles.size == 5) {
+                        return true
+                    }
+
+                }
+
+            }
+            return false
+        }
+        return false
+    }
+
     fun uninstallApk(pkg: String, context: Context): Boolean {
         val callbackIntent = Intent(context, AppUninstallerService::class.java)
         callbackIntent.putExtra("pkg", pkg)
@@ -69,12 +164,11 @@ object PackageHelper {
         }
     }
     
-    fun install(app: String, path: String, context: Context){
-        val callbackIntent = Intent(context, AppInstallerService::class.java).putExtra("app", app)
+    fun install(path: String, context: Context) {
+        val callbackIntent = Intent(context, AppInstallerService::class.java)
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
         val packageInstaller = context.packageManager.packageInstaller
         val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
-        params.setAppPackageName(if (app == "microg") "com.mgoogle.android.gms" else "com.vanced.android.apps.youtube.music")
         val sessionId = packageInstaller.createSession(params)
         val session = packageInstaller.openSession(sessionId)
         val inputStream: InputStream = FileInputStream(path)
@@ -91,7 +185,7 @@ object PackageHelper {
     }
     
     fun installVanced(context: Context): Int {
-        val apkFolderPath = context.getExternalFilesDir("apks")?.path + "/"
+        val apkFolderPath = context.getExternalFilesDir("vanced/nonroot")?.path.toString() + "/"
         val nameSizeMap = HashMap<String, Long>()
         var totalSize: Long = 0
         var sessionId = 0
@@ -176,7 +270,7 @@ object PackageHelper {
         try {
             try {
                 session = context.packageManager.packageInstaller.openSession(sessionId)
-                val callbackIntent = Intent(context, SplitInstallerService::class.java)
+                val callbackIntent = Intent(context, AppInstallerService::class.java)
                 val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
                 session.commit(pendingIntent.intentSender)
                 session.close()
@@ -204,7 +298,7 @@ object PackageHelper {
             val application = context.applicationContext as App
             val vancedApplication = application.vanced.get()?.int("versionCode")
             val vancedVersionCode = if (vancedApplication != null) vancedApplication else { application.loadJsonAsync(); vancedApplication }
-            val apkFilesPath = context.getExternalFilesDir("apks")?.path
+            val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
             val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
             if (fileInfoList != null) {
                 var modApk: FileInfo? = null
@@ -216,8 +310,7 @@ object PackageHelper {
                 if (modApk != null) {
                     if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, context)) {
                         sendRefresh(context)
-                        vancedProgress.get()?.showInstallCircle?.set(false)
-                        mutableInstall.value = false
+                        sendCloseDialog(context)
                     }
                 }
                 else {

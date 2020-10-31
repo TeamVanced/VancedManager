@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="vanced_variants">
+        <item>nonroot</item>
+        <item>root</item>
+    </string-array>
+
+    <string-array name="vanced_themes">
+        <item>@string/install_light_dark</item>
+        <item>@string/install_light_black</item>
+    </string-array>
+
     <string-array name="theme_modes">
         <item>@string/theme_light</item>
         <item>@string/theme_dark</item>

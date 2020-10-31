@@ -9,7 +9,7 @@
     <string name="title_home">Ana Sayfa</string>
     <string name="title_settings">Ayarlar</string>
     <!-- Home Page -->
-    <string name="changelogs">Değişiklikler</string>
+    <string name="changelog">Değişiklikler</string>
     <string name="downloading_file">%1$s indiriliyor</string>
     <string name="install">Yükle</string>
     <string name="installation_wait">Lütfen yükleme bitene kadar bekleyin.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Arayüz</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">Güncellemeleri denetle</string>
-    <string name="chosen_install_values">Seçilen yükleme tercihleri </string>
+    <string name="vanced_installation_preferences">Seçilen yükleme tercihleri </string>
     <string name="chosen_lang">Dil(ler): %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Yeniden denetle</string>
     <string name="update_center">Manager Güncelleme Merkezi</string>
     <string name="update_found">Güncelleme bulundu!</string>
-    <string name="update_notfound">Yeni güncelleme yok</string>
+    <string name="update_not_found">Yeni güncelleme yok</string>
     <!-- Dialogs -->
     <string name="guide">Kılavuz</string>
     <string name="hold_on">Durdur!</string>

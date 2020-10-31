@@ -9,7 +9,7 @@
     <string name="title_home">Αρχική σελίδα</string>
     <string name="title_settings">Ρυθμίσεις</string>
     <!-- Home Page -->
-    <string name="changelogs">Λίστα Αλλαγών</string>
+    <string name="changelog">Λίστα Αλλαγών</string>
     <string name="downloading_file">Λήψη %1$s</string>
     <string name="install">Εγκατάσταση</string>
     <string name="installation_wait">Παρακαλώ περιμένετε να ολοκληρωθεί η εγκατάσταση.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">Διεπαφή</string>
     <string name="category_manager">Διαχειριστής</string>
     <string name="check_updates">Έλεγχος για ενημερώσεις</string>
-    <string name="chosen_install_values">Επιλεγμένες προτιμήσεις εγκατάστασης</string>
+    <string name="vanced_installation_preferences">Επιλεγμένες προτιμήσεις εγκατάστασης</string>
     <string name="chosen_lang">Γλώσσα(/ες): %1$s</string>
     <string name="chosen_theme">Θέμα: %1$s</string>
     <string name="clear_files">Εκκαθάριση ληφθέντων αρχείων</string>
@@ -58,7 +58,7 @@
     <string name="re_check">Επανέλεγχος</string>
     <string name="update_center">Κέντρο ενημερώσεων</string>
     <string name="update_found">Διαθέσιμη ενημέρωση!</string>
-    <string name="update_notfound">Δεν υπάρχουν διαθέσιμες ενημερώσεις</string>
+    <string name="update_not_found">Δεν υπάρχουν διαθέσιμες ενημερώσεις</string>
     <!-- Dialogs -->
     <string name="guide">Οδηγίες</string>
     <string name="hold_on">Σταματήστε!</string>

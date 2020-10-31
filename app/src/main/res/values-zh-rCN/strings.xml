@@ -9,7 +9,7 @@
     <string name="title_home">主菜单</string>
     <string name="title_settings">设置</string>
     <!-- Home Page -->
-    <string name="changelogs">变更日志</string>
+    <string name="changelog">变更日志</string>
     <string name="downloading_file">正在下载 %1$s</string>
     <string name="install">安装</string>
     <string name="installation_wait">请等待安装程序完成.</string>
@@ -34,7 +34,7 @@
     <string name="category_interface">介面</string>
     <string name="category_manager">Manager</string>
     <string name="check_updates">检查更新</string>
-    <string name="chosen_install_values">已选择安装偏好</string>
+    <string name="vanced_installation_preferences">已选择安装偏好</string>
     <string name="chosen_lang">语言: %1$s</string>
     <string name="chosen_theme">主题： %1$s</string>
     <string name="clear_files">清除已下载的档案</string>
@@ -58,7 +58,7 @@
     <string name="re_check">重新检查</string>
     <string name="update_center">Manager 更新中心</string>
     <string name="update_found">有可用的更新！</string>
-    <string name="update_notfound">没有新的更新</string>
+    <string name="update_not_found">没有新的更新</string>
     <!-- Dialogs -->
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
