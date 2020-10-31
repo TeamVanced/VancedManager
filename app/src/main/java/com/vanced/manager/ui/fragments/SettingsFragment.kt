@@ -47,7 +47,7 @@ class SettingsFragment : Fragment() {
         }
 
         binding.managerVariant.apply {
-            prefs.getString("vanced_variant", "nonrooot")?.let { setSummary(it) }
+            prefs.getString("vanced_variant", "nonroot")?.let { setSummary(it) }
             setOnClickListener {
                 ManagerVariantDialog().show(requireActivity().supportFragmentManager, "")
             }
@@ -55,8 +55,8 @@ class SettingsFragment : Fragment() {
 
         binding.clearFiles.setOnClickListener {
             with(requireActivity()) {
-                listOf("apk", "apks").forEach { dir ->
-                    File(getExternalFilesDir(dir)?.path as String).deleteRecursively()
+                listOf("vanced/nonroot", "vanced/root", "music/nonroot", "music/root", "microg").forEach { dir ->
+                    File(getExternalFilesDir(dir)?.path.toString()).deleteRecursively()
                 }
                 Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT).show()
             }

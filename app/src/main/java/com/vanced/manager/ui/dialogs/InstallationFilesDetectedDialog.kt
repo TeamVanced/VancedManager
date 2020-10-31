@@ -35,10 +35,14 @@ class InstallationFilesDetectedDialog(private val app: String) : BottomSheetDial
 
         binding.installationDetectedRedownload.setOnClickListener {
             dismiss()
-            AppDownloadDialog(app).show(requireActivity())
+            if (app == requireActivity().getString(R.string.vanced))
+                VancedPreferencesDialog().show(requireActivity())
+            else
+                AppDownloadDialog(app).show(requireActivity())
         }
 
         binding.installationDetectedInstall.setOnClickListener {
+            dismiss()
             when (app) {
                 requireActivity().getString(R.string.vanced) -> startVancedInstall(requireActivity(), getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot"))
                 requireActivity().getString(R.string.music) -> startMusicInstall(requireActivity())

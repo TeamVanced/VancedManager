@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:nestedScrollingEnabled="false"
-                    android:paddingBottom="4dp"
+                    android:paddingBottom="8dp"
                     tools:itemCount="6"
                     tools:listitem="@layout/view_social_link" />
 
