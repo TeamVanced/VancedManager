@@ -4,15 +4,23 @@
     <string name="close">बंद करे</string>
     <string name="reset">रिसेट</string>
     <string name="save">सुरक्षित करें</string>
+    <string name="select_apps">Select Your Apps</string>
     <!-- Main Activity -->
     <string name="title_about">बारे में</string>
-    <string name="title_home">होम</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">सेटिंग्स</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
-    <string name="changelogs">चेंजलॉग</string>
+    <string name="about_app">About %1$s</string>
+    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
     <string name="install">इंस्टॉल</string>
-    <string name="installation_wait">कृपया स्थापना समाप्त होने तक प्रतीक्षा करें।</string>
     <string name="button_reinstall">फिर से इंस्टॉल</string>
     <string name="version_installed">इन्स्टॉल्ड:</string>
     <string name="latest">नवीनतम</string>
@@ -21,9 +29,7 @@
     <string name="unavailable">अनुपलब्ध</string>
     <string name="update">अद्यतन करें</string>
     <string name="useful_links">उपयोगी लिंक्स </string>
-    <string name="website_text">वेबसाइट</string>
-    <string name="support_us">हमें सपॉर्ट कीजिये!</string>
-    <string name="version_toast">%1$s संस्करण संख्या कॉपी की गई थी!</string>
+    <string name="support_us">Support US!</string>
     <!-- Settings -->
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="accent_blue">नीला</string>
@@ -31,12 +37,8 @@
     <string name="accent_purple">बैंगनी</string>
     <string name="accent_red">लाल</string>
     <string name="accent_yellow">पीला</string>
-    <string name="category_interface">इंटरफेस</string>
-    <string name="category_manager">मैनेजर</string>
-    <string name="check_updates">अद्यतनों के लिए जाँचें</string>
-    <string name="chosen_install_values">स्थापना प्राथमिकताएँ चुना</string>
-    <string name="chosen_lang">भाषा (एं): %1$s</string>
-    <string name="chosen_theme">थीम: %1$s</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">डाउनलोड की गई फ़ाइलें साफ़ करें</string>
     <string name="cleared_files">फ़ाइलें सफलतापूर्वक साफ़ की गई</string>
     <string name="firebase_title">फायरबेस वैश्लेषिकी</string>
@@ -44,43 +46,42 @@
     <string name="language_title">भाषा</string>
     <string name="link_title">क्रोम कस्टम टैब का उपयोग करें</string>
     <string name="link_custom_tabs">क्रोम कस्टम टैब में लिंक खुलेंगे</string>
-    <string name="link_external_browser">लिंक एक बाहरी ब्राउज़र में खुलेंगे</string>
-    <string name="new_installer_title">नए रूट इंस्टॉलर (प्रायोगिक) का उपयोग करें</string>
-    <string name="new_installer_summary">यह इंस्टॉलर हस्ताक्षर सत्यापन की स्थिति पर निर्भर नहीं करता है।
-चेतावनी: यदि आप इसका उपयोग करके इसे स्थापित करते हैं तो रिबूट के बाद Vanced गायब हो सकता है</string>
     <string name="system_default">सिस्टम डिफ़ॉल्ट</string>
     <string name="theme">थीम</string>
-    <string name="theme_follow">सिस्टम का पालन करें</string>
     <string name="theme_dark">डार्क थीम</string>
     <string name="theme_light">लाइट थीम</string>
     <string name="update_url">चैनल URL अपडेट करें</string>
     <string name="push_notifications">%1$s पुश सूचनाएँ</string>
     <string name="push_notifications_summary">जब %1$s का अपडेट जारी किया जाता है, तो पुश सूचनाएँ प्राप्त करें</string>
-    <string name="re_check">री-चेक</string>
     <string name="update_center">अपडेट केंद्र</string>
-    <string name="update_found">अपडेट मिला!</string>
-    <string name="update_notfound">कोई नया अपडेट नहीं</string>
+    <string name="update_not_found">No new updates</string>
+    <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="checking_updates">Checking for updates…</string>
+    <string name="chosen_lang">भाषा (एं): %1$s</string>
     <string name="guide">गाइड</string>
     <string name="hold_on">रुकें!</string>
+    <string name="installing_app">Installing %1$s</string>
     <string name="magisk_vanced">आप Vanced के Magisk / TWRP संस्करण का उपयोग कर रहे हैं, जिसे बंद कर दिया गया है और इस ऐप का उपयोग करके अपडेट नहीं किया जा सकता है। कृपया इस Magisk मॉड्यूल को हटाकर / TWRP Vanced uninstaller का उपयोग करके हटा दें।</string>
     <string name="miui_one_title">पता लगाया MiUI उपयोगकर्ता!</string>
     <string name="miui_one">Vanced इनस्टॉल करने के लिए, आप डेवलपर सेटिंग में MIUI ऑप्टिमाइज़ेशन को निष्क्रिय करें। (यदि आप 20.2.20 या बाद में xiaomi.eu आधारित ROM का उपयोग कर रहे हैं तो आप इस चेतावनी को अनदेखा कर सकते हैं)</string>
     <string name="error">त्रुटि</string>
+    <string name="redownload">Redownload</string>
     <string name="security_context">सुनिश्चित करें कि आपने vanced.app, Vanced Discord सर्वर या Vanced GitHub से ऐप डाउनलोड किया है</string>
     <string name="success">सफलता!</string>
+    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
     <string name="vanced_installed">सफलतापूर्वक स्थापित किया गया है! अब खोलो?</string>
     <string name="music_installed">वेंसड संगीत सफलतापूर्वक स्थापित किया गया है! अब खोले?</string>
+    <string name="please_be_patient">Please be patient…</string>
     <string name="launch">खोले</string>
     <string name="welcome">स्वागत है!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced के लिए अपनी पसंदीदा भाषा (ए) चुनें</string>
-    <string name="choose_preferred_language_note">नोट: यदि आप अंग्रेजी के अलावा कुछ भी स्थापित करते हैं, तब भी अंग्रेजी एक अतिरिक्त भाषा के रूप में स्थापित की जाएगी</string>
-    <string name="choose_preferred_theme">Vanced के लिए अपना पसंदीदा थीम चुनें</string>
-    <string name="finish">समाप्त करें</string>
     <string name="install_light_black">लाइट + ब्लैक</string>
     <string name="install_light_dark">लाइट + डार्क</string>
-    <string name="next">आगे</string>
+    <string name="select_at_least_one_lang">Select at least one language!</string>
     <!-- About Page -->
     <string name="manager_dev">प्रबंधक डेवलपर्स</string>
     <string name="sources">स्रोत</string>
