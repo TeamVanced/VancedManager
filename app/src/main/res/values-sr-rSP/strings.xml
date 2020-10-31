@@ -4,15 +4,23 @@
     <string name="close">Затвори</string>
     <string name="reset">Ресетуј</string>
     <string name="save">Сачувај</string>
+    <string name="select_apps">Select Your Apps</string>
     <!-- Main Activity -->
     <string name="title_about">О апликацији</string>
-    <string name="title_home">Почетна</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Подешавања</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
-    <string name="changelogs">Измене</string>
+    <string name="about_app">About %1$s</string>
+    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">Преузимање %1$s</string>
     <string name="install">Инсталација</string>
-    <string name="installation_wait">Молимо сачекајте док се инсталација не заврши.</string>
     <string name="button_reinstall">Реинсталирај</string>
     <string name="version_installed">Инсталирана:</string>
     <string name="latest">Најновија:</string>
@@ -21,9 +29,7 @@
     <string name="unavailable">Недоступно</string>
     <string name="update">Ажурирај</string>
     <string name="useful_links">Корисни линкови</string>
-    <string name="website_text">Веб сајт</string>
-    <string name="support_us">Подржите нас!</string>
-    <string name="version_toast">%1$s ознака верзије је копирана!</string>
+    <string name="support_us">Support US!</string>
     <!-- Settings -->
     <string name="accent_color">Боја наглашавања</string>
     <string name="accent_blue">Плава</string>
@@ -31,12 +37,8 @@
     <string name="accent_purple">Љубичаста</string>
     <string name="accent_red">Црвена</string>
     <string name="accent_yellow">Жута</string>
-    <string name="category_interface">Интерфејс</string>
-    <string name="category_manager">Менаџер</string>
-    <string name="check_updates">Провери ажурирања</string>
-    <string name="chosen_install_values">Изабрана инсталациона подешавања</string>
-    <string name="chosen_lang">Језик (Језици):%1$s</string>
-    <string name="chosen_theme">Тема: %1$s</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">Обриши преузете датотеке</string>
     <string name="cleared_files">Успешно брисање датотека</string>
     <string name="firebase_title">Firebase Анализа</string>
@@ -44,42 +46,42 @@
     <string name="language_title">Језик</string>
     <string name="link_title">Користите Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
-    <string name="link_external_browser">Линкови ће бити отвотрни у екстерном претраживачу</string>
-    <string name="new_installer_title">Користи нову root installer апликацију ( Експериментално)</string>
-    <string name="new_installer_summary">Installer апликација не зависи од статуса верификационог потписа. УПОЗОРЕЊЕ: Ако користите ову опцију може да се деси да Vanced апликација се обрише после рестарта</string>
     <string name="system_default">Системски подразумевано</string>
     <string name="theme">Тема</string>
-    <string name="theme_follow">Као у систему</string>
     <string name="theme_dark">Тамна Тема</string>
     <string name="theme_light">Светла Тема</string>
     <string name="update_url">Ажурирај URL канала</string>
     <string name="push_notifications">%1$s слање обавештења</string>
     <string name="push_notifications_summary">Примај обавештења када је достигнута верзија %1$s</string>
-    <string name="re_check">Провери</string>
     <string name="update_center">Менаџер ажурирања</string>
-    <string name="update_found">Ажурирање је пронађено!</string>
-    <string name="update_notfound">Нема нове верзије</string>
+    <string name="update_not_found">No new updates</string>
+    <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="checking_updates">Checking for updates…</string>
+    <string name="chosen_lang">Језик (Језици):%1$s</string>
     <string name="guide">Водич</string>
     <string name="hold_on">Заустави!</string>
+    <string name="installing_app">Installing %1$s</string>
     <string name="magisk_vanced">Користите Magisk/TWRP верзију Vanced апликације, која више није подржана и чије коришћење није могуће. Молимо Вас да уклоните ову апликацију из Magisk/TWRP-а путем Vanced апликације за деинсталацију.</string>
     <string name="miui_one_title">MIUI је детектован!</string>
     <string name="miui_one">Да би апликација Vanced била исправно инсталирана морате да искључите оптимизацију за ову апликацију у MIUI подешавањима за програмере.( Ову напомену можете да занемарите у случају ако користите верзију 20.2.20 и новију xiaomi.eu ROM-а)</string>
     <string name="error">Грешка</string>
+    <string name="redownload">Redownload</string>
     <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта, Vanced Discord сервера или Vanced GitHub-а</string>
     <string name="success">Успешно!</string>
+    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
     <string name="vanced_installed">Vanced је успешно инсталиран! Желите да га одмах отворите?</string>
     <string name="music_installed">Vanced Music је успешно инсталиран! Желите да га одмах отворите?</string>
+    <string name="please_be_patient">Please be patient…</string>
     <string name="launch">Отвори</string>
     <string name="welcome">Добро дошли</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Одаберите језик за коришћење Vanced апликације</string>
-    <string name="choose_preferred_language_note">Напомена: Енглески ће такође бити инсталиран као додатани језик.</string>
-    <string name="choose_preferred_theme">Одаберите тему Vanced апликације</string>
-    <string name="finish">Заврши</string>
     <string name="install_light_black">Светла + Црна</string>
     <string name="install_light_dark">Светла + Тамна</string>
-    <string name="next">Даље</string>
+    <string name="select_at_least_one_lang">Select at least one language!</string>
     <!-- About Page -->
     <string name="manager_dev">Менаџер развоја</string>
     <string name="sources">Извор</string>
