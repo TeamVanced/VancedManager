@@ -26,6 +26,7 @@ import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
+import kotlin.jvm.Throws
 
 object PackageHelper {
     
@@ -341,7 +342,7 @@ object PackageHelper {
 
     private fun setupScript(apkFPath: String, path: String): Boolean
     {
-        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ \"${'$'}(getprop sys.boot_completed)\" != 1 ];\ndo sleep 1;\ndone;\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
+        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ '${"$"}(getprop sys.boot_completed)' != 1 ];\ndo sleep 1;\ndone;\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
         {
             return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
         }
@@ -498,7 +499,7 @@ object PackageHelper {
     //get path of the installed youtube
     private fun getPackageDir(context: Context): String?
     {
-        val p = getPkgInfo(yPkg, context)
+        val p = getPkgInfo(vancedRootPkg, context)
         return if(p != null)
         {
             p.applicationInfo.sourceDir
