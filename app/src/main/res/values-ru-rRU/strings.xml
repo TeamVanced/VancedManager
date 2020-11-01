@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Отмена</string>
     <string name="close">Закрыть</string>
     <string name="reset">Сброс</string>
     <string name="save">Сохранить</string>
@@ -9,7 +10,7 @@
     <string name="title_about">О нас</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Настройки</string>
-    <string name="update_manager">Менеджер обновлений</string>
+    <string name="update_manager">Обновить Менеджер</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Выберите хотя бы одно приложение!</string>
     <string name="are_you_rooted">У вас есть root?</string>
