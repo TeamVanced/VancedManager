@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">बंद करे</string>
     <string name="reset">रिसेट</string>
     <string name="save">सुरक्षित करें</string>
