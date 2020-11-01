@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">Bezárás</string>
     <string name="reset">Visszaállítás</string>
     <string name="save">Mentés</string>
