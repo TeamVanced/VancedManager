@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">Tutup</string>
     <string name="reset">Atur ulang</string>
     <string name="save">Simpan</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">Pilih Aplikasi Anda</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">Pengelola</string>
     <string name="title_settings">Pengaturan</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">Perbarui Manajer</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
+    <string name="are_you_rooted">Apakah Anda Berakar?</string>
+    <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
+    <string name="grant_root">Berikan Izin Root</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="about_app">Tentang %1$s</string>
+    <string name="app_changelog_tooltip">Ketuk kartu untuk melihat log perubahan.</string>
+    <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
     <string name="button_reinstall">Pasang ulang</string>
@@ -29,7 +30,7 @@
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
     <string name="useful_links">Tautan Berguna</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">Dukung KAMI!</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
     <string name="accent_blue">Biru</string>
@@ -37,8 +38,8 @@
     <string name="accent_purple">Ungu</string>
     <string name="accent_red">Merah</string>
     <string name="accent_yellow">Kuning</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">Penampilan</string>
+    <string name="category_behaviour">Tingkah laku</string>
     <string name="clear_files">Hapus file yang diunduh</string>
     <string name="cleared_files">Berhasil menghapus file</string>
     <string name="firebase_title">Analisis Firebase</string>
@@ -54,34 +55,34 @@
     <string name="push_notifications">%1$s Notifikasi Push</string>
     <string name="push_notifications_summary">Terima notifikasi push saat pembaruan untuk %1$s dirilis</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
-    <string name="update_not_found">No new updates</string>
-    <string name="variant">Variant</string>
+    <string name="update_not_found">Tidak ada pembaruan baru</string>
+    <string name="variant">Varian</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="app_install_files_detected">%1$s file instalasi terdeteksi!</string>
+    <string name="app_install_files_detected_summary">Manajer mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah Anda ingin menginstal?</string>
+    <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">Menginstal %1$s</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapus itu dengan menghapus modul magisk/gunakan pencopot Vanced TWRP.</string>
     <string name="miui_one_title">MIUI terdeteksi!</string>
     <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
     <string name="error">Terjadi kesalahan</string>
-    <string name="redownload">Redownload</string>
+    <string name="redownload">Unduh ulang</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi dari vanced.app, Vanced Discord server atau dari Vanced GitHub</string>
     <string name="success">Berhasil!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Preferensi Instalasi Vanced</string>
     <string name="vanced_installed">Vanced berhasil dipasang! Buka sekarang?</string>
     <string name="music_installed">Vanced Musik berhasil dipasang! Buka sekarang?</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">Harap bersabar…</string>
     <string name="launch">Buka</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
     <string name="install_light_black">Terang + Hitam</string>
     <string name="install_light_dark">Terang + Gelap</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="select_at_least_one_lang">Pilih setidaknya satu bahasa!</string>
     <!-- About Page -->
     <string name="manager_dev">Pengembang Manager</string>
     <string name="sources">Sumber</string>
