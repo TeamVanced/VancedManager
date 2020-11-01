@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">বন্ধ করুন</string>
     <string name="reset">আবার শুরু করো</string>
     <string name="save">সংরক্ষণ করুন</string>
