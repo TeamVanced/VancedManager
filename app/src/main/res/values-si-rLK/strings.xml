@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">වසන්න</string>
     <string name="reset">ප්‍රතිස්ථාපනය කරන්න</string>
     <string name="save">සුරකින්න</string>
