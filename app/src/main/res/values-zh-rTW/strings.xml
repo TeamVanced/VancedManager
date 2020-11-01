@@ -9,16 +9,16 @@
     <string name="title_about">關於</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">更新 Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="select_at_least_one_app">請至少選擇一個 App！</string>
     <string name="are_you_rooted">Are You Rooted?</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="grant_root">授予 Root 權限</string>
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="app_changelog_tooltip">點選卡片以檢視更新日誌</string>
+    <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
     <string name="button_reinstall">重新安裝</string>
@@ -37,7 +37,7 @@
     <string name="accent_purple">紫色</string>
     <string name="accent_red">紅色</string>
     <string name="accent_yellow">黃色</string>
-    <string name="category_appearance">Appearance</string>
+    <string name="category_appearance">介面外觀</string>
     <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">清除已下載的檔案</string>
     <string name="cleared_files">成功清除檔案</string>
@@ -54,34 +54,34 @@
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">有可用更新時接收 %1$s 推送通知</string>
     <string name="update_center">Manager 更新中心</string>
-    <string name="update_not_found">No new updates</string>
+    <string name="update_not_found">沒有更新</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
     <string name="app_install_files_detected">%1$s installation files detected!</string>
     <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="checking_updates">檢查更新中…</string>
     <string name="chosen_lang">語言：%1$s</string>
     <string name="guide">說明</string>
     <string name="hold_on">警告！</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">正在安裝 %1$s</string>
     <string name="magisk_vanced">您正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
     <string name="miui_one_title">已偵測到 MIUI！</string>
     <string name="miui_one">為了能夠正確安裝 Vanced ，您必須在開發人員設定中停用 MIUI 優化。 (如果您使用基於 xiomi.eu 20.2.20 或更新的 ROM ，則可以忽略此警告)</string>
     <string name="error">錯誤</string>
-    <string name="redownload">Redownload</string>
+    <string name="redownload">重新下載</string>
     <string name="security_context">請確保您從 vanced.app、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="success">成功！</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Vanced 安裝偏好設定</string>
     <string name="vanced_installed">成功安裝 Vanced ，要開啟它嗎？</string>
     <string name="music_installed">成功安裝 Vanced Music ！要開啟它嗎？</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">請耐心等候...</string>
     <string name="launch">啟動</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
     <string name="install_light_black">淺色 + 黑色</string>
     <string name="install_light_dark">淺色 + 深色</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="select_at_least_one_lang">請至少選擇一種語言！</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開發者</string>
     <string name="sources">原始碼</string>
