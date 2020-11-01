@@ -2,6 +2,7 @@
 <resources>
 
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">Close</string>
     <string name="reset">Reset</string>
     <string name="save">Save</string>
