@@ -4,20 +4,20 @@
     <string name="close">Chiudi</string>
     <string name="reset">Ripristina</string>
     <string name="save">Salva</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">Seleziona le tue Applicazioni</string>
     <!-- Main Activity -->
     <string name="title_about">Autori</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Impostazioni</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">Aggiorna Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">Seleziona almeno un\'app!</string>
+    <string name="are_you_rooted">Hai il Root?</string>
+    <string name="willing_to_use_root">Sei disposto a usare la versione root? Basta premere il pulsante in basso, altrimenti tappa per continuare</string>
+    <string name="grant_root">Concedi Permessi Root</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="about_app">A proposito di %1$s</string>
+    <string name="app_changelog_tooltip">Tappa sulla scheda per vedere il changelog.</string>
     <string name="changelog">Changelog</string>
     <string name="downloading_file">Download in corso di %1$s</string>
     <string name="install">Installa</string>
@@ -29,7 +29,7 @@
     <string name="unavailable">Non disponibile</string>
     <string name="update">Aggiorna</string>
     <string name="useful_links">Link utili</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">Sostienici!</string>
     <!-- Settings -->
     <string name="accent_color">Colore evidenziatore</string>
     <string name="accent_blue">Blu</string>
@@ -37,8 +37,8 @@
     <string name="accent_purple">Viola</string>
     <string name="accent_red">Rosso</string>
     <string name="accent_yellow">Giallo</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">Aspetto</string>
+    <string name="category_behaviour">Comportamento</string>
     <string name="clear_files">Cancella i file scaricati</string>
     <string name="cleared_files">File cancellati con successo</string>
     <string name="firebase_title">Analitica Firebase</string>
@@ -54,34 +54,34 @@
     <string name="push_notifications">Notifiche push di %1$s</string>
     <string name="push_notifications_summary">Ricevi notifiche push quando un aggiornamento per %1$s è disponibile</string>
     <string name="update_center">Centro aggiornamenti</string>
-    <string name="update_not_found">No new updates</string>
-    <string name="variant">Variant</string>
+    <string name="update_not_found">Nessun nuovo aggiornamento</string>
+    <string name="variant">Variante</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="app_install_files_detected">%1$s file d\'installazione rilevati!</string>
+    <string name="app_install_files_detected_summary">Manager ha rilevato che tutti i file necessari per l\'installazione di %1$s sono stati trovati. Vuoi installare?</string>
+    <string name="checking_updates">Ricerca aggiornamenti…</string>
     <string name="chosen_lang">Lingue: %1$s</string>
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">Installazione %1$s</string>
     <string name="magisk_vanced">Stai utilizzando la versione di Vanced ottenuta con Magisk/TWRP, ormai è obsoleta e non può essere aggiornata con questa app. Per favore, rimuovila eliminando il modulo di Magisk oppure utilizzando TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Rilevata l\'interfaccia MIUI!</string>
     <string name="miui_one">Per poter installare Vanced, DEVI PER FORZA disattivare le ottimizzazioni di MIUI nelle impostazioni da sviluppatore (puoi ignorare questo avviso se stai utilizzando la versione 20.2.20 o successive di una ROM basata su xiaomi.eu).</string>
     <string name="error">Errore</string>
-    <string name="redownload">Redownload</string>
+    <string name="redownload">Scarica di nuovo</string>
     <string name="security_context">Assicurati di aver scaricato l\'app da vanced.app, dal server di Discord di Vanced o dalla pagina GitHub di Vanced</string>
     <string name="success">Fatto!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Preferenze d\'Installazione Vanced</string>
     <string name="vanced_installed">Vanced è stato installato con successo. Vuoi avviarlo ora?</string>
     <string name="music_installed">Vanced Music è stato installato con successo! Vuoi eseguirlo ora?</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">Si prega di attendere…</string>
     <string name="launch">Avvia</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Scegli le tue lingue preferite per Vanced</string>
     <string name="install_light_black">Chiaro + nero</string>
     <string name="install_light_dark">Chiaro + scuro</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="select_at_least_one_lang">Seleziona almeno una lingua!</string>
     <!-- About Page -->
     <string name="manager_dev">Sviluppatori di Manager</string>
     <string name="sources">Codice sorgente</string>
