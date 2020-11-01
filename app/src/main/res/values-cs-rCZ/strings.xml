@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Zrušit</string>
     <string name="close">Zavřít</string>
     <string name="reset">Resetovat</string>
     <string name="save">Uložit</string>
