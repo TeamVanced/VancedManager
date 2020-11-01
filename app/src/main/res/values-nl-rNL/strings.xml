@@ -4,21 +4,21 @@
     <string name="close">Sluiten</string>
     <string name="reset">Herstellen</string>
     <string name="save">Bewaren</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">Selecteer je apps</string>
     <!-- Main Activity -->
     <string name="title_about">Over</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Instellingen</string>
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">Selecteer minstens één app!</string>
+    <string name="are_you_rooted">Is je apparaat geroot?</string>
+    <string name="willing_to_use_root">Wil je de root-versie gebruiken? Tik op de knop hieronder, of tik om verder te gaan</string>
+    <string name="grant_root">Root machtiging toestaan</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="about_app">Over %1$s</string>
+    <string name="app_changelog_tooltip">Tik op de kaart om de wijzigingen te zien.</string>
+    <string name="changelog">Wijzigingen</string>
     <string name="downloading_file">%1$s downloaden</string>
     <string name="install">Installeren</string>
     <string name="button_reinstall">Herinstalleren</string>
@@ -29,7 +29,7 @@
     <string name="unavailable">Niet beschikbaar</string>
     <string name="update">Bijwerken</string>
     <string name="useful_links">Handige links</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">Steun ons!</string>
     <!-- Settings -->
     <string name="accent_color">Accentkleur</string>
     <string name="accent_blue">Blauw</string>
@@ -37,8 +37,8 @@
     <string name="accent_purple">Paars</string>
     <string name="accent_red">Rood</string>
     <string name="accent_yellow">Geel</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">Weergave</string>
+    <string name="category_behaviour">Gedrag</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
     <string name="cleared_files">Bestanden succesvol verwijderd</string>
     <string name="firebase_title">Firebase analyse</string>
@@ -54,34 +54,34 @@
     <string name="push_notifications">%1$s push meldingen</string>
     <string name="push_notifications_summary">Push meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
     <string name="update_center">Manager Update Center</string>
-    <string name="update_not_found">No new updates</string>
+    <string name="update_not_found">Geen nieuwe updates</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="app_install_files_detected">%1$s installatiebestanden gedetecteerd!</string>
+    <string name="app_install_files_detected_summary">Manager heeft alle nodige bestanden gedetecteerd voor het installeren van %1$s. Wil je installeren?</string>
+    <string name="checking_updates">Controleren op updates…</string>
     <string name="chosen_lang">Talen: %1$s</string>
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">%1$s installeren</string>
     <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die stopgezet is en niet kan bijgewerkt worden met deze app. Verwijder deze eerst door het verwijderen van de Magisk module / door de TWRP Vanced uninstaller te gebruiken.</string>
     <string name="miui_one_title">MIUI gedetecteerd!</string>
     <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kunt deze waarschuwing negeren als je 20.2.20 of later xiaomi.eu gebaseerde ROM gebruikt)</string>
     <string name="error">Fout</string>
-    <string name="redownload">Redownload</string>
+    <string name="redownload">Opnieuw downloaden</string>
     <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vanced.app, de Vanced Discord server of Vanced GitHub</string>
     <string name="success">Gelukt!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Vanced installatie voorkeuren</string>
     <string name="vanced_installed">Vanced is succesvol geïnstalleerd! Nu starten?</string>
     <string name="music_installed">Vanced Music is succesvol geïnstalleerd! Nu starten?</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">Even geduld…</string>
     <string name="launch">Openen</string>
     <string name="welcome">Welkom</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Kies je gewenste taal/talen voor Vanced</string>
     <string name="install_light_black">Licht + zwart</string>
     <string name="install_light_dark">Licht + donker</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="select_at_least_one_lang">Selecteer minstens één taal!</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Ontwikkelaars</string>
     <string name="sources">Bronnen</string>
