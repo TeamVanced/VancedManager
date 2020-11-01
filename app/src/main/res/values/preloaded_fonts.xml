@@ -5,5 +5,6 @@
         <item>@font/exo_2</item>
         <item>@font/exo_2_bold</item>
         <item>@font/exo_semibold</item>
+        <item>@font/roboto_medium</item>
     </array>
 </resources>

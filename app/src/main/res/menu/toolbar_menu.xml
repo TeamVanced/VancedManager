@@ -3,15 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/toolbar_about"
-        android:title="@string/title_about"
-        android:icon="@drawable/ic_info_black_24dp"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/toolbar_settings"
         android:title="@string/title_settings"
         android:icon="@drawable/ic_settings_black_24dp"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/toolbar_update_manager"
+        android:title="@string/update_manager"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/toolbar_about"
+        android:title="@string/title_about"
+        android:icon="@drawable/ic_info_black_24dp"
+        app:showAsAction="withText" />
 
 </menu>

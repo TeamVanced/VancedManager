@@ -9,10 +9,9 @@
     <string name="title_home">홈</string>
     <string name="title_settings">설정</string>
     <!-- Home Page -->
-    <string name="changelogs">변경사항</string>
+    <string name="changelog">변경사항</string>
     <string name="downloading_file">%1$s 다운로드 중</string>
     <string name="install">설치</string>
-    <string name="installation_wait">설치가 완료될 때까지 기다려주세요.</string>
     <string name="button_reinstall">재설치</string>
     <string name="version_installed">설치됨:</string>
     <string name="latest">최신:</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">사용 불가</string>
     <string name="update">업데이트</string>
     <string name="useful_links">참고할 만한 링크</string>
-    <string name="website_text">웹사이트</string>
     <string name="support_us">우리를 지원해주세요!</string>
-    <string name="version_toast">%1$s의 버전 정보가 복사되었습니다.</string>
     <!-- Settings -->
     <string name="accent_color">강조 색상</string>
     <string name="accent_blue">파란색</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">보라색</string>
     <string name="accent_red">빨간색</string>
     <string name="accent_yellow">노란색</string>
-    <string name="category_interface">인터페이스</string>
-    <string name="category_manager">관리자</string>
-    <string name="check_updates">업데이트 확인하기</string>
-    <string name="chosen_install_values">선택된 설치값</string>
+    <string name="vanced_installation_preferences">선택된 설치값</string>
     <string name="chosen_lang">언어: %1$s</string>
-    <string name="chosen_theme">테마: %1$s</string>
     <string name="clear_files">다운로드된 파일 모두 지우기</string>
     <string name="cleared_files">다운로드된 파일을 모두 삭제했습니다</string>
     <string name="firebase_title">Firebase 분석</string>
@@ -44,21 +37,15 @@
     <string name="language_title">언어</string>
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
-    <string name="link_external_browser">링크가 외부 브라우저로 열립니다</string>
-    <string name="new_installer_title">새로운 루트 설치 관리자 사용하기 (실험적)</string>
-    <string name="new_installer_summary">이 설치 관리자는 서명 검증 상태의 영향을 받지 않습니다. 경고: 이 설치 관리자로 Vanced를 설치할 경우 Vanced가 재부팅 후에 제거될 수도 있습니다</string>
     <string name="system_default">시스템 기본값</string>
     <string name="theme">테마</string>
-    <string name="theme_follow">시스템 설정과 같이</string>
     <string name="theme_dark">다크 테마</string>
     <string name="theme_light">라이트 테마</string>
     <string name="update_url">업데이트 채널 URL</string>
     <string name="push_notifications">%1$s 푸시 알림</string>
     <string name="push_notifications_summary">새로운 %1$s 업데이트가 출시되면 알림 받기</string>
-    <string name="re_check">재확인</string>
     <string name="update_center">업데이트 센터</string>
-    <string name="update_found">업데이트를 찾았습니다!</string>
-    <string name="update_notfound">새로운 업데이트 없음</string>
+    <string name="update_not_found">새로운 업데이트 없음</string>
     <!-- Dialogs -->
     <string name="guide">가이드</string>
     <string name="hold_on">잠깐만요!</string>
@@ -74,12 +61,8 @@
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced에서 선호하는 언어를 선택해주세요</string>
-    <string name="choose_preferred_language_note">참고: 영어 이외를 선택해도 영어는 항상 추가적인 언어로 설치됩니다</string>
-    <string name="choose_preferred_theme">Vanced에서 선호하는 테마를 선택해주세요</string>
-    <string name="finish">완료</string>
     <string name="install_light_black">라이트 + 블랙</string>
     <string name="install_light_dark">라이트 + 다크</string>
-    <string name="next">다음</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 개발자</string>
     <string name="sources">소스</string>

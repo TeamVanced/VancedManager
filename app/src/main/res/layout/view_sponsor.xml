@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+
+        <variable
+            name="sponsor"
+            type="com.vanced.manager.model.SponsorModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="165dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="8dp"
+        android:onClick="@{()-> viewModel.openUrl(sponsor.url)}"
+        app:cardBackgroundColor="?colorLinkBG"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:contentPaddingTop="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/sponsor_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:src="@{sponsor.logo}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?colorLinkImage"
+                tools:src="@drawable/ic_brave" />
+
+            <TextView
+                android:id="@+id/sponsor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{sponsor.name}"
+                app:layout_constraintBottom_toTopOf="@id/sponsor_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sponsor_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/support_us"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sponsor_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="theme_modes">
-        <item>@string/theme_light</item>
-        <item>@string/theme_dark</item>
-        <item>@string/theme_follow</item>
-    </string-array>
-
-    <string-array name="theme_modes_values">
-        <item>Light</item>
-        <item>Dark</item>
-        <item>Follow System</item>
-    </string-array>
-
-    <string-array name="accent_color">
-        <item>@string/accent_blue</item>
-        <item>@string/accent_red</item>
-        <item>@string/accent_green</item>
-        <item>@string/accent_yellow</item>
-        <item>@string/accent_purple</item>
-    </string-array>
-
-    <string-array name="accent_color_values">
-        <item>Blue</item>
-        <item>Red</item>
-        <item>Green</item>
-        <item>Yellow</item>
-        <item>Purple</item>
+    <string-array name="vanced_themes">
+        <item>@string/install_light_dark</item>
+        <item>@string/install_light_black</item>
     </string-array>
 
 </resources>

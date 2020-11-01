@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.core.content.ContextCompat
+import androidx.databinding.Observable
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.databinding.ObservableInt
@@ -16,8 +17,10 @@ import kotlinx.coroutines.launch
 
 open class DataModel(
     private val jsonObject: ObservableField<JsonObject?>,
-    private val appPkg: String,
-    private val context: Context
+    private val context: Context,
+    val appPkg: String,
+    val appName: String,
+    val appIcon: Drawable?
 ) {
 
     private val versionCode = ObservableInt()
@@ -27,7 +30,7 @@ open class DataModel(
     val versionName = ObservableField<String>()
     val installedVersionName = ObservableField<String>()
     val buttonTxt = ObservableField<String>()
-    val buttonIcon = ObservableField<Drawable>()
+    //val buttonIcon = ObservableField<Drawable>()
     val changelog = ObservableField<String>()
 
     fun fetch() = CoroutineScope(Dispatchers.IO).launch {
@@ -37,12 +40,18 @@ open class DataModel(
         versionCode.set(jsonObject.get()?.int("versionCode") ?: 0)
         installedVersionCode.set(getPkgVersionCode(isAppInstalled.get(), appPkg))
         buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
-        buttonIcon.set(compareIntDrawable(installedVersionCode.get(), versionCode.get()))
+        //buttonIcon.set(compareIntDrawable(installedVersionCode.get(), versionCode.get()))
         changelog.set(jsonObject.get()?.string("changelog") ?: context.getString(R.string.unavailable))
     }
 
     init {
         fetch()
+        jsonObject.addOnPropertyChangedCallback(object  : Observable.OnPropertyChangedCallback() {
+            override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
+                fetch()
+            }
+
+        })
     }
     
     private fun getPkgVersionName(toCheck: Boolean, pkg: String): String  {
@@ -82,5 +91,5 @@ open class DataModel(
             else -> ContextCompat.getDrawable(context, R.drawable.ic_download)
         }
     }
-    
+
 } 

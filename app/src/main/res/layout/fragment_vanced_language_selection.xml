@@ -1,81 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vanced.manager.ui.core.SlidingConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/BottomDialogCard"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/InstallMaterialCard"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            style="@style/BottomDialogCardTitle"
+            android:text="@string/choose_preferred_language" />
+
+        <androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="400dp"
+            android:layout_marginTop="8dp"
+            android:fillViewport="true"
+            tools:ignore="HardcodedText">
 
-            <TextView
-                style="@style/InstallCardTitle"
-                android:text="@string/choose_preferred_language" />
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/lang_button_ll"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp"
-                android:fontFamily="@font/exo_semibold"
-                android:text="@string/choose_preferred_language_note"
-                android:textSize="13sp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginEnd="2dp"
-                android:layout_weight="1">
+            </LinearLayout>
 
-                <androidx.core.widget.NestedScrollView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    xmlns:tools="http://schemas.android.com/tools"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:fillViewport="true"
-                    tools:ignore="HardcodedText">
+        </androidx.core.widget.NestedScrollView>
 
-                    <LinearLayout
-                        android:id="@+id/lang_button_ll"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/vanced_install_finish"
+            style="@style/BottomDialogButtonStyle"
+            android:text="@string/save" />
 
-                        <com.google.android.material.checkbox.MaterialCheckBox
-                            android:id="@+id/en"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:buttonTint="?colorDisabled"
-                            android:fontFamily="@font/exo_semibold"
-                            android:text="English"
-                            android:tag="en"
-                            android:textSize="18sp"
-                            android:checked="true"
-                            android:clickable="false"/>
+    </LinearLayout>
 
-                    </LinearLayout>
-
-                </androidx.core.widget.NestedScrollView>
-
-            </FrameLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/vanced_install_finish"
-                style="@style/InstallButtonStyle"
-                android:text="@string/finish"
-                app:icon="@drawable/ic_done_black_24dp" />
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</com.vanced.manager.ui.core.SlidingConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

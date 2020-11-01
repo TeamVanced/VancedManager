@@ -9,10 +9,9 @@
     <string name="title_home">නිවස</string>
     <string name="title_settings">සැකසුම්</string>
     <!-- Home Page -->
-    <string name="changelogs">වෙනස්කම් ලඝු සටහන</string>
+    <string name="changelog">වෙනස්කම් ලඝු සටහන</string>
     <string name="downloading_file">Downloading %1$s</string>
     <string name="install">ස්ථාපනය</string>
-    <string name="installation_wait">Please wait until installation finishes.</string>
     <string name="button_reinstall">නැවත් ස්ථාපනය කරන්න</string>
     <string name="version_installed">ස්ථාපනය:</string>
     <string name="latest">අලුත්</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">නොමැත</string>
     <string name="update">යාවත්කාලීන කරන්න</string>
     <string name="useful_links">ප්‍රයෝජනවත් සබැඳි</string>
-    <string name="website_text">වෙබ් අඩවිය</string>
     <string name="support_us">සහයෝගය දක්වන්න</string>
-    <string name="version_toast">%1$s version number was copied!</string>
     <!-- Settings -->
     <string name="accent_color">අනෙක් වර්ණය</string>
     <string name="accent_blue">නිල්</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">දම්</string>
     <string name="accent_red">රතු</string>
     <string name="accent_yellow">කහ</string>
-    <string name="category_interface">අතුරු මුහුණත</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">යාවත්කාලීනයන් සඳහා පිරික්සන්න</string>
-    <string name="chosen_install_values">Chosen installation preferences</string>
+    <string name="vanced_installation_preferences">Chosen installation preferences</string>
     <string name="chosen_lang">Language(s): %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
     <string name="clear_files">Clear downloaded files</string>
     <string name="cleared_files">Successfully cleared files</string>
     <string name="firebase_title">Firebase Analytics</string>
@@ -44,21 +37,15 @@
     <string name="language_title">Language</string>
     <string name="link_title">Use Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
-    <string name="link_external_browser">Links will open in an External Browser</string>
-    <string name="new_installer_title">Use the new root installer (Experimental)</string>
-    <string name="new_installer_summary">This installer does not depend on Signature Verification status. WARNING: Vanced may disappear after reboot if you install it using this</string>
     <string name="system_default">System Default</string>
     <string name="theme">Theme</string>
-    <string name="theme_follow">Follow System</string>
     <string name="theme_dark">Dark Theme</string>
     <string name="theme_light">Light Theme</string>
     <string name="update_url">Update Channel URL</string>
     <string name="push_notifications">%1$s Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
-    <string name="re_check">Re-check</string>
     <string name="update_center">Manager Update Center</string>
-    <string name="update_found">Update found!</string>
-    <string name="update_notfound">No new updates</string>
+    <string name="update_not_found">No new updates</string>
     <!-- Dialogs -->
     <string name="guide">Guide</string>
     <string name="hold_on">Stop!</string>
@@ -74,12 +61,8 @@
     <string name="welcome">ආයුබෝවන්</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
-    <string name="choose_preferred_language_note">Note: English will always be installed as an additional language as well.</string>
-    <string name="choose_preferred_theme">Choose your preferred theme for Vanced</string>
-    <string name="finish">Finish</string>
     <string name="install_light_black">Light + Black</string>
     <string name="install_light_dark">Light + Dark</string>
-    <string name="next">Next</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
     <string name="sources">Sources</string>

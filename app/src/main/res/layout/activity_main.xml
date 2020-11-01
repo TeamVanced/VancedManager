@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
-        android:id="@+id/container"
-        android:background="?colorSurface"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?colorSurface"
+        tools:context=".ui.MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/home_appbar"
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?colorSurface"
-            android:layout_alignParentTop="true">
+            app:elevation="0dp">
 
             <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/home_toolbar"
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:titleTextColor="?attr/toolbarIconColor"
-                android:background="?colorSurface"/>
+                android:background="?colorSurface"
+                app:titleTextAppearance="@style/ToolbarTextTitle"
+                tools:title="Manager" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/nav_host"
             android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_below="@id/home_appbar"
-            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_bar"
             app:defaultNavHost="true"
             app:navGraph="@navigation/mobile_navigation" />
 

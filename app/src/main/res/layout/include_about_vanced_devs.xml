@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/MaterialCard"
-    tools:ignore="HardcodedText"
-    app:contentPaddingTop="2dp">
+    app:cardBackgroundColor="?colorLinkBG"
+    app:contentPaddingLeft="16dp"
+    app:contentPaddingRight="16dp"
+    app:contentPaddingTop="8dp"
+    tools:ignore="HardcodedText">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,35 +15,33 @@
         android:orientation="vertical">
 
         <TextView
-            style="@style/AboutCardTitle"
             android:id="@+id/about_card_vancedTeam"
+            style="@style/CardTextHeader"
             android:text="@string/vanced_team"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- xfileFIN"
-            android:textSize="18sp" />
+            android:layout_marginTop="8dp"
+            android:text="xfileFIN" />
+
+        <TextView
+            style="@style/AboutDevNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KevinX8" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- KevinX8"
-            android:textSize="18sp" />
+            android:text="ZaneZam" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="- Zanezam"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="- Laura Almeida"
-            android:textSize="18sp" />
+            android:text="Laura Almeida" />
 
     </LinearLayout>
 

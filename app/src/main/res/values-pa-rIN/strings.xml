@@ -9,10 +9,9 @@
     <string name="title_home">ਘਰ</string>
     <string name="title_settings">ਸੇਟਿੰਗਸ</string>
     <!-- Home Page -->
-    <string name="changelogs">ਤਬਦੀਲੀਆਂ</string>
+    <string name="changelog">ਤਬਦੀਲੀਆਂ</string>
     <string name="downloading_file">ਡਾਉਨਲੋਡ ਕਰ ਰਿਹਾ ਹੈ %1$s</string>
     <string name="install">ਸਥਾਪਨਾ</string>
-    <string name="installation_wait">ਕਿਰਪਾ ਸਥਾਪਨਾ ਹੋਣ ਤੱਕ ਰੁਕੋ</string>
     <string name="button_reinstall">ਮੁੜ ਸਥਾਪਨਾ</string>
     <string name="version_installed">ਪ੍ਰਤੀਰੂਪ ਸਥਾਪਿਤ:</string>
     <string name="latest">ਨਵੀਨਤਮ</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">ਮੋਜੂਦ ਨਹੀਂ ਹੈ</string>
     <string name="update">ਅੱਪਡੇਟ</string>
     <string name="useful_links">ਉਪਯੋਗੀ ਲਿੰਕ</string>
-    <string name="website_text">ਵੇਬਸਾਇਟ</string>
     <string name="support_us">ਸਾਨੂੰ ਸਹਿਯੋਗ ਕਰੋ!</string>
-    <string name="version_toast">%1$s ਵਰਜਨ ਸੰਖਿਆ ਕਾਪੀ ਕੀਤੀ ਗਈ ਸੀ!</string>
     <!-- Settings -->
     <string name="accent_color">ਐੱਕਸੈਂਟ ਰੰਗ</string>
     <string name="accent_blue">ਨੀਲਾ</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">ਬੈਂਗਣੀ</string>
     <string name="accent_red">ਲਾਲ</string>
     <string name="accent_yellow">ਪੀਲਾ</string>
-    <string name="category_interface">ਇੰਟਰਫੇਸ</string>
-    <string name="category_manager">ਮਨੈਜ਼ਰ</string>
-    <string name="check_updates">ਅੱਪਡੇਟ ਲਈ ਦੇਖੋ</string>
-    <string name="chosen_install_values">ਸਥਾਪਨਾ ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
+    <string name="vanced_installation_preferences">ਸਥਾਪਨਾ ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
     <string name="chosen_lang">ਭਾਸ਼ਾ (ਇ): %1$s</string>
-    <string name="chosen_theme">ਥੀਮ: %1$s</string>
     <string name="clear_files">ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="cleared_files">ਫਾਇਲਾਂ ਸਫਲਤਾਪੂਰਵਕ ਸਾਫ਼ ਕੀਤੀ ਗਈ</string>
     <string name="firebase_title">ਫਾਇਰਬੇਸ ਵਿਸ਼ਲੇਸ਼ਣ</string>
@@ -44,21 +37,15 @@
     <string name="language_title">ਭਾਸ਼ਾ</string>
     <string name="link_title">ਕਰੋਮ ਕਸਟੰਮ ਟੈਬ ਦਾ ਉਪਯੋਗ ਕਰੋ</string>
     <string name="link_custom_tabs">ਕਰੋਮ ਕਸਟੰਮ ਟੈਬ ਵਿੱਚ ਲਿੰਕ ਖੁਲਣਗੇ</string>
-    <string name="link_external_browser">ਲਿੰਕ ਇੱਕ ਬਾਹਰੀ ਬਰਾਉਸਰ ਵਿੱਚ ਖੁਲਣਗੇ</string>
-    <string name="new_installer_title">ਨਵਾਂ ਰੂਟ ਸਥਾਪਕ (ਪ੍ਰਯੋਗਾਤਮਕ) ਵਰਤੋ</string>
-    <string name="new_installer_summary">ਇਹ ਸਥਾਪਕ ਕਰਨ ਵਾਲੇ ਦਸਤਖਤ ਤਸਦੀਕ ਸਥਿਤੀ \'ਤੇ ਨਿਰਭਰ ਨਹੀਂ ਕਰਦੇ. ਚੇਤਾਵਨੀ: ਜੇਕਰ ਤੁਸੀਂ ਇਸਨੂੰ ਵਰਤਦੇ ਹੋਏ ਇਸ ਨੂੰ ਸਥਾਪਤ ਕਰਦੇ ਹੋ ਤਾਂ ਮੁੜ ਚਾਲੂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਗਾਇਬ ਹੋ ਸਕਦਾ ਹੈ</string>
     <string name="system_default">ਮੂਲ ਰੂਪ</string>
     <string name="theme">ਥੀਮ</string>
-    <string name="theme_follow">ਸਿਸਟਮ ਦਾ ਪਾਲਣ ਕਰੋ</string>
     <string name="theme_dark">ਡਾਰਕ ਥੀਮ</string>
     <string name="theme_light">ਲਾਇਟ ਥੀਮ</string>
     <string name="update_url">ਚੈਨਲ URL ਅੱਪਡੇਟ</string>
     <string name="push_notifications">%1$s ਪੁਸ਼ ਸੂਚਨਾਵਾਂ</string>
     <string name="push_notifications_summary">ਜਦੋਂ %1$s ਦਾ ਅੱਪਡੇਟ ਜਾਰੀ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਪੁਸ਼ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ</string>
-    <string name="re_check">ਰਿ-ਚੈੱਕ</string>
     <string name="update_center">ਅੱਪਡੇਟ ਕੇਂਦਰ</string>
-    <string name="update_found">ਅੱਪਡੇਟ ਮਿਲਿਆ!</string>
-    <string name="update_notfound">ਕੋਈ ਨਵਾਂ ਅੱਪਡੇਟ ਨਹੀਂ</string>
+    <string name="update_not_found">ਕੋਈ ਨਵਾਂ ਅੱਪਡੇਟ ਨਹੀਂ</string>
     <!-- Dialogs -->
     <string name="guide">ਗਾਇਡ</string>
     <string name="hold_on">ਉਡੀਕੋ!</string>
@@ -74,12 +61,8 @@
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ (ਏ) ਚੁਣੋ</string>
-    <string name="choose_preferred_language_note">ਨੋਟ: ਜੇਕਰ ਤੁਸੀਂ ਅੰਗਰੇਜ਼ੀ ਤੋਂ ਬਿਨਾਂ ਕੁਝ ਵੀ ਸਥਾਪਤ ਕਰਦੇ ਹੋ ਤਾਂ, ਓਦੋਂ ਵੀ ਅੰਗਰੇਜ਼ੀ ਇੱਕ ਵੱਖਰੀ ਭਾਸ਼ਾ ਦੇ ਰੂਪ ਵਿੱਚ ਲਾਗੂ ਕੀਤੀ ਜਾਵੇਗੀ</string>
-    <string name="choose_preferred_theme">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਥੀਮ ਚੁਣੋ</string>
-    <string name="finish">ਸਮਾਪਤੀ ਕਰੋ</string>
     <string name="install_light_black">ਲਾਇਟ + ਬਲੈਕ</string>
     <string name="install_light_dark">ਲਾਇਟ + ਡਾਰਕ</string>
-    <string name="next">ਅੱਗੇ</string>
     <!-- About Page -->
     <string name="manager_dev">ਪ੍ਬੰਧਕ ਨਿਰਮਾਣਕਰਤਾ</string>
     <string name="sources">ਸਰੋਤ</string>

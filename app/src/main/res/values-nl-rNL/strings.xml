@@ -9,10 +9,9 @@
     <string name="title_home">Startpagina</string>
     <string name="title_settings">Instellingen</string>
     <!-- Home Page -->
-    <string name="changelogs">Wijzigingen</string>
+    <string name="changelog">Wijzigingen</string>
     <string name="downloading_file">%1$s downloaden</string>
     <string name="install">Installeren</string>
-    <string name="installation_wait">Wacht tot de installatie is voltooid.</string>
     <string name="button_reinstall">Herinstalleren</string>
     <string name="version_installed">Geïnstalleerd:</string>
     <string name="latest">Recentste:</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">Niet beschikbaar</string>
     <string name="update">Bijwerken</string>
     <string name="useful_links">Handige links</string>
-    <string name="website_text">Website</string>
     <string name="support_us">Steun ons!</string>
-    <string name="version_toast">Versienummer %1$s is gekopieerd!</string>
     <!-- Settings -->
     <string name="accent_color">Accentkleur</string>
     <string name="accent_blue">Blauw</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">Paars</string>
     <string name="accent_red">Rood</string>
     <string name="accent_yellow">Geel</string>
-    <string name="category_interface">Interface</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Controleren op updates</string>
-    <string name="chosen_install_values">Gekozen installatievoorkeuren</string>
+    <string name="vanced_installation_preferences">Gekozen installatievoorkeuren</string>
     <string name="chosen_lang">Talen: %1$s</string>
-    <string name="chosen_theme">Thema: %1$s</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
     <string name="cleared_files">Bestanden succesvol verwijderd</string>
     <string name="firebase_title">Firebase analyse</string>
@@ -44,21 +37,15 @@
     <string name="language_title">Taal</string>
     <string name="link_title">Aangepaste Chrome-tabs gebruiken</string>
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
-    <string name="link_external_browser">Links zullen openen in een externe browser</string>
-    <string name="new_installer_title">Het nieuwe root-installatieprogramma gebruiken (experimenteel)</string>
-    <string name="new_installer_summary">Dit installatieprogramma is niet afhankelijk van de status van de handtekeningverificatie. WAARSCHUWING: Vanced kan na het opnieuw opstarten verdwijnen als je het hiermee installeert</string>
     <string name="system_default">Systeemstandaard</string>
     <string name="theme">Thema</string>
-    <string name="theme_follow">Systeeminstelling</string>
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht thema</string>
     <string name="update_url">URL update kanaal</string>
     <string name="push_notifications">%1$s push meldingen</string>
     <string name="push_notifications_summary">Push meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
-    <string name="re_check">Opnieuw controleren</string>
     <string name="update_center">Manager Update Center</string>
-    <string name="update_found">Update gevonden!</string>
-    <string name="update_notfound">Geen nieuwe updates</string>
+    <string name="update_not_found">Geen nieuwe updates</string>
     <!-- Dialogs -->
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>
@@ -74,12 +61,8 @@
     <string name="welcome">Welkom</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Kies je gewenste taal/talen voor Vanced</string>
-    <string name="choose_preferred_language_note">Opmerking: Engels zal altijd als extra taal worden geïnstalleerd.</string>
-    <string name="choose_preferred_theme">Kies je gewenste thema voor Vanced</string>
-    <string name="finish">Voltooien</string>
     <string name="install_light_black">Licht + Zwart</string>
     <string name="install_light_dark">Licht + Donker</string>
-    <string name="next">Volgende</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Ontwikkelaars</string>
     <string name="sources">Bronnen</string>

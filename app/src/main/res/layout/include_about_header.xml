@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,27 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/rectangle_2"
-        android:paddingBottom="4dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingVertical="8dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="#fff"
             android:textAlignment="center"
-            android:textSize="30sp"
-            android:fontFamily="@font/exo_semibold" />
+            android:textColor="#fff"
+            android:textSize="30sp" />
 
         <!--suppress AndroidDomInspection -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/versionName"
-            android:textColor="#fff"
             android:textAlignment="center"
-            android:textSize="18sp"
-            android:fontFamily="@font/exo_bold" />
+            android:textColor="#fff"
+            android:textSize="14sp" />
 
     </LinearLayout>
 

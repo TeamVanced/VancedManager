@@ -9,10 +9,9 @@
     <string name="title_home">মূল পাতা</string>
     <string name="title_settings">সেটিংস</string>
     <!-- Home Page -->
-    <string name="changelogs">পরিবর্তন নথি</string>
+    <string name="changelog">পরিবর্তন নথি</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="install">ইনস্টল করুন</string>
-    <string name="installation_wait">ইনস্টলেশন শেষ হওয়া পর্যন্ত অপেক্ষা করুন।</string>
     <string name="button_reinstall">পুনরায় ইনস্টল করুন</string>
     <string name="version_installed">ইনস্টল হয়েছে:</string>
     <string name="latest">সর্বশেষ:</string>
@@ -21,9 +20,7 @@
     <string name="unavailable">অনুপলব্ধ</string>
     <string name="update">হালনাগাদ</string>
     <string name="useful_links">উপকারী লিংকসমূহ</string>
-    <string name="website_text">ওয়েবসাইট</string>
     <string name="support_us">আমাদের সমর্থন করুন!</string>
-    <string name="version_toast">%1$s সংস্করণ নম্বরটি অনুলিপি করা হয়েছিল!</string>
     <!-- Settings -->
     <string name="accent_color">অ্যাকসেন্ট রঙ</string>
     <string name="accent_blue">নীল</string>
@@ -31,12 +28,8 @@
     <string name="accent_purple">বেগুনি</string>
     <string name="accent_red">লাল</string>
     <string name="accent_yellow">হলুদ</string>
-    <string name="category_interface">ইন্টারফেস</string>
-    <string name="category_manager">ম্যানেজার</string>
-    <string name="check_updates">হালনাগাদ এর জন্য অনুসন্ধান করুন</string>
-    <string name="chosen_install_values">নির্বাচিত ইনস্টলেশন পছন্দগুলি</string>
+    <string name="vanced_installation_preferences">নির্বাচিত ইনস্টলেশন পছন্দগুলি</string>
     <string name="chosen_lang">ভাষা(গুলি): %1$s</string>
-    <string name="chosen_theme">থিম: %1$s</string>
     <string name="clear_files">ডাউনলোড করা ফাইলগুলি মুছে ফেলুন</string>
     <string name="cleared_files">সফলভাবে ফাইলগুলি মুছে ফেলা হয়েছে</string>
     <string name="firebase_title">ফায়ারবেস তথ্য বিশ্লেষণ</string>
@@ -44,21 +37,15 @@
     <string name="language_title">ভাষা</string>
     <string name="link_title">ক্রোম কাস্টম ট্যাবস ব্যবহার করুন</string>
     <string name="link_custom_tabs">লিঙ্কগুলি ক্রোম কাস্টম ট্যাবসে খুলবে</string>
-    <string name="link_external_browser">লিঙ্কগুলি একটি বাহ্যিক ব্রাউজারে খুলবে</string>
-    <string name="new_installer_title">নতুন রুট ইনস্টলার ব্যবহার করুন (পরীক্ষামূলক)</string>
-    <string name="new_installer_summary">এই ইনস্টলারটি এপিকে স্বাক্ষর যাচাইকরণের স্থিতির উপর নির্ভর করে না। সতর্কতা: এটি ব্যবহার করে ভ্যান্সড ইনস্টল করা হলে, রিবুটের পর ভ্যান্সড মুছে যেতে পারে</string>
     <string name="system_default">সিস্টেম দ্বারা র্নির্ধারিত</string>
     <string name="theme">থিম</string>
-    <string name="theme_follow">সিস্টেমকে অনুসরণ করুন</string>
     <string name="theme_dark">অন্ধকার থিম</string>
     <string name="theme_light">হালকা থিম</string>
     <string name="update_url">চ্যানেল ইউআরএল হালনাগাদ করুন</string>
     <string name="push_notifications">%1$s পুশ নোটিফিকেশনগুলি</string>
     <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তিগুলি পান</string>
-    <string name="re_check">পুনরায় চেক করুন</string>
     <string name="update_center">পরিচালক আপডেট কেন্দ্র</string>
-    <string name="update_found">আপডেট পাওয়া গেল!</string>
-    <string name="update_notfound">কোনো নতুন আপডেট নেই</string>
+    <string name="update_not_found">কোনো নতুন আপডেট নেই</string>
     <!-- Dialogs -->
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামুন!</string>
@@ -74,12 +61,8 @@
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">ভ্যান্সডের জন্য আপনার পছন্দসই ভাষা(গুলি) চয়ন করুন</string>
-    <string name="choose_preferred_language_note">দ্রষ্টব্য: ইংরেজি সর্বদা অতিরিক্ত ভাষা হিসাবে ইনস্টল করা হবে।</string>
-    <string name="choose_preferred_theme">ভান্সডের জন্য আপনার পছন্দসই থিমটি চয়ন করুন</string>
-    <string name="finish">শেষ</string>
     <string name="install_light_black">হালকা + কালো</string>
     <string name="install_light_dark">হালকা + অন্ধকার</string>
-    <string name="next">পরবর্তী</string>
     <!-- About Page -->
     <string name="manager_dev">ম্যানেজার বিকাশকারীরা</string>
     <string name="sources">উৎসগুলি</string>

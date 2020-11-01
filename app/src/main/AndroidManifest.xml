@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.vanced.manager">
 
@@ -10,10 +9,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+
+    <!--  is required for some Android 5.x devices  -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
     <queries>
         <package android:name="com.vanced.android.youtube" />
         <package android:name="com.google.android.youtube" />
         <package android:name="com.vanced.android.apps.youtube.music" />
+        <package android:name="com.google.android.apps.youtube.music" />
         <package android:name="com.mgoogle.android.gms" />
     </queries>
 
@@ -40,22 +46,26 @@
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
-
         </activity>
+
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:theme="@style/DarkTheme.Blue"/>
+
         <activity
             android:name=".ui.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/DarkTheme.Blue"
             android:configChanges="layoutDirection|locale"
-            android:exported="true"/>
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/DarkTheme.Blue" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
         <provider
-            android:authorities="${applicationId}.provider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
 
@@ -79,7 +89,6 @@
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat_name" />
 
-        <service android:name=".core.installer.SplitInstallerService" />
         <service android:name=".core.installer.AppUninstallerService" />
         <service android:name=".core.installer.AppInstallerService" />
 

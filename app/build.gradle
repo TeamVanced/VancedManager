@@ -20,13 +20,12 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 131
-        versionName "1.3.1 (Arcturus)"
+        versionCode 200
+        versionName "2.0.0 (.nomagiskui)"
 
         vectorDrawables.useSupportLibrary = true
 
         buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(langs) + "}"
-        buildConfigField "String[]", "MANAGER_LANGUAGE_NAMES", "{" + surroundWithQuotes(getLanguageNames()) + "}"
     }
 
     lintOptions {
@@ -83,21 +82,7 @@ def getLanguages() {
     return langs.toArray()
 }
 
-def getLanguageNames() {
-    List<String> langnames = new ArrayList<String>()
-    for (int i = 0; i < langs.size(); i++) {
-        if (langs[i].length() > 2) {
-            Locale loc = new Locale(langs[i].substring(0, langs[i].length() - 3), langs[i].substring(langs[i].length() - 2))
-            langnames.add(loc.getDisplayLanguage(loc).capitalize() + " (" + loc.getDisplayCountry(loc).capitalize() + ")")
-        } else {
-            Locale loc = new Locale(langs[i])
-            langnames.add(loc.getDisplayLanguage(loc).capitalize())
-        }
-    }
-    return langnames.toArray()
-}
-
-def surroundWithQuotes(Object[] arr) {
+static def surroundWithQuotes(Object[] arr) {
     String[] dummyArr = arr
     for (int i = 0; i < arr.length; i++) {
         dummyArr[i] = "\"" + arr[i] + "\""
@@ -114,31 +99,33 @@ dependencies {
 // AndroidX
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.browser:browser:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.3'
+    implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.fragment:fragment-ktx:1.2.5'
     implementation 'androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
     implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'com.google.android.material:material:1.3.0-alpha02'
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
 
 // Other
     implementation 'com.beust:klaxon:5.3'
     implementation 'com.crowdin.platform:mobile-sdk:1.1.6'
+    implementation 'com.github.florent37:viewtooltip:1.2.2'
     implementation 'com.github.kittinunf.fuel:fuel:2.2.3'
     implementation 'com.github.kittinunf.fuel:fuel-coroutines:2.2.3'
     implementation 'com.github.kittinunf.fuel:fuel-json:2.2.3'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
-    implementation 'com.github.topjohnwu.libsu:core:3.0.1'
-    implementation 'com.github.topjohnwu.libsu:io:3.0.1'
-    implementation 'com.google.firebase:firebase-messaging:20.2.4'
-    implementation 'com.google.firebase:firebase-perf:19.0.8'
+    implementation 'com.github.topjohnwu.libsu:core:3.0.2'
+    implementation 'com.github.topjohnwu.libsu:io:3.0.2'
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+    implementation 'com.google.firebase:firebase-perf:19.0.9'
+    implementation 'com.google.firebase:firebase-analytics-ktx:18.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
     implementation 'com.mindorks.android:prdownloader:0.6.0'
-    implementation 'com.google.firebase:firebase-analytics-ktx:17.5.0'
-    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
 
 }

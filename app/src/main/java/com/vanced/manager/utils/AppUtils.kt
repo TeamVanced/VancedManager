@@ -3,12 +3,12 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
+import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.fragments.HomeFragment
+import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -16,18 +16,12 @@ import kotlinx.coroutines.launch
 
 object AppUtils {
 
-    val mutableInstall = MutableLiveData<Boolean>()
-    val installing: LiveData<Boolean> = mutableInstall
-
     const val vancedPkg = "com.vanced.android.youtube"
     const val vancedRootPkg = "com.google.android.youtube"
     const val musicPkg = "com.vanced.android.apps.youtube.music"
+    const val musicRootPkg = "com.google.android.apps.youtube.music"
     const val microgPkg = "com.mgoogle.android.gms"
     const val managerPkg = APPLICATION_ID
-
-    init {
-        mutableInstall.value = false
-    }
 
     fun sendRefresh(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
@@ -36,8 +30,16 @@ object AppUtils {
         }
     }
 
+    fun sendCloseDialog(context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            delay(500)
+            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
+            downloadProgress.get()?.installing?.set(false)
+        }
+    }
+
     fun sendFailure(status: Int, context: Context) {
-        mutableInstall.value = false
+        downloadProgress.get()?.installing?.set(false)
         //Delay error broadcast until activity (and fragment) get back to the screen
         CoroutineScope(Dispatchers.IO).launch {
             delay(500)
