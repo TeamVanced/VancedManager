@@ -393,7 +393,7 @@ object PackageHelper {
 
     private fun setupScript(apkFPath: String, path: String): Boolean
     {
-        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ '\${"$"}(getprop sys.boot_completed)' != '1' ];\ndo sleep 1;\ndone;\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
+        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess)
         {
             Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep youtube | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/vanced.sh""").exec()
             return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
