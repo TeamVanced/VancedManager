@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancelar</string>
     <string name="close">Cerrar</string>
     <string name="reset">Restablecer</string>
     <string name="save">Guardar</string>
     <string name="select_apps">Selecciona tus aplicaciones</string>
     <!-- Main Activity -->
     <string name="title_about">Información</string>
-    <string name="title_home">Gestor</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
-    <string name="update_manager">Gestor de actualizaciones</string>
+    <string name="update_manager">Actualizar Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">¡Seleccione al menos una aplicación!</string>
     <string name="are_you_rooted">¿Tienes root?</string>
