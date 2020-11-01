@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">İptal</string>
     <string name="close">Kapat</string>
     <string name="reset">Sıfırla</string>
     <string name="save">Kaydet</string>
