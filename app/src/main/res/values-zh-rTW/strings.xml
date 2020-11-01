@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">取消</string>
     <string name="close">關閉</string>
     <string name="reset">重設</string>
     <string name="save">儲存</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">選擇您需要的應用程式</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
     <string name="update_manager">更新 Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">請至少選擇一個 App！</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="select_at_least_one_app">請至少選擇一個應用程式！</string>
+    <string name="are_you_rooted">您的裝置是 Rooted 嗎？</string>
+    <string name="willing_to_use_root">打算使用 root 版本嗎？只需要點擊下面的按鈕，或者選擇繼續</string>
     <string name="grant_root">授予 Root 權限</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
+    <string name="about_app">關於 %1$s</string>
     <string name="app_changelog_tooltip">點選卡片以檢視更新日誌</string>
     <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
@@ -29,7 +30,7 @@
     <string name="unavailable">無法使用</string>
     <string name="update">更新</string>
     <string name="useful_links">相關連結</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">支持我們！</string>
     <!-- Settings -->
     <string name="accent_color">輔色</string>
     <string name="accent_blue">藍色</string>
@@ -37,8 +38,8 @@
     <string name="accent_purple">紫色</string>
     <string name="accent_red">紅色</string>
     <string name="accent_yellow">黃色</string>
-    <string name="category_appearance">介面外觀</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">外觀</string>
+    <string name="category_behaviour">行為</string>
     <string name="clear_files">清除已下載的檔案</string>
     <string name="cleared_files">成功清除檔案</string>
     <string name="firebase_title">Firebase 分析</string>
@@ -55,11 +56,11 @@
     <string name="push_notifications_summary">有可用更新時接收 %1$s 推送通知</string>
     <string name="update_center">Manager 更新中心</string>
     <string name="update_not_found">沒有更新</string>
-    <string name="variant">Variant</string>
+    <string name="variant">版本</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">檢查更新中…</string>
+    <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
+    <string name="app_install_files_detected_summary">Manager 找到所有 %1$s 所需的安裝檔案。您打算安裝嗎？</string>
+    <string name="checking_updates">正在檢查更新…</string>
     <string name="chosen_lang">語言：%1$s</string>
     <string name="guide">說明</string>
     <string name="hold_on">警告！</string>
@@ -74,7 +75,7 @@
     <string name="vanced_installation_preferences">Vanced 安裝偏好設定</string>
     <string name="vanced_installed">成功安裝 Vanced ，要開啟它嗎？</string>
     <string name="music_installed">成功安裝 Vanced Music ！要開啟它嗎？</string>
-    <string name="please_be_patient">請耐心等候...</string>
+    <string name="please_be_patient">請耐心等候…</string>
     <string name="launch">啟動</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
