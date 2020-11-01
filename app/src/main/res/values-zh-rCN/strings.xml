@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">取消</string>
     <string name="close">关闭</string>
     <string name="reset">重设</string>
     <string name="save">储存</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">选择您的应用</string>
     <!-- Main Activity -->
     <string name="title_about">关于</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">设置</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">更新 Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">选择至少一个应用！</string>
+    <string name="are_you_rooted">您有 Root 权限吗？</string>
+    <string name="willing_to_use_root">想要使用 root 版本？只需点击下面的按钮，或点击继续</string>
+    <string name="grant_root">授予 Root 权限</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="about_app">关于 %1$s</string>
+    <string name="app_changelog_tooltip">点击卡片查看变更日志。</string>
+    <string name="changelog">变更日志</string>
     <string name="downloading_file">正在下载 %1$s</string>
     <string name="install">安装</string>
     <string name="button_reinstall">重新安装</string>
@@ -29,7 +30,7 @@
     <string name="unavailable">不可用</string>
     <string name="update">更新</string>
     <string name="useful_links">相关链接</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">支持我们！</string>
     <!-- Settings -->
     <string name="accent_color">辅色</string>
     <string name="accent_blue">蓝色</string>
@@ -37,8 +38,8 @@
     <string name="accent_purple">紫色</string>
     <string name="accent_red">红色</string>
     <string name="accent_yellow">黄色</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">外观</string>
+    <string name="category_behaviour">行为</string>
     <string name="clear_files">清除已下载文件</string>
     <string name="cleared_files">成功清除文件</string>
     <string name="firebase_title">Firebase 分析</string>
@@ -54,34 +55,34 @@
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">有可用更新时接收 %1$s 推送通知</string>
     <string name="update_center">Manager 更新中心</string>
-    <string name="update_not_found">No new updates</string>
-    <string name="variant">Variant</string>
+    <string name="update_not_found">无可用更新</string>
+    <string name="variant">版本</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="app_install_files_detected">检测到 %1$s 安装文件！</string>
+    <string name="app_install_files_detected_summary">Manager 检测到 %1$s 所需要的安装文件。您想现在安装吗？</string>
+    <string name="checking_updates">正在检查更新…</string>
     <string name="chosen_lang">语言: %1$s</string>
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">正在安装 %1$s</string>
     <string name="magisk_vanced">您正在使用 Magisk/TWRP 版的 Vanced ，它已停止支援且无法透过此应用更新。请透过移除 Magisk 模块 /使用 TWRP Vanced 卸载程式来移除它。</string>
     <string name="miui_one_title">检测到 MIUI ！</string>
     <string name="miui_one">为了能够正确安装 Vanced ，您必须在开发者设置中禁用 MIUI 优化。 (如果您是基于 xiomi.eu 20.2.20或更新的 ROM，您可以忽略此警告)</string>
     <string name="error">错误</string>
-    <string name="redownload">Redownload</string>
+    <string name="redownload">重新下载</string>
     <string name="security_context">请确保您是从来自 vanced.app 、 Vanced Discord 服务器或 Vanced Github 下载本应用</string>
     <string name="success">成功！</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Vanced 安装首选设定</string>
     <string name="vanced_installed">成功安装 Vanced ，现在打开吗？</string>
     <string name="music_installed">成功安装 Vanced 音乐! 现在打开吗？</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">请耐心等候…</string>
     <string name="launch">打开</string>
     <string name="welcome">欢迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">为 Vanced 选择您的首选语言</string>
     <string name="install_light_black">浅 + 黑</string>
     <string name="install_light_dark">浅 + 深</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="select_at_least_one_lang">选择至少一种语言！</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 开发人员</string>
     <string name="sources">程式码</string>
@@ -97,8 +98,8 @@
     <string name="installation_downgrade">用户试图降级导致安装失败。卸载原厂 YouTube 的更新，然后重试。</string>
     <string name="installation_conflict">应用与已安装的应用发生冲突导致安装失败。卸载当前版本的 Vanced ，然后重试。</string>
     <string name="installation_failed">未知原因导致安装失败，加入我们的 Telegram 或 Discord 寻求更多支援。</string>
-    <string name="installation_incompatible">安装档案与您的设备不相容导致安装失败。请在设置中清除已下载的档案，然后重试。</string>
-    <string name="installation_invalid">apk 档案已被损坏导致安装失败，请重试。</string>
+    <string name="installation_incompatible">安装文件与您的设备不相容导致安装失败。请在设置中清除已下载的文件，然后重试。</string>
+    <string name="installation_invalid">apk 文件已被损坏导致安装失败，请重试。</string>
     <string name="installation_signature">apk 签名验证已被启用导致安装失败。禁用apk 签名验证，然后重试。</string>
     <string name="installation_miui">MIUI 优化已被启用导致安装失败。禁用 MIUI 优化，然后重试。</string>
     <string name="installation_storage">存储错误导致安装失败。</string>
