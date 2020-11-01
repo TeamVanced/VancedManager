@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">هەڵوەشاندنەوە</string>
     <string name="close">داخستن</string>
     <string name="reset">ڕێکخستنەوە</string>
     <string name="save">پاراستن</string>
