@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
     <string name="reset">Herstellen</string>
     <string name="save">Bewaren</string>
