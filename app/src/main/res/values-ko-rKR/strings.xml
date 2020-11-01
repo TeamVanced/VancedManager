@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">닫기</string>
     <string name="reset">초기화</string>
     <string name="save">저장</string>
