@@ -34,10 +34,9 @@ import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper.apkExist
 import com.vanced.manager.utils.PackageHelper.musicApkExists
-import com.vanced.manager.utils.PackageHelper.musicRootApkExists
 import com.vanced.manager.utils.PackageHelper.uninstallApk
+import com.vanced.manager.utils.PackageHelper.uninstallRootApk
 import com.vanced.manager.utils.PackageHelper.vancedInstallFilesExist
-import com.vanced.manager.utils.PackageHelper.vancedRootInstallFilesExist
 
 open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     
@@ -64,7 +63,6 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
         fetching.set(false)
     }
     
-    //private val microgSnackbar = Snackbar.make(, R.string.no_microg, Snackbar.LENGTH_LONG).setAction(R.string.install) { downloadMicrog(activity) }
     private val microgToast = Toast.makeText(activity, R.string.no_microg, Toast.LENGTH_LONG)
 
     fun openMicrogSettings() {
@@ -133,7 +131,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     }
 
-    fun uninstallPackage(pkg: String) = uninstallApk(pkg, activity)
+    fun uninstallPackage(pkg: String): Any = if (prefs.getString("vanced_variant", "nonroot") == "root") uninstallRootApk(pkg) else uninstallApk(pkg, activity)
 
     init {
         fetching.set(true)

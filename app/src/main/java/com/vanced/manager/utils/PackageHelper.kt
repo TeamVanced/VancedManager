@@ -18,6 +18,9 @@ import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -71,27 +74,6 @@ object PackageHelper {
         return false
     }
 
-    fun musicRootApkExists(context: Context): Boolean {
-        val apkPath = File(context.getExternalFilesDir("music/root")?.path as String)
-        val apkList = mutableListOf<String>()
-        if (apkPath.exists()) {
-            val files = apkPath.listFiles()
-            if (files?.isNotEmpty() == true) {
-                for (file in files) {
-                    if (apkList.size == 2)
-                        return true
-
-                    when (file.name) {
-                        "music.apk"  -> apkList.add("music")
-                        "stock.apk" -> apkList.add("stock")
-                    }
-                }
-            }
-        }
-
-        return false
-    }
-
     fun vancedInstallFilesExist(context: Context): Boolean {
         val apksPath = File(context.getExternalFilesDir("vanced/nonroot")?.path.toString())
         val splitFiles = mutableListOf<String>()
@@ -121,46 +103,18 @@ object PackageHelper {
         return false
     }
 
-    fun vancedRootInstallFilesExist(context: Context): Boolean {
-        val apksPath = File(context.getExternalFilesDir("vanced/root")?.path.toString())
-        val splitFiles = mutableListOf<String>()
-        if (apksPath.exists()) {
-            val files = apksPath.listFiles()
-            if (files?.isNotEmpty() == true) {
-                for (file in files) {
-
-                    when {
-                        (file.name == "black.apk" || file.name == "dark.apk") && !splitFiles.contains("base") -> splitFiles.add("base")
-                        file.name == "stock.apk" && !splitFiles.contains("stock") -> splitFiles.add("stock")
-                        file.name == "dpi.apk" && !splitFiles.contains("dpi") -> splitFiles.add("dpi")
-                        file.name.matches(Regex("split_config\\.(..)\\.apk")) && !splitFiles.contains("lang") -> splitFiles.add("lang")
-                        (file.name.startsWith("split_config.arm") || file.name.startsWith("split_config.x86")) && !splitFiles.contains("arch") -> splitFiles.add("arch")
-                    }
-
-                    Log.d("test", splitFiles.joinToString())
-
-                    if (splitFiles.size == 5) {
-                        return true
-                    }
-
-                }
-
-            }
-            return false
-        }
-        return false
+    fun uninstallRootApk(pkg: String): Boolean {
+        return Shell.su("pm uninstall $pkg").exec().isSuccess
     }
 
-    fun uninstallApk(pkg: String, context: Context): Boolean {
+    fun uninstallApk(pkg: String, context: Context) {
         val callbackIntent = Intent(context, AppUninstallerService::class.java)
         callbackIntent.putExtra("pkg", pkg)
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
-        return try {
+        try {
             context.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
-            true
         } catch (e: Exception) {
             e.printStackTrace()
-            false
         }
     }
     
@@ -287,41 +241,46 @@ object PackageHelper {
     }
     
     fun installVancedRoot(context: Context) {
-        Shell.enableVerboseLogging = BuildConfig.DEBUG
-        Shell.setDefaultBuilder(
-            Shell.Builder.create()
-                .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                .setTimeout(10)
-        )
+        CoroutineScope(Dispatchers.IO).launch {
+            Shell.enableVerboseLogging = BuildConfig.DEBUG
+            Shell.setDefaultBuilder(
+                Shell.Builder.create()
+                    .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                    .setTimeout(10)
+            )
 
-        Shell.getShell {
-            val application = context.applicationContext as App
-            val vancedApplication = application.vanced.get()?.int("versionCode")
-            val vancedVersionCode = if (vancedApplication != null) vancedApplication else { application.loadJsonAsync(); vancedApplication }
-            val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
-            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-            if (fileInfoList != null) {
-                var modApk: FileInfo? = null
-                for (file in fileInfoList) {
-                    if (file.name == "dark.apk" || file.name == "black.apk") {
-                        modApk = file
+            Shell.getShell {
+                val application = context.applicationContext as App
+                val vancedVersionCode = application.vanced.get()?.int("versionCode")
+                val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
+                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                if (fileInfoList != null) {
+                    var modApk: FileInfo? = null
+                    for (file in fileInfoList) {
+                        if (file.name == "dark.apk" || file.name == "black.apk") {
+                            modApk = file
+                        }
                     }
-                }
-                if (modApk != null) {
-                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, context)) {
-                        sendRefresh(context)
+                    if (modApk != null) {
+                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, context)) {
+                            sendRefresh(context)
+                            sendCloseDialog(context)
+                        }
+                    }
+                    else {
+                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                         sendCloseDialog(context)
                     }
                 }
                 else {
-                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendCloseDialog(context)
                 }
-            }
-            else {
-                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+
             }
 
         }
+
     }
     
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
@@ -493,10 +452,11 @@ object PackageHelper {
 
     //uninstall current update and install base that works with patch
     private fun fixHigherVer(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
-        if (uninstallApk(vancedRootPkg, context)) {
+        if (uninstallRootApk(vancedRootPkg)) {
             return installSplitApkFiles(apkFiles, context)
         }
         sendFailure(listOf("Failed_Uninstall").toMutableList(), context)
+        sendCloseDialog(context)
         return false
     }
 
