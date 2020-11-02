@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">ரத்துசெய்</string>
     <string name="close">மூடுக</string>
     <string name="reset">மீட்டமை</string>
     <string name="save">சேமிக்கவும்</string>
