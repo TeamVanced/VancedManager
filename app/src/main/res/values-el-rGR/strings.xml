@@ -14,7 +14,7 @@
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Επιλέξτε τουλάχιστον μια εφαρμογή!</string>
     <string name="are_you_rooted">Έχετε πρόσβαση Root;</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="willing_to_use_root">Επιθυμείτε την έκδοση root; Απλώς πατήστε το παρακάτω κουμπί, αλλιώς πατήστε το βελάκι για συνέχεια</string>
     <string name="grant_root">Χορηγήστε Αδεια Root</string>
     <!-- Home Page -->
     <string name="about_app">Σχετικά με το %1$s</string>
