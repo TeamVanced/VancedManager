@@ -5,12 +5,12 @@
     <string name="close">Sulje</string>
     <string name="reset">Palauta</string>
     <string name="save">Tallenna</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">Valitse Sovelluksesi</string>
     <!-- Main Activity -->
     <string name="title_about">Tietoja</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Asetukset</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">Päivitä hallintasovellus</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Select at least one app!</string>
     <string name="are_you_rooted">Are You Rooted?</string>
@@ -18,8 +18,8 @@
     <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="app_changelog_tooltip">Napauta korttia nähdäksesi muutoshistoria.</string>
+    <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
     <string name="button_reinstall">Uudelleenasenna</string>
@@ -38,7 +38,7 @@
     <string name="accent_purple">Violetti</string>
     <string name="accent_red">Punainen</string>
     <string name="accent_yellow">Keltainen</string>
-    <string name="category_appearance">Appearance</string>
+    <string name="category_appearance">Ulkoasu</string>
     <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
     <string name="cleared_files">Tiedostot tyhjennettiin onnistuneesti</string>
