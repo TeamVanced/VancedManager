@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">Batalkan</string>
     <string name="close">Tutup</string>
     <string name="reset">Atur ulang</string>
     <string name="save">Simpan</string>
