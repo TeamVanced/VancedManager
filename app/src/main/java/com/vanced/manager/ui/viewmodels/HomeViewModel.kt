@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
-import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableField
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LiveData
@@ -30,6 +29,8 @@ import com.vanced.manager.utils.AppUtils.musicPkg
 import com.vanced.manager.utils.AppUtils.musicRootPkg
 import com.vanced.manager.utils.AppUtils.vancedPkg
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
+import com.vanced.manager.utils.Extensions.fetchData
+import com.vanced.manager.utils.Extensions.setRefreshing
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.PackageHelper.apkExist
@@ -50,17 +51,16 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     val music = ObservableField<DataModel>()
     val musicRoot = ObservableField<DataModel>()
     val manager = ObservableField<DataModel>()
-    val fetching = ObservableBoolean(true)
 
     private var _navigateDestination = MutableLiveData<Event<Int>>()
 
     val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
     fun fetchData() {
-        fetching.set(true)
-        app.loadJsonAsync()
+        activity.setRefreshing(true)
+        app.loadJson()
         Crowdin.forceUpdate(activity)
-        fetching.set(false)
+        activity.setRefreshing(false)
     }
     
     private val microgToast = Toast.makeText(activity, R.string.no_microg, Toast.LENGTH_LONG)
@@ -131,17 +131,17 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     }
 
-    fun uninstallPackage(pkg: String): Any = if (prefs.getString("vanced_variant", "nonroot") == "root") uninstallRootApk(pkg) else uninstallApk(pkg, activity)
+    fun uninstallPackage(pkg: String) = if (prefs.getString("vanced_variant", "nonroot") == "root" && uninstallRootApk(pkg)) activity.fetchData() else uninstallApk(pkg, activity)
 
     init {
-        fetching.set(true)
+        activity.setRefreshing(true)
         vanced.set(DataModel(app.vanced, activity, vancedPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
         vancedRoot.set(DataModel(app.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
         music.set(DataModel(app.music, activity, musicPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
         musicRoot.set(DataModel(app.music, activity, musicRootPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
         microg.set(DataModel(app.microg, activity, microgPkg, activity.getString(R.string.microg), ContextCompat.getDrawable(activity, R.drawable.ic_microg)))
         manager.set(DataModel(app.manager, activity, managerPkg, activity.getString(R.string.app_name), ContextCompat.getDrawable(activity, R.mipmap.ic_launcher)))
-        fetching.set(false)
+        activity.setRefreshing(false)
     }
 
 }

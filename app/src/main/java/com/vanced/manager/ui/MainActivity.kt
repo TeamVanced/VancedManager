@@ -21,8 +21,10 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
 import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
+import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
+import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.PackageHelper
@@ -40,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onFailure(throwable: Throwable) {
-            Log.d(tag, "Failed to load data")
+            Log.d(tag, "Failed to load data: $throwable")
         }
 
     }
@@ -130,11 +132,21 @@ class MainActivity : AppCompatActivity() {
         val variant = prefs.getString("vanced_variant", "nonroot")
         prefs.getBoolean("show_root_dialog", true)
 
+        if (intent?.data != null) {
+            val urldialog = URLChangeDialog()
+            val arg = Bundle()
+            arg.putString("url", intent.dataString)
+            urldialog.arguments = arg
+            intent.dataString?.let { Log.d("urlTest", it) }
+            urldialog.show(this)
+        }
+
         when {
             firstLaunch -> {
                 DialogContainer.showSecurityDialog(this)
                 with(FirebaseMessaging.getInstance()) {
                     subscribeToTopic("Vanced-Update")
+                    subscribeToTopic("Music-Update")
                     subscribeToTopic("MicroG-Update")
                 }
             }

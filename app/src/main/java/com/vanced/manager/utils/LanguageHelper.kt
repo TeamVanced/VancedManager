@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.res.Resources
 import android.os.Build
 import android.os.LocaleList
-import android.util.Log
 import androidx.annotation.RequiresApi
 import com.vanced.manager.R
 import com.vanced.manager.core.App

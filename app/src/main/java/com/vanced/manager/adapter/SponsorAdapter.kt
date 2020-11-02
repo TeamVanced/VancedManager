@@ -10,7 +10,11 @@ import com.vanced.manager.databinding.ViewSponsorBinding
 import com.vanced.manager.model.SponsorModel
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 
-class SponsorAdapter(context: Context, private val viewModel: HomeViewModel) : RecyclerView.Adapter<SponsorAdapter.LinkViewHolder>() {
+class SponsorAdapter(
+    context: Context,
+    private val viewModel: HomeViewModel,
+    //private val json: ObservableField<JsonObject?>
+) : RecyclerView.Adapter<SponsorAdapter.LinkViewHolder>() {
 
     private val brave = SponsorModel(
         ContextCompat.getDrawable(context, R.drawable.ic_brave),
@@ -24,11 +28,11 @@ class SponsorAdapter(context: Context, private val viewModel: HomeViewModel) : R
         "https://vancedapp.com/adguard"
     )
 
-    val sponsors = arrayOf(brave, adguard)
+    val sponsors = arrayListOf(brave, adguard)
 
-    inner class LinkViewHolder(private val binding: ViewSponsorBinding) : RecyclerView.ViewHolder(binding.root) {
-        //val cardBg = binding.linkBg
-        //val descText = binding.linkAppDescription
+    inner class LinkViewHolder(private val binding: ViewSponsorBinding) : RecyclerView.ViewHolder(
+        binding.root
+    ) {
         fun bind(position: Int) {
             binding.viewModel = viewModel
             binding.sponsor = sponsors[position]
@@ -42,16 +46,29 @@ class SponsorAdapter(context: Context, private val viewModel: HomeViewModel) : R
     }
 
     override fun onBindViewHolder(holder: LinkViewHolder, position: Int) {
-        //holder.cardBg.setCardBackgroundColor()
         holder.bind(position)
-//        val lp = holder.cardBg
-//        if (lp is FlexboxLayoutManager.LayoutParams) {
-//            val flexboxLp = lp as FlexboxLayoutManager.LayoutParams
-//            flexboxLp.flexGrow = 1.0f
-//            flexboxLp.alignSelf = AlignItems.STRETCH
-//        }
     }
 
     override fun getItemCount(): Int = 2
+
+//    fun getCountryFromIP(ipAddress: String?): String? {
+//        val db = context.assets.open("GeoLite2-Country.mmdb")
+//        val reader = DatabaseReader.Builder(db).build()
+//        val inetIp = InetAddress.getByName(ipAddress)
+//        return reader.country(inetIp).country.isoCode
+//    }
+//
+//    init {
+//        json.addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
+//            override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
+//                val wm = context.applicationContext.getSystemService(WIFI_SERVICE) as WifiManager?
+//                val ip: String = formatIpAddress(wm!!.connectionInfo.ipAddress)
+//                val promotedTiers = json.get()?.array<String>("tier2")?.value!! + json.get()?.array<String>("tier3")?.value!!
+//                if (promotedTiers.any { getCountryFromIP(ip)?.contains(it)!! })
+//                    sponsors.removeAt(1)
+//            }
+//
+//        })
+//    }
 
 }

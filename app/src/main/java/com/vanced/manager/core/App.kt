@@ -14,7 +14,6 @@ import com.vanced.manager.utils.JsonHelper.getJson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
 open class App: Application() {
 
@@ -23,22 +22,29 @@ open class App: Application() {
     var microg = ObservableField<JsonObject?>()
     var manager = ObservableField<JsonObject?>()
 
+    //var braveTiers = ObservableField<JsonObject?>()
+
     override fun onCreate() {
-        loadJsonAsync()
+        loadJson()
         super.onCreate()
         PRDownloader.initialize(this)
 
         Crowdin.init(this,
             CrowdinConfig.Builder()
-                .withDistributionHash("36c51aed3180a4f43073d28j4s6")
+                .withDistributionHash("3b84be9663023b0b1a22988j4s6")
                 .withNetworkType(NetworkType.WIFI)
                 .build()
         )
 
     }
 
-    open fun loadJsonAsync() = CoroutineScope(Dispatchers.IO).launch {
-        val latest = getJson("${getDefaultSharedPreferences(this@App).getString("install_url", baseUrl)}/latest.json")
+    open fun loadJson() = CoroutineScope(Dispatchers.IO).launch {
+        val installUrl = getDefaultSharedPreferences(this@App).getString("install_url", baseUrl)
+        val latest = getJson("$installUrl/latest.json")
+//        braveTiers.apply {
+//            set(getJson("$installUrl/sponsor.json"))
+//            notifyChange()
+//        }
 
         vanced.apply {
             set(latest?.obj("vanced"))

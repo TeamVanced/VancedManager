@@ -12,6 +12,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
+import com.vanced.manager.utils.Extensions.fetchData
 import com.vanced.manager.utils.InternetTools.baseUrl
 
 class URLChangeDialog : DialogFragment() {
@@ -29,7 +30,8 @@ class URLChangeDialog : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val urlField = view.findViewById<EditText>(R.id.url_input)
-        urlField.setText(getDefaultSharedPreferences(requireActivity()).getString("install_url", baseUrl), TextView.BufferType.EDITABLE)
+        val fieldTxt = if (arguments != null) arguments?.getString("url") else getDefaultSharedPreferences(requireActivity()).getString("install_url", baseUrl)
+        urlField.setText(fieldTxt, TextView.BufferType.EDITABLE)
         view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
             val finalUrl =
                 if (urlField.text.startsWith("https://") || urlField.text.startsWith("http://"))
@@ -44,6 +46,7 @@ class URLChangeDialog : DialogFragment() {
 
     private fun saveUrl(url: String) {
         getDefaultSharedPreferences(requireActivity()).edit().putString("install_url", url).apply()
+        requireActivity().fetchData()
         dismiss()
     }
 

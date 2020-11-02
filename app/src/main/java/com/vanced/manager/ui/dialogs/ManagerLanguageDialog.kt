@@ -15,7 +15,6 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogManagerLanguageBinding
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
-import java.util.*
 
 class ManagerLanguageDialog : BottomSheetDialogFragment() {
 

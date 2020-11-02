@@ -56,7 +56,20 @@
             android:configChanges="layoutDirection|locale"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/DarkTheme.Blue" />
+            android:theme="@style/DarkTheme.Blue">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="vancedapp.com"
+                    android:pathPrefix="/downloads"/>
+
+            </intent-filter>
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
