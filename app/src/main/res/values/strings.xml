@@ -7,6 +7,7 @@
     <string name="reset">Reset</string>
     <string name="save">Save</string>
     <string name="select_apps">Select Your Apps</string>
+    <string name="testStr">Hi I\'m donald and i love lasagna</string>
 
     <!-- Main Activity -->
     <string name="title_about">About</string>
