@@ -7,6 +7,7 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.beust.klaxon.JsonObject
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
+import com.crowdin.platform.data.model.AuthConfig
 import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
 import com.vanced.manager.utils.InternetTools.baseUrl
@@ -22,24 +23,36 @@ open class App: Application() {
     var microg = ObservableField<JsonObject?>()
     var manager = ObservableField<JsonObject?>()
 
+    private val prefs by lazy { getDefaultSharedPreferences(this) }
+
     //var braveTiers = ObservableField<JsonObject?>()
 
     override fun onCreate() {
         loadJson()
         super.onCreate()
         PRDownloader.initialize(this)
+        val clientId = prefs.getString("crowdin_client_id", "")
+        val clientSecret = prefs.getString("crowdin_client_secret", "")
 
         Crowdin.init(this,
-            CrowdinConfig.Builder()
-                .withDistributionHash("3b84be9663023b0b1a22988j4s6")
-                .withNetworkType(NetworkType.WIFI)
-                .build()
+            CrowdinConfig.Builder().apply {
+                withDistributionHash("3b84be9663023b0b1a22988j4s6")
+                withNetworkType(NetworkType.WIFI)
+                if (clientId != "" && clientSecret != "") {
+                    withRealTimeUpdates()
+                    withSourceLanguage("en")
+                    withAuthConfig(AuthConfig(clientId!!, clientSecret!!, null))
+                    withScreenshotEnabled()
+                }
+            }.build()
         )
+        if (prefs.getBoolean("crowdin_upload_screenshot", false))
+            Crowdin.registerScreenShotContentObserver(this)
 
     }
 
     open fun loadJson() = CoroutineScope(Dispatchers.IO).launch {
-        val installUrl = getDefaultSharedPreferences(this@App).getString("install_url", baseUrl)
+        val installUrl = prefs.getString("install_url", baseUrl)
         val latest = getJson("$installUrl/latest.json")
 //        braveTiers.apply {
 //            set(getJson("$installUrl/sponsor.json"))

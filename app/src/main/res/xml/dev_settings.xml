@@ -17,6 +17,27 @@
         android:key="install_url" />
 
     <PreferenceCategory
+        android:title="Crowdin">
+
+        <SwitchPreferenceCompat
+            android:title="Screenshot Uploading (ADMIN ONLY)"
+            android:key="crowdin_upload_screenshot" />
+
+        <SwitchPreferenceCompat
+            android:title="Real-time updates"
+            android:key="crowdin_real_time" />
+
+        <EditTextPreference
+            android:title="Client ID"
+            android:key="crowdin_client_id"/>
+
+        <EditTextPreference
+            android:title="Client Secret"
+            android:key="crowdin_client_secret"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="Device info">
 
         <Preference
