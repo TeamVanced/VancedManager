@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Abbrechen</string>
     <string name="close">Schließen</string>
     <string name="reset">Zurücksetzen</string>
     <string name="save">Speichern</string>
+    <string name="select_apps">Wählen deine Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Über</string>
     <string name="title_home">Startseite</string>
     <string name="title_settings">Einstellungen</string>
+    <string name="update_manager">Manager updaten</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Wähle mindestens eine app aus!</string>
+    <string name="are_you_rooted">Bist du gerooted?</string>
+    <string name="willing_to_use_root">Möchtest du die root version verwenden? Tippe einfach auf die Schaltfläche unten, ansonsten tippe auf weiter.</string>
+    <string name="grant_root">Root-Berechtigung erteilen</string>
     <!-- Home Page -->
+    <string name="about_app">Über %1$s</string>
+    <string name="app_changelog_tooltip">Tippe auf die Karte umn dem Änderungsverlauf zu sehen.</string>
     <string name="changelog">Änderungsverlauf</string>
     <string name="downloading_file">%1$s wird heruntergeladen</string>
     <string name="install">Installieren</string>
@@ -28,8 +38,8 @@
     <string name="accent_purple">Lila</string>
     <string name="accent_red">Rot</string>
     <string name="accent_yellow">Gelb</string>
-    <string name="vanced_installation_preferences">Ausgewählte Installationsoptionen</string>
-    <string name="chosen_lang">Sprache(n): %1$s</string>
+    <string name="category_appearance">Aussehen</string>
+    <string name="category_behaviour">Verhalten</string>    
     <string name="clear_files">Heruntergeladene Dateien löschen</string>
     <string name="cleared_files">Daten erfolgreich gelöscht</string>
     <string name="firebase_title">Firebase-Analyse</string>
@@ -46,23 +56,33 @@
     <string name="push_notifications_summary">Push-Benachrichtigungen erhalten, wenn ein Update für %1$s veröffentlicht wird</string>
     <string name="update_center">Update Center</string>
     <string name="update_not_found">Keine neuen Updates</string>
+    <string name="variant">Variante</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s Installationsdateien entdeckt!</string>
+    <string name="app_install_files_detected_summary">Manager hat entdeckt dass alle nötigen Dateien für die %1$s installation gefunden wurden. Möchtest du die installation starten?</string>
+    <string name="checking_updates">Suche nach Updates…</string>
+    <string name="chosen_lang">Sprache(n): %1$s</string>    
     <string name="guide">Erklärung</string>
     <string name="hold_on">Stop!</string>
+    <string name="installing_app">Installiere %1$s</string>
     <string name="magisk_vanced">Sie nutzen die Magisk/TWRP-Version von Vanced, die nicht mehr unterstützt wird und mit dieser App nicht aktualisiert werden kann. Bitte entfernen sie diese indem Sie das Magisk-Modul mit dem TWRP Vanced Uninstaller entfernen.</string>
     <string name="miui_one_title">MIUI erkannt!</string>
     <string name="miui_one">Um Vanced zu installieren, MÜSSEN Sie MIUI-Optimierungen in den Entwickler-Einstellungen deaktivieren. (Sie können diese Warnung ignorieren, wenn Sie einen auf xiaomi.eu basierenden ROM 20.2.20 oder höher verwenden)</string>
     <string name="error">Fehler</string>
+    <string name="redownload">Erneut herunterladen</string>
     <string name="security_context">Bitte stellen Sie sicher, dass Sie die App von vanced.app, dem Vanced Discord Server oder GitHub heruntergeldaden haben.</string>
     <string name="success">Erfolg!</string>
+    <string name="vanced_installation_preferences">Vanced Installationseinstellungen</string>
     <string name="vanced_installed">Vanced wurde erfolgreich installiert. Jetzt öffnen?</string>
     <string name="music_installed">Vanced Musik wurde erfolgreich installiert. Jetzt starten?</string>
+    <string name="please_be_patient">Bitte haben Sie Geduld…</string>
     <string name="launch">Öffnen</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wählen Sie ihre bevorzugte Sprache(n) für Vanced</string>
     <string name="install_light_black">Hell + Schwarz</string>
     <string name="install_light_dark">Hell + Dunkel</string>
+    <string name="select_at_least_one_lang">Wähle mindestens eine Sprache!</string>
     <!-- About Page -->
     <string name="manager_dev">Manager-Entwickler</string>
     <string name="sources">Quellen</string>
