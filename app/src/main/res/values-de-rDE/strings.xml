@@ -4,10 +4,17 @@
     <string name="close">Schließen</string>
     <string name="reset">Zurücksetzen</string>
     <string name="save">Speichern</string>
+    <string name="select_apps">Wählen Sie Ihre Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Über</string>
     <string name="title_home">Startseite</string>
     <string name="title_settings">Einstellungen</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Wählen Sie mindestens eine App aus!</string>
+    <string name="are_you_rooted">Sind Sie gerootet?</string>
+    <string name="willing_to_use_root">Möchten Sie die root Version benutzen? Tippen Sie dazu einfach auf die Schaltfläche unten, ansonsten tippen zum Fortfahren</string> 
+    <string name="grant_root">Root-Zugriff erteilen</string> 
     <!-- Home Page -->
     <string name="changelog">Änderungsverlauf</string>
     <string name="downloading_file">%1$s wird heruntergeladen</string>
@@ -47,6 +54,10 @@
     <string name="update_center">Update Center</string>
     <string name="update_not_found">Keine neuen Updates</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s Installationsdateien erkannt!</string>
+    <string name="app_install_files_detected_summary">Manager hat alle nötigen Dateien für die %1$s installation gefunden. Möchten Sie installieren?</string>
+    <string name="checking_updates">Suche nach Updates…</string>
+    <string name="chosen_lang">Sprache(n): %1$s</string>    
     <string name="guide">Erklärung</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Sie nutzen die Magisk/TWRP-Version von Vanced, die nicht mehr unterstützt wird und mit dieser App nicht aktualisiert werden kann. Bitte entfernen sie diese indem Sie das Magisk-Modul mit dem TWRP Vanced Uninstaller entfernen.</string>
@@ -84,5 +95,5 @@
     <string name="installation_miui">Installation fehlgeschlagen, da die MIUI-Optimierung aktiviert ist. Deaktivieren Sie die MIUI-Optimierung, und versuchen Sie es erneut.</string>
     <string name="installation_storage">Die Installation ist aufgrund eines Speicherfehlers fehlgeschlagen.</string>
     <string name="modapk_missing">Schwarz/Dunkel apk fehlt im Installer. Dies sollte nicht passieren, bitte löschen Sie die App-Daten des Managers</string>
-    <string name="path_missing">La ruta de instalación de Youtube no es accesible o no existe después de la instalación de split</string>
+    <string name="path_missing">Konnte den Installationspfad von der stock YouTube Installation nach der split Installation nicht finden.</string>
 </resources>
