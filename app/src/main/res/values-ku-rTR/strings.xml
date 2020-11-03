@@ -41,7 +41,7 @@
     <string name="category_appearance">Xuyang</string>
     <string name="category_behaviour">Reftar</string>
     <string name="clear_files">Dosiyayên daxistî paqij bike</string>
-    <string name="cleared_files">Dosiya biserketî paqij bûn</string>
+    <string name="cleared_files">Dosiya, biserketî paqij bûn</string>
     <string name="firebase_title">Analîza Firebase\'ê</string>
     <string name="firebase_summary">Ev yek dihêle ku em di bara performansa sepanê û tomarên hilweşiyayî de agahiyan berhev bikin</string>
     <string name="language_title">Ziman</string>
@@ -95,7 +95,7 @@
     <string name="ifile_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji bîrgehê bi ser neket, jkx dîsa biceribîne.</string>
     <string name="installation_aborted">Sazkirin bi ser neket ji ber ku bikarîner dawî li pêvajoya sazkirinê anî.</string>
     <string name="installation_blocked">Sazkirin bi ser neket ji ber ku bikarînerê sazkirin asteng kir.</string>
-    <string name="installation_downgrade">Sazkirin bi ser neket ji ber ku bikarîner hewl dida derecebendiya pakêtê kêm bike. Hildeman ji bernameya YouTube ya heyî rakin, paşê dîsa biceribînin.</string>
+    <string name="installation_downgrade">Sazkirin bi ser neket ji ber ku bikarîner hewl dida derecebendiya pakêtê kêm bike. Hildeman ji bernameya YouTube\'ê ya heyî rakin, paşê dîsa biceribînin.</string>
     <string name="installation_conflict">Sazkirin bi ser neket ji ber ku ev bernameya ligel bernameyeke din ya sazkirî li hev nake. Guhertoya heyî ya Vanced\'ê rakin, paşê dîsa biceribînin.</string>
     <string name="installation_failed">Sazkirin ji ber sedemên nenas bi ser neket, ji bo piştgiriya zêdetir tevlî Telegram an Discord\'ê bibin.</string>
     <string name="installation_incompatible">Sazkirin bi ser neket ji ber ku dosiya sazkirinê ligel cîhaza te hevaheng nîne. Dosiyên daxistî ji sazkariyan paqij bike, paşê dîsa biceribîne.</string>
@@ -104,5 +104,5 @@
     <string name="installation_miui">Sazkirin bi ser neket ji ber ku MIUI Optimization çalak e. MIUI Optimization\'ê neçalak bikin, paşê dîsa biceribînin.</string>
     <string name="installation_storage">Sazkirinê ji ber çewtiyeke depoyê bi ser neket.</string>
     <string name="modapk_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji sazkirinê bi ser neket. Daneyên sepanê ji rêveberê paqij bikin, paşê dîsa biceribîne.</string>
-    <string name="path_missing">Piştî sazkirina dabeşkirî peydakirina rêka sazkirina YouTube stokê bi ser neket.</string>
+    <string name="path_missing">Piştî sazkirina dabeşkirî, dozîna rêka sazkirina YouTube stokê bi ser neket.</string>
 </resources>
