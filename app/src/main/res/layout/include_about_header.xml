@@ -27,7 +27,7 @@
             android:text="@string/versionName"
             android:textAlignment="center"
             android:textColor="#fff"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 

@@ -26,6 +26,10 @@ android {
         vectorDrawables.useSupportLibrary = true
 
         buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(langs) + "}"
+        buildConfigField "Boolean", "ENABLE_CROWDIN_AUTH", "false"
+        buildConfigField "String", "CROWDIN_HASH", "\"${System.getenv('CROWDIN_HASH')}\""
+        buildConfigField "String", "CROWDIN_CLIENT_ID", "\"${System.getenv('CROWDIN_CLIENT_ID')}\""
+        buildConfigField "String", "CROWDIN_CLIENT_SECRET", "\"${System.getenv('CROWDIN_CLIENT_SECRET')}\""
     }
 
     lintOptions {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
         android:key="firstlaunch_switch"
@@ -19,21 +20,19 @@
     <PreferenceCategory
         android:title="Crowdin">
 
+        <Preference
+            android:title="Authorize"
+            android:key="crowdin_auth" />
+
         <SwitchPreferenceCompat
             android:title="Screenshot Uploading (ADMIN ONLY)"
-            android:key="crowdin_upload_screenshot" />
+            android:key="crowdin_upload_screenshot"
+            app:isPreferenceVisible="false"/>
 
         <SwitchPreferenceCompat
             android:title="Real-time updates"
-            android:key="crowdin_real_time" />
-
-        <EditTextPreference
-            android:title="Client ID"
-            android:key="crowdin_client_id"/>
-
-        <EditTextPreference
-            android:title="Client Secret"
-            android:key="crowdin_client_secret"/>
+            android:key="crowdin_real_time"
+            app:isPreferenceVisible="false"/>
 
     </PreferenceCategory>
 

@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setFinalTheme(this)
         super.onCreate(savedInstanceState)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         with(binding) {
@@ -113,7 +114,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(LanguageContextWrapper.wrap(newBase))
+        super.attachBaseContext(Crowdin.wrapContext(LanguageContextWrapper.wrap(newBase)))
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

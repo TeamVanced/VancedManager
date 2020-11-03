@@ -1,12 +1,17 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
+import androidx.preference.SwitchPreferenceCompat
+import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
 import com.vanced.manager.ui.WelcomeActivity
 import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
@@ -40,6 +45,25 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
 
         }
 
+        findPreference<SwitchPreferenceCompat>("crowdin_upload_screenshot")?.isVisible = Crowdin.isAuthorized()
+        findPreference<SwitchPreferenceCompat>("crowdin_real_time")?.isVisible = Crowdin.isAuthorized()
+
+        findPreference<Preference>("crowdin_auth")?.setOnPreferenceClickListener {
+
+            @RequiresApi(Build.VERSION_CODES.M)
+            if (!Settings.canDrawOverlays(requireActivity())) {
+                val intent = Intent(
+                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:" + requireActivity().packageName)
+                )
+                startActivityForResult(intent, 69)
+                return@setOnPreferenceClickListener true
+            }
+
+            Crowdin.authorize(requireActivity())
+            true
+        }
+
         findPreference<Preference>("install_url")?.setOnPreferenceClickListener {
             URLChangeDialog().show(childFragmentManager.beginTransaction(), "Install URL")
             true
@@ -58,10 +82,23 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
 
         val forceUpdate: Preference? = findPreference("force_update")
         forceUpdate?.setOnPreferenceClickListener {
-            ManagerUpdateDialog(true).show(requireActivity().supportFragmentManager, "update_manager")
+            ManagerUpdateDialog(true).show(
+                requireActivity().supportFragmentManager,
+                "update_manager"
+            )
             true
         }
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 69) {
+            @RequiresApi(23)
+            if (Settings.canDrawOverlays(requireActivity())) {
+                Crowdin.authorize(requireActivity())
+            }
+        }
     }
 
 }

@@ -19,8 +19,8 @@ class PreferenceSwitch @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyle, defStyleRes) {
 
     private val prefs by lazy { getDefaultSharedPreferences(context) }
-    private var prefKey: String = ""
-    private var defValue: Boolean = false
+    var prefKey: String = ""
+    var defValue: Boolean = false
     private var mListener: OnCheckedListener? = null
 
     init {
@@ -101,7 +101,7 @@ class PreferenceSwitch @JvmOverloads constructor(
         }
 
         @JvmStatic
-        @BindingAdapter("app:switch_def_val")
+        @BindingAdapter("app:switch_def_value")
         fun setDefaultValue(view: PreferenceSwitch, newVal: Boolean) {
             view.defValue = newVal
             view.preference_switch.isChecked = view.prefs.getBoolean(view.prefKey, view.defValue)
