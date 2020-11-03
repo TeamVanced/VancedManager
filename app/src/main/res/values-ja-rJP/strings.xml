@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">キャンセル</string>
     <string name="close">閉じる</string>
     <string name="reset">リセット</string>
     <string name="save">保存</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">アプリを選択してください</string>
     <!-- Main Activity -->
     <string name="title_about">情報</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">Manager を更新</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
+    <string name="are_you_rooted">ルート化されていますか？</string>
+    <string name="willing_to_use_root">root 版を使用したいですか？下のボタンを押してください。そうでないなら続けるボタンを押してください</string>
+    <string name="grant_root">root 権限を付与</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="about_app">%1$s について</string>
+    <string name="app_changelog_tooltip">カードをタップして更新履歴を見る。</string>
+    <string name="changelog">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="install">インストール</string>
     <string name="button_reinstall">再インストール</string>
@@ -30,7 +30,7 @@
     <string name="unavailable">利用不可</string>
     <string name="update">更新</string>
     <string name="useful_links">リンク集</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">サポートする</string>
     <!-- Settings -->
     <string name="accent_color">アクセントカラー</string>
     <string name="accent_blue">青</string>
@@ -38,8 +38,8 @@
     <string name="accent_purple">紫</string>
     <string name="accent_red">赤</string>
     <string name="accent_yellow">黄</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">表示設定</string>
+    <string name="category_behaviour">動作設定</string>
     <string name="clear_files">ダウンロード済みファイルを消去</string>
     <string name="cleared_files">ファイルを消去しました</string>
     <string name="firebase_title">Firebase アナリティクス</string>
@@ -55,34 +55,34 @@
     <string name="push_notifications">%1$s プッシュ通知</string>
     <string name="push_notifications_summary">%1$s のアップデートがリリースされたときにプッシュ通知を受け取る</string>
     <string name="update_center">アップデート センター</string>
-    <string name="update_not_found">No new updates</string>
-    <string name="variant">Variant</string>
+    <string name="update_not_found">アップデートはありません</string>
+    <string name="variant">種類</string>
     <!-- Dialogs -->
     <string name="app_install_files_detected">%1$s installation files detected!</string>
     <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="checking_updates">アップデートを確認中...</string>
     <string name="chosen_lang">言語: %1$s</string>
     <string name="guide">ガイド</string>
     <string name="hold_on">ストップ！</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">%1$s をインストールしています</string>
     <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
     <string name="miui_one_title">MIUI ユーザーを検知しました！</string>
     <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="error">エラー</string>
-    <string name="redownload">Redownload</string>
+    <string name="redownload">再ダウンロード</string>
     <string name="security_context">vanced.app、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="success">成功！</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Vanced インストール設定</string>
     <string name="vanced_installed">Vanced のインストールに成功しました。今すぐ開きますか？</string>
     <string name="music_installed">Vanced Music のインストールに成功しました。今すぐ開きますか？</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">しばらくお待ちください…</string>
     <string name="launch">開く</string>
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced で使用する言語を選択</string>
     <string name="install_light_black">ライト + ブラック</string>
     <string name="install_light_dark">ライト + ダーク</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="select_at_least_one_lang">少なくとも一つの言語を選択してください！</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開発</string>
     <string name="sources">ソースコード</string>
