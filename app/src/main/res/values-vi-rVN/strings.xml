@@ -17,7 +17,7 @@
     <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Hãy nhấn nút phía dưới, mặt khác nhấn để tiếp tục</string>
     <string name="grant_root">Cấp quyền Root</string>
     <!-- Home Page -->
-    <string name="about_app">Về %1$s</string>
+    <string name="about_app">Thông tin %1$s</string>
     <string name="app_changelog_tooltip">Nhấn vào thẻ để xem bảng thay đổi.</string>
     <string name="changelog">Nhật ký thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
