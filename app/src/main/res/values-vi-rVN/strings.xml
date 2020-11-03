@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">Hủy</string>
     <string name="close">Đóng</string>
     <string name="reset">Đặt lại</string>
     <string name="save">Lưu</string>
@@ -18,7 +18,7 @@
     <string name="grant_root">Cấp quyền Root</string>
     <!-- Home Page -->
     <string name="about_app">Về %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="app_changelog_tooltip">Nhấn vào thẻ để xem bảng thay đổi.</string>
     <string name="changelog">Nhật ký thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
@@ -39,7 +39,7 @@
     <string name="accent_red">Đỏ</string>
     <string name="accent_yellow">Vàng</string>
     <string name="category_appearance">Giao diện</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_behaviour">Hành động</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
     <string name="firebase_title">Firebase Analytics</string>
@@ -56,15 +56,15 @@
     <string name="push_notifications_summary">Nhận thông báo đẩy khi một bản cập nhật của %1$s được phát hành</string>
     <string name="update_center">Trung tâm cập nhật</string>
     <string name="update_not_found">Không có bản cập nhật mới</string>
-    <string name="variant">Variant</string>
+    <string name="variant">Biến thể</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="app_install_files_detected">%1$s tệp cài đặt được phát hiện!</string>
+    <string name="app_install_files_detected_summary">Manager đã phát hiện thấy rằng tất cả các tệp cần thiết để cài đặt %1$s đã được tìm thấy. Bạn có muốn cài đặt không?</string>
     <string name="checking_updates">Đang kiểm tra bản cập nhật…</string>
     <string name="chosen_lang">Ngôn ngữ: %1$s</string>
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Dừng lại!</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">Đang cài đặt %1$s</string>
     <string name="magisk_vanced">Bạn đang dùng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ nó bằng cách gỡ mô-đun Magisk/sử dụng trình gỡ cài đặt TWRP Vanced.</string>
     <string name="miui_one_title">Phát hiện MIUI!</string>
     <string name="miui_one">Để cài đặt Vanced, bạn PHẢI vô hiệu hóa Tối Ưu Hóa MIUI trong cài đặt nhà phát triển. (Bạn có thể bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
@@ -72,7 +72,7 @@
     <string name="redownload">Tải lại</string>
     <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vanced.app, server Discord Vanced hoặc Github Vanced</string>
     <string name="success">Thành công!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Tùy chọn cài đặt Vanced</string>
     <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
     <string name="music_installed">Vanced Music đã được cài đặt thành công! Mở ứng dụng?</string>
     <string name="please_be_patient">Vui lòng chờ…</string>
