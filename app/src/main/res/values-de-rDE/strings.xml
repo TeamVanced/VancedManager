@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">Abbrechen</string>
     <string name="close">Schließen</string>
     <string name="reset">Zurücksetzen</string>
     <string name="save">Speichern</string>
@@ -13,7 +13,7 @@
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Wählen Sie mindestens eine App!</string>
-    <string name="are_you_rooted">Sind Sie gerooted?</string>
+    <string name="are_you_rooted">Haben Sie Root-Zugriff?</string>
     <string name="willing_to_use_root">Möchten Sie die Root-Version verwenden? Tippen Sie einfach auf die Schaltfläche unten, andernfalls tippen Sie um fortzufahren</string>
     <string name="grant_root">Root-Berechtigung erteilen</string>
     <!-- Home Page -->
