@@ -62,6 +62,8 @@
     <string name="app_install_files_detected_summary">Il manager ha rilevato che tutti i file necessari per l\'installazione di %1$s sono stati trovati. Vuoi installarli?</string>
     <string name="checking_updates">Verificando gli aggiornamenti…</string>
     <string name="chosen_lang">Lingue: %1$s</string>
+    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="chosen_version">Versione: %1$s</string>
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
     <string name="installing_app">Installazione %1$s</string>
@@ -74,14 +76,14 @@
     <string name="success">Fatto!</string>
     <string name="vanced_installation_preferences">Preferenze d\'Installazione Vanced</string>
     <string name="vanced_installed">Vanced è stato installato con successo. Vuoi avviarlo ora?</string>
+    <string name="version">Versione</string>
     <string name="music_installed">Vanced Music è stato installato con successo! Vuoi eseguirlo ora?</string>
     <string name="please_be_patient">Sei pregato di essere paziente…</string>
     <string name="launch">Avvia</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Scegli le tue lingue preferite per Vanced</string>
-    <string name="install_light_black">Chiaro + nero</string>
-    <string name="install_light_dark">Chiaro + scuro</string>
+    <string name="light_plus_other">Luce + %1$s</string>
     <string name="select_at_least_one_lang">Seleziona almeno una lingua!</string>
     <!-- About Page -->
     <string name="manager_dev">Sviluppatori di Manager</string>
