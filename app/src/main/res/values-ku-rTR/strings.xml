@@ -62,6 +62,8 @@
     <string name="app_install_files_detected_summary">Rêveberê peydabûna hemû ew dosiyên pêwîst ên ji bo sazkirina %1$s tesbît kir. Gelo tu dixwazî saz bikî?</string>
     <string name="checking_updates">Hildem tên kontrolkirin...</string>
     <string name="chosen_lang">Ziman(ên):%1$s</string>
+    <string name="chosen_theme">Rûkar: %1$s</string>
+    <string name="chosen_version">Guherto: %1$s</string>
     <string name="guide">Rêzan</string>
     <string name="hold_on">Rawestîne!</string>
     <string name="installing_app">%1$s tê sazkirin</string>
@@ -74,14 +76,14 @@
     <string name="success">Bi Ser Ket!</string>
     <string name="vanced_installation_preferences">Vebijêrkên sazkirina Vanced\'ê</string>
     <string name="vanced_installed">Vanced biserketî saz bû! Gelo niha vebe?</string>
+    <string name="version">Guherto</string>
     <string name="music_installed">Vanced Mûzîk biserketî saz bû! Gelo niha vebe?</string>
     <string name="please_be_patient">Jkx tebata xwe bînin...</string>
     <string name="launch">Veke</string>
     <string name="welcome">Bi xêr hatî</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Ziman(ên) xwe yën dilxwaz ji bo Vanced\'ê hilbijêre</string>
-    <string name="install_light_black">Ronak + reş</string>
-    <string name="install_light_dark">Ronak + Tarî</string>
+    <string name="light_plus_other">Ronak + %1$s</string>
     <string name="select_at_least_one_lang">Herî kêm zimanekê hilbijêre!</string>
     <!-- About Page -->
     <string name="manager_dev">Pêşvebirên rêveberê</string>
