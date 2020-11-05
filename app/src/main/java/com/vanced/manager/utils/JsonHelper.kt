@@ -9,7 +9,7 @@ import com.github.kittinunf.fuel.httpGet
 
 object JsonHelper {
 
-    var dataMap: HashMap<String, JsonObject> = HashMap()
+    private var dataMap: HashMap<String, JsonObject> = HashMap()
 
     suspend fun getJson(url: String): JsonObject? {
         return try {
