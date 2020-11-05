@@ -62,6 +62,8 @@
     <string name="app_install_files_detected_summary">Byly nalezeny všechny potřebné soubory pro instalaci %1$s. Chcete je nainstalovat?</string>
     <string name="checking_updates">Kontrola aktualizací…</string>
     <string name="chosen_lang">Jazyk: %1$s</string>
+    <string name="chosen_theme">Vzhled: %1$s</string>
+    <string name="chosen_version">Verze: %1$s</string>
     <string name="guide">Návod</string>
     <string name="hold_on">Zastavit!</string>
     <string name="installing_app">Probíhá instalace %1$s</string>
@@ -74,14 +76,14 @@
     <string name="success">Hotovo!</string>
     <string name="vanced_installation_preferences">Předvolby instalace Vanced</string>
     <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji otevřít?</string>
+    <string name="version">Verze</string>
     <string name="music_installed">Aplikace Vanced Music byla úspěšně nainstalována! Chcete ji otevřít?</string>
     <string name="please_be_patient">Chvilku strpení…</string>
     <string name="launch">Otevřít</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
-    <string name="install_light_black">Světlý + černý</string>
-    <string name="install_light_dark">Světlý + tmavý</string>
+    <string name="light_plus_other">Světlý + %1$s</string>
     <string name="select_at_least_one_lang">Vyberte alespoň jeden jazyk!</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojáři aplikace</string>
