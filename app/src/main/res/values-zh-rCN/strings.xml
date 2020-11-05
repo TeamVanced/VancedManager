@@ -62,6 +62,8 @@
     <string name="app_install_files_detected_summary">Manager 检测到 %1$s 所需要的安装文件。您想现在安装吗？</string>
     <string name="checking_updates">正在检查更新…</string>
     <string name="chosen_lang">语言: %1$s</string>
+    <string name="chosen_theme">主题: %1$s</string>
+    <string name="chosen_version">版本: %1$s</string>
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
     <string name="installing_app">正在安装 %1$s</string>
@@ -74,14 +76,14 @@
     <string name="success">成功！</string>
     <string name="vanced_installation_preferences">Vanced 安装首选设定</string>
     <string name="vanced_installed">成功安装 Vanced ，现在打开吗？</string>
+    <string name="version">版本</string>
     <string name="music_installed">成功安装 Vanced 音乐! 现在打开吗？</string>
     <string name="please_be_patient">请耐心等候…</string>
     <string name="launch">打开</string>
     <string name="welcome">欢迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">为 Vanced 选择您的首选语言</string>
-    <string name="install_light_black">浅 + 黑</string>
-    <string name="install_light_dark">浅 + 深</string>
+    <string name="light_plus_other">浅色 + %1$s</string>
     <string name="select_at_least_one_lang">选择至少一种语言！</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 开发人员</string>
