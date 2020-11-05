@@ -29,7 +29,7 @@ import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 object PackageHelper {
-    
+
     private const val apkInstallPath = "/data/adb/Vanced/"
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
@@ -116,7 +116,7 @@ object PackageHelper {
             e.printStackTrace()
         }
     }
-    
+
     fun install(path: String, context: Context) {
         val callbackIntent = Intent(context, AppInstallerService::class.java)
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
@@ -136,7 +136,7 @@ object PackageHelper {
         outputStream.close()
         session.commit(pendingIntent.intentSender)
     }
-    
+
     fun installVanced(context: Context): Int {
         val apkFolderPath = context.getExternalFilesDir("vanced/nonroot")?.path.toString() + "/"
         val nameSizeMap = HashMap<String, Long>()
@@ -238,7 +238,7 @@ object PackageHelper {
             session!!.close()
         }
     }
-    
+
     fun installVancedRoot(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
             Shell.enableVerboseLogging = BuildConfig.DEBUG
@@ -253,11 +253,8 @@ object PackageHelper {
                 val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
                 if (fileInfoList != null) {
-                    var modApk: FileInfo? = null
-                    for (file in fileInfoList) {
-                        if (file.name == "dark.apk" || file.name == "black.apk") {
-                            modApk = file
-                        }
+                    val modApk: FileInfo? = fileInfoList.lastOrNull {
+                        it.name == "dark.apk" || it.name == "black.apk"
                     }
                     if (modApk != null) {
                         if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, context)) {
@@ -280,7 +277,7 @@ object PackageHelper {
         }
 
     }
-    
+
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
         Log.d("AppLog", "installing split apk files:$apkFiles")
@@ -314,8 +311,8 @@ object PackageHelper {
         val installResult = Shell.su("pm install-commit $sessionId").exec()
         if (installResult.isSuccess) {
             return true
-        } else
-            sendFailure(installResult.out, context)
+        }
+        sendFailure(installResult.out, context)
 
         return false
     }
@@ -332,8 +329,9 @@ object PackageHelper {
 
         if (parentFile.exists() && parentFile.canRead()) {
             val listFiles = parentFile.listFiles() ?: return ArrayList()
-            for (file in listFiles)
-                result.add(FileInfo(file.name, file.length(), file))
+            listFiles.mapTo(result) {
+                FileInfo(it.name, it.length(), it)
+            }
             return result
         }
         val longLines = Shell.su("ls -l $splitApkPath").exec().out
@@ -424,9 +422,7 @@ object PackageHelper {
                 }
                 return true
             }
-            else {
-                return fixNoInstall(baseApkFiles, context)
-            }
+            return fixNoInstall(baseApkFiles, context)
         }
         return fixNoInstall(baseApkFiles, context)
     }
@@ -507,10 +503,8 @@ object PackageHelper {
                 return false
             }
         }
-        else {
-            sendFailure(listOf("IFile_Missing").toMutableList(), context)
-            return false
-        }
+        sendFailure(listOf("IFile_Missing").toMutableList(), context)
+        return false
     }
 
 
@@ -533,14 +527,12 @@ object PackageHelper {
             if(execRes.isSuccess) {
                 val result = execRes.out
                 var version = 0
-                for(line in result) {
-                    val versionCode = line.substringAfter("=")
-                    val versionCodeFiltered = versionCode.substringBefore(" ")
-                    if(version < Integer.valueOf(versionCodeFiltered))
-                    {
-                        version = Integer.valueOf(versionCodeFiltered)
-                    }
-                }
+                result
+                    .asSequence()
+                    .map { it.substringAfter("=") }
+                    .map { it.substringBefore(" ") }
+                    .filter { version < Integer.valueOf(it) }
+                    .forEach { version = Integer.valueOf(it) }
                 return version
             }
         }

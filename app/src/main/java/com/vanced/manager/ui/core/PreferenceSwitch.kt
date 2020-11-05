@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.CompoundButton
 import android.widget.FrameLayout
+import androidx.core.content.edit
 import androidx.databinding.BindingAdapter
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
@@ -33,7 +34,7 @@ class PreferenceSwitch @JvmOverloads constructor(
             preference_switch.isChecked = !preference_switch.isChecked
         }
         preference_switch.setOnCheckedChangeListener { buttonView, isChecked ->
-            prefs.edit().putBoolean(prefKey, isChecked).apply()
+            prefs.edit { putBoolean(prefKey, isChecked) }
             mListener?.onChecked(buttonView, isChecked)
         }
 

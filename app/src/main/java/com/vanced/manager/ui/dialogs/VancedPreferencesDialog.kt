@@ -57,6 +57,7 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
             dismiss()
             AppVersionSelectorDialog(vancedVersionsConv, "vanced").show(requireActivity())
         }
+        binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
 
         binding.openLanguageSelector.setOnClickListener {
             dismiss()

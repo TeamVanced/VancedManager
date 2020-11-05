@@ -178,7 +178,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        if (InternetTools.isUpdateAvailable(this)) {
+        if (InternetTools.isUpdateAvailable()) {
             ManagerUpdateDialog(false).show(supportFragmentManager, "UpdateCheck")
         }
     }

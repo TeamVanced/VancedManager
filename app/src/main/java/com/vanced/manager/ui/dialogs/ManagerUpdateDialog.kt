@@ -69,7 +69,7 @@ class ManagerUpdateDialog(
     }
 
     private fun checkUpdates() {
-        if (isUpdateAvailable(requireActivity())) {
+        if (isUpdateAvailable()) {
             binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
             downloadManager(requireActivity())
         } else

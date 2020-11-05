@@ -1,13 +1,12 @@
 package com.vanced.manager.utils
 
-import android.text.TextUtils
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
 
 object MiuiHelper {
 
-    fun isMiui(): Boolean = !TextUtils.isEmpty(getSystemProps("ro.miui.ui.version.name"))
+    fun isMiui(): Boolean = getSystemProps("ro.miui.ui.version.name")!!.isNotEmpty()
 
     private fun getSystemProps(propname: String): String? {
         val line: String

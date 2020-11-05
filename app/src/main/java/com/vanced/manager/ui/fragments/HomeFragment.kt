@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.view.*
+import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -67,7 +68,7 @@ open class HomeFragment : Fragment() {
                 .withShadow(false)
                 .corner(25)
                 .onHide {
-                    prefs.edit().putBoolean("show_changelog_tooltip", false).apply()
+                    prefs.edit { putBoolean("show_changelog_tooltip", false) }
                 }
                 .text(requireActivity().getString(R.string.app_changelog_tooltip))
 

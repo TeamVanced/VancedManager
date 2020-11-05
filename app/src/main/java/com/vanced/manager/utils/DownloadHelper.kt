@@ -8,6 +8,8 @@ import android.os.Build
 import android.util.Log
 import android.widget.Toast
 import androidx.core.content.FileProvider
+import androidx.core.content.getSystemService
+import androidx.core.net.toUri
 import androidx.databinding.ObservableField
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
@@ -22,14 +24,14 @@ import java.io.File
 object DownloadHelper {
 
     fun download(url: String, dir: String, child: String, context: Context): Long {
-        val request = DownloadManager.Request(Uri.parse(url)).apply {
+        val request = DownloadManager.Request(url.toUri()).apply {
             setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
             setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
             setTitle(context.getString(R.string.downloading_file, child))
             setDestinationInExternalFilesDir(context, dir, child)
         }
 
-        val downloadManager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+        val downloadManager = context.getSystemService<DownloadManager>()!!
         return downloadManager.enqueue(request)
     }
 
