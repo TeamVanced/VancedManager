@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.view.*
+import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -43,7 +44,7 @@ open class HomeFragment : Fragment() {
 //                Toast.makeText(requireActivity(), getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
 //            }
 //            val variant = if (tab.position == 1) "root" else "nonroot"
-//            getDefaultSharedPreferences(requireActivity()).edit().putString("vanced_variant", variant).apply()
+//            getDefaultSharedPreferences(requireActivity()).edit { putString("vanced_variant", variant) }
 //        }
 //
 //        override fun onTabUnselected(tab: TabLayout.Tab) {
@@ -86,7 +87,7 @@ open class HomeFragment : Fragment() {
                 .withShadow(false)
                 .corner(25)
                 .onHide {
-                    prefs.edit().putBoolean("show_changelog_tooltip", false).apply()
+                    prefs.edit { putBoolean("show_changelog_tooltip", false) }
                 }
                 .text(requireActivity().getString(R.string.app_changelog_tooltip))
 
@@ -159,7 +160,7 @@ open class HomeFragment : Fragment() {
 //        with(binding) {
 //            if (mainTablayout.visibility != View.GONE) {
 //                mainTablayout.startAnimation(tabHide)
-//                mainTablayout.visibility = View.GONE
+//                mainTablayout.isVisible = false
 //            }
 //            mainViewpager.isUserInputEnabled = false
 //        }
@@ -169,7 +170,7 @@ open class HomeFragment : Fragment() {
 //        val tabShow = AnimationUtils.loadAnimation(requireActivity(), R.anim.tablayout_enter)
 //        with(binding) {
 //            if (mainTablayout.visibility != View.VISIBLE) {
-//                mainTablayout.visibility = View.VISIBLE
+//                mainTablayout.isVisible = true
 //                mainTablayout.startAnimation(tabShow)
 //            }
 //            mainViewpager.isUserInputEnabled = true

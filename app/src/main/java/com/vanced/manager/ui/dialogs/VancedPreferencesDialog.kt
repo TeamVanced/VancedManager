@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
+import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
@@ -66,7 +67,7 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
         binding.themeSpinner.onItemSelectedListener = object : OnItemSelectedListener {
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
-                prefs.edit().putString("theme", adapter[position].value).apply()
+                prefs.edit { putString("theme", adapter[position].value) }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

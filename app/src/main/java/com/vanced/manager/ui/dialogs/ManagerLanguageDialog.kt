@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -38,7 +39,7 @@ class ManagerLanguageDialog : BottomSheetDialogFragment() {
         binding.languageSave.setOnClickListener {
             val newPref = binding.languageRadiogroup.getCheckedButtonTag()
             if (language != newPref) {
-                prefs.edit().putString("manager_lang", newPref).apply()
+                prefs.edit { putString("manager_lang", newPref) }
                 dismiss()
                 requireActivity().recreate()
             } else {

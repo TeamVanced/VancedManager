@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
+import androidx.core.content.edit
 import androidx.fragment.app.DialogFragment
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.button.MaterialButton
@@ -45,7 +46,7 @@ class URLChangeDialog : DialogFragment() {
     }
 
     private fun saveUrl(url: String) {
-        getDefaultSharedPreferences(requireActivity()).edit().putString("install_url", url).apply()
+        getDefaultSharedPreferences(requireActivity()).edit { putString("install_url", url) }
         requireActivity().fetchData()
         dismiss()
     }

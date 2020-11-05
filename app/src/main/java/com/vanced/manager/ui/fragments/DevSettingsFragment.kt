@@ -1,12 +1,13 @@
 package com.vanced.manager.ui.fragments
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.edit
+import androidx.core.net.toUri
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
@@ -39,8 +40,10 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
                 .create()
                 .show()
 
-            prefs.edit().putBoolean("firstLaunch", true).apply()
-            prefs.edit().putBoolean("show_changelog_tooltip", true).apply()
+            prefs.edit {
+                putBoolean("firstLaunch", true)
+                putBoolean("show_changelog_tooltip", true)
+            }
             true
 
         }
@@ -54,7 +57,7 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
             if (!Settings.canDrawOverlays(requireActivity())) {
                 val intent = Intent(
                     Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                    Uri.parse("package:" + requireActivity().packageName)
+                    ("package:" + requireActivity().packageName).toUri()
                 )
                 startActivityForResult(intent, 69)
                 return@setOnPreferenceClickListener true
