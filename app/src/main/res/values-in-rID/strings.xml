@@ -8,17 +8,17 @@
     <string name="select_apps">Pilih Aplikasi Anda</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
-    <string name="title_home">Pengelola</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Pengaturan</string>
-    <string name="update_manager">Perbarui Manajer</string>
+    <string name="update_manager">Perbarui Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
-    <string name="are_you_rooted">Apakah Anda Berakar?</string>
+    <string name="are_you_rooted">Apakah Anda Mempunyai Root?</string>
     <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
     <string name="grant_root">Berikan Izin Root</string>
     <!-- Home Page -->
     <string name="about_app">Tentang %1$s</string>
-    <string name="app_changelog_tooltip">Ketuk kartu untuk melihat log perubahan.</string>
+    <string name="app_changelog_tooltip">Ketuk kartu untuk melihat catatan perubahan.</string>
     <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
@@ -30,7 +30,7 @@
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
     <string name="useful_links">Tautan Berguna</string>
-    <string name="support_us">Dukung KAMI!</string>
+    <string name="support_us">Dukung Kami!</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
     <string name="accent_blue">Biru</string>
@@ -39,7 +39,7 @@
     <string name="accent_red">Merah</string>
     <string name="accent_yellow">Kuning</string>
     <string name="category_appearance">Penampilan</string>
-    <string name="category_behaviour">Tingkah laku</string>
+    <string name="category_behaviour">Perilaku</string>
     <string name="clear_files">Hapus file yang diunduh</string>
     <string name="cleared_files">Berhasil menghapus file</string>
     <string name="firebase_title">Analisis Firebase</string>
@@ -52,19 +52,19 @@
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
     <string name="update_url">Perbarui URL Channel</string>
-    <string name="push_notifications">%1$s Notifikasi Push</string>
+    <string name="push_notifications">Notifikasi Push %1$s</string>
     <string name="push_notifications_summary">Terima notifikasi push saat pembaruan untuk %1$s dirilis</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
-    <string name="update_not_found">Tidak ada pembaruan baru</string>
+    <string name="update_not_found">Tidak ada pembaruan</string>
     <string name="variant">Varian</string>
     <!-- Dialogs -->
     <string name="app_install_files_detected">%1$s file instalasi terdeteksi!</string>
-    <string name="app_install_files_detected_summary">Manajer mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah Anda ingin menginstal?</string>
+    <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasang?</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
-    <string name="installing_app">Menginstal %1$s</string>
+    <string name="installing_app">Memasang %1$s</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapus itu dengan menghapus modul magisk/gunakan pencopot Vanced TWRP.</string>
     <string name="miui_one_title">MIUI terdeteksi!</string>
     <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
