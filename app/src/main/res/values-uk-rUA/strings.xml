@@ -62,6 +62,8 @@
     <string name="app_install_files_detected_summary">Менеджер виявив, що були знайдені всі необхідні файли для встановлення %1$s. Бажаєте інсталювати?</string>
     <string name="checking_updates">Перевірка оновлень…</string>
     <string name="chosen_lang">Мова(и): %1$s</string>
+    <string name="chosen_theme">Тема: %1$s</string>
+    <string name="chosen_version">Версія: %1$s</string>
     <string name="guide">Гайд</string>
     <string name="hold_on">Зупинись!</string>
     <string name="installing_app">Інсталяція %1$s</string>
@@ -74,14 +76,14 @@
     <string name="success">Успіх!</string>
     <string name="vanced_installation_preferences">Вибрані значення встановлення</string>
     <string name="vanced_installed">Vanced був успішно встановлений! Відкрити зараз?</string>
+    <string name="version">Версія</string>
     <string name="music_installed">Vanced Music успішно встановлений! Відкрити зараз?</string>
     <string name="please_be_patient">Будь ласка, зачекайте…</string>
     <string name="launch">Відкрити</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
-    <string name="install_light_black">Світла + Чорна</string>
-    <string name="install_light_dark">Світла + Темна</string>
+    <string name="light_plus_other">Світла + %1$s</string>
     <string name="select_at_least_one_lang">Оберіть хоча б одну мову!</string>
     <!-- About Page -->
     <string name="manager_dev">Розробники інсталятора</string>
