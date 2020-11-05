@@ -62,6 +62,8 @@
     <string name="app_install_files_detected_summary">Manager heeft alle nodige bestanden gedetecteerd voor het installeren van %1$s. Wil je installeren?</string>
     <string name="checking_updates">Controleren op updates…</string>
     <string name="chosen_lang">Talen: %1$s</string>
+    <string name="chosen_theme">Thema: %1$s</string>
+    <string name="chosen_version">Versie: %1$s</string>
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>
     <string name="installing_app">%1$s installeren</string>
@@ -74,14 +76,14 @@
     <string name="success">Gelukt!</string>
     <string name="vanced_installation_preferences">Vanced installatie voorkeuren</string>
     <string name="vanced_installed">Vanced is succesvol geïnstalleerd! Nu starten?</string>
+    <string name="version">Versie</string>
     <string name="music_installed">Vanced Music is succesvol geïnstalleerd! Nu starten?</string>
     <string name="please_be_patient">Even geduld…</string>
     <string name="launch">Openen</string>
     <string name="welcome">Welkom</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Kies je gewenste taal/talen voor Vanced</string>
-    <string name="install_light_black">Licht + zwart</string>
-    <string name="install_light_dark">Licht + donker</string>
+    <string name="light_plus_other">Licht + %1$s</string>
     <string name="select_at_least_one_lang">Selecteer minstens één taal!</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Ontwikkelaars</string>
