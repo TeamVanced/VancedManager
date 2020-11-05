@@ -61,8 +61,6 @@
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>
-    <string name="install_light_black">Claro + Negro</string>
-    <string name="install_light_dark">Claro + Oscuro</string>
     <!-- About Page -->
     <string name="manager_dev">Desarrolladores del Manager</string>
     <string name="sources">Fuentes</string>

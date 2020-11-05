@@ -1,6 +1,6 @@
 package com.vanced.manager.model
 
-data class VancedPrefModel(
-    val name: String,
+data class AppVersionsModel(
+    val version: String,
     val value: String
 )

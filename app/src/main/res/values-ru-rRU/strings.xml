@@ -61,8 +61,6 @@
     <string name="welcome">Добро пожаловать</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Выберите предпочитаемый язык для Vanced</string>
-    <string name="install_light_black">Светлая + Чёрная</string>
-    <string name="install_light_dark">Светлая + Тёмная</string>
     <!-- About Page -->
     <string name="manager_dev">Разработчики Менеджера</string>
     <string name="sources">Исходники</string>

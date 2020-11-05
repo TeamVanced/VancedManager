@@ -62,8 +62,6 @@
 اهلا</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
-    <string name="install_light_black">ابيض + اسود</string>
-    <string name="install_light_dark">ابيض + داكن</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
     <string name="sources">مصادر</string>

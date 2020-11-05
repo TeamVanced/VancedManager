@@ -61,8 +61,6 @@
     <string name="welcome">Benvingut</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Trieu els vostres idiomes preferits per a Vanced</string>
-    <string name="install_light_black">Clar + Negre</string>
-    <string name="install_light_dark">Clar + Fosc</string>
     <!-- About Page -->
     <string name="manager_dev">Gestor de desenvolupadors</string>
     <string name="sources">Fonts</string>

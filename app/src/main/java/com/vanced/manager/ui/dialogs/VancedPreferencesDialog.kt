@@ -5,14 +5,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.AdapterView.OnItemSelectedListener
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
-import com.vanced.manager.adapter.VancedPrefArray
 import com.vanced.manager.databinding.DialogInstallationPreferencesBinding
-import com.vanced.manager.model.VancedPrefModel
+import com.vanced.manager.model.AppVersionsModel
+import com.vanced.manager.utils.Extensions.convertToAppTheme
+import com.vanced.manager.utils.Extensions.convertToAppVersions
+import com.vanced.manager.utils.Extensions.show
+import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import java.util.*
 
@@ -33,7 +34,7 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val prefs = requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val langPrefs = prefs.getString("lang", getDefaultVancedLanguages(requireActivity()))?.split(", ")?.toTypedArray()
+        val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toTypedArray()
         val showLang = mutableListOf<String>()
         if (langPrefs != null) {
             for (lang in langPrefs) {
@@ -41,37 +42,25 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
                 showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
         }
+        val vancedVersionsConv = vancedVersions.get()?.value?.convertToAppVersions() ?: arrayOf(AppVersionsModel("", ""))
 
-        val darkTheme = VancedPrefModel(
-                requireActivity().getString(R.string.install_light_dark),
-                "dark"
-        )
+        binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
+        binding.chosenVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("vanced_version", vancedVersionsConv[0].value))
+        binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
 
-        val blackTheme = VancedPrefModel(
-                requireActivity().getString(R.string.install_light_black),
-                "black"
-        )
+        binding.openThemeSelector.setOnClickListener {
+            dismiss()
+            VancedThemeDialog().show(requireActivity())
+        }
 
-        val adapter = arrayOf(darkTheme, blackTheme)
-        binding.themeSpinner.adapter = VancedPrefArray(requireActivity(), android.R.layout.simple_spinner_dropdown_item, adapter)
-        binding.themeSpinner.setSelection(if (prefs.getString("theme", "dark") == "dark") 0 else 1)
+        binding.openVersionSelector.setOnClickListener {
+            dismiss()
+            AppVersionSelectorDialog(vancedVersionsConv, "vanced").show(requireActivity())
+        }
 
         binding.openLanguageSelector.setOnClickListener {
             dismiss()
-            VancedLanguageSelectionDialog().show(requireActivity().supportFragmentManager, "")
-        }
-
-        binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
-
-        binding.themeSpinner.onItemSelectedListener = object : OnItemSelectedListener {
-
-            override fun onItemSelected(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
-                prefs.edit().putString("theme", adapter[position].value).apply()
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                return
-            }
+            VancedLanguageSelectionDialog().show(requireActivity())
         }
 
         binding.chosenPrefsInstall.setOnClickListener {

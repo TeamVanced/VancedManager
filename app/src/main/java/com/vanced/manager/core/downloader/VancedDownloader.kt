@@ -10,12 +10,14 @@ import com.downloader.PRDownloader
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.logEvent
 import com.vanced.manager.R
-import com.vanced.manager.core.App
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.Extensions.convertToAppVersions
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.vanced
+import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import com.vanced.manager.utils.PackageHelper.getPkgVerCode
 import com.vanced.manager.utils.PackageHelper.installVanced
@@ -53,16 +55,15 @@ object VancedDownloader {
     private var downloadPath: String? = null
 
     fun downloadVanced(context: Context) {
-        val app = context.applicationContext as App
         defPrefs = getDefaultSharedPreferences(context)
         installUrl = defPrefs.getString("install_url", baseUrl)
         prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         variant = defPrefs.getString("vanced_variant", "nonroot")
         downloadPath = context.getExternalFilesDir("vanced/$variant")?.path
         File(downloadPath.toString()).deleteRecursively()
-        lang = prefs.getString("lang", getDefaultVancedLanguages(app))?.split(", ")?.toMutableList()
+        lang = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toMutableList()
         theme = prefs.getString("theme", "dark")
-        vancedVersion = app.vanced.get()?.string("version")
+        vancedVersion = defPrefs.getString("vanced_version", vancedVersions.get()?.value?.convertToAppVersions()?.get(0)?.value)
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         //newInstaller = defPrefs.getBoolean("new_installer", false)
@@ -74,7 +75,7 @@ object VancedDownloader {
             }
         count = 0
 
-        vancedVersionCode = app.vanced.get()?.int("versionCode") ?: 0
+        vancedVersionCode = vanced.get()?.int("versionCode") ?: 0
         downloadSplits(context)
     }
 

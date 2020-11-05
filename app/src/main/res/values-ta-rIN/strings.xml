@@ -61,8 +61,6 @@
     <string name="welcome">வரவேற்பு</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">வேன்ஸ்டுக்காக உங்களுக்கு விருப்பமான மொழியைத் தேர்வுசெய்க</string>
-    <string name="install_light_black">ஒளி + கருப்பு</string>
-    <string name="install_light_dark">ஒளி + கருப்பு</string>
     <!-- About Page -->
     <string name="manager_dev">மேலாளர் டெவலப்பர்கள்</string>
     <string name="sources">மூலம்</string>

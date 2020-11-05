@@ -61,8 +61,6 @@
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">ভ্যান্সডের জন্য আপনার পছন্দসই ভাষা(গুলি) চয়ন করুন</string>
-    <string name="install_light_black">হালকা + কালো</string>
-    <string name="install_light_dark">হালকা + অন্ধকার</string>
     <!-- About Page -->
     <string name="manager_dev">ম্যানেজার বিকাশকারীরা</string>
     <string name="sources">উৎসগুলি</string>

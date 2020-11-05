@@ -61,8 +61,6 @@
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
-    <string name="install_light_black">Vaalea + Musta</string>
-    <string name="install_light_dark">Vaalea + Tumma</string>
     <!-- About Page -->
     <string name="manager_dev">Kehittäjäpäällikkö</string>
     <string name="sources">Lähdekoodi</string>

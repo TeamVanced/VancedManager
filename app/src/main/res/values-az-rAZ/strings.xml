@@ -58,8 +58,6 @@
     <string name="welcome">Xoş gəlmisiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced üçün istədiyiniz dili seçin</string>
-    <string name="install_light_black">İşıqlı + Qara</string>
-    <string name="install_light_dark">İşıqlı + Qaranlıq</string>
     <!-- About Page -->
     <string name="manager_dev">Menecer Təkmilcilər</string>
     <string name="sources">Mənbələr</string>

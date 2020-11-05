@@ -61,8 +61,6 @@
     <string name="welcome">Välkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Välj önskade språk för Vanced</string>
-    <string name="install_light_black">Ljus + svart</string>
-    <string name="install_light_dark">Ljus + svart</string>
     <!-- About Page -->
     <string name="manager_dev">Hanteraren Dev</string>
     <string name="sources">Källor</string>

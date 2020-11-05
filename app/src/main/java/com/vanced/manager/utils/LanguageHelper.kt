@@ -2,12 +2,16 @@ package com.vanced.manager.utils
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.res.Resources
+import android.net.Uri
 import android.os.Build
 import android.os.LocaleList
+import android.provider.Settings
 import androidx.annotation.RequiresApi
+import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
-import com.vanced.manager.core.App
+import com.vanced.manager.utils.InternetTools.vanced
 import java.util.*
 
 object LanguageHelper {
@@ -30,29 +34,16 @@ object LanguageHelper {
 
     }
 
-    fun getDefaultVancedLanguages(activity: Activity): String {
-        val serverLangs = (activity.applicationContext as App).vanced.get()!!.array<String>("langs")
+    @Suppress("DEPRECATION")
+    fun getDefaultVancedLanguages(): String {
+        val serverLangs = vanced.get()?.array("langs") ?: mutableListOf("")
         val sysLocales = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) Resources.getSystem().configuration.locales.toLangTags() else arrayOf(Resources.getSystem().configuration.locale.language)
         val finalLangs = mutableListOf<String>()
         sysLocales.forEach { sysLocale ->
-            if (sysLocale == "en")
-                finalLangs.add(sysLocale)
-            else if (serverLangs != null && serverLangs.contains(sysLocale))
-                finalLangs.add(sysLocale)
-        }
-
-        return finalLangs.distinct().sorted().joinToString(", ")
-    }
-
-    fun getDefaultVancedLanguages(app: App): String {
-        val serverLangs = app.vanced.get()!!.array<String>("langs")
-        val sysLocales = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) Resources.getSystem().configuration.locales.toLangTags() else arrayOf(Resources.getSystem().configuration.locale.language)
-        val finalLangs = mutableListOf<String>()
-        sysLocales.forEach { sysLocale ->
-            if (sysLocale == "en")
-                finalLangs.add(sysLocale)
-            else if (serverLangs != null && serverLangs.contains(sysLocale))
-                finalLangs.add(sysLocale)
+            when {
+                sysLocale == "en" -> finalLangs.add(sysLocale)
+                serverLangs.contains(sysLocale) -> finalLangs.add(sysLocale)
+            }
         }
 
         return finalLangs.distinct().sorted().joinToString(", ")
@@ -65,6 +56,28 @@ object LanguageHelper {
             langTags[i] = langTags[i].substring(0, 2)
         }
         return langTags
+    }
+
+    fun Activity.authCrowdin() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                val intent = Intent(
+                        Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:$packageName")
+                )
+                startActivityForResult(intent, 69)
+                return
+            }
+            Crowdin.authorize(this)
+        }
+    }
+
+    fun Activity.onActivityResult(requestCode: Int) {
+        if (requestCode == 69 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (Settings.canDrawOverlays(this)) {
+                Crowdin.authorize(this)
+            }
+        }
     }
 
 }

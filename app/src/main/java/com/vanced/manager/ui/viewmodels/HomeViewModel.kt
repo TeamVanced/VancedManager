@@ -3,7 +3,6 @@ package com.vanced.manager.ui.viewmodels
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -17,7 +16,6 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
-import com.vanced.manager.core.App
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.dialogs.InstallationFilesDetectedDialog
@@ -33,6 +31,9 @@ import com.vanced.manager.utils.Extensions.fetchData
 import com.vanced.manager.utils.Extensions.setRefreshing
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.InternetTools.loadJson
+import com.vanced.manager.utils.InternetTools.musicVersions
+import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.PackageHelper.apkExist
 import com.vanced.manager.utils.PackageHelper.musicApkExists
 import com.vanced.manager.utils.PackageHelper.uninstallApk
@@ -40,8 +41,6 @@ import com.vanced.manager.utils.PackageHelper.uninstallRootApk
 import com.vanced.manager.utils.PackageHelper.vancedInstallFilesExist
 
 open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
-    
-    private val app = activity.application as App
 
     private val prefs = getDefaultSharedPreferences(activity)
 
@@ -58,7 +57,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     fun fetchData() {
         activity.setRefreshing(true)
-        app.loadJson()
+        loadJson(activity)
         Crowdin.forceUpdate(activity)
         activity.setRefreshing(false)
     }
@@ -124,7 +123,6 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
                 }
             }
             activity.getString(R.string.microg) -> {
-                Log.d("test", apkExist(activity, "microg.apk").toString())
                 if (apkExist(activity, "microg.apk")) InstallationFilesDetectedDialog(app).show(activity) else AppDownloadDialog(app).show(activity)
             }
         }
@@ -135,12 +133,12 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     init {
         activity.setRefreshing(true)
-        vanced.set(DataModel(app.vanced, activity, vancedPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
-        vancedRoot.set(DataModel(app.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
-        music.set(DataModel(app.music, activity, musicPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
-        musicRoot.set(DataModel(app.music, activity, musicRootPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
-        microg.set(DataModel(app.microg, activity, microgPkg, activity.getString(R.string.microg), ContextCompat.getDrawable(activity, R.drawable.ic_microg)))
-        manager.set(DataModel(app.manager, activity, managerPkg, activity.getString(R.string.app_name), ContextCompat.getDrawable(activity, R.mipmap.ic_launcher)))
+        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced), vancedVersions))
+        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced), vancedVersions))
+        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music), musicVersions))
+        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music), musicVersions))
+        microg.set(DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), ContextCompat.getDrawable(activity, R.drawable.ic_microg)))
+        manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), ContextCompat.getDrawable(activity, R.mipmap.ic_launcher)))
         activity.setRefreshing(false)
     }
 

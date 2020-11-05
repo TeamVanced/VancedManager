@@ -61,8 +61,6 @@
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced nyelvének kiválasztása</string>
-    <string name="install_light_black">Világos + Sötét</string>
-    <string name="install_light_dark">Világos + Fekete</string>
     <!-- About Page -->
     <string name="manager_dev">Fejlesztői Menedzser</string>
     <string name="sources">Források</string>

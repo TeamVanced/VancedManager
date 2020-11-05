@@ -61,8 +61,6 @@
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Alegeți limba preferată pentru Vanced</string>
-    <string name="install_light_black">Luminos + Negru</string>
-    <string name="install_light_dark">Luminos + Întunecat</string>
     <!-- About Page -->
     <string name="manager_dev">Dezvoltatori</string>
     <string name="sources">Surse</string>

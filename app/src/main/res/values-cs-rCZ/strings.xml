@@ -61,8 +61,6 @@
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
-    <string name="install_light_black">Světlý + černý</string>
-    <string name="install_light_dark">Světlý + tmavý</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojáři aplikace</string>
     <string name="sources">Zdrojové kódy</string>

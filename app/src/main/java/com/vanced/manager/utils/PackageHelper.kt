@@ -11,13 +11,13 @@ import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
-import com.vanced.manager.core.App
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
+import com.vanced.manager.utils.InternetTools.vanced
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -249,8 +249,7 @@ object PackageHelper {
             )
 
             Shell.getShell {
-                val application = context.applicationContext as App
-                val vancedVersionCode = application.vanced.get()?.int("versionCode")
+                val vancedVersionCode = vanced.get()?.int("versionCode")
                 val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
                 if (fileInfoList != null) {

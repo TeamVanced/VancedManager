@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="vanced_themes">
-        <item>@string/install_light_dark</item>
-        <item>@string/install_light_black</item>
-    </string-array>
-
 </resources>

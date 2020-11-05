@@ -15,7 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
-import com.vanced.manager.core.App
+import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -37,8 +37,7 @@ class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
     @ExperimentalStdlibApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val app = activity?.application as App
-        langs = app.vanced.get()?.array<String>("langs")?.value ?: mutableListOf("null")
+        langs = vanced.get()?.array<String>("langs")?.value ?: mutableListOf("null")
         loadBoxes(view.findViewById(R.id.lang_button_ll))
         view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
             val chosenLangs = mutableListOf<String>()
@@ -62,7 +61,7 @@ class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
     @ExperimentalStdlibApi
     private fun loadBoxes(ll: LinearLayout) {
         CoroutineScope(Dispatchers.Main).launch {
-            val langPrefs = prefs.getString("lang", getDefaultVancedLanguages(requireActivity()))
+            val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())
             if (this@VancedLanguageSelectionDialog::langs.isInitialized) {
                 if (!langs.contains("null")) {
                     langs.forEach { lang ->

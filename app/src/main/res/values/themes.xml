@@ -3,7 +3,7 @@
 
     <!-- LIGHT -->
 
-    <style name="LightTheme.Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="LightTheme_Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">#2e73ff</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -40,7 +40,7 @@
 
     </style>
 
-    <style name="LightTheme.Red" parent="LightTheme.Blue">
+    <style name="LightTheme_Red" parent="LightTheme_Blue">
 
         <item name="colorPrimary">#D71414</item>
         <item name="colorPrimaryVariant">#B92C2C</item>
@@ -49,7 +49,7 @@
 
     </style>
 
-    <style name="LightTheme.Green" parent="LightTheme.Blue">
+    <style name="LightTheme_Green" parent="LightTheme_Blue">
 
         <item name="colorPrimary">#3ED714</item>
         <item name="colorPrimaryVariant">#2CB943</item>
@@ -58,7 +58,7 @@
 
     </style>
 
-    <style name="LightTheme.Yellow" parent="LightTheme.Blue">
+    <style name="LightTheme_Yellow" parent="LightTheme_Blue">
 
         <item name="colorPrimary">#ffd500</item>
         <item name="colorPrimaryVariant">#A6FFD500</item>
@@ -67,7 +67,7 @@
 
     </style>
 
-    <style name="LightTheme.Purple" parent="LightTheme.Blue">
+    <style name="LightTheme_Purple" parent="LightTheme_Blue">
 
         <item name="colorPrimary">#6D49B7</item>
         <item name="colorPrimaryVariant">#563C8D</item>
@@ -78,7 +78,7 @@
 
     <!-- DARK -->
 
-    <style name="DarkTheme.Blue" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="DarkTheme_Blue" parent="Theme.MaterialComponents.NoActionBar">
 
         <item name="colorPrimary">#2e73ff</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -116,7 +116,7 @@
 
     </style>
 
-    <style name="DarkTheme.Red" parent="DarkTheme.Blue">
+    <style name="DarkTheme_Red" parent="DarkTheme_Blue">
 
         <item name="colorPrimary">#D71414</item>
         <item name="colorPrimaryVariant">#B92C2C</item>
@@ -125,7 +125,7 @@
 
     </style>
 
-    <style name="DarkTheme.Green" parent="DarkTheme.Blue">
+    <style name="DarkTheme_Green" parent="DarkTheme_Blue">
 
         <item name="colorPrimary">#3ED714</item>
         <item name="colorPrimaryVariant">#2CB943</item>
@@ -134,7 +134,7 @@
 
     </style>
 
-    <style name="DarkTheme.Yellow" parent="DarkTheme.Blue">
+    <style name="DarkTheme_Yellow" parent="DarkTheme_Blue">
 
         <item name="colorPrimary">#ffd500</item>
         <item name="colorPrimaryVariant">#A6FFD500</item>
@@ -143,7 +143,7 @@
 
     </style>
 
-    <style name="DarkTheme.Purple" parent="DarkTheme.Blue">
+    <style name="DarkTheme_Purple" parent="DarkTheme_Blue">
 
         <item name="colorPrimary">#6D49B7</item>
         <item name="colorPrimaryVariant">#563C8D</item>

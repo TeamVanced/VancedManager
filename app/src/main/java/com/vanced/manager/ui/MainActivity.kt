@@ -17,6 +17,7 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.firebase.messaging.FirebaseMessaging
+import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
@@ -27,6 +28,8 @@ import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.LanguageContextWrapper
+import com.vanced.manager.utils.LanguageHelper.authCrowdin
+import com.vanced.manager.utils.LanguageHelper.onActivityResult
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 
@@ -48,8 +51,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setFinalTheme(this)
+        setFinalTheme()
         super.onCreate(savedInstanceState)
+        if (ENABLE_CROWDIN_AUTH)
+            authCrowdin()
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
@@ -80,13 +85,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        setFinalTheme(this)
+        setFinalTheme()
         super.onResume()
         Crowdin.registerDataLoadingObserver(loadingObserver)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         when (item.itemId) {
             android.R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
@@ -115,6 +119,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun attachBaseContext(newBase: Context) {
         super.attachBaseContext(Crowdin.wrapContext(LanguageContextWrapper.wrap(newBase)))
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        onActivityResult(requestCode)
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

@@ -61,8 +61,6 @@
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced で使用する言語を選択</string>
-    <string name="install_light_black">ライト + ブラック</string>
-    <string name="install_light_dark">ライト + ダーク</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開発</string>
     <string name="sources">ソースコード</string>

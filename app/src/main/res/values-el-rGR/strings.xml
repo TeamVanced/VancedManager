@@ -61,8 +61,6 @@
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Επιλέξτε την(/ις) γλώσσα(/ες) που επιθυμείτε για το Vanced</string>
-    <string name="install_light_black">Ανοιχτόχρωμο + Απόλυτο μαύρο</string>
-    <string name="install_light_dark">Ανοιχτόχρωμο + Σκούροχρωμο</string>
     <!-- About Page -->
     <string name="manager_dev">Προγραμματιστές Διαχειριστή Vanced</string>
     <string name="sources">Πηγές</string>

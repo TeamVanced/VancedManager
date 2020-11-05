@@ -16,6 +16,7 @@ import com.vanced.manager.R
 import com.vanced.manager.ui.WelcomeActivity
 import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
 import com.vanced.manager.ui.dialogs.URLChangeDialog
+import com.vanced.manager.utils.LanguageHelper.authCrowdin
 
 class DevSettingsFragment: PreferenceFragmentCompat() {
 
@@ -45,22 +46,13 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
 
         }
 
+        findPreference<Preference>("crowdin_auth")?.isVisible = !Crowdin.isAuthorized()
         findPreference<SwitchPreferenceCompat>("crowdin_upload_screenshot")?.isVisible = Crowdin.isAuthorized()
         findPreference<SwitchPreferenceCompat>("crowdin_real_time")?.isVisible = Crowdin.isAuthorized()
 
         findPreference<Preference>("crowdin_auth")?.setOnPreferenceClickListener {
 
-            @RequiresApi(Build.VERSION_CODES.M)
-            if (!Settings.canDrawOverlays(requireActivity())) {
-                val intent = Intent(
-                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                    Uri.parse("package:" + requireActivity().packageName)
-                )
-                startActivityForResult(intent, 69)
-                return@setOnPreferenceClickListener true
-            }
-
-            Crowdin.authorize(requireActivity())
+            requireActivity().authCrowdin()
             true
         }
 
@@ -89,16 +81,6 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
             true
         }
 
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 69) {
-            @RequiresApi(23)
-            if (Settings.canDrawOverlays(requireActivity())) {
-                Crowdin.authorize(requireActivity())
-            }
-        }
     }
 
 }

@@ -19,7 +19,7 @@ class AppListAdapter(
 ) : RecyclerView.Adapter<AppListAdapter.ListViewHolder>() {
 
     val apps = mutableListOf<String>()
-    val dataModels = mutableListOf<DataModel?>()
+    private val dataModels = mutableListOf<DataModel?>()
     private val rootDataModels = mutableListOf<DataModel?>()
     private val prefs = getDefaultSharedPreferences(context)
     private var itemCount = 0

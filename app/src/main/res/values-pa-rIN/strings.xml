@@ -61,8 +61,6 @@
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ (ਏ) ਚੁਣੋ</string>
-    <string name="install_light_black">ਲਾਇਟ + ਬਲੈਕ</string>
-    <string name="install_light_dark">ਲਾਇਟ + ਡਾਰਕ</string>
     <!-- About Page -->
     <string name="manager_dev">ਪ੍ਬੰਧਕ ਨਿਰਮਾਣਕਰਤਾ</string>
     <string name="sources">ਸਰੋਤ</string>

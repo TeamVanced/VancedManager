@@ -61,8 +61,6 @@
     <string name="welcome">欢迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">为 Vanced 选择您的首选语言</string>
-    <string name="install_light_black">浅 + 黑</string>
-    <string name="install_light_dark">浅 + 深</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 开发人员</string>
     <string name="sources">程式码</string>

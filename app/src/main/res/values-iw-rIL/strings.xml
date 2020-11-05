@@ -61,8 +61,6 @@
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">בחר את השפה המועדפת עליך לVanced</string>
-    <string name="install_light_black">בהיר + שחור</string>
-    <string name="install_light_dark">בהיר + כהה</string>
     <!-- About Page -->
     <string name="manager_dev">מנהל המפתחים</string>
     <string name="sources">מקורות</string>

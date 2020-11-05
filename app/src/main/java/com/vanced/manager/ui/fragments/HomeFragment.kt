@@ -14,6 +14,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.crowdin.platform.util.inflateWithCrowdin
 import com.github.florent37.viewtooltip.ViewTooltip
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
@@ -35,26 +36,6 @@ open class HomeFragment : Fragment() {
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
     private val prefs by lazy { PreferenceManager.getDefaultSharedPreferences(requireActivity()) }
     private lateinit var tooltip: ViewTooltip
-
-//    private val tabListener = object : TabLayout.OnTabSelectedListener {
-//
-//        override fun onTabSelected(tab: TabLayout.Tab) {
-//            if (tab.position == 1 && !Shell.rootAccess()) {
-//                Toast.makeText(requireActivity(), getString(R.string.root_not_granted), Toast.LENGTH_SHORT).show()
-//            }
-//            val variant = if (tab.position == 1) "root" else "nonroot"
-//            getDefaultSharedPreferences(requireActivity()).edit().putString("vanced_variant", variant).apply()
-//        }
-//
-//        override fun onTabUnselected(tab: TabLayout.Tab) {
-//            return
-//        }
-//
-//        override fun onTabReselected(tab: TabLayout.Tab) {
-//            return
-//        }
-//
-//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -117,19 +98,6 @@ open class HomeFragment : Fragment() {
             }
         }
 
-//        with(binding) {
-//            mainViewpager.adapter = VariantAdapter(viewModel, requireActivity())
-//            TabLayoutMediator(mainTablayout, mainViewpager) { tab, position ->
-//                val variants = arrayOf("nonroot", "root")
-//                tab.text = variants[position]
-//            }.attach()
-//            mainTablayout.getTabAt(if (getDefaultSharedPreferences(requireActivity()).getString("vanced_variant", "nonroot") == "root") 1 else 0)?.select()
-//        }
-
-//        installing.observe(viewLifecycleOwner, { value ->
-//            if (value) hideTab() else showTab()
-//        })
-
     }
     
     override fun onPause() {
@@ -154,28 +122,6 @@ open class HomeFragment : Fragment() {
         }
     }
 
-//    private fun hideTab() {
-//        val tabHide = AnimationUtils.loadAnimation(requireActivity(), R.anim.tablayout_exit)
-//        with(binding) {
-//            if (mainTablayout.visibility != View.GONE) {
-//                mainTablayout.startAnimation(tabHide)
-//                mainTablayout.visibility = View.GONE
-//            }
-//            mainViewpager.isUserInputEnabled = false
-//        }
-//    }
-//
-//    private fun showTab() {
-//        val tabShow = AnimationUtils.loadAnimation(requireActivity(), R.anim.tablayout_enter)
-//        with(binding) {
-//            if (mainTablayout.visibility != View.VISIBLE) {
-//                mainTablayout.visibility = View.VISIBLE
-//                mainTablayout.startAnimation(tabShow)
-//            }
-//            mainViewpager.isUserInputEnabled = true
-//        }
-//    }
-
     private fun registerReceivers() {
         val intentFilter = IntentFilter()
         intentFilter.addAction(INSTALL_FAILED)
@@ -184,7 +130,7 @@ open class HomeFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.toolbar_menu, menu)
+        inflater.inflateWithCrowdin(R.menu.toolbar_menu, menu, resources)
         super.onCreateOptionsMenu(menu, inflater)
     }
 

@@ -24,7 +24,6 @@
                     android:id="@+id/use_custom_tabs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     app:switch_def_value="true"
                     app:switch_key="use_customtabs"
                     app:switch_summary="@string/link_custom_tabs"

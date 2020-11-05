@@ -10,6 +10,7 @@ import com.vanced.manager.core.App
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.music
 import com.vanced.manager.utils.PackageHelper.install
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -23,7 +24,7 @@ object MusicDownloader {
         CoroutineScope(Dispatchers.IO).launch {
             val prefs = getDefaultSharedPreferences(context)
             variant = prefs.getString("vanced_variant", "nonroot")
-            val url = "${prefs.getString("install_url", baseUrl)}/music/v${(context.applicationContext as App).music.get()?.string("version")}.apk"
+            val url = "${prefs.getString("install_url", baseUrl)}/music/v${music.get()?.string("version")}.apk"
 
             downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("music/$variant")?.path, "music.apk")
                 .build()

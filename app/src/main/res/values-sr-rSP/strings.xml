@@ -61,8 +61,6 @@
     <string name="welcome">Добро дошли</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Одаберите језик за коришћење Vanced апликације</string>
-    <string name="install_light_black">Светла + Црна</string>
-    <string name="install_light_dark">Светла + Тамна</string>
     <!-- About Page -->
     <string name="manager_dev">Менаџер развоја</string>
     <string name="sources">Извор</string>

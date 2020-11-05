@@ -26,15 +26,41 @@
                     style="@style/BottomDialogCardTextItem"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@id/theme_spinner"
-                    android:text="@string/theme" />
+                    android:layout_toStartOf="@id/open_theme_selector" />
 
-                <Spinner
-                    android:id="@+id/theme_spinner"
+                <ImageButton
+                    android:id="@+id/open_theme_selector"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    tools:entries="@array/vanced_themes" />
+                    android:background="@android:color/transparent"
+                    android:maxWidth="24dp"
+                    android:maxHeight="24dp"
+                    android:src="@drawable/ic_baseline_navigate_next_36" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/chosen_version"
+                    style="@style/BottomDialogCardTextItem"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/open_version_selector" />
+
+                <ImageButton
+                    android:id="@+id/open_version_selector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:maxWidth="24dp"
+                    android:maxHeight="24dp"
+                    android:src="@drawable/ic_baseline_navigate_next_36" />
 
             </RelativeLayout>
 
@@ -48,8 +74,7 @@
                     style="@style/BottomDialogCardTextItem"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:layout_toStartOf="@+id/open_language_selector"
-                    android:text="@string/language_title" />
+                    android:layout_toStartOf="@+id/open_language_selector" />
 
                 <ImageButton
                     android:id="@+id/open_language_selector"

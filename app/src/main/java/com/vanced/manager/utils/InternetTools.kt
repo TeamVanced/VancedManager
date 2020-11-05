@@ -6,14 +6,32 @@ import android.net.Uri
 import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
+import androidx.databinding.ObservableField
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import com.beust.klaxon.JsonArray
+import com.beust.klaxon.JsonObject
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
-import com.vanced.manager.core.App
+import com.vanced.manager.utils.Extensions.getDefaultPrefs
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.*
 
 object InternetTools {
 
     private const val TAG = "VMNetTools"
+
+    var vanced = ObservableField<JsonObject?>()
+    var music = ObservableField<JsonObject?>()
+    var microg = ObservableField<JsonObject?>()
+    var manager = ObservableField<JsonObject?>()
+
+    var vancedVersions = ObservableField<JsonArray<String>>()
+    var musicVersions = ObservableField<JsonArray<String>>()
+
+    //var braveTiers = ObservableField<JsonObject?>()
 
     fun openUrl(Url: String, color: Int, context: Context) {
         val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_customtabs", true)
@@ -57,8 +75,37 @@ object InternetTools {
         }
     }
 
+    fun loadJson(context: Context) = CoroutineScope(Dispatchers.IO).launch {
+        val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
+        val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.getDefault())}")
+        val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.getDefault())}")
+//      braveTiers.apply {
+//          set(getJson("$installUrl/sponsor.json"))
+//          notifyChange()
+//      }
+
+        vanced.apply {
+            set(latest?.obj("vanced"))
+            notifyChange()
+        }
+        vancedVersions.set(versions?.array("vanced"))
+        music.apply {
+            set(latest?.obj("music"))
+            notifyChange()
+        }
+        musicVersions.set(versions?.array("music"))
+        microg.apply {
+            set(latest?.obj("microg"))
+            notifyChange()
+        }
+        manager.apply {
+            set(latest?.obj("manager"))
+            notifyChange()
+        }
+    }
+
     suspend fun getJsonString(file: String, obj: String, context: Context): String {
-        val installUrl = getDefaultSharedPreferences(context).getString("install_url", baseUrl)
+        val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
         return try {
             JsonHelper.getJson("$installUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
         } catch (e: Exception) {
@@ -68,7 +115,7 @@ object InternetTools {
     }
 
     fun isUpdateAvailable(context: Context): Boolean {
-        val result = (context.applicationContext as App).manager.get()?.int("versionCode") ?: 0
+        val result = manager.get()?.int("versionCode") ?: 0
 
         return result > BuildConfig.VERSION_CODE
     }

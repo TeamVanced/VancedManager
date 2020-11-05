@@ -2,7 +2,6 @@ package com.vanced.manager.ui.core
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.widget.CompoundButton
 import android.widget.FrameLayout
@@ -30,15 +29,14 @@ class PreferenceSwitch @JvmOverloads constructor(
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        preference_switch.isChecked = prefs.getBoolean(prefKey, defValue)
         setOnClickListener {
             preference_switch.isChecked = !preference_switch.isChecked
-            Log.d("clickTest", "clicked")
         }
         preference_switch.setOnCheckedChangeListener { buttonView, isChecked ->
             prefs.edit().putBoolean(prefKey, isChecked).apply()
             mListener?.onChecked(buttonView, isChecked)
         }
+
     }
 
     fun setOnCheckedListener(method: (buttonView: CompoundButton, isChecked: Boolean) -> Unit) {
@@ -61,8 +59,10 @@ class PreferenceSwitch @JvmOverloads constructor(
             val key = typedArray.getText(R.styleable.PreferenceSwitch_switch_key)
             val value = typedArray.getBoolean(R.styleable.PreferenceSwitch_switch_def_value, false)
 
-            if (key != null)
+            if (key != null) {
                 prefKey = key.toString()
+                preference_switch.isChecked = prefs.getBoolean(key.toString(), value)
+            }
 
             defValue = value
             preference_switch_title.text = title

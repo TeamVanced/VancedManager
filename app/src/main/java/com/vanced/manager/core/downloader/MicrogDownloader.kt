@@ -8,6 +8,7 @@ import com.vanced.manager.R
 import com.vanced.manager.core.App
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.microg
 import com.vanced.manager.utils.PackageHelper.install
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,7 +20,7 @@ object MicrogDownloader {
         context: Context,
     ) {
         CoroutineScope(Dispatchers.IO).launch {
-            val url = (context.applicationContext as App).microg.get()?.string("url")
+            val url = microg.get()?.string("url")
 
              downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("microg")?.path, "microg.apk")
                 .build()

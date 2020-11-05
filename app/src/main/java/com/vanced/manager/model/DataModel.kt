@@ -3,11 +3,8 @@ package com.vanced.manager.model
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
-import androidx.core.content.ContextCompat
-import androidx.databinding.Observable
-import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableField
-import androidx.databinding.ObservableInt
+import androidx.databinding.*
+import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
@@ -20,7 +17,8 @@ open class DataModel(
     private val context: Context,
     val appPkg: String,
     val appName: String,
-    val appIcon: Drawable?
+    val appIcon: Drawable?,
+    appVersions: ObservableField<JsonArray<String>>? = null
 ) {
 
     private val versionCode = ObservableInt()
@@ -28,29 +26,34 @@ open class DataModel(
 
     val isAppInstalled = ObservableBoolean()
     val versionName = ObservableField<String>()
+    //val versions = ObservableField<Array<AppVersionsModel>>()
     val installedVersionName = ObservableField<String>()
     val buttonTxt = ObservableField<String>()
-    //val buttonIcon = ObservableField<Drawable>()
     val changelog = ObservableField<String>()
 
     fun fetch() = CoroutineScope(Dispatchers.IO).launch {
+        val jobj = jsonObject.get()
         isAppInstalled.set(isPackageInstalled(appPkg, context.packageManager))
-        versionName.set(jsonObject.get()?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
+        versionName.set(jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
+        //versions.set(appVersions?.get()?.value?.convertToAppVersions())
         installedVersionName.set(getPkgVersionName(isAppInstalled.get(), appPkg))
-        versionCode.set(jsonObject.get()?.int("versionCode") ?: 0)
+        versionCode.set(jobj?.int("versionCode") ?: 0)
         installedVersionCode.set(getPkgVersionCode(isAppInstalled.get(), appPkg))
         buttonTxt.set(compareInt(installedVersionCode.get(), versionCode.get()))
-        //buttonIcon.set(compareIntDrawable(installedVersionCode.get(), versionCode.get()))
-        changelog.set(jsonObject.get()?.string("changelog") ?: context.getString(R.string.unavailable))
+        changelog.set(jobj?.string("changelog") ?: context.getString(R.string.unavailable))
     }
 
     init {
         fetch()
-        jsonObject.addOnPropertyChangedCallback(object  : Observable.OnPropertyChangedCallback() {
+        jsonObject.addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
             override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
                 fetch()
             }
-
+        })
+        appVersions?.addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
+            override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
+                fetch()
+            }
         })
     }
     
@@ -81,15 +84,6 @@ open class DataModel(
             else -> context.getString(R.string.install)
         }
 
-    }
-
-    private fun compareIntDrawable(int1: Int, int2: Int): Drawable? {
-        return when {
-            int1 == 0 -> ContextCompat.getDrawable(context, R.drawable.ic_download)
-            int2 > int1 -> ContextCompat.getDrawable(context, R.drawable.ic_update)
-            int2 == int1 -> ContextCompat.getDrawable(context, R.drawable.ic_done)
-            else -> ContextCompat.getDrawable(context, R.drawable.ic_download)
-        }
     }
 
 } 
