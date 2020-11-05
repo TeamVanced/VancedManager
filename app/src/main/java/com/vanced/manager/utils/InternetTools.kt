@@ -2,10 +2,10 @@ package com.vanced.manager.utils
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
@@ -15,16 +15,16 @@ object InternetTools {
 
     private const val TAG = "VMNetTools"
 
-    fun openUrl(Url: String, color: Int, context: Context) {
+    fun openUrl(url: String, color: Int, context: Context) {
         val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_customtabs", true)
         if (customTabPrefs) {
             val builder = CustomTabsIntent.Builder()
             builder.setToolbarColor(ContextCompat.getColor(context, color))
             val customTabsIntent = builder.build()
             customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            customTabsIntent.launchUrl(context, Uri.parse(Url))
+            customTabsIntent.launchUrl(context, url.toUri())
         } else
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Url)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+            context.startActivity(Intent(Intent.ACTION_VIEW, url.toUri()).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)

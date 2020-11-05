@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -41,7 +42,7 @@ class SelectAppsDialog : BottomSheetDialogFragment() {
                 return@setOnClickListener
             }
             ad.apps.forEach { app ->
-                prefs.edit().putBoolean("enable_${app.tag}", app.isChecked).apply()
+                prefs.edit { putBoolean("enable_${app.tag}", app.isChecked) }
             }
             dismiss()
         }

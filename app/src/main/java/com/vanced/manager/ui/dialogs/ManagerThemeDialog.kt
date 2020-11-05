@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -33,7 +34,7 @@ class ManagerThemeDialog : BottomSheetDialogFragment() {
         binding.themeSave.setOnClickListener {
             val newPref = binding.themeRadiogroup.getCheckedButtonTag()
             if (theme != newPref) {
-                prefs.edit().putString("manager_theme", newPref).apply()
+                prefs.edit { putString("manager_theme", newPref) }
                 dismiss()
                 requireActivity().recreate()
             } else {

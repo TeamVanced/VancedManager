@@ -10,6 +10,7 @@ import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
@@ -54,7 +55,7 @@ class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
                 return@setOnClickListener
             }
 
-            prefs?.edit()?.putString("lang", chosenLangs.joinToString())?.apply()
+            prefs?.edit { putString("lang", chosenLangs.joinToString()) }
             dismiss()
         }
     }

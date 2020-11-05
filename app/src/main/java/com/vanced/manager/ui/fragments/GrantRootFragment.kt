@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
@@ -36,7 +37,7 @@ class GrantRootFragment : Fragment(), View.OnClickListener {
         when (v?.id) {
             R.id.grant_root_fab -> {
                 if (Shell.rootAccess()) {
-                    getDefaultSharedPreferences(requireActivity()).edit().putString("vanced_variant", "root").apply()
+                    getDefaultSharedPreferences(requireActivity()).edit { putString("vanced_variant", "root") }
                 } else {
                     Toast.makeText(requireActivity(), R.string.root_not_granted, Toast.LENGTH_SHORT).show()
                 }

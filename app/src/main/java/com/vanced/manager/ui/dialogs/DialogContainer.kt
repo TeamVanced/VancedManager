@@ -5,6 +5,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat.startActivity
+import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
@@ -34,7 +35,7 @@ object DialogContainer {
             show()
         }
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        prefs.edit().putBoolean("firstLaunch", false).apply()
+        prefs.edit { putBoolean("firstLaunch", false) }
     }
 
     private fun showMiuiDialog(context: Context) {
@@ -65,7 +66,7 @@ object DialogContainer {
         }
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-        prefs.edit().putBoolean("statement", true).apply()
+        prefs.edit { putBoolean("statement", true) }
     }
 
     fun installAlertBuilder(msg: String, context: Context) {

@@ -121,7 +121,7 @@ object VancedDownloader {
                             "lang" -> {
                                 count++
                                 succesfulLangCount++
-                                if (count < lang?.count()!!)
+                                if (count < lang?.size!!)
                                     downloadSplits(context, "lang")
                                 else
                                     startVancedInstall(context)
@@ -133,7 +133,7 @@ object VancedDownloader {
                         if (type == "lang") {
                             count++
                             when {
-                                count < lang?.count()!! -> downloadSplits(context, "lang")
+                                count < lang?.size!! -> downloadSplits(context, "lang")
                                 succesfulLangCount == 0 -> {
                                     lang?.add("en")
                                     downloadSplits(context, "lang")

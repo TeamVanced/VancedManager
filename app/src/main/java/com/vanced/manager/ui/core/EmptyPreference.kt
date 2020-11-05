@@ -3,8 +3,9 @@ package com.vanced.manager.ui.core
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.FrameLayout
+import androidx.core.view.isGone
+import androidx.core.view.isVisible
 import com.vanced.manager.R
 import kotlinx.android.synthetic.main.view_preference.view.*
 
@@ -26,7 +27,7 @@ class EmptyPreference @JvmOverloads constructor(
 
     fun setSummary(newSummary: String) {
         preference_summary.text = newSummary
-        preference_summary.visibility = View.VISIBLE
+        preference_summary.isVisible = true
         preference_title.setPadding(0, 0, 0, 0)
     }
 
@@ -38,7 +39,7 @@ class EmptyPreference @JvmOverloads constructor(
             if (summary != null) {
                 preference_summary.text = summary
             } else {
-                preference_summary.visibility = View.GONE
+                preference_summary.isGone = true
                 preference_title.setPadding(0, 12, 0, 12)
             }
             preference_title.text = title
