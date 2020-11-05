@@ -5,21 +5,21 @@
     <string name="close">Đóng</string>
     <string name="reset">Đặt lại</string>
     <string name="save">Lưu</string>
-    <string name="select_apps">Chọn ứng dụng của bạn</string>
+    <string name="select_apps">Chọn Ứng Dụng Của Bạn</string>
     <!-- Main Activity -->
     <string name="title_about">Giới thiệu</string>
-    <string name="title_home">Quản lý</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Cài đặt</string>
-    <string name="update_manager">Cật nhật Manager</string>
+    <string name="update_manager">Cập Nhật Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
-    <string name="are_you_rooted">Thiết bị của bạn đã root chưa?</string>
-    <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Hãy nhấn nút phía dưới, mặt khác nhấn để tiếp tục</string>
-    <string name="grant_root">Cấp quyền Root</string>
+    <string name="are_you_rooted">Máy Bạn Đã Root chưa?</string>
+    <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Nhấn nút bên dưới, nếu không hãy nhấn tiếp tục</string>
+    <string name="grant_root">Cấp Quyền Root</string>
     <!-- Home Page -->
-    <string name="about_app">Thông tin %1$s</string>
-    <string name="app_changelog_tooltip">Nhấn vào thẻ để xem bảng thay đổi.</string>
-    <string name="changelog">Nhật ký thay đổi</string>
+    <string name="about_app">Thông Tin Về %1$s</string>
+    <string name="app_changelog_tooltip">Nhấn vào thẻ để xem các thay đổi.</string>
+    <string name="changelog">Các Thay Đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
     <string name="button_reinstall">Cài đặt lại</string>
@@ -30,7 +30,7 @@
     <string name="unavailable">Chưa cài đặt</string>
     <string name="update">Cập nhật</string>
     <string name="useful_links">Đường link hữu ích</string>
-    <string name="support_us">Hỗ trợ chúng tôi!</string>
+    <string name="support_us">Hỗ Trợ Chúng Tôi!</string>
     <!-- Settings -->
     <string name="accent_color">Màu Chính</string>
     <string name="accent_blue">Xanh dương</string>
@@ -38,7 +38,7 @@
     <string name="accent_purple">Tím</string>
     <string name="accent_red">Đỏ</string>
     <string name="accent_yellow">Vàng</string>
-    <string name="category_appearance">Giao diện</string>
+    <string name="category_appearance">Giao Diện</string>
     <string name="category_behaviour">Hành động</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
@@ -62,6 +62,8 @@
     <string name="app_install_files_detected_summary">Manager đã phát hiện thấy rằng tất cả các tệp cần thiết để cài đặt %1$s đã được tìm thấy. Bạn có muốn cài đặt không?</string>
     <string name="checking_updates">Đang kiểm tra bản cập nhật…</string>
     <string name="chosen_lang">Ngôn ngữ: %1$s</string>
+    <string name="chosen_theme">Chủ đề: %1$s</string>
+    <string name="chosen_version">Phiên bản: %1$s</string>
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Dừng lại!</string>
     <string name="installing_app">Đang cài đặt %1$s</string>
@@ -74,14 +76,14 @@
     <string name="success">Thành công!</string>
     <string name="vanced_installation_preferences">Tùy chọn cài đặt Vanced</string>
     <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
+    <string name="version">Phiên bản</string>
     <string name="music_installed">Vanced Music đã được cài đặt thành công! Mở ứng dụng?</string>
     <string name="please_be_patient">Vui lòng chờ…</string>
     <string name="launch">Mở</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
-    <string name="install_light_black">Sáng + Đen</string>
-    <string name="install_light_dark">Sáng + Tối</string>
+    <string name="light_plus_other">Sáng + %1$s</string>
     <string name="select_at_least_one_lang">Chọn ít nhất một ngôn ngữ!</string>
     <!-- About Page -->
     <string name="manager_dev">Đội ngũ phát triển</string>
