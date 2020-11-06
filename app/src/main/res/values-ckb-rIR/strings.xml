@@ -62,8 +62,8 @@
     <string name="app_install_files_detected_summary">بەرنامەکە هەموو ئەو فایلانەی دۆزیەوە %1$s کە پێویستن بۆ دابەزاندن، ئەتەوێ دایان مەزرێنیت؟</string>
     <string name="checking_updates">پشکنین بۆ نوێکردنەوە…</string>
     <string name="chosen_lang">زمان: %1$s</string>
-    <string name="chosen_theme">Rûkar: %1$s</string>
-    <string name="chosen_version">Guherto: %1$s</string>
+    <string name="chosen_theme">ڕووکار: %1$s</string>
+    <string name="chosen_version">وەشان: %1$s</string>
     <string name="guide">زانیاری</string>
     <string name="hold_on">وەستاندن!</string>
     <string name="installing_app">دامەزراندنی %1$s</string>
@@ -76,14 +76,14 @@
     <string name="success">سەرکەوتو بوو!</string>
     <string name="vanced_installation_preferences">ڕێکخستنەکانی دابەزێنەر</string>
     <string name="vanced_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
-    <string name="version">Guherto</string>
+    <string name="version">وەشان</string>
     <string name="music_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
     <string name="please_be_patient">تکایە چاوەڕوانبە…</string>
     <string name="launch">کردنه‌وه‌</string>
     <string name="welcome">بەخێربێیت</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">زمانێک هەڵبژێرە بۆ بەکارهێنانی بەرنامەکە</string>
-    <string name="light_plus_other">Ronak + %1$s</string>
+    <string name="light_plus_other">ڕووناک + %1$s</string>
     <string name="select_at_least_one_lang">لانیکەم زمانێک دیاریبکە!</string>
     <!-- About Page -->
     <string name="manager_dev">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
