@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">বাতিল</string>
     <string name="close">বন্ধ করুন</string>
     <string name="reset">রিসেট করুন</string>
     <string name="save">সংরক্ষণ করুন</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">ম্যানেজার হালনাগাদ করুন</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
+    <string name="are_you_rooted">আপনার কি রুট অ্যাক্সেস আছে?</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
