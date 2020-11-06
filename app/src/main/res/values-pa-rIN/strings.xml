@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">ਰੱਦ ਕਰੋ</string>
     <string name="close">ਰੱਦ ਕਰੋ</string>
     <string name="reset">ਰੀਸੈੱਟ</string>
     <string name="save">ਸੁੱਰਖਿਅਤ ਕਰੋ</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">ਹੋਰ ਐਪ ਚੁਣੋ</string>
     <!-- Main Activity -->
     <string name="title_about">ਸਾਡੇ ਬਾਰੇ ਵਿੱਚ</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">ਮਨੇਜਰ</string>
     <string name="title_settings">ਸੇਟਿੰਗਸ</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">ਅਪਡੇਟ ਮਨੇਜਰ</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
+    <string name="are_you_rooted">ਕੀ ਤੁਸੀਂ ਰੂਟ ਕੀਤਾ ਹੋਇਆ?</string>
+    <string name="willing_to_use_root">ਰੂਟ ਕੀਤੇ ਵਰਜਨ ਨੂੰ ਵਰਤਨਾ? ਬੱਸ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਨੂੰ ਦਬਾਓ, ਨਹੀਂ ਤਾਂ ਜਾਰੀ ਰੱਖਣ ਲਈ ਟੈਪ ਕਰੋ</string>
+    <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="about_app">ਬਾਰੇ ਵਿੱਚ %1$s</string>
+    <string name="app_changelog_tooltip">ਚੇਂਜਲਾਗ ਦੇਖਣ ਲਈ ਕਾਰਡ \'ਤੇ ਟੈਪ ਕਰੋ.</string>
+    <string name="changelog">ਤਬਦੀਲੀਆਂ</string>
     <string name="downloading_file">ਡਾਉਨਲੋਡ ਕਰ ਰਿਹਾ ਹੈ %1$s</string>
     <string name="install">ਸਥਾਪਨਾ</string>
     <string name="button_reinstall">ਮੁੜ ਸਥਾਪਨਾ</string>
@@ -30,7 +30,7 @@
     <string name="unavailable">ਮੋਜੂਦ ਨਹੀਂ ਹੈ</string>
     <string name="update">ਅੱਪਡੇਟ</string>
     <string name="useful_links">ਉਪਯੋਗੀ ਲਿੰਕ</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">ਸਾਨੂੰ ਸਹਿਯੋਗ ਕਰੋ!</string>
     <!-- Settings -->
     <string name="accent_color">ਐੱਕਸੈਂਟ ਰੰਗ</string>
     <string name="accent_blue">ਨੀਲਾ</string>
@@ -38,8 +38,8 @@
     <string name="accent_purple">ਬੈਂਗਣੀ</string>
     <string name="accent_red">ਲਾਲ</string>
     <string name="accent_yellow">ਪੀਲਾ</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">ਦਿੱਖ</string>
+    <string name="category_behaviour">ਰਵੱਈਆ</string>
     <string name="clear_files">ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="cleared_files">ਫਾਇਲਾਂ ਸਫਲਤਾਪੂਰਵਕ ਸਾਫ਼ ਕੀਤੀ ਗਈ</string>
     <string name="firebase_title">ਫਾਇਰਬੇਸ ਵਿਸ਼ਲੇਸ਼ਣ</string>
@@ -55,36 +55,36 @@
     <string name="push_notifications">%1$s ਪੁਸ਼ ਸੂਚਨਾਵਾਂ</string>
     <string name="push_notifications_summary">ਜਦੋਂ %1$s ਦਾ ਅੱਪਡੇਟ ਜਾਰੀ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਪੁਸ਼ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="update_center">ਅੱਪਡੇਟ ਕੇਂਦਰ</string>
-    <string name="update_not_found">No new updates</string>
-    <string name="variant">Variant</string>
+    <string name="update_not_found">ਕੋਈ ਨਵਾਂ ਅੱਪਡੇਟ ਨਹੀਂ</string>
+    <string name="variant">ਵੇਰੀਐਂਟ</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="app_install_files_detected">%1$s ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਲੱਭੀਆਂ!</string>
+    <string name="app_install_files_detected_summary">ਮੈਨੇਜਰ ਨੇ ਖੋਜਿਆ ਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਇਲਾਂ %1$s ਮਿਲੀਆਂ ਹਨ. ਕੀ ਤੁਸੀਂ ਸਥਾਪਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="checking_updates">ਅੱਪਡੇਟ ਲਈ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="chosen_lang">ਭਾਸ਼ਾ (ਇ): %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_version">Version: %1$s</string>
+    <string name="chosen_theme">ਥੀਮ: %1$s</string>
+    <string name="chosen_version">ਵਰਜਨ %1$s</string>
     <string name="guide">ਗਾਇਡ</string>
     <string name="hold_on">ਉਡੀਕੋ!</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">%1$s ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
     <string name="magisk_vanced">ਤੁਸੀਂ Vanced ਦੇ Magisk / TWRP ਸੰਸਕਰਣ ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ, ਜਿਸਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ ਅੱਤੇ ਇਸ ਐਪ ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਅੱਪਡੇਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ| ਕਿਰਪਾ ਇਸ Magisk ਮੋਡੂਅਲ ਨੂੰ / TWRP Vanced uninstaller ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਹੱਟਾ ਦੇਵੋਂ|</string>
     <string name="miui_one_title">ਪਤਾ ਲਗਾਇਆ MiUI ਉਪਯੋਗਕਰਤਾ!</string>
     <string name="miui_one">Vanced ਇੰਸਟਾਲ ਕਰਨ ਲਈ, ਤੁਸੀੰ ਡਵੇਲਪਰ ਸੇਟਿੰਗ ਵਿੱਚ MIUI Optimization ਨੂੰ ਬੰਦ ਕਰੋ| (ਜੇਕਰ ਤੁਸੀਂ 20.2.20 ਜਾਂ ਬਾਅਦ ਵਿੱਚ xiaomi.eu ਆਧਾਰਿਤ ROM ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ ਤਾਂ ਤੁਸੀਂ ਇਸ ਚੇਤਾਵਨੀ ਨੂੰ ਅਣਦੇਖਾ ਕਰ ਸਕਦੇ ਹੋ)</string>
     <string name="error">ਗਲਤੀ</string>
-    <string name="redownload">Redownload</string>
+    <string name="redownload">ਮੁੜ ਡਾਉਨਲੋਡ</string>
     <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vanced.app, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
     <string name="success">ਸਫਲਤਾ!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="vanced_installation_preferences">Vanced ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
     <string name="vanced_installed">ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ! ਹੁਣ ਖੋਲੋ?</string>
-    <string name="version">Version</string>
+    <string name="version">ਵਰਜਨ</string>
     <string name="music_installed">ਵੇਂਸਡ ਸੰਗੀਤ ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ ! ਹੁਣ ਖੋਲੋ?</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">ਕਿਰਪਾ ਕਰਕੇ ਸਬਰ ਰੱਖੋ…</string>
     <string name="launch">ਖੋਲੋ</string>
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ (ਏ) ਚੁਣੋ</string>
-    <string name="light_plus_other">Light + %1$s</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="light_plus_other">ਲਾਇਟ + %1$s</string>
+    <string name="select_at_least_one_lang">ਘੱਟੋ-ਘੱਟ ਇੱਕ ਭਾਸ਼ਾ ਚੁਣੋ!</string>
     <!-- About Page -->
     <string name="manager_dev">ਪ੍ਬੰਧਕ ਨਿਰਮਾਣਕਰਤਾ</string>
     <string name="sources">ਸਰੋਤ</string>
