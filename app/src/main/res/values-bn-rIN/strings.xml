@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">বাতিল করুন</string>
     <string name="close">বন্ধ করুন</string>
     <string name="reset">রিসেট করুন</string>
     <string name="save">সংরক্ষণ করুন</string>
+    <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
-    <string name="title_home">মূল পাতা</string>
+    <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
+    <string name="update_manager">ম্যানেজার হালনাগাদ করুন</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
+    <string name="are_you_rooted">আপনার কি রুট অ্যাক্সেস আছে?</string>
+    <string name="willing_to_use_root">রুট সংস্করণ ব্যবহার করতে ইচ্ছুক? নীচের বোতামটি চাপুন, অন্যথায় চালিয়ে যেতে আলতো চাপুন</string>
+    <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
     <!-- Home Page -->
+    <string name="about_app">%1$s এর সম্বন্ধে</string>
+    <string name="app_changelog_tooltip">পরিবর্তন নথি দেখতে কার্ডে আলতো চাপুন।</string>
     <string name="changelog">পরিবর্তন নথি</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="install">ইনস্টল করুন</string>
@@ -28,8 +38,8 @@
     <string name="accent_purple">বেগুনি</string>
     <string name="accent_red">লাল</string>
     <string name="accent_yellow">হলুদ</string>
-    <string name="vanced_installation_preferences">নির্বাচিত ইনস্টলেশন পছন্দগুলি</string>
-    <string name="chosen_lang">ভাষা(গুলি): %1$s</string>
+    <string name="category_appearance">রূপ</string>
+    <string name="category_behaviour">আচরণ</string>
     <string name="clear_files">ডাউনলোড করা ফাইলগুলি মুছে ফেলুন</string>
     <string name="cleared_files">সফলভাবে ফাইলগুলি মুছে ফেলা হয়েছে</string>
     <string name="firebase_title">ফায়ারবেস তথ্য বিশ্লেষণ</string>
@@ -39,48 +49,62 @@
     <string name="link_custom_tabs">লিঙ্কগুলি ক্রোম কাস্টম ট্যাবসে খুলবে</string>
     <string name="system_default">সিস্টেম দ্বারা র্নির্ধারিত</string>
     <string name="theme">থিম</string>
-    <string name="theme_dark">অন্ধকার থিম</string>
+    <string name="theme_dark">গাঢ় থিম</string>
     <string name="theme_light">হালকা থিম</string>
     <string name="update_url">চ্যানেল ইউআরএল হালনাগাদ করুন</string>
     <string name="push_notifications">%1$s পুশ নোটিফিকেশনগুলি</string>
     <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তিগুলি পান</string>
     <string name="update_center">পরিচালক আপডেট কেন্দ্র</string>
-    <string name="update_not_found">কোনো নতুন আপডেট নেই</string>
+    <string name="update_not_found">কোনো নতুন হালনাগাদ নেই</string>
+    <string name="variant">বিকল্প</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">ইনস্টল করার জন্য %1$s ফাইল খুঁজে পাওয়া গেছে!</string>
+    <string name="app_install_files_detected_summary">%1$s ইনস্টল করার জন্য প্রয়োজনীয় সমস্ত ফাইলগুলি ম্যানেজার খুঁজে পেয়েছে। আপনি কি ইনস্টল করতে চান?</string>
+    <string name="checking_updates">হালনাগাদের জন্য চেক করা হচ্ছে…</string>
+    <string name="chosen_lang">ভাষা(গুলি): %1$s</string>
+    <string name="chosen_theme">থিম: %1$s</string>
+    <string name="chosen_version">সংস্করণ: %1$s</string>
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামুন!</string>
+    <string name="installing_app">%1$s ইনস্টল করা হচ্ছে</string>
     <string name="magisk_vanced">আপনি ভ্যান্সড ম্যাজিস্ক/টিডব্লিউআরপি সংস্করণ ব্যবহার করছেন যা বন্ধ হয়ে গেছে এবং এই অ্যাপ্লিকেশনটি ব্যবহার করে হালনাগাদ করতে পারবেন না। দয়া করে ম্যাজিস্ক মডিউলটি সরিয়ে/ টিডব্লিউআরপি ভ্যান্সড আনইনস্টলার ব্যবহার করে এটি মুছে ফেলুন।</string>
     <string name="miui_one_title">মিআইইউআই শনাক্তকৃত!</string>
     <string name="miui_one">ভ্যান্সড ইনস্টল করার জন্য, আপনাকে বিকাশকারী সেটিংসে এমআইইউআই অপটিমাইজেশন অক্ষম করতে হবে। (আপনি যদি ২০.২.২০ বা তার পরে xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কতাটিকে এড়িয়ে যেতে পারেন)</string>
     <string name="error">ত্রুটি</string>
+    <string name="redownload">পুনরায় ডাউনলোড করুন</string>
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vanced.app, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
     <string name="success">সফল!</string>
+    <string name="vanced_installation_preferences">ভ্যান্সড ইনস্টল করার পছন্দসমূহ</string>
     <string name="vanced_installed">ভ্যান্সড সফলভাবে ইনস্টল করা হয়েছে! এখন চালু করুন?</string>
+    <string name="version">সংস্করণ</string>
     <string name="music_installed">ভ্যান্সড মিউজিক সফলভাবে ইনস্টল করা হয়েছে! এখন খুলুন?</string>
+    <string name="please_be_patient">দয়া করে ধৈর্য ধরুন…</string>
     <string name="launch">খুলুন</string>
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">ভ্যান্সডের জন্য আপনার পছন্দসই ভাষা(গুলি) চয়ন করুন</string>
+    <string name="light_plus_other">হাল্কা + %1$s</string>
+    <string name="select_at_least_one_lang">অন্তত একটি ভাষা নির্বাচন করুন!</string>
     <!-- About Page -->
     <string name="manager_dev">ম্যানেজার বিকাশকারীরা</string>
     <string name="sources">উৎসগুলি</string>
-    <string name="vanced_team">ভান্সড টীম</string>
+    <string name="vanced_team">ভ্যান্সড টীম</string>
     <!-- Error messages -->
-    <string name="chown_fail">সিস্টেমের মালিককে এপিকে chown করতে ব্যর্থ, আবার চেষ্টা করুন</string>
+    <string name="chown_fail">সিস্টেমের মালিককে এপিকে `chown` করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="error_downloading">%1$s ডাউনলোড করার সময় ত্রুটি</string>
     <string name="failed_uninstall">%1$s পেকেজ আন‌ইনস্টল করা যাইনি</string>
-    <string name="files_missing_va">ফাইলগুলি অনুপস্থিত, ডাউনলোড ব্যর্থ হয়েছে?</string>
-    <string name="ifile_missing">অন্ধকার/কালো এপিকে পড়া যাচ্ছে না (স্টোরেজ ব্লক হয়ে গেছে?) বা ফাইলটি নেই</string>
+    <string name="files_missing_va">ইনস্টলেশনের জন্য প্রয়োজনীয় ফাইলগুলি খুঁজে পাওয়া যায় নি। ইনস্টল করার জন্য ফাইলগুলি পুনরায় ডাউনলোড করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="ifile_missing">স্টোরেজ থেকে কালো/গাঢ় থিমের জন্য এপিকে ফাইল সনাক্ত করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="installation_aborted">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী ইনস্টলেশনটি বাতিল করে দিয়েছেন।</string>
     <string name="installation_blocked">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী ইনস্টলেশন অবরুদ্ধ করেছেন।</string>
     <string name="installation_downgrade">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করছিলেন। স্টক ইউটিউব অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
-    <string name="installation_conflict">ইনস্টলেশন ব্যর্থ হয়েছে কারণ অ্যাপ্লিকেশনটি ইতিমধ্যে ইনস্টল হওয়া আরেকটি অ্যাপ্লিকেশানের সাথে দ্বন্দ্ব করছে। ভান্সডের বর্তমান সংস্করণটি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="installation_conflict">ইনস্টলেশন ব্যর্থ হয়েছে কারণ অ্যাপ্লিকেশনটি ইতিমধ্যে ইনস্টল হওয়া আরেকটি অ্যাপ্লিকেশানের সাথে দ্বন্দ্ব করছে। ভ্যান্সডের বর্তমান সংস্করণটি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের উপযুক্ত নয়। সেটিংসে ডাউনলোড করা ফাইল মুছে ফেলুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_invalid">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এপিকে ফাইলগুলি দূষিত, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="installation_signature">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এপিকে স্বাক্ষর যাচাইকরণ সক্ষম করা আছে। এপিকে স্বাক্ষর যাচাইকরণ অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_miui">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এমআইইউআই অপটিমাইজেশন সক্ষম আছে। এমআইইউআই অপ্টিমাইজেশন অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_storage">স্টোরেজ ত্রুটির কারণে ইনস্টলেশন ব্যর্থ হয়েছে।</string>
-    <string name="modapk_missing">ইনস্টলারের থেকে কালো/অন্ধকার এপিকে অনুপস্থিত, এটি হওয়া উচিত নয়, দয়া করে ম্যানেজারের অ্যাপ্লিকেশন ডেটা সাফ করুন</string>
-    <string name="path_missing">স্টক ইউটিউব ইনস্টল করার পথটি প্রবেশযোগ্য নয় বা স্টক স্প্লিট ইনস্টলের পরে অনুপস্থিত</string>
+    <string name="modapk_missing">ইনস্টলার থেকে কালো/গাঢ় থিমের জন্য সফটওয়্যারের ফাইল খুঁজতে ব্যর্থ। ম্যানেজারের ডেটা সাফ করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="path_missing">স্পিল্ট ফাইলগুলি ইনস্টল করার পরে স্টক ইউটিউবের ইনস্টলেশন পাথ সনাক্ত করতে ব্যর্থ।</string>
 </resources>
