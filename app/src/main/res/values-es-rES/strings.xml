@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancelar</string>
     <string name="close">Cerrar</string>
     <string name="reset">Restablecer</string>
     <string name="save">Guardar</string>
+    <string name="select_apps">Selecciona tus aplicaciones</string>
     <!-- Main Activity -->
     <string name="title_about">Información</string>
-    <string name="title_home">Hogar</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
+    <string name="update_manager">Actualizar Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">¡Seleccione al menos una aplicación!</string>
+    <string name="are_you_rooted">¿Tienes root?</string>
+    <string name="willing_to_use_root">¿Deseas usar la versión root? Sólo tienes que tocar el botón de abajo, si no, toca para continuar</string>
+    <string name="grant_root">Conceder permiso root</string>
     <!-- Home Page -->
-    <string name="changelog">Actualizaciones</string>
+    <string name="about_app">Acerca de %1$s</string>
+    <string name="app_changelog_tooltip">Toque en la tarjeta para ver el registro de cambios.</string>
+    <string name="changelog">Registro de cambios</string>
     <string name="downloading_file">Descargando %1$s</string>
     <string name="install">Instalar</string>
     <string name="button_reinstall">Reinstalar</string>
@@ -20,7 +30,7 @@
     <string name="unavailable">No Disponible</string>
     <string name="update">Actualizar</string>
     <string name="useful_links">Links Utiles</string>
-    <string name="support_us">Apoyanos!</string>
+    <string name="support_us">¡Apóyenos!</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
     <string name="accent_blue">Azul</string>
@@ -28,8 +38,8 @@
     <string name="accent_purple">Purpura</string>
     <string name="accent_red">Rojo</string>
     <string name="accent_yellow">Amarillo</string>
-    <string name="vanced_installation_preferences">Preferencias de instalación elegidas</string>
-    <string name="chosen_lang">Idioma(s): %1$s</string>
+    <string name="category_appearance">Apariencia</string>
+    <string name="category_behaviour">Comportamiento</string>
     <string name="clear_files">Limpiar archivos descargados</string>
     <string name="cleared_files">Archivos limpiados exitosamente</string>
     <string name="firebase_title">Analíticas de Firebase</string>
@@ -46,31 +56,45 @@
     <string name="push_notifications_summary">Recibir notificaciones push cuando una actualización para %1$s sea lanzada</string>
     <string name="update_center">Centro de Actualizaciones</string>
     <string name="update_not_found">Sin actualizaciónes nuevas</string>
+    <string name="variant">Variante</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">¡%1$s archivos de instalación detectados!</string>
+    <string name="app_install_files_detected_summary">El Manager detectó que todos los archivos necesarios para la instalación de %1$s, se encontraron. ¿Desea instalar?</string>
+    <string name="checking_updates">Comprobando actualizaciones…</string>
+    <string name="chosen_lang">Idioma(s): %1$s</string>
+    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="chosen_version">Versión: %1$s</string>
     <string name="guide">Guía</string>
     <string name="hold_on">¡Detente!</string>
+    <string name="installing_app">Instalando %1$s</string>
     <string name="magisk_vanced">Estás utilizando la versión Magisk/TWRP de Vanced, la cual está descontinuada y no puede ser actualizada mediante esta app. Por favor elimínala quitando el módulo de Magisk o utilizando el desinstalador TWRP.</string>
     <string name="miui_one_title">MIUI detectado!</string>
-    <string name="miui_one">Para instalar Vanced, DEBES desactivar las Optimizaciones MIUI en los ajustes de desarrollador. (Puede ignorar esta advertencia si está utilizando el ROM 20.2.20 o posterior de xiaomi.eu)</string>
+    <string name="miui_one">Para instalar Vanced, DEBES desactivar las Optimizaciones MIUI en los ajustes de desarrollador. (Puedes ignorar esta advertencia si estas utilizando el ROM 20.2.20 o posterior de xiaomi.eu)</string>
     <string name="error">Error</string>
+    <string name="redownload">Volver a descargar</string>
     <string name="security_context">Asegúrate de haber descargado la aplicación desde vanced.app, Servidor de discord o el GitHub de Vanced</string>
     <string name="success">Éxito!</string>
+    <string name="vanced_installation_preferences">Preferencias de instalación de Vanced</string>
     <string name="vanced_installed">¡Vanced se ha instalado correctamente! ¿Abrir ahora?</string>
+    <string name="version">Versión</string>
     <string name="music_installed">¡Vanced Music se ha instalado correctamente! ¿Abrir ahora?</string>
+    <string name="please_be_patient">Por favor, sé paciente…</string>
     <string name="launch">Abrir</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>
+    <string name="light_plus_other">Claro + %1$s</string>
+    <string name="select_at_least_one_lang">¡Se necesita al menos un idioma!</string>
     <!-- About Page -->
     <string name="manager_dev">Desarrolladores del Manager</string>
     <string name="sources">Fuentes</string>
     <string name="vanced_team">Equipo Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">No se pudo conectar a Chown Apk con el propietario del sistema, inténtalo de nuevo</string>
+    <string name="chown_fail">No se pudo conectar a Chown Apk con el propietario del sistema, inténtalo de nuevo.</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="files_missing_va">Faltan los archivos, ¿Descarga Fallida?</string>
-    <string name="ifile_missing">Dark/Black.apk no puede ser leído (¿su almacenamiento fue bloqueado?) o el archivo desapareció</string>
+    <string name="files_missing_va">Error al localizar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
+    <string name="ifile_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del almacenamiento, por favor inténtelo de nuevo.</string>
     <string name="installation_aborted">La instalación falló porque el usuario abortó la instalación.</string>
     <string name="installation_blocked">Instalación fallida porque el usuario bloqueó la instalación.</string>
     <string name="installation_downgrade">La instalación falló porque el usuario intentó degradar el paquete. Desinstale las actualizaciones de stock YouTube, y vuelva a intentarlo.</string>
@@ -81,6 +105,6 @@
     <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de apk está habilitada. Desactiva la verificación de la firmas de apk, y vuelve a intentarlo.</string>
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
     <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
-    <string name="modapk_missing">Falta el Dark/Black.apk en el instalador. Esto no debería pasar, por favor, borra los datos de la aplicación del Manager</string>
-    <string name="path_missing">La ruta de instalación de Youtube no es accesible o no está disponible después de la instalación del Split</string>
+    <string name="modapk_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del instalador. Elimina los datos de la aplicación Vanced Manager y vuelva a intentarlo.</string>
+    <string name="path_missing">No se pudo encontrar la ruta de instalación de YouTube después de dividir la instalación.</string>
 </resources>
