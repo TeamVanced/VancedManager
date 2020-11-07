@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">取消</string>
     <string name="close">關閉</string>
     <string name="reset">重設</string>
     <string name="save">儲存</string>
+    <string name="select_apps">選擇您需要的應用程式</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
-    <string name="title_home">主頁</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
+    <string name="update_manager">更新 Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">請至少選擇一個應用程式！</string>
+    <string name="are_you_rooted">您的裝置是 Rooted 嗎？</string>
+    <string name="willing_to_use_root">打算使用 root 版本嗎？只需要點擊下面的按鈕，或者選擇繼續</string>
+    <string name="grant_root">授予 Root 權限</string>
     <!-- Home Page -->
+    <string name="about_app">關於 %1$s</string>
+    <string name="app_changelog_tooltip">點選卡片以檢視更新日誌</string>
     <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
@@ -28,12 +38,12 @@
     <string name="accent_purple">紫色</string>
     <string name="accent_red">紅色</string>
     <string name="accent_yellow">黃色</string>
-    <string name="vanced_installation_preferences">已選安裝偏好設定</string>
-    <string name="chosen_lang">語言: %1$s</string>
+    <string name="category_appearance">外觀</string>
+    <string name="category_behaviour">行為</string>
     <string name="clear_files">清除已下載的檔案</string>
     <string name="cleared_files">成功清除檔案</string>
     <string name="firebase_title">Firebase 分析</string>
-    <string name="firebase_summary">這讓我們收集有關應用程式表現和崩潰日誌的資訊</string>
+    <string name="firebase_summary">這讓我們可以收集關於應用程式效能和崩潰日誌的資訊</string>
     <string name="language_title">語言</string>
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
@@ -45,42 +55,56 @@
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">有可用更新時接收 %1$s 推送通知</string>
     <string name="update_center">Manager 更新中心</string>
-    <string name="update_not_found">沒有新的更新</string>
+    <string name="update_not_found">沒有更新</string>
+    <string name="variant">版本</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
+    <string name="app_install_files_detected_summary">Manager 找到所有 %1$s 所需的安裝檔案。您打算安裝嗎？</string>
+    <string name="checking_updates">正在檢查更新…</string>
+    <string name="chosen_lang">語言：%1$s</string>
+    <string name="chosen_theme">主題: %1$s</string>
+    <string name="chosen_version">版本: %1$s</string>
     <string name="guide">說明</string>
     <string name="hold_on">警告！</string>
+    <string name="installing_app">正在安裝 %1$s</string>
     <string name="magisk_vanced">您正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
     <string name="miui_one_title">已偵測到 MIUI！</string>
     <string name="miui_one">為了能夠正確安裝 Vanced ，您必須在開發人員設定中停用 MIUI 優化。 (如果您使用基於 xiomi.eu 20.2.20 或更新的 ROM ，則可以忽略此警告)</string>
     <string name="error">錯誤</string>
+    <string name="redownload">重新下載</string>
     <string name="security_context">請確保您從 vanced.app、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="success">成功！</string>
-    <string name="vanced_installed">成功安裝 Vanced ，現在啟動嗎？</string>
-    <string name="music_installed">成功安裝 Vanced Music ！現在啟動嗎？</string>
+    <string name="vanced_installation_preferences">Vanced 安裝偏好設定</string>
+    <string name="vanced_installed">成功安裝 Vanced ，要開啟它嗎？</string>
+    <string name="version">版本</string>
+    <string name="music_installed">成功安裝 Vanced Music ！要開啟它嗎？</string>
+    <string name="please_be_patient">請耐心等候…</string>
     <string name="launch">啟動</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
+    <string name="light_plus_other">淺色 + %1$s</string>
+    <string name="select_at_least_one_lang">請至少選擇一種語言！</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開發者</string>
     <string name="sources">原始碼</string>
     <string name="vanced_team">Vanced 團隊</string>
     <!-- Error messages -->
-    <string name="chown_fail">Chown Apk 到系統擁有者失敗，請重試</string>
+    <string name="chown_fail">無法 `chown` apk 為系統擁有者，請重試。</string>
     <string name="error_downloading">%1$s 下載錯誤</string>
     <string name="failed_uninstall">%1$s 解除安裝失敗</string>
-    <string name="files_missing_va">檔案已丟失，下載失敗嗎？</string>
-    <string name="ifile_missing">無法讀取 Dark/Black.apk (儲存空間被封鎖了？) 或檔案已丟失</string>
+    <string name="files_missing_va">無法找到安裝所需的檔案。請重新下載安裝檔案，然後再試。</string>
+    <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 apk 檔案，請再試。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
     <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生 YouTube 的更新，然後重試。</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前版本的 Vanced ，然後重試。</string>
     <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
-    <string name="installation_incompatible">安裝檔案與您的手機不兼容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
+    <string name="installation_incompatible">安裝檔案與您的裝置不相容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
     <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
     <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
     <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
     <string name="installation_storage">儲存空間發生錯誤導致安裝失敗。</string>
-    <string name="modapk_missing">安裝程式缺乏黑色/深色 apk ，這不應該發生的，請清除 Manager 數據</string>
-    <string name="path_missing">未能訪問原生 YouTube 安裝路徑，或在原生 Split 安裝後丟失</string>
+    <string name="modapk_missing">在安裝程式中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試。</string>
+    <string name="path_missing">分割安裝後無法找到原生 YouTube 安裝路徑。</string>
 </resources>

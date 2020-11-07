@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Anuluj</string>
     <string name="close">Zamknij</string>
     <string name="reset">Zresetuj</string>
     <string name="save">Zapisz</string>
+    <string name="select_apps">Wybierz swoje aplikacje</string>
     <!-- Main Activity -->
     <string name="title_about">O nas</string>
-    <string name="title_home">Dom</string>
+    <string name="title_home">Menedżer</string>
     <string name="title_settings">Ustawienia</string>
+    <string name="update_manager">Zaktualizuj Menedżera</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Wybierz co najmniej jedną aplikację!</string>
+    <string name="are_you_rooted">Czy masz root?</string>
+    <string name="willing_to_use_root">Zamierzasz używać wersji root? Po prostu kliknij przycisk poniżej, jeśli nie kliknij aby kontynuować</string>
+    <string name="grant_root">Przyznaj uprawnienie root</string>
     <!-- Home Page -->
-    <string name="changelog">Listy zmian</string>
+    <string name="about_app">O %1$s</string>
+    <string name="app_changelog_tooltip">Kliknij kartę, aby zobaczyć listę zmian.</string>
+    <string name="changelog">Lista zmian</string>
     <string name="downloading_file">Pobieranie %1$s</string>
     <string name="install">Zainstaluj</string>
     <string name="button_reinstall">Przeinstaluj</string>
@@ -20,7 +30,7 @@
     <string name="unavailable">Niedostępne</string>
     <string name="update">Aktualizuj</string>
     <string name="useful_links">Przydatne linki</string>
-    <string name="support_us">Wesprzyj nas, pobierając Brave</string>
+    <string name="support_us">Wspomóż nas!</string>
     <!-- Settings -->
     <string name="accent_color">Kolor Akcentu</string>
     <string name="accent_blue">Niebieski</string>
@@ -28,8 +38,8 @@
     <string name="accent_purple">Fioletowy</string>
     <string name="accent_red">Czerwony</string>
     <string name="accent_yellow">Żółty</string>
-    <string name="vanced_installation_preferences">Wybrane preferencje instalacji</string>
-    <string name="chosen_lang">Język(i): %1$s</string>
+    <string name="category_appearance">Wygląd</string>
+    <string name="category_behaviour">Zachowanie</string>
     <string name="clear_files">Wyczyść pobrane pliki</string>
     <string name="cleared_files">Pomyślnie wyczyszczono pliki</string>
     <string name="firebase_title">Analityka Firebase</string>
@@ -46,31 +56,45 @@
     <string name="push_notifications_summary">Otrzymuj powiadomienia push po wydaniu aktualizacji dla %1$s</string>
     <string name="update_center">Centrum aktualizacji</string>
     <string name="update_not_found">Brak nowych aktualizacji</string>
+    <string name="variant">Wariant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">Wykryto %1$s plików instalacyjnych!</string>
+    <string name="app_install_files_detected_summary">Menedżer wykrył, że znaleziono wszystkie pliki niezbędne do instalacji %1$s. Czy chcesz zainstalować?</string>
+    <string name="checking_updates">Sprawdzam aktualizacje…</string>
+    <string name="chosen_lang">Język(i): %1$s</string>
+    <string name="chosen_theme">Motyw: %1$s</string>
+    <string name="chosen_version">Wersja: %1$s</string>
     <string name="guide">Przewodnik</string>
     <string name="hold_on">Stop!</string>
+    <string name="installing_app">Instalowanie %1$s</string>
     <string name="magisk_vanced">Korzystasz z Vanced w wersji Magisk/TWRP, która została wycofana i nie można jej zaktualizować za pomocą tej aplikacji. Najpierw usuń moduł magisk/używając deinstalatora TWRP Vanced.</string>
     <string name="miui_one_title">MIUI wykryte!</string>
     <string name="miui_one">Aby zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli korzystasz z ROM 20.2.20 lub późniejszego xiaomi.eu)</string>
     <string name="error">Błąd</string>
+    <string name="redownload">Pobierz ponownie</string>
     <string name="security_context">Upewnij się, że pobrałeś aplikację z vanced.app, serwera Vanced Discord lub GitHub</string>
     <string name="success">Sukces!</string>
+    <string name="vanced_installation_preferences">Preferencje instalacji Vanced</string>
     <string name="vanced_installed">Vanced został pomyślnie zainstalowany! Uruchomić teraz?</string>
+    <string name="version">Wersja</string>
     <string name="music_installed">Vanced Music został pomyślnie zainstalowany! Uruchomić teraz?</string>
+    <string name="please_be_patient">Prosimy o cierpliwość…</string>
     <string name="launch">Uruchom</string>
     <string name="welcome">Witaj</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wybierz preferowany język(i) dla Vanced</string>
+    <string name="light_plus_other">Jasny + %1$s</string>
+    <string name="select_at_least_one_lang">Wybierz co najmniej jeden język!</string>
     <!-- About Page -->
     <string name="manager_dev">Deweloperzy Menedżera</string>
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Nie udało się zmienić właściciela Apk, spróbuj ponownie</string>
+    <string name="chown_fail">Nie udało się zmienić właściciela apk, spróbuj ponownie.</string>
     <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
-    <string name="files_missing_va">Brakuje plików, Pobieranie nie powiodło się?</string>
-    <string name="ifile_missing">Dark/Black.apk nie może być odczytany (Czy pamięć została zablokowana?) lub brakuje pliku</string>
+    <string name="files_missing_va">Nie udało się zlokalizować wymaganych plików do instalacji. Pobierz ponownie pliki instalacyjne, a następnie spróbuj ponownie.</string>
+    <string name="ifile_missing">Nie udało się zlokalizować pliku apk dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
     <string name="installation_aborted">Instalacja nie powiodła się, bo użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Instalacja nie powiodła się, bo użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć wersję paczki. Odinstaluj aktualizacje z oryginalnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
@@ -81,6 +105,6 @@
     <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
     <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
-    <string name="modapk_missing">Brak czarnej/ciemnej apk w instalatorze. To nie powinno się zdarzyć, wyczyść dane menedżera</string>
-    <string name="path_missing">Ścieżka instalacji Youtube nie jest dostępna lub brakuje po instalacji systemowego split</string>
+    <string name="modapk_missing">Nie udało się znaleźć pliku apk dla czarnego/ciemnego motywu z instalatora. Wyczyść dane aplikacji Menedżera i spróbuj ponownie.</string>
+    <string name="path_missing">Nie udało się zlokalizować ścieżki instalacji YouTube po podzieleniu instalacji.</string>
 </resources>

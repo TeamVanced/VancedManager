@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">ਰੱਦ ਕਰੋ</string>
     <string name="close">ਰੱਦ ਕਰੋ</string>
     <string name="reset">ਰੀਸੈੱਟ</string>
     <string name="save">ਸੁੱਰਖਿਅਤ ਕਰੋ</string>
+    <string name="select_apps">ਹੋਰ ਐਪ ਚੁਣੋ</string>
     <!-- Main Activity -->
     <string name="title_about">ਸਾਡੇ ਬਾਰੇ ਵਿੱਚ</string>
-    <string name="title_home">ਘਰ</string>
+    <string name="title_home">ਮਨੇਜਰ</string>
     <string name="title_settings">ਸੇਟਿੰਗਸ</string>
+    <string name="update_manager">ਅਪਡੇਟ ਮਨੇਜਰ</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
+    <string name="are_you_rooted">ਕੀ ਤੁਸੀਂ ਰੂਟ ਕੀਤਾ ਹੋਇਆ?</string>
+    <string name="willing_to_use_root">ਰੂਟ ਕੀਤੇ ਵਰਜਨ ਨੂੰ ਵਰਤਨਾ? ਬੱਸ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਨੂੰ ਦਬਾਓ, ਨਹੀਂ ਤਾਂ ਜਾਰੀ ਰੱਖਣ ਲਈ ਟੈਪ ਕਰੋ</string>
+    <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
     <!-- Home Page -->
+    <string name="about_app">ਬਾਰੇ ਵਿੱਚ %1$s</string>
+    <string name="app_changelog_tooltip">ਚੇਂਜਲਾਗ ਦੇਖਣ ਲਈ ਕਾਰਡ \'ਤੇ ਟੈਪ ਕਰੋ.</string>
     <string name="changelog">ਤਬਦੀਲੀਆਂ</string>
     <string name="downloading_file">ਡਾਉਨਲੋਡ ਕਰ ਰਿਹਾ ਹੈ %1$s</string>
     <string name="install">ਸਥਾਪਨਾ</string>
@@ -28,8 +38,8 @@
     <string name="accent_purple">ਬੈਂਗਣੀ</string>
     <string name="accent_red">ਲਾਲ</string>
     <string name="accent_yellow">ਪੀਲਾ</string>
-    <string name="vanced_installation_preferences">ਸਥਾਪਨਾ ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
-    <string name="chosen_lang">ਭਾਸ਼ਾ (ਇ): %1$s</string>
+    <string name="category_appearance">ਦਿੱਖ</string>
+    <string name="category_behaviour">ਰਵੱਈਆ</string>
     <string name="clear_files">ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="cleared_files">ਫਾਇਲਾਂ ਸਫਲਤਾਪੂਰਵਕ ਸਾਫ਼ ਕੀਤੀ ਗਈ</string>
     <string name="firebase_title">ਫਾਇਰਬੇਸ ਵਿਸ਼ਲੇਸ਼ਣ</string>
@@ -46,31 +56,45 @@
     <string name="push_notifications_summary">ਜਦੋਂ %1$s ਦਾ ਅੱਪਡੇਟ ਜਾਰੀ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਪੁਸ਼ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ</string>
     <string name="update_center">ਅੱਪਡੇਟ ਕੇਂਦਰ</string>
     <string name="update_not_found">ਕੋਈ ਨਵਾਂ ਅੱਪਡੇਟ ਨਹੀਂ</string>
+    <string name="variant">ਵੇਰੀਐਂਟ</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਲੱਭੀਆਂ!</string>
+    <string name="app_install_files_detected_summary">ਮੈਨੇਜਰ ਨੇ ਖੋਜਿਆ ਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਇਲਾਂ %1$s ਮਿਲੀਆਂ ਹਨ. ਕੀ ਤੁਸੀਂ ਸਥਾਪਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="checking_updates">ਅੱਪਡੇਟ ਲਈ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
+    <string name="chosen_lang">ਭਾਸ਼ਾ (ਇ): %1$s</string>
+    <string name="chosen_theme">ਥੀਮ: %1$s</string>
+    <string name="chosen_version">ਵਰਜਨ %1$s</string>
     <string name="guide">ਗਾਇਡ</string>
     <string name="hold_on">ਉਡੀਕੋ!</string>
+    <string name="installing_app">%1$s ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
     <string name="magisk_vanced">ਤੁਸੀਂ Vanced ਦੇ Magisk / TWRP ਸੰਸਕਰਣ ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ, ਜਿਸਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ ਅੱਤੇ ਇਸ ਐਪ ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਅੱਪਡੇਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ| ਕਿਰਪਾ ਇਸ Magisk ਮੋਡੂਅਲ ਨੂੰ / TWRP Vanced uninstaller ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਹੱਟਾ ਦੇਵੋਂ|</string>
     <string name="miui_one_title">ਪਤਾ ਲਗਾਇਆ MiUI ਉਪਯੋਗਕਰਤਾ!</string>
     <string name="miui_one">Vanced ਇੰਸਟਾਲ ਕਰਨ ਲਈ, ਤੁਸੀੰ ਡਵੇਲਪਰ ਸੇਟਿੰਗ ਵਿੱਚ MIUI Optimization ਨੂੰ ਬੰਦ ਕਰੋ| (ਜੇਕਰ ਤੁਸੀਂ 20.2.20 ਜਾਂ ਬਾਅਦ ਵਿੱਚ xiaomi.eu ਆਧਾਰਿਤ ROM ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ ਤਾਂ ਤੁਸੀਂ ਇਸ ਚੇਤਾਵਨੀ ਨੂੰ ਅਣਦੇਖਾ ਕਰ ਸਕਦੇ ਹੋ)</string>
     <string name="error">ਗਲਤੀ</string>
+    <string name="redownload">ਮੁੜ ਡਾਉਨਲੋਡ</string>
     <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vanced.app, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
     <string name="success">ਸਫਲਤਾ!</string>
+    <string name="vanced_installation_preferences">Vanced ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
     <string name="vanced_installed">ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ! ਹੁਣ ਖੋਲੋ?</string>
+    <string name="version">ਵਰਜਨ</string>
     <string name="music_installed">ਵੇਂਸਡ ਸੰਗੀਤ ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ ! ਹੁਣ ਖੋਲੋ?</string>
+    <string name="please_be_patient">ਕਿਰਪਾ ਕਰਕੇ ਸਬਰ ਰੱਖੋ…</string>
     <string name="launch">ਖੋਲੋ</string>
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ (ਏ) ਚੁਣੋ</string>
+    <string name="light_plus_other">ਲਾਇਟ + %1$s</string>
+    <string name="select_at_least_one_lang">ਘੱਟੋ-ਘੱਟ ਇੱਕ ਭਾਸ਼ਾ ਚੁਣੋ!</string>
     <!-- About Page -->
     <string name="manager_dev">ਪ੍ਬੰਧਕ ਨਿਰਮਾਣਕਰਤਾ</string>
     <string name="sources">ਸਰੋਤ</string>
     <string name="vanced_team">Vanced ਟੋਲੀ</string>
     <!-- Error messages -->
-    <string name="chown_fail">ਸਿਸਟਮ ਦੇ ਮਾਲਕ ਨੂੰ APK ਨੂੰ Chown ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ, ਫਿਰ ਤੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string name="chown_fail">ਸਿਸਟਮ ਦੇ ਮਾਲਕ ਨੂੰ APK ਨੂੰ Chown ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ, ਫਿਰ ਤੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="error_downloading">ਡਾਉਨਲੋਡ ਕਰਨ ਵਿਚ ਖਾਮੀਂ %1$s</string>
     <string name="failed_uninstall">ਪੈਕਜ ਦੀ ਸਥਾਪਨਾ ਰੱਦ ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ %1$s</string>
-    <string name="files_missing_va">ਫਾਇਲਾਂ ਗਾਇਬ ਹਨ, ਡਾਉਨਲੋਡ ਕਰਨ ਵਿਚ ਖਾਮੀਂ?</string>
-    <string name="ifile_missing">ਡਾਰਕ / ਬਲੈਕ.ਪੈਕ ਰੀਡ ਨਹੀਂ ਹੋ ਸਕਦਾ (ਕੀ ਸਟੋਰੇਜ ਬਲਾਕ ਹੋ ਗਿਆ ਹੈ?) ਜਾਂ या ਫਾਇਲ ਮਿਸਿੰਗ ਹੈ</string>
+    <string name="files_missing_va">ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਈਲਾਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ. ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਨੂੰ ਮੁੜ ਡਾਉਨਲੋਡ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="ifile_missing">ਸਟੋਰੇਜ ਤੋਂ ਕਾਲੇ / ਡਾਰਕ ਥੀਮ ਲਈ apk ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_aborted">ਸਥਾਪਨਾ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਸਥਾਪਨਾ ਰੱਦ ਕਰ ਦਿੱਤੀ ਸੀ</string>
     <string name="installation_blocked">ਸਥਾਪਨਾ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਸਥਾਪਨਾ ਬਲਾਕ ਕਰ ਦਿੱਤਾ|</string>
     <string name="installation_downgrade">ਸਥਾਪਨਾ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਪੈਕਜ ਨੂੰ ਡਾਉਣਗਰੇਡ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ| ਅਸਲ YouTube ਐਪ ਤੋਂ ਅਪਡੇਟ ਅਨਇੰਸਟਾਲ ਕਰੋ, ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
@@ -81,6 +105,6 @@
     <string name="installation_signature">ਸਥਾਪਨਾ ਰੱਦ ਹੋ ਗਈ ਕਿਉਂਕੀ ਏਪੀਕੇ ਦਸਤਖਤ ਤਸਦੀਕ ਯੋਗ ਹੈ| ਏਪੀਕੇ ਦਸਤਖਤ ਤਸਦੀਕ ਨੂੰ ਅਯੋਗ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_miui">MIUI ਸਥਾਪਨਾ ਅਸਫਲ, ਕਿਉਂਕਿ Optimization ਯੋਗ ਕੀਤੀ ਗਈ ਸੀ. MIUI Optimization ਅਯੋਗ ਕਰੋ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
     <string name="installation_storage">ਸਟੋਰੇਜ ਨਾਕਾਮੀ ਦੇ ਕਾਰਨ ਸਥਾਪਨਾ ਅਸਫਲ|</string>
-    <string name="modapk_missing">ਬਲੈਕ / ਡਾਰਕ ਏਪੀਕੇ ਇੰਸਟੌਲਰ ਤੋਂ ਗੁੰਮ ਹੈ, ਅਜਿਹਾ ਨਹੀਂ ਹੋਣਾ ਚਾਹੀਦਾ, ਕਿਰਪਾ ਕਰਕੇ ਮੈਨੇਜਰ ਦਾ ਐਪ ਡਾਟਾ ਮਿਟਾਓ</string>
-    <string name="path_missing">ਅਸਲ Youtube ਸਟਾਕ ਸਥਾਪਤ ਕਰਨ ਦਾ ਰਸਤਾ ਪਹੁੰਚਯੋਗ ਨਹੀਂ ਜਾਂ ਸਟਾਕ ਸਪਲਿਟ ਸਥਾਪਨਾ ਤੋਂ ਬਾਅਦ ਗੁੰਮ ਹੈ</string>
+    <string name="modapk_missing">ਇੰਸਟੌਲਰ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ. ਮੈਨੇਜਰ ਐਪ ਦਾ ਡਾਟਾ ਸਾਫ਼ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="path_missing">ਸਪਲਿਟ ਇੰਸਟਾਲੇਸ਼ਨ ਦੇ ਬਾਅਦ ਸਟਾਕ YouTube ਇੰਸਟਾਲੇਸ਼ਨ ਮਾਰਗ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ.</string>
 </resources>

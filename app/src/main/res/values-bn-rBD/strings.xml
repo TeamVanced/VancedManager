@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
     <string name="close">বন্ধ করুন</string>
     <string name="reset">আবার শুরু করো</string>
     <string name="save">সংরক্ষণ করুন</string>
+    <string name="select_apps">Select Your Apps</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
-    <string name="title_home">মূল পাতা</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">সেটিংস</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
-    <string name="changelog">পরিবর্তন নথি</string>
+    <string name="about_app">About %1$s</string>
+    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="install">ইনস্টল করুন</string>
     <string name="button_reinstall">পুনরায় ইনস্টল করুন</string>
@@ -20,7 +30,7 @@
     <string name="unavailable">অনুপলব্ধ</string>
     <string name="update">হালনাগাদ</string>
     <string name="useful_links">উপকারী লিংক</string>
-    <string name="support_us">আমাদের সমর্থন করো!</string>
+    <string name="support_us">Support US!</string>
     <!-- Settings -->
     <string name="accent_color">রঙের ধরন</string>
     <string name="accent_blue">নীল</string>
@@ -28,12 +38,12 @@
     <string name="accent_purple">গাঢ় বেগুনী</string>
     <string name="accent_red">লাল</string>
     <string name="accent_yellow">হলুদ</string>
-    <string name="vanced_installation_preferences">নির্বাচিত ইনস্টলেশন পছন্দগুলি</string>
-    <string name="chosen_lang">ভাষা (গুলি):%1$s</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">ডাউনলোড করা ফাইল সাফ করুন</string>
     <string name="cleared_files">সাফল্যের সাথে ফাইলগুলি সাফ করা হয়েছে</string>
-    <string name="firebase_title">Firebase Analytics</string>
-    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="firebase_title">ফায়ারবেস বিশ্লেষণ</string>
+    <string name="firebase_summary">এটি আমাদের সফটওয়্যার এর চলার ধরন ও অনাকাঙ্ক্ষিত আচরন সম্পকে আমাদের তথ্য দিবে।</string>
     <string name="language_title">ভাষা</string>
     <string name="link_title">Chrome কাস্টম ট্যাব ব্যবহার করুন</string>
     <string name="link_custom_tabs">লিঙ্কগুলি Chrome কাস্টম ট্যাবগুলিতে খোলা হবে</string>
@@ -45,32 +55,46 @@
     <string name="push_notifications">%1$s পুশ বিজ্ঞপ্তি</string>
     <string name="push_notifications_summary">%1$s এর জন্য আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তিগুলি পান</string>
     <string name="update_center">পরিচালক আপডেট কেন্দ্র Center</string>
-    <string name="update_not_found">কোনও নতুন আপডেট নেই</string>
+    <string name="update_not_found">No new updates</string>
+    <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="checking_updates">Checking for updates…</string>
+    <string name="chosen_lang">ভাষা (গুলি):%1$s</string>
+    <string name="chosen_theme">Theme: %1$s</string>
+    <string name="chosen_version">Version: %1$s</string>
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামো!</string>
+    <string name="installing_app">Installing %1$s</string>
     <string name="magisk_vanced">আপনি ভ্যানসিডের ম্যাজিক / টিডব্লিউআরপি সংস্করণ ব্যবহার করছেন যা বন্ধ হয়ে গেছে এবং এই অ্যাপ্লিকেশনটি ব্যবহার করে আপডেট করা যাবে না। দয়া করে Magisk মডিউলটি সরিয়ে / TWRP ভ্যান্সড আনইনস্টলার ব্যবহার করে এটি সরিয়ে দিন।.</string>
     <string name="miui_one_title">মিইউআই শনাক্তকৃত!</string>
     <string name="miui_one">ভ্যানসড ইনস্টল করার জন্য, আপনাকে বিকাশকারী সেটিংসে এমআইইউআই অপটিমাইজেশন অক্ষম করতে হবে। (আপনি যদি 20.2.20 বা তার পরে xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কতাটিকে এড়িয়ে যেতে পারেন)</string>
     <string name="error">ত্রুটি</string>
+    <string name="redownload">Redownload</string>
     <string name="security_context">নিশ্চিত হয়ে নিন যে আপনি ভ্যানসিড.এপ, ভ্যানস্যাড ডিসকার্ড সার্ভার বা ভ্যানসেড গিটহাব থেকে অ্যাপটি ডাউনলোড করেছেন</string>
     <string name="success">সফলতা!</string>
+    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
     <string name="vanced_installed">ভ্যান্সড সফলভাবে ইনস্টল করা হয়েছে! এখন খোল?</string>
+    <string name="version">Version</string>
     <string name="music_installed">ভ্যান্সড মিউজিক সফলভাবে ইনস্টল করা হয়েছে! এখন খোল?</string>
+    <string name="please_be_patient">Please be patient…</string>
     <string name="launch">খোলা</string>
     <string name="welcome">স্বাগতম</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">ভ্যানসডের জন্য আপনার পছন্দসই ভাষা (গুলি) চয়ন করুন</string>
+    <string name="light_plus_other">Light + %1$s</string>
+    <string name="select_at_least_one_lang">Select at least one language!</string>
     <!-- About Page -->
     <string name="manager_dev">পরিচালক বিকাশকারী</string>
     <string name="sources">সূত্রসমূহ</string>
     <string name="vanced_team">ভান্সড দল</string>
     <!-- Error messages -->
-    <string name="chown_fail">সিস্টেমের মালিককে এপিকে ছাওয়াতে ব্যর্থ, আবার চেষ্টা করুন</string>
+    <string name="chown_fail">সিস্টেমের মালিককে এপিকে `chown` করতে ব্যর্থ হয়েছে, দয়া করে আবার চেষ্টা করুন.</string>
     <string name="error_downloading">%1$s ডাউনলোড করার সময় ত্রুটি</string>
     <string name="failed_uninstall">প্যাকেজ %1$s আনইনস্টল করতে ব্যর্থ</string>
-    <string name="files_missing_va">ফাইলগুলি অনুপস্থিত, ডাউনলোড ব্যর্থ হয়েছে?</string>
-    <string name="ifile_missing">ডার্ক / ব্ল্যাক.এপকে পড়া যায় না (স্টোরেজ ব্লক হয়ে গেছে?) বা ফাইল মিসিং Miss</string>
+    <string name="files_missing_va">সফটওয়্যার টি ইনস্টল এর জন্য প্রয়োজনী ফাইল সংগ্রহতে ব্যর্থ হয়েছে। পুনরায় ডাওনলোড এবং ইনস্টল করে চেষ্টা করুন.</string>
+    <string name="ifile_missing">স্টোরেজ থেকে কালো / অন্ধকান থিমের জন্য apk ফাইল সনাক্ত করতে ব্যর্থ হয়েছে, দয়া করে আবার চেষ্টা করুন।.</string>
     <string name="installation_aborted">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারীরা ইনস্টলেশনটি বাতিল করে দিয়েছেন।.</string>
     <string name="installation_blocked">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারীরা ইনস্টলেশনটি অবরুদ্ধ করেছেন।.</string>
     <string name="installation_downgrade">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করেছিল। স্টক ইউটিউব অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।.</string>
@@ -81,6 +105,6 @@
     <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
     <string name="installation_miui">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এমআইইউআই অপটিমাইজেশন সক্ষম রয়েছে। MIUI অপ্টিমাইজেশন অক্ষম করুন, তারপরে আবার চেষ্টা করুন।.</string>
     <string name="installation_storage">স্টোরেজ ত্রুটির কারণে ইনস্টলেশন ব্যর্থ হয়েছে।.</string>
-    <string name="modapk_missing">ইনস্টলারের কাছ থেকে কালো / গাark় এপিপি অনুপস্থিত, এটি হওয়া উচিত নয়, দয়া করে ম্যানেজারের অ্যাপ্লিকেশন ডেটা সাফ করুন</string>
-    <string name="path_missing">স্টক ইউটিউব ইনস্টল করার পথটি অ্যাক্সেসযোগ্য নয় বা স্টক স্প্লিট ইনস্টলের পরে অনুপস্থিত</string>
+    <string name="modapk_missing">ইনস্টলার থেকে কালো / অন্ধকার থিমের জন্য সফটওয়্যারের ফাইল খুঁজতে ব্যর্থ। আপনার অ্যাপ্লিকেশনের ডেটা সাফ করুন, তারপরে আবার চেষ্টা করুন।.</string>
+    <string name="path_missing">ভিন্ন ভিন্ন ইনস্টলেশন পরে স্টক ইউটিউব ইনস্টলেশন পথ সনাক্ত করতে ব্যর্থ.</string>
 </resources>

@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Hủy</string>
     <string name="close">Đóng</string>
     <string name="reset">Đặt lại</string>
     <string name="save">Lưu</string>
+    <string name="select_apps">Chọn ứng dụng của bạn</string>
     <!-- Main Activity -->
     <string name="title_about">Giới thiệu</string>
-    <string name="title_home">Trang chủ</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Cài đặt</string>
+    <string name="update_manager">Cật nhật Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
+    <string name="are_you_rooted">Máy bạn đã root chưa?</string>
+    <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Nhấn nút bên dưới, nếu không hãy nhấn tiếp tục</string>
+    <string name="grant_root">Cấp quyền root</string>
     <!-- Home Page -->
-    <string name="changelog">Bản ghi các thay đổi</string>
+    <string name="about_app">Thông tin về %1$s</string>
+    <string name="app_changelog_tooltip">Nhấn vào thẻ để xem các thay đổi.</string>
+    <string name="changelog">Các thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
     <string name="button_reinstall">Cài đặt lại</string>
@@ -17,70 +27,84 @@
     <string name="latest">Mới nhất:</string>
     <string name="no_microg">microG chưa được cài đặt</string>
     <string name="root_not_granted">Quyền root không được cấp</string>
-    <string name="unavailable">Chưa cài đặt</string>
+    <string name="unavailable">Không tồn tại</string>
     <string name="update">Cập nhật</string>
-    <string name="useful_links">Đường link hữu ích</string>
+    <string name="useful_links">Liên kết hữu ích</string>
     <string name="support_us">Hỗ trợ chúng tôi!</string>
     <!-- Settings -->
-    <string name="accent_color">Màu Chính</string>
+    <string name="accent_color">Màu chủ đạo</string>
     <string name="accent_blue">Xanh dương</string>
     <string name="accent_green">Xanh lá</string>
     <string name="accent_purple">Tím</string>
     <string name="accent_red">Đỏ</string>
     <string name="accent_yellow">Vàng</string>
-    <string name="vanced_installation_preferences">Kiểu cài đặt ưa thích</string>
-    <string name="chosen_lang">Ngôn ngữ: %1$s</string>
+    <string name="category_appearance">Giao diện</string>
+    <string name="category_behaviour">Hành động</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
-    <string name="firebase_title">Phân tích Firebase</string>
-    <string name="firebase_summary">Điều này cho phép chúng tôi thu thập thông tin về hiệu suất ứng dụng và nhật ký sự cố</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_summary">Điều này cho phép chúng tôi thu thập thông tin về hiệu suất và sự cố của ứng dụng</string>
     <string name="language_title">Ngôn ngữ</string>
-    <string name="link_title">Sử dụng Custom Tabs của Chrome</string>
-    <string name="link_custom_tabs">Các đường link sẽ mở trong Custom Tabs của Chrome</string>
+    <string name="link_title">Sử dụng Chrome Custom Tabs</string>
+    <string name="link_custom_tabs">Các liên kết sẽ mở trong Chrome Custom Tabs</string>
     <string name="system_default">Mặc định hệ thống</string>
     <string name="theme">Nền</string>
-    <string name="theme_dark">Nền Tối</string>
-    <string name="theme_light">Nền Sáng</string>
-    <string name="update_url">URL Kênh Cập Nhật</string>
-    <string name="push_notifications">Thông báo đẩy %1$s</string>
-    <string name="push_notifications_summary">Nhận thông báo đẩy khi một bản cập nhật của %1$s được phát hành</string>
+    <string name="theme_dark">Nền tối</string>
+    <string name="theme_light">Nền sáng</string>
+    <string name="update_url">URL kênh cập nhật</string>
+    <string name="push_notifications">Thông báo cho %1$s</string>
+    <string name="push_notifications_summary">Nhận thông báo khi một bản cập nhật của %1$s được phát hành</string>
     <string name="update_center">Trung tâm cập nhật</string>
-    <string name="update_not_found">Không có bản cập nhật mới</string>
+    <string name="update_not_found">Không có cập nhật mới</string>
+    <string name="variant">Phiên bản</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
+    <string name="app_install_files_detected_summary">Manager đã tìm thấy tất cả các tệp cần thiết để cài đặt %1$s. Bạn có muốn cài đặt không?</string>
+    <string name="checking_updates">Đang kiểm tra cập nhật…</string>
+    <string name="chosen_lang">Ngôn ngữ: %1$s</string>
+    <string name="chosen_theme">Nền: %1$s</string>
+    <string name="chosen_version">Phiên bản: %1$s</string>
     <string name="guide">Hướng dẫn</string>
-    <string name="hold_on">Dừng lại!</string>
-    <string name="magisk_vanced">Bạn đang dùng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ nó bằng cách gỡ mô-đun Magisk/sử dụng trình gỡ cài đặt TWRP Vanced.</string>
+    <string name="hold_on">Khoan đã!</string>
+    <string name="installing_app">Đang cài đặt %1$s</string>
+    <string name="magisk_vanced">Bạn đang sử dụng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ mô-đun Magisk/flash trình gỡ cài đặt TWRP.</string>
     <string name="miui_one_title">Phát hiện MIUI!</string>
-    <string name="miui_one">Để có thể cài đặt Vanced, bạn PHẢI vô hiệu hoá tính năng \"Tối ưu hoá MIUI\" trong cài đặt nhà phát triển. (Bạn có thể bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
+    <string name="miui_one">Để cài đặt Vanced, bạn BẮT BUỘC PHẢI vô hiệu hóa Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="error">Lỗi</string>
-    <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vanced.app, server Discord Vanced hoặc Github Vanced</string>
+    <string name="redownload">Tải lại</string>
+    <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vancedapp.com, server Discord Vanced hoặc Github Vanced</string>
     <string name="success">Thành công!</string>
+    <string name="vanced_installation_preferences">Tùy chọn cài đặt của Vanced</string>
     <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
-    <string name="music_installed">Cài đặt thành công Vanced Music! Mở nó?</string>
+    <string name="version">Phiên bản</string>
+    <string name="music_installed">Vanced Music đã được cài đặt thành công! Mở ứng dụng?</string>
+    <string name="please_be_patient">Hãy kiên nhẫn…</string>
     <string name="launch">Mở</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
+    <string name="light_plus_other">Sáng + %1$s</string>
+    <string name="select_at_least_one_lang">Chọn ít nhất một ngôn ngữ!</string>
     <!-- About Page -->
     <string name="manager_dev">Đội ngũ phát triển</string>
     <string name="sources">Nguồn</string>
     <string name="vanced_team">Đội ngũ Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Thay đổi chủ sở hữu Apk cho chủ sở hữu hệ thống thất bại, vui lòng thử lại</string>
+    <string name="chown_fail">Không thể `đổi chủ sở hữu` tệp tin apk thành chủ hệ thống, vui lòng thử lại.</string>
     <string name="error_downloading">Lỗi khi tải xuống %1$s</string>
-    <string name="failed_uninstall">Gỡ cài đặt thất bại %1$s</string>
-    <string name="files_missing_va">Tập tin bị thiếu, download lỗi?</string>
-    <string name="ifile_missing">Không thể đọc Dark/Black.apk (Bộ nhớ có bị chặn không?) hay thiếu tệp tin</string>
+    <string name="failed_uninstall">Gỡ cài đặt %1$s thất bại</string>
+    <string name="files_missing_va">Không thể xác định các tệp tin cần thiết để cài đặt. Tải lại các tệp cài đặt rồi thử lại.</string>
+    <string name="ifile_missing">Không thể xác định tệp tin apk cho chủ đề đen/tối từ bộ nhớ, vui lòng thử lại.</string>
     <string name="installation_aborted">Cài đặt thất bại do người dùng hủy.</string>
     <string name="installation_blocked">Cài đặt thất bại do người dùng chặn.</string>
     <string name="installation_downgrade">Cài đặt thất bại do người dùng hạ cấp ứng dụng. Gỡ các bản cập nhật từ ứng dụng YouTube gốc rồi thử lại.</string>
     <string name="installation_conflict">Cài đặt thất bại do ứng dụng xung đột với một ứng dụng đã được cài đặt trước đó. Gỡ cài đặt phiên bản hiện tại của Vanced rồi thử lại.</string>
-    <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, hãy tham gia Telegram hoặc Discord của chúng tôi để được hỗ trợ thêm.</string>
+    <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, tham gia Telegram hoặc Discord của chúng tôi để được hỗ trợ thêm.</string>
     <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
     <string name="installation_invalid">Cài đặt thất bại do các tệp tin apk bị lỗi, xin hãy thử lại.</string>
     <string name="installation_signature">Cài đặt thất bại do xác minh chứng chỉ apk được kích hoạt. Vô hiệu hóa xác minh chứng chỉ apk rồi thử lại.</string>
     <string name="installation_miui">Cài đặt thất bại do Tối ưu hóa MIUI được kích hoạt. Vô hiệu hóa Tối ưu hóa MIUI rồi thử lại.</string>
     <string name="installation_storage">Cài đặt thất bại do lỗi bộ nhớ.</string>
-    <string name="modapk_missing">Thiếu Black/Dark apk trong trình cài đặt, Điều này không nên xảy ra, vui lòng xoá dữ liệu của Vanced Manager</string>
-    <string name="path_missing">Đường dẫn cài đặt Youtube gốc không thể truy cập được hoặc bị thiếu sau khi cài đặt bản gốc tách rời</string>
+    <string name="modapk_missing">Không thể tìm thấy tập tin cho chủ đề đen/tối từ trình cài đặt. Xóa dữ liệu của Manager rồi thử lại.</string>
+    <string name="path_missing">Không thể xác định thư mục cài đặt của YouTube gốc sau khi tải split.</string>
 </resources>

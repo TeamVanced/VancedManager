@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">İptal</string>
     <string name="close">Kapat</string>
     <string name="reset">Sıfırla</string>
     <string name="save">Kaydet</string>
+    <string name="select_apps">Uygulamalarınızı Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Hakkında</string>
-    <string name="title_home">Ana Sayfa</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Ayarlar</string>
+    <string name="update_manager">Manager\'ı Güncelle</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">En az bir uygulama seçin!</string>
+    <string name="are_you_rooted">Root\'lu musunuz?</string>
+    <string name="willing_to_use_root">Root sürümünü kullanmak ister misiniz? Sadece aşağıdaki düğmeye basın, yoksa devam etmek için dokunun</string>
+    <string name="grant_root">Root İzni Ver</string>
     <!-- Home Page -->
+    <string name="about_app">%1$s Hakkında</string>
+    <string name="app_changelog_tooltip">Değişiklikleri görmek için karta dokunun.</string>
     <string name="changelog">Değişiklikler</string>
     <string name="downloading_file">%1$s indiriliyor</string>
     <string name="install">Yükle</string>
@@ -20,7 +30,7 @@
     <string name="unavailable">Mevcut değil</string>
     <string name="update">Güncelle</string>
     <string name="useful_links">Yararlı Bağlantılar</string>
-    <string name="support_us">Bizi destekle!</string>
+    <string name="support_us">Bizi Destekle!</string>
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
     <string name="accent_blue">Mavi</string>
@@ -28,8 +38,8 @@
     <string name="accent_purple">Mor</string>
     <string name="accent_red">Kırmızı</string>
     <string name="accent_yellow">Sarı</string>
-    <string name="vanced_installation_preferences">Seçilen yükleme tercihleri </string>
-    <string name="chosen_lang">Dil(ler): %1$s</string>
+    <string name="category_appearance">Görünüm</string>
+    <string name="category_behaviour">Davranış</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
     <string name="cleared_files">Dosyalar başarıyla temizlendi</string>
     <string name="firebase_title">Firebase Analizi</string>
@@ -46,41 +56,55 @@
     <string name="push_notifications_summary">%1$s için bir güncelleme yayınlandığında anlık bildirimler alın</string>
     <string name="update_center">Manager Güncelleme Merkezi</string>
     <string name="update_not_found">Yeni güncelleme yok</string>
+    <string name="variant">Varyant</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s kurulum dosyası algılandı!</string>
+    <string name="app_install_files_detected_summary">Manager, %1$s kurulumu için gerekli tüm dosyaların bulunduğunu tespit etti. Yüklemek ister misiniz?</string>
+    <string name="checking_updates">Güncellemeler denetleniyor…</string>
+    <string name="chosen_lang">Dil(ler): %1$s</string>
+    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="chosen_version">Sürüm: %1$s</string>
     <string name="guide">Kılavuz</string>
     <string name="hold_on">Durdur!</string>
+    <string name="installing_app">%1$s yükleniyor</string>
     <string name="magisk_vanced">Üretimi durdurulan ve bu uygulama kullanılarak güncellenemeyen Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen magisk modülünü/TWRP Vanced kaldırıcıyı kullanarak kaldırın.</string>
     <string name="miui_one_title">MIUI tespit edildi!</string>
     <string name="miui_one">Vanced\'i yüklemek için geliştirici ayarlarından MIUI Optimizasyonlarını devre dışı bırakmanız GEREKİR. (20.2.20 veya üzeri xiaomi.eu tabanlı ROM kullanıyorsanız bu uyarıyı göz ardı edebilirsiniz)</string>
     <string name="error">Hata</string>
+    <string name="redownload">Yeniden indir</string>
     <string name="security_context">Uygulamayı vanced.app, Vanced Discord sunucusu veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
     <string name="success">Başarılı!</string>
+    <string name="vanced_installation_preferences">Vanced Kurulum Tercihleri</string>
     <string name="vanced_installed">Vanced başarıyla yüklendi! Şimdi açılsın mı?</string>
+    <string name="version">Sürüm</string>
     <string name="music_installed">Vanced Music başarıyla yüklendi! Şimdi açılsın mı?</string>
+    <string name="please_be_patient">Lütfen sabırlı olun…</string>
     <string name="launch">Aç</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced için tercih ettiğiniz dil(ler)i seçin</string>
+    <string name="light_plus_other">Açık + %1$s</string>
+    <string name="select_at_least_one_lang">En az bir dil seçin!</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Geliştiricisi</string>
+    <string name="manager_dev">Manager Geliştiricileri</string>
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->
-    <string name="chown_fail">Apk sistem sahibine değiştirilemedi, Tekrar Deneyin</string>
+    <string name="chown_fail">Apk sistem sahibine değiştirilemedi, lütfen tekrar deneyin.</string>
     <string name="error_downloading">%1$s İndirilemedi</string>
     <string name="failed_uninstall">%1$s paketi kaldırılamadı</string>
-    <string name="files_missing_va">Dosyalar eksik, İndirme Başarısız mı oldu?</string>
-    <string name="ifile_missing">Dark/Black.apk Okunamıyor(Depolama mı Engellendi?) veya Dosya Yok</string>
+    <string name="files_missing_va">Yükleme için gerekli dosyalar bulunamadı. Yükleme dosyalarını yeniden indirip tekrar deneyin.</string>
+    <string name="ifile_missing">Depolamada siyah/koyu tema için apk dosyası bulunamadı, lütfen tekrar deneyin.</string>
     <string name="installation_aborted">Kullanıcı yüklemeyi iptal ettiği için yükleme başarısız oldu.</string>
     <string name="installation_blocked">Kullanıcı yüklemeyi engellediği için yükleme başarısız oldu.</string>
-    <string name="installation_downgrade">Kullanıcı paketi eski sürüme düşürmeye çalıştığı için yükleme başarısız oldu. Stok YouTube uygulamasından güncellemeleri kaldırın, ardından tekrar deneyin.</string>
-    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırın ve ardından tekrar deneyin.</string>
+    <string name="installation_downgrade">Kullanıcı paketi eski sürüme düşürmeye çalıştığı için yükleme başarısız oldu. Stok YouTube uygulamasından güncellemeleri kaldırıp tekrar deneyin.</string>
+    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırıp tekrar deneyin.</string>
     <string name="installation_failed">Yükleme bilinmeyen nedenlerle başarısız oldu, daha fazla destek için Telegram veya Discord\'a katılın.</string>
-    <string name="installation_incompatible">Yükleme dosyası cihazınızla uyumlu olmadığından yükleme başarısız oldu. İndirilen dosyaları Ayarlar\'dan temizleyin, ardından tekrar deneyin.</string>
+    <string name="installation_incompatible">Yükleme dosyası cihazınızla uyumlu olmadığından yükleme başarısız oldu. İndirilen dosyaları Ayarlar\'dan temizleyip tekrar deneyin.</string>
     <string name="installation_invalid">Apk dosyaları bozuk olduğundan yükleme başarısız oldu, lütfen tekrar deneyin.</string>
-    <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakın, ardından tekrar deneyin.</string>
-    <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakın, ardından tekrar deneyin.</string>
+    <string name="installation_signature">Apk imza doğrulaması etkinleştirildiğinden yükleme başarısız oldu. APK imza doğrulamasını devre dışı bırakıp tekrar deneyin.</string>
+    <string name="installation_miui">MIUI Optimizasyonu etkinleştirildiği için yükleme başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp tekrar deneyin.</string>
     <string name="installation_storage">Bir depolama hatası nedeniyle yükleme başarısız oldu.</string>
-    <string name="modapk_missing">Yükleyicide Black/Dark apk eksik, Bu olmamalı, lütfen yöneticinin uygulama verilerini temizleyin</string>
-    <string name="path_missing">Stok Youtube Yükleme Yolu, Stok Bölünmüş Yüklemeden Sonra Erişilemiyor Veya Yok</string>
+    <string name="modapk_missing">Yükleyiciden siyah/koyu tema için apk dosyası bulunamadı. Manager\'ın uygulama verilerini temizleyip tekrar deneyin.</string>
+    <string name="path_missing">Bölünmüş yüklemeden sonra stok YouTube yükleme yolu bulunamadı.</string>
 </resources>
