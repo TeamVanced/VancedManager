@@ -13,7 +13,7 @@
     <string name="update_manager">Yeniləmə Meneceri</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Ən azı bir tətbiq seçin!</string>
-    <string name="are_you_rooted">Root etmisiniz?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Root versiyasını istifadə etmək istəyirsiniz? Sadəcə aşağıdakı düyməyə basın, əks halda davam etmək üçün toxunun</string>
     <string name="grant_root">Root İcazəsi Ver</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Vanced-i quraşdırmaq üçün tərtibatçı tənzimləmələrindən MIUI Optimallaşdırmasını sıradan çıxartmaq LAZIMDIR. (20.2.20 və ya yuxarı xiaomi.eu əsaslı ROM istifadə edirsinizsə bu xəbərdarlığı nəzərə almaya bilərsiniz)</string>
     <string name="error">Xəta</string>
     <string name="redownload">Yenidən endir</string>
-    <string name="security_context">Tətbiqləri vanced.app, Vanced Discord server və ya Vanced GitHub-dan endirdiyinizə əmin olun</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Uğurlu!</string>
-    <string name="vanced_installation_preferences">Vanced Quraşdırma Tərcihləri</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced uğurla quraşdırıldı! İndi açılsın?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Music uğurla quraşdırıldı! İndi açılsın?</string>
