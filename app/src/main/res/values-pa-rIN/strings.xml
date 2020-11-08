@@ -13,7 +13,7 @@
     <string name="update_manager">ਅਪਡੇਟ ਮਨੇਜਰ</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
-    <string name="are_you_rooted">ਕੀ ਤੁਸੀਂ ਰੂਟ ਕੀਤਾ ਹੋਇਆ?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">ਰੂਟ ਕੀਤੇ ਵਰਜਨ ਨੂੰ ਵਰਤਨਾ? ਬੱਸ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਨੂੰ ਦਬਾਓ, ਨਹੀਂ ਤਾਂ ਜਾਰੀ ਰੱਖਣ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Vanced ਇੰਸਟਾਲ ਕਰਨ ਲਈ, ਤੁਸੀੰ ਡਵੇਲਪਰ ਸੇਟਿੰਗ ਵਿੱਚ MIUI Optimization ਨੂੰ ਬੰਦ ਕਰੋ| (ਜੇਕਰ ਤੁਸੀਂ 20.2.20 ਜਾਂ ਬਾਅਦ ਵਿੱਚ xiaomi.eu ਆਧਾਰਿਤ ROM ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ ਤਾਂ ਤੁਸੀਂ ਇਸ ਚੇਤਾਵਨੀ ਨੂੰ ਅਣਦੇਖਾ ਕਰ ਸਕਦੇ ਹੋ)</string>
     <string name="error">ਗਲਤੀ</string>
     <string name="redownload">ਮੁੜ ਡਾਉਨਲੋਡ</string>
-    <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vanced.app, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">ਸਫਲਤਾ!</string>
-    <string name="vanced_installation_preferences">Vanced ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ! ਹੁਣ ਖੋਲੋ?</string>
     <string name="version">ਵਰਜਨ</string>
     <string name="music_installed">ਵੇਂਸਡ ਸੰਗੀਤ ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ ! ਹੁਣ ਖੋਲੋ?</string>
