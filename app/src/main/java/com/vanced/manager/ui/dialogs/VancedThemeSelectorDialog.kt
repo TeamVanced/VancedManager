@@ -15,7 +15,6 @@ import com.vanced.manager.utils.Extensions.convertToAppTheme
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vanced
-import java.util.*
 
 class VancedThemeDialog : BottomSheetDialogFragment() {
 
