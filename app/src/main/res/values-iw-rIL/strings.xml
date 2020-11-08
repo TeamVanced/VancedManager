@@ -13,7 +13,7 @@
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">על מנת להתקין את Vanced, עליך להשבית אופטימיזציות של MIUI בהגדרות המפתח. (אתה יכול להתעלם מאזהרה זו אם אתה משתמש בגרסה 20.2.2. של שיאומי או יותר)</string>
     <string name="error">בעיה</string>
     <string name="redownload">Redownload</string>
-    <string name="security_context">וודא שהורדת את האפליקציה מ- vanced.app, משרת הדיסקורד של Vanced או מהעמוד של Vanced בGitHub</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">הצלחה!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced הותקן בהצלחה! לפתוח עכשיו?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Music הותקן בהצלחה! לפתוח עכשיו?</string>
