@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Скасувати</string>
     <string name="close">Закрити</string>
     <string name="reset">Скинути</string>
     <string name="save">Зберегти</string>
+    <string name="select_apps">Виберіть ваші додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
-    <string name="title_home">Головна</string>
+    <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
+    <string name="update_manager">Обновіть Менеджер</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Оберіть хоча б один додаток!</string>
+    <string name="are_you_rooted">У вас є root?</string>
+    <string name="willing_to_use_root">Хочете використовувати root-версію? Просто натисніть кнопку нижче, інакше натисніть для продовження</string>
+    <string name="grant_root">Надати root-права</string>
     <!-- Home Page -->
+    <string name="about_app">О %1$s</string>
+    <string name="app_changelog_tooltip">Натисніть на картку, щоб побачити перелік змін.</string>
     <string name="changelog">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
@@ -28,7 +38,8 @@
     <string name="accent_purple">Фіолетовий</string>
     <string name="accent_red">Червоний</string>
     <string name="accent_yellow">Жовтий</string>
-    <string name="chosen_lang">Мова(и): %1$s</string>
+    <string name="category_appearance">Оформлення</string>
+    <string name="category_behaviour">Дії</string>
     <string name="clear_files">Очистити завантажені файли</string>
     <string name="cleared_files">Файли було успішно очищено</string>
     <string name="firebase_title">Аналітика Firebase</string>
@@ -44,32 +55,46 @@
     <string name="push_notifications">%1$s Спливаючі Сповіщення</string>
     <string name="push_notifications_summary">Отримувати спливаючі сповіщення, коли доступне оновлення для %1$s</string>
     <string name="update_center">Центр Оновлень</string>
-    <string name="update_not_found">Нових оновлень не виявлено</string>
+    <string name="update_not_found">Оновлень не знайдено</string>
+    <string name="variant">Варіант</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
+    <string name="app_install_files_detected_summary">Менеджер виявив, що були знайдені всі необхідні файли для встановлення %1$s. Бажаєте інсталювати?</string>
+    <string name="checking_updates">Перевірка оновлень…</string>
+    <string name="chosen_lang">Мова(и): %1$s</string>
+    <string name="chosen_theme">Тема: %1$s</string>
+    <string name="chosen_version">Версія: %1$s</string>
     <string name="guide">Гайд</string>
     <string name="hold_on">Зупинись!</string>
+    <string name="installing_app">Інсталяція %1$s</string>
     <string name="magisk_vanced">Схоже, ви використовуєте Magisk/TWRP-версію Vanced, підтримка якої була припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
     <string name="miui_one_title">Виявлено користувача MIUI!</string>
     <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI в налаштуваннях розробника. (Ви можете проігнорувати це попередження, якщо ви використовуєте прошивку xiaomi.eu на версії 20.2.20+)</string>
     <string name="error">Помилка</string>
+    <string name="redownload">Завантажити заново</string>
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vanced.app, Vanced Discord сервера або Vanced GitHub</string>
     <string name="success">Успіх!</string>
+    <string name="vanced_installation_preferences">Вибрані значення встановлення</string>
     <string name="vanced_installed">Vanced був успішно встановлений! Відкрити зараз?</string>
+    <string name="version">Версія</string>
     <string name="music_installed">Vanced Music успішно встановлений! Відкрити зараз?</string>
+    <string name="please_be_patient">Будь ласка, зачекайте…</string>
     <string name="launch">Відкрити</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
+    <string name="light_plus_other">Світла + %1$s</string>
+    <string name="select_at_least_one_lang">Оберіть хоча б одну мову!</string>
     <!-- About Page -->
     <string name="manager_dev">Розробники інсталятора</string>
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Не вдалося Chown Apk для власника системи, спробуйте ще раз</string>
+    <string name="chown_fail">Не вдалося передати apk власнику системи, спробуйте ще раз.</string>
     <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
-    <string name="files_missing_va">Файли відсутні, Невдале завантаження?</string>
-    <string name="ifile_missing">Dark/Black.apk не зчитується (доступ до сховища був заблокований?) або файл відсутній</string>
+    <string name="files_missing_va">Не вдалося знайти необхідні файли для встановлення. Повторно завантажте файли і спробуйте ще раз.</string>
+    <string name="ifile_missing">Не вдалося знайти apk-файл для чорної/темної теми зі сховища, спробуйте ще раз.</string>
     <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
@@ -80,6 +105,6 @@
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
     <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
-    <string name="modapk_missing">Чорний/Темний apk відсутній, Цього не повинно статися, будь ласка, очистіть дані програми від менеджера</string>
-    <string name="path_missing">Шлях для встановлення звичайного Youtube не є допустимим, або відсутній після того, як був викорастаний SAI</string>
+    <string name="modapk_missing">Не вдалося знайти apk-файл для чорної/темної теми в програмі встановлення. Видаліть дані додатка з Менеджера і спробуйте ще раз.</string>
+    <string name="path_missing">Не вдалося знайти стандартний шлях встановлення YouTube після роздільного встановлення.</string>
 </resources>

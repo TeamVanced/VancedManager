@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Batalkan</string>
     <string name="close">Tutup</string>
     <string name="reset">Atur ulang</string>
     <string name="save">Simpan</string>
+    <string name="select_apps">Pilih Aplikasi Anda</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
-    <string name="title_home">Beranda</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Pengaturan</string>
+    <string name="update_manager">Perbarui Manager</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
+    <string name="are_you_rooted">Apakah Anda Mempunyai Root?</string>
+    <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
+    <string name="grant_root">Berikan Izin Root</string>
     <!-- Home Page -->
+    <string name="about_app">Tentang %1$s</string>
+    <string name="app_changelog_tooltip">Ketuk kartu untuk melihat catatan perubahan.</string>
     <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
@@ -20,7 +30,7 @@
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
     <string name="useful_links">Tautan Berguna</string>
-    <string name="support_us">Dukung kami!</string>
+    <string name="support_us">Dukung Kami!</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
     <string name="accent_blue">Biru</string>
@@ -28,7 +38,8 @@
     <string name="accent_purple">Ungu</string>
     <string name="accent_red">Merah</string>
     <string name="accent_yellow">Kuning</string>
-    <string name="chosen_lang">Bahasa: %1$s</string>
+    <string name="category_appearance">Penampilan</string>
+    <string name="category_behaviour">Perilaku</string>
     <string name="clear_files">Hapus file yang diunduh</string>
     <string name="cleared_files">Berhasil menghapus file</string>
     <string name="firebase_title">Analisis Firebase</string>
@@ -41,35 +52,49 @@
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
     <string name="update_url">Perbarui URL Channel</string>
-    <string name="push_notifications">%1$s Notifikasi Push</string>
+    <string name="push_notifications">Notifikasi Push %1$s</string>
     <string name="push_notifications_summary">Terima notifikasi push saat pembaruan untuk %1$s dirilis</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
     <string name="update_not_found">Tidak ada pembaruan</string>
+    <string name="variant">Varian</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">%1$s file instalasi terdeteksi!</string>
+    <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasang?</string>
+    <string name="checking_updates">Memeriksa pembaruan…</string>
+    <string name="chosen_lang">Bahasa: %1$s</string>
+    <string name="chosen_theme">Theme: %1$s</string>
+    <string name="chosen_version">Version: %1$s</string>
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
+    <string name="installing_app">Memasang %1$s</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapus itu dengan menghapus modul magisk/gunakan pencopot Vanced TWRP.</string>
     <string name="miui_one_title">MIUI terdeteksi!</string>
     <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
     <string name="error">Terjadi kesalahan</string>
+    <string name="redownload">Unduh ulang</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi dari vanced.app, Vanced Discord server atau dari Vanced GitHub</string>
     <string name="success">Berhasil!</string>
+    <string name="vanced_installation_preferences">Preferensi Instalasi Vanced</string>
     <string name="vanced_installed">Vanced berhasil dipasang! Buka sekarang?</string>
+    <string name="version">Version</string>
     <string name="music_installed">Vanced Musik berhasil dipasang! Buka sekarang?</string>
+    <string name="please_be_patient">Harap bersabar…</string>
     <string name="launch">Buka</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
+    <string name="light_plus_other">Light + %1$s</string>
+    <string name="select_at_least_one_lang">Pilih setidaknya satu bahasa!</string>
     <!-- About Page -->
     <string name="manager_dev">Pengembang Manager</string>
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Gagal untuk Chown Apk untuk pemilik sistem, Coba Lagi</string>
+    <string name="chown_fail">Gagal untuk `chown` apk ke pemilik sistem, mohon coba lagi.</string>
     <string name="error_downloading">Gagal Mengunduh %1$s</string>
     <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
-    <string name="files_missing_va">File menghilang, Gagal Mengunduh?</string>
-    <string name="ifile_missing">Dark/Black.apk Tidak Bisa Dibaca (Apakah Penyimpanan Diblokir?) atau File Menghilang</string>
+    <string name="files_missing_va">Gagal untuk menemukan file yang diperlukan untuk instalasi. Unduh ulang file instalasi, lalu coba lagi.</string>
+    <string name="ifile_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
     <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
     <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
     <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
@@ -80,6 +105,6 @@
     <string name="installation_signature">Pemasangan gagal karena apk signature verification diaktifkan. Nonaktifkan apk signature verification, lalu coba lagi.</string>
     <string name="installation_miui">Pemasangan gagal karena Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
     <string name="installation_storage">Pemasangan gagal karena kesalahan pada penyimpanan.</string>
-    <string name="modapk_missing">Black/Dark apk hilang dari pemasang, Ini seharusnya tidak terjadi, mohon hapus data aplikasi manager</string>
-    <string name="path_missing">Install Path Youtube Bawaan Tidak Dapat Diakses Atau Menghilang Setelah Stock Split Install</string>
+    <string name="modapk_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penginstal. Hapus data aplikasi Manager, lalu coba lagi.</string>
+    <string name="path_missing">Gagal untuk menemukan path instalasi YouTube setelah instalasi split.</string>
 </resources>

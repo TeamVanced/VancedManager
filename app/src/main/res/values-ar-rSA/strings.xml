@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">إلغاء</string>
     <string name="close">اغلاق</string>
     <string name="reset">إعادة تعيين</string>
     <string name="save">حفظ</string>
+    <string name="select_apps">اختر تطبيقاتك</string>
     <!-- Main Activity -->
     <string name="title_about">حول</string>
-    <string name="title_home">الرئيسية</string>
+    <string name="title_home">مدير</string>
     <string name="title_settings">اعدادات</string>
+    <string name="update_manager">تحديث المدير</string>
+    <!-- Welcome Page -->
+    <string name="select_at_least_one_app">اختر تطبيق واحد على الأقل!</string>
+    <string name="are_you_rooted">هل جهازك مروت؟</string>
+    <string name="willing_to_use_root">هل ترغب باستعمال نسخة الروت؟ فقط عليك الضغط على الزر في الأسفل، إذا لا اضغط على زر المتابعة</string>
+    <string name="grant_root">امنح صلاحيات الروت</string>
     <!-- Home Page -->
+    <string name="about_app">حوالي %1$s</string>
+    <string name="app_changelog_tooltip">اضغط على القائمة لعرض سجل التغييرات.</string>
     <string name="changelog">سجل التغييرات</string>
     <string name="downloading_file">جارٍ تنزيل %1$s</string>
     <string name="install">تثبيت</string>
@@ -20,7 +30,7 @@
     <string name="unavailable">غير متاح</string>
     <string name="update">تحديث</string>
     <string name="useful_links">روابط المفيدة</string>
-    <string name="support_us">ادعمنا بتريق تنزيل بريف</string>
+    <string name="support_us">ادعمنا!</string>
     <!-- Settings -->
     <string name="accent_color">الوان</string>
     <string name="accent_blue">ازرق</string>
@@ -28,59 +38,74 @@
     <string name="accent_purple">أرجواني</string>
     <string name="accent_red">احمر</string>
     <string name="accent_yellow">اصفر</string>
-    <string name="chosen_lang">اللغة/اللغات: %1$s</string>
+    <string name="category_appearance">المظهر</string>
+    <string name="category_behaviour">السلوك</string>
     <string name="clear_files">مسح الملفات التي تم تنزيلها</string>
     <string name="cleared_files">تم مسح الملفات بنجاح</string>
-    <string name="firebase_title">تحليلات الشراء</string>
+    <string name="firebase_title">تحليلات FireBase</string>
     <string name="firebase_summary">هذا يتيح لنا جمع معلومات عن أداء التطبيق وسجلات الأعطال</string>
     <string name="language_title">اللغة</string>
     <string name="link_title">إستخدم علامات التبويب المخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
-    <string name="system_default">الوضع الافتراضي للنظام</string>
+    <string name="system_default">الوضع الافتراضي</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_dark">الموضوع الاسود</string>
     <string name="theme_light">موضوع الابيض</string>
     <string name="update_url">تحديث رابط القناة</string>
-    <string name="push_notifications">%1$s الإشعارات</string>
+    <string name="push_notifications">إشعارات %1$s</string>
     <string name="push_notifications_summary">تلقي الإشعارات عند إصدار تحديث لـ %1$s</string>
     <string name="update_center">مركز التحديث</string>
-    <string name="update_not_found">لا يوجد تحديثات جديدة</string>
+    <string name="update_not_found">لا توجد تحديثات جديدة</string>
+    <string name="variant">النوع</string>
     <!-- Dialogs -->
+    <string name="app_install_files_detected">تم اكتشاف ملفات تثبيت %1$s!</string>
+    <string name="app_install_files_detected_summary">اكتشف المدير أن جميع الملفات اللازمة لتثبيت %1$s موجودة. هل تريد التثبيت؟</string>
+    <string name="checking_updates">جارٍ التحقق من وجود تحديثات…</string>
+    <string name="chosen_lang">اللغة/اللغات: %1$s</string>
+    <string name="chosen_theme">السمة: %1$s</string>
+    <string name="chosen_version">الإصدار: %1$s</string>
     <string name="guide">المعالج</string>
-    <string name="hold_on">توقف!</string>
-    <string name="magisk_vanced">يبدو أنك تستخدم إصدار Magisk/TWRP من Vanced، الذي تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً عن طريق إزالة وحدة الـ Magisk / بإستخدام أداة إلغاء تثبيت TWRP Vanced.</string>
+    <string name="hold_on">إيقاف!</string>
+    <string name="installing_app">جاري تثبيت %1$s</string>
+    <string name="magisk_vanced">يبدو أنك تستخدم إصدار ماجيسك/TWRP من ڤانسد، الذي قد تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً من قائمة إضافات ماجيسك أو بإستخدام أداة إلغاء تثبيت ڤانسد من TWRP.</string>
     <string name="miui_one_title">تم اكتشاف MIUI!</string>
-    <string name="miui_one">In order to install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة اذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند الى نسخة نظام شاومي أوروبا)</string>
     <string name="error">خطأ</string>
-    <string name="security_context">Make sure that you downloaded the app from vanced.app, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="redownload">إعادة التنزيل</string>
+    <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vanced.app، أو خادم ديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="success">نجاح!</string>
-    <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
-    <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
-    <string name="launch">Open</string>
+    <string name="vanced_installation_preferences">اختيارات تثبيت ڤانسد</string>
+    <string name="vanced_installed">تم تثبيت ڤانسد بنجاح! افتح الآن؟</string>
+    <string name="version">الإصدار</string>
+    <string name="music_installed">تم تثبيت موسيقى ڤانسد بنجاح! افتح الآن؟</string>
+    <string name="please_be_patient">يرجى التحلي بالصبر…</string>
+    <string name="launch">فتح</string>
     <string name="welcome">مرحبا
 اهلا</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
+    <string name="choose_preferred_language">اختر لغتك(لغاتك) المفضلة لڤانسد</string>
+    <string name="light_plus_other">فاتح + %1$s</string>
+    <string name="select_at_least_one_lang">اختر لغة واحدة على الأقل!</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">مطوري المدير</string>
     <string name="sources">مصادر</string>
     <string name="vanced_team">فريق فانسد</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed To Chown Apk to system owner, Try Again</string>
+    <string name="chown_fail">فشل تغيير ملكية حزمة التثبيت الى مالك النظام، الرجاء المحاولة مرة أخرى.</string>
     <string name="error_downloading">خطأ في تحميل %1$s</string>
     <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
-    <string name="files_missing_va">Files are missing, Failed Download?</string>
-    <string name="ifile_missing">Dark/Black.apk Cannot Be Read(Did Storage Get Blocked?) or File Missing</string>
+    <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
+    <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
-    <string name="installation_downgrade">فشل التثبيت لان المستخدم حاول تثبيت اصدار اقدم. قم بحذف التحديثات الخاصيه باليوتيوب الاصلي، ثم حاول مره اخرى</string>
-    <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
-    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم.</string>
-    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. مسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
-    <string name="installation_invalid">فشل التثبيت لأن ملفات apk تالفة، الرجاء المحاولة مرة أخرى.</string>
+    <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار أقدم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب العادي، ثم حاول مرة اخرى.</string>
+    <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من ڤانسد، ثم حاول مرة أخرى.</string>
+    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد الخاص بنا لمزيد من الدعم.</string>
+    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. إمسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
+    <string name="installation_invalid">فشل التثبيت لأن حزم التثبيت تالفة، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_signature">فشل التثبيت بسبب تمكين التحقق من توقيع apk. تعطيل التحقق من توقيع apk، ثم حاول مرة أخرى.</string>
     <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
     <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
-    <string name="modapk_missing">Black/Dark apk missing from installer, This should not happen, please clear app data of manager</string>
-    <string name="path_missing">Stock Youtube Install Path Is Not Accessible Or Missing After Stock Split Install</string>
+    <string name="modapk_missing">فشل العثور على حزمة التثبيت للسمة السوداء/المظلمة من المثبت. إمسح بيانات التطبيق لمدير فانسد، ثم حاول مرة أخرى.</string>
+    <string name="path_missing">فشل العثور على موقع تثبيت اليوتيوب الأصلي بعد تثبيت الحزم المفصلة.</string>
 </resources>
