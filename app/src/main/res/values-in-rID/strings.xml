@@ -13,7 +13,7 @@
     <string name="update_manager">Perbarui Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
-    <string name="are_you_rooted">Apakah Anda Mempunyai Root?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
     <string name="grant_root">Berikan Izin Root</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="redownload">Unduh ulang</string>
-    <string name="security_context">Pastikan anda mengunduh aplikasi dari vanced.app, Vanced Discord server atau dari Vanced GitHub</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Berhasil!</string>
-    <string name="vanced_installation_preferences">Preferensi Instalasi Vanced</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced berhasil dipasang! Buka sekarang?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Musik berhasil dipasang! Buka sekarang?</string>
