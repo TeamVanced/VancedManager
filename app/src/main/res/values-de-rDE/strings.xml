@@ -13,7 +13,7 @@
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Wählen Sie mindestens eine App!</string>
-    <string name="are_you_rooted">Haben Sie Root-Zugriff?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Möchten Sie die Root-Version verwenden? Tippen Sie einfach auf die Schaltfläche unten, andernfalls tippen Sie um fortzufahren</string>
     <string name="grant_root">Root-Berechtigung erteilen</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Um Vanced zu installieren, MÜSSEN Sie MIUI-Optimierungen in den Entwickler-Einstellungen deaktivieren. (Sie können diese Warnung ignorieren, wenn Sie einen auf xiaomi.eu basierenden ROM 20.2.20 oder höher verwenden)</string>
     <string name="error">Fehler</string>
     <string name="redownload">Erneut herunterladen</string>
-    <string name="security_context">Bitte stellen Sie sicher, dass Sie die App von vanced.app, dem Vanced Discord Server oder GitHub heruntergeldaden haben.</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Erfolg!</string>
-    <string name="vanced_installation_preferences">Vanced Installationspräferenzen</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced wurde erfolgreich installiert. Jetzt öffnen?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Musik wurde erfolgreich installiert. Jetzt starten?</string>
