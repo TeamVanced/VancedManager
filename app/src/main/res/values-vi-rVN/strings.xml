@@ -13,7 +13,7 @@
     <string name="update_manager">Cật nhật Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
-    <string name="are_you_rooted">Máy bạn đã root chưa?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Nhấn nút bên dưới, nếu không hãy nhấn tiếp tục</string>
     <string name="grant_root">Cấp quyền root</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Để cài đặt Vanced, bạn BẮT BUỘC PHẢI vô hiệu hóa Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="error">Lỗi</string>
     <string name="redownload">Tải lại</string>
-    <string name="security_context">Hãy đảm bảo rằng bạn tải xuống ứng dụng này từ vancedapp.com, server Discord Vanced hoặc Github Vanced</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Thành công!</string>
-    <string name="vanced_installation_preferences">Tùy chọn cài đặt của Vanced</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
     <string name="version">Phiên bản</string>
     <string name="music_installed">Vanced Music đã được cài đặt thành công! Mở ứng dụng?</string>
