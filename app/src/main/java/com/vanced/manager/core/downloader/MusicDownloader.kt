@@ -6,11 +6,13 @@ import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
+import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.music
 import com.vanced.manager.utils.PackageHelper.install
+import com.vanced.manager.utils.PackageHelper.installMusicRoot
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,12 +20,23 @@ import kotlinx.coroutines.launch
 object MusicDownloader {
 
     private var variant: String? = null
+    private var version: String? = null
+    private var baseurl = ""
 
-    fun downloadMusic(context: Context){
+    fun downloadMusic(context: Context) {
+        val prefs = getDefaultSharedPreferences(context)
+        version = prefs.getString("music_version", music.get()?.string("version"))
+        variant = prefs.getString("vanced_variant", "nonroot")
+        baseurl = "${prefs.getString("install_url", baseUrl)}/music/"
+    }
+
+    fun downloadMusic(context: Context, apk: String = "music") {
         CoroutineScope(Dispatchers.IO).launch {
-            val prefs = getDefaultSharedPreferences(context)
-            variant = prefs.getString("vanced_variant", "nonroot")
-            val url = "${prefs.getString("install_url", baseUrl)}/music/v${music.get()?.string("version")}.apk"
+            val url =
+                    if (apk == "stock")
+                        "$baseurl/stock/v${version}/${getArch()}.apk"
+                    else
+                        "$baseurl/$variant/v${version}.apk"
 
             downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("music/$variant")?.path, "music.apk")
                 .build()
@@ -35,6 +48,11 @@ object MusicDownloader {
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
+                        if (variant == "root" && apk != "stock") {
+                            downloadMusic(context, "stock")
+                            return
+                        }
+
                         startMusicInstall(context)
                     }
 
@@ -50,7 +68,10 @@ object MusicDownloader {
     fun startMusicInstall(context: Context) {
         downloadProgress.get()?.installing?.set(true)
         downloadProgress.get()?.reset()
-        install("${context.getExternalFilesDir("music/$variant")}/music.apk", context)
+        if (variant == "root")
+            installMusicRoot(context)
+        else
+            install("${context.getExternalFilesDir("music/$variant")}/music.apk", context)
     }
 
 }

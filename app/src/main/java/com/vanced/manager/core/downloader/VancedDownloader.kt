@@ -11,6 +11,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.logEvent
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
+import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.Extensions.convertToAppVersions
 import com.vanced.manager.utils.InternetTools
@@ -67,12 +68,7 @@ object VancedDownloader {
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         //newInstaller = defPrefs.getBoolean("new_installer", false)
-        arch = 
-            when {
-                Build.SUPPORTED_ABIS.contains("x86") -> "x86"
-                Build.SUPPORTED_ABIS.contains("arm64-v8a") -> "arm64_v8a"
-                else -> "armeabi_v7a"
-            }
+        arch = getArch()
         count = 0
 
         vancedVersionCode = vanced.get()?.int("versionCode") ?: 0
