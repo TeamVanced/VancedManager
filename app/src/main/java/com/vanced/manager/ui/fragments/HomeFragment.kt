@@ -12,7 +12,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import androidx.navigation.findNavController
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.crowdin.platform.util.inflateWithCrowdin
@@ -50,12 +49,6 @@ open class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.navigateDestination.observe(viewLifecycleOwner, {
-            val content = it.getContentIfNotHandled()
-            if (content != null){
-                view.findNavController().navigate(content)
-            }
-        })
 
         with(binding) {
             viewModel = this@HomeFragment.viewModel

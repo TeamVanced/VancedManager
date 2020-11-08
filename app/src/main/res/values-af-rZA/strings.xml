@@ -28,7 +28,6 @@
     <string name="accent_purple">Purple</string>
     <string name="accent_red">Red</string>
     <string name="accent_yellow">Yellow</string>
-    <string name="vanced_installation_preferences">Chosen installation preferences</string>
     <string name="chosen_lang">Language(s): %1$s</string>
     <string name="clear_files">Clear downloaded files</string>
     <string name="cleared_files">Successfully cleared files</string>

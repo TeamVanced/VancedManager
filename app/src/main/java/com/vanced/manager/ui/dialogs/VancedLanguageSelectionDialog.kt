@@ -16,6 +16,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
+import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import kotlinx.coroutines.CoroutineScope
@@ -32,7 +33,7 @@ class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_vanced_language_selection, container, false)
+        return inflater.inflate(R.layout.dialog_vanced_language_selection, container, false)
     }
 
     @ExperimentalStdlibApi
@@ -84,7 +85,7 @@ class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        VancedPreferencesDialog().show(requireActivity().supportFragmentManager, "")
+        VancedPreferencesDialog().show(requireActivity())
     }
 
 }

@@ -28,7 +28,6 @@
     <string name="accent_purple">Ungu</string>
     <string name="accent_red">Merah</string>
     <string name="accent_yellow">Kuning</string>
-    <string name="vanced_installation_preferences">Preferensi pemasangan yang dipilih</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="clear_files">Hapus file yang diunduh</string>
     <string name="cleared_files">Berhasil menghapus file</string>

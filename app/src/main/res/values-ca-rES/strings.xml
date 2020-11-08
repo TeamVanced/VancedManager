@@ -28,7 +28,6 @@
     <string name="accent_purple">Porpra</string>
     <string name="accent_red">Vermell</string>
     <string name="accent_yellow">Groc</string>
-    <string name="vanced_installation_preferences">Preferències d\'instal·lació triades</string>
     <string name="chosen_lang">Idioma: %1$s</string>
     <string name="clear_files">Esborrar fitxers descarregats</string>
     <string name="cleared_files">Fitxers netejats correctament</string>

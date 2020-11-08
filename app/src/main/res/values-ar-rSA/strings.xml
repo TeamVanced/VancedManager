@@ -28,7 +28,6 @@
     <string name="accent_purple">أرجواني</string>
     <string name="accent_red">احمر</string>
     <string name="accent_yellow">اصفر</string>
-    <string name="vanced_installation_preferences">تفضيلات التثبيت المختارة</string>
     <string name="chosen_lang">اللغة/اللغات: %1$s</string>
     <string name="clear_files">مسح الملفات التي تم تنزيلها</string>
     <string name="cleared_files">تم مسح الملفات بنجاح</string>

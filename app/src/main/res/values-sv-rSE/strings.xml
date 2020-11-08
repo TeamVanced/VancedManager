@@ -28,7 +28,6 @@
     <string name="accent_purple">Lila</string>
     <string name="accent_red">Röd</string>
     <string name="accent_yellow">Gul</string>
-    <string name="vanced_installation_preferences">Valda installationsinställningar</string>
     <string name="chosen_lang">Språk: %1$s</string>
     <string name="clear_files">Rensa nedladdade filer</string>
     <string name="cleared_files">Rensade data</string>

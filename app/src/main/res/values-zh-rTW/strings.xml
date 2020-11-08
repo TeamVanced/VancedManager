@@ -28,7 +28,6 @@
     <string name="accent_purple">紫色</string>
     <string name="accent_red">紅色</string>
     <string name="accent_yellow">黃色</string>
-    <string name="vanced_installation_preferences">已選安裝偏好設定</string>
     <string name="chosen_lang">語言: %1$s</string>
     <string name="clear_files">清除已下載的檔案</string>
     <string name="cleared_files">成功清除檔案</string>

@@ -28,7 +28,6 @@
     <string name="accent_purple">বেগুনি</string>
     <string name="accent_red">লাল</string>
     <string name="accent_yellow">হলুদ</string>
-    <string name="vanced_installation_preferences">নির্বাচিত ইনস্টলেশন পছন্দগুলি</string>
     <string name="chosen_lang">ভাষা(গুলি): %1$s</string>
     <string name="clear_files">ডাউনলোড করা ফাইলগুলি মুছে ফেলুন</string>
     <string name="cleared_files">সফলভাবে ফাইলগুলি মুছে ফেলা হয়েছে</string>

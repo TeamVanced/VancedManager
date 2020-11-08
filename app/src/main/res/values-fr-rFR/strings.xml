@@ -28,7 +28,6 @@
     <string name="accent_purple">Violet</string>
     <string name="accent_red">Rouge</string>
     <string name="accent_yellow">Jaune</string>
-    <string name="vanced_installation_preferences">Préférences d\'installation sélectionnées</string>
     <string name="chosen_lang">Langue(s) : %1$s</string>
     <string name="clear_files">Effacer les fichiers téléchargés</string>
     <string name="cleared_files">Données effacées avec succès</string>

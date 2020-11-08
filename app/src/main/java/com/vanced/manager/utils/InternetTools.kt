@@ -5,8 +5,8 @@ import android.content.Intent
 import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
-import androidx.databinding.ObservableField
 import androidx.core.net.toUri
+import androidx.databinding.ObservableField
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
@@ -34,7 +34,7 @@ object InternetTools {
     //var braveTiers = ObservableField<JsonObject?>()
 
     fun openUrl(url: String, color: Int, context: Context) {
-        val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_customtabs", true)
+        val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_custom_tabs", true)
         if (customTabPrefs) {
             val builder = CustomTabsIntent.Builder()
             builder.setToolbarColor(ContextCompat.getColor(context, color))

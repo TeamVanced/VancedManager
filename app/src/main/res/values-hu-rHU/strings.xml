@@ -28,7 +28,6 @@
     <string name="accent_purple">Lila</string>
     <string name="accent_red">Vörös</string>
     <string name="accent_yellow">Sárga</string>
-    <string name="vanced_installation_preferences">Telepítési preferencia</string>
     <string name="chosen_lang">Nyelv: %1$s</string>
     <string name="clear_files">Letöltött fájlok törlése</string>
     <string name="cleared_files">Sikeresen törölte a fájlokat</string>

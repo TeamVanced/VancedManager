@@ -9,8 +9,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableField
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
@@ -19,8 +17,8 @@ import com.vanced.manager.R
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.dialogs.InstallationFilesDetectedDialog
+import com.vanced.manager.ui.dialogs.MusicPreferencesDialog
 import com.vanced.manager.ui.dialogs.VancedPreferencesDialog
-import com.vanced.manager.ui.events.Event
 import com.vanced.manager.utils.AppUtils.managerPkg
 import com.vanced.manager.utils.AppUtils.microgPkg
 import com.vanced.manager.utils.AppUtils.musicPkg
@@ -32,8 +30,6 @@ import com.vanced.manager.utils.Extensions.setRefreshing
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.loadJson
-import com.vanced.manager.utils.InternetTools.musicVersions
-import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.PackageHelper.apkExist
 import com.vanced.manager.utils.PackageHelper.musicApkExists
 import com.vanced.manager.utils.PackageHelper.uninstallApk
@@ -50,10 +46,6 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     val music = ObservableField<DataModel>()
     val musicRoot = ObservableField<DataModel>()
     val manager = ObservableField<DataModel>()
-
-    private var _navigateDestination = MutableLiveData<Event<Int>>()
-
-    val navigateDestination : LiveData<Event<Int>> = _navigateDestination
 
     fun fetchData() {
         activity.setRefreshing(true)
@@ -101,10 +93,11 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
         }
 
         if ((view as MaterialButton).text == activity.getString(R.string.update)) {
-            if (app == activity.getString(R.string.vanced))
-                VancedPreferencesDialog().show(activity)
-            else
-                AppDownloadDialog(app).show(activity)
+            when (app) {
+                activity.getString(R.string.vanced) -> VancedPreferencesDialog().show(activity)
+                activity.getString(R.string.music) -> MusicPreferencesDialog().show(activity)
+                else ->  AppDownloadDialog(app).show(activity)
+            }
 
             return
         }
@@ -118,8 +111,8 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             }
             activity.getString(R.string.music) -> {
                 when (variant) {
-                    "nonroot" -> if (musicApkExists(activity)) InstallationFilesDetectedDialog(app).show(activity) else AppDownloadDialog(app).show(activity)
-                    "root" -> AppDownloadDialog(app).show(activity)
+                    "nonroot" -> if (musicApkExists(activity)) InstallationFilesDetectedDialog(app).show(activity) else MusicPreferencesDialog().show(activity)
+                    "root" -> MusicPreferencesDialog().show(activity)
                 }
             }
             activity.getString(R.string.microg) -> {
@@ -133,10 +126,10 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     init {
         activity.setRefreshing(true)
-        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced), vancedVersions))
-        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced), vancedVersions))
-        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music), musicVersions))
-        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music), musicVersions))
+        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
+        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
+        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
+        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
         microg.set(DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), ContextCompat.getDrawable(activity, R.drawable.ic_microg)))
         manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), ContextCompat.getDrawable(activity, R.mipmap.ic_launcher)))
         activity.setRefreshing(false)

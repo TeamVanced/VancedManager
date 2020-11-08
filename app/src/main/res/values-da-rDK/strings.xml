@@ -28,7 +28,6 @@
     <string name="accent_purple">Lilla</string>
     <string name="accent_red">Rød</string>
     <string name="accent_yellow">Gul</string>
-    <string name="vanced_installation_preferences">Valgte installations præferencer</string>
     <string name="chosen_lang">Sprog:%1$s</string>
     <string name="clear_files">Ryd hentede filer</string>
     <string name="cleared_files">Filer ryddet succesfuldt</string>

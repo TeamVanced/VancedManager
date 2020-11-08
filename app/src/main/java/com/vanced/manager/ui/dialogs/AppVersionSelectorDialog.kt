@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.dialogs
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -57,6 +58,11 @@ class AppVersionSelectorDialog(
                 binding.dialogRadiogroup.addView(rb, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
             }
         }
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        super.onDismiss(dialog)
+        VancedPreferencesDialog().show(requireActivity())
     }
 
 }

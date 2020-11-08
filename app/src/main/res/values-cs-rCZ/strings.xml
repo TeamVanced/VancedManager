@@ -28,7 +28,6 @@
     <string name="accent_purple">Fialová</string>
     <string name="accent_red">Červená</string>
     <string name="accent_yellow">Žlutá</string>
-    <string name="vanced_installation_preferences">Vybrané předvolby instalace</string>
     <string name="chosen_lang">Jazyk: %1$s</string>
     <string name="clear_files">Vymazat stažené soubory</string>
     <string name="cleared_files">Vymazání souborů proběhlo úspěšně</string>

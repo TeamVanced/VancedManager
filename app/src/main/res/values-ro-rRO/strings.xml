@@ -28,7 +28,6 @@
     <string name="accent_purple">Violet</string>
     <string name="accent_red">Roşu</string>
     <string name="accent_yellow">Galben</string>
-    <string name="vanced_installation_preferences">Preferințe de instalare selectate</string>
     <string name="chosen_lang">Limbă: %1$s</string>
     <string name="clear_files">Ştergeţi fişierele descărcate</string>
     <string name="cleared_files">Fişiere şterse cu succes</string>

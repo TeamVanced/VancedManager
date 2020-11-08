@@ -28,7 +28,6 @@
     <string name="accent_purple">Tím</string>
     <string name="accent_red">Đỏ</string>
     <string name="accent_yellow">Vàng</string>
-    <string name="vanced_installation_preferences">Kiểu cài đặt ưa thích</string>
     <string name="chosen_lang">Ngôn ngữ: %1$s</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>

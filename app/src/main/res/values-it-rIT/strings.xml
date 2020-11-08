@@ -28,7 +28,6 @@
     <string name="accent_purple">Viola</string>
     <string name="accent_red">Rosso</string>
     <string name="accent_yellow">Giallo</string>
-    <string name="vanced_installation_preferences">Preferenze di installazione scelte</string>
     <string name="chosen_lang">Lingue: %1$s</string>
     <string name="clear_files">Cancella i file scaricati</string>
     <string name="cleared_files">File cancellati con successo</string>

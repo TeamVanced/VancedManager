@@ -28,7 +28,6 @@
     <string name="accent_purple">बैंगनी</string>
     <string name="accent_red">लाल</string>
     <string name="accent_yellow">पीला</string>
-    <string name="vanced_installation_preferences">स्थापना प्राथमिकताएँ चुना</string>
     <string name="chosen_lang">भाषा (एं): %1$s</string>
     <string name="clear_files">डाउनलोड की गई फ़ाइलें साफ़ करें</string>
     <string name="cleared_files">फ़ाइलें सफलतापूर्वक साफ़ की गई</string>

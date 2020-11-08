@@ -3,21 +3,14 @@ package com.vanced.manager.core
 import android.app.Application
 import android.content.res.Configuration
 import android.util.Log
-import androidx.databinding.ObservableField
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.beust.klaxon.JsonObject
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.model.AuthConfig
 import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
 import com.vanced.manager.BuildConfig.*
-import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.loadJson
-import com.vanced.manager.utils.JsonHelper.getJson
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 open class App: Application() {
 

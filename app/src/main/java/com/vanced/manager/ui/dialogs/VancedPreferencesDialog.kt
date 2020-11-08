@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
-import com.vanced.manager.databinding.DialogInstallationPreferencesBinding
-import com.vanced.manager.model.AppVersionsModel
+import com.vanced.manager.databinding.DialogVancedPreferencesBinding
 import com.vanced.manager.utils.Extensions.convertToAppTheme
 import com.vanced.manager.utils.Extensions.convertToAppVersions
 import com.vanced.manager.utils.Extensions.show
@@ -19,13 +18,13 @@ import java.util.*
 
 class VancedPreferencesDialog : BottomSheetDialogFragment() {
 
-    private lateinit var binding: DialogInstallationPreferencesBinding
+    private lateinit var binding: DialogVancedPreferencesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_installation_preferences, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_vanced_preferences, container, false)
         return binding.root
     }
 
@@ -42,29 +41,33 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
                 showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
         }
-        val vancedVersionsConv = vancedVersions.get()?.value?.convertToAppVersions() ?: arrayOf(AppVersionsModel("", ""))
 
-        binding.chosenTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
-        binding.chosenVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("vanced_version", vancedVersionsConv[0].value))
-        binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
+        val vancedVersionsConv = vancedVersions.get()?.value?.reversed()?.convertToAppVersions()
+
+        binding.vancedInstallTitle.text = requireActivity().getString(R.string.app_installation_preferences, requireActivity().getString(R.string.vanced))
+
+        binding.vancedTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
+        binding.vancedVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("vanced_version", vancedVersionsConv?.get(0)?.value ?: ""))
+        binding.vancedLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
 
         binding.openThemeSelector.setOnClickListener {
             dismiss()
-            VancedThemeDialog().show(requireActivity())
+            VancedThemeSelectorDialog().show(requireActivity())
         }
 
         binding.openVersionSelector.setOnClickListener {
             dismiss()
-            AppVersionSelectorDialog(vancedVersionsConv, "vanced").show(requireActivity())
+            if (vancedVersionsConv != null) {
+                AppVersionSelectorDialog(vancedVersionsConv, "vanced").show(requireActivity())
+            }
         }
-        binding.chosenLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
 
         binding.openLanguageSelector.setOnClickListener {
             dismiss()
             VancedLanguageSelectionDialog().show(requireActivity())
         }
 
-        binding.chosenPrefsInstall.setOnClickListener {
+        binding.vancedInstall.setOnClickListener {
             dismiss()
             AppDownloadDialog(requireActivity().getString(R.string.vanced)).show(requireActivity().supportFragmentManager, "InstallVanced")
         }

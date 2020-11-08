@@ -28,7 +28,6 @@
     <string name="accent_purple">Фіолетовий</string>
     <string name="accent_red">Червоний</string>
     <string name="accent_yellow">Жовтий</string>
-    <string name="vanced_installation_preferences">Вибрані налаштування встановлення</string>
     <string name="chosen_lang">Мова(и): %1$s</string>
     <string name="clear_files">Очистити завантажені файли</string>
     <string name="cleared_files">Файли було успішно очищено</string>

@@ -28,7 +28,6 @@
     <string name="accent_purple">Paars</string>
     <string name="accent_red">Rood</string>
     <string name="accent_yellow">Geel</string>
-    <string name="vanced_installation_preferences">Gekozen installatievoorkeuren</string>
     <string name="chosen_lang">Talen: %1$s</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
     <string name="cleared_files">Bestanden succesvol verwijderd</string>

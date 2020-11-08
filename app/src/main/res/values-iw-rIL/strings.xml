@@ -28,7 +28,6 @@
     <string name="accent_purple">סגול</string>
     <string name="accent_red">אדום</string>
     <string name="accent_yellow">צהוב</string>
-    <string name="vanced_installation_preferences">העדפות התקנה שנבחרו</string>
     <string name="chosen_lang">שפה: %1$s</string>
     <string name="clear_files">מחק קבצים שהורדו</string>
     <string name="cleared_files">מחיקת הקבצים הסתיימה בהצלחה</string>

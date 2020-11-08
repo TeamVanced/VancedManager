@@ -28,7 +28,6 @@
     <string name="accent_purple">Mor</string>
     <string name="accent_red">Kırmızı</string>
     <string name="accent_yellow">Sarı</string>
-    <string name="vanced_installation_preferences">Seçilen yükleme tercihleri </string>
     <string name="chosen_lang">Dil(ler): %1$s</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
     <string name="cleared_files">Dosyalar başarıyla temizlendi</string>

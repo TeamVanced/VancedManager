@@ -28,7 +28,6 @@
     <string name="accent_purple">Lila</string>
     <string name="accent_red">Rot</string>
     <string name="accent_yellow">Gelb</string>
-    <string name="vanced_installation_preferences">Ausgewählte Installationsoptionen</string>
     <string name="chosen_lang">Sprache(n): %1$s</string>
     <string name="clear_files">Heruntergeladene Dateien löschen</string>
     <string name="cleared_files">Daten erfolgreich gelöscht</string>

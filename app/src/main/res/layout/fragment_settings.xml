@@ -25,7 +25,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:switch_def_value="true"
-                    app:switch_key="use_customtabs"
+                    app:switch_key="@{@string/use_custom_tabs}"
                     app:switch_summary="@string/link_custom_tabs"
                     app:switch_title="@string/link_title" />
 
@@ -42,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:switch_def_value="true"
-                    app:switch_key="firebase"
+                    app:switch_key="@{@string/firebase}"
                     app:switch_summary="@string/firebase_summary"
                     app:switch_title="@string/firebase_title" />
 

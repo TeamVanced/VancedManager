@@ -28,7 +28,6 @@
     <string name="accent_purple">紫</string>
     <string name="accent_red">赤</string>
     <string name="accent_yellow">黄</string>
-    <string name="vanced_installation_preferences">選択されたインストール設定</string>
     <string name="chosen_lang">言語: %1$s</string>
     <string name="clear_files">ダウンロード済みファイルを消去</string>
     <string name="cleared_files">ファイルを消去しました</string>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- LIGHT -->
-
-    <style name="LightTheme_Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- BASE LIGHT -->
+    <style name="BaseLight_Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">#2e73ff</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -25,7 +24,7 @@
         <item name="iconColor">?colorPrimaryVariant</item>
         <item name="toolbarIconColor">#111111</item>
         <item name="DialogBG">#ffffff</item>
-        <item name="colorLinkImage">#72000000</item>
+        <item name="colorLinkImage">#000000</item>
         <item name="colorLinkBG">#F7F7F7</item>
         <item name="colorSettingsTitle">#000000</item>
         <item name="colorSecondaryText">#B3000000</item>
@@ -39,6 +38,10 @@
         <item name="snackbarTextViewStyle">@style/SnackBarText</item>
 
     </style>
+
+    <!-- LIGHT -->
+
+    <style name="LightTheme_Blue" parent="BaseLight_Blue"/>
 
     <style name="LightTheme_Red" parent="LightTheme_Blue">
 

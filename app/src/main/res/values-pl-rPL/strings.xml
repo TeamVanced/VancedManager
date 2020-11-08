@@ -28,7 +28,6 @@
     <string name="accent_purple">Fioletowy</string>
     <string name="accent_red">Czerwony</string>
     <string name="accent_yellow">Żółty</string>
-    <string name="vanced_installation_preferences">Wybrane preferencje instalacji</string>
     <string name="chosen_lang">Język(i): %1$s</string>
     <string name="clear_files">Wyczyść pobrane pliki</string>
     <string name="cleared_files">Pomyślnie wyczyszczono pliki</string>

@@ -28,7 +28,6 @@
     <string name="accent_purple">보라색</string>
     <string name="accent_red">빨간색</string>
     <string name="accent_yellow">노란색</string>
-    <string name="vanced_installation_preferences">선택된 설치값</string>
     <string name="chosen_lang">언어: %1$s</string>
     <string name="clear_files">다운로드된 파일 모두 지우기</string>
     <string name="cleared_files">다운로드된 파일을 모두 삭제했습니다</string>

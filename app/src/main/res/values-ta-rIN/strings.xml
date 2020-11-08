@@ -28,7 +28,6 @@
     <string name="accent_purple">ஊதா</string>
     <string name="accent_red">சிவப்பு</string>
     <string name="accent_yellow">மஞ்சள்</string>
-    <string name="vanced_installation_preferences">நிறுவல் விருப்பத்தேர்வுகளைத் தேர்ந்தெடுத்தது</string>
     <string name="chosen_lang">மொழி: %1$s</string>
     <string name="clear_files">பதிவிறக்கிய கோப்புகளை அழிக்கவும்</string>
     <string name="cleared_files">கோப்புகளை வெற்றிகரமாக அழித்துவிட்டது</string>

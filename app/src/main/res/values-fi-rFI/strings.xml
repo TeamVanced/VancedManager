@@ -28,7 +28,6 @@
     <string name="accent_purple">Violetti</string>
     <string name="accent_red">Punainen</string>
     <string name="accent_yellow">Keltainen</string>
-    <string name="vanced_installation_preferences">Valitut asennusasetukset</string>
     <string name="chosen_lang">Kieli: %1$s</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
     <string name="cleared_files">Tiedostot tyhjennettiin onnistuneesti</string>

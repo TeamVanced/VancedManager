@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.dialogs
 
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +17,7 @@ import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vanced
 
-class VancedThemeDialog : BottomSheetDialogFragment() {
+class VancedThemeSelectorDialog : BottomSheetDialogFragment() {
 
     private lateinit var binding: DialogBottomRadioButtonBinding
     private val prefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
@@ -52,6 +53,11 @@ class VancedThemeDialog : BottomSheetDialogFragment() {
                 binding.dialogRadiogroup.addView(rb, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
             }
         }
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        super.onDismiss(dialog)
+        VancedPreferencesDialog().show(requireActivity())
     }
 
 }

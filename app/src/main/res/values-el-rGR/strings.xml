@@ -28,7 +28,6 @@
     <string name="accent_purple">Μωβ</string>
     <string name="accent_red">Κόκκινο</string>
     <string name="accent_yellow">Κίτρινο</string>
-    <string name="vanced_installation_preferences">Επιλεγμένες προτιμήσεις εγκατάστασης</string>
     <string name="chosen_lang">Γλώσσα(/ες): %1$s</string>
     <string name="clear_files">Εκκαθάριση ληφθέντων αρχείων</string>
     <string name="cleared_files">Επιτυχής εκκαθάριση αρχείων</string>

@@ -30,4 +30,22 @@ open class SlidingLinearLayout: LinearLayout {
             y = newHeight
         }
 
+    var xFraction: Float
+        get() {
+            val width = width
+            return if (width != 0)
+                x / getWidth()
+            else
+                x
+        }
+        set(xFraction) {
+            val width = width
+            val newWidth =
+                    if (width > 0)
+                        xFraction * width
+                    else
+                        (1).toFloat()
+            x = newWidth
+        }
+
 }

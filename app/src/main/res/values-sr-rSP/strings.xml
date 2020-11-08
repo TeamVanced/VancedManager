@@ -28,7 +28,6 @@
     <string name="accent_purple">Љубичаста</string>
     <string name="accent_red">Црвена</string>
     <string name="accent_yellow">Жута</string>
-    <string name="vanced_installation_preferences">Изабрана инсталациона подешавања</string>
     <string name="chosen_lang">Језик (Језици):%1$s</string>
     <string name="clear_files">Обриши преузете датотеке</string>
     <string name="cleared_files">Успешно брисање датотека</string>
