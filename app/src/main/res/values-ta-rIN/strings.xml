@@ -13,7 +13,7 @@
     <string name="update_manager">புதுப்பிப்பு மேலாளர்</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">குறைந்தது ஒரு பயன்பாட்டையாவது தேர்ந்தெடுக்கவும்!</string>
-    <string name="are_you_rooted">நீங்கள் வேரூன்றியிருக்கிறீர்களா?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">ரூட் பதிப்பைப் பயன்படுத்த விரும்புகிறீர்களா? கீழே உள்ள பொத்தானை அழுத்தினால், தொடர தொடரவும்</string>
     <string name="grant_root">கிராண்ட் ரூட் அனுமதி</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Vanced ஐ நிறுவ, டெவலப்பர் அமைப்புகளில் MIUI உகப்பாக்கங்களை முடக்க வேண்டும். (நீங்கள் 20.2.20 அல்லது அதற்குப் பிறகு xiaomi.eu அடிப்படையிலான ROM ஐப் பயன்படுத்துகிறீர்கள் என்றால் இந்த எச்சரிக்கையை நீங்கள் புறக்கணிக்கலாம்)</string>
     <string name="error">பிழை</string>
     <string name="redownload">மீண்டும் பதிவிறக்கு</string>
-    <string name="security_context">பயன்பாட்டை vanced.app, Vanced Discord server அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">வெற்றி!</string>
-    <string name="vanced_installation_preferences">நிறுவப்பட்ட நிறுவல் விருப்பத்தேர்வுகள்</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">வேன்ட் வெற்றிகரமாக நிறுவப்பட்டது! இப்போது திற?</string>
     <string name="version">Version</string>
     <string name="music_installed">வேன்ஸ்ட் மியூசிக் வெற்றிகரமாக நிறுவப்பட்டுள்ளது! இப்போது திற?</string>
