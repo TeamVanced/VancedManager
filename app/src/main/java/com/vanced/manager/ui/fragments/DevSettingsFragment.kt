@@ -8,11 +8,9 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
 import androidx.core.net.toUri
-import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
-import androidx.preference.PreferenceManager
-import androidx.preference.SwitchPreferenceCompat
+import androidx.preference.*
 import com.crowdin.platform.Crowdin
+import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
 import com.vanced.manager.R
 import com.vanced.manager.ui.WelcomeActivity
 import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
@@ -49,24 +47,28 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
 
         }
 
-        findPreference<Preference>("crowdin_auth")?.isVisible = !Crowdin.isAuthorized()
-        findPreference<SwitchPreferenceCompat>("crowdin_upload_screenshot")?.isVisible = Crowdin.isAuthorized()
-        findPreference<SwitchPreferenceCompat>("crowdin_real_time")?.isVisible = Crowdin.isAuthorized()
+        if (ENABLE_CROWDIN_AUTH) {
+            findPreference<PreferenceCategory>("crowdin_pref_category")?.isVisible = true
 
-        findPreference<Preference>("crowdin_auth")?.setOnPreferenceClickListener {
-            requireActivity().authCrowdin()
-            @RequiresApi(Build.VERSION_CODES.M)
-            if (!Settings.canDrawOverlays(requireActivity())) {
-                val intent = Intent(
-                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                    ("package:" + requireActivity().packageName).toUri()
-                )
-                startActivityForResult(intent, 69)
-                return@setOnPreferenceClickListener true
+            findPreference<Preference>("crowdin_auth")?.isVisible = !Crowdin.isAuthorized()
+            findPreference<SwitchPreferenceCompat>("crowdin_upload_screenshot")?.isVisible = Crowdin.isAuthorized()
+            findPreference<SwitchPreferenceCompat>("crowdin_real_time")?.isVisible = Crowdin.isAuthorized()
+
+            findPreference<Preference>("crowdin_auth")?.setOnPreferenceClickListener {
+                requireActivity().authCrowdin()
+                @RequiresApi(Build.VERSION_CODES.M)
+                if (!Settings.canDrawOverlays(requireActivity())) {
+                    val intent = Intent(
+                            Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                            ("package:" + requireActivity().packageName).toUri()
+                    )
+                    startActivityForResult(intent, 69)
+                    return@setOnPreferenceClickListener true
+                }
+
+                Crowdin.authorize(requireActivity())
+                true
             }
-
-            Crowdin.authorize(requireActivity())
-            true
         }
 
         findPreference<Preference>("install_url")?.setOnPreferenceClickListener {
