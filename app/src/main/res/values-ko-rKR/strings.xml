@@ -13,7 +13,7 @@
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Vanced를 올바르게 설치하려면, 개발자 설정으로 들어가서 MIUI 최적화 기능을 반드시 끄셔야 합니다. (단, 버전이 20.2.20 이상인 xiaomi.eu 기반 ROM을 사용하는 경우 이 경고를 무시하셔도 좋습니다)</string>
     <string name="error">오류</string>
     <string name="redownload">Redownload</string>
-    <string name="security_context">항상 vanced.app, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 앱을 다운로드했는지 확인해주세요.</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">성공!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced가 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced 뮤직이 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
