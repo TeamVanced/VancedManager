@@ -13,7 +13,7 @@
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">For å installere Vanced, MÅ du deaktivere MIUI Optimaliseringer i utviklerinnstillingene. (Du kan ignorere denne advarselen hvis du bruker 20.2.20 eller senere xiaomi.eu basert ROM)</string>
     <string name="error">Feil</string>
     <string name="redownload">Redownload</string>
-    <string name="security_context">Kontroller at du lastet ned appen fra vanced.app, Vanced Discord serveren eller Vanced GitHub</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Suksess!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced har blitt installert! Åpne nå?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Music har blitt installert! Åpne nå?</string>
