@@ -13,7 +13,7 @@
     <string name="update_manager">ম্যানেজার হালনাগাদ করুন</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
-    <string name="are_you_rooted">আপনার কি রুট অ্যাক্সেস আছে?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">রুট সংস্করণ ব্যবহার করতে ইচ্ছুক? নীচের বোতামটি চাপুন, অন্যথায় চালিয়ে যেতে আলতো চাপুন</string>
     <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">ভ্যান্সড ইনস্টল করার জন্য, আপনাকে বিকাশকারী সেটিংসে এমআইইউআই অপটিমাইজেশন অক্ষম করতে হবে। (আপনি যদি ২০.২.২০ বা তার পরে xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কতাটিকে এড়িয়ে যেতে পারেন)</string>
     <string name="error">ত্রুটি</string>
     <string name="redownload">পুনরায় ডাউনলোড করুন</string>
-    <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vanced.app, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">সফল!</string>
-    <string name="vanced_installation_preferences">ভ্যান্সড ইনস্টল করার পছন্দসমূহ</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">ভ্যান্সড সফলভাবে ইনস্টল করা হয়েছে! এখন চালু করুন?</string>
     <string name="version">সংস্করণ</string>
     <string name="music_installed">ভ্যান্সড মিউজিক সফলভাবে ইনস্টল করা হয়েছে! এখন খুলুন?</string>
