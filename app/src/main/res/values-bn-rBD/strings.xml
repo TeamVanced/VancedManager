@@ -13,7 +13,7 @@
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">ভ্যানসড ইনস্টল করার জন্য, আপনাকে বিকাশকারী সেটিংসে এমআইইউআই অপটিমাইজেশন অক্ষম করতে হবে। (আপনি যদি 20.2.20 বা তার পরে xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কতাটিকে এড়িয়ে যেতে পারেন)</string>
     <string name="error">ত্রুটি</string>
     <string name="redownload">Redownload</string>
-    <string name="security_context">নিশ্চিত হয়ে নিন যে আপনি ভ্যানসিড.এপ, ভ্যানস্যাড ডিসকার্ড সার্ভার বা ভ্যানসেড গিটহাব থেকে অ্যাপটি ডাউনলোড করেছেন</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">সফলতা!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">ভ্যান্সড সফলভাবে ইনস্টল করা হয়েছে! এখন খোল?</string>
     <string name="version">Version</string>
     <string name="music_installed">ভ্যান্সড মিউজিক সফলভাবে ইনস্টল করা হয়েছে! এখন খোল?</string>
