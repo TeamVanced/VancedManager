@@ -13,7 +13,7 @@
     <string name="update_manager">Manager を更新</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
-    <string name="are_you_rooted">ルート化されていますか？</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">root 版を使用したいですか？下のボタンを押してください。そうでないなら続けるボタンを押してください</string>
     <string name="grant_root">root 権限を付与</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="error">エラー</string>
     <string name="redownload">再ダウンロード</string>
-    <string name="security_context">vanced.app、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">成功！</string>
-    <string name="vanced_installation_preferences">Vanced インストール設定</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced のインストールに成功しました。今すぐ開きますか？</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Music のインストールに成功しました。今すぐ開きますか？</string>
