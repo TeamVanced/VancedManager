@@ -13,7 +13,7 @@
     <string name="update_manager">Päivitä hallintasovellus</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Valitse ainakin yksi sovellus!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Vancedin asentamiseksi TÄYTYY poistaa MIUI-optimoinnit käytöstä kehittäjäasetuksissa. (Voit ohittaa tämän varoituksen, jos käytät 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM-levyä)</string>
     <string name="error">Virhe</string>
     <string name="redownload">Uudelleenlataa</string>
-    <string name="security_context">Varmista, että latasit sovelluksen vanced.app -sivustolta, Vancedin Discord-palvelimelta tai Vancedin GitHubista</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Onnistui!</string>
-    <string name="vanced_installation_preferences">Vancedin asennusasetukset</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced on asennettu onnistuneesti! Avaa nyt?</string>
     <string name="version">Versio</string>
     <string name="music_installed">Vanced Music on asennettu onnistuneesti! Avoinna nyt?</string>
