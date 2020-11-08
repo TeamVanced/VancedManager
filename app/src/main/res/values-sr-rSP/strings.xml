@@ -13,7 +13,7 @@
     <string name="update_manager">Освежи Менаџера</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Одабери барем једну апликацију!</string>
-    <string name="are_you_rooted">Дали је уређај рутован?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Имате ли намеру користити рутовану верзију? Само кликните на дугме доле, у супротном кликните за наставак</string>
     <string name="grant_root">Омогућите дозволу за рут</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Да би апликација Vanced била исправно инсталирана морате да искључите оптимизацију за ову апликацију у MIUI подешавањима за програмере.( Ову напомену можете да занемарите у случају ако користите верзију 20.2.20 и новију xiaomi.eu ROM-а)</string>
     <string name="error">Грешка</string>
     <string name="redownload">Поново преузми</string>
-    <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта, Vanced Discord сервера или Vanced GitHub-а</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Успешно!</string>
-    <string name="vanced_installation_preferences">Инсталациона подешавања за Vanced</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced је успешно инсталиран! Желите да га одмах отворите?</string>
     <string name="version">Верзија</string>
     <string name="music_installed">Vanced Music је успешно инсталиран! Желите да га одмах отворите?</string>
