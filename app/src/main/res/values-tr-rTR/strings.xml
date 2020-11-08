@@ -13,7 +13,7 @@
     <string name="update_manager">Manager\'ı Güncelle</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">En az bir uygulama seçin!</string>
-    <string name="are_you_rooted">Root\'lu musunuz?</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="willing_to_use_root">Root sürümünü kullanmak ister misiniz? Sadece aşağıdaki düğmeye basın, yoksa devam etmek için dokunun</string>
     <string name="grant_root">Root İzni Ver</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Vanced\'i yüklemek için geliştirici ayarlarından MIUI Optimizasyonlarını devre dışı bırakmanız GEREKİR. (20.2.20 veya üzeri xiaomi.eu tabanlı ROM kullanıyorsanız bu uyarıyı göz ardı edebilirsiniz)</string>
     <string name="error">Hata</string>
     <string name="redownload">Yeniden indir</string>
-    <string name="security_context">Uygulamayı vanced.app, Vanced Discord sunucusu veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Başarılı!</string>
-    <string name="vanced_installation_preferences">Vanced Kurulum Tercihleri</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced başarıyla yüklendi! Şimdi açılsın mı?</string>
     <string name="version">Sürüm</string>
     <string name="music_installed">Vanced Music başarıyla yüklendi! Şimdi açılsın mı?</string>
