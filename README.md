@@ -1,6 +1,6 @@
 Pull requests should be made to the Dev branch as that is the working branch, master is for release code.
 ======
-For anyone who wants to provide translations please submit them to https://translatemanager.vanced.app as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
+For anyone who wants to provide translations please submit them to https://crowdin.com/project/vanced-manager as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
 ======
 [![Github All Releases](https://img.shields.io/github/downloads/YTVanced/VancedManager/total.svg)]() [![Github All Releases](https://img.shields.io/github/release/YTVanced/VancedManager.svg)]() 
 # Vanced Manager
