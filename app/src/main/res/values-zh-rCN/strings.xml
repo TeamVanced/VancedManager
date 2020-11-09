@@ -13,7 +13,7 @@
     <string name="update_manager">更新 Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">选择至少一个应用！</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">您的设备是否已 Root ？</string>
     <string name="willing_to_use_root">想要使用 root 版本？只需点击下面的按钮，或点击继续</string>
     <string name="grant_root">授予 Root 权限</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">为了能够正确安装 Vanced ，您必须在开发者设置中禁用 MIUI 优化。 (如果您是基于 xiomi.eu 20.2.20或更新的 ROM，您可以忽略此警告)</string>
     <string name="error">错误</string>
     <string name="redownload">重新下载</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">请确保您是从 vancedapp.com 、 Vanced Discord 服务器或 Vanced Github 下载本应用</string>
     <string name="success">成功！</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s 安装首选设定</string>
     <string name="vanced_installed">成功安装 Vanced ，现在打开吗？</string>
     <string name="version">版本</string>
     <string name="music_installed">成功安装 Vanced 音乐! 现在打开吗？</string>
