@@ -13,7 +13,7 @@
     <string name="update_manager">Rêveberê hildemîne</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Herî kêm sepanekê hilbijêre!</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">Gelo cîhaza te Root e?</string>
     <string name="willing_to_use_root">Gelo dixwazî guhertoya root bi kar bînî? Tenê bişkoka jêrîn bidewsîne, an ji bo domandinê bitepînin</string>
     <string name="grant_root">Destûra Root\'ê bide</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">Ji bo ku Vanced were sazkirin, DIVÊ hûn Optimîzasyonên MIUI-yê di sazkariyên pêşvebirinê de neçalak bikin. (Hûn dikarin vê hişyariyê paşguh bikin heke hûn ROM\'a li ser esasa xiaomi.eu 20.2.20 an jortir bi kar tînin)</string>
     <string name="error">Çewtî</string>
     <string name="redownload">Ji nû ve daxîne</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">Piştrast bin ku we sepan ji vancedapp.com\'ê, ji servera Vanced Discord\'ê an Vanced GitHub\'ê daxistiye</string>
     <string name="success">Bi Ser Ket!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s sazkariyên bijarde yên sazkirinê</string>
     <string name="vanced_installed">Vanced biserketî saz bû! Gelo niha vebe?</string>
     <string name="version">Guherto</string>
     <string name="music_installed">Vanced Mûzîk biserketî saz bû! Gelo niha vebe?</string>
