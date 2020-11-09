@@ -13,7 +13,7 @@
     <string name="update_manager">تحديث المدير</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">اختر تطبيق واحد على الأقل!</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">هل جهازك مروت؟</string>
     <string name="willing_to_use_root">هل ترغب باستعمال نسخة الروت؟ فقط عليك الضغط على الزر في الأسفل، إذا لا اضغط على زر المتابعة</string>
     <string name="grant_root">امنح صلاحيات الروت</string>
     <!-- Home Page -->
@@ -72,9 +72,9 @@
     <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة اذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند الى نسخة نظام شاومي أوروبا)</string>
     <string name="error">خطأ</string>
     <string name="redownload">إعادة التنزيل</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم ديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="success">نجاح!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">تفضيلات تثبيت %1$s</string>
     <string name="vanced_installed">تم تثبيت ڤانسد بنجاح! افتح الآن؟</string>
     <string name="version">الإصدار</string>
     <string name="music_installed">تم تثبيت موسيقى ڤانسد بنجاح! افتح الآن؟</string>
