@@ -13,7 +13,7 @@
     <string name="update_manager">Manager を更新</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">端末をルート化していますか？</string>
     <string name="willing_to_use_root">root 版を使用したいですか？下のボタンを押してください。そうでないなら続けるボタンを押してください</string>
     <string name="grant_root">root 権限を付与</string>
     <!-- Home Page -->
