@@ -13,7 +13,7 @@
     <string name="update_manager">Perbarui Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Root?</string>
     <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
     <string name="grant_root">Berikan Izin Root</string>
     <!-- Home Page -->
@@ -62,8 +62,8 @@
     <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasang?</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_version">Version: %1$s</string>
+    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="chosen_version">Versi: %1$s</string>
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
     <string name="installing_app">Memasang %1$s</string>
@@ -72,18 +72,18 @@
     <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="redownload">Unduh ulang</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, Vanced Discord atau Vanced Github</string>
     <string name="success">Berhasil!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
     <string name="vanced_installed">Vanced berhasil dipasang! Buka sekarang?</string>
-    <string name="version">Version</string>
+    <string name="version">Versi</string>
     <string name="music_installed">Vanced Musik berhasil dipasang! Buka sekarang?</string>
     <string name="please_be_patient">Harap bersabar…</string>
     <string name="launch">Buka</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
-    <string name="light_plus_other">Light + %1$s</string>
+    <string name="light_plus_other">Terang + %1$s</string>
     <string name="select_at_least_one_lang">Pilih setidaknya satu bahasa!</string>
     <!-- About Page -->
     <string name="manager_dev">Pengembang Manager</string>
