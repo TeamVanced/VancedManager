@@ -41,7 +41,7 @@ class AppInstallerService: Service() {
         return null
     }
 
-    companion object{
+    companion object {
         const val TAG = "VMInstall"
     }
 

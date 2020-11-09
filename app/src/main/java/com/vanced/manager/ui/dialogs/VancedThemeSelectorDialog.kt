@@ -38,7 +38,6 @@ class VancedThemeSelectorDialog : BottomSheetDialogFragment() {
         binding.dialogSave.setOnClickListener {
             prefs.edit { putString("theme", binding.dialogRadiogroup.getCheckedButtonTag()) }
             dismiss()
-            VancedPreferencesDialog().show(requireActivity())
         }
     }
 

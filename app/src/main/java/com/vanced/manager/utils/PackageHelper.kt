@@ -33,6 +33,8 @@ import kotlin.collections.HashMap
 object PackageHelper {
 
     private const val apkInstallPath = "/data/adb/Vanced/"
+    private val vancedThemes = arrayOf("black", "dark", "pink", "blue")
+
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
             packageManager.getPackageInfo(packageName, 0)
@@ -84,7 +86,7 @@ object PackageHelper {
                 for (file in files) {
 
                     when {
-                        (file.name == "black.apk" || file.name == "dark.apk") && !splitFiles.contains("base") -> splitFiles.add("base")
+                        vancedThemes.any { file.name == "$it.apk" } && !splitFiles.contains("base") -> splitFiles.add("base")
                         file.name.matches(Regex("split_config\\.(..)\\.apk")) && !splitFiles.contains("lang") -> splitFiles.add("lang")
                         (file.name.startsWith("split_config.arm") || file.name.startsWith("split_config.x86")) && !splitFiles.contains("arch") -> splitFiles.add("arch")
                     }
@@ -292,8 +294,8 @@ object PackageHelper {
                 val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
                 if (fileInfoList != null) {
-                    val modApk: FileInfo? = fileInfoList.lastOrNull {
-                        it.name == "dark.apk" || it.name == "black.apk"
+                    val modApk: FileInfo? = fileInfoList.lastOrNull { file ->
+                        vancedThemes.any { file.name == "$it.apk" }
                     }
                     if (modApk != null) {
                         if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, vancedRootPkg, context)) {

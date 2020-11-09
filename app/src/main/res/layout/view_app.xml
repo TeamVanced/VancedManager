@@ -98,20 +98,14 @@
                 app:layout_constraintTop_toBottomOf="@id/app_name">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:letterSpacing="0.02"
-                    android:text="@string/latest"
-                    android:textSize="14sp" />
+                    style="@style/AppVersionText"
+                    android:text="@string/latest" />
 
                 <TextView
                     android:id="@+id/app_remote_version"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/AppVersionText"
                     android:layout_marginStart="4dp"
-                    android:letterSpacing="0.02"
-                    android:text="@{dataModel.versionName}"
-                    android:textSize="14sp" />
+                    android:text="@{dataModel.versionName}" />
 
             </com.google.android.flexbox.FlexboxLayout>
 
@@ -127,18 +121,13 @@
                 app:layout_constraintTop_toBottomOf="@id/app_remote_version_container">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:letterSpacing="0.02"
-                    android:text="@string/version_installed"
-                    android:textSize="14sp" />
+                    style="@style/AppVersionText"
+                    android:text="@string/version_installed" />
 
                 <TextView
                     android:id="@+id/app_installed_version"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/AppVersionText"
                     android:layout_marginStart="4dp"
-                    android:letterSpacing="0.02"
                     android:text="@{dataModel.installedVersionName}" />
 
             </com.google.android.flexbox.FlexboxLayout>

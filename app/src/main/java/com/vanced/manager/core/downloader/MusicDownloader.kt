@@ -8,9 +8,11 @@ import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.Extensions.getLatestAppVersion
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.music
+import com.vanced.manager.utils.InternetTools.musicVersions
 import com.vanced.manager.utils.PackageHelper.install
 import com.vanced.manager.utils.PackageHelper.installMusicRoot
 import kotlinx.coroutines.CoroutineScope
@@ -25,18 +27,20 @@ object MusicDownloader {
 
     fun downloadMusic(context: Context) {
         val prefs = getDefaultSharedPreferences(context)
-        version = prefs.getString("music_version", music.get()?.string("version"))
+        version = prefs.getString("music_version", "latest")?.getLatestAppVersion(musicVersions.get()?.value ?: listOf(""))
         variant = prefs.getString("vanced_variant", "nonroot")
-        baseurl = "${prefs.getString("install_url", baseUrl)}/music/"
+        baseurl = "${prefs.getString("install_url", baseUrl)}/music/v$version"
+
+        downloadApk(context)
     }
 
-    fun downloadMusic(context: Context, apk: String = "music") {
+    private fun downloadApk(context: Context, apk: String = "music") {
         CoroutineScope(Dispatchers.IO).launch {
             val url =
                     if (apk == "stock")
-                        "$baseurl/stock/v${version}/${getArch()}.apk"
+                        "$baseurl/stock/${getArch()}.apk"
                     else
-                        "$baseurl/$variant/v${version}.apk"
+                        "$baseurl/$variant.apk"
 
             downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("music/$variant")?.path, "music.apk")
                 .build()
@@ -49,7 +53,7 @@ object MusicDownloader {
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         if (variant == "root" && apk != "stock") {
-                            downloadMusic(context, "stock")
+                            downloadApk(context, "stock")
                             return
                         }
 

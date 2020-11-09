@@ -11,13 +11,12 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
-import com.vanced.manager.model.AppVersionsModel
-import com.vanced.manager.utils.Extensions.getCheckedButtonTag
+import com.vanced.manager.utils.Extensions.getCheckedButtonText
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
 import com.vanced.manager.utils.Extensions.show
 
 class AppVersionSelectorDialog(
-    private val versions: Array<AppVersionsModel>,
+    private val versions: List<String>,
     private val app: String
 ) : BottomSheetDialogFragment() {
 
@@ -36,14 +35,13 @@ class AppVersionSelectorDialog(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loadBoxes()
-        view.findViewWithTag<MaterialRadioButton>(prefs.getString("${app}_version", versions[0].value)).isChecked = true
+        view.findViewWithTag<MaterialRadioButton>(prefs.getString("${app}_version", "latest")).isChecked = true
         binding.dialogTitle.text = requireActivity().getString(R.string.version)
         binding.dialogSave.setOnClickListener {
             prefs.edit {
-                putString("${app}_version", binding.dialogRadiogroup.getCheckedButtonTag())
+                putString("${app}_version", binding.dialogRadiogroup.getCheckedButtonText())
             }
             dismiss()
-            VancedPreferencesDialog().show(requireActivity())
         }
     }
 
@@ -51,8 +49,7 @@ class AppVersionSelectorDialog(
         requireActivity().runOnUiThread {
             for (i in versions.indices) {
                 val rb = MaterialRadioButton(requireActivity()).apply {
-                    text = versions[i].version
-                    tag = versions[i].value
+                    text = versions[i]
                     textSize = 18f
                 }
                 binding.dialogRadiogroup.addView(rb, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
@@ -62,7 +59,10 @@ class AppVersionSelectorDialog(
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        VancedPreferencesDialog().show(requireActivity())
+        if (app == "vanced")
+            VancedPreferencesDialog().show(requireActivity())
+        else
+            MusicPreferencesDialog().show(requireActivity())
     }
 
 }

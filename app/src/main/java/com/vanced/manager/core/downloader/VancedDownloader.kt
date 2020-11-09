@@ -2,7 +2,6 @@ package com.vanced.manager.core.downloader
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.os.Build
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.downloader.Error
 import com.downloader.OnDownloadListener
@@ -13,7 +12,7 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.Extensions.convertToAppVersions
+import com.vanced.manager.utils.Extensions.getLatestAppVersion
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -56,15 +55,15 @@ object VancedDownloader {
     private var downloadPath: String? = null
 
     fun downloadVanced(context: Context) {
-        defPrefs = getDefaultSharedPreferences(context)
-        installUrl = defPrefs.getString("install_url", baseUrl)
-        prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         variant = defPrefs.getString("vanced_variant", "nonroot")
         downloadPath = context.getExternalFilesDir("vanced/$variant")?.path
         File(downloadPath.toString()).deleteRecursively()
+        defPrefs = getDefaultSharedPreferences(context)
+        installUrl = defPrefs.getString("install_url", baseUrl)
+        prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         lang = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toMutableList()
         theme = prefs.getString("theme", "dark")
-        vancedVersion = defPrefs.getString("vanced_version", vancedVersions.get()?.value?.convertToAppVersions()?.get(0)?.value)
+        vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.get()?.value ?: listOf(""))
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         //newInstaller = defPrefs.getBoolean("new_installer", false)

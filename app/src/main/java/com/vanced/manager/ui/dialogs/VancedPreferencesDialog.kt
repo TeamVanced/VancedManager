@@ -10,7 +10,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogVancedPreferencesBinding
 import com.vanced.manager.utils.Extensions.convertToAppTheme
-import com.vanced.manager.utils.Extensions.convertToAppVersions
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
@@ -42,12 +41,12 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
             }
         }
 
-        val vancedVersionsConv = vancedVersions.get()?.value?.reversed()?.convertToAppVersions()
+        val vancedVersionsConv = vancedVersions.get()?.value?.reversed()
 
         binding.vancedInstallTitle.text = requireActivity().getString(R.string.app_installation_preferences, requireActivity().getString(R.string.vanced))
 
         binding.vancedTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
-        binding.vancedVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("vanced_version", vancedVersionsConv?.get(0)?.value ?: ""))
+        binding.vancedVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("vanced_version", "latest"))
         binding.vancedLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
 
         binding.openThemeSelector.setOnClickListener {
@@ -69,7 +68,7 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
 
         binding.vancedInstall.setOnClickListener {
             dismiss()
-            AppDownloadDialog(requireActivity().getString(R.string.vanced)).show(requireActivity().supportFragmentManager, "InstallVanced")
+            AppDownloadDialog(requireActivity().getString(R.string.vanced)).show(requireActivity())
         }
     }
 }

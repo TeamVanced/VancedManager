@@ -19,6 +19,7 @@ class LanguageContextWrapper(base: Context?) : ContextWrapper(base) {
             return LanguageContextWrapper(context)
         }
 
+        @Suppress("DEPRECATION")
         private fun setLocale(config: Configuration, context: Context): Configuration {
             val pref = PreferenceManager.getDefaultSharedPreferences(context).getString("manager_lang", "System Default")
             val sysLocale = Resources.getSystem().configuration.locale

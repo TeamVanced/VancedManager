@@ -33,13 +33,17 @@ class MusicPreferencesDialog : BottomSheetDialogFragment() {
         val musicVersionsConv = musicVersions.get()?.value?.reversed()?.convertToAppVersions()
 
         binding.musicInstallTitle.text = requireActivity().getString(R.string.app_installation_preferences, requireActivity().getString(R.string.music))
-        binding.musicVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("music_version", musicVersionsConv?.get(0)?.value ?: ""))
+        binding.musicVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("music_version", musicVersionsConv?.get(0) ?: ""))
 
         binding.openVersionSelector.setOnClickListener {
             dismiss()
             if (musicVersionsConv != null) {
                 AppVersionSelectorDialog(musicVersionsConv, "music").show(requireActivity())
             }
+        }
+        binding.musicInstall.setOnClickListener {
+            dismiss()
+            AppDownloadDialog(requireActivity().getString(R.string.music)).show(requireActivity())
         }
     }
 

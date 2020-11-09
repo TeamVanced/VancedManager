@@ -49,8 +49,8 @@ object InternetTools {
 
     fun loadJson(context: Context) = CoroutineScope(Dispatchers.IO).launch {
         val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
-        val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.getDefault())}")
-        val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.getDefault())}")
+        val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
+        val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
 //      braveTiers.apply {
 //          set(getJson("$installUrl/sponsor.json"))
 //          notifyChange()

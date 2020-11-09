@@ -25,16 +25,16 @@ object AppUtils {
 
     fun sendRefresh(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
-            delay(500)
+            delay(700)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
         }
     }
 
     fun sendCloseDialog(context: Context) {
+        downloadProgress.get()?.installing?.set(false)
         CoroutineScope(Dispatchers.IO).launch {
-            delay(500)
+            delay(700)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
-            downloadProgress.get()?.installing?.set(false)
         }
     }
 
@@ -42,7 +42,7 @@ object AppUtils {
         downloadProgress.get()?.installing?.set(false)
         //Delay error broadcast until activity (and fragment) get back to the screen
         CoroutineScope(Dispatchers.IO).launch {
-            delay(500)
+            delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
             intent.putExtra("errorMsg", getErrorMessage(status, context))
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent)

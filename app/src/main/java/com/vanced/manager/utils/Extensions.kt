@@ -20,6 +20,10 @@ object Extensions {
         return findViewById<MaterialRadioButton>(checkedRadioButtonId).tag.toString()
     }
 
+    fun RadioGroup.getCheckedButtonText(): String {
+        return findViewById<MaterialRadioButton>(checkedRadioButtonId).text.toString()
+    }
+
     fun DialogFragment.show(activity: FragmentActivity) {
         show(activity.supportFragmentManager, "")
     }
@@ -49,16 +53,20 @@ object Extensions {
     //Not sure how much this can affect performance
     //but if anyone can improve this even slightly,
     //feel free to open a PR
-    fun List<String>.convertToAppVersions(): Array<AppVersionsModel> {
-        val versionsModel = arrayListOf(AppVersionsModel("latest", this[0]))
+    fun List<String>.convertToAppVersions(): List<String> {
+        val versionsModel = arrayListOf("latest")
         for (i in reversed().indices) {
-            versionsModel.add(AppVersionsModel(this[i], this[i]))
+            versionsModel.add(this[i])
         }
-        return versionsModel.toTypedArray()
+        return versionsModel
     }
 
     fun String.convertToAppTheme(context: Context): String {
         return context.getString(R.string.light_plus_other, this.capitalize(Locale.ROOT))
+    }
+
+    fun String.getLatestAppVersion(versions: List<String>): String {
+        return if (this == "latest") versions.reversed()[0] else this
     }
 
 }
