@@ -10,6 +10,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogVancedPreferencesBinding
 import com.vanced.manager.utils.Extensions.convertToAppTheme
+import com.vanced.manager.utils.Extensions.convertToAppVersions
+import com.vanced.manager.utils.Extensions.getDefaultPrefs
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
@@ -18,6 +20,8 @@ import java.util.*
 class VancedPreferencesDialog : BottomSheetDialogFragment() {
 
     private lateinit var binding: DialogVancedPreferencesBinding
+    private val defPrefs by lazy { requireActivity().getDefaultPrefs() }
+    private val installPrefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,22 +35,18 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val prefs = requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toTypedArray()
         val showLang = mutableListOf<String>()
-        if (langPrefs != null) {
-            for (lang in langPrefs) {
-                val loc = Locale(lang)
-                showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
-            }
+        installPrefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toTypedArray()?.forEach { lang ->
+            val loc = Locale(lang)
+            showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
         }
 
-        val vancedVersionsConv = vancedVersions.get()?.value?.reversed()
+        val vancedVersionsConv = vancedVersions.get()?.value?.reversed()?.convertToAppVersions()
 
         binding.vancedInstallTitle.text = requireActivity().getString(R.string.app_installation_preferences, requireActivity().getString(R.string.vanced))
 
-        binding.vancedTheme.text = requireActivity().getString(R.string.chosen_theme, prefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
-        binding.vancedVersion.text = requireActivity().getString(R.string.chosen_version, prefs.getString("vanced_version", "latest"))
+        binding.vancedTheme.text = requireActivity().getString(R.string.chosen_theme, installPrefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
+        binding.vancedVersion.text = requireActivity().getString(R.string.chosen_version, defPrefs.getString("vanced_version", "latest"))
         binding.vancedLang.text = requireActivity().getString(R.string.chosen_lang, showLang)
 
         binding.openThemeSelector.setOnClickListener {

@@ -11,7 +11,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
-import com.vanced.manager.utils.Extensions.getCheckedButtonText
+import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
 import com.vanced.manager.utils.Extensions.show
 
@@ -39,7 +39,7 @@ class AppVersionSelectorDialog(
         binding.dialogTitle.text = requireActivity().getString(R.string.version)
         binding.dialogSave.setOnClickListener {
             prefs.edit {
-                putString("${app}_version", binding.dialogRadiogroup.getCheckedButtonText())
+                putString("${app}_version", binding.dialogRadiogroup.getCheckedButtonTag())
             }
             dismiss()
         }
@@ -50,6 +50,7 @@ class AppVersionSelectorDialog(
             for (i in versions.indices) {
                 val rb = MaterialRadioButton(requireActivity()).apply {
                     text = versions[i]
+                    tag = versions[i]
                     textSize = 18f
                 }
                 binding.dialogRadiogroup.addView(rb, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
