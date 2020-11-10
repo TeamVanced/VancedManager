@@ -25,7 +25,7 @@ class SponsorAdapter(
     private val adguard = SponsorModel(
         ContextCompat.getDrawable(context, R.drawable.ic_adguard),
         "AdGuard",
-        "https://vancedapp.com/adguard"
+        "https://adguard.com/?aid=31141&source=manager"
     )
 
     val sponsors = arrayListOf(brave, adguard)
