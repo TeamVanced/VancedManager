@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">Visszavonás</string>
     <string name="close">Bezárás</string>
     <string name="reset">Visszaállítás</string>
     <string name="save">Mentés</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">Válaszd ki az Appot</string>
     <!-- Main Activity -->
     <string name="title_about">Rólunk</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Beállítások</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">Manager frissitése</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">Legalább egy appot válassz!</string>
+    <string name="are_you_rooted">Rootolt az eszközöd?</string>
+    <string name="willing_to_use_root">Rootolt verziót használsz? Nyomd meg lent a gombot vagy nyomj a továbbra!</string>
+    <string name="grant_root">Root hozzáférés engedélyezése</string>
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
     <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
