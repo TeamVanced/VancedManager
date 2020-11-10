@@ -6,13 +6,15 @@ import android.content.pm.PackageInstaller
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.VancedDownloader
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.vanced.manager.utils.InternetTools.getSha256
+import kotlinx.coroutines.*
+import java.io.File
+import java.io.IOException
+import java.security.MessageDigest
 
 object AppUtils {
 
@@ -55,6 +57,41 @@ object AppUtils {
             intent.putExtra("errorMsg", getErrorMessage(error.joinToString(), context))
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
         }
+    }
+
+    @Throws(IOException::class)
+    fun generateChecksum(data: ByteArray): String {
+        try {
+            val digest: MessageDigest = MessageDigest.getInstance("SHA-256")
+            val hash: ByteArray = digest.digest(data)
+            return printableHexString(hash)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return ""
+    }
+
+    private fun printableHexString(data: ByteArray): String {
+        // Create Hex String
+        val hexString: StringBuilder = StringBuilder()
+        for (aMessageDigest:Byte in data) {
+            var h: String = Integer.toHexString(0xFF and aMessageDigest.toInt())
+            while (h.length < 2)
+                h = "0$h"
+            hexString.append(h)
+        }
+        return hexString.toString()
+    }
+
+    fun validateTheme(
+        downloadPath: String,
+        apk: String,
+        hashUrl: String,
+        context: Context,
+    ): Boolean {
+        val themeF = File(downloadPath, "$apk.apk")
+        return runBlocking { InternetTools.checkSHA256(getSha256(hashUrl, apk, context), themeF) }
     }
 
     private fun getErrorMessage(status: String, context: Context): String {

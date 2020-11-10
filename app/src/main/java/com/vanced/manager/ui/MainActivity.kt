@@ -142,12 +142,11 @@ class MainActivity : AppCompatActivity() {
         val variant = prefs.getString("vanced_variant", "nonroot")
         prefs.getBoolean("show_root_dialog", true)
 
-        if (intent?.data != null) {
+        if (intent?.data != null && intent.dataString?.startsWith("https") == true) {
             val urldialog = URLChangeDialog()
             val arg = Bundle()
             arg.putString("url", intent.dataString)
             urldialog.arguments = arg
-            intent.dataString?.let { Log.d("urlTest", it) }
             urldialog.show(this)
         }
 

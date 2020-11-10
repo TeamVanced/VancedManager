@@ -12,10 +12,13 @@ import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.VancedDownloader
+import com.vanced.manager.utils.AppUtils.generateChecksum
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -92,6 +95,23 @@ object InternetTools {
         val result = manager.get()?.int("versionCode") ?: 0
 
         return result > BuildConfig.VERSION_CODE
+    }
+
+    suspend fun getSha256(hashUrl: String, obj: String, context: Context): String {
+        return getJsonString(hashUrl, obj, context)
+    }
+
+    fun checkSHA256(sha256: String, updateFile: File?): Boolean {
+        return try {
+            val dataBuffer = updateFile!!.readBytes()
+            // Generate the checksum
+            val sum = generateChecksum(dataBuffer)
+
+            sum.toLowerCase(Locale.ENGLISH) == sha256.toLowerCase(Locale.ENGLISH)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
     }
 
     const val baseUrl = "https://vancedapp.com/api/v1"

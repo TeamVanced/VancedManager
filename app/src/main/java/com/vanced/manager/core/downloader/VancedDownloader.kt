@@ -9,6 +9,7 @@ import com.downloader.PRDownloader
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.logEvent
 import com.vanced.manager.R
+import com.vanced.manager.utils.AppUtils.validateTheme
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
@@ -17,10 +18,13 @@ import com.vanced.manager.utils.Extensions.getLatestAppVersion
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.backupUrl
 import com.vanced.manager.utils.InternetTools.baseUrl
+import com.vanced.manager.utils.InternetTools.checkSHA256
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
+import com.vanced.manager.utils.InternetTools.getSha256
 import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
+import com.vanced.manager.utils.PackageHelper.downloadStockCheck
 import com.vanced.manager.utils.PackageHelper.getPkgVerCode
 import com.vanced.manager.utils.PackageHelper.installVanced
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
@@ -34,8 +38,6 @@ import java.security.MessageDigest
 import java.util.*
 
 object VancedDownloader {
-
-    private var sha256Val: String? = null
     
     private lateinit var prefs: SharedPreferences
     private lateinit var defPrefs: SharedPreferences
@@ -104,8 +106,8 @@ object VancedDownloader {
                         when (type) {
                             "theme" -> 
                                 if (variant == "root") {
-                                    if (validateTheme(context)) {
-                                        if (downloadStockCheck(context))
+                                    if (validateTheme(downloadPath!!, theme!!, hashUrl, context)) {
+                                        if (downloadStockCheck(vancedRootPkg, vancedVersionCode, context))
                                             downloadSplits(context, "arch") 
                                         else 
                                             startVancedInstall(context)
@@ -155,24 +157,6 @@ object VancedDownloader {
         }
     }
 
-    fun downloadStockCheck(context: Context): Boolean {
-        return try {
-            getPkgVerCode(vancedRootPkg, context.packageManager) != vancedVersionCode
-        } catch (e: Exception) {
-            true
-        }
-    }
-    
-    private suspend fun getSha256(obj: String, context: Context) {
-        sha256Val = InternetTools.getJsonString(hashUrl, obj, context)
-    }
-    
-    private fun validateTheme(context: Context): Boolean {
-        val themeF = File(downloadPath, "${theme}.apk")
-        runBlocking { getSha256(theme!!, context) }
-        return checkSHA256(sha256Val!!,themeF)
-    }
-
     fun startVancedInstall(context: Context, variant: String? = this.variant) {
         downloadProgress.get()?.installing?.set(true)
         downloadProgress.get()?.reset()
@@ -186,44 +170,7 @@ object VancedDownloader {
             installVanced(context)
     }
 
-    private fun checkSHA256(sha256: String, updateFile: File?): Boolean {
-        return try {
-            val dataBuffer = updateFile!!.readBytes()
-            // Generate the checksum
-            val sum = generateChecksum(dataBuffer)
 
-            sum.toLowerCase(Locale.ENGLISH) == sha256.toLowerCase(Locale.ENGLISH)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
-        }
-    }
-
-    @Throws(IOException::class)
-    private fun generateChecksum(data: ByteArray): String {
-        try {
-            val digest: MessageDigest = MessageDigest.getInstance("SHA-256")
-            val hash: ByteArray = digest.digest(data)
-            return printableHexString(hash)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-        return ""
-    }
-
-
-    private fun printableHexString(data: ByteArray): String {
-        // Create Hex String
-        val hexString: StringBuilder = StringBuilder()
-        for (aMessageDigest:Byte in data) {
-            var h: String = Integer.toHexString(0xFF and aMessageDigest.toInt())
-            while (h.length < 2)
-                h = "0$h"
-            hexString.append(h)
-        }
-        return hexString.toString()
-    }
 
 
 }
