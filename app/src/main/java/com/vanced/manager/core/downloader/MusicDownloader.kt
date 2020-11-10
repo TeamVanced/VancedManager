@@ -8,10 +8,10 @@ import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.Extensions.getInstallUrl
 import com.vanced.manager.utils.Extensions.getLatestAppVersion
-import com.vanced.manager.utils.InternetTools.baseUrl
+import com.vanced.manager.utils.InternetTools.backupUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.music
 import com.vanced.manager.utils.InternetTools.musicVersions
 import com.vanced.manager.utils.PackageHelper.install
 import com.vanced.manager.utils.PackageHelper.installMusicRoot
@@ -29,7 +29,7 @@ object MusicDownloader {
         val prefs = getDefaultSharedPreferences(context)
         version = prefs.getString("music_version", "latest")?.getLatestAppVersion(musicVersions.get()?.value ?: listOf(""))
         variant = prefs.getString("vanced_variant", "nonroot")
-        baseurl = "${prefs.getString("install_url", baseUrl)}/music/v$version"
+        baseurl = "${prefs.getInstallUrl()}/music/v$version"
 
         downloadApk(context)
     }
@@ -61,6 +61,12 @@ object MusicDownloader {
                     }
 
                     override fun onError(error: Error?) {
+                        if (baseurl != backupUrl) {
+                            baseurl = "$backupUrl/music/v$version"
+                            downloadApk(context, apk)
+                            return
+                        }
+
                         downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.error_downloading, "Music"))
                     }
                 })

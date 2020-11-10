@@ -31,6 +31,8 @@ object InternetTools {
     var vancedVersions = ObservableField<JsonArray<String>>()
     var musicVersions = ObservableField<JsonArray<String>>()
 
+    const val backupUrl = "https://mirror.codebucket.de/vanced/api/v1"
+
     //var braveTiers = ObservableField<JsonObject?>()
 
     fun openUrl(url: String, color: Int, context: Context) {

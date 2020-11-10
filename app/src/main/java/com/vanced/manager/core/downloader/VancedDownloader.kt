@@ -12,8 +12,10 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.Extensions.getInstallUrl
 import com.vanced.manager.utils.Extensions.getLatestAppVersion
 import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.InternetTools.backupUrl
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
 import com.vanced.manager.utils.InternetTools.vanced
@@ -60,7 +62,7 @@ object VancedDownloader {
         variant = defPrefs.getString("vanced_variant", "nonroot")
         downloadPath = context.getExternalFilesDir("vanced/$variant")?.path
         File(downloadPath.toString()).deleteRecursively()
-        installUrl = defPrefs.getString("install_url", baseUrl)
+        installUrl = defPrefs.getInstallUrl()
         lang = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toMutableList()
         theme = prefs.getString("theme", "dark")
         vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.get()?.value ?: listOf(""))
@@ -126,6 +128,14 @@ object VancedDownloader {
                         }
                     }
                     override fun onError(error: Error?) {
+                        if (installUrl != backupUrl) {
+                            installUrl = backupUrl
+                            themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
+
+                            downloadSplits(context, type)
+                            return
+                        }
+
                         if (type == "lang") {
                             count++
                             when {

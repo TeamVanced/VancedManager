@@ -11,6 +11,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
 import com.vanced.manager.model.AppVersionsModel
+import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.InternetTools.loadJson
 import java.util.*
 
@@ -68,5 +69,7 @@ object Extensions {
     fun String.getLatestAppVersion(versions: List<String>): String {
         return if (this == "latest") versions.reversed()[0] else this
     }
+
+    fun SharedPreferences.getInstallUrl() = getString("install_url", baseUrl)
 
 }
