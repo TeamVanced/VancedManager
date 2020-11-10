@@ -8,11 +8,11 @@
     <string name="select_apps">اختر تطبيقاتك</string>
     <!-- Main Activity -->
     <string name="title_about">حول</string>
-    <string name="title_home">مدير</string>
+    <string name="title_home">المدير</string>
     <string name="title_settings">اعدادات</string>
     <string name="update_manager">تحديث المدير</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">اختر تطبيق واحد على الأقل!</string>
+    <string name="select_at_least_one_app">حدد تطبيق واحد على الأقل!</string>
     <string name="are_you_rooted">هل جهازك مروت؟</string>
     <string name="willing_to_use_root">هل ترغب باستعمال نسخة الروت؟ فقط عليك الضغط على الزر في الأسفل، إذا لا اضغط على زر المتابعة</string>
     <string name="grant_root">امنح صلاحيات الروت</string>
@@ -42,11 +42,11 @@
     <string name="category_behaviour">السلوك</string>
     <string name="clear_files">مسح الملفات التي تم تنزيلها</string>
     <string name="cleared_files">تم مسح الملفات بنجاح</string>
-    <string name="firebase_title">تحليلات FireBase</string>
-    <string name="firebase_summary">هذا يتيح لنا جمع معلومات عن أداء التطبيق وسجلات الأعطال</string>
+    <string name="firebase_title">تحليلات Firebase</string>
+    <string name="firebase_summary">هذا يتيح لنا جمع المعلومات عن أداء التطبيق وسجلات الأعطال</string>
     <string name="language_title">اللغة</string>
-    <string name="link_title">إستخدم علامات التبويب المخصصة لمتصفح كروم</string>
-    <string name="link_custom_tabs">سيتم فتح الروابط في علامات التبويب المخصصة لمتصفح كروم</string>
+    <string name="link_title">استخدم علامات تبويب مخصصة لمتصفح كروم</string>
+    <string name="link_custom_tabs">سيتم فتح الروابط في علامات تبويب مخصصة لمتصفح كروم</string>
     <string name="system_default">الوضع الافتراضي</string>
     <string name="theme">موضوع اللون</string>
     <string name="theme_dark">الموضوع الاسود</string>
@@ -69,16 +69,16 @@
     <string name="installing_app">جاري تثبيت %1$s</string>
     <string name="magisk_vanced">يبدو أنك تستخدم إصدار ماجيسك/TWRP من ڤانسد، الذي قد تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً من قائمة إضافات ماجيسك أو بإستخدام أداة إلغاء تثبيت ڤانسد من TWRP.</string>
     <string name="miui_one_title">تم اكتشاف MIUI!</string>
-    <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة اذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند الى نسخة نظام شاومي أوروبا)</string>
+    <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة إذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند إلى نسخة نظام شاومي أوروبا)</string>
     <string name="error">خطأ</string>
     <string name="redownload">إعادة التنزيل</string>
-    <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم ديسكورد لڤانسد أو Vanced GitHub</string>
+    <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="success">نجاح!</string>
     <string name="app_installation_preferences">تفضيلات تثبيت %1$s</string>
     <string name="vanced_installed">تم تثبيت ڤانسد بنجاح! افتح الآن؟</string>
     <string name="version">الإصدار</string>
     <string name="music_installed">تم تثبيت موسيقى ڤانسد بنجاح! افتح الآن؟</string>
-    <string name="please_be_patient">يرجى التحلي بالصبر…</string>
+    <string name="please_be_patient">الرجاء الانتظار…</string>
     <string name="launch">فتح</string>
     <string name="welcome">مرحبا
 اهلا</string>
@@ -98,14 +98,14 @@
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
-    <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار أقدم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب العادي، ثم حاول مرة اخرى.</string>
+    <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
     <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من ڤانسد، ثم حاول مرة أخرى.</string>
-    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد الخاص بنا لمزيد من الدعم.</string>
-    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. إمسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
+    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى التيليجرام أو الديسكورد الخاص بنا لمزيد من الدعم.</string>
+    <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. امسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
     <string name="installation_invalid">فشل التثبيت لأن حزم التثبيت تالفة، الرجاء المحاولة مرة أخرى.</string>
-    <string name="installation_signature">فشل التثبيت بسبب تمكين التحقق من توقيع apk. تعطيل التحقق من توقيع apk، ثم حاول مرة أخرى.</string>
-    <string name="installation_miui">فشل التثبيت بسبب تمكين تحسين MIUI. تعطيل تحسين MIUI ، ثم حاول مرة أخرى.</string>
+    <string name="installation_signature">فشل التثبيت لأن التحقق من توقيع حزم التثبيت مفعل. الرجاء تعطيل التحقق من توقيع حزم التثبيت, ثم المحاولة مرة أخرى.</string>
+    <string name="installation_miui">فشل التثبيت لأن تحسينات MIUI مفعلة. قم بتعطيل تحسينات MIUI ، ثم حاول مرة أخرى.</string>
     <string name="installation_storage">فشل التثبيت بسبب خطأ في التخزين.</string>
-    <string name="modapk_missing">فشل العثور على حزمة التثبيت للسمة السوداء/المظلمة من المثبت. إمسح بيانات التطبيق لمدير فانسد، ثم حاول مرة أخرى.</string>
-    <string name="path_missing">فشل العثور على موقع تثبيت اليوتيوب الأصلي بعد تثبيت الحزم المفصلة.</string>
+    <string name="modapk_missing">فشل العثور على حزمة التثبيت للسمة السوداء/المظلمة من المثبت. امسح بيانات التطبيق لمدير ڤانسد، ثم حاول مرة أخرى.</string>
+    <string name="path_missing">فشل تحديد مسار تثبيت اليوتيوب الأصلي بعد تثبيت الحزم المنفصلة.</string>
 </resources>
