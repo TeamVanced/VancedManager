@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">අවලංගු කරන්න</string>
     <string name="close">වසන්න</string>
     <string name="reset">ප්‍රතිස්ථාපනය කරන්න</string>
     <string name="save">සුරකින්න</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">ඔබගේ යෙදුම් තෝරන්න</string>
     <!-- Main Activity -->
     <string name="title_about">මේ ගැන</string>
     <string name="title_home">Manager</string>
