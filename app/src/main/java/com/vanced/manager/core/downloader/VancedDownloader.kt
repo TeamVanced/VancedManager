@@ -55,12 +55,12 @@ object VancedDownloader {
     private var downloadPath: String? = null
 
     fun downloadVanced(context: Context) {
+        defPrefs = getDefaultSharedPreferences(context)
+        prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         variant = defPrefs.getString("vanced_variant", "nonroot")
         downloadPath = context.getExternalFilesDir("vanced/$variant")?.path
         File(downloadPath.toString()).deleteRecursively()
-        defPrefs = getDefaultSharedPreferences(context)
         installUrl = defPrefs.getString("install_url", baseUrl)
-        prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
         lang = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toMutableList()
         theme = prefs.getString("theme", "dark")
         vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.get()?.value ?: listOf(""))
