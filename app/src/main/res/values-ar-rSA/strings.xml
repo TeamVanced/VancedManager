@@ -18,7 +18,7 @@
     <string name="grant_root">امنح صلاحيات الروت</string>
     <!-- Home Page -->
     <string name="about_app">حوالي %1$s</string>
-    <string name="app_changelog_tooltip">اضغط على القائمة لعرض سجل التغييرات.</string>
+    <string name="app_changelog_tooltip">اضغط على البطاقة لرؤية سجل التغيير.</string>
     <string name="changelog">سجل التغييرات</string>
     <string name="downloading_file">جارٍ تنزيل %1$s</string>
     <string name="install">تثبيت</string>
