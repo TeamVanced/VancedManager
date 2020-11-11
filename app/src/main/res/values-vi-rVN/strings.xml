@@ -13,7 +13,7 @@
     <string name="update_manager">Cật nhật Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
-    <string name="are_you_rooted">Thiết Bị Của Bạn Đã Được Root?</string>
+    <string name="are_you_rooted">Thiết bị của bạn đã Root chưa?</string>
     <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Nhấn nút bên dưới, nếu không hãy nhấn tiếp tục</string>
     <string name="grant_root">Cấp quyền root</string>
     <!-- Home Page -->
