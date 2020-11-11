@@ -17,9 +17,9 @@
     <string name="willing_to_use_root">Rootolt verziót használsz? Nyomd meg lent a gombot vagy nyomj a továbbra!</string>
     <string name="grant_root">Root hozzáférés engedélyezése</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="about_app">%1$s- ról</string>
+    <string name="app_changelog_tooltip">Kattintson a kártyára hogy megnézze a változásjegyzéket.</string>
+    <string name="changelog">Változáslista</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="install">Telepítés</string>
     <string name="button_reinstall">Újratelepítés</string>
@@ -30,7 +30,7 @@
     <string name="unavailable">Nem elérhető</string>
     <string name="update">Frissítés</string>
     <string name="useful_links">Hasznos hivatkozások</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">Támogasson minket!</string>
     <!-- Settings -->
     <string name="accent_color">Kiemelés színe</string>
     <string name="accent_blue">Kék</string>
@@ -38,12 +38,12 @@
     <string name="accent_purple">Lila</string>
     <string name="accent_red">Vörös</string>
     <string name="accent_yellow">Sárga</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">Megjelenítés</string>
+    <string name="category_behaviour">Viselkedés</string>
     <string name="clear_files">Letöltött fájlok törlése</string>
     <string name="cleared_files">Sikeresen törölte a fájlokat</string>
     <string name="firebase_title">Firebase Analytics</string>
-    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="firebase_summary">Ezzel megengedi hogy információkat gyűjtsünk az alkalmazás teljesítményéről és az összeomlási naplóról</string>
     <string name="language_title">Nyelv</string>
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
@@ -55,46 +55,46 @@
     <string name="push_notifications">%1$s Leküldéses (Push) Értesítések</string>
     <string name="push_notifications_summary">Értesítések fogadása, amikor a %1$s számára frissítés érhető el</string>
     <string name="update_center">Frissítő központ</string>
-    <string name="update_not_found">No new updates</string>
-    <string name="variant">Variant</string>
+    <string name="update_not_found">Új frissítések nem elérhetőek</string>
+    <string name="variant">Változat</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="app_install_files_detected">%1$s telepítőfájlok észlelve!</string>
+    <string name="app_install_files_detected_summary">A Manager észlelte ez összes szükséges file-t a(z) %1$s telepítéséhez. Kívánja folytatni a telepítést?</string>
+    <string name="checking_updates">Frissítések ellenőrzése... </string>
     <string name="chosen_lang">Nyelv: %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_version">Version: %1$s</string>
+    <string name="chosen_theme">Kinézet: %1$s</string>
+    <string name="chosen_version">Verzió: %1$s</string>
     <string name="guide">Útmutató</string>
     <string name="hold_on">Állj!</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">%1$s telepítése</string>
     <string name="magisk_vanced">A Vanced Magisk/TWRP verzióját használod, ami már nem támogatott és nem frissíthető ezzel az alkalmazással. Távolítsd el a Magisk modul eltávolításával vagy TWRP Vanced eltávolítóval.</string>
     <string name="miui_one_title">MIUI észlelve!</string>
     <string name="miui_one">Hogy a Vanced-et telepítsd, ki KELL kapcsolnod a MIUI Optimalizációt a fejlesztői beállításokban. (Ezt figyelmen kívül hagyhatod ha 20.2.20 vagy későbbi xiaomi.eu alapú ROM-ot használsz)</string>
     <string name="error">Hiba</string>
-    <string name="redownload">Redownload</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="redownload">Újra letölt</string>
+    <string name="security_context">Bizonyosodjon meg arró, l hogy az alkalmaz@st a vancedapp.com-ról, a Vanced Discord szerverről vagy a Vanced Github-röl töltötte le</string>
     <string name="success">Kész!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Telepítés személyreszabása</string>
     <string name="vanced_installed">Vanced sikeresen telepítve! Elindítod most?</string>
-    <string name="version">Version</string>
+    <string name="version">Verzió</string>
     <string name="music_installed">Vanced Music sikeresen települt! Megnyitja most?</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">Kérjük legyen türelmes... </string>
     <string name="launch">Megnyitás</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced nyelvének kiválasztása</string>
-    <string name="light_plus_other">Light + %1$s</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="light_plus_other">Világos + %1$s</string>
+    <string name="select_at_least_one_lang">Válasszon ki legalább egy nyelvet!</string>
     <!-- About Page -->
     <string name="manager_dev">Fejlesztői Menedzser</string>
     <string name="sources">Források</string>
     <string name="vanced_team">Vanced csapat</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">Meghiúsult az alkalmazás \'chown\' beállítása a rendszer fiókra, kéjük próbálja újra.</string>
     <string name="error_downloading">%1$s letöltése nem sikerült</string>
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
+    <string name="files_missing_va">A telepítéshez szükséges file-ok megtalálása meghiúsult. Töltse le újra a telepítőfile-okat és próbálja újra.</string>
+    <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A telepítés nem sikerült, mert a felhasználó elutasította azt.</string>
     <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó régebbi verziót próbált telepíteni.
@@ -107,6 +107,6 @@ Távolítsd el a gyári YouTube app frissítéseit, majd próld újra.</string>
 Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
     <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsold ki a MIUI Optimalizációt és próbáld újra.</string>
     <string name="installation_storage">Tárhely hiba miatt a telepítés nem sikerült.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="modapk_missing">Nem sikerült megtalálni az apk file-t a fekete/sötét kinézethez a telepítőből. Törölje a Manager alkalmazás adatait, majd próbálja újra.</string>
+    <string name="path_missing">Nem sikerült megtalálni az alap YouTube telepítési útvonalat a(z) split telepítés után.</string>
 </resources>
