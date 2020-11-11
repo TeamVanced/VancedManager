@@ -13,12 +13,12 @@
     <string name="update_manager">نوێکردنەوەی بەرنامە</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">Gelo cîhaza te Root e?</string>
     <string name="willing_to_use_root">ئەگەر ئەتەوێ بە ڕێگەپێدانی ڕۆت فایلەکان دابەزێنیت، تەنها لە خوارەوە پەنجە بنێ بە بەردەوامبون بۆ ئەنجامدانی کارەکە</string>
     <string name="grant_root">ڕێگەپێدانی ڕۆت Root</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
-    <string name="app_changelog_tooltip">پەنجەی پێدابنێ بۆ بینینی گۆڕانکارییەکان</string>
+    <string name="app_changelog_tooltip">Ji bo guherînan bibînî kartê bitepîne.</string>
     <string name="changelog">گۆڕانکارییەکان</string>
     <string name="downloading_file">داگرتنی %1$s</string>
     <string name="install">دامەزراندن</string>
@@ -72,9 +72,9 @@
     <string name="miui_one">بۆ ئەوەی Vanced دابمەزرێنیت، پێویستە چاکسازییەکانی ڕووکاری MIUI لە ڕێکبەندەکانی پەرەپێدەر لە کار بخەیت، (دەتوانیت ئەم ئاگاداریە پشتگوێ بخەیت ئەگەر ڕومی تایبەتی وەشانی 20.2.20 یان دواتر xiaomi.eu بەکاردەهێنیت. بەکاردەهێنیت)</string>
     <string name="error">هەڵەیەک ڕوویدا</string>
     <string name="redownload">داگرتنەوە</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">Piştrast bin ku we sepan ji vancedapp.com\'ê, ji servera Vanced Discord\'ê an Vanced GitHub\'ê daxistiye</string>
     <string name="success">سەرکەوتو بوو!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s sazkariyên bijarde yên sazkirinê</string>
     <string name="vanced_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
     <string name="version">وەشان</string>
     <string name="music_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
