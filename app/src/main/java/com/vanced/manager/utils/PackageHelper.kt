@@ -149,8 +149,19 @@ object PackageHelper {
         session.commit(pendingIntent.intentSender)
     }
 
-    private fun installRootApk(apkPath: String): Boolean {
-        return Shell.su("pm install -r $apkPath").exec().isSuccess
+    private fun installRootMusic(files: ArrayList<FileInfo>, context: Context): Boolean {
+        files.forEach { apk ->
+            if (apk.name != "root.apk") {
+                val command = Shell.su("cat ${apk.file?.path} | pm install -S ${apk.fileSize}").exec()
+                if (command.isSuccess)
+                    return true
+                else {
+                    sendFailure(command.out, context)
+                    sendCloseDialog(context)
+                }
+            }
+        }
+        return false
     }
 
     fun installMusicRoot(context: Context) {
@@ -167,7 +178,7 @@ object PackageHelper {
                 val apkFilesPath = context.getExternalFilesDir("music/root")?.path
                 val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
                 if (fileInfoList != null) {
-                    val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "music.apk" }
+                    val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "root.apk" }
                     if (modApk != null) {
                         if (overwriteBase(modApk, fileInfoList, musicVersionCode!!, musicRootPkg, "music", context)) {
                             sendRefresh(context)
@@ -332,7 +343,8 @@ object PackageHelper {
 
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
-        Log.d("AppLog", "installing split apk files:$apkFiles")
+        val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
+        Log.d("AppLog", "installing split apk files: $apkFiles")
         run {
             val sessionIdResult = Shell.su("pm install-create -r -t").exec().out
             val sessionIdPattern = Pattern.compile("(\\d+)")
@@ -341,8 +353,8 @@ object PackageHelper {
             sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
         }
         apkFiles.forEach { apkFile ->
-            if (apkFile.name != "black.apk" && apkFile.name != "dark.apk" && apkFile.name != "hash.json") {
-                Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
+            if (!filenames.any { apkFile.name == it }) {
+                Log.d("AppLog", "installing APK: ${apkFile.name} ${apkFile.fileSize}")
                 val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
                 val process: Process = Runtime.getRuntime().exec(command)
                 val inputPipe = apkFile.getInputStream()
@@ -365,6 +377,7 @@ object PackageHelper {
             return true
         }
         sendFailure(installResult.out, context)
+        sendCloseDialog(context)
 
         return false
     }
@@ -505,7 +518,7 @@ object PackageHelper {
     //uninstall current update and install base that works with patch
     private fun fixHigherVer(apkFiles: ArrayList<FileInfo>, pkg: String, context: Context) : Boolean {
         if (uninstallRootApk(pkg)) {
-            return if (pkg == vancedRootPkg) installSplitApkFiles(apkFiles, context) else installRootApk(apkFiles[0].file?.path!!)
+            return if (pkg == vancedRootPkg) installSplitApkFiles(apkFiles, context) else installRootMusic(apkFiles, context)
         }
         sendFailure(listOf("Failed_Uninstall").toMutableList(), context)
         sendCloseDialog(context)
@@ -514,7 +527,7 @@ object PackageHelper {
 
     //install stock youtube matching vanced version
     private fun installStock(baseApkFiles: ArrayList<FileInfo>, pkg: String, context: Context): Boolean {
-        return if (pkg == vancedRootPkg) installSplitApkFiles(baseApkFiles, context) else installRootApk(baseApkFiles[0].file?.path!!)
+        return if (pkg == vancedRootPkg) installSplitApkFiles(baseApkFiles, context) else installRootMusic(baseApkFiles, context)
     }
 
     //set chcon to apk_data_file
@@ -525,6 +538,7 @@ object PackageHelper {
             true
         } else {
             sendFailure(response.out, context)
+            sendCloseDialog(context)
             false
         }
     }

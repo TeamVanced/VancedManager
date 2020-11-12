@@ -69,7 +69,7 @@ object DialogContainer {
         prefs.edit { putBoolean("statement", true) }
     }
 
-    fun installAlertBuilder(msg: String, context: Context) {
+    fun installAlertBuilder(msg: String, fullMsg: String?, context: Context) {
         MaterialAlertDialogBuilder(context).apply {
             setTitle(context.getString(R.string.error))
             setMessage(msg)
@@ -79,25 +79,33 @@ object DialogContainer {
                         openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, context)
                     }
                     setNeutralButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+                    if (fullMsg != null)
+                        setNegativeButton("Advanced") { _, _ -> basicDialog("Advanced", fullMsg, context) }
                 }
                 context.getString(R.string.installation_miui) -> {
                     setPositiveButton(context.getString(R.string.guide)) { _, _ ->
                         openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
                     }
                     setNeutralButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+                    if (fullMsg != null)
+                        setNegativeButton("Advanced") { _, _ -> basicDialog("Advanced", fullMsg, context) }
                 }
-                else -> setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+                else -> {
+                    setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+                    if (fullMsg != null)
+                        setNegativeButton("Advanced") { _, _ -> basicDialog("Advanced", fullMsg, context) }
+                }
             }
             create()
             show()
         }
     }
 
-    fun basicDialog(title: String, msg: String, activity: Activity) {
-        MaterialAlertDialogBuilder(activity).apply {
+    fun basicDialog(title: String, msg: String, context: Context) {
+        MaterialAlertDialogBuilder(context).apply {
             setTitle(title)
             setMessage(msg)
-            setPositiveButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
+            setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()
             show()
         }

@@ -52,9 +52,12 @@ object AppUtils {
     }
 
     fun sendFailure(error: MutableList<String>, context: Context) {
+        downloadProgress.get()?.installing?.set(false)
         CoroutineScope(Dispatchers.IO).launch {
+            delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
             intent.putExtra("errorMsg", getErrorMessage(error.joinToString(), context))
+            intent.putExtra("fullErrorMsg", error.joinToString(" "))
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
         }
     }

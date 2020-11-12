@@ -52,7 +52,7 @@ object MusicDownloader {
                     else
                         "$baseurl/$variant.apk"
 
-            downloadProgress.get()?.currentDownload = PRDownloader.download(url, downloadPath, "music.apk")
+            downloadProgress.get()?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener {
                     downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
