@@ -13,7 +13,7 @@
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
     <string name="select_at_least_one_app">Wählen Sie mindestens eine App!</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">Ist mein Gerät gerootet?</string>
     <string name="willing_to_use_root">Möchten Sie die Root-Version verwenden? Tippen Sie einfach auf die Schaltfläche unten, andernfalls tippen Sie um fortzufahren</string>
     <string name="grant_root">Root-Berechtigung erteilen</string>
     <!-- Home Page -->
