@@ -80,7 +80,7 @@ object DialogContainer {
                     }
                     setNeutralButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
                     if (fullMsg != null)
-                        setNegativeButton("Advanced") { _, _ -> basicDialog("Advanced", fullMsg, context) }
+                        setNegativeButton(context.getString(R.string.advanced)) { _, _ -> basicDialog(context.getString(R.string.advanced), fullMsg, context) }
                 }
                 context.getString(R.string.installation_miui) -> {
                     setPositiveButton(context.getString(R.string.guide)) { _, _ ->
@@ -88,12 +88,12 @@ object DialogContainer {
                     }
                     setNeutralButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
                     if (fullMsg != null)
-                        setNegativeButton("Advanced") { _, _ -> basicDialog("Advanced", fullMsg, context) }
+                        setNegativeButton(context.getString(R.string.advanced)) { _, _ -> basicDialog(context.getString(R.string.advanced), fullMsg, context) }
                 }
                 else -> {
                     setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
                     if (fullMsg != null)
-                        setNegativeButton("Advanced") { _, _ -> basicDialog("Advanced", fullMsg, context) }
+                        setNegativeButton(context.getString(R.string.advanced)) { _, _ -> basicDialog(context.getString(R.string.advanced), fullMsg, context) }
                 }
             }
             create()

@@ -64,6 +64,7 @@
     <string name="variant">Variant</string>
 
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s installation files detected!</string>
     <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
     <string name="checking_updates">Checking for updates…</string>
