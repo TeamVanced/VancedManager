@@ -15,10 +15,13 @@
     <string name="update_manager">Update Manager</string>
 
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
     <string name="are_you_rooted">Is Your Device Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
 
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>

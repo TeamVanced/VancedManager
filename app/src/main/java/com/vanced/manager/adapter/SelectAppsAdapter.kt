@@ -15,14 +15,14 @@ class SelectAppsAdapter(context: Context) : RecyclerView.Adapter<SelectAppsAdapt
 
     private val vanced = SelectAppModel(
         context.getString(R.string.vanced),
-        "YouTube Vanced is the stock Android YouTube App, but better!",
+        context.getString(R.string.select_apps_vanced),
         "vanced",
         prefs.getBoolean("enable_vanced", true)
     )
 
     private val music = SelectAppModel(
         context.getString(R.string.music),
-        "Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.",
+        context.getString(R.string.select_apps_music),
         "music",
         prefs.getBoolean("enable_music", false)
     )

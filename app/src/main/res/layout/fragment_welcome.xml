@@ -24,7 +24,7 @@
             android:layout_marginBottom="32dp"
             android:letterSpacing="0.15"
             android:padding="22dp"
-            android:text="Let's get started"
+            android:text="@string/lets_get_started"
             android:textAllCaps="false"
             android:textSize="13sp"
             app:cornerRadius="50dp"
