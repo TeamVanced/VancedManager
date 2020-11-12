@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">ביטול</string>
     <string name="close">סגור</string>
     <string name="reset">איפוס</string>
     <string name="save">שמור</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">בחר את היישומים שלך</string>
     <!-- Main Activity -->
     <string name="title_about">אודות</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">מנהל</string>
     <string name="title_settings">הגדרות</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">מנהל העדכונים</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">בחר לפחות יישום אחד!</string>
+    <string name="are_you_rooted">האם המכשיר שלך Root?</string>
+    <string name="willing_to_use_root">מוכן להשתמש בRoot? רק הקש על הכפתור מטה, או לחץ המשך</string>
+    <string name="grant_root">הענק הרשאות Root</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="about_app">אודות %1$s</string>
+    <string name="app_changelog_tooltip">לחץ על הכרטיס כדי לצפות בשינויים.</string>
+    <string name="changelog">היסטורית שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
     <string name="install">התקן</string>
     <string name="button_reinstall">התקן מחדש</string>
@@ -30,7 +30,7 @@
     <string name="unavailable">אינו זמין</string>
     <string name="update">עדכן</string>
     <string name="useful_links">קישורים שימושיים</string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">תמוך בנו!</string>
     <!-- Settings -->
     <string name="accent_color">צבע הדגשה</string>
     <string name="accent_blue">כחול</string>
@@ -38,8 +38,8 @@
     <string name="accent_purple">סגול</string>
     <string name="accent_red">אדום</string>
     <string name="accent_yellow">צהוב</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_appearance">מראה</string>
+    <string name="category_behaviour">התנהגות</string>
     <string name="clear_files">מחק קבצים שהורדו</string>
     <string name="cleared_files">מחיקת הקבצים הסתיימה בהצלחה</string>
     <string name="firebase_title">ניתוח מידע משתמש</string>
@@ -55,42 +55,42 @@
     <string name="push_notifications">%1$s התראות דחיפה</string>
     <string name="push_notifications_summary">קבל התראות דחיפה כשעדכון ל %1$s משתחרר</string>
     <string name="update_center">מרכז העדכונים</string>
-    <string name="update_not_found">No new updates</string>
-    <string name="variant">Variant</string>
+    <string name="update_not_found">אין עדכונים חדשים</string>
+    <string name="variant">סוג</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
-    <string name="checking_updates">Checking for updates…</string>
+    <string name="app_install_files_detected">%1$s קבצי התקנה נמצאו!</string>
+    <string name="app_install_files_detected_summary">מנהל איתר את כל הקבצים הנדרשים עבור התקנת %1$s. האם להתקין?</string>
+    <string name="checking_updates">בודק אחר עדכונים…</string>
     <string name="chosen_lang">שפה: %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_version">Version: %1$s</string>
+    <string name="chosen_theme">ערכת נושא: %1$s</string>
+    <string name="chosen_version">גרסא: %1$s</string>
     <string name="guide">מדריך</string>
     <string name="hold_on">עצור!</string>
-    <string name="installing_app">Installing %1$s</string>
+    <string name="installing_app">מתקין %1$s</string>
     <string name="magisk_vanced">נדמה שאתה משתמש בגרסת הMagisk/TWRP של Vanced, שתמיכה בה הופסקה והגרסה אינה יכולה להתעדכן בעזרת האפליקציה הזו. אנא מחק אותה קודם על ידי מחיקת מודול בMagisk.</string>
     <string name="miui_one_title">MIUI זוהה!</string>
     <string name="miui_one">על מנת להתקין את Vanced, עליך להשבית אופטימיזציות של MIUI בהגדרות המפתח. (אתה יכול להתעלם מאזהרה זו אם אתה משתמש בגרסה 20.2.2. של שיאומי או יותר)</string>
     <string name="error">בעיה</string>
-    <string name="redownload">Redownload</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="redownload">הורד מחדש</string>
+    <string name="security_context">וודא שאתה מוריד את היישום דרך vancedapp.com, דרך שרת Vanced Discord או דרך Vanced GitHub</string>
     <string name="success">הצלחה!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s העדפות התקנה</string>
     <string name="vanced_installed">Vanced הותקן בהצלחה! לפתוח עכשיו?</string>
-    <string name="version">Version</string>
+    <string name="version">גרסא</string>
     <string name="music_installed">Vanced Music הותקן בהצלחה! לפתוח עכשיו?</string>
-    <string name="please_be_patient">Please be patient…</string>
+    <string name="please_be_patient">בבקשה היה סבלני…</string>
     <string name="launch">פתח</string>
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">בחר את השפה המועדפת עליך לVanced</string>
-    <string name="light_plus_other">Light + %1$s</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="light_plus_other">בהיר + %1$s</string>
+    <string name="select_at_least_one_lang">בחר לפחות שפה אחת!</string>
     <!-- About Page -->
     <string name="manager_dev">מנהל המפתחים</string>
     <string name="sources">מקורות</string>
     <string name="vanced_team">צוות Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` apk to system owner, please try again.</string>
+    <string name="chown_fail">נכשל ב \'chown\' לקובץ Apk למנהל המערכת. בבקשה נסה שוב.</string>
     <string name="error_downloading">בעיה בהורדה של %1$s</string>
     <string name="failed_uninstall">יש בעיה במחיקת החבילה %1$s</string>
     <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
