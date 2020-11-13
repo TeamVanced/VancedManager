@@ -12,10 +12,13 @@
     <string name="title_settings">ڕێکخستنەکان</string>
     <string name="update_manager">نوێکردنەوەی بەرنامە</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
     <string name="are_you_rooted">مۆبایلەکەت ڕۆت کراوە؟</string>
-    <string name="willing_to_use_root">ئەگەر ئەتەوێ بە ڕێگەپێدانی ڕۆت فایلەکان دابەزێنیت، تەنها لە خوارەوە پەنجە بنێ بە بەردەوامبون بۆ ئەنجامدانی کارەکە</string>
     <string name="grant_root">ڕێگەپێدانی ڕۆت Root</string>
+    <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">ئەگەر ئەتەوێ بە ڕێگەپێدانی ڕۆت فایلەکان دابەزێنیت، تەنها لە خوارەوە پەنجە بنێ بە بەردەوامبون بۆ ئەنجامدانی کارەکە</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
     <string name="app_changelog_tooltip">Ji bo guherînan bibînî kartê bitepîne.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">هیچ نوێکردنەوەیەک نیە</string>
     <string name="variant">جۆر</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
     <string name="app_install_files_detected_summary">بەرنامەکە هەموو ئەو فایلانەی دۆزیەوە %1$s کە پێویستن بۆ دابەزاندن، ئەتەوێ دایان مەزرێنیت؟</string>
     <string name="checking_updates">پشکنین بۆ نوێکردنەوە…</string>
