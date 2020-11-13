@@ -10,7 +10,7 @@
     <string name="title_about">Información</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
-    <string name="update_manager">Actualizar Manager</string>
+    <string name="update_manager">Gestor de actualizaciones</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">¿Su dispositivo está rooteado?</string>
     <string name="grant_root">Conceder permiso root</string>
