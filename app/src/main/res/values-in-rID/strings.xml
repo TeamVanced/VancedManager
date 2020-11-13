@@ -12,10 +12,13 @@
     <string name="title_settings">Pengaturan</string>
     <string name="update_manager">Perbarui Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
     <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Root?</string>
-    <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
     <string name="grant_root">Berikan Izin Root</string>
+    <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
     <!-- Home Page -->
     <string name="about_app">Tentang %1$s</string>
     <string name="app_changelog_tooltip">Ketuk kartu untuk melihat catatan perubahan.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Tidak ada pembaruan</string>
     <string name="variant">Varian</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s file instalasi terdeteksi!</string>
     <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasang?</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
