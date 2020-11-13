@@ -5,19 +5,19 @@
     <string name="close">বন্ধ করুন</string>
     <string name="reset">আবার শুরু করো</string>
     <string name="save">সংরক্ষণ করুন</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">আপনার আ্যপ্স নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">ম্যানেজার আপডেট করুন</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
-    <string name="grant_root">Grant Root Permission</string>
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="are_you_rooted">আপনার ডিভাইস কি রুটেড?</string>
+    <string name="grant_root">রুটের অনুমতি দিন</string>
+    <string name="select_at_least_one_app">সর্বনিম্ন একটি আ্যপ নির্বাচন করুন!</string>
+    <string name="select_apps_music">ভ্যান্সড, কিন্তু তুলনা মূলক কম গুণাগুণ সম্পন্ন তবুও আপনার চাহিদাকে পূরণ করবে।</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
+    <string name="lets_get_started">চলুন শুরু করি</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
