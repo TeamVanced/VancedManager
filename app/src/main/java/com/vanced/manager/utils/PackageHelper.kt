@@ -11,15 +11,18 @@ import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
-import com.vanced.manager.core.App
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
-import com.vanced.manager.core.installer.SplitInstallerService
-import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.vancedProgress
-import com.vanced.manager.utils.AppUtils.mutableInstall
+import com.vanced.manager.utils.AppUtils.musicRootPkg
+import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
+import com.vanced.manager.utils.InternetTools.music
+import com.vanced.manager.utils.InternetTools.vanced
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -28,8 +31,9 @@ import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 object PackageHelper {
-    
-    private const val apkInstallPath = "/data/adb/Vanced/"
+
+    private const val apkInstallPath = "/data/adb"
+    private val vancedThemes = arrayOf("black", "dark", "pink", "blue")
 
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
@@ -56,25 +60,80 @@ object PackageHelper {
 
     }
 
-    fun uninstallApk(pkg: String, context: Context): Boolean {
+    fun downloadStockCheck(pkg: String, versionCode: Int, context: Context): Boolean {
+        return try {
+            getPkgVerCode(pkg, context.packageManager) != versionCode
+        } catch (e: Exception) {
+            true
+        }
+    }
+
+    fun apkExist(context: Context, apk: String): Boolean {
+        val apkPath = File(context.getExternalFilesDir(apk.substring(0, apk.length - 4))?.path, apk)
+        if (apkPath.exists())
+            return true
+
+        return false
+    }
+
+    fun musicApkExists(context: Context): Boolean {
+        val apkPath = File(context.getExternalFilesDir("music/nonroot")?.path, "music.apk")
+        if (apkPath.exists()) {
+            return true
+        }
+
+        return false
+    }
+
+    fun vancedInstallFilesExist(context: Context): Boolean {
+        val apksPath = File(context.getExternalFilesDir("vanced/nonroot")?.path.toString())
+        val splitFiles = mutableListOf<String>()
+        if (apksPath.exists()) {
+            val files = apksPath.listFiles()
+            if (files?.isNotEmpty() == true) {
+                for (file in files) {
+
+                    when {
+                        vancedThemes.any { file.name == "$it.apk" } && !splitFiles.contains("base") -> splitFiles.add("base")
+                        file.name.matches(Regex("split_config\\.(..)\\.apk")) && !splitFiles.contains("lang") -> splitFiles.add("lang")
+                        (file.name.startsWith("split_config.arm") || file.name.startsWith("split_config.x86")) && !splitFiles.contains("arch") -> splitFiles.add("arch")
+                    }
+
+                    Log.d("test", splitFiles.joinToString())
+
+                    if (splitFiles.size == 3) {
+                        return true
+                    }
+
+                }
+
+            }
+
+            return false
+        }
+        return false
+    }
+
+    fun uninstallRootApk(pkg: String): Boolean {
+        return Shell.su("pm uninstall $pkg").exec().isSuccess
+    }
+
+    fun uninstallApk(pkg: String, context: Context) {
         val callbackIntent = Intent(context, AppUninstallerService::class.java)
         callbackIntent.putExtra("pkg", pkg)
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
-        return try {
+        try {
             context.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
-            true
         } catch (e: Exception) {
             e.printStackTrace()
-            false
         }
     }
-    
-    fun install(app: String, path: String, context: Context){
-        val callbackIntent = Intent(context, AppInstallerService::class.java).putExtra("app", app)
+
+    fun install(path: String, context: Context) {
+        val callbackIntent = Intent(context, AppInstallerService::class.java)
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
         val packageInstaller = context.packageManager.packageInstaller
         val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
-        params.setAppPackageName(if (app == "microg") "com.mgoogle.android.gms" else "com.vanced.android.apps.youtube.music")
         val sessionId = packageInstaller.createSession(params)
         val session = packageInstaller.openSession(sessionId)
         val inputStream: InputStream = FileInputStream(path)
@@ -89,9 +148,60 @@ object PackageHelper {
         outputStream.close()
         session.commit(pendingIntent.intentSender)
     }
-    
+
+    private fun installRootMusic(files: ArrayList<FileInfo>, context: Context): Boolean {
+        files.forEach { apk ->
+            if (apk.name != "root.apk") {
+                val command = Shell.su("cat ${apk.file?.path} | pm install -S ${apk.fileSize}").exec()
+                if (command.isSuccess)
+                    return true
+                else {
+                    sendFailure(command.out, context)
+                    sendCloseDialog(context)
+                }
+            }
+        }
+        return false
+    }
+
+    fun installMusicRoot(context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            Shell.enableVerboseLogging = BuildConfig.DEBUG
+            Shell.setDefaultBuilder(
+                    Shell.Builder.create()
+                            .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                            .setTimeout(10)
+            )
+
+            Shell.getShell {
+                val musicVersionCode = music.get()?.int("versionCode")
+                val apkFilesPath = context.getExternalFilesDir("music/root")?.path
+                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                if (fileInfoList != null) {
+                    val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "root.apk" }
+                    if (modApk != null) {
+                        if (overwriteBase(modApk, fileInfoList, musicVersionCode!!, musicRootPkg, "music", context)) {
+                            sendRefresh(context)
+                            sendCloseDialog(context)
+                        }
+                    }
+                    else {
+                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+                        sendCloseDialog(context)
+                    }
+                }
+                else {
+                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendCloseDialog(context)
+                }
+
+            }
+
+        }
+    }
+
     fun installVanced(context: Context): Int {
-        val apkFolderPath = context.getExternalFilesDir("apks")?.path + "/"
+        val apkFolderPath = context.getExternalFilesDir("vanced/nonroot")?.path.toString() + "/"
         val nameSizeMap = HashMap<String, Long>()
         var totalSize: Long = 0
         var sessionId = 0
@@ -176,7 +286,7 @@ object PackageHelper {
         try {
             try {
                 session = context.packageManager.packageInstaller.openSession(sessionId)
-                val callbackIntent = Intent(context, SplitInstallerService::class.java)
+                val callbackIntent = Intent(context, AppInstallerService::class.java)
                 val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
                 session.commit(pendingIntent.intentSender)
                 session.close()
@@ -191,49 +301,50 @@ object PackageHelper {
             session!!.close()
         }
     }
-    
-    fun installVancedRoot(context: Context) {
-        Shell.enableVerboseLogging = BuildConfig.DEBUG
-        Shell.setDefaultBuilder(
-            Shell.Builder.create()
-                .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                .setTimeout(10)
-        )
 
-        Shell.getShell {
-            val application = context.applicationContext as App
-            val vancedApplication = application.vanced.get()?.int("versionCode")
-            val vancedVersionCode = if (vancedApplication != null) vancedApplication else { application.loadJsonAsync(); vancedApplication }
-            val apkFilesPath = context.getExternalFilesDir("apks")?.path
-            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-            if (fileInfoList != null) {
-                var modApk: FileInfo? = null
-                for (file in fileInfoList) {
-                    if (file.name == "dark.apk" || file.name == "black.apk") {
-                        modApk = file
+    fun installVancedRoot(context: Context) {
+        CoroutineScope(Dispatchers.IO).launch {
+            Shell.enableVerboseLogging = BuildConfig.DEBUG
+            Shell.setDefaultBuilder(
+                Shell.Builder.create()
+                    .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                    .setTimeout(10)
+            )
+
+            Shell.getShell {
+                val vancedVersionCode = vanced.get()?.int("versionCode")
+                val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
+                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+                if (fileInfoList != null) {
+                    val modApk: FileInfo? = fileInfoList.lastOrNull { file ->
+                        vancedThemes.any { file.name == "$it.apk" }
                     }
-                }
-                if (modApk != null) {
-                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, context)) {
-                        sendRefresh(context)
-                        vancedProgress.get()?.showInstallCircle?.set(false)
-                        mutableInstall.value = false
+                    if (modApk != null) {
+                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, vancedRootPkg, "vanced", context)) {
+                            sendRefresh(context)
+                            sendCloseDialog(context)
+                        }
+                    }
+                    else {
+                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+                        sendCloseDialog(context)
                     }
                 }
                 else {
-                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendCloseDialog(context)
                 }
-            }
-            else {
-                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+
             }
 
         }
+
     }
-    
+
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
-        Log.d("AppLog", "installing split apk files:$apkFiles")
+        val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
+        Log.d("AppLog", "installing split apk files: $apkFiles")
         run {
             val sessionIdResult = Shell.su("pm install-create -r -t").exec().out
             val sessionIdPattern = Pattern.compile("(\\d+)")
@@ -242,8 +353,8 @@ object PackageHelper {
             sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
         }
         apkFiles.forEach { apkFile ->
-            if (apkFile.name != "black.apk" && apkFile.name != "dark.apk" && apkFile.name != "hash.json") {
-                Log.d("AppLog", "installing APK : ${apkFile.name} ${apkFile.fileSize} ")
+            if (!filenames.any { apkFile.name == it }) {
+                Log.d("AppLog", "installing APK: ${apkFile.name} ${apkFile.fileSize}")
                 val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
                 val process: Process = Runtime.getRuntime().exec(command)
                 val inputPipe = apkFile.getInputStream()
@@ -264,8 +375,9 @@ object PackageHelper {
         val installResult = Shell.su("pm install-commit $sessionId").exec()
         if (installResult.isSuccess) {
             return true
-        } else
-            sendFailure(installResult.out, context)
+        }
+        sendFailure(installResult.out, context)
+        sendCloseDialog(context)
 
         return false
     }
@@ -282,8 +394,9 @@ object PackageHelper {
 
         if (parentFile.exists() && parentFile.canRead()) {
             val listFiles = parentFile.listFiles() ?: return ArrayList()
-            for (file in listFiles)
-                result.add(FileInfo(file.name, file.length(), file))
+            listFiles.mapTo(result) {
+                FileInfo(it.name, it.length(), it)
+            }
             return result
         }
         val longLines = Shell.su("ls -l $splitApkPath").exec().out
@@ -314,20 +427,27 @@ object PackageHelper {
         return result
     }
 
-    //install Vanced
-    private fun overwriteBase(apkFile: FileInfo,baseApkFiles: ArrayList<FileInfo>, versionCode: Int, context: Context): Boolean {
-        if (checkVersion(versionCode, baseApkFiles, context)) {
-            val path = getPackageDir(context)
+    //overwrite stock Vanced/Music
+    private fun overwriteBase(
+        apkFile: FileInfo,
+        baseApkFiles: ArrayList<FileInfo>,
+        versionCode: Int,
+        pkg: String,
+        app: String,
+        context: Context
+    ): Boolean {
+        if (checkVersion(versionCode, baseApkFiles, pkg, context)) {
+            val path = getPackageDir(context, pkg)
             apkFile.file?.let {
                 val apath = it.absolutePath
 
-                setupFolder(apkInstallPath)
+                setupFolder("$apkInstallPath/${app.capitalize(Locale.ROOT)}")
                 if (path != null) {
-                    val apkFPath = apkInstallPath + "base.apk"
-                    if (moveAPK(apath, apkFPath, context)) {
+                    val apkFPath = "$apkInstallPath/${app.capitalize(Locale.ROOT)}/base.apk"
+                    if (moveAPK(apath, apkFPath, pkg, context)) {
                         if (chConV(apkFPath, context)) {
-                            if (setupScript(apkFPath,path)) {
-                                return linkVanced(apkFPath,path)
+                            if (setupScript(apkFPath, path, app)) {
+                                return linkApp(apkFPath, pkg, path)
                             }
                         }
                     }
@@ -339,20 +459,22 @@ object PackageHelper {
         return false
     }
 
-    private fun setupScript(apkFPath: String, path: String): Boolean {
-        if (Shell.su("""echo "#!/system/bin/sh\nmount -o bind $apkFPath $path" > /data/adb/service.d/vanced.sh""").exec().isSuccess) {
-            return Shell.su("chmod 744 /data/adb/service.d/vanced.sh").exec().isSuccess
+    private fun setupScript(apkFPath: String, path: String, app: String): Boolean
+    {
+        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done\nmount -o bind $apkFPath $path" > /data/adb/service.d/$app.sh""").exec().isSuccess)
+        {
+            Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep youtube | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
+            return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
         }
         return false
     }
 
-    private fun linkVanced(apkFPath: String, path: String): Boolean {
-        Shell.su("am force-stop $vancedRootPkg").exec()
-        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep com.google.android.youtube | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
-        //Log.d("umountTest", Shell.su("grep com.google.android.youtube").exec().out.joinToString(" "))
+    private fun linkApp(apkFPath: String, pkg:String, path: String): Boolean {
+        Shell.su("am force-stop $pkg").exec()
+        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
         Thread.sleep(500)
-        Shell.su("am force-stop $vancedRootPkg").exec()
+        Shell.su("am force-stop $pkg").exec()
         return response.isSuccess
     }
 
@@ -361,21 +483,19 @@ object PackageHelper {
     }
 
     //check version and perform action based on result
-    private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>, context: Context): Boolean {
-        val path = getPackageDir(context)
+    private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>, pkg: String, context: Context): Boolean {
+        val path = getPackageDir(context, pkg)
         if (path != null) {
             if (path.contains("/data/app/")) {
-                when (getVersionNumber(context)?.let { compareVersion(it,versionCode) } ) {
-                    1 -> return fixHigherVer(baseApkFiles, context)
-                    -1 -> return fixLowerVer(baseApkFiles, context)
+                when (getVersionNumber(pkg, context)?.let { compareVersion(it,versionCode) } ) {
+                    1 -> return fixHigherVer(baseApkFiles, pkg, context)
+                    -1 -> return installStock(baseApkFiles, pkg, context)
                 }
                 return true
             }
-            else {
-                return fixNoInstall(baseApkFiles, context)
-            }
+            return installStock(baseApkFiles, pkg, context)
         }
-        return fixNoInstall(baseApkFiles, context)
+        return installStock(baseApkFiles, pkg, context)
     }
 
     private fun getPkgInfo(pkg: String, context: Context): PackageInfo? {
@@ -396,22 +516,18 @@ object PackageHelper {
     }
 
     //uninstall current update and install base that works with patch
-    private fun fixHigherVer(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
-        if (uninstallApk(vancedRootPkg, context)) {
-            return installSplitApkFiles(apkFiles, context)
+    private fun fixHigherVer(apkFiles: ArrayList<FileInfo>, pkg: String, context: Context) : Boolean {
+        if (uninstallRootApk(pkg)) {
+            return if (pkg == vancedRootPkg) installSplitApkFiles(apkFiles, context) else installRootMusic(apkFiles, context)
         }
         sendFailure(listOf("Failed_Uninstall").toMutableList(), context)
+        sendCloseDialog(context)
         return false
     }
 
-    //install newer stock youtube
-    private fun fixLowerVer(apkFiles: ArrayList<FileInfo>, context: Context): Boolean {
-        return installSplitApkFiles(apkFiles, context)
-    }
-
-    //install stock youtube since no install was found
-    private fun fixNoInstall(baseApkFiles: ArrayList<FileInfo>, context: Context): Boolean {
-        return installSplitApkFiles(baseApkFiles, context)
+    //install stock youtube matching vanced version
+    private fun installStock(baseApkFiles: ArrayList<FileInfo>, pkg: String, context: Context): Boolean {
+        return if (pkg == vancedRootPkg) installSplitApkFiles(baseApkFiles, context) else installRootMusic(baseApkFiles, context)
     }
 
     //set chcon to apk_data_file
@@ -422,18 +538,19 @@ object PackageHelper {
             true
         } else {
             sendFailure(response.out, context)
+            sendCloseDialog(context)
             false
         }
     }
 
     //move patch to data/app
-    private fun moveAPK(apkFile: String, path: String, context: Context) : Boolean {
+    private fun moveAPK(apkFile: String, path: String, pkg: String, context: Context) : Boolean {
         val apkinF = SuFile.open(apkFile)
         val apkoutF = SuFile.open(path)
 
         if(apkinF.exists()) {
             try {
-                Shell.su("am force-stop $vancedRootPkg").exec()
+                Shell.su("am force-stop $pkg").exec()
 
                 //Shell.su("rm -r SuFile.open(path).parent")
 
@@ -443,6 +560,7 @@ object PackageHelper {
                     true
                 } else {
                     sendFailure(listOf("Chown_Fail").toMutableList(), context)
+                    sendCloseDialog(context)
                     false
                 }
 
@@ -450,13 +568,13 @@ object PackageHelper {
             catch (e: IOException)
             {
                 sendFailure(listOf("${e.message}").toMutableList(), context)
+                sendCloseDialog(context)
                 return false
             }
         }
-        else {
-            sendFailure(listOf("IFile_Missing").toMutableList(), context)
-            return false
-        }
+        sendFailure(listOf("IFile_Missing").toMutableList(), context)
+        sendCloseDialog(context)
+        return false
     }
 
 
@@ -467,7 +585,7 @@ object PackageHelper {
     }
 
     @Suppress("DEPRECATION")
-    private fun getVersionNumber(context: Context): Int? {
+    private fun getVersionNumber(pkg: String, context: Context): Int? {
         try {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
                 context.packageManager.getPackageInfo(vancedRootPkg, 0).longVersionCode.and(0xFFFFFFFF).toInt()
@@ -475,18 +593,16 @@ object PackageHelper {
                 context.packageManager.getPackageInfo(vancedRootPkg, 0).versionCode
         }
         catch (e : Exception) {
-            val execRes = Shell.su("dumpsys package com.google.android.youtube | grep versionCode").exec()
+            val execRes = Shell.su("dumpsys package $pkg | grep versionCode").exec()
             if(execRes.isSuccess) {
                 val result = execRes.out
                 var version = 0
-                for(line in result) {
-                    val versionCode = line.substringAfter("=")
-                    val versionCodeFiltered = versionCode.substringBefore(" ")
-                    if(version < Integer.valueOf(versionCodeFiltered))
-                    {
-                        version = Integer.valueOf(versionCodeFiltered)
-                    }
-                }
+                result
+                    .asSequence()
+                    .map { it.substringAfter("=") }
+                    .map { it.substringBefore(" ") }
+                    .filter { version < Integer.valueOf(it) }
+                    .forEach { version = Integer.valueOf(it) }
                 return version
             }
         }
@@ -494,13 +610,16 @@ object PackageHelper {
     }
 
     //get path of the installed youtube
-    private fun getPackageDir(context: Context): String?
+    private fun getPackageDir(context: Context, pkg: String): String?
     {
-        return try {
-            val p = getPkgInfo(vancedRootPkg, context)
-            p!!.applicationInfo.sourceDir
-        } catch (e: Exception) {
-             val execRes = Shell.su("dumpsys package com.google.android.youtube | grep codePath").exec()
+        val p = getPkgInfo(pkg, context)
+        return if(p != null)
+        {
+            p.applicationInfo.sourceDir
+        }
+        else
+        {
+            val execRes = Shell.su("dumpsys package $pkg | grep codePath").exec()
             if(execRes.isSuccess)
             {
                 val result = execRes.out

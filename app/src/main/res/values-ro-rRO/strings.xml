@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Anulaţi</string>
     <string name="close">Închide</string>
     <string name="reset">Resetează</string>
     <string name="save">Salvează</string>
+    <string name="select_apps">Selectați aplicațiile</string>
     <!-- Main Activity -->
     <string name="title_about">Despre</string>
-    <string name="title_home">Start</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Configurări</string>
+    <string name="update_manager">Actualizați Manager</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">Dispozitivul tău este rootat?</string>
+    <string name="grant_root">Acordați permisiunea Root</string>
+    <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced este aplicația YouTube stoc, dar mai bună!</string>
+    <string name="lets_get_started">Să începem</string>
+    <string name="willing_to_use_root">Vreți să folosiți versiunea root? Doar apăsați butonul de mai jos, altfel apăsați săgeata pentru a continua</string>
     <!-- Home Page -->
-    <string name="changelogs">Istoric modificări</string>
+    <string name="about_app">Despre %1$s</string>
+    <string name="app_changelog_tooltip">Apăsați pe card pentru a vedea schimbările.</string>
+    <string name="changelog">Schimbări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
-    <string name="installation_wait">Vă rugăm să aşteptaţi până la finalizarea instalării.</string>
     <string name="button_reinstall">Reinstalare</string>
     <string name="version_installed">Instalat:</string>
     <string name="latest">Ultima:</string>
@@ -21,9 +33,7 @@
     <string name="unavailable">Indisponibil</string>
     <string name="update">Actualizare</string>
     <string name="useful_links">Link-uri folositoare</string>
-    <string name="website_text">Website</string>
-    <string name="support_us">Ajutați-ne!</string>
-    <string name="version_toast">Versiunea %1$s a fost copiată!</string>
+    <string name="support_us">Susțineți-ne!</string>
     <!-- Settings -->
     <string name="accent_color">Nuanță culoare</string>
     <string name="accent_blue">Albastru</string>
@@ -31,12 +41,8 @@
     <string name="accent_purple">Violet</string>
     <string name="accent_red">Roşu</string>
     <string name="accent_yellow">Galben</string>
-    <string name="category_interface">Interfață</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Verifică pentru actualizări</string>
-    <string name="chosen_install_values">Preferințe de instalare selectate</string>
-    <string name="chosen_lang">Limbă: %1$s</string>
-    <string name="chosen_theme">Temă: %1$s</string>
+    <string name="category_appearance">Aspect</string>
+    <string name="category_behaviour">Comportament</string>
     <string name="clear_files">Ştergeţi fişierele descărcate</string>
     <string name="cleared_files">Fişiere şterse cu succes</string>
     <string name="firebase_title">Statistici Firebase</string>
@@ -44,52 +50,55 @@
     <string name="language_title">Limbă</string>
     <string name="link_title">Utilizează file personalizate Chrome</string>
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
-    <string name="link_external_browser">Link-urile se vor deschide într-un browser extern</string>
-    <string name="new_installer_title">Folosește noul instalator root (Experimental)</string>
-    <string name="new_installer_summary">Acest instalator nu depinde de starea de verificare a semnăturii. ATENȚIE: Vanced poate dispărea după repornire dacă îl instalați utilizând această opțiune</string>
     <string name="system_default">Setarea implicită a sistemului</string>
     <string name="theme">Temă</string>
-    <string name="theme_follow">Urmăreşte sistemul</string>
     <string name="theme_dark">Temă întunecată</string>
     <string name="theme_light">Temă deschisă</string>
     <string name="update_url">URL canal de actualizare</string>
     <string name="push_notifications">%1$s Notificari push</string>
     <string name="push_notifications_summary">Primiți notificări push când o actualizare pentru %1$s este lansată</string>
-    <string name="re_check">Re-verifică</string>
     <string name="update_center">Actualizator</string>
-    <string name="update_found">Actualizare găsită!</string>
-    <string name="update_notfound">Nu există actualizări noi</string>
+    <string name="update_not_found">Nu există actualizări noi</string>
+    <string name="variant">Variantă</string>
     <!-- Dialogs -->
+    <string name="advanced">Avansat</string>
+    <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
+    <string name="app_install_files_detected_summary">Manager a detectat că au fost găsite toate fişierele necesare pentru instalarea %1$s. Doriţi să instalaţi?</string>
+    <string name="checking_updates">Verificare actualizări…</string>
+    <string name="chosen_lang">Limbă: %1$s</string>
+    <string name="chosen_theme">Temă: %1$s</string>
+    <string name="chosen_version">Versiune: %1$s</string>
     <string name="guide">Ghid</string>
     <string name="hold_on">Oprește!</string>
+    <string name="installing_app">Se Instalează %1$s</string>
     <string name="magisk_vanced">Folosiți versiunea Magisk/TWRP a Vanced, care este întreruptă și nu poate fi actualizată folosind această aplicație. Vă rugăm să o eliminați eliminând modulul magisk/utilizând dezinstalare Vanced TWRP.</string>
     <string name="miui_one_title">MIUI detectat!</string>
     <string name="miui_one">Pentru a instala Vanced, TREBUIE să dezactivaţi Optimizările MIUI în setările dezvoltatorului. (Puteți ignora această avertizare dacă utilizați un ROM cu baza pe xiaomi.eu 20.2.20 sau mai recent)</string>
     <string name="error">Eroare</string>
-    <string name="security_context">Asigură-te că ai descărcat aplicația de pe vanced.app, serverul Discord Vanced sau GitHub Vanced</string>
+    <string name="redownload">Redescărcare</string>
+    <string name="security_context">Asigură-te că ai descărcat aplicația de pe vancedapp.com, serverul Discord Vanced sau GitHub Vanced</string>
     <string name="success">Succes!</string>
+    <string name="app_installation_preferences">%1$s Preferințe de instalare</string>
     <string name="vanced_installed">Vanced a fost instalat cu succes! Deschideți acum?</string>
+    <string name="version">Versiune</string>
     <string name="music_installed">Vanced Music a fost instalat cu succes! Deschizi acum?</string>
+    <string name="please_be_patient">Vă rugăm să aveți răbdare…</string>
     <string name="launch">Deschideți</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Alegeți limba preferată pentru Vanced</string>
-    <string name="choose_preferred_language_note">Notă: Engleza va fi întotdeauna instalată și ca limbă suplimentară.</string>
-    <string name="choose_preferred_theme">Alegeți tema preferată pentru Vanced</string>
-    <string name="finish">Terminat</string>
-    <string name="install_light_black">Luminos + Negru</string>
-    <string name="install_light_dark">Luminos + Întunecat</string>
-    <string name="next">Continuare</string>
+    <string name="light_plus_other">Alb + %1$s</string>
+    <string name="select_at_least_one_lang">Selectaţi cel puţin o limbă!</string>
     <!-- About Page -->
     <string name="manager_dev">Dezvoltatori</string>
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Nu s-a reușit comanda chown Apk pentru proprietarul sistemului, încercați din nou</string>
+    <string name="chown_fail">Comanda \'chown\' apk pentru proprietarul sistemului a eșuat, încercați din nou.</string>
     <string name="error_downloading">Eroare la descărcarea %1$s</string>
     <string name="failed_uninstall">Dezinstalarea pachetului %1$s a eșuat</string>
-    <string name="files_missing_va">Fișierele lipsesc, Descărcarea a eșuat?</string>
-    <string name="ifile_missing">Întunecat/Black.apk nu poate fi citită (acces spațiu stocare blocat?) sau fișier lipsă</string>
+    <string name="files_missing_va">Nu s-a reușit localizarea fișierelor necesare pentru instalare. Redescărcați fișierele de instalare, apoi încercați din nou.</string>
+    <string name="ifile_missing">Nu s-a reuşit localizarea fişierului apk pentru tema neagră/întunecată din stocare, vă rugăm să încercaţi din nou.</string>
     <string name="installation_aborted">Operația a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_blocked">Operația a eșuat deoarece utilizatorul a blocat instalarea.</string>
     <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările de pe aplicația YouTube stocată, apoi încercați din nou.</string>
@@ -100,6 +109,6 @@
     <string name="installation_signature">Instalarea a eșuat deoarece verificarea semnăturii apk este activată. Dezactivați verificarea semnăturii apk, apoi încercați din nou.</string>
     <string name="installation_miui">Instalarea a eșuat deoarece este activată optimizarea MIUI. Dezactivați optimizarea MIUI, apoi încercați din nou.</string>
     <string name="installation_storage">Instalarea a eșuat din cauza unei erori de stocare.</string>
-    <string name="modapk_missing">Aplicația neagră lipsește din instalator, acest lucru nu ar trebui să se întâmple, vă rugăm să ștergeți datele aplicației din manager</string>
-    <string name="path_missing">Calea de instalare pentru Youtube stoc nu este accesibilă sau lipsește după instalare depărțită stoc</string>
+    <string name="modapk_missing">Nu s-a putut găsi fișierul apk pentru tema neagră/întunecată din instalator. Ștergeți datele aplicației Manager, apoi încercați din nou.</string>
+    <string name="path_missing">Localizarea instalarii YouTube-ului stock a eșuat dupa instalarea divizată.</string>
 </resources>

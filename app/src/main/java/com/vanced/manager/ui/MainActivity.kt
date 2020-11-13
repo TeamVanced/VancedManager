@@ -17,15 +17,19 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.firebase.messaging.FirebaseMessaging
+import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
+import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
+import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
-import com.vanced.manager.ui.fragments.UpdateCheckFragment
-import com.vanced.manager.utils.AppUtils.installing
+import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.LanguageContextWrapper
+import com.vanced.manager.utils.LanguageHelper.authCrowdin
+import com.vanced.manager.utils.LanguageHelper.onActivityResult
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
 
@@ -41,27 +45,29 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onFailure(throwable: Throwable) {
-            Log.d(tag, "Failed to load data")
+            Log.d(tag, "Failed to load data: $throwable")
         }
 
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setFinalTheme(this)
+        setFinalTheme()
         super.onCreate(savedInstanceState)
+        if (ENABLE_CROWDIN_AUTH)
+            authCrowdin()
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         with(binding) {
             lifecycleOwner = this@MainActivity
-            setSupportActionBar(homeToolbar)
-            homeToolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
+            setSupportActionBar(toolbar)
+            toolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
         }
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
 
-        initDialogs()
-
+        initDialogs(intent.getBooleanExtra("firstLaunch", false))
     }
 
     override fun onBackPressed() {
@@ -70,7 +76,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        binding.homeToolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
+        binding.toolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
     }
 
     override fun onPause() {
@@ -79,15 +85,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        setFinalTheme(this)
+        setFinalTheme()
         super.onResume()
         Crowdin.registerDataLoadingObserver(loadingObserver)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (installing.value!!)
-            return false
-
         when (item.itemId) {
             android.R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
@@ -101,6 +104,9 @@ class MainActivity : AppCompatActivity() {
                 navHost.navigate(HomeFragmentDirections.toSettingsFragment())
                 return true
             }
+            R.id.toolbar_update_manager -> {
+                ManagerUpdateDialog(false).show(supportFragmentManager, "manager_update")
+            }
             R.id.dev_settings -> {
                 navHost.navigate(SettingsFragmentDirections.toDevSettingsFragment())
                 return true
@@ -112,7 +118,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(LanguageContextWrapper.wrap(newBase))
+        super.attachBaseContext(Crowdin.wrapContext(LanguageContextWrapper.wrap(newBase)))
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        onActivityResult(requestCode)
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -126,16 +137,25 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun initDialogs() {
+    private fun initDialogs(firstLaunch: Boolean) {
         val prefs = getDefaultSharedPreferences(this)
         val variant = prefs.getString("vanced_variant", "nonroot")
         prefs.getBoolean("show_root_dialog", true)
 
+        if (intent?.data != null && intent.dataString?.startsWith("https") == true) {
+            val urldialog = URLChangeDialog()
+            val arg = Bundle()
+            arg.putString("url", intent.dataString)
+            urldialog.arguments = arg
+            urldialog.show(this)
+        }
+
         when {
-            prefs.getBoolean("firstStart", true) -> {
+            firstLaunch -> {
                 DialogContainer.showSecurityDialog(this)
                 with(FirebaseMessaging.getInstance()) {
                     subscribeToTopic("Vanced-Update")
+                    subscribeToTopic("Music-Update")
                     subscribeToTopic("MicroG-Update")
                 }
             }
@@ -157,8 +177,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUpdates() {
-        if (InternetTools.isUpdateAvailable(this)) {
-            UpdateCheckFragment().show(supportFragmentManager, "UpdateCheck")
+        if (InternetTools.isUpdateAvailable()) {
+            ManagerUpdateDialog(false).show(supportFragmentManager, "UpdateCheck")
         }
     }
 

@@ -2,8 +2,12 @@
 <resources>
 
     <string name="app_name" translatable="false">Vanced Manager</string>
-    <string name="vanced" translatable="false">Vanced</string>
-    <string name="microg" translatable="false">microG</string>
-    <string name="music" translatable="false">Music</string>
+    <string name="vanced" translatable="false">YouTube Vanced</string>
+    <string name="microg" translatable="false">Vanced microG</string>
+    <string name="music" translatable="false">YouTube Music</string>
+
+    <!-- prefs -->
+    <string name="firebase" translatable="false">firebase</string>
+    <string name="use_custom_tabs" translatable="false">use_custom_tabs</string>
 
 </resources>

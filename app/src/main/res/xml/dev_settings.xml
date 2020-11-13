@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Preference
-        android:key="firststart_switch"
+        android:key="firstlaunch_switch"
         android:title="First start switcher"
         android:summary="No reason to touch this, seriously"/>
 
@@ -15,6 +16,27 @@
     <Preference
         android:title="@string/update_url"
         android:key="install_url" />
+
+    <PreferenceCategory
+        android:title="Crowdin"
+        android:key="crowdin_pref_category"
+        app:isPreferenceVisible="false">
+
+        <Preference
+            android:title="Authorize"
+            android:key="crowdin_auth" />
+
+        <SwitchPreferenceCompat
+            android:title="Screenshot Uploading (ADMIN ONLY)"
+            android:key="crowdin_upload_screenshot"
+            app:isPreferenceVisible="false"/>
+
+        <SwitchPreferenceCompat
+            android:title="Real-time updates"
+            android:key="crowdin_real_time"
+            app:isPreferenceVisible="false"/>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="Device info">

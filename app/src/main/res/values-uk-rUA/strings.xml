@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Скасувати</string>
     <string name="close">Закрити</string>
     <string name="reset">Скинути</string>
     <string name="save">Зберегти</string>
+    <string name="select_apps">Виберіть Ваші Додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
-    <string name="title_home">Головна</string>
+    <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
+    <string name="update_manager">Оновіть Менеджер</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">На Пристрої Є Root Права?</string>
+    <string name="grant_root">Надати Root Права</string>
+    <string name="select_at_least_one_app">Оберіть принаймні один додаток!</string>
+    <string name="select_apps_music">Vanced, але для YouTube Music!\nвідносно менше можливостей, але задовольняє ваші потреби.</string>
+    <string name="select_apps_vanced">YouTube Vanced - це стандартний Android YouTube додаток, але краще!</string>
+    <string name="lets_get_started">Почнімо</string>
+    <string name="willing_to_use_root">Хочете використовувати root версію? Просто натисніть кнопку нижче, інакше натисніть для продовження</string>
     <!-- Home Page -->
-    <string name="changelogs">Список змін</string>
+    <string name="about_app">Про %1$s</string>
+    <string name="app_changelog_tooltip">Натисніть на картку, щоб побачити список змін.</string>
+    <string name="changelog">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
-    <string name="installation_wait">Будь ласка, дочекайтеся закінчення установки.</string>
     <string name="button_reinstall">Перевстановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
@@ -21,9 +33,7 @@
     <string name="unavailable">Недоступно</string>
     <string name="update">Оновити</string>
     <string name="useful_links">Корисні сторінки</string>
-    <string name="website_text">Вебсайт</string>
-    <string name="support_us">Підтримай нас!</string>
-    <string name="version_toast">версія %1$s скопійована!</string>
+    <string name="support_us">Підтримайте нас!</string>
     <!-- Settings -->
     <string name="accent_color">Вторинний колір</string>
     <string name="accent_blue">Синій</string>
@@ -31,65 +41,64 @@
     <string name="accent_purple">Фіолетовий</string>
     <string name="accent_red">Червоний</string>
     <string name="accent_yellow">Жовтий</string>
-    <string name="category_interface">Інтерфейс</string>
-    <string name="category_manager">Менеджер</string>
-    <string name="check_updates">Перевірити на оновлення</string>
-    <string name="chosen_install_values">Вибрані налаштування встановлення</string>
-    <string name="chosen_lang">Мова(и): %1$s</string>
-    <string name="chosen_theme">Тема: %1$s</string>
+    <string name="category_appearance">Вигляд</string>
+    <string name="category_behaviour">Поведінка</string>
     <string name="clear_files">Очистити завантажені файли</string>
     <string name="cleared_files">Файли було успішно очищено</string>
     <string name="firebase_title">Аналітика Firebase</string>
-    <string name="firebase_summary">Це дозволяє нам збирати інформацію про продуктивність додатка й журнали збоїв</string>
+    <string name="firebase_summary">Це дозволяє нам збирати інформацію про продуктивність додатка та журнали збоїв</string>
     <string name="language_title">Мова</string>
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
-    <string name="link_external_browser">Відкривати посилання у зовнішньому браузері</string>
-    <string name="new_installer_title">Використовувати новий root інсталятор (експериментальний)</string>
-    <string name="new_installer_summary">Цей інсталятор не залежить від статусу перевірки підпису. УВАГА: Vanced може пропасти після перезавантаження, якщо ви встановите його за допомогою цього інсталятора</string>
-    <string name="system_default">Системний за замовчуванням</string>
+    <string name="system_default">Системна</string>
     <string name="theme">Тема</string>
-    <string name="theme_follow">Слідувати системі</string>
     <string name="theme_dark">Темна тема</string>
     <string name="theme_light">Світла тема</string>
     <string name="update_url">URL-адреса до каналу з оновленнями</string>
     <string name="push_notifications">%1$s Спливаючі Сповіщення</string>
     <string name="push_notifications_summary">Отримувати спливаючі сповіщення, коли доступне оновлення для %1$s</string>
-    <string name="re_check">Перепровірити</string>
     <string name="update_center">Центр Оновлень</string>
-    <string name="update_found">Знайдено оновлення!</string>
-    <string name="update_notfound">Нових оновлень не виявлено</string>
+    <string name="update_not_found">Оновлень не знайдено</string>
+    <string name="variant">Варіант</string>
     <!-- Dialogs -->
+    <string name="advanced">Розширені</string>
+    <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
+    <string name="app_install_files_detected_summary">Менеджер виявив, що були знайдені всі необхідні файли для встановлення %1$s. Бажаєте встановити?</string>
+    <string name="checking_updates">Перевірка оновлень…</string>
+    <string name="chosen_lang">Мова(и): %1$s</string>
+    <string name="chosen_theme">Тема: %1$s</string>
+    <string name="chosen_version">Версія: %1$s</string>
     <string name="guide">Гайд</string>
     <string name="hold_on">Зупинись!</string>
+    <string name="installing_app">Встановлення %1$s</string>
     <string name="magisk_vanced">Схоже, ви використовуєте Magisk/TWRP-версію Vanced, підтримка якої була припинена і не може бути оновлена за допомогою цього додатку. Будь ласка, видаліть цю версію, видаливши модуль Magisk.</string>
     <string name="miui_one_title">Виявлено користувача MIUI!</string>
     <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI в налаштуваннях розробника. (Ви можете проігнорувати це попередження, якщо ви використовуєте прошивку xiaomi.eu на версії 20.2.20+)</string>
     <string name="error">Помилка</string>
-    <string name="security_context">Переконайтеся, що ви завантажили додаток з vanced.app, Vanced Discord сервера або Vanced GitHub</string>
+    <string name="redownload">Завантажити заново</string>
+    <string name="security_context">Будь ласка, переконайтеся, що ви завантажили цей додаток з vancedapp.com, Discord сервера Vanced або з GitHub Vanced</string>
     <string name="success">Успіх!</string>
+    <string name="app_installation_preferences">Параметри встановлення %1$s</string>
     <string name="vanced_installed">Vanced був успішно встановлений! Відкрити зараз?</string>
-    <string name="music_installed">Vanced Music успішно встановлений! Відкрити зараз?</string>
+    <string name="version">Версія</string>
+    <string name="music_installed">Vanced Music успішно встановлено! Відкрити зараз?</string>
+    <string name="please_be_patient">Будь ласка, зачекайте…</string>
     <string name="launch">Відкрити</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
-    <string name="choose_preferred_language_note">Примітка: Якщо ви встановите що-небудь, крім Англійської, Англійська мова все одно буде встановлена як додаткова мова</string>
-    <string name="choose_preferred_theme">Виберіть вашу головну тему для Vanced</string>
-    <string name="finish">Завершити</string>
-    <string name="install_light_black">Світла + Чорна</string>
-    <string name="install_light_dark">Світла + Темна</string>
-    <string name="next">Далі</string>
+    <string name="light_plus_other">Світла + %1$s</string>
+    <string name="select_at_least_one_lang">Оберіть принаймні одну мову!</string>
     <!-- About Page -->
-    <string name="manager_dev">Розробники інсталятора</string>
+    <string name="manager_dev">Розробники Менеджера</string>
     <string name="sources">Джерела</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Не вдалося Chown Apk для власника системи, спробуйте ще раз</string>
+    <string name="chown_fail">Не вдалося передати apk власнику системи, спробуйте ще раз.</string>
     <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
-    <string name="files_missing_va">Файли відсутні, Невдале завантаження?</string>
-    <string name="ifile_missing">Dark/Black.apk не зчитується (доступ до сховища був заблокований?) або файл відсутній</string>
+    <string name="files_missing_va">Не вдалося знайти необхідні файли для встановлення. Повторно завантажте файли і спробуйте ще раз.</string>
+    <string name="ifile_missing">Не вдалося знайти apk-файл для чорної/темної теми зі сховища, спробуйте ще раз.</string>
     <string name="installation_aborted">Операція не вдалася, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Операція не вдалася, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався понизити версію. Видаліть оновлення з YouTube програми, і повторіть спробу.</string>
@@ -100,6 +109,6 @@
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
     <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
-    <string name="modapk_missing">Чорний/Темний apk відсутній, Цього не повинно статися, будь ласка, очистіть дані програми від менеджера</string>
-    <string name="path_missing">Шлях для встановлення звичайного Youtube не є допустимим, або відсутній після того, як був викорастаний SAI</string>
+    <string name="modapk_missing">Не вдалося знайти apk-файл для чорної/темної теми в програмі встановлення. Видаліть дані додатка з Менеджера і спробуйте ще раз.</string>
+    <string name="path_missing">Не вдалося знайти типовий шлях встановлення YouTube після роздільного встановлення.</string>
 </resources>

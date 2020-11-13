@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Отмена</string>
     <string name="close">Закрыть</string>
     <string name="reset">Сброс</string>
     <string name="save">Сохранить</string>
+    <string name="select_apps">Выберите ваши приложения</string>
     <!-- Main Activity -->
     <string name="title_about">О нас</string>
-    <string name="title_home">Главная</string>
+    <string name="title_home">Менеджер</string>
     <string name="title_settings">Настройки</string>
+    <string name="update_manager">Менеджер обновлений</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">На устройстве есть рут-права?</string>
+    <string name="grant_root">Предоставить root-права</string>
+    <string name="select_at_least_one_app">Выберите хотя бы одно приложение!</string>
+    <string name="select_apps_music">Vanced, но для YouTube Music!\nотносительно меньше возможностей, но удовлетворяет ваши потребности.</string>
+    <string name="select_apps_vanced">YouTube Vanced — это приложение для YouTube для Android, но лучше!</string>
+    <string name="lets_get_started">Давайте начнем</string>
+    <string name="willing_to_use_root">Хотите использовать root-версию? Просто нажмите кнопку ниже, иначе нажмите для продолжения</string>
     <!-- Home Page -->
-    <string name="changelogs">Список изменений</string>
+    <string name="about_app">О %1$s</string>
+    <string name="app_changelog_tooltip">Нажмите на карточку, чтобы увидеть список изменений.</string>
+    <string name="changelog">Список изменений</string>
     <string name="downloading_file">Загрузка %1$s</string>
     <string name="install">Установить</string>
-    <string name="installation_wait">Пожалуйста, дождитесь окончания установки.</string>
     <string name="button_reinstall">Переустановить</string>
     <string name="version_installed">Установлена:</string>
     <string name="latest">Последняя:</string>
@@ -21,9 +33,7 @@
     <string name="unavailable">Недоступно</string>
     <string name="update">Обновить</string>
     <string name="useful_links">Полезные ссылки</string>
-    <string name="website_text">Сайт</string>
     <string name="support_us">Поддержите нас!</string>
-    <string name="version_toast">Версия %1$s была скопирована!</string>
     <!-- Settings -->
     <string name="accent_color">Второстепенный цвет</string>
     <string name="accent_blue">Синий</string>
@@ -31,12 +41,8 @@
     <string name="accent_purple">Пурпурный</string>
     <string name="accent_red">Красный</string>
     <string name="accent_yellow">Жёлтый</string>
-    <string name="category_interface">Интерфейс</string>
-    <string name="category_manager">Менеджер</string>
-    <string name="check_updates">Проверить обновления</string>
-    <string name="chosen_install_values">Выбранные значения установки</string>
-    <string name="chosen_lang">Язык(и): %1$s</string>
-    <string name="chosen_theme">Тема: %1$s</string>
+    <string name="category_appearance">Оформление</string>
+    <string name="category_behaviour">Действия</string>
     <string name="clear_files">Удалить загруженные файлы</string>
     <string name="cleared_files">Файлы успешно удалены</string>
     <string name="firebase_title">Аналитика Firebase</string>
@@ -44,52 +50,55 @@
     <string name="language_title">Язык</string>
     <string name="link_title">Использовать Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
-    <string name="link_external_browser">Ссылки откроются во внешнем браузере</string>
-    <string name="new_installer_title">Использовать новый root установщик (экспериментальный)</string>
-    <string name="new_installer_summary">Этот установщик не зависит от статуса проверки подписи. ВНИМАНИЕ: Vanced может пропасть после перезагрузки, если вы установите его с помощью этого установщика</string>
     <string name="system_default">Системный по умолчанию</string>
     <string name="theme">Тема</string>
-    <string name="theme_follow">Как в системе</string>
     <string name="theme_dark">Тёмная тема</string>
     <string name="theme_light">Светлая тема</string>
     <string name="update_url">Ссылка на канал обновлений</string>
-    <string name="push_notifications">%1$s Push Уведомления</string>
+    <string name="push_notifications">Push Уведомления для %1$s</string>
     <string name="push_notifications_summary">Получать уведомления о выходе обновления для %1$s</string>
-    <string name="re_check">Перепроверить</string>
     <string name="update_center">Центр обновлений</string>
-    <string name="update_found">Найдено обновление!</string>
-    <string name="update_notfound">Обновлений не найдено</string>
+    <string name="update_not_found">Обновлений не найдено</string>
+    <string name="variant">Вариант</string>
     <!-- Dialogs -->
+    <string name="advanced">Доп. настройки</string>
+    <string name="app_install_files_detected">Обнаружены установочные файлы для %1$s!</string>
+    <string name="app_install_files_detected_summary">Менеджер обнаружил все необходимые файлы для установки %1$s. Продолжить установку?</string>
+    <string name="checking_updates">Проверка обновлений…</string>
+    <string name="chosen_lang">Язык(и): %1$s</string>
+    <string name="chosen_theme">Тема: %1$s</string>
+    <string name="chosen_version">Версия: %1$s</string>
     <string name="guide">Руководство</string>
     <string name="hold_on">Стойте!</string>
+    <string name="installing_app">Установка %1$s</string>
     <string name="magisk_vanced">Похоже, вы используете Magisk/TWRP версию Vanced, которая больше не поддерживается и не может быть обновлена с помощью этого приложения. Пожалуйста, удалите модуль Vanced через Magisk или с помощью деинсталлятора Vanced для TWRP.</string>
     <string name="miui_one_title">Обнаружен пользователь MIUI!</string>
     <string name="miui_one">Чтобы установить Vanced, вы ДОЛЖНЫ отключить оптимизацию MIUI в настройках разработчика. (Вы можете проигнорировать это предупреждение, если вы используете прошивку на xiaomi.eu версии 20.2.20+)</string>
     <string name="error">Ошибка</string>
-    <string name="security_context">Пожалуйста, убедитесь в том, что вы скачали это приложение с vanced.app, сервера Vanced в Discord или с GitHub</string>
+    <string name="redownload">Скачать заново</string>
+    <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vancedapp.com, сервера Vanced в Discord или с официального GitHub</string>
     <string name="success">Успешно!</string>
+    <string name="app_installation_preferences">Параметры установки %1$s</string>
     <string name="vanced_installed">Vanced успешно установлен! Хотите запустить его сейчас?</string>
+    <string name="version">Версия</string>
     <string name="music_installed">Vanced Music успешно установлен! Хотите запустить его сейчас?</string>
+    <string name="please_be_patient">Пожалуйста, подождите…</string>
     <string name="launch">Открыть</string>
     <string name="welcome">Добро пожаловать</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Выберите предпочитаемый язык для Vanced</string>
-    <string name="choose_preferred_language_note">Примечание: если вы выберите не английский язык, то он все равно будет установлен как дополнительный язык</string>
-    <string name="choose_preferred_theme">Выберите предпочитаемую тему для Vanced</string>
-    <string name="finish">Готово</string>
-    <string name="install_light_black">Светлая + Чёрная</string>
-    <string name="install_light_dark">Светлая + Тёмная</string>
-    <string name="next">Далее</string>
+    <string name="light_plus_other">Светлая + %1$s</string>
+    <string name="select_at_least_one_lang">Выберите хотя бы один язык!</string>
     <!-- About Page -->
     <string name="manager_dev">Разработчики Менеджера</string>
     <string name="sources">Исходники</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Не удалось Chown Apk для владельца системы, попробуйте еще раз</string>
+    <string name="chown_fail">Не удалось передать apk владельцу системы, попробуйте еще раз.</string>
     <string name="error_downloading">Ошибка загрузки %1$s</string>
     <string name="failed_uninstall">Ошибка установки пакета %1$s</string>
-    <string name="files_missing_va">Файлы отсутствуют, загрузка не удалась?</string>
-    <string name="ifile_missing">Dark/Black.apk не читается (доступ к хранилищу был заблокирован?) или файл отсутствует</string>
+    <string name="files_missing_va">Не удалось найти необходимые файлы для установки. Повторно загрузите установочные файлы и попробуйте еще раз.</string>
+    <string name="ifile_missing">Не удалось найти apk-файл для черной/темной темы в памяти устройства, повторите попытку.</string>
     <string name="installation_aborted">Установка не была выполнена, поскольку пользователь прервал установку.</string>
     <string name="installation_blocked">Установка не была выполнена, поскольку пользователь заблокировал установку.</string>
     <string name="installation_downgrade">Установка не удалась, так как пользователь попытался понизить версию приложения. Удалите обновления обычного приложения YouTube, затем повторите попытку.</string>
@@ -100,6 +109,6 @@
     <string name="installation_signature">Установка не удалась, так как включена проверка подписи apk. Отключите проверку подписи apk, а затем повторите попытку.</string>
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
     <string name="installation_storage">Установка не была выполнена, так как произошла ошибка с доступом к памяти.</string>
-    <string name="modapk_missing">Black/Dark apk отсутствует в установщике, этого не должно происходить, пожалуйста, очистите данные приложения</string>
-    <string name="path_missing">Путь для установки стандартного Youtube недоступен или отсутствует после раздельной установки</string>
+    <string name="modapk_missing">Не удалось найти apk-файл для черной/темной темы в программе установки. Удалите данные приложения из Менеджера и повторите попытку.</string>
+    <string name="path_missing">Не удалось найти стандартный путь установки YouTube после раздельной установки.</string>
 </resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="progress"
+            type="com.vanced.manager.model.ProgressModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/DialogCard"
+        tools:context=".ui.dialogs.AppDownloadDialog">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/app_download_header"
+                style="@style/DialogCardTitle"
+                tools:text="Installing Vanced" />
+
+            <TextView
+                android:id="@+id/app_download_patient"
+                style="@style/DialogCardSubtitle"
+                android:layout_below="@id/app_download_header"
+                android:text="@string/please_be_patient" />
+
+            <com.google.android.material.progressindicator.ProgressIndicator
+                android:id="@+id/app_download_progressbar"
+                style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_download_patient"
+                android:layout_marginTop="24dp"
+                android:progress="@{progress.downloadProgress}"
+                android:visibility="@{progress.installing ? View.GONE : View.VISIBLE}"
+                app:indicatorColor="?colorPrimary"
+                app:indicatorCornerRadius="15dp"
+                tools:progress="10" />
+
+            <com.google.android.material.progressindicator.ProgressIndicator
+                android:id="@+id/app_install_progressbar"
+                style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_download_progressbar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="24dp"
+                android:indeterminate="true"
+                android:visibility="@{progress.installing ? View.VISIBLE : View.GONE}"
+                app:indicatorColor="?colorPrimary"
+                app:indicatorCornerRadius="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_install_progressbar"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/app_download_file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/app_download_cancel"
+                    android:text="@{progress.downloadingFile}"
+                    android:textSize="15sp"
+                    android:visibility="@{progress.installing ? View.GONE : View.VISIBLE}"
+                    tools:text="Downloading base.apk..." />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/app_download_cancel"
+                    style="@style/OutlinedButtonStyle"
+                    android:layout_alignParentEnd="true"
+                    android:enabled="@{!progress.installing}"
+                    android:text="@string/cancel"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

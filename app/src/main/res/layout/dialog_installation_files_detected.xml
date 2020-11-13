@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/BottomDialogCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/installation_detected_title"
+                style="@style/BottomDialogCardTitle"
+                tools:text="@string/app_install_files_detected" />
+
+            <TextView
+                android:id="@+id/installation_detected_summary"
+                style="@style/DialogCardSubtitle"
+                tools:text="@string/app_install_files_detected_summary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/installation_detected_install"
+                style="@style/BottomDialogButtonStyle"
+                android:layout_marginTop="16dp"
+                android:text="@string/install" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/installation_detected_redownload"
+                style="@style/BottomDialogButtonStyle"
+                android:text="@string/redownload" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="12dp">
+
+    <TextView
+        android:id="@+id/preference_title"
+        style="@style/SettingsItemTitle"
+        tools:text="@string/theme" />
+
+    <TextView
+        android:id="@+id/preference_summary"
+        style="@style/SettingsItemSummary"
+        app:layout_constraintTop_toBottomOf="@id/preference_title"
+        tools:text="Light" />
+
+</LinearLayout>

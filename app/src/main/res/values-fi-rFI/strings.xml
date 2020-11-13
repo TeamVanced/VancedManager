@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Peruuta</string>
     <string name="close">Sulje</string>
     <string name="reset">Palauta</string>
     <string name="save">Tallenna</string>
+    <string name="select_apps">Valitse Sovelluksesi</string>
     <!-- Main Activity -->
     <string name="title_about">Tietoja</string>
-    <string name="title_home">Koti</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Asetukset</string>
+    <string name="update_manager">Päivitä hallintasovellus</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">Valitse ainakin yksi sovellus!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
-    <string name="changelogs">Muutoshistoria</string>
+    <string name="about_app">About %1$s</string>
+    <string name="app_changelog_tooltip">Napauta korttia nähdäksesi muutoshistoria.</string>
+    <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
-    <string name="installation_wait">Odota, kunnes asennus on valmis.</string>
     <string name="button_reinstall">Uudelleenasenna</string>
     <string name="version_installed">Asennettu:</string>
     <string name="latest">Uusin:</string>
@@ -21,9 +33,7 @@
     <string name="unavailable">Ei saatavilla</string>
     <string name="update">Päivitä</string>
     <string name="useful_links">Hyödyllisiä linkkejä</string>
-    <string name="website_text">Verkkosivu</string>
     <string name="support_us">Tue meitä!</string>
-    <string name="version_toast">%1$s versionumero kopioitu!</string>
     <!-- Settings -->
     <string name="accent_color">Aksenttiväri</string>
     <string name="accent_blue">Sininen</string>
@@ -31,12 +41,8 @@
     <string name="accent_purple">Violetti</string>
     <string name="accent_red">Punainen</string>
     <string name="accent_yellow">Keltainen</string>
-    <string name="category_interface">Ulkoasu</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Tarkista päivitykset</string>
-    <string name="chosen_install_values">Valitut asennusasetukset</string>
-    <string name="chosen_lang">Kieli: %1$s</string>
-    <string name="chosen_theme">Teema: %1$s</string>
+    <string name="category_appearance">Ulkoasu</string>
+    <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
     <string name="cleared_files">Tiedostot tyhjennettiin onnistuneesti</string>
     <string name="firebase_title">Firebase-analytiikka</string>
@@ -44,52 +50,55 @@
     <string name="language_title">Kieli</string>
     <string name="link_title">Käytä Chromen mukautettuja välilehtiä</string>
     <string name="link_custom_tabs">Linkit aukeavat Chromen mukautetuissa välilehdissä</string>
-    <string name="link_external_browser">Linkit aukeavat ulkoisessa selaimessa</string>
-    <string name="new_installer_title">Käytä uutta juuriasenninta (kokeellinen)</string>
-    <string name="new_installer_summary">Tämä asennusohjelma ei ole riippuvainen allekirjoituksen vahvistuksen tilasta. VAROITUS: Vanced saattaa kadota uudelleenkäynnistyksen jälkeen, jos asennat sen tällä tavalla</string>
     <string name="system_default">Järjestelmän oletus</string>
     <string name="theme">Teema</string>
-    <string name="theme_follow">Järjestelmän teema</string>
     <string name="theme_dark">Tumma teema</string>
     <string name="theme_light">Vaalea teema</string>
     <string name="update_url">Päivityskanavan URL-osoite</string>
     <string name="push_notifications">%1$s Push-ilmoitusta</string>
     <string name="push_notifications_summary">Vastaanota push-ilmoituksia, kun %1$s:lle on julkaistu päivitys</string>
-    <string name="re_check">Tarkista uudelleen</string>
     <string name="update_center">Managerin päivityskeskus</string>
-    <string name="update_found">Päivitys löytyi!</string>
-    <string name="update_notfound">Ei uusia päivityksiä</string>
+    <string name="update_not_found">Ei uusia päivityksiä</string>
+    <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="checking_updates">Tarkistetaan päivityksiä…</string>
+    <string name="chosen_lang">Kieli: %1$s</string>
+    <string name="chosen_theme">Teema: %1$s</string>
+    <string name="chosen_version">Versio: %1$s</string>
     <string name="guide">Opas</string>
     <string name="hold_on">Pysähdy!</string>
+    <string name="installing_app">Asennetaan %1$s</string>
     <string name="magisk_vanced">Käytät Vancedin Magisk / TWRP-versiota, joka on lopetettu eikä sitä voi päivittää tällä sovelluksella. Poista se poistamalla magisk-moduuli / käyttämällä TWRP Vanced -asennusohjelmaa.</string>
     <string name="miui_one_title">MIUI tunnistettu!</string>
     <string name="miui_one">Vancedin asentamiseksi TÄYTYY poistaa MIUI-optimoinnit käytöstä kehittäjäasetuksissa. (Voit ohittaa tämän varoituksen, jos käytät 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM-levyä)</string>
     <string name="error">Virhe</string>
-    <string name="security_context">Varmista, että latasit sovelluksen vanced.app -sivustolta, Vancedin Discord-palvelimelta tai Vancedin GitHubista</string>
+    <string name="redownload">Uudelleenlataa</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Onnistui!</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced on asennettu onnistuneesti! Avaa nyt?</string>
+    <string name="version">Versio</string>
     <string name="music_installed">Vanced Music on asennettu onnistuneesti! Avoinna nyt?</string>
+    <string name="please_be_patient">Ole kärsivällinen…</string>
     <string name="launch">Avaa</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
-    <string name="choose_preferred_language_note">Huom: Englanti asennetaan rinnalle aina.</string>
-    <string name="choose_preferred_theme">Valitse haluamasi teema</string>
-    <string name="finish">Valmis</string>
-    <string name="install_light_black">Vaalea + Musta</string>
-    <string name="install_light_dark">Vaalea + Tumma</string>
-    <string name="next">Seuraava</string>
+    <string name="light_plus_other">Vaalea + %1$s</string>
+    <string name="select_at_least_one_lang">Valitse ainakin yksi kieli!</string>
     <!-- About Page -->
-    <string name="manager_dev">Kehittäjäpäällikkö</string>
+    <string name="manager_dev">Managerin kehittäjät</string>
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
-    <string name="chown_fail">Apk: n lähettäminen järjestelmän omistajalle epäonnistui, yritä uudelleen</string>
+    <string name="chown_fail">APK:n omistajuuden siirto järjestelmän omistajalle epäonnistui, yritä uudelleen.</string>
     <string name="error_downloading">%1$s lataus epäonnistui</string>
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
-    <string name="files_missing_va">Tiedostot puuttuvat, lataaminen epäonnistui?</string>
-    <string name="ifile_missing">Dark / Black.apk-tiedostoa ei voi lukea (estettiinkö tallennustila?) Tai tiedosto puuttuu</string>
+    <string name="files_missing_va">Asennukseen vaadittavien tiedostojen paikannus epäonnistui. Yritä ladata asennustiedostot uudelleen.</string>
+    <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä esti asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
@@ -100,6 +109,6 @@
     <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
     <string name="installation_storage">Asennus epäonnistui tallennustilan virheen vuoksi.</string>
-    <string name="modapk_missing">Musta / tumma apk puuttuu asennusohjelmasta. Tämän ei pitäisi tapahtua. Tyhjennä managerin sovellustiedot</string>
-    <string name="path_missing">Osakkeen YouTube-asennuspolku ei ole käytettävissä tai puuttuu osakkeiden jaon asennuksen jälkeen</string>
+    <string name="modapk_missing">APK-tiedostoa mustalle/tummalle teemalle ei löytynyt asentajalta. Tyhjennä Managerin sovellustiedot ja yritä uudelleen.</string>
+    <string name="path_missing">Youtube-sovelluksen asennuspolkua ei voitu paikantaa jaetun asennuksen jälkeen.</string>
 </resources>

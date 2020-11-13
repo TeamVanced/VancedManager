@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
+    <string name="cancel">Annulla</string>
     <string name="close">Chiudi</string>
     <string name="reset">Ripristina</string>
     <string name="save">Salva</string>
+    <string name="select_apps">Seleziona le Tue App</string>
     <!-- Main Activity -->
     <string name="title_about">Autori</string>
-    <string name="title_home">Pagina principale</string>
+    <string name="title_home">Manager</string>
     <string name="title_settings">Impostazioni</string>
+    <string name="update_manager">Aggiorna Manager</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">Il tuo dispositivo ha i permessi di root?</string>
+    <string name="grant_root">Concedi Permessi Root</string>
+    <string name="select_at_least_one_app">Seleziona almeno un\'app!</string>
+    <string name="select_apps_music">Vanced, ma per YouTube Music!\nrelativamente meno ricco di caratteristiche ma ugualmente adattabile alle tue esigenze.</string>
+    <string name="select_apps_vanced">YouTube Vanced è l\'App di YouTube preinstallata di Android, ma migliore!</string>
+    <string name="lets_get_started">Iniziamo</string>
+    <string name="willing_to_use_root">Vorresti usare la versione di root? Basta premere il pulsante sotto, altrimenti tocca per continuare</string>
     <!-- Home Page -->
-    <string name="changelogs">Note di rilascio</string>
+    <string name="about_app">A proposito di %1$s</string>
+    <string name="app_changelog_tooltip">Tocca sulla scheda per vedere il changelog.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">Download in corso di %1$s</string>
     <string name="install">Installa</string>
-    <string name="installation_wait">Attendere il completamento dell\'installazione</string>
     <string name="button_reinstall">Reinstalla</string>
     <string name="version_installed">Versione installata:</string>
     <string name="latest">Ultima versione:</string>
@@ -21,9 +33,7 @@
     <string name="unavailable">Non disponibile</string>
     <string name="update">Aggiorna</string>
     <string name="useful_links">Link utili</string>
-    <string name="website_text">Sito web</string>
     <string name="support_us">Sostienici!</string>
-    <string name="version_toast">Il numero di versione di %1$s è stato copiato!</string>
     <!-- Settings -->
     <string name="accent_color">Colore evidenziatore</string>
     <string name="accent_blue">Blu</string>
@@ -31,65 +41,64 @@
     <string name="accent_purple">Viola</string>
     <string name="accent_red">Rosso</string>
     <string name="accent_yellow">Giallo</string>
-    <string name="category_interface">Interfaccia</string>
-    <string name="category_manager">Manager</string>
-    <string name="check_updates">Verifica aggiornamenti</string>
-    <string name="chosen_install_values">Preferenze di installazione scelte</string>
-    <string name="chosen_lang">Lingue: %1$s</string>
-    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="category_appearance">Aspetto</string>
+    <string name="category_behaviour">Comportamento</string>
     <string name="clear_files">Cancella i file scaricati</string>
     <string name="cleared_files">File cancellati con successo</string>
     <string name="firebase_title">Analitica Firebase</string>
-    <string name="firebase_summary">Questo ci consente di raccogliere informazioni sulle prestazioni dell\'app e sui registri degli arresti anomali</string>
+    <string name="firebase_summary">Questo ci consente di raccogliere informazioni sulle prestazioni dell\'app ed i registri dei crash</string>
     <string name="language_title">Lingua</string>
     <string name="link_title">Utilizza le schede personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle schede personalizzate di Chrome</string>
-    <string name="link_external_browser">I link verranno aperti in un browser esterno</string>
-    <string name="new_installer_title">Utilizza il nuovo metodo di installazione root (Sperimentale)</string>
-    <string name="new_installer_summary">Questo programma di installazione non dipende dallo stato di Verifica della Firma. ATTENZIONE: Vanced potrebbe essere rimosso dopo il riavvio se installato con questo metodo</string>
     <string name="system_default">Predefinito di Sistema</string>
     <string name="theme">Tema</string>
-    <string name="theme_follow">Utilizza quello di sistema</string>
     <string name="theme_dark">Tema scuro</string>
     <string name="theme_light">Tema chiaro</string>
     <string name="update_url">Aggiorna l\'URL del canale</string>
     <string name="push_notifications">Notifiche push di %1$s</string>
     <string name="push_notifications_summary">Ricevi notifiche push quando un aggiornamento per %1$s è disponibile</string>
-    <string name="re_check">Ricontrolla</string>
     <string name="update_center">Centro aggiornamenti</string>
-    <string name="update_found">Aggiornamento trovato!</string>
-    <string name="update_notfound">Non ci sono nuovi aggiornamenti</string>
+    <string name="update_not_found">Nessun nuovo aggiornamento</string>
+    <string name="variant">Variante</string>
     <!-- Dialogs -->
+    <string name="advanced">Avanzate</string>
+    <string name="app_install_files_detected">%1$s file d\'installazione rilevati!</string>
+    <string name="app_install_files_detected_summary">Il manager ha rilevato che tutti i file necessari per l\'installazione di %1$s sono stati trovati. Vuoi installarli?</string>
+    <string name="checking_updates">Verificando gli aggiornamenti…</string>
+    <string name="chosen_lang">Lingue: %1$s</string>
+    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="chosen_version">Versione: %1$s</string>
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
+    <string name="installing_app">Installazione %1$s</string>
     <string name="magisk_vanced">Stai utilizzando la versione di Vanced ottenuta con Magisk/TWRP, ormai è obsoleta e non può essere aggiornata con questa app. Per favore, rimuovila eliminando il modulo di Magisk oppure utilizzando TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Rilevata l\'interfaccia MIUI!</string>
     <string name="miui_one">Per poter installare Vanced, DEVI PER FORZA disattivare le ottimizzazioni di MIUI nelle impostazioni da sviluppatore (puoi ignorare questo avviso se stai utilizzando la versione 20.2.20 o successive di una ROM basata su xiaomi.eu).</string>
     <string name="error">Errore</string>
-    <string name="security_context">Assicurati di aver scaricato l\'app da vanced.app, dal server di Discord di Vanced o dalla pagina GitHub di Vanced</string>
+    <string name="redownload">Scarica di nuovo</string>
+    <string name="security_context">Assicurati di aver scaricato l\'app da vancedapp.com, dal server Discord di Vanced o dalla pagina GitHub di Vanced</string>
     <string name="success">Fatto!</string>
+    <string name="app_installation_preferences">Preferenze di installazione %1$s</string>
     <string name="vanced_installed">Vanced è stato installato con successo. Vuoi avviarlo ora?</string>
+    <string name="version">Versione</string>
     <string name="music_installed">Vanced Music è stato installato con successo! Vuoi eseguirlo ora?</string>
+    <string name="please_be_patient">Sei pregato di essere paziente…</string>
     <string name="launch">Avvia</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Scegli le tue lingue preferite per Vanced</string>
-    <string name="choose_preferred_language_note">Nota: l\'inglese sarà comunque installato, indipendentemente dalla tua scelta.</string>
-    <string name="choose_preferred_theme">Seleziona il tuo tema preferito per Vanced</string>
-    <string name="finish">Concludi</string>
-    <string name="install_light_black">Chiaro + nero</string>
-    <string name="install_light_dark">Chiaro + scuro</string>
-    <string name="next">Avanti</string>
+    <string name="light_plus_other">Luce + %1$s</string>
+    <string name="select_at_least_one_lang">Seleziona almeno una lingua!</string>
     <!-- About Page -->
     <string name="manager_dev">Sviluppatori di Manager</string>
     <string name="sources">Codice sorgente</string>
     <string name="vanced_team">Il team di Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Impossibile modificare il proprietario dell\'apk, riprova</string>
+    <string name="chown_fail">Impossibile cambiare il proprietario dell\'apk in proprietario del sistema, sei pregato di riprovare.</string>
     <string name="error_downloading">Errore nel download di %1$s</string>
     <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
-    <string name="files_missing_va">File mancanti, download non riuscito?</string>
-    <string name="ifile_missing">L\'apk scura/nera non può essere letta (permesso di archiviazione bloccato?) oppure il file è mancante</string>
+    <string name="files_missing_va">Impossibile trovare i file richiesti per l\'installazione. Scarica di nuovo i file di installazione, poi riprova.</string>
+    <string name="ifile_missing">Impossibile trovare il file apk per il tema nero/scuro dall\'archiviazione, sei pregato di riprovare.</string>
     <string name="installation_aborted">Installazione non riuscita, l\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Installazione non riuscita, l\'utente ha bloccato l\'installazione.</string>
     <string name="installation_downgrade">Installazione non riuscita, l\'utente ha provato a eseguire il downgrade del pacchetto. Disinstalla gli aggiornamenti dell\'app predefinita di YouTube, poi riprova.</string>
@@ -100,6 +109,6 @@
     <string name="installation_signature">Installazione non riuscita, la verifica della firma apk è attivata. Disattiva la verifica della firma apk, poi riprova.</string>
     <string name="installation_miui">Installazione non riuscita, le ottimizzazioni di MIUI sono attivate. Disattiva le ottimizzazioni di MIUI, poi riprova.</string>
     <string name="installation_storage">Installazione non riuscita, errore dello spazio di archiviazione.</string>
-    <string name="modapk_missing">L\'apk nera/scura manca dal programma di installazione. Non dovrebbe succedere, pulisci i dati dell\'app Manager</string>
-    <string name="path_missing">Percorso predefinito di installazione YouTube non accessibile o mancante dopo dopo l\'installazione di Stock Split</string>
+    <string name="modapk_missing">Impossibile trovare il file apk per il tema nero/scuro dall\'installer. Cancella i dati dell\'app del Manager, poi riprova.</string>
+    <string name="path_missing">Impossibile trovare il percorso di installazione di stock di YouTube dopo l\'installazione divisa.</string>
 </resources>

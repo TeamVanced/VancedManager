@@ -5,16 +5,13 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 import android.util.Log
-import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.microgProgress
-import com.vanced.manager.ui.viewmodels.HomeViewModel.Companion.musicProgress
-import com.vanced.manager.utils.AppUtils.mutableInstall
+import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 
 class AppInstallerService: Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
-        val app = intent.getStringExtra("app")
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 Log.d(TAG, "Requesting user confirmation for installation")
@@ -28,13 +25,12 @@ class AppInstallerService: Service() {
             }
             PackageInstaller.STATUS_SUCCESS -> {
                 Log.d(TAG, "Installation succeed")
-                if (app == "microg") microgProgress.get()?.showInstallCircle?.set(false) else musicProgress.get()?.showInstallCircle?.set(false)
-                mutableInstall.postValue(false)
+                sendCloseDialog(this)
                 sendRefresh(this)
             }
             else -> {
+                sendCloseDialog(this)
                 sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
-                if (app == "microg") microgProgress.get()?.showInstallCircle?.set(false) else musicProgress.get()?.showInstallCircle?.set(false)
             }
         }
         stopSelf()
@@ -45,7 +41,7 @@ class AppInstallerService: Service() {
         return null
     }
 
-    companion object{
+    companion object {
         const val TAG = "VMInstall"
     }
 

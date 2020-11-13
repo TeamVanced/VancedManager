@@ -2,24 +2,24 @@ package com.vanced.manager.utils
 
 import android.app.Activity
 import android.content.res.Configuration
-import androidx.preference.PreferenceManager
 import com.vanced.manager.R
+import com.vanced.manager.utils.Extensions.getDefaultPrefs
 
 object ThemeHelper {
 
-    fun setFinalTheme(activity: Activity) {
-        val currentAccent = PreferenceManager.getDefaultSharedPreferences(activity).getString("accent_color", "Blue")
-        when (PreferenceManager.getDefaultSharedPreferences(activity)
-            .getString("theme_mode", "Follow System")) {
-            "Light" -> activity.setTheme(getLightAccent(currentAccent))
-            "Dark" -> activity.setTheme(getDarkAccent(currentAccent))
-            "Follow System" -> {
-                when (activity.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> activity.setTheme(getDarkAccent(currentAccent))
-                    Configuration.UI_MODE_NIGHT_NO -> activity.setTheme(getLightAccent(currentAccent))
+    fun Activity.setFinalTheme() {
+        val prefs = getDefaultPrefs()
+        val currentAccent = prefs.getString("manager_accent", "Blue")
+        when (prefs.getString("manager_theme", "System Default")) {
+            "Light" -> setTheme(getLightAccent(currentAccent))
+            "Dark" -> setTheme(getDarkAccent(currentAccent))
+            "System Default" -> {
+                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                    Configuration.UI_MODE_NIGHT_YES -> setTheme(getDarkAccent(currentAccent))
+                    Configuration.UI_MODE_NIGHT_NO -> setTheme(getLightAccent(currentAccent))
                 }
             }
-            else -> getLightAccent("Blue")
+            else -> setTheme(getLightAccent("Blue"))
         }
     }
 

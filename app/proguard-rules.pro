@@ -13,7 +13,7 @@
 #}
 
 -keep class com.vanced.manager.core.App
--keepnames class androidx.navigation.fragment.NavHostFragment
+-keep class com.crowdin.platform.* { *; }
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.

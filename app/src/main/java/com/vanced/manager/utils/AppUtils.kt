@@ -3,44 +3,48 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.VancedDownloader
+import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.fragments.HomeFragment
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.InternetTools.getSha256
+import kotlinx.coroutines.*
+import java.io.File
+import java.io.IOException
+import java.security.MessageDigest
 
 object AppUtils {
-
-    val mutableInstall = MutableLiveData<Boolean>()
-    val installing: LiveData<Boolean> = mutableInstall
 
     const val vancedPkg = "com.vanced.android.youtube"
     const val vancedRootPkg = "com.google.android.youtube"
     const val musicPkg = "com.vanced.android.apps.youtube.music"
+    const val musicRootPkg = "com.google.android.apps.youtube.music"
     const val microgPkg = "com.mgoogle.android.gms"
     const val managerPkg = APPLICATION_ID
 
-    init {
-        mutableInstall.value = false
-    }
-
     fun sendRefresh(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
-            delay(500)
+            delay(700)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
         }
     }
 
+    fun sendCloseDialog(context: Context) {
+        downloadProgress.get()?.installing?.set(false)
+        CoroutineScope(Dispatchers.IO).launch {
+            delay(700)
+            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
+        }
+    }
+
     fun sendFailure(status: Int, context: Context) {
-        mutableInstall.value = false
+        downloadProgress.get()?.installing?.set(false)
         //Delay error broadcast until activity (and fragment) get back to the screen
         CoroutineScope(Dispatchers.IO).launch {
-            delay(500)
+            delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
             intent.putExtra("errorMsg", getErrorMessage(status, context))
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
@@ -48,11 +52,49 @@ object AppUtils {
     }
 
     fun sendFailure(error: MutableList<String>, context: Context) {
+        downloadProgress.get()?.installing?.set(false)
         CoroutineScope(Dispatchers.IO).launch {
+            delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
             intent.putExtra("errorMsg", getErrorMessage(error.joinToString(), context))
+            intent.putExtra("fullErrorMsg", error.joinToString(" "))
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
         }
+    }
+
+    @Throws(IOException::class)
+    fun generateChecksum(data: ByteArray): String {
+        try {
+            val digest: MessageDigest = MessageDigest.getInstance("SHA-256")
+            val hash: ByteArray = digest.digest(data)
+            return printableHexString(hash)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return ""
+    }
+
+    private fun printableHexString(data: ByteArray): String {
+        // Create Hex String
+        val hexString: StringBuilder = StringBuilder()
+        for (aMessageDigest:Byte in data) {
+            var h: String = Integer.toHexString(0xFF and aMessageDigest.toInt())
+            while (h.length < 2)
+                h = "0$h"
+            hexString.append(h)
+        }
+        return hexString.toString()
+    }
+
+    fun validateTheme(
+        downloadPath: String,
+        apk: String,
+        hashUrl: String,
+        context: Context,
+    ): Boolean {
+        val themeF = File(downloadPath, "$apk.apk")
+        return runBlocking { InternetTools.checkSHA256(getSha256(hashUrl, apk, context), themeF) }
     }
 
     private fun getErrorMessage(status: String, context: Context): String {

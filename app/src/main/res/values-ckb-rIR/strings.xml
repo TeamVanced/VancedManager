@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="cancel">هەڵوەشاندنەوە</string>
+    <string name="close">داخستن</string>
+    <string name="reset">ڕێکخستنەوە</string>
+    <string name="save">پاراستن</string>
+    <string name="select_apps">بەرنامەکانت دیاریبکە</string>
+    <!-- Main Activity -->
+    <string name="title_about">دەربارە</string>
+    <string name="title_home">بەرێوەبردن</string>
+    <string name="title_settings">ڕێکخستنەکان</string>
+    <string name="update_manager">نوێکردنەوەی بەرنامە</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">مۆبایلەکەت ڕۆت کراوە؟</string>
+    <string name="grant_root">ڕێگەپێدانی ڕۆت Root</string>
+    <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">ئەگەر ئەتەوێ بە ڕێگەپێدانی ڕۆت فایلەکان دابەزێنیت، تەنها لە خوارەوە پەنجە بنێ بە بەردەوامبون بۆ ئەنجامدانی کارەکە</string>
+    <!-- Home Page -->
+    <string name="about_app">دەربارەی %1$s</string>
+    <string name="app_changelog_tooltip">Ji bo guherînan bibînî kartê bitepîne.</string>
+    <string name="changelog">گۆڕانکارییەکان</string>
+    <string name="downloading_file">داگرتنی %1$s</string>
+    <string name="install">دامەزراندن</string>
+    <string name="button_reinstall">دامەزراندنەوە</string>
+    <string name="version_installed">دامەزرێنراو:</string>
+    <string name="latest">دوایین:</string>
+    <string name="no_microg">دانەبەزێنراوە microG</string>
+    <string name="root_not_granted">ڕێگەپێدانی Root نەدراوە</string>
+    <string name="unavailable">بەردەست نیە</string>
+    <string name="update">نوێکردنەوە</string>
+    <string name="useful_links">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
+    <string name="support_us">پاڵپشتی تیمەکەمان!</string>
+    <!-- Settings -->
+    <string name="accent_color">ڕەنگی سەرەکی</string>
+    <string name="accent_blue">شین</string>
+    <string name="accent_green">سەوز</string>
+    <string name="accent_purple">مۆر</string>
+    <string name="accent_red">سوور</string>
+    <string name="accent_yellow">زەرد</string>
+    <string name="category_appearance">ڕووکار</string>
+    <string name="category_behaviour">ڕووکەش</string>
+    <string name="clear_files">سڕینەوەی فایلە داگیراوەکان</string>
+    <string name="cleared_files">فایلەکان بەسەرکەتوویی سڕانەوە</string>
+    <string name="firebase_title">Firebase شیکردنەوەی</string>
+    <string name="firebase_summary">کۆکردنەوەی زانیاری لەکاتی بوونی کێشەو تۆماری هەڵە لە بەرنامەکەدا </string>
+    <string name="language_title">زمان</string>
+    <string name="link_title">بەکارهێنانی پەنجەرەی تایبەتی گۆگڵ کرۆم</string>
+    <string name="link_custom_tabs">بەستەرەکان لە پەنجەرەی تایبەتی گۆگڵ کرۆمدا دەکرێنەوە</string>
+    <string name="system_default">سیستەم</string>
+    <string name="theme">ڕووکار</string>
+    <string name="theme_dark">تاریک</string>
+    <string name="theme_light">ڕووناک</string>
+    <string name="update_url">بەستەری کەناڵی نوێکردنەوە</string>
+    <string name="push_notifications">%1$s وەرگرتنی ئاگادارکردنەوەکان</string>
+    <string name="push_notifications_summary">وەرگرتنی ئاگادارکردنەوە کاتێ نوێکردنەوەی %1$s بەردەست کرا</string>
+    <string name="update_center">ناوەندی نوێکردنەوە</string>
+    <string name="update_not_found">هیچ نوێکردنەوەیەک نیە</string>
+    <string name="variant">جۆر</string>
+    <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
+    <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
+    <string name="app_install_files_detected_summary">بەرنامەکە هەموو ئەو فایلانەی دۆزیەوە %1$s کە پێویستن بۆ دابەزاندن، ئەتەوێ دایان مەزرێنیت؟</string>
+    <string name="checking_updates">پشکنین بۆ نوێکردنەوە…</string>
+    <string name="chosen_lang">زمان: %1$s</string>
+    <string name="chosen_theme">ڕووکار: %1$s</string>
+    <string name="chosen_version">وەشان: %1$s</string>
+    <string name="guide">زانیاری</string>
+    <string name="hold_on">وەستاندن!</string>
+    <string name="installing_app">دامەزراندنی %1$s</string>
+    <string name="magisk_vanced">تۆ وەشانی Magisk/TWRP ـی Vanced بەکاردێنیت، کە ناتوانرێت بە بەکارهێنانی ئەم بەرنامەیە نوێبکرێتەوە، تکایە لایبدە بە سڕینەوەی مۆدیولی ماگیسک/لەڕێی TWRP Vanced.</string>
+    <string name="miui_one_title">تۆ ڕووکاری MIUI بەکاردێنیت!</string>
+    <string name="miui_one">بۆ ئەوەی Vanced دابمەزرێنیت، پێویستە چاکسازییەکانی ڕووکاری MIUI لە ڕێکبەندەکانی پەرەپێدەر لە کار بخەیت، (دەتوانیت ئەم ئاگاداریە پشتگوێ بخەیت ئەگەر ڕومی تایبەتی وەشانی 20.2.20 یان دواتر xiaomi.eu بەکاردەهێنیت. بەکاردەهێنیت)</string>
+    <string name="error">هەڵەیەک ڕوویدا</string>
+    <string name="redownload">داگرتنەوە</string>
+    <string name="security_context">دڵنیابە کە بەرنامەکەت لە سایتی vancedapp.com، سێرڤەری دیسکۆرد یان Vanced GitHub داگرتووە</string>
+    <string name="success">سەرکەوتو بوو!</string>
+    <string name="app_installation_preferences">%1$s ڕێکخستنەکانی دامەزراندن</string>
+    <string name="vanced_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
+    <string name="version">وەشان</string>
+    <string name="music_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
+    <string name="please_be_patient">تکایە چاوەڕوانبە…</string>
+    <string name="launch">کردنه‌وه‌</string>
+    <string name="welcome">بەخێربێیت</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">زمانێک هەڵبژێرە بۆ بەکارهێنانی بەرنامەکە</string>
+    <string name="light_plus_other">ڕووناک + %1$s</string>
+    <string name="select_at_least_one_lang">لانیکەم زمانێک دیاریبکە!</string>
+    <!-- About Page -->
+    <string name="manager_dev">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
+    <string name="sources">سەرچاوەکان</string>
+    <string name="vanced_team">Vanced تیمی</string>
+    <!-- Error messages -->
+    <string name="chown_fail">سەرکەوتو نەبوو `chown` بۆ دانان وەک بەرنامەی سیستەم, تکایە دووبارە هەوڵبدەرەوە.</string>
+    <string name="error_downloading">کێشە ڕوویدا لە داگرتنی %1$s</string>
+    <string name="failed_uninstall">سڕینەوەی %1$s سەرکەوتو نەبوو</string>
+    <string name="files_missing_va">سەرکەوتو نەبوو لە دۆزینەوەی فایلە پێویستەکان بۆ دامەزراندن، فایلە پێویستیەکان دووبارە دابگرەوە بۆ جێگیرکردن، پاشان دووبارە هەوڵبدەرەوە.</string>
+    <string name="ifile_missing">سەرکەوتوو نەبوو لەدۆزینەوەی شوێنی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە بیرگەدا، تکایە دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_aborted">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر کۆتاییهێنا بە دابەزاندنەکە.</string>
+    <string name="installation_blocked">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر ڕێگریکرد لە دابەزاندنەکە.</string>
+    <string name="installation_downgrade">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر هەوڵیدا بۆ نزمکردنەوەی وەشان، نوێکارییەکانی بەرنامەی بنەڕەتی YouTube بسڕەوە و دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_conflict">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی وەشانێکی تری بەرنامەکە پێشتر دامەزرێنراوە، وەشانی ئێستای Vanced بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_failed">دامەزراندن سەرکەوتو نەبوو لەبەر هۆکاری نادیار، پەیوەندی بکە بە تێلێگرامەکەمان یان Discord بۆ پشتگیری زیاتر.</string>
+    <string name="installation_incompatible">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی فایلی دابەزاندن گونجاو نییە لەگەڵ ئامێرەکەت، فایلە داگیراوەکان بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_invalid">دامەزراندن سەرکەوتوو نەبوو لەبەرئەوەی فایلی apk تێکچووە، تکایە دووبارە هەوڵبدرەوە.</string>
+    <string name="installation_signature">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی سەلماندنەکانی apk چالاککراوە، سەلماندنی دووپاتکردنەوەی ئیمزای apk ناچالاک بکە و پاشان دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_miui">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی باشکردنی ڕووکاری MIUI چالاککراوە، باشکردنی ڕووکاری MIUI ناچالاک بکە ودووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_storage">دامەزراندن سەرکەوتو نەبوو بەهۆی بوونی کێشە لە بیرگەدا.</string>
+    <string name="modapk_missing">سەرکەوتو نەبوو لە دۆزینەوەی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە دامەزرێنەرەکەدا. داتای بەرنامەکە بسڕەوە لە ڕێکبەندیەکاندا و دووبارە هەوڵبدەرەوە.</string>
+    <string name="path_missing">سەرکەوتو نەبوو لە دۆزینەوەی بەرنامەی بنەڕەتی YouTube لەشوێنی دابەزاندن لەپاش دامەزراندنی پێکهاتەکان.</string>
+</resources>
