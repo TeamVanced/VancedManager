@@ -12,10 +12,13 @@
     <string name="title_settings">Configurações</string>
     <string name="update_manager">Gerente de atualização</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Selecione pelo menos um aplicativo!</string>
     <string name="are_you_rooted">Seu dispositivo tem root?</string>
-    <string name="willing_to_use_root">Deseja usar a versão raiz? Pressione o botão abaixo, caso contrário, toque para continuar</string>
     <string name="grant_root">Conceder permissão de root</string>
+    <string name="select_at_least_one_app">Selecione pelo menos um aplicativo!</string>
+    <string name="select_apps_music">Vanced, mas para o YouTube Music!\nrelativamente menos funções, mas satisfaz suas necessidades.</string>
+    <string name="select_apps_vanced">YouTube Vanced é o aplicativo nativo de Android YouTube, mas melhor!</string>
+    <string name="lets_get_started">Vamos começar</string>
+    <string name="willing_to_use_root">Deseja usar a versão root? Basta clicar no botão abaixo, senão toque para continuar</string>
     <!-- Home Page -->
     <string name="about_app">Sobre %1$s</string>
     <string name="app_changelog_tooltip">Toque no cartão para ver o registro de mudanças.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Não há novas atualizações</string>
     <string name="variant">Variante</string>
     <!-- Dialogs -->
+    <string name="advanced">Avançado</string>
     <string name="app_install_files_detected">%1$s arquivos de instalação detectados!</string>
     <string name="app_install_files_detected_summary">O gerenciador detectou que todos os arquivos necessários para a instalação de %1$s foram encontrados. Você quer instalar?</string>
     <string name="checking_updates">Verificando por atualizações…</string>
