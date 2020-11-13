@@ -12,10 +12,13 @@
     <string name="title_settings">设置</string>
     <string name="update_manager">更新 Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">选择至少一个应用！</string>
     <string name="are_you_rooted">您的设备是否拥有 Root 权限？</string>
-    <string name="willing_to_use_root">想要使用 root 版本？只需点击下面的按钮，或点击继续</string>
     <string name="grant_root">授予 Root 权限</string>
+    <string name="select_at_least_one_app">选择至少一个应用！</string>
+    <string name="select_apps_music">Youtube Music 现已加入 Vanced 全家桶！\n功能略少，但足以满足您的需求。</string>
+    <string name="select_apps_vanced">Youtube Vanced 是官方 Youtube 应用的增强版！</string>
+    <string name="lets_get_started">让我们开始吧</string>
+    <string name="willing_to_use_root">想要使用 root 版本？只需点击下面的按钮，或点击继续</string>
     <!-- Home Page -->
     <string name="about_app">关于 %1$s</string>
     <string name="app_changelog_tooltip">点击卡片查看变更日志。</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">无可用更新</string>
     <string name="variant">版本</string>
     <!-- Dialogs -->
+    <string name="advanced">高级</string>
     <string name="app_install_files_detected">检测到 %1$s 安装文件！</string>
     <string name="app_install_files_detected_summary">Manager 检测到 %1$s 所需要的安装文件。您想现在安装吗？</string>
     <string name="checking_updates">正在检查更新…</string>
