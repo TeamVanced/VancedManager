@@ -12,10 +12,13 @@
     <string name="title_settings">Beállítások</string>
     <string name="update_manager">Manager frissitése</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Legalább egy appot válassz!</string>
     <string name="are_you_rooted">Rootolt az eszközöd?</string>
-    <string name="willing_to_use_root">Rootolt verziót használsz? Nyomd meg lent a gombot vagy nyomj a továbbra!</string>
     <string name="grant_root">Root hozzáférés engedélyezése</string>
+    <string name="select_at_least_one_app">Legalább egy appot válassz!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Rootolt verziót használsz? Nyomd meg lent a gombot vagy nyomj a továbbra!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s- ról</string>
     <string name="app_changelog_tooltip">Kattintson a kártyára hogy megnézze a változásjegyzéket.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Új frissítések nem elérhetőek</string>
     <string name="variant">Változat</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s telepítőfájlok észlelve!</string>
     <string name="app_install_files_detected_summary">A Manager észlelte ez összes szükséges file-t a(z) %1$s telepítéséhez. Kívánja folytatni a telepítést?</string>
     <string name="checking_updates">Frissítések ellenőrzése... </string>
