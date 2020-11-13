@@ -12,10 +12,13 @@
     <string name="title_settings">Настройки</string>
     <string name="update_manager">Менеджер обновлений</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Выберите хотя бы одно приложение!</string>
     <string name="are_you_rooted">На устройстве есть рут-права?</string>
-    <string name="willing_to_use_root">Хотите использовать root-версию? Просто нажмите кнопку ниже, иначе нажмите для продолжения</string>
     <string name="grant_root">Предоставить root-права</string>
+    <string name="select_at_least_one_app">Выберите хотя бы одно приложение!</string>
+    <string name="select_apps_music">Vanced, но для YouTube Music!\nотносительно меньше возможностей, но удовлетворяет ваши потребности.</string>
+    <string name="select_apps_vanced">YouTube Vanced — это приложение для YouTube для Android, но лучше!</string>
+    <string name="lets_get_started">Давайте начнем</string>
+    <string name="willing_to_use_root">Хотите использовать root-версию? Просто нажмите кнопку ниже, иначе нажмите для продолжения</string>
     <!-- Home Page -->
     <string name="about_app">О %1$s</string>
     <string name="app_changelog_tooltip">Нажмите на карточку, чтобы увидеть список изменений.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Обновлений не найдено</string>
     <string name="variant">Вариант</string>
     <!-- Dialogs -->
+    <string name="advanced">Доп. настройки</string>
     <string name="app_install_files_detected">Обнаружены установочные файлы для %1$s!</string>
     <string name="app_install_files_detected_summary">Менеджер обнаружил все необходимые файлы для установки %1$s. Продолжить установку?</string>
     <string name="checking_updates">Проверка обновлений…</string>
