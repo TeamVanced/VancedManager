@@ -12,10 +12,13 @@
     <string name="title_settings">Ayarlar</string>
     <string name="update_manager">Manager\'ı Güncelle</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">En az bir uygulama seçin!</string>
     <string name="are_you_rooted">Cihazınız Root\'lu mu?</string>
-    <string name="willing_to_use_root">Root sürümünü kullanmak ister misiniz? Sadece aşağıdaki düğmeye basın, yoksa devam etmek için dokunun</string>
     <string name="grant_root">Root İzni Ver</string>
+    <string name="select_at_least_one_app">En az bir uygulama seçin!</string>
+    <string name="select_apps_music">Vanced, ancak YouTube Music için!\nnispeten daha az zengin özelliklere sahiptir, ancak ihtiyaçlarınızı karşılar.</string>
+    <string name="select_apps_vanced">YouTube Vanced, stok Android YouTube Uygulamasıdır, ancak daha iyidir!</string>
+    <string name="lets_get_started">Başlayalım</string>
+    <string name="willing_to_use_root">Root sürümünü kullanmak ister misiniz? Sadece aşağıdaki düğmeye basın, yoksa devam etmek için dokunun</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Hakkında</string>
     <string name="app_changelog_tooltip">Değişiklikleri görmek için karta dokunun.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Yeni güncelleme yok</string>
     <string name="variant">Varyant</string>
     <!-- Dialogs -->
+    <string name="advanced">Gelişmiş</string>
     <string name="app_install_files_detected">%1$s kurulum dosyası algılandı!</string>
     <string name="app_install_files_detected_summary">Manager, %1$s kurulumu için gerekli tüm dosyaların bulunduğunu tespit etti. Yüklemek ister misiniz?</string>
     <string name="checking_updates">Güncellemeler denetleniyor…</string>
