@@ -15,27 +15,18 @@ import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.Extensions.getInstallUrl
 import com.vanced.manager.utils.Extensions.getLatestAppVersion
-import com.vanced.manager.utils.InternetTools
 import com.vanced.manager.utils.InternetTools.backupUrl
-import com.vanced.manager.utils.InternetTools.baseUrl
-import com.vanced.manager.utils.InternetTools.checkSHA256
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.getSha256
 import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import com.vanced.manager.utils.PackageHelper.downloadStockCheck
-import com.vanced.manager.utils.PackageHelper.getPkgVerCode
 import com.vanced.manager.utils.PackageHelper.installVanced
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import java.io.File
-import java.io.IOException
-import java.security.MessageDigest
-import java.util.*
 
 object VancedDownloader {
     

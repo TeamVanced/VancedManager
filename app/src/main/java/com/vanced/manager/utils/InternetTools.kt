@@ -12,7 +12,6 @@ import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.VancedDownloader
 import com.vanced.manager.utils.AppUtils.generateChecksum
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
 import kotlinx.coroutines.CoroutineScope

@@ -21,7 +21,7 @@ import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
 
 class ManagerUpdateDialog(
-        private val forceUpdate: Boolean
+    private val forceUpdate: Boolean
 ) : DialogFragment() {
 
     private lateinit var binding: DialogManagerUpdateBinding
