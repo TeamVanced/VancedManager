@@ -77,7 +77,7 @@ object PackageHelper {
     }
 
     fun musicApkExists(context: Context): Boolean {
-        val apkPath = File(context.getExternalFilesDir("music/nonroot")?.path, "music.apk")
+        val apkPath = File(context.getExternalFilesDir("music/nonroot")?.path, "nonroot.apk")
         if (apkPath.exists()) {
             return true
         }

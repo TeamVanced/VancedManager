@@ -17,7 +17,7 @@
     <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
     <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
+    <string name="lets_get_started">さあ、始めましょう</string>
     <string name="willing_to_use_root">root 版を使用したいですか？下のボタンを押してください。そうでないなら続けるボタンを押してください</string>
     <!-- Home Page -->
     <string name="about_app">%1$s について</string>
@@ -61,7 +61,7 @@
     <string name="update_not_found">アップデートはありません</string>
     <string name="variant">種類</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">上級者向け</string>
     <string name="app_install_files_detected">%1$sのインストールに必要なファイルが見つかりました</string>
     <string name="app_install_files_detected_summary">%1$sのインストールに必要な全てのファイル準備が整いました。インストールしますか?</string>
     <string name="checking_updates">アップデートを確認中...</string>

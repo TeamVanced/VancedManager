@@ -107,7 +107,7 @@ object MusicDownloader {
         if (variant == "root")
             installMusicRoot(context)
         else
-            install("${context.getExternalFilesDir("music/$variant")}/music.apk", context)
+            install("${context.getExternalFilesDir("music/nonroot")}/nonroot.apk", context)
     }
 
 }

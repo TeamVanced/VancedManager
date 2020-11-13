@@ -6,7 +6,6 @@ import android.content.pm.PackageInstaller
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
-import com.vanced.manager.core.downloader.VancedDownloader
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.fragments.HomeFragment
 import com.vanced.manager.utils.DownloadHelper.downloadProgress

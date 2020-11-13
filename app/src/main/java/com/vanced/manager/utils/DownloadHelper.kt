@@ -44,16 +44,19 @@ object DownloadHelper {
     fun downloadManager(context: Context) {
         CoroutineScope(Dispatchers.IO).launch {
             val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
-            downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("apk")?.path, "manager.apk")
+            downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("manager")?.path, "manager.apk")
                 .build()
                 .setOnProgressListener { progress ->
                     val mProgress = progress.currentBytes * 100 / progress.totalBytes
                     downloadProgress.get()?.downloadProgress?.set(mProgress.toInt())
                 }
+                .setOnCancelListener {
+                    downloadProgress.get()?.downloadProgress?.set(0)
+                }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         val apk =
-                            File("${context.getExternalFilesDir("apk")?.path}/manager.apk")
+                            File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
                         val uri =
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                                 FileProvider.getUriForFile(
