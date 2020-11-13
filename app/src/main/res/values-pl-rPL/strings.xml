@@ -15,8 +15,8 @@
     <string name="are_you_rooted">Czy Twoje urządzenie jest zakorzenione (root)?</string>
     <string name="grant_root">Przyznaj uprawnienie root</string>
     <string name="select_at_least_one_app">Wybierz co najmniej jedną aplikację!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="select_apps_music">Vanced, ale dla Muzyki YouTube!\nstosunkowo mniej funkcji, ale zaspokaja Twoje potrzeby.</string>
+    <string name="select_apps_vanced">YouTube Vanced to domyślna aplikacja YouTube na Androida, ale lepsza!</string>
     <string name="lets_get_started">Zaczynajmy</string>
     <string name="willing_to_use_root">Zamierzasz używać wersji root? Po prostu kliknij przycisk poniżej, jeśli nie kliknij aby kontynuować</string>
     <!-- Home Page -->
