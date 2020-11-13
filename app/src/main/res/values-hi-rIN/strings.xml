@@ -12,14 +12,17 @@
     <string name="title_settings">सेटिंग्स</string>
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
     <string name="are_you_rooted">Is Your Device Rooted?</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <string name="grant_root">Grant Root Permission</string>
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
-    <string name="about_app">About %1$s</string>
+    <string name="about_app">%1$s के बारे में</string>
     <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
-    <string name="changelog">Changelog</string>
+    <string name="changelog">परिवर्तन लॉग</string>
     <string name="downloading_file">डाउनलोड कर रहा है %1$s</string>
     <string name="install">इंस्टॉल</string>
     <string name="button_reinstall">फिर से इंस्टॉल</string>
@@ -30,7 +33,7 @@
     <string name="unavailable">अनुपलब्ध</string>
     <string name="update">अद्यतन करें</string>
     <string name="useful_links">उपयोगी लिंक्स </string>
-    <string name="support_us">Support US!</string>
+    <string name="support_us">हमें सपोर्ट कीजिए!</string>
     <!-- Settings -->
     <string name="accent_color">एक्सेंट रंग</string>
     <string name="accent_blue">नीला</string>
@@ -38,7 +41,7 @@
     <string name="accent_purple">बैंगनी</string>
     <string name="accent_red">लाल</string>
     <string name="accent_yellow">पीला</string>
-    <string name="category_appearance">Appearance</string>
+    <string name="category_appearance">रूप</string>
     <string name="category_behaviour">Behaviour</string>
     <string name="clear_files">डाउनलोड की गई फ़ाइलें साफ़ करें</string>
     <string name="cleared_files">फ़ाइलें सफलतापूर्वक साफ़ की गई</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">No new updates</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s installation files detected!</string>
     <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
     <string name="checking_updates">Checking for updates…</string>
@@ -76,7 +80,7 @@
     <string name="success">सफलता!</string>
     <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">सफलतापूर्वक स्थापित किया गया है! अब खोलो?</string>
-    <string name="version">Version</string>
+    <string name="version">संस्करण</string>
     <string name="music_installed">वेंसड संगीत सफलतापूर्वक स्थापित किया गया है! अब खोले?</string>
     <string name="please_be_patient">Please be patient…</string>
     <string name="launch">खोले</string>
