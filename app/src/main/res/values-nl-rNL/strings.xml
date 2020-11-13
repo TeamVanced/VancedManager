@@ -5,17 +5,20 @@
     <string name="close">Sluiten</string>
     <string name="reset">Herstellen</string>
     <string name="save">Bewaren</string>
-    <string name="select_apps">Selecteer je apps</string>
+    <string name="select_apps">Apps selecteren</string>
     <!-- Main Activity -->
     <string name="title_about">Over</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Instellingen</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">Manager update</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Selecteer minstens één app!</string>
     <string name="are_you_rooted">Is je apparaat geroot?</string>
-    <string name="willing_to_use_root">Wil je de root-versie gebruiken? Tik op de knop hieronder, of tik om verder te gaan</string>
     <string name="grant_root">Root machtiging toestaan</string>
+    <string name="select_at_least_one_app">Selecteer minstens één app!</string>
+    <string name="select_apps_music">Vanced voor YouTube Music !\nMinder functies maar voldoet zeker aan je wensen.</string>
+    <string name="select_apps_vanced">YouTube Vanced is de standaard Android YouTube app, maar nog beter !</string>
+    <string name="lets_get_started">Aan de slag !</string>
+    <string name="willing_to_use_root">Wil je de root versie gebruiken? Tik dan op de knop hieronder of tik om verder te gaan</string>
     <!-- Home Page -->
     <string name="about_app">Over %1$s</string>
     <string name="app_changelog_tooltip">Tik op de kaart om de wijzigingen te zien.</string>
@@ -26,7 +29,7 @@
     <string name="version_installed">Geïnstalleerd:</string>
     <string name="latest">Recentste:</string>
     <string name="no_microg">microG is niet geïnstalleerd</string>
-    <string name="root_not_granted">Root toegang niet toegestaan</string>
+    <string name="root_not_granted">Root machtiging niet toegestaan</string>
     <string name="unavailable">Niet beschikbaar</string>
     <string name="update">Bijwerken</string>
     <string name="useful_links">Handige links</string>
@@ -39,7 +42,7 @@
     <string name="accent_red">Rood</string>
     <string name="accent_yellow">Geel</string>
     <string name="category_appearance">Weergave</string>
-    <string name="category_behaviour">Gedrag</string>
+    <string name="category_behaviour">Werking</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
     <string name="cleared_files">Bestanden succesvol verwijderd</string>
     <string name="firebase_title">Firebase analyse</string>
@@ -56,8 +59,9 @@
     <string name="push_notifications_summary">Push meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
     <string name="update_center">Manager Update Center</string>
     <string name="update_not_found">Geen nieuwe updates</string>
-    <string name="variant">Variant</string>
+    <string name="variant">Versie</string>
     <!-- Dialogs -->
+    <string name="advanced">Geavanceerd</string>
     <string name="app_install_files_detected">%1$s installatiebestanden gedetecteerd!</string>
     <string name="app_install_files_detected_summary">Manager heeft alle nodige bestanden gedetecteerd voor het installeren van %1$s. Wil je installeren?</string>
     <string name="checking_updates">Controleren op updates…</string>
@@ -72,7 +76,7 @@
     <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kunt deze waarschuwing negeren als je 20.2.20 of later xiaomi.eu gebaseerde ROM gebruikt)</string>
     <string name="error">Fout</string>
     <string name="redownload">Opnieuw downloaden</string>
-    <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vancedapp.com, de Vanced Discord-server of Vanced GitHub</string>
+    <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vancedapp.com, de Vanced Discord server of Vanced GitHub</string>
     <string name="success">Gelukt!</string>
     <string name="app_installation_preferences">installatievoorkeuren voor %1$s</string>
     <string name="vanced_installed">Vanced is succesvol geïnstalleerd! Nu starten?</string>
