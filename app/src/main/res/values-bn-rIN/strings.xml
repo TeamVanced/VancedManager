@@ -12,10 +12,13 @@
     <string name="title_settings">সেটিংস</string>
     <string name="update_manager">ম্যানেজার হালনাগাদ করুন</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
     <string name="are_you_rooted">আপনার ডিভাইসটিতে আপনার রুট অ্যাক্সেস আছে?</string>
-    <string name="willing_to_use_root">রুট সংস্করণ ব্যবহার করতে ইচ্ছুক? নীচের বোতামটি চাপুন, অন্যথায় চালিয়ে যেতে আলতো চাপুন</string>
     <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
+    <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
+    <string name="select_apps_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য!\nতুলনামূলকভাবে কম বৈশিষ্ট্যযুক্ত, তবে আপনার চাহিদা পূরণ করে।</string>
+    <string name="select_apps_vanced">ইউটিউব ভ্যান্সড হল স্টক অ্যান্ড্রয়েড ইউটিউব অ্যাপ, তবে আরো ভাল!</string>
+    <string name="lets_get_started">শুরু করা যাক</string>
+    <string name="willing_to_use_root">রুট সংস্করণ ব্যবহার করতে ইচ্ছুক? নীচের বোতামটি চাপুন, অন্যথায় চালিয়ে যেতে আলতো চাপুন</string>
     <!-- Home Page -->
     <string name="about_app">%1$s এর সম্বন্ধে</string>
     <string name="app_changelog_tooltip">পরিবর্তন নথি দেখতে কার্ডে আলতো চাপুন।</string>
@@ -23,7 +26,7 @@
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="install">ইনস্টল করুন</string>
     <string name="button_reinstall">পুনরায় ইনস্টল করুন</string>
-    <string name="version_installed">ইনস্টল হয়েছে:</string>
+    <string name="version_installed">ইনস্টল করা আছে:</string>
     <string name="latest">সর্বশেষ:</string>
     <string name="no_microg">মাইক্রোজি ইনস্টল করা নেই</string>
     <string name="root_not_granted">রুট অ্যাক্সেস দেওয়া হয়নি</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">কোনো নতুন হালনাগাদ নেই</string>
     <string name="variant">বিকল্প</string>
     <!-- Dialogs -->
+    <string name="advanced">উন্নত</string>
     <string name="app_install_files_detected">ইনস্টল করার জন্য %1$s ফাইল খুঁজে পাওয়া গেছে!</string>
     <string name="app_install_files_detected_summary">%1$s ইনস্টল করার জন্য প্রয়োজনীয় সমস্ত ফাইলগুলি ম্যানেজার খুঁজে পেয়েছে। আপনি কি ইনস্টল করতে চান?</string>
     <string name="checking_updates">হালনাগাদের জন্য চেক করা হচ্ছে…</string>
