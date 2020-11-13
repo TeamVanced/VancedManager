@@ -12,10 +12,13 @@
     <string name="title_settings">Cài đặt</string>
     <string name="update_manager">Cật nhật Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
-    <string name="are_you_rooted">Thiết bị của bạn đã Root chưa?</string>
-    <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Nhấn nút bên dưới, nếu không hãy nhấn tiếp tục</string>
+    <string name="are_you_rooted">Thiết Bị Của Bạn Đã Được Root?</string>
     <string name="grant_root">Cấp quyền root</string>
+    <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced cũng là ứng dụng Youtube gốc nhưng tốt hơn!</string>
+    <string name="lets_get_started">Bắt đầu nào</string>
+    <string name="willing_to_use_root">Muốn sử dụng phiên bản root? Nhấn nút bên dưới, nếu không hãy nhấn tiếp tục</string>
     <!-- Home Page -->
     <string name="about_app">Thông tin về %1$s</string>
     <string name="app_changelog_tooltip">Nhấn vào thẻ để xem các thay đổi.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Không có cập nhật mới</string>
     <string name="variant">Phiên bản</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
     <string name="app_install_files_detected_summary">Manager đã tìm thấy tất cả các tệp cần thiết để cài đặt %1$s. Bạn có muốn cài đặt không?</string>
     <string name="checking_updates">Đang kiểm tra cập nhật…</string>
