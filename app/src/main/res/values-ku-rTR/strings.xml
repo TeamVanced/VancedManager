@@ -12,10 +12,13 @@
     <string name="title_settings">Sazkarî</string>
     <string name="update_manager">Rêveberê hildemîne</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Herî kêm sepanekê hilbijêre!</string>
-    <string name="are_you_rooted">Gelo mobîla te Root e?</string>
-    <string name="willing_to_use_root">Gelo dixwazî guhertoya root bi kar bînî? Tenê bişkoka jêrîn bidewsîne, an ji bo domandinê bitepînin</string>
+    <string name="are_you_rooted">Gelo cîhaza te Root e?</string>
     <string name="grant_root">Destûra Root\'ê bide</string>
+    <string name="select_at_least_one_app">Herî kêm sepanekê hilbijêre!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Gelo dixwazî guhertoya root bi kar bînî? Tenê bişkoka jêrîn bidewsîne, an ji bo domandinê bitepînin</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
     <string name="app_changelog_tooltip">Ji bo guherînan bibînî kartê bitepîne.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Hildema nû nîne</string>
     <string name="variant">Guharto</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s dosiyên sazkirinê peyda bûn!</string>
     <string name="app_install_files_detected_summary">Rêveberê peydabûna hemû ew dosiyên pêwîst ên ji bo sazkirina %1$s tesbît kir. Gelo tu dixwazî saz bikî?</string>
     <string name="checking_updates">Hildem tên kontrolkirin...</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">Ji bo ku Vanced were sazkirin, DIVÊ hûn Optimîzasyonên MIUI-yê di sazkariyên pêşvebirinê de neçalak bikin. (Hûn dikarin vê hişyariyê paşguh bikin heke hûn ROM\'a li ser esasa xiaomi.eu 20.2.20 an jortir bi kar tînin)</string>
     <string name="error">Çewtî</string>
     <string name="redownload">Ji nû ve daxîne</string>
-    <string name="security_context">Piştrast bin ku we sepan ji vanced.app\'ê, ji servera Vanced Discord\'ê an Vanced GitHub\'ê daxistiye</string>
+    <string name="security_context">Piştrast bin ku we sepan ji vancedapp.com\'ê, ji servera Vanced Discord\'ê an Vanced GitHub\'ê daxistiye</string>
     <string name="success">Bi Ser Ket!</string>
-    <string name="vanced_installation_preferences">Vebijêrkên sazkirina Vanced\'ê</string>
+    <string name="app_installation_preferences">%1$s sazkariyên bijarde yên sazkirinê</string>
     <string name="vanced_installed">Vanced biserketî saz bû! Gelo niha vebe?</string>
     <string name="version">Guherto</string>
     <string name="music_installed">Vanced Mûzîk biserketî saz bû! Gelo niha vebe?</string>

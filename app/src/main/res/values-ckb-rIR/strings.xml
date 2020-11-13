@@ -12,13 +12,16 @@
     <string name="title_settings">ڕێکخستنەکان</string>
     <string name="update_manager">نوێکردنەوەی بەرنامە</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
-    <string name="are_you_rooted">مۆبایلەکەت ڕۆت کردووە؟</string>
-    <string name="willing_to_use_root">ئەگەر ئەتەوێ بە ڕێگەپێدانی ڕۆت فایلەکان دابەزێنیت، تەنها لە خوارەوە پەنجە بنێ بە بەردەوامبون بۆ ئەنجامدانی کارەکە</string>
+    <string name="are_you_rooted">مۆبایلەکەت ڕۆت کراوە؟</string>
     <string name="grant_root">ڕێگەپێدانی ڕۆت Root</string>
+    <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">ئەگەر ئەتەوێ بە ڕێگەپێدانی ڕۆت فایلەکان دابەزێنیت، تەنها لە خوارەوە پەنجە بنێ بە بەردەوامبون بۆ ئەنجامدانی کارەکە</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
-    <string name="app_changelog_tooltip">پەنجەی پێدابنێ بۆ بینینی گۆڕانکارییەکان</string>
+    <string name="app_changelog_tooltip">Ji bo guherînan bibînî kartê bitepîne.</string>
     <string name="changelog">گۆڕانکارییەکان</string>
     <string name="downloading_file">داگرتنی %1$s</string>
     <string name="install">دامەزراندن</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">هیچ نوێکردنەوەیەک نیە</string>
     <string name="variant">جۆر</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
     <string name="app_install_files_detected_summary">بەرنامەکە هەموو ئەو فایلانەی دۆزیەوە %1$s کە پێویستن بۆ دابەزاندن، ئەتەوێ دایان مەزرێنیت؟</string>
     <string name="checking_updates">پشکنین بۆ نوێکردنەوە…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">بۆ ئەوەی Vanced دابمەزرێنیت، پێویستە چاکسازییەکانی ڕووکاری MIUI لە ڕێکبەندەکانی پەرەپێدەر لە کار بخەیت، (دەتوانیت ئەم ئاگاداریە پشتگوێ بخەیت ئەگەر ڕومی تایبەتی وەشانی 20.2.20 یان دواتر xiaomi.eu بەکاردەهێنیت. بەکاردەهێنیت)</string>
     <string name="error">هەڵەیەک ڕوویدا</string>
     <string name="redownload">داگرتنەوە</string>
-    <string name="security_context">دڵنیابە لەوەی کە بەرنامەکەت دابەزاندوە لە vanced.app، سێرڤەری Discord یان Vanced GitHub</string>
+    <string name="security_context">دڵنیابە کە بەرنامەکەت لە سایتی vancedapp.com، سێرڤەری دیسکۆرد یان Vanced GitHub داگرتووە</string>
     <string name="success">سەرکەوتو بوو!</string>
-    <string name="vanced_installation_preferences">ڕێکخستنەکانی دابەزێنەر</string>
+    <string name="app_installation_preferences">%1$s ڕێکخستنەکانی دامەزراندن</string>
     <string name="vanced_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
     <string name="version">وەشان</string>
     <string name="music_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>

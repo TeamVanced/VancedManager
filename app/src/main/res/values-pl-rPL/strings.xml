@@ -12,10 +12,13 @@
     <string name="title_settings">Ustawienia</string>
     <string name="update_manager">Zaktualizuj Menedżera</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Wybierz co najmniej jedną aplikację!</string>
-    <string name="are_you_rooted">Czy masz root?</string>
-    <string name="willing_to_use_root">Zamierzasz używać wersji root? Po prostu kliknij przycisk poniżej, jeśli nie kliknij aby kontynuować</string>
+    <string name="are_you_rooted">Czy Twoje urządzenie jest zakorzenione (root)?</string>
     <string name="grant_root">Przyznaj uprawnienie root</string>
+    <string name="select_at_least_one_app">Wybierz co najmniej jedną aplikację!</string>
+    <string name="select_apps_music">Vanced, ale dla Muzyki YouTube!\nstosunkowo mniej funkcji, ale zaspokaja Twoje potrzeby.</string>
+    <string name="select_apps_vanced">YouTube Vanced to domyślna aplikacja YouTube na Androida, ale lepsza!</string>
+    <string name="lets_get_started">Zaczynajmy</string>
+    <string name="willing_to_use_root">Zamierzasz używać wersji root? Po prostu kliknij przycisk poniżej, jeśli nie kliknij aby kontynuować</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="app_changelog_tooltip">Kliknij kartę, aby zobaczyć listę zmian.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Brak nowych aktualizacji</string>
     <string name="variant">Wariant</string>
     <!-- Dialogs -->
+    <string name="advanced">Opcje zaawansowane</string>
     <string name="app_install_files_detected">Wykryto %1$s plików instalacyjnych!</string>
     <string name="app_install_files_detected_summary">Menedżer wykrył, że znaleziono wszystkie pliki niezbędne do instalacji %1$s. Czy chcesz zainstalować?</string>
     <string name="checking_updates">Sprawdzam aktualizacje…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">Aby zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli korzystasz z ROM 20.2.20 lub późniejszego xiaomi.eu)</string>
     <string name="error">Błąd</string>
     <string name="redownload">Pobierz ponownie</string>
-    <string name="security_context">Upewnij się, że pobrałeś aplikację z vanced.app, serwera Vanced Discord lub GitHub</string>
+    <string name="security_context">Upewnij się, że pobrałeś aplikację z vancedapp.com, serwera Discord Vanced lub GitHub\'a</string>
     <string name="success">Sukces!</string>
-    <string name="vanced_installation_preferences">Preferencje instalacji Vanced</string>
+    <string name="app_installation_preferences">Preferencje instalacji %1$s</string>
     <string name="vanced_installed">Vanced został pomyślnie zainstalowany! Uruchomić teraz?</string>
     <string name="version">Wersja</string>
     <string name="music_installed">Vanced Music został pomyślnie zainstalowany! Uruchomić teraz?</string>

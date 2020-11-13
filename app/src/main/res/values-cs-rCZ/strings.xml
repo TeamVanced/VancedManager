@@ -12,10 +12,13 @@
     <string name="title_settings">Nastavení</string>
     <string name="update_manager">Správce aktualizací</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Vyberte alespoň jednu aplikaci!</string>
-    <string name="are_you_rooted">Máte přístup root?</string>
-    <string name="willing_to_use_root">Chcete použít verzi s přístupem root? Stačí kliknout na tlačítko níže, jinak pokračujte klepnutím</string>
+    <string name="are_you_rooted">Má vaše zařízení práva root?</string>
     <string name="grant_root">Udělit root oprávnění</string>
+    <string name="select_at_least_one_app">Vyberte alespoň jednu aplikaci!</string>
+    <string name="select_apps_music">Pokročilé, ale YouTube Music!\nRelativně méně funkcí splňující vaše potřeby.</string>
+    <string name="select_apps_vanced">YouTube Vanced je výchozí vylepšená aplikace YouTube!</string>
+    <string name="lets_get_started">Začínáme</string>
+    <string name="willing_to_use_root">Chcete použít verzi s přístupem root? Stačí kliknout na tlačítko níže, jinak pokračujte klepnutím</string>
     <!-- Home Page -->
     <string name="about_app">O aplikaci %1$s</string>
     <string name="app_changelog_tooltip">Klepnutím na kartu zobrazíte seznam změn.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Žádné nové aktualizace</string>
     <string name="variant">Varianta</string>
     <!-- Dialogs -->
+    <string name="advanced">Pokročilé</string>
     <string name="app_install_files_detected">Zjištěné instalační soubory: %1$s</string>
     <string name="app_install_files_detected_summary">Byly nalezeny všechny potřebné soubory pro instalaci %1$s. Chcete je nainstalovat?</string>
     <string name="checking_updates">Kontrola aktualizací…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">Chcete-li nainstalovat Vanced, MUSÍTE vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM z 20.2.2020 nebo novější založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
     <string name="redownload">Stáhnout znovu</string>
-    <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vanced.app, z našeho Discord serveru nebo našeho GitHubu</string>
+    <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vancedapp.com, z našeho Discord serveru nebo našeho GitHubu</string>
     <string name="success">Hotovo!</string>
-    <string name="vanced_installation_preferences">Předvolby instalace Vanced</string>
+    <string name="app_installation_preferences">Předvolby instalace %1$s</string>
     <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji otevřít?</string>
     <string name="version">Verze</string>
     <string name="music_installed">Aplikace Vanced Music byla úspěšně nainstalována! Chcete ji otevřít?</string>
