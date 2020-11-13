@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@id/preference_switch_title"
         tools:text="Receive push notifications when an update for vanced is released" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/preference_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,7 +37,6 @@
         android:theme="@style/PreferenceSwitch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:checked="true" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
