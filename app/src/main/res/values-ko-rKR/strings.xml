@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">취소</string>
     <string name="close">닫기</string>
     <string name="reset">초기화</string>
     <string name="save">저장</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">앱을 선택하세요</string>
     <!-- Main Activity -->
     <string name="title_about">정보</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">관리자</string>
     <string name="title_settings">설정</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">업데이트 관리자</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
-    <string name="grant_root">Grant Root Permission</string>
-    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="are_you_rooted">기기가 루팅되어 있습니까?</string>
+    <string name="grant_root">루트 권한 부여</string>
+    <string name="select_at_least_one_app">적어도 하나의 앱을 선택해주세요</string>
     <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
     <string name="lets_get_started">Let\'s get started</string>
