@@ -12,10 +12,13 @@
     <string name="title_settings">Configurări</string>
     <string name="update_manager">Actualizați Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
     <string name="are_you_rooted">Dispozitivul tău este rootat?</string>
-    <string name="willing_to_use_root">Vreți să folosiți versiunea root? Doar apăsați butonul de mai jos, altfel apăsați săgeata pentru a continua</string>
     <string name="grant_root">Acordați permisiunea Root</string>
+    <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Vreți să folosiți versiunea root? Doar apăsați butonul de mai jos, altfel apăsați săgeata pentru a continua</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
     <string name="app_changelog_tooltip">Apăsați pe card pentru a vedea schimbările.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Nu există actualizări noi</string>
     <string name="variant">Variantă</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
     <string name="app_install_files_detected_summary">Manager a detectat că au fost găsite toate fişierele necesare pentru instalarea %1$s. Doriţi să instalaţi?</string>
     <string name="checking_updates">Verificare actualizări…</string>
