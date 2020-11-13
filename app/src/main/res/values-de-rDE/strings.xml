@@ -12,10 +12,13 @@
     <string name="title_settings">Einstellungen</string>
     <string name="update_manager">Update Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Wählen Sie mindestens eine App!</string>
-    <string name="are_you_rooted">Haben Sie Root-Zugriff?</string>
-    <string name="willing_to_use_root">Möchten Sie die Root-Version verwenden? Tippen Sie einfach auf die Schaltfläche unten, andernfalls tippen Sie um fortzufahren</string>
+    <string name="are_you_rooted">Ist mein Gerät gerootet?</string>
     <string name="grant_root">Root-Berechtigung erteilen</string>
+    <string name="select_at_least_one_app">Wählen Sie mindestens eine App!</string>
+    <string name="select_apps_music">Vanced, aber für YouTube Music!\nrelativ wenige features aber erfüllt die Bedürfnissse.</string>
+    <string name="select_apps_vanced">YouTube Vanced ist die standard Android YouTube App, aber besser!</string>
+    <string name="lets_get_started">Los geht\'s</string>
+    <string name="willing_to_use_root">Möchten Sie die Root-Version verwenden? Tippen Sie einfach auf die Schaltfläche unten, andernfalls tippen Sie um fortzufahren</string>
     <!-- Home Page -->
     <string name="about_app">Über %1$s</string>
     <string name="app_changelog_tooltip">Tippe auf die Karte, um Changelog zu sehen.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Keine neuen Updates</string>
     <string name="variant">Variante</string>
     <!-- Dialogs -->
+    <string name="advanced">Erweitert</string>
     <string name="app_install_files_detected">%1$s Installationsdateien erkannt!</string>
     <string name="app_install_files_detected_summary">Manager hat festgestellt, dass alle notwendigen Dateien für die Installation von %1$s gefunden wurden. Möchten Sie installieren?</string>
     <string name="checking_updates">Suche nach Updates…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">Um Vanced zu installieren, MÜSSEN Sie MIUI-Optimierungen in den Entwickler-Einstellungen deaktivieren. (Sie können diese Warnung ignorieren, wenn Sie einen auf xiaomi.eu basierenden ROM 20.2.20 oder höher verwenden)</string>
     <string name="error">Fehler</string>
     <string name="redownload">Erneut herunterladen</string>
-    <string name="security_context">Bitte stellen Sie sicher, dass Sie die App von vanced.app, dem Vanced Discord Server oder GitHub heruntergeldaden haben.</string>
+    <string name="security_context">Bitte stellen Sie sicher, dass Sie die App von vancedapp.com, dem Vanced Discord Server oder dem Vanced GitHub heruntergeladen haben</string>
     <string name="success">Erfolg!</string>
-    <string name="vanced_installation_preferences">Vanced Installationspräferenzen</string>
+    <string name="app_installation_preferences">%1$s Installationsoptionen</string>
     <string name="vanced_installed">Vanced wurde erfolgreich installiert. Jetzt öffnen?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Musik wurde erfolgreich installiert. Jetzt starten?</string>
@@ -83,7 +87,7 @@
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wählen Sie ihre bevorzugte Sprache(n) für Vanced</string>
-    <string name="light_plus_other">Light + %1$s</string>
+    <string name="light_plus_other">Hell + %1$s</string>
     <string name="select_at_least_one_lang">Wählen Sie mindestens eine Sprache aus!</string>
     <!-- About Page -->
     <string name="manager_dev">Manager-Entwickler</string>

@@ -12,10 +12,13 @@
     <string name="title_settings">Indstillinger</string>
     <string name="update_manager">Opdaterings Manager</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Vælg mindst én app!</string>
-    <string name="are_you_rooted">Er du rooted?</string>
-    <string name="willing_to_use_root">Vil du bruge root version? Tryk blot på knappen nedenfor, ellers tryk fotsæt</string>
+    <string name="are_you_rooted">Er Din Enhed Rooted?</string>
     <string name="grant_root">Tildel Root Tilladelse</string>
+    <string name="select_at_least_one_app">Vælg mindst én app!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Vil du bruge root version? Tryk blot på knappen nedenfor, ellers tryk fotsæt</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
     <string name="app_changelog_tooltip">Tryk på kortet for at se ændringsloggen.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Ingen nye opdateringer</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s installationsfiler fundet!</string>
     <string name="app_install_files_detected_summary">Manageren opdagede, at alle nødvendige filer til %1$s installationen blev fundet. Vil du installere?</string>
     <string name="checking_updates">Søger efter opdateringer…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">For at kunne installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
     <string name="error">Fejl</string>
     <string name="redownload">Hent igen</string>
-    <string name="security_context">Venligst sørg for kun at have downloaded appen fra vanced.app, Vanced Discord serveren eller Vanced GitHub siden</string>
+    <string name="security_context">Venligst sørg for kun at have downloaded appen fra vancedapp.com, Vanced Discord serveren eller Vanced GitHub siden</string>
     <string name="success">Succes!</string>
-    <string name="vanced_installation_preferences">Vanced Installationspræferencer</string>
+    <string name="app_installation_preferences">%1$s Installationsindstillinger</string>
     <string name="vanced_installed">Vanced er nu installeret! Åben appen?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Music er nu installeret! Åben appen?</string>

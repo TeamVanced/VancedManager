@@ -12,10 +12,13 @@
     <string name="title_settings">அமைப்புகள்</string>
     <string name="update_manager">புதுப்பிப்பு மேலாளர்</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">குறைந்தது ஒரு பயன்பாட்டையாவது தேர்ந்தெடுக்கவும்!</string>
-    <string name="are_you_rooted">நீங்கள் வேரூன்றியிருக்கிறீர்களா?</string>
-    <string name="willing_to_use_root">ரூட் பதிப்பைப் பயன்படுத்த விரும்புகிறீர்களா? கீழே உள்ள பொத்தானை அழுத்தினால், தொடர தொடரவும்</string>
+    <string name="are_you_rooted">உங்கள் சாதனம் வேரூன்றியதா?</string>
     <string name="grant_root">கிராண்ட் ரூட் அனுமதி</string>
+    <string name="select_at_least_one_app">குறைந்தது ஒரு பயன்பாட்டையாவது தேர்ந்தெடுக்கவும்!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">ரூட் பதிப்பைப் பயன்படுத்த விரும்புகிறீர்களா? கீழே உள்ள பொத்தானை அழுத்தினால், தொடர தொடரவும்</string>
     <!-- Home Page -->
     <string name="about_app">பற்றி %1$s</string>
     <string name="app_changelog_tooltip">சேஞ்ச்லாக் பார்க்க அட்டையில் தட்டவும்.</string>
@@ -58,12 +61,13 @@
     <string name="update_not_found">புதிய புதுப்பிப்புகள் இல்லை</string>
     <string name="variant">மாறுபாடு</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s நிறுவல் கோப்புகள் கண்டறியப்பட்டன!</string>
     <string name="app_install_files_detected_summary">%1$s நிறுவலுக்கு தேவையான அனைத்து கோப்புகளும் கண்டறியப்பட்டதை மேலாளர் கண்டறிந்தார். நீங்கள் நிறுவ விரும்புகிறீர்களா?</string>
     <string name="checking_updates">புதுப்பிப்புகளைச் சரிபார்க்கிறது…</string>
     <string name="chosen_lang">மொழி: %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_version">Version: %1$s</string>
+    <string name="chosen_theme">தீம் %1$s</string>
+    <string name="chosen_version">பதிப்பு: %1$s</string>
     <string name="guide">வழிகாட்டி</string>
     <string name="hold_on">நிறுத்து!</string>
     <string name="installing_app">%1$s ஐ நிறுவுகிறது</string>
@@ -72,18 +76,18 @@
     <string name="miui_one">Vanced ஐ நிறுவ, டெவலப்பர் அமைப்புகளில் MIUI உகப்பாக்கங்களை முடக்க வேண்டும். (நீங்கள் 20.2.20 அல்லது அதற்குப் பிறகு xiaomi.eu அடிப்படையிலான ROM ஐப் பயன்படுத்துகிறீர்கள் என்றால் இந்த எச்சரிக்கையை நீங்கள் புறக்கணிக்கலாம்)</string>
     <string name="error">பிழை</string>
     <string name="redownload">மீண்டும் பதிவிறக்கு</string>
-    <string name="security_context">பயன்பாட்டை vanced.app, Vanced Discord server அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
+    <string name="security_context">நீங்கள் பயன்பாட்டை vancedapp.com, Vanced Discord server அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
     <string name="success">வெற்றி!</string>
-    <string name="vanced_installation_preferences">நிறுவப்பட்ட நிறுவல் விருப்பத்தேர்வுகள்</string>
+    <string name="app_installation_preferences">%1$s நிறுவல் விருப்பத்தேர்வுகள்</string>
     <string name="vanced_installed">வேன்ட் வெற்றிகரமாக நிறுவப்பட்டது! இப்போது திற?</string>
-    <string name="version">Version</string>
+    <string name="version">பதிப்பு</string>
     <string name="music_installed">வேன்ஸ்ட் மியூசிக் வெற்றிகரமாக நிறுவப்பட்டுள்ளது! இப்போது திற?</string>
     <string name="please_be_patient">தயவுசெய்து பொருமைையாயிறு…</string>
     <string name="launch">திற</string>
     <string name="welcome">வரவேற்பு</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">வேன்ஸ்டுக்காக உங்களுக்கு விருப்பமான மொழியைத் தேர்வுசெய்க</string>
-    <string name="light_plus_other">Light + %1$s</string>
+    <string name="light_plus_other">ஒளி + %1$s</string>
     <string name="select_at_least_one_lang">குறைந்தது ஒரு மொழியையாவது தேர்ந்தெடுக்கவும்!</string>
     <!-- About Page -->
     <string name="manager_dev">மேலாளர் டெவலப்பர்கள்</string>

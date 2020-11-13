@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">취소</string>
     <string name="close">닫기</string>
     <string name="reset">초기화</string>
     <string name="save">저장</string>
-    <string name="select_apps">Select Your Apps</string>
+    <string name="select_apps">앱을 선택하세요</string>
     <!-- Main Activity -->
     <string name="title_about">정보</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">관리자</string>
     <string name="title_settings">설정</string>
-    <string name="update_manager">Update Manager</string>
+    <string name="update_manager">업데이트 관리자</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="are_you_rooted">Are You Rooted?</string>
+    <string name="are_you_rooted">기기가 루팅되어 있습니까?</string>
+    <string name="grant_root">루트 권한 부여</string>
+    <string name="select_at_least_one_app">적어도 하나의 앱을 선택해주세요</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
     <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
-    <string name="grant_root">Grant Root Permission</string>
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
     <string name="app_changelog_tooltip">Tap on the card to see changelog.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">No new updates</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s installation files detected!</string>
     <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
     <string name="checking_updates">Checking for updates…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">Vanced를 올바르게 설치하려면, 개발자 설정으로 들어가서 MIUI 최적화 기능을 반드시 끄셔야 합니다. (단, 버전이 20.2.20 이상인 xiaomi.eu 기반 ROM을 사용하는 경우 이 경고를 무시하셔도 좋습니다)</string>
     <string name="error">오류</string>
     <string name="redownload">Redownload</string>
-    <string name="security_context">항상 vanced.app, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 앱을 다운로드했는지 확인해주세요.</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">성공!</string>
-    <string name="vanced_installation_preferences">Vanced Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced가 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced 뮤직이 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>

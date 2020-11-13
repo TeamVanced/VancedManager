@@ -12,10 +12,13 @@
     <string name="title_settings">Inställningar</string>
     <string name="update_manager">Uppdatera hanteraren</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Välj minst en zoomnivå!</string>
-    <string name="are_you_rooted">Är du rotad?</string>
-    <string name="willing_to_use_root">Vill du använda root-versionen? Tryck bara på knappen nedan, annars tryck för att fortsätta</string>
+    <string name="are_you_rooted">Är din enhet rotad?</string>
     <string name="grant_root">Ge Posting Permission</string>
+    <string name="select_at_least_one_app">Välj minst en zoomnivå!</string>
+    <string name="select_apps_music">Vanced, men för YouTube Music!\nrelativt mindre funktion rik men uppfyller dina behov.</string>
+    <string name="select_apps_vanced">YouTube Vanced är beståndet Android YouTube App, men bättre!</string>
+    <string name="lets_get_started">Nu sätter vi igång</string>
+    <string name="willing_to_use_root">Vill du använda root-versionen? Tryck bara på knappen nedan, annars tryck för att fortsätta</string>
     <!-- Home Page -->
     <string name="about_app">Cirka %1$s</string>
     <string name="app_changelog_tooltip">Tryck på kortet för att se ändringsloggen.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Inga nya uppdateringar</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
+    <string name="advanced">Avancerad</string>
     <string name="app_install_files_detected">%1$s installationsfiler upptäckt!</string>
     <string name="app_install_files_detected_summary">Manager upptäckte att alla nödvändiga filer för %1$s installation hittades. Vill du installera?</string>
     <string name="checking_updates">Söker efter uppdateringar…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">För att installera Vanced, måste du inaktivera MIUI Optimisations i utvecklarinställningarna. (Du kan ignorera denna varning om du använder 20.2.20 eller senare xiaomi.eu-baserad ROM)</string>
     <string name="error">Fel</string>
     <string name="redownload">Ladda ner igen</string>
-    <string name="security_context">Se till att du laddade ner appen från vanced.app, den Vanced Discord-servern eller den Vanced GitHub</string>
+    <string name="security_context">Se till att du laddade ner appen från vancedapp.com, den Vanced Discord-servern eller den Vanced GitHub</string>
     <string name="success">Framgång!</string>
-    <string name="vanced_installation_preferences">Valda installationsinställningar</string>
+    <string name="app_installation_preferences">%1$s Valda installationsinställningar</string>
     <string name="vanced_installed">Vanced har installerats! Starta nu?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Music har installerats! Öppna nu?</string>

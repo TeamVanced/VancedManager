@@ -8,17 +8,20 @@
     <string name="select_apps">Seleciona as tuas aplicações</string>
     <!-- Main Activity -->
     <string name="title_about">Sobre</string>
-    <string name="title_home">Gerenciador</string>
+    <string name="title_home">Gestor</string>
     <string name="title_settings">Configurações</string>
-    <string name="update_manager">Atualizar gerenciador</string>
+    <string name="update_manager">Atualizar gestor</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Selecione pelo menos uma aplicação!</string>
-    <string name="are_you_rooted">O seu telemóvel está rooted?</string>
-    <string name="willing_to_use_root">Pronto para usar a versão root? Clica no botão abaixo ou então clica no botão de continuar</string>
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="grant_root">Conceder permissão de root</string>
+    <string name="select_at_least_one_app">Selecione pelo menos uma aplicação!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">Pronto para usar a versão root? Clica no botão abaixo ou então clica no botão de continuar</string>
     <!-- Home Page -->
-    <string name="about_app">Cerca de %1$s</string>
-    <string name="app_changelog_tooltip">Toque no cartão para ver o registro de mudanças.</string>
+    <string name="about_app">Acerca de %1$s</string>
+    <string name="app_changelog_tooltip">Toque no cartão para ver a lista de alterações.</string>
     <string name="changelog">Lista de alterações</string>
     <string name="downloading_file">Transferindo %1$s</string>
     <string name="install">Instalar</string>
@@ -43,7 +46,7 @@
     <string name="clear_files">Limpar ficheiros descarregados</string>
     <string name="cleared_files">Arquivos limpos com sucesso</string>
     <string name="firebase_title">Firebase Analytics</string>
-    <string name="firebase_summary">Isto permite-nos recolher informações sobre o desempenho do aplicativo e registros de falhas</string>
+    <string name="firebase_summary">Isto permite-nos recolher informações sobre o desempenho da aplicação e registos de falhas</string>
     <string name="language_title">Idioma</string>
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos em abas personalizadas do Chrome</string>
@@ -55,11 +58,12 @@
     <string name="push_notifications">Notificações Push %1$s</string>
     <string name="push_notifications_summary">Receber notificações Push quando uma actualização para %1$s estiver disponível</string>
     <string name="update_center">Centro de Actualizações</string>
-    <string name="update_not_found">Sem updates novos</string>
+    <string name="update_not_found">Sem atualizações</string>
     <string name="variant">Variante</string>
     <!-- Dialogs -->
-    <string name="app_install_files_detected">%1$s arquivos de instalação detectados!</string>
-    <string name="app_install_files_detected_summary">O gerenciador detectou que todos os arquivos necessários para a instalação %1$s foram encontrados. Deseja instalar?</string>
+    <string name="advanced">Advanced</string>
+    <string name="app_install_files_detected">%1$s arquivos de instalação detetados!</string>
+    <string name="app_install_files_detected_summary">O gestor detetou que todos os ficheiros necessários para a instalação %1$s foram encontrados. Deseja instalar?</string>
     <string name="checking_updates">A procurar por atualizações…</string>
     <string name="chosen_lang">Língua(s): %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">Para instalar o Vanced, você DEVE desativar as Otimizações MIUI nas configurações do desenvolvedor. (Você pode ignorar este aviso se você estiver usando ROM baseado em xiaomi.eu de versão 20.2.20 ou maior)</string>
     <string name="error">Erro</string>
     <string name="redownload">Voltar a descarregar</string>
-    <string name="security_context">Por favor certifique-se que você transferiu o aplicativo do site vanced.app, o server Discord do Vanced ou o GitHub do Vanced</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
     <string name="success">Sucesso!</string>
-    <string name="vanced_installation_preferences">Preferências de instalação do Vanced</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">O Vanced foi instalado com sucesso! Abrir agora?</string>
     <string name="version">Versão</string>
     <string name="music_installed">O Vanced Music foi instalado com sucesso! Pretende abri-lo?</string>
@@ -84,16 +88,16 @@
     <!-- Install Page -->
     <string name="choose_preferred_language">Escolha a(s) sua(s) língua(s) de preferência para o Vanced</string>
     <string name="light_plus_other">Claro + %1$s</string>
-    <string name="select_at_least_one_lang">Selecione pelo menos 1 idioma!</string>
+    <string name="select_at_least_one_lang">Selecione pelo menos um idioma!</string>
     <!-- About Page -->
-    <string name="manager_dev">Programadores do Manager</string>
+    <string name="manager_dev">Desenvolvedores do Manager</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipa Vanced</string>
     <!-- Error messages -->
     <string name="chown_fail">Falha ao mudar o proprietário do apk para o sistema, tente novamente.</string>
     <string name="error_downloading">Erro Transferindo %1$s</string>
     <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
-    <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Baixe novamente os arquivos de instalação e tente novamente.</string>
+    <string name="files_missing_va">Falha ao localizar os ficheiros necessários para instalação. Faça o download dos ficheiros de instalação e tente novamente.</string>
     <string name="ifile_missing">Falha ao localizar o apk para o tema preto/escuro do armazenamento, por favor, tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário cancelou a abortou.</string>
     <string name="installation_blocked">Falha na instalação porque o usuário bloqueou a instalação.</string>

@@ -12,10 +12,13 @@
     <string name="title_settings">Ρυθμίσεις</string>
     <string name="update_manager">Ενημέρωση Διαχειριστή Vanced</string>
     <!-- Welcome Page -->
+    <string name="are_you_rooted">Έχετε πρόσβαση Root στην συσκευή σας;</string>
+    <string name="grant_root">Χορήγηση Άδειας Root</string>
     <string name="select_at_least_one_app">Επιλέξτε τουλάχιστον μια εφαρμογή!</string>
-    <string name="are_you_rooted">Έχετε πρόσβαση Root;</string>
+    <string name="select_apps_music">Vanced, αλλά για το YouTube Music!\nμε σχετικά λιγότερες δυνατότητες αλλά καλύπτει όλες τις ανάγκες σας.</string>
+    <string name="select_apps_vanced">Το YouTube Vanced είναι το όπως την αρχική εφαρμογή YouTube, αλλά καλύτερο!</string>
+    <string name="lets_get_started">Ας ξεκινήσουμε</string>
     <string name="willing_to_use_root">Επιθυμείτε την έκδοση root; Απλώς πατήστε το παρακάτω κουμπί, αλλιώς πατήστε το βελάκι για συνέχεια</string>
-    <string name="grant_root">Χορηγήστε Αδεια Root</string>
     <!-- Home Page -->
     <string name="about_app">Σχετικά με το %1$s</string>
     <string name="app_changelog_tooltip">Πατήστε στην καρτέλα για να δείτε τις αλλαγές.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Δεν υπάρχουν νέες ενημερώσεις</string>
     <string name="variant">Παραλλαγή</string>
     <!-- Dialogs -->
+    <string name="advanced">Για προχωρημένους</string>
     <string name="app_install_files_detected">Ανιχνεύτηκαν τα αρχεία εγκατάστασης του %1$s!</string>
     <string name="app_install_files_detected_summary">Ο Διαχειριστής του Vanced ανίχνευσε ότι βρέθηκαν όλα τα απαραίτητα αρχεία για την εγκατάσταση του %1$s. Θέλετε να εγκατασταθεί;</string>
     <string name="checking_updates">Έλεγχος για ενημερώσεις…</string>
@@ -72,9 +76,9 @@
     <string name="miui_one">Για να εγκαταστήσετε το Vanced, ΠΡΕΠΕΙ να απενεργοποιήσετε (στις ρυθμίσεις) τη βελτιστοποίηση MIUI στις επιλογές προγραμματιστών. (Μπορείτε να αγνοήσετε αυτήν την προειδοποίηση εάν χρησιμοποιείτε την έκδοση ROM 20.2.20 ή μεταγενέστερη βασισμένη στο xiaomi.eu)</string>
     <string name="error">Σφάλμα</string>
     <string name="redownload">Επανάληψη λήψης</string>
-    <string name="security_context">Σιγουρευτείτε πως κατεβάσατε την εφαρμογή από το vanced.app, τον διακομιστή Discord του Vanced ή το GitHub του Vanced</string>
+    <string name="security_context">Σιγουρευτείτε πως κατεβάσατε την εφαρμογή από το vancedapp.com, τον διακομιστή Discord του Vanced ή το GitHub του Vanced</string>
     <string name="success">Επιτυχία!</string>
-    <string name="vanced_installation_preferences">Προτιμήσεις Εγκατάστασης του Vanced</string>
+    <string name="app_installation_preferences">Προτιμήσεις Εγκατάστασης του %1$s</string>
     <string name="vanced_installed">Το Vanced έχει εγκατασταθεί επιτυχώς! Εκκίνηση τώρα;</string>
     <string name="version">Έκδοση</string>
     <string name="music_installed">Η εγκατάσταση του Vanced Music ολοκληρώθηκε επιτυχώς! Εκκίνηση τώρα;</string>
