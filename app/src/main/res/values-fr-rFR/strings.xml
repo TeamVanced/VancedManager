@@ -12,10 +12,13 @@
     <string name="title_settings">Paramètres</string>
     <string name="update_manager">Gestionnaire de Mise à Jour</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">Sélectionnez au moins une application !</string>
     <string name="are_you_rooted">Votre appareil est-il rooté ?</string>
-    <string name="willing_to_use_root">Vous voulez utiliser la version root ? Appuyez simplement sur le bouton ci-dessous, sinon appuyez pour continuer</string>
     <string name="grant_root">Accorder l’autorisation root</string>
+    <string name="select_at_least_one_app">Sélectionnez au moins une application !</string>
+    <string name="select_apps_music">Vanced, mais pour YouTube Music!\nrelativement moins riche en fonctionnalités mais répond à vos besoins.</string>
+    <string name="select_apps_vanced">YouTube Vanced est la même application YouTube livrée par défaut avec Android mais en mieux !</string>
+    <string name="lets_get_started">Commençons</string>
+    <string name="willing_to_use_root">Vous voulez utiliser la version root ? Appuyez simplement sur le bouton ci-dessous, sinon appuyez pour continuer</string>
     <!-- Home Page -->
     <string name="about_app">À propos de %1$s</string>
     <string name="app_changelog_tooltip">Appuyez sur la carte pour voir le changelog.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">Aucune nouvelle mise à jour</string>
     <string name="variant">Variante</string>
     <!-- Dialogs -->
+    <string name="advanced">Avancé</string>
     <string name="app_install_files_detected">%1$s fichiers d\'installation détectés !</string>
     <string name="app_install_files_detected_summary">Le gestionnaire a détecté que tous les fichiers nécessaires à l\'installation de %1$s ont été trouvés. Voulez-vous installer ?</string>
     <string name="checking_updates">Vérification des mises à jour…</string>
