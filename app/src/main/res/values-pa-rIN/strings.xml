@@ -12,10 +12,13 @@
     <string name="title_settings">ਸੇਟਿੰਗਸ</string>
     <string name="update_manager">ਅਪਡੇਟ ਮਨੇਜਰ</string>
     <!-- Welcome Page -->
-    <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
     <string name="are_you_rooted">ਕੀ ਤੁਹਾਡੀ ਡਵਿਾਈਸ ਰੂਟ ਕੀਤਾ ਹੈ?</string>
-    <string name="willing_to_use_root">ਰੂਟ ਕੀਤੇ ਵਰਜਨ ਨੂੰ ਵਰਤਨਾ? ਬੱਸ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਨੂੰ ਦਬਾਓ, ਨਹੀਂ ਤਾਂ ਜਾਰੀ ਰੱਖਣ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
+    <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="willing_to_use_root">ਰੂਟ ਕੀਤੇ ਵਰਜਨ ਨੂੰ ਵਰਤਨਾ? ਬੱਸ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਨੂੰ ਦਬਾਓ, ਨਹੀਂ ਤਾਂ ਜਾਰੀ ਰੱਖਣ ਲਈ ਟੈਪ ਕਰੋ</string>
     <!-- Home Page -->
     <string name="about_app">ਬਾਰੇ ਵਿੱਚ %1$s</string>
     <string name="app_changelog_tooltip">ਚੇਂਜਲਾਗ ਦੇਖਣ ਲਈ ਕਾਰਡ \'ਤੇ ਟੈਪ ਕਰੋ.</string>
@@ -58,6 +61,7 @@
     <string name="update_not_found">ਕੋਈ ਨਵਾਂ ਅੱਪਡੇਟ ਨਹੀਂ</string>
     <string name="variant">ਵੇਰੀਐਂਟ</string>
     <!-- Dialogs -->
+    <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਲੱਭੀਆਂ!</string>
     <string name="app_install_files_detected_summary">ਮੈਨੇਜਰ ਨੇ ਖੋਜਿਆ ਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਇਲਾਂ %1$s ਮਿਲੀਆਂ ਹਨ. ਕੀ ਤੁਸੀਂ ਸਥਾਪਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="checking_updates">ਅੱਪਡੇਟ ਲਈ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
