@@ -46,7 +46,7 @@
     <string name="clear_files">Limpar arquivos baixados</string>
     <string name="cleared_files">Arquivos limpos com sucesso</string>
     <string name="firebase_title">Análises de Firebase</string>
-    <string name="firebase_summary">Isso nos permite coletar informações sobre o desempenho do aplicativo e registros de falhas</string>
+    <string name="firebase_summary">Isto nos permite coletar informações sobre o desempenho do aplicativo e registros de falhas</string>
     <string name="language_title">Idioma</string>
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos nas abas personalizadas do Chrome</string>
@@ -78,7 +78,7 @@
     <string name="redownload">Baixar novamente</string>
     <string name="security_context">Certifique-se de fazer o download do aplicativo em vancedapp.com, no servidor Vanced Discord ou no Vanced GitHub</string>
     <string name="success">Sucesso!</string>
-    <string name="app_installation_preferences">Preferências de instalação de %1$s</string>
+    <string name="app_installation_preferences">%1$s Preferências de Instalação</string>
     <string name="vanced_installed">O Vanced foi instalado com sucesso. Deseja iniciá-lo agora?</string>
     <string name="version">Versão</string>
     <string name="music_installed">O Vanced Music foi instalado com sucesso! Abrir agora?</string>
