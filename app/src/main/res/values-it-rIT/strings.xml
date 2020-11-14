@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Annulla</string>
     <string name="close">Chiudi</string>
-    <string name="reset">Ripristina</string>
+    <string name="reset">Reimposta</string>
     <string name="save">Salva</string>
     <string name="select_apps">Seleziona le Tue App</string>
     <!-- Main Activity -->
@@ -12,7 +12,7 @@
     <string name="title_settings">Impostazioni</string>
     <string name="update_manager">Aggiorna Manager</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Il tuo dispositivo ha i permessi di root?</string>
+    <string name="are_you_rooted">Il Tuo Dispositivo Ha i Permessi di Root?</string>
     <string name="grant_root">Concedi i Permessi di Root</string>
     <string name="select_at_least_one_app">Seleziona almeno un\'app!</string>
     <string name="select_apps_music">Vanced, ma per YouTube Music!\nrelativamente meno ricco di caratteristiche ma ugualmente adattabile alle tue esigenze.</string>
@@ -30,7 +30,7 @@
     <string name="latest">Disponibile:</string>
     <string name="no_microg">microG non è installato</string>
     <string name="root_not_granted">Accesso root non consentito</string>
-    <string name="unavailable">Non disponibile</string>
+    <string name="unavailable">Irraggiungibile</string>
     <string name="update">Aggiorna</string>
     <string name="useful_links">Link Utili</string>
     <string name="support_us">Sostienici!</string>
@@ -44,7 +44,7 @@
     <string name="category_appearance">Aspetto</string>
     <string name="category_behaviour">Comportamento</string>
     <string name="clear_files">Cancella i file scaricati</string>
-    <string name="cleared_files">File cancellati con successo</string>
+    <string name="cleared_files">Cancellazione file riuscita</string>
     <string name="firebase_title">Analisi Firebase</string>
     <string name="firebase_summary">Questo ci consente di raccogliere informazioni sulle prestazioni dell\'app ed i registri sui crash</string>
     <string name="language_title">Lingua</string>
@@ -54,7 +54,7 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Scuro</string>
     <string name="theme_light">Tema Chiaro</string>
-    <string name="update_url">Aggiorna l\'URL del canale</string>
+    <string name="update_url">Aggiorna l\'URL del Canale</string>
     <string name="push_notifications">Notifiche Push di %1$s</string>
     <string name="push_notifications_summary">Ricevi notifiche push quando un aggiornamento per %1$s è disponibile</string>
     <string name="update_center">Centro Aggiornamenti</string>
@@ -62,8 +62,8 @@
     <string name="variant">Variante</string>
     <!-- Dialogs -->
     <string name="advanced">Avanzate</string>
-    <string name="app_install_files_detected">%1$s file d\'installazione rilevati!</string>
-    <string name="app_install_files_detected_summary">Manager ha rilevato tutti i file necessari per l\'installazione di %1$s. Vuoi installarli?</string>
+    <string name="app_install_files_detected">%1$s file di installazione rilevati!</string>
+    <string name="app_install_files_detected_summary">Manager ha trovato tutti i file necessari per l\'installazione di %1$s. Vuoi installarli?</string>
     <string name="checking_updates">Verifica aggiornamenti…</string>
     <string name="chosen_lang">Lingue: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
@@ -78,10 +78,10 @@
     <string name="redownload">Scarica nuovamente</string>
     <string name="security_context">Assicurati di aver scaricato l\'app da vancedapp.com, dal server di Discord di Vanced o dalla pagina GitHub di Vanced</string>
     <string name="success">Riuscito!</string>
-    <string name="app_installation_preferences">Preferenze di installazione %1$s</string>
-    <string name="vanced_installed">Vanced è stato installato con successo. Vuoi avviarlo ora?</string>
+    <string name="app_installation_preferences">Preferenze Installazione di %1$s</string>
+    <string name="vanced_installed">Vanced è stato correttamente installato. Desideri avviarlo ora?</string>
     <string name="version">Versione</string>
-    <string name="music_installed">Vanced Music è stato installato con successo! Vuoi eseguirlo ora?</string>
+    <string name="music_installed">Vanced Music è stato correttamente installato! Vuoi eseguirlo ora?</string>
     <string name="please_be_patient">Si prega di attendere…</string>
     <string name="launch">Avvia</string>
     <string name="welcome">Benvenuto</string>
@@ -91,7 +91,7 @@
     <string name="select_at_least_one_lang">Seleziona almeno una lingua!</string>
     <!-- About Page -->
     <string name="manager_dev">Sviluppatori di Manager</string>
-    <string name="sources">Codice sorgente</string>
+    <string name="sources">Codice Sorgente</string>
     <string name="vanced_team">Il Team di Vanced</string>
     <!-- Error messages -->
     <string name="chown_fail">Impossibile modificare il proprietario dell\'apk nel proprietario di sistema, per favore riprova.</string>
