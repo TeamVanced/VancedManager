@@ -12,17 +12,17 @@
     <string name="title_settings">Tənzimləmələr</string>
     <string name="update_manager">Yeniləmə Meneceri</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">Cihazınızda root varmı?</string>
     <string name="grant_root">Root İcazəsi Ver</string>
     <string name="select_at_least_one_app">Ən azı bir tətbiq seçin!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
+    <string name="select_apps_music">Vanced, amma YouTube Musiqi üçün!\nçox daha az xüsusiyyətli olsa da ehtiyaclarınızı qarşılayır.</string>
+    <string name="select_apps_vanced">YouTube Vanced adi Android YouTube tətbiqi olsa da daha yaxşıdır!</string>
+    <string name="lets_get_started">Gəlin başlayaq</string>
     <string name="willing_to_use_root">Root versiyasını istifadə etmək istəyirsiniz? Sadəcə aşağıdakı düyməyə basın, əks halda davam etmək üçün toxunun</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Haqqında</string>
     <string name="app_changelog_tooltip">Dəyişiklik jurnalına baxmaq üçün karta toxunun.</string>
-    <string name="changelog">Dəyişiklik jurnalı</string>
+    <string name="changelog">Dəyişikliklər</string>
     <string name="downloading_file">%1$s endirilir</string>
     <string name="install">Quraşdır</string>
     <string name="button_reinstall">Yenidən quraşdır</string>
@@ -52,8 +52,8 @@
     <string name="link_custom_tabs">Bağlantılar Chrome Özəl Vərəqlərində açılacaq</string>
     <string name="system_default">İlkin Sistem</string>
     <string name="theme">Tema</string>
-    <string name="theme_dark">Tünd Tema</string>
-    <string name="theme_light">Açıq Tema</string>
+    <string name="theme_dark">Tünd mövzu</string>
+    <string name="theme_light">Açıq mövzu</string>
     <string name="update_url">Yeniləmə Kanal URL-si</string>
     <string name="push_notifications">%1$s Ani Bildirişlər</string>
     <string name="push_notifications_summary">%1$s üçün yeni buraxılış olanda ani bildirişlər alın</string>
@@ -61,13 +61,13 @@
     <string name="update_not_found">Yeniləmə yoxdur</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">Qabaqcıl</string>
     <string name="app_install_files_detected">%1$s quraşdırma faylı aşkarlandı!</string>
     <string name="app_install_files_detected_summary">Menecer %1$s quraşdırması üçün lazımi bütün faylların tapıldığını aşkarladı. Quraşdırmaq istəyirsiniz?</string>
     <string name="checking_updates">Yeniləmələr yoxlanılır…</string>
     <string name="chosen_lang">Dil(lər): %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
-    <string name="chosen_version">Version: %1$s</string>
+    <string name="chosen_theme">Mövzu: %1$s</string>
+    <string name="chosen_version">Versiya: %1$s</string>
     <string name="guide">Bələdçi</string>
     <string name="hold_on">Dayandır!</string>
     <string name="installing_app">%1$s quraşdırılır</string>
@@ -76,18 +76,18 @@
     <string name="miui_one">Vanced-i quraşdırmaq üçün tərtibatçı tənzimləmələrindən MIUI Optimallaşdırmasını sıradan çıxartmaq LAZIMDIR. (20.2.20 və ya yuxarı xiaomi.eu əsaslı ROM istifadə edirsinizsə bu xəbərdarlığı nəzərə almaya bilərsiniz)</string>
     <string name="error">Xəta</string>
     <string name="redownload">Yenidən endir</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">Tətbiqi vancedapp.com, Vanced Discord server və ya Vanced GitHub\'dan endirdiyinizə əmin olun</string>
     <string name="success">Uğurlu!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$sQurma Seçimləri</string>
     <string name="vanced_installed">Vanced uğurla quraşdırıldı! İndi açılsın?</string>
-    <string name="version">Version</string>
+    <string name="version">Versiya</string>
     <string name="music_installed">Vanced Music uğurla quraşdırıldı! İndi açılsın?</string>
     <string name="please_be_patient">Zəhmət olmasa səbrli olun…</string>
     <string name="launch">Aç</string>
     <string name="welcome">Xoş gəldiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced üçün tərcih etdiyiniz dili seçin</string>
-    <string name="light_plus_other">Light + %1$s</string>
+    <string name="light_plus_other">İşıqlı + %1$s</string>
     <string name="select_at_least_one_lang">Ən azı bir dil seçin!</string>
     <!-- About Page -->
     <string name="manager_dev">Menecer Tərtibatçıları</string>
@@ -98,7 +98,7 @@
     <string name="error_downloading">%1$s endirilmə xətası</string>
     <string name="failed_uninstall">%1$s paketini silinmədi</string>
     <string name="files_missing_va">Quraşdırmaq üçün lazımi fayllar tapılmadı. Quraşdırma fayllarını yenidən endirib təkrar sınayın.</string>
-    <string name="ifile_missing">Anbarda qara/tünd tema üçün apk faylı tapılmadı, yenidən sınayın.</string>
+    <string name="ifile_missing">Anbarda qara/tünd mövzu üçün apk faylı tapılmadı, yenidən sınayın.</string>
     <string name="installation_aborted">İstifadəçi quraşdırmanı ləğv etdiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_blocked">İstifadəçi quraşdırmanı əngəllədiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_downgrade">İstifadəçi paketi alt versiyaya keçirməyə çalışdığı üçün quraşdırılma uğursuz oldu. Stok YouTube tətbiqindən yeniləmələri silib yenidən sınayın.</string>
