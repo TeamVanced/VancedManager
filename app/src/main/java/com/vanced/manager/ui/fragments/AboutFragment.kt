@@ -9,37 +9,33 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.databinding.FragmentAboutBinding
+import com.vanced.manager.ui.core.BindingFragment
 import com.vanced.manager.ui.viewmodels.AboutViewModel
 
-class AboutFragment : Fragment() {
+class AboutFragment : BindingFragment<FragmentAboutBinding>() {
 
-    private lateinit var binding: FragmentAboutBinding
     private val viewModel: AboutViewModel by viewModels()
     private var count = 0
     private var startMillSec: Long = 0
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun binding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        requireActivity().title = getString(R.string.title_about)
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
-        binding.viewModel = viewModel
-        return binding.root
+    ) = FragmentAboutBinding.inflate(inflater, container, false)
+
+    override fun otherSetups() {
+        dataBind()
     }
 
-
     @SuppressLint("ClickableViewAccessibility")
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        view.setOnTouchListener { _, event: MotionEvent ->
-
+    private fun dataBind() {
+        requireActivity().title = getString(R.string.title_about)
+        binding.root.setOnTouchListener { _, event: MotionEvent ->
             val eventAction = event.action
             if (eventAction == MotionEvent.ACTION_UP) {
                 val time = System.currentTimeMillis()
@@ -64,5 +60,7 @@ class AboutFragment : Fragment() {
             }
             false
         }
+        binding.aboutSources.aboutGithubButton.setOnClickListener { viewModel.openUrl("https://github.com/YTVanced/VancedInstaller") }
+        binding.aboutSources.aboutLicenseButton.setOnClickListener { viewModel.openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE") }
     }
 }
