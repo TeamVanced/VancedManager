@@ -10,7 +10,7 @@
     <string name="title_about">Over</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Instellingen</string>
-    <string name="update_manager">Manager update</string>
+    <string name="update_manager">Manager bijwerken</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Is je apparaat geroot?</string>
     <string name="grant_root">Root machtiging toestaan</string>
