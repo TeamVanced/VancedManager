@@ -17,7 +17,7 @@
     <string name="select_at_least_one_app">Herî kêm sepanekê hilbijêre!</string>
     <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
+    <string name="lets_get_started">Dest pê kirin</string>
     <string name="willing_to_use_root">Gelo dixwazî guhertoya root bi kar bînî? Tenê bişkoka jêrîn bidewsîne, an ji bo domandinê bitepînin</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
@@ -61,7 +61,7 @@
     <string name="update_not_found">Hildema nû nîne</string>
     <string name="variant">Guharto</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">Pêşketî</string>
     <string name="app_install_files_detected">%1$s dosiyên sazkirinê peyda bûn!</string>
     <string name="app_install_files_detected_summary">Rêveberê peydabûna hemû ew dosiyên pêwîst ên ji bo sazkirina %1$s tesbît kir. Gelo tu dixwazî saz bikî?</string>
     <string name="checking_updates">Hildem tên kontrolkirin...</string>
