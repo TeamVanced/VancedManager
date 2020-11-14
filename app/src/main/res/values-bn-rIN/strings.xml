@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">বাতিল করুন</string>
     <string name="close">বন্ধ করুন</string>
-    <string name="reset">রিসেট করুন</string>
+    <string name="reset">পুনরায় স্থির করুন</string>
     <string name="save">সংরক্ষণ করুন</string>
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
@@ -15,7 +15,7 @@
     <string name="are_you_rooted">আপনার ডিভাইসটিতে আপনার রুট অ্যাক্সেস আছে?</string>
     <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
     <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
-    <string name="select_apps_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য!\nতুলনামূলকভাবে কম বৈশিষ্ট্যযুক্ত, তবে আপনার চাহিদা পূরণ করে।</string>
+    <string name="select_apps_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য!\nতুলনামূলকভাবে কম বৈশিষ্ট্যযুক্ত, তবে আপনার চাহিদা পূরণ করবে।</string>
     <string name="select_apps_vanced">ইউটিউব ভ্যান্সড হল স্টক অ্যান্ড্রয়েড ইউটিউব অ্যাপ, তবে আরো ভাল!</string>
     <string name="lets_get_started">শুরু করা যাক</string>
     <string name="willing_to_use_root">রুট সংস্করণ ব্যবহার করতে ইচ্ছুক? নীচের বোতামটি চাপুন, অন্যথায় চালিয়ে যেতে আলতো চাপুন</string>
@@ -29,7 +29,7 @@
     <string name="version_installed">ইনস্টল করা আছে:</string>
     <string name="latest">সর্বশেষ:</string>
     <string name="no_microg">মাইক্রোজি ইনস্টল করা নেই</string>
-    <string name="root_not_granted">রুট অ্যাক্সেস দেওয়া হয়নি</string>
+    <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
     <string name="unavailable">অনুপলব্ধ</string>
     <string name="update">হালনাগাদ</string>
     <string name="useful_links">উপকারী লিংকগুলি</string>
@@ -38,7 +38,7 @@
     <string name="accent_color">অ্যাকসেন্ট রঙ</string>
     <string name="accent_blue">নীল</string>
     <string name="accent_green">সবুজ</string>
-    <string name="accent_purple">বেগুনি</string>
+    <string name="accent_purple">বেগুনী</string>
     <string name="accent_red">লাল</string>
     <string name="accent_yellow">হলুদ</string>
     <string name="category_appearance">রূপ</string>
@@ -54,8 +54,8 @@
     <string name="theme">থিম</string>
     <string name="theme_dark">গাঢ় থিম</string>
     <string name="theme_light">হালকা থিম</string>
-    <string name="update_url">চ্যানেল ইউআরএল হালনাগাদ করুন</string>
-    <string name="push_notifications">%1$s পুশ নোটিফিকেশনগুলি</string>
+    <string name="update_url">চ্যানেল URL হালনাগাদ করুন</string>
+    <string name="push_notifications">%1$s পুশ বিজ্ঞপ্তিগুলি</string>
     <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তিগুলি পান</string>
     <string name="update_center">পরিচালক আপডেট কেন্দ্র</string>
     <string name="update_not_found">কোনো নতুন হালনাগাদ নেই</string>
