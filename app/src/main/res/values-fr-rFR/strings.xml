@@ -5,12 +5,12 @@
     <string name="close">Fermer</string>
     <string name="reset">Réinitialiser</string>
     <string name="save">Sauvegarder</string>
-    <string name="select_apps">Sélectionnez votre application</string>
+    <string name="select_apps">Sélectionnez vos applications</string>
     <!-- Main Activity -->
     <string name="title_about">À propos</string>
     <string name="title_home">Gestionnaire</string>
     <string name="title_settings">Paramètres</string>
-    <string name="update_manager">Gestionnaire de Mise à Jour</string>
+    <string name="update_manager">Gestionnaire de mise à jour</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Votre appareil est-il rooté ?</string>
     <string name="grant_root">Accorder l’autorisation root</string>
@@ -66,7 +66,7 @@
     <string name="app_install_files_detected_summary">Le gestionnaire a détecté que tous les fichiers nécessaires à l\'installation de %1$s ont été trouvés. Voulez-vous installer ?</string>
     <string name="checking_updates">Vérification des mises à jour…</string>
     <string name="chosen_lang">Langue(s) : %1$s</string>
-    <string name="chosen_theme">Thème: %1$s</string>
+    <string name="chosen_theme">Thème : %1$s</string>
     <string name="chosen_version">Version : %1$s</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Stop!</string>
@@ -75,10 +75,10 @@
     <string name="miui_one_title">MIUI détecté!</string>
     <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres du développeur. (Vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure sur xiaomi.eu)</string>
     <string name="error">Erreur</string>
-    <string name="redownload">Re-téléchargé</string>
+    <string name="redownload">Re-télécharger</string>
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application sur vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="success">Succès!</string>
-    <string name="app_installation_preferences">%1$s Préférences D\'installation</string>
+    <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="vanced_installed">Vanced a été installé avec succès ! Ouvrir maintenant ?</string>
     <string name="version">Version</string>
     <string name="music_installed">Vanced Music a été installé avec succès ! Voulez-vous l\'ouvrir maintenant ?</string>
@@ -110,5 +110,5 @@
     <string name="installation_miui">L\'installation a échouée car l\'optimisation MIUI est activée. Désactivez l\'optimisation MIUI, puis réessayez.</string>
     <string name="installation_storage">L\'opération à échouée, une erreur de stockage s\'est produite.</string>
     <string name="modapk_missing">Impossible de trouver le fichier apk pour le thème noir/foncé de l\'installateur. Effacer les données de l\'application de Manager, puis réessayer.</string>
-    <string name="path_missing">Impossible de localiser le chemin d\'installation de YouTube d\'origine après l\'installation de la division.</string>
+    <string name="path_missing">Impossible de localiser le chemin d\'installation du YouTube original après l\'installation fractionnée.</string>
 </resources>
