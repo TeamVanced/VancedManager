@@ -15,9 +15,9 @@
     <string name="are_you_rooted">உங்கள் சாதனம் வேரூன்றியதா?</string>
     <string name="grant_root">கிராண்ட் ரூட் அனுமதி</string>
     <string name="select_at_least_one_app">குறைந்தது ஒரு பயன்பாட்டையாவது தேர்ந்தெடுக்கவும்!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
+    <string name="select_apps_music">வேன்ட், ஆனால் யூடியூப் இசைக்கு! \nஒப்பீட்டளவில் குறைந்த அம்சம் நிறைந்த ஆனால் உங்கள் தேவைகளை பூர்த்தி செய்கிறது.</string>
+    <string name="select_apps_vanced">YouTube Vanced என்பது Android YouTube பயன்பாடாகும், ஆனால் சிறந்தது!</string>
+    <string name="lets_get_started">தொடங்குவோம்</string>
     <string name="willing_to_use_root">ரூட் பதிப்பைப் பயன்படுத்த விரும்புகிறீர்களா? கீழே உள்ள பொத்தானை அழுத்தினால், தொடர தொடரவும்</string>
     <!-- Home Page -->
     <string name="about_app">பற்றி %1$s</string>
@@ -61,7 +61,7 @@
     <string name="update_not_found">புதிய புதுப்பிப்புகள் இல்லை</string>
     <string name="variant">மாறுபாடு</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">மேம்படுத்தபட்ட</string>
     <string name="app_install_files_detected">%1$s நிறுவல் கோப்புகள் கண்டறியப்பட்டன!</string>
     <string name="app_install_files_detected_summary">%1$s நிறுவலுக்கு தேவையான அனைத்து கோப்புகளும் கண்டறியப்பட்டதை மேலாளர் கண்டறிந்தார். நீங்கள் நிறுவ விரும்புகிறீர்களா?</string>
     <string name="checking_updates">புதுப்பிப்புகளைச் சரிபார்க்கிறது…</string>
