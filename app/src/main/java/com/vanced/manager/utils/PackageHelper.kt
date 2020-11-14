@@ -298,7 +298,7 @@ object PackageHelper {
             }
 
         } finally {
-            session!!.close()
+            session?.close()
         }
     }
 
