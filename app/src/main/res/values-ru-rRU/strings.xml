@@ -10,15 +10,15 @@
     <string name="title_about">О нас</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Настройки</string>
-    <string name="update_manager">Менеджер обновлений</string>
+    <string name="update_manager">Обновить Менеджер</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">На устройстве есть рут-права?</string>
     <string name="grant_root">Предоставить root-права</string>
     <string name="select_at_least_one_app">Выберите хотя бы одно приложение!</string>
-    <string name="select_apps_music">Vanced, но для YouTube Music!\nотносительно меньше возможностей, но удовлетворяет ваши потребности.</string>
+    <string name="select_apps_music">Vanced, но для YouTube Music!\nОтносительно меньше возможностей, но удовлетворит ваши потребности.</string>
     <string name="select_apps_vanced">YouTube Vanced — это приложение для YouTube для Android, но лучше!</string>
-    <string name="lets_get_started">Давайте начнем</string>
-    <string name="willing_to_use_root">Хотите использовать root-версию? Просто нажмите кнопку ниже, иначе нажмите для продолжения</string>
+    <string name="lets_get_started">Давайте приступим</string>
+    <string name="willing_to_use_root">Хотите использовать root-версию? Если да, то предоставьте рут-права с помощью кнопки ниже. Если нет, то нажмите на кнопку в правом нижнем углу для продолжения</string>
     <!-- Home Page -->
     <string name="about_app">О %1$s</string>
     <string name="app_changelog_tooltip">Нажмите на карточку, чтобы увидеть список изменений.</string>
@@ -50,8 +50,8 @@
     <string name="language_title">Язык</string>
     <string name="link_title">Использовать Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
-    <string name="system_default">Системный по умолчанию</string>
-    <string name="theme">Тема</string>
+    <string name="system_default">Как в системе</string>
+    <string name="theme">Тема оформления</string>
     <string name="theme_dark">Тёмная тема</string>
     <string name="theme_light">Светлая тема</string>
     <string name="update_url">Ссылка на канал обновлений</string>
