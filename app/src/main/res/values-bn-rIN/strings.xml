@@ -10,7 +10,7 @@
     <string name="title_about">সম্বন্ধে</string>
     <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
-    <string name="update_manager">ম্যানেজার হালনাগাদ করুন</string>
+    <string name="update_manager">ম্যানেজার আপডেট করুন</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">আপনার ডিভাইসটিতে আপনার রুট অ্যাক্সেস আছে?</string>
     <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
@@ -31,7 +31,7 @@
     <string name="no_microg">মাইক্রোজি ইনস্টল করা নেই</string>
     <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
     <string name="unavailable">অনুপলব্ধ</string>
-    <string name="update">হালনাগাদ</string>
+    <string name="update">আপডেট</string>
     <string name="useful_links">উপকারী লিংকগুলি</string>
     <string name="support_us">আমাদের সমর্থন করুন!</string>
     <!-- Settings -->
@@ -54,24 +54,24 @@
     <string name="theme">থিম</string>
     <string name="theme_dark">গাঢ় থিম</string>
     <string name="theme_light">হালকা থিম</string>
-    <string name="update_url">চ্যানেল URL হালনাগাদ করুন</string>
+    <string name="update_url">চ্যানেল URL আপডেট করুন</string>
     <string name="push_notifications">%1$s পুশ বিজ্ঞপ্তিগুলি</string>
-    <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তিগুলি পান</string>
-    <string name="update_center">পরিচালক আপডেট কেন্দ্র</string>
-    <string name="update_not_found">কোনো নতুন হালনাগাদ নেই</string>
+    <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তি পান</string>
+    <string name="update_center">ম্যানেজার আপডেট কেন্দ্র</string>
+    <string name="update_not_found">কোনো নতুন আপডেট নেই</string>
     <string name="variant">বিকল্প</string>
     <!-- Dialogs -->
     <string name="advanced">উন্নত</string>
     <string name="app_install_files_detected">ইনস্টল করার জন্য %1$s ফাইল খুঁজে পাওয়া গেছে!</string>
     <string name="app_install_files_detected_summary">%1$s ইনস্টল করার জন্য প্রয়োজনীয় সমস্ত ফাইলগুলি ম্যানেজার খুঁজে পেয়েছে। আপনি কি ইনস্টল করতে চান?</string>
-    <string name="checking_updates">হালনাগাদের জন্য চেক করা হচ্ছে…</string>
+    <string name="checking_updates">আপডেটের জন্য চেক করা হচ্ছে…</string>
     <string name="chosen_lang">ভাষা(গুলি): %1$s</string>
     <string name="chosen_theme">থিম: %1$s</string>
     <string name="chosen_version">সংস্করণ: %1$s</string>
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামুন!</string>
     <string name="installing_app">%1$s ইনস্টল করা হচ্ছে</string>
-    <string name="magisk_vanced">আপনি ভ্যান্সড ম্যাজিস্ক/টিডব্লিউআরপি সংস্করণ ব্যবহার করছেন যা বন্ধ হয়ে গেছে এবং এই অ্যাপ্লিকেশনটি ব্যবহার করে হালনাগাদ করতে পারবেন না। দয়া করে ম্যাজিস্ক মডিউলটি সরিয়ে/ টিডব্লিউআরপি ভ্যান্সড আনইনস্টলার ব্যবহার করে এটি মুছে ফেলুন।</string>
+    <string name="magisk_vanced">আপনি ভ্যান্সড ম্যাজিস্ক/TWRP সংস্করণ ব্যবহার করছেন যা বন্ধ হয়ে গেছে এবং আপনি এটিকে আপডেট করতে পারবেন না। দয়া করে ম্যাজিস্ক মডিউলটি সরিয়ে/TWRP ভ্যান্সড আনইনস্টলার ব্যবহার করে এটি মুছে ফেলুন।</string>
     <string name="miui_one_title">মিআইইউআই শনাক্তকৃত!</string>
     <string name="miui_one">ভ্যান্সড ইনস্টল করার জন্য, আপনাকে বিকাশকারী সেটিংসে এমআইইউআই অপটিমাইজেশন অক্ষম করতে হবে। (আপনি যদি ২০.২.২০ বা তার পরে xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কতাটিকে এড়িয়ে যেতে পারেন)</string>
     <string name="error">ত্রুটি</string>
@@ -101,7 +101,7 @@
     <string name="ifile_missing">স্টোরেজ থেকে কালো/গাঢ় থিমের জন্য এপিকে ফাইল সনাক্ত করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="installation_aborted">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী ইনস্টলেশনটি বাতিল করে দিয়েছেন।</string>
     <string name="installation_blocked">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী ইনস্টলেশন অবরুদ্ধ করেছেন।</string>
-    <string name="installation_downgrade">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করছিলেন। স্টক ইউটিউব অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="installation_downgrade">ইনস্টল করা যায়নি কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করছিলেন। স্টক ইউটিউব অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_conflict">ইনস্টলেশন ব্যর্থ হয়েছে কারণ অ্যাপ্লিকেশনটি ইতিমধ্যে ইনস্টল হওয়া আরেকটি অ্যাপ্লিকেশানের সাথে দ্বন্দ্ব করছে। ভ্যান্সডের বর্তমান সংস্করণটি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের উপযুক্ত নয়। সেটিংসে ডাউনলোড করা ফাইল মুছে ফেলুন, তারপরে আবার চেষ্টা করুন।</string>
