@@ -62,8 +62,8 @@
     <string name="variant">種類</string>
     <!-- Dialogs -->
     <string name="advanced">上級者向け</string>
-    <string name="app_install_files_detected">%1$sのインストールに必要なファイルが見つかりました</string>
-    <string name="app_install_files_detected_summary">%1$sのインストールに必要な全てのファイル準備が整いました。インストールしますか?</string>
+    <string name="app_install_files_detected">%1$s のインストールに必要なファイルが見つかりました</string>
+    <string name="app_install_files_detected_summary">%1$s のインストールに必要な全てのファイル準備が整いました。インストールしますか？</string>
     <string name="checking_updates">アップデートを確認中...</string>
     <string name="chosen_lang">言語: %1$s</string>
     <string name="chosen_theme">テーマ: %1$s</string>
@@ -76,9 +76,9 @@
     <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="error">エラー</string>
     <string name="redownload">再ダウンロード</string>
-    <string name="security_context">このアプリは必ずvancedapp.com、VancedのDiscordサーバー、VancedのGitHubのいづれかからダウンロードして下さい。</string>
+    <string name="security_context">vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="success">成功！</string>
-    <string name="app_installation_preferences">%1$sのインストール設定</string>
+    <string name="app_installation_preferences">%1$s のインストール設定</string>
     <string name="vanced_installed">Vanced のインストールに成功しました。今すぐ開きますか？</string>
     <string name="version">バージョン</string>
     <string name="music_installed">Vanced Music のインストールに成功しました。今すぐ開きますか？</string>
