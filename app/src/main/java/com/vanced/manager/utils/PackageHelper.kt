@@ -374,7 +374,6 @@ object PackageHelper {
         }
         sendFailure(installResult.out, context)
         sendCloseDialog(context)
-
         return false
     }
 
