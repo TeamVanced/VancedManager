@@ -33,7 +33,7 @@
     <string name="unavailable">Indisponible</string>
     <string name="update">Mettre à jour</string>
     <string name="useful_links">Liens utiles</string>
-    <string name="support_us">Nous soutenir !</string>
+    <string name="support_us">Soutenez-nous !</string>
     <!-- Settings -->
     <string name="accent_color">Couleur d\'accentuation</string>
     <string name="accent_blue">Bleu</string>
@@ -73,10 +73,10 @@
     <string name="installing_app">Installation de %1$s</string>
     <string name="magisk_vanced">Vous utilisez la version Magisk/TWRP de Vanced, qui n\'est plus entretenu et ne peut pas être mise à jour à l\'aide de cette application. Veuillez la retirer en supprimant le module Magisk/en utilisant le désinstallateur TWRP pour Vanced.</string>
     <string name="miui_one_title">MIUI détecté!</string>
-    <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres du développeur. (Vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure sur xiaomi.eu)</string>
+    <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres développeur. (Vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure de xiaomi.eu)</string>
     <string name="error">Erreur</string>
     <string name="redownload">Re-télécharger</string>
-    <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application sur vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
+    <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="success">Succès!</string>
     <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="vanced_installed">Vanced a été installé avec succès ! Ouvrir maintenant ?</string>
@@ -94,13 +94,13 @@
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Impossible de modifier les permissions de l\'Apk système, réessayez.</string>
+    <string name="chown_fail">Échec de la commande `chown` APK vers le propriétaire du système, veuillez réessayer.</string>
     <string name="error_downloading">Erreur en téléchargeant %1$s</string>
     <string name="failed_uninstall">N\'a pas pu désinstaller le paquet %1$s</string>
     <string name="files_missing_va">Impossible de localiser les fichiers nécessaires à l\'installation. Retéléchargez les fichiers d\'installation, puis réessayez.</string>
     <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé du stockage, veuillez réessayer.</string>
-    <string name="installation_aborted">L\'opération a échouée, l\'utilisateur a abandonné l\'installation.</string>
-    <string name="installation_blocked">L\'opération a échouée, l\'utilisateur a bloqué l\'installation.</string>
+    <string name="installation_aborted">L\'installation a échoué car l\'utilisateur a abandonné l\'installation.</string>
+    <string name="installation_blocked">L\'installation a échoué, car l\'utilisateur a bloqué l\'installation.</string>
     <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le package. Désinstallez les mises à jour depuis l\'application YouTube d\'origine, puis réessayez.</string>
     <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
     <string name="installation_failed">L\'installation a échouée pour une raison inconnue, rejoignez notre Telegram ou Discord pour obtenir de l\'aide.</string>
