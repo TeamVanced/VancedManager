@@ -77,6 +77,7 @@ object InternetTools {
             set(latest?.obj("manager"))
             notifyChange()
         }
+
     }
 
     suspend fun getJsonString(file: String, obj: String, context: Context): String {

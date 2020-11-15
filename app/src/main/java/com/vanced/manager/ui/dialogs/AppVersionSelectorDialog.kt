@@ -16,7 +16,7 @@ import com.vanced.manager.utils.Extensions.getDefaultPrefs
 import com.vanced.manager.utils.Extensions.show
 
 class AppVersionSelectorDialog(
-    private val versions: List<String>,
+    private val versions: List<String>?,
     private val app: String
 ) : BottomSheetDialogFragment() {
 
@@ -41,19 +41,20 @@ class AppVersionSelectorDialog(
         }
         binding.dialogTitle.text = requireActivity().getString(R.string.version)
         binding.dialogSave.setOnClickListener {
-            prefs.edit {
-                putString("${app}_version", binding.dialogRadiogroup.getCheckedButtonTag())
-            }
+            val checkedTag = binding.dialogRadiogroup.getCheckedButtonTag()
+            if (checkedTag != null)
+                prefs.edit { putString("${app}_version", checkedTag) }
+
             dismiss()
         }
     }
 
     private fun loadBoxes() {
         requireActivity().runOnUiThread {
-            for (i in versions.indices) {
+            versions?.forEach { version ->
                 val rb = MaterialRadioButton(requireActivity()).apply {
-                    text = versions[i]
-                    tag = versions[i]
+                    text = version
+                    tag = version
                     textSize = 18f
                 }
                 binding.dialogRadiogroup.addView(rb, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)

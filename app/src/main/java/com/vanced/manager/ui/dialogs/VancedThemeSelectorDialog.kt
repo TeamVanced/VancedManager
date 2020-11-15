@@ -39,7 +39,10 @@ class VancedThemeSelectorDialog : BottomSheetDialogFragment() {
             tag.isChecked = true
         }
         binding.dialogSave.setOnClickListener {
-            prefs.edit { putString("theme", binding.dialogRadiogroup.getCheckedButtonTag()) }
+            val checkedTag = binding.dialogRadiogroup.getCheckedButtonTag()
+            if (checkedTag != null)
+                prefs.edit { putString("theme", checkedTag) }
+
             dismiss()
         }
     }
