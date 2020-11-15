@@ -5,34 +5,49 @@ import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.DialogFragment
+import androidx.core.graphics.drawable.toBitmap
 import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogAppInfoBinding
+import com.vanced.manager.ui.core.BindingDialogFragment
 
-class AppInfoDialog(
-        private val appName: String?,
-        private val appIcon: Drawable?,
-        private val changelog: String?
-) : DialogFragment() {
+class AppInfoDialog : BindingDialogFragment<DialogAppInfoBinding>() {
 
-    private lateinit var binding: DialogAppInfoBinding
+    companion object {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        if (dialog != null && dialog?.window != null) {
-            dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        private const val TAG_APP_NAME = "TAG_APP_NAME"
+        private const val TAG_APP_ICON = "TAG_APP_ICON"
+        private const val TAG_CHANGELOG = "TAG_CHANGELOG"
+
+        fun newInstance(
+            appName: String?,
+            appIcon: Drawable?,
+            changelog: String?
+        ): AppInfoDialog = AppInfoDialog().apply {
+            arguments = Bundle().apply {
+                putString(TAG_APP_NAME, appName)
+                putString(TAG_CHANGELOG, changelog)
+                putParcelable(TAG_APP_ICON, appIcon?.toBitmap())
+            }
         }
-        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_app_info, container, false)
-        return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.aboutAppName.text = requireActivity().getString(R.string.about_app, appName)
-        binding.aboutAppImage.setImageDrawable(appIcon)
-        binding.aboutAppChangelog.text = changelog
+    override fun binding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) = DialogAppInfoBinding.inflate(inflater, container, false)
+
+    override fun otherSetups() {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        bindData()
     }
 
+    private fun bindData() {
+        with(binding) {
+            aboutAppName.text = getString(R.string.about_app, arguments?.getString(TAG_APP_NAME))
+            aboutAppChangelog.text = arguments?.getString(TAG_CHANGELOG)
+            aboutAppImage.setImageBitmap(arguments?.getParcelable(TAG_APP_ICON))
+        }
+    }
 }
