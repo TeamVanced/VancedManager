@@ -42,7 +42,7 @@
     <string name="accent_red">Rød</string>
     <string name="accent_yellow">Gul</string>
     <string name="category_appearance">Udseende</string>
-    <string name="category_behaviour">Opførsel</string>
+    <string name="category_behaviour">Adfærd</string>
     <string name="clear_files">Ryd hentede filer</string>
     <string name="cleared_files">Filer ryddet succesfuldt</string>
     <string name="firebase_title">Firebase analyse</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Avanceret</string>
     <string name="app_install_files_detected">%1$s installationsfiler fundet!</string>
-    <string name="app_install_files_detected_summary">Manageren opdagede, at alle nødvendige filer til %1$s installationen blev fundet. Vil du installere?</string>
+    <string name="app_install_files_detected_summary">Manageren opdagede, at alle nødvendige filer til %1$s installationen blev fundet. Vil du installere den?</string>
     <string name="checking_updates">Søger efter opdateringer…</string>
     <string name="chosen_lang">Sprog:%1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
@@ -73,7 +73,7 @@
     <string name="installing_app">Installerer %1$s</string>
     <string name="magisk_vanced">Det ser ud som om du bruger Magisk/TWRP versionen af Vanced. Den er ikke længere understøttet og kan derfor ikke opdateres igennem denne app. Vær venlig at fjerne magisk modulet/brug TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI fundet!</string>
-    <string name="miui_one">For at kunne installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
+    <string name="miui_one">For at installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
     <string name="error">Fejl</string>
     <string name="redownload">Hent igen</string>
     <string name="security_context">Venligst sørg for kun at have downloaded appen fra vancedapp.com, Vanced Discord serveren eller Vanced GitHub siden</string>
