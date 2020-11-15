@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="@dimen/top_header_margin"
-        android:src="@drawable/ic_launch_text"
+        app:srcCompat="@drawable/ic_launch_text"
         android:textAlignment="center"
         app:layout_constraintTop_toTopOf="parent"/>
 
