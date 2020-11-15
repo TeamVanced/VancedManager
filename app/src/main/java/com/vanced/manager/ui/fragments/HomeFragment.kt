@@ -5,11 +5,12 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.ViewGroup
 import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
@@ -22,7 +23,6 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.AppListAdapter
 import com.vanced.manager.adapter.LinkAdapter
 import com.vanced.manager.adapter.SponsorAdapter
-import com.vanced.manager.databinding.FragmentGrantRootBinding
 import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.core.BindingFragment
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder

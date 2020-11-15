@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.startMicrogInstall

@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDialogFragment
-import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
 abstract class BindingDialogFragment<VB : ViewBinding> : AppCompatDialogFragment() {

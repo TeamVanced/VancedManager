@@ -1,7 +1,7 @@
 package com.vanced.manager.core.downloader
 
 import android.content.Context
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.downloader.Error
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader

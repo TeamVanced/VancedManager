@@ -7,7 +7,7 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.databinding.ObservableField
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.BuildConfig

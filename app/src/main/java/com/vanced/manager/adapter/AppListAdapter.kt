@@ -3,7 +3,7 @@ package com.vanced.manager.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.RecyclerView
 import com.github.florent37.viewtooltip.ViewTooltip
 import com.vanced.manager.R

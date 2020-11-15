@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.edit
 import androidx.lifecycle.lifecycleScope
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.databinding.DialogCustomUrlBinding
 import com.vanced.manager.ui.core.BindingDialogFragment
 import com.vanced.manager.utils.Extensions.fetchData

@@ -11,7 +11,10 @@ import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
 import com.vanced.manager.BuildConfig.*
 import com.vanced.manager.utils.InternetTools.loadJson
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 open class App: Application() {
 
