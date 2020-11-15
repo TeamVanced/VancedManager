@@ -12,7 +12,7 @@
     <string name="title_settings">設定</string>
     <string name="update_manager">更新 Manager</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">您的裝置有擁有 Root 權限嗎？</string>
+    <string name="are_you_rooted">您的裝置擁有 Root 權限嗎？</string>
     <string name="grant_root">授予 Root 權限</string>
     <string name="select_at_least_one_app">請至少選擇一個應用程式！</string>
     <string name="select_apps_music">Vanced ，不過是 YouTube 音樂！\n功能相對較少但足以滿足您的需要。</string>

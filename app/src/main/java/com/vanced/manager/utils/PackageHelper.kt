@@ -298,7 +298,7 @@ object PackageHelper {
             }
 
         } finally {
-            session!!.close()
+            session?.close()
         }
     }
 
@@ -579,8 +579,8 @@ object PackageHelper {
 
 
     @Throws(IOException::class)
-    fun copy(src: File?, dst: File?) {
-        val cmd = Shell.su("mv ${src!!.absolutePath} ${dst!!.absolutePath}").exec().isSuccess
+    fun copy(src: File, dst: File) {
+        val cmd = Shell.su("mv ${src.absolutePath} ${dst.absolutePath}").exec().isSuccess
         Log.d("ZLog", cmd.toString())
     }
 

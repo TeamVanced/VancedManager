@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
@@ -13,6 +14,7 @@ import com.vanced.manager.core.downloader.MusicDownloader.startMusicInstall
 import com.vanced.manager.core.downloader.VancedDownloader.startVancedInstall
 import com.vanced.manager.databinding.DialogInstallationFilesDetectedBinding
 import com.vanced.manager.utils.Extensions.show
+import kotlinx.coroutines.launch
 
 class InstallationFilesDetectedDialog(private val app: String) : BottomSheetDialogFragment() {
 

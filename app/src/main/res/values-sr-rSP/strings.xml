@@ -12,12 +12,12 @@
     <string name="title_settings">Подешавања</string>
     <string name="update_manager">Освежи Менаџера</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="are_you_rooted">Да ли је ваш уређај рутован?</string>
     <string name="grant_root">Омогућите дозволу за рут</string>
     <string name="select_at_least_one_app">Одабери барем једну апликацију!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
+    <string name="select_apps_music">Vanced, али за YouTube Music!\nрелативно са мање напредних карактеристикама, али ће задовољити ваше потребе.</string>
+    <string name="select_apps_vanced">YouTube Vanced је фабрички Android YouTube апликација, али много боља!</string>
+    <string name="lets_get_started">Хајде да почнемо</string>
     <string name="willing_to_use_root">Имате ли намеру користити рутовану верзију? Само кликните на дугме доле, у супротном кликните за наставак</string>
     <!-- Home Page -->
     <string name="about_app">О %s</string>
@@ -61,7 +61,7 @@
     <string name="update_not_found">Нема нове верзије</string>
     <string name="variant">Варијанта</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">Napredan</string>
     <string name="app_install_files_detected">%1$s верзија је пронађена!</string>
     <string name="app_install_files_detected_summary">Менаџер је пронашао све датотеке за %1$s верзију инсталације. Да ли желите да инсталирате?</string>
     <string name="checking_updates">Провера ажурирања…</string>
@@ -76,9 +76,9 @@
     <string name="miui_one">Да би апликација Vanced била исправно инсталирана морате да искључите оптимизацију за ову апликацију у MIUI подешавањима за програмере.( Ову напомену можете да занемарите у случају ако користите верзију 20.2.20 и новију xiaomi.eu ROM-а)</string>
     <string name="error">Грешка</string>
     <string name="redownload">Поново преузми</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта, Vanced Discord сервера или Vanced GitHub-а</string>
     <string name="success">Успешно!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Инсталациона подешавања</string>
     <string name="vanced_installed">Vanced је успешно инсталиран! Желите да га одмах отворите?</string>
     <string name="version">Верзија</string>
     <string name="music_installed">Vanced Music је успешно инсталиран! Желите да га одмах отворите?</string>

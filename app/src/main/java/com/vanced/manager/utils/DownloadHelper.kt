@@ -16,9 +16,8 @@ import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.model.ProgressModel
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 
 object DownloadHelper {
@@ -41,8 +40,8 @@ object DownloadHelper {
         downloadProgress.set(ProgressModel())
     }
 
-    fun downloadManager(context: Context) {
-        CoroutineScope(Dispatchers.IO).launch {
+    suspend fun downloadManager(context: Context) =
+        withContext(Dispatchers.IO) {
             val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
             downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("manager")?.path, "manager.apk")
                 .build()
@@ -82,6 +81,4 @@ object DownloadHelper {
 
                 })
         }
-    }
-
 }

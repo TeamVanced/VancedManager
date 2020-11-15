@@ -1,59 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/tools">
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.vanced.manager.ui.viewmodels.AboutViewModel" />
-
-    </data>
-
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:scrollbars="none">
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/twelvedp"
+        android:clipToPadding="false"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            android:id="@+id/about_header"
+            layout="@layout/include_about_header"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="@dimen/twelvedp"
-            android:layout_marginEnd="16dp"
-            android:clipToPadding="false"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twelvedp" />
 
-            <include
-                android:id="@+id/about_header"
-                layout="@layout/include_about_header"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+        <include
+            layout="@layout/include_about_vanced_devs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stdp"/>
 
-            <include
-                layout="@layout/include_about_vanced_devs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/stdp" />
+        <include
+            layout="@layout/include_about_app_devs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stdp"/>
 
-            <include
-                layout="@layout/include_about_app_devs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/stdp" />
+        <include
+            android:id="@+id/about_sources"
+            layout="@layout/include_about_sources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/stdp"/>
 
-            <include
-                layout="@layout/include_about_sources"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/stdp"
-                bind:viewModel="@{viewModel}" />
+    </LinearLayout>
 
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-</layout>
-
-
+</androidx.core.widget.NestedScrollView>
