@@ -34,7 +34,10 @@ class VancedThemeSelectorDialog : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         loadButtons()
         binding.dialogTitle.text = requireActivity().getString(R.string.theme)
-        view.findViewWithTag<MaterialRadioButton>(prefs.getString("theme", "dark")).isChecked = true
+        val tag = view.findViewWithTag<MaterialRadioButton>(prefs.getString("theme", "dark"))
+        if (tag != null) {
+            tag.isChecked = true
+        }
         binding.dialogSave.setOnClickListener {
             prefs.edit { putString("theme", binding.dialogRadiogroup.getCheckedButtonTag()) }
             dismiss()

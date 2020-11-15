@@ -35,7 +35,10 @@ class AppVersionSelectorDialog(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loadBoxes()
-        view.findViewWithTag<MaterialRadioButton>(prefs.getString("${app}_version", "latest")).isChecked = true
+        val tag = view.findViewWithTag<MaterialRadioButton>(prefs.getString("${app}_version", "latest"))
+        if (tag != null) {
+            tag.isChecked = true
+        }
         binding.dialogTitle.text = requireActivity().getString(R.string.version)
         binding.dialogSave.setOnClickListener {
             prefs.edit {
