@@ -20,6 +20,9 @@ import com.vanced.manager.utils.AppUtils.sendRefresh
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.InternetTools.music
 import com.vanced.manager.utils.InternetTools.vanced
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -161,7 +164,7 @@ object PackageHelper {
         return false
     }
 
-    fun installMusicRoot(context: Context) {
+    fun installMusicRoot(context: Context) = CoroutineScope(Dispatchers.IO).launch {
         Shell.enableVerboseLogging = BuildConfig.DEBUG
         Shell.setDefaultBuilder(
                 Shell.Builder.create()
@@ -192,6 +195,7 @@ object PackageHelper {
             }
 
         }
+
     }
 
     fun installVanced(context: Context): Int {
@@ -296,7 +300,7 @@ object PackageHelper {
         }
     }
 
-    fun installVancedRoot(context: Context) {
+    fun installVancedRoot(context: Context) = CoroutineScope(Dispatchers.IO).launch {
         Shell.enableVerboseLogging = BuildConfig.DEBUG
         Shell.setDefaultBuilder(
             Shell.Builder.create()
@@ -331,6 +335,7 @@ object PackageHelper {
         }
 
     }
+
 
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
