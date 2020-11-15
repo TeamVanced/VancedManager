@@ -21,23 +21,18 @@ import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
 import kotlinx.coroutines.launch
 
-class ManagerUpdateDialog(
-    private val forceUpdate: Boolean
-) : BindingDialogFragment<DialogManagerUpdateBinding>()  {
+class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() {
 
     companion object {
 
         const val CLOSE_DIALOG = "close_dialog"
-        private const val TAG_APP = "TAG_APP"
-        private const val TAG_INSTALLING = "TAG_INSTALLING"
+        private const val TAG_FORCE_UPDATE = "TAG_FORCE_UPDATE"
 
         fun newInstance(
-            app: String,
-            installing: Boolean = false
-        ): AppDownloadDialog = AppDownloadDialog().apply {
+            forceUpdate: Boolean
+        ): ManagerUpdateDialog = ManagerUpdateDialog().apply {
             arguments = Bundle().apply {
-                putString(TAG_APP, app)
-                putBoolean(TAG_INSTALLING, installing)
+                putBoolean(TAG_FORCE_UPDATE, forceUpdate)
             }
         }
     }
@@ -62,7 +57,7 @@ class ManagerUpdateDialog(
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         bindData()
         lifecycleScope.launch {
-            if (forceUpdate) {
+            if (arguments?.getBoolean(TAG_FORCE_UPDATE) == true) {
                 binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
                 downloadManager(requireActivity())
             } else {

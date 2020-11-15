@@ -13,11 +13,11 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.preference.PreferenceManager.*
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.firebase.messaging.FirebaseMessaging
-import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
+import com.vanced.manager.BuildConfig.*
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
@@ -104,8 +104,9 @@ class MainActivity : AppCompatActivity() {
                 navHost.navigate(HomeFragmentDirections.toSettingsFragment())
                 return true
             }
+
             R.id.toolbar_update_manager -> {
-                ManagerUpdateDialog(false).show(supportFragmentManager, "manager_update")
+                ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "manager_update")
             }
             R.id.dev_settings -> {
                 navHost.navigate(SettingsFragmentDirections.toDevSettingsFragment())
@@ -178,7 +179,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkUpdates() {
         if (InternetTools.isUpdateAvailable()) {
-            ManagerUpdateDialog(false).show(supportFragmentManager, "UpdateCheck")
+            ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "UpdateCheck")
         }
     }
 
