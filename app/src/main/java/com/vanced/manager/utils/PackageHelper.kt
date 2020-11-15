@@ -165,36 +165,33 @@ object PackageHelper {
     }
 
     fun installMusicRoot(context: Context) {
-        CoroutineScope(Dispatchers.IO).launch {
-            Shell.enableVerboseLogging = BuildConfig.DEBUG
-            Shell.setDefaultBuilder(
-                    Shell.Builder.create()
-                            .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                            .setTimeout(10)
-            )
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
+        Shell.setDefaultBuilder(
+                Shell.Builder.create()
+                        .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                        .setTimeout(10)
+        )
 
-            Shell.getShell {
-                val musicVersionCode = music.get()?.int("versionCode")
-                val apkFilesPath = context.getExternalFilesDir("music/root")?.path
-                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                if (fileInfoList != null) {
-                    val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "root.apk" }
-                    if (modApk != null) {
-                        if (overwriteBase(modApk, fileInfoList, musicVersionCode!!, musicRootPkg, "music", context)) {
-                            sendRefresh(context)
-                            sendCloseDialog(context)
-                        }
-                    }
-                    else {
-                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+        Shell.getShell {
+            val musicVersionCode = music.get()?.int("versionCode")
+            val apkFilesPath = context.getExternalFilesDir("music/root")?.path
+            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+            if (fileInfoList != null) {
+                val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "root.apk" }
+                if (modApk != null) {
+                    if (overwriteBase(modApk, fileInfoList, musicVersionCode!!, musicRootPkg, "music", context)) {
+                        sendRefresh(context)
                         sendCloseDialog(context)
                     }
                 }
                 else {
-                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                     sendCloseDialog(context)
                 }
-
+            }
+            else {
+                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                sendCloseDialog(context)
             }
 
         }
@@ -303,38 +300,35 @@ object PackageHelper {
     }
 
     fun installVancedRoot(context: Context) {
-        CoroutineScope(Dispatchers.IO).launch {
-            Shell.enableVerboseLogging = BuildConfig.DEBUG
-            Shell.setDefaultBuilder(
-                Shell.Builder.create()
-                    .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                    .setTimeout(10)
-            )
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
+        Shell.setDefaultBuilder(
+            Shell.Builder.create()
+                .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                .setTimeout(10)
+        )
 
-            Shell.getShell {
-                val vancedVersionCode = vanced.get()?.int("versionCode")
-                val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
-                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                if (fileInfoList != null) {
-                    val modApk: FileInfo? = fileInfoList.lastOrNull { file ->
-                        vancedThemes.any { file.name == "$it.apk" }
-                    }
-                    if (modApk != null) {
-                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, vancedRootPkg, "vanced", context)) {
-                            sendRefresh(context)
-                            sendCloseDialog(context)
-                        }
-                    }
-                    else {
-                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+        Shell.getShell {
+            val vancedVersionCode = vanced.get()?.int("versionCode")
+            val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
+            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+            if (fileInfoList != null) {
+                val modApk: FileInfo? = fileInfoList.lastOrNull { file ->
+                    vancedThemes.any { file.name == "$it.apk" }
+                }
+                if (modApk != null) {
+                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, vancedRootPkg, "vanced", context)) {
+                        sendRefresh(context)
                         sendCloseDialog(context)
                     }
                 }
                 else {
-                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                     sendCloseDialog(context)
                 }
-
+            }
+            else {
+                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                sendCloseDialog(context)
             }
 
         }
