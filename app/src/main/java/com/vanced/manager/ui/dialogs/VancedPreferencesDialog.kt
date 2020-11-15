@@ -56,7 +56,10 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
 
         binding.openVersionSelector.setOnClickListener {
             dismiss()
-            AppVersionSelectorDialog(vancedVersionsConv, "vanced").show(requireActivity())
+            AppVersionSelectorDialog.newInstance(
+                versions = vancedVersionsConv,
+                app = "vanced"
+            ).show(requireActivity())
         }
 
         binding.openLanguageSelector.setOnClickListener {
