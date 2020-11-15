@@ -2,50 +2,57 @@ package com.vanced.manager.ui.dialogs
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.edit
-import androidx.databinding.DataBindingUtil
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.preference.PreferenceManager.*
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SelectAppsAdapter
 import com.vanced.manager.databinding.DialogSelectAppsBinding
+import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 
-class SelectAppsDialog : BottomSheetDialogFragment() {
+class SelectAppsDialog : BindingBottomSheetDialogFragment<DialogSelectAppsBinding>() {
 
-    private lateinit var binding: DialogSelectAppsBinding
+    companion object {
+
+        fun newInstance(): SelectAppsDialog = SelectAppsDialog().apply {
+            arguments = Bundle()
+        }
+    }
+
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
 
-    override fun onCreateView(
+    override fun binding(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_select_apps, container, false)
-        return binding.root
+    ) = DialogSelectAppsBinding.inflate(inflater, container, false)
+
+    override fun otherSetups() {
+        bindData()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val ad = SelectAppsAdapter(requireActivity())
-        binding.selectAppsRecycler.apply {
-            layoutManager = LinearLayoutManager(requireActivity())
-            adapter = ad
-            setHasFixedSize(true)
-        }
-        binding.selectAppsSave.setOnClickListener {
-            if (ad.apps.all { app -> !app.isChecked }) {
-                Toast.makeText(requireActivity(), R.string.select_at_least_one_app, Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+    private fun bindData() {
+        with(binding) {
+            val ad = SelectAppsAdapter(requireActivity())
+            selectAppsRecycler.apply {
+                layoutManager = LinearLayoutManager(requireActivity())
+                adapter = ad
+                setHasFixedSize(true)
             }
-            ad.apps.forEach { app ->
-                prefs.edit { putBoolean("enable_${app.tag}", app.isChecked) }
+            selectAppsSave.setOnClickListener {
+                if (ad.apps.all { app -> !app.isChecked }) {
+                    Toast.makeText(requireActivity(), R.string.select_at_least_one_app, Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                prefs.edit {
+                    ad.apps.forEach { app ->
+                        putBoolean("enable_${app.tag}", app.isChecked)
+                    }
+                }
+                dismiss()
             }
-            dismiss()
         }
     }
-
 }
