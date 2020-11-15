@@ -13,22 +13,21 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-object MicrogDownloader {
+object MicrogDownloader : CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     fun downloadMicrog(
         context: Context,
-    ) {
-        CoroutineScope(Dispatchers.IO).launch {
-            val url = microg.get()?.string("url")
+    ) = launch {
+        val url = microg.get()?.string("url")
 
-             downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("microg")?.path, "microg.apk")
-                .build()
-                .setOnStartOrResumeListener {
-                    downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, url?.let { getFileNameFromUrl(it) }))
-                }
-                .setOnProgressListener { progress ->
-                    downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
-                }
+        downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("microg")?.path, "microg.apk")
+            .build()
+            .setOnStartOrResumeListener {
+                downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, url?.let { getFileNameFromUrl(it) }))
+            }
+            .setOnProgressListener { progress ->
+                downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
+            }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
                         startMicrogInstall(context)
@@ -40,12 +39,10 @@ object MicrogDownloader {
                 })
 
         }
-    }
 
     fun startMicrogInstall(context: Context) {
         downloadProgress.get()?.installing?.set(true)
         downloadProgress.get()?.reset()
         install("${context.getExternalFilesDir("microg")}/microg.apk", context)
     }
-
 }

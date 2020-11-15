@@ -28,7 +28,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.File
 
-object VancedDownloader {
+object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     
     private lateinit var prefs: SharedPreferences
     private lateinit var defPrefs: SharedPreferences
@@ -73,7 +73,7 @@ object VancedDownloader {
         context: Context,
         type: String = "theme"
     ) {
-        CoroutineScope(Dispatchers.IO).launch {
+        launch {
             val url =
                 when (type) {
                     "theme" -> "$themePath/$theme.apk"
@@ -160,8 +160,4 @@ object VancedDownloader {
         else
             installVanced(context)
     }
-
-
-
-
 }

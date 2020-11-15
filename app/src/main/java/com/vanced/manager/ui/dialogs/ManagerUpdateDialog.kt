@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.lifecycleScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.downloader.PRDownloader
 import com.vanced.manager.R
@@ -19,6 +20,7 @@ import com.vanced.manager.databinding.DialogManagerUpdateBinding
 import com.vanced.manager.utils.DownloadHelper.downloadManager
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
+import kotlinx.coroutines.launch
 
 class ManagerUpdateDialog(
     private val forceUpdate: Boolean
@@ -51,15 +53,18 @@ class ManagerUpdateDialog(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (forceUpdate) {
-            binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
-            downloadManager(requireActivity())
-        } else
-            checkUpdates()
+        lifecycleScope.launch {
+            if (forceUpdate) {
+                binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
+                downloadManager(requireActivity())
+            } else {
+                checkUpdates()
+            }
 
-        binding.managerUpdateCancel.setOnClickListener {
-            PRDownloader.cancel(downloadProgress.get()!!.currentDownload)
-            dismiss()
+            binding.managerUpdateCancel.setOnClickListener {
+                PRDownloader.cancel(downloadProgress.get()!!.currentDownload)
+                dismiss()
+            }
         }
     }
 
@@ -68,12 +73,13 @@ class ManagerUpdateDialog(
         registerReceiver()
     }
 
-    private fun checkUpdates() {
+    private suspend fun checkUpdates() {
         if (isUpdateAvailable()) {
             binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
             downloadManager(requireActivity())
-        } else
+        } else {
             binding.managerUpdatePatient.text = requireActivity().getString(R.string.update_not_found)
+        }
     }
 
     private fun registerReceiver() {
