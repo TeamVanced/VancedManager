@@ -42,7 +42,7 @@
     <string name="accent_red">Красный</string>
     <string name="accent_yellow">Жёлтый</string>
     <string name="category_appearance">Оформление</string>
-    <string name="category_behaviour">Действия</string>
+    <string name="category_behaviour">Поведение</string>
     <string name="clear_files">Удалить загруженные файлы</string>
     <string name="cleared_files">Файлы успешно удалены</string>
     <string name="firebase_title">Аналитика Firebase</string>
