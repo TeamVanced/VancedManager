@@ -36,7 +36,7 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     private var installUrl: String? = null
     private var variant: String? = null
     private var theme: String? = null
-    private var lang: MutableList<String>? = null
+    private var lang = mutableListOf<String>()
 
     private lateinit var themePath: String
 
@@ -56,7 +56,9 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
         downloadPath = context.getExternalFilesDir("vanced/$variant")?.path
         File(downloadPath.toString()).deleteRecursively()
         installUrl = defPrefs.getInstallUrl()
-        lang = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toMutableList()
+        prefs.getString("lang", getDefaultVancedLanguages())?.let {
+            lang = it.split(", ").toMutableList()
+        }
         theme = prefs.getString("theme", "dark")
         vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.get()?.value ?: listOf(""))
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
@@ -112,7 +114,7 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
                             "lang" -> {
                                 count++
                                 succesfulLangCount++
-                                if (count < lang?.size!!)
+                                if (count < lang.size)
                                     downloadSplits(context, "lang")
                                 else
                                     startVancedInstall(context)
@@ -132,9 +134,9 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
                         if (type == "lang") {
                             count++
                             when {
-                                count < lang?.size!! -> downloadSplits(context, "lang")
+                                count < lang.size       -> downloadSplits(context, "lang")
                                 succesfulLangCount == 0 -> {
-                                    lang?.add("en")
+                                    lang.add("en")
                                     downloadSplits(context, "lang")
                                 }
                                 else -> startVancedInstall(context)

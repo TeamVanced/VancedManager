@@ -71,7 +71,7 @@ class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
                         val loc = Locale(lang)
                         val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
                             tag = lang
-                            isChecked = langPrefs!!.contains(lang)
+                            isChecked = langPrefs?.contains(lang) ?: false
                             text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
                             textSize = 18F
                             typeface = ResourcesCompat.getFont(requireActivity(), R.font.exo_bold)

@@ -100,9 +100,9 @@ object InternetTools {
         return getJsonString(hashUrl, obj, context)
     }
 
-    fun checkSHA256(sha256: String, updateFile: File?): Boolean {
+    fun checkSHA256(sha256: String, updateFile: File): Boolean {
         return try {
-            val dataBuffer = updateFile!!.readBytes()
+            val dataBuffer = updateFile.readBytes()
             // Generate the checksum
             val sum = generateChecksum(dataBuffer)
 
