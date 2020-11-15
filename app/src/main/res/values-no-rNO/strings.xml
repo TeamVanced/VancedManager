@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="grant_root">Grant Root Permission</string>
     <string name="select_at_least_one_app">Velg minst en app!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
     <string name="lets_get_started">La oss komme i gang</string>
-    <string name="willing_to_use_root">Willing to use root version? Just hit the button below, else tap to continue</string>
+    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
-    <string name="app_changelog_tooltip">Trykk på kortet for å se endringsloggen.</string>
+    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
     <string name="changelog">Endringslogg</string>
     <string name="downloading_file">Laster ned %1$s</string>
     <string name="install">Installer</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">Utilgjengelig</string>
     <string name="update">Oppdater</string>
     <string name="useful_links">Nyttige lenker</string>
-    <string name="support_us">Støtt oss!</string>
+    <string name="support_us">Support us!</string>
     <!-- Settings -->
     <string name="accent_color">Aksentfarge</string>
     <string name="accent_blue">Blå</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Rød</string>
     <string name="accent_yellow">Gul</string>
     <string name="category_appearance">Utseende</string>
-    <string name="category_behaviour">Behaviour</string>
+    <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Fjern nedlastede filer</string>
     <string name="cleared_files">Successfully cleared files</string>
     <string name="firebase_title">Firebase analyser</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install?</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">Checking for updates…</string>
     <string name="chosen_lang">Språk: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Guide</string>
     <string name="hold_on">Stopp!</string>
     <string name="installing_app">Installerer %1$s</string>
-    <string name="magisk_vanced">Du bruker Magisk/TWRP versjonen av Vanced, som ikke funker lengre og ikke kan oppdateres ved hjelp av denne appen. Vennligst fjern den ved å fjerne Magisk modul/bruke TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI oppdaget!</string>
-    <string name="miui_one">For å installere Vanced, MÅ du deaktivere MIUI Optimaliseringer i utviklerinnstillingene. (Du kan ignorere denne advarselen hvis du bruker 20.2.20 eller senere xiaomi.eu basert ROM)</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Feil</string>
     <string name="redownload">Last ned på nytt</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server or the Vanced GitHub</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="success">Suksess!</string>
     <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced har blitt installert! Åpne nå?</string>
@@ -94,15 +94,15 @@
     <string name="sources">Kilder</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
-    <string name="chown_fail">Kunne ikke `chown` apk til systemeieren, vennligst prøv igjen.</string>
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Feil ved nedlasting %1$s</string>
     <string name="failed_uninstall">Kunne ikke avinstallere pakken %1$s</string>
     <string name="files_missing_va">Kunne ikke finne de nødvendige filene for installasjon. Last ned installasjonsfilene på nytt, og prøv på nytt.</string>
     <string name="ifile_missing">Klarte ikke å finne apk-filen for svart/mørkt tema på enheten, vennligst prøv igjen.</string>
-    <string name="installation_aborted">Installasjonen mislyktes fordi brukeren har avbrutt installasjonen.</string>
-    <string name="installation_blocked">Installasjonen mislyktes fordi brukeren har blokkert installasjonen.</string>
-    <string name="installation_downgrade">Installasjonen mislyktes fordi brukeren prøvde å nedgradere pakken. Avinstaller oppdateringer fra YouTube appen, og prøv på nytt.</string>
-    <string name="installation_conflict">Installasjonen mislyktes på grunn av at appen er i konflikt med en allerede installert app. Avinstaller den installerte versjon av Vanced, og prøv på nytt.</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">Installasjonen mislyktes av ukjente årsaker, bli med i vår Telegram eller Discord gruppe for videre støtte.</string>
     <string name="installation_incompatible">Installasjonen mislyktes på grunn av at installasjonsfilen er inkompatibel med enheten. Fjern nedlastede filer i innstillinger og prøv på nytt.</string>
     <string name="installation_invalid">Installasjonen mislyktes fordi apk-filene er ødelagt, vennligst prøv på nytt.</string>
