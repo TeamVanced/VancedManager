@@ -1,59 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BottomDialogCard">
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        style="@style/BottomDialogCard">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:text="@string/theme"
+            style="@style/BottomDialogCardTitle"/>
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TextView
-                style="@style/BottomDialogCardTitle"
-                android:text="@string/theme" />
-
-            <androidx.core.widget.NestedScrollView
+            <RadioGroup
+                android:id="@+id/theme_radiogroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RadioGroup
-                    android:id="@+id/theme_radiogroup"
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:tag="System Default"
+                    android:text="@string/system_default"
+                    android:textSize="18sp"/>
 
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="System Default"
-                        android:text="@string/system_default"
-                        android:textSize="18sp" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="Light"
+                    android:text="@string/theme_light"
+                    android:textSize="18sp"/>
 
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="Light"
-                        android:text="@string/theme_light"
-                        android:textSize="18sp" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="Dark"
+                    android:text="@string/theme_dark"
+                    android:textSize="18sp"/>
+            </RadioGroup>
+        </androidx.core.widget.NestedScrollView>
 
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="Dark"
-                        android:text="@string/theme_dark"
-                        android:textSize="18sp" />
-
-                </RadioGroup>
-
-            </androidx.core.widget.NestedScrollView>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/theme_save"
-                style="@style/BottomDialogButtonStyle"
-                android:text="@string/save" />
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/theme_save"
+            android:text="@string/save"
+            style="@style/BottomDialogButtonStyle"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

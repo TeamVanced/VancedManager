@@ -2,43 +2,48 @@ package com.vanced.manager.ui.dialogs
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.edit
-import androidx.databinding.DataBindingUtil
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import androidx.preference.PreferenceManager.*
 import com.google.android.material.radiobutton.MaterialRadioButton
-import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogManagerThemeBinding
+import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 
-class ManagerThemeDialog : BottomSheetDialogFragment() {
+class ManagerThemeDialog : BindingBottomSheetDialogFragment<DialogManagerThemeBinding>() {
 
-    private lateinit var binding: DialogManagerThemeBinding
+    companion object {
+
+        fun newInstance(): ManagerThemeDialog = ManagerThemeDialog().apply {
+            arguments = Bundle()
+        }
+    }
+
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
 
-    override fun onCreateView(
+    override fun binding(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_manager_theme, container, false)
-        return binding.root
+    ) = DialogManagerThemeBinding.inflate(inflater, container, false)
+
+    override fun otherSetups() {
+        bindData()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val theme = prefs.getString("manager_theme", "System Default")
-        view.findViewWithTag<MaterialRadioButton>(theme).isChecked = true
-        binding.themeSave.setOnClickListener {
-            val newPref = binding.themeRadiogroup.getCheckedButtonTag()
-            if (theme != newPref) {
-                prefs.edit { putString("manager_theme", newPref) }
-                dismiss()
-                requireActivity().recreate()
-            } else {
-                dismiss()
+    private fun bindData() {
+        with(binding) {
+            val theme = prefs.getString("manager_theme", "System Default")
+            root.findViewWithTag<MaterialRadioButton>(theme).isChecked = true
+            themeSave.setOnClickListener {
+                val newPref = themeRadiogroup.getCheckedButtonTag()
+                if (theme != newPref) {
+                    prefs.edit { putString("manager_theme", newPref) }
+                    dismiss()
+                    requireActivity().recreate()
+                } else {
+                    dismiss()
+                }
             }
         }
     }
