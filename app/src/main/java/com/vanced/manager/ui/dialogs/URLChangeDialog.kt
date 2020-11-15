@@ -4,47 +4,58 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.TextView
 import androidx.core.content.edit
-import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.google.android.material.button.MaterialButton
-import com.vanced.manager.R
+import androidx.preference.PreferenceManager.*
+import com.vanced.manager.databinding.DialogCustomUrlBinding
+import com.vanced.manager.ui.core.BindingDialogFragment
 import com.vanced.manager.utils.Extensions.fetchData
 import com.vanced.manager.utils.InternetTools.baseUrl
 import kotlinx.coroutines.launch
 
-class URLChangeDialog : DialogFragment() {
+class URLChangeDialog : BindingDialogFragment<DialogCustomUrlBinding>() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        if (dialog != null && dialog?.window != null) {
-            dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+    companion object {
+
+        fun newInstance(): URLChangeDialog = URLChangeDialog().apply {
+            arguments = Bundle()
         }
-        return inflater.inflate(R.layout.dialog_custom_url, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val urlField = view.findViewById<EditText>(R.id.url_input)
-        val fieldTxt = if (arguments != null) arguments?.getString("url") else getDefaultSharedPreferences(requireActivity()).getString("install_url", baseUrl)
-        urlField.setText(fieldTxt, TextView.BufferType.EDITABLE)
-        view.findViewById<MaterialButton>(R.id.url_save).setOnClickListener {
-            val finalUrl =
-                if (urlField.text.startsWith("https://") || urlField.text.startsWith("http://"))
-                    urlField.text.removeSuffix("/").toString()
-                else
-                    "https://${urlField.text}".removeSuffix("/")
+    override fun binding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) = DialogCustomUrlBinding.inflate(inflater, container, false)
 
-            saveUrl(finalUrl)
+    override fun otherSetups() {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        bindData()
+    }
+
+    private fun bindData() {
+        with(binding) {
+
+            urlInput.setText(
+                if (arguments != null) {
+                    arguments?.getString("url")
+                } else {
+                    getDefaultSharedPreferences(requireActivity()).getString("install_url", baseUrl)
+                },
+                TextView.BufferType.EDITABLE
+            )
+            urlSave.setOnClickListener {
+                val finalUrl = if (urlInput.text?.startsWith("https://") == true || urlInput.text?.startsWith("http://") == true) {
+                    urlInput.text?.removeSuffix("/").toString()
+                } else {
+                    "https://${urlInput.text}".removeSuffix("/")
+                }
+                saveUrl(finalUrl)
+            }
+            urlReset.setOnClickListener { saveUrl(baseUrl) }
         }
-        view.findViewById<MaterialButton>(R.id.url_reset).setOnClickListener { saveUrl(baseUrl) }
     }
 
     private fun saveUrl(url: String) {
