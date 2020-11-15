@@ -37,9 +37,7 @@ class MusicPreferencesDialog : BottomSheetDialogFragment() {
 
         binding.openVersionSelector.setOnClickListener {
             dismiss()
-            if (musicVersionsConv != null) {
-                AppVersionSelectorDialog(musicVersionsConv, "music").show(requireActivity())
-            }
+            AppVersionSelectorDialog(musicVersionsConv, "music").show(requireActivity())
         }
         binding.musicInstall.setOnClickListener {
             dismiss()

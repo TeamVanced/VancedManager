@@ -17,7 +17,7 @@ import java.util.*
 object Extensions {
 
     fun RadioGroup.getCheckedButtonTag(): String? {
-        return findViewById<MaterialRadioButton>(checkedRadioButtonId).tag as String?
+        return findViewById<MaterialRadioButton>(checkedRadioButtonId)?.tag?.toString()
     }
 
     fun RadioGroup.getCheckedButtonText(): String {
