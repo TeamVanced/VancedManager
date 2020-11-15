@@ -15,13 +15,13 @@
     <string name="are_you_rooted">ਕੀ ਤੁਹਾਡੀ ਡਵਿਾਈਸ ਰੂਟ ਕੀਤਾ ਹੈ?</string>
     <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
     <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
     <string name="lets_get_started">Let\'s get started</string>
-    <string name="willing_to_use_root">ਰੂਟ ਕੀਤੇ ਵਰਜਨ ਨੂੰ ਵਰਤਨਾ? ਬੱਸ ਹੇਠਾਂ ਦਿੱਤੇ ਬਟਨ ਨੂੰ ਦਬਾਓ, ਨਹੀਂ ਤਾਂ ਜਾਰੀ ਰੱਖਣ ਲਈ ਟੈਪ ਕਰੋ</string>
+    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">ਬਾਰੇ ਵਿੱਚ %1$s</string>
-    <string name="app_changelog_tooltip">ਚੇਂਜਲਾਗ ਦੇਖਣ ਲਈ ਕਾਰਡ \'ਤੇ ਟੈਪ ਕਰੋ.</string>
+    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
     <string name="changelog">ਤਬਦੀਲੀਆਂ</string>
     <string name="downloading_file">ਡਾਉਨਲੋਡ ਕਰ ਰਿਹਾ ਹੈ %1$s</string>
     <string name="install">ਸਥਾਪਨਾ</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">ਮੋਜੂਦ ਨਹੀਂ ਹੈ</string>
     <string name="update">ਅੱਪਡੇਟ</string>
     <string name="useful_links">ਉਪਯੋਗੀ ਲਿੰਕ</string>
-    <string name="support_us">ਸਾਨੂੰ ਸਹਿਯੋਗ ਕਰੋ!</string>
+    <string name="support_us">Support us!</string>
     <!-- Settings -->
     <string name="accent_color">ਐੱਕਸੈਂਟ ਰੰਗ</string>
     <string name="accent_blue">ਨੀਲਾ</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">ਲਾਲ</string>
     <string name="accent_yellow">ਪੀਲਾ</string>
     <string name="category_appearance">ਦਿੱਖ</string>
-    <string name="category_behaviour">ਰਵੱਈਆ</string>
+    <string name="category_behaviour">Behavior</string>
     <string name="clear_files">ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="cleared_files">ਫਾਇਲਾਂ ਸਫਲਤਾਪੂਰਵਕ ਸਾਫ਼ ਕੀਤੀ ਗਈ</string>
     <string name="firebase_title">ਫਾਇਰਬੇਸ ਵਿਸ਼ਲੇਸ਼ਣ</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਲੱਭੀਆਂ!</string>
-    <string name="app_install_files_detected_summary">ਮੈਨੇਜਰ ਨੇ ਖੋਜਿਆ ਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਇਲਾਂ %1$s ਮਿਲੀਆਂ ਹਨ. ਕੀ ਤੁਸੀਂ ਸਥਾਪਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">ਅੱਪਡੇਟ ਲਈ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
     <string name="chosen_lang">ਭਾਸ਼ਾ (ਇ): %1$s</string>
     <string name="chosen_theme">ਥੀਮ: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">ਗਾਇਡ</string>
     <string name="hold_on">ਉਡੀਕੋ!</string>
     <string name="installing_app">%1$s ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
-    <string name="magisk_vanced">ਤੁਸੀਂ Vanced ਦੇ Magisk / TWRP ਸੰਸਕਰਣ ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ, ਜਿਸਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ ਅੱਤੇ ਇਸ ਐਪ ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਅੱਪਡੇਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ| ਕਿਰਪਾ ਇਸ Magisk ਮੋਡੂਅਲ ਨੂੰ / TWRP Vanced uninstaller ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਹੱਟਾ ਦੇਵੋਂ|</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">ਪਤਾ ਲਗਾਇਆ MiUI ਉਪਯੋਗਕਰਤਾ!</string>
-    <string name="miui_one">Vanced ਇੰਸਟਾਲ ਕਰਨ ਲਈ, ਤੁਸੀੰ ਡਵੇਲਪਰ ਸੇਟਿੰਗ ਵਿੱਚ MIUI Optimization ਨੂੰ ਬੰਦ ਕਰੋ| (ਜੇਕਰ ਤੁਸੀਂ 20.2.20 ਜਾਂ ਬਾਅਦ ਵਿੱਚ xiaomi.eu ਆਧਾਰਿਤ ROM ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ ਤਾਂ ਤੁਸੀਂ ਇਸ ਚੇਤਾਵਨੀ ਨੂੰ ਅਣਦੇਖਾ ਕਰ ਸਕਦੇ ਹੋ)</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">ਗਲਤੀ</string>
     <string name="redownload">ਮੁੜ ਡਾਉਨਲੋਡ</string>
-    <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vancedapp.com, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="success">ਸਫਲਤਾ!</string>
     <string name="app_installation_preferences">%1$s ਪ੍ਰਾਥਮਿਕਤਾਵਾਂ ਚੁਣੋ</string>
     <string name="vanced_installed">ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ! ਹੁਣ ਖੋਲੋ?</string>
@@ -94,15 +94,15 @@
     <string name="sources">ਸਰੋਤ</string>
     <string name="vanced_team">Vanced ਟੋਲੀ</string>
     <!-- Error messages -->
-    <string name="chown_fail">ਸਿਸਟਮ ਦੇ ਮਾਲਕ ਨੂੰ APK ਨੂੰ Chown ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ, ਫਿਰ ਤੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">ਡਾਉਨਲੋਡ ਕਰਨ ਵਿਚ ਖਾਮੀਂ %1$s</string>
     <string name="failed_uninstall">ਪੈਕਜ ਦੀ ਸਥਾਪਨਾ ਰੱਦ ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ %1$s</string>
     <string name="files_missing_va">ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਈਲਾਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ. ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਨੂੰ ਮੁੜ ਡਾਉਨਲੋਡ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="ifile_missing">ਸਟੋਰੇਜ ਤੋਂ ਕਾਲੇ / ਡਾਰਕ ਥੀਮ ਲਈ apk ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
-    <string name="installation_aborted">ਸਥਾਪਨਾ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਸਥਾਪਨਾ ਰੱਦ ਕਰ ਦਿੱਤੀ ਸੀ</string>
-    <string name="installation_blocked">ਸਥਾਪਨਾ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਸਥਾਪਨਾ ਬਲਾਕ ਕਰ ਦਿੱਤਾ|</string>
-    <string name="installation_downgrade">ਸਥਾਪਨਾ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਪੈਕਜ ਨੂੰ ਡਾਉਣਗਰੇਡ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ| ਅਸਲ YouTube ਐਪ ਤੋਂ ਅਪਡੇਟ ਅਨਇੰਸਟਾਲ ਕਰੋ, ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
-    <string name="installation_conflict">ਸਥਾਪਨਾ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਐਪ ਹਿਲਾਂ ਤੋਂ ਹੀ ਇੰਸਟਾਲ ਕੀਤੀ ਗਈ ਐਪ ਨਾਲ ਸੰਘਰਸ਼ ਕਰਦਾ ਹੈ| Vanced ਦੇ ਵਰਤਮਾਨ ਸੰਸਕਰਣ ਨੂੰ ਅਣਇੰਸਟਾਲ ਕਰੋ, ਮੁੜ ਫੇਰ: ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">ਅਣਪਛਾਤੇ ਕਾਰਣਾਂ ਕਰਕੇ ਸਥਾਪਨਾ ਰੱਦ ਹੋ ਗਈ, ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ ਸਾਡੇ ਟੈਲੀਗਰਾਮ ਜਾਂ ਡਿਸਕੋਰਡ ਵਿੱਚ ਸ਼ਾਮਿਲ ਹੋਵੋ।</string>
     <string name="installation_incompatible">ਸਥਾਪਨਾ ਰੱਦ ਹੋ ਗਈ ਕਿਉਂਕੀ ਸਥਾਪਨਾ ਫਾਇਲ ਆਪ ਦੇ ਯੰਤਰ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ। ਪਰੀਸਥਿਤੀ ਵਿੱਚ ਡਾਉਨਲੋਡ ਕੀਤੀ ਗਈ ਫਾਇਲ ਨੂੰ ਮਿੱਟਾ ਕੇ, ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।।</string>
     <string name="installation_invalid">ਸਥਾਪਨਾ ਰੱਦ ਹੋ ਗਈ ਕਿਉਂਕੀ ਸਥਾਪਨਾ ਫਾਇਲਾਂ ਜਾਇਜ਼ ਨਹੀਂ ਹਨ, ਕਿਰਪਾ ਫੇਰ: ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>

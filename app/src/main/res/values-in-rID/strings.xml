@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Root?</string>
     <string name="grant_root">Berikan Izin Root</string>
     <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
-    <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
+    <string name="select_apps_vanced">YouTube Vanced adalah aplikasi YouTube untuk Android, tetapi lebih baik!</string>
+    <string name="lets_get_started">Mari kita mulai</string>
+    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">Tentang %1$s</string>
-    <string name="app_changelog_tooltip">Ketuk kartu untuk melihat catatan perubahan.</string>
+    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
     <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
     <string name="useful_links">Tautan Berguna</string>
-    <string name="support_us">Dukung Kami!</string>
+    <string name="support_us">Support us!</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
     <string name="accent_blue">Biru</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Merah</string>
     <string name="accent_yellow">Kuning</string>
     <string name="category_appearance">Penampilan</string>
-    <string name="category_behaviour">Perilaku</string>
+    <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Hapus file yang diunduh</string>
     <string name="cleared_files">Berhasil menghapus file</string>
     <string name="firebase_title">Analisis Firebase</string>
@@ -61,9 +61,9 @@
     <string name="update_not_found">Tidak ada pembaruan</string>
     <string name="variant">Varian</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">Maju</string>
     <string name="app_install_files_detected">%1$s file instalasi terdeteksi!</string>
-    <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasang?</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
     <string name="chosen_theme">Tema: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
     <string name="installing_app">Memasang %1$s</string>
-    <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapus itu dengan menghapus modul magisk/gunakan pencopot Vanced TWRP.</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI terdeteksi!</string>
-    <string name="miui_one">Agar bisa memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="redownload">Unduh ulang</string>
-    <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, Vanced Discord atau Vanced Github</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="success">Berhasil!</string>
     <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
     <string name="vanced_installed">Vanced berhasil dipasang! Buka sekarang?</string>
@@ -94,15 +94,15 @@
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Gagal untuk `chown` apk ke pemilik sistem, mohon coba lagi.</string>
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Gagal Mengunduh %1$s</string>
     <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
     <string name="files_missing_va">Gagal untuk menemukan file yang diperlukan untuk instalasi. Unduh ulang file instalasi, lalu coba lagi.</string>
     <string name="ifile_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
-    <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
-    <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
-    <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
-    <string name="installation_conflict">Pemasangan gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang. Hapus versi Vanced yang sekarang, lalu coba lagi.</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
     <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
     <string name="installation_invalid">Pemasangan gagal karena file apk rusak, mohon coba lagi.</string>
