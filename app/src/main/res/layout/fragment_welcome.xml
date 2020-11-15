@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<com.vanced.manager.ui.core.SlidingConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorSurface">
 
-    <com.vanced.manager.ui.core.SlidingConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?colorSurface">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/top_header_margin"
+        android:src="@drawable/ic_launch_text"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="@dimen/top_header_margin"
-            android:src="@drawable/ic_launch_text"
-            android:textAlignment="center"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/welcome_get_started"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:letterSpacing="0.15"
-            android:padding="22dp"
-            android:text="@string/lets_get_started"
-            android:textAllCaps="false"
-            android:textSize="13sp"
-            app:cornerRadius="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </com.vanced.manager.ui.core.SlidingConstraintLayout>
-
-</layout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/welcome_get_started"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:letterSpacing="0.15"
+        android:padding="22dp"
+        android:text="@string/lets_get_started"
+        android:textAllCaps="false"
+        android:textSize="13sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</com.vanced.manager.ui.core.SlidingConstraintLayout>
