@@ -54,7 +54,7 @@ object DownloadHelper {
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
-                        downloadProgress.get()?.downloadProgress?.set(0)
+                        downloadProgress.value?.downloadProgress?.value = 0
                         val apk =
                             File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
                         val uri =
