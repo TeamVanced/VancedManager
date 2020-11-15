@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Dispozitivul tău este rootat?</string>
     <string name="grant_root">Acordați permisiunea Root</string>
     <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced este aplicația YouTube stoc, dar mai bună!</string>
     <string name="lets_get_started">Să începem</string>
-    <string name="willing_to_use_root">Vreți să folosiți versiunea root? Doar apăsați butonul de mai jos, altfel apăsați săgeata pentru a continua</string>
+    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
-    <string name="app_changelog_tooltip">Apăsați pe card pentru a vedea schimbările.</string>
+    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
     <string name="changelog">Schimbări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">Indisponibil</string>
     <string name="update">Actualizare</string>
     <string name="useful_links">Link-uri folositoare</string>
-    <string name="support_us">Susțineți-ne!</string>
+    <string name="support_us">Support us!</string>
     <!-- Settings -->
     <string name="accent_color">Nuanță culoare</string>
     <string name="accent_blue">Albastru</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Roşu</string>
     <string name="accent_yellow">Galben</string>
     <string name="category_appearance">Aspect</string>
-    <string name="category_behaviour">Comportament</string>
+    <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Ştergeţi fişierele descărcate</string>
     <string name="cleared_files">Fişiere şterse cu succes</string>
     <string name="firebase_title">Statistici Firebase</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Avansat</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
-    <string name="app_install_files_detected_summary">Manager a detectat că au fost găsite toate fişierele necesare pentru instalarea %1$s. Doriţi să instalaţi?</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">Verificare actualizări…</string>
     <string name="chosen_lang">Limbă: %1$s</string>
     <string name="chosen_theme">Temă: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Ghid</string>
     <string name="hold_on">Oprește!</string>
     <string name="installing_app">Se Instalează %1$s</string>
-    <string name="magisk_vanced">Folosiți versiunea Magisk/TWRP a Vanced, care este întreruptă și nu poate fi actualizată folosind această aplicație. Vă rugăm să o eliminați eliminând modulul magisk/utilizând dezinstalare Vanced TWRP.</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI detectat!</string>
-    <string name="miui_one">Pentru a instala Vanced, TREBUIE să dezactivaţi Optimizările MIUI în setările dezvoltatorului. (Puteți ignora această avertizare dacă utilizați un ROM cu baza pe xiaomi.eu 20.2.20 sau mai recent)</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Eroare</string>
     <string name="redownload">Redescărcare</string>
-    <string name="security_context">Asigură-te că ai descărcat aplicația de pe vancedapp.com, serverul Discord Vanced sau GitHub Vanced</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="success">Succes!</string>
     <string name="app_installation_preferences">%1$s Preferințe de instalare</string>
     <string name="vanced_installed">Vanced a fost instalat cu succes! Deschideți acum?</string>
@@ -94,15 +94,15 @@
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Comanda \'chown\' apk pentru proprietarul sistemului a eșuat, încercați din nou.</string>
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Eroare la descărcarea %1$s</string>
     <string name="failed_uninstall">Dezinstalarea pachetului %1$s a eșuat</string>
     <string name="files_missing_va">Nu s-a reușit localizarea fișierelor necesare pentru instalare. Redescărcați fișierele de instalare, apoi încercați din nou.</string>
     <string name="ifile_missing">Nu s-a reuşit localizarea fişierului apk pentru tema neagră/întunecată din stocare, vă rugăm să încercaţi din nou.</string>
-    <string name="installation_aborted">Operația a eșuat deoarece utilizatorul a anulat instalarea.</string>
-    <string name="installation_blocked">Operația a eșuat deoarece utilizatorul a blocat instalarea.</string>
-    <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările de pe aplicația YouTube stocată, apoi încercați din nou.</string>
-    <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă a Vanced, apoi încercați din nou.</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">Instalarea a eșuat din motive necunoscute, alătură-te Telegramului nostru sau Discord pentru mai multă asistență.</string>
     <string name="installation_incompatible">Instalarea a eșuat deoarece fișierul de instalare este incompatibil cu dispozitivul dvs. Ștergeți fișierele descărcate din Setări, apoi încercați din nou.</string>
     <string name="installation_invalid">Instalarea a eșuat deoarece fișierele apk sunt corupte, încercați din nou.</string>
