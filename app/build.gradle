@@ -20,8 +20,8 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 200
-        versionName "2.0.0 (.nomagiskui)"
+        versionCode 201
+        versionName "2.0.1 (Android5and6suck)"
 
         vectorDrawables.useSupportLibrary true
 
@@ -34,10 +34,6 @@ android {
 
     lintOptions {
         disable 'MissingTranslation', 'ExtraTranslation'
-    }
-
-    aaptOptions {
-        noCompress 'apk', '.apk'
     }
 
     applicationVariants.all { variant ->
