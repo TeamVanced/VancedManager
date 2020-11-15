@@ -9,7 +9,7 @@
     <!-- Main Activity -->
     <string name="title_about">О апликацији</string>
     <string name="title_home">Менаџер</string>
-    <string name="title_settings">Подешавања</string>
+    <string name="title_settings">Поставке</string>
     <string name="update_manager">Освежи Менаџера</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Да ли је ваш уређај рутован?</string>
@@ -52,9 +52,9 @@
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="system_default">Системски подразумевано</string>
     <string name="theme">Тема</string>
-    <string name="theme_dark">Тамна Тема</string>
-    <string name="theme_light">Светла Тема</string>
-    <string name="update_url">Ажурирај URL канала</string>
+    <string name="theme_dark">Тамна тема</string>
+    <string name="theme_light">Светла тема</string>
+    <string name="update_url">Ажурирај УРЛ канала</string>
     <string name="push_notifications">%1$s слање обавештења</string>
     <string name="push_notifications_summary">Примај обавештења када је достигнута верзија %1$s</string>
     <string name="update_center">Менаџер ажурирања</string>
@@ -109,6 +109,6 @@
     <string name="installation_signature">Инсталација неуспешна јер је укључена провера потписа преузете apk датотеке. Искључите apk проверу и затим покушајте поново.</string>
     <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
     <string name="installation_storage">Инсталација неуспешна услед грешке у меоријском простору.</string>
-    <string name="modapk_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у инсталационим датотекама. Очистите податке у Менаджеру и покушајте поново.</string>
+    <string name="modapk_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у инсталационим датотекама. Очистите податке у Менаџеру и покушајте поново.</string>
     <string name="path_missing">Није могуће пронаћи подразумевану YouTube локацију за инсталацију после подељене инсталације.</string>
 </resources>
