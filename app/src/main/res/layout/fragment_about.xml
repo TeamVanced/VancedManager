@@ -26,6 +26,7 @@
             android:orientation="vertical">
 
             <include
+                android:id="@+id/about_header"
                 layout="@layout/include_about_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

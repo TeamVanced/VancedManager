@@ -25,7 +25,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="About YouTube Vanced" />
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/about_app_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

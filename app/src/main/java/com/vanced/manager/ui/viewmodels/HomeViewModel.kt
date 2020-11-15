@@ -5,7 +5,7 @@ import android.content.ComponentName
 import android.content.Intent
 import android.view.View
 import android.widget.Toast
-import androidx.core.content.ContextCompat
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableField
 import androidx.fragment.app.FragmentActivity
@@ -126,12 +126,12 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     init {
         activity.setRefreshing(true)
-        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
-        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
-        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
-        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
-        microg.set(DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), ContextCompat.getDrawable(activity, R.drawable.ic_microg)))
-        manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), ContextCompat.getDrawable(activity, R.mipmap.ic_launcher)))
+        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced)))
+        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced)))
+        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music)))
+        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music)))
+        microg.set(DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg)))
+        manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher)))
         activity.setRefreshing(false)
     }
 

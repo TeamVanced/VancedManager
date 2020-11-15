@@ -7,6 +7,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -14,7 +15,10 @@ import androidx.fragment.app.viewModels
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
 import com.vanced.manager.databinding.FragmentAboutBinding
+import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.AboutViewModel
+import com.vanced.manager.utils.Extensions.show
+import com.vanced.manager.utils.InternetTools.manager
 
 class AboutFragment : Fragment() {
 
@@ -37,7 +41,7 @@ class AboutFragment : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.aboutHeader.setOnClickListener { AppInfoDialog(getString(R.string.app_name), AppCompatResources.getDrawable(requireActivity(), R.mipmap.ic_launcher), manager.get()?.string("changelog")).show(requireActivity()) }
         view.setOnTouchListener { _, event: MotionEvent ->
 
             val eventAction = event.action
