@@ -83,7 +83,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
             recyclerSponsors.apply {
                 val lm = FlexboxLayoutManager(requireActivity())
-                lm.justifyContent = JustifyContent.SPACE_EVENLY
+                lm.justifyContent = JustifyContent.FLEX_START
                 layoutManager = lm
                 setHasFixedSize(true)
                 adapter = SponsorAdapter(requireActivity(), this@HomeFragment.viewModel)
@@ -91,7 +91,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
             recyclerLinks.apply {
                 val lm = FlexboxLayoutManager(requireActivity())
-                lm.justifyContent = JustifyContent.SPACE_EVENLY
+                lm.justifyContent = JustifyContent.FLEX_START
                 layoutManager = lm
                 setHasFixedSize(true)
                 adapter = LinkAdapter(requireActivity(), this@HomeFragment.viewModel)

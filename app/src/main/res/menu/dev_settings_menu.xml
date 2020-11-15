@@ -7,7 +7,7 @@
         android:id="@+id/dev_settings"
         android:title="Dev Settings"
         app:showAsAction="always"
-        android:icon="@drawable/ic_settings_black_24dp"
+        android:icon="@drawable/ic_settings_24px_outlined"
         tools:ignore="HardcodedText"/>
 
 </menu>

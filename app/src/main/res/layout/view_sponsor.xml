@@ -5,64 +5,48 @@
 
         <variable
             name="viewModel"
-            type="com.vanced.manager.ui.viewmodels.HomeViewModel" />
+            type="com.vanced.manager.ui.viewmodels.HomeViewModel"/>
 
         <variable
             name="sponsor"
-            type="com.vanced.manager.model.SponsorModel" />
+            type="com.vanced.manager.model.SponsorModel"/>
 
     </data>
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="165dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:onClick="@{()-> viewModel.openUrl(sponsor.url)}"
         app:cardBackgroundColor="?colorLinkBG"
         app:cardCornerRadius="12dp"
-        app:cardElevation="0dp"
-        app:contentPaddingTop="12dp">
+        app:cardElevation="0dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:layout_margin="18dp"
+            android:layout_gravity="center"
+            android:gravity="center|start"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/sponsor_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:tint="?colorLinkImage"
-                tools:src="@drawable/ic_brave" />
+                tools:src="@drawable/ic_brave"/>
 
             <TextView
                 android:id="@+id/sponsor_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="@{sponsor.name}"
-                android:textColor="?colorLinkImage"
-                app:layout_constraintBottom_toTopOf="@id/sponsor_description"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/sponsor_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/support_us"
-                android:textColor="?colorLinkImage"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/sponsor_name" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+                android:textColor="?colorLinkImage"/>
+        </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
-
 </layout>

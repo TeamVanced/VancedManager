@@ -29,10 +29,10 @@
         app:cardBackgroundColor="?colorLinkBG"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:contentPaddingBottom="4dp"
+        app:contentPaddingBottom="16dp"
         app:contentPaddingLeft="16dp"
         app:contentPaddingRight="16dp"
-        app:contentPaddingTop="8dp">
+        app:contentPaddingTop="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/app_view_container"
@@ -52,7 +52,6 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/app_install_button"
                 style="@style/OutlinedButtonStyle"
-                android:layout_marginTop="4dp"
                 android:onClick="@{(v)-> viewModel.openInstallDialog(v, app)}"
                 android:text="@{dataModel.buttonTxt}"
                 android:textColor="?colorPrimary"
@@ -64,27 +63,29 @@
                 android:id="@+id/app_uninstall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
                 android:onClick="@{()-> viewModel.uninstallPackage(dataModel.appPkg)}"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_delete_black_24dp"
+                android:src="@drawable/ic_delete_24px_outlined"
                 android:visibility="@{dataModel.isAppInstalled() ? View.VISIBLE : View.GONE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/app_install_button"
-                app:tint="?colorLinkImage" />
+                app:tint="?colorLinkImage"/>
 
             <ImageButton
                 android:id="@+id/app_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="2dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
                 android:onClick="@{()-> viewModel.openMicrogSettings()}"
-                android:src="@drawable/ic_app_settings_black_24dp"
+                android:src="@drawable/ic_settings_24px_outlined"
                 android:visibility="@{(app.equals(@string/microg) &amp;&amp; dataModel.isAppInstalled()) ? View.VISIBLE : View.GONE}"
                 app:layout_constraintEnd_toStartOf="@id/app_uninstall"
                 app:layout_constraintTop_toBottomOf="@id/app_install_button"
-                app:tint="?colorLinkImage" />
+                app:tint="?colorLinkImage"/>
 
             <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/app_remote_version_container"
@@ -106,7 +107,6 @@
                     style="@style/AppVersionText"
                     android:layout_marginStart="4dp"
                     android:text="@{dataModel.versionName}" />
-
             </com.google.android.flexbox.FlexboxLayout>
 
             <com.google.android.flexbox.FlexboxLayout
@@ -129,12 +129,8 @@
                     style="@style/AppVersionText"
                     android:layout_marginStart="4dp"
                     android:text="@{dataModel.installedVersionName}" />
-
             </com.google.android.flexbox.FlexboxLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
-
 </layout>
 

@@ -13,6 +13,7 @@
         android:scrollbars="none">
 
         <LinearLayout
+            android:layout_marginHorizontal="8dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -21,27 +22,32 @@
                 android:id="@+id/recycler_app_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:nestedScrollingEnabled="false"
                 tools:itemCount="3"
                 tools:listitem="@layout/view_app"/>
 
             <TextView
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/useful_links"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/support_us"
                 style="@style/CardTextHeader"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_sponsors"
+                android:layout_gravity="start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:nestedScrollingEnabled="false"
                 tools:itemCount="2"
                 tools:listitem="@layout/view_sponsor"/>
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/useful_links"
+                style="@style/CardTextHeader"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_links"
