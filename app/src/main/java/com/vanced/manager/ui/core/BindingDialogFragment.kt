@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDialogFragment
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
-abstract class BindingFragment<VB : ViewBinding> : Fragment() {
+abstract class BindingDialogFragment<VB : ViewBinding> : AppCompatDialogFragment() {
 
     private var _binding: VB? = null
     protected val binding: VB get() = requireNotNull(_binding)

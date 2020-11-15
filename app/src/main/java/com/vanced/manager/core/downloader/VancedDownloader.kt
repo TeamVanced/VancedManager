@@ -86,13 +86,13 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
                 }
 
-            downloadProgress.get()?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
+            downloadProgress.value?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener {
-                    downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
+                    downloadProgress.value?.downloadingFile?.value = context.getString(R.string.downloading_file, getFileNameFromUrl(url))
                 }
                 .setOnProgressListener { progress ->
-                    downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                    downloadProgress.value?.downloadProgress?.value = (progress.currentBytes * 100 / progress.totalBytes).toInt()
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
@@ -143,7 +143,7 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
                             }
 
                         } else {
-                            downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
+                            downloadProgress.value?.downloadingFile?.value = context.getString(R.string.error_downloading, getFileNameFromUrl(url))
                         }
                     }
                 })
@@ -151,8 +151,8 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     }
 
     fun startVancedInstall(context: Context, variant: String? = this.variant) {
-        downloadProgress.get()?.installing?.set(true)
-        downloadProgress.get()?.reset()
+        downloadProgress.value?.installing?.value = true
+        downloadProgress.value?.reset()
         FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
             variant?.let { param("vanced_variant", it) }
             theme?.let { param("vanced_theme", it) }

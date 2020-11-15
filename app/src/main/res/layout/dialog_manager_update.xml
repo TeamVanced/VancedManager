@@ -1,73 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:contentPaddingLeft="16dp"
+    app:contentPaddingRight="16dp"
+    tools:context=".ui.dialogs.ManagerUpdateDialog"
+    style="@style/MaterialCard">
 
-    <data>
-
-        <import type="android.view.View" />
-
-        <variable
-            name="progress"
-            type="com.vanced.manager.model.ProgressModel" />
-
-    </data>
-
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        style="@style/MaterialCard"
+    <RelativeLayout
         android:layout_width="match_parent"
-        app:contentPaddingLeft="16dp"
-        app:contentPaddingRight="16dp"
-        tools:context=".ui.dialogs.ManagerUpdateDialog">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/manager_update_header"
+            android:text="@string/update_center"
+            style="@style/DialogCardTitle"/>
+
+        <TextView
+            android:id="@+id/manager_update_patient"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/manager_update_header"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/checking_updates"
+            android:textSize="16sp"/>
 
-            <TextView
-                android:id="@+id/manager_update_header"
-                style="@style/DialogCardTitle"
-                android:text="@string/update_center" />
+        <com.google.android.material.progressindicator.ProgressIndicator
+            android:id="@+id/manager_update_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/manager_update_patient"
+            android:layout_marginTop="32dp"
+            android:paddingBottom="8dp"
+            app:indicatorColor="?colorPrimary"
+            app:indicatorCornerRadius="15dp"
+            tools:progress="10"
+            tools:visibility="visible"
+            style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"/>
 
-            <TextView
-                android:id="@+id/manager_update_patient"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/manager_update_header"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="@string/checking_updates"
-                android:textSize="16sp" />
-
-            <com.google.android.material.progressindicator.ProgressIndicator
-                android:id="@+id/manager_update_progressbar"
-                style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/manager_update_patient"
-                android:layout_marginTop="32dp"
-                android:paddingBottom="8dp"
-                android:progress="@{progress.downloadProgress}"
-                android:visibility="@{progress.downloadProgress == 0 ? View.GONE : View.VISIBLE}"
-                app:indicatorColor="?colorPrimary"
-                app:indicatorCornerRadius="15dp"
-                tools:progress="10"
-                tools:visibility="visible" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/manager_update_cancel"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/manager_update_progressbar"
-                android:layout_alignParentEnd="true"
-                android:text="@string/cancel"
-                app:strokeWidth="2dp" />
-
-        </RelativeLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/manager_update_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/manager_update_progressbar"
+            android:text="@string/cancel"
+            app:strokeWidth="2dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

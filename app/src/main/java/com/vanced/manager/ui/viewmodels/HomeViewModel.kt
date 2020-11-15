@@ -100,7 +100,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             when (app) {
                 activity.getString(R.string.vanced) -> VancedPreferencesDialog().show(activity)
                 activity.getString(R.string.music) -> MusicPreferencesDialog().show(activity)
-                else ->  AppDownloadDialog(app).show(activity)
+                else ->  AppDownloadDialog.newInstance(app).show(activity)
             }
 
             return
@@ -109,18 +109,38 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
         when (app) {
             activity.getString(R.string.vanced) -> {
                 when (variant) {
-                    "nonroot" -> if (vancedInstallFilesExist(activity)) InstallationFilesDetectedDialog(app).show(activity) else VancedPreferencesDialog().show(activity)
-                    "root" -> VancedPreferencesDialog().show(activity)
+                    "nonroot" -> {
+                        if (vancedInstallFilesExist(activity)) {
+                            InstallationFilesDetectedDialog(app).show(activity)
+                        } else {
+                            VancedPreferencesDialog().show(activity)
+                        }
+                    }
+                    "root" -> {
+                        VancedPreferencesDialog().show(activity)
+                    }
                 }
             }
             activity.getString(R.string.music) -> {
                 when (variant) {
-                    "nonroot" -> if (musicApkExists(activity)) InstallationFilesDetectedDialog(app).show(activity) else MusicPreferencesDialog().show(activity)
-                    "root" -> MusicPreferencesDialog().show(activity)
+                    "nonroot" -> {
+                        if (musicApkExists(activity)) {
+                            InstallationFilesDetectedDialog(app).show(activity)
+                        } else {
+                            MusicPreferencesDialog().show(activity)
+                        }
+                    }
+                    "root" -> {
+                        MusicPreferencesDialog().show(activity)
+                    }
                 }
             }
             activity.getString(R.string.microg) -> {
-                if (apkExist(activity, "microg.apk")) InstallationFilesDetectedDialog(app).show(activity) else AppDownloadDialog(app).show(activity)
+                if (apkExist(activity, "microg.apk")) {
+                    InstallationFilesDetectedDialog(app).show(activity)
+                } else {
+                    AppDownloadDialog.newInstance(app).show(activity)
+                }
             }
         }
 

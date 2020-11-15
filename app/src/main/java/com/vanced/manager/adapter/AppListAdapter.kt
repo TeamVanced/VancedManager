@@ -3,7 +3,7 @@ package com.vanced.manager.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.preference.PreferenceManager.*
 import androidx.recyclerview.widget.RecyclerView
 import com.github.florent37.viewtooltip.ViewTooltip
 import com.vanced.manager.R
@@ -46,10 +46,10 @@ class AppListAdapter(
 
         holder.appCard.setOnClickListener {
             tooltip.close()
-            AppInfoDialog(
-                apps[position],
-                dataModels[position]?.appIcon,
-                dataModels[position]?.changelog?.get()
+            AppInfoDialog.newInstance(
+                appName = apps[position],
+                appIcon = dataModels[position]?.appIcon,
+                changelog = dataModels[position]?.changelog?.get()
             ).show(context.supportFragmentManager, "info")
         }
     }

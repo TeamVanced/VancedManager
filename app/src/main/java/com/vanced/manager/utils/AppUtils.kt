@@ -32,7 +32,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     }
 
     fun sendCloseDialog(context: Context): Job {
-        downloadProgress.get()?.installing?.set(false)
+        downloadProgress.value?.installing?.value = false
         return launch {
             delay(700)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
@@ -40,7 +40,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     }
 
     fun sendFailure(status: Int, context: Context): Job {
-        downloadProgress.get()?.installing?.set(false)
+        downloadProgress.value?.installing?.value = false
         //Delay error broadcast until activity (and fragment) get back to the screen
         return launch {
             delay(700)
@@ -51,7 +51,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     }
 
     fun sendFailure(error: MutableList<String>, context: Context): Job {
-        downloadProgress.get()?.installing?.set(false)
+        downloadProgress.value?.installing?.value = false
         return launch {
             delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)

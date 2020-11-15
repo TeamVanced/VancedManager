@@ -66,7 +66,9 @@ class VancedPreferencesDialog : BottomSheetDialogFragment() {
 
         binding.vancedInstall.setOnClickListener {
             dismiss()
-            AppDownloadDialog(requireActivity().getString(R.string.vanced)).show(requireActivity())
+            AppDownloadDialog.newInstance(
+                app = getString(R.string.vanced)
+            ).show(requireActivity())
         }
     }
 }

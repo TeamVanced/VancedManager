@@ -11,11 +11,11 @@ import androidx.core.content.edit
 import androidx.fragment.app.viewModels
 import androidx.preference.PreferenceManager
 import com.vanced.manager.R
+import com.vanced.manager.core.ext.showDialog
 import com.vanced.manager.databinding.FragmentAboutBinding
-import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.core.BindingFragment
+import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.AboutViewModel
-import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.manager
 
 class AboutFragment : BindingFragment<FragmentAboutBinding>() {
@@ -37,7 +37,15 @@ class AboutFragment : BindingFragment<FragmentAboutBinding>() {
     @SuppressLint("ClickableViewAccessibility")
     private fun dataBind() {
         requireActivity().title = getString(R.string.title_about)
-        binding.aboutHeader.root.setOnClickListener { AppInfoDialog(getString(R.string.app_name), AppCompatResources.getDrawable(requireActivity(), R.mipmap.ic_launcher), manager.get()?.string("changelog")).show(requireActivity()) }
+        binding.aboutHeader.root.setOnClickListener {
+            showDialog(
+                AppInfoDialog.newInstance(
+                    appName = getString(R.string.app_name),
+                    appIcon = AppCompatResources.getDrawable(requireActivity(), R.mipmap.ic_launcher),
+                    changelog = manager.get()?.string("changelog")
+                )
+            )
+        }
         binding.root.setOnTouchListener { _, event: MotionEvent ->
             val eventAction = event.action
             if (eventAction == MotionEvent.ACTION_UP) {
