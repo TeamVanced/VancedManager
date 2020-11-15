@@ -8,7 +8,6 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
@@ -92,7 +91,7 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
                         if (installing) {
                             return@setOnClickListener
                         }
-                        PRDownloader.cancel(downloadProgress.value?.currentDownload)
+                        PRDownloader.cancel(progressModel.currentDownload)
                         dismiss()
                     }
                 }
