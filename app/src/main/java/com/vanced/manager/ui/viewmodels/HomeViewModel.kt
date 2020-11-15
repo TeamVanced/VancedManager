@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableField
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.google.android.material.button.MaterialButton
@@ -35,6 +36,7 @@ import com.vanced.manager.utils.PackageHelper.musicApkExists
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 import com.vanced.manager.utils.PackageHelper.uninstallRootApk
 import com.vanced.manager.utils.PackageHelper.vancedInstallFilesExist
+import kotlinx.coroutines.launch
 
 open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
@@ -48,10 +50,12 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     val manager = ObservableField<DataModel>()
 
     fun fetchData() {
-        activity.setRefreshing(true)
-        loadJson(activity)
-        Crowdin.forceUpdate(activity)
-        activity.setRefreshing(false)
+        viewModelScope.launch {
+            activity.setRefreshing(true)
+            loadJson(activity)
+            Crowdin.forceUpdate(activity)
+            activity.setRefreshing(false)
+        }
     }
     
     private val microgToast = Toast.makeText(activity, R.string.no_microg, Toast.LENGTH_LONG)
@@ -122,7 +126,13 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     }
 
-    fun uninstallPackage(pkg: String) = if (prefs.getString("vanced_variant", "nonroot") == "root" && uninstallRootApk(pkg)) activity.fetchData() else uninstallApk(pkg, activity)
+    fun uninstallPackage(pkg: String) {
+        if (prefs.getString("vanced_variant", "nonroot") == "root" && uninstallRootApk(pkg)) {
+            viewModelScope.launch { activity.fetchData() }
+        } else {
+            uninstallApk(pkg, activity)
+        }
+    }
 
     init {
         activity.setRefreshing(true)
@@ -134,5 +144,4 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
         manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), ContextCompat.getDrawable(activity, R.mipmap.ic_launcher)))
         activity.setRefreshing(false)
     }
-
 }

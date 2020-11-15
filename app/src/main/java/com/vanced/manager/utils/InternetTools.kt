@@ -7,16 +7,15 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.databinding.ObservableField
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
+import androidx.preference.PreferenceManager.*
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.generateChecksum
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -49,19 +48,20 @@ object InternetTools {
             context.startActivity(Intent(Intent.ACTION_VIEW, url.toUri()).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 
-    fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
+    fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, url.length)
 
-    fun loadJson(context: Context) = CoroutineScope(Dispatchers.IO).launch {
-        val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
-        val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
-        val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
+    suspend fun loadJson(context: Context) =
+        withContext(Dispatchers.IO) {
+            val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
+            val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
+            val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
 //      braveTiers.apply {
 //          set(getJson("$installUrl/sponsor.json"))
 //          notifyChange()
 //      }
 
-        vanced.apply {
-            set(latest?.obj("vanced"))
+            vanced.apply {
+                set(latest?.obj("vanced"))
             notifyChange()
         }
         vancedVersions.set(versions?.array("vanced"))

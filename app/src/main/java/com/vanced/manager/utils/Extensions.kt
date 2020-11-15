@@ -28,7 +28,7 @@ object Extensions {
         show(activity.supportFragmentManager, "")
     }
 
-    fun Activity.fetchData() {
+    suspend fun Activity.fetchData() {
         val refreshLayout = findViewById<SwipeRefreshLayout>(R.id.home_refresh)
         setRefreshing(true, refreshLayout)
         loadJson(this)
