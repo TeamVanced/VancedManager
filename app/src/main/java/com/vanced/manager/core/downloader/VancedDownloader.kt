@@ -134,7 +134,7 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
                         if (type == "lang") {
                             count++
                             when {
-                                count < lang.size       -> downloadSplits(context, "lang")
+                                count < lang.size -> downloadSplits(context, "lang")
                                 succesfulLangCount == 0 -> {
                                     lang.add("en")
                                     downloadSplits(context, "lang")

@@ -16,7 +16,7 @@ import kotlinx.coroutines.*
 open class App: Application() {
 
     private val prefs by lazy { getDefaultSharedPreferences(this) }
-    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     override fun onCreate() {
         scope.launch { loadJson(this@App) }

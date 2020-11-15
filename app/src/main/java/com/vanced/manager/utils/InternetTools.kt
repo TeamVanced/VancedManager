@@ -50,18 +50,17 @@ object InternetTools {
 
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, url.length)
 
-    suspend fun loadJson(context: Context) =
-        withContext(Dispatchers.IO) {
-            val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
-            val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
-            val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
+    suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
+        val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
+        val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
+        val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
 //      braveTiers.apply {
 //          set(getJson("$installUrl/sponsor.json"))
 //          notifyChange()
 //      }
 
-            vanced.apply {
-                set(latest?.obj("vanced"))
+        vanced.apply {
+            set(latest?.obj("vanced"))
             notifyChange()
         }
         vancedVersions.set(versions?.array("vanced"))
