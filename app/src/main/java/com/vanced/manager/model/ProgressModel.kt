@@ -1,24 +1,22 @@
 package com.vanced.manager.model
 
-import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableField
-import androidx.databinding.ObservableInt
+import androidx.lifecycle.MutableLiveData
 
 open class ProgressModel {
-    
-    val downloadProgress = ObservableInt()
-    val downloadingFile = ObservableField<String>()
-    val installing = ObservableBoolean()
+
+    val downloadProgress = MutableLiveData<Int>()
+    val downloadingFile = MutableLiveData<String>()
+    val installing = MutableLiveData<Boolean>()
 
     var currentDownload: Int = 0
 
     fun reset() {
-        downloadProgress.set(0)
-        downloadingFile.set("")
+        downloadProgress.value = 0
+        downloadingFile.value = ""
     }
 
     init {
-        installing.set(false)
+        installing.value = false
         reset()
     }
     

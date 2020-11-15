@@ -49,13 +49,13 @@ object MusicDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
         launch {
             val url = if (apk == "stock") "$baseurl/stock/${getArch()}.apk" else "$baseurl/$variant.apk"
             suspendCoroutine {
-                downloadProgress.get()?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
+                downloadProgress.value?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
                     .build()
                     .setOnStartOrResumeListener {
-                        downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
+                        downloadProgress.value?.downloadingFile?.value =context.getString(R.string.downloading_file, getFileNameFromUrl(url))
                     }
                     .setOnProgressListener { progress ->
-                        downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                        downloadProgress.value?.downloadProgress?.value = (progress.currentBytes * 100 / progress.totalBytes).toInt()
                     }
                     .start(object : OnDownloadListener {
                         override fun onDownloadComplete() {
@@ -90,7 +90,7 @@ object MusicDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
                                 return
                             }
 
-                            downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.error_downloading, "Music"))
+                            downloadProgress.value?.downloadingFile?.value = context.getString(R.string.error_downloading, "Music")
                         }
                     })
             }
@@ -99,8 +99,8 @@ object MusicDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     }
 
     fun startMusicInstall(context: Context) {
-        downloadProgress.get()?.installing?.set(true)
-        downloadProgress.get()?.reset()
+        downloadProgress.value?.installing?.value = true
+        downloadProgress.value?.reset()
         if (variant == "root")
             installMusicRoot(context)
         else

@@ -43,8 +43,9 @@ class MusicPreferencesDialog : BottomSheetDialogFragment() {
         }
         binding.musicInstall.setOnClickListener {
             dismiss()
-            AppDownloadDialog(requireActivity().getString(R.string.music)).show(requireActivity())
+            AppDownloadDialog.newInstance(
+                app = getString(R.string.music)
+            ).show(requireActivity())
         }
     }
-
 }

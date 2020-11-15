@@ -20,29 +20,29 @@ object MicrogDownloader : CoroutineScope by CoroutineScope(Dispatchers.IO) {
     ) = launch {
         val url = microg.get()?.string("url")
 
-        downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("microg")?.path, "microg.apk")
+        downloadProgress.value?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("microg")?.path, "microg.apk")
             .build()
             .setOnStartOrResumeListener {
-                downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, url?.let { getFileNameFromUrl(it) }))
+                downloadProgress.value?.downloadingFile?.value = context.getString(R.string.downloading_file, url?.let { getFileNameFromUrl(it) })
             }
             .setOnProgressListener { progress ->
-                downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                downloadProgress.value?.downloadProgress?.value = (progress.currentBytes * 100 / progress.totalBytes).toInt()
             }
-                .start(object : OnDownloadListener {
-                    override fun onDownloadComplete() {
-                        startMicrogInstall(context)
-                    }
+            .start(object : OnDownloadListener {
+                override fun onDownloadComplete() {
+                    startMicrogInstall(context)
+                }
 
-                    override fun onError(error: Error?) {
-                        downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.error_downloading, "microG"))
-                    }
-                })
+                override fun onError(error: Error?) {
+                    downloadProgress.value?.downloadingFile?.value = context.getString(R.string.error_downloading, "microG")
+                }
+            })
 
         }
 
     fun startMicrogInstall(context: Context) {
-        downloadProgress.get()?.installing?.set(true)
-        downloadProgress.get()?.reset()
+        downloadProgress.value?.installing?.value = true
+        downloadProgress.value?.reset()
         install("${context.getExternalFilesDir("microg")}/microg.apk", context)
     }
 }

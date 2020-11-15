@@ -10,13 +10,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.downloader.PRDownloader
 import com.vanced.manager.R
+import com.vanced.manager.core.downloader.MicrogDownloader
+import com.vanced.manager.core.downloader.MusicDownloader
+import com.vanced.manager.core.downloader.VancedDownloader
+import com.vanced.manager.databinding.DialogAppDownloadBinding
 import com.vanced.manager.databinding.DialogManagerUpdateBinding
+import com.vanced.manager.ui.core.BindingDialogFragment
 import com.vanced.manager.utils.DownloadHelper.downloadManager
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
@@ -24,9 +30,24 @@ import kotlinx.coroutines.launch
 
 class ManagerUpdateDialog(
     private val forceUpdate: Boolean
-) : DialogFragment() {
+) : BindingDialogFragment<DialogManagerUpdateBinding>()  {
 
-    private lateinit var binding: DialogManagerUpdateBinding
+    companion object {
+
+        const val CLOSE_DIALOG = "close_dialog"
+        private const val TAG_APP = "TAG_APP"
+        private const val TAG_INSTALLING = "TAG_INSTALLING"
+
+        fun newInstance(
+            app: String,
+            installing: Boolean = false
+        ): AppDownloadDialog = AppDownloadDialog().apply {
+            arguments = Bundle().apply {
+                putString(TAG_APP, app)
+                putBoolean(TAG_INSTALLING, installing)
+            }
+        }
+    }
 
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
 
@@ -38,21 +59,15 @@ class ManagerUpdateDialog(
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun binding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        if (dialog != null && dialog?.window != null) {
-            dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        }
-        isCancelable = false
-        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_manager_update, container, false)
-        binding.progress = downloadProgress.get()
-        return binding.root
-    }
+    ) = DialogManagerUpdateBinding.inflate(inflater, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun otherSetups() {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        bindData()
         lifecycleScope.launch {
             if (forceUpdate) {
                 binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
@@ -62,8 +77,26 @@ class ManagerUpdateDialog(
             }
 
             binding.managerUpdateCancel.setOnClickListener {
-                PRDownloader.cancel(downloadProgress.get()!!.currentDownload)
+                PRDownloader.cancel(downloadProgress.value?.currentDownload)
                 dismiss()
+            }
+        }
+    }
+
+    private fun bindData() {
+        with(binding) {
+            isCancelable = false
+            bindDownloadProgress()
+        }
+    }
+
+    private fun DialogManagerUpdateBinding.bindDownloadProgress() {
+        with(downloadProgress) {
+            observe(viewLifecycleOwner) { progressModel ->
+                progressModel.downloadProgress.observe(viewLifecycleOwner) {
+                    managerUpdateProgressbar.progress = it
+                    managerUpdateProgressbar.isVisible = it != 0
+                }
             }
         }
     }
@@ -87,9 +120,4 @@ class ManagerUpdateDialog(
         intentFilter.addAction(CLOSE_DIALOG)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
     }
-
-    companion object {
-        const val CLOSE_DIALOG = "close_dialog"
-    }
-
 }
