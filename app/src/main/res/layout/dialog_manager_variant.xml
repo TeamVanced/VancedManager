@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BottomDialogCard">
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        style="@style/BottomDialogCard">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:text="@string/variant"
+            style="@style/BottomDialogCardTitle"/>
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TextView
-                style="@style/BottomDialogCardTitle"
-                android:text="@string/variant" />
-
-            <androidx.core.widget.NestedScrollView
+            <RadioGroup
+                android:id="@+id/variant_radiogroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText">
 
-                <RadioGroup
-                    android:id="@+id/variant_radiogroup"
+                <com.google.android.material.radiobutton.MaterialRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:ignore="HardcodedText">
+                    android:tag="nonroot"
+                    android:text="nonroot"
+                    android:textSize="18sp"/>
 
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="nonroot"
-                        android:text="nonroot"
-                        android:textSize="18sp" />
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="root"
+                    android:text="root"
+                    android:textSize="18sp"/>
+            </RadioGroup>
+        </androidx.core.widget.NestedScrollView>
 
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="root"
-                        android:text="root"
-                        android:textSize="18sp" />
-
-                </RadioGroup>
-
-            </androidx.core.widget.NestedScrollView>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/variant_save"
-                style="@style/BottomDialogButtonStyle"
-                android:text="@string/save" />
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/variant_save"
+            android:text="@string/save"
+            style="@style/BottomDialogButtonStyle"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

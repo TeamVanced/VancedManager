@@ -111,7 +111,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
                 when (variant) {
                     "nonroot" -> {
                         if (vancedInstallFilesExist(activity)) {
-                            InstallationFilesDetectedDialog(app).show(activity)
+                            InstallationFilesDetectedDialog.newInstance(app).show(activity)
                         } else {
                             VancedPreferencesDialog().show(activity)
                         }
@@ -125,7 +125,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
                 when (variant) {
                     "nonroot" -> {
                         if (musicApkExists(activity)) {
-                            InstallationFilesDetectedDialog(app).show(activity)
+                            InstallationFilesDetectedDialog.newInstance(app).show(activity)
                         } else {
                             MusicPreferencesDialog().show(activity)
                         }
@@ -137,7 +137,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             }
             activity.getString(R.string.microg) -> {
                 if (apkExist(activity, "microg.apk")) {
-                    InstallationFilesDetectedDialog(app).show(activity)
+                    InstallationFilesDetectedDialog.newInstance(app).show(activity)
                 } else {
                     AppDownloadDialog.newInstance(app).show(activity)
                 }
