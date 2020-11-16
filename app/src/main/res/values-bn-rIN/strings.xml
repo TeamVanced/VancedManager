@@ -18,7 +18,7 @@
     <string name="select_apps_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য!\nতুলনামূলকভাবে কম বৈশিষ্ট্যযুক্ত, তবে আপনার চাহিদা পূরণ করবে।</string>
     <string name="select_apps_vanced">ইউটিউব ভ্যান্সড হল স্টক অ্যান্ড্রয়েড ইউটিউব অ্যাপ, তবে আরো ভাল!</string>
     <string name="lets_get_started">শুরু করা যাক</string>
-    <string name="willing_to_use_root">রুট সংস্করণ ব্যবহার করতে ইচ্ছুক? নীচের বোতামটি চাপুন, অন্যথায় চালিয়ে যেতে > এর উপরে আলতো চাপুন</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s এর সম্বন্ধে</string>
     <string name="app_changelog_tooltip">পরিবর্তন নথি দেখতে কার্ডে আলতো চাপুন।</string>
