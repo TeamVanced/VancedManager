@@ -10,13 +10,13 @@
     <string name="title_about">Información</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
-    <string name="update_manager">Gestor de actualizaciones</string>
+    <string name="update_manager">Actualizar Manager</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">¿Su dispositivo está rooteado?</string>
-    <string name="grant_root">Conceder permiso root</string>
+    <string name="grant_root">Otorgar permiso root</string>
     <string name="select_at_least_one_app">¡Seleccione al menos una aplicación!</string>
     <string name="select_apps_music">Vanced, pero para YouTube Music!\nrelativamente menos características, pero satisface tus necesidades.</string>
-    <string name="select_apps_vanced">YouTube Vanced es la aplicación stock de YouTube, pero mejorada!</string>
+    <string name="select_apps_vanced">YouTube Vanced es la aplicación original de YouTube para Android, pero mejorada!</string>
     <string name="lets_get_started">Comencemos</string>
     <string name="willing_to_use_root">¿Deseas usar la versión root? Sólo haz clic en el botón de abajo, si no, toca para continuar</string>
     <!-- Home Page -->
