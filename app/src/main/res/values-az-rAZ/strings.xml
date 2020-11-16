@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced adi Android YouTube tətbiqi olsa da daha yaxşıdır!</string>
     <string name="lets_get_started">Gəlin başlayaq</string>
-    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Haqqında</string>
     <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
