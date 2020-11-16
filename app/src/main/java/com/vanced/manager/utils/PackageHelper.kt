@@ -466,7 +466,7 @@ object PackageHelper {
 
     private fun linkApp(apkFPath: String, pkg:String, path: String): Boolean {
         Shell.su("am force-stop $pkg").exec()
-        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
+        Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
         Thread.sleep(500)
         Shell.su("am force-stop $pkg").exec()

@@ -44,6 +44,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/grant_root_fab"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nonroot"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/grant_root_finish_fab"
+        app:layout_constraintEnd_toEndOf="@id/grant_root_finish_fab"
+        app:layout_constraintStart_toStartOf="@id/grant_root_finish_fab"
+        android:layout_marginBottom="8dp"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/grant_root_finish_fab"
         android:layout_width="wrap_content"

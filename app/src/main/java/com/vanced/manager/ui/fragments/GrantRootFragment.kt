@@ -42,6 +42,7 @@ class GrantRootFragment : BindingFragment<FragmentGrantRootBinding>() {
     private fun grantRoot() {
         if (Shell.rootAccess()) {
             getDefaultSharedPreferences(requireActivity()).edit { putString("vanced_variant", "root") }
+            navigateToFirstLaunch()
         } else {
             Toast.makeText(requireActivity(), R.string.root_not_granted, Toast.LENGTH_SHORT).show()
         }

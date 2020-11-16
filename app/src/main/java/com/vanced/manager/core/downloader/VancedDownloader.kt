@@ -82,7 +82,7 @@ object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
                     "arch" -> "$installUrl/apks/v$vancedVersion/$variant/Arch/split_config.$arch.apk"
                     "stock" -> "$themePath/stock.apk"
                     "dpi" ->  "$themePath/dpi.apk"
-                    "lang" -> "$installUrl/apks/v$vancedVersion/$variant/Language/split_config.${lang?.get(count)}.apk"
+                    "lang" -> "$installUrl/apks/v$vancedVersion/$variant/Language/split_config.${lang[count]}.apk"
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
                 }
 
