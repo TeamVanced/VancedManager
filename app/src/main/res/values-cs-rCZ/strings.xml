@@ -94,7 +94,7 @@
     <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tým Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Nelze změnit soubor apk na vlastníka systému, zkuste to prosím znovu.</string>
+    <string name="chown_fail">Nelze změnit soubor APK na vlastníka systému, zkuste to prosím znovu.</string>
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
     <string name="files_missing_va">Nepodařilo se najít požadované soubory pro instalaci. Stáhněte znovu instalační soubory a pokus opakujte.</string>
