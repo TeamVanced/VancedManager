@@ -18,7 +18,7 @@
     <string name="select_apps_music">ڤانسد، ولكن لموسيقى يوتيوب! \n نسبياً فيه مميزات أقل ولكن يلبي احتياجاتك.</string>
     <string name="select_apps_vanced">يوتيوب ڤانسد هو يوتيوب الأندرويد العادي، ولكن أفضل!</string>
     <string name="lets_get_started">فلنبدأ</string>
-    <string name="willing_to_use_root">هل ترغب باستعمال نسخة الروت؟ فقط عليك الضغط على الزر في الأسفل، إذا لا اضغط على زر المتابعة</string>
+    <string name="willing_to_use_root">لا تعرف ما هذا أو لا تود استخدام نسخة الروت؟ اضغط على السهم الأزرق في الأسفل!</string>
     <!-- Home Page -->
     <string name="about_app">حوالي %1$s</string>
     <string name="app_changelog_tooltip">أضغط على إحدى البطاقات لعرض سجل التغييرات.</string>
