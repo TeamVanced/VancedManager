@@ -10,15 +10,15 @@
     <string name="title_about">Sobre</string>
     <string name="title_home">Gestor</string>
     <string name="title_settings">Configurações</string>
-    <string name="update_manager">Atualizar gestor</string>
+    <string name="update_manager">Gestor de Atualização</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">O seu dispositivo está assado?</string>
-    <string name="grant_root">Conceder permissão de root</string>
+    <string name="are_you_rooted">Seu Dispositivo Tem Root?</string>
+    <string name="grant_root">Conceder Permissão de Root</string>
     <string name="select_at_least_one_app">Selecione pelo menos uma aplicação!</string>
-    <string name="select_apps_music">Aprimorado, mas para o YouTube Music!\nrelativamente menos rico em recursos, mas atende às suas necessidades.</string>
-    <string name="select_apps_vanced">YouTube Vanced é o Android App original, mas melhor!</string>
-    <string name="lets_get_started">Vamos começar!</string>
-    <string name="willing_to_use_root">Deseja usar a versão raiz? Pressione o botão abaixo, senão toque para continuar</string>
+    <string name="select_apps_music">Vanced, mas para o YouTube Music!\nrelativamente menos rico em recursos, mas atende às suas necessidades.</string>
+    <string name="select_apps_vanced">YouTube Vanced é o App YouTube Android original, mas melhor!</string>
+    <string name="lets_get_started">Vamos começar</string>
+    <string name="willing_to_use_root">Não sabes o que é isto ou não queres utilizar a versão root? apenas clique a seta azul abaixo!</string>
     <!-- Home Page -->
     <string name="about_app">Acerca de %1$s</string>
     <string name="app_changelog_tooltip">Toque no cartão para ver o registro de mudanças.</string>
@@ -73,7 +73,7 @@
     <string name="installing_app">A instalar %1$s</string>
     <string name="magisk_vanced">Você está usando a versão Magisk/TWRP do Vanced, que está descontinuada e não pode ser atualizada usando este aplicativo. Por favor, remova-o removendo o módulo Magisk/usando a desinstalação TWRP Vanced Uninstaler.</string>
     <string name="miui_one_title">MIUI detetado!</string>
-    <string name="miui_one">Para instalar o Vanced, você DEVE desativar as Otimizações MIUI nas configurações do desenvolvedor. (Você pode ignorar este aviso se você estiver usando ROM baseada em 20.2.20 ou mais tarde xiaomi.eu)</string>
+    <string name="miui_one">Para instalar o Vanced, você DEVE desativar as Otimizações MIUI nas configurações do desenvolvedor. (Você pode ignorar este aviso se você estiver usando 20.2.20 ou ROM baseada em xiaomi.eu)</string>
     <string name="error">Erro</string>
     <string name="redownload">Voltar a descarregar</string>
     <string name="security_context">Certifique-se de que você baixou o aplicativo do vancedapp.com, o servidor Vanced Discord ou o Vanced GitHub</string>
@@ -82,13 +82,13 @@
     <string name="vanced_installed">O Vanced foi instalado com sucesso! Abrir agora?</string>
     <string name="version">Versão</string>
     <string name="music_installed">O Vanced Music foi instalado com sucesso! Pretende abri-lo?</string>
-    <string name="please_be_patient">Por favor, seja paciente…</string>
+    <string name="please_be_patient">Por favor, sejas paciente…</string>
     <string name="launch">Abrir</string>
     <string name="welcome">Bem-Vindo</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Escolha a(s) sua(s) língua(s) de preferência para o Vanced</string>
     <string name="light_plus_other">Claro + %1$s</string>
-    <string name="select_at_least_one_lang">Selecione pelo menos um idioma!</string>
+    <string name="select_at_least_one_lang">Selecione ao menos um idioma!</string>
     <!-- About Page -->
     <string name="manager_dev">Desenvolvedores do Manager</string>
     <string name="sources">Fontes</string>
