@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, но для YouTube Music!\nОтносительно меньше возможностей, но удовлетворит ваши потребности.</string>
     <string name="select_apps_vanced">YouTube Vanced — это приложение для YouTube для Android, но лучше!</string>
     <string name="lets_get_started">Давайте приступим</string>
-    <string name="willing_to_use_root">Хотите использовать root-версию? Если да, то предоставьте рут-права с помощью кнопки ниже. Если нет, то нажмите на кнопку в правом нижнем углу для продолжения</string>
+    <string name="willing_to_use_root">Не знаете, что это, или не хотите использовать рут версию? Просто нажмите на синюю стрелку ниже!</string>
     <!-- Home Page -->
     <string name="about_app">О %1$s</string>
     <string name="app_changelog_tooltip">Нажмите на карточку, чтобы увидеть список изменений.</string>
