@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vansat, dar pentru Muzica YouTube!\nrelativ mai puţin bogat în caracteristici, dar îţi satisface nevoile.</string>
     <string name="select_apps_vanced">YouTube Vanced este aplicația YouTube stoc, dar mai bună!</string>
     <string name="lets_get_started">Să începem</string>
-    <string name="willing_to_use_root">Vrei să folosești versiunea root? Doar apasă butonul de mai jos, altfel apasă pentru a continua</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
     <string name="app_changelog_tooltip">Atinge cardul pentru a vedea schimbarile.</string>
@@ -101,8 +101,8 @@
     <string name="ifile_missing">Nu s-a reuşit localizarea fişierului apk pentru tema neagră/întunecată din stocare, vă rugăm să încercaţi din nou.</string>
     <string name="installation_aborted">Instalarea a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_blocked">Instalarea a eșuat deoarece utilizatorul a blocat instalarea.</string>
-    <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările din aplicația YouTube stocată, apoi încercați din nou.</string>
-    <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă de Vanced, apoi încercați din nou.</string>
+    <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările din aplicația stock YouTube, apoi încercați din nou.</string>
+    <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă Vanced, apoi încercați din nou.</string>
     <string name="installation_failed">Instalarea a eșuat din motive necunoscute, alătură-te Telegramului nostru sau Discord pentru mai multă asistență.</string>
     <string name="installation_incompatible">Instalarea a eșuat deoarece fișierul de instalare este incompatibil cu dispozitivul dvs. Ștergeți fișierele descărcate din Setări, apoi încercați din nou.</string>
     <string name="installation_invalid">Instalarea a eșuat deoarece fișierele apk sunt corupte, încercați din nou.</string>
