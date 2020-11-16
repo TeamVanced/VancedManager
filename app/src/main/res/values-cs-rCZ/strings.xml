@@ -18,7 +18,7 @@
     <string name="select_apps_music">Pokročilé, ale YouTube Music!\nRelativně méně funkcí splňující vaše potřeby.</string>
     <string name="select_apps_vanced">YouTube Vanced je výchozí vylepšená aplikace YouTube!</string>
     <string name="lets_get_started">Začínáme</string>
-    <string name="willing_to_use_root">Chcete použít verzi s přístupem root? Stačí kliknout na tlačítko níže, jinak pokračujte klepnutím</string>
+    <string name="willing_to_use_root">Nevíte, co to je, nebo nechcete používat verzi s přístupem root? Stačí kliknout na modrou šipku níže!</string>
     <!-- Home Page -->
     <string name="about_app">O aplikaci %1$s</string>
     <string name="app_changelog_tooltip">Klepnutím na kartu zobrazíte seznam změn.</string>
