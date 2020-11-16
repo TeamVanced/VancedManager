@@ -18,7 +18,7 @@
     <string name="select_apps_music">Ванс, але для YouTube Music!\nвідносно не багата на можливості, але задовольняє ваші потреби.</string>
     <string name="select_apps_vanced">YouTube Vanced - це стандартний Android YouTube додаток, але краще!</string>
     <string name="lets_get_started">Почнімо</string>
-    <string name="willing_to_use_root">Бажаєте використовувати кореневу версію? Просто натисніть на кнопку нижче, щоб продовжити</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
     <string name="app_changelog_tooltip">Натисніть на картці, щоб побачити зміни.</string>
