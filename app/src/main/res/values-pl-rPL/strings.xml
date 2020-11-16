@@ -15,10 +15,10 @@
     <string name="are_you_rooted">Czy Twoje urządzenie jest zakorzenione (root)?</string>
     <string name="grant_root">Przyznaj uprawnienie root</string>
     <string name="select_at_least_one_app">Wybierz co najmniej jedną aplikację!</string>
-    <string name="select_apps_music">Vanced, ale dla muzyki YouTube!\nstosunkowo mniej bogatych w funkcje, ale zaspokaja Twoje potrzeby.</string>
+    <string name="select_apps_music">Vanced, ale dla muzyki YouTube!\nstosunkowo mniej bogaty w funkcje, ale zaspokaja Twoje potrzeby.</string>
     <string name="select_apps_vanced">YouTube Vanced to domyślna aplikacja YouTube na Androida, ale lepsza!</string>
     <string name="lets_get_started">Zaczynajmy</string>
-    <string name="willing_to_use_root">Czy chcesz użyć wersji głównej? Po prostu naciśnij przycisk poniżej, w przeciwnym razie naciśnij aby kontynuować</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="app_changelog_tooltip">Dotknij karty, aby zobaczyć listę zmian.</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Opcje zaawansowane</string>
     <string name="app_install_files_detected">Wykryto %1$s plików instalacyjnych!</string>
-    <string name="app_install_files_detected_summary">Menedżer wykrył, że znaleziono wszystkie pliki niezbędne do instalacji %1$s . Czy chcesz ją zainstalować?</string>
+    <string name="app_install_files_detected_summary">Menedżer wykrył, że znaleziono wszystkie pliki niezbędne do instalacji %1$s. Czy chcesz zainstalować?</string>
     <string name="checking_updates">Sprawdzam aktualizacje…</string>
     <string name="chosen_lang">Język(i): %1$s</string>
     <string name="chosen_theme">Motyw: %1$s</string>
@@ -73,7 +73,7 @@
     <string name="installing_app">Instalowanie %1$s</string>
     <string name="magisk_vanced">Używasz wersji Magisk/TWRP Vanced, która została przerwana i nie może zostać zaktualizowana za pomocą tej aplikacji. Proszę go usunąć usuwając moduł Magisk/używając TWRP Vanced deinstalatora.</string>
     <string name="miui_one_title">MIUI wykryte!</string>
-    <string name="miui_one">Aby zainstalować Vanced, MUSI wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli używasz oprogramowania 20.2.20 lub później z bazą na xiaomi.eu)</string>
+    <string name="miui_one">Aby zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli używasz oprogramowania 20.2.20 lub później z bazą na xiaomi.eu)</string>
     <string name="error">Błąd</string>
     <string name="redownload">Pobierz ponownie</string>
     <string name="security_context">Upewnij się, że pobrałeś aplikację z vancedapp.com, serwera Vanced Discord lub Vanced GitHub</string>
