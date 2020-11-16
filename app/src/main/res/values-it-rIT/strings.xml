@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, ma per YouTube Music!\nrelativamente meno ricco di caratteristiche ma ugualmente adattabile alle tue esigenze.</string>
     <string name="select_apps_vanced">YouTube Vanced è l\'App di YouTube preinstallata di Android, ma migliorata!</string>
     <string name="lets_get_started">Iniziamo</string>
-    <string name="willing_to_use_root">Vuoi utilizzare la versione root? Basta premere il pulsante in basso, altrimenti tocca per continuare</string>
+    <string name="willing_to_use_root">Non sai cos\'è o non vuoi utilizzare la versione root? clicca sulla freccia blu qui in basso!</string>
     <!-- Home Page -->
     <string name="about_app">Informazioni su %1$s</string>
     <string name="app_changelog_tooltip">Tocca la scheda per leggere le novità.</string>
