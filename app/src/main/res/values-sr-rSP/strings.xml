@@ -9,19 +9,19 @@
     <!-- Main Activity -->
     <string name="title_about">О апликацији</string>
     <string name="title_home">Менаџер</string>
-    <string name="title_settings">Подешавања</string>
+    <string name="title_settings">Поставке</string>
     <string name="update_manager">Освежи Менаџера</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Да ли је ваш уређај рутован?</string>
     <string name="grant_root">Омогућите дозволу за рут</string>
     <string name="select_at_least_one_app">Одабери барем једну апликацију!</string>
-    <string name="select_apps_music">Vanced, али за YouTube Music!\nрелативно са мање напредних карактеристикама, али ће задовољити ваше потребе.</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced је фабрички Android YouTube апликација, али много боља!</string>
     <string name="lets_get_started">Хајде да почнемо</string>
-    <string name="willing_to_use_root">Имате ли намеру користити рутовану верзију? Само кликните на дугме доле, у супротном кликните за наставак</string>
+    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">О %s</string>
-    <string name="app_changelog_tooltip">Кликните на картицу да видите историју измена.</string>
+    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
     <string name="changelog">Историја измена</string>
     <string name="downloading_file">Преузимање %1$s</string>
     <string name="install">Инсталација</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Црвена</string>
     <string name="accent_yellow">Жута</string>
     <string name="category_appearance">Изглед</string>
-    <string name="category_behaviour">Понашање</string>
+    <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Обриши преузете датотеке</string>
     <string name="cleared_files">Успешно брисање датотека</string>
     <string name="firebase_title">Firebase Анализа</string>
@@ -52,9 +52,9 @@
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="system_default">Системски подразумевано</string>
     <string name="theme">Тема</string>
-    <string name="theme_dark">Тамна Тема</string>
-    <string name="theme_light">Светла Тема</string>
-    <string name="update_url">Ажурирај URL канала</string>
+    <string name="theme_dark">Тамна тема</string>
+    <string name="theme_light">Светла тема</string>
+    <string name="update_url">Ажурирај УРЛ канала</string>
     <string name="push_notifications">%1$s слање обавештења</string>
     <string name="push_notifications_summary">Примај обавештења када је достигнута верзија %1$s</string>
     <string name="update_center">Менаџер ажурирања</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Napredan</string>
     <string name="app_install_files_detected">%1$s верзија је пронађена!</string>
-    <string name="app_install_files_detected_summary">Менаџер је пронашао све датотеке за %1$s верзију инсталације. Да ли желите да инсталирате?</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">Провера ажурирања…</string>
     <string name="chosen_lang">Језик (Језици):%1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Водич</string>
     <string name="hold_on">Заустави!</string>
     <string name="installing_app">Инсталирање %1$s</string>
-    <string name="magisk_vanced">Користите Magisk/TWRP верзију Vanced апликације, која више није подржана и чије коришћење није могуће. Молимо Вас да уклоните ову апликацију из Magisk/TWRP-а путем Vanced апликације за деинсталацију.</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI је детектован!</string>
-    <string name="miui_one">Да би апликација Vanced била исправно инсталирана морате да искључите оптимизацију за ову апликацију у MIUI подешавањима за програмере.( Ову напомену можете да занемарите у случају ако користите верзију 20.2.20 и новију xiaomi.eu ROM-а)</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Грешка</string>
     <string name="redownload">Поново преузми</string>
-    <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта, Vanced Discord сервера или Vanced GitHub-а</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="success">Успешно!</string>
     <string name="app_installation_preferences">%1$s Инсталациона подешавања</string>
     <string name="vanced_installed">Vanced је успешно инсталиран! Желите да га одмах отворите?</string>
@@ -94,21 +94,21 @@
     <string name="sources">Извор</string>
     <string name="vanced_team">Vanced Тим</string>
     <!-- Error messages -->
-    <string name="chown_fail">Грешка при додели apk власнику система , покушајте поново.</string>
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Грешка приликом преузимања %1$s</string>
     <string name="failed_uninstall">Неуспешно деинсталирање пакета %1$s</string>
     <string name="files_missing_va">Није могуће пронаћи датотеке за инсталацију. Преузмите их поново и поновите инсталацију.</string>
     <string name="ifile_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у меморијском простору, покушајте поново.</string>
-    <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
-    <string name="installation_blocked">Инсталација није успешна, корисник је блокирао инсталацију.</string>
-    <string name="installation_downgrade">Инсталација није успешна, корисник је покушао да инсталира старију верзију преко новије верзије апликације. Деинсталирајте све до предодређене инсталиране верзије YouTubе апликације, затим покушајте поново.</string>
-    <string name="installation_conflict">Инсталација није успешна, зато што је дошло до конфликта са већ инсталираном верзијом. Деинсталирајте тренутну верзију Vanced-а и затим покушајте поново.</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">Инсталација није успеla, услед непознатог разлога, прикључите нам се на Telegram и Discord апликацијама за даљу подршку.</string>
     <string name="installation_incompatible">Инсталација је неуспешна јер инсталациона датотека није компатибилна са вашим уређајем. Очистите преузете датотеке у Подешавањима и затим покушајте поново.</string>
     <string name="installation_invalid">Инсталација није успеla јер је apk датотека оштећена, покушајте поново.</string>
     <string name="installation_signature">Инсталација неуспешна јер је укључена провера потписа преузете apk датотеке. Искључите apk проверу и затим покушајте поново.</string>
     <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
     <string name="installation_storage">Инсталација неуспешна услед грешке у меоријском простору.</string>
-    <string name="modapk_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у инсталационим датотекама. Очистите податке у Менаджеру и покушајте поново.</string>
+    <string name="modapk_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у инсталационим датотекама. Очистите податке у Менаџеру и покушајте поново.</string>
     <string name="path_missing">Није могуће пронаћи подразумевану YouTube локацију за инсталацију после подељене инсталације.</string>
 </resources>

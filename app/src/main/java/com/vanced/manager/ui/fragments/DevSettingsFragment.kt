@@ -10,7 +10,7 @@ import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.preference.*
 import com.crowdin.platform.Crowdin
-import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
+import com.vanced.manager.BuildConfig.*
 import com.vanced.manager.R
 import com.vanced.manager.ui.WelcomeActivity
 import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
@@ -89,7 +89,7 @@ class DevSettingsFragment: PreferenceFragmentCompat() {
 
         val forceUpdate: Preference? = findPreference("force_update")
         forceUpdate?.setOnPreferenceClickListener {
-            ManagerUpdateDialog(true).show(
+            ManagerUpdateDialog.newInstance(true).show(
                 requireActivity().supportFragmentManager,
                 "update_manager"
             )

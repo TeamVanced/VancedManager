@@ -15,7 +15,7 @@ import java.io.File
 import java.io.IOException
 import java.security.MessageDigest
 
-object AppUtils {
+object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     const val vancedPkg = "com.vanced.android.youtube"
     const val vancedRootPkg = "com.google.android.youtube"
@@ -24,25 +24,24 @@ object AppUtils {
     const val microgPkg = "com.mgoogle.android.gms"
     const val managerPkg = APPLICATION_ID
 
-    fun sendRefresh(context: Context) {
-        CoroutineScope(Dispatchers.IO).launch {
+    fun sendRefresh(context: Context): Job {
+        return launch {
             delay(700)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
         }
     }
 
-    fun sendCloseDialog(context: Context) {
-        downloadProgress.get()?.installing?.set(false)
-        CoroutineScope(Dispatchers.IO).launch {
+    fun sendCloseDialog(context: Context): Job {
+        return launch {
             delay(700)
+            downloadProgress.value?.installing?.postValue(false)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
         }
     }
 
-    fun sendFailure(status: Int, context: Context) {
-        downloadProgress.get()?.installing?.set(false)
+    fun sendFailure(status: Int, context: Context): Job {
         //Delay error broadcast until activity (and fragment) get back to the screen
-        CoroutineScope(Dispatchers.IO).launch {
+        return launch {
             delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
             intent.putExtra("errorMsg", getErrorMessage(status, context))
@@ -50,9 +49,8 @@ object AppUtils {
         }
     }
 
-    fun sendFailure(error: MutableList<String>, context: Context) {
-        downloadProgress.get()?.installing?.set(false)
-        CoroutineScope(Dispatchers.IO).launch {
+    fun sendFailure(error: MutableList<String>, context: Context): Job {
+        return launch {
             delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
             intent.putExtra("errorMsg", getErrorMessage(error.joinToString(), context))
@@ -134,6 +132,4 @@ object AppUtils {
                     context.getString(R.string.installation_failed)
         }
     }
-
-
 }

@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BottomDialogCard">
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        style="@style/BottomDialogCard">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:text="@string/language_title"
+            style="@style/BottomDialogCardTitle"/>
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="450dp">
 
-            <TextView
-                style="@style/BottomDialogCardTitle"
-                android:text="@string/language_title" />
-
-            <androidx.core.widget.NestedScrollView
+            <RadioGroup
+                android:id="@+id/language_radiogroup"
                 android:layout_width="match_parent"
-                android:layout_height="450dp">
+                android:layout_height="wrap_content"/>
+        </androidx.core.widget.NestedScrollView>
 
-                <RadioGroup
-                    android:id="@+id/language_radiogroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </RadioGroup>
-
-            </androidx.core.widget.NestedScrollView>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/language_save"
-                style="@style/BottomDialogButtonStyle"
-                android:text="@string/save" />
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/language_save"
+            android:text="@string/save"
+            style="@style/BottomDialogButtonStyle"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

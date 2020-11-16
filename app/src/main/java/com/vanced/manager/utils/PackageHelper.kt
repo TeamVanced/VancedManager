@@ -164,40 +164,38 @@ object PackageHelper {
         return false
     }
 
-    fun installMusicRoot(context: Context) {
-        CoroutineScope(Dispatchers.IO).launch {
-            Shell.enableVerboseLogging = BuildConfig.DEBUG
-            Shell.setDefaultBuilder(
-                    Shell.Builder.create()
-                            .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                            .setTimeout(10)
-            )
+    fun installMusicRoot(context: Context) = CoroutineScope(Dispatchers.IO).launch {
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
+        Shell.setDefaultBuilder(
+                Shell.Builder.create()
+                        .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                        .setTimeout(10)
+        )
 
-            Shell.getShell {
-                val musicVersionCode = music.get()?.int("versionCode")
-                val apkFilesPath = context.getExternalFilesDir("music/root")?.path
-                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                if (fileInfoList != null) {
-                    val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "root.apk" }
-                    if (modApk != null) {
-                        if (overwriteBase(modApk, fileInfoList, musicVersionCode!!, musicRootPkg, "music", context)) {
-                            sendRefresh(context)
-                            sendCloseDialog(context)
-                        }
-                    }
-                    else {
-                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+        Shell.getShell {
+            val musicVersionCode = music.get()?.int("versionCode")
+            val apkFilesPath = context.getExternalFilesDir("music/root")?.path
+            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+            if (fileInfoList != null) {
+                val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "root.apk" }
+                if (modApk != null) {
+                    if (overwriteBase(modApk, fileInfoList, musicVersionCode!!, musicRootPkg, "music", context)) {
+                        sendRefresh(context)
                         sendCloseDialog(context)
                     }
                 }
                 else {
-                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                     sendCloseDialog(context)
                 }
-
+            }
+            else {
+                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                sendCloseDialog(context)
             }
 
         }
+
     }
 
     fun installVanced(context: Context): Int {
@@ -298,48 +296,46 @@ object PackageHelper {
             }
 
         } finally {
-            session!!.close()
+            session?.close()
         }
     }
 
-    fun installVancedRoot(context: Context) {
-        CoroutineScope(Dispatchers.IO).launch {
-            Shell.enableVerboseLogging = BuildConfig.DEBUG
-            Shell.setDefaultBuilder(
-                Shell.Builder.create()
-                    .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                    .setTimeout(10)
-            )
+    fun installVancedRoot(context: Context) = CoroutineScope(Dispatchers.IO).launch {
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
+        Shell.setDefaultBuilder(
+            Shell.Builder.create()
+                .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                .setTimeout(10)
+        )
 
-            Shell.getShell {
-                val vancedVersionCode = vanced.get()?.int("versionCode")
-                val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
-                val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-                if (fileInfoList != null) {
-                    val modApk: FileInfo? = fileInfoList.lastOrNull { file ->
-                        vancedThemes.any { file.name == "$it.apk" }
-                    }
-                    if (modApk != null) {
-                        if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, vancedRootPkg, "vanced", context)) {
-                            sendRefresh(context)
-                            sendCloseDialog(context)
-                        }
-                    }
-                    else {
-                        sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+        Shell.getShell {
+            val vancedVersionCode = vanced.get()?.int("versionCode")
+            val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
+            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
+            if (fileInfoList != null) {
+                val modApk: FileInfo? = fileInfoList.lastOrNull { file ->
+                    vancedThemes.any { file.name == "$it.apk" }
+                }
+                if (modApk != null) {
+                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, vancedRootPkg, "vanced", context)) {
+                        sendRefresh(context)
                         sendCloseDialog(context)
                     }
                 }
                 else {
-                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                     sendCloseDialog(context)
                 }
-
+            }
+            else {
+                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                sendCloseDialog(context)
             }
 
         }
 
     }
+
 
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
@@ -378,7 +374,6 @@ object PackageHelper {
         }
         sendFailure(installResult.out, context)
         sendCloseDialog(context)
-
         return false
     }
 
@@ -471,7 +466,7 @@ object PackageHelper {
 
     private fun linkApp(apkFPath: String, pkg:String, path: String): Boolean {
         Shell.su("am force-stop $pkg").exec()
-        val umountv = Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
+        Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
         Thread.sleep(500)
         Shell.su("am force-stop $pkg").exec()
@@ -579,8 +574,8 @@ object PackageHelper {
 
 
     @Throws(IOException::class)
-    fun copy(src: File?, dst: File?) {
-        val cmd = Shell.su("mv ${src!!.absolutePath} ${dst!!.absolutePath}").exec().isSuccess
+    fun copy(src: File, dst: File) {
+        val cmd = Shell.su("mv ${src.absolutePath} ${dst.absolutePath}").exec().isSuccess
         Log.d("ZLog", cmd.toString())
     }
 

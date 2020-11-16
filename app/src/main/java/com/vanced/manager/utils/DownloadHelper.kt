@@ -10,15 +10,14 @@ import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.core.content.getSystemService
 import androidx.core.net.toUri
-import androidx.databinding.ObservableField
+import androidx.lifecycle.MutableLiveData
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.model.ProgressModel
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 
 object DownloadHelper {
@@ -35,26 +34,27 @@ object DownloadHelper {
         return downloadManager.enqueue(request)
     }
 
-    val downloadProgress = ObservableField<ProgressModel>()
+    val downloadProgress = MutableLiveData<ProgressModel>()
 
     init {
-        downloadProgress.set(ProgressModel())
+        downloadProgress.value = ProgressModel()
     }
 
-    fun downloadManager(context: Context) {
-        CoroutineScope(Dispatchers.IO).launch {
+    suspend fun downloadManager(context: Context) =
+        withContext(Dispatchers.IO) {
             val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
-            downloadProgress.get()?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("manager")?.path, "manager.apk")
+            downloadProgress.value?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("manager")?.path, "manager.apk")
                 .build()
                 .setOnProgressListener { progress ->
                     val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                    downloadProgress.get()?.downloadProgress?.set(mProgress.toInt())
+                    downloadProgress.value?.downloadProgress?.value = mProgress.toInt()
                 }
                 .setOnCancelListener {
-                    downloadProgress.get()?.downloadProgress?.set(0)
+                    downloadProgress.value?.downloadProgress?.value = 0
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
+                        downloadProgress.value?.downloadProgress?.value = 0
                         val apk =
                             File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
                         val uri =
@@ -82,6 +82,4 @@ object DownloadHelper {
 
                 })
         }
-    }
-
 }

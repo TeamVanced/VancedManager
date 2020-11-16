@@ -3,7 +3,7 @@ package com.vanced.manager.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewSponsorBinding
@@ -17,13 +17,13 @@ class SponsorAdapter(
 ) : RecyclerView.Adapter<SponsorAdapter.LinkViewHolder>() {
 
     private val brave = SponsorModel(
-        ContextCompat.getDrawable(context, R.drawable.ic_brave),
+        AppCompatResources.getDrawable(context, R.drawable.ic_brave),
         "Brave",
         "https://vancedapp.com/brave"
     )
 
     private val adguard = SponsorModel(
-        ContextCompat.getDrawable(context, R.drawable.ic_adguard),
+        AppCompatResources.getDrawable(context, R.drawable.ic_adguard),
         "AdGuard",
         "https://adguard.com/?aid=31141&source=manager"
     )
@@ -33,6 +33,7 @@ class SponsorAdapter(
     inner class LinkViewHolder(private val binding: ViewSponsorBinding) : RecyclerView.ViewHolder(
         binding.root
     ) {
+        val logo = binding.sponsorLogo
         fun bind(position: Int) {
             binding.viewModel = viewModel
             binding.sponsor = sponsors[position]
@@ -47,6 +48,7 @@ class SponsorAdapter(
 
     override fun onBindViewHolder(holder: LinkViewHolder, position: Int) {
         holder.bind(position)
+        holder.logo.setImageDrawable(sponsors[position].logo)
     }
 
     override fun getItemCount(): Int = 2

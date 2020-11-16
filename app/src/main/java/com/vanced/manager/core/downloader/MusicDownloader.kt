@@ -22,8 +22,9 @@ import com.vanced.manager.utils.PackageHelper.installMusicRoot
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlin.coroutines.suspendCoroutine
 
-object MusicDownloader {
+object MusicDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     private var variant: String? = null
     private var version: String? = null
@@ -45,69 +46,64 @@ object MusicDownloader {
     }
 
     private fun downloadApk(context: Context, apk: String = "music") {
-        CoroutineScope(Dispatchers.IO).launch {
-            val url =
-                    if (apk == "stock")
-                        "$baseurl/stock/${getArch()}.apk"
-                    else
-                        "$baseurl/$variant.apk"
-
-            downloadProgress.get()?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
-                .build()
-                .setOnStartOrResumeListener {
-                    downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
-                }
-                .setOnProgressListener { progress ->
-                    downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
-                }
-                .start(object : OnDownloadListener {
-                    override fun onDownloadComplete() {
-                        if (variant == "root" && apk != "stock") {
-                            downloadApk(context, "stock")
-                            return
-                        }
-
-                        when (apk) {
-                            "music" -> {
-                                if (variant == "root") {
-                                    if (validateTheme(downloadPath!!, "root", hashUrl!!, context)) {
-                                        if (downloadStockCheck(musicRootPkg, versionCode!!, context))
-                                            downloadApk(context, "stock")
-                                        else
-                                            startMusicInstall(context)
-                                    } else {
-                                        downloadApk(context, apk)
-                                    }
-                                } else
-                                    startMusicInstall(context)
+        launch {
+            val url = if (apk == "stock") "$baseurl/stock/${getArch()}.apk" else "$baseurl/$variant.apk"
+            suspendCoroutine {
+                downloadProgress.value?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
+                    .build()
+                    .setOnStartOrResumeListener {
+                        downloadProgress.value?.downloadingFile?.value =context.getString(R.string.downloading_file, getFileNameFromUrl(url))
+                    }
+                    .setOnProgressListener { progress ->
+                        downloadProgress.value?.downloadProgress?.value = (progress.currentBytes * 100 / progress.totalBytes).toInt()
+                    }
+                    .start(object : OnDownloadListener {
+                        override fun onDownloadComplete() {
+                            if (variant == "root" && apk != "stock") {
+                                downloadApk(context, "stock") // recursive in coroutine its so bad...
+                                return
                             }
+
+                            when (apk) {
+                                "music" -> {
+                                    if (variant == "root") {
+                                        if (validateTheme(downloadPath!!, "root", hashUrl!!, context)) {
+                                            if (downloadStockCheck(musicRootPkg, versionCode!!, context))
+                                                downloadApk(context, "stock")
+                                            else
+                                                startMusicInstall(context)
+                                        } else {
+                                            downloadApk(context, apk)
+                                        }
+                                    } else
+                                        startMusicInstall(context)
+                                }
+                            }
+
+                            startMusicInstall(context)
                         }
 
-                        startMusicInstall(context)
-                    }
+                        override fun onError(error: Error?) {
+                            if (baseurl != backupUrl) {
+                                baseurl = "$backupUrl/music/v$version"
+                                downloadApk(context, apk)
+                                return
+                            }
 
-                    override fun onError(error: Error?) {
-                        if (baseurl != backupUrl) {
-                            baseurl = "$backupUrl/music/v$version"
-                            downloadApk(context, apk)
-                            return
+                            downloadProgress.value?.downloadingFile?.value = context.getString(R.string.error_downloading, "Music")
                         }
-
-                        downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.error_downloading, "Music"))
-                    }
-                })
+                    })
+            }
 
         }
-
     }
 
     fun startMusicInstall(context: Context) {
-        downloadProgress.get()?.installing?.set(true)
-        downloadProgress.get()?.reset()
+        downloadProgress.value?.installing?.value = true
+        downloadProgress.value?.reset()
         if (variant == "root")
             installMusicRoot(context)
         else
             install("${context.getExternalFilesDir("music/nonroot")}/nonroot.apk", context)
     }
-
 }

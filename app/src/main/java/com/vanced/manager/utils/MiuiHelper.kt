@@ -6,28 +6,20 @@ import java.io.InputStreamReader
 
 object MiuiHelper {
 
-    fun isMiui(): Boolean = getSystemProps("ro.miui.ui.version.name")!!.isNotEmpty()
+    private const val MIUI_PROP_NAME = "ro.miui.ui.version.name"
+
+    fun isMiui(): Boolean = !getSystemProps(MIUI_PROP_NAME).isNullOrEmpty()
 
     private fun getSystemProps(propname: String): String? {
-        val line: String
         var input: BufferedReader? = null
-        try {
-            val p = Runtime.getRuntime().exec("getprop $propname")
-            input = BufferedReader(InputStreamReader(p.inputStream), 1024)
-            line = input.readLine()
-            input.close()
+        return try {
+            val process = Runtime.getRuntime().exec("getprop $propname")
+            input = BufferedReader(InputStreamReader(process.inputStream), 1024)
+            input.readLine()
         } catch (e: IOException) {
-            return null
+            null
         } finally {
-            if (input != null) {
-                try {
-                    input.close()
-                } catch (e: IOException) {
-                    e.printStackTrace()
-                }
-            }
+            input?.close()
         }
-        return line
     }
-
 }

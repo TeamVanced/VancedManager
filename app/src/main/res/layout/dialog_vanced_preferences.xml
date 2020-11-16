@@ -1,44 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    app:contentPaddingBottom="4dp"
+    style="@style/BottomDialogCard">
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/BottomDialogCard"
-        app:contentPaddingBottom="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/vanced_install_title"
+            style="@style/BottomDialogCardTitle"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
 
             <TextView
-                android:id="@+id/vanced_install_title"
-                style="@style/BottomDialogCardTitle" />
+                android:id="@+id/vanced_theme"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/open_theme_selector"
+                style="@style/BottomDialogCardTextItem"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/open_theme_selector"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp">
-
-                <TextView
-                    android:id="@+id/vanced_theme"
-                    style="@style/BottomDialogCardTextItem"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:layout_toStartOf="@id/open_theme_selector" />
-
-                <ImageButton
-                    android:id="@+id/open_theme_selector"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:background="@android:color/transparent"
-                    android:maxWidth="24dp"
-                    android:maxHeight="24dp"
-                    android:src="@drawable/ic_baseline_navigate_next_36" />
-
-            </RelativeLayout>
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:maxWidth="24dp"
+                android:maxHeight="24dp"
+                android:src="@drawable/ic_baseline_navigate_next_36"/>
+        </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -61,7 +58,6 @@
                     android:maxWidth="24dp"
                     android:maxHeight="24dp"
                     android:src="@drawable/ic_baseline_navigate_next_36" />
-
             </RelativeLayout>
 
             <RelativeLayout
@@ -84,17 +80,12 @@
                     android:background="@android:color/transparent"
                     android:maxWidth="24dp"
                     android:maxHeight="24dp"
-                    android:src="@drawable/ic_baseline_navigate_next_36" />
-
+                    android:src="@drawable/ic_baseline_navigate_next_36"/>
             </RelativeLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/vanced_install"
-                style="@style/BottomDialogButtonStyle"
-                android:text="@string/install" />
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/vanced_install"
+            android:text="@string/install"
+            style="@style/BottomDialogButtonStyle"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

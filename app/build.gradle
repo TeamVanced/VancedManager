@@ -19,8 +19,8 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 200
-        versionName "2.0.0 (.nomagiskui)"
+        versionCode 201
+        versionName "2.0.1 (Android5and6suck)"
 
         vectorDrawables.useSupportLibrary true
 
@@ -33,10 +33,6 @@ android {
 
     lintOptions {
         disable 'MissingTranslation', 'ExtraTranslation'
-    }
-
-    aaptOptions {
-        noCompress 'apk', '.apk'
     }
 
     applicationVariants.all { variant ->
@@ -52,6 +48,7 @@ android {
 
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
 
 // To inline the bytecode built with JVM target 1.8 into
@@ -70,19 +67,24 @@ android {
 def getLanguages() {
     List<String> langs = new ArrayList<String>()
     langs.add("en")
+    //Add languages with dialects
+    langs.add("bn_BD")
+    langs.add("bn_IN")
+    langs.add("pt_BR")
+    langs.add("pt_PT")
+    langs.add("zh_CN")
+    langs.add("zh_TW")
+    List<String> exceptions = [ "bn", "pt", "zh"]
     Pattern pattern = Pattern.compile("-(\\w+)-")
     new File("${projectDir}/src/main/res").eachDir { dir ->
         if (dir.name.startsWith("values-") && !dir.name.contains("v23")) {
             Matcher matcher = pattern.matcher(dir.name)
-            if (matcher.find()) {
-                if (langs.contains(matcher.group(1)))
-                    langs.add(matcher.group(1) + "_${dir.name.substring(dir.name.length() - 2)}")
-                else
-                    langs.add(matcher.group(1))
+            if (matcher.find() && !exceptions.any { matcher.group(1) == it } ) {
+                langs.add(matcher.group(1))
             }
         }
     }
-    return langs.toArray()
+    return langs.toArray().toSorted()
 }
 
 static def surroundWithQuotes(Object[] arr) {
@@ -114,7 +116,6 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'com.google.android.material:material:1.3.0-alpha03'
 
-// Other
     // JSON parser
     implementation 'com.beust:klaxon:5.4'
 

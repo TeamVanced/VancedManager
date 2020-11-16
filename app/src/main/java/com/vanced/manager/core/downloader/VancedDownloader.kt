@@ -28,7 +28,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.File
 
-object VancedDownloader {
+object VancedDownloader: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     
     private lateinit var prefs: SharedPreferences
     private lateinit var defPrefs: SharedPreferences
@@ -36,7 +36,7 @@ object VancedDownloader {
     private var installUrl: String? = null
     private var variant: String? = null
     private var theme: String? = null
-    private var lang: MutableList<String>? = null
+    private var lang = mutableListOf<String>()
 
     private lateinit var themePath: String
 
@@ -56,7 +56,9 @@ object VancedDownloader {
         downloadPath = context.getExternalFilesDir("vanced/$variant")?.path
         File(downloadPath.toString()).deleteRecursively()
         installUrl = defPrefs.getInstallUrl()
-        lang = prefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toMutableList()
+        prefs.getString("lang", getDefaultVancedLanguages())?.let {
+            lang = it.split(", ").toMutableList()
+        }
         theme = prefs.getString("theme", "dark")
         vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.get()?.value ?: listOf(""))
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
@@ -73,24 +75,24 @@ object VancedDownloader {
         context: Context,
         type: String = "theme"
     ) {
-        CoroutineScope(Dispatchers.IO).launch {
+        launch {
             val url =
                 when (type) {
                     "theme" -> "$themePath/$theme.apk"
                     "arch" -> "$installUrl/apks/v$vancedVersion/$variant/Arch/split_config.$arch.apk"
                     "stock" -> "$themePath/stock.apk"
                     "dpi" ->  "$themePath/dpi.apk"
-                    "lang" -> "$installUrl/apks/v$vancedVersion/$variant/Language/split_config.${lang?.get(count)}.apk"
+                    "lang" -> "$installUrl/apks/v$vancedVersion/$variant/Language/split_config.${lang[count]}.apk"
                     else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
                 }
 
-            downloadProgress.get()?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
+            downloadProgress.value?.currentDownload = PRDownloader.download(url, downloadPath, getFileNameFromUrl(url))
                 .build()
                 .setOnStartOrResumeListener {
-                    downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.downloading_file, getFileNameFromUrl(url)))
+                    downloadProgress.value?.downloadingFile?.value = context.getString(R.string.downloading_file, getFileNameFromUrl(url))
                 }
                 .setOnProgressListener { progress ->
-                    downloadProgress.get()?.downloadProgress?.set((progress.currentBytes * 100 / progress.totalBytes).toInt())
+                    downloadProgress.value?.downloadProgress?.value = (progress.currentBytes * 100 / progress.totalBytes).toInt()
                 }
                 .start(object : OnDownloadListener {
                     override fun onDownloadComplete() {
@@ -112,7 +114,7 @@ object VancedDownloader {
                             "lang" -> {
                                 count++
                                 succesfulLangCount++
-                                if (count < lang?.size!!)
+                                if (count < lang.size)
                                     downloadSplits(context, "lang")
                                 else
                                     startVancedInstall(context)
@@ -132,16 +134,16 @@ object VancedDownloader {
                         if (type == "lang") {
                             count++
                             when {
-                                count < lang?.size!! -> downloadSplits(context, "lang")
+                                count < lang.size -> downloadSplits(context, "lang")
                                 succesfulLangCount == 0 -> {
-                                    lang?.add("en")
+                                    lang.add("en")
                                     downloadSplits(context, "lang")
                                 }
                                 else -> startVancedInstall(context)
                             }
 
                         } else {
-                            downloadProgress.get()?.downloadingFile?.set(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
+                            downloadProgress.value?.downloadingFile?.value = context.getString(R.string.error_downloading, getFileNameFromUrl(url))
                         }
                     }
                 })
@@ -149,8 +151,8 @@ object VancedDownloader {
     }
 
     fun startVancedInstall(context: Context, variant: String? = this.variant) {
-        downloadProgress.get()?.installing?.set(true)
-        downloadProgress.get()?.reset()
+        downloadProgress.value?.installing?.value = true
+        downloadProgress.value?.reset()
         FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
             variant?.let { param("vanced_variant", it) }
             theme?.let { param("vanced_theme", it) }
@@ -160,8 +162,4 @@ object VancedDownloader {
         else
             installVanced(context)
     }
-
-
-
-
 }

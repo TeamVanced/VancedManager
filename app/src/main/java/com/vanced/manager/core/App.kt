@@ -11,13 +11,18 @@ import com.crowdin.platform.data.remote.NetworkType
 import com.downloader.PRDownloader
 import com.vanced.manager.BuildConfig.*
 import com.vanced.manager.utils.InternetTools.loadJson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 open class App: Application() {
 
     private val prefs by lazy { getDefaultSharedPreferences(this) }
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     override fun onCreate() {
-        loadJson(this)
+        scope.launch { loadJson(this@App) }
         super.onCreate()
         PRDownloader.initialize(this)
 
@@ -46,6 +51,4 @@ open class App: Application() {
         super.onConfigurationChanged(newConfig)
         Crowdin.onConfigurationChanged()
     }
-
-
 }

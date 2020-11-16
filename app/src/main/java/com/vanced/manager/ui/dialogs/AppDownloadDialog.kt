@@ -8,10 +8,8 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.DialogFragment
+import androidx.core.view.isVisible
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.downloader.PRDownloader
 import com.vanced.manager.R
@@ -19,53 +17,87 @@ import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
 import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
 import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.databinding.DialogAppDownloadBinding
+import com.vanced.manager.ui.core.BindingDialogFragment
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 
-class AppDownloadDialog(
-    private val app: String,
-    private val installing: Boolean = false
-) : DialogFragment() {
+class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
 
-    private lateinit var binding: DialogAppDownloadBinding
+    companion object {
+
+        const val CLOSE_DIALOG = "close_dialog"
+        private const val TAG_APP = "TAG_APP"
+        private const val TAG_INSTALLING = "TAG_INSTALLING"
+
+        fun newInstance(
+            app: String,
+            installing: Boolean = false
+        ): AppDownloadDialog = AppDownloadDialog().apply {
+            arguments = Bundle().apply {
+                putString(TAG_APP, app)
+                putBoolean(TAG_INSTALLING, installing)
+            }
+        }
+    }
 
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            when (intent.action) {
-                CLOSE_DIALOG -> dismiss()
+            if (intent.action == CLOSE_DIALOG) {
+                dismiss()
             }
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+    override fun binding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        if (dialog != null && dialog?.window != null) {
-            dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        }
-        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_app_download, container, false)
-        binding.progress = downloadProgress.get()
-        return binding.root
+    ) = DialogAppDownloadBinding.inflate(inflater, container, false)
+
+    override fun otherSetups() {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        bindData()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        isCancelable = false
-        binding.appDownloadHeader.text = requireActivity().getString(R.string.installing_app, app)
-        binding.appDownloadCancel.setOnClickListener {
-            if (downloadProgress.get()?.installing?.get() == true)
-                return@setOnClickListener
-
-            PRDownloader.cancel(downloadProgress.get()!!.currentDownload)
-            dismiss()
+    private fun bindData() {
+        with(binding) {
+            isCancelable = false
+            bindDownloadProgress()
+            val app = arguments?.getString(TAG_APP)
+            appDownloadHeader.text = app
+            if (arguments?.getBoolean(TAG_INSTALLING) == false) {
+                when (app) {
+                    getString(R.string.vanced) -> downloadVanced(requireContext())
+                    getString(R.string.music) -> downloadMusic(requireContext())
+                    getString(R.string.microg) -> downloadMicrog(requireContext())
+                }
+            }
         }
-        if (!installing) {
-            when (app) {
-                requireActivity().getString(R.string.vanced) -> downloadVanced(requireActivity())
-                requireActivity().getString(R.string.music) -> downloadMusic(requireActivity())
-                requireActivity().getString(R.string.microg) -> downloadMicrog(requireActivity())
+    }
+
+    private fun DialogAppDownloadBinding.bindDownloadProgress() {
+        with(downloadProgress) {
+            observe(viewLifecycleOwner) { progressModel ->
+                progressModel.downloadProgress.observe(viewLifecycleOwner) {
+                    appDownloadProgressbar.progress = it
+                }
+                progressModel.installing.observe(viewLifecycleOwner) { installing ->
+                    appDownloadProgressbar.isVisible = !installing
+                    appInstallProgressbar.isVisible = installing
+                    appDownloadFile.isVisible = !installing
+                    appDownloadCancel.isEnabled = !installing
+                    appDownloadCancel.setOnClickListener {
+                        if (installing) {
+                            return@setOnClickListener
+                        }
+                        PRDownloader.cancel(progressModel.currentDownload)
+                        dismiss()
+                    }
+                }
+                progressModel.downloadingFile.observe(viewLifecycleOwner) {
+                    appDownloadFile.text = it
+                }
             }
         }
     }
@@ -80,9 +112,4 @@ class AppDownloadDialog(
         intentFilter.addAction(CLOSE_DIALOG)
         localBroadcastManager.registerReceiver(broadcastReceiver, intentFilter)
     }
-
-    companion object {
-        const val CLOSE_DIALOG = "close_dialog"
-    }
-
 }

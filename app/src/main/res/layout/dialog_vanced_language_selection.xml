@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/BottomDialogCard"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -14,7 +16,7 @@
             style="@style/BottomDialogCardTitle"
             android:text="@string/choose_preferred_language" />
 
-        <androidx.core.widget.NestedScrollView xmlns:tools="http://schemas.android.com/tools"
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_marginTop="8dp"
@@ -25,17 +27,12 @@
                 android:id="@+id/lang_button_ll"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
+                android:orientation="vertical"/>
         </androidx.core.widget.NestedScrollView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/vanced_install_finish"
             style="@style/BottomDialogButtonStyle"
             android:text="@string/save" />
-
     </LinearLayout>
-
 </com.google.android.material.card.MaterialCardView>

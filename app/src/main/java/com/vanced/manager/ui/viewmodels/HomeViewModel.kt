@@ -5,11 +5,12 @@ import android.content.ComponentName
 import android.content.Intent
 import android.view.View
 import android.widget.Toast
-import androidx.core.content.ContextCompat
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableField
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.google.android.material.button.MaterialButton
@@ -35,6 +36,7 @@ import com.vanced.manager.utils.PackageHelper.musicApkExists
 import com.vanced.manager.utils.PackageHelper.uninstallApk
 import com.vanced.manager.utils.PackageHelper.uninstallRootApk
 import com.vanced.manager.utils.PackageHelper.vancedInstallFilesExist
+import kotlinx.coroutines.launch
 
 open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
@@ -48,10 +50,12 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     val manager = ObservableField<DataModel>()
 
     fun fetchData() {
-        activity.setRefreshing(true)
-        loadJson(activity)
-        Crowdin.forceUpdate(activity)
-        activity.setRefreshing(false)
+        viewModelScope.launch {
+            activity.setRefreshing(true)
+            loadJson(activity)
+            Crowdin.forceUpdate(activity)
+            activity.setRefreshing(false)
+        }
     }
     
     private val microgToast = Toast.makeText(activity, R.string.no_microg, Toast.LENGTH_LONG)
@@ -96,7 +100,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             when (app) {
                 activity.getString(R.string.vanced) -> VancedPreferencesDialog().show(activity)
                 activity.getString(R.string.music) -> MusicPreferencesDialog().show(activity)
-                else ->  AppDownloadDialog(app).show(activity)
+                else ->  AppDownloadDialog.newInstance(app).show(activity)
             }
 
             return
@@ -105,34 +109,59 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
         when (app) {
             activity.getString(R.string.vanced) -> {
                 when (variant) {
-                    "nonroot" -> if (vancedInstallFilesExist(activity)) InstallationFilesDetectedDialog(app).show(activity) else VancedPreferencesDialog().show(activity)
-                    "root" -> VancedPreferencesDialog().show(activity)
+                    "nonroot" -> {
+                        if (vancedInstallFilesExist(activity)) {
+                            InstallationFilesDetectedDialog.newInstance(app).show(activity)
+                        } else {
+                            VancedPreferencesDialog().show(activity)
+                        }
+                    }
+                    "root" -> {
+                        VancedPreferencesDialog().show(activity)
+                    }
                 }
             }
             activity.getString(R.string.music) -> {
                 when (variant) {
-                    "nonroot" -> if (musicApkExists(activity)) InstallationFilesDetectedDialog(app).show(activity) else MusicPreferencesDialog().show(activity)
-                    "root" -> MusicPreferencesDialog().show(activity)
+                    "nonroot" -> {
+                        if (musicApkExists(activity)) {
+                            InstallationFilesDetectedDialog.newInstance(app).show(activity)
+                        } else {
+                            MusicPreferencesDialog().show(activity)
+                        }
+                    }
+                    "root" -> {
+                        MusicPreferencesDialog().show(activity)
+                    }
                 }
             }
             activity.getString(R.string.microg) -> {
-                if (apkExist(activity, "microg.apk")) InstallationFilesDetectedDialog(app).show(activity) else AppDownloadDialog(app).show(activity)
+                if (apkExist(activity, "microg.apk")) {
+                    InstallationFilesDetectedDialog.newInstance(app).show(activity)
+                } else {
+                    AppDownloadDialog.newInstance(app).show(activity)
+                }
             }
         }
 
     }
 
-    fun uninstallPackage(pkg: String) = if (prefs.getString("vanced_variant", "nonroot") == "root" && uninstallRootApk(pkg)) activity.fetchData() else uninstallApk(pkg, activity)
+    fun uninstallPackage(pkg: String) {
+        if (prefs.getString("vanced_variant", "nonroot") == "root" && uninstallRootApk(pkg)) {
+            viewModelScope.launch { activity.fetchData() }
+        } else {
+            uninstallApk(pkg, activity)
+        }
+    }
 
     init {
         activity.setRefreshing(true)
-        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
-        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), ContextCompat.getDrawable(activity, R.drawable.ic_vanced)))
-        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
-        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), ContextCompat.getDrawable(activity, R.drawable.ic_music)))
-        microg.set(DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), ContextCompat.getDrawable(activity, R.drawable.ic_microg)))
-        manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), ContextCompat.getDrawable(activity, R.mipmap.ic_launcher)))
+        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced)))
+        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced)))
+        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music)))
+        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music)))
+        microg.set(DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg)))
+        manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher)))
         activity.setRefreshing(false)
     }
-
 }

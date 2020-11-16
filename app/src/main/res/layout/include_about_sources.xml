@@ -1,73 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layout>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="?colorLinkBG"
+    app:cardElevation="0dp"
+    app:contentPaddingBottom="8dp"
+    app:contentPaddingTop="2dp">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.vanced.manager.ui.viewmodels.AboutViewModel" />
-
-    </data>
-
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="?colorLinkBG"
-        app:cardElevation="0dp"
-        app:contentPaddingBottom="8dp"
-        app:contentPaddingTop="2dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/about_card_vancedTeam"
+            style="@style/CardTextHeader"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/sources"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.flexbox.FlexboxLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:flexDirection="row"
+            app:justifyContent="space_evenly">
 
-            <TextView
-                android:id="@+id/about_card_vancedTeam"
-                style="@style/CardTextHeader"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/sources"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/about_github_button"
+                style="@style/SocialButtonStyle"
+                app:icon="@drawable/ic_github"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/about_license_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.flexbox.FlexboxLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:alignItems="center"
-                app:flexDirection="row"
-                app:justifyContent="space_evenly">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/about_github_button"
-                    style="@style/SocialButtonStyle"
-                    android:onClick='@{()-> viewModel.openUrl("https://github.com/YTVanced/VancedInstaller")}'
-                    app:icon="@drawable/ic_github"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/about_license_button"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/about_license_button"
-                    style="@style/SocialButtonStyle"
-                    android:fontFamily="@font/exo_semibold"
-                    android:onClick='@{()-> viewModel.openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE")}'
-                    android:text="GPL"
-                    android:textSize="21sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/about_github_button"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="HardcodedText" />
-
-            </com.google.android.flexbox.FlexboxLayout>
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</layout>
-
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/about_license_button"
+                style="@style/SocialButtonStyle"
+                android:fontFamily="@font/exo_semibold"
+                android:text="GPL"
+                android:textSize="21sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/about_github_button"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+        </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

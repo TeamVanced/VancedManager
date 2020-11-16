@@ -15,13 +15,13 @@
     <string name="are_you_rooted">端末をルート化していますか？</string>
     <string name="grant_root">root 権限を付与</string>
     <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
     <string name="lets_get_started">さあ、始めましょう</string>
-    <string name="willing_to_use_root">root 版を使用したいですか？下のボタンを押してください。そうでないなら続けるボタンを押してください</string>
+    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">%1$s について</string>
-    <string name="app_changelog_tooltip">カードをタップして更新履歴を見る。</string>
+    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
     <string name="changelog">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="install">インストール</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">利用不可</string>
     <string name="update">更新</string>
     <string name="useful_links">リンク集</string>
-    <string name="support_us">サポートする</string>
+    <string name="support_us">Brave をダウンロードして支援する</string>
     <!-- Settings -->
     <string name="accent_color">アクセントカラー</string>
     <string name="accent_blue">青</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">赤</string>
     <string name="accent_yellow">黄</string>
     <string name="category_appearance">表示設定</string>
-    <string name="category_behaviour">動作設定</string>
+    <string name="category_behaviour">動作</string>
     <string name="clear_files">ダウンロード済みファイルを消去</string>
     <string name="cleared_files">ファイルを消去しました</string>
     <string name="firebase_title">Firebase アナリティクス</string>
@@ -62,8 +62,8 @@
     <string name="variant">種類</string>
     <!-- Dialogs -->
     <string name="advanced">上級者向け</string>
-    <string name="app_install_files_detected">%1$sのインストールに必要なファイルが見つかりました</string>
-    <string name="app_install_files_detected_summary">%1$sのインストールに必要な全てのファイル準備が整いました。インストールしますか?</string>
+    <string name="app_install_files_detected">%1$s のインストールに必要なファイルが見つかりました</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">アップデートを確認中...</string>
     <string name="chosen_lang">言語: %1$s</string>
     <string name="chosen_theme">テーマ: %1$s</string>
@@ -71,14 +71,14 @@
     <string name="guide">ガイド</string>
     <string name="hold_on">ストップ！</string>
     <string name="installing_app">%1$s をインストールしています</string>
-    <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI ユーザーを検知しました！</string>
-    <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">エラー</string>
     <string name="redownload">再ダウンロード</string>
-    <string name="security_context">このアプリは必ずvancedapp.com、VancedのDiscordサーバー、VancedのGitHubのいづれかからダウンロードして下さい。</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="success">成功！</string>
-    <string name="app_installation_preferences">%1$sのインストール設定</string>
+    <string name="app_installation_preferences">%1$s のインストール設定</string>
     <string name="vanced_installed">Vanced のインストールに成功しました。今すぐ開きますか？</string>
     <string name="version">バージョン</string>
     <string name="music_installed">Vanced Music のインストールに成功しました。今すぐ開きますか？</string>
@@ -94,15 +94,15 @@
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
     <!-- Error messages -->
-    <string name="chown_fail">システム所有者への APK の Chown ができませんでした、もう一度やり直してください.</string>
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">%1$s のダウンロード中にエラー</string>
     <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
     <string name="files_missing_va">インストールに必要なファイルが見つかりませんでした。再ダウンロードし、もう一度お試しください。</string>
     <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルが見つかりませんでした。もう一度お試しください。</string>
-    <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
-    <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
-    <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。ストックの YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_conflict">既にインストールされたアプリと競合したためインストールに失敗しました。Vanced の現在のバージョンをアンインストールしてから、もう一度やり直してください。</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
     <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>

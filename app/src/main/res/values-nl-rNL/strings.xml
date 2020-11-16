@@ -10,7 +10,7 @@
     <string name="title_about">Over</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Instellingen</string>
-    <string name="update_manager">Manager update</string>
+    <string name="update_manager">Manager bijwerken</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Is je apparaat geroot?</string>
     <string name="grant_root">Root machtiging toestaan</string>
@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced voor YouTube Music !\nMinder functies maar voldoet zeker aan je wensen.</string>
     <string name="select_apps_vanced">YouTube Vanced is de standaard Android YouTube app, maar nog beter !</string>
     <string name="lets_get_started">Aan de slag !</string>
-    <string name="willing_to_use_root">Wil je de root versie gebruiken? Tik dan op de knop hieronder of tik om verder te gaan</string>
+    <string name="willing_to_use_root">Wil je de root-versie gebruiken? Tik dan op de knop hieronder of tik om verder te gaan</string>
     <!-- Home Page -->
     <string name="about_app">Over %1$s</string>
     <string name="app_changelog_tooltip">Tik op de kaart om de wijzigingen te zien.</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Rood</string>
     <string name="accent_yellow">Geel</string>
     <string name="category_appearance">Weergave</string>
-    <string name="category_behaviour">Werking</string>
+    <string name="category_behaviour">Gedrag</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
     <string name="cleared_files">Bestanden succesvol verwijderd</string>
     <string name="firebase_title">Firebase analyse</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Geavanceerd</string>
     <string name="app_install_files_detected">%1$s installatiebestanden gedetecteerd!</string>
-    <string name="app_install_files_detected_summary">Manager heeft alle nodige bestanden gedetecteerd voor het installeren van %1$s. Wil je installeren?</string>
+    <string name="app_install_files_detected_summary">Manager heeft alle nodige bestanden gedetecteerd voor het installeren van %1$s. Wil je ze installeren?</string>
     <string name="checking_updates">Controleren op updates…</string>
     <string name="chosen_lang">Talen: %1$s</string>
     <string name="chosen_theme">Thema: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>
     <string name="installing_app">%1$s installeren</string>
-    <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die stopgezet is en niet kan bijgewerkt worden met deze app. Verwijder deze eerst door het verwijderen van de Magisk module / door de TWRP Vanced uninstaller te gebruiken.</string>
+    <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die stopgezet is en niet kan bijgewerkt worden met deze app. Verwijder deze eerst door het verwijderen van de Magisk-module / door de TWRP Vanced uninstaller te gebruiken.</string>
     <string name="miui_one_title">MIUI gedetecteerd!</string>
-    <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kunt deze waarschuwing negeren als je 20.2.20 of later xiaomi.eu gebaseerde ROM gebruikt)</string>
+    <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kunt deze waarschuwing negeren als je de op xiaomi.eu gebaseerde ROM 20.2.20 of later gebruikt)</string>
     <string name="error">Fout</string>
     <string name="redownload">Opnieuw downloaden</string>
-    <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vancedapp.com, de Vanced Discord server of Vanced GitHub</string>
+    <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vancedapp.com, de Vanced Discord-server of Vanced GitHub</string>
     <string name="success">Gelukt!</string>
     <string name="app_installation_preferences">installatievoorkeuren voor %1$s</string>
     <string name="vanced_installed">Vanced is succesvol geïnstalleerd! Nu starten?</string>
@@ -94,14 +94,14 @@
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
-    <string name="chown_fail">Wijzigen van apk-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
+    <string name="chown_fail">Wijzigen van APK-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
     <string name="error_downloading">Fout bij downloaden van %1$s</string>
     <string name="failed_uninstall">Deïnstalleren van pakket %1$s mislukt</string>
     <string name="files_missing_va">Kan de vereiste bestanden voor de installatie niet vinden. Download de installatiebestanden opnieuw en probeer het opnieuw.</string>
     <string name="ifile_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in opslag. Probeer het opnieuw.</string>
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_blocked">Installatie mislukt omdat de gebruiker de installatie heeft geblokkeerd.</string>
-    <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard YouTube app en probeer het daarna opnieuw.</string>
+    <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard YouTube-app en probeer het daarna opnieuw.</string>
     <string name="installation_conflict">Installatie mislukt omdat de app conflicten heeft met een reeds geïnstalleerde app. Verwijder de huidige versie van Vanced en probeer het opnieuw.</string>
     <string name="installation_failed">Installatie mislukt om onbekende redenen, word lid van onze Telegram of Discord voor verdere ondersteuning.</string>
     <string name="installation_incompatible">Installatie mislukt omdat het installatiebestand niet compatibel is met jouw apparaat. Wis de gedownloade bestanden in de instellingen en probeer het opnieuw.</string>

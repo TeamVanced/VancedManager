@@ -4,82 +4,75 @@ import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams.MATCH_PARENT
-import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.view.ViewGroup.LayoutParams.*
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
+import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
+import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.util.*
 
-class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
+class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVancedLanguageSelectionBinding>() {
 
-    private lateinit var langs: MutableList<String>
-    private val prefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
+    companion object {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.dialog_vanced_language_selection, container, false)
-    }
-
-    @ExperimentalStdlibApi
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        langs = vanced.get()?.array<String>("langs")?.value ?: mutableListOf("null")
-        loadBoxes(view.findViewById(R.id.lang_button_ll))
-        view.findViewById<MaterialButton>(R.id.vanced_install_finish).setOnClickListener {
-            val chosenLangs = mutableListOf<String>()
-            if (!langs.contains("null"))
-                langs.forEach { lang ->
-                    if (view.findViewWithTag<MaterialCheckBox>(lang).isChecked) {
-                        chosenLangs.add(lang)
-                    }
-                }
-
-            if (chosenLangs.isEmpty()) {
-                Toast.makeText(requireActivity(), R.string.select_at_least_one_lang, Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            prefs?.edit { putString("lang", chosenLangs.joinToString()) }
-            dismiss()
+        fun newInstance(): VancedLanguageSelectionDialog = VancedLanguageSelectionDialog().apply {
+            arguments = Bundle()
         }
     }
 
-    @ExperimentalStdlibApi
-    private fun loadBoxes(ll: LinearLayout) {
-        CoroutineScope(Dispatchers.Main).launch {
-            val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())
-            if (this@VancedLanguageSelectionDialog::langs.isInitialized) {
-                if (!langs.contains("null")) {
-                    langs.forEach { lang ->
-                        val loc = Locale(lang)
-                        val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
-                            tag = lang
-                            isChecked = langPrefs!!.contains(lang)
-                            text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
-                            textSize = 18F
-                            typeface = ResourcesCompat.getFont(requireActivity(), R.font.exo_bold)
-                        }
-                        ll.addView(box, MATCH_PARENT, WRAP_CONTENT)
+    private val langs = vanced.get()?.array<String>("langs")?.value
+    private val prefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
+
+    override fun binding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) = DialogVancedLanguageSelectionBinding.inflate(inflater, container, false)
+
+    override fun otherSetups() {
+        bindData()
+    }
+
+    private fun bindData() {
+        with(binding) {
+            langButtonLl.loadBoxes()
+            vancedInstallFinish.setOnClickListener {
+                val chosenLangs = mutableListOf<String>()
+                langs?.forEach { lang ->
+                    if (root.findViewWithTag<MaterialCheckBox>(lang).isChecked) {
+                        chosenLangs.add(lang)
                     }
                 }
-            } else
-                loadBoxes(ll)
+                if (chosenLangs.isEmpty()) {
+                    Toast.makeText(requireActivity(), R.string.select_at_least_one_lang, Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                prefs?.edit { putString("lang", chosenLangs.joinToString()) }
+                dismiss()
+            }
+        }
+    }
+
+    private fun LinearLayout.loadBoxes() {
+        val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())
+        langs?.forEach { lang ->
+            val loc = Locale(lang)
+            val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
+                tag = lang
+                isChecked = langPrefs?.contains(lang) ?: false
+                text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
+                textSize = 18F
+                typeface = ResourcesCompat.getFont(requireActivity(), R.font.exo_bold)
+            }
+            addView(box, MATCH_PARENT, WRAP_CONTENT)
         }
     }
 
@@ -87,5 +80,4 @@ class VancedLanguageSelectionDialog : BottomSheetDialogFragment() {
         super.onDismiss(dialog)
         VancedPreferencesDialog().show(requireActivity())
     }
-
 }

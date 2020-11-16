@@ -14,9 +14,8 @@ import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.generateChecksum
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -49,9 +48,9 @@ object InternetTools {
             context.startActivity(Intent(Intent.ACTION_VIEW, url.toUri()).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 
-    fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/')+1, url.length)
+    fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, url.length)
 
-    fun loadJson(context: Context) = CoroutineScope(Dispatchers.IO).launch {
+    suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
         val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
         val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
         val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
@@ -78,6 +77,7 @@ object InternetTools {
             set(latest?.obj("manager"))
             notifyChange()
         }
+
     }
 
     suspend fun getJsonString(file: String, obj: String, context: Context): String {
@@ -100,9 +100,9 @@ object InternetTools {
         return getJsonString(hashUrl, obj, context)
     }
 
-    fun checkSHA256(sha256: String, updateFile: File?): Boolean {
+    fun checkSHA256(sha256: String, updateFile: File): Boolean {
         return try {
-            val dataBuffer = updateFile!!.readBytes()
+            val dataBuffer = updateFile.readBytes()
             // Generate the checksum
             val sum = generateChecksum(dataBuffer)
 

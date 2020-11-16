@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Gelo cîhaza te Root e?</string>
     <string name="grant_root">Destûra Root\'ê bide</string>
     <string name="select_at_least_one_app">Herî kêm sepanekê hilbijêre!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature rich but fulfils your needs.</string>
+    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
-    <string name="willing_to_use_root">Gelo dixwazî guhertoya root bi kar bînî? Tenê bişkoka jêrîn bidewsîne, an ji bo domandinê bitepînin</string>
+    <string name="lets_get_started">Dest pê kirin</string>
+    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
-    <string name="app_changelog_tooltip">Ji bo guherînan bibînî kartê bitepîne.</string>
+    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
     <string name="changelog">Guherîn</string>
     <string name="downloading_file">Tê daxistin %1$s</string>
     <string name="install">Saz bike</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Sor</string>
     <string name="accent_yellow">Zer</string>
     <string name="category_appearance">Xuyang</string>
-    <string name="category_behaviour">Reftar</string>
+    <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Dosiyayên daxistî paqij bike</string>
     <string name="cleared_files">Dosiya, biserketî paqij bûn</string>
     <string name="firebase_title">Analîza Firebase\'ê</string>
@@ -61,9 +61,9 @@
     <string name="update_not_found">Hildema nû nîne</string>
     <string name="variant">Guharto</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">Pêşketî</string>
     <string name="app_install_files_detected">%1$s dosiyên sazkirinê peyda bûn!</string>
-    <string name="app_install_files_detected_summary">Rêveberê peydabûna hemû ew dosiyên pêwîst ên ji bo sazkirina %1$s tesbît kir. Gelo tu dixwazî saz bikî?</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">Hildem tên kontrolkirin...</string>
     <string name="chosen_lang">Ziman(ên):%1$s</string>
     <string name="chosen_theme">Rûkar: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Rêzan</string>
     <string name="hold_on">Rawestîne!</string>
     <string name="installing_app">%1$s tê sazkirin</string>
-    <string name="magisk_vanced">Hûn niha guhertoya Magisk/TWRP ji Vanced\'ê bi kar tînin, ku qut bûye û bi saya vê sepanê naye hildemandin. Jkx magsik module/bi alîkariya TWRP Vanced uninstaller\'ê rakin.</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI destnîşan bû!</string>
-    <string name="miui_one">Ji bo ku Vanced were sazkirin, DIVÊ hûn Optimîzasyonên MIUI-yê di sazkariyên pêşvebirinê de neçalak bikin. (Hûn dikarin vê hişyariyê paşguh bikin heke hûn ROM\'a li ser esasa xiaomi.eu 20.2.20 an jortir bi kar tînin)</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Çewtî</string>
     <string name="redownload">Ji nû ve daxîne</string>
-    <string name="security_context">Piştrast bin ku we sepan ji vancedapp.com\'ê, ji servera Vanced Discord\'ê an Vanced GitHub\'ê daxistiye</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="success">Bi Ser Ket!</string>
     <string name="app_installation_preferences">%1$s sazkariyên bijarde yên sazkirinê</string>
     <string name="vanced_installed">Vanced biserketî saz bû! Gelo niha vebe?</string>
@@ -94,15 +94,15 @@
     <string name="sources">Çavkanî</string>
     <string name="vanced_team">Koma Vanced\'ê</string>
     <!-- Error messages -->
-    <string name="chown_fail">\'Chown\' apk ji xwediyê sîstemê re bi ser neket, jkx dîsa biceribîne.</string>
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Çewtiya daxistinê %1$s</string>
     <string name="failed_uninstall">Rakirina pakêta %1$s bi ser neket</string>
     <string name="files_missing_va">Dozîna dosiyên pêwîst ji bo sazkirinê bi ser neket. Dosiyên sazkirinê dîsa daxîne, paşê dubare biceribîne.</string>
     <string name="ifile_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji bîrgehê bi ser neket, jkx dîsa biceribîne.</string>
-    <string name="installation_aborted">Sazkirin bi ser neket ji ber ku bikarîner dawî li pêvajoya sazkirinê anî.</string>
-    <string name="installation_blocked">Sazkirin bi ser neket ji ber ku bikarînerê sazkirin asteng kir.</string>
-    <string name="installation_downgrade">Sazkirin bi ser neket ji ber ku bikarîner hewl dida derecebendiya pakêtê kêm bike. Hildeman ji bernameya YouTube\'ê ya heyî rakin, paşê dîsa biceribînin.</string>
-    <string name="installation_conflict">Sazkirin bi ser neket ji ber ku ev bernameya ligel bernameyeke din ya sazkirî li hev nake. Guhertoya heyî ya Vanced\'ê rakin, paşê dîsa biceribînin.</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">Sazkirin ji ber sedemên nenas bi ser neket, ji bo piştgiriya zêdetir tevlî Telegram an Discord\'ê bibin.</string>
     <string name="installation_incompatible">Sazkirin bi ser neket ji ber ku dosiya sazkirinê ligel cîhaza te hevaheng nîne. Dosiyên daxistî ji sazkariyan paqij bike, paşê dîsa biceribîne.</string>
     <string name="installation_invalid">Sazkirin bi ser neket ji ber ku dosiyên apk\'ayê xirab in, jkx dîsa biceribîne.</string>

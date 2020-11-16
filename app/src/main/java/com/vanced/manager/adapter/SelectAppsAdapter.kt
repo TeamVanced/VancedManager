@@ -24,7 +24,7 @@ class SelectAppsAdapter(context: Context) : RecyclerView.Adapter<SelectAppsAdapt
         context.getString(R.string.music),
         context.getString(R.string.select_apps_music),
         "music",
-        prefs.getBoolean("enable_music", false)
+        prefs.getBoolean("enable_music", true)
     )
 
     val apps = arrayOf(vanced, music)

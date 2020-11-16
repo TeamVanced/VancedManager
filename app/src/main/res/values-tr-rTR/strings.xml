@@ -15,8 +15,8 @@
     <string name="are_you_rooted">Cihazınız Root\'lu mu?</string>
     <string name="grant_root">Root İzni Ver</string>
     <string name="select_at_least_one_app">En az bir uygulama seçin!</string>
-    <string name="select_apps_music">Vanced, ancak YouTube Music için!\nnispeten daha az zengin özelliklere sahiptir, ancak ihtiyaçlarınızı karşılar.</string>
-    <string name="select_apps_vanced">YouTube Vanced, stok Android YouTube Uygulamasıdır, ancak daha iyidir!</string>
+    <string name="select_apps_music">Vanced, ancak YouTube Music için!\nnispeten daha az özelliğe sahiptir ancak ihtiyaçlarınızı karşılar.</string>
+    <string name="select_apps_vanced">YouTube Vanced, temelde YouTube Android Uygulamasıdır, ancak orijinalinden daha iyidir!</string>
     <string name="lets_get_started">Başlayalım</string>
     <string name="willing_to_use_root">Root sürümünü kullanmak ister misiniz? Sadece aşağıdaki düğmeye basın, yoksa devam etmek için dokunun</string>
     <!-- Home Page -->
@@ -30,10 +30,10 @@
     <string name="latest">En son:</string>
     <string name="no_microg">microG yüklü değil</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
-    <string name="unavailable">Mevcut değil</string>
+    <string name="unavailable">Yüklenmemiş</string>
     <string name="update">Güncelle</string>
     <string name="useful_links">Yararlı Bağlantılar</string>
-    <string name="support_us">Bizi Destekle!</string>
+    <string name="support_us">Bizi destekle!</string>
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
     <string name="accent_blue">Mavi</string>
@@ -71,7 +71,7 @@
     <string name="guide">Kılavuz</string>
     <string name="hold_on">Durdur!</string>
     <string name="installing_app">%1$s yükleniyor</string>
-    <string name="magisk_vanced">Üretimi durdurulan ve bu uygulama kullanılarak güncellenemeyen Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen magisk modülünü/TWRP Vanced kaldırıcıyı kullanarak kaldırın.</string>
+    <string name="magisk_vanced">Üretimi durdurulan ve bu uygulama kullanılarak güncellenemeyen Vanced\'in Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen Magisk modülünü/TWRP Vanced kaldırıcıyı kullanarak kaldırın.</string>
     <string name="miui_one_title">MIUI tespit edildi!</string>
     <string name="miui_one">Vanced\'i yüklemek için geliştirici ayarlarından MIUI Optimizasyonlarını devre dışı bırakmanız GEREKİR. (20.2.20 veya üzeri xiaomi.eu tabanlı ROM kullanıyorsanız bu uyarıyı göz ardı edebilirsiniz)</string>
     <string name="error">Hata</string>

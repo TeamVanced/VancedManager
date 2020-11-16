@@ -2,63 +2,64 @@ package com.vanced.manager.ui.dialogs
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams.MATCH_PARENT
-import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.view.ViewGroup.LayoutParams.*
 import androidx.core.content.edit
-import androidx.databinding.DataBindingUtil
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import androidx.preference.PreferenceManager.*
 import com.google.android.material.radiobutton.MaterialRadioButton
-import com.vanced.manager.BuildConfig.MANAGER_LANGUAGES
-import com.vanced.manager.R
+import com.vanced.manager.BuildConfig.*
 import com.vanced.manager.databinding.DialogManagerLanguageBinding
+import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
 
-class ManagerLanguageDialog : BottomSheetDialogFragment() {
+class ManagerLanguageDialog : BindingBottomSheetDialogFragment<DialogManagerLanguageBinding>() {
 
-    private lateinit var binding: DialogManagerLanguageBinding
+    companion object {
+
+        fun newInstance(): ManagerLanguageDialog = ManagerLanguageDialog().apply {
+            arguments = Bundle()
+        }
+    }
+
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
 
-    override fun onCreateView(
+    override fun binding(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.dialog_manager_language, container, false)
-        return binding.root
+    ) = DialogManagerLanguageBinding.inflate(inflater, container, false)
+
+    override fun otherSetups() {
+        bindData()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        addRadioButtons()
-        val language = prefs.getString("manager_lang", "System Default")
-        view.findViewWithTag<MaterialRadioButton>(language).isChecked = true
-        binding.languageSave.setOnClickListener {
-            val newPref = binding.languageRadiogroup.getCheckedButtonTag()
-            if (language != newPref) {
-                prefs.edit { putString("manager_lang", newPref) }
-                dismiss()
-                requireActivity().recreate()
-            } else {
-                dismiss()
+    private fun bindData() {
+        with(binding) {
+            addRadioButtons().forEach { mrb ->
+                languageRadiogroup.addView(mrb, MATCH_PARENT, WRAP_CONTENT)
             }
-        }
-    }
-
-    private fun addRadioButtons() {
-        requireActivity().runOnUiThread {
-            (arrayOf("System Default") + MANAGER_LANGUAGES).forEach { lang ->
-                val button = MaterialRadioButton(requireActivity()).apply {
-                    text = getLanguageFormat(requireActivity(), lang)
-                    textSize = 18f
-                    tag = lang
+            val language = prefs.getString("manager_lang", "System Default")
+            root.findViewWithTag<MaterialRadioButton>(language).isChecked = true
+            languageSave.setOnClickListener {
+                val newPref = binding.languageRadiogroup.getCheckedButtonTag()
+                if (language != newPref) {
+                    prefs.edit { putString("manager_lang", newPref) }
+                    dismiss()
+                    requireActivity().recreate()
+                } else {
+                    dismiss()
                 }
-                binding.languageRadiogroup.addView(button, MATCH_PARENT, WRAP_CONTENT)
             }
         }
     }
 
+    private fun addRadioButtons() =
+        (arrayOf("System Default") + MANAGER_LANGUAGES).map { lang ->
+            MaterialRadioButton(requireActivity()).apply {
+                text = getLanguageFormat(requireActivity(), lang)
+                textSize = 18f
+                tag = lang
+            }
+        }
 }

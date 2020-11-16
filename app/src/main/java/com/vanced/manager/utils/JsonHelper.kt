@@ -13,13 +13,14 @@ object JsonHelper {
 
     suspend fun getJson(url: String): JsonObject? {
         return try {
-            if(dataMap.containsKey(url)) {
-                dataMap[url]!!
+            if (dataMap.containsKey(url)) {
+                dataMap[url]
             } else {
                 dataMap[url] = getSuspendJson(url)
-                dataMap[url]!!
+                dataMap[url]
             }
         } catch (e: Exception) {
+            //This null is NEEDED, do NOT try to "fix" NPE here!!!
             null
         }
     }

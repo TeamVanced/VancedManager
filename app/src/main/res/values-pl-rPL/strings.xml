@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Czy Twoje urządzenie jest zakorzenione (root)?</string>
     <string name="grant_root">Przyznaj uprawnienie root</string>
     <string name="select_at_least_one_app">Wybierz co najmniej jedną aplikację!</string>
-    <string name="select_apps_music">Vanced, ale dla Muzyki YouTube!\nstosunkowo mniej funkcji, ale zaspokaja Twoje potrzeby.</string>
+    <string name="select_apps_music">Vanced, ale dla muzyki YouTube!\nstosunkowo mniej bogatych w funkcje, ale zaspokaja Twoje potrzeby.</string>
     <string name="select_apps_vanced">YouTube Vanced to domyślna aplikacja YouTube na Androida, ale lepsza!</string>
     <string name="lets_get_started">Zaczynajmy</string>
-    <string name="willing_to_use_root">Zamierzasz używać wersji root? Po prostu kliknij przycisk poniżej, jeśli nie kliknij aby kontynuować</string>
+    <string name="willing_to_use_root">Czy chcesz użyć wersji głównej? Po prostu naciśnij przycisk poniżej, w przeciwnym razie naciśnij aby kontynuować</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
-    <string name="app_changelog_tooltip">Kliknij kartę, aby zobaczyć listę zmian.</string>
+    <string name="app_changelog_tooltip">Dotknij karty, aby zobaczyć listę zmian.</string>
     <string name="changelog">Lista zmian</string>
     <string name="downloading_file">Pobieranie %1$s</string>
     <string name="install">Zainstaluj</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">Niedostępne</string>
     <string name="update">Aktualizuj</string>
     <string name="useful_links">Przydatne linki</string>
-    <string name="support_us">Wspomóż nas!</string>
+    <string name="support_us">Wesprzyj nas, pobierając Brave</string>
     <!-- Settings -->
     <string name="accent_color">Kolor Akcentu</string>
     <string name="accent_blue">Niebieski</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Opcje zaawansowane</string>
     <string name="app_install_files_detected">Wykryto %1$s plików instalacyjnych!</string>
-    <string name="app_install_files_detected_summary">Menedżer wykrył, że znaleziono wszystkie pliki niezbędne do instalacji %1$s. Czy chcesz zainstalować?</string>
+    <string name="app_install_files_detected_summary">Menedżer wykrył, że znaleziono wszystkie pliki niezbędne do instalacji %1$s . Czy chcesz ją zainstalować?</string>
     <string name="checking_updates">Sprawdzam aktualizacje…</string>
     <string name="chosen_lang">Język(i): %1$s</string>
     <string name="chosen_theme">Motyw: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Przewodnik</string>
     <string name="hold_on">Stop!</string>
     <string name="installing_app">Instalowanie %1$s</string>
-    <string name="magisk_vanced">Korzystasz z Vanced w wersji Magisk/TWRP, która została wycofana i nie można jej zaktualizować za pomocą tej aplikacji. Najpierw usuń moduł magisk/używając deinstalatora TWRP Vanced.</string>
+    <string name="magisk_vanced">Używasz wersji Magisk/TWRP Vanced, która została przerwana i nie może zostać zaktualizowana za pomocą tej aplikacji. Proszę go usunąć usuwając moduł Magisk/używając TWRP Vanced deinstalatora.</string>
     <string name="miui_one_title">MIUI wykryte!</string>
-    <string name="miui_one">Aby zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli korzystasz z ROM 20.2.20 lub późniejszego xiaomi.eu)</string>
+    <string name="miui_one">Aby zainstalować Vanced, MUSI wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli używasz oprogramowania 20.2.20 lub później z bazą na xiaomi.eu)</string>
     <string name="error">Błąd</string>
     <string name="redownload">Pobierz ponownie</string>
-    <string name="security_context">Upewnij się, że pobrałeś aplikację z vancedapp.com, serwera Discord Vanced lub GitHub\'a</string>
+    <string name="security_context">Upewnij się, że pobrałeś aplikację z vancedapp.com, serwera Vanced Discord lub Vanced GitHub</string>
     <string name="success">Sukces!</string>
     <string name="app_installation_preferences">Preferencje instalacji %1$s</string>
     <string name="vanced_installed">Vanced został pomyślnie zainstalowany! Uruchomić teraz?</string>
@@ -94,15 +94,15 @@
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Nie udało się zmienić właściciela apk, spróbuj ponownie.</string>
+    <string name="chown_fail">Nie udało się `chown` APK dla właściciela systemu, spróbuj ponownie.</string>
     <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
     <string name="files_missing_va">Nie udało się zlokalizować wymaganych plików do instalacji. Pobierz ponownie pliki instalacyjne, a następnie spróbuj ponownie.</string>
     <string name="ifile_missing">Nie udało się zlokalizować pliku apk dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
-    <string name="installation_aborted">Instalacja nie powiodła się, bo użytkownik przerwał instalację.</string>
-    <string name="installation_blocked">Instalacja nie powiodła się, bo użytkownik zablokował instalację.</string>
-    <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć wersję paczki. Odinstaluj aktualizacje z oryginalnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
-    <string name="installation_conflict">Instalacja nie powiodła się, ponieważ aplikacja koliduje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję Vanced, a następnie spróbuj ponownie.</string>
+    <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
+    <string name="installation_blocked">Instalacja nie powiodła się, ponieważ użytkownik zablokował instalację.</string>
+    <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z aplikacji YouTube, a następnie spróbuj ponownie.</string>
+    <string name="installation_conflict">Instalacja nie powiodła się z powodu konfliktu aplikacji z już zainstalowaną aplikacją. Odinstaluj aktualną wersję Vanced, a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
     <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>
