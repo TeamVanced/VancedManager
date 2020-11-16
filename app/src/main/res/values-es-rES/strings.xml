@@ -13,14 +13,14 @@
     <string name="update_manager">Actualizar Manager</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">¿Su dispositivo está rooteado?</string>
-    <string name="grant_root">Otorgar permiso root</string>
+    <string name="grant_root">Otorgar permisos Root</string>
     <string name="select_at_least_one_app">¡Seleccione al menos una aplicación!</string>
     <string name="select_apps_music">Vanced, pero para YouTube Music!\nrelativamente menos características, pero satisface tus necesidades.</string>
     <string name="select_apps_vanced">YouTube Vanced es la aplicación original de YouTube para Android, pero mejorada!</string>
     <string name="lets_get_started">Comencemos</string>
-    <string name="willing_to_use_root">¿Deseas usar la versión root? Sólo haz clic en el botón de abajo, si no, toca para continuar</string>
+    <string name="willing_to_use_root">¿No sabes lo que es, o no deseas usar la versión Root? ¡Haz click en la flecha azul de abajo!</string>
     <!-- Home Page -->
-    <string name="about_app">Acerca de %1$s</string>
+    <string name="about_app">Sobre %1$s</string>
     <string name="app_changelog_tooltip">Haz clic en la tarjeta para ver el registro de cambios.</string>
     <string name="changelog">Registro de cambios</string>
     <string name="downloading_file">Descargando %1$s</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">No Disponible</string>
     <string name="update">Actualizar</string>
     <string name="useful_links">Links Utiles</string>
-    <string name="support_us">¡Apóyanos!</string>
+    <string name="support_us">¡Ayúdenos!</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
     <string name="accent_blue">Azul</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Rojo</string>
     <string name="accent_yellow">Amarillo</string>
     <string name="category_appearance">Apariencia</string>
-    <string name="category_behaviour">Comportamiento</string>
+    <string name="category_behaviour">Comportamientos</string>
     <string name="clear_files">Limpiar archivos descargados</string>
     <string name="cleared_files">Archivos limpiados exitosamente</string>
     <string name="firebase_title">Analíticas de Firebase</string>
@@ -58,27 +58,27 @@
     <string name="push_notifications">Notificaciones push de %1$s</string>
     <string name="push_notifications_summary">Recibir notificaciones push cuando una actualización para %1$s sea lanzada</string>
     <string name="update_center">Centro de Actualizaciones</string>
-    <string name="update_not_found">Sin actualizaciónes nuevas</string>
-    <string name="variant">Variante</string>
+    <string name="update_not_found">No hay nuevas actualizaciones</string>
+    <string name="variant">variante</string>
     <!-- Dialogs -->
-    <string name="advanced">Configuración avanzada</string>
-    <string name="app_install_files_detected">¡%1$s archivos de instalación detectados!</string>
-    <string name="app_install_files_detected_summary">Manager encontró todos los archivos necesarios para la instalación de %1$s. ¿Deseas instalarlo?</string>
-    <string name="checking_updates">Comprobando actualizaciones…</string>
+    <string name="advanced">avanzado</string>
+    <string name="app_install_files_detected">¡Archivos de instalación de %1$s detectados!</string>
+    <string name="app_install_files_detected_summary">El administrador detectó que se encontraron todos los archivos necesarios para la instalación de %1$s . ¿Desea instalarlo?</string>
+    <string name="checking_updates">Buscando actualizaciones…</string>
     <string name="chosen_lang">Idioma(s): %1$s</string>
-    <string name="chosen_theme">Tema: %1$s</string>
+    <string name="chosen_theme">Temas: %1$s</string>
     <string name="chosen_version">Versión: %1$s</string>
     <string name="guide">Guía</string>
     <string name="hold_on">¡Detente!</string>
     <string name="installing_app">Instalando %1$s</string>
-    <string name="magisk_vanced">Estás utilizando la versión Magisk/TWRP de Vanced, la cual está descontinuada y no puede ser actualizada mediante esta app. Por favor elimínala quitando el módulo de Magisk o utilizando el desinstalador TWRP.</string>
+    <string name="magisk_vanced">Estás usando la versión Magisk/TWRP de Vanced, la cual está descontinuada y no puede actualizarse usando esta aplicación. Por favor, elimínelo eliminando el módulo Magisk / usando el desinstalador TWRP Vanced.</string>
     <string name="miui_one_title">MIUI detectado!</string>
     <string name="miui_one">Para instalar Vanced, DEBES desactivar la Optimización de MIUI en las opciones para desarrolladores. (Puedes omitir este paso si estás utilizando Xiaomi.eu 20.2.20 o más reciente)</string>
     <string name="error">Error</string>
     <string name="redownload">Volver a descargar</string>
-    <string name="security_context">Asegúrate de haber descargado la app desde vancedapp.com, el servidor de Discord de Vanced, o el GitHub de Vanced</string>
+    <string name="security_context">Asegúrese de descargar la aplicación desde vancedapp.com, el servidor Vanced Discord o el Vanced GitHub</string>
     <string name="success">Éxito!</string>
-    <string name="app_installation_preferences">%1$s preferencias de instalación</string>
+    <string name="app_installation_preferences">Preferencias de instalación de %1$s</string>
     <string name="vanced_installed">¡Vanced se ha instalado correctamente! ¿Abrir ahora?</string>
     <string name="version">Versión</string>
     <string name="music_installed">¡Vanced Music se ha instalado correctamente! ¿Abrir ahora?</string>
@@ -88,7 +88,7 @@
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>
     <string name="light_plus_other">Claro + %1$s</string>
-    <string name="select_at_least_one_lang">¡Se necesita al menos un idioma!</string>
+    <string name="select_at_least_one_lang">¡Seleccione al menos un idioma!</string>
     <!-- About Page -->
     <string name="manager_dev">Desarrolladores del Manager</string>
     <string name="sources">Fuentes</string>
@@ -97,18 +97,18 @@
     <string name="chown_fail">No se pudo cambiar el propietario del APK al propietario del sistema, inténtalo de nuevo.</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="files_missing_va">Error al localizar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
-    <string name="ifile_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del almacenamiento, por favor inténtelo de nuevo.</string>
-    <string name="installation_aborted">La instalación falló debido a que el usuario canceló la instalación.</string>
-    <string name="installation_blocked">La instalación falló debido a que el usuario bloqueó la instalación.</string>
-    <string name="installation_downgrade">La instalación falló debido a que el usuario intentó instalar una versión anterior. Desinstala las actualizaciones de la aplicación stock de YouTube, e inténtalo de nuevo.</string>
-    <string name="installation_conflict">La instalación falló debido a que la aplicación entra en conflicto con una aplicación ya instalada. Desinstala la versión actual de Vanced, e inténtalo de nuevo.</string>
+    <string name="files_missing_va">Fallo al localizar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
+    <string name="ifile_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del almacenamiento, por favor inténtalo de nuevo.</string>
+    <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
+    <string name="installation_blocked">La instalación ha fallado porque el usuario ha bloqueado la instalación.</string>
+    <string name="installation_downgrade">La instalación falló porque el usuario intentó downgradear el paquete. Desinstale las actualizaciones de la aplicación de YouTube, luego vuelva a intentarlo.</string>
+    <string name="installation_conflict">La instalación ha fallado debido a que la aplicación entra en conflicto con una aplicación ya instalada. Desinstale la versión actual de Vanced, y vuelva a intentarlo.</string>
     <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
     <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
     <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de apk está habilitada. Desactiva la verificación de la firmas de apk, y vuelve a intentarlo.</string>
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
     <string name="installation_storage">La instalación falló debido a un error de almacenamiento.</string>
-    <string name="modapk_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del instalador. Elimina los datos de la aplicación Vanced Manager y vuelva a intentarlo.</string>
-    <string name="path_missing">No se pudo encontrar la ruta de instalación de YouTube después de dividir la instalación.</string>
+    <string name="modapk_missing">No se pudo encontrar el archivo apk para el tema negro/oscuro del instalador. Limpia los datos de la aplicación del Administrador, y vuelve a intentarlo.</string>
+    <string name="path_missing">No se ha podido encontrar la ruta de instalación de YouTube después de dividir la instalación.</string>
 </resources>
