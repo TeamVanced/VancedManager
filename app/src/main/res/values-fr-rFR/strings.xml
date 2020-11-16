@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, mais pour YouTube Music!\nrelativement moins riche en fonctionnalités mais répond à vos besoins.</string>
     <string name="select_apps_vanced">YouTube Vanced est la même application YouTube livrée par défaut avec Android mais en mieux !</string>
     <string name="lets_get_started">Commençons</string>
-    <string name="willing_to_use_root">Vous voulez utiliser la version root ? Appuyez simplement sur le bouton ci-dessous, sinon appuyez pour continuer</string>
+    <string name="willing_to_use_root">Vous ne savez pas ce que c\'est ou vous ne voulez pas utiliser la version « root » ? Cliquez simplement sur la flèche bleue ci-dessous !</string>
     <!-- Home Page -->
     <string name="about_app">À propos de %1$s</string>
     <string name="app_changelog_tooltip">Appuyez sur la carte pour voir le changelog.</string>
@@ -90,7 +90,7 @@
     <string name="light_plus_other">Lumière + %1$s</string>
     <string name="select_at_least_one_lang">Sélectionnez au moins une langue !</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager pour les développeurs</string>
+    <string name="manager_dev">Développeurs du Manager</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
     <!-- Error messages -->
@@ -98,7 +98,7 @@
     <string name="error_downloading">Erreur en téléchargeant %1$s</string>
     <string name="failed_uninstall">N\'a pas pu désinstaller le paquet %1$s</string>
     <string name="files_missing_va">Impossible de localiser les fichiers nécessaires à l\'installation. Retéléchargez les fichiers d\'installation, puis réessayez.</string>
-    <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé du stockage, veuillez réessayer.</string>
+    <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé, veuillez réessayer.</string>
     <string name="installation_aborted">L\'installation a échoué car l\'utilisateur a abandonné l\'installation.</string>
     <string name="installation_blocked">L\'installation a échoué, car l\'utilisateur a bloqué l\'installation.</string>
     <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le package. Désinstallez les mises à jour depuis l\'application YouTube d\'origine, puis réessayez.</string>
