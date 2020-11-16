@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanhentunut, mutta YouTube Music!\nsuhteellisen vähemmän ominaisuus-rikas, mutta täyttää tarpeesi.</string>
     <string name="select_apps_vanced">YouTube Vanced on Androidin Youtube-vakiosovellus, mutta parempi!</string>
     <string name="lets_get_started">Aloitetaan</string>
-    <string name="willing_to_use_root">Haluaisitko käyttää juuriversiota? Paina vain alla olevaa painiketta, muuta napauta jatkaaksesi</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
     <string name="app_changelog_tooltip">Napauta korttia nähdäksesi muutoslokin.</string>
