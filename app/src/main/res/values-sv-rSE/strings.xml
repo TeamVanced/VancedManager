@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, men för YouTube Music!\nrelativt mindre funktion rik men uppfyller dina behov.</string>
     <string name="select_apps_vanced">YouTube Vanced är beståndet Android YouTube App, men bättre!</string>
     <string name="lets_get_started">Nu sätter vi igång</string>
-    <string name="willing_to_use_root">Vill du använda root-versionen? Tryck bara på knappen nedan, annars tryck för att fortsätta</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Cirka %1$s</string>
     <string name="app_changelog_tooltip">Tryck på kortet för att se ändringsloggen.</string>
