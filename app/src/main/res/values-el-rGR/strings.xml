@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, αλλά για το YouTube Music!\nΣχετικά λιγότερες δυνατότητες, αλλά καλύπτει τις ανάγκες σας.</string>
     <string name="select_apps_vanced">Το YouTube Vanced είναι το όπως την αρχική εφαρμογή YouTube, αλλά καλύτερο!</string>
     <string name="lets_get_started">Ας ξεκινήσουμε</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Δεν ξέρετε τι είναι αυτό ή δεν θέλετε να χρησιμοποιήσετε την έκδοση root; Τότε απλώς πατήστε το μπλε βέλος παρακάτω!</string>
     <!-- Home Page -->
     <string name="about_app">Σχετικά με το %1$s</string>
     <string name="app_changelog_tooltip">Πατήστε στην καρτέλα για να δείτε το αρχείο αλλαγών.</string>
