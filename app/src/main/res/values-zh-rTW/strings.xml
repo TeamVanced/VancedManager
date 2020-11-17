@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced ，不過是 YouTube 音樂！\n功能相對較少但足以滿足您的需要。</string>
     <string name="select_apps_vanced">YouTube Vanced 是安卓更高級的原生 YouTube 應用程式！</string>
     <string name="lets_get_started">讓我們開始吧</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">不知道這是什麼？或者不想用 Root 版？那就點一下下面的藍色箭頭吧！</string>
     <!-- Home Page -->
     <string name="about_app">關於 %1$s</string>
     <string name="app_changelog_tooltip">點選卡片以檢視更新日誌</string>
