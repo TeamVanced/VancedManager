@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, nhưng cho YouTube Music!\ntương đối ít tính năng nhưng đáp ứng những gì bạn cần.</string>
     <string name="select_apps_vanced">YouTube Vanced cũng là ứng dụng YouTube gốc nhưng tốt hơn!</string>
     <string name="lets_get_started">Bắt đầu nào</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Bạn không biết đây là gì hoặc không muốn sử dụng phiên bản root?  chỉ cần nhấp vào mũi tên màu xanh bên dưới!</string>
     <!-- Home Page -->
     <string name="about_app">Thông tin về %1$s</string>
     <string name="app_changelog_tooltip">Nhấn vào thẻ để xem các thay đổi.</string>
