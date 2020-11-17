@@ -3,11 +3,11 @@
     <!-- Global Strings -->
     <string name="cancel">Odustani</string>
     <string name="close">Zatvori</string>
-    <string name="reset">Vrati izvorno</string>
+    <string name="reset">Resetiraj</string>
     <string name="save">Spremi</string>
     <string name="select_apps">Odaberite svoje aplikacije</string>
     <!-- Main Activity -->
-    <string name="title_about">O aplikaciji</string>
+    <string name="title_about">O autorima</string>
     <string name="title_home">Upravitelj</string>
     <string name="title_settings">Postavke</string>
     <string name="update_manager">Ažuriraj upravitelja</string>
