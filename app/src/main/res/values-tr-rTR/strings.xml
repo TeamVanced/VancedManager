@@ -18,7 +18,7 @@
     <string name="select_apps_music">Yine Vanced, ama YouTube Music için!\nKıyasen daha az özelliğe sahip fakat ihtiyaçlarını karşılar</string>
     <string name="select_apps_vanced">YouTube Vanced, temelde YouTube Android Uygulamasıdır, ancak orijinalinden daha iyidir!</string>
     <string name="lets_get_started">Başlayalım</string>
-    <string name="willing_to_use_root">Root\'un ne olduğunu bilmiyor veya root sürümünü kullanmak istemiyorsan, altta ki mavi oka tıklayabilirsin!</string>
+    <string name="willing_to_use_root">Root\'un ne olduğunu bilmiyor veya root sürümünü kullanmak istemiyorsan, alttaki mavi oka tıklayarak devam edebilirsin</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Hakkında</string>
     <string name="app_changelog_tooltip">Değişiklikleri görmek için karta dokunun.</string>
