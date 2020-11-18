@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, ale dla muzyki YouTube!\nstosunkowo mniej bogaty w funkcje, ale zaspokaja Twoje potrzeby.</string>
     <string name="select_apps_vanced">YouTube Vanced to domyślna aplikacja YouTube na Androida, ale lepsza!</string>
     <string name="lets_get_started">Zaczynajmy</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Nie wiesz, co to jest lub nie chcesz użyć wersji z rootem? Po prostu kliknij niebieską strzałkę poniżej!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="app_changelog_tooltip">Dotknij karty, aby zobaczyć listę zmian.</string>
