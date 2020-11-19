@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Onko laitteesi rootattu?</string>
     <string name="grant_root">Anna root-oikeudet</string>
     <string name="select_at_least_one_app">Valitse ainakin yksi sovellus!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
+    <string name="select_apps_music">Vanhentunut, mutta YouTube Music!\nsuhteellisen vähemmän ominaisuus-rikas, mutta täyttää tarpeesi.</string>
     <string name="select_apps_vanced">YouTube Vanced on Androidin Youtube-vakiosovellus, mutta parempi!</string>
     <string name="lets_get_started">Aloitetaan</string>
-    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
+    <string name="willing_to_use_root">Haluaisitko käyttää juuriversiota? Paina vain alla olevaa painiketta, muuta napauta jatkaaksesi</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
-    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
+    <string name="app_changelog_tooltip">Napauta korttia nähdäksesi muutoslokin.</string>
     <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
@@ -33,7 +33,7 @@
     <string name="unavailable">Ei saatavilla</string>
     <string name="update">Päivitä</string>
     <string name="useful_links">Hyödyllisiä linkkejä</string>
-    <string name="support_us">Support us!</string>
+    <string name="support_us">Tue meitä!</string>
     <!-- Settings -->
     <string name="accent_color">Aksenttiväri</string>
     <string name="accent_blue">Sininen</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Punainen</string>
     <string name="accent_yellow">Keltainen</string>
     <string name="category_appearance">Ulkoasu</string>
-    <string name="category_behaviour">Behavior</string>
+    <string name="category_behaviour">Käyttäytyminen</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
     <string name="cleared_files">Tiedostot tyhjennettiin onnistuneesti</string>
     <string name="firebase_title">Firebase-analytiikka</string>
@@ -62,8 +62,8 @@
     <string name="variant">Variaatio</string>
     <!-- Dialogs -->
     <string name="advanced">Kehittyneet</string>
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
+    <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
+    <string name="app_install_files_detected_summary">Hallitsija havaitsi, että kaikki tarvittavat tiedostot %1$s asennusta varten. Haluatko asentaa sen?</string>
     <string name="checking_updates">Tarkistetaan päivityksiä…</string>
     <string name="chosen_lang">Kieli: %1$s</string>
     <string name="chosen_theme">Teema: %1$s</string>
@@ -71,12 +71,12 @@
     <string name="guide">Opas</string>
     <string name="hold_on">Pysähdy!</string>
     <string name="installing_app">Asennetaan %1$s</string>
-    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Käytät Magisk / TWRP versio Vanced, joka on lopetettu ja ei voi päivittää käyttämällä tätä sovellusta. Poista se poistamalla Magisk moduuli / käyttämällä TWRP Vanced asennuksen.</string>
     <string name="miui_one_title">MIUI tunnistettu!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Jos haluat asentaa Vanced, sinun täytyy poistaa MIUI-optimoinnit käytöstä kehittäjän asetuksista. (Voit ohittaa tämän varoituksen, jos käytät 20.2.20 tai myöhemmin xiaomi.eu-pohjaista ROM:ia)</string>
     <string name="error">Virhe</string>
     <string name="redownload">Uudelleenlataa</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
+    <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
     <string name="success">Onnistui!</string>
     <string name="app_installation_preferences">%1$s asennusasetukset</string>
     <string name="vanced_installed">Vanced on asennettu onnistuneesti! Avaa nyt?</string>
@@ -94,15 +94,15 @@
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
+    <string name="chown_fail">Ei voitu `chown` APK järjestelmän omistajalle, yritä uudelleen.</string>
     <string name="error_downloading">%1$s lataus epäonnistui</string>
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
     <string name="files_missing_va">Asennukseen vaadittavien tiedostojen paikannus epäonnistui. Yritä ladata asennustiedostot uudelleen.</string>
     <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
-    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
-    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
+    <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
+    <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
+    <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti heikentää pakettia. Poista päivitykset YouTube-sovelluksesta ja yritä sitten uudelleen.</string>
+    <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista Vanedin nykyisen version asennus ja yritä uudelleen.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
