@@ -10,7 +10,7 @@
     <string name="title_about">À propos</string>
     <string name="title_home">Gestionnaire</string>
     <string name="title_settings">Paramètres</string>
-    <string name="update_manager">Gestionnaire de mise à jour</string>
+    <string name="update_manager">Gestionnaire de Mise à Jour</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Votre appareil est-il rooté ?</string>
     <string name="grant_root">Accorder l’autorisation root</string>
@@ -45,7 +45,7 @@
     <string name="category_behaviour">Comportement</string>
     <string name="clear_files">Effacer les fichiers téléchargés</string>
     <string name="cleared_files">Données effacées avec succès</string>
-    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_title">Analyses Firebase</string>
     <string name="firebase_summary">Cela nous permet de recueillir des informations sur les performances de l\'application et les journaux de bord</string>
     <string name="language_title">Langue</string>
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
