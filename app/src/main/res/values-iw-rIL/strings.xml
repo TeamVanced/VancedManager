@@ -16,12 +16,12 @@
     <string name="grant_root">הענק הרשאות Root</string>
     <string name="select_at_least_one_app">בחר לפחות יישום אחד!</string>
     <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="select_apps_vanced">YouTube Vanced היא כמו אפליקציית YouTube לאנדרואיד, אבל יותר טובה!</string>
+    <string name="lets_get_started">בוא נתחיל</string>
+    <string name="willing_to_use_root">לא יודע מה זה או לא רוצה להשתמש בגרסת הroot? פשוט תלחץ על החץ הכחול למטה!</string>
     <!-- Home Page -->
     <string name="about_app">אודות %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
+    <string name="app_changelog_tooltip">לחץ על הכרטיס כדי לראות מה חדש.</string>
     <string name="changelog">היסטורית שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
     <string name="install">התקן</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">אדום</string>
     <string name="accent_yellow">צהוב</string>
     <string name="category_appearance">מראה</string>
-    <string name="category_behaviour">Behavior</string>
+    <string name="category_behaviour">התנהגות</string>
     <string name="clear_files">מחק קבצים שהורדו</string>
     <string name="cleared_files">מחיקת הקבצים הסתיימה בהצלחה</string>
     <string name="firebase_title">ניתוח מידע משתמש</string>
@@ -61,9 +61,9 @@
     <string name="update_not_found">אין עדכונים חדשים</string>
     <string name="variant">סוג</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">אפשרויות מתקדמות</string>
     <string name="app_install_files_detected">%1$s קבצי התקנה נמצאו!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
+    <string name="app_install_files_detected_summary">המנהל זיהה שכל הקבצים הנדרשים עבור התקנת %1$s נמצאו. האם אתה רוצה להתקין?</string>
     <string name="checking_updates">בודק אחר עדכונים…</string>
     <string name="chosen_lang">שפה: %1$s</string>
     <string name="chosen_theme">ערכת נושא: %1$s</string>
@@ -71,9 +71,9 @@
     <string name="guide">מדריך</string>
     <string name="hold_on">עצור!</string>
     <string name="installing_app">מתקין %1$s</string>
-    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">נדמה שאתה משתמש בגרסת הMagisk/TWRP של Vanced, שהתמיכה בה הופסקה והיא לא יכולה להתעדכן להתעדכן בעזרת האפליקציה הזו. אנא מחק אותה קודם על ידי מחיקת המודול בMagisk או בשימוש בTWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI זוהה!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">על מנת להתקין את Vanced, עליך להשבית אופטימיזציות של MIUI בהגדרות מפתח. (אתה יכול להתעלם מאזהרה זו אם אתה משתמש בגרסה 20.2.2. של שיאומי או יותר)</string>
     <string name="error">בעיה</string>
     <string name="redownload">הורד מחדש</string>
     <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
