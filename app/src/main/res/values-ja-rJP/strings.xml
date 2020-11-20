@@ -100,7 +100,7 @@
     <string name="files_missing_va">インストールに必要なファイルが見つかりませんでした。再ダウンロードし、もう一度お試しください。</string>
     <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルが見つかりませんでした。もう一度お試しください。</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
-    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
+    <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
     <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
     <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
