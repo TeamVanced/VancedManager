@@ -9,7 +9,7 @@
     <!-- Main Activity -->
     <string name="title_about">ข้อมูลเกี่ยวกับทีมนักพัฒนา</string>
     <string name="title_home">ตัวจัดการ</string>
-    <string name="title_settings">การตั้งค่า</string>
+    <string name="title_settings">ตั้งค่า</string>
     <string name="update_manager">อัพเดทตัวจัดการ</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">อุปกรณ์ของคุณได้รูทหรือไม่?</string>
