@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">ਰੱਦ ਕਰੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
-    <string name="reset">ਰੀਸੈੱਟ</string>
+    <string name="reset">ਮੁੜ-ਸੈੱਟ ਕਰੋ</string>
     <string name="save">ਸੁੱਰਖਿਅਤ ਕਰੋ</string>
     <string name="select_apps">ਹੋਰ ਐਪ ਚੁਣੋ</string>
     <!-- Main Activity -->
