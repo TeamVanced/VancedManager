@@ -1,37 +1,41 @@
 package com.vanced.manager.utils
 
-import android.app.DownloadManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.util.Log
-import android.widget.Toast
 import androidx.core.content.FileProvider
-import androidx.core.content.getSystemService
-import androidx.core.net.toUri
 import androidx.lifecycle.MutableLiveData
-import com.downloader.OnDownloadListener
-import com.downloader.PRDownloader
+import com.github.kittinunf.fuel.Fuel
 import com.vanced.manager.R
 import com.vanced.manager.model.ProgressModel
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.launch
 import java.io.File
 
-object DownloadHelper {
+object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
-    fun download(url: String, dir: String, child: String, context: Context): Long {
-        val request = DownloadManager.Request(url.toUri()).apply {
-            setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI)
-            setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
-            setTitle(context.getString(R.string.downloading_file, child))
-            setDestinationInExternalFilesDir(context, dir, child)
-        }
-
-        val downloadManager = context.getSystemService<DownloadManager>()!!
-        return downloadManager.enqueue(request)
+    fun fuelDownload(url: String, fileFolder: String, fileName: String, context: Context, onDownloadComplete: () -> Unit, onError: (error: String) -> Unit) = launch {
+        downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.downloading_file, fileName))
+        downloadProgress.value?.currentDownload = Fuel.download(url)
+            .fileDestination { _, _ ->
+                File(context.getExternalFilesDir(fileFolder)?.path, fileName)
+            }
+            .progress { readBytes, totalBytes ->
+                downloadProgress.value?.downloadProgress?.postValue((readBytes * 100 / totalBytes).toInt())
+            }
+            .responseString {_, _, result ->
+                result.fold(success = {
+                    downloadProgress.value?.downloadProgress?.postValue(0)
+                    onDownloadComplete()
+                }, failure = { error ->
+                    Log.d("VMDownloader", error.errorData.toString())
+                    onError(error.errorData.toString())
+                })
+            }
     }
 
     val downloadProgress = MutableLiveData<ProgressModel>()
@@ -40,46 +44,25 @@ object DownloadHelper {
         downloadProgress.value = ProgressModel()
     }
 
-    suspend fun downloadManager(context: Context) =
-        withContext(Dispatchers.IO) {
-            val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
-            downloadProgress.value?.currentDownload = PRDownloader.download(url, context.getExternalFilesDir("manager")?.path, "manager.apk")
-                .build()
-                .setOnProgressListener { progress ->
-                    val mProgress = progress.currentBytes * 100 / progress.totalBytes
-                    downloadProgress.value?.downloadProgress?.value = mProgress.toInt()
-                }
-                .setOnCancelListener {
-                    downloadProgress.value?.downloadProgress?.value = 0
-                }
-                .start(object : OnDownloadListener {
-                    override fun onDownloadComplete() {
-                        downloadProgress.value?.downloadProgress?.value = 0
-                        val apk =
-                            File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
-                        val uri =
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                                FileProvider.getUriForFile(
-                                    context,
-                                    "${context.packageName}.provider",
-                                    apk
-                                )
-                            else
-                                Uri.fromFile(apk)
+    fun downloadManager(context: Context) {
+        val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
+        fuelDownload(url, "manager", "manager.apk", context, onDownloadComplete = {
+            val apk = File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
+            val uri =
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                        FileProvider.getUriForFile(context, "${context.packageName}.provider", apk)
+                    else
+                        Uri.fromFile(apk)
 
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.setDataAndType(uri, "application/vnd.android.package-archive")
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                        context.startActivity(intent)
-                        sendCloseDialog(context)
-                    }
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.setDataAndType(uri, "application/vnd.android.package-archive")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            context.startActivity(intent)
+            sendCloseDialog(context)
+        }, onError = {
+            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, "manager.apk"))
+        })
+    }
 
-                    override fun onError(error: com.downloader.Error?) {
-                        Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show()
-                        Log.e("VMUpgrade", error.toString())
-                    }
-
-                })
-        }
 }

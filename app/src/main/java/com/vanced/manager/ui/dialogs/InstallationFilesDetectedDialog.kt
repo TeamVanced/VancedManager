@@ -3,7 +3,7 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.startMicrogInstall
 import com.vanced.manager.core.downloader.MusicDownloader.startMusicInstall

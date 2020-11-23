@@ -4,11 +4,8 @@ import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.edit
-import androidx.databinding.DataBindingUtil
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding

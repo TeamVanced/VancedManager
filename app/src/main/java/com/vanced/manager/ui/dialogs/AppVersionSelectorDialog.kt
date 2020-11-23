@@ -2,7 +2,6 @@ package com.vanced.manager.ui.dialogs
 
 import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.edit

@@ -75,7 +75,7 @@ def getLanguages() {
     langs.add("pt_PT")
     langs.add("zh_CN")
     langs.add("zh_TW")
-    List<String> exceptions = [ "bn", "pt", "zh"]
+    List<String> exceptions = ["bn", "pt", "zh"]
     Pattern pattern = Pattern.compile("-(\\w+)-")
     new File("${projectDir}/src/main/res").eachDir { dir ->
         if (dir.name.startsWith("values-") && !dir.name.contains("v23")) {
@@ -138,9 +138,6 @@ dependencies {
 
     // Layout
     implementation 'com.google.android:flexbox:2.0.1'
-
-    // File downloader
-    implementation 'com.mindorks.android:prdownloader:0.6.0'
 
     // Firebase
     implementation 'com.google.firebase:firebase-analytics-ktx:18.0.0'

@@ -10,22 +10,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.lifecycle.lifecycleScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.databinding.DialogManagerUpdateBinding
 import com.vanced.manager.ui.core.BindingDialogFragment
 import com.vanced.manager.utils.DownloadHelper.downloadManager
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.InternetTools.isUpdateAvailable
-import kotlinx.coroutines.launch
 
 class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() {
 
     companion object {
 
-        const val CLOSE_DIALOG = "close_dialog"
+        const val CLOSE_DIALOG = "CLOSE_DIALOG"
         private const val TAG_FORCE_UPDATE = "TAG_FORCE_UPDATE"
 
         fun newInstance(
@@ -56,18 +53,16 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
     override fun otherSetups() {
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         bindData()
-        lifecycleScope.launch {
-            if (arguments?.getBoolean(TAG_FORCE_UPDATE) == true) {
-                binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
-                downloadManager(requireActivity())
-            } else {
-                checkUpdates()
-            }
+        if (arguments?.getBoolean(TAG_FORCE_UPDATE) == true) {
+            binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
+            downloadManager(requireActivity())
+        } else {
+            checkUpdates()
+        }
 
-            binding.managerUpdateCancel.setOnClickListener {
-                PRDownloader.cancel(downloadProgress.value?.currentDownload)
-                dismiss()
-            }
+        binding.managerUpdateCancel.setOnClickListener {
+            downloadProgress.value?.currentDownload?.cancel()
+            dismiss()
         }
     }
 
@@ -94,7 +89,7 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
         registerReceiver()
     }
 
-    private suspend fun checkUpdates() {
+    private fun checkUpdates() {
         if (isUpdateAvailable()) {
             binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
             downloadManager(requireActivity())

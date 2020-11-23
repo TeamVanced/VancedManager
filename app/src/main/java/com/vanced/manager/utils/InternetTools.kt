@@ -32,8 +32,6 @@ object InternetTools {
     var vancedVersions = ObservableField<JsonArray<String>>()
     var musicVersions = ObservableField<JsonArray<String>>()
 
-    const val backupUrl = "https://mirror.codebucket.de/vanced/api/v1"
-
     //var braveTiers = ObservableField<JsonObject?>()
 
     fun openUrl(url: String, color: Int, context: Context) {
@@ -80,7 +78,7 @@ object InternetTools {
 
     }
 
-    suspend fun getJsonString(file: String, obj: String, context: Context): String {
+    private suspend fun getJsonString(file: String, obj: String, context: Context): String {
         val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
         return try {
             JsonHelper.getJson("$installUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
@@ -91,9 +89,11 @@ object InternetTools {
     }
 
     fun isUpdateAvailable(): Boolean {
-        val result = manager.get()?.int("versionCode") ?: 0
-
-        return result > BuildConfig.VERSION_CODE
+        while (true) {
+            if (manager.get() != null) {
+                return manager.get()?.int("versionCode") ?: 0 > BuildConfig.VERSION_CODE
+            }
+        }
     }
 
     suspend fun getSha256(hashUrl: String, obj: String, context: Context): String {

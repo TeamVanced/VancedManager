@@ -8,7 +8,6 @@ import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.model.AuthConfig
 import com.crowdin.platform.data.remote.NetworkType
-import com.downloader.PRDownloader
 import com.vanced.manager.BuildConfig.*
 import com.vanced.manager.utils.InternetTools.loadJson
 import kotlinx.coroutines.CoroutineScope
@@ -24,7 +23,6 @@ open class App: Application() {
     override fun onCreate() {
         scope.launch { loadJson(this@App) }
         super.onCreate()
-        PRDownloader.initialize(this)
 
         Crowdin.init(this,
             CrowdinConfig.Builder().apply {

@@ -11,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.downloader.PRDownloader
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
 import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
@@ -91,7 +90,7 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
                         if (installing) {
                             return@setOnClickListener
                         }
-                        PRDownloader.cancel(progressModel.currentDownload)
+                        progressModel.currentDownload?.cancel()
                         dismiss()
                     }
                 }

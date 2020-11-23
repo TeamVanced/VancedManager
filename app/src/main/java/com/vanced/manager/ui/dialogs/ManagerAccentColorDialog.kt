@@ -2,15 +2,10 @@ package com.vanced.manager.ui.dialogs
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.edit
-import androidx.databinding.DataBindingUtil
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.radiobutton.MaterialRadioButton
-import com.vanced.manager.R
-import com.vanced.manager.databinding.DialogInstallationFilesDetectedBinding
 import com.vanced.manager.databinding.DialogManagerAccentColorBinding
 import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag

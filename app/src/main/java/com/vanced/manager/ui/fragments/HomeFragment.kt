@@ -32,8 +32,8 @@ import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
 open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
     companion object {
-        const val INSTALL_FAILED = "install_failed"
-        const val REFRESH_HOME = "refresh_home"
+        const val INSTALL_FAILED = "INSTALL_FAILED"
+        const val REFRESH_HOME = "REFRESH_HOME"
     }
 
     private val viewModel: HomeViewModel by viewModels {
