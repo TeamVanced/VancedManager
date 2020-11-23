@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
-    <string name="close">Close</string>
+    <string name="cancel">रद्द करा</string>
+    <string name="close">बंद करा</string>
     <string name="reset">Reset</string>
     <string name="save">Save</string>
     <string name="select_apps">Select Your Apps</string>
