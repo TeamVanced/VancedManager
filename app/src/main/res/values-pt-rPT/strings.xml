@@ -94,21 +94,21 @@
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipa Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Falha no APK `chown` para o proprietário do sistema, por favor, tente novamente.</string>
+    <string name="chown_fail">Falhou na mudança de dono do Apk para o proprietário do sistema, por favor, tente novamente.</string>
     <string name="error_downloading">Erro Transferindo %1$s</string>
     <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
-    <string name="files_missing_va">Falha ao localizar os ficheiros necessários para instalação. Faça o download dos ficheiros de instalação e tente novamente.</string>
-    <string name="ifile_missing">Falha ao localizar o apk para o tema preto/escuro do armazenamento, por favor, tente novamente.</string>
+    <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Faça o download dos arquivos de instalação e tente novamente.</string>
+    <string name="ifile_missing">Falha ao localizar o apk para o tema preto/escuro no armazenamento, por favor, tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do app do YouTube e, em seguida, tente novamente.</string>
-    <string name="installation_conflict">A instalação falhou por causa do app estar em conflito com um app já instalado. Desinstale a versão atual do Vanced, e tente novamente.</string>
+    <string name="installation_conflict">A instalação falhou devido ao app estar em conflito com um app já instalado. Desinstale a versão atual do Vanced e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por razões desconhecidas, por favor entre no nosso Telegram ou Discord para suporte.</string>
     <string name="installation_incompatible">Falha na instalação porque o pacote de instalação é incompatível com o seu dispositivo. Limpe os pacotes transferidos nas Configurações e tente novamente.</string>
     <string name="installation_invalid">A instalação falhou porque os pacotes apk estão corrompidos, por favor tente novamente.</string>
     <string name="installation_signature">A instalação falhou porque a verificação de assinatura apk está ativa. Desative a verificação de assinatura apk e tente novamente.</string>
     <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
     <string name="installation_storage">A instalação falhou devido a um erro de armazenamento.</string>
-    <string name="modapk_missing">Falha ao encontrar o arquivo apk para o tema preto/escuro do instalador. Limpe os dados do gerenciador e tente novamente.</string>
+    <string name="modapk_missing">Falha ao encontrar o arquivo apk para o tema preto/escuro no instalador. Limpe os dados do app do Gerenciador (Vanced Manager) e tente novamente.</string>
     <string name="path_missing">Falha ao localizar o caminho de instalação padrão do YouTube após instalação dividida.</string>
 </resources>
