@@ -9,7 +9,8 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewAppCheckboxBinding
 import com.vanced.manager.model.SelectAppModel
 
-class SelectAppsAdapter(context: Context) : RecyclerView.Adapter<SelectAppsAdapter.SelectAppsViewHolder>() {
+class SelectAppsAdapter(private val context: Context) :
+    RecyclerView.Adapter<SelectAppsAdapter.SelectAppsViewHolder>() {
 
     private val prefs by lazy { getDefaultSharedPreferences(context) }
 
@@ -37,7 +38,7 @@ class SelectAppsAdapter(context: Context) : RecyclerView.Adapter<SelectAppsAdapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SelectAppsViewHolder {
-        val view = ViewAppCheckboxBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view = ViewAppCheckboxBinding.inflate(LayoutInflater.from(context), parent, false)
         return SelectAppsViewHolder(view)
     }
 

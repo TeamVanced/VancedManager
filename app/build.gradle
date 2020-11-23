@@ -48,7 +48,7 @@ android {
     }
 
     buildFeatures {
-        dataBinding true
+        dataBinding true // ObservableField migrate to flow or liveData
         viewBinding true
     }
 
