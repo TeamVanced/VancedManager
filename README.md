@@ -9,7 +9,7 @@ Then we thought, "why don't we make a manager for vanced, which will download, u
   
 After 3 months of development, we are finally ready to introduce Vanced Manager to the masses. Vanced manager can easily install and uninstall vanced and microg, has various settings for customisation and better experience. The Manager comes with an easy-to-use interface  
 
-##### Background download/installation feature is no longer supported due to problems with some ROMs, please do NOT report problems regarding background activity.  
+##### Background download/installation feature is no longer supported due to problems with some ROMs, please do NOT report issues regarding background activity.  
 
 ## Vanced Developers
 - xfileFIN
@@ -22,11 +22,11 @@ After 3 months of development, we are finally ready to introduce Vanced Manager 
 - Koopah (ostajic)
 
 ## Contributors
-- AioiLight
+- AioiLight  
+- HaliksaR
 
 ## Credits
 - topjohnwu for his wonderful [LibSU](https://github.com/topjohnwu/libsu)
-- Mindorks for their amazing [PRDownloader](https://github.com/MindorksOpenSource/PRDownloader)
 - aefyr for [SAI](https://github.com/aefyr/SAI), which was an inspiration for our Manager
 - kittinunf for [Fuel](https://github.com/kittinunf/Fuel) HTTP client
 - cbeust for [klaxon](https://github.com/cbeust/klaxon) JSON parser
