@@ -10,7 +10,10 @@ import com.vanced.manager.databinding.ViewSocialLinkBinding
 import com.vanced.manager.model.LinkModel
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 
-class LinkAdapter(context: Context, private val viewModel: HomeViewModel) : RecyclerView.Adapter<LinkAdapter.LinkViewHolder>() {
+class LinkAdapter(
+    private val context: Context,
+    private val viewModel: HomeViewModel
+) : RecyclerView.Adapter<LinkAdapter.LinkViewHolder>() {
 
     private val instagram = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_instagram),
@@ -55,16 +58,18 @@ class LinkAdapter(context: Context, private val viewModel: HomeViewModel) : Recy
     val links = arrayOf(instagram, youtube, github, website, telegram, twitter, discord, reddit)
 
     inner class LinkViewHolder(private val binding: ViewSocialLinkBinding) : RecyclerView.ViewHolder(binding.root) {
-        val logo = binding.linkImage
-        fun bind(position: Int) {
-            binding.viewModel = viewModel
-            binding.linkModel = links[position]
-        }
 
+        val logo = binding.linkImage
+
+        fun bind(position: Int) {
+            binding.linkBg.setOnClickListener {
+                viewModel.openUrl(links[position].linkUrl)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LinkViewHolder {
-        val view = ViewSocialLinkBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view = ViewSocialLinkBinding.inflate(LayoutInflater.from(context), parent, false)
         return LinkViewHolder(view)
     }
 

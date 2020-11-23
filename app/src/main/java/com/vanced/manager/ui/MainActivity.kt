@@ -8,7 +8,6 @@ import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -56,12 +55,15 @@ class MainActivity : AppCompatActivity() {
         if (ENABLE_CROWDIN_AUTH)
             authCrowdin()
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         with(binding) {
-            lifecycleOwner = this@MainActivity
             setSupportActionBar(toolbar)
-            toolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
+            toolbar.setupWithNavController(
+                this@MainActivity.navHost,
+                AppBarConfiguration(this@MainActivity.navHost.graph)
+            )
         }
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)

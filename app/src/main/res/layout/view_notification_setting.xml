@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <data>
-
-        <variable
-            name="app"
-            type="com.vanced.manager.model.NotifModel" />
-
-    </data>
-
-    <com.vanced.manager.ui.core.PreferenceSwitch xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/notif_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:switch_def_value="true"
-        app:switch_key="@{app.key}"
-        app:switch_summary="@{app.switchSummary}"
-        app:switch_title="@{app.switchTitle}" />
-
-</layout>
+<com.vanced.manager.ui.core.PreferenceSwitch xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notif_switch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />

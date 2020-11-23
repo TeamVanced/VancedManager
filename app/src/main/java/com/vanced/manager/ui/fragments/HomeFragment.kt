@@ -77,7 +77,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
             recyclerAppList.apply {
                 layoutManager = LinearLayoutManager(requireActivity())
-                adapter = AppListAdapter(requireActivity(), this@HomeFragment.viewModel, tooltip)
+                adapter = AppListAdapter(requireActivity(), viewModel, viewLifecycleOwner, tooltip)
                 setHasFixedSize(true)
             }
 
@@ -86,7 +86,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
                 lm.justifyContent = JustifyContent.SPACE_EVENLY
                 layoutManager = lm
                 setHasFixedSize(true)
-                adapter = SponsorAdapter(requireActivity(), this@HomeFragment.viewModel)
+                adapter = SponsorAdapter(requireActivity(), viewModel)
             }
 
             recyclerLinks.apply {
@@ -94,7 +94,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
                 lm.justifyContent = JustifyContent.SPACE_EVENLY
                 layoutManager = lm
                 setHasFixedSize(true)
-                adapter = LinkAdapter(requireActivity(), this@HomeFragment.viewModel)
+                adapter = LinkAdapter(requireActivity(), viewModel)
             }
         }
     }

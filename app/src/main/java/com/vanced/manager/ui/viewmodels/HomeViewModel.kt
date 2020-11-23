@@ -91,7 +91,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     fun openInstallDialog(view: View, app: String) {
         val variant = prefs.getString("vanced_variant", "nonroot")
-        if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microg.get()?.isAppInstalled?.get()!!) {
+        if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microg.get()?.isAppInstalled?.value!!) {
             microgToast.show()
             return
         }
