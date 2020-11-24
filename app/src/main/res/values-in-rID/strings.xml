@@ -12,7 +12,7 @@
     <string name="title_settings">Pengaturan</string>
     <string name="update_manager">Perbarui Manager</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Root?</string>
+    <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Akses Root?</string>
     <string name="grant_root">Berikan Izin Root</string>
     <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
     <string name="select_apps_music">Vanced, tetapi untuk YouTube Music! \nfitur yang relatif kurang kaya tetapi memenuhi kebutuhan anda.</string>
