@@ -17,12 +17,12 @@
     <string name="select_at_least_one_app">Wähle mindestens eine App!</string>
     <string name="select_apps_music">Vanced, aber für YouTube Music!\nrelativ weniger funktionsreich, aber erfüllt deine Bedürfnisse.</string>
     <string name="select_apps_vanced">YouTube Vanced ist die Standard-Android-YouTube-App, aber besser!</string>
-    <string name="lets_get_started">Las uns anfangen</string>
+    <string name="lets_get_started">Los geht\'s</string>
     <string name="willing_to_use_root">Du weißt nicht was das ist, oder willst die Root-Version nicht benutzen? klicke einfach den blauen Pfeil unten an!</string>
     <!-- Home Page -->
     <string name="about_app">Über %1$s</string>
-    <string name="app_changelog_tooltip">Tippe auf die Karte, um die Änderungen zu sehen.</string>
-    <string name="changelog">Änderungen</string>
+    <string name="app_changelog_tooltip">Tippe auf die Karte, um den Changelog zu sehen.</string>
+    <string name="changelog">Changelog</string>
     <string name="downloading_file">%1$s wird heruntergeladen</string>
     <string name="install">Installieren</string>
     <string name="button_reinstall">Neu installieren</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Erweitert</string>
     <string name="app_install_files_detected">%1$s Installationsdateien erkannt!</string>
-    <string name="app_install_files_detected_summary">Manager hat festgestellt, dass alle notwendigen Dateien für die Installation von %1$s gefunden wurden. Möchtest du sie installieren?</string>
+    <string name="app_install_files_detected_summary">Manager hat festgestellt, dass alle notwendigen Dateien für die Installation von %1$s gefunden wurden. Möchtest Du sie installieren?</string>
     <string name="checking_updates">Suche nach Updates…</string>
     <string name="chosen_lang">Sprache(n): %1$s</string>
     <string name="chosen_theme">Theme: %1$s</string>
@@ -71,7 +71,7 @@
     <string name="guide">Erklärung</string>
     <string name="hold_on">Stop!</string>
     <string name="installing_app">%1$s wird installiert</string>
-    <string name="magisk_vanced">Du benutzt die Magisk/TWRP-Version von Vanced, die nicht mehr unterstützt wird und mit dieser App nicht aktualisiert werden kann. Bitte entferne es indem du das Magisk-Modul mit dem TWRP Vanced Uninstaller entfernst.</string>
+    <string name="magisk_vanced">Du benutzt die Magisk/TWRP-Version von Vanced, die nicht mehr unterstützt wird und mit dieser App nicht aktualisiert werden kann. Bitte entferne siie indem du das Magisk-Modul mit dem TWRP Vanced Uninstaller entfernst.</string>
     <string name="miui_one_title">MIUI erkannt!</string>
     <string name="miui_one">Um Vanced zu installieren, musst du die MIUI Optimierungen in den Entwicklereinstellungen deaktivieren. (Du kannst diese Warnung ignorieren, wenn du 20.2.20 oder höher auf xiaomi.eu basierenden ROM verwendest)</string>
     <string name="error">Fehler</string>
@@ -102,7 +102,7 @@
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
     <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer die Installation blockiert hat.</string>
     <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, das Paket herunterzustufen. Aktualisierungen von YouTube deinstallieren und dann erneut versuchen.</string>
-    <string name="installation_conflict">Installation fehlgeschlagen, da die App mit einer bereits installierten App kollidiert. Deinstallieren Sie die aktuelle Version von Vanced, dann versuchen Sie es erneut.</string>
+    <string name="installation_conflict">Installation fehlgeschlagen, da die App mit einer bereits installierten App kollidiert. Deinstalliere die aktuelle Version von Vanced, dann versuche es erneut.</string>
     <string name="installation_failed">Installation aus unbekannten Grund fehlgeschlagen. Treten Sie bitte unserem Telegram-Chat oder Discord-Server bei, um Support zu erhalten.</string>
     <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
     <string name="installation_invalid">Installation fehlgeschlagen, da die apk-Dateien beschädigt sind, bitte versuchen Sie es erneut.</string>
