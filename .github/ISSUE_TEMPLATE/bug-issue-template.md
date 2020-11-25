@@ -13,7 +13,6 @@ assignees: ''
 - This is an issue in the Vanced Manager app (NOT Youtube Vanced)
 - This issue keeps re-occurring every time I try
 - For MIUI users: I disabled MIUI optimisation
-- For root users: I disabled apk Signature Verification
 
 **Phone Specifications:**
 - Brand:
