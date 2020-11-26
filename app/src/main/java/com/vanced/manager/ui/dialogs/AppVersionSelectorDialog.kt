@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import androidx.core.content.edit
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.Extensions.show
 
 class AppVersionSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRadioButtonBinding>() {
 
@@ -83,9 +83,9 @@ class AppVersionSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRa
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
         if (arguments?.getString(TAG_APP) == "vanced") {
-            VancedPreferencesDialog().show(requireActivity())
+            showDialog(VancedPreferencesDialog())
         } else {
-            MusicPreferencesDialog().show(requireActivity())
+            showDialog(MusicPreferencesDialog())
         }
     }
 }

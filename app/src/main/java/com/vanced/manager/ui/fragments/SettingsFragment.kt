@@ -13,9 +13,9 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.perf.FirebasePerformance
 import com.vanced.manager.R
 import com.vanced.manager.adapter.GetNotifAdapter
-import com.vanced.manager.core.ext.showDialogRefl
+import com.vanced.manager.core.ui.base.BindingFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.FragmentSettingsBinding
-import com.vanced.manager.ui.core.BindingFragment
 import com.vanced.manager.ui.dialogs.*
 import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
 import java.io.File
@@ -54,7 +54,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
             bindManagerTheme()
             bindManagerAccentColor()
             bindManagerLanguage()
-            selectApps.setOnClickListener { showDialogRefl<SelectAppsDialog>() }
+            selectApps.setOnClickListener { showDialog(SelectAppsDialog()) }
         }
     }
 
@@ -76,7 +76,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindManagerVariant() {
         managerVariant.apply {
             prefs.getString("vanced_variant", "nonroot")?.let { setSummary(it) }
-            setOnClickListener { showDialogRefl<ManagerVariantDialog>() }
+            setOnClickListener { showDialog(ManagerVariantDialog()) }
         }
     }
     private fun FragmentSettingsBinding.bindClearFiles() {
@@ -96,11 +96,11 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
             setSummary(
                 when (themePref) {
                     LIGHT -> getString(R.string.theme_light)
-                    DARK  -> getString(R.string.theme_dark)
-                    else  -> getString(R.string.system_default)
+                    DARK -> getString(R.string.theme_dark)
+                    else -> getString(R.string.system_default)
                 }
             )
-            setOnClickListener { showDialogRefl<ManagerThemeDialog>() }
+            setOnClickListener { showDialog(ManagerThemeDialog()) }
         }
     }
 
@@ -109,14 +109,14 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
         managerAccentColor.apply {
             setSummary(
                 when (accentPref) {
-                    BLUE   -> getString(R.string.accent_blue)
-                    RED    -> getString(R.string.accent_red)
-                    GREEN  -> getString(R.string.accent_green)
+                    BLUE -> getString(R.string.accent_blue)
+                    RED -> getString(R.string.accent_red)
+                    GREEN -> getString(R.string.accent_green)
                     YELLOW -> getString(R.string.accent_yellow)
-                    else   -> getString(R.string.accent_purple)
+                    else -> getString(R.string.accent_purple)
                 }
             )
-            setOnClickListener { showDialogRefl<ManagerAccentColorDialog>() }
+            setOnClickListener { showDialog(ManagerAccentColorDialog()) }
         }
     }
 
@@ -124,7 +124,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
         val langPref = prefs.getString("manager_lang", "System Default")
         managerLanguage.apply {
             setSummary(getLanguageFormat(requireActivity(), requireNotNull(langPref)))
-            setOnClickListener { showDialogRefl<ManagerLanguageDialog>() }
+            setOnClickListener { showDialog(ManagerLanguageDialog()) }
         }
 
     }

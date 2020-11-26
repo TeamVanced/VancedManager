@@ -13,9 +13,9 @@ import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
-import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import java.util.*
@@ -79,6 +79,6 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        VancedPreferencesDialog().show(requireActivity())
+        showDialog(VancedPreferencesDialog())
     }
 }

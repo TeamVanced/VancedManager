@@ -15,8 +15,8 @@ import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.downloadMicrog
 import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
 import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
+import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogAppDownloadBinding
-import com.vanced.manager.ui.core.BindingDialogFragment
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 
 class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {

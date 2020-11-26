@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.graphics.drawable.toBitmap
 import com.vanced.manager.R
+import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogAppInfoBinding
-import com.vanced.manager.ui.core.BindingDialogFragment
 
 class AppInfoDialog : BindingDialogFragment<DialogAppInfoBinding>() {
 

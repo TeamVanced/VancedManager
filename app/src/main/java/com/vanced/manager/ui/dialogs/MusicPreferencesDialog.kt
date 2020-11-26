@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.vanced.manager.R
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogMusicPreferencesBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.convertToAppVersions
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.musicVersions
 
 class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPreferencesBinding>() {
@@ -39,16 +39,20 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
             musicVersion.text = getString(R.string.chosen_version, prefs.getString("music_version", "latest"))
             openVersionSelector.setOnClickListener {
                 dismiss()
-                AppVersionSelectorDialog.newInstance(
-                    versions = musicVersionsConv,
-                    app = "music"
-                ).show(requireActivity())
+                showDialog(
+                    AppVersionSelectorDialog.newInstance(
+                        versions = musicVersionsConv,
+                        app = "music"
+                    )
+                )
             }
             musicInstall.setOnClickListener {
                 dismiss()
-                AppDownloadDialog.newInstance(
-                    app = getString(R.string.music)
-                ).show(requireActivity())
+                showDialog(
+                    AppDownloadDialog.newInstance(
+                        app = getString(R.string.music)
+                    )
+                )
             }
         }
     }

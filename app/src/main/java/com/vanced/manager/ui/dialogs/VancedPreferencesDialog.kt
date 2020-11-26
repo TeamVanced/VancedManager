@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.vanced.manager.R
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedPreferencesBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.convertToAppTheme
 import com.vanced.manager.utils.Extensions.convertToAppVersions
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.Extensions.show
 import com.vanced.manager.utils.InternetTools.vancedVersions
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import java.util.*
@@ -51,24 +51,28 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
             vancedLang.text = getString(R.string.chosen_lang, showLang)
             openThemeSelector.setOnClickListener {
                 dismiss()
-                VancedThemeSelectorDialog().show(requireActivity())
+                showDialog(VancedThemeSelectorDialog())
             }
             openVersionSelector.setOnClickListener {
                 dismiss()
-                AppVersionSelectorDialog.newInstance(
-                    versions = vancedVersionsConv,
-                    app = "vanced"
-                ).show(requireActivity())
+                showDialog(
+                    AppVersionSelectorDialog.newInstance(
+                        versions = vancedVersionsConv,
+                        app = "vanced"
+                    )
+                )
             }
             openLanguageSelector.setOnClickListener {
                 dismiss()
-                VancedLanguageSelectionDialog().show(requireActivity())
+                showDialog(VancedLanguageSelectionDialog())
             }
             vancedInstall.setOnClickListener {
                 dismiss()
-                AppDownloadDialog.newInstance(
-                    app = getString(R.string.vanced)
-                ).show(requireActivity())
+                showDialog(
+                    AppDownloadDialog.newInstance(
+                        app = getString(R.string.vanced)
+                    )
+                )
             }
         }
     }

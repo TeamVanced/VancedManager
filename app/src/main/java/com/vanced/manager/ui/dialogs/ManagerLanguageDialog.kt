@@ -9,8 +9,8 @@ import androidx.core.content.edit
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.BuildConfig.MANAGER_LANGUAGES
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerLanguageBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
 
