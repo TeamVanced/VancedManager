@@ -9,8 +9,8 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SelectAppsAdapter
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogSelectAppsBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 
 class SelectAppsDialog : BindingBottomSheetDialogFragment<DialogSelectAppsBinding>() {
 

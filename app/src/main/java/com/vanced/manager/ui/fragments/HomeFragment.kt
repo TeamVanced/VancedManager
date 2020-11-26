@@ -23,8 +23,8 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.AppListAdapter
 import com.vanced.manager.adapter.LinkAdapter
 import com.vanced.manager.adapter.SponsorAdapter
+import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.databinding.FragmentHomeBinding
-import com.vanced.manager.ui.core.BindingFragment
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory

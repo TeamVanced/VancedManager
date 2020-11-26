@@ -1,4 +1,4 @@
-package com.vanced.manager.ui.core
+package com.vanced.manager.core.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -51,6 +51,10 @@ object InternetTools {
     suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
         val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
         val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
+        Log.d(
+            "latest",
+            "$installUrl/latest.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}"
+        )
         val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
 //      braveTiers.apply {
 //          set(getJson("$installUrl/sponsor.json"))

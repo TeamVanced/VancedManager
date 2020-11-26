@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.databinding.FragmentWelcomeBinding
-import com.vanced.manager.ui.core.BindingFragment
 
 class WelcomeFragment : BindingFragment<FragmentWelcomeBinding>() {
 

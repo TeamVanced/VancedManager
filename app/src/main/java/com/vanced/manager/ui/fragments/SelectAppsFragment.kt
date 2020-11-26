@@ -10,8 +10,8 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.vanced.manager.R
 import com.vanced.manager.adapter.SelectAppsAdapter
+import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.databinding.FragmentSelectAppsBinding
-import com.vanced.manager.ui.core.BindingFragment
 
 class SelectAppsFragment : BindingFragment<FragmentSelectAppsBinding>() {
 
