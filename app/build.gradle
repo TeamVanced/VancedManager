@@ -52,6 +52,11 @@ android {
         viewBinding true
     }
 
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude "META-INF/*.kotlin_module"
+    }
+
 // To inline the bytecode built with JVM target 1.8 into
 // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
 
@@ -101,6 +106,7 @@ dependencies {
     implementation project(':core-presentation')
     implementation project(":core-ui")
 
+    implementation project(':library-network')
 // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
