@@ -2,3 +2,4 @@ rootProject.name='Vanced Manager'
 include ':app'
 
 include ':core-ui'
+include ':feature-home'
