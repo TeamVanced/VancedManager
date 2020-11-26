@@ -98,6 +98,7 @@ static def surroundWithQuotes(Object[] arr) {
 
 dependencies {
 
+    implementation project(':core-presentation')
     implementation project(":core-ui")
 
 // Kotlin
