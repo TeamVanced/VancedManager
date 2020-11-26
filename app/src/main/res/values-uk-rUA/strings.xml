@@ -15,10 +15,10 @@
     <string name="are_you_rooted">На Пристрої Є Root Права?</string>
     <string name="grant_root">Надати Root Права</string>
     <string name="select_at_least_one_app">Оберіть принаймні один додаток!</string>
-    <string name="select_apps_music">Ванс, але для YouTube Music!\nвідносно не багата на можливості, але задовольняє ваші потреби.</string>
+    <string name="select_apps_music">Vanced, але для YouTube Music!\nвідносно не багата на можливості, але задовольняє ваші потреби.</string>
     <string name="select_apps_vanced">YouTube Vanced - це стандартний Android YouTube додаток, але краще!</string>
     <string name="lets_get_started">Почнімо</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Не знаєте, що це або не хочете використовувати рутовану версію? Просто натисніть синю стрілку внизу!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
     <string name="app_changelog_tooltip">Натисніть на картці, щоб побачити зміни.</string>
@@ -63,7 +63,7 @@
     <!-- Dialogs -->
     <string name="advanced">Розширені</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
-    <string name="app_install_files_detected_summary">Виявлено менеджера, що всі необхідні файли для встановлення %1$s були. Бажаєте встановити їх?</string>
+    <string name="app_install_files_detected_summary">Менеджер виявив, що всі необхідні файли для %1$s встановлення було знайдено. Бажаєте встановити їх?</string>
     <string name="checking_updates">Перевірка оновлень…</string>
     <string name="chosen_lang">Мова(и): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
