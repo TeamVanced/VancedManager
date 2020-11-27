@@ -37,6 +37,13 @@ android {
 	}
 }
 
+android.testOptions {
+	unitTests.all {
+		useJUnitPlatform()
+	}
+}
+
+
 dependencies {
 	implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 	implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -61,7 +68,10 @@ dependencies {
 	implementation "org.koin:koin-android-viewmodel:2.2.1"
 	implementation "org.koin:koin-android-ext:2.2.1"
 
-	testImplementation 'junit:junit:4.13.1'
-	androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-	androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+	testImplementation 'io.kotest:kotest-runner-junit5:4.3.1'
+	testImplementation 'io.kotest:kotest-assertions-core:4.3.1'
+	testImplementation 'io.kotest:kotest-property:4.3.1'
+
+	testImplementation "io.mockk:mockk:1.10.2"
+
 }
