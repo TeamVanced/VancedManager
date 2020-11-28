@@ -7,24 +7,30 @@ import kotlinx.coroutines.withContext
 
 interface PkgInformationDataSource {
 
-    @Throws(PackageManager.NameNotFoundException::class)
-    suspend fun getVersionCode(packageName: String): Int
+    suspend fun getVersionCode(packageName: String): Int?
 
-    @Throws(PackageManager.NameNotFoundException::class)
-    suspend fun getVersionName(packageName: String): String
+    suspend fun getVersionName(packageName: String): String?
 }
 
 class PkgInformationDataSourceImpl(
     private val pkgManager: PkgManager
 ) : PkgInformationDataSource {
 
-    override suspend fun getVersionCode(packageName: String): Int =
+    override suspend fun getVersionCode(packageName: String): Int? =
         withContext(Dispatchers.IO) {
-            pkgManager.getVersionCode(packageName)
+            try {
+                pkgManager.getVersionCode(packageName)
+            } catch (exception: PackageManager.NameNotFoundException) {
+                null
+            }
         }
 
-    override suspend fun getVersionName(packageName: String): String =
+    override suspend fun getVersionName(packageName: String): String? =
         withContext(Dispatchers.IO) {
-            pkgManager.getVersionName(packageName)
+            try {
+                pkgManager.getVersionName(packageName)
+            } catch (exception: PackageManager.NameNotFoundException) {
+                null
+            }
         }
 }
