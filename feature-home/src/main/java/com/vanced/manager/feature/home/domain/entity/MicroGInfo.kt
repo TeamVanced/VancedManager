@@ -1,8 +1,8 @@
 package com.vanced.manager.feature.home.domain.entity
 
-data class YouTubeMusicVanced(
+data class MicroGInfo(
     val version: String,
-    val versionCode: Long,
+    val versionCode: Int,
     val baseUrl: String,
     val changeLog: String
 )

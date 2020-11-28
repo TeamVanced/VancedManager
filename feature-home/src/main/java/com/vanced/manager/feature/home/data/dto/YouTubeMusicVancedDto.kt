@@ -2,18 +2,18 @@ package com.vanced.manager.feature.home.data.dto
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import com.vanced.manager.feature.home.domain.entity.YouTubeMusicVanced
+import com.vanced.manager.feature.home.domain.entity.YouTubeMusicVancedInfo
 
 @JsonClass(generateAdapter = true)
 data class YouTubeMusicVancedDto(
     @Json(name = "version") val version: String,
-    @Json(name = "versionCode") val versionCode: Long,
+    @Json(name = "versionCode") val versionCode: Int,
     @Json(name = "url") val baseUrl: String,
     @Json(name = "changelog") val changeLog: String
 )
 
 fun YouTubeMusicVancedDto.toEntity() =
-    YouTubeMusicVanced(version, versionCode, baseUrl, changeLog)
+    YouTubeMusicVancedInfo(version, versionCode, baseUrl, changeLog)
 
-fun YouTubeMusicVanced.toDto() =
+fun YouTubeMusicVancedInfo.toDto() =
     YouTubeMusicVancedDto(version, versionCode, baseUrl, changeLog)
