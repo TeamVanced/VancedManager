@@ -2,7 +2,7 @@ Pull requests should be made to the Dev branch as that is the working branch, ma
 ======
 For anyone who wants to provide translations please submit them to https://crowdin.com/project/vanced-manager as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
 ======
-[![Github All Releases](https://img.shields.io/github/downloads/YTVanced/VancedManager/total.svg)]() [![Github All Releases](https://img.shields.io/github/release/YTVanced/VancedManager.svg)]() 
+[![Github All Releases](https://img.shields.io/github/downloads/YTVanced/VancedManager/total.svg)](https://github.com/YTVanced/VancedManager/releases/latest) [![Github All Releases](https://img.shields.io/github/release/YTVanced/VancedManager.svg)](https://github.com/YTVanced/VancedManager/releases/latest) 
 # Vanced Manager
 Hi, when we released Vanced 15.05.54, people were upset because it used the .apks format, which was way harder to install than a traditional .apk file. Even though we wrote clear instructions on how to install the new Vanced build, people still couldn't figure it out.  
 Then we thought, "why don't we make a manager for vanced, which will download, update and uninstall Vanced and MicroG, have an easy and understandable UI and be less than 10mb?" and that's how Vanced Manager was born.  
