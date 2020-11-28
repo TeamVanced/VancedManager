@@ -2,7 +2,10 @@ package com.vanced.manager.feature.home.data.datasource
 
 import com.vanced.manager.feature.home.data.api.GetAppInformationApi
 import com.vanced.manager.feature.home.data.dto.*
-import com.vanced.manager.feature.home.domain.entity.*
+import com.vanced.manager.feature.home.domain.entity.MicroGInfo
+import com.vanced.manager.feature.home.domain.entity.VancedManagerInfo
+import com.vanced.manager.feature.home.domain.entity.YouTubeMusicVancedInfo
+import com.vanced.manager.feature.home.domain.entity.YouTubeVancedInfo
 import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.coEvery
@@ -14,13 +17,6 @@ internal class AppInformationDataSourceImplTest : ShouldSpec() {
 
     private val dataSource = AppInformationDataSourceImpl(api)
 
-    private val expectation = VancedApps(
-        VancedManager("", 1, "", ""),
-        YouTubeVanced("", 1, "", "", listOf(), listOf()),
-        YouTubeMusicVanced("", 1, "", ""),
-        MicroG("", 1, "", "")
-    )
-
     private val verifiable = VancedAppsDto(
         VancedManagerDto("", 1, "", ""),
         YouTubeVancedDto("", 1, "", "", listOf(), listOf()),
@@ -30,9 +26,51 @@ internal class AppInformationDataSourceImplTest : ShouldSpec() {
 
     init { // https://kotest.io/styles/
         context("return information") {
-            should("all apps") {
+            should("VancedManagerInfo") {
                 coEvery { api.getAppInformation() } returns verifiable
-                dataSource.getAppInformation() shouldBe expectation
+                dataSource
+                    .getVancedManagerInformation() shouldBe
+                        VancedManagerInfo(
+                            version = "",
+                            versionCode = 1,
+                            baseUrl = "",
+                            changeLog = ""
+                        )
+            }
+            should("YouTubeVancedInfo") {
+                coEvery { api.getAppInformation() } returns verifiable
+                dataSource
+                    .getYouTubeVancedInformation() shouldBe
+                        YouTubeVancedInfo(
+                            version = "",
+                            versionCode = 1,
+                            baseUrl = "",
+                            changeLog = "",
+                            themes = listOf(),
+                            langs = listOf()
+                        )
+            }
+            should("YouTubeMusicVancedInfo") {
+                coEvery { api.getAppInformation() } returns verifiable
+                dataSource
+                    .getYouTubeMusicVancedInformation() shouldBe
+                        YouTubeMusicVancedInfo(
+                            version = "",
+                            versionCode = 1,
+                            baseUrl = "",
+                            changeLog = ""
+                        )
+            }
+            should("MicroGInfo") {
+                coEvery { api.getAppInformation() } returns verifiable
+                dataSource
+                    .getMicroGInformation() shouldBe
+                        MicroGInfo(
+                            version = "",
+                            versionCode = 1,
+                            baseUrl = "",
+                            changeLog = ""
+                        )
             }
         }
     }
