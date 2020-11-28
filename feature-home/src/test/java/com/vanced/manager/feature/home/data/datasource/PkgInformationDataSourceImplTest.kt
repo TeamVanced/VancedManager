@@ -1,11 +1,6 @@
 package com.vanced.manager.feature.home.data.datasource
 
-import com.vanced.manager.feature.home.data.pkg.PkgManager
-import io.kotest.core.spec.style.ShouldSpec
-import io.kotest.matchers.shouldBe
-import io.mockk.coEvery
-import io.mockk.mockk
-
+/*
 internal class PkgInformationDataSourceImplTest : ShouldSpec() {
 
     private val pkgManager: PkgManager = mockk()
@@ -26,4 +21,4 @@ internal class PkgInformationDataSourceImplTest : ShouldSpec() {
             dataSource.getVersionName(testPackageName) shouldBe expectation
         }
     }
-}
+}*/

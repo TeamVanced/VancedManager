@@ -1,15 +1,6 @@
 package com.vanced.manager.feature.home.data.datasource
 
-import com.vanced.manager.feature.home.data.api.GetAppInformationApi
-import com.vanced.manager.feature.home.data.dto.*
-import com.vanced.manager.feature.home.domain.entity.MicroGInfo
-import com.vanced.manager.feature.home.domain.entity.VancedManagerInfo
-import com.vanced.manager.feature.home.domain.entity.YouTubeMusicVancedInfo
-import com.vanced.manager.feature.home.domain.entity.YouTubeVancedInfo
-import io.kotest.core.spec.style.ShouldSpec
-import io.kotest.matchers.shouldBe
-import io.mockk.coEvery
-import io.mockk.mockk
+/*
 
 internal class AppInformationDataSourceImplTest : ShouldSpec() {
 
@@ -74,4 +65,4 @@ internal class AppInformationDataSourceImplTest : ShouldSpec() {
             }
         }
     }
-}
+}*/

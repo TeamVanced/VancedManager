@@ -1,0 +1,60 @@
+[
+  {
+    "name": "manager",
+    "iconUrl": "https://github.com/YTVanced/VancedManager/icon.png",
+    "versionName": "2.0.1",
+    "versionCode": 201,
+    "pkgName": "com.vanced.manager",
+    "downloadUrl": "https://github.com/YTVanced/VancedManager/releases/latest/download",
+    "changelog": "- Fixed issues with Android 5 and 6\n- Fixed various crashes\n- Improved performance"
+  },
+  {
+    "name": "vanced",
+    "iconUrl": "https://github.com/YTVanced/icon.png",
+    "versionName": "15.43.32",
+    "versionCode": 1515701696,
+    "pkgName": "com.vanced.android.youtube",
+    "downloadUrl": "https://github.com/YTVanced/releases/latest/download",
+    "changelog": "- Added toggle to revert to ExoPlayer V1\\r\\n- Added toggle to hide the new big Create button\\r\\n- A lot of fixes to old features",
+    "languages": [
+      "af",
+      "am",
+      "ar",
+      "az",
+      "be",
+      "bg",
+      "bn",
+      "bs",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en"
+    ],
+    // may be null,
+    "themes": [
+      "dark",
+      "black"
+    ]
+    // may be null
+  },
+  {
+    "name": "music",
+    "iconUrl": "https://github.com/YTMVanced/icon.png",
+    "versionName": "4.04.52",
+    "versionCode": 40452240,
+    "pkgName": "com.vanced.android.apps.youtube.music",
+    "downloadUrl": "https://github.com/YTMVanced/releases/latest/download",
+    "changelog": "- Added a toggle switch for outline icons\\n- Toolbar premium button has been removed"
+  },
+  {
+    "name": "microg",
+    "iconUrl": "https://github.com/microg/icon.png",
+    "versionName": "0.2.14.204215",
+    "versionCode": 204215001,
+    "pkgName": "com.vanced.android.apps.youtube.music",
+    "downloadUrl": "https://github.com/microg/releases/latest/download",
+    "changelog": "- Updated to upstream sources\\n- Fixed video uploading"
+  }
+]
