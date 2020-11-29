@@ -15,7 +15,7 @@
     <string name="are_you_rooted">האם המכשיר שלך Root?</string>
     <string name="grant_root">הענק הרשאות Root</string>
     <string name="select_at_least_one_app">בחר לפחות יישום אחד!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
+    <string name="select_apps_music">Vacned, אבל של YouTube Music!\nיחסית פחות עשיר בתכונות, אבל ממלא את צרכיך.</string>
     <string name="select_apps_vanced">YouTube Vanced היא כמו אפליקציית YouTube לאנדרואיד, אבל יותר טובה!</string>
     <string name="lets_get_started">בוא נתחיל</string>
     <string name="willing_to_use_root">לא יודע מה זה או לא רוצה להשתמש בגרסת הroot? פשוט תלחץ על החץ הכחול למטה!</string>
@@ -76,7 +76,7 @@
     <string name="miui_one">על מנת להתקין את Vanced, עליך להשבית אופטימיזציות של MIUI בהגדרות מפתח. (אתה יכול להתעלם מאזהרה זו אם אתה משתמש בגרסה 20.2.2. של שיאומי או יותר)</string>
     <string name="error">בעיה</string>
     <string name="redownload">הורד מחדש</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
+    <string name="security_context">ודא שהורדת את האפליקציה מהאתר vancedapp.com, שרת הדיסקורד של Vanced או מהעמוד של Vanced ב־GitHub</string>
     <string name="success">הצלחה!</string>
     <string name="app_installation_preferences">%1$s העדפות התקנה</string>
     <string name="vanced_installed">Vanced הותקן בהצלחה! לפתוח עכשיו?</string>
