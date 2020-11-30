@@ -79,7 +79,7 @@ private class MviFlowImpl<State, Action, Modification, SideEffect>(
         also {
             onEach { modification ->
                 withLock {
-                    state.value = reducer.invoke(state.value, modification)
+                    reducer.invoke(state, state.value, modification)
                 }
             }.launchIn(this@MviFlowImpl)
         }

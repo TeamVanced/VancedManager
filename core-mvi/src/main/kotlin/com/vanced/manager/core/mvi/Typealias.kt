@@ -10,7 +10,7 @@ typealias Handler<State, Action, Modification, SideEffect> =
         ) -> Unit
 
 typealias Reducer<State, Modification> =
-        suspend (
+        suspend MutableSharedFlow<State>.(
             state: State,
             modification: Modification
-        ) -> State
+        ) -> Unit
