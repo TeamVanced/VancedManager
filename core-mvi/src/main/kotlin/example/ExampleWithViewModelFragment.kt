@@ -1,9 +1,6 @@
 package example
 
 import com.vanced.manager.core.mvi.MviRenderView
-import example.ExampleContainer.Action
-import example.ExampleContainer.SideEffect
-import example.ExampleContainer.State
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.Job
@@ -13,18 +10,18 @@ import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.launch
 
 
-class ExampleFragment : MviRenderView<State, Action, SideEffect> {
+class ExampleWithViewModelFragment : MviRenderView<State, Action, SideEffect> {
 
-    val lifecycleScope = CoroutineScope(Job())
+    private val lifecycleScope = CoroutineScope(Job())
 
-    val viewModel = ExampleViewModel()
+    private val viewModel = ExampleViewModel()
 
     private fun onCreate() {
         lifecycleScope.launch {
-            viewModel.mvi.bindView(view = this@ExampleFragment, scope = this)
+            viewModel.store.bindView(view = this@ExampleWithViewModelFragment, scope = this)
         }
         lifecycleScope.launch {
-            viewModel.mvi.bindSideEffects(view = this@ExampleFragment, scope = this)
+            viewModel.store.bindSideEffects(view = this@ExampleWithViewModelFragment, scope = this)
         }
     }
 

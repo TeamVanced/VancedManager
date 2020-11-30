@@ -6,7 +6,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
-interface MviFlow<State, Action, SideEffect> {
+interface MviFlow<State, Action, Modification, SideEffect> {
 
     fun bindView(
         view: MviRenderView<State, Action, SideEffect>,
@@ -25,7 +25,7 @@ private class MviFlowImpl<State, Action, Modification, SideEffect>(
     private val reducer: Reducer<State, Modification>,
     private val handler: Handler<State, Action, Modification, SideEffect>,
     scope: CoroutineScope,
-) : MviFlow<State, Action, SideEffect>,
+) : MviFlow<State, Action, Modification, SideEffect>,
     CoroutineScope by scope,
     Mutex by Mutex() {
 
@@ -70,19 +70,19 @@ private class MviFlowImpl<State, Action, Modification, SideEffect>(
     private suspend fun Flow<Action>.proceed() =
         collect { action ->
             handler.invoke(
-                MutableSharedFlow<Modification>().setState(),
+                MutableSharedFlow<Modification>().subscribeState(),
                 state.value, action, sideEffect
             )
         }
 
-    private fun MutableSharedFlow<Modification>.setState(): MutableSharedFlow<Modification> {
-        onEach { modification ->
-            withLock {
-                state.value = reducer.invoke(state.value, modification)
-            }
-        }.launchIn(this@MviFlowImpl)
-        return this
-    }
+    private fun MutableSharedFlow<Modification>.subscribeState(): MutableSharedFlow<Modification> =
+        also {
+            onEach { modification ->
+                withLock {
+                    reducer.invoke(state, state.value, modification)
+                }
+            }.launchIn(this@MviFlowImpl)
+        }
 }
 
 fun <State, Action, SideEffect, Modification> MviFlow(
@@ -90,7 +90,7 @@ fun <State, Action, SideEffect, Modification> MviFlow(
     reducer: Reducer<State, Modification>,
     handler: Handler<State, Action, Modification, SideEffect>,
     scope: CoroutineScope
-): MviFlow<State, Action, SideEffect> = MviFlowImpl(
+): MviFlow<State, Action, Modification, SideEffect> = MviFlowImpl(
     initialState = initialState,
     reducer = reducer,
     handler = handler,
