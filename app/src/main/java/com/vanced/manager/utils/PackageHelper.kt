@@ -10,6 +10,8 @@ import android.os.Build
 import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
+import com.topjohnwu.superuser.io.SuFileInputStream
+import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
@@ -29,6 +31,8 @@ import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
+import kotlin.jvm.Throws
+
 
 object PackageHelper {
 
@@ -456,10 +460,19 @@ object PackageHelper {
 
     private fun setupScript(apkFPath: String, path: String, app: String): Boolean
     {
-        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done\nmount -o bind $apkFPath $path" > /data/adb/service.d/$app.sh""").exec().isSuccess)
-        {
-            Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep youtube | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
-            return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
+
+        val shellFileZ = SuFile.open("/data/adb/service.d/$app.sh")
+        shellFileZ.createNewFile()
+
+        val code = """#!/system/bin/sh${"\n"}while [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ]; do sleep 1; done${"\n"}mount -o bind $apkFPath $path"""
+        if (shellFileZ.exists()) {
+            try {
+                SuFileOutputStream(shellFileZ).use { out ->  out.write(code.toByteArray())}
+                Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep youtube | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
+                return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
         }
         return false
     }
