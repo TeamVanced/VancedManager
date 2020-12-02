@@ -25,7 +25,7 @@
     <string name="changelog">Changelog</string>
     <string name="downloading_file">Downloading %1$s</string>
     <string name="install">ස්ථාපනය</string>
-    <string name="button_reinstall">නැවත් ස්ථාපනය කරන්න</string>
+    <string name="button_reinstall">නැවත ස්ථාපනය කරන්න</string>
     <string name="version_installed">ස්ථාපනය:</string>
     <string name="latest">අලුත්</string>
     <string name="no_microg">මයික්‍රො ජී ස්ථාපනය කර නැත</string>
@@ -80,10 +80,10 @@
     <string name="success">Success!</string>
     <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="vanced_installed">Vanced has successfully been installed! Open now?</string>
-    <string name="version">Version</string>
+    <string name="version">අනුවාදය</string>
     <string name="music_installed">Vanced Music has successfully been installed! Open now?</string>
     <string name="please_be_patient">Please be patient…</string>
-    <string name="launch">Open</string>
+    <string name="launch">විවෘත කරන්න</string>
     <string name="welcome">ආයුබෝවන්</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
@@ -91,7 +91,7 @@
     <string name="select_at_least_one_lang">Select at least one language!</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
-    <string name="sources">Sources</string>
+    <string name="sources">මූලාශ්‍ර</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
     <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
