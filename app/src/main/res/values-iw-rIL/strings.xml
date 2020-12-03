@@ -12,7 +12,7 @@
     <string name="title_settings">הגדרות</string>
     <string name="update_manager">מנהל העדכונים</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">האם המכשיר שלך Root?</string>
+    <string name="are_you_rooted">האם המכשיר שלך בעל הרשאות Root?</string>
     <string name="grant_root">הענק הרשאות Root</string>
     <string name="select_at_least_one_app">בחר לפחות יישום אחד!</string>
     <string name="select_apps_music">Vacned, אבל של YouTube Music!\nיחסית פחות עשיר בתכונות, אבל ממלא את צרכיך.</string>
@@ -30,7 +30,7 @@
     <string name="latest">החדש ביותר:</string>
     <string name="no_microg">microG לא הותקן</string>
     <string name="root_not_granted">לא הוענקו הרשאות Root</string>
-    <string name="unavailable">אינו זמין</string>
+    <string name="unavailable">לא זמין</string>
     <string name="update">עדכן</string>
     <string name="useful_links">קישורים שימושיים</string>
     <string name="support_us">תמכו בנו!</string>
