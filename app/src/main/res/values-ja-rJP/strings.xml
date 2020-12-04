@@ -15,10 +15,10 @@
     <string name="are_you_rooted">端末をルート化していますか？</string>
     <string name="grant_root">root 権限を付与</string>
     <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
-    <string name="select_apps_music">YouTubeの音楽を楽しめます!\n機能豊富ではありませんが、あなたのニーズを満たすことができます。</string>
-    <string name="select_apps_vanced">Youtube VancedはAndoroid標準のYoutubeアプリより良いです！</string>
+    <string name="select_apps_music">YouTube Musicを楽しめます!\n機能は多くありませんが、あなたのニーズを満たすことができます。</string>
+    <string name="select_apps_vanced">YouTube VancedはAndoroid標準のYouTubeアプリより良いです！</string>
     <string name="lets_get_started">さあ、始めましょう</string>
-    <string name="willing_to_use_root">これが何であるか分からないか、またはrootバージョンを使用したくないですか? ただ、下の青い矢印をクリックしてください!</string>
+    <string name="willing_to_use_root">これが何であるか分からないか、またはRootバージョンを使用したくないですか? 下の青い矢印をタップしてください！</string>
     <!-- Home Page -->
     <string name="about_app">%1$s について</string>
     <string name="app_changelog_tooltip">カードをタップして更新履歴を見る。</string>
@@ -76,7 +76,7 @@
     <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="error">エラー</string>
     <string name="redownload">再ダウンロード</string>
-    <string name="security_context">Vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
+    <string name="security_context">Vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください。</string>
     <string name="success">成功！</string>
     <string name="app_installation_preferences">%1$s のインストール設定</string>
     <string name="vanced_installed">Vanced のインストールに成功しました。今すぐ開きますか？</string>
