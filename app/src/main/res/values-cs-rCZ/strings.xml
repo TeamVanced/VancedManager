@@ -12,10 +12,10 @@
     <string name="title_settings">Nastavení</string>
     <string name="update_manager">Správce aktualizací</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Má vaše zařízení práva root?</string>
+    <string name="are_you_rooted">Má vaše zařízení oprávnění root?</string>
     <string name="grant_root">Udělit root oprávnění</string>
     <string name="select_at_least_one_app">Vyberte alespoň jednu aplikaci!</string>
-    <string name="select_apps_music">Pokročilé, ale YouTube Music!\nRelativně méně funkcí splňující vaše potřeby.</string>
+    <string name="select_apps_music">Vanced, ale YouTube Music!\nRelativně méně funkcí splňující vaše potřeby.</string>
     <string name="select_apps_vanced">YouTube Vanced je výchozí vylepšená aplikace YouTube!</string>
     <string name="lets_get_started">Začínáme</string>
     <string name="willing_to_use_root">Nevíte, co to je, nebo nechcete používat verzi s přístupem root? Stačí kliknout na modrou šipku níže!</string>
