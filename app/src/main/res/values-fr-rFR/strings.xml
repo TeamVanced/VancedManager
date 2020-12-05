@@ -13,10 +13,10 @@
     <string name="update_manager">Gestionnaire de Mise à Jour</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Votre appareil est-il rooté ?</string>
-    <string name="grant_root">Accorder l’autorisation root</string>
+    <string name="grant_root">Accorder l’accès root</string>
     <string name="select_at_least_one_app">Sélectionnez au moins une application !</string>
     <string name="select_apps_music">Vanced, mais pour YouTube Music!\nrelativement moins riche en fonctionnalités mais répond à vos besoins.</string>
-    <string name="select_apps_vanced">YouTube Vanced est la même application YouTube livrée par défaut avec Android mais en mieux !</string>
+    <string name="select_apps_vanced">YouTube Vanced est l\'application YouTube Android par défaut, mais en mieux !</string>
     <string name="lets_get_started">Commençons</string>
     <string name="willing_to_use_root">Vous ne savez pas ce que c\'est ou vous ne voulez pas utiliser la version « root » ? Cliquez simplement sur la flèche bleue ci-dessous !</string>
     <!-- Home Page -->
