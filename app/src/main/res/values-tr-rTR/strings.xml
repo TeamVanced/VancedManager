@@ -12,11 +12,11 @@
     <string name="title_settings">Ayarlar</string>
     <string name="update_manager">Manager\'ı güncelle</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Cihazın root var mı?</string>
+    <string name="are_you_rooted">Cihazın rootlu mu?</string>
     <string name="grant_root">Root yetkisi ver</string>
     <string name="select_at_least_one_app">En az bir uygulama seçin!</string>
     <string name="select_apps_music">Yine Vanced, ama YouTube Music için!\nKıyasen daha az özelliğe sahip fakat ihtiyaçlarını karşılar</string>
-    <string name="select_apps_vanced">YouTube Vanced, temelde YouTube Android Uygulamasıdır, ancak orjinalinden daha iyidir!</string>
+    <string name="select_apps_vanced">YouTube Vanced, temelde YouTube Android Uygulamasıdır, ancak orijinalinden daha iyidir!</string>
     <string name="lets_get_started">Haydi başlayalım</string>
     <string name="willing_to_use_root">Root\'un ne olduğunu bilmiyor veya root sürümünü kullanmak istemiyorsan, alttaki mavi oka tıklayabilirsin!</string>
     <!-- Home Page -->
@@ -46,7 +46,7 @@
     <string name="clear_files">İndirilen dosyaları temizle</string>
     <string name="cleared_files">Dosyalar başarıyla temizlendi</string>
     <string name="firebase_title">Firebase Analizi</string>
-    <string name="firebase_summary">Uygulama hakkında performans ve hata kayıtlarını toplamıza izin verir</string>
+    <string name="firebase_summary">Uygulama hakkında performans ve hata kayıtlarını toplamamıza izin verir</string>
     <string name="language_title">Dil</string>
     <string name="link_title">Chrome Özel Sekmelerini kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
@@ -101,14 +101,14 @@
     <string name="ifile_missing">Depolama alanında Siyah/Koyu temanın APK dosyasını belirlerken bir hata oluştu. Tekrar deneyin lütfen.</string>
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
     <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
-    <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orjinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
+    <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
     <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından, yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırıp tekrar deneyin.</string>
     <string name="installation_failed">Kurulum bilinmeyen nedenlerden dolayı başarısız oldu. Telegram veya Discord\'a katılarak destek alabilirsin.</string>
     <string name="installation_incompatible">Kurulum dosyaları cihazınla uyumlu olmadığı için kurulum işlemi başarısız oldu. Ayarlardan indirilen dosyaları temizleyip, tekrar deneyin.</string>
     <string name="installation_invalid">APK dosyaları çözümlenemediğinden, kurulum başarısız oldu. Lütfen yeniden deneyin.</string>
     <string name="installation_signature">APK imza doğrulaması etkin olduğundan, kurulum başarısız oldu. APK imza doğrulamasını devre dışı bırakıp, yeniden deneyin.</string>
-    <string name="installation_miui">MIUI Optimizasyonu etkin olduğunda, kurulum başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp, yeniden deneyin.</string>
+    <string name="installation_miui">MIUI Optimizasyonu etkin olduğundan, kurulum başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp, yeniden deneyin.</string>
     <string name="installation_storage">Kurulum, depoloma hatası sebebiyle başarısız oldu.</string>
     <string name="modapk_missing">Yükleyicide Siyah/Koyu tema için APK dosyalarını ararken bir hata oluştu. Manager\'ın verilerini temizleyip, yeniden deneyin.</string>
-    <string name="path_missing">Ayrı kurulum işleminden sonra orjinal YouTube kurulum yolu belirlenemedi.</string>
+    <string name="path_missing">Ayrı kurulum işleminden sonra orijinal YouTube kurulum yolu belirlenemedi.</string>
 </resources>
