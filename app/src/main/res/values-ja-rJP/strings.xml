@@ -76,7 +76,7 @@
     <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="error">エラー</string>
     <string name="redownload">再ダウンロード</string>
-    <string name="security_context">Vancedapp.com、VancedのDiscordサーバーまたはGitHubからアプリをダウンロードしたことを確認してください。</string>
+    <string name="security_context">Vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="success">成功！</string>
     <string name="app_installation_preferences">%1$s のインストール設定</string>
     <string name="vanced_installed">Vanced のインストールに成功しました。今すぐ開きますか？</string>
