@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, kuid YouTube Musicu jaoks! \nsuhteliselt vähem funktsioonirikas, kuid vastab teie vajadustele.</string>
     <string name="select_apps_vanced">YouTube Vanced on tavaline Androidi YouTube äpp, aga parem!</string>
     <string name="lets_get_started">Alustame</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Kas te ei tea mis see on, või ei soovi kasutada rooditud versiooni? vajutage allpool sinist noolt!</string>
     <!-- Home Page -->
     <string name="about_app">Umbes %1$s</string>
     <string name="app_changelog_tooltip">Vajuta kaardile, et näha muudatusi.</string>
@@ -29,13 +29,13 @@
     <string name="version_installed">Installitud:</string>
     <string name="latest">Uusim:</string>
     <string name="no_microg">microG pole installitud</string>
-    <string name="root_not_granted">Root access not granted</string>
+    <string name="root_not_granted">Administraatoriõigusi ei tagatud</string>
     <string name="unavailable">Pole saadaval</string>
     <string name="update">Uuenda</string>
     <string name="useful_links">Kasulikud lingid</string>
     <string name="support_us">Toetage meid!</string>
     <!-- Settings -->
-    <string name="accent_color">Accent Color</string>
+    <string name="accent_color">Rõhuvärv</string>
     <string name="accent_blue">Sinine</string>
     <string name="accent_green">Roheline</string>
     <string name="accent_purple">Lilla</string>
@@ -57,13 +57,13 @@
     <string name="update_url">Uuenduskanali link</string>
     <string name="push_notifications">%1$s Hüpikteated</string>
     <string name="push_notifications_summary">Saa hüpikteateid kui %1$s uuendus on saadaval</string>
-    <string name="update_center">Manager Update Center</string>
+    <string name="update_center">Halduri värskenduskeskus</string>
     <string name="update_not_found">Uusi uuendusi ei ole</string>
     <string name="variant">Variant</string>
     <!-- Dialogs -->
     <string name="advanced">Täpsustatud</string>
-    <string name="app_install_files_detected">%1$s installation files detected!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
+    <string name="app_install_files_detected">%1$s paigaldusfailid on leitud!</string>
+    <string name="app_install_files_detected_summary">Haldur tuvastas, et kõik failid paigaldamaks %1$s on leitud. Kas soovite seda paigaldada?</string>
     <string name="checking_updates">Uuenduste otsimine…</string>
     <string name="chosen_lang">Keel(ed): %1$s</string>
     <string name="chosen_theme">Kujundus: %1$s</string>
@@ -71,14 +71,14 @@
     <string name="guide">Juhend</string>
     <string name="hold_on">Peata!</string>
     <string name="installing_app">Installin %1$s</string>
-    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Te kasutate Vanced Magisk/TWRP versiooni, mis on katkestatud, ning seda ei saa uuendada kasutades seda äppi. Palun eemaldage Magisk moodul kasutades TWRP Vanced eemaldajat.</string>
     <string name="miui_one_title">MIUI on tuvastatud!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Et paigaldada Vanced, PEAB keelama MIUI optimiseerimise arendaja valikute alt. (Võite seda igroneerida kui kasutate 20.2.20 või uuemat xiaomi.eu põhist ROMi)</string>
     <string name="error">Viga</string>
     <string name="redownload">Lae uuesti alla</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
+    <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
     <string name="success">Õnnestus!</string>
-    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="app_installation_preferences">%1$s Paigalduseelistused</string>
     <string name="vanced_installed">Vanced on edukalt paigaldatud! Soovite avada kohe?</string>
     <string name="version">Versioon</string>
     <string name="music_installed">Vanced Music on edukalt paigaldatud! Soovite avada kohe?</string>
@@ -90,25 +90,25 @@
     <string name="light_plus_other">Hele + %1$s</string>
     <string name="select_at_least_one_lang">Vali vähemalt üks keel!</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Devs</string>
+    <string name="manager_dev">Halduri arendajad</string>
     <string name="sources">Allikad</string>
     <string name="vanced_team">Vanced Meeskond</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
+    <string name="chown_fail">APK edastamine süsteemi omanikule ebaõnnestus, proovige uuesti.</string>
     <string name="error_downloading">Viga allalaadimisel %1$s</string>
-    <string name="failed_uninstall">Failed to uninstall package %1$s</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
-    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
-    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
-    <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>
-    <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
-    <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
-    <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
-    <string name="installation_storage">Installation failed due to a storage error.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="failed_uninstall">Paketi %1$s eemaldamine ebaõnnestus</string>
+    <string name="files_missing_va">Paigalduseks vajalike failide leidmine ebaõnnestus. Laadige paigaldusfailid uuesti alla ja proovige uuesti.</string>
+    <string name="ifile_missing">Apk faili musta/tumeda teema jaoks leidmine ebaõnnestus, proovige palun uuesti.</string>
+    <string name="installation_aborted">Paigaldamine ebaõnnestus kuna kasutaja katkestas selle.</string>
+    <string name="installation_blocked">Paigaldamine ebaõnnestus kuna kasutaja peatas selle.</string>
+    <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused YouTube\'i originaalrakendusest ja proovige uuesti.</string>
+    <string name="installation_conflict">Paigaldamine ebaõnnestus, kuna tekkis konflikt olemasoleva versiooniga. Eemaldage praegune Vanced versioon, ning proovige uuesti.</string>
+    <string name="installation_failed">Paigaldamine ebaõnnestus teadmata põhjustel, liituge meie Telegrami või Discordiga, et saada edaspidist tuge.</string>
+    <string name="installation_incompatible">Paigaldamine ebaõnnestus, kuna paigaldusfail ei sobitu teie seadmega. Puhastage allalaaditud failid seadete alt, ning proovige uuesti.</string>
+    <string name="installation_invalid">Paigaldamine ebaõnnestus kuna apk failid on vigased, palun proovige uuesti.</string>
+    <string name="installation_signature">Paigaldamine ebaõnnestus kuna apk-allkirja kontrollimine on lubatud. Keelake apk allkirja kinnitamine ja proovige uuesti.</string>
+    <string name="installation_miui">Paigaldamine ebaõnnestus, kuna MIUI optimiseerimine on lubatud. Keelake MIUI optimiseerimine ja proovige uuesti.</string>
+    <string name="installation_storage">Paigaldamine ebaõnnestus salvestusvea tõttu.</string>
+    <string name="modapk_missing">Apk faili musta/tumeda teema jaoks leidmine paigaldajast ebaõnnestus. Puhastage halduri rakenduse andmed ja proovige uuesti.</string>
+    <string name="path_missing">Pärast jagatud paigaldamist ei õnnestunud leida originaal YouTube\'i paigaldus asukohta.</string>
 </resources>
