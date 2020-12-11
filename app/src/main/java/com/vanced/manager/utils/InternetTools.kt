@@ -112,7 +112,7 @@ object InternetTools {
             // Generate the checksum
             val sum = generateChecksum(dataBuffer)
 
-            sum.toLowerCase(Locale.ENGLISH) == sha256.toLowerCase(Locale.ENGLISH)
+            sum.equals(sha256, ignoreCase = true)
         } catch (e: Exception) {
             e.printStackTrace()
             false
