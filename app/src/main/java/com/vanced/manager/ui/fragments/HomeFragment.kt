@@ -17,6 +17,8 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.crowdin.platform.util.inflateWithCrowdin
 import com.github.florent37.viewtooltip.ViewTooltip
+import com.google.android.flexbox.AlignContent
+import com.google.android.flexbox.AlignItems
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
 import com.vanced.manager.R
