@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vanced.manager.ui.core.SlidingConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.vanced.manager.ui.core.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,14 +9,14 @@
         android:id="@+id/grant_root_header"
         android:text="@string/are_you_rooted"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/WelcomeHeaderTitle"/>
+        style="@style/WelcomeHeaderTitle" />
 
     <TextView
         android:id="@+id/grant_root_description"
         android:text="@string/willing_to_use_root"
         android:textSize="13sp"
         app:layout_constraintTop_toBottomOf="@id/grant_root_header"
-        style="@style/WelcomeHeaderSubtitle"/>
+        style="@style/WelcomeHeaderSubtitle" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/grant_root_fab"
@@ -31,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/grant_root_header"
-        app:maxImageSize="44dp"/>
+        app:maxImageSize="44dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +41,7 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/grant_root_fab"/>
+        app:layout_constraintTop_toBottomOf="@id/grant_root_fab" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -52,7 +51,7 @@
         app:layout_constraintBottom_toTopOf="@id/grant_root_finish_fab"
         app:layout_constraintEnd_toEndOf="@id/grant_root_finish_fab"
         app:layout_constraintStart_toStartOf="@id/grant_root_finish_fab"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/grant_root_finish_fab"
@@ -64,5 +63,5 @@
         android:src="@drawable/ic_baseline_navigate_next_48"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="48dp"/>
+        app:maxImageSize="48dp" />
 </com.vanced.manager.ui.core.SlidingConstraintLayout>

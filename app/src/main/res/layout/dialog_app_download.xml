@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.dialogs.AppDownloadDialog"
@@ -13,26 +12,25 @@
         <TextView
             android:id="@+id/app_download_header"
             tools:text="Installing Vanced"
-            style="@style/DialogCardTitle"/>
+            style="@style/DialogCardTitle" />
 
         <TextView
             android:id="@+id/app_download_patient"
             android:layout_below="@id/app_download_header"
             android:text="@string/please_be_patient"
-            style="@style/DialogCardSubtitle"/>
+            style="@style/DialogCardSubtitle" />
 
-        <com.google.android.material.progressindicator.ProgressIndicator
+        <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/app_download_progressbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/app_download_patient"
             android:layout_marginTop="24dp"
+            app:trackCornerRadius="15dp"
             app:indicatorColor="?colorPrimary"
-            app:indicatorCornerRadius="15dp"
-            tools:progress="10"
-            style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"/>
+            tools:progress="10" />
 
-        <com.google.android.material.progressindicator.ProgressIndicator
+        <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/app_install_progressbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,8 +40,7 @@
             android:layout_marginTop="24dp"
             android:indeterminate="true"
             app:indicatorColor="?colorPrimary"
-            app:indicatorCornerRadius="15dp"
-            style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate"/>
+            app:trackCornerRadius="15dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -59,14 +56,16 @@
                 android:layout_centerVertical="true"
                 android:layout_toStartOf="@+id/app_download_cancel"
                 android:textSize="15sp"
-                tools:text="Downloading base.apk..."/>
+                tools:text="Downloading base.apk..." />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/app_download_cancel"
                 android:layout_alignParentEnd="true"
                 android:text="@string/cancel"
                 app:layout_constraintEnd_toEndOf="parent"
-                style="@style/OutlinedButtonStyle"/>
+                style="@style/OutlinedButtonStyle" />
         </RelativeLayout>
+
     </RelativeLayout>
+
 </com.google.android.material.card.MaterialCardView>

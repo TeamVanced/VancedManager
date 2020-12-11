@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vanced.manager.ui.core.SlidingConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.vanced.manager.ui.core.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +12,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/WelcomeHeaderTitle"/>
+        style="@style/WelcomeHeaderTitle" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/select_apps_recycler"
@@ -24,7 +23,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:itemCount="2"
-        tools:listitem="@layout/view_app_checkbox"/>
+        tools:listitem="@layout/view_app_checkbox" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/select_apps_fab"
@@ -36,6 +35,6 @@
         android:src="@drawable/ic_baseline_navigate_next_48"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:maxImageSize="48dp"/>
+        app:maxImageSize="48dp" />
 
 </com.vanced.manager.ui.core.SlidingConstraintLayout>

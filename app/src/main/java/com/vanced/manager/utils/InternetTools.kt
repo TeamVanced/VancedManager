@@ -3,6 +3,7 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
@@ -38,7 +39,8 @@ object InternetTools {
         val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_custom_tabs", true)
         if (customTabPrefs) {
             val builder = CustomTabsIntent.Builder()
-            builder.setToolbarColor(ContextCompat.getColor(context, color))
+            val params = CustomTabColorSchemeParams.Builder().setToolbarColor(ContextCompat.getColor(context, color))
+            builder.setDefaultColorSchemeParams(params.build())
             val customTabsIntent = builder.build()
             customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             customTabsIntent.launchUrl(context, url.toUri())
