@@ -1,12 +1,8 @@
 package com.vanced.manager.ui.viewmodels
 
-import android.content.ActivityNotFoundException
-import android.content.ComponentName
-import android.content.Intent
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.ObservableField
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
@@ -59,20 +55,6 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
     
     private val microgToast = Toast.makeText(activity, R.string.no_microg, Toast.LENGTH_LONG)
-
-    fun openMicrogSettings() {
-        try {
-            val intent = Intent()
-            intent.component = ComponentName(
-                "com.mgoogle.android.gms",
-                "org.microg.gms.ui.SettingsActivity"
-            )
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(activity, intent, null)
-        } catch (e: ActivityNotFoundException) {
-            Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show()
-        }
-    }
 
     fun openUrl(url: String) {
         val color: Int =

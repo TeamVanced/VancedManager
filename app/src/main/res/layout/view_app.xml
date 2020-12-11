@@ -48,17 +48,6 @@
             app:layout_constraintTop_toBottomOf="@id/app_install_button"
             app:tint="?colorLinkImage" />
 
-        <ImageButton
-            android:id="@+id/app_settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_app_settings_black_24dp"
-            app:layout_constraintEnd_toStartOf="@id/app_uninstall"
-            app:layout_constraintTop_toBottomOf="@id/app_install_button"
-            app:tint="?colorLinkImage" />
-
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/app_remote_version_container"
             android:layout_width="match_parent"
@@ -80,25 +69,28 @@
                 android:layout_marginStart="4dp" />
         </com.google.android.flexbox.FlexboxLayout>
 
-            <com.google.android.flexbox.FlexboxLayout
-                android:id="@+id/app_installed_version_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:flexWrap="wrap"
-                app:layout_constrainedWidth="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/app_install_button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/app_remote_version_container">
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/app_installed_version_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexWrap="wrap"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/app_install_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_remote_version_container">
 
-                <TextView
-                    style="@style/AppVersionText"
-                    android:text="@string/version_installed" />
+            <TextView
+                style="@style/AppVersionText"
+                android:text="@string/version_installed" />
 
-                <TextView
-                    android:id="@+id/app_installed_version"
-                    style="@style/AppVersionText"
-                    android:layout_marginStart="4dp" />
-            </com.google.android.flexbox.FlexboxLayout>
+            <TextView
+                android:id="@+id/app_installed_version"
+                style="@style/AppVersionText"
+                android:layout_marginStart="4dp" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </com.google.android.material.card.MaterialCardView>

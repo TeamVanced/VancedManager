@@ -46,11 +46,6 @@ class AppListAdapter(
                     dataModel?.appPkg?.let { it1 -> viewModel.uninstallPackage(it1) }
                 }
                 appUninstall.isVisible = dataModel?.isAppInstalled?.value == true
-                appSettings.setOnClickListener {
-                    viewModel.openMicrogSettings()
-                }
-                appSettings.isVisible =
-                    apps[position] == context.getString(R.string.microg) && dataModel?.isAppInstalled?.value == true
                 dataModel?.versionName?.observe(this@AppListAdapter.lifecycleOwner) {
                     appRemoteVersion.text = it
                 }
