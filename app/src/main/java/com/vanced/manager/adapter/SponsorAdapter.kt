@@ -19,13 +19,13 @@ class SponsorAdapter(
     private val brave = SponsorModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_brave),
         "Brave",
-        "https://vancedapp.com/brave"
+        BRAVE
     )
 
     private val adguard = SponsorModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_adguard),
         "AdGuard",
-        "https://adguard.com/?aid=31141&source=manager"
+        ADGUARD
     )
 
     val sponsors = arrayListOf(brave, adguard)
@@ -75,5 +75,10 @@ class SponsorAdapter(
 //
 //        })
 //    }
+
+    companion object {
+        const val BRAVE = "https://vancedapp.com/brave"
+        const val ADGUARD = "https://adguard.com/?aid=31141&source=manager"
+    }
 
 }

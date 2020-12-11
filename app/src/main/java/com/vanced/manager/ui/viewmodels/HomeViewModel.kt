@@ -11,6 +11,11 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
+import com.vanced.manager.adapter.LinkAdapter.Companion.DISCORD
+import com.vanced.manager.adapter.LinkAdapter.Companion.REDDIT
+import com.vanced.manager.adapter.LinkAdapter.Companion.TELEGRAM
+import com.vanced.manager.adapter.LinkAdapter.Companion.TWITTER
+import com.vanced.manager.adapter.SponsorAdapter.Companion.BRAVE
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.dialogs.InstallationFilesDetectedDialog
@@ -59,12 +64,11 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     fun openUrl(url: String) {
         val color: Int =
             when (url) {
-                "https://discord.gg/TUVd7rd" -> R.color.Discord
-                "https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w" -> R.color.Telegram
-                "https://twitter.com/YTVanced" -> R.color.Twitter
-                "https://reddit.com/r/vanced" -> R.color.Reddit
-                "https://vanced.activity" -> R.color.Vanced
-                "https://brave.com/van874" -> R.color.Brave
+                DISCORD -> R.color.Discord
+                TELEGRAM -> R.color.Telegram
+                TWITTER -> R.color.Twitter
+                REDDIT -> R.color.Reddit
+                BRAVE -> R.color.Brave
                 else -> R.color.Vanced
             }
             

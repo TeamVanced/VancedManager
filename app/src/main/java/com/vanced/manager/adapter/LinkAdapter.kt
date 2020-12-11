@@ -17,42 +17,42 @@ class LinkAdapter(
 
     private val instagram = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_instagram),
-        "https://instagram.com/vanced.youtube"
+        INSTAGRAM
     )
 
     private val youtube = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_youtube),
-        "https://youtube.com/c/YouTubeVanced"
+        YOUTUBE
     )
 
     private val github = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_github),
-        "https://github.com/YTVanced/VancedManager"
+        GITHUB
     )
 
     private val website = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_website),
-        "https://vancedapp.com"
+        WEBSITE
     )
 
     private val telegram = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_telegram),
-        "https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w"
+        TELEGRAM
     )
 
     private val twitter = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_twitter),
-        "https://twitter.com/YTVanced"
+        TWITTER
     )
 
     private val discord = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_discord),
-        "https://discord.gg/WCGNdRruzb"
+        DISCORD
     )
 
     private val reddit = LinkModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_reddit),
-        "https://www.reddit.com/r/Vanced/"
+        REDDIT
     )
 
     val links = arrayOf(instagram, youtube, github, website, telegram, twitter, discord, reddit)
@@ -79,5 +79,16 @@ class LinkAdapter(
     }
 
     override fun getItemCount(): Int = links.size
+
+    companion object {
+        const val INSTAGRAM = "https://instagram.com/vanced.youtube"
+        const val YOUTUBE = "https://youtube.com/c/YouTubeVanced"
+        const val GITHUB = "https://github.com/YTVanced/VancedManager"
+        const val WEBSITE = "https://vancedapp.com"
+        const val TELEGRAM = "https://t.me/joinchat/AAAAAEHf-pi4jH1SDlAL4w"
+        const val TWITTER = "https://twitter.com/YTVanced"
+        const val DISCORD = "https://discord.gg/WCGNdRruzb"
+        const val REDDIT = "https://www.reddit.com/r/Vanced/"
+    }
 
 }
