@@ -3,15 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_sponsor"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="165dp"
+    android:layout_height="97dp"
     android:layout_marginTop="8dp"
     app:cardBackgroundColor="?colorLinkBG"
-    app:contentPaddingTop="16dp"
-    app:contentPaddingBottom="16dp"
-    app:contentPaddingLeft="64dp"
-    app:contentPaddingRight="64dp"
-    app:cardCornerRadius="16dp"
+    app:cardCornerRadius="12dp"
     app:cardElevation="0dp">
 
     <LinearLayout
@@ -24,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="16dp"
             app:tint="?colorLinkImage"
             tools:src="@drawable/ic_brave" />
 
