@@ -70,7 +70,6 @@
     <string name="chosen_version">รุ่น: %1$s</string>
     <string name="guide">คู่มือ</string>
     <string name="hold_on">หยุด!</string>
-    <string name="installing_app">กำลังติดตั้ง %1$s</string>
     <string name="magisk_vanced">คุณกำลังใช้ Vanced เวอร์ชัน Magisk / TWRP ซึ่งถูกยกเลิกและไม่สามารถอัปเดตได้จากแอปนี้ กรุณาลบออกโดยการถอดโมดูล Magisk / ใช้โปรแกรมถอนการติดตั้ง TWRP Vanced</string>
     <string name="miui_one_title">ตรวจพบ MIUI!</string>
     <string name="miui_one">ในการติดตั้ง Vanced คุณต้องปิดใช้งาน MIUI Optimisations ในการตั้งค่าสำหรับนักพัฒนา (คุณสามารถเพิกเฉยต่อคำเตือนนี้ได้หากคุณใช้ ROM ที่ใช้ xiaomi.eu 20.2.20 ขึ้นไป)</string>
