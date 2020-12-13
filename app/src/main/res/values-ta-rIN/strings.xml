@@ -70,7 +70,6 @@
     <string name="chosen_version">பதிப்பு: %1$s</string>
     <string name="guide">வழிகாட்டி</string>
     <string name="hold_on">நிறுத்து!</string>
-    <string name="installing_app">%1$s ஐ நிறுவுகிறது</string>
     <string name="magisk_vanced">நீங்கள் வேன்ஸின் மேஜிஸ்க் / டி. டபிள்யூ. ஆர். பி பதிப்பைப் பயன்படுத்துகிறீர்கள், இது நிறுத்தப்பட்டது மற்றும் இந்த பயன்பாட்டைப் பயன்படுத்தி புதுப்பிக்க முடியாது. மேஜிஸ்க் தொகுதியை அகற்றி / TWRP Vanced uninstaller ஐப் பயன்படுத்தி அதை அகற்றவும்.</string>
     <string name="miui_one_title">MIUI கண்டறியப்பட்டது!</string>
     <string name="miui_one">Vanced ஐ நிறுவ, டெவலப்பர் அமைப்புகளில் MIUI உகப்பாக்கங்களை முடக்க வேண்டும். (நீங்கள் 20.2.20 அல்லது அதற்குப் பிறகு xiaomi.eu அடிப்படையிலான ROM ஐப் பயன்படுத்துகிறீர்கள் என்றால் இந்த எச்சரிக்கையை நீங்கள் புறக்கணிக்கலாம்)</string>
