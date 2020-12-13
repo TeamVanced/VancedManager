@@ -70,7 +70,6 @@
     <string name="chosen_version">Sürüm: %1$s</string>
     <string name="guide">Kılavuz</string>
     <string name="hold_on">Dur!</string>
-    <string name="installing_app">%1$s yükleniyor</string>
     <string name="magisk_vanced">Geliştirilmesi durdurulan ve bu uygulama ile güncellenemeyen Vanced\'ın, Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen Magisk/TWRP sürümünü cihazınızdan kaldırın.</string>
     <string name="miui_one_title">MIUI tespit edildi!</string>
     <string name="miui_one">Vanced\'i yüklemek için geliştirici ayarlarından MIUI Optimizasyonları, devre dışı bırakılmalıdır. (xiaomi.eu tabanlı 20.2.20 veya üzeri bir ROM kullanıyorsanız, bu uyarıyı göz ardı edebilirsiniz)</string>
