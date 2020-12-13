@@ -70,7 +70,6 @@
     <string name="chosen_version">גרסה: %1$s</string>
     <string name="guide">מדריך</string>
     <string name="hold_on">עצור!</string>
-    <string name="installing_app">מתקין %1$s</string>
     <string name="magisk_vanced">נדמה שאתה משתמש בגרסת ה־Magisk/TWRP של Vanced, שהתמיכה בה הופסקה והיא לא יכולה להתעדכן להתעדכן בעזרת האפליקציה הזו. אנא מחק אותה על ידי מחיקת ה־Module ב־Magisk או בשימוש במסיר ההתקנה של TWRP Vanced.</string>
     <string name="miui_one_title">MIUI זוהה!</string>
     <string name="miui_one">על מנת להתקין את Vanced, עליך להשבית אופטימיזציות של MIUI בהגדרות מפתח. (אתה יכול להתעלם מאזהרה זו אם אתה משתמש בגרסה 20.2.2. של שיאומי או יותר)</string>
