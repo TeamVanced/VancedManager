@@ -70,7 +70,6 @@
     <string name="chosen_version">Versjon: %1$s</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Stopp!</string>
-    <string name="installing_app">Installerer %1$s</string>
     <string name="magisk_vanced">Du bruker Magisk/TWRP-versjonen av Vansert, som seponeres og som ikke kan oppdateres ved hjelp av denne appen. Vennligst fjern den ved å fjerne Magisk modul/bruke TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI oppdaget!</string>
     <string name="miui_one">For å installere Vananced, MÅ du deaktivere MIUI Optimaliseringer i utviklerinnstillingene. (Du kan ignorere denne advarselen hvis du bruker 20.2.20 eller senere xiaomi.eu basert ROM)</string>
