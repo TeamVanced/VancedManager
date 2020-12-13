@@ -70,7 +70,6 @@
     <string name="chosen_version">Versioon: %1$s</string>
     <string name="guide">Juhend</string>
     <string name="hold_on">Peata!</string>
-    <string name="installing_app">Installin %1$s</string>
     <string name="magisk_vanced">Te kasutate Vanced Magisk/TWRP versiooni, mis on katkestatud, ning seda ei saa uuendada kasutades seda äppi. Palun eemaldage Magisk moodul kasutades TWRP Vanced eemaldajat.</string>
     <string name="miui_one_title">MIUI on tuvastatud!</string>
     <string name="miui_one">Et paigaldada Vanced, PEAB keelama MIUI optimiseerimise arendaja valikute alt. (Võite seda igroneerida kui kasutate 20.2.20 või uuemat xiaomi.eu põhist ROMi)</string>
