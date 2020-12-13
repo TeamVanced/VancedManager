@@ -70,7 +70,6 @@
     <string name="chosen_version">الإصدار: %1$s</string>
     <string name="guide">الدليل</string>
     <string name="hold_on">إيقاف!</string>
-    <string name="installing_app">جاري تثبيت %1$s</string>
     <string name="magisk_vanced">يبدو أنك تستخدم إصدار ماجيسك/TWRP من ڤانسد، الذي قد تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً من قائمة إضافات ماجيسك أو بإستخدام أداة إلغاء تثبيت ڤانسد من TWRP.</string>
     <string name="miui_one_title">تم اكتشاف MIUI!</string>
     <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة إذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند إلى نسخة نظام شاومي أوروبا)</string>
