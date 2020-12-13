@@ -70,7 +70,6 @@
     <string name="chosen_version">Phiên bản: %1$s</string>
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Khoan đã!</string>
-    <string name="installing_app">Đang cài đặt %1$s</string>
     <string name="magisk_vanced">Bạn đang sử dụng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ mô-đun Magisk/flash trình gỡ cài đặt TWRP.</string>
     <string name="miui_one_title">Phát hiện MIUI!</string>
     <string name="miui_one">Để cài đặt Vanced, bạn PHẢI vô hiệu hóa Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bạn có thể bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu 20.2.20 trở lên)</string>

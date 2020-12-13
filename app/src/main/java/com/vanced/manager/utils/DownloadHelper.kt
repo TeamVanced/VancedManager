@@ -27,12 +27,12 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             .progress { readBytes, totalBytes ->
                 downloadProgress.value?.downloadProgress?.postValue((readBytes * 100 / totalBytes).toInt())
             }
-            .responseString {_, _, result ->
+            .responseString { _, _, result ->
                 result.fold(success = {
                     downloadProgress.value?.downloadProgress?.postValue(0)
                     onDownloadComplete()
                 }, failure = { error ->
-                    Log.d("VMDownloader", error.errorData.toString())
+                    Log.d("VMDownloader", error.cause.toString())
                     onError(error.errorData.toString())
                 })
             }
@@ -49,10 +49,10 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
         fuelDownload(url, "manager", "manager.apk", context, onDownloadComplete = {
             val apk = File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
             val uri =
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                        FileProvider.getUriForFile(context, "${context.packageName}.provider", apk)
-                    else
-                        Uri.fromFile(apk)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                    FileProvider.getUriForFile(context, "${context.packageName}.provider", apk)
+                else
+                    Uri.fromFile(apk)
 
             val intent = Intent(Intent.ACTION_VIEW)
             intent.setDataAndType(uri, "application/vnd.android.package-archive")

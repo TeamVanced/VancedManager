@@ -70,7 +70,6 @@
     <string name="chosen_version">Wersja: %1$s</string>
     <string name="guide">Przewodnik</string>
     <string name="hold_on">Stop!</string>
-    <string name="installing_app">Instalowanie %1$s</string>
     <string name="magisk_vanced">Używasz wersji Magisk/TWRP Vanced, która została przerwana i nie może zostać zaktualizowana za pomocą tej aplikacji. Proszę go usunąć usuwając moduł Magisk/używając TWRP Vanced deinstalatora.</string>
     <string name="miui_one_title">MIUI wykryte!</string>
     <string name="miui_one">Aby zainstalować Vanced, MUSI wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli używasz oprogramowania 20.2.20 lub później z bazą na xiaomi.eu)</string>

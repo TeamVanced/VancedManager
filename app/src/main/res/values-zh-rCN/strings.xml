@@ -70,7 +70,6 @@
     <string name="chosen_version">版本: %1$s</string>
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
-    <string name="installing_app">正在安装 %1$s</string>
     <string name="magisk_vanced">您正在使用 Magisk/TWRP 版的 Vanced，它已被停止支持且无法通过此应用更新。请通过移除 Magisk 模块 / 使用 TWRP Vanced 卸载器来移除它。</string>
     <string name="miui_one_title">检测到 MIUI！</string>
     <string name="miui_one">为了能够正确安装 Vanced ，您必须在开发者设置中禁用 MIUI 优化。 (如果您正在使用基于 xiomi.eu 20.2.20或更新的 ROM，您可以忽略此警告)</string>

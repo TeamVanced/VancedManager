@@ -70,7 +70,6 @@
     <string name="chosen_version">Guherto: %1$s</string>
     <string name="guide">Rêzan</string>
     <string name="hold_on">Rawestîne!</string>
-    <string name="installing_app">%1$s tê sazkirin</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI destnîşan bû!</string>
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>

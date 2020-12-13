@@ -6,7 +6,6 @@
     <string name="microg" translatable="false">Vanced microG</string>
     <string name="music" translatable="false">YouTube Music</string>
 
-    <string name="root">root</string>
     <string name="nonroot">nonroot</string>
 
     <!-- prefs -->

@@ -70,7 +70,6 @@
     <string name="chosen_version">Versione: %1$s</string>
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
-    <string name="installing_app">Installazione %1$s</string>
     <string name="magisk_vanced">Stai utilizzando la versione Magisk/TWRP di Vanced, ormai obsoleta e non più aggiornabile tramite questa app. Per favore, rimuovila eliminando il modulo Magisk oppure utilizzando TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Rilevata l\'interfaccia MIUI!</string>
     <string name="miui_one">Per poter installare Vanced, DEVI disattivare le ottimizzazioni MIUI nelle Opzioni Sviluppatore (puoi ignorare questo avviso se stai utilizzando la versione 20.2.20 o successive di una ROM basata su xiaomi.eu)</string>
