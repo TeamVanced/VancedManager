@@ -70,7 +70,6 @@
     <string name="chosen_version">Versiya: %1$s</string>
     <string name="guide">Bələdçi</string>
     <string name="hold_on">Dayandır!</string>
-    <string name="installing_app">%1$s quraşdırılır</string>
     <string name="magisk_vanced">Buraxılışı dayandırılan və bu tətbiq istifadə edərək yenilənə bilməyən Vanced-in Magisk/TWRP versiyasını istifadə edirsiniz. Zəhmət olmasa magisk modulunu/TWRP Vanced silici istifadə edərək silin.</string>
     <string name="miui_one_title">MIUI aşkarlandı!</string>
     <string name="miui_one">Vanced-i quraşdırmaq üçün tərtibatçı tənzimləmələrindən MIUI Optimallaşdırmasını sıradan çıxartmaq LAZIMDIR. (20.2.20 və ya yuxarı xiaomi.eu əsaslı ROM istifadə edirsinizsə bu xəbərdarlığı nəzərə almaya bilərsiniz)</string>
