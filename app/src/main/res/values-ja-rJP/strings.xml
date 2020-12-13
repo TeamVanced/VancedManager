@@ -70,7 +70,6 @@
     <string name="chosen_version">バージョン: %1$s</string>
     <string name="guide">ガイド</string>
     <string name="hold_on">ストップ！</string>
-    <string name="installing_app">%1$s をインストールしています</string>
     <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
     <string name="miui_one_title">MIUI ユーザーを検知しました！</string>
     <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
