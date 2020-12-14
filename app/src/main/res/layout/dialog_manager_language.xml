@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content" />
         </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/language_save"
             android:text="@string/save"
             style="@style/BottomDialogButtonStyle" />

@@ -124,6 +124,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+
+    //Appearance
+    implementation 'com.github.madrapps:pikolo:2.0.1'
     implementation 'com.google.android.material:material:1.3.0-alpha04'
 
     // JSON parser

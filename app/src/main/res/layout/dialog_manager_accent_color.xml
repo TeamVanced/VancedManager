@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/BottomDialogCard">
 
     <LinearLayout
@@ -11,55 +12,41 @@
             android:text="@string/accent_color"
             style="@style/BottomDialogCardTitle" />
 
-        <androidx.core.widget.NestedScrollView
+        <com.madrapps.pikolo.RGBColorPicker
+            android:id="@+id/accent_picker"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="350dp" />
 
-            <RadioGroup
-                android:id="@+id/accent_radiogroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hex_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:tag="Blue"
-                    android:text="@string/accent_blue"
-                    android:textSize="18sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:tag="Red"
-                    android:text="@string/accent_red"
-                    android:textSize="18sp" />
+            <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
+                android:id="@+id/accent_reset"
+                style="@style/OutlinedButtonStyle"
+                android:layout_alignParentStart="true"
+                android:text="@string/reset" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:tag="Green"
-                    android:text="@string/accent_green"
-                    android:textSize="18sp" />
+            <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
+                android:id="@+id/accent_cancel"
+                style="@style/OutlinedButtonStyle"
+                android:layout_alignEnd="@id/accent_save"
+                android:text="@string/cancel" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:tag="Yellow"
-                    android:text="@string/accent_yellow"
-                    android:textSize="18sp" />
+            <com.vanced.manager.ui.core.ThemedMaterialButton
+                android:id="@+id/accent_save"
+                style="@style/ButtonStyle"
+                android:layout_alignParentEnd="true"
+                android:text="@string/save" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:tag="Purple"
-                    android:text="@string/accent_purple"
-                    android:textSize="18sp" />
-            </RadioGroup>
-        </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/accent_save"
-            android:text="@string/save"
-            style="@style/BottomDialogButtonStyle" />
     </LinearLayout>
+
 </com.google.android.material.card.MaterialCardView>

@@ -23,7 +23,7 @@
             </RadioGroup>
         </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/dialog_save"
             android:text="@string/save"
             style="@style/BottomDialogButtonStyle" />

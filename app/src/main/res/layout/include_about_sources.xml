@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <com.vanced.manager.ui.core.ThemedTextView
             android:id="@+id/about_card_vancedTeam"
             style="@style/CardTextHeader"
             android:layout_marginStart="16dp"

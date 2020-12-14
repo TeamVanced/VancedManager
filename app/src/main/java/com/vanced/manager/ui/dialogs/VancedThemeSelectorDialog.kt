@@ -6,11 +6,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.edit
-import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
+import com.vanced.manager.ui.core.ThemedMaterialRadioButton
 import com.vanced.manager.utils.Extensions.convertToAppTheme
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 import com.vanced.manager.utils.InternetTools.vanced
@@ -46,7 +46,7 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
                 )
             }
             dialogTitle.text = requireActivity().getString(R.string.theme)
-            val tag = root.findViewWithTag<MaterialRadioButton>(prefs.getString("theme", "dark"))
+            val tag = root.findViewWithTag<ThemedMaterialRadioButton>(prefs.getString("theme", "dark"))
             if (tag != null) {
                 tag.isChecked = true
             }
@@ -61,7 +61,7 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
     }
 
     private fun loadButtons() = vanced.get()?.array<String>("themes")?.value?.map {theme ->
-        MaterialRadioButton(requireActivity()).apply {
+        ThemedMaterialRadioButton(requireActivity()).apply {
             text = theme.convertToAppTheme(requireActivity())
             tag = theme
             textSize = 18f

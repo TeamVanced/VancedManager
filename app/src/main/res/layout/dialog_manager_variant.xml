@@ -22,14 +22,14 @@
                 android:layout_height="wrap_content"
                 tools:ignore="HardcodedText">
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
+                <com.vanced.manager.ui.core.ThemedMaterialRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:tag="nonroot"
                     android:text="nonroot"
                     android:textSize="18sp" />
 
-                <com.google.android.material.radiobutton.MaterialRadioButton
+                <com.vanced.manager.ui.core.ThemedMaterialRadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:tag="root"
@@ -38,7 +38,7 @@
             </RadioGroup>
         </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/variant_save"
             android:text="@string/save"
             style="@style/BottomDialogButtonStyle" />

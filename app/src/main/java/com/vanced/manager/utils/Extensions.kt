@@ -2,10 +2,12 @@ package com.vanced.manager.utils
 
 import android.app.Activity
 import android.content.Context
+import android.content.ContextWrapper
 import android.content.SharedPreferences
 import android.widget.RadioGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.LifecycleOwner
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.radiobutton.MaterialRadioButton
@@ -18,10 +20,6 @@ object Extensions {
 
     fun RadioGroup.getCheckedButtonTag(): String? {
         return findViewById<MaterialRadioButton>(checkedRadioButtonId)?.tag?.toString()
-    }
-
-    fun RadioGroup.getCheckedButtonText(): String {
-        return findViewById<MaterialRadioButton>(checkedRadioButtonId).text.toString()
     }
 
     fun DialogFragment.show(activity: FragmentActivity) {
@@ -70,5 +68,20 @@ object Extensions {
     }
 
     fun SharedPreferences.getInstallUrl() = getString("install_url", baseUrl)
+
+    fun Context.lifecycleOwner(): LifecycleOwner? {
+        var curContext = this
+        var maxDepth = 20
+        while (maxDepth-- > 0 && curContext !is LifecycleOwner) {
+            curContext = (curContext as ContextWrapper).baseContext
+        }
+        return if (curContext is LifecycleOwner) {
+            curContext
+        } else {
+            null
+        }
+    }
+
+    fun Int.toHex(): String = java.lang.String.format("#%06X", 0xFFFFFF and this)
 
 }

@@ -34,7 +34,7 @@
                 android:src="@drawable/ic_baseline_navigate_next_36" />
         </RelativeLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/music_install"
             android:text="@string/install"
             style="@style/BottomDialogButtonStyle" />

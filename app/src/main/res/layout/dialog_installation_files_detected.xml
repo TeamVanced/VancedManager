@@ -18,15 +18,17 @@
             tools:text="@string/app_install_files_detected_summary"
             style="@style/DialogCardSubtitle" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/installation_detected_install"
             android:layout_marginTop="16dp"
             android:text="@string/install"
             style="@style/BottomDialogButtonStyle" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/installation_detected_redownload"
             android:text="@string/redownload"
             style="@style/BottomDialogButtonStyle" />
+
     </LinearLayout>
+
 </com.google.android.material.card.MaterialCardView>

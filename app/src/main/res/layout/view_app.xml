@@ -21,14 +21,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <com.vanced.manager.ui.core.ThemedTextView
             android:id="@+id/app_name"
             style="@style/CardTextHeader"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/vanced" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
             android:id="@+id/app_install_button"
             style="@style/OutlinedButtonStyle"
             android:layout_marginTop="4dp"

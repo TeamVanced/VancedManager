@@ -41,7 +41,7 @@
             tools:progress="10"
             tools:visibility="visible" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
             android:id="@+id/manager_update_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

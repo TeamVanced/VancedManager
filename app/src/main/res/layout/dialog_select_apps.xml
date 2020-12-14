@@ -19,7 +19,7 @@
             tools:itemCount="2"
             tools:listitem="@layout/view_app_checkbox" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/select_apps_save"
             style="@style/BottomDialogButtonStyle"
             android:layout_marginTop="4dp"

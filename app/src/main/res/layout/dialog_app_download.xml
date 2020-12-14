@@ -58,7 +58,7 @@
                 android:textSize="15sp"
                 tools:text="Downloading base.apk..." />
 
-            <com.google.android.material.button.MaterialButton
+            <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
                 android:id="@+id/app_download_cancel"
                 android:layout_alignParentEnd="true"
                 android:text="@string/cancel"

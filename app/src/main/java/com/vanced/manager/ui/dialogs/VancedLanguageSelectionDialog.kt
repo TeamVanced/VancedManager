@@ -16,6 +16,7 @@ import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
+import com.vanced.manager.ui.core.ThemedMaterialCheckbox
 import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import java.util.*
@@ -66,7 +67,7 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
         val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())
         langs?.forEach { lang ->
             val loc = Locale(lang)
-            val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
+            val box = ThemedMaterialCheckbox(requireActivity()).apply {
                 tag = lang
                 isChecked = langPrefs?.contains(lang) ?: false
                 text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)

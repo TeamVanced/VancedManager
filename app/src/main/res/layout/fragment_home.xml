@@ -26,7 +26,7 @@
                 tools:itemCount="3"
                 tools:listitem="@layout/view_app" />
 
-            <TextView
+            <com.vanced.manager.ui.core.ThemedTextView
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="12dp"
                 android:text="@string/support_us"
@@ -42,7 +42,7 @@
                 tools:itemCount="2"
                 tools:listitem="@layout/view_sponsor" />
 
-            <TextView
+            <com.vanced.manager.ui.core.ThemedTextView
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="12dp"
                 android:text="@string/useful_links"

@@ -37,7 +37,6 @@ class URLChangeDialog : BindingDialogFragment<DialogCustomUrlBinding>() {
 
     private fun bindData() {
         with(binding) {
-
             urlInput.setText(
                 if (arguments != null) {
                     arguments?.getString("url")

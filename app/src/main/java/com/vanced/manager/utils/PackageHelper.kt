@@ -10,7 +10,6 @@ import android.os.Build
 import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
-import com.topjohnwu.superuser.io.SuFileInputStream
 import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
@@ -31,7 +30,6 @@ import java.util.*
 import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
-import kotlin.jvm.Throws
 
 
 object PackageHelper {

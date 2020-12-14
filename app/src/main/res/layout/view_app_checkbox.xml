@@ -9,7 +9,7 @@
     android:layout_marginTop="16dp"
     android:layout_marginEnd="8dp">
 
-    <TextView
+    <com.vanced.manager.ui.core.ThemedTextView
         android:id="@+id/app_checkbox_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,4 +48,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:checked="true" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="LightTheme_Blue" parent="BaseLight_Blue">
+    <style name="LightTheme" parent="BaseLight">
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">?colorSurface</item>
     </style>
