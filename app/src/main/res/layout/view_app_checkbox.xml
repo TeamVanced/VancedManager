@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@id/app_checkbox_text"
         tools:text="YouTube Vanced is the stock Android YouTube App, but better!" />
 
-    <com.google.android.material.checkbox.MaterialCheckBox
+    <com.vanced.manager.ui.core.ThemedMaterialCheckbox
         android:id="@+id/app_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

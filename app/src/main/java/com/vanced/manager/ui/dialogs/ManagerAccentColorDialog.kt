@@ -83,6 +83,10 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
 
                 })
             }
+            accentCancel.setOnClickListener {
+                mutableAccentColor.value = accent
+                dismiss()
+            }
             accentSave.setOnClickListener {
                 try {
                     val colorFromEditText = Color.parseColor(hexEdittext.text.toString())

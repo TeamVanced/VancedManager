@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPaddingLeft="0dp"
+    app:contentPaddingRight="0dp"
     style="@style/BottomDialogCard">
+
+    <ImageButton
+        android:id="@+id/accent_cancel"
+        android:layout_width="48dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_baseline_close_24"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="end"
+        android:background="@android:color/transparent"
+        android:tint="?colorSettingsTitle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
         android:orientation="vertical">
 
         <TextView
             android:text="@string/accent_color"
             style="@style/BottomDialogCardTitle" />
 
-        <com.madrapps.pikolo.RGBColorPicker
+        <com.madrapps.pikolo.HSLColorPicker
             android:id="@+id/accent_picker"
             android:layout_width="match_parent"
-            android:layout_height="350dp" />
+            android:layout_height="350dp"
+            app:lightness_radius_offset="40dp"
+            app:saturation_radius_offset="40dp"/>
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/hex_edittext"
