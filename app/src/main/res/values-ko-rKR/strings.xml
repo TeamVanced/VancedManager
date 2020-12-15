@@ -96,6 +96,7 @@
     <string name="chown_fail">APK의 소유권을 시스템 관리자로 변경하던 중에 오류가 발생하였습니다. 다시 시도하십시오.</string>
     <string name="error_downloading">%1$s 다운로드 중 오류 발생</string>
     <string name="failed_uninstall">%1$s 패키지 제거에 실패하였습니다</string>
+    <string name="failed_accent">강조 색상을 적용하지 못했습니다</string>
     <string name="files_missing_va">설치에 필요한 파일을 찾지 못했습니다. 설치 파일을 다시 다운로드한 다음 재시도하십시오.</string>
     <string name="ifile_missing">저장소에서 블랙/다크 테마에 대한 apk 파일을 찾지 못했습니다. 다시 시도하십시오.</string>
     <string name="installation_aborted">사용자가 설치를 중단했기 때문에 앱을 설치하지 못했습니다.</string>
