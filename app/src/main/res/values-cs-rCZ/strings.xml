@@ -96,6 +96,7 @@
     <string name="chown_fail">Nelze změnit soubor APK na vlastníka systému, zkuste to prosím znovu.</string>
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
+    <string name="failed_accent">Nepodařilo se nastavit novou doplňkovou barvu</string>
     <string name="files_missing_va">Nepodařilo se najít požadované soubory pro instalaci. Stáhněte znovu instalační soubory a pokus opakujte.</string>
     <string name="ifile_missing">Nepodařilo se najít soubor apk pro černý/tmavý motiv v úložišti, zkuste to prosím znovu.</string>
     <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
