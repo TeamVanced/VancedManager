@@ -96,6 +96,7 @@
     <string name="chown_fail">System owner কে APK `chown` করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="error_downloading">%1$s ডাউনলোড করার সময় ত্রুটি</string>
     <string name="failed_uninstall">%1$s পেকেজ আন‌ইনস্টল করা যাইনি</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">ইনস্টলেশনের জন্য প্রয়োজনীয় ফাইলগুলি খুঁজে পাওয়া যায় নি। ইনস্টল করার জন্য ফাইলগুলি পুনরায় ডাউনলোড করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="ifile_missing">স্টোরেজ থেকে কালো/গাঢ় থিমের জন্য এপিকে ফাইল সনাক্ত করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="installation_aborted">ইনস্টল করা যায়নি কারণ ব্যবহারকারী ইনস্টল করা বাতিল করে দিয়েছেন।</string>
