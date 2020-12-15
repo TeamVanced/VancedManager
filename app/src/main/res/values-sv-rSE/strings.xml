@@ -96,6 +96,7 @@
     <string name="chown_fail">Misslyckades att Chown Apk till systemägare, Försök igen.</string>
     <string name="error_downloading">Laddar ned %1$s</string>
     <string name="failed_uninstall">Det gick inte att avinstallera paket %1$s</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Det gick inte att hitta de nödvändiga filerna för installationen. Ladda ner installationsfilerna igen och försök igen.</string>
     <string name="ifile_missing">Det gick inte att hitta apk-fil för svart/mörkt tema från lagring, försök igen.</string>
     <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
