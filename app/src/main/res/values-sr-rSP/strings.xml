@@ -96,6 +96,7 @@
     <string name="chown_fail">Грешка при додели apk власнику система, покушајте поново.</string>
     <string name="error_downloading">Грешка приликом преузимања %1$s</string>
     <string name="failed_uninstall">Неуспешно деинсталирање пакета %1$s</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Није могуће пронаћи датотеке за инсталацију. Преузмите их поново и поновите инсталацију.</string>
     <string name="ifile_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у меморијском простору, покушајте поново.</string>
     <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
