@@ -96,6 +96,7 @@
     <string name="chown_fail">Laguma guulaysan in APK-ga `mulkiilihiisa loo badalo` barnaamijka aaladu kushaqayso, fadlan markale kuceli.</string>
     <string name="error_downloading">Khalad ayaa ka dhacay soo dajintii %1$s</string>
     <string name="failed_uninstall">Laguma guulaysan in laga saaro %1$s</string>
+    <string name="failed_accent">Laguma guulaysanin in midabka cusub lagu fadhiisiyo</string>
     <string name="files_missing_va">Laguma guulaysan in la helo faylashii ku shubi lahaa. Dib-usoodaji faylasha, kadibna isku day markale.</string>
     <string name="ifile_missing">Laguma guulaysanin in faylka apk-ga ee nashqada madow/mugdiga laga helo kaydka aalaada, fadlan markale isku day.</string>
     <string name="installation_aborted">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa joojiyay.</string>
