@@ -20,7 +20,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/hex_edittext"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:maxLength="7"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -32,12 +33,6 @@
                 style="@style/OutlinedButtonStyle"
                 android:layout_alignParentStart="true"
                 android:text="@string/reset" />
-
-            <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
-                android:id="@+id/accent_cancel"
-                style="@style/OutlinedButtonStyle"
-                android:layout_alignEnd="@id/accent_save"
-                android:text="@string/cancel" />
 
             <com.vanced.manager.ui.core.ThemedMaterialButton
                 android:id="@+id/accent_save"
