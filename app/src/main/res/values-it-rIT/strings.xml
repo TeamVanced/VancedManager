@@ -96,6 +96,7 @@
     <string name="chown_fail">Impossibile modificare il proprietario dell\'apk nel proprietario di sistema, per favore riprova.</string>
     <string name="error_downloading">Errore nel Download di %1$s</string>
     <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
+    <string name="failed_accent">Impossibile applicare il nuovo colore di accento</string>
     <string name="files_missing_va">Impossibile individuare i file richiesti per l\'installazione. Scaricali nuovamente e riprova.</string>
     <string name="ifile_missing">Impossibile individuare il file apk per il tema nero/scuro dalla memoria, per favore riprova.</string>
     <string name="installation_aborted">Installazione non riuscita. L\'utente ha annullato l\'installazione.</string>
