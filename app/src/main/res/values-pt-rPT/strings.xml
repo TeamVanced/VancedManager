@@ -96,6 +96,7 @@
     <string name="chown_fail">Falhou na mudança de dono do Apk para o proprietário do sistema, por favor, tente novamente.</string>
     <string name="error_downloading">Erro Transferindo %1$s</string>
     <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Faça o download dos arquivos de instalação e tente novamente.</string>
     <string name="ifile_missing">Falha ao localizar o apk para o tema preto/escuro no armazenamento, por favor, tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
