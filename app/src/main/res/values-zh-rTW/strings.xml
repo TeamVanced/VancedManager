@@ -96,6 +96,7 @@
     <string name="chown_fail">無法 `chown` apk 為系統擁有者，請重試。</string>
     <string name="error_downloading">%1$s 下載錯誤</string>
     <string name="failed_uninstall">%1$s 解除安裝失敗</string>
+    <string name="failed_accent">無法套用新的輔色</string>
     <string name="files_missing_va">無法找到安裝所需的檔案。請重新下載安裝檔案，然後再試。</string>
     <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 apk 檔案，請再試。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
