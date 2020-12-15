@@ -96,6 +96,7 @@
     <string name="chown_fail">Fehler beim `chown` der APK zum Systembesitzer, bitte versuche es erneut.</string>
     <string name="error_downloading">Download von %1$s fehlgeschlagen</string>
     <string name="failed_uninstall">Entfernen von %1$s fehlgeschlagen</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Die benötigten Dateien für die Installation konnten nicht gefunden werden. Laden Sie die Installationsdateien erneut herunter und versuchen Sie es erneut.</string>
     <string name="ifile_missing">Apk-Datei für schwarz/dunkles Theme konnte nicht gefunden werden, bitte versuchen Sie es erneut.</string>
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
