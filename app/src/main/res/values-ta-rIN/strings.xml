@@ -96,7 +96,7 @@
     <string name="chown_fail">கணினி உரிமையாளருக்கு APK ஐத் தேடுவதில் தோல்வி, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="error_downloading">%1$s பதிவிறக்குவதில் தோழ்வி</string>
     <string name="failed_uninstall">%1$s நீக்குவதில் தோல்வி</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">புதிய உச்சரிப்பு வண்ணத்தைப் பயன்படுத்துவதில் தோல்வி</string>
     <string name="files_missing_va">நிறுவலுக்கு தேவையான கோப்புகளை கண்டுபிடிப்பதில் தோல்வி. நிறுவல் கோப்புகளை மீண்டும் பதிவிறக்கவும், பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="ifile_missing">சேமிப்பகத்திலிருந்து கருப்பு / இருண்ட கருப்பொருளுக்கான Apk கோப்பை கண்டுபிடிப்பதில் தோல்வி, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_aborted">பயனர் நிறுவலை நிறுத்தியதால் நிறுவல் தோல்வியடைந்தது.</string>
