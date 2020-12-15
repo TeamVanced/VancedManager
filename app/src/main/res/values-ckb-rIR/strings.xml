@@ -96,6 +96,7 @@
     <string name="chown_fail">سەرکەوتو نەبوو `chown` بۆ دانان وەک بەرنامەی سیستەم, تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="error_downloading">کێشە ڕوویدا لە داگرتنی %1$s</string>
     <string name="failed_uninstall">سڕینەوەی %1$s سەرکەوتو نەبوو</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">سەرکەوتو نەبوو لە دۆزینەوەی فایلە پێویستەکان بۆ دامەزراندن، فایلە پێویستیەکان دووبارە دابگرەوە بۆ جێگیرکردن، پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="ifile_missing">سەرکەوتوو نەبوو لەدۆزینەوەی شوێنی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە بیرگەدا، تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_aborted">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر کۆتاییهێنا بە دابەزاندنەکە.</string>
