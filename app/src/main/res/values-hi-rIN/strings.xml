@@ -96,6 +96,7 @@
     <string name="chown_fail">सिस्टम के मालिक को APK को Chown करने में विफल, फिर से प्रयास करें।</string>
     <string name="error_downloading">डाउनलोड करने में त्रुटि %1$s</string>
     <string name="failed_uninstall">पैकेज की स्थापना रद्द करने में विफल %1$s</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">स्थापना के लिए आवश्यक फ़ाइलों का पता लगाने में विफल। स्थापना फ़ाइलों को फिर से डाउनलोड करें, फिर पुनः प्रयास करें।</string>
     <string name="ifile_missing">भंडारण से काले / अंधेरे विषय के लिए apk फ़ाइल खोजने में विफल, कृपया पुनः प्रयास करें।</string>
     <string name="installation_aborted">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना रद्द कर दी।</string>
