@@ -96,7 +96,7 @@
     <string name="chown_fail">Nu s-a reușit comanda chown pentru APK la proprietarul sistemului. Încercați din nou.</string>
     <string name="error_downloading">Eroare la descărcarea %1$s</string>
     <string name="failed_uninstall">Dezinstalarea pachetului %1$s a eșuat</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">Nu s-a putut aplica noua culoare de evidențiere</string>
     <string name="files_missing_va">Nu s-a reușit localizarea fișierelor necesare pentru instalare. Redescărcați fișierele de instalare, apoi încercați din nou.</string>
     <string name="ifile_missing">Nu s-a reuşit localizarea fişierului apk pentru tema neagră/întunecată din stocare, vă rugăm să încercaţi din nou.</string>
     <string name="installation_aborted">Instalarea a eșuat deoarece utilizatorul a anulat instalarea.</string>
