@@ -9,7 +9,6 @@
     <string name="nonroot">nonroot</string>
 
     <!-- prefs -->
-    <string name="firebase" translatable="false">firebase</string>
     <string name="use_custom_tabs" translatable="false">use_custom_tabs</string>
 
 </resources>
