@@ -97,6 +97,7 @@ Akarod telepíteni?</string>
     <string name="chown_fail">Nem sikerült az APK beállítása a rendszer tulajdonoshoz, kérjük próbálja újra.</string>
     <string name="error_downloading">%1$s letöltése nem sikerült</string>
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">A telepítéshez szükséges file-ok megtalálása meghiúsult. Töltse le újra a telepítőfile-okat és próbálja újra.</string>
     <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
