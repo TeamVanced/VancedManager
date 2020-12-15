@@ -96,6 +96,7 @@
     <string name="chown_fail">Wijzigen van APK-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
     <string name="error_downloading">Fout bij downloaden van %1$s</string>
     <string name="failed_uninstall">Deïnstalleren van pakket %1$s mislukt</string>
+    <string name="failed_accent">Nieuwe accentkleur toepassen mislukt</string>
     <string name="files_missing_va">Kan de vereiste bestanden voor de installatie niet vinden. Download de installatiebestanden opnieuw en probeer het opnieuw.</string>
     <string name="ifile_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in opslag. Probeer het opnieuw.</string>
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
