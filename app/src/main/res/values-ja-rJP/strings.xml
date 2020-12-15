@@ -96,6 +96,7 @@
     <string name="chown_fail">システム所有者への APK の Chown ができませんでした、もう一度やり直してください.</string>
     <string name="error_downloading">%1$s のダウンロード中にエラー</string>
     <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">インストールに必要なファイルが見つかりませんでした。再ダウンロードし、もう一度お試しください。</string>
     <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルが見つかりませんでした。もう一度お試しください。</string>
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
