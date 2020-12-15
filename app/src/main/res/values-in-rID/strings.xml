@@ -96,7 +96,7 @@
     <string name="chown_fail">Gagal untuk `chown` APK ke pemilik sistem, mohon coba lagi.</string>
     <string name="error_downloading">Gagal Mengunduh %1$s</string>
     <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">Gagal menerapkan warna aksen baru</string>
     <string name="files_missing_va">Gagal untuk menemukan file yang diperlukan untuk instalasi. Unduh ulang file instalasi, lalu coba lagi.</string>
     <string name="ifile_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
     <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
