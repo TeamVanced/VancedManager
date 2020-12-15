@@ -96,6 +96,7 @@
     <string name="chown_fail">APK dosyasına sistem yetkisi atanamadı, lütfen tekrar deneyin.</string>
     <string name="error_downloading">%1$s indirilirken hata oluştu</string>
     <string name="failed_uninstall">%1$s kaldırılırken hata oluştu</string>
+    <string name="failed_accent">Yeni vurgu rengi uygulanamadı</string>
     <string name="files_missing_va">Kurulum için gerekli olan dosyaları belirlerken bir hata oluştu. Kurulum dosyalarını tekrar indirip, yeniden deneyin.</string>
     <string name="ifile_missing">Depolama alanında Siyah/Koyu temanın APK dosyasını belirlerken bir hata oluştu. Tekrar deneyin lütfen.</string>
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
@@ -103,7 +104,7 @@
     <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
     <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından, yükleme başarısız oldu. Mevcut Vanced sürümünü kaldırıp tekrar deneyin.</string>
     <string name="installation_failed">Kurulum bilinmeyen nedenlerden dolayı başarısız oldu. Telegram veya Discord\'a katılarak destek alabilirsin.</string>
-    <string name="installation_incompatible">Kurulum dosyaları cihazınla uyumlu olmadığı için kurulum işlemi başarısız oldu. Ayarlardan indirilen dosyaları temizleyip, tekrar deneyin.</string>
+    <string name="installation_incompatible">Kurulum dosyası cihazınız ile uyumsuz olduğu için kurulum işlemi başarısız oldu. Ayarlar\'da indirilen dosyaları temizleyip, tekrar deneyin.</string>
     <string name="installation_invalid">APK dosyaları çözümlenemediğinden, kurulum başarısız oldu. Lütfen yeniden deneyin.</string>
     <string name="installation_signature">APK imza doğrulaması etkin olduğundan, kurulum başarısız oldu. APK imza doğrulamasını devre dışı bırakıp, yeniden deneyin.</string>
     <string name="installation_miui">MIUI Optimizasyonu etkin olduğundan, kurulum başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp, yeniden deneyin.</string>
