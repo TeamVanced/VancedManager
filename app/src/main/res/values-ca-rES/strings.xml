@@ -96,6 +96,7 @@
     <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Error en descarregar %1$s</string>
     <string name="failed_uninstall">Error en instal·lar el paquet %1$s</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
     <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
