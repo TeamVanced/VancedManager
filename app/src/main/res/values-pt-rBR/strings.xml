@@ -96,6 +96,7 @@
     <string name="chown_fail">Falha ao enviar o Apk para o proprietário do sistema, Tente Novamente.</string>
     <string name="error_downloading">Erro ao baixar %1$s</string>
     <string name="failed_uninstall">Falha ao desinstalar o pacote %1$s</string>
+    <string name="failed_accent">Falha ao aplicar nova cor de destaque</string>
     <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Baixe novamente os arquivos de instalação e tente novamente.</string>
     <string name="ifile_missing">Falha ao localizar o arquivo apk para o tema preto/escuro a partir do armazenamento, por favor tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
