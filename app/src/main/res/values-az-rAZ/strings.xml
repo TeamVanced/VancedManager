@@ -96,6 +96,7 @@
     <string name="chown_fail">Apk, sistem sahibinə dəyişdirilmədi, yenidən sınayın.</string>
     <string name="error_downloading">%1$s endirilmə xətası</string>
     <string name="failed_uninstall">%1$s paketini silinmədi</string>
+    <string name="failed_accent">Yeni ikinci rəngi təyin etmək alınmadı</string>
     <string name="files_missing_va">Quraşdırmaq üçün lazımi fayllar tapılmadı. Quraşdırma fayllarını yenidən endirib təkrar sınayın.</string>
     <string name="ifile_missing">Anbarda qara/tünd mövzu üçün apk faylı tapılmadı, yenidən sınayın.</string>
     <string name="installation_aborted">İstifadəçi quraşdırmanı ləğv etdiyi üçün quraşdırılma uğursuz oldu.</string>
