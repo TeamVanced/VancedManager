@@ -96,6 +96,7 @@
     <string name="chown_fail">Échec de la commande `chown` APK vers le propriétaire du système, veuillez réessayer.</string>
     <string name="error_downloading">Erreur en téléchargeant %1$s</string>
     <string name="failed_uninstall">N\'a pas pu désinstaller le paquet %1$s</string>
+    <string name="failed_accent">Impossible d\'appliquer la nouvelle couleur d\'accentuation</string>
     <string name="files_missing_va">Impossible de localiser les fichiers nécessaires à l\'installation. Retéléchargez les fichiers d\'installation, puis réessayez.</string>
     <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé, veuillez réessayer.</string>
     <string name="installation_aborted">L\'installation a échoué car l\'utilisateur a abandonné l\'installation.</string>
