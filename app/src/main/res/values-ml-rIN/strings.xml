@@ -96,7 +96,7 @@
     <string name="chown_fail">സിസ്റ്റം ഉടമയ്‌ക്ക് APK `chown` ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="error_downloading">%1$s ഡൗൺലോഡുചെയ്യുന്നതിൽ പിശക്</string>
     <string name="failed_uninstall">%1$s package അൺ‌ഇൻസ്റ്റാൾ ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">പുതിയ ആക്‌സന്റ് വർണ്ണം പ്രയോഗിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="files_missing_va">ഇൻസ്റ്റാളേഷന് ആവശ്യമായ ഫയലുകൾ കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു. ഇൻസ്റ്റാളേഷൻ ഫയലുകൾ വീണ്ടും ഡ download ൺലോഡ് ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="ifile_missing">സംഭരണത്തിൽ നിന്ന് കറുപ്പ് / ഇരുണ്ട തീമിനായി Apk ഫയൽ കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_aborted">ഉപയോക്താവ് ഇൻസ്റ്റാളേഷൻ നിർത്തലാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
