@@ -96,6 +96,7 @@
     <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Çewtiya daxistinê %1$s</string>
     <string name="failed_uninstall">Rakirina pakêta %1$s bi ser neket</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Dozîna dosiyên pêwîst ji bo sazkirinê bi ser neket. Dosiyên sazkirinê dîsa daxîne, paşê dubare biceribîne.</string>
     <string name="ifile_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji bîrgehê bi ser neket, jkx dîsa biceribîne.</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
