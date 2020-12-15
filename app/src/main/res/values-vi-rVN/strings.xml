@@ -96,6 +96,7 @@
     <string name="chown_fail">Không thể `chown`APK cho chủ sở hữu hệ thống, vui lòng thử lại.</string>
     <string name="error_downloading">Lỗi khi tải xuống %1$s</string>
     <string name="failed_uninstall">Gỡ cài đặt %1$s thất bại</string>
+    <string name="failed_accent">Không áp dụng được màu nhấn mới</string>
     <string name="files_missing_va">Không thể xác định các tệp tin cần thiết để cài đặt. Tải lại các tệp cài đặt rồi thử lại.</string>
     <string name="ifile_missing">Không thể xác định tệp tin apk cho chủ đề đen/tối từ bộ nhớ, vui lòng thử lại.</string>
     <string name="installation_aborted">Cài đặt không thành công vì người dùng đã hủy cài đặt.</string>
