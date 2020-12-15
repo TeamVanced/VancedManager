@@ -96,6 +96,7 @@
     <string name="chown_fail">ไม่สามารถ `chown` APK ในระบบได้ โปรดลองอีกครั้ง</string>
     <string name="error_downloading">เกิดข้อผิดพลาดในการดาวน์โหลด %1$s</string>
     <string name="failed_uninstall">ถอนการติดตั้งแพ็กเกจไม่สำเร็จ %1$s</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">ไม่สามารถค้นหาไฟล์สำหรับการติดตั้งที่ต้องการได้. กรุณาดาวน์โหลดไฟล์สำหรับการติดตั้งใหม่แล้วลองอีกครั้ง</string>
     <string name="ifile_missing">ไม่พบไฟล์ apk สำหรับธีมสีดำ / สีเข้ม จากที่เก็บข้อมูล โปรดลองอีกครั้ง</string>
     <string name="installation_aborted">การติดตั้งล้มเหลวเนื่องจากผู้ใช้ยกเลิกการติดตั้ง</string>
