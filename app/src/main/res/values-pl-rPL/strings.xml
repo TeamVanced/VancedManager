@@ -96,6 +96,7 @@
     <string name="chown_fail">Nie udało się `chown` APK dla właściciela systemu, spróbuj ponownie.</string>
     <string name="error_downloading">Błąd pobierania %1$s</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
+    <string name="failed_accent">Nie udało się zastosować nowego koloru akcentu</string>
     <string name="files_missing_va">Nie udało się zlokalizować wymaganych plików do instalacji. Pobierz ponownie pliki instalacyjne, a następnie spróbuj ponownie.</string>
     <string name="ifile_missing">Nie udało się zlokalizować pliku apk dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
     <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
