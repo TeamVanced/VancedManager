@@ -28,8 +28,8 @@
 
         <com.madrapps.pikolo.HSLColorPicker
             android:id="@+id/accent_picker"
-            android:layout_width="350dp"
-            android:layout_height="350dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             app:lightness_radius_offset="40dp"
             app:saturation_radius_offset="40dp"/>
