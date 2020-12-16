@@ -28,7 +28,7 @@ class ThemedMaterialButton @JvmOverloads constructor(
 
     private fun setBgColor(color: Int) {
         setBackgroundColor(color)
-        if (ColorUtils.calculateLuminance(color) < 0.75) {
+        if (ColorUtils.calculateLuminance(color) < 0.7) {
             setTextColor(ResourcesCompat.getColor(resources, R.color.White, null))
         } else {
             setTextColor(ResourcesCompat.getColor(resources, R.color.Black, null))
