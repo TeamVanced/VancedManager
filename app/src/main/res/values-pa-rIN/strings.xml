@@ -96,7 +96,7 @@
     <string name="chown_fail">ਸਿਸਟਮ ਦੇ ਮਾਲਕ ਨੂੰ APK ਨੂੰ `chown` ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ, ਫਿਰ ਤੋਂ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="error_downloading">ਡਾਉਨਲੋਡ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ %1$s</string>
     <string name="failed_uninstall">ਪੈਕਜ ਦੀ ਸਥਾਪਨਾ ਰੱਦ ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ %1$s</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">ਨਵਾਂ ਲਹਿਜ਼ਾ ਰੰਗ ਲਾਗੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="files_missing_va">ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਈਲਾਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ. ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਨੂੰ ਮੁੜ ਡਾਉਨਲੋਡ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="ifile_missing">ਸਟੋਰੇਜ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_aborted">ਇੰਸਟਾਲ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਰੱਦ ਕਰ ਦਿੱਤੀ.</string>
