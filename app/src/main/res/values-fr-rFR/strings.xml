@@ -80,7 +80,7 @@
     <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="vanced_installed">Vanced a été installé avec succès ! Ouvrir maintenant ?</string>
     <string name="version">Version</string>
-    <string name="music_installed">Vanced Music a été installé avec succès ! Voulez-vous l\'ouvrir maintenant ?</string>
+    <string name="music_installed">Vanced Music a été installé avec succès ! Ouvrir maintenant ?</string>
     <string name="please_be_patient">Veuillez patienter…</string>
     <string name="launch">Ouvrir</string>
     <string name="welcome">Bienvenue</string>
