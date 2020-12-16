@@ -96,7 +96,7 @@
     <string name="chown_fail">Не удалось передать apk владельцу системы, попробуйте еще раз.</string>
     <string name="error_downloading">Ошибка загрузки %1$s</string>
     <string name="failed_uninstall">Ошибка установки пакета %1$s</string>
-    <string name="failed_accent">Не удалось применить новый акцент</string>
+    <string name="failed_accent">Не удалось применить новый второстепенный цвет</string>
     <string name="files_missing_va">Не удалось найти необходимые файлы для установки. Повторно загрузите установочные файлы и попробуйте еще раз.</string>
     <string name="ifile_missing">Не удалось найти apk-файл для черной/темной темы в памяти устройства, повторите попытку.</string>
     <string name="installation_aborted">Установка не была выполнена, поскольку пользователь прервал установку.</string>
