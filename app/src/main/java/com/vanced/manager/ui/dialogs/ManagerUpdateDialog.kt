@@ -11,12 +11,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.vanced.manager.BuildConfig.VERSION_CODE
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerUpdateBinding
 import com.vanced.manager.utils.DownloadHelper.downloadManager
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.InternetTools.isUpdateAvailable
+import com.vanced.manager.utils.InternetTools.manager
 
 class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() {
 
@@ -90,7 +91,7 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
     }
 
     private fun checkUpdates() {
-        if (isUpdateAvailable()) {
+        if (manager.value?.int("versionCode") ?: 0 > VERSION_CODE) {
             binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
             downloadManager(requireActivity())
         } else {

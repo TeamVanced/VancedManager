@@ -31,7 +31,6 @@ import java.util.regex.Pattern
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
-
 object PackageHelper {
 
     private const val apkInstallPath = "/data/adb"
@@ -167,7 +166,7 @@ object PackageHelper {
         return false
     }
 
-    fun installRootApp(context: Context, app: String, appVerCode: Int, pkg: String, modApkBool: (fileName: String) -> Boolean) = CoroutineScope(Dispatchers.IO).launch {
+    private fun installRootApp(context: Context, app: String, appVerCode: Int, pkg: String, modApkBool: (fileName: String) -> Boolean) = CoroutineScope(Dispatchers.IO).launch {
         Shell.getShell {
             val apkFilesPath = context.getExternalFilesDir("$app/root")?.path
             val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
@@ -195,7 +194,7 @@ object PackageHelper {
         installRootApp(
             context,
             "music",
-            music.get()?.int("versionCode")!!,
+            music.value?.int("versionCode")!!,
             musicRootPkg
         ) {
             it == "root.apk"
@@ -206,7 +205,7 @@ object PackageHelper {
         installRootApp(
             context,
             "vanced",
-            vanced.get()?.int("versionCode")!!,
+            vanced.value?.int("versionCode")!!,
             vancedRootPkg
         ) { fileName ->
             vancedThemes.any { fileName == "$it.apk" }

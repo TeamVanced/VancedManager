@@ -13,7 +13,7 @@ object MicrogDownloader {
     private const val folderName = "microg"
 
     fun downloadMicrog(context: Context) {
-        val url = microg.get()?.string("url") ?: ""
+        val url = microg.value?.string("url") ?: ""
         fuelDownload(url, folderName, fileName, context, onDownloadComplete = {
             startMicrogInstall(context)
         }, onError = {

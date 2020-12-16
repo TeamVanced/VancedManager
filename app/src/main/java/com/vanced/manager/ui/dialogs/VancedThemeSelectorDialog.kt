@@ -60,7 +60,7 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
         }
     }
 
-    private fun loadButtons() = vanced.get()?.array<String>("themes")?.value?.map {theme ->
+    private fun loadButtons() = vanced.value?.array<String>("themes")?.value?.map {theme ->
         ThemedMaterialRadioButton(requireActivity()).apply {
             text = theme.convertToAppTheme(requireActivity())
             tag = theme

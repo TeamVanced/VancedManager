@@ -16,6 +16,7 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.firebase.messaging.FirebaseMessaging
+import com.vanced.manager.BuildConfig.VERSION_CODE
 import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -25,12 +26,13 @@ import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.utils.Extensions.show
-import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.InternetTools.manager
 import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.LanguageHelper.authCrowdin
 import com.vanced.manager.utils.LanguageHelper.onActivityResult
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,6 +72,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         initDialogs(intent.getBooleanExtra("firstLaunch", false))
+        manager.observe(this) {
+            if (manager.value?.int("versionCode") ?: 0 > VERSION_CODE) {
+                ManagerUpdateDialog.newInstance(false).show(this)
+            }
+        }
     }
 
     override fun onBackPressed() {
@@ -106,7 +113,6 @@ class MainActivity : AppCompatActivity() {
                 navHost.navigate(HomeFragmentDirections.toSettingsFragment())
                 return true
             }
-
             R.id.toolbar_update_manager -> {
                 ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "manager_update")
             }
@@ -174,14 +180,6 @@ class MainActivity : AppCompatActivity() {
                         this
                     )
             }
-        }
-
-        checkUpdates()
-    }
-
-    private fun checkUpdates() {
-        if (InternetTools.isUpdateAvailable()) {
-            ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "UpdateCheck")
         }
     }
 

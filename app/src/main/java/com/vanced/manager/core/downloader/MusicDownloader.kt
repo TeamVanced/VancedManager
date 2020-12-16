@@ -29,8 +29,8 @@ object MusicDownloader {
 
     fun downloadMusic(context: Context) {
         val prefs = getDefaultSharedPreferences(context)
-        version = prefs.getString("music_version", "latest")?.getLatestAppVersion(musicVersions.get()?.value ?: listOf(""))
-        versionCode = music.get()?.int("versionCode")
+        version = prefs.getString("music_version", "latest")?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))
+        versionCode = music.value?.int("versionCode")
         variant = prefs.getString("vanced_variant", "nonroot")
         baseurl = "${prefs.getInstallUrl()}/music/v$version"
         folderName = "music/$variant"

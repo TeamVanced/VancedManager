@@ -57,7 +57,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
     private fun bindData() {
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        with(binding) {
+        with (binding) {
             homeRefresh.setOnRefreshListener { viewModel.fetchData() }
             tooltip = ViewTooltip
                 .on(recyclerAppList)
@@ -108,13 +108,11 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
         super.onPause()
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
         tooltip.close()
-        //binding.mainTablayout.removeOnTabSelectedListener(tabListener)
     }
 
     override fun onResume() {
         super.onResume()
         registerReceivers()
-       // binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {

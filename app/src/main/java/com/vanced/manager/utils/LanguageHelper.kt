@@ -36,7 +36,7 @@ object LanguageHelper {
 
     @Suppress("DEPRECATION")
     fun getDefaultVancedLanguages(): String {
-        val serverLangs = vanced.get()?.array("langs") ?: mutableListOf("")
+        val serverLangs = vanced.value?.array("langs") ?: mutableListOf("")
         val sysLocales = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) Resources.getSystem().configuration.locales.toLangTags() else arrayOf(Resources.getSystem().configuration.locale.language)
         val finalLangs = mutableListOf<String>()
         sysLocales.forEach { sysLocale ->

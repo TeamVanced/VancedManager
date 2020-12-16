@@ -42,7 +42,7 @@ class AboutFragment : BindingFragment<FragmentAboutBinding>() {
                 AppInfoDialog.newInstance(
                     appName = getString(R.string.app_name),
                     appIcon = AppCompatResources.getDrawable(requireActivity(), R.mipmap.ic_launcher),
-                    changelog = manager.get()?.string("changelog")
+                    changelog = manager.value?.string("changelog")
                 )
             )
         }

@@ -56,14 +56,14 @@ object VancedDownloader {
             lang = it.split(", ").toMutableList()
         }
         theme = prefs.getString("theme", "dark")
-        vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.get()?.value ?: listOf(""))
+        vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         //newInstaller = defPrefs.getBoolean("new_installer", false)
         arch = getArch()
         count = 0
 
-        vancedVersionCode = vanced.get()?.int("versionCode") ?: 0
+        vancedVersionCode = vanced.value?.int("versionCode") ?: 0
         downloadSplits(context)
     }
 

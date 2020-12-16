@@ -31,11 +31,11 @@ class AppListAdapter(
 
     inner class ListViewHolder(private val binding: ViewAppBinding) : RecyclerView.ViewHolder(binding.root) {
         val appCard = binding.appCard
-
         fun bind(position: Int) {
             val dataModel = if (isRoot) rootDataModels[position] else dataModels[position]
             with(binding) {
                 appName.text = dataModel?.appName
+                if (dataModel?.buttonTxt?.value != null) appInstallButton.text = dataModel.buttonTxt.value
                 dataModel?.buttonTxt?.observe(this@AppListAdapter.lifecycleOwner) {
                     appInstallButton.text = it
                 }
@@ -46,9 +46,14 @@ class AppListAdapter(
                     dataModel?.appPkg?.let { it1 -> viewModel.uninstallPackage(it1) }
                 }
                 appUninstall.isVisible = dataModel?.isAppInstalled?.value == true
+                dataModel?.isAppInstalled?.observe(lifecycleOwner) {
+                    appUninstall.isVisible = it
+                }
+                if (dataModel?.versionName?.value != null) appRemoteVersion.text = dataModel.versionName.value
                 dataModel?.versionName?.observe(this@AppListAdapter.lifecycleOwner) {
                     appRemoteVersion.text = it
                 }
+                if (dataModel?.installedVersionName?.value != null) appInstalledVersion.text = dataModel.installedVersionName.value
                 dataModel?.installedVersionName?.observe(this@AppListAdapter.lifecycleOwner) {
                     appInstalledVersion.text = it
                 }

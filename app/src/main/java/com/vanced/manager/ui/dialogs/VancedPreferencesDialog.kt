@@ -44,7 +44,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                 val loc = Locale(lang)
                 showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
-            val vancedVersionsConv = vancedVersions.get()?.value?.reversed()?.convertToAppVersions()
+            val vancedVersionsConv = vancedVersions.value?.value?.reversed()?.convertToAppVersions()
             vancedInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.vanced))
             vancedTheme.text = getString(R.string.chosen_theme, installPrefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
             vancedVersion.text = getString(R.string.chosen_version, defPrefs.getString("vanced_version", "latest"))

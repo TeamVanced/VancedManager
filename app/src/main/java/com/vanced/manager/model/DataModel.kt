@@ -3,18 +3,18 @@ package com.vanced.manager.model
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
-import androidx.databinding.Observable
-import androidx.databinding.ObservableField
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
+import com.vanced.manager.utils.Extensions.lifecycleOwner
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 open class DataModel(
-    private val jsonObject: ObservableField<JsonObject?>,
+    private val jsonObject: LiveData<JsonObject?>,
     private val context: Context,
     val appPkg: String,
     val appName: String,
@@ -30,28 +30,32 @@ open class DataModel(
     val buttonTxt = MutableLiveData<String>()
     val changelog = MutableLiveData<String>()
 
-    fun fetch() = CoroutineScope(Dispatchers.IO).launch {
-        val jobj = jsonObject.get()
+    private fun fetch() = CoroutineScope(Dispatchers.IO).launch {
+        val jobj = jsonObject.value
         isAppInstalled.postValue(isPackageInstalled(appPkg, context.packageManager))
-        versionName.postValue(
-            jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(
-                R.string.unavailable
-            )
-        )
-        installedVersionName.postValue(getPkgVersionName(isAppInstalled.value, appPkg))
         versionCode.postValue(jobj?.int("versionCode") ?: 0)
         installedVersionCode.postValue(getPkgVersionCode(isAppInstalled.value, appPkg))
-        buttonTxt.postValue(compareInt(installedVersionCode.value, versionCode.value))
+        versionName.postValue(jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(
+                R.string.unavailable
+            ))
+        installedVersionName.postValue(getPkgVersionName(isAppInstalled.value, appPkg))
         changelog.postValue(jobj?.string("changelog") ?: context.getString(R.string.unavailable))
     }
 
     init {
         fetch()
-        jsonObject.addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
-            override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
-                fetch()
+        with(context.lifecycleOwner()) {
+            this?.let {
+                jsonObject.observe(it) {
+                    fetch()
+                }
             }
-        })
+            this?.let { versionCode.observe(it) { versionCode ->
+                installedVersionCode.observe(it) { installedVersionCode ->
+                    buttonTxt.value = compareInt(installedVersionCode, versionCode)
+                }
+            }}
+        }
     }
 
     private fun getPkgVersionName(toCheck: Boolean?, pkg: String): String {

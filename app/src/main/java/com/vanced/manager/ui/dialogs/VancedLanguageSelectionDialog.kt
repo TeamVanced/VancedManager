@@ -30,7 +30,7 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
         }
     }
 
-    private val langs = vanced.get()?.array<String>("langs")?.value
+    private val langs = vanced.value?.array<String>("langs")?.value
     private val prefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
 
     override fun binding(

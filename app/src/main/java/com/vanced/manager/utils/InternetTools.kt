@@ -7,33 +7,31 @@ import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import androidx.databinding.ObservableField
+import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
-import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.generateChecksum
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
-import java.text.SimpleDateFormat
 import java.util.*
 
 object InternetTools {
 
     private const val TAG = "VMNetTools"
 
-    var vanced = ObservableField<JsonObject?>()
-    var music = ObservableField<JsonObject?>()
-    var microg = ObservableField<JsonObject?>()
-    var manager = ObservableField<JsonObject?>()
+    var vanced = MutableLiveData<JsonObject?>()
+    var music = MutableLiveData<JsonObject?>()
+    var microg = MutableLiveData<JsonObject?>()
+    var manager = MutableLiveData<JsonObject?>()
 
-    var vancedVersions = ObservableField<JsonArray<String>>()
-    var musicVersions = ObservableField<JsonArray<String>>()
+    var vancedVersions = MutableLiveData<JsonArray<String>>()
+    var musicVersions = MutableLiveData<JsonArray<String>>()
 
-    //var braveTiers = ObservableField<JsonObject?>()
+    //var braveTiers = MutableLiveData<JsonObject?>()
 
     fun openUrl(url: String, color: Int, context: Context) {
         val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_custom_tabs", true)
@@ -56,32 +54,20 @@ object InternetTools {
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
         val minute = calendar.get(Calendar.MINUTE)
         val second = calendar.get(Calendar.SECOND)
-        val latest = JsonHelper.getJson("$installUrl/latest.json?fetchTime=$hour$minute$second")
-        Log.d("test", "$installUrl/latest.json?fetchTime=$hour$minute$second")
-        val versions = JsonHelper.getJson("$installUrl/versions.json?fetchTime=${SimpleDateFormat("HHmmss", Locale.ROOT)}")
+        val fetchTime = "fetchTime=$hour$minute$second"
+        val latest = JsonHelper.getJson("$installUrl/latest.json?$fetchTime")
+        val versions = JsonHelper.getJson("$installUrl/versions.json?$fetchTime")
 //      braveTiers.apply {
 //          set(getJson("$installUrl/sponsor.json"))
 //          notifyChange()
 //      }
 
-        vanced.apply {
-            set(latest?.obj("vanced"))
-            notifyChange()
-        }
-        vancedVersions.set(versions?.array("vanced"))
-        music.apply {
-            set(latest?.obj("music"))
-            notifyChange()
-        }
-        musicVersions.set(versions?.array("music"))
-        microg.apply {
-            set(latest?.obj("microg"))
-            notifyChange()
-        }
-        manager.apply {
-            set(latest?.obj("manager"))
-            notifyChange()
-        }
+        vanced.postValue(latest?.obj("vanced"))
+        vancedVersions.postValue(versions?.array("vanced") )
+        music.postValue(latest?.obj("music"))
+        musicVersions.postValue(versions?.array("music"))
+        microg.postValue(latest?.obj("microg"))
+        manager.postValue(latest?.obj("manager"))
 
     }
 
@@ -92,14 +78,6 @@ object InternetTools {
         } catch (e: Exception) {
             Log.e(TAG, "Error: ", e)
             context.getString(R.string.unavailable)
-        }
-    }
-
-    fun isUpdateAvailable(): Boolean {
-        while (true) {
-            if (manager.get() != null) {
-                return manager.get()?.int("versionCode") ?: 0 > BuildConfig.VERSION_CODE
-            }
         }
     }
 
