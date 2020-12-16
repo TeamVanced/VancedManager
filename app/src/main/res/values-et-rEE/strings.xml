@@ -96,7 +96,7 @@
     <string name="chown_fail">APK edastamine süsteemi omanikule ebaõnnestus, proovige uuesti.</string>
     <string name="error_downloading">Viga allalaadimisel %1$s</string>
     <string name="failed_uninstall">Paketi %1$s eemaldamine ebaõnnestus</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">Uue rõhuvärvi rakendamine ebaõnnestus</string>
     <string name="files_missing_va">Paigalduseks vajalike failide leidmine ebaõnnestus. Laadige paigaldusfailid uuesti alla ja proovige uuesti.</string>
     <string name="ifile_missing">Apk faili musta/tumeda teema jaoks leidmine ebaõnnestus, proovige palun uuesti.</string>
     <string name="installation_aborted">Paigaldamine ebaõnnestus kuna kasutaja katkestas selle.</string>
