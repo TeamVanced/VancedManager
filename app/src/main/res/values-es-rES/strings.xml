@@ -96,7 +96,7 @@
     <string name="chown_fail">Fallo al ejecutar `chown` al propietario del sistema, por favor inténtalo de nuevo.</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">No se pudo aplicar el nuevo color de acento</string>
     <string name="files_missing_va">Falla al localizar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
     <string name="ifile_missing">Falla al localizar en el almacenamiento el archivo apk para el tema negro/oscuro, por favor intente otra vez.</string>
     <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
