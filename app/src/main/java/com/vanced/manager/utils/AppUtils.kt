@@ -39,12 +39,13 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
         }
     }
 
-    fun sendFailure(status: Int, context: Context): Job {
+    fun sendFailure(status: Int, fullError: String?, context: Context): Job {
         //Delay error broadcast until activity (and fragment) get back to the screen
         return launch {
             delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
             intent.putExtra("errorMsg", getErrorMessage(status, context))
+            intent.putExtra("fullErrorMsg", fullError)
             LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
         }
     }
