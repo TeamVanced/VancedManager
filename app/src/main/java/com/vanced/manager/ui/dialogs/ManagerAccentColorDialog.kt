@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.dialogs
 
+import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -38,7 +39,11 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
 
     override fun otherSetups() {
         bindData()
-        isCancelable = false
+    }
+
+    override fun onCancel(dialog: DialogInterface) {
+        super.onCancel(dialog)
+        mutableAccentColor.value = prefs.getInt("manager_accent", defAccentColor)
     }
 
     private fun bindData() {
@@ -53,7 +58,6 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                         if (length() == 0) {
                             setText("#")
                             setSelection(1)
-
                         }
 
                         if (accentColor.value?.toHex() != text.toString() && length() == 7) {
@@ -61,7 +65,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                                 val colorFromEditText = Color.parseColor(text.toString())
                                 accentPicker.setColor(colorFromEditText)
                                 mutableAccentColor.value = colorFromEditText
-                            } catch (e: java.lang.IllegalArgumentException) { }
+                            } catch (e: IllegalArgumentException) {}
                         }
                     }
 
