@@ -36,11 +36,6 @@
     <string name="support_us">Ajutați-ne!</string>
     <!-- Settings -->
     <string name="accent_color">Nuanță culoare</string>
-    <string name="accent_blue">Albastru</string>
-    <string name="accent_green">Verde</string>
-    <string name="accent_purple">Violet</string>
-    <string name="accent_red">Roşu</string>
-    <string name="accent_yellow">Galben</string>
     <string name="category_appearance">Aspect</string>
     <string name="category_behaviour">Comportament</string>
     <string name="clear_files">Ştergeţi fişierele descărcate</string>

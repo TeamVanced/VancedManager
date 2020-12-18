@@ -36,11 +36,6 @@
     <string name="support_us">Bizi destekle!</string>
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
-    <string name="accent_blue">Mavi</string>
-    <string name="accent_green">Yeşil</string>
-    <string name="accent_purple">Mor</string>
-    <string name="accent_red">Kırmızı</string>
-    <string name="accent_yellow">Sarı</string>
     <string name="category_appearance">Görünüm</string>
     <string name="category_behaviour">Davranış</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
