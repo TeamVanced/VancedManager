@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Rootolt az eszközöd?</string>
     <string name="grant_root">Root hozzáférés engedélyezése</string>
     <string name="select_at_least_one_app">Legalább egy appot válassz!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
-    <string name="lets_get_started">Let\'s get started</string>
-    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
+    <string name="select_apps_music">Vanced a YouTube Music-ra!\nkevesebb funkciő, de minden ami kellhet.</string>
+    <string name="select_apps_vanced">A Youtube Vanced egy gyári Android YouTube alkalmazás, csak jobb!</string>
+    <string name="lets_get_started">Lássunk neki</string>
+    <string name="willing_to_use_root">Nem tudod mi ez vagy csak nem akarod használni a root verziót? Csak kattins a lenti kék nyílra!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s- ról</string>
-    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
+    <string name="app_changelog_tooltip">Kattintson a kártyára a változás lista megtekintéséhez.</string>
     <string name="changelog">Változáslista</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="install">Telepítés</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Nincs root jogosultság</string>
     <string name="unavailable">Nem elérhető</string>
     <string name="update">Frissítés</string>
-    <string name="social_media">Hasznos hivatkozások</string>
-    <string name="support_us">Támogasson bennünket!</string>
+    <string name="social_media">Social Media</string>
+    <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Kiemelés színe</string>
     <string name="accent_blue">Kék</string>
@@ -42,7 +42,7 @@
     <string name="accent_red">Vörös</string>
     <string name="accent_yellow">Sárga</string>
     <string name="category_appearance">Megjelenítés</string>
-    <string name="category_behaviour">Behavior</string>
+    <string name="category_behaviour">Viselkedés</string>
     <string name="clear_files">Letöltött fájlok törlése</string>
     <string name="cleared_files">Sikeresen törölte a fájlokat</string>
     <string name="firebase_title">Firebase Analytics</string>
@@ -61,21 +61,22 @@
     <string name="update_not_found">Új frissítések nem elérhetőek</string>
     <string name="variant">Változat</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">Haladó</string>
     <string name="app_install_files_detected">%1$s telepítőfájlok észlelve!</string>
-    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
+    <string name="app_install_files_detected_summary">A Manager észlelte a %1$s telepítéséhez szükséges fájlokat.
+Akarod telepíteni?</string>
     <string name="checking_updates">Frissítések ellenőrzése... </string>
     <string name="chosen_lang">Nyelv: %1$s</string>
     <string name="chosen_theme">Kinézet: %1$s</string>
     <string name="chosen_version">Verzió: %1$s</string>
     <string name="guide">Útmutató</string>
     <string name="hold_on">Állj!</string>
-    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">A Vanced Magisk/TWRP verzióját használod, ami már nem támogatott és nem frissíthető ezzel az alkalmazással. Távolítsd el a Magisk modul eltávolításával vagy TWRP Vanced eltávolítóval.</string>
     <string name="miui_one_title">MIUI észlelve!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Hogy a Vanced-et telepítsd, ki KELL kapcsolnod a MIUI Optimalizációt a fejlesztői beállításokban. (Ezt figyelmen kívül hagyhatod ha 20.2.20 vagy későbbi xiaomi.eu alapú ROM-ot használsz)</string>
     <string name="error">Hiba</string>
     <string name="redownload">Újra letölt</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
+    <string name="security_context">Arra kérünk, győződj meg róla, hogy ezt az alkalmazást a vancedapp.com oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötted le</string>
     <string name="success">Kész!</string>
     <string name="app_installation_preferences">%1$s Telepítés személyreszabása</string>
     <string name="vanced_installed">Vanced sikeresen telepítve! Elindítod most?</string>
@@ -93,15 +94,17 @@
     <string name="sources">Források</string>
     <string name="vanced_team">Vanced csapat</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
+    <string name="chown_fail">Nem sikerült az APK beállítása a rendszer tulajdonoshoz, kérjük próbálja újra.</string>
     <string name="error_downloading">%1$s letöltése nem sikerült</string>
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">A telepítéshez szükséges file-ok megtalálása meghiúsult. Töltse le újra a telepítőfile-okat és próbálja újra.</string>
     <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
-    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
-    <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
+    <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
+    <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
+    <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó régebbi verziót próbált telepíteni.
+Távolítsd el a gyári YouTube app frissítéseit, majd próbáld újra.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">A telepítés ismeretlen okok miatt nem sikerült, támogatásért csatlakozz a Telegram vagy a Discord csoportunkhoz.</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
     <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok korruptak, próbáld újra.</string>
