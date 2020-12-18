@@ -12,13 +12,13 @@
     <string name="title_settings">Pengaturan</string>
     <string name="update_manager">Perbarui Manager</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Root?</string>
+    <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Akses Root?</string>
     <string name="grant_root">Berikan Izin Root</string>
     <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
     <string name="select_apps_music">Vanced, tetapi untuk YouTube Music! \nfitur yang relatif kurang kaya tetapi memenuhi kebutuhan anda.</string>
     <string name="select_apps_vanced">YouTube Vanced adalah Aplikasi YouTube bawaan Android, tetapi lebih baik!</string>
     <string name="lets_get_started">Mari memulai</string>
-    <string name="willing_to_use_root">Bersedia menggunakan versi root? Cukup tekan tombol di bawah, atau ketuk untuk melanjutkan</string>
+    <string name="willing_to_use_root">Tidak tahu apa ini atau tidak ingin menggunakan versi root? cukup klik panah biru di bawah!</string>
     <!-- Home Page -->
     <string name="about_app">Tentang %1$s</string>
     <string name="app_changelog_tooltip">Ketuk kartu untuk melihat catatan perubahan.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Akses Root tidak diberikan</string>
     <string name="unavailable">Tidak tersedia</string>
     <string name="update">Perbarui</string>
-    <string name="social_media">Tautan Berguna</string>
-    <string name="support_us">Dukung kami!</string>
+    <string name="social_media">Media sosial</string>
+    <string name="support_us">Dukung kami</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
     <string name="accent_blue">Biru</string>
@@ -96,12 +96,13 @@
     <string name="chown_fail">Gagal untuk `chown` APK ke pemilik sistem, mohon coba lagi.</string>
     <string name="error_downloading">Gagal Mengunduh %1$s</string>
     <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
+    <string name="failed_accent">Gagal untuk menerapkan warna aksen baru</string>
     <string name="files_missing_va">Gagal untuk menemukan file yang diperlukan untuk instalasi. Unduh ulang file instalasi, lalu coba lagi.</string>
     <string name="ifile_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
     <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
     <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
     <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
-    <string name="installation_conflict">Pemasangan gagal dikarenakan aplikasi konflik dengan aplikasi yang sudah terpasang. Hapus versi Vanced yang sekarang, lalu coba lagi.</string>
+    <string name="installation_conflict">Pemasangan gagal karena aplikasi bentrok dengan aplikasi yang sudah terpasang. Copot pemasangan aplikasi versi saat ini, lalu coba lagi.</string>
     <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
     <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
     <string name="installation_invalid">Pemasangan gagal karena file apk rusak, mohon coba lagi.</string>

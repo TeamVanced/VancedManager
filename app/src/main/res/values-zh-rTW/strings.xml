@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced ，不過是 YouTube 音樂！\n功能相對較少但足以滿足您的需要。</string>
     <string name="select_apps_vanced">YouTube Vanced 是安卓更高級的原生 YouTube 應用程式！</string>
     <string name="lets_get_started">讓我們開始吧</string>
-    <string name="willing_to_use_root">打算使用 root 版本嗎？只需要點擊下面的按鈕，或者選擇繼續</string>
+    <string name="willing_to_use_root">不知道這是什麼，或者不想使用 Root 版本？只需點選下面的藍色箭頭！</string>
     <!-- Home Page -->
     <string name="about_app">關於 %1$s</string>
     <string name="app_changelog_tooltip">點選卡片以檢視更新日誌</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="unavailable">無法使用</string>
     <string name="update">更新</string>
-    <string name="social_media">相關連結</string>
-    <string name="support_us">支持我們！</string>
+    <string name="social_media">社交媒體</string>
+    <string name="support_us">支持我們</string>
     <!-- Settings -->
     <string name="accent_color">輔色</string>
     <string name="accent_blue">藍色</string>
@@ -96,12 +96,13 @@
     <string name="chown_fail">無法 `chown` apk 為系統擁有者，請重試。</string>
     <string name="error_downloading">%1$s 下載錯誤</string>
     <string name="failed_uninstall">%1$s 解除安裝失敗</string>
+    <string name="failed_accent">無法套用新的輔色</string>
     <string name="files_missing_va">無法找到安裝所需的檔案。請重新下載安裝檔案，然後再試。</string>
     <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 apk 檔案，請再試。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
     <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生 YouTube 的更新，然後重試。</string>
-    <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前版本的 Vanced ，然後重試。</string>
+    <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前的版本，然後重試。</string>
     <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
     <string name="installation_incompatible">安裝檔案與您的裝置不相容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
     <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>

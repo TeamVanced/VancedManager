@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, ma per YouTube Music!\nrelativamente meno ricco di caratteristiche ma ugualmente adattabile alle tue esigenze.</string>
     <string name="select_apps_vanced">YouTube Vanced è l\'App di YouTube preinstallata di Android, ma migliorata!</string>
     <string name="lets_get_started">Iniziamo</string>
-    <string name="willing_to_use_root">Vuoi utilizzare la versione root? Basta premere il pulsante in basso, altrimenti tocca per continuare</string>
+    <string name="willing_to_use_root">Non sai cos\'è o non vuoi utilizzare la versione root? clicca sulla freccia blu qui in basso!</string>
     <!-- Home Page -->
     <string name="about_app">Informazioni su %1$s</string>
     <string name="app_changelog_tooltip">Tocca la scheda per leggere le novità.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Accesso root non consentito</string>
     <string name="unavailable">Irraggiungibile</string>
     <string name="update">Aggiorna</string>
-    <string name="social_media">Link Utili</string>
-    <string name="support_us">Sostienici!</string>
+    <string name="social_media">Social Media</string>
+    <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Colore in Evidenza</string>
     <string name="accent_blue">Blu</string>
@@ -96,12 +96,13 @@
     <string name="chown_fail">Impossibile modificare il proprietario dell\'apk nel proprietario di sistema, per favore riprova.</string>
     <string name="error_downloading">Errore nel Download di %1$s</string>
     <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
+    <string name="failed_accent">Impossibile applicare il nuovo colore di accento</string>
     <string name="files_missing_va">Impossibile individuare i file richiesti per l\'installazione. Scaricali nuovamente e riprova.</string>
     <string name="ifile_missing">Impossibile individuare il file apk per il tema nero/scuro dalla memoria, per favore riprova.</string>
     <string name="installation_aborted">Installazione non riuscita. L\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Installazione non riuscita. L\'utente ha bloccato l\'installazione.</string>
     <string name="installation_downgrade">Installazione non riuscita. L\'utente ha provato ad eseguire il downgrade del pacchetto. Disinstalla gli aggiornamenti dell\'app predefinita di YouTube, poi riprova.</string>
-    <string name="installation_conflict">Installazione non riuscita. L\'app è andata in conflitto con un\'app già installata. Disinstalla la versione attuale di Vanced, poi riprova.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Installazione non riuscita a causa di un errore sconosciuto, unisciti al nostro gruppo Telegram o al server di Discord per ricevere ulteriore assistenza.</string>
     <string name="installation_incompatible">Installazione non riuscita, il file di installazione non è compatibile con il tuo dispositivo. Elimina i file scaricati nelle impostazioni, poi riprova.</string>
     <string name="installation_invalid">Installazione non riuscita a causa di file apk corrotti, si prega di riprovare.</string>
