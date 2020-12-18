@@ -32,7 +32,7 @@
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
     <string name="update">Päivitä</string>
-    <string name="useful_links">Hyödyllisiä linkkejä</string>
+    <string name="social_media">Hyödyllisiä linkkejä</string>
     <string name="support_us">Tue meitä!</string>
     <!-- Settings -->
     <string name="accent_color">Aksenttiväri</string>

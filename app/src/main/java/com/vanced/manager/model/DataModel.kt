@@ -34,11 +34,9 @@ open class DataModel(
         val jobj = jsonObject.value
         isAppInstalled.postValue(isPackageInstalled(appPkg, context.packageManager))
         versionCode.postValue(jobj?.int("versionCode") ?: 0)
-        installedVersionCode.postValue(getPkgVersionCode(isAppInstalled.value, appPkg))
         versionName.postValue(jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(
                 R.string.unavailable
             ))
-        installedVersionName.postValue(getPkgVersionName(isAppInstalled.value, appPkg))
         changelog.postValue(jobj?.string("changelog") ?: context.getString(R.string.unavailable))
     }
 
@@ -50,17 +48,25 @@ open class DataModel(
                     fetch()
                 }
             }
-            this?.let { versionCode.observe(it) { versionCode ->
-                installedVersionCode.observe(it) { installedVersionCode ->
-                    buttonTxt.value = compareInt(installedVersionCode, versionCode)
+            this?.let {
+                isAppInstalled.observe(it) {
+                    installedVersionCode.postValue(getPkgVersionCode(appPkg))
+                    installedVersionName.postValue(getPkgVersionName(appPkg))
                 }
-            }}
+            }
+            this?.let {
+                versionCode.observe(it) { versionCode ->
+                    installedVersionCode.observe(it) { installedVersionCode ->
+                        buttonTxt.value = compareInt(installedVersionCode, versionCode)
+                    }
+                }
+            }
         }
     }
 
-    private fun getPkgVersionName(toCheck: Boolean?, pkg: String): String {
+    private fun getPkgVersionName(pkg: String): String {
         val pm = context.packageManager
-        return if (toCheck == true) {
+        return if (isAppInstalled.value == true) {
             pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
         } else {
             context.getString(R.string.unavailable)
@@ -68,8 +74,8 @@ open class DataModel(
     }
 
     @Suppress("DEPRECATION")
-    private fun getPkgVersionCode(toCheck: Boolean?, pkg: String): Int {
-        return if (toCheck == true) {
+    private fun getPkgVersionCode(pkg: String): Int {
+        return if (isAppInstalled.value == true) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
                 context.packageManager.getPackageInfo(pkg, 0).longVersionCode.and(0xFFFFFFFF)
                     .toInt()

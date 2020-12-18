@@ -9,6 +9,7 @@ import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
+import com.vanced.manager.utils.Extensions.applyAccent
 import com.vanced.manager.utils.InternetTools.openUrl
 import com.vanced.manager.utils.MiuiHelper
 
@@ -23,22 +24,22 @@ object DialogContainer {
             }
             setOnDismissListener {
                 if (MiuiHelper.isMiui()) {
-                    showMiuiDialog(context)
+                    applyAccentMiuiDialog(context)
                 }
             }
             setOnCancelListener {
                 if (MiuiHelper.isMiui()) {
-                    showMiuiDialog(context)
+                    applyAccentMiuiDialog(context)
                 }
             }
             create()
-            show()
+            applyAccent()
         }
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit { putBoolean("firstLaunch", false) }
     }
 
-    private fun showMiuiDialog(context: Context) {
+    private fun applyAccentMiuiDialog(context: Context) {
         MaterialAlertDialogBuilder(context).apply {
             setTitle(context.getString(R.string.miui_one_title))
             setMessage(context.getString(R.string.miui_one))
@@ -52,7 +53,7 @@ object DialogContainer {
             }
             setCancelable(false)
             create()
-            show()
+            applyAccent()
         }
     }
 
@@ -62,7 +63,7 @@ object DialogContainer {
             setMessage("So this statement is false huh? I'll go with True!")
             setPositiveButton("wut?") { dialog, _ -> dialog.dismiss() }
             create()
-            show()
+            applyAccent()
         }
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -97,7 +98,7 @@ object DialogContainer {
                 }
             }
             create()
-            show()
+            applyAccent()
         }
     }
 
@@ -107,7 +108,7 @@ object DialogContainer {
             setMessage(msg)
             setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()
-            show()
+            applyAccent()
         }
     }
 
@@ -127,7 +128,7 @@ object DialogContainer {
             }
             setNegativeButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()
-            show()
+            applyAccent()
         }
     }
     
@@ -142,7 +143,7 @@ object DialogContainer {
             }
             setNegativeButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()
-            show()
+            applyAccent()
         }
     }
 

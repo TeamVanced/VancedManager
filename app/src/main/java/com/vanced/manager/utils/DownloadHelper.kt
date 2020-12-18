@@ -32,6 +32,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                     downloadProgress.value?.downloadProgress?.postValue(0)
                     onDownloadComplete()
                 }, failure = { error ->
+                    downloadProgress.value?.downloadProgress?.postValue(0)
                     Log.d("VMDownloader", error.cause.toString())
                     onError(error.errorData.toString())
                 })

@@ -32,7 +32,7 @@
     <string name="root_not_granted">Права суперкористувача не були надані</string>
     <string name="unavailable">Недоступно</string>
     <string name="update">Оновити</string>
-    <string name="useful_links">Корисні сторінки</string>
+    <string name="social_media">Корисні сторінки</string>
     <string name="support_us">Підтримай нас!</string>
     <!-- Settings -->
     <string name="accent_color">Вторинний колір</string>

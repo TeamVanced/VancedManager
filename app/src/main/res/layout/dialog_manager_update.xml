@@ -36,7 +36,6 @@
             android:layout_below="@id/manager_update_patient"
             android:layout_marginTop="32dp"
             android:paddingBottom="8dp"
-            app:indicatorColor="?colorPrimary"
             app:trackCornerRadius="15dp"
             tools:progress="10"
             tools:visibility="visible" />
@@ -48,7 +47,8 @@
             android:layout_alignParentEnd="true"
             android:layout_below="@id/manager_update_progressbar"
             android:text="@string/cancel"
-            app:strokeWidth="2dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+            style="@style/OutlinedButtonStyle" />
+
     </RelativeLayout>
+
 </com.google.android.material.card.MaterialCardView>

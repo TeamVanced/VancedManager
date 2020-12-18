@@ -17,6 +17,7 @@ import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerUpdateBinding
 import com.vanced.manager.utils.DownloadHelper.downloadManager
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.Extensions.applyAccent
 import com.vanced.manager.utils.InternetTools.manager
 
 class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() {
@@ -60,16 +61,19 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
         } else {
             checkUpdates()
         }
-
-        binding.managerUpdateCancel.setOnClickListener {
-            downloadProgress.value?.currentDownload?.cancel()
-            dismiss()
-        }
     }
 
     private fun bindData() {
         with(binding) {
             isCancelable = false
+            managerUpdateProgressbar.applyAccent()
+            managerUpdateCancel.setOnClickListener {
+                with(downloadProgress.value) {
+                    this?.downloadProgress?.value = 0
+                    this?.currentDownload?.cancel()
+                }
+                dismiss()
+            }
             bindDownloadProgress()
         }
     }

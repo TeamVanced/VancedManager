@@ -18,6 +18,7 @@ import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogAppDownloadBinding
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
+import com.vanced.manager.utils.Extensions.applyAccent
 
 class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
 
@@ -62,6 +63,8 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
     private fun bindData() {
         with(binding) {
             isCancelable = false
+            binding.appDownloadProgressbar.applyAccent()
+            binding.appInstallProgressbar.applyAccent()
             bindDownloadProgress()
             val app = arguments?.getString(TAG_APP)
             appDownloadHeader.text = app
@@ -91,6 +94,7 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
                             return@setOnClickListener
                         }
                         progressModel.currentDownload?.cancel()
+                        progressModel.downloadProgress.value = 0
                         dismiss()
                     }
                 }

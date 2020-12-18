@@ -3,8 +3,8 @@ package com.vanced.manager.ui.viewmodels
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.databinding.ObservableField
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
@@ -43,12 +43,12 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     private val prefs = getDefaultSharedPreferences(activity)
 
-    val vanced = ObservableField<DataModel>()
-    val vancedRoot = ObservableField<DataModel>()
-    val microg = ObservableField<DataModel>()
-    val music = ObservableField<DataModel>()
-    val musicRoot = ObservableField<DataModel>()
-    val manager = ObservableField<DataModel>()
+    val vanced = MutableLiveData<DataModel>()
+    val vancedRoot = MutableLiveData<DataModel>()
+    val microg = MutableLiveData<DataModel>()
+    val music = MutableLiveData<DataModel>()
+    val musicRoot = MutableLiveData<DataModel>()
+    val manager = MutableLiveData<DataModel>()
 
     fun fetchData() {
         viewModelScope.launch {
@@ -77,7 +77,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     fun openInstallDialog(view: View, app: String) {
         val variant = prefs.getString("vanced_variant", "nonroot")
-        if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microg.get()?.isAppInstalled?.value!!) {
+        if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microg.value?.isAppInstalled?.value!!) {
             microgToast.show()
             return
         }
@@ -142,12 +142,12 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     init {
         activity.setRefreshing(true)
-        vanced.set(DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced)))
-        vancedRoot.set(DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced)))
-        music.set(DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music)))
-        musicRoot.set(DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music)))
-        microg.set(DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg)))
-        manager.set(DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher)))
+        vanced.value = DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
+        vancedRoot.value = DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
+        music.value = DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
+        musicRoot.value = DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
+        microg.value = DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg))
+        manager.value = DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher))
         activity.setRefreshing(false)
     }
 }

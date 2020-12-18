@@ -35,8 +35,8 @@ class AppListAdapter(
             val dataModel = if (isRoot) rootDataModels[position] else dataModels[position]
             with(binding) {
                 appName.text = dataModel?.appName
-                if (dataModel?.buttonTxt?.value != null) appInstallButton.text = dataModel.buttonTxt.value
-                dataModel?.buttonTxt?.observe(this@AppListAdapter.lifecycleOwner) {
+                appInstallButton.text = dataModel?.buttonTxt?.value
+                dataModel?.buttonTxt?.observe(lifecycleOwner) {
                     appInstallButton.text = it
                 }
                 appInstallButton.setOnClickListener {
@@ -49,12 +49,12 @@ class AppListAdapter(
                 dataModel?.isAppInstalled?.observe(lifecycleOwner) {
                     appUninstall.isVisible = it
                 }
-                if (dataModel?.versionName?.value != null) appRemoteVersion.text = dataModel.versionName.value
-                dataModel?.versionName?.observe(this@AppListAdapter.lifecycleOwner) {
+                appRemoteVersion.text = dataModel?.versionName?.value
+                dataModel?.versionName?.observe(lifecycleOwner) {
                     appRemoteVersion.text = it
                 }
-                if (dataModel?.installedVersionName?.value != null) appInstalledVersion.text = dataModel.installedVersionName.value
-                dataModel?.installedVersionName?.observe(this@AppListAdapter.lifecycleOwner) {
+                appInstalledVersion.text = dataModel?.installedVersionName?.value
+                dataModel?.installedVersionName?.observe(lifecycleOwner) {
                     appInstalledVersion.text = it
                 }
             }
@@ -84,21 +84,21 @@ class AppListAdapter(
     init {
 
         if (prefs.getBoolean("enable_vanced", true)) {
-            dataModels.add(viewModel.vanced.get())
-            rootDataModels.add(viewModel.vancedRoot.get())
+            dataModels.add(viewModel.vanced.value)
+            rootDataModels.add(viewModel.vancedRoot.value)
             apps.add(context.getString(R.string.vanced))
             itemCount++
         }
 
-        if (prefs.getBoolean("enable_music", false)) {
-            dataModels.add(viewModel.music.get())
-            rootDataModels.add(viewModel.musicRoot.get())
+        if (prefs.getBoolean("enable_music", true)) {
+            dataModels.add(viewModel.music.value)
+            rootDataModels.add(viewModel.musicRoot.value)
             apps.add(context.getString(R.string.music))
             itemCount++
         }
 
         if (!isRoot) {
-            dataModels.add(viewModel.microg.get())
+            dataModels.add(viewModel.microg.value)
             apps.add(context.getString(R.string.microg))
             itemCount++
         }

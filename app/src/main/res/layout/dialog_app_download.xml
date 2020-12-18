@@ -27,7 +27,6 @@
             android:layout_below="@id/app_download_patient"
             android:layout_marginTop="24dp"
             app:trackCornerRadius="15dp"
-            app:indicatorColor="?colorPrimary"
             tools:progress="10" />
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -39,7 +38,6 @@
             android:layout_below="@id/app_download_progressbar"
             android:layout_marginTop="24dp"
             android:indeterminate="true"
-            app:indicatorColor="?colorPrimary"
             app:trackCornerRadius="15dp" />
 
         <RelativeLayout
@@ -64,6 +62,7 @@
                 android:text="@string/cancel"
                 app:layout_constraintEnd_toEndOf="parent"
                 style="@style/OutlinedButtonStyle" />
+
         </RelativeLayout>
 
     </RelativeLayout>
