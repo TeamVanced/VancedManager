@@ -36,6 +36,11 @@
     <string name="support_us">සහයෝගය දක්වන්න</string>
     <!-- Settings -->
     <string name="accent_color">අනෙක් වර්ණය</string>
+    <string name="accent_blue">නිල්</string>
+    <string name="accent_green">කොළ</string>
+    <string name="accent_purple">දම්</string>
+    <string name="accent_red">රතු</string>
+    <string name="accent_yellow">කහ</string>
     <string name="category_appearance">Appearance</string>
     <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Clear downloaded files</string>

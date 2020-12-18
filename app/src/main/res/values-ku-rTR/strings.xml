@@ -36,6 +36,11 @@
     <string name="support_us">Piştgiriya me bike!</string>
     <!-- Settings -->
     <string name="accent_color">Rengê devokê</string>
+    <string name="accent_blue">Şîn</string>
+    <string name="accent_green">Kesk</string>
+    <string name="accent_purple">Mor</string>
+    <string name="accent_red">Sor</string>
+    <string name="accent_yellow">Zer</string>
     <string name="category_appearance">Xuyang</string>
     <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Dosiyayên daxistî paqij bike</string>

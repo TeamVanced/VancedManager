@@ -36,6 +36,11 @@
     <string name="support_us">Dukung kami!</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
+    <string name="accent_blue">Biru</string>
+    <string name="accent_green">Hijau</string>
+    <string name="accent_purple">Ungu</string>
+    <string name="accent_red">Merah</string>
+    <string name="accent_yellow">Kuning</string>
     <string name="category_appearance">Penampilan</string>
     <string name="category_behaviour">Perilaku</string>
     <string name="clear_files">Hapus file yang diunduh</string>
