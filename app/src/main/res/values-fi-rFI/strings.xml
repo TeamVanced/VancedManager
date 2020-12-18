@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanhentunut, mutta YouTube Music!\nsuhteellisen vähemmän ominaisuus-rikas, mutta täyttää tarpeesi.</string>
     <string name="select_apps_vanced">YouTube Vanced on Androidin Youtube-vakiosovellus, mutta parempi!</string>
     <string name="lets_get_started">Aloitetaan</string>
-    <string name="willing_to_use_root">Haluaisitko käyttää juuriversiota? Paina vain alla olevaa painiketta, muuta napauta jatkaaksesi</string>
+    <string name="willing_to_use_root">Etkö tiedä mikä tämä on tai etkö halua käyttää rootattua versiota? Klikkaa alla olevaa sinistä nuolta!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
     <string name="app_changelog_tooltip">Napauta korttia nähdäksesi muutoslokin.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
     <string name="update">Päivitä</string>
-    <string name="social_media">Hyödyllisiä linkkejä</string>
-    <string name="support_us">Tue meitä!</string>
+    <string name="social_media">Social Media</string>
+    <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Aksenttiväri</string>
     <string name="accent_blue">Sininen</string>
@@ -96,12 +96,13 @@
     <string name="chown_fail">Ei voitu `chown` APK järjestelmän omistajalle, yritä uudelleen.</string>
     <string name="error_downloading">%1$s lataus epäonnistui</string>
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Asennukseen vaadittavien tiedostojen paikannus epäonnistui. Yritä ladata asennustiedostot uudelleen.</string>
     <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti heikentää pakettia. Poista päivitykset YouTube-sovelluksesta ja yritä sitten uudelleen.</string>
-    <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista Vanedin nykyisen version asennus ja yritä uudelleen.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
