@@ -29,7 +29,6 @@
         <item name="colorSettingsTitle">#000000</item>
         <item name="colorSecondaryText">#B3000000</item>
         <item name="colorWelcomeHeaderSubtitle">#99000000</item>
-        <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">?colorSurface</item>
         <item name="android:statusBarColor">#787777</item>
         <item name="materialAlertDialogTheme">@style/DialogStyle</item>
