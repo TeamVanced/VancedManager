@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced ，不过是 YouTube 音乐！\n功能相对较少，但足以满足您的需求。</string>
     <string name="select_apps_vanced">YouTube Vanced 是增强版的原生 YouTube ！</string>
     <string name="lets_get_started">让我们开始吧</string>
-    <string name="willing_to_use_root">想要使用 root 版本？只需点击下面的按钮，或点击继续</string>
+    <string name="willing_to_use_root">不知道这是什么或不想使用 Root 版本？只需点击下面的蓝色箭头！</string>
     <!-- Home Page -->
     <string name="about_app">关于 %1$s</string>
     <string name="app_changelog_tooltip">点击卡片查看变更日志。</string>
@@ -32,10 +32,10 @@
     <string name="root_not_granted">未授予 Root 权限</string>
     <string name="unavailable">不可用</string>
     <string name="update">更新</string>
-    <string name="useful_links">相关链接</string>
-    <string name="support_us">支持我们！</string>
+    <string name="social_media">社交媒体</string>
+    <string name="support_us">支持我们</string>
     <!-- Settings -->
-    <string name="accent_color">辅色</string>
+    <string name="accent_color">强调色</string>
     <string name="accent_blue">蓝色</string>
     <string name="accent_green">绿色</string>
     <string name="accent_purple">紫色</string>
@@ -70,7 +70,6 @@
     <string name="chosen_version">版本: %1$s</string>
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
-    <string name="installing_app">正在安装 %1$s</string>
     <string name="magisk_vanced">您正在使用 Magisk/TWRP 版的 Vanced，它已被停止支持且无法通过此应用更新。请通过移除 Magisk 模块 / 使用 TWRP Vanced 卸载器来移除它。</string>
     <string name="miui_one_title">检测到 MIUI！</string>
     <string name="miui_one">为了能够正确安装 Vanced ，您必须在开发者设置中禁用 MIUI 优化。 (如果您正在使用基于 xiomi.eu 20.2.20或更新的 ROM，您可以忽略此警告)</string>
@@ -97,12 +96,13 @@
     <string name="chown_fail">无法 `chown` apk 为系统拥有者，请重试。</string>
     <string name="error_downloading">%1$s 下载错误</string>
     <string name="failed_uninstall">%1$s 卸载失败</string>
+    <string name="failed_accent">无法应用新的强调色</string>
     <string name="files_missing_va">无法找到需要安装的文件。重新下载安装文件，然后重试。</string>
     <string name="ifile_missing">无法从存储中找到黑色/深色主题的 apk 文件，请重试。</string>
     <string name="installation_aborted">用户放弃安装导致安装失败。</string>
     <string name="installation_blocked">用户封锁安装导致安装失败。</string>
     <string name="installation_downgrade">用户试图降级导致安装失败。卸载原生 YouTube 的更新，然后重试。</string>
-    <string name="installation_conflict">应用与已安装的应用发生冲突导致安装失败。卸载当前版本的 Vanced ，然后重试。</string>
+    <string name="installation_conflict">应用与已安装的应用发生冲突导致安装失败。卸载当前的版本，然后重试。</string>
     <string name="installation_failed">未知原因导致安装失败，加入我们的 Telegram 或 Discord 寻求更多支援。</string>
     <string name="installation_incompatible">安装文件与您的设备不相容导致安装失败。请在设置中清除已下载的文件，然后重试。</string>
     <string name="installation_invalid">apk 文件已被损坏导致安装失败，请重试。</string>

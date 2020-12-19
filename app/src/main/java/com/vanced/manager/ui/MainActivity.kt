@@ -8,16 +8,16 @@ import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.LoadingStateListener
 import com.google.firebase.messaging.FirebaseMessaging
-import com.vanced.manager.BuildConfig.*
+import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
+import com.vanced.manager.BuildConfig.VERSION_CODE
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
 import com.vanced.manager.ui.dialogs.DialogContainer
@@ -26,12 +26,13 @@ import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.utils.Extensions.show
-import com.vanced.manager.utils.InternetTools
+import com.vanced.manager.utils.InternetTools.manager
 import com.vanced.manager.utils.LanguageContextWrapper
 import com.vanced.manager.utils.LanguageHelper.authCrowdin
 import com.vanced.manager.utils.LanguageHelper.onActivityResult
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.ThemeHelper.setFinalTheme
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,18 +57,26 @@ class MainActivity : AppCompatActivity() {
         if (ENABLE_CROWDIN_AUTH)
             authCrowdin()
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         with(binding) {
-            lifecycleOwner = this@MainActivity
             setSupportActionBar(toolbar)
-            toolbar.setupWithNavController(this@MainActivity.navHost, AppBarConfiguration(this@MainActivity.navHost.graph))
+            toolbar.setupWithNavController(
+                this@MainActivity.navHost,
+                AppBarConfiguration(this@MainActivity.navHost.graph)
+            )
         }
         navHost.addOnDestinationChangedListener { _, currFrag: NavDestination, _ ->
             setDisplayHomeAsUpEnabled(currFrag.id != R.id.home_fragment)
         }
 
         initDialogs(intent.getBooleanExtra("firstLaunch", false))
+        manager.observe(this) {
+            if (manager.value?.int("versionCode") ?: 0 > VERSION_CODE) {
+                ManagerUpdateDialog.newInstance(false).show(this)
+            }
+        }
     }
 
     override fun onBackPressed() {
@@ -104,7 +113,6 @@ class MainActivity : AppCompatActivity() {
                 navHost.navigate(HomeFragmentDirections.toSettingsFragment())
                 return true
             }
-
             R.id.toolbar_update_manager -> {
                 ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "manager_update")
             }
@@ -172,14 +180,6 @@ class MainActivity : AppCompatActivity() {
                         this
                     )
             }
-        }
-
-        checkUpdates()
-    }
-
-    private fun checkUpdates() {
-        if (InternetTools.isUpdateAvailable()) {
-            ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "UpdateCheck")
         }
     }
 

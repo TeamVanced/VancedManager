@@ -13,10 +13,10 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (getDefaultSharedPreferences(this).getBoolean("firstLaunch", true)) {
-            startActivity(Intent(this@SplashScreenActivity, WelcomeActivity::class.java))
+            startActivity(Intent(this, WelcomeActivity::class.java))
             finish()
         } else {
-            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 

@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
     <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
     <string name="lets_get_started">Dest pê kirin</string>
-    <string name="willing_to_use_root">Willing to use the root version? Just hit the button below, else tap to continue</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
     <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Rê li gihana Root nehate dayîn</string>
     <string name="unavailable">Berdest nîne</string>
     <string name="update">Hildemîne</string>
-    <string name="useful_links">Girêdanên kêrhatî</string>
-    <string name="support_us">Piştgiriya me bike!</string>
+    <string name="social_media">Social Media</string>
+    <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Rengê devokê</string>
     <string name="accent_blue">Şîn</string>
@@ -70,7 +70,6 @@
     <string name="chosen_version">Guherto: %1$s</string>
     <string name="guide">Rêzan</string>
     <string name="hold_on">Rawestîne!</string>
-    <string name="installing_app">%1$s tê sazkirin</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI destnîşan bû!</string>
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
@@ -97,12 +96,13 @@
     <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="error_downloading">Çewtiya daxistinê %1$s</string>
     <string name="failed_uninstall">Rakirina pakêta %1$s bi ser neket</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
     <string name="files_missing_va">Dozîna dosiyên pêwîst ji bo sazkirinê bi ser neket. Dosiyên sazkirinê dîsa daxîne, paşê dubare biceribîne.</string>
     <string name="ifile_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji bîrgehê bi ser neket, jkx dîsa biceribîne.</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of Vanced, then try again.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Sazkirin ji ber sedemên nenas bi ser neket, ji bo piştgiriya zêdetir tevlî Telegram an Discord\'ê bibin.</string>
     <string name="installation_incompatible">Sazkirin bi ser neket ji ber ku dosiya sazkirinê ligel cîhaza te hevaheng nîne. Dosiyên daxistî ji sazkariyan paqij bike, paşê dîsa biceribîne.</string>
     <string name="installation_invalid">Sazkirin bi ser neket ji ber ku dosiyên apk\'ayê xirab in, jkx dîsa biceribîne.</string>

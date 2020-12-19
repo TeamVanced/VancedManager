@@ -30,7 +30,7 @@ class AppInstallerService: Service() {
             }
             else -> {
                 sendCloseDialog(this)
-                sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), this)
+                sendFailure(intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999), intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE),this)
             }
         }
         stopSelf()

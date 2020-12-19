@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,7 +15,7 @@
         <TextView
             android:id="@+id/manager_update_header"
             android:text="@string/update_center"
-            style="@style/DialogCardTitle"/>
+            style="@style/DialogCardTitle" />
 
         <TextView
             android:id="@+id/manager_update_patient"
@@ -28,29 +27,28 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="@string/checking_updates"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
-        <com.google.android.material.progressindicator.ProgressIndicator
+        <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/manager_update_progressbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/manager_update_patient"
             android:layout_marginTop="32dp"
             android:paddingBottom="8dp"
-            app:indicatorColor="?colorPrimary"
-            app:indicatorCornerRadius="15dp"
+            app:trackCornerRadius="15dp"
             tools:progress="10"
-            tools:visibility="visible"
-            style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Determinate"/>
+            tools:visibility="visible" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
             android:id="@+id/manager_update_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/manager_update_progressbar"
             android:text="@string/cancel"
-            app:strokeWidth="2dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            style="@style/OutlinedButtonStyle" />
+
     </RelativeLayout>
+
 </com.google.android.material.card.MaterialCardView>

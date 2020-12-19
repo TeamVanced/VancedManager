@@ -10,5 +10,4 @@ object DeviceUtils {
         else -> "armeabi_v7a"
     }
 
-
 }

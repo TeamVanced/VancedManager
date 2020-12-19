@@ -12,13 +12,13 @@
     <string name="title_settings">Nastavení</string>
     <string name="update_manager">Správce aktualizací</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Má vaše zařízení práva root?</string>
+    <string name="are_you_rooted">Má vaše zařízení oprávnění root?</string>
     <string name="grant_root">Udělit root oprávnění</string>
     <string name="select_at_least_one_app">Vyberte alespoň jednu aplikaci!</string>
-    <string name="select_apps_music">Pokročilé, ale YouTube Music!\nRelativně méně funkcí splňující vaše potřeby.</string>
+    <string name="select_apps_music">Vanced, ale YouTube Music!\nRelativně méně funkcí splňující vaše potřeby.</string>
     <string name="select_apps_vanced">YouTube Vanced je výchozí vylepšená aplikace YouTube!</string>
     <string name="lets_get_started">Začínáme</string>
-    <string name="willing_to_use_root">Chcete použít verzi s přístupem root? Stačí kliknout na tlačítko níže, jinak pokračujte klepnutím</string>
+    <string name="willing_to_use_root">Nevíte, co to je, nebo nechcete používat verzi s přístupem root? Stačí kliknout na modrou šipku níže!</string>
     <!-- Home Page -->
     <string name="about_app">O aplikaci %1$s</string>
     <string name="app_changelog_tooltip">Klepnutím na kartu zobrazíte seznam změn.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Root přístup nebyl udělen</string>
     <string name="unavailable">Není k dispozici</string>
     <string name="update">Aktualizovat</string>
-    <string name="useful_links">Užitečné odkazy</string>
-    <string name="support_us">Podpořte nás!</string>
+    <string name="social_media">Sociální média</string>
+    <string name="support_us">Podpořte nás</string>
     <!-- Settings -->
     <string name="accent_color">Doplňková barva</string>
     <string name="accent_blue">Modrá</string>
@@ -70,7 +70,6 @@
     <string name="chosen_version">Verze: %1$s</string>
     <string name="guide">Návod</string>
     <string name="hold_on">Zastavit!</string>
-    <string name="installing_app">Probíhá instalace %1$s</string>
     <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, která je ukončena a pomocí této aplikace ji nelze aktualizovat. Nejprve ji odstraňte odinstalací modulu Magisk/použitím Vanced odinstalátoru v TWRP.</string>
     <string name="miui_one_title">Zjištěno MIUI!</string>
     <string name="miui_one">Chcete-li nainstalovat Vanced, MUSÍTE vypnout optimalizaci MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM z 20.2.2020 nebo novější založenou na xiaomi.eu)</string>
@@ -97,6 +96,7 @@
     <string name="chown_fail">Nelze změnit soubor APK na vlastníka systému, zkuste to prosím znovu.</string>
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
+    <string name="failed_accent">Nepodařilo se nastavit novou doplňkovou barvu</string>
     <string name="files_missing_va">Nepodařilo se najít požadované soubory pro instalaci. Stáhněte znovu instalační soubory a pokus opakujte.</string>
     <string name="ifile_missing">Nepodařilo se najít soubor apk pro černý/tmavý motiv v úložišti, zkuste to prosím znovu.</string>
     <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>

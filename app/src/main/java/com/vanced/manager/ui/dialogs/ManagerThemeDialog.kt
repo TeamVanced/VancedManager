@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.edit
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.radiobutton.MaterialRadioButton
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerThemeBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
 import com.vanced.manager.utils.Extensions.getCheckedButtonTag
 
 class ManagerThemeDialog : BindingBottomSheetDialogFragment<DialogManagerThemeBinding>() {

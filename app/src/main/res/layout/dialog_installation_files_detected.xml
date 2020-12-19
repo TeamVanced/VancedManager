@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/BottomDialogCard">
 
@@ -12,22 +11,24 @@
         <TextView
             android:id="@+id/installation_detected_title"
             tools:text="@string/app_install_files_detected"
-            style="@style/BottomDialogCardTitle"/>
+            style="@style/BottomDialogCardTitle" />
 
         <TextView
             android:id="@+id/installation_detected_summary"
             tools:text="@string/app_install_files_detected_summary"
-            style="@style/DialogCardSubtitle"/>
+            style="@style/DialogCardSubtitle" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/installation_detected_install"
             android:layout_marginTop="16dp"
             android:text="@string/install"
-            style="@style/BottomDialogButtonStyle"/>
+            style="@style/BottomDialogButtonStyle" />
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/installation_detected_redownload"
             android:text="@string/redownload"
-            style="@style/BottomDialogButtonStyle"/>
+            style="@style/BottomDialogButtonStyle" />
+
     </LinearLayout>
+
 </com.google.android.material.card.MaterialCardView>

@@ -18,7 +18,7 @@
     <string name="select_apps_music">ڤانسد، ولكن لموسيقى يوتيوب! \n نسبياً فيه مميزات أقل ولكن يلبي احتياجاتك.</string>
     <string name="select_apps_vanced">يوتيوب ڤانسد هو يوتيوب الأندرويد العادي، ولكن أفضل!</string>
     <string name="lets_get_started">فلنبدأ</string>
-    <string name="willing_to_use_root">هل ترغب باستعمال نسخة الروت؟ فقط عليك الضغط على الزر في الأسفل، إذا لا اضغط على زر المتابعة</string>
+    <string name="willing_to_use_root">لا تعرف ما هذا أو لا تود استخدام نسخة الروت؟ اضغط على السهم الأزرق في الأسفل!</string>
     <!-- Home Page -->
     <string name="about_app">حوالي %1$s</string>
     <string name="app_changelog_tooltip">أضغط على إحدى البطاقات لعرض سجل التغييرات.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">لم يتم منح صلاحيات الروت</string>
     <string name="unavailable">غير متاح</string>
     <string name="update">تحديث</string>
-    <string name="useful_links">روابط مفيدة</string>
-    <string name="support_us">ادعمنا بتريق تنزيل بريف</string>
+    <string name="social_media">وسائل التواصل الإجتماعي</string>
+    <string name="support_us">ادعمنا</string>
     <!-- Settings -->
     <string name="accent_color">الألوان</string>
     <string name="accent_blue">أزرق</string>
@@ -70,7 +70,6 @@
     <string name="chosen_version">الإصدار: %1$s</string>
     <string name="guide">الدليل</string>
     <string name="hold_on">إيقاف!</string>
-    <string name="installing_app">جاري تثبيت %1$s</string>
     <string name="magisk_vanced">يبدو أنك تستخدم إصدار ماجيسك/TWRP من ڤانسد، الذي قد تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً من قائمة إضافات ماجيسك أو بإستخدام أداة إلغاء تثبيت ڤانسد من TWRP.</string>
     <string name="miui_one_title">تم اكتشاف MIUI!</string>
     <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة إذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند إلى نسخة نظام شاومي أوروبا)</string>
@@ -97,6 +96,7 @@
     <string name="chown_fail">فشل تغيير ملكية حزمة التثبيت الى مالك النظام، الرجاء المحاولة مرة أخرى.</string>
     <string name="error_downloading">خطأ في تنزيل %1$s</string>
     <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
+    <string name="failed_accent">فشل تطبيق لون النسق الجديد</string>
     <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>

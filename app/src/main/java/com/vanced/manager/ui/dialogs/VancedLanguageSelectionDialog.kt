@@ -5,16 +5,18 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams.*
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.content.edit
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
-import com.vanced.manager.utils.Extensions.show
+import com.vanced.manager.ui.core.ThemedMaterialCheckbox
 import com.vanced.manager.utils.InternetTools.vanced
 import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
 import java.util.*
@@ -28,7 +30,7 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
         }
     }
 
-    private val langs = vanced.get()?.array<String>("langs")?.value
+    private val langs = vanced.value?.array<String>("langs")?.value
     private val prefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
 
     override fun binding(
@@ -65,7 +67,7 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
         val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())
         langs?.forEach { lang ->
             val loc = Locale(lang)
-            val box: MaterialCheckBox = MaterialCheckBox(requireActivity()).apply {
+            val box = ThemedMaterialCheckbox(requireActivity()).apply {
                 tag = lang
                 isChecked = langPrefs?.contains(lang) ?: false
                 text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
@@ -78,6 +80,6 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        VancedPreferencesDialog().show(requireActivity())
+        showDialog(VancedPreferencesDialog())
     }
 }

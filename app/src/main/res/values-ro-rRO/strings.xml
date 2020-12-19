@@ -15,13 +15,13 @@
     <string name="are_you_rooted">Dispozitivul tău este rootat?</string>
     <string name="grant_root">Acordați permisiunea Root</string>
     <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
-    <string name="select_apps_music">Vansat, dar pentru Muzica YouTube!\nrelativ mai puţin bogat în caracteristici, dar îţi satisface nevoile.</string>
+    <string name="select_apps_music">Vanced pentru YouTube Music!\noferă mai puține funcții, dar are tot ce trebuie.</string>
     <string name="select_apps_vanced">YouTube Vanced este aplicația YouTube stoc, dar mai bună!</string>
     <string name="lets_get_started">Să începem</string>
-    <string name="willing_to_use_root">Vrei să folosești versiunea root? Doar apasă butonul de mai jos, altfel apasă pentru a continua</string>
+    <string name="willing_to_use_root">Nu știți ce este sau nu vreți să folosiți versiunea root? Apăsați săgeata albastră de mai jos!</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
-    <string name="app_changelog_tooltip">Atinge cardul pentru a vedea schimbarile.</string>
+    <string name="app_changelog_tooltip">Atinge cardul pentru a vedea schimbările.</string>
     <string name="changelog">Schimbări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
     <string name="update">Actualizare</string>
-    <string name="useful_links">Link-uri folositoare</string>
-    <string name="support_us">Ajutați-ne!</string>
+    <string name="social_media">Rețele sociale</string>
+    <string name="support_us">Ajutați-ne</string>
     <!-- Settings -->
     <string name="accent_color">Nuanță culoare</string>
     <string name="accent_blue">Albastru</string>
@@ -70,10 +70,9 @@
     <string name="chosen_version">Versiune: %1$s</string>
     <string name="guide">Ghid</string>
     <string name="hold_on">Oprește!</string>
-    <string name="installing_app">Se Instalează %1$s</string>
-    <string name="magisk_vanced">Folosiți versiunea Magisk/TWRP a Vanced, care este întreruptă și nu poate fi actualizată folosind această aplicație. Vă rugăm să o eliminați prin eliminarea modulului Magisk/folosind dezinstalatorul Vanced TWRP.</string>
+    <string name="magisk_vanced">Folosiți versiunea Magisk/TWRP a Vanced, care nu mai este în uz și nu poate fi actualizată folosind această aplicație. Vă rugăm să o eliminați prin eliminarea modulului Magisk/folosind dezinstalatorul Vanced TWRP.</string>
     <string name="miui_one_title">MIUI detectat!</string>
-    <string name="miui_one">Pentru a instala Vanced, TREBUIE să dezactivați Optimizările MIUI în setările dezvoltatorului. (Puteți ignora această avertizare dacă utilizați un ROM cu baza pe xiaomi.eu 20.2.20 sau mai recent</string>
+    <string name="miui_one">Pentru a instala Vanced, TREBUIE să dezactivați Optimizările MIUI în setările dezvoltatorului. (Puteți ignora această avertizare dacă utilizați un ROM cu baza pe xiaomi.eu 20.2.20 sau mai recent)</string>
     <string name="error">Eroare</string>
     <string name="redownload">Redescărcare</string>
     <string name="security_context">Asigurați-vă că ați descărcat aplicația de pe vancedapp.com, de pe serverul Discord Vanced sau de pe GitHub Vanced</string>
@@ -94,15 +93,16 @@
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Nu s-a reușit `chown` APK pentru proprietarul de sistem, încercați din nou.</string>
+    <string name="chown_fail">Nu s-a reușit comanda chown pentru APK la proprietarul sistemului. Încercați din nou.</string>
     <string name="error_downloading">Eroare la descărcarea %1$s</string>
     <string name="failed_uninstall">Dezinstalarea pachetului %1$s a eșuat</string>
+    <string name="failed_accent">Nu s-a putut aplica noua culoare de evidențiere</string>
     <string name="files_missing_va">Nu s-a reușit localizarea fișierelor necesare pentru instalare. Redescărcați fișierele de instalare, apoi încercați din nou.</string>
     <string name="ifile_missing">Nu s-a reuşit localizarea fişierului apk pentru tema neagră/întunecată din stocare, vă rugăm să încercaţi din nou.</string>
     <string name="installation_aborted">Instalarea a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_blocked">Instalarea a eșuat deoarece utilizatorul a blocat instalarea.</string>
-    <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările din aplicația YouTube stocată, apoi încercați din nou.</string>
-    <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă de Vanced, apoi încercați din nou.</string>
+    <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările din aplicația stock YouTube, apoi încercați din nou.</string>
+    <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă Vanced, apoi încercați din nou.</string>
     <string name="installation_failed">Instalarea a eșuat din motive necunoscute, alătură-te Telegramului nostru sau Discord pentru mai multă asistență.</string>
     <string name="installation_incompatible">Instalarea a eșuat deoarece fișierul de instalare este incompatibil cu dispozitivul dvs. Ștergeți fișierele descărcate din Setări, apoi încercați din nou.</string>
     <string name="installation_invalid">Instalarea a eșuat deoarece fișierele apk sunt corupte, încercați din nou.</string>

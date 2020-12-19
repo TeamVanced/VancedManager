@@ -10,8 +10,6 @@ apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
-ext.langs = getLanguages()
-
 android {
     compileSdkVersion 30
 
@@ -19,12 +17,12 @@ android {
         applicationId "com.vanced.manager"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 201
-        versionName "2.0.1 (Android5and6suck)"
+        versionCode 210
+        versionName "2.1.0 (CyberManager2077)"
 
         vectorDrawables.useSupportLibrary true
 
-        buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(langs) + "}"
+        buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(getLanguages()) + "}"
         buildConfigField "Boolean", "ENABLE_CROWDIN_AUTH", "false"
         buildConfigField "String", "CROWDIN_HASH", "\"${System.getenv('CROWDIN_HASH')}\""
         buildConfigField "String", "CROWDIN_CLIENT_ID", "\"${System.getenv('CROWDIN_CLIENT_ID')}\""
@@ -47,8 +45,13 @@ android {
     }
 
     buildFeatures {
-        dataBinding true
+        dataBinding true // ObservableField migrate to flow or liveData
         viewBinding true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude "META-INF/*.kotlin_module"
     }
 
 // To inline the bytecode built with JVM target 1.8 into
@@ -74,7 +77,7 @@ def getLanguages() {
     langs.add("pt_PT")
     langs.add("zh_CN")
     langs.add("zh_TW")
-    List<String> exceptions = [ "bn", "pt", "zh"]
+    List<String> exceptions = ["bn", "pt", "zh"]
     Pattern pattern = Pattern.compile("-(\\w+)-")
     new File("${projectDir}/src/main/res").eachDir { dir ->
         if (dir.name.startsWith("values-") && !dir.name.contains("v23")) {
@@ -97,24 +100,32 @@ static def surroundWithQuotes(Object[] arr) {
 
 dependencies {
 
+    implementation project(':core-presentation')
+    implementation project(":core-ui")
+
+    implementation project(':library-network')
 // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
 // AndroidX
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.browser:browser:1.2.0'
+    implementation 'androidx.browser:browser:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.fragment:fragment-ktx:1.2.5'
     implementation 'androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
     implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'com.google.android.material:material:1.3.0-alpha03'
+
+
+    //Appearance
+    implementation 'com.github.madrapps:pikolo:2.0.1'
+    implementation 'com.google.android.material:material:1.3.0-beta01'
 
     // JSON parser
     implementation 'com.beust:klaxon:5.4'
@@ -138,12 +149,9 @@ dependencies {
     // Layout
     implementation 'com.google.android:flexbox:2.0.1'
 
-    // File downloader
-    implementation 'com.mindorks.android:prdownloader:0.6.0'
-
     // Firebase
     implementation 'com.google.firebase:firebase-analytics-ktx:18.0.0'
     implementation 'com.google.firebase:firebase-crashlytics:17.3.0'
-    implementation 'com.google.firebase:firebase-messaging:21.0.0'
-    implementation 'com.google.firebase:firebase-perf:19.0.10'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-perf:19.0.11'
 }

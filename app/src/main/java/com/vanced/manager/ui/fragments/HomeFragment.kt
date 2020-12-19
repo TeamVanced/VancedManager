@@ -23,17 +23,18 @@ import com.vanced.manager.R
 import com.vanced.manager.adapter.AppListAdapter
 import com.vanced.manager.adapter.LinkAdapter
 import com.vanced.manager.adapter.SponsorAdapter
+import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.databinding.FragmentHomeBinding
-import com.vanced.manager.ui.core.BindingFragment
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
+import com.vanced.manager.utils.InternetTools.isFetching
 
 open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
     companion object {
-        const val INSTALL_FAILED = "install_failed"
-        const val REFRESH_HOME = "refresh_home"
+        const val INSTALL_FAILED = "INSTALL_FAILED"
+        const val REFRESH_HOME = "REFRESH_HOME"
     }
 
     private val viewModel: HomeViewModel by viewModels {
@@ -57,8 +58,9 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
     private fun bindData() {
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        with(binding) {
+        with (binding) {
             homeRefresh.setOnRefreshListener { viewModel.fetchData() }
+            isFetching.observe(viewLifecycleOwner) { homeRefresh.isRefreshing = it }
             tooltip = ViewTooltip
                 .on(recyclerAppList)
                 .position(ViewTooltip.Position.TOP)
@@ -77,7 +79,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
             recyclerAppList.apply {
                 layoutManager = LinearLayoutManager(requireActivity())
-                adapter = AppListAdapter(requireActivity(), this@HomeFragment.viewModel, tooltip)
+                adapter = AppListAdapter(requireActivity(), viewModel, viewLifecycleOwner, tooltip)
                 setHasFixedSize(true)
             }
 
@@ -86,7 +88,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
                 lm.justifyContent = JustifyContent.SPACE_EVENLY
                 layoutManager = lm
                 setHasFixedSize(true)
-                adapter = SponsorAdapter(requireActivity(), this@HomeFragment.viewModel)
+                adapter = SponsorAdapter(requireActivity(), viewModel)
             }
 
             recyclerLinks.apply {
@@ -94,7 +96,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
                 lm.justifyContent = JustifyContent.SPACE_EVENLY
                 layoutManager = lm
                 setHasFixedSize(true)
-                adapter = LinkAdapter(requireActivity(), this@HomeFragment.viewModel)
+                adapter = LinkAdapter(requireActivity(), viewModel)
             }
         }
     }
@@ -108,13 +110,11 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
         super.onPause()
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
         tooltip.close()
-        //binding.mainTablayout.removeOnTabSelectedListener(tabListener)
     }
 
     override fun onResume() {
         super.onResume()
         registerReceivers()
-       // binding.mainTablayout.addOnTabSelectedListener(tabListener)
     }
 
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {

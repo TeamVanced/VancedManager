@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/BottomDialogCard">
 
     <LinearLayout
@@ -10,7 +9,7 @@
 
         <TextView
             android:id="@+id/music_install_title"
-            style="@style/BottomDialogCardTitle"/>
+            style="@style/BottomDialogCardTitle" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,7 +21,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_toStartOf="@id/open_version_selector"
-                style="@style/BottomDialogCardTextItem"/>
+                style="@style/BottomDialogCardTextItem" />
 
             <ImageButton
                 android:id="@+id/open_version_selector"
@@ -32,12 +31,12 @@
                 android:background="@android:color/transparent"
                 android:maxWidth="24dp"
                 android:maxHeight="24dp"
-                android:src="@drawable/ic_baseline_navigate_next_36"/>
+                android:src="@drawable/ic_baseline_navigate_next_36" />
         </RelativeLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/music_install"
             android:text="@string/install"
-            style="@style/BottomDialogButtonStyle"/>
+            style="@style/BottomDialogButtonStyle" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

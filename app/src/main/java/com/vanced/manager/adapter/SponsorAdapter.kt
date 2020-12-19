@@ -11,7 +11,7 @@ import com.vanced.manager.model.SponsorModel
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 
 class SponsorAdapter(
-    context: Context,
+    private val context: Context,
     private val viewModel: HomeViewModel,
     //private val json: ObservableField<JsonObject?>
 ) : RecyclerView.Adapter<SponsorAdapter.LinkViewHolder>() {
@@ -19,13 +19,13 @@ class SponsorAdapter(
     private val brave = SponsorModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_brave),
         "Brave",
-        "https://vancedapp.com/brave"
+        BRAVE
     )
 
     private val adguard = SponsorModel(
         AppCompatResources.getDrawable(context, R.drawable.ic_adguard),
         "AdGuard",
-        "https://adguard.com/?aid=31141&source=manager"
+        ADGUARD
     )
 
     val sponsors = arrayListOf(brave, adguard)
@@ -35,14 +35,17 @@ class SponsorAdapter(
     ) {
         val logo = binding.sponsorLogo
         fun bind(position: Int) {
-            binding.viewModel = viewModel
-            binding.sponsor = sponsors[position]
+            with(binding) {
+                sponsorName.text = sponsors[position].name
+                cardSponsor.setOnClickListener {
+                    viewModel.openUrl(sponsors[position].url)
+                }
+            }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LinkViewHolder {
-        val view = ViewSponsorBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view = ViewSponsorBinding.inflate(LayoutInflater.from(context), parent, false)
         return LinkViewHolder(view)
     }
 
@@ -72,5 +75,10 @@ class SponsorAdapter(
 //
 //        })
 //    }
+
+    companion object {
+        const val BRAVE = "https://vancedapp.com/brave"
+        const val ADGUARD = "https://adguard.com/?aid=31141&source=manager"
+    }
 
 }

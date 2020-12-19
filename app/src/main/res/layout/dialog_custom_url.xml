@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/DialogCard">
@@ -38,13 +37,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp">
 
-            <com.google.android.material.button.MaterialButton
+            <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
                 android:id="@+id/url_reset"
                 style="@style/OutlinedButtonStyle"
                 android:layout_alignParentStart="true"
                 android:text="@string/reset" />
 
-            <com.google.android.material.button.MaterialButton
+            <com.vanced.manager.ui.core.ThemedMaterialButton
                 android:id="@+id/url_save"
                 style="@style/ButtonStyle"
                 android:layout_alignParentEnd="true"

@@ -2,46 +2,29 @@ package com.vanced.manager.utils
 
 import android.app.Activity
 import android.content.res.Configuration
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.vanced.manager.R
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
 
 object ThemeHelper {
 
+    const val defAccentColor: Int = -13732865
+
+    val mutableAccentColor = MutableLiveData<Int>()
+    val accentColor: LiveData<Int> = mutableAccentColor
+
     fun Activity.setFinalTheme() {
-        val prefs = getDefaultPrefs()
-        val currentAccent = prefs.getString("manager_accent", "Blue")
-        when (prefs.getString("manager_theme", "System Default")) {
-            "Light" -> setTheme(getLightAccent(currentAccent))
-            "Dark" -> setTheme(getDarkAccent(currentAccent))
+        when (getDefaultPrefs().getString("manager_theme", "System Default")) {
+            "Light" -> setTheme(R.style.LightTheme)
+            "Dark" -> setTheme(R.style.DarkTheme)
             "System Default" -> {
                 when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setTheme(getDarkAccent(currentAccent))
-                    Configuration.UI_MODE_NIGHT_NO -> setTheme(getLightAccent(currentAccent))
+                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme)
+                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme)
                 }
             }
-            else -> setTheme(getLightAccent("Blue"))
-        }
-    }
-
-    private fun getDarkAccent(accentColor: String?): Int {
-        return when (accentColor) {
-            "Blue" -> R.style.DarkTheme_Blue
-            "Red" -> R.style.DarkTheme_Red
-            "Green" -> R.style.DarkTheme_Green
-            "Yellow" -> R.style.DarkTheme_Yellow
-            "Purple" -> R.style.DarkTheme_Purple
-            else -> R.style.DarkTheme_Blue
-        }
-    }
-
-    private fun getLightAccent(accentColor: String?): Int {
-        return when (accentColor) {
-            "Blue" -> R.style.LightTheme_Blue
-            "Red" -> R.style.LightTheme_Red
-            "Green" -> R.style.LightTheme_Green
-            "Yellow" -> R.style.LightTheme_Yellow
-            "Purple" -> R.style.LightTheme_Purple
-            else -> R.style.LightTheme_Blue
+            else -> setTheme(R.style.LightTheme)
         }
     }
     

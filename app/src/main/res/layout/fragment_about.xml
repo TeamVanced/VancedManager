@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -26,20 +25,20 @@
             layout="@layout/include_about_vanced_devs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/stdp"/>
+            android:layout_marginTop="@dimen/stdp" />
 
         <include
             layout="@layout/include_about_app_devs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/stdp"/>
+            android:layout_marginTop="@dimen/stdp" />
 
         <include
             android:id="@+id/about_sources"
             layout="@layout/include_about_sources"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/stdp"/>
+            android:layout_marginTop="@dimen/stdp" />
 
     </LinearLayout>
 

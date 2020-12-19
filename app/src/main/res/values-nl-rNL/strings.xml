@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced voor YouTube Music !\nMinder functies maar voldoet zeker aan je wensen.</string>
     <string name="select_apps_vanced">YouTube Vanced is de standaard Android YouTube app, maar nog beter !</string>
     <string name="lets_get_started">Aan de slag !</string>
-    <string name="willing_to_use_root">Wil je de root-versie gebruiken? Tik dan op de knop hieronder of tik om verder te gaan</string>
+    <string name="willing_to_use_root">Weet je niet wat dit is of wil je de root-versie niet gebruiken? Klik gewoon op de blauwe pijl hieronder!</string>
     <!-- Home Page -->
     <string name="about_app">Over %1$s</string>
     <string name="app_changelog_tooltip">Tik op de kaart om de wijzigingen te zien.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Root machtiging niet toegestaan</string>
     <string name="unavailable">Niet beschikbaar</string>
     <string name="update">Bijwerken</string>
-    <string name="useful_links">Handige links</string>
-    <string name="support_us">Steun ons!</string>
+    <string name="social_media">Sociale Media</string>
+    <string name="support_us">Steun ons</string>
     <!-- Settings -->
     <string name="accent_color">Accentkleur</string>
     <string name="accent_blue">Blauw</string>
@@ -70,7 +70,6 @@
     <string name="chosen_version">Versie: %1$s</string>
     <string name="guide">Handleiding</string>
     <string name="hold_on">Stoppen!</string>
-    <string name="installing_app">%1$s installeren</string>
     <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die stopgezet is en niet kan bijgewerkt worden met deze app. Verwijder deze eerst door het verwijderen van de Magisk-module / door de TWRP Vanced uninstaller te gebruiken.</string>
     <string name="miui_one_title">MIUI gedetecteerd!</string>
     <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kunt deze waarschuwing negeren als je de op xiaomi.eu gebaseerde ROM 20.2.20 of later gebruikt)</string>
@@ -97,12 +96,13 @@
     <string name="chown_fail">Wijzigen van APK-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
     <string name="error_downloading">Fout bij downloaden van %1$s</string>
     <string name="failed_uninstall">Deïnstalleren van pakket %1$s mislukt</string>
+    <string name="failed_accent">Nieuwe accentkleur toepassen mislukt</string>
     <string name="files_missing_va">Kan de vereiste bestanden voor de installatie niet vinden. Download de installatiebestanden opnieuw en probeer het opnieuw.</string>
     <string name="ifile_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in opslag. Probeer het opnieuw.</string>
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_blocked">Installatie mislukt omdat de gebruiker de installatie heeft geblokkeerd.</string>
     <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard YouTube-app en probeer het daarna opnieuw.</string>
-    <string name="installation_conflict">Installatie mislukt omdat de app conflicten heeft met een reeds geïnstalleerde app. Verwijder de huidige versie van Vanced en probeer het opnieuw.</string>
+    <string name="installation_conflict">Installatie mislukt omdat de app conflicten heeft met een reeds geïnstalleerde app. Verwijder de huidige versie van die app en probeer het opnieuw.</string>
     <string name="installation_failed">Installatie mislukt om onbekende redenen, word lid van onze Telegram of Discord voor verdere ondersteuning.</string>
     <string name="installation_incompatible">Installatie mislukt omdat het installatiebestand niet compatibel is met jouw apparaat. Wis de gedownloade bestanden in de instellingen en probeer het opnieuw.</string>
     <string name="installation_invalid">Installatie mislukt omdat de apk-bestanden beschadigd zijn. Probeer het opnieuw.</string>

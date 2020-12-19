@@ -15,10 +15,10 @@
     <string name="are_you_rooted">На Пристрої Є Root Права?</string>
     <string name="grant_root">Надати Root Права</string>
     <string name="select_at_least_one_app">Оберіть принаймні один додаток!</string>
-    <string name="select_apps_music">Ванс, але для YouTube Music!\nвідносно не багата на можливості, але задовольняє ваші потреби.</string>
+    <string name="select_apps_music">Vanced, але для YouTube Music!\nвідносно не багата на можливості, але задовольняє ваші потреби.</string>
     <string name="select_apps_vanced">YouTube Vanced - це стандартний Android YouTube додаток, але краще!</string>
     <string name="lets_get_started">Почнімо</string>
-    <string name="willing_to_use_root">Бажаєте використовувати кореневу версію? Просто натисніть на кнопку нижче, щоб продовжити</string>
+    <string name="willing_to_use_root">Не знаєте, що це або не хочете використовувати рутовану версію? Просто натисніть синю стрілку внизу!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
     <string name="app_changelog_tooltip">Натисніть на картці, щоб побачити зміни.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Права суперкористувача не були надані</string>
     <string name="unavailable">Недоступно</string>
     <string name="update">Оновити</string>
-    <string name="useful_links">Корисні сторінки</string>
-    <string name="support_us">Підтримай нас!</string>
+    <string name="social_media">Social Media</string>
+    <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Вторинний колір</string>
     <string name="accent_blue">Синій</string>
@@ -63,14 +63,13 @@
     <!-- Dialogs -->
     <string name="advanced">Розширені</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
-    <string name="app_install_files_detected_summary">Виявлено менеджера, що всі необхідні файли для встановлення %1$s були. Бажаєте встановити їх?</string>
+    <string name="app_install_files_detected_summary">Менеджер виявив, що всі необхідні файли для %1$s встановлення було знайдено. Бажаєте встановити їх?</string>
     <string name="checking_updates">Перевірка оновлень…</string>
     <string name="chosen_lang">Мова(и): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
     <string name="chosen_version">Версія: %1$s</string>
     <string name="guide">Гайд</string>
     <string name="hold_on">Зупинись!</string>
-    <string name="installing_app">Встановлення %1$s</string>
     <string name="magisk_vanced">Ви використовуєте Magisk/TWRP версію Vanced, яка припиняється і не може бути оновлена за допомогою цього застосунку. Будь ласка, видаліть його, видаливши модуль Magisk / з використання TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Виявлено користувача MIUI!</string>
     <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI у налаштуваннях розробника. (Ви можете ігнорувати це попередження якщо ви використовуєте 20.2.20 або новіші xiaomi.eu based ROM)</string>
@@ -97,12 +96,13 @@
     <string name="chown_fail">Не вдалося створити файл APK системного власника програми, будь ласка, повторіть спробу.</string>
     <string name="error_downloading">Помилка Завантаження %1$s</string>
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
+    <string name="failed_accent">Не вдалося застосувати новий другорядний колір</string>
     <string name="files_missing_va">Не вдалося знайти необхідні файли для встановлення. Повторно завантажте файли і спробуйте ще раз.</string>
     <string name="ifile_missing">Не вдалося знайти apk-файл для чорної/темної теми зі сховища, спробуйте ще раз.</string>
     <string name="installation_aborted">Встановлення не вдалося, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Встановлення не вдалося, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався знизити пакет. Видаліть оновлення з програми YouTube на складі, а потім спробуйте ще раз.</string>
-    <string name="installation_conflict">Помилка встановлення, через конфлікт програми з уже встановленою програмою. Видаліть поточну версію Vanced, а потім спробуйте ще раз.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
     <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>

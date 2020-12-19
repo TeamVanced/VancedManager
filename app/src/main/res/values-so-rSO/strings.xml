@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="cancel">Ka noqo</string>
+    <string name="close">Xidh</string>
+    <string name="reset">Dib uceli</string>
+    <string name="save">Kaydi</string>
+    <string name="select_apps">Dooro apps-ka</string>
+    <!-- Main Activity -->
+    <string name="title_about">Anaga</string>
+    <string name="title_home">Manager</string>
+    <string name="title_settings">Fadhiga</string>
+    <string name="update_manager">Cusboonaysii Manager-ka</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">Aaladaada miyay root-garaysan tahay?</string>
+    <string name="grant_root">U Ogolow Fasaxa Root-ka</string>
+    <string name="select_at_least_one_app">Ugu yaraan hal app dooro!</string>
+    <string name="select_apps_music">Vanced, laakiin loogu talagalay YouTube Music!\nwuu ka yara wax qabad yaryahay Vanced-ka laakiin baahiyahaaga wuu fulin.</string>
+    <string name="select_apps_vanced">YouTube Vanced waa YouTube-kii android ka caadiga ahaa, laakiin wuu ka fiican yahay!</string>
+    <string name="lets_get_started">Aan bilawno</string>
+    <string name="willing_to_use_root">Ma aqaano wuxuu kani yahay ama ma doonayo inaan isticmaalo midka root-ka ah? Aayar taabo falaadha buluuga ah ee hoose!</string>
+    <!-- Home Page -->
+    <string name="about_app">Ku saabsan %1$s</string>
+    <string name="app_changelog_tooltip">Kusii dhufo si aad u aragto waxa isbadalay.</string>
+    <string name="changelog">Waxa isbadalay</string>
+    <string name="downloading_file">Dajinaya %1$s</string>
+    <string name="install">Ku shub</string>
+    <string name="button_reinstall">Dib-ugushub</string>
+    <string name="version_installed">Ka kujira:</string>
+    <string name="latest">Kii u dambeeyay:</string>
+    <string name="no_microg">microG laguma shubin</string>
+    <string name="root_not_granted">\'Root\' looma fasaxin</string>
+    <string name="unavailable">Lama heli karo</string>
+    <string name="update">Cusboonaysii</string>
+    <string name="social_media">Social Media</string>
+    <string name="support_us">Support us</string>
+    <!-- Settings -->
+    <string name="accent_color">Midabka</string>
+    <string name="accent_blue">Buluug</string>
+    <string name="accent_green">Cagaar</string>
+    <string name="accent_purple">Baarbal</string>
+    <string name="accent_red">Guduud</string>
+    <string name="accent_yellow">Jaalle</string>
+    <string name="category_appearance">Muuqaalka</string>
+    <string name="category_behaviour">Dabeecada</string>
+    <string name="clear_files">Nadiifi waxyaabaha lasoo dajiyay</string>
+    <string name="cleared_files">Waa la nadiifiyay</string>
+    <string name="firebase_title">Falanqaynta Firebase</string>
+    <string name="firebase_summary">Tani waxay noo ogolaanaysaa inaan uruurino xog ku saabsan shaqaynta app-ka iyo kaydinta xogta khaladaadka dhaca</string>
+    <string name="language_title">Luuqada</string>
+    <string name="link_title">Isticmaal Taababka Chrome</string>
+    <string name="link_custom_tabs">Linkiyadu waxay ku furmi doonaan Taababka Chrome-ka ee loogu talagalay</string>
+    <string name="system_default">Sida aaladu tahay</string>
+    <string name="theme">Nashqada</string>
+    <string name="theme_dark">Nashqad Madow</string>
+    <string name="theme_light">Nashqad Cad</string>
+    <string name="update_url">Cusboonaysii Ciwaanka Kanaanlka</string>
+    <string name="push_notifications">%1$s Ogaysiisyada soodhaca</string>
+    <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyada marka wax cusub %1$s lasoo galiyo</string>
+    <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
+    <string name="update_not_found">Majiro wax cusub</string>
+    <string name="variant">Nooca</string>
+    <!-- Dialogs -->
+    <string name="advanced">Dheeraad ah</string>
+    <string name="app_install_files_detected">%1$s faylashiisii kushubi lahaa ayaa la helay!</string>
+    <string name="app_install_files_detected_summary">Manager-ku wuxuu helay dhamaan faylashii loo baahnaa %1$s inuu ku shubmo. Ma rabtaa inaad ku shubto?</string>
+    <string name="checking_updates">Hubinaya wax cusub…</string>
+    <string name="chosen_lang">Luuqada(ha): %1$s</string>
+    <string name="chosen_theme">Nashqada: %1$s</string>
+    <string name="chosen_version">Tirsiga: %1$s</string>
+    <string name="guide">Hagitaan</string>
+    <string name="hold_on">Jooji!</string>
+    <string name="magisk_vanced">Waxaad isticmaalaysaa version-ka Vanced ee loogu talagalay Magisk/TWRP, kaasoo aan hada la taageerin halkana lagama cusboonaysiin karo. Fadlan iska saar lifaaqa Magisk/adoo isticmaalaya kasaaraha Vanced ee TWRP-ga xagiisa.</string>
+    <string name="miui_one_title">Waxaad isticmaalaysaa MIUI!</string>
+    <string name="miui_one">Si aad ugu shubto Vanced, WAA INAAD ka xidhaa MIUI Optimizations xaga fadhiga Developer Settings-ka. (Waad iska indhatiri kartaa digniintan hadaad isticmaalayso version-ka 20.2.20 iyo wixii ka dambeeyay ee nidaamka barnaamijyada ROM-ka ee kusalaysan xiaomi.eu)</string>
+    <string name="error">Khalad</string>
+    <string name="redownload">Dib udaji</string>
+    <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
+    <string name="success">Waa la fuliyay!</string>
+    <string name="app_installation_preferences">%1$s Kushubida Fadhigeeda</string>
+    <string name="vanced_installed">Vanced waa lagu shubay! Fur hadda?</string>
+    <string name="version">Tirsiga</string>
+    <string name="music_installed">Vanced Music waa lagu shubay! Fur hadda?</string>
+    <string name="please_be_patient">Fadlan dulqaado…</string>
+    <string name="launch">Fur</string>
+    <string name="welcome">Soo dhawoow</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Dooro luuqada(ha) aad rabto ee app-ka Vanced</string>
+    <string name="light_plus_other">Cadiin + %1$s</string>
+    <string name="select_at_least_one_lang">Ugu yaraan hal luuqad dooro!</string>
+    <!-- About Page -->
+    <string name="manager_dev">Sameeyaasha Manager-ka</string>
+    <string name="sources">Tixraacyo</string>
+    <string name="vanced_team">Kooxda Vanced</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Laguma guulaysan in APK-ga `mulkiilihiisa loo badalo` barnaamijka aaladu kushaqayso, fadlan markale kuceli.</string>
+    <string name="error_downloading">Khalad ayaa ka dhacay soo dajintii %1$s</string>
+    <string name="failed_uninstall">Laguma guulaysan in laga saaro %1$s</string>
+    <string name="failed_accent">Laguma guulaysanin in midabka cusub lagu fadhiisiyo</string>
+    <string name="files_missing_va">Laguma guulaysan in la helo faylashii ku shubi lahaa. Dib-usoodaji faylasha, kadibna isku day markale.</string>
+    <string name="ifile_missing">Laguma guulaysanin in faylka apk-ga ee nashqada madow/mugdiga laga helo kaydka aalaada, fadlan markale isku day.</string>
+    <string name="installation_aborted">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa joojiyay.</string>
+    <string name="installation_blocked">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa xanibay.</string>
+    <string name="installation_downgrade">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa isku dayay inuu nooc hore ku shubo. Ka saar cusboonaysiinta xaga app-ka YouTube-ka caadiga ah, kadibna markale isku day.</string>
+    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_failed">Ku shubidii way guuldaraysatay sababo aan la garanaynin awgood, kusoo biir Telegram-kanaga ama Discord-ka si aad caawin dheerad ah u hesho.</string>
+    <string name="installation_incompatible">Ku shubidii way guuldaraysatay sababtoo ah faylka kuma shaqaynayo aaladaada. Xaga Fadhiga ka saar waxyaabaha lasoo dajiyay, kadib markale isku day.</string>
+    <string name="installation_invalid">Ku shubidii way guuldaraysatay sababtoo ah faylashii apk-ga ayaa khalkhalsan, markale isku day.</string>
+    <string name="installation_signature">Ku shubidii way guuldaraysatay sababtoo ah waxaa furan xaqiijinta saxiixa apk-ga. Xidh xaqiijinta saxiixa apk-ga, kadibna markale ku celi.</string>
+    <string name="installation_miui">Ku shubidii way guuldaraysatay sababtoo ah waxaa furan MIUI Optimization. Xidh MIUI Optimization-ka, kadib markale ku celi.</string>
+    <string name="installation_storage">Ku shubidii way guuldaraysatay ayadooy ugu wacan tahay khalad xaga kaydka aalada ah.</string>
+    <string name="modapk_missing">Lama helin faylka apk-ga ee nashqada madow/mugdiga ah. Tirtir xogta Manager-ka, kadib markale ku celi.</string>
+    <string name="path_missing">Waa lagu guuldaraysatay in la helo wadadii ku shubida app-ka caadiga ah ee YouTube-ka ee kuxigtay ku shubida kala qaybsan.</string>
+</resources>

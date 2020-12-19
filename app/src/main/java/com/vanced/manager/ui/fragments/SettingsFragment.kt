@@ -13,11 +13,14 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.perf.FirebasePerformance
 import com.vanced.manager.R
 import com.vanced.manager.adapter.GetNotifAdapter
-import com.vanced.manager.core.ext.showDialogRefl
+import com.vanced.manager.core.ui.base.BindingFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.FragmentSettingsBinding
-import com.vanced.manager.ui.core.BindingFragment
 import com.vanced.manager.ui.dialogs.*
+import com.vanced.manager.utils.Extensions.toHex
 import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
+import com.vanced.manager.utils.ThemeHelper.accentColor
+import com.vanced.manager.utils.ThemeHelper.defAccentColor
 import java.io.File
 
 class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
@@ -26,10 +29,6 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
         const val LIGHT = "Light"
         const val DARK = "Dark"
-        const val BLUE = "Blue"
-        const val RED = "Red"
-        const val GREEN = "Green"
-        const val YELLOW = "Yellow"
     }
 
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
@@ -54,7 +53,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
             bindManagerTheme()
             bindManagerAccentColor()
             bindManagerLanguage()
-            selectApps.setOnClickListener { showDialogRefl<SelectAppsDialog>() }
+            selectApps.setOnClickListener { showDialog(SelectAppsDialog()) }
         }
     }
 
@@ -76,7 +75,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindManagerVariant() {
         managerVariant.apply {
             prefs.getString("vanced_variant", "nonroot")?.let { setSummary(it) }
-            setOnClickListener { showDialogRefl<ManagerVariantDialog>() }
+            setOnClickListener { showDialog(ManagerVariantDialog()) }
         }
     }
     private fun FragmentSettingsBinding.bindClearFiles() {
@@ -96,27 +95,21 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
             setSummary(
                 when (themePref) {
                     LIGHT -> getString(R.string.theme_light)
-                    DARK  -> getString(R.string.theme_dark)
-                    else  -> getString(R.string.system_default)
+                    DARK -> getString(R.string.theme_dark)
+                    else -> getString(R.string.system_default)
                 }
             )
-            setOnClickListener { showDialogRefl<ManagerThemeDialog>() }
+            setOnClickListener { showDialog(ManagerThemeDialog()) }
         }
     }
 
     private fun FragmentSettingsBinding.bindManagerAccentColor() {
-        val accentPref = prefs.getString("manager_accent", "Blue")
+        managerAccentColor.setSummary(prefs.getInt("manager_accent", defAccentColor).toHex())
         managerAccentColor.apply {
-            setSummary(
-                when (accentPref) {
-                    BLUE   -> getString(R.string.accent_blue)
-                    RED    -> getString(R.string.accent_red)
-                    GREEN  -> getString(R.string.accent_green)
-                    YELLOW -> getString(R.string.accent_yellow)
-                    else   -> getString(R.string.accent_purple)
-                }
-            )
-            setOnClickListener { showDialogRefl<ManagerAccentColorDialog>() }
+            setOnClickListener { showDialog(ManagerAccentColorDialog()) }
+            accentColor.observe(viewLifecycleOwner) {
+                managerAccentColor.setSummary(prefs.getInt("manager_accent", defAccentColor).toHex())
+            }
         }
     }
 
@@ -124,7 +117,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
         val langPref = prefs.getString("manager_lang", "System Default")
         managerLanguage.apply {
             setSummary(getLanguageFormat(requireActivity(), requireNotNull(langPref)))
-            setOnClickListener { showDialogRefl<ManagerLanguageDialog>() }
+            setOnClickListener { showDialog(ManagerLanguageDialog()) }
         }
 
     }

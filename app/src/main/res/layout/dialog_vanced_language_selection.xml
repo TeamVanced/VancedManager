@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/BottomDialogCard"
@@ -27,10 +26,10 @@
                 android:id="@+id/lang_button_ll"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"/>
+                android:orientation="vertical" />
         </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.button.MaterialButton
+        <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/vanced_install_finish"
             style="@style/BottomDialogButtonStyle"
             android:text="@string/save" />

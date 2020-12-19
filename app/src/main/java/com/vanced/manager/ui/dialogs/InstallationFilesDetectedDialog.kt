@@ -3,14 +3,14 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.preference.PreferenceManager.*
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.startMicrogInstall
 import com.vanced.manager.core.downloader.MusicDownloader.startMusicInstall
 import com.vanced.manager.core.downloader.VancedDownloader.startVancedInstall
+import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogInstallationFilesDetectedBinding
-import com.vanced.manager.ui.core.BindingBottomSheetDialogFragment
-import com.vanced.manager.utils.Extensions.show
 
 class InstallationFilesDetectedDialog : BindingBottomSheetDialogFragment<DialogInstallationFilesDetectedBinding>() {
 
@@ -45,23 +45,30 @@ class InstallationFilesDetectedDialog : BindingBottomSheetDialogFragment<DialogI
             installationDetectedRedownload.setOnClickListener {
                 dismiss()
                 if (app == getString(R.string.vanced))
-                    VancedPreferencesDialog().show(requireActivity())
+                    showDialog(VancedPreferencesDialog())
                 else {
-                    AppDownloadDialog.newInstance(app).show(requireActivity())
+                    showDialog(AppDownloadDialog.newInstance(app))
                 }
             }
             installationDetectedInstall.setOnClickListener {
                 dismiss()
                 when (app) {
-                    getString(R.string.vanced) -> startVancedInstall(requireContext(),
-                        getDefaultSharedPreferences(requireContext()).getString("vanced_variant", "nonroot"))
+                    getString(R.string.vanced) -> startVancedInstall(
+                        requireContext(),
+                        getDefaultSharedPreferences(requireContext()).getString(
+                            "vanced_variant",
+                            "nonroot"
+                        )
+                    )
                     getString(R.string.music) -> startMusicInstall(requireContext())
                     getString(R.string.microg) -> startMicrogInstall(requireContext())
                 }
-                AppDownloadDialog.newInstance(
-                    app = app,
-                    installing = true
-                ).show(requireActivity())
+                showDialog(
+                    AppDownloadDialog.newInstance(
+                        app = app,
+                        installing = true
+                    )
+                )
             }
         }
     }

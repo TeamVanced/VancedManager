@@ -10,6 +10,7 @@ import android.os.Build
 import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
+import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
@@ -34,6 +35,23 @@ object PackageHelper {
 
     private const val apkInstallPath = "/data/adb"
     private val vancedThemes = arrayOf("black", "dark", "pink", "blue")
+
+    init {
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
+        Shell.setDefaultBuilder(
+            Shell.Builder.create()
+                .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                .setTimeout(10)
+        )
+    }
+
+    private fun getAppName(pkg: String): String {
+        return when (pkg) {
+            vancedRootPkg -> "vanced"
+            musicRootPkg -> "music"
+            else -> ""
+        }
+    }
 
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
@@ -92,29 +110,27 @@ object PackageHelper {
             val files = apksPath.listFiles()
             if (files?.isNotEmpty() == true) {
                 for (file in files) {
-
                     when {
                         vancedThemes.any { file.name == "$it.apk" } && !splitFiles.contains("base") -> splitFiles.add("base")
                         file.name.matches(Regex("split_config\\.(..)\\.apk")) && !splitFiles.contains("lang") -> splitFiles.add("lang")
                         (file.name.startsWith("split_config.arm") || file.name.startsWith("split_config.x86")) && !splitFiles.contains("arch") -> splitFiles.add("arch")
                     }
 
-                    Log.d("test", splitFiles.joinToString())
-
                     if (splitFiles.size == 3) {
                         return true
                     }
-
                 }
-
             }
-
             return false
         }
         return false
     }
 
     fun uninstallRootApk(pkg: String): Boolean {
+        val app = getAppName(pkg)
+        Shell.su("rm -rf $apkInstallPath/${app.capitalize(Locale.ROOT)}").exec()
+        Shell.su("rm $apkInstallPath/post-fs-data.d/$app.sh").exec()
+        Shell.su("rm $apkInstallPath/service.d/$app.sh").exec()
         return Shell.su("pm uninstall $pkg").exec().isSuccess
     }
 
@@ -164,38 +180,50 @@ object PackageHelper {
         return false
     }
 
-    fun installMusicRoot(context: Context) = CoroutineScope(Dispatchers.IO).launch {
-        Shell.enableVerboseLogging = BuildConfig.DEBUG
-        Shell.setDefaultBuilder(
-                Shell.Builder.create()
-                        .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                        .setTimeout(10)
-        )
-
+    private fun installRootApp(context: Context, app: String, appVerCode: Int, pkg: String, modApkBool: (fileName: String) -> Boolean) = CoroutineScope(Dispatchers.IO).launch {
         Shell.getShell {
-            val musicVersionCode = music.get()?.int("versionCode")
-            val apkFilesPath = context.getExternalFilesDir("music/root")?.path
+            val apkFilesPath = context.getExternalFilesDir("$app/root")?.path
             val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
             if (fileInfoList != null) {
-                val modApk: FileInfo? = fileInfoList.lastOrNull { it.name == "root.apk" }
+                val modApk: FileInfo? = fileInfoList.lastOrNull { modApkBool(it.name) }
                 if (modApk != null) {
-                    if (overwriteBase(modApk, fileInfoList, musicVersionCode!!, musicRootPkg, "music", context)) {
+                    if (overwriteBase(modApk, fileInfoList, appVerCode, pkg, app, context)) {
                         sendRefresh(context)
                         sendCloseDialog(context)
                     }
-                }
-                else {
+                } else {
                     sendFailure(listOf("ModApk_Missing").toMutableList(), context)
                     sendCloseDialog(context)
                 }
-            }
-            else {
+            } else {
                 sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
                 sendCloseDialog(context)
             }
 
         }
 
+    }
+
+    fun installMusicRoot(context: Context) {
+        installRootApp(
+            context,
+            "music",
+            music.value?.int("versionCode")!!,
+            musicRootPkg
+        ) {
+            it == "root.apk"
+        }
+    }
+
+    fun installVancedRoot(context: Context) {
+        installRootApp(
+            context,
+            "vanced",
+            vanced.value?.int("versionCode")!!,
+            vancedRootPkg
+        ) { fileName ->
+            vancedThemes.any { fileName == "$it.apk" }
+        }
     }
 
     fun installVanced(context: Context): Int {
@@ -299,43 +327,6 @@ object PackageHelper {
             session?.close()
         }
     }
-
-    fun installVancedRoot(context: Context) = CoroutineScope(Dispatchers.IO).launch {
-        Shell.enableVerboseLogging = BuildConfig.DEBUG
-        Shell.setDefaultBuilder(
-            Shell.Builder.create()
-                .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                .setTimeout(10)
-        )
-
-        Shell.getShell {
-            val vancedVersionCode = vanced.get()?.int("versionCode")
-            val apkFilesPath = context.getExternalFilesDir("vanced/root")?.path
-            val fileInfoList = apkFilesPath?.let { it1 -> getFileInfoList(it1) }
-            if (fileInfoList != null) {
-                val modApk: FileInfo? = fileInfoList.lastOrNull { file ->
-                    vancedThemes.any { file.name == "$it.apk" }
-                }
-                if (modApk != null) {
-                    if (overwriteBase(modApk, fileInfoList, vancedVersionCode!!, vancedRootPkg, "vanced", context)) {
-                        sendRefresh(context)
-                        sendCloseDialog(context)
-                    }
-                }
-                else {
-                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
-                    sendCloseDialog(context)
-                }
-            }
-            else {
-                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
-                sendCloseDialog(context)
-            }
-
-        }
-
-    }
-
 
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
@@ -441,25 +432,32 @@ object PackageHelper {
                     val apkFPath = "$apkInstallPath/${app.capitalize(Locale.ROOT)}/base.apk"
                     if (moveAPK(apath, apkFPath, pkg, context)) {
                         if (chConV(apkFPath, context)) {
-                            if (setupScript(apkFPath, path, app)) {
+                            if (setupScript(apkFPath, path, app, pkg)) {
                                 return linkApp(apkFPath, pkg, path)
                             }
                         }
                     }
-
                 }
-
             }
         }
         return false
     }
 
-    private fun setupScript(apkFPath: String, path: String, app: String): Boolean
+    private fun setupScript(apkFPath: String, path: String, app: String, pkg: String): Boolean
     {
-        if(Shell.su("""echo "#!/system/bin/sh\nwhile [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done\nmount -o bind $apkFPath $path" > /data/adb/service.d/$app.sh""").exec().isSuccess)
-        {
-            Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep youtube | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
-            return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
+
+        val shellFileZ = SuFile.open("/data/adb/service.d/$app.sh")
+        shellFileZ.createNewFile()
+
+        val code = """#!/system/bin/sh${"\n"}while [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ]; do sleep 1; done${"\n"}mount -o bind $apkFPath $path"""
+        if (shellFileZ.exists()) {
+            try {
+                SuFileOutputStream(shellFileZ).use { out ->  out.write(code.toByteArray())}
+                Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep $pkg | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
+                return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
         }
         return false
     }

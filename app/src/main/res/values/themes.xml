@@ -2,7 +2,7 @@
 <resources>
 
     <!-- BASE LIGHT -->
-    <style name="BaseLight_Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="BaseLight" parent="Theme.MaterialComponents.Light.NoActionBar">
 
         <item name="colorPrimary">#2e73ff</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -41,47 +41,11 @@
 
     <!-- LIGHT -->
 
-    <style name="LightTheme_Blue" parent="BaseLight_Blue"/>
-
-    <style name="LightTheme_Red" parent="LightTheme_Blue">
-
-        <item name="colorPrimary">#D71414</item>
-        <item name="colorPrimaryVariant">#B92C2C</item>
-        <item name="colorSecondary">#AF3E3E</item>
-        <item name="colorSecondaryVariant">#80AF3E3E</item>
-
-    </style>
-
-    <style name="LightTheme_Green" parent="LightTheme_Blue">
-
-        <item name="colorPrimary">#3ED714</item>
-        <item name="colorPrimaryVariant">#2CB943</item>
-        <item name="colorSecondary">#3EAF51</item>
-        <item name="colorSecondaryVariant">#803EAF44</item>
-
-    </style>
-
-    <style name="LightTheme_Yellow" parent="LightTheme_Blue">
-
-        <item name="colorPrimary">#ffd500</item>
-        <item name="colorPrimaryVariant">#A6FFD500</item>
-        <item name="colorSecondary">#D3B418</item>
-        <item name="colorSecondaryVariant">#B7D3B418</item>
-
-    </style>
-
-    <style name="LightTheme_Purple" parent="LightTheme_Blue">
-
-        <item name="colorPrimary">#6D49B7</item>
-        <item name="colorPrimaryVariant">#563C8D</item>
-        <item name="colorSecondary">#734BC7</item>
-        <item name="colorSecondaryVariant">#9A734BC7</item>
-
-    </style>
+    <style name="LightTheme" parent="BaseLight"/>
 
     <!-- DARK -->
 
-    <style name="DarkTheme_Blue" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
 
         <item name="colorPrimary">#2e73ff</item>
         <item name="colorPrimaryVariant">#2C7EB9</item>
@@ -116,42 +80,6 @@
         <item name="snackbarStyle">@style/SnackBar</item>
         <item name="snackbarButtonStyle">@style/SnackButton</item>
         <item name="snackbarTextViewStyle">@style/SnackBarText</item>
-
-    </style>
-
-    <style name="DarkTheme_Red" parent="DarkTheme_Blue">
-
-        <item name="colorPrimary">#D71414</item>
-        <item name="colorPrimaryVariant">#B92C2C</item>
-        <item name="colorSecondary">#AF3E3E</item>
-        <item name="colorSecondaryVariant">#80AF3E3E</item>
-
-    </style>
-
-    <style name="DarkTheme_Green" parent="DarkTheme_Blue">
-
-        <item name="colorPrimary">#3ED714</item>
-        <item name="colorPrimaryVariant">#2CB943</item>
-        <item name="colorSecondary">#3EAF51</item>
-        <item name="colorSecondaryVariant">#803EAF44</item>
-
-    </style>
-
-    <style name="DarkTheme_Yellow" parent="DarkTheme_Blue">
-
-        <item name="colorPrimary">#ffd500</item>
-        <item name="colorPrimaryVariant">#A6FFD500</item>
-        <item name="colorSecondary">#D3B418</item>
-        <item name="colorSecondaryVariant">#B7D3B418</item>
-
-    </style>
-
-    <style name="DarkTheme_Purple" parent="DarkTheme_Blue">
-
-        <item name="colorPrimary">#6D49B7</item>
-        <item name="colorPrimaryVariant">#563C8D</item>
-        <item name="colorSecondary">#734BC7</item>
-        <item name="colorSecondaryVariant">#9A734BC7</item>
 
     </style>
 

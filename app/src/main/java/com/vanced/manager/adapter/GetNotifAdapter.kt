@@ -9,19 +9,20 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewNotificationSettingBinding
 import com.vanced.manager.model.NotifModel
 
-class GetNotifAdapter(context: Context) : RecyclerView.Adapter<GetNotifAdapter.GetNotifViewHolder>() {
+class GetNotifAdapter(private val context: Context) :
+    RecyclerView.Adapter<GetNotifAdapter.GetNotifViewHolder>() {
 
     private val vanced = NotifModel(
-            "Vanced-Update",
-            context.getString(R.string.push_notifications, context.getString(R.string.vanced)),
-            context.getString(R.string.push_notifications_summary, context.getString(R.string.vanced)),
-            "vanced_notifs"
+        "Vanced-Update",
+        context.getString(R.string.push_notifications, context.getString(R.string.vanced)),
+        context.getString(R.string.push_notifications_summary, context.getString(R.string.vanced)),
+        "vanced_notifs"
     )
     private val music = NotifModel(
-            "MicroG-Update",
-            context.getString(R.string.push_notifications, context.getString(R.string.music)),
-            context.getString(R.string.push_notifications_summary, context.getString(R.string.music)),
-            "music_notifs"
+        "MicroG-Update",
+        context.getString(R.string.push_notifications, context.getString(R.string.music)),
+        context.getString(R.string.push_notifications_summary, context.getString(R.string.music)),
+        "music_notifs"
     )
     private val microg = NotifModel(
             "Music-Update",
@@ -36,12 +37,18 @@ class GetNotifAdapter(context: Context) : RecyclerView.Adapter<GetNotifAdapter.G
         val switch = binding.notifSwitch
 
         fun bind(position: Int) {
-            binding.app = apps[position]
+            with(binding.notifSwitch) {
+                setKey(apps[position].key)
+                setSummary(apps[position].switchSummary)
+                setTitle(apps[position].switchTitle)
+                setDefaultValue(false)
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GetNotifViewHolder {
-        val view = ViewNotificationSettingBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view =
+            ViewNotificationSettingBinding.inflate(LayoutInflater.from(context), parent, false)
         return GetNotifViewHolder(view)
     }
 

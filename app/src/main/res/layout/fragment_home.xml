@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_refresh"
     android:layout_width="match_parent"
@@ -25,13 +24,13 @@
                 android:layout_marginStart="8dp"
                 android:nestedScrollingEnabled="false"
                 tools:itemCount="3"
-                tools:listitem="@layout/view_app"/>
+                tools:listitem="@layout/view_app" />
 
-            <TextView
+            <com.vanced.manager.ui.core.ThemedTextView
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="12dp"
-                android:text="@string/useful_links"
-                style="@style/CardTextHeader"/>
+                android:text="@string/support_us"
+                style="@style/CardTextHeader" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_sponsors"
@@ -41,7 +40,13 @@
                 android:layout_marginStart="8dp"
                 android:nestedScrollingEnabled="false"
                 tools:itemCount="2"
-                tools:listitem="@layout/view_sponsor"/>
+                tools:listitem="@layout/view_sponsor" />
+
+            <com.vanced.manager.ui.core.ThemedTextView
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/social_media"
+                style="@style/CardTextHeader" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_links"
@@ -51,7 +56,7 @@
                 android:nestedScrollingEnabled="false"
                 android:paddingBottom="8dp"
                 tools:itemCount="6"
-                tools:listitem="@layout/view_social_link"/>
+                tools:listitem="@layout/view_social_link" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

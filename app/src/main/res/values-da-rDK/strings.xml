@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, men for YouTube Music!\nrelativt mindre funktionsrig men opfylder dine behov.</string>
     <string name="select_apps_vanced">YouTube Vanced er standard YouTube App, men bedre!</string>
     <string name="lets_get_started">Lad os komme igang</string>
-    <string name="willing_to_use_root">Vil du bruge root version? Tryk blot på knappen nedenfor, ellers tryk fotsæt</string>
+    <string name="willing_to_use_root">Ved du ikke hvad dette er, eller ønsker du ikke at bruge root versionen? Bare klik på den blå pil nedenfor!</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
     <string name="app_changelog_tooltip">Tryk på kortet for at se ændringsloggen.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Root adgang ikke tildelt</string>
     <string name="unavailable">Utilgængelig</string>
     <string name="update">Opdater</string>
-    <string name="useful_links">Nyttige Links</string>
-    <string name="support_us">Støt os!</string>
+    <string name="social_media">Sociale medier</string>
+    <string name="support_us">Støt os</string>
     <!-- Settings -->
     <string name="accent_color">Sekundær farve</string>
     <string name="accent_blue">Blå</string>
@@ -70,7 +70,6 @@
     <string name="chosen_version">Version: %1$s</string>
     <string name="guide">Vejledning</string>
     <string name="hold_on">Stop!</string>
-    <string name="installing_app">Installerer %1$s</string>
     <string name="magisk_vanced">Det ser ud som om du bruger Magisk/TWRP versionen af Vanced. Den er ikke længere understøttet og kan derfor ikke opdateres igennem denne app. Vær venlig at fjerne magisk modulet/brug TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">MIUI fundet!</string>
     <string name="miui_one">For at installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
@@ -97,6 +96,7 @@
     <string name="chown_fail">Kunne ikke vælge Apk til systemejer, Prøv igen.</string>
     <string name="error_downloading">Fejl i download af %1$s</string>
     <string name="failed_uninstall">Fejlede i at fjerne pakke %1$s</string>
+    <string name="failed_accent">Kunne ikke anvende ny accentfarve</string>
     <string name="files_missing_va">Kunne ikke finde de påkrævede filer til installation. Download installationsfilerne igen, og prøv igen.</string>
     <string name="ifile_missing">Kunne ikke finde apk-fil til sort/mørkt tema fra lager. Prøv venligst igen.</string>
     <string name="installation_aborted">Installationen fejlede fordi brugeren lukkede installationen.</string>
