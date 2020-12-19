@@ -104,11 +104,11 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     }
 
     private fun FragmentSettingsBinding.bindManagerAccentColor() {
-        managerAccentColor.setSummary(prefs.getInt("manager_accent", defAccentColor).toHex())
+        managerAccentColor.setSummary(prefs.getInt("manager_accent_color", defAccentColor).toHex())
         managerAccentColor.apply {
             setOnClickListener { showDialog(ManagerAccentColorDialog()) }
             accentColor.observe(viewLifecycleOwner) {
-                managerAccentColor.setSummary(prefs.getInt("manager_accent", defAccentColor).toHex())
+                managerAccentColor.setSummary(prefs.getInt("manager_accent_color", defAccentColor).toHex())
             }
         }
     }

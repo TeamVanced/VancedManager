@@ -14,7 +14,7 @@ class ThemedTextView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : AppCompatTextView(context, attributeSet, defStyleAttr) {
     init {
-        setTextColor(context.getDefaultPrefs().getInt("manager_accent", defAccentColor))
+        setTextColor(context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor))
         context.lifecycleOwner()?.let { owner ->
             accentColor.observe(owner) { color ->
                 setTextColor(color.toInt())

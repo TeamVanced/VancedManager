@@ -21,7 +21,7 @@ class ThemedSwitchCompat @JvmOverloads constructor(
     private val states = arrayOf(intArrayOf(-android.R.attr.state_checked), intArrayOf(android.R.attr.state_checked))
 
     init {
-        setSwitchColors(context.getDefaultPrefs().getInt("manager_accent", defAccentColor))
+        setSwitchColors(context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor))
         context.lifecycleOwner()?.let { owner ->
             accentColor.observe(owner) { color ->
                 setSwitchColors(color.toInt())

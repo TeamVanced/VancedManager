@@ -17,7 +17,7 @@ class ThemedOutlinedMaterialButton @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : MaterialButton(context, attributeSet, defStyleAttr) {
     init {
-        applyAccent(context.getDefaultPrefs().getInt("manager_accent", defAccentColor))
+        applyAccent(context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor))
         context.lifecycleOwner()?.let { owner ->
             accentColor.observe(owner) { color ->
                 applyAccent(color.toInt())

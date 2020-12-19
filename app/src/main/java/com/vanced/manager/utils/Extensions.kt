@@ -70,14 +70,14 @@ object Extensions {
     //Material team decided to keep their LinearProgressIndicator final
     //At least extension methods exist
     fun LinearProgressIndicator.applyAccent() {
-        with(accentColor.value ?: context.getDefaultPrefs().getInt("manager_accent", defAccentColor)) {
+        with(accentColor.value ?: context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor)) {
             setIndicatorColor(this)
             trackColor = ColorUtils.setAlphaComponent(this, 70)
         }
     }
 
     fun MaterialAlertDialogBuilder.applyAccent() {
-        with(accentColor.value ?: context.getDefaultPrefs().getInt("manager_accent", defAccentColor)) {
+        with(accentColor.value ?: context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor)) {
             show().apply {
                 getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(this@with)
                 getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(this@with)

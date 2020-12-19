@@ -15,7 +15,7 @@ class ThemedMaterialCheckbox @JvmOverloads constructor(
     attributeSet: AttributeSet? = null,
 ) : MaterialCheckBox(context, attributeSet, R.attr.checkboxStyle) {
     init {
-        buttonTintList = ColorStateList.valueOf(context.getDefaultPrefs().getInt("manager_accent", defAccentColor))
+        buttonTintList = ColorStateList.valueOf(context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor))
         context.lifecycleOwner()?.let { owner ->
             accentColor.observe(owner) { color ->
                 buttonTintList = ColorStateList.valueOf(color.toInt())
