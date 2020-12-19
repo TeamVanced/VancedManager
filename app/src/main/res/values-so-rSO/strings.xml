@@ -32,8 +32,8 @@
     <string name="root_not_granted">\'Root\' looma fasaxin</string>
     <string name="unavailable">Lama heli karo</string>
     <string name="update">Cusboonaysii</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">Baraha Bulshada</string>
+    <string name="support_us">Na taageer</string>
     <!-- Settings -->
     <string name="accent_color">Midabka</string>
     <string name="accent_blue">Buluug</string>
@@ -102,7 +102,7 @@
     <string name="installation_aborted">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa joojiyay.</string>
     <string name="installation_blocked">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa xanibay.</string>
     <string name="installation_downgrade">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa isku dayay inuu nooc hore ku shubo. Ka saar cusboonaysiinta xaga app-ka YouTube-ka caadiga ah, kadibna markale isku day.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Ku shubidii way guuldaraysatay sababtoo ah app-ka waxay iskhilaafeen mid horay ugu jiray aalada. Ka saar nooca Vanced-ka ee kujira, kadib markale ku celi.</string>
     <string name="installation_failed">Ku shubidii way guuldaraysatay sababo aan la garanaynin awgood, kusoo biir Telegram-kanaga ama Discord-ka si aad caawin dheerad ah u hesho.</string>
     <string name="installation_incompatible">Ku shubidii way guuldaraysatay sababtoo ah faylka kuma shaqaynayo aaladaada. Xaga Fadhiga ka saar waxyaabaha lasoo dajiyay, kadib markale isku day.</string>
     <string name="installation_invalid">Ku shubidii way guuldaraysatay sababtoo ah faylashii apk-ga ayaa khalkhalsan, markale isku day.</string>
