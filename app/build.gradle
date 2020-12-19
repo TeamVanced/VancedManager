@@ -10,11 +10,8 @@ apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
-ext.langs = getLanguages()
-
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.vanced.manager"
@@ -25,7 +22,7 @@ android {
 
         vectorDrawables.useSupportLibrary true
 
-        buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(langs) + "}"
+        buildConfigField "String[]", "MANAGER_LANGUAGES", "{" + surroundWithQuotes(getLanguages()) + "}"
         buildConfigField "Boolean", "ENABLE_CROWDIN_AUTH", "false"
         buildConfigField "String", "CROWDIN_HASH", "\"${System.getenv('CROWDIN_HASH')}\""
         buildConfigField "String", "CROWDIN_CLIENT_ID", "\"${System.getenv('CROWDIN_CLIENT_ID')}\""
