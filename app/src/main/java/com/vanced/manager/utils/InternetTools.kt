@@ -23,13 +23,15 @@ object InternetTools {
 
     private const val TAG = "VMNetTools"
 
-    var vanced = MutableLiveData<JsonObject?>()
-    var music = MutableLiveData<JsonObject?>()
-    var microg = MutableLiveData<JsonObject?>()
-    var manager = MutableLiveData<JsonObject?>()
+    val vanced = MutableLiveData<JsonObject?>()
+    val music = MutableLiveData<JsonObject?>()
+    val microg = MutableLiveData<JsonObject?>()
+    val manager = MutableLiveData<JsonObject?>()
 
-    var vancedVersions = MutableLiveData<JsonArray<String>>()
-    var musicVersions = MutableLiveData<JsonArray<String>>()
+    val vancedVersions = MutableLiveData<JsonArray<String>>()
+    val musicVersions = MutableLiveData<JsonArray<String>>()
+
+    val isFetching = MutableLiveData<Boolean>()
 
     //var braveTiers = MutableLiveData<JsonObject?>()
 
@@ -49,6 +51,7 @@ object InternetTools {
     fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, url.length)
 
     suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
+        isFetching.postValue(true)
         val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
         val calendar = Calendar.getInstance()
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
@@ -68,7 +71,7 @@ object InternetTools {
         musicVersions.postValue(versions?.array("music"))
         microg.postValue(latest?.obj("microg"))
         manager.postValue(latest?.obj("manager"))
-
+        isFetching.postValue(false)
     }
 
     private suspend fun getJsonString(file: String, obj: String, context: Context): String {

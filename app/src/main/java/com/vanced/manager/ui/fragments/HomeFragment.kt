@@ -28,6 +28,7 @@ import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
+import com.vanced.manager.utils.InternetTools.isFetching
 
 open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
@@ -59,6 +60,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
         setHasOptionsMenu(true)
         with (binding) {
             homeRefresh.setOnRefreshListener { viewModel.fetchData() }
+            isFetching.observe(viewLifecycleOwner) { homeRefresh.isRefreshing = it }
             tooltip = ViewTooltip
                 .on(recyclerAppList)
                 .position(ViewTooltip.Position.TOP)

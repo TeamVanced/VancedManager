@@ -1,6 +1,5 @@
 package com.vanced.manager.utils
 
-import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.DialogInterface
@@ -11,13 +10,11 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LifecycleOwner
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.progressindicator.LinearProgressIndicator
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
-import com.vanced.manager.utils.InternetTools.loadJson
 import com.vanced.manager.utils.ThemeHelper.accentColor
 import com.vanced.manager.utils.ThemeHelper.defAccentColor
 import java.util.*
@@ -30,26 +27,6 @@ object Extensions {
 
     fun DialogFragment.show(activity: FragmentActivity) {
         show(activity.supportFragmentManager, "")
-    }
-
-    suspend fun Activity.fetchData() {
-        val refreshLayout = findViewById<SwipeRefreshLayout>(R.id.home_refresh)
-        setRefreshing(true, refreshLayout)
-        loadJson(this)
-        setRefreshing(false, refreshLayout)
-    }
-
-    fun Activity.setRefreshing(isRefreshing: Boolean) {
-        val refreshLayout = findViewById<SwipeRefreshLayout>(R.id.home_refresh)
-        if (refreshLayout != null) {
-            refreshLayout.isRefreshing = isRefreshing
-        }
-    }
-
-    fun Activity.setRefreshing(isRefreshing: Boolean, refreshLayout: SwipeRefreshLayout?) {
-        if (refreshLayout != null) {
-            refreshLayout.isRefreshing = isRefreshing
-        }
     }
 
     fun Context.getDefaultPrefs(): SharedPreferences = getDefaultSharedPreferences(this)
