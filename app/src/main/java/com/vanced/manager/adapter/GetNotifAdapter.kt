@@ -19,16 +19,16 @@ class GetNotifAdapter(private val context: Context) :
         "vanced_notifs"
     )
     private val music = NotifModel(
-        "MicroG-Update",
+        "Music-Update",
         context.getString(R.string.push_notifications, context.getString(R.string.music)),
         context.getString(R.string.push_notifications_summary, context.getString(R.string.music)),
         "music_notifs"
     )
     private val microg = NotifModel(
-            "Music-Update",
-            context.getString(R.string.push_notifications, context.getString(R.string.microg)),
-            context.getString(R.string.push_notifications_summary, context.getString(R.string.microg)),
-            "microg_notifs"
+        "MicroG-Update",
+        context.getString(R.string.push_notifications, context.getString(R.string.microg)),
+        context.getString(R.string.push_notifications_summary, context.getString(R.string.microg)),
+        "microg_notifs"
     )
 
     private val apps = arrayOf(vanced, music, microg)
@@ -41,7 +41,7 @@ class GetNotifAdapter(private val context: Context) :
                 setKey(apps[position].key)
                 setSummary(apps[position].switchSummary)
                 setTitle(apps[position].switchTitle)
-                setDefaultValue(false)
+                setDefaultValue(true)
             }
         }
     }
