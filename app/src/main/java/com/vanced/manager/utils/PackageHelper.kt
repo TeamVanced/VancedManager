@@ -45,6 +45,14 @@ object PackageHelper {
         )
     }
 
+    private fun getAppName(pkg: String): String {
+        return when (pkg) {
+            vancedRootPkg -> "vanced"
+            musicRootPkg -> "music"
+            else -> ""
+        }
+    }
+
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
             packageManager.getPackageInfo(packageName, 0)
@@ -118,7 +126,13 @@ object PackageHelper {
         return false
     }
 
-    fun uninstallRootApk(pkg: String): Boolean = Shell.su("pm uninstall $pkg").exec().isSuccess
+    fun uninstallRootApk(pkg: String): Boolean {
+        val app = getAppName(pkg)
+        Shell.su("rm -rf $apkInstallPath/${app.capitalize(Locale.ROOT)}").exec()
+        Shell.su("rm $apkInstallPath/post-fs-data.d/$app.sh").exec()
+        Shell.su("rm $apkInstallPath/service.d/$app.sh").exec()
+        return Shell.su("pm uninstall $pkg").exec().isSuccess
+    }
 
     fun uninstallApk(pkg: String, context: Context) {
         val callbackIntent = Intent(context, AppUninstallerService::class.java)
