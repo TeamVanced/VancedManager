@@ -10,7 +10,7 @@
     <string name="title_about">O autorima</string>
     <string name="title_home">Upravitelj</string>
     <string name="title_settings">Postavke</string>
-    <string name="update_manager">Ažuriraj upravitelja</string>
+    <string name="update_manager">Ažuriranje upravitelja</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Je li vaš uređaj rootan?</string>
     <string name="grant_root">Dopusti root dozvolu</string>
@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, ali za YouTube Glazbu!\nS manje značajki ali tako da ispunjava vaše potrebe.</string>
     <string name="select_apps_vanced">YouTube Vanced je izvorna Android YouTube aplikacija, ali mnogo bolja!</string>
     <string name="lets_get_started">Započnite</string>
-    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root inačicu? Jednostavno kliknite na plavu strelicu ispod!</string>
+    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root izdanje? Jednostavno kliknite na plavu strelicu ispod!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="app_changelog_tooltip">Dodirnite karticu kako bi vidjeli zapis promjena.</string>
@@ -55,7 +55,7 @@
     <string name="theme_dark">Tamna tema</string>
     <string name="theme_light">Svjetla tema</string>
     <string name="update_url">Ažuriraj URL kanala</string>
-    <string name="push_notifications">%1$s skočnih obavijesti</string>
+    <string name="push_notifications">%1$s skočne obavijesti</string>
     <string name="push_notifications_summary">Primite skočnu obavijest kada je ažuriranje za %1$s dostupno</string>
     <string name="update_center">Središte ažuriranja upravitelja</string>
     <string name="update_not_found">Nema novih ažuriranja</string>
