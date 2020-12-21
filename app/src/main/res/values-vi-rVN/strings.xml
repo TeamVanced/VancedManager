@@ -10,7 +10,7 @@
     <string name="title_about">Giới thiệu</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Cài đặt</string>
-    <string name="update_manager">Cật nhật Manager</string>
+    <string name="update_manager">Cập nhật Manager</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Thiết Bị Của Bạn Đã Được Root?</string>
     <string name="grant_root">Cấp quyền root</string>
