@@ -8,14 +8,14 @@
     <string name="select_apps">Dooro apps-ka</string>
     <!-- Main Activity -->
     <string name="title_about">Anaga</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">Maamule</string>
     <string name="title_settings">Fadhiga</string>
-    <string name="update_manager">Cusboonaysii Manager-ka</string>
+    <string name="update_manager">Cusboonaysii</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Aaladaada miyay root-garaysan tahay?</string>
     <string name="grant_root">U Ogolow Fasaxa Root-ka</string>
     <string name="select_at_least_one_app">Ugu yaraan hal app dooro!</string>
-    <string name="select_apps_music">Vanced, laakiin loogu talagalay YouTube Music!\nwuu ka yara wax qabad yaryahay Vanced-ka laakiin baahiyahaaga wuu fulin.</string>
+    <string name="select_apps_music">Waa Vanced, laakiin loogu talagalay YouTube Music!\nwuu ka yara wax qabad yaryahay Vanced-ka laakiin baahiyahaaga wuu fulin.</string>
     <string name="select_apps_vanced">YouTube Vanced waa YouTube-kii android ka caadiga ahaa, laakiin wuu ka fiican yahay!</string>
     <string name="lets_get_started">Aan bilawno</string>
     <string name="willing_to_use_root">Ma aqaano wuxuu kani yahay ama ma doonayo inaan isticmaalo midka root-ka ah? Aayar taabo falaadha buluuga ah ee hoose!</string>
@@ -48,15 +48,15 @@
     <string name="firebase_title">Falanqaynta Firebase</string>
     <string name="firebase_summary">Tani waxay noo ogolaanaysaa inaan uruurino xog ku saabsan shaqaynta app-ka iyo kaydinta xogta khaladaadka dhaca</string>
     <string name="language_title">Luuqada</string>
-    <string name="link_title">Isticmaal Taababka Chrome</string>
-    <string name="link_custom_tabs">Linkiyadu waxay ku furmi doonaan Taababka Chrome-ka ee loogu talagalay</string>
+    <string name="link_title">Isticmaal Daaqadaha Chrome</string>
+    <string name="link_custom_tabs">Linkiyadu waxay ku furmi doonaan daaqadaha Chrome-ka ee loogu talagalay</string>
     <string name="system_default">Sida aaladu tahay</string>
     <string name="theme">Nashqada</string>
     <string name="theme_dark">Nashqad Madow</string>
     <string name="theme_light">Nashqad Cad</string>
     <string name="update_url">Cusboonaysii Ciwaanka Kanaanlka</string>
-    <string name="push_notifications">%1$s Ogaysiisyada soodhaca</string>
-    <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyada marka wax cusub %1$s lasoo galiyo</string>
+    <string name="push_notifications">%1$s Ogaysiisyadisa soodhaca</string>
+    <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyo marka mid cusub oo %1$s ah lasoo saaro</string>
     <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
     <string name="update_not_found">Majiro wax cusub</string>
     <string name="variant">Nooca</string>
