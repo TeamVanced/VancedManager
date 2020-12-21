@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">What is your favourite song</string>
     <string name="close">Maak toe</string>
     <string name="reset">Herstel</string>
     <string name="save">Stoor</string>
