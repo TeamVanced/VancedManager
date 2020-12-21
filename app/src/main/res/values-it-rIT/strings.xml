@@ -36,11 +36,6 @@
     <string name="support_us">Sostienici</string>
     <!-- Settings -->
     <string name="accent_color">Colore in Evidenza</string>
-    <string name="accent_blue">Blu</string>
-    <string name="accent_green">Verde</string>
-    <string name="accent_purple">Viola</string>
-    <string name="accent_red">Rosso</string>
-    <string name="accent_yellow">Giallo</string>
     <string name="category_appearance">Aspetto</string>
     <string name="category_behaviour">Comportamento</string>
     <string name="clear_files">Cancella i file scaricati</string>

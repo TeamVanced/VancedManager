@@ -36,11 +36,6 @@
     <string name="support_us">Apoie-nos</string>
     <!-- Settings -->
     <string name="accent_color">Cor de destaque</string>
-    <string name="accent_blue">Azul</string>
-    <string name="accent_green">Verde</string>
-    <string name="accent_purple">Roxo</string>
-    <string name="accent_red">Vermelho</string>
-    <string name="accent_yellow">Amarelo</string>
     <string name="category_appearance">Aparência</string>
     <string name="category_behaviour">Comportamento</string>
     <string name="clear_files">Limpar arquivos baixados</string>
@@ -102,7 +97,7 @@
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo YouTube stock e tente novamente.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">A instalação falhou porque o aplicativo entrou em conflito com um aplicativo já instalado. Desinstale a versão atual do Vanced e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por um motivo desconhecido, junte-se ao nosso grupo no Telegram ou Discord para obter suporte.</string>
     <string name="installation_incompatible">A instalação falhou porque o arquivo de instalação é incompatível com o seu dispositivo. Limpe os arquivos baixados nas configurações e tente novamente.</string>
     <string name="installation_invalid">A instalação falhou porque os arquivos apk estão corrompidos, tente novamente.</string>
