@@ -36,6 +36,11 @@
     <string name="support_us">Tıkla, destek ol</string>
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Görünüm</string>
     <string name="category_behaviour">Davranış</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Chrome Özel Sekmelerini kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="system_default">Sistem varsayılanı</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
