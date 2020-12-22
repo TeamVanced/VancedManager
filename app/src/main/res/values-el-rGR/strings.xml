@@ -36,6 +36,11 @@
     <string name="support_us">Υποστηρίξτε μας</string>
     <!-- Settings -->
     <string name="accent_color">Χρώμα Διεπαφής</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Εμφάνιση</string>
     <string name="category_behaviour">Συμπεριφορά</string>
     <string name="clear_files">Εκκαθάριση ληφθέντων αρχείων</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="system_default">Προεπιλογή Συστήματος</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">Θέμα</string>
     <string name="theme_dark">Σκουρόχρωμο Θέμα</string>
     <string name="theme_light">Ανοιχτόχρωμο Θέμα</string>
