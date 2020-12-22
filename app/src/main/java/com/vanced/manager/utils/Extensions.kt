@@ -13,6 +13,8 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.progressindicator.LinearProgressIndicator
 import com.google.android.material.radiobutton.MaterialRadioButton
+import com.topjohnwu.superuser.io.SuFile
+import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.R
 import com.vanced.manager.utils.InternetTools.baseUrl
 import com.vanced.manager.utils.ThemeHelper.accentColor
@@ -84,6 +86,13 @@ object Extensions {
                 getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(this@with)
             }
         }
+    }
+
+    fun Context.writeServiceDScript(path: String, apkFPath: String, app: String) {
+        val shellFileZ = SuFile.open("/data/adb/service.d/$app.sh")
+        shellFileZ.createNewFile()
+        val code = """#!/system/bin/sh${"\n"}while [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ]; do sleep ${getDefaultPrefs().getInt("serviced_sleep_timer", 1)}; done${"\n"}mount -o bind $apkFPath $path"""
+        SuFileOutputStream(shellFileZ).use { out ->  out.write(code.toByteArray())}
     }
 
 }

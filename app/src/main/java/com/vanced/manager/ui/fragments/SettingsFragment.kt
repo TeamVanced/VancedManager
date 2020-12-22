@@ -1,11 +1,13 @@
 package com.vanced.manager.ui.fragments
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -26,12 +28,20 @@ import java.io.File
 class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     private companion object {
-
         const val LIGHT = "Light"
         const val DARK = "Dark"
     }
 
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
+    private val listener = SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->
+        when (key) {
+            "serviced_sleep_timer" -> {
+                binding.servicedTimer.setSummary(sharedPreferences.getInt(key, 1).toString())
+            }
+        }
+    }
+
+    private lateinit var variant: String
 
     override fun binding(
         inflater: LayoutInflater,
@@ -41,14 +51,22 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     override fun otherSetups() {
         setHasOptionsMenu(true)
+        prefs.registerOnSharedPreferenceChangeListener(listener)
         bindData()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        prefs.unregisterOnSharedPreferenceChangeListener(listener)
     }
 
     private fun bindData() {
         with(binding) {
+            variant = prefs.getString("vanced_variant", "nonroot").toString()
             bindRecycler()
             bindFirebase()
             bindManagerVariant()
+            bindServiceDTimer()
             bindClearFiles()
             bindManagerTheme()
             bindManagerAccentColor()
@@ -74,10 +92,19 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     private fun FragmentSettingsBinding.bindManagerVariant() {
         managerVariant.apply {
-            prefs.getString("vanced_variant", "nonroot")?.let { setSummary(it) }
+            setSummary(variant)
             setOnClickListener { showDialog(ManagerVariantDialog()) }
         }
     }
+
+    private fun FragmentSettingsBinding.bindServiceDTimer() {
+        servicedTimer.apply {
+            if (variant == "root") this.isVisible = true
+            setSummary(prefs.getInt("serviced_sleep_timer", 1).toString())
+            setOnClickListener { showDialog(ServiceDTimerDialog()) }
+        }
+    }
+
     private fun FragmentSettingsBinding.bindClearFiles() {
         clearFiles.setOnClickListener {
             with(requireActivity()) {
@@ -104,11 +131,11 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     }
 
     private fun FragmentSettingsBinding.bindManagerAccentColor() {
-        managerAccentColor.setSummary(prefs.getInt("manager_accent_color", defAccentColor).toHex())
-        managerAccentColor.apply {
+        managerAccentColor.apply{
+            setSummary(prefs.getInt("manager_accent_color", defAccentColor).toHex())
             setOnClickListener { showDialog(ManagerAccentColorDialog()) }
             accentColor.observe(viewLifecycleOwner) {
-                managerAccentColor.setSummary(prefs.getInt("manager_accent_color", defAccentColor).toHex())
+                setSummary(it.toHex())
             }
         }
     }

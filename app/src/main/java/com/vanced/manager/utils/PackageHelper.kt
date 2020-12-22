@@ -10,7 +10,6 @@ import android.os.Build
 import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
-import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
@@ -19,6 +18,7 @@ import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
+import com.vanced.manager.utils.Extensions.writeServiceDScript
 import com.vanced.manager.utils.InternetTools.music
 import com.vanced.manager.utils.InternetTools.vanced
 import kotlinx.coroutines.CoroutineScope
@@ -33,7 +33,7 @@ import kotlin.collections.HashMap
 
 object PackageHelper {
 
-    private const val apkInstallPath = "/data/adb"
+    const val apkInstallPath = "/data/adb"
     private val vancedThemes = arrayOf("black", "dark", "pink", "blue")
 
     init {
@@ -45,7 +45,7 @@ object PackageHelper {
         )
     }
 
-    private fun getAppName(pkg: String): String {
+    private fun getAppNameRoot(pkg: String): String {
         return when (pkg) {
             vancedRootPkg -> "vanced"
             musicRootPkg -> "music"
@@ -53,6 +53,13 @@ object PackageHelper {
         }
     }
 
+    fun getPkgNameRoot(app: String): String {
+        return when (app) {
+            "vanced" -> vancedRootPkg
+            "music" -> musicRootPkg
+            else -> ""
+        }
+    }
     fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
         return try {
             packageManager.getPackageInfo(packageName, 0)
@@ -127,7 +134,7 @@ object PackageHelper {
     }
 
     fun uninstallRootApk(pkg: String): Boolean {
-        val app = getAppName(pkg)
+        val app = getAppNameRoot(pkg)
         Shell.su("rm -rf $apkInstallPath/${app.capitalize(Locale.ROOT)}").exec()
         Shell.su("rm $apkInstallPath/post-fs-data.d/$app.sh").exec()
         Shell.su("rm $apkInstallPath/service.d/$app.sh").exec()
@@ -432,7 +439,7 @@ object PackageHelper {
                     val apkFPath = "$apkInstallPath/${app.capitalize(Locale.ROOT)}/base.apk"
                     if (moveAPK(apath, apkFPath, pkg, context)) {
                         if (chConV(apkFPath, context)) {
-                            if (setupScript(apkFPath, path, app, pkg)) {
+                            if (setupScript(apkFPath, path, app, pkg, context)) {
                                 return linkApp(apkFPath, pkg, path)
                             }
                         }
@@ -443,21 +450,14 @@ object PackageHelper {
         return false
     }
 
-    private fun setupScript(apkFPath: String, path: String, app: String, pkg: String): Boolean
+    private fun setupScript(apkFPath: String, path: String, app: String, pkg: String, context: Context): Boolean
     {
-
-        val shellFileZ = SuFile.open("/data/adb/service.d/$app.sh")
-        shellFileZ.createNewFile()
-
-        val code = """#!/system/bin/sh${"\n"}while [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ]; do sleep 1; done${"\n"}mount -o bind $apkFPath $path"""
-        if (shellFileZ.exists()) {
-            try {
-                SuFileOutputStream(shellFileZ).use { out ->  out.write(code.toByteArray())}
-                Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep $pkg | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
-                return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
+        try {
+            context.writeServiceDScript(apkFPath, path, app)
+            Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep $pkg | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
+            return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
+        } catch (e: IOException) {
+            e.printStackTrace()
         }
         return false
     }
@@ -603,7 +603,7 @@ object PackageHelper {
     }
 
     //get path of the installed youtube
-    private fun getPackageDir(context: Context, pkg: String): String?
+    fun getPackageDir(context: Context, pkg: String): String?
     {
         val p = getPkgInfo(pkg, context)
         return if(p != null)

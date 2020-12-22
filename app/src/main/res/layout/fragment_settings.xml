@@ -50,10 +50,18 @@
                 app:preference_title="@string/variant" />
 
             <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/serviced_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Script Sleep Timer"
+                android:visibility="gone"/>
+
+            <com.vanced.manager.ui.core.EmptyPreference
                 android:id="@+id/clearFiles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:preference_title="@string/clear_files" />
+
         </com.vanced.manager.ui.core.PreferenceCategory>
 
         <com.vanced.manager.ui.core.PreferenceCategory
@@ -86,6 +94,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:preference_title="@string/select_apps" />
+
         </com.vanced.manager.ui.core.PreferenceCategory>
+
     </LinearLayout>
+
 </androidx.core.widget.NestedScrollView>
