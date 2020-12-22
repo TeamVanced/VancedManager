@@ -3,7 +3,9 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.edit
+import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogServicedTimerBinding
 import com.vanced.manager.utils.Extensions.getDefaultPrefs
@@ -41,6 +43,7 @@ class ServiceDTimerDialog : BindingDialogFragment<DialogServicedTimerBinding>() 
                         getPackageDir(requireActivity(), getPkgNameRoot(app))?.let { it1 -> requireActivity().writeServiceDScript(apkFPath, it1, app) }
                     }
                 } catch (e: IOException) {
+                    Toast.makeText(requireActivity(), R.string.script_save_failed, Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
 

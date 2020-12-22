@@ -53,7 +53,7 @@
                 android:id="@+id/serviced_timer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:preference_title="Script Sleep Timer"
+                app:preference_title="@string/script_sleep_timer"
                 android:visibility="gone"/>
 
             <com.vanced.manager.ui.core.EmptyPreference

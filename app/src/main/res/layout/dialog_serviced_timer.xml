@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/serviced_header"
-            tools:text="Script Sleep Timer"
+            tools:text="@string/script_sleep_timer"
             style="@style/DialogCardTitle" />
 
         <com.google.android.material.slider.Slider
