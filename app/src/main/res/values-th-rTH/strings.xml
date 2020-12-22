@@ -36,6 +36,11 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">สีหลัก</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">ลักษณะที่ปรากฏ</string>
     <string name="category_behaviour">ลักษณะการทำงาน</string>
     <string name="clear_files">ล้างไฟล์ที่ดาวน์โหลดไว้</string>
@@ -46,6 +51,8 @@
     <string name="link_title">ใช้แท็บที่กำหนดเองของ Chrome</string>
     <string name="link_custom_tabs">ลิ้งค์จะเปิดไปยังแท็บที่กำหนดเองของ Chrome</string>
     <string name="system_default">ค่าเริ่มต้นของระบบ</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">ธีม</string>
     <string name="theme_dark">ธีมมืด</string>
     <string name="theme_light">ธีมสว่าง</string>
