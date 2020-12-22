@@ -21,8 +21,8 @@ object LanguageHelper {
             language == "System Default" -> context.getString(R.string.system_default)
             language.length > 2 -> {
                 val loc = Locale(
-                        language.substring(0, language.length - 3),
-                        language.substring(language.length - 2)
+                    language.substring(0, language.length - 3),
+                    language.substring(language.length - 2)
                 )
                 loc.getDisplayName(loc).capitalize(Locale.ENGLISH)
             }
@@ -62,8 +62,8 @@ object LanguageHelper {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (!Settings.canDrawOverlays(this)) {
                 val intent = Intent(
-                        Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                        Uri.parse("package:$packageName")
+                    Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                    Uri.parse("package:$packageName")
                 )
                 startActivityForResult(intent, 69)
                 return

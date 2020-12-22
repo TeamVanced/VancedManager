@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.edit
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
@@ -67,6 +68,14 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                 showDialog(VancedLanguageSelectionDialog())
             }
             vancedInstall.setOnClickListener {
+                if (showLang.isEmpty()) {
+                    with("en") en@ {
+                        showLang.add(this)
+                        installPrefs.edit {
+                            putString("lang", this@en)
+                        }
+                    }
+                }
                 dismiss()
                 showDialog(
                     AppDownloadDialog.newInstance(
