@@ -36,6 +36,11 @@
     <string name="support_us">დაგვიჭირეთ მხარი</string>
     <!-- Settings -->
     <string name="accent_color">აქცენტის ფერი</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">შესახედაობა</string>
     <string name="category_behaviour">ფუნქციები</string>
     <string name="clear_files">გადმოწერილი ფაილების გაწმენდა</string>
@@ -46,6 +51,8 @@
     <string name="link_title">გამოიყენეთ Chrome Custom Tabs</string>
     <string name="link_custom_tabs">ლინკები გაიხსნება Chrome Custom Tabs-ში</string>
     <string name="system_default">სისტემის ნაგულისხმევი</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">თემა</string>
     <string name="theme_dark">მუქი თემა</string>
     <string name="theme_light">ღია თემა</string>
