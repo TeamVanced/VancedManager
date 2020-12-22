@@ -32,15 +32,10 @@
     <string name="root_not_granted">Root nie został przyznany</string>
     <string name="unavailable">Niedostępne</string>
     <string name="update">Aktualizuj</string>
-    <string name="social_media">Social Media</string>
+    <string name="social_media">Media Społecznościowe</string>
     <string name="support_us">Wesprzyj nas</string>
     <!-- Settings -->
     <string name="accent_color">Kolor Akcentu</string>
-    <string name="accent_blue">Niebieski</string>
-    <string name="accent_green">Zielony</string>
-    <string name="accent_purple">Fioletowy</string>
-    <string name="accent_red">Czerwony</string>
-    <string name="accent_yellow">Żółty</string>
     <string name="category_appearance">Wygląd</string>
     <string name="category_behaviour">Zachowanie</string>
     <string name="clear_files">Wyczyść pobrane pliki</string>
@@ -102,7 +97,7 @@
     <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Instalacja nie powiodła się, ponieważ użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z aplikacji YouTube, a następnie spróbuj ponownie.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Instalacja nie powiodła się z powodu konfliktu aplikacji z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
     <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>

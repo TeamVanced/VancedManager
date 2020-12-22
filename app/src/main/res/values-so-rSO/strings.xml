@@ -8,14 +8,14 @@
     <string name="select_apps">Dooro apps-ka</string>
     <!-- Main Activity -->
     <string name="title_about">Anaga</string>
-    <string name="title_home">Manager</string>
+    <string name="title_home">Maamule</string>
     <string name="title_settings">Fadhiga</string>
-    <string name="update_manager">Cusboonaysii Manager-ka</string>
+    <string name="update_manager">Cusboonaysii</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Aaladaada miyay root-garaysan tahay?</string>
     <string name="grant_root">U Ogolow Fasaxa Root-ka</string>
     <string name="select_at_least_one_app">Ugu yaraan hal app dooro!</string>
-    <string name="select_apps_music">Vanced, laakiin loogu talagalay YouTube Music!\nwuu ka yara wax qabad yaryahay Vanced-ka laakiin baahiyahaaga wuu fulin.</string>
+    <string name="select_apps_music">Waa Vanced, laakiin loogu talagalay YouTube Music!\nwuu ka yara wax qabad yaryahay Vanced-ka laakiin baahiyahaaga wuu fulin.</string>
     <string name="select_apps_vanced">YouTube Vanced waa YouTube-kii android ka caadiga ahaa, laakiin wuu ka fiican yahay!</string>
     <string name="lets_get_started">Aan bilawno</string>
     <string name="willing_to_use_root">Ma aqaano wuxuu kani yahay ama ma doonayo inaan isticmaalo midka root-ka ah? Aayar taabo falaadha buluuga ah ee hoose!</string>
@@ -32,15 +32,10 @@
     <string name="root_not_granted">\'Root\' looma fasaxin</string>
     <string name="unavailable">Lama heli karo</string>
     <string name="update">Cusboonaysii</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">Baraha Bulshada</string>
+    <string name="support_us">Na taageer</string>
     <!-- Settings -->
     <string name="accent_color">Midabka</string>
-    <string name="accent_blue">Buluug</string>
-    <string name="accent_green">Cagaar</string>
-    <string name="accent_purple">Baarbal</string>
-    <string name="accent_red">Guduud</string>
-    <string name="accent_yellow">Jaalle</string>
     <string name="category_appearance">Muuqaalka</string>
     <string name="category_behaviour">Dabeecada</string>
     <string name="clear_files">Nadiifi waxyaabaha lasoo dajiyay</string>
@@ -48,15 +43,15 @@
     <string name="firebase_title">Falanqaynta Firebase</string>
     <string name="firebase_summary">Tani waxay noo ogolaanaysaa inaan uruurino xog ku saabsan shaqaynta app-ka iyo kaydinta xogta khaladaadka dhaca</string>
     <string name="language_title">Luuqada</string>
-    <string name="link_title">Isticmaal Taababka Chrome</string>
-    <string name="link_custom_tabs">Linkiyadu waxay ku furmi doonaan Taababka Chrome-ka ee loogu talagalay</string>
+    <string name="link_title">Isticmaal Daaqadaha Chrome</string>
+    <string name="link_custom_tabs">Linkiyadu waxay ku furmi doonaan daaqadaha Chrome-ka ee loogu talagalay</string>
     <string name="system_default">Sida aaladu tahay</string>
     <string name="theme">Nashqada</string>
     <string name="theme_dark">Nashqad Madow</string>
     <string name="theme_light">Nashqad Cad</string>
     <string name="update_url">Cusboonaysii Ciwaanka Kanaanlka</string>
-    <string name="push_notifications">%1$s Ogaysiisyada soodhaca</string>
-    <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyada marka wax cusub %1$s lasoo galiyo</string>
+    <string name="push_notifications">%1$s Ogaysiisyadisa soodhaca</string>
+    <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyo marka mid cusub oo %1$s ah lasoo saaro</string>
     <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
     <string name="update_not_found">Majiro wax cusub</string>
     <string name="variant">Nooca</string>
@@ -102,7 +97,7 @@
     <string name="installation_aborted">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa joojiyay.</string>
     <string name="installation_blocked">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa xanibay.</string>
     <string name="installation_downgrade">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa isku dayay inuu nooc hore ku shubo. Ka saar cusboonaysiinta xaga app-ka YouTube-ka caadiga ah, kadibna markale isku day.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Ku shubidii way guuldaraysatay sababtoo ah app-ka waxay iskhilaafeen mid horay ugu jiray aalada. Ka saar nooca Vanced-ka ee kujira, kadib markale ku celi.</string>
     <string name="installation_failed">Ku shubidii way guuldaraysatay sababo aan la garanaynin awgood, kusoo biir Telegram-kanaga ama Discord-ka si aad caawin dheerad ah u hesho.</string>
     <string name="installation_incompatible">Ku shubidii way guuldaraysatay sababtoo ah faylka kuma shaqaynayo aaladaada. Xaga Fadhiga ka saar waxyaabaha lasoo dajiyay, kadib markale isku day.</string>
     <string name="installation_invalid">Ku shubidii way guuldaraysatay sababtoo ah faylashii apk-ga ayaa khalkhalsan, markale isku day.</string>

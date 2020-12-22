@@ -32,15 +32,10 @@
     <string name="root_not_granted">ڕێگەپێدانی Root نەدراوە</string>
     <string name="unavailable">بەردەست نیە</string>
     <string name="update">نوێکردنەوە</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">تۆڕە کۆمەڵایەتییەکان</string>
+    <string name="support_us">پشتگیریکردن</string>
     <!-- Settings -->
     <string name="accent_color">ڕەنگی سەرەکی</string>
-    <string name="accent_blue">شین</string>
-    <string name="accent_green">سەوز</string>
-    <string name="accent_purple">مۆر</string>
-    <string name="accent_red">سوور</string>
-    <string name="accent_yellow">زەرد</string>
     <string name="category_appearance">ڕووکار</string>
     <string name="category_behaviour">ڕێکخستن</string>
     <string name="clear_files">سڕینەوەی فایلە داگیراوەکان</string>
@@ -96,13 +91,13 @@
     <string name="chown_fail">سەرکەوتو نەبوو `chown` بۆ دانان وەک بەرنامەی سیستەم, تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="error_downloading">کێشە ڕوویدا لە داگرتنی %1$s</string>
     <string name="failed_uninstall">سڕینەوەی %1$s سەرکەوتو نەبوو</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">گۆڕینی ڕەنگ سەرکەوتو نەبوو</string>
     <string name="files_missing_va">سەرکەوتو نەبوو لە دۆزینەوەی فایلە پێویستەکان بۆ دامەزراندن، فایلە پێویستیەکان دووبارە دابگرەوە بۆ جێگیرکردن، پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="ifile_missing">سەرکەوتوو نەبوو لەدۆزینەوەی شوێنی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە بیرگەدا، تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_aborted">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر کۆتاییهێنا بە دابەزاندنەکە.</string>
     <string name="installation_blocked">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر ڕێگریکرد لە دابەزاندنەکە.</string>
     <string name="installation_downgrade">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر هەوڵیدا بۆ نزمکردنەوەی وەشان، نوێکارییەکانی بەرنامەی بنەڕەتی YouTube بسڕەوە و دووبارە هەوڵبدەرەوە.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی وەشانێکی تری بەرنامەکە پێشتر دامەزرێنراوە، وەشانی ئێستای Vanced بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_failed">دامەزراندن سەرکەوتو نەبوو لەبەر هۆکاری نادیار، پەیوەندی بکە بە تێلێگرامەکەمان یان Discord بۆ پشتگیری زیاتر.</string>
     <string name="installation_incompatible">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی فایلی دابەزاندن گونجاو نییە لەگەڵ ئامێرەکەت، فایلە داگیراوەکان بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_invalid">دامەزراندن سەرکەوتوو نەبوو لەبەرئەوەی فایلی apk تێکچووە، تکایە دووبارە هەوڵبدرەوە.</string>
