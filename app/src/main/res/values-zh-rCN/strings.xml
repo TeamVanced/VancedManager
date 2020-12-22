@@ -36,6 +36,11 @@
     <string name="support_us">支持我们</string>
     <!-- Settings -->
     <string name="accent_color">强调色</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">外观</string>
     <string name="category_behaviour">行为</string>
     <string name="clear_files">清除已下载文件</string>
@@ -46,6 +51,8 @@
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">链接会使用 Chrome Custom Tabs 打开</string>
     <string name="system_default">系统默认</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">主题</string>
     <string name="theme_dark">深色主题</string>
     <string name="theme_light">浅色主题</string>
