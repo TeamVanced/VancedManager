@@ -36,6 +36,11 @@
     <string name="support_us">Steun ons</string>
     <!-- Settings -->
     <string name="accent_color">Accentkleur</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Weergave</string>
     <string name="category_behaviour">Gedrag</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Aangepaste Chrome-tabs gebruiken</string>
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
     <string name="system_default">Systeemstandaard</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">Thema</string>
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht thema</string>
