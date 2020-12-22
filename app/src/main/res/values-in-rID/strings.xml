@@ -36,6 +36,11 @@
     <string name="support_us">Dukung kami</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Penampilan</string>
     <string name="category_behaviour">Perilaku</string>
     <string name="clear_files">Hapus file yang diunduh</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="system_default">Standar Sistem</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
