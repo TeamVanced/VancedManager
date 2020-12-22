@@ -36,6 +36,11 @@
     <string name="support_us">지원하기</string>
     <!-- Settings -->
     <string name="accent_color">강조 색상</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">모양</string>
     <string name="category_behaviour">동작</string>
     <string name="clear_files">다운로드된 파일 모두 지우기</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="system_default">시스템 기본값</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">테마</string>
     <string name="theme_dark">다크 테마</string>
     <string name="theme_light">라이트 테마</string>
