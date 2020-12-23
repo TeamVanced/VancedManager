@@ -48,6 +48,18 @@
             app:layout_constraintTop_toBottomOf="@id/app_install_button"
             app:tint="?colorLinkImage" />
 
+        <ImageButton
+            android:id="@+id/app_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_launch_24"
+            app:layout_constraintEnd_toStartOf="@id/app_uninstall"
+            app:layout_constraintTop_toBottomOf="@id/app_install_button"
+            android:layout_marginEnd="4dp"
+            app:tint="?colorLinkImage" />
+
         <com.google.android.flexbox.FlexboxLayout
             android:id="@+id/app_remote_version_container"
             android:layout_width="match_parent"

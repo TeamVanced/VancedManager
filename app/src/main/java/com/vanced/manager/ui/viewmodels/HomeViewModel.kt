@@ -1,5 +1,9 @@
 package com.vanced.manager.ui.viewmodels
 
+import android.content.ActivityNotFoundException
+import android.content.ComponentName
+import android.content.Intent
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
@@ -69,6 +73,21 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             }
             
         InternetTools.openUrl(url, color, activity)
+    }
+
+    fun launchApp(app: String, isRoot: Boolean) {
+        val componentName = when (app) {
+            activity.getString(R.string.vanced) -> if (isRoot) ComponentName(vancedRootPkg, "$vancedRootPkg.HomeActivity") else ComponentName(vancedPkg, "$vancedRootPkg.HomeActivity")
+            activity.getString(R.string.music) -> if (isRoot) ComponentName(musicRootPkg, "$musicRootPkg.activities.MusicActivity") else ComponentName(musicPkg, "$musicRootPkg.activities.MusicActivity")
+            activity.getString(R.string.microg) -> ComponentName(microgPkg, "org.microg.gms.ui.SettingsActivity")
+            else -> throw IllegalArgumentException("Can't open this app")
+        }
+        try {
+            activity.startActivity(Intent().setComponent(componentName))
+        } catch (e: ActivityNotFoundException) {
+            Log.d("VMHMV", e.toString())
+        }
+
     }
 
     fun openInstallDialog(view: View, app: String) {

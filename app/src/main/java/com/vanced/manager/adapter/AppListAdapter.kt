@@ -45,9 +45,16 @@ class AppListAdapter(
                 appUninstall.setOnClickListener {
                     dataModel?.appPkg?.let { it1 -> viewModel.uninstallPackage(it1) }
                 }
-                appUninstall.isVisible = dataModel?.isAppInstalled?.value == true
+                appLaunch.setOnClickListener {
+                    viewModel.launchApp(apps[position], isRoot)
+                }
+                with(dataModel?.isAppInstalled?.value) {
+                    appUninstall.isVisible = this == true
+                    appLaunch.isVisible = this == true
+                }
                 dataModel?.isAppInstalled?.observe(lifecycleOwner) {
                     appUninstall.isVisible = it
+                    appLaunch.isVisible = it
                 }
                 appRemoteVersion.text = dataModel?.versionName?.value
                 dataModel?.versionName?.observe(lifecycleOwner) {
