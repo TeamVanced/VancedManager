@@ -36,11 +36,11 @@
     <string name="support_us">ഞങ്ങളെ പിന്തുണയ്ക്കുക</string>
     <!-- Settings -->
     <string name="accent_color">ആക്‌സന്റ് വർണ്ണം</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
+    <string name="accent_blue">നീല</string>
+    <string name="accent_green">പച്ച</string>
+    <string name="accent_purple">പർപ്പിൾ</string>
+    <string name="accent_red">ചുവപ്പ്</string>
+    <string name="accent_yellow">മഞ്ഞ</string>
     <string name="category_appearance">രൂപം</string>
     <string name="category_behaviour">പെരുമാറ്റം</string>
     <string name="clear_files">ഡൗൺലോഡുചെയ്‌ത ഫയലുകൾ മായ്‌ക്കുക</string>
@@ -51,8 +51,8 @@
     <string name="link_title">Chrome Custom ടാബുകൾ ഉപയോഗിക്കുക</string>
     <string name="link_custom_tabs">Chrome Custom ടാബുകളിൽ ലിങ്കുകൾ തുറക്കും</string>
     <string name="system_default">സിസ്റ്റം സ്ഥിരസ്ഥിതി</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">പുതിയ ടൈമർ മൂല്യം സംരക്ഷിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="script_sleep_timer">സ്ക്രിപ്റ്റ് സ്ലീപ്പ് ടൈമർ</string>
     <string name="theme">തീം</string>
     <string name="theme_dark">ഡാർക്ക് തീം</string>
     <string name="theme_light">ലൈറ്റ് തീം</string>
