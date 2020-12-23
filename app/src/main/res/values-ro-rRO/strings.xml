@@ -36,11 +36,11 @@
     <string name="support_us">Ajutați-ne</string>
     <!-- Settings -->
     <string name="accent_color">Nuanță culoare</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
+    <string name="accent_blue">Albastru</string>
+    <string name="accent_green">Verde</string>
+    <string name="accent_purple">Mov</string>
+    <string name="accent_red">Roșu</string>
+    <string name="accent_yellow">Galben</string>
     <string name="category_appearance">Aspect</string>
     <string name="category_behaviour">Comportament</string>
     <string name="clear_files">Ştergeţi fişierele descărcate</string>
@@ -51,8 +51,8 @@
     <string name="link_title">Utilizează file personalizate Chrome</string>
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="system_default">Setarea implicită a sistemului</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Salvarea noii valori a temporizatorului a eșuat</string>
+    <string name="script_sleep_timer">Temporizator pentru modul de veghe</string>
     <string name="theme">Temă</string>
     <string name="theme_dark">Temă întunecată</string>
     <string name="theme_light">Temă deschisă</string>
