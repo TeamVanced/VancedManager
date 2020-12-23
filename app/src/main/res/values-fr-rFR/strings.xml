@@ -36,11 +36,11 @@
     <string name="support_us">Soutenez-nous</string>
     <!-- Settings -->
     <string name="accent_color">Couleur d\'accentuation</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
+    <string name="accent_blue">Bleu</string>
+    <string name="accent_green">Vert</string>
+    <string name="accent_purple">Violet</string>
+    <string name="accent_red">Rouge</string>
+    <string name="accent_yellow">Jaune</string>
     <string name="category_appearance">Apparence</string>
     <string name="category_behaviour">Comportement</string>
     <string name="clear_files">Effacer les fichiers téléchargés</string>
@@ -51,8 +51,8 @@
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="system_default">Système par défaut</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Impossible d\'enregistrer la nouvelle valeur du minuteur</string>
+    <string name="script_sleep_timer">Définir un arrêt programmé</string>
     <string name="theme">Thème</string>
     <string name="theme_dark">Thème sombre</string>
     <string name="theme_light">Thème clair</string>
