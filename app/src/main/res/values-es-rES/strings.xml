@@ -32,15 +32,15 @@
     <string name="root_not_granted">Acceso root no concedido</string>
     <string name="unavailable">No Disponible</string>
     <string name="update">Actualizar</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">Mídias Sociais</string>
+    <string name="support_us">Apoyanos</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
+    <string name="accent_blue">Azul</string>
+    <string name="accent_green">Verde</string>
+    <string name="accent_purple">Morado</string>
+    <string name="accent_red">Rojo</string>
+    <string name="accent_yellow">Amarillo</string>
     <string name="category_appearance">Apariencia</string>
     <string name="category_behaviour">Comportamiento</string>
     <string name="clear_files">Limpiar archivos descargados</string>
@@ -51,8 +51,8 @@
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="system_default">Predeterminado del sistema</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">No se pudo guardar el nuevo valor del temporizador</string>
+    <string name="script_sleep_timer">Temporizador de suspensión de script</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Oscuro</string>
     <string name="theme_light">Tema Claro</string>
@@ -104,7 +104,7 @@
     <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
     <string name="installation_blocked">La instalación ha fallado debido a que el usuario bloqueo la instalación.</string>
     <string name="installation_downgrade">La instalación ha fallado debido a que el usuario intento degradar el paquete. Desinstale las actualizaciones de la app original de YouTube y vuelva a intentarlo.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">La instalación ha fallado debido a que la app entra en conflicto con una app ya instalada. Desinstale la version actual de Vanced y vuelva a intentarlo.</string>
     <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
     <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
