@@ -52,7 +52,7 @@
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="system_default">Standar Sistem</string>
     <string name="script_save_failed">Gagal untuk menyimpan nilai timer baru</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_sleep_timer">Pewaktu Skript Tidur</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
