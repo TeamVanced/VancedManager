@@ -51,8 +51,8 @@
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="system_default">系統預設</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">儲存定時器時間失敗</string>
+    <string name="script_sleep_timer">設定睡眠定時器</string>
     <string name="theme">主題</string>
     <string name="theme_dark">深色主題</string>
     <string name="theme_light">淺色主題</string>
