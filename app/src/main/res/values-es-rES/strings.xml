@@ -104,7 +104,7 @@
     <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
     <string name="installation_blocked">La instalación ha fallado debido a que el usuario bloqueo la instalación.</string>
     <string name="installation_downgrade">La instalación ha fallado debido a que el usuario intento degradar el paquete. Desinstale las actualizaciones de la app original de YouTube y vuelva a intentarlo.</string>
-    <string name="installation_conflict">La instalación ha fallado debido a que la app entra en conflicto con una app ya instalada. Desinstale la versión actual de Vanced y vuelva a intentarlo.</string>
+    <string name="installation_conflict">La instalación ha fallado debido a que la app entra en conflicto con una app ya instalada. Desinstala la versión actual de Vanced y vuelve a intentarlo.</string>
     <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
     <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
