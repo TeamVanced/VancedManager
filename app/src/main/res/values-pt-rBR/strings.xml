@@ -5,15 +5,15 @@
     <string name="close">Fechar</string>
     <string name="reset">Resetar</string>
     <string name="save">Salvar</string>
-    <string name="select_apps">Selecione seus aplicativos</string>
+    <string name="select_apps">Selecione Seus Aplicativos</string>
     <!-- Main Activity -->
     <string name="title_about">Sobre</string>
     <string name="title_home">Gerenciador</string>
     <string name="title_settings">Configurações</string>
-    <string name="update_manager">Gerenciador de atualização</string>
+    <string name="update_manager">Gerenciador de Atualização</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Seu dispositivo tem root?</string>
-    <string name="grant_root">Conceder permissão de root</string>
+    <string name="are_you_rooted">Seu Dispositivo Tem Root?</string>
+    <string name="grant_root">Conceder Permissão de Root</string>
     <string name="select_at_least_one_app">Selecione pelo menos um aplicativo!</string>
     <string name="select_apps_music">Vanced, mas para o YouTube Music!\nrelativamente menos funções, mas satisfaz suas necessidades.</string>
     <string name="select_apps_vanced">YouTube Vanced é o aplicativo nativo de Android YouTube, mas melhor!</string>
