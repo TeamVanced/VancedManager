@@ -32,7 +32,7 @@
     <string name="root_not_granted">ไม่ได้รับสิทธิ์ของรูท</string>
     <string name="unavailable">ไม่สามารถใช้ได้</string>
     <string name="update">อัพเดท</string>
-    <string name="social_media">สื่อสังคมออนไลน์</string>
+    <string name="social_media">Social Media</string>
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">สีหลัก</string>
