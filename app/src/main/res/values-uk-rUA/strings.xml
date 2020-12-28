@@ -15,7 +15,7 @@
     <string name="are_you_rooted">На Пристрої Є Root Права?</string>
     <string name="grant_root">Надати Root Права</string>
     <string name="select_at_least_one_app">Оберіть принаймні один додаток!</string>
-    <string name="select_apps_music">Vanced, але для YouTube Music!\nвідносно не багата на можливості, але задовольняє ваші потреби.</string>
+    <string name="select_apps_music">Vanced, але для YouTube Music!\nВідносно не багата на можливості, але задовольняє ваші потреби.</string>
     <string name="select_apps_vanced">YouTube Vanced - це стандартний Android YouTube додаток, але краще!</string>
     <string name="lets_get_started">Почнімо</string>
     <string name="willing_to_use_root">Не знаєте, що це або не хочете використовувати рутовану версію? Просто натисніть синю стрілку внизу!</string>
@@ -52,7 +52,7 @@
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="system_default">Системна</string>
     <string name="script_save_failed">Неможливо зберегти нове значення таймера</string>
-    <string name="script_sleep_timer">Скрипт Таймера сну</string>
+    <string name="script_sleep_timer">Скрипт таймера сну</string>
     <string name="theme">Тема</string>
     <string name="theme_dark">Темна тема</string>
     <string name="theme_light">Світла тема</string>
