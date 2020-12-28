@@ -36,11 +36,11 @@
     <string name="support_us">Bizi dəstəklə</string>
     <!-- Settings -->
     <string name="accent_color">Tema rəngi</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
+    <string name="accent_blue">Göy</string>
+    <string name="accent_green">Yaşıl</string>
+    <string name="accent_purple">Bənövşəyi</string>
+    <string name="accent_red">Qırmızı</string>
+    <string name="accent_yellow">Sarı</string>
     <string name="category_appearance">Görünüş</string>
     <string name="category_behaviour">Davranış</string>
     <string name="clear_files">Endirilmiş faylları təmizlə</string>
@@ -51,8 +51,8 @@
     <string name="link_title">Chrome Özəl Vərəqlərini istifadə et</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özəl Vərəqlərində açılacaq</string>
     <string name="system_default">İlkin Sistem</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Yeni zamanlayıcı qiymətini saxlamaq olmadı</string>
+    <string name="script_sleep_timer">Zamanlayıcı tənzimləməsi</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tünd mövzu</string>
     <string name="theme_light">Açıq mövzu</string>
