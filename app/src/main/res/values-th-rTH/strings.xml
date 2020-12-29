@@ -104,7 +104,7 @@
     <string name="installation_aborted">การติดตั้งล้มเหลวเนื่องจากผู้ใช้ยกเลิกการติดตั้ง</string>
     <string name="installation_blocked">การติดตั้งล้มเหลวเนื่องจากผู้ใช้บล็อกการติดตั้ง</string>
     <string name="installation_downgrade">การติดตั้งล้มเหลว เนื่องจากผู้ใช้พยายามดาวน์เกรดแพ็กเกจ. กรุณาถอนการติดตั้งการอัปเดตจากแอป YouTube แล้วลองติดตั้งใหม่อีกครั้ง</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">การติดตั้งล้มเหลวเนื่องจากแอปขัดแย้งกับแอปที่ติดตั้งไว้แล้ว กรุณาถอนการติดตั้ง Vanced แล้วลองใหม่อีกครั้ง</string>
     <string name="installation_failed">การติดตั้งล้มเหลวโดยไม่ทราบสาเหตุ ลองเข้าร่วม Telegram หรือ Discord ของเรา เพื่อรับการสนับสนุนเพิ่มเติม</string>
     <string name="installation_incompatible">การติดตั้งล้มเหลวเนื่องจากไฟล์การติดตั้งเข้ากันไม่ได้กับอุปกรณ์ของคุณ กรุณาล้างไฟล์ที่ดาวน์โหลดในการตั้งค่า แล้วลองอีกครั้ง</string>
     <string name="installation_invalid">การติดตั้งล้มเหลวเนื่องจากไฟล์ apk เสียหายโปรดลองอีกครั้ง</string>
