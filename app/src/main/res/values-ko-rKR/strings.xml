@@ -5,12 +5,12 @@
     <string name="close">닫기</string>
     <string name="reset">초기화</string>
     <string name="save">저장</string>
-    <string name="select_apps">앱을 선택하세요</string>
+    <string name="select_apps">설치할 앱 선택하기</string>
     <!-- Main Activity -->
     <string name="title_about">정보</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">설정</string>
-    <string name="update_manager">업데이트 관리</string>
+    <string name="update_manager">매니저 업데이트</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">기기가 루팅되어 있나요?</string>
     <string name="grant_root">루트 권한 부여</string>
@@ -92,7 +92,7 @@
     <string name="select_at_least_one_lang">적어도 하나의 언어를 선택해주세요!</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 개발자</string>
-    <string name="sources">소스</string>
+    <string name="sources">소스 코드</string>
     <string name="vanced_team">Vanced 팀</string>
     <!-- Error messages -->
     <string name="chown_fail">APK의 소유권을 시스템 관리자로 변경하던 중에 오류가 발생하였습니다. 다시 시도하십시오.</string>
