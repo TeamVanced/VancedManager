@@ -36,6 +36,11 @@
     <string name="support_us">Toetage meid</string>
     <!-- Settings -->
     <string name="accent_color">Rõhuvärv</string>
+    <string name="accent_blue">Sinine</string>
+    <string name="accent_green">Roheline</string>
+    <string name="accent_purple">Lilla</string>
+    <string name="accent_red">Punane</string>
+    <string name="accent_yellow">Kollane</string>
     <string name="category_appearance">Välimus</string>
     <string name="category_behaviour">Käitumine</string>
     <string name="clear_files">Tühjenda allalaaditud failid</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Kasuta Chrome kohandatud vahekaarte</string>
     <string name="link_custom_tabs">Lingid avatakse Chrome kohandatud vahekaartides</string>
     <string name="system_default">Süsteemi vaikimisi</string>
+    <string name="script_save_failed">Taimeri uue väärtuse salvestamine ebaõnnestus</string>
+    <string name="script_sleep_timer">Unetaimeri skript</string>
     <string name="theme">Kujundus</string>
     <string name="theme_dark">Tume Kujundus</string>
     <string name="theme_light">Hele Kujundus</string>

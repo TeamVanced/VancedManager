@@ -10,7 +10,7 @@
     <string name="title_about">Giới thiệu</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Cài đặt</string>
-    <string name="update_manager">Cật nhật Manager</string>
+    <string name="update_manager">Cập nhật Manager</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Thiết Bị Của Bạn Đã Được Root?</string>
     <string name="grant_root">Cấp quyền root</string>
@@ -36,6 +36,11 @@
     <string name="support_us">Hỗ trợ chúng tôi</string>
     <!-- Settings -->
     <string name="accent_color">Màu chủ đạo</string>
+    <string name="accent_blue">Xanh dương</string>
+    <string name="accent_green">Xanh lá</string>
+    <string name="accent_purple">Tím</string>
+    <string name="accent_red">Đỏ</string>
+    <string name="accent_yellow">Vàng</string>
     <string name="category_appearance">Giao diện</string>
     <string name="category_behaviour">Hành vi</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Sử dụng Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Các liên kết sẽ mở trong Chrome Custom Tabs</string>
     <string name="system_default">Mặc định hệ thống</string>
+    <string name="script_save_failed">Không thể lưu giá trị hẹn giờ mới</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">Nền</string>
     <string name="theme_dark">Nền tối</string>
     <string name="theme_light">Nền sáng</string>
