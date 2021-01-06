@@ -52,7 +52,7 @@
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="system_default">Προεπιλογή Συστήματος</string>
     <string name="script_save_failed">Αποτυχία αποθήκευσης νέας τιμής χρονοδιακόπτη</string>
-    <string name="script_sleep_timer">Χρονοδιακόπτης αδράνειας σεναρίων</string>
+    <string name="script_sleep_timer">Σενάριο χρονοδιακόπτη αδράνειας</string>
     <string name="theme">Θέμα</string>
     <string name="theme_dark">Σκουρόχρωμο Θέμα</string>
     <string name="theme_light">Ανοιχτόχρωμο Θέμα</string>
