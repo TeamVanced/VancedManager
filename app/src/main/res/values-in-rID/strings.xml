@@ -64,7 +64,7 @@
     <string name="variant">Varian</string>
     <!-- Dialogs -->
     <string name="advanced">Tingkat Lanjut</string>
-    <string name="app_install_files_detected">%1$s file instalasi terdeteksi!</string>
+    <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
     <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasangnya?</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
