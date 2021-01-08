@@ -524,8 +524,8 @@ object PackageHelper {
     }
 
     //set chcon to apk_data_file
-    private fun chConV(path: String, context: Context): Boolean {
-        val response = Shell.su("chcon u:object_r:apk_data_file:s0 $path").exec()
+    private fun chConV(apkFPath: String, context: Context): Boolean {
+        val response = Shell.su("chcon u:object_r:apk_data_file:s0 $apkFPath").exec()
         //val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
         return if (response.isSuccess) {
             true
