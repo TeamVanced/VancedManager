@@ -51,8 +51,9 @@
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="system_default">Predeterminado del sistema</string>
-    <string name="script_save_failed">No se pudo guardar el nuevo valor del temporizador</string>
-    <string name="script_sleep_timer">Temporizador para suspensión de script</string>
+    <string name="script_save_failed">Error al guardar el nuevo valor de tiempo</string>
+    <string name="script_sleep_timer">Script Root de Tiempo para Dormir</string>
+    <string name="script_sleep_timer_description">Ajustar el valor de tiempo para dormir en el script /data/adb/service.d/app.sh, útil para arreglar problemas de montaje</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Oscuro</string>
     <string name="theme_light">Tema Claro</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
     <string name="installation_blocked">La instalación ha fallado debido a que el usuario bloqueo la instalación.</string>
     <string name="installation_downgrade">La instalación ha fallado debido a que el usuario intento degradar el paquete. Desinstale las actualizaciones de la app original de YouTube y vuelva a intentarlo.</string>
-    <string name="installation_conflict">La instalación ha fallado debido a que la app entra en conflicto con una app ya instalada. Desinstala la versión actual de Vanced y vuelve a intentarlo.</string>
+    <string name="installation_conflict">La instalación ha fallado porque la aplicación entra en conflicto con una aplicación ya instalada. Desinstala la versión actual de la aplicación y vuelve a intentarlo.</string>
     <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
     <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
