@@ -21,7 +21,7 @@ android {
 
         vectorDrawables.useSupportLibrary = true
 
-        buildConfigField("String[]", "MANAGER_LANGUAGES", "{" + getLanguages().surroundWithQuotes() + "}")
+        buildConfigField("String[]", "MANAGER_LANGUAGES", "{" + getLanguages() + "}")
         buildConfigField("Boolean", "ENABLE_CROWDIN_AUTH", "false")
         buildConfigField("String", "CROWDIN_HASH", "\"${System.getenv("CROWDIN_HASH")}\"")
         buildConfigField("String", "CROWDIN_CLIENT_ID", "\"${System.getenv("CROWDIN_CLIENT_ID")}\"")
@@ -69,9 +69,9 @@ android {
 
 }
 
-fun getLanguages(): Array<String> {
-    val langs = mutableListOf("en", "bn_BD", "bn_IN", "pt_BR", "pt_PT", "zh_CN", "zh_TW")
-    val exceptions = listOf("bn", "pt", "zh")
+fun getLanguages(): String {
+    val langs = arrayListOf("en", "bn_BD", "bn_IN", "pt_BR", "pt_PT", "zh_CN", "zh_TW")
+    val exceptions = arrayOf("bn", "pt", "zh")
     val pattern = "-(\\w+)-".toRegex()
 
     File("$projectDir/src/main/res").listFiles()?.forEach { dir ->
@@ -85,10 +85,8 @@ fun getLanguages(): Array<String> {
             }
         }
     }
-    return langs.sorted().toTypedArray()
+    return langs.joinToString(", ") { "\"$it\"" }
 }
-
-fun Array<String>.surroundWithQuotes(): String = this.joinToString(", ") { "\"$this\"" }
 
 dependencies {
 
