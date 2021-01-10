@@ -36,6 +36,11 @@
     <string name="support_us">Поддержите нас</string>
     <!-- Settings -->
     <string name="accent_color">Второстепенный цвет</string>
+    <string name="accent_blue">Синий</string>
+    <string name="accent_green">Зелёный</string>
+    <string name="accent_purple">Фиолетовый</string>
+    <string name="accent_red">Красный</string>
+    <string name="accent_yellow">Жёлтый</string>
     <string name="category_appearance">Оформление</string>
     <string name="category_behaviour">Поведение</string>
     <string name="clear_files">Удалить загруженные файлы</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Использовать Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
     <string name="system_default">Как в системе</string>
+    <string name="script_save_failed">Не удалось сохранить новое значение таймера</string>
+    <string name="script_sleep_timer">Скрипт Таймера сна</string>
     <string name="theme">Тема оформления</string>
     <string name="theme_dark">Тёмная тема</string>
     <string name="theme_light">Светлая тема</string>

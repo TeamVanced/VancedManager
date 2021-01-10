@@ -36,6 +36,11 @@
     <string name="support_us">Na taageer</string>
     <!-- Settings -->
     <string name="accent_color">Midabka</string>
+    <string name="accent_blue">Buluug</string>
+    <string name="accent_green">Cagaar</string>
+    <string name="accent_purple">Baarbal</string>
+    <string name="accent_red">Guduud</string>
+    <string name="accent_yellow">Jaalle</string>
     <string name="category_appearance">Muuqaalka</string>
     <string name="category_behaviour">Dabeecada</string>
     <string name="clear_files">Nadiifi waxyaabaha lasoo dajiyay</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Isticmaal Daaqadaha Chrome</string>
     <string name="link_custom_tabs">Linkiyadu waxay ku furmi doonaan daaqadaha Chrome-ka ee loogu talagalay</string>
     <string name="system_default">Sida aaladu tahay</string>
+    <string name="script_save_failed">Laguma guulaysan in cadadkaas la kaydiyo</string>
+    <string name="script_sleep_timer">Qor Gooraynta Jiifka</string>
     <string name="theme">Nashqada</string>
     <string name="theme_dark">Nashqad Madow</string>
     <string name="theme_light">Nashqad Cad</string>
@@ -72,7 +79,7 @@
     <string name="redownload">Dib udaji</string>
     <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
     <string name="success">Waa la fuliyay!</string>
-    <string name="app_installation_preferences">%1$s Kushubida Fadhigeeda</string>
+    <string name="app_installation_preferences">Fadhiga Kushubida %1$s</string>
     <string name="vanced_installed">Vanced waa lagu shubay! Fur hadda?</string>
     <string name="version">Tirsiga</string>
     <string name="music_installed">Vanced Music waa lagu shubay! Fur hadda?</string>

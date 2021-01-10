@@ -36,6 +36,11 @@
     <string name="support_us">Sostienici</string>
     <!-- Settings -->
     <string name="accent_color">Colore in Evidenza</string>
+    <string name="accent_blue">Blu</string>
+    <string name="accent_green">Verde</string>
+    <string name="accent_purple">Viola</string>
+    <string name="accent_red">Rosso</string>
+    <string name="accent_yellow">Giallo</string>
     <string name="category_appearance">Aspetto</string>
     <string name="category_behaviour">Comportamento</string>
     <string name="clear_files">Cancella i file scaricati</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Utilizza le Schede Personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle Schede Personalizzate di Chrome</string>
     <string name="system_default">Predefinito di Sistema</string>
+    <string name="script_save_failed">Impossibile salvare il nuovo valore del timer</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Scuro</string>
     <string name="theme_light">Tema Chiaro</string>

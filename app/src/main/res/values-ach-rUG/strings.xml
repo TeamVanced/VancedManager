@@ -36,6 +36,11 @@
     <string name="support_us">crwdns25066:0crwdne25066:0</string>
     <!-- Settings -->
     <string name="accent_color">crwdns1906:0crwdne1906:0</string>
+    <string name="accent_blue">crwdns25070:0crwdne25070:0</string>
+    <string name="accent_green">crwdns25072:0crwdne25072:0</string>
+    <string name="accent_purple">crwdns25074:0crwdne25074:0</string>
+    <string name="accent_red">crwdns25076:0crwdne25076:0</string>
+    <string name="accent_yellow">crwdns25078:0crwdne25078:0</string>
     <string name="category_appearance">crwdns24972:0crwdne24972:0</string>
     <string name="category_behaviour">crwdns25030:0crwdne25030:0</string>
     <string name="clear_files">crwdns24374:0crwdne24374:0</string>
@@ -46,6 +51,8 @@
     <string name="link_title">crwdns23938:0crwdne23938:0</string>
     <string name="link_custom_tabs">crwdns23944:0crwdne23944:0</string>
     <string name="system_default">crwdns24826:0crwdne24826:0</string>
+    <string name="script_save_failed">crwdns25080:0crwdne25080:0</string>
+    <string name="script_sleep_timer">crwdns25082:0crwdne25082:0</string>
     <string name="theme">crwdns1930:0crwdne1930:0</string>
     <string name="theme_dark">crwdns1934:0crwdne1934:0</string>
     <string name="theme_light">crwdns1936:0crwdne1936:0</string>

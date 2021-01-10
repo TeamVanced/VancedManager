@@ -24,7 +24,7 @@
     <string name="app_changelog_tooltip">Uygulama alanına dokunarak değişiklikleri görebilirsin.</string>
     <string name="changelog">Sürüm Notları</string>
     <string name="downloading_file">%1$s indiriliyor</string>
-    <string name="install">Yükleme</string>
+    <string name="install">Yükle</string>
     <string name="button_reinstall">Yeniden yükle</string>
     <string name="version_installed">Yüklü:</string>
     <string name="latest">En son:</string>
@@ -36,6 +36,11 @@
     <string name="support_us">Tıkla, destek ol</string>
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
+    <string name="accent_blue">Mavi</string>
+    <string name="accent_green">Yeşil</string>
+    <string name="accent_purple">Mor</string>
+    <string name="accent_red">Kırmızı</string>
+    <string name="accent_yellow">Sarı</string>
     <string name="category_appearance">Görünüm</string>
     <string name="category_behaviour">Davranış</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Chrome Özel Sekmelerini kullan</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="system_default">Sistem varsayılanı</string>
+    <string name="script_save_failed">Zamanlayıcı değeri kaydedilemedi</string>
+    <string name="script_sleep_timer">Zamanlayıcı ayarı</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
@@ -64,7 +71,7 @@
     <string name="chosen_theme">Tema: %1$s</string>
     <string name="chosen_version">Sürüm: %1$s</string>
     <string name="guide">Kılavuz</string>
-    <string name="hold_on">Dur!</string>
+    <string name="hold_on">Durdur!</string>
     <string name="magisk_vanced">Geliştirilmesi durdurulan ve bu uygulama ile güncellenemeyen Vanced\'ın, Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen Magisk/TWRP sürümünü cihazınızdan kaldırın.</string>
     <string name="miui_one_title">MIUI tespit edildi!</string>
     <string name="miui_one">Vanced\'i yüklemek için geliştirici ayarlarından MIUI Optimizasyonları, devre dışı bırakılmalıdır. (xiaomi.eu tabanlı 20.2.20 veya üzeri bir ROM kullanıyorsanız, bu uyarıyı göz ardı edebilirsiniz)</string>
@@ -97,7 +104,7 @@
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
     <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
     <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Uygulama, önceden yüklenmiş bir uygulama ile çakıştığından, yükleme başarısız oldu. Mevcut sürümü kaldırıp tekrar deneyin.</string>
     <string name="installation_failed">Kurulum bilinmeyen nedenlerden dolayı başarısız oldu. Telegram veya Discord\'a katılarak destek alabilirsin.</string>
     <string name="installation_incompatible">Kurulum dosyası cihazınız ile uyumsuz olduğu için kurulum işlemi başarısız oldu. Ayarlar\'da indirilen dosyaları temizleyip, tekrar deneyin.</string>
     <string name="installation_invalid">APK dosyaları çözümlenemediğinden, kurulum başarısız oldu. Lütfen yeniden deneyin.</string>

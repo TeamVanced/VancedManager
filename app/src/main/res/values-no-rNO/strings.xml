@@ -36,6 +36,11 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Aksentfarge</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Utseende</string>
     <string name="category_behaviour">Oppførsel</string>
     <string name="clear_files">Fjern nedlastede filer</string>
@@ -46,6 +51,8 @@
     <string name="link_title">Bruk Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Lenker vil åpne i Chrome Custom Tabs</string>
     <string name="system_default">System standard</string>
+    <string name="script_save_failed">Failed to save new timer value</string>
+    <string name="script_sleep_timer">Script Sleep Timer</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Mørkt tema</string>
     <string name="theme_light">Lyst tema</string>
