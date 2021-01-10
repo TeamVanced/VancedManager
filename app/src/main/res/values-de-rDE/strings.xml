@@ -51,8 +51,9 @@
     <string name="link_title">Verwende Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="system_default">Systemstandard</string>
-    <string name="script_save_failed">Konnte neuen Timer-Wert nicht speichern</string>
-    <string name="script_sleep_timer">Skript Sleep-Timer</string>
+    <string name="script_save_failed">Konnte neuen Zeitwert nicht speichern</string>
+    <string name="script_sleep_timer">Haupt Skript Ruhezeit</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Theme</string>
     <string name="theme_dark">Dunkles Theme</string>
     <string name="theme_light">Helles Theme</string>
