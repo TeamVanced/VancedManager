@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("android.extensions") //We still need it for custom views
     kotlin("kapt")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
