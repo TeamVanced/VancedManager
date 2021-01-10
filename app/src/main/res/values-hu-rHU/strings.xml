@@ -51,8 +51,9 @@
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="system_default">Rendszer alapértelmezett</string>
-    <string name="script_save_failed">Nem sikerült az időzítő értékének mentése</string>
-    <string name="script_sleep_timer">Alvás időzítő</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Kinézet</string>
     <string name="theme_dark">Sötét téma</string>
     <string name="theme_light">Világos téma</string>
@@ -106,7 +107,7 @@ Akarod telepíteni?</string>
     <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó régebbi verziót próbált telepíteni.
 Távolítsd el a gyári YouTube app frissítéseit, majd próbáld újra.</string>
-    <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsd el a jelenlegi verziót és próbáld újra.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">A telepítés ismeretlen okok miatt nem sikerült, támogatásért csatlakozz a Telegram vagy a Discord csoportunkhoz.</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
     <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok korruptak, próbáld újra.</string>
