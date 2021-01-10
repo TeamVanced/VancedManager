@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.fragments
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -33,13 +32,6 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     }
 
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
-    private val listener = SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->
-        when (key) {
-            "serviced_sleep_timer" -> {
-                binding.servicedTimer.setSummary(sharedPreferences.getInt(key, 1).toString())
-            }
-        }
-    }
 
     private lateinit var variant: String
 
@@ -51,13 +43,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     override fun otherSetups() {
         setHasOptionsMenu(true)
-        prefs.registerOnSharedPreferenceChangeListener(listener)
         bindData()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        prefs.unregisterOnSharedPreferenceChangeListener(listener)
     }
 
     private fun bindData() {
@@ -100,7 +86,6 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindServiceDTimer() {
         servicedTimer.apply {
             if (variant == "root") this.isVisible = true
-            setSummary(prefs.getInt("serviced_sleep_timer", 1).toString())
             setOnClickListener { showDialog(ServiceDTimerDialog()) }
         }
     }

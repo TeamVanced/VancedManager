@@ -54,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:preference_title="@string/script_sleep_timer"
+                app:preference_summary="@string/script_sleep_timer_description"
                 android:visibility="gone"/>
 
             <com.vanced.manager.ui.core.EmptyPreference
