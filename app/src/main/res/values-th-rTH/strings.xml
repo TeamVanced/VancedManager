@@ -51,8 +51,9 @@
     <string name="link_title">ใช้แท็บที่กำหนดเองของ Chrome</string>
     <string name="link_custom_tabs">ลิ้งค์จะเปิดไปยังแท็บที่กำหนดเองของ Chrome</string>
     <string name="system_default">ค่าเริ่มต้นของระบบ</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">ธีม</string>
     <string name="theme_dark">ธีมมืด</string>
     <string name="theme_light">ธีมสว่าง</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">การติดตั้งล้มเหลวเนื่องจากผู้ใช้ยกเลิกการติดตั้ง</string>
     <string name="installation_blocked">การติดตั้งล้มเหลวเนื่องจากผู้ใช้บล็อกการติดตั้ง</string>
     <string name="installation_downgrade">การติดตั้งล้มเหลว เนื่องจากผู้ใช้พยายามดาวน์เกรดแพ็กเกจ. กรุณาถอนการติดตั้งการอัปเดตจากแอป YouTube แล้วลองติดตั้งใหม่อีกครั้ง</string>
-    <string name="installation_conflict">การติดตั้งล้มเหลวเนื่องจากแอปขัดแย้งกับแอปที่ติดตั้งไว้แล้ว กรุณาถอนการติดตั้ง Vanced แล้วลองใหม่อีกครั้ง</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">การติดตั้งล้มเหลวโดยไม่ทราบสาเหตุ ลองเข้าร่วม Telegram หรือ Discord ของเรา เพื่อรับการสนับสนุนเพิ่มเติม</string>
     <string name="installation_incompatible">การติดตั้งล้มเหลวเนื่องจากไฟล์การติดตั้งเข้ากันไม่ได้กับอุปกรณ์ของคุณ กรุณาล้างไฟล์ที่ดาวน์โหลดในการตั้งค่า แล้วลองอีกครั้ง</string>
     <string name="installation_invalid">การติดตั้งล้มเหลวเนื่องจากไฟล์ apk เสียหายโปรดลองอีกครั้ง</string>
