@@ -51,8 +51,9 @@
     <string name="link_title">Χρήση προσαρμοσμένων καρτέλων Chrome</string>
     <string name="link_custom_tabs">Οι σύνδεσμοι θα ανοίγουν σε προσαρμοσμένες καρτέλες chrome</string>
     <string name="system_default">Προεπιλογή Συστήματος</string>
-    <string name="script_save_failed">Αποτυχία αποθήκευσης νέας τιμής χρονοδιακόπτη</string>
-    <string name="script_sleep_timer">Σενάριο χρονοδιακόπτη αδράνειας</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Θέμα</string>
     <string name="theme_dark">Σκουρόχρωμο Θέμα</string>
     <string name="theme_light">Ανοιχτόχρωμο Θέμα</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Η εγκατάσταση απέτυχε διότι ο χρήστης ακύρωσε την εγκατάσταση.</string>
     <string name="installation_blocked">Η εγκατάσταση απέτυχε διότι ο χρήστης απέκλεισε την εγκατάσταση.</string>
     <string name="installation_downgrade">Η εγκατάσταση απέτυχε διότι ο χρήστης προσπάθησε να υποβαθμίσει το πακέτο. Απεγκαταστήστε τις ενημερώσεις της αρχικής εφαρμογής YouTube, στη συνέχεια προσπαθήστε ξανά.</string>
-    <string name="installation_conflict">Η εγκατάσταση απέτυχε διότι η εφαρμογή αντικρούεται με μια ήδη εγκατεστημένη εφαρμογή. Απεγκαταστήστε την τρέχουσα έκδοση της εφαρμογής, και μετά προσπαθήστε ξανά.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Η εγκατάσταση απέτυχε για άγνωστους λόγους, παρακαλούμε μπείτε στο Telegram ή στο Discord μας για περαιτέρω βοήθεια.</string>
     <string name="installation_incompatible">Η εγκατάσταση απέτυχε διότι το αρχείο εγκατάστασης είναι μη συμβατό με την συσκευή σας. Κάντε εκκαθάριση των ληφθέντων αρχείων στις ρυθμίσεις, στην συνέχεια προσπαθήστε ξανά.</string>
     <string name="installation_invalid">Η εγκατάσταση απέτυχε διότι τα αρχεία apk έχουν διαφθαρεί, παρακαλώ προσπαθήστε ξανά.</string>
