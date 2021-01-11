@@ -53,7 +53,7 @@
     <string name="system_default">Systeemstandaard</string>
     <string name="script_save_failed">Bewaren van nieuwe waarde voor slaaptimer mislukt</string>
     <string name="script_sleep_timer">Slaaptimer root script</string>
-    <string name="script_sleep_timer_description">Aanpassen waarde voor slaaptimer gebruikt in /data/adb/service.d/app.sh script, nuttig bij het oplossen van problemen</string>
+    <string name="script_sleep_timer_description">Aanpassen waarde voor slaaptimer gebruikt in /data/adb/service.d/app.sh script, nuttig bij mount-issues</string>
     <string name="theme">Thema</string>
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht thema</string>
