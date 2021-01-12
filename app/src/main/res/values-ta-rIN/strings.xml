@@ -51,9 +51,9 @@
     <string name="link_title">Chrome தனிப்பயன் தாவல்களைப் பயன்படுத்தவும்</string>
     <string name="link_custom_tabs">Chrome தனிப்பயன் தாவல்களில் இணைப்புகள் திறக்கப்படும்</string>
     <string name="system_default">கணினி இயல்புநிலை</string>
-    <string name="script_save_failed">Failed to save new time value</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_save_failed">புதிய நேர மதிப்பைச் சேமிப்பதில் தோல்வி</string>
+    <string name="script_sleep_timer">ரூட் ஸ்கிரிப்ட் தூக்க நேரம்</string>
+    <string name="script_sleep_timer_description">பெருகிவரும் சிக்கல்களை சரிசெய்ய பயனுள்ளதாக இருக்கும் /data/adb/service.d/app.sh ஸ்கிரிப்டில் பயன்படுத்தப்படும் தூக்க நேர மதிப்பை சரிசெய்யவும்</string>
     <string name="theme">தீம்</string>
     <string name="theme_dark">இருண்ட தீம்</string>
     <string name="theme_light">ஒளி தீம்</string>
@@ -105,7 +105,7 @@
     <string name="installation_aborted">பயனர் நிறுவலை நிறுத்தியதால் நிறுவல் தோல்வியடைந்தது.</string>
     <string name="installation_blocked">பயனர் நிறுவலைத் தடுத்ததால் நிறுவல் தோல்வியடைந்தது.</string>
     <string name="installation_downgrade">பயனர் தொகுப்பை தரமிறக்க முயற்சித்ததால் நிறுவல் தோல்வியடைந்தது. பங்கு YouTube பயன்பாட்டிலிருந்து புதுப்பிப்புகளை நிறுவல் நீக்கி, மீண்டும் முயற்சிக்கவும்.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">ஏற்கனவே நிறுவப்பட்ட பயன்பாட்டுடன் பயன்பாடு முரண்படுவதால் நிறுவல் தோல்வியடைந்தது. பயன்பாட்டின் தற்போதைய பதிப்பை நிறுவல் நீக்கி, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_failed">அறியப்படாத காரணங்களுக்காக நிறுவல் தோல்வியடைந்தது, மேலும் ஆதரவுக்காக எங்கள் டெலிகிராம் அல்லது டிஸ்கார்ட் இல் சேரவும்.</string>
     <string name="installation_incompatible">நிறுவல் கோப்பு உங்கள் சாதனத்துடன் பொருந்தாததால் நிறுவல் தோல்வியடைந்தது. அமைப்புகளில் பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை அழிக்கவும், பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_invalid">நிறுவல் தோல்வியுற்றது, ஏனெனில் Apk கோப்புகள் சிதைந்துள்ளன, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
