@@ -19,24 +19,31 @@ import java.io.File
 object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     fun fuelDownload(url: String, fileFolder: String, fileName: String, context: Context, onDownloadComplete: () -> Unit, onError: (error: String) -> Unit) = launch {
-        downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.downloading_file, fileName))
-        downloadProgress.value?.currentDownload = Fuel.download(url)
-            .fileDestination { _, _ ->
-                File(context.getExternalFilesDir(fileFolder)?.path, fileName)
-            }
-            .progress { readBytes, totalBytes ->
-                downloadProgress.value?.downloadProgress?.postValue((readBytes * 100 / totalBytes).toInt())
-            }
-            .responseString { _, _, result ->
-                result.fold(success = {
-                    downloadProgress.value?.downloadProgress?.postValue(0)
-                    onDownloadComplete()
-                }, failure = { error ->
-                    downloadProgress.value?.downloadProgress?.postValue(0)
-                    Log.d("VMDownloader", error.cause.toString())
-                    onError(error.errorData.toString())
-                })
-            }
+        try {
+            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.downloading_file, fileName))
+            downloadProgress.value?.currentDownload = Fuel.download(url)
+                .fileDestination { _, _ ->
+                    File(context.getExternalFilesDir(fileFolder)?.path, fileName)
+                }
+                .progress { readBytes, totalBytes ->
+                    downloadProgress.value?.downloadProgress?.postValue((readBytes * 100 / totalBytes).toInt())
+                }
+                .responseString { _, _, result ->
+                    result.fold(success = {
+                        downloadProgress.value?.downloadProgress?.postValue(0)
+                        onDownloadComplete()
+                    }, failure = { error ->
+                        downloadProgress.value?.downloadProgress?.postValue(0)
+                        Log.d("VMDownloader", error.cause.toString())
+                        onError(error.errorData.toString())
+                    })
+                }
+        } catch (e: Exception) {
+            downloadProgress.value?.downloadProgress?.postValue(0)
+            Log.d("VMDownloader", "Failed to download file: $url")
+            onError("")
+        }
+
     }
 
     val downloadProgress = MutableLiveData<ProgressModel>()
