@@ -62,7 +62,7 @@
     <string name="theme">Theme</string>
     <string name="theme_dark">Dark Theme</string>
     <string name="theme_light">Light Theme</string>
-    <string name="update_url">Channel URL</string>
+    <string name="update_url" translatable="false">Channel URL</string>
     <string name="push_notifications">%1$s Push Notifications</string>
     <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
     <string name="update_center">Manager Update Center</string>
