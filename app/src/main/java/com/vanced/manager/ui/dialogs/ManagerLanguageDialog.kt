@@ -41,7 +41,7 @@ class ManagerLanguageDialog : BindingBottomSheetDialogFragment<DialogManagerLang
                 languageRadiogroup.addView(mrb, MATCH_PARENT, WRAP_CONTENT)
             }
             val language = prefs.getString("manager_lang", "System Default")
-            root.findViewWithTag<ThemedMaterialRadioButton>(language).isChecked = true
+            root.findViewWithTag<ThemedMaterialRadioButton>(language)?.isChecked = true
             languageSave.setOnClickListener {
                 val newPref = binding.languageRadiogroup.getCheckedButtonTag()
                 if (language != newPref) {
