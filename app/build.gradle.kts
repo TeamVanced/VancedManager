@@ -15,8 +15,8 @@ android {
         applicationId = "com.vanced.manager"
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 210
-        versionName = "2.1.0 (CyberManager2077)"
+        versionCode = 220
+        versionName = "2.2.0 (RootedFirebase)"
 
         vectorDrawables.useSupportLibrary = true
 
