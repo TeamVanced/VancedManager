@@ -57,7 +57,7 @@
     <string name="theme">Тема</string>
     <string name="theme_dark">Темна тема</string>
     <string name="theme_light">Світла тема</string>
-    <string name="update_url">URL-адреса до каналу з оновленнями</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Спливаючі Сповіщення</string>
     <string name="push_notifications_summary">Отримувати спливаючі сповіщення, коли доступне оновлення для %1$s</string>
     <string name="update_center">Центр Оновлень</string>
