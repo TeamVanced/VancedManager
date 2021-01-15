@@ -69,8 +69,8 @@ android {
 }
 
 fun getLanguages(): String {
-    val langs = arrayListOf("en", "bn_BD", "bn_IN", "pt_BR", "pt_PT", "zh_CN", "zh_TW")
-    val exceptions = arrayOf("bn", "pt", "zh")
+    val langs = arrayListOf("en", "bn_BD", "bn_IN", "pa_IN", "pa_PK", "pt_BR", "pt_PT", "zh_CN", "zh_TW")
+    val exceptions = arrayOf("bn", "pa", "pt", "zh")
     val pattern = "-(\\w+)-".toRegex()
 
     File("$projectDir/src/main/res").listFiles()?.forEach { dir ->
