@@ -57,7 +57,7 @@
     <string name="theme">Nashqada</string>
     <string name="theme_dark">Nashqad Madow</string>
     <string name="theme_light">Nashqad Cad</string>
-    <string name="update_url">Cusboonaysii Ciwaanka Kanaanlka</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Ogaysiisyadisa soodhaca</string>
     <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyo marka mid cusub oo %1$s ah lasoo saaro</string>
     <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
