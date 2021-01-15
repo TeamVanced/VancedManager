@@ -57,7 +57,7 @@
     <string name="theme">السمة</string>
     <string name="theme_dark">السمة الداكنة</string>
     <string name="theme_light">السمة الفاتحة</string>
-    <string name="update_url">تحديث رابط القناة</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">إشعارات %1$s</string>
     <string name="push_notifications_summary">تلقي الإشعارات عند إصدار تحديث لـ %1$s</string>
     <string name="update_center">مركز التحديث</string>
