@@ -361,7 +361,8 @@ object PackageHelper {
                     else
                         process.destroy()
 
-                    throw RuntimeException(e)
+                    sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                    sendCloseDialog(context)
                 }
                 process.waitFor()
             }
