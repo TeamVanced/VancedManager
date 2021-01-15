@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.ContextWrapper
 import android.content.DialogInterface
 import android.content.SharedPreferences
+import android.util.Log
 import android.widget.RadioGroup
 import androidx.core.graphics.ColorUtils
 import androidx.fragment.app.DialogFragment
@@ -28,7 +29,12 @@ object Extensions {
     }
 
     fun DialogFragment.show(activity: FragmentActivity) {
-        show(activity.supportFragmentManager, "")
+        try {
+            show(activity.supportFragmentManager, "")
+        } catch (e: Exception) {
+            Log.d("VMUI", e.stackTraceToString())
+        }
+
     }
 
     fun Context.getDefaultPrefs(): SharedPreferences = getDefaultSharedPreferences(this)

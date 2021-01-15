@@ -1,10 +1,6 @@
 package com.vanced.manager.ui.dialogs
 
-import android.app.Activity
-import android.content.ComponentName
 import android.content.Context
-import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -107,41 +103,6 @@ object DialogContainer {
             setTitle(title)
             setMessage(msg)
             setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
-            create()
-            applyAccent()
-        }
-    }
-
-    fun launchVanced(context: Context) {
-        val intent = Intent()
-        intent.component =
-            if (PreferenceManager.getDefaultSharedPreferences(context).getString("vanced_variant", "nonroot") == "root")
-                ComponentName("com.google.android.youtube", "com.google.android.youtube.HomeActivity")
-            else
-                ComponentName("com.vanced.android.youtube", "com.google.android.youtube.HomeActivity")
-                
-        MaterialAlertDialogBuilder(context).apply {
-            setTitle(context.getString(R.string.success))
-            setMessage(context.getString(R.string.vanced_installed))
-            setPositiveButton(context.getString(R.string.launch)) { _, _ ->
-                startActivity(context, intent, null)
-            }
-            setNegativeButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
-            create()
-            applyAccent()
-        }
-    }
-    
-    fun launchMusic(activity: Activity) {
-        val intent = Intent()
-        intent.component = ComponentName("com.vanced.android.youtube.music", "com.vanced.android.youtube.music.MusicActivity")
-        MaterialAlertDialogBuilder(activity).apply {
-            setTitle(activity.getString(R.string.success))
-            setMessage(activity.getString(R.string.music_installed))
-            setPositiveButton(activity.getString(R.string.launch)) { _, _ ->
-                startActivity(activity, intent, null)
-            }
-            setNegativeButton(activity.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()
             applyAccent()
         }
