@@ -10,10 +10,10 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewPreferenceBinding
 
 class EmptyPreference @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null,
-        defStyle: Int = 0,
-        defStyleRes: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyle: Int = 0,
+    defStyleRes: Int = 0
 ) : FrameLayout(context, attrs, defStyle, defStyleRes) {
 
     private var _binding: ViewPreferenceBinding? = null

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="16dp">
+
+        <com.vanced.manager.ui.core.PreferenceCategory
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/category_background"
+            app:category_title="General">
+
+            <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/welcome_screen_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Welcome screen launcher"
+                app:preference_summary="Title says it all" />
+
+            <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/force_manager_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Force Manager Update"
+                app:preference_summary="Update manager without comparing versionCode"/>
+
+            <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/channel_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="@string/update_url" />
+
+        </com.vanced.manager.ui.core.PreferenceCategory>
+
+        <com.vanced.manager.ui.core.PreferenceCategory
+            android:id="@+id/crowdin_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/category_background"
+            app:category_title="Crowdin"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/crowdin_auth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Authorize" />
+
+            <com.vanced.manager.ui.core.PreferenceSwitch
+                android:id="@+id/screenshot_uploading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Screenshot Uploading (ADMIN ONLY)"
+                android:visibility="gone"/>
+
+            <com.vanced.manager.ui.core.PreferenceSwitch
+                android:id="@+id/real_time_updates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Real-time Updates"
+                android:visibility="gone" />
+
+        </com.vanced.manager.ui.core.PreferenceCategory>
+
+        <com.vanced.manager.ui.core.PreferenceCategory
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/category_background"
+            app:category_title="Device Info">
+
+            <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/kernel_arch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Kernel Architecture"/>
+
+            <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/android_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="Android Version"/>
+
+        </com.vanced.manager.ui.core.PreferenceCategory>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

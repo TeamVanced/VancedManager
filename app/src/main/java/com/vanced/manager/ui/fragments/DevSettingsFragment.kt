@@ -4,98 +4,112 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
 import androidx.core.net.toUri
-import androidx.preference.*
+import androidx.core.view.isVisible
+import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
-import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
-import com.vanced.manager.R
+import com.vanced.manager.BuildConfig
+import com.vanced.manager.core.ui.base.BindingFragment
+import com.vanced.manager.databinding.FragmentDevSettingsBinding
 import com.vanced.manager.ui.WelcomeActivity
 import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
 import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.utils.LanguageHelper.authCrowdin
 
-class DevSettingsFragment: PreferenceFragmentCompat() {
+class DevSettingsFragment : BindingFragment<FragmentDevSettingsBinding>() {
 
-    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.dev_settings, rootKey)
+    private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
 
-        val ftSwitch: Preference? = findPreference("firstlaunch_switch")
+    override fun binding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) = FragmentDevSettingsBinding.inflate(inflater, container, false)
 
-        val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
-        ftSwitch?.setOnPreferenceClickListener {
+    override fun otherSetups() {
+        setHasOptionsMenu(true)
+        bindData()
+    }
 
-            AlertDialog.Builder(requireContext())
-                .setTitle("FirstLaunch activated")
-                .setMessage("boolean will be activated on next app start")
-                .setPositiveButton("Restart") { _, _ ->
-                    run {
-                        startActivity(Intent(requireContext(), WelcomeActivity::class.java))
-                        activity?.finish()
-                    }
-                }
-                .create()
-                .show()
+    private fun bindData() {
+        with(binding) {
+            bindWelcomeLauncher()
+            bindForceUpdate()
+            bindChannelURL()
+            bindCrowdin()
+            bindKernelArch()
+            bindAndroidVersion()
+        }
+    }
 
+    private fun FragmentDevSettingsBinding.bindWelcomeLauncher() {
+        welcomeScreenLauncher.setOnClickListener {
             prefs.edit {
                 putBoolean("firstLaunch", true)
                 putBoolean("show_changelog_tooltip", true)
             }
-            true
-
+            startActivity(Intent(requireContext(), WelcomeActivity::class.java))
+            requireActivity().finish()
         }
+    }
 
-        if (ENABLE_CROWDIN_AUTH) {
-            findPreference<PreferenceCategory>("crowdin_pref_category")?.isVisible = true
+    private fun FragmentDevSettingsBinding.bindForceUpdate() {
+        forceManagerUpdate.setOnClickListener {
+            ManagerUpdateDialog.newInstance(true).show(
+                requireActivity().supportFragmentManager,
+                "update_manager"
+            )
+        }
+    }
 
-            findPreference<Preference>("crowdin_auth")?.isVisible = !Crowdin.isAuthorized()
-            findPreference<SwitchPreferenceCompat>("crowdin_upload_screenshot")?.isVisible = Crowdin.isAuthorized()
-            findPreference<SwitchPreferenceCompat>("crowdin_real_time")?.isVisible = Crowdin.isAuthorized()
+    private fun FragmentDevSettingsBinding.bindChannelURL() {
+        channelUrl.setOnClickListener {
+            URLChangeDialog().show(childFragmentManager.beginTransaction(), null)
+        }
+    }
 
-            findPreference<Preference>("crowdin_auth")?.setOnPreferenceClickListener {
+    private fun FragmentDevSettingsBinding.bindCrowdin() {
+        if (BuildConfig.ENABLE_CROWDIN_AUTH) {
+            val isAuthorized = Crowdin.isAuthorized()
+            crowdinCategory.isVisible = true
+
+            crowdinAuth.isVisible = !isAuthorized
+            screenshotUploading.isVisible = isAuthorized
+            realTimeUpdates.isVisible = isAuthorized
+
+            crowdinAuth.setOnClickListener {
                 requireActivity().authCrowdin()
                 @RequiresApi(Build.VERSION_CODES.M)
                 if (!Settings.canDrawOverlays(requireActivity())) {
                     val intent = Intent(
-                            Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                            ("package:" + requireActivity().packageName).toUri()
+                        Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        ("package:" + requireActivity().packageName).toUri()
                     )
                     startActivityForResult(intent, 69)
-                    return@setOnPreferenceClickListener true
                 }
 
                 Crowdin.authorize(requireActivity())
-                true
             }
         }
+    }
 
-        findPreference<Preference>("install_url")?.setOnPreferenceClickListener {
-            URLChangeDialog().show(childFragmentManager.beginTransaction(), "Install URL")
-            true
-        }
-
+    private fun FragmentDevSettingsBinding.bindKernelArch() {
         val supportedAbis: Array<String> = Build.SUPPORTED_ABIS
 
-        findPreference<Preference>("device_arch")?.summary =
+        kernelArch.setSummary(
             if (supportedAbis.contains("arm64-v8a") || supportedAbis.contains("x86_64")) {
                 "64bit"
             } else {
                 "32bit"
             }
-
-        findPreference<Preference>("device_os")?.summary = "${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})"
-
-        val forceUpdate: Preference? = findPreference("force_update")
-        forceUpdate?.setOnPreferenceClickListener {
-            ManagerUpdateDialog.newInstance(true).show(
-                requireActivity().supportFragmentManager,
-                "update_manager"
-            )
-            true
-        }
-
+        )
     }
 
+    private fun FragmentDevSettingsBinding.bindAndroidVersion() {
+        androidVersion.setSummary("${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})")
+    }
 }

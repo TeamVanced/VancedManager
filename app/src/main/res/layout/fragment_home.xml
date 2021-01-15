@@ -22,15 +22,14 @@
                 android:id="@+id/recycler_app_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:nestedScrollingEnabled="false"
+                android:layout_marginHorizontal="8dp"
                 tools:itemCount="3"
                 tools:listitem="@layout/view_app" />
 
             <com.vanced.manager.ui.core.ThemedTextView
-                android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginStart="20dp"
                 android:text="@string/support_us"
                 style="@style/CardTextHeader" />
 
@@ -38,15 +37,13 @@
                 android:id="@+id/recycler_sponsors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:nestedScrollingEnabled="false"
                 tools:itemCount="2"
                 tools:listitem="@layout/view_sponsor" />
 
             <com.vanced.manager.ui.core.ThemedTextView
-                android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginStart="20dp"
                 android:text="@string/social_media"
                 style="@style/CardTextHeader" />
 
@@ -59,6 +56,7 @@
                 android:paddingBottom="8dp"
                 tools:itemCount="6"
                 tools:listitem="@layout/view_social_link" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

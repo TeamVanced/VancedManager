@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/serviced_header"
-            tools:text="@string/script_sleep_timer"
+            android:text="@string/script_sleep_timer"
             style="@style/DialogCardTitle" />
 
         <com.vanced.manager.ui.core.ThemedMaterialSlider
