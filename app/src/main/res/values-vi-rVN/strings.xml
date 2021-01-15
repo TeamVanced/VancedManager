@@ -51,12 +51,13 @@
     <string name="link_title">Sử dụng Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Các liên kết sẽ mở trong Chrome Custom Tabs</string>
     <string name="system_default">Mặc định hệ thống</string>
-    <string name="script_save_failed">Không thể lưu giá trị hẹn giờ mới</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Nền</string>
     <string name="theme_dark">Nền tối</string>
     <string name="theme_light">Nền sáng</string>
-    <string name="update_url">URL kênh cập nhật</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Thông báo cho %1$s</string>
     <string name="push_notifications_summary">Nhận thông báo khi một bản cập nhật của %1$s được phát hành</string>
     <string name="update_center">Trung tâm cập nhật</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Cài đặt không thành công vì người dùng đã hủy cài đặt.</string>
     <string name="installation_blocked">Cài đặt không thành công vì người dùng đã chặn cài đặt.</string>
     <string name="installation_downgrade">Cài đặt không thành công do người dùng đã cố gắng hạ cấp gói. Gỡ cài đặt các bản cập nhật khỏi ứng dụng YouTube có sẵn, sau đó thử lại.</string>
-    <string name="installation_conflict">Cài đặt không thành công do ứng dụng xung đột với phiên bản đã được cài đặt. Gỡ cài đặt phiên bản hiện tại rồi thử lại.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, tham gia Telegram hoặc Discord của chúng tôi để được hỗ trợ thêm.</string>
     <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
     <string name="installation_invalid">Cài đặt thất bại do các tệp tin apk bị lỗi, xin hãy thử lại.</string>

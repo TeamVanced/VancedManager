@@ -52,11 +52,12 @@
     <string name="link_custom_tabs">連結會使用 Chrome Custom Tabs 開啟</string>
     <string name="system_default">系統預設</string>
     <string name="script_save_failed">儲存定時器時間失敗</string>
-    <string name="script_sleep_timer">設定睡眠定時器</string>
+    <string name="script_sleep_timer">Root 腳本休眠時間</string>
+    <string name="script_sleep_timer_description">調整 /data/adb/service.d/app.sh 指令碼中的休眠時間值，對修復掛載問題很有用</string>
     <string name="theme">主題</string>
     <string name="theme_dark">深色主題</string>
     <string name="theme_light">淺色主題</string>
-    <string name="update_url">更新管道</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">有可用更新時接收 %1$s 推送通知</string>
     <string name="update_center">Manager 更新中心</string>

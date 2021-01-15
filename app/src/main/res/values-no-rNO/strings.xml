@@ -51,12 +51,13 @@
     <string name="link_title">Bruk Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Lenker vil åpne i Chrome Custom Tabs</string>
     <string name="system_default">System standard</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Mørkt tema</string>
     <string name="theme_light">Lyst tema</string>
-    <string name="update_url">URL for oppdateringskanal</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Push varsler</string>
     <string name="push_notifications_summary">Motta push varsler når en oppdatering for %1$s er utgitt</string>
     <string name="update_center">Oppdateringssenter</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Installasjonen mislyktes fordi brukeren avbrutt installasjonen.</string>
     <string name="installation_blocked">Installasjonen mislyktes på grunn av at brukeren blokkerte installasjonen.</string>
     <string name="installation_downgrade">Installasjonen mislyktes fordi brukeren prøvde å nedgradere pakken. Avinstaller oppdateringer fra standard YouTube app, og prøv på nytt.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Installasjonen mislyktes av ukjente årsaker, bli med i vår Telegram eller Discord gruppe for videre støtte.</string>
     <string name="installation_incompatible">Installasjonen mislyktes på grunn av at installasjonsfilen er inkompatibel med enheten. Fjern nedlastede filer i innstillinger og prøv på nytt.</string>
     <string name="installation_invalid">Installasjonen mislyktes fordi apk-filene er ødelagt, vennligst prøv på nytt.</string>

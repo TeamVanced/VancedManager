@@ -51,12 +51,13 @@
     <string name="link_title">Hilpekên Chrome\'ê yên taybet bi kar bîne</string>
     <string name="link_custom_tabs">Girêdan dê di hilpekên taybet ên Chrome\'ê de vebin</string>
     <string name="system_default">Jixwebera sîstemê</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Rûkar</string>
     <string name="theme_dark">Rûkara tarî</string>
     <string name="theme_light">Rûkara ronak</string>
-    <string name="update_url">URL\'a kanalê hildemîne</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s danezanên lezgîn</string>
     <string name="push_notifications_summary">Dema ku hildemînek ji bo %1$s belav bû, danezanên lezgîn werbigire</string>
     <string name="update_center">Navenda hildemandina rêveberê</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Sazkirin ji ber sedemên nenas bi ser neket, ji bo piştgiriya zêdetir tevlî Telegram an Discord\'ê bibin.</string>
     <string name="installation_incompatible">Sazkirin bi ser neket ji ber ku dosiya sazkirinê ligel cîhaza te hevaheng nîne. Dosiyên daxistî ji sazkariyan paqij bike, paşê dîsa biceribîne.</string>
     <string name="installation_invalid">Sazkirin bi ser neket ji ber ku dosiyên apk\'ayê xirab in, jkx dîsa biceribîne.</string>

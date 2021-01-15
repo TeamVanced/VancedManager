@@ -51,12 +51,13 @@
     <string name="link_title">Verwende Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="system_default">Systemstandard</string>
-    <string name="script_save_failed">Konnte neuen Timer-Wert nicht speichern</string>
-    <string name="script_sleep_timer">Skript Sleep-Timer</string>
+    <string name="script_save_failed">Speichern des neuen Zeitwertes fehlgeschlagen</string>
+    <string name="script_sleep_timer">Haupt Skript Ruhezeit</string>
+    <string name="script_sleep_timer_description">Anpassen des Wertes für die Ruhezeit, der im Skript /data/adb/service.d/app.sh verwendet wird, nützlich zur Behebung von Problemen beim Einbinden</string>
     <string name="theme">Theme</string>
     <string name="theme_dark">Dunkles Theme</string>
     <string name="theme_light">Helles Theme</string>
-    <string name="update_url">Kanal-Url updaten</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Push-Benachrichtigungen</string>
     <string name="push_notifications_summary">Push-Benachrichtigungen erhalten, wenn ein Update für %1$s veröffentlicht wird</string>
     <string name="update_center">Update Center</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
     <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer die Installation blockiert hat.</string>
     <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, das Paket herunterzustufen. Aktualisierungen von YouTube deinstallieren und dann erneut versuchen.</string>
-    <string name="installation_conflict">Installation fehlgeschlagen, da die App mit einer bereits installierten App kollidiert. Deinstalliere die aktuelle Version von Vanced, dann versuche es erneut.</string>
+    <string name="installation_conflict">Die Installation ist fehlgeschlagen, weil die App in Konflikt mit einer bereits installierten App steht. Deinstalliere die aktuell installierte Version der App und versuchen es dann erneut.</string>
     <string name="installation_failed">Installation aus unbekannten Grund fehlgeschlagen. Treten Sie bitte unserem Telegram-Chat oder Discord-Server bei, um Support zu erhalten.</string>
     <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
     <string name="installation_invalid">Installation fehlgeschlagen, da die apk-Dateien beschädigt sind, bitte versuchen Sie es erneut.</string>

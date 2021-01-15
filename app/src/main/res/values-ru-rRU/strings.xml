@@ -51,12 +51,13 @@
     <string name="link_title">Использовать Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Открывать ссылки в Chrome Custom Tabs</string>
     <string name="system_default">Как в системе</string>
-    <string name="script_save_failed">Не удалось сохранить новое значение таймера</string>
+    <string name="script_save_failed">Не удалось сохранить новое значение времени</string>
     <string name="script_sleep_timer">Скрипт Таймера сна</string>
+    <string name="script_sleep_timer_description">Настройка значения времени сна, используемого в скрипте /data/adb/service.d/app.sh, полезно для решения проблем монтирования</string>
     <string name="theme">Тема оформления</string>
     <string name="theme_dark">Тёмная тема</string>
     <string name="theme_light">Светлая тема</string>
-    <string name="update_url">Ссылка на канал обновлений</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Push Уведомления для %1$s</string>
     <string name="push_notifications_summary">Получать уведомления о выходе обновления для %1$s</string>
     <string name="update_center">Центр обновлений</string>

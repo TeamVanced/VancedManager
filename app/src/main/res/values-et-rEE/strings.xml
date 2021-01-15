@@ -51,12 +51,13 @@
     <string name="link_title">Kasuta Chrome kohandatud vahekaarte</string>
     <string name="link_custom_tabs">Lingid avatakse Chrome kohandatud vahekaartides</string>
     <string name="system_default">Süsteemi vaikimisi</string>
-    <string name="script_save_failed">Taimeri uue väärtuse salvestamine ebaõnnestus</string>
-    <string name="script_sleep_timer">Unetaimeri skript</string>
+    <string name="script_save_failed">Aja uue väärtuse salvestamine ebaõnnestus</string>
+    <string name="script_sleep_timer">Uneaja skript</string>
+    <string name="script_sleep_timer_description">Reguleerige uneaja väärtust, mis on kasutatav /data/adb/service.d/app.sh skriptis, see on kasulik paigaldusprobleemide parandamiseks</string>
     <string name="theme">Kujundus</string>
     <string name="theme_dark">Tume Kujundus</string>
     <string name="theme_light">Hele Kujundus</string>
-    <string name="update_url">Uuenduskanali link</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Hüpikteated</string>
     <string name="push_notifications_summary">Saa hüpikteateid kui %1$s uuendus on saadaval</string>
     <string name="update_center">Halduri värskenduskeskus</string>

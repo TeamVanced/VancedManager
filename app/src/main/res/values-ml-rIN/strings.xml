@@ -51,12 +51,13 @@
     <string name="link_title">Chrome Custom ടാബുകൾ ഉപയോഗിക്കുക</string>
     <string name="link_custom_tabs">Chrome Custom ടാബുകളിൽ ലിങ്കുകൾ തുറക്കും</string>
     <string name="system_default">സിസ്റ്റം സ്ഥിരസ്ഥിതി</string>
-    <string name="script_save_failed">പുതിയ ടൈമർ മൂല്യം സംരക്ഷിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
-    <string name="script_sleep_timer">സ്ക്രിപ്റ്റ് സ്ലീപ്പ് ടൈമർ</string>
+    <string name="script_save_failed">പുതിയ സമയ മൂല്യം സംരക്ഷിക്കുന്നതിൽ പരാജയപ്പെട്ടു</string>
+    <string name="script_sleep_timer">റൂട്ട് സ്ക്രിപ്റ്റ് ഉറക്ക സമയം</string>
+    <string name="script_sleep_timer_description">മ d ണ്ടിംഗ് പ്രശ്നങ്ങൾ പരിഹരിക്കുന്നതിന് ഉപയോഗപ്രദമായ /data/adb/service.d/app.sh സ്ക്രിപ്റ്റിൽ ഉപയോഗിച്ചിരിക്കുന്ന ഉറക്ക സമയ മൂല്യം ക്രമീകരിക്കുക</string>
     <string name="theme">തീം</string>
     <string name="theme_dark">ഡാർക്ക് തീം</string>
     <string name="theme_light">ലൈറ്റ് തീം</string>
-    <string name="update_url">ചാനൽ URL അപ്‌ഡേറ്റുചെയ്യുക</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s പുഷ് അറിയിപ്പുകൾ</string>
     <string name="push_notifications_summary">%1$s ഒരു അപ്‌ഡേറ്റ് പുറത്തിറങ്ങുമ്പോൾ പുഷ് അറിയിപ്പുകൾ സ്വീകരിക്കുക</string>
     <string name="update_center">മാനേജർ അപ്‌ഡേറ്റ് സെന്റർ</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">ഉപയോക്താവ് ഇൻസ്റ്റാളേഷൻ നിർത്തലാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
     <string name="installation_blocked">ഉപയോക്താവ് ഇൻസ്റ്റാളേഷൻ തടഞ്ഞതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
     <string name="installation_downgrade">ഉപയോക്താവ് പാക്കേജ് തരംതാഴ്ത്താൻ ശ്രമിച്ചതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. സ്റ്റോക്ക് YouTube അപ്ലിക്കേഷനിൽ നിന്ന് അപ്‌ഡേറ്റുകൾ അൺഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="installation_conflict">ഇതിനകം ഇൻസ്റ്റാളുചെയ്‌ത അപ്ലിക്കേഷനുമായി അപ്ലിക്കേഷൻ പൊരുത്തക്കേടുകൾ ഉള്ളതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. അപ്ലിക്കേഷന്റെ നിലവിലെ പതിപ്പ് അൺ‌ഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="installation_conflict">ഇതിനകം ഇൻസ്റ്റാളുചെയ്‌ത അപ്ലിക്കേഷനുമായി അപ്ലിക്കേഷൻ പൊരുത്തപ്പെടുന്നതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. അപ്ലിക്കേഷന്റെ നിലവിലെ പതിപ്പ് അൺ‌ഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_failed">അജ്ഞാതമായ കാരണങ്ങളാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു, കൂടുതൽ പിന്തുണയ്ക്കായി ഞങ്ങളുടെ ടെലിഗ്രാം അല്ലെങ്കിൽ ഡിസ്കോർഡിൽ ചേരുക.</string>
     <string name="installation_incompatible">ഇൻസ്റ്റാളേഷൻ ഫയൽ നിങ്ങളുടെ ഉപകരണവുമായി പൊരുത്തപ്പെടാത്തതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. ക്രമീകരണങ്ങളിൽ ഡ download ൺലോഡ് ചെയ്ത ഫയലുകൾ മായ്‌ക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_invalid">Apk ഫയലുകൾ‌ കേടായതിനാൽ‌ ഇൻ‌സ്റ്റാളേഷൻ‌ പരാജയപ്പെട്ടു, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>

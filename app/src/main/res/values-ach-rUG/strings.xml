@@ -51,12 +51,13 @@
     <string name="link_title">crwdns23938:0crwdne23938:0</string>
     <string name="link_custom_tabs">crwdns23944:0crwdne23944:0</string>
     <string name="system_default">crwdns24826:0crwdne24826:0</string>
-    <string name="script_save_failed">crwdns25080:0crwdne25080:0</string>
-    <string name="script_sleep_timer">crwdns25082:0crwdne25082:0</string>
+    <string name="script_save_failed">crwdns25102:0crwdne25102:0</string>
+    <string name="script_sleep_timer">crwdns25104:0crwdne25104:0</string>
+    <string name="script_sleep_timer_description">crwdns25106:0crwdne25106:0</string>
     <string name="theme">crwdns1930:0crwdne1930:0</string>
     <string name="theme_dark">crwdns1934:0crwdne1934:0</string>
     <string name="theme_light">crwdns1936:0crwdne1936:0</string>
-    <string name="update_url">crwdns1938:0crwdne1938:0</string>
+    <string name="update_url">crwdns25110:0crwdne25110:0</string>
     <string name="push_notifications">crwdns24366:0%1$scrwdne24366:0</string>
     <string name="push_notifications_summary">crwdns24368:0%1$scrwdne24368:0</string>
     <string name="update_center">crwdns1946:0crwdne1946:0</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">crwdns25042:0crwdne25042:0</string>
     <string name="installation_blocked">crwdns25044:0crwdne25044:0</string>
     <string name="installation_downgrade">crwdns25046:0crwdne25046:0</string>
-    <string name="installation_conflict">crwdns25068:0crwdne25068:0</string>
+    <string name="installation_conflict">crwdns25108:0crwdne25108:0</string>
     <string name="installation_failed">crwdns24422:0crwdne24422:0</string>
     <string name="installation_incompatible">crwdns24392:0crwdne24392:0</string>
     <string name="installation_invalid">crwdns24424:0crwdne24424:0</string>

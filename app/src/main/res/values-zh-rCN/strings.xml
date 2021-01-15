@@ -51,12 +51,13 @@
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="link_custom_tabs">链接会使用 Chrome Custom Tabs 打开</string>
     <string name="system_default">系统默认</string>
-    <string name="script_save_failed">无法保存新的计时器值</string>
-    <string name="script_sleep_timer">脚本休眠计时器</string>
+    <string name="script_save_failed">保存新定时器值失败</string>
+    <string name="script_sleep_timer">Root 脚本睡眠定时器</string>
+    <string name="script_sleep_timer_description">调整 /data/adb/service.d/app.sh 脚本中的睡眠定时器值，有助于修复挂载问题。</string>
     <string name="theme">主题</string>
     <string name="theme_dark">深色主题</string>
     <string name="theme_light">浅色主题</string>
-    <string name="update_url">更新通道链接</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">%1$s 有可用更新时接收推送通知</string>
     <string name="update_center">Manager 更新中心</string>

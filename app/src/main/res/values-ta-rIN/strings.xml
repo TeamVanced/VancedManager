@@ -51,12 +51,13 @@
     <string name="link_title">Chrome தனிப்பயன் தாவல்களைப் பயன்படுத்தவும்</string>
     <string name="link_custom_tabs">Chrome தனிப்பயன் தாவல்களில் இணைப்புகள் திறக்கப்படும்</string>
     <string name="system_default">கணினி இயல்புநிலை</string>
-    <string name="script_save_failed">புதிய டைமர் மதிப்பைச் சேமிப்பதில் தோல்வி</string>
-    <string name="script_sleep_timer">ஸ்கிரிப்ட் ஸ்லீப் டைமர்</string>
+    <string name="script_save_failed">புதிய நேர மதிப்பைச் சேமிப்பதில் தோல்வி</string>
+    <string name="script_sleep_timer">ரூட் ஸ்கிரிப்ட் தூக்க நேரம்</string>
+    <string name="script_sleep_timer_description">பெருகிவரும் சிக்கல்களை சரிசெய்ய பயனுள்ளதாக இருக்கும் /data/adb/service.d/app.sh ஸ்கிரிப்டில் பயன்படுத்தப்படும் தூக்க நேர மதிப்பை சரிசெய்யவும்</string>
     <string name="theme">தீம்</string>
     <string name="theme_dark">இருண்ட தீம்</string>
     <string name="theme_light">ஒளி தீம்</string>
-    <string name="update_url">சேனல் URL ஐப் புதுப்பிக்கவும்</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s புஷ் அறிவிப்புகள்</string>
     <string name="push_notifications_summary">%1$s க்கான புதுப்பிப்பு வெளியிடப்படும் போது புஷ் அறிவிப்புகளைப் பெறுக</string>
     <string name="update_center">மேலாளர் புதுப்பிப்பு மையம்</string>

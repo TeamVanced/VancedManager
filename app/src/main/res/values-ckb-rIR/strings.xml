@@ -51,12 +51,13 @@
     <string name="link_title">بەکارهێنانی پەنجەرەی تایبەتی گۆگڵ کرۆم</string>
     <string name="link_custom_tabs">بەستەرەکان لە پەنجەرەی تایبەتی گۆگڵ کرۆمدا دەکرێنەوە</string>
     <string name="system_default">سیستەم</string>
-    <string name="script_save_failed">پاشکەوتکردنی بیرخەرەوە سەرکەوتو نەبوو</string>
-    <string name="script_sleep_timer">بیرخەرەوەی کات</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">ڕووکار</string>
     <string name="theme_dark">تاریک</string>
     <string name="theme_light">ڕووناک</string>
-    <string name="update_url">بەستەری کەناڵی نوێکردنەوە</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s وەرگرتنی ئاگادارکردنەوەکان</string>
     <string name="push_notifications_summary">وەرگرتنی ئاگادارکردنەوە کاتێ نوێکردنەوەی %1$s بەردەست کرا</string>
     <string name="update_center">ناوەندی نوێکردنەوە</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر کۆتاییهێنا بە دابەزاندنەکە.</string>
     <string name="installation_blocked">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر ڕێگریکرد لە دابەزاندنەکە.</string>
     <string name="installation_downgrade">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر هەوڵیدا بۆ نزمکردنەوەی وەشان، نوێکارییەکانی بەرنامەی بنەڕەتی YouTube بسڕەوە و دووبارە هەوڵبدەرەوە.</string>
-    <string name="installation_conflict">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی وەشانێکی تری بەرنامەکە پێشتر دامەزرێنراوە، وەشانی ئێستای Vanced بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">دامەزراندن سەرکەوتو نەبوو لەبەر هۆکاری نادیار، پەیوەندی بکە بە تێلێگرامەکەمان یان Discord بۆ پشتگیری زیاتر.</string>
     <string name="installation_incompatible">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی فایلی دابەزاندن گونجاو نییە لەگەڵ ئامێرەکەت، فایلە داگیراوەکان بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_invalid">دامەزراندن سەرکەوتوو نەبوو لەبەرئەوەی فایلی apk تێکچووە، تکایە دووبارە هەوڵبدرەوە.</string>

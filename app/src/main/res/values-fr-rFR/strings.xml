@@ -51,12 +51,13 @@
     <string name="link_title">Utiliser les onglets personnalisés Chrome</string>
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="system_default">Système par défaut</string>
-    <string name="script_save_failed">Impossible d\'enregistrer la nouvelle valeur du minuteur</string>
+    <string name="script_save_failed">Impossible d\'enregistrer la nouvelle valeur de temps</string>
     <string name="script_sleep_timer">Définir un arrêt programmé</string>
+    <string name="script_sleep_timer_description">Ajuster la valeur de l\'heure de veille utilisée dans le script /data/adb/service.d/app.sh, utile pour résoudre les problèmes de montage</string>
     <string name="theme">Thème</string>
     <string name="theme_dark">Thème sombre</string>
     <string name="theme_light">Thème clair</string>
-    <string name="update_url">URL du canal de mise à jour</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Notifications Push</string>
     <string name="push_notifications_summary">Recevoir une notification push quand une nouvelle version pour %1$s est publiée</string>
     <string name="update_center">Centre de mise à jour du Manager</string>

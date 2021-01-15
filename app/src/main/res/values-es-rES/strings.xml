@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancelado</string>
+    <string name="cancel">Cancelar</string>
     <string name="close">Cerrar</string>
     <string name="reset">Restablecer</string>
     <string name="save">Guardar</string>
@@ -32,7 +32,7 @@
     <string name="root_not_granted">Acceso root no concedido</string>
     <string name="unavailable">No Disponible</string>
     <string name="update">Actualizar</string>
-    <string name="social_media">Redes sociales</string>
+    <string name="social_media">Redes Sociales</string>
     <string name="support_us">Apóyanos</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
@@ -51,12 +51,13 @@
     <string name="link_title">Usar Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="system_default">Predeterminado del sistema</string>
-    <string name="script_save_failed">No se pudo guardar el nuevo valor del temporizador</string>
-    <string name="script_sleep_timer">Temporizador de suspensión de script</string>
+    <string name="script_save_failed">Error al guardar el nuevo valor de tiempo</string>
+    <string name="script_sleep_timer">Script Root de Tiempo para Dormir</string>
+    <string name="script_sleep_timer_description">Ajustar el valor de tiempo para dormir en el script /data/adb/service.d/app.sh, útil para arreglar problemas de montaje</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Oscuro</string>
     <string name="theme_light">Tema Claro</string>
-    <string name="update_url">URL del canal de actualizacion</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Notificaciones push de %1$s</string>
     <string name="push_notifications_summary">Recibir notificaciones push cuando una actualización para %1$s sea lanzada</string>
     <string name="update_center">Centro de Actualizaciones</string>
@@ -72,7 +73,7 @@
     <string name="chosen_version">Versión: %1$s</string>
     <string name="guide">Guía</string>
     <string name="hold_on">¡Detente!</string>
-    <string name="magisk_vanced">Estás usando la versión Magisk/TWRP de Vanced, que está descontinuada y no se puede actualizar usando esta aplicación. Por favor, elimínelo eliminando el módulo Magisk o usando el desinstalador TWRP Vanced.</string>
+    <string name="magisk_vanced">Estás usando la versión Magisk/TWRP de Vanced, la cual está descontinuada y no puede ser actualizada usando esta aplicación. Por favor, remuevala eliminando el módulo Magisk o usando el desinstalador TWRP Vanced.</string>
     <string name="miui_one_title">MIUI detectado!</string>
     <string name="miui_one">Para instalar Vanced, DEBES desactivar las optimizaciones de MIUI en las opciones de desarrollador. (Puedes omitir este paso si estás utilizando un ROM basado en xiaomi.eu 20.2.20 o posterior)</string>
     <string name="error">Error</string>
@@ -98,13 +99,13 @@
     <string name="chown_fail">Fallo al ejecutar `chown` al propietario del sistema, por favor inténtalo de nuevo.</string>
     <string name="error_downloading">Error al descargar %1$s</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
-    <string name="failed_accent">No se pudo aplicar el nuevo color de acento</string>
+    <string name="failed_accent">Falla al aplicar el nuevo color de acento</string>
     <string name="files_missing_va">Falla al localizar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
     <string name="ifile_missing">Falla al localizar en el almacenamiento el archivo apk para el tema negro/oscuro, por favor intente otra vez.</string>
     <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
     <string name="installation_blocked">La instalación ha fallado debido a que el usuario bloqueo la instalación.</string>
     <string name="installation_downgrade">La instalación ha fallado debido a que el usuario intento degradar el paquete. Desinstale las actualizaciones de la app original de YouTube y vuelva a intentarlo.</string>
-    <string name="installation_conflict">La instalación ha fallado debido a que la app entra en conflicto con una app ya instalada. Desinstala la versión actual de Vanced y vuelve a intentarlo.</string>
+    <string name="installation_conflict">La instalación ha fallado porque la aplicación entra en conflicto con una aplicación ya instalada. Desinstala la versión actual de la aplicación y vuelve a intentarlo.</string>
     <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
     <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
