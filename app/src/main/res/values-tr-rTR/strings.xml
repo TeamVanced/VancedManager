@@ -57,7 +57,7 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
-    <string name="update_url">Güncelleme kaynağı (URL)</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Anlık Bildirimleri</string>
     <string name="push_notifications_summary">%1$s için bir güncelleme yayınlandığında anlık bildirimler alın</string>
     <string name="update_center">Manager Güncelleme Merkezi</string>
