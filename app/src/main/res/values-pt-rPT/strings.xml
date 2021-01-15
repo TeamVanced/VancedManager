@@ -51,12 +51,13 @@
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos em abas personalizadas do Chrome</string>
     <string name="system_default">Padrão do sistema</string>
-    <string name="script_save_failed">Falha ao salvar novo valor de temporizador</string>
-    <string name="script_sleep_timer">Temporizador do script para dormir</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Escuro</string>
     <string name="theme_light">Tema Claro</string>
-    <string name="update_url">Atualizar Canal URL</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Notificações Push %1$s</string>
     <string name="push_notifications_summary">Receber notificações Push quando uma actualização para %1$s estiver disponível</string>
     <string name="update_center">Centro de Actualizações</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do app do YouTube e, em seguida, tente novamente.</string>
-    <string name="installation_conflict">A instalação falhou porque o app entra em conflito com um app já instalado. Desinstale a versão atual do app e tente novamente.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">A instalação falhou por razões desconhecidas, por favor entre no nosso Telegram ou Discord para suporte.</string>
     <string name="installation_incompatible">Falha na instalação porque o pacote de instalação é incompatível com o seu dispositivo. Limpe os pacotes transferidos nas Configurações e tente novamente.</string>
     <string name="installation_invalid">A instalação falhou porque os pacotes apk estão corrompidos, por favor tente novamente.</string>

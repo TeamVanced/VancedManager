@@ -51,12 +51,13 @@
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos nas abas personalizadas do Chrome</string>
     <string name="system_default">Padrão do sistema</string>
-    <string name="script_save_failed">Falha ao salvar o novo valor do temporizador</string>
-    <string name="script_sleep_timer">Script para timer de dormir</string>
+    <string name="script_save_failed">Falha ao salvar o novo valor de tempo</string>
+    <string name="script_sleep_timer">Tempo de repouso do script raiz</string>
+    <string name="script_sleep_timer_description">Ajuste o valor do tempo de suspensão usado no script /data/adb/service.d/app.sh, útil para corrigir problemas de montagem</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Escuro</string>
     <string name="theme_light">Claro</string>
-    <string name="update_url">Atualizar URL do canal</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s notificações push</string>
     <string name="push_notifications_summary">Receber notificações quando uma atualização para o %1$s for lançado</string>
     <string name="update_center">Centro de Atualizações</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo YouTube stock e tente novamente.</string>
-    <string name="installation_conflict">A instalação falhou porque o aplicativo entrou em conflito com um aplicativo já instalado. Desinstale a versão atual do Vanced e tente novamente.</string>
+    <string name="installation_conflict">A instalação falhou porque o aplicativo está em conflito com um aplicativo já instalado. Desinstale a versão atual do aplicativo e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por um motivo desconhecido, junte-se ao nosso grupo no Telegram ou Discord para obter suporte.</string>
     <string name="installation_incompatible">A instalação falhou porque o arquivo de instalação é incompatível com o seu dispositivo. Limpe os arquivos baixados nas configurações e tente novamente.</string>
     <string name="installation_invalid">A instalação falhou porque os arquivos apk estão corrompidos, tente novamente.</string>

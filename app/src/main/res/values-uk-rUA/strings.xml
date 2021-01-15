@@ -51,12 +51,13 @@
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="system_default">Системна</string>
-    <string name="script_save_failed">Неможливо зберегти нове значення таймера</string>
-    <string name="script_sleep_timer">Скрипт таймера сну</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Тема</string>
     <string name="theme_dark">Темна тема</string>
     <string name="theme_light">Світла тема</string>
-    <string name="update_url">URL-адреса до каналу з оновленнями</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Спливаючі Сповіщення</string>
     <string name="push_notifications_summary">Отримувати спливаючі сповіщення, коли доступне оновлення для %1$s</string>
     <string name="update_center">Центр Оновлень</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Встановлення не вдалося, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Встановлення не вдалося, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався знизити пакет. Видаліть оновлення з програми YouTube на складі, а потім спробуйте ще раз.</string>
-    <string name="installation_conflict">Встановлення не вдалося, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
     <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>

@@ -51,12 +51,13 @@
     <string name="link_title">Utilizează file personalizate Chrome</string>
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="system_default">Setarea implicită a sistemului</string>
-    <string name="script_save_failed">Salvarea noii valori a temporizatorului a eșuat</string>
-    <string name="script_sleep_timer">Temporizator pentru modul de veghe</string>
+    <string name="script_save_failed">Salvarea noii valori de timp a eșuat</string>
+    <string name="script_sleep_timer">Dupa cât timp se activează script-ul root</string>
+    <string name="script_sleep_timer_description">Reglaţi dupa cât timp este activat script-ul root folosit în /data/adb/service.d/app.sh script, util pentru remedierea problemelor de montare</string>
     <string name="theme">Temă</string>
     <string name="theme_dark">Temă întunecată</string>
     <string name="theme_light">Temă deschisă</string>
-    <string name="update_url">URL canal de actualizare</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Notificari push</string>
     <string name="push_notifications_summary">Primiți notificări push când o actualizare pentru %1$s este lansată</string>
     <string name="update_center">Actualizator</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Instalarea a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_blocked">Instalarea a eșuat deoarece utilizatorul a blocat instalarea.</string>
     <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările din aplicația stock YouTube, apoi încercați din nou.</string>
-    <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă Vanced, apoi încercați din nou.</string>
+    <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă a aplicației, apoi încercați din nou.</string>
     <string name="installation_failed">Instalarea a eșuat din motive necunoscute, alătură-te Telegramului nostru sau Discord pentru mai multă asistență.</string>
     <string name="installation_incompatible">Instalarea a eșuat deoarece fișierul de instalare este incompatibil cu dispozitivul dvs. Ștergeți fișierele descărcate din Setări, apoi încercați din nou.</string>
     <string name="installation_invalid">Instalarea a eșuat deoarece fișierele apk sunt corupte, încercați din nou.</string>

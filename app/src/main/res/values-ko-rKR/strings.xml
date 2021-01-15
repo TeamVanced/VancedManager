@@ -51,12 +51,13 @@
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="system_default">시스템 기본값</string>
-    <string name="script_save_failed">새 타이머 값을 저장할 수 없습니다</string>
-    <string name="script_sleep_timer">취침 타이머 일정</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">테마</string>
     <string name="theme_dark">다크 테마</string>
     <string name="theme_light">라이트 테마</string>
-    <string name="update_url">업데이트 채널 URL</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s 푸시 알림</string>
     <string name="push_notifications_summary">새로운 %1$s 업데이트가 출시되면 알림 받기</string>
     <string name="update_center">업데이트 센터</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">사용자가 설치를 중단했기 때문에 앱을 설치하지 못했습니다.</string>
     <string name="installation_blocked">사용자가 설치를 차단했기 때문에 앱을 설치하지 못했습니다.</string>
     <string name="installation_downgrade">사용자가 패키지를 이전 버전으로 변경하려고 하여 앱을 설치하지 못했습니다. 기본 YouTube 앱을 초기 버전으로 변경한 다음, 설치를 다시 진행해주세요.</string>
-    <string name="installation_conflict">설치하려는 앱이 이미 설치된 앱과 충돌하여 앱을 설치하지 못했습니다. 현재 설치된 앱을 제거한 다음 다시 설치하십시오.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">알 수 없는 이유가 발생하여 앱을 설치하지 못했습니다. 저희 텔레그램 또는 디스코드에 문제를 제보해주시면 도와드리겠습니다.</string>
     <string name="installation_incompatible">설치 파일이 기기와 호환되지 않아 앱을 설치하지 못했습니다. Manager 설정에서 다운로드된 파일을 모두 삭제한 다음, 설치를 다시 진행해주세요.</string>
     <string name="installation_invalid">APK 파일이 손상되어 앱을 설치하지 못했습니다. 설치를 다시 진행해주세요.</string>

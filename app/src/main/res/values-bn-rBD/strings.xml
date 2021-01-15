@@ -51,12 +51,13 @@
     <string name="link_title">ক্রোম কাস্টম ট্যাবস ব্যবহার করুন</string>
     <string name="link_custom_tabs">লিঙ্কগুলি ক্রোম কাস্টম ট্যাবসে খোলা হবে</string>
     <string name="system_default">সিস্টেম দ্বারা নির্ধারিত</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">থিম</string>
     <string name="theme_dark">গাঢ় থিম</string>
     <string name="theme_light">হালকা থিম</string>
-    <string name="update_url">চ্যানেল URL আপডেট করুন</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s পুশ বিজ্ঞপ্তি</string>
     <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তি পান</string>
     <string name="update_center">ম্যানেজার আপডেট কেন্দ্র</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।.</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের সাথে বেমানান। সেটিংসে ডাউনলোড করা ফাইল সাফ করুন, তারপরে আবার চেষ্টা করুন।.</string>
     <string name="installation_invalid">অ্যাপ্লিকেশন ব্যর্থ হয়েছে কারণ এপিপি ফাইলগুলি দূষিত হয়েছে, দয়া করে আবার চেষ্টা করুন।.</string>

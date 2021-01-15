@@ -51,12 +51,13 @@
     <string name="link_title">Använd Chrome-anpassade flikar</string>
     <string name="link_custom_tabs">Länkar öppnas i Chrome Custom Tabs</string>
     <string name="system_default">Systemstandard</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Mörkt tema</string>
     <string name="theme_light">Ljust tema</string>
-    <string name="update_url">Uppdatera källa</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s push-meddelanden</string>
     <string name="push_notifications_summary">Få push-meddelanden när en uppdatering för %1$s släpps</string>
     <string name="update_center">Ansvarig uppdateringscenter</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_downgrade">Installationen misslyckades eftersom användaren försökte nedgradera paketet. Avinstallera uppdateringar från lagerappen YouTube, försök sedan igen.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
     <string name="installation_incompatible">Installationen misslyckades eftersom installationsfilen är inkompatibel med din enhet. Rensa nedladdade filer i Inställningarna och försök igen.</string>
     <string name="installation_invalid">Installationen misslyckades eftersom apk-filerna är skadade, försök igen.</string>

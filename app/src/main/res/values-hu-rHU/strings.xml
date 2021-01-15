@@ -15,8 +15,8 @@
     <string name="are_you_rooted">Rootolt az eszközöd?</string>
     <string name="grant_root">Root hozzáférés engedélyezése</string>
     <string name="select_at_least_one_app">Legalább egy appot válassz!</string>
-    <string name="select_apps_music">Vanced a YouTube Music-ra!\nkevesebb funkciő, de minden ami kellhet.</string>
-    <string name="select_apps_vanced">A Youtube Vanced egy gyári Android YouTube alkalmazás, csak jobb!</string>
+    <string name="select_apps_music">Vanced, a YouTube Music-ra!\nKevésbé funkciógazdag, de kielégíti az igényeidet.</string>
+    <string name="select_apps_vanced">A Youtube Vanced a gyári Android YouTube alkalmazás, csak jobb nála!</string>
     <string name="lets_get_started">Lássunk neki</string>
     <string name="willing_to_use_root">Nem tudod mi ez vagy csak nem akarod használni a root verziót? Csak kattins a lenti kék nyílra!</string>
     <!-- Home Page -->
@@ -29,18 +29,18 @@
     <string name="version_installed">Telepítve:</string>
     <string name="latest">Legújabb:</string>
     <string name="no_microg">microG nincs telepítve</string>
-    <string name="root_not_granted">Nincs root jogosultság</string>
+    <string name="root_not_granted">A root hozzáférés nincs megadva</string>
     <string name="unavailable">Nem elérhető</string>
     <string name="update">Frissítés</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">Közösségi média</string>
+    <string name="support_us">Támogass minket</string>
     <!-- Settings -->
     <string name="accent_color">Kiemelés színe</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
+    <string name="accent_blue">Kék</string>
+    <string name="accent_green">Zöld</string>
+    <string name="accent_purple">Lila</string>
+    <string name="accent_red">Vörös</string>
+    <string name="accent_yellow">Sárga</string>
     <string name="category_appearance">Megjelenítés</string>
     <string name="category_behaviour">Viselkedés</string>
     <string name="clear_files">Letöltött fájlok törlése</string>
@@ -51,12 +51,13 @@
     <string name="link_title">Egyéni Chrome lapok használata</string>
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="system_default">Rendszer alapértelmezett</string>
-    <string name="script_save_failed">Failed to save new timer value</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Nem sikerült az időzítő új értékének mentése</string>
+    <string name="script_sleep_timer">Alvás idő script (Root)</string>
+    <string name="script_sleep_timer_description">Alvás idő beállítás a /data/adb/service.d/app.sh scriptben, hasznos a csatlakoztatási problémák javítására</string>
     <string name="theme">Kinézet</string>
     <string name="theme_dark">Sötét téma</string>
     <string name="theme_light">Világos téma</string>
-    <string name="update_url">Frissítési csatorna</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Leküldéses (Push) Értesítések</string>
     <string name="push_notifications_summary">Értesítések fogadása, amikor a %1$s számára frissítés érhető el</string>
     <string name="update_center">Frissítő központ</string>
@@ -99,14 +100,14 @@ Akarod telepíteni?</string>
     <string name="chown_fail">Nem sikerült az APK beállítása a rendszer tulajdonoshoz, kérjük próbálja újra.</string>
     <string name="error_downloading">%1$s letöltése nem sikerült</string>
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">Nem sikerült az új kiemelés szín beállítása</string>
     <string name="files_missing_va">A telepítéshez szükséges file-ok megtalálása meghiúsult. Töltse le újra a telepítőfile-okat és próbálja újra.</string>
     <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
     <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó régebbi verziót próbált telepíteni.
 Távolítsd el a gyári YouTube app frissítéseit, majd próbáld újra.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsd el a jelenlegi verziót és próbáld újra.</string>
     <string name="installation_failed">A telepítés ismeretlen okok miatt nem sikerült, támogatásért csatlakozz a Telegram vagy a Discord csoportunkhoz.</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
     <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok korruptak, próbáld újra.</string>

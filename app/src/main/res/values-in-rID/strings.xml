@@ -51,12 +51,13 @@
     <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
     <string name="system_default">Standar Sistem</string>
-    <string name="script_save_failed">Gagal untuk menyimpan nilai timer baru</string>
-    <string name="script_sleep_timer">Pewaktu Skript Tidur</string>
+    <string name="script_save_failed">Gagal untuk menyimpan nilai waktu baru</string>
+    <string name="script_sleep_timer">Waktu Root Script Sleep</string>
+    <string name="script_sleep_timer_description">Sesuaikan nilai sleep time yang digunakan dalam skript /data/adb/service.d/app.sh, berguna untuk memperbaiki masalah pemasangan</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
-    <string name="update_url">Perbarui URL Channel</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Notifikasi Push %1$s</string>
     <string name="push_notifications_summary">Terima notifikasi push saat pembaruan untuk %1$s dirilis</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
@@ -64,7 +65,7 @@
     <string name="variant">Varian</string>
     <!-- Dialogs -->
     <string name="advanced">Tingkat Lanjut</string>
-    <string name="app_install_files_detected">%1$s file instalasi terdeteksi!</string>
+    <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
     <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasangnya?</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
     <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
     <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
-    <string name="installation_conflict">Pemasangan gagal dikarenakan aplikasi konflik dengan aplikasi yang sudah terpasang. Hapus versi aplikasi yang sekarang, lalu coba lagi.</string>
+    <string name="installation_conflict">Pemasangan gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang. Copot pemasangan aplikasi versi saat ini, lalu coba lagi.</string>
     <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
     <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
     <string name="installation_invalid">Pemasangan gagal karena file apk rusak, mohon coba lagi.</string>

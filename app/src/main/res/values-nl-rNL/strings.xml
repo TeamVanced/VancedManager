@@ -52,11 +52,12 @@
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
     <string name="system_default">Systeemstandaard</string>
     <string name="script_save_failed">Bewaren van nieuwe waarde voor slaaptimer mislukt</string>
-    <string name="script_sleep_timer">Slaaptimer instellen</string>
+    <string name="script_sleep_timer">Slaaptimer root script</string>
+    <string name="script_sleep_timer_description">Aanpassen waarde voor slaaptimer gebruikt in /data/adb/service.d/app.sh script, nuttig bij mount-issues</string>
     <string name="theme">Thema</string>
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht thema</string>
-    <string name="update_url">URL update kanaal</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s push meldingen</string>
     <string name="push_notifications_summary">Push meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
     <string name="update_center">Manager Update Center</string>

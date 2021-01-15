@@ -51,12 +51,13 @@
     <string name="link_title">Utilizza le Schede Personalizzate di Chrome</string>
     <string name="link_custom_tabs">I link verranno aperti nelle Schede Personalizzate di Chrome</string>
     <string name="system_default">Predefinito di Sistema</string>
-    <string name="script_save_failed">Impossibile salvare il nuovo valore del timer</string>
-    <string name="script_sleep_timer">Script Sleep Timer</string>
+    <string name="script_save_failed">Impossibile salvare il nuovo valore temporale</string>
+    <string name="script_sleep_timer">Tempo Di Sospensione Script Root</string>
+    <string name="script_sleep_timer_description">Regola il valore del tempo di sospensione utilizzato nello script /data/adb/service.d/app.sh, utile per risolvere i problemi di montaggio</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Scuro</string>
     <string name="theme_light">Tema Chiaro</string>
-    <string name="update_url">Aggiorna l\'URL del Canale</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Notifiche Push di %1$s</string>
     <string name="push_notifications_summary">Ricevi notifiche push quando un aggiornamento per %1$s è disponibile</string>
     <string name="update_center">Centro Aggiornamenti</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Installazione non riuscita. L\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Installazione non riuscita. L\'utente ha bloccato l\'installazione.</string>
     <string name="installation_downgrade">Installazione non riuscita. L\'utente ha provato ad eseguire il downgrade del pacchetto. Disinstalla gli aggiornamenti dell\'app predefinita di YouTube, poi riprova.</string>
-    <string name="installation_conflict">Installazione fallita a causa di conflitti con un\'app già installata. Disinstalla la versione corrente dell\'app, quindi riprova.</string>
+    <string name="installation_conflict">Installazione fallita perché l\'applicazione è in conflitto con un\'app già installata. Disinstallare la versione corrente dell\'applicazione, quindi riprovare.</string>
     <string name="installation_failed">Installazione non riuscita a causa di un errore sconosciuto, unisciti al nostro gruppo Telegram o al server di Discord per ricevere ulteriore assistenza.</string>
     <string name="installation_incompatible">Installazione non riuscita, il file di installazione non è compatibile con il tuo dispositivo. Elimina i file scaricati nelle impostazioni, poi riprova.</string>
     <string name="installation_invalid">Installazione non riuscita a causa di file apk corrotti, si prega di riprovare.</string>

@@ -51,12 +51,13 @@
     <string name="link_title">Chrome カスタムタブを使用する</string>
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
     <string name="system_default">システム標準</string>
-    <string name="script_save_failed">新しいタイマーの値の保存に失敗しました</string>
-    <string name="script_sleep_timer">スクリプトスリープタイマー</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">テーマ</string>
     <string name="theme_dark">ダークテーマ</string>
     <string name="theme_light">ライトテーマ</string>
-    <string name="update_url">アップデート チャンネル URL</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s プッシュ通知</string>
     <string name="push_notifications_summary">%1$s のアップデートがリリースされたときにプッシュ通知を受け取る</string>
     <string name="update_center">アップデート センター</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。標準の YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_conflict">既にインストールされたアプリと競合したためインストールに失敗しました。Vanced の現在のバージョンをアンインストールしてから、もう一度やり直してください。</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
     <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>

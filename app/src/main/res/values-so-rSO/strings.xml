@@ -51,12 +51,13 @@
     <string name="link_title">Isticmaal Daaqadaha Chrome</string>
     <string name="link_custom_tabs">Linkiyadu waxay ku furmi doonaan daaqadaha Chrome-ka ee loogu talagalay</string>
     <string name="system_default">Sida aaladu tahay</string>
-    <string name="script_save_failed">Laguma guulaysan in cadadkaas la kaydiyo</string>
-    <string name="script_sleep_timer">Qor Gooraynta Jiifka</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Nashqada</string>
     <string name="theme_dark">Nashqad Madow</string>
     <string name="theme_light">Nashqad Cad</string>
-    <string name="update_url">Cusboonaysii Ciwaanka Kanaanlka</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Ogaysiisyadisa soodhaca</string>
     <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyo marka mid cusub oo %1$s ah lasoo saaro</string>
     <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa joojiyay.</string>
     <string name="installation_blocked">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa xanibay.</string>
     <string name="installation_downgrade">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa isku dayay inuu nooc hore ku shubo. Ka saar cusboonaysiinta xaga app-ka YouTube-ka caadiga ah, kadibna markale isku day.</string>
-    <string name="installation_conflict">Ku shubidii way guuldaraysatay sababtoo ah app-ka waxay iskhilaafeen mid horay ugu jiray aalada. Ka saar nooca Vanced-ka ee kujira, kadib markale ku celi.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Ku shubidii way guuldaraysatay sababo aan la garanaynin awgood, kusoo biir Telegram-kanaga ama Discord-ka si aad caawin dheerad ah u hesho.</string>
     <string name="installation_incompatible">Ku shubidii way guuldaraysatay sababtoo ah faylka kuma shaqaynayo aaladaada. Xaga Fadhiga ka saar waxyaabaha lasoo dajiyay, kadib markale isku day.</string>
     <string name="installation_invalid">Ku shubidii way guuldaraysatay sababtoo ah faylashii apk-ga ayaa khalkhalsan, markale isku day.</string>

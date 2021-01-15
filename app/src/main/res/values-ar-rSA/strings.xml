@@ -51,12 +51,13 @@
     <string name="link_title">استخدم علامات تبويب مخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات تبويب مخصصة لمتصفح كروم</string>
     <string name="system_default">الوضع الافتراضي</string>
-    <string name="script_save_failed">فشل حفظ قيمة المؤقت الجديدة</string>
-    <string name="script_sleep_timer">مؤقت خمول نص الروت</string>
+    <string name="script_save_failed">فشل في حفظ قيمة وقت جديد</string>
+    <string name="script_sleep_timer">مؤقت خمول نص الجذر</string>
+    <string name="script_sleep_timer_description">ضبط القيمة الزمنية للنوم المستخدمة في /data/adb/service.d/app.sh script، مفيد لإصلاح مشاكل التركيب</string>
     <string name="theme">السمة</string>
     <string name="theme_dark">السمة الداكنة</string>
     <string name="theme_light">السمة الفاتحة</string>
-    <string name="update_url">تحديث رابط القناة</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">إشعارات %1$s</string>
     <string name="push_notifications_summary">تلقي الإشعارات عند إصدار تحديث لـ %1$s</string>
     <string name="update_center">مركز التحديث</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
     <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
-    <string name="installation_conflict">فشل التثبيت لأن التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من ڤانسد، ثم حاول مرة أخرى.</string>
+    <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
     <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى التيليجرام أو الديسكورد الخاص بنا لمزيد من الدعم.</string>
     <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. امسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
     <string name="installation_invalid">فشل التثبيت لأن حزم التثبيت تالفة، الرجاء المحاولة مرة أخرى.</string>

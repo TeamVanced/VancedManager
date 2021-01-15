@@ -51,12 +51,13 @@
     <string name="link_title">Chrome Özəl Vərəqlərini istifadə et</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özəl Vərəqlərində açılacaq</string>
     <string name="system_default">İlkin Sistem</string>
-    <string name="script_save_failed">Yeni zamanlayıcı qiymətini saxlamaq olmadı</string>
-    <string name="script_sleep_timer">Zamanlayıcı tənzimləməsi</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tünd mövzu</string>
     <string name="theme_light">Açıq mövzu</string>
-    <string name="update_url">Yeniləmə Kanal URL-si</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Ani Bildirişlər</string>
     <string name="push_notifications_summary">%1$s üçün yeni buraxılış olanda ani bildirişlər alın</string>
     <string name="update_center">Menecer Yeniləmə Mərkəzi</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">İstifadəçi quraşdırmanı ləğv etdiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_blocked">İstifadəçi quraşdırmanı əngəllədiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_downgrade">İstifadəçi paketi alt versiyaya keçirməyə çalışdığı üçün quraşdırılma uğursuz oldu. Stok YouTube tətbiqindən yeniləmələri silib yenidən sınayın.</string>
-    <string name="installation_conflict">Tətbiq əvvəlcədən quraşdırılmış bir tətbiqlə toqquşduğu üçün quraşdırılma uğursuz oldu. Vanced-in cari versiyasını silib yenidən sınayın.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Bilinməyən səbəblərə görə quraşdırılma uğursuz oldu. Dəstək üçün Telegram və ya Discord-a qoşulun.</string>
     <string name="installation_incompatible">Quraşdırma faylı cihazınıza uyğun gəlmədiyi üçün quraşdırılma uğursuz oldu. Tənzimləmələrdən endirilmiş faylları təmizləyib yenidən sınayın.</string>
     <string name="installation_invalid">Apk faylları zədəli olduğu üçün quraşdırılma uğursuz oldu, yenidən sınayın.</string>

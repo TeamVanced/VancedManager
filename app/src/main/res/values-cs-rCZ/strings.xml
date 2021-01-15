@@ -51,12 +51,13 @@
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
     <string name="link_custom_tabs">Odkazy se otevřou na vlastních kartách prohlížeče Chrome</string>
     <string name="system_default">Výchozí systémové nastavení</string>
-    <string name="script_save_failed">Nepodařilo se uložit novou hodnotu časovače</string>
-    <string name="script_sleep_timer">Časovač vypnutí skriptu</string>
+    <string name="script_save_failed">Nepodařilo se uložit novou hodnotu času</string>
+    <string name="script_sleep_timer">Doba nečinnosti kořenového skriptu</string>
+    <string name="script_sleep_timer_description">Upravte hodnotu doby nečinnosti použitou ve skriptu /data/adb/service.d/app.sh, která je užitečná pro opravu problémů s připojením</string>
     <string name="theme">Vzhled</string>
     <string name="theme_dark">Tmavý vzhled</string>
     <string name="theme_light">Světlý vzhled</string>
-    <string name="update_url">URL aktualizačního kanálu</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s vyskakovací oznámení</string>
     <string name="push_notifications_summary">Po vydání aktualizace pro %1$s obdržíte vyskakovací oznámení</string>
     <string name="update_center">Centrum aktualizací</string>

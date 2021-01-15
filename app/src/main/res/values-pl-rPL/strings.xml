@@ -51,12 +51,13 @@
     <string name="link_title">Używaj niestandardowych kart Chrome</string>
     <string name="link_custom_tabs">Linki zostaną otwarte w niestandardowych kartach Chrome</string>
     <string name="system_default">Domyślny systemowy</string>
-    <string name="script_save_failed">Nie udało się zapisać nowej wartości timera</string>
-    <string name="script_sleep_timer">Czas snu skryptu</string>
+    <string name="script_save_failed">Nie udało się zapisać nowej wartości czasu</string>
+    <string name="script_sleep_timer">Czas snu skryptu root</string>
+    <string name="script_sleep_timer_description">Dostosuj wartość czasu uśpienia w skrypcie /data/adb/service.d/app.sh, przydatne do naprawy problemów z montowaniem</string>
     <string name="theme">Motyw</string>
     <string name="theme_dark">Ciemny Motyw</string>
     <string name="theme_light">Jasny Motyw</string>
-    <string name="update_url">Zaktualizuj URL kanału</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Powiadomień Push</string>
     <string name="push_notifications_summary">Otrzymuj powiadomienia push po wydaniu aktualizacji dla %1$s</string>
     <string name="update_center">Centrum aktualizacji</string>
@@ -104,7 +105,7 @@
     <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Instalacja nie powiodła się, ponieważ użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z aplikacji YouTube, a następnie spróbuj ponownie.</string>
-    <string name="installation_conflict">Instalacja nie powiodła się z powodu konfliktu aplikacji z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
+    <string name="installation_conflict">Instalacja nie powiodła się ponieważ aplikacja konfliktuje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
     <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>

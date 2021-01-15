@@ -51,12 +51,13 @@
     <string name="link_title">Koristi prilagođene kartice Chroma</string>
     <string name="link_custom_tabs">Poveznice će se otvarati u prilagođenim karticama Chroma</string>
     <string name="system_default">Zadano sustavom</string>
-    <string name="script_save_failed">Neuspjelo spremanje nove vrijednosti odbrojavanja</string>
-    <string name="script_sleep_timer">Skripta odbrojavanja spavanja</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tamna tema</string>
     <string name="theme_light">Svjetla tema</string>
-    <string name="update_url">Ažuriraj URL kanala</string>
+    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s skočne obavijesti</string>
     <string name="push_notifications_summary">Primite skočnu obavijest kada je ažuriranje za %1$s dostupno</string>
     <string name="update_center">Središte ažuriranja upravitelja</string>
