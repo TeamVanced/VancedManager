@@ -14,7 +14,7 @@
             tools:text="@string/script_sleep_timer"
             style="@style/DialogCardTitle" />
 
-        <com.google.android.material.slider.Slider
+        <com.vanced.manager.ui.core.ThemedMaterialSlider
             android:id="@+id/serviced_slider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
