@@ -57,7 +57,6 @@
     <string name="theme">தீம்</string>
     <string name="theme_dark">இருண்ட தீம்</string>
     <string name="theme_light">ஒளி தீம்</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s புஷ் அறிவிப்புகள்</string>
     <string name="push_notifications_summary">%1$s க்கான புதுப்பிப்பு வெளியிடப்படும் போது புஷ் அறிவிப்புகளைப் பெறுக</string>
     <string name="update_center">மேலாளர் புதுப்பிப்பு மையம்</string>
