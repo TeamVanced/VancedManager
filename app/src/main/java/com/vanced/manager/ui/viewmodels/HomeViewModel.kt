@@ -21,6 +21,7 @@ import com.vanced.manager.adapter.LinkAdapter.Companion.TELEGRAM
 import com.vanced.manager.adapter.LinkAdapter.Companion.TWITTER
 import com.vanced.manager.adapter.SponsorAdapter.Companion.BRAVE
 import com.vanced.manager.model.DataModel
+import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.dialogs.InstallationFilesDetectedDialog
 import com.vanced.manager.ui.dialogs.MusicPreferencesDialog
@@ -46,10 +47,10 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     private val prefs = getDefaultSharedPreferences(activity)
 
     val vanced = MutableLiveData<DataModel>()
-    val vancedRoot = MutableLiveData<DataModel>()
+    val vancedRoot = MutableLiveData<RootDataModel>()
     val microg = MutableLiveData<DataModel>()
     val music = MutableLiveData<DataModel>()
-    val musicRoot = MutableLiveData<DataModel>()
+    val musicRoot = MutableLiveData<RootDataModel>()
     val manager = MutableLiveData<DataModel>()
 
     fun fetchData() {
@@ -157,9 +158,9 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     init {
         vanced.value = DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
-        vancedRoot.value = DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
+        vancedRoot.value = RootDataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced), "vanced")
         music.value = DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
-        musicRoot.value = DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
+        musicRoot.value = RootDataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music), "music")
         microg.value = DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg))
         manager.value = DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher))
     }

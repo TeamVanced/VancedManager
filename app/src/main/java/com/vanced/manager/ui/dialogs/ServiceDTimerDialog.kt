@@ -13,6 +13,7 @@ import com.vanced.manager.utils.Extensions.writeServiceDScript
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.PackageHelper.getPackageDir
 import com.vanced.manager.utils.PackageHelper.getPkgNameRoot
+import com.vanced.manager.utils.PackageHelper.scriptExists
 import java.io.IOException
 import java.util.*
 
@@ -39,8 +40,10 @@ class ServiceDTimerDialog : BindingDialogFragment<DialogServicedTimerBinding>() 
             servicedSave.setOnClickListener {
                 try {
                     arrayOf("vanced", "music").forEach { app ->
-                        val apkFPath = "${PackageHelper.apkInstallPath}/${app.capitalize(Locale.ROOT)}/base.apk"
-                        getPackageDir(requireActivity(), getPkgNameRoot(app))?.let { it1 -> requireActivity().writeServiceDScript(apkFPath, it1, app) }
+                        if (scriptExists(app)) {
+                            val apkFPath = "${PackageHelper.apkInstallPath}/${app.capitalize(Locale.ROOT)}/base.apk"
+                            getPackageDir(requireActivity(), getPkgNameRoot(app))?.let { it1 -> requireActivity().writeServiceDScript(apkFPath, it1, app) }
+                        }
                     }
                 } catch (e: IOException) {
                     Toast.makeText(requireActivity(), R.string.script_save_failed, Toast.LENGTH_SHORT).show()

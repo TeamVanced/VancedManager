@@ -34,7 +34,7 @@ import kotlin.collections.HashMap
 object PackageHelper {
 
     const val apkInstallPath = "/data/adb"
-    const val INSTALLER_TAG = "VMInstall"
+    private const val INSTALLER_TAG = "VMInstall"
     private val vancedThemes = arrayOf("black", "dark", "pink", "blue")
 
     init {
@@ -53,6 +53,16 @@ object PackageHelper {
             else -> ""
         }
     }
+
+    fun scriptExists(scriptName: String): Boolean {
+        val serviceDScript = SuFile.open("$apkInstallPath/service.d/$scriptName.sh")
+        val postFsDataScript = SuFile.open("$apkInstallPath/post-fs-data.d/$scriptName.sh")
+        if (serviceDScript.exists() && postFsDataScript.exists()) {
+            return true
+        }
+        return false
+    }
+
 
     fun getPkgNameRoot(app: String): String {
         return when (app) {

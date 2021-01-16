@@ -11,6 +11,7 @@ import com.github.florent37.viewtooltip.ViewTooltip
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewAppBinding
 import com.vanced.manager.model.DataModel
+import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 
@@ -23,7 +24,7 @@ class AppListAdapter(
 
     val apps = mutableListOf<String>()
     private val dataModels = mutableListOf<DataModel?>()
-    private val rootDataModels = mutableListOf<DataModel?>()
+    private val rootDataModels = mutableListOf<RootDataModel?>()
     private val prefs = getDefaultSharedPreferences(context)
     private var itemCount = 0
 
