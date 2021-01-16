@@ -5,27 +5,22 @@ import android.content.res.Configuration
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.vanced.manager.R
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
 
-object ThemeHelper {
+const val defAccentColor: Int = -13732865
 
-    const val defAccentColor: Int = -13732865
+val mutableAccentColor = MutableLiveData<Int>()
+val accentColor: LiveData<Int> = mutableAccentColor
 
-    val mutableAccentColor = MutableLiveData<Int>()
-    val accentColor: LiveData<Int> = mutableAccentColor
-
-    fun Activity.setFinalTheme() {
-        when (getDefaultPrefs().getString("manager_theme", "System Default")) {
-            "Light" -> setTheme(R.style.LightTheme)
-            "Dark" -> setTheme(R.style.DarkTheme)
-            "System Default" -> {
-                when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                    Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme)
-                    Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme)
-                }
+fun Activity.setFinalTheme() {
+    when (getDefaultPrefs().getString("manager_theme", "System Default")) {
+        "Light" -> setTheme(R.style.LightTheme)
+        "Dark" -> setTheme(R.style.DarkTheme)
+        "System Default" -> {
+            when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme)
+                Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme)
             }
-            else -> setTheme(R.style.LightTheme)
         }
+        else -> setTheme(R.style.LightTheme)
     }
-    
 }

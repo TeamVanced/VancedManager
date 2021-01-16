@@ -92,21 +92,21 @@ class AppListAdapter(
     init {
 
         if (prefs.getBoolean("enable_vanced", true)) {
-            dataModels.add(viewModel.vanced.value)
-            rootDataModels.add(viewModel.vancedRoot.value)
+            dataModels.add(viewModel.vancedModel.value)
+            rootDataModels.add(viewModel.vancedRootModel.value)
             apps.add(context.getString(R.string.vanced))
             itemCount++
         }
 
         if (prefs.getBoolean("enable_music", true)) {
-            dataModels.add(viewModel.music.value)
-            rootDataModels.add(viewModel.musicRoot.value)
+            dataModels.add(viewModel.musicModel.value)
+            rootDataModels.add(viewModel.musicRootModel.value)
             apps.add(context.getString(R.string.music))
             itemCount++
         }
 
         if (!isRoot) {
-            dataModels.add(viewModel.microg.value)
+            dataModels.add(viewModel.microgModel.value)
             apps.add(context.getString(R.string.microg))
             itemCount++
         }

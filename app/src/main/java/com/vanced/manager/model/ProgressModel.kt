@@ -1,7 +1,6 @@
 package com.vanced.manager.model
 
 import androidx.lifecycle.MutableLiveData
-import com.github.kittinunf.fuel.core.requests.CancellableRequest
 import okhttp3.ResponseBody
 import retrofit2.Call
 

@@ -9,11 +9,7 @@ import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedPreferencesBinding
-import com.vanced.manager.utils.Extensions.convertToAppTheme
-import com.vanced.manager.utils.Extensions.convertToAppVersions
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.InternetTools.vancedVersions
-import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
+import com.vanced.manager.utils.*
 import java.util.*
 
 class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPreferencesBinding>() {

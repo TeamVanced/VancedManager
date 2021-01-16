@@ -7,9 +7,9 @@ import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogMusicPreferencesBinding
-import com.vanced.manager.utils.Extensions.convertToAppVersions
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.InternetTools.musicVersions
+import com.vanced.manager.utils.convertToAppVersions
+import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.musicVersions
 
 class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPreferencesBinding>() {
 

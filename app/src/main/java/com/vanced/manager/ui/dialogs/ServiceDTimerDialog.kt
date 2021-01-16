@@ -8,12 +8,12 @@ import androidx.core.content.edit
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogServicedTimerBinding
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.Extensions.writeServiceDScript
 import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.PackageHelper.getPackageDir
 import com.vanced.manager.utils.PackageHelper.getPkgNameRoot
 import com.vanced.manager.utils.PackageHelper.scriptExists
+import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.writeServiceDScript
 import java.io.IOException
 import java.util.*
 

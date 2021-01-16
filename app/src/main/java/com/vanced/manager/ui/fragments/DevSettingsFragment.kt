@@ -18,7 +18,7 @@ import com.vanced.manager.databinding.FragmentDevSettingsBinding
 import com.vanced.manager.ui.WelcomeActivity
 import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
 import com.vanced.manager.ui.dialogs.URLChangeDialog
-import com.vanced.manager.utils.LanguageHelper.authCrowdin
+import com.vanced.manager.utils.authCrowdin
 
 class DevSettingsFragment : BindingFragment<FragmentDevSettingsBinding>() {
 

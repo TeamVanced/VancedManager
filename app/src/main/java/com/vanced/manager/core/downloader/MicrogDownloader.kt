@@ -4,10 +4,10 @@ import android.content.Context
 import com.vanced.manager.R
 import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.Extensions.getInstallUrl
-import com.vanced.manager.utils.InternetTools.microg
 import com.vanced.manager.utils.PackageHelper.install
+import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.getInstallUrl
+import com.vanced.manager.utils.microg
 
 object MicrogDownloader {
 

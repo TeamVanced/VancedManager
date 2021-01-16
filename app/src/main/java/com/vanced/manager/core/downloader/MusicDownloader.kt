@@ -3,16 +3,11 @@ package com.vanced.manager.core.downloader
 import android.content.Context
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
+import com.vanced.manager.utils.*
 import com.vanced.manager.utils.AppUtils.musicRootPkg
 import com.vanced.manager.utils.AppUtils.validateTheme
-import com.vanced.manager.utils.DeviceUtils.getArch
 import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.Extensions.getInstallUrl
-import com.vanced.manager.utils.Extensions.getLatestAppVersion
-import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
-import com.vanced.manager.utils.InternetTools.music
-import com.vanced.manager.utils.InternetTools.musicVersions
 import com.vanced.manager.utils.PackageHelper.downloadStockCheck
 import com.vanced.manager.utils.PackageHelper.install
 import com.vanced.manager.utils.PackageHelper.installMusicRoot

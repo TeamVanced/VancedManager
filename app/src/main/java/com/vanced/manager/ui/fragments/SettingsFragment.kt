@@ -18,10 +18,10 @@ import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.FragmentSettingsBinding
 import com.vanced.manager.ui.dialogs.*
-import com.vanced.manager.utils.Extensions.toHex
-import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
-import com.vanced.manager.utils.ThemeHelper.accentColor
-import com.vanced.manager.utils.ThemeHelper.defAccentColor
+import com.vanced.manager.utils.accentColor
+import com.vanced.manager.utils.defAccentColor
+import com.vanced.manager.utils.getLanguageFormat
+import com.vanced.manager.utils.toHex
 import java.io.File
 
 class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {

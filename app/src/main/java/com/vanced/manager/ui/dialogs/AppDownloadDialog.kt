@@ -18,7 +18,7 @@ import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogAppDownloadBinding
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.Extensions.applyAccent
+import com.vanced.manager.utils.applyAccent
 
 class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
 

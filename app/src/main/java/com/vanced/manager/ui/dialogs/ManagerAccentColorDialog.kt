@@ -16,10 +16,10 @@ import com.madrapps.pikolo.listeners.OnColorSelectionListener
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerAccentColorBinding
-import com.vanced.manager.utils.Extensions.toHex
-import com.vanced.manager.utils.ThemeHelper.accentColor
-import com.vanced.manager.utils.ThemeHelper.defAccentColor
-import com.vanced.manager.utils.ThemeHelper.mutableAccentColor
+import com.vanced.manager.utils.accentColor
+import com.vanced.manager.utils.defAccentColor
+import com.vanced.manager.utils.mutableAccentColor
+import com.vanced.manager.utils.toHex
 
 class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorBinding>() {
 

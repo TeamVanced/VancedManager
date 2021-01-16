@@ -5,9 +5,9 @@ import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
-import com.vanced.manager.utils.Extensions.applyAccent
-import com.vanced.manager.utils.InternetTools.openUrl
-import com.vanced.manager.utils.MiuiHelper
+import com.vanced.manager.utils.applyAccent
+import com.vanced.manager.utils.isMiui
+import com.vanced.manager.utils.openUrl
 
 object DialogContainer {
 
@@ -19,12 +19,12 @@ object DialogContainer {
                 dialog.dismiss()
             }
             setOnDismissListener {
-                if (MiuiHelper.isMiui()) {
+                if (isMiui()) {
                     applyAccentMiuiDialog(context)
                 }
             }
             setOnCancelListener {
-                if (MiuiHelper.isMiui()) {
+                if (isMiui()) {
                     applyAccentMiuiDialog(context)
                 }
             }

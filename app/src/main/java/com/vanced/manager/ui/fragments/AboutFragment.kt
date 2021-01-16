@@ -16,7 +16,7 @@ import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.FragmentAboutBinding
 import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.AboutViewModel
-import com.vanced.manager.utils.InternetTools.manager
+import com.vanced.manager.utils.manager
 
 class AboutFragment : BindingFragment<FragmentAboutBinding>() {
 

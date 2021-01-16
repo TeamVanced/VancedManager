@@ -3,10 +3,10 @@ package com.vanced.manager.ui.core
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.Extensions.lifecycleOwner
-import com.vanced.manager.utils.ThemeHelper.accentColor
-import com.vanced.manager.utils.ThemeHelper.defAccentColor
+import com.vanced.manager.utils.accentColor
+import com.vanced.manager.utils.defAccentColor
+import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.lifecycleOwner
 
 class ThemedTextView @JvmOverloads constructor(
     context: Context,

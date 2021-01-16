@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
-import com.vanced.manager.utils.Extensions.lifecycleOwner
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
+import com.vanced.manager.utils.lifecycleOwner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

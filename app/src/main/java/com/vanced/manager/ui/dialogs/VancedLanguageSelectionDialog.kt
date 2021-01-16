@@ -17,8 +17,8 @@ import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
 import com.vanced.manager.ui.core.ThemedMaterialCheckbox
-import com.vanced.manager.utils.InternetTools.vanced
-import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
+import com.vanced.manager.utils.getDefaultVancedLanguages
+import com.vanced.manager.utils.vanced
 import java.util.*
 
 class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVancedLanguageSelectionBinding>() {

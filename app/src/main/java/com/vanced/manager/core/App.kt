@@ -9,7 +9,7 @@ import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.model.AuthConfig
 import com.crowdin.platform.data.remote.NetworkType
 import com.vanced.manager.BuildConfig.*
-import com.vanced.manager.utils.InternetTools.loadJson
+import com.vanced.manager.utils.loadJson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

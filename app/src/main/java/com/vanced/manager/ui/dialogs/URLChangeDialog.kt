@@ -11,8 +11,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogCustomUrlBinding
-import com.vanced.manager.utils.InternetTools.baseUrl
-import com.vanced.manager.utils.InternetTools.loadJson
+import com.vanced.manager.utils.baseUrl
+import com.vanced.manager.utils.loadJson
 import kotlinx.coroutines.launch
 
 class URLChangeDialog : BindingDialogFragment<DialogCustomUrlBinding>() {

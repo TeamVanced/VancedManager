@@ -8,10 +8,10 @@ import androidx.appcompat.widget.SwitchCompat
 import androidx.core.graphics.ColorUtils
 import androidx.core.graphics.drawable.DrawableCompat
 import com.vanced.manager.R
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.Extensions.lifecycleOwner
-import com.vanced.manager.utils.ThemeHelper.accentColor
-import com.vanced.manager.utils.ThemeHelper.defAccentColor
+import com.vanced.manager.utils.accentColor
+import com.vanced.manager.utils.defAccentColor
+import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.lifecycleOwner
 
 class ThemedSwitchCompat @JvmOverloads constructor(
     context: Context,

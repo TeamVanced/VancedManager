@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.vanced.manager.R
-import com.vanced.manager.utils.Extensions.getDefaultPrefs
-import com.vanced.manager.utils.ThemeHelper.defAccentColor
+import com.vanced.manager.utils.defAccentColor
+import com.vanced.manager.utils.getDefaultPrefs
 
 class ThemedSwipeRefreshlayout @JvmOverloads constructor(
     context: Context,

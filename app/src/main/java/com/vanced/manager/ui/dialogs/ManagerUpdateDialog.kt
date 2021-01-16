@@ -17,8 +17,8 @@ import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerUpdateBinding
 import com.vanced.manager.utils.DownloadHelper.downloadManager
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.Extensions.applyAccent
-import com.vanced.manager.utils.InternetTools.manager
+import com.vanced.manager.utils.applyAccent
+import com.vanced.manager.utils.manager
 
 class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() {
 

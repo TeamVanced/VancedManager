@@ -18,9 +18,6 @@ import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
-import com.vanced.manager.utils.Extensions.writeServiceDScript
-import com.vanced.manager.utils.InternetTools.music
-import com.vanced.manager.utils.InternetTools.vanced
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

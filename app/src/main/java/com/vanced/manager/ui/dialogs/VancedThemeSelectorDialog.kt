@@ -11,9 +11,9 @@ import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
 import com.vanced.manager.ui.core.ThemedMaterialRadioButton
-import com.vanced.manager.utils.Extensions.convertToAppTheme
-import com.vanced.manager.utils.Extensions.getCheckedButtonTag
-import com.vanced.manager.utils.InternetTools.vanced
+import com.vanced.manager.utils.convertToAppTheme
+import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.vanced
 
 class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRadioButtonBinding>() {
 
