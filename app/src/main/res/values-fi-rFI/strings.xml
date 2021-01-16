@@ -57,7 +57,6 @@
     <string name="theme">Teema</string>
     <string name="theme_dark">Tumma teema</string>
     <string name="theme_light">Vaalea teema</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Push-ilmoitusta</string>
     <string name="push_notifications_summary">Vastaanota push-ilmoituksia, kun %1$s:lle on julkaistu päivitys</string>
     <string name="update_center">Managerin päivityskeskus</string>
