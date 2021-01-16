@@ -6,8 +6,8 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.musicRootPkg
 import com.vanced.manager.utils.AppUtils.validateTheme
 import com.vanced.manager.utils.DeviceUtils.getArch
+import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.DownloadHelper.fuelDownload
 import com.vanced.manager.utils.Extensions.getInstallUrl
 import com.vanced.manager.utils.Extensions.getLatestAppVersion
 import com.vanced.manager.utils.InternetTools.getFileNameFromUrl
@@ -42,10 +42,10 @@ object MusicDownloader {
 
     private fun downloadApk(context: Context, apk: String = "music") {
         val url = if (apk == "stock") "$baseurl/stock/${getArch()}.apk" else "$baseurl/$variant.apk"
-        fuelDownload(url, folderName!!, getFileNameFromUrl(url), context, onDownloadComplete = {
+        download(url, baseurl + "/", folderName!!, getFileNameFromUrl(url), context, onDownloadComplete = {
             if (variant == "root" && apk != "stock") {
                 downloadApk(context, "stock")
-                return@fuelDownload
+                return@download
             }
 
             when (apk) {
