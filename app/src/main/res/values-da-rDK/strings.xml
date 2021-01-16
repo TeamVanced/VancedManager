@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Mørkt tema</string>
     <string name="theme_light">Lyst tema</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Push Notifikationer</string>
     <string name="push_notifications_summary">Modtag push meddelelser når der er en ny opdatering til %1$s</string>
     <string name="update_center">Manager opdaterings center</string>
