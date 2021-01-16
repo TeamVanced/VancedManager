@@ -57,7 +57,6 @@
     <string name="theme">Nền</string>
     <string name="theme_dark">Nền tối</string>
     <string name="theme_light">Nền sáng</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Thông báo cho %1$s</string>
     <string name="push_notifications_summary">Nhận thông báo khi một bản cập nhật của %1$s được phát hành</string>
     <string name="update_center">Trung tâm cập nhật</string>

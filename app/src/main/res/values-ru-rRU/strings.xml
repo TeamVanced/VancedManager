@@ -57,7 +57,6 @@
     <string name="theme">Тема оформления</string>
     <string name="theme_dark">Тёмная тема</string>
     <string name="theme_light">Светлая тема</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Push Уведомления для %1$s</string>
     <string name="push_notifications_summary">Получать уведомления о выходе обновления для %1$s</string>
     <string name="update_center">Центр обновлений</string>

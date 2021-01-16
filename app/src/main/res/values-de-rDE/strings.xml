@@ -52,12 +52,11 @@
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="system_default">Systemstandard</string>
     <string name="script_save_failed">Speichern des neuen Zeitwertes fehlgeschlagen</string>
-    <string name="script_sleep_timer">Haupt Skript Ruhezeit</string>
+    <string name="script_sleep_timer">Haupt Skript Wartezeit</string>
     <string name="script_sleep_timer_description">Anpassen des Wertes für die Ruhezeit, der im Skript /data/adb/service.d/app.sh verwendet wird, nützlich zur Behebung von Problemen beim Einbinden</string>
     <string name="theme">Theme</string>
     <string name="theme_dark">Dunkles Theme</string>
     <string name="theme_light">Helles Theme</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Push-Benachrichtigungen</string>
     <string name="push_notifications_summary">Push-Benachrichtigungen erhalten, wenn ein Update für %1$s veröffentlicht wird</string>
     <string name="update_center">Update Center</string>

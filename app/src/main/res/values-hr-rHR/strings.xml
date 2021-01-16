@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Tamna tema</string>
     <string name="theme_light">Svjetla tema</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s skočne obavijesti</string>
     <string name="push_notifications_summary">Primite skočnu obavijest kada je ažuriranje za %1$s dostupno</string>
     <string name="update_center">Središte ažuriranja upravitelja</string>

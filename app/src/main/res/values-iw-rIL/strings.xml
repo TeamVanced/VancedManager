@@ -57,7 +57,6 @@
     <string name="theme">ערכת נושא</string>
     <string name="theme_dark">ערכת נושא כהה</string>
     <string name="theme_light">ערכת נושא בהירה</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s התראות דחיפה</string>
     <string name="push_notifications_summary">קבל התראות דחיפה כשעדכון ל־%1$s משתחרר</string>
     <string name="update_center">מרכז העדכונים</string>

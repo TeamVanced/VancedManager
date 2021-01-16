@@ -57,7 +57,6 @@
     <string name="theme">主題</string>
     <string name="theme_dark">深色主題</string>
     <string name="theme_light">淺色主題</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">有可用更新時接收 %1$s 推送通知</string>
     <string name="update_center">Manager 更新中心</string>
