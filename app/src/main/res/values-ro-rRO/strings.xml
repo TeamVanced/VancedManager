@@ -57,7 +57,6 @@
     <string name="theme">Temă</string>
     <string name="theme_dark">Temă întunecată</string>
     <string name="theme_light">Temă deschisă</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Notificari push</string>
     <string name="push_notifications_summary">Primiți notificări push când o actualizare pentru %1$s este lansată</string>
     <string name="update_center">Actualizator</string>
