@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Tünd mövzu</string>
     <string name="theme_light">Açıq mövzu</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Ani Bildirişlər</string>
     <string name="push_notifications_summary">%1$s üçün yeni buraxılış olanda ani bildirişlər alın</string>
     <string name="update_center">Menecer Yeniləmə Mərkəzi</string>
