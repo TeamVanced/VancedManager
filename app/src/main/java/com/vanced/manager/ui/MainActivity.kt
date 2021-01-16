@@ -25,13 +25,7 @@ import com.vanced.manager.ui.dialogs.ManagerUpdateDialog
 import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
-import com.vanced.manager.utils.Extensions.show
-import com.vanced.manager.utils.InternetTools.manager
-import com.vanced.manager.utils.LanguageContextWrapper
-import com.vanced.manager.utils.LanguageHelper.authCrowdin
-import com.vanced.manager.utils.LanguageHelper.onActivityResult
-import com.vanced.manager.utils.PackageHelper
-import com.vanced.manager.utils.ThemeHelper.setFinalTheme
+import com.vanced.manager.utils.*
 
 
 class MainActivity : AppCompatActivity() {

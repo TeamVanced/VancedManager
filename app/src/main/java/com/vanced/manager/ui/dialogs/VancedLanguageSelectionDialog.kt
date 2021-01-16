@@ -10,15 +10,14 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.content.edit
-import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
 import com.vanced.manager.ui.core.ThemedMaterialCheckbox
-import com.vanced.manager.utils.InternetTools.vanced
-import com.vanced.manager.utils.LanguageHelper.getDefaultVancedLanguages
+import com.vanced.manager.utils.getDefaultVancedLanguages
+import com.vanced.manager.utils.vanced
 import java.util.*
 
 class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVancedLanguageSelectionBinding>() {
@@ -72,7 +71,6 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
                 isChecked = langPrefs?.contains(lang) ?: false
                 text = loc.getDisplayLanguage(loc).capitalize(Locale.ROOT)
                 textSize = 18F
-                typeface = ResourcesCompat.getFont(requireActivity(), R.font.exo_bold)
             }
             addView(box, MATCH_PARENT, WRAP_CONTENT)
         }

@@ -5,15 +5,15 @@
     <string name="close">Fechar</string>
     <string name="reset">Resetar</string>
     <string name="save">Salvar</string>
-    <string name="select_apps">Selecione seus aplicativos</string>
+    <string name="select_apps">Selecione Seus Aplicativos</string>
     <!-- Main Activity -->
     <string name="title_about">Sobre</string>
     <string name="title_home">Gerenciador</string>
     <string name="title_settings">Configurações</string>
-    <string name="update_manager">Gerenciador de atualização</string>
+    <string name="update_manager">Gerenciador de Atualização</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Seu dispositivo tem root?</string>
-    <string name="grant_root">Conceder permissão de root</string>
+    <string name="are_you_rooted">Seu Dispositivo Tem Root?</string>
+    <string name="grant_root">Conceder Permissão de Root</string>
     <string name="select_at_least_one_app">Selecione pelo menos um aplicativo!</string>
     <string name="select_apps_music">Vanced, mas para o YouTube Music!\nrelativamente menos funções, mas satisfaz suas necessidades.</string>
     <string name="select_apps_vanced">YouTube Vanced é o aplicativo nativo de Android YouTube, mas melhor!</string>
@@ -51,10 +51,12 @@
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos nas abas personalizadas do Chrome</string>
     <string name="system_default">Padrão do sistema</string>
+    <string name="script_save_failed">Falha ao salvar o novo valor de tempo</string>
+    <string name="script_sleep_timer">Tempo de repouso do script raiz</string>
+    <string name="script_sleep_timer_description">Ajuste o valor do tempo de suspensão usado no script /data/adb/service.d/app.sh, útil para corrigir problemas de montagem</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Escuro</string>
     <string name="theme_light">Claro</string>
-    <string name="update_url">Atualizar URL do canal</string>
     <string name="push_notifications">%1$s notificações push</string>
     <string name="push_notifications_summary">Receber notificações quando uma atualização para o %1$s for lançado</string>
     <string name="update_center">Centro de Atualizações</string>
@@ -102,7 +104,7 @@
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo YouTube stock e tente novamente.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">A instalação falhou porque o aplicativo está em conflito com um aplicativo já instalado. Desinstale a versão atual do aplicativo e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por um motivo desconhecido, junte-se ao nosso grupo no Telegram ou Discord para obter suporte.</string>
     <string name="installation_incompatible">A instalação falhou porque o arquivo de instalação é incompatível com o seu dispositivo. Limpe os arquivos baixados nas configurações e tente novamente.</string>
     <string name="installation_invalid">A instalação falhou porque os arquivos apk estão corrompidos, tente novamente.</string>

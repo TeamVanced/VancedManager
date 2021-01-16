@@ -10,7 +10,7 @@
     <string name="title_about">O autorima</string>
     <string name="title_home">Upravitelj</string>
     <string name="title_settings">Postavke</string>
-    <string name="update_manager">Ažuriraj upravitelja</string>
+    <string name="update_manager">Ažuriranje upravitelja</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Je li vaš uređaj rootan?</string>
     <string name="grant_root">Dopusti root dozvolu</string>
@@ -18,7 +18,7 @@
     <string name="select_apps_music">Vanced, ali za YouTube Glazbu!\nS manje značajki ali tako da ispunjava vaše potrebe.</string>
     <string name="select_apps_vanced">YouTube Vanced je izvorna Android YouTube aplikacija, ali mnogo bolja!</string>
     <string name="lets_get_started">Započnite</string>
-    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root inačicu? Jednostavno kliknite na plavu strelicu ispod!</string>
+    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root izdanje? Jednostavno kliknite na plavu strelicu ispod!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="app_changelog_tooltip">Dodirnite karticu kako bi vidjeli zapis promjena.</string>
@@ -32,8 +32,8 @@
     <string name="root_not_granted">Root pristup nije dopušten</string>
     <string name="unavailable">Nedostupno</string>
     <string name="update">Ažuriraj</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">Društvene mreže</string>
+    <string name="support_us">Podržite nas</string>
     <!-- Settings -->
     <string name="accent_color">Boja naglašavanja</string>
     <string name="accent_blue">Plava</string>
@@ -50,16 +50,18 @@
     <string name="language_title">Jezik</string>
     <string name="link_title">Koristi prilagođene kartice Chroma</string>
     <string name="link_custom_tabs">Poveznice će se otvarati u prilagođenim karticama Chroma</string>
-    <string name="system_default">Zadan sustavom</string>
+    <string name="system_default">Zadano sustavom</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tamna tema</string>
     <string name="theme_light">Svjetla tema</string>
-    <string name="update_url">Ažuriraj URL kanala</string>
-    <string name="push_notifications">%1$s skočnih obavijesti</string>
+    <string name="push_notifications">%1$s skočne obavijesti</string>
     <string name="push_notifications_summary">Primite skočnu obavijest kada je ažuriranje za %1$s dostupno</string>
     <string name="update_center">Središte ažuriranja upravitelja</string>
     <string name="update_not_found">Nema novih ažuriranja</string>
-    <string name="variant">Inačica</string>
+    <string name="variant">Izdanje</string>
     <!-- Dialogs -->
     <string name="advanced">Napredno</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
@@ -89,7 +91,7 @@
     <string name="light_plus_other">Svjetla + %1$s</string>
     <string name="select_at_least_one_lang">Odaberite najmanje jedan jezik!</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager razvijatelji</string>
+    <string name="manager_dev">Razvijatelji Vanced upravitelja</string>
     <string name="sources">Izvori</string>
     <string name="vanced_team">Vanced tim</string>
     <!-- Error messages -->
@@ -102,7 +104,7 @@
     <string name="installation_aborted">Instalacija je prekinuta zato jer ju je korisnik prekinuo.</string>
     <string name="installation_blocked">Instalacija nije uspjela jer je korisnik blokirao instalaciju.</string>
     <string name="installation_downgrade">Instalacija nije uspjela jer je korisnik pokušao instalirati stariju inačicu paketa. Deinstalirajte ažuriranja izvorne YouTube aplikacije, zatim pokušajte ponovno.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Instalacija nije uspjela jer je aplikacija u sukobu s već instaliranom aplikacijom. Deinstalirajte trenutnu inačicu aplikacije zatim pokušajte ponovno.</string>
     <string name="installation_failed">Instalacija nije uspjela iz nepoznatih razloga, pridružite nam se na Telegramu ili Discordu za daljnju podršku.</string>
     <string name="installation_incompatible">Instalacija nije uspjela zato jer datoteka instalacije nije kompatibilna s vašim uređajem. Uklonite preuzete datoteke u postavkama, zatim pokušajte ponovno.</string>
     <string name="installation_invalid">Instalacija nije uspjela zato jer je apk datoteka oštećena.</string>

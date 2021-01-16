@@ -1,7 +1,8 @@
 package com.vanced.manager.model
 
 import androidx.lifecycle.MutableLiveData
-import com.github.kittinunf.fuel.core.requests.CancellableRequest
+import okhttp3.ResponseBody
+import retrofit2.Call
 
 open class ProgressModel {
 
@@ -9,7 +10,7 @@ open class ProgressModel {
     val downloadingFile = MutableLiveData<String>()
     val installing = MutableLiveData<Boolean>()
 
-    var currentDownload: CancellableRequest? = null
+    var currentDownload: Call<ResponseBody>? = null
 
     fun reset() {
         downloadProgress.value = 0

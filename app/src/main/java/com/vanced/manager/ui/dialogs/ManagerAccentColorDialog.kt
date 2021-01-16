@@ -16,10 +16,10 @@ import com.madrapps.pikolo.listeners.OnColorSelectionListener
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerAccentColorBinding
-import com.vanced.manager.utils.Extensions.toHex
-import com.vanced.manager.utils.ThemeHelper.accentColor
-import com.vanced.manager.utils.ThemeHelper.defAccentColor
-import com.vanced.manager.utils.ThemeHelper.mutableAccentColor
+import com.vanced.manager.utils.accentColor
+import com.vanced.manager.utils.defAccentColor
+import com.vanced.manager.utils.mutableAccentColor
+import com.vanced.manager.utils.toHex
 
 class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorBinding>() {
 
@@ -43,12 +43,12 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
 
     override fun onCancel(dialog: DialogInterface) {
         super.onCancel(dialog)
-        mutableAccentColor.value = prefs.getInt("manager_accent", defAccentColor)
+        mutableAccentColor.value = prefs.getInt("manager_accent_color", defAccentColor)
     }
 
     private fun bindData() {
         with(binding) {
-            val accent = prefs.getInt("manager_accent", defAccentColor)
+            val accent = prefs.getInt("manager_accent_color", defAccentColor)
             hexEdittext.apply {
                 setText(accent.toHex(), TextView.BufferType.EDITABLE)
                 addTextChangedListener(object : TextWatcher {
@@ -95,7 +95,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                 try {
                     val colorFromEditText = Color.parseColor(hexEdittext.text.toString())
                     mutableAccentColor.value = colorFromEditText
-                    prefs.edit { putInt("manager_accent", colorFromEditText) }
+                    prefs.edit { putInt("manager_accent_color", colorFromEditText) }
                 } catch (e: IllegalArgumentException) {
                     Log.d("VMTheme", getString(R.string.failed_accent))
                     Toast.makeText(requireActivity(), getString(R.string.failed_accent), Toast.LENGTH_SHORT).show()
@@ -105,7 +105,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                 dismiss()
             }
             accentReset.setOnClickListener {
-                prefs.edit { putInt("manager_accent", defAccentColor) }
+                prefs.edit { putInt("manager_accent_color", defAccentColor) }
                 mutableAccentColor.value = defAccentColor
                 dismiss()
             }

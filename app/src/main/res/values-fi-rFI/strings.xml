@@ -36,11 +36,11 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Aksenttiväri</string>
-    <string name="accent_blue">Sininen</string>
-    <string name="accent_green">Vihreä</string>
-    <string name="accent_purple">Violetti</string>
-    <string name="accent_red">Punainen</string>
-    <string name="accent_yellow">Keltainen</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Ulkoasu</string>
     <string name="category_behaviour">Käyttäytyminen</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
@@ -51,10 +51,12 @@
     <string name="link_title">Käytä Chromen mukautettuja välilehtiä</string>
     <string name="link_custom_tabs">Linkit aukeavat Chromen mukautetuissa välilehdissä</string>
     <string name="system_default">Järjestelmän oletus</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Teema</string>
     <string name="theme_dark">Tumma teema</string>
     <string name="theme_light">Vaalea teema</string>
-    <string name="update_url">Päivityskanavan URL-osoite</string>
     <string name="push_notifications">%1$s Push-ilmoitusta</string>
     <string name="push_notifications_summary">Vastaanota push-ilmoituksia, kun %1$s:lle on julkaistu päivitys</string>
     <string name="update_center">Managerin päivityskeskus</string>
@@ -102,7 +104,7 @@
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti heikentää pakettia. Poista päivitykset YouTube-sovelluksesta ja yritä sitten uudelleen.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>

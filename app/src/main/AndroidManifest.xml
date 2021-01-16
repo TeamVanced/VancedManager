@@ -31,14 +31,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
         tools:ignore="UnusedAttribute">
 
         <activity
             android:name=".ui.core.SplashScreenActivity"
             android:label="@string/app_name"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="portrait">
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,16 +50,14 @@
 
         <activity
             android:name=".ui.WelcomeActivity"
-            android:theme="@style/DarkTheme"
-            android:screenOrientation="portrait"/>
+            android:theme="@style/DarkTheme"/>
 
         <activity
             android:name=".ui.MainActivity"
             android:configChanges="layoutDirection|locale"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/DarkTheme"
-            android:screenOrientation="portrait">
+            android:theme="@style/DarkTheme">
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

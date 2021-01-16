@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.dialogs.AppDownloadDialog"
+    style="@style/DialogCard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/serviced_header"
+            android:text="@string/script_sleep_timer"
+            style="@style/DialogCardTitle" />
+
+        <com.vanced.manager.ui.core.ThemedMaterialSlider
+            android:id="@+id/serviced_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/serviced_header"
+            android:layout_marginTop="24dp"
+            android:valueFrom="1"
+            android:valueTo="15"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/serviced_slider"
+            android:layout_marginTop="8dp">
+
+            <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
+                android:id="@+id/serviced_cancel"
+                android:layout_alignParentStart="true"
+                android:textSize="15sp"
+                android:text="@string/cancel"
+                style="@style/OutlinedButtonStyle"/>
+
+            <com.vanced.manager.ui.core.ThemedMaterialButton
+                android:id="@+id/serviced_save"
+                android:layout_alignParentEnd="true"
+                android:text="@string/save"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/ButtonStyle"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

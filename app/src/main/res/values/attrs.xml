@@ -32,4 +32,8 @@
         <attr name="preference_summary" format="reference|string"/>
     </declare-styleable>
 
+    <declare-styleable name="ThemedSwipeRefreshlayout">
+        <attr name="progressBackgroundColor" format="reference|color" />
+    </declare-styleable>
+
 </resources>

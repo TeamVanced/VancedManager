@@ -28,7 +28,7 @@ import com.vanced.manager.databinding.FragmentHomeBinding
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
-import com.vanced.manager.utils.InternetTools.isFetching
+import com.vanced.manager.utils.isFetching
 
 open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 

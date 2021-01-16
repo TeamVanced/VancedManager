@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
-import com.vanced.manager.utils.Extensions.lifecycleOwner
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
+import com.vanced.manager.utils.lifecycleOwner
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,9 +16,9 @@ import kotlinx.coroutines.launch
 open class DataModel(
     private val jsonObject: LiveData<JsonObject?>,
     private val context: Context,
-    val appPkg: String,
-    val appName: String,
-    val appIcon: Drawable?,
+    open val appPkg: String,
+    open val appName: String,
+    open val appIcon: Drawable?,
 ) {
 
     private val versionCode = MutableLiveData<Int>()
@@ -64,7 +64,7 @@ open class DataModel(
         }
     }
 
-    private fun getPkgVersionName(pkg: String): String {
+    open fun getPkgVersionName(pkg: String): String {
         val pm = context.packageManager
         return if (isAppInstalled.value == true) {
             pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
@@ -84,7 +84,7 @@ open class DataModel(
         } else 0
     }
 
-    private fun compareInt(int1: Int?, int2: Int?): String {
+    open fun compareInt(int1: Int?, int2: Int?): String {
         if (int2 != null && int1 != null) {
             return when {
                 int1 == 0 -> context.getString(R.string.install)

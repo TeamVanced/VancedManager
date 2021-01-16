@@ -2,10 +2,12 @@ package com.vanced.manager.core.downloader
 
 import android.content.Context
 import com.vanced.manager.R
+import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.DownloadHelper.fuelDownload
-import com.vanced.manager.utils.InternetTools.microg
 import com.vanced.manager.utils.PackageHelper.install
+import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.getInstallUrl
+import com.vanced.manager.utils.microg
 
 object MicrogDownloader {
 
@@ -14,11 +16,13 @@ object MicrogDownloader {
 
     fun downloadMicrog(context: Context) {
         val url = microg.value?.string("url") ?: ""
-        fuelDownload(url, folderName, fileName, context, onDownloadComplete = {
-            startMicrogInstall(context)
-        }, onError = {
-            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, fileName))
-        })
+        context.getDefaultPrefs().getInstallUrl()?.let {
+            download(url, "$it/", folderName, fileName, context, onDownloadComplete = {
+                startMicrogInstall(context)
+            }, onError = {
+                downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, fileName))
+            })
+        }
 
     }
 

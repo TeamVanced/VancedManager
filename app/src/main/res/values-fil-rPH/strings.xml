@@ -36,11 +36,11 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Kulay ng font</string>
-    <string name="accent_blue">Asul</string>
-    <string name="accent_green">Berde</string>
-    <string name="accent_purple">Lila</string>
-    <string name="accent_red">Pula</string>
-    <string name="accent_yellow">Dilaw</string>
+    <string name="accent_blue">Blue</string>
+    <string name="accent_green">Green</string>
+    <string name="accent_purple">Purple</string>
+    <string name="accent_red">Red</string>
+    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Hitsura</string>
     <string name="category_behaviour">Kilos</string>
     <string name="clear_files">Tanggalin ang naka-download na files</string>
@@ -51,10 +51,12 @@
     <string name="link_title">Gamitin ang Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Mabubuksan ang mga links sa Chrome Custom Tabs</string>
     <string name="system_default">Sistemang Default</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Itim na tema</string>
     <string name="theme_light">Puti na tema</string>
-    <string name="update_url">I-update ang Channel URL</string>
     <string name="push_notifications">%1$s Push Notifications</string>
     <string name="push_notifications_summary">Tumanggap ng push notifications kapag ang update sa %1$s ay nailabas</string>
     <string name="update_center">Manager Update Center</string>
@@ -102,7 +104,7 @@
     <string name="installation_aborted">Nabigo ang pag-install dahil kinansela ito.</string>
     <string name="installation_blocked">Nabigo ang pag-install dahil binlock ito.</string>
     <string name="installation_downgrade">Nabigo ang pag-install dahil dinowngrade ng gumagamit ang pakete. I-uninstall ang mga updates galing sa stock Youtube app, at ulitin muli.</string>
-    <string name="installation_conflict">Installation failed because of the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Nabigo ang pag-install dahil sa hindi tukoy na dahilan, makiisa sa aming Telegram o Discord para sa karagdagang suporta.</string>
     <string name="installation_incompatible">Nabigo ang pag-install dahil ang installation file ay hindi tugma sa iyong device. Tanggalin ang mga downloaded files sa Settings, at ulitin muli.</string>
     <string name="installation_invalid">Nabigo ang pag-install dahil ang mga apk files ay nasira, ulitin muli.</string>

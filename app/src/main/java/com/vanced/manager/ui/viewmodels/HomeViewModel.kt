@@ -1,5 +1,9 @@
 package com.vanced.manager.ui.viewmodels
 
+import android.content.ActivityNotFoundException
+import android.content.ComponentName
+import android.content.Intent
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
@@ -17,19 +21,18 @@ import com.vanced.manager.adapter.LinkAdapter.Companion.TELEGRAM
 import com.vanced.manager.adapter.LinkAdapter.Companion.TWITTER
 import com.vanced.manager.adapter.SponsorAdapter.Companion.BRAVE
 import com.vanced.manager.model.DataModel
+import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.dialogs.InstallationFilesDetectedDialog
 import com.vanced.manager.ui.dialogs.MusicPreferencesDialog
 import com.vanced.manager.ui.dialogs.VancedPreferencesDialog
+import com.vanced.manager.utils.*
 import com.vanced.manager.utils.AppUtils.managerPkg
 import com.vanced.manager.utils.AppUtils.microgPkg
 import com.vanced.manager.utils.AppUtils.musicPkg
 import com.vanced.manager.utils.AppUtils.musicRootPkg
 import com.vanced.manager.utils.AppUtils.vancedPkg
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
-import com.vanced.manager.utils.Extensions.show
-import com.vanced.manager.utils.InternetTools
-import com.vanced.manager.utils.InternetTools.loadJson
 import com.vanced.manager.utils.PackageHelper.apkExist
 import com.vanced.manager.utils.PackageHelper.musicApkExists
 import com.vanced.manager.utils.PackageHelper.uninstallApk
@@ -41,12 +44,12 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     private val prefs = getDefaultSharedPreferences(activity)
 
-    val vanced = MutableLiveData<DataModel>()
-    val vancedRoot = MutableLiveData<DataModel>()
-    val microg = MutableLiveData<DataModel>()
-    val music = MutableLiveData<DataModel>()
-    val musicRoot = MutableLiveData<DataModel>()
-    val manager = MutableLiveData<DataModel>()
+    val vancedModel = MutableLiveData<DataModel>()
+    val vancedRootModel = MutableLiveData<RootDataModel>()
+    val microgModel = MutableLiveData<DataModel>()
+    val musicModel = MutableLiveData<DataModel>()
+    val musicRootModel = MutableLiveData<RootDataModel>()
+    val managerModel = MutableLiveData<DataModel>()
 
     fun fetchData() {
         viewModelScope.launch {
@@ -68,12 +71,27 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
                 else -> R.color.Vanced
             }
             
-        InternetTools.openUrl(url, color, activity)
+        openUrl(url, color, activity)
+    }
+
+    fun launchApp(app: String, isRoot: Boolean) {
+        val componentName = when (app) {
+            activity.getString(R.string.vanced) -> if (isRoot) ComponentName(vancedRootPkg, "$vancedRootPkg.HomeActivity") else ComponentName(vancedPkg, "$vancedRootPkg.HomeActivity")
+            activity.getString(R.string.music) -> if (isRoot) ComponentName(musicRootPkg, "$musicRootPkg.activities.MusicActivity") else ComponentName(musicPkg, "$musicRootPkg.activities.MusicActivity")
+            activity.getString(R.string.microg) -> ComponentName(microgPkg, "org.microg.gms.ui.SettingsActivity")
+            else -> throw IllegalArgumentException("Can't open this app")
+        }
+        try {
+            activity.startActivity(Intent().setComponent(componentName))
+        } catch (e: ActivityNotFoundException) {
+            Log.d("VMHMV", e.toString())
+        }
+
     }
 
     fun openInstallDialog(view: View, app: String) {
         val variant = prefs.getString("vanced_variant", "nonroot")
-        if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microg.value?.isAppInstalled?.value!!) {
+        if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microgModel.value?.isAppInstalled?.value!!) {
             microgToast.show()
             return
         }
@@ -137,11 +155,11 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
 
     init {
-        vanced.value = DataModel(InternetTools.vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
-        vancedRoot.value = DataModel(InternetTools.vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
-        music.value = DataModel(InternetTools.music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
-        musicRoot.value = DataModel(InternetTools.music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
-        microg.value = DataModel(InternetTools.microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg))
-        manager.value = DataModel(InternetTools.manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher))
+        vancedModel.value = DataModel(vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
+        vancedRootModel.value = RootDataModel(vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced), "vanced")
+        musicModel.value = DataModel(music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
+        musicRootModel.value = RootDataModel(music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music), "music")
+        microgModel.value = DataModel(microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg))
+        managerModel.value = DataModel(manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher))
     }
 }

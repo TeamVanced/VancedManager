@@ -7,11 +7,11 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
     app:cardBackgroundColor="?colorLinkBG"
-    app:cardCornerRadius="16dp"
+    app:cardCornerRadius="12dp"
     app:cardElevation="0dp"
     app:contentPaddingBottom="4dp"
-    app:contentPaddingLeft="16dp"
-    app:contentPaddingRight="16dp"
+    app:contentPaddingLeft="12dp"
+    app:contentPaddingRight="12dp"
     app:contentPaddingTop="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +31,6 @@
         <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
             android:id="@+id/app_install_button"
             style="@style/OutlinedButtonStyle"
-            android:layout_marginTop="4dp"
             android:textColor="?colorPrimary"
             app:layout_constraintBottom_toTopOf="@id/app_uninstall"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +45,18 @@
             android:src="@drawable/ic_delete_black_24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/app_install_button"
+            app:tint="?colorLinkImage" />
+
+        <ImageButton
+            android:id="@+id/app_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_launch_24"
+            app:layout_constraintEnd_toStartOf="@id/app_uninstall"
+            app:layout_constraintTop_toBottomOf="@id/app_install_button"
+            android:layout_marginEnd="4dp"
             app:tint="?colorLinkImage" />
 
         <com.google.android.flexbox.FlexboxLayout

@@ -1,10 +1,14 @@
 package com.vanced.manager.core.ui.base
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import androidx.viewbinding.ViewBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 abstract class BindingBottomSheetDialogFragment<VB : ViewBinding> : BottomSheetDialogFragment() {
@@ -20,6 +24,20 @@ abstract class BindingBottomSheetDialogFragment<VB : ViewBinding> : BottomSheetD
         _binding = binding(inflater, container, savedInstanceState)
         otherSetups()
         return binding.root
+    }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = super.onCreateDialog(savedInstanceState)
+        dialog.setOnShowListener {
+            val bottomSheetDialogFragment = (it as BottomSheetDialog).findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)
+            if (bottomSheetDialogFragment != null) {
+                BottomSheetBehavior.from(bottomSheetDialogFragment).apply {
+                    state = BottomSheetBehavior.STATE_EXPANDED
+                    peekHeight = 0
+                }
+            }
+        }
+        return dialog
     }
 
     protected abstract fun binding(

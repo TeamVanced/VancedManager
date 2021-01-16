@@ -11,10 +11,10 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewPreferenceSwitchBinding
 
 class PreferenceSwitch @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null,
-        defStyle: Int = 0,
-        defStyleRes: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyle: Int = 0,
+    defStyleRes: Int = 0
 ) : FrameLayout(context, attrs, defStyle, defStyleRes) {
 
     interface OnCheckedListener {
@@ -43,8 +43,9 @@ class PreferenceSwitch @JvmOverloads constructor(
                 val title = getText(R.styleable.PreferenceSwitch_switch_title)
                 val summary = getText(R.styleable.PreferenceSwitch_switch_summary)
                 val key = getText(R.styleable.PreferenceSwitch_switch_key)
-                setDefaultValue(getBoolean(R.styleable.PreferenceSwitch_switch_def_value, false))
+                val defValue = getBoolean(R.styleable.PreferenceSwitch_switch_def_value, false)
                 setKey(key)
+                setDefaultValue(defValue)
                 setTitle(title)
                 setSummary(summary)
                 recycle()
@@ -64,7 +65,7 @@ class PreferenceSwitch @JvmOverloads constructor(
     }
 
     fun setOnCheckedListener(method: (buttonView: CompoundButton, isChecked: Boolean) -> Unit) {
-        mListener = object : OnCheckedListener{
+        mListener = object : OnCheckedListener {
             override fun onChecked(buttonView: CompoundButton, isChecked: Boolean) {
                 method(buttonView, isChecked)
             }
@@ -85,11 +86,11 @@ class PreferenceSwitch @JvmOverloads constructor(
 
     fun setKey(key: CharSequence?) {
         prefKey = key.toString()
-        binding.preferenceSwitch.isChecked = prefs.getBoolean(prefKey, defValue)
+        binding.preferenceSwitch.isChecked = prefs.getBoolean(key.toString(), defValue)
     }
 
     fun setDefaultValue(newVal: Boolean) {
         defValue = newVal
-        binding.preferenceSwitch.isChecked = prefs.getBoolean(prefKey, defValue)
+        binding.preferenceSwitch.isChecked = prefs.getBoolean(prefKey, newVal)
     }
 }

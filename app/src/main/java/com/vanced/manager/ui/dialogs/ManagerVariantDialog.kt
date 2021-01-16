@@ -9,7 +9,7 @@ import com.google.android.material.radiobutton.MaterialRadioButton
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerVariantBinding
-import com.vanced.manager.utils.Extensions.getCheckedButtonTag
+import com.vanced.manager.utils.getCheckedButtonTag
 
 class ManagerVariantDialog : BindingBottomSheetDialogFragment<DialogManagerVariantBinding>() {
 

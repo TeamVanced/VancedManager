@@ -11,8 +11,8 @@ import com.vanced.manager.BuildConfig.MANAGER_LANGUAGES
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerLanguageBinding
 import com.vanced.manager.ui.core.ThemedMaterialRadioButton
-import com.vanced.manager.utils.Extensions.getCheckedButtonTag
-import com.vanced.manager.utils.LanguageHelper.getLanguageFormat
+import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.getLanguageFormat
 
 class ManagerLanguageDialog : BindingBottomSheetDialogFragment<DialogManagerLanguageBinding>() {
 
@@ -41,7 +41,7 @@ class ManagerLanguageDialog : BindingBottomSheetDialogFragment<DialogManagerLang
                 languageRadiogroup.addView(mrb, MATCH_PARENT, WRAP_CONTENT)
             }
             val language = prefs.getString("manager_lang", "System Default")
-            root.findViewWithTag<ThemedMaterialRadioButton>(language).isChecked = true
+            root.findViewWithTag<ThemedMaterialRadioButton>(language)?.isChecked = true
             languageSave.setOnClickListener {
                 val newPref = binding.languageRadiogroup.getCheckedButtonTag()
                 if (language != newPref) {
