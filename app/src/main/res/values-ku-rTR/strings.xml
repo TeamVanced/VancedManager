@@ -57,7 +57,6 @@
     <string name="theme">Rûkar</string>
     <string name="theme_dark">Rûkara tarî</string>
     <string name="theme_light">Rûkara ronak</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s danezanên lezgîn</string>
     <string name="push_notifications_summary">Dema ku hildemînek ji bo %1$s belav bû, danezanên lezgîn werbigire</string>
     <string name="update_center">Navenda hildemandina rêveberê</string>

@@ -57,7 +57,6 @@
     <string name="theme">തീം</string>
     <string name="theme_dark">ഡാർക്ക് തീം</string>
     <string name="theme_light">ലൈറ്റ് തീം</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s പുഷ് അറിയിപ്പുകൾ</string>
     <string name="push_notifications_summary">%1$s ഒരു അപ്‌ഡേറ്റ് പുറത്തിറങ്ങുമ്പോൾ പുഷ് അറിയിപ്പുകൾ സ്വീകരിക്കുക</string>
     <string name="update_center">മാനേജർ അപ്‌ഡേറ്റ് സെന്റർ</string>

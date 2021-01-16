@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Mørkt tema</string>
     <string name="theme_light">Lyst tema</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Push varsler</string>
     <string name="push_notifications_summary">Motta push varsler når en oppdatering for %1$s er utgitt</string>
     <string name="update_center">Oppdateringssenter</string>

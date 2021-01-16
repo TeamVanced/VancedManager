@@ -57,7 +57,6 @@
     <string name="theme">ธีม</string>
     <string name="theme_dark">ธีมมืด</string>
     <string name="theme_light">ธีมสว่าง</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s การแจ้งเตือนแบบพุช</string>
     <string name="push_notifications_summary">รับการแจ้งเตือนแบบพุช เมื่อมีการเผยแพร่อัปเดต %1$s ล่าสุด</string>
     <string name="update_center">การจัดการอัพเดพหลัก</string>

@@ -57,7 +57,6 @@
     <string name="theme">থিম</string>
     <string name="theme_dark">গাঢ় থিম</string>
     <string name="theme_light">হালকা থিম</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s পুশ বিজ্ঞপ্তিগুলি</string>
     <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তি পান</string>
     <string name="update_center">ম্যানেজার আপডেট কেন্দ্র</string>

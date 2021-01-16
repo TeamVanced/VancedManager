@@ -57,7 +57,6 @@
     <string name="theme">Kinézet</string>
     <string name="theme_dark">Sötét téma</string>
     <string name="theme_light">Világos téma</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Leküldéses (Push) Értesítések</string>
     <string name="push_notifications_summary">Értesítések fogadása, amikor a %1$s számára frissítés érhető el</string>
     <string name="update_center">Frissítő központ</string>

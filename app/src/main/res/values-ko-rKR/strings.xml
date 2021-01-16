@@ -57,7 +57,6 @@
     <string name="theme">테마</string>
     <string name="theme_dark">다크 테마</string>
     <string name="theme_light">라이트 테마</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s 푸시 알림</string>
     <string name="push_notifications_summary">새로운 %1$s 업데이트가 출시되면 알림 받기</string>
     <string name="update_center">업데이트 센터</string>

@@ -57,7 +57,6 @@
     <string name="theme">ڕووکار</string>
     <string name="theme_dark">تاریک</string>
     <string name="theme_light">ڕووناک</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s وەرگرتنی ئاگادارکردنەوەکان</string>
     <string name="push_notifications_summary">وەرگرتنی ئاگادارکردنەوە کاتێ نوێکردنەوەی %1$s بەردەست کرا</string>
     <string name="update_center">ناوەندی نوێکردنەوە</string>

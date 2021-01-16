@@ -57,7 +57,6 @@
     <string name="theme">Θέμα</string>
     <string name="theme_dark">Σκουρόχρωμο Θέμα</string>
     <string name="theme_light">Ανοιχτόχρωμο Θέμα</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Ειδοποιήσεις Push για το %1$s</string>
     <string name="push_notifications_summary">Λάβεται ειδοποιήσεις push όταν υπάρχουν διαθέσιμες ενημερώσεις για το %1$s</string>
     <string name="update_center">Κέντρο ενημερώσεων</string>

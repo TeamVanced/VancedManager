@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Escuro</string>
     <string name="theme_light">Claro</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s notificações push</string>
     <string name="push_notifications_summary">Receber notificações quando uma atualização para o %1$s for lançado</string>
     <string name="update_center">Centro de Atualizações</string>
