@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Itim na tema</string>
     <string name="theme_light">Puti na tema</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Push Notifications</string>
     <string name="push_notifications_summary">Tumanggap ng push notifications kapag ang update sa %1$s ay nailabas</string>
     <string name="update_center">Manager Update Center</string>
