@@ -57,7 +57,6 @@
     <string name="theme">Thema</string>
     <string name="theme_dark">Donker thema</string>
     <string name="theme_light">Licht thema</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s push meldingen</string>
     <string name="push_notifications_summary">Push meldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
     <string name="update_center">Manager Update Center</string>
