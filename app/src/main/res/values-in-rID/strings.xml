@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Gelap</string>
     <string name="theme_light">Tema Terang</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">Notifikasi Push %1$s</string>
     <string name="push_notifications_summary">Terima notifikasi push saat pembaruan untuk %1$s dirilis</string>
     <string name="update_center">Pusat Pembaruan Manager</string>
