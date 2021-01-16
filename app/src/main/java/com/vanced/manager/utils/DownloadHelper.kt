@@ -55,7 +55,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                         } else {
                             onError("Could not save file")
                             downloadProgress.value?.downloadProgress?.postValue(0)
-                            Log.d("VMDownloader", "Failed to download file: $url")
+                            Log.d("VMDownloader", "Failed to save file: $url")
                         }
                     }
                 } else {

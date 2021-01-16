@@ -196,6 +196,7 @@ object PackageHelper {
                 val modApk: FileInfo? = fileInfoList.lastOrNull { modApkBool(it.name) }
                 if (modApk != null) {
                     if (overwriteBase(modApk, fileInfoList, appVerCode, pkg, app, context)) {
+                        Log.d(INSTALLER_TAG, "Finished installation")
                         sendRefresh(context)
                         sendCloseDialog(context)
                     }
@@ -465,7 +466,7 @@ object PackageHelper {
         return false
     }
 
-    private fun linkApp(apkFPath: String, pkg:String, path: String): Boolean {
+    private fun linkApp(apkFPath: String, pkg: String, path: String): Boolean {
         Log.d(INSTALLER_TAG, "Linking app")
         Shell.su("am force-stop $pkg").exec()
         Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
