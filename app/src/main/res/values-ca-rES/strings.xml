@@ -57,7 +57,6 @@
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema fosc</string>
     <string name="theme_light">Tema clar</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s notificacions automàtiques</string>
     <string name="push_notifications_summary">Rebeu notificacions automàtiques quan es publiqui una actualització de%1$s</string>
     <string name="update_center">Gestor d\'actualitzacions</string>
