@@ -57,7 +57,6 @@
     <string name="theme">テーマ</string>
     <string name="theme_dark">ダークテーマ</string>
     <string name="theme_light">ライトテーマ</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s プッシュ通知</string>
     <string name="push_notifications_summary">%1$s のアップデートがリリースされたときにプッシュ通知を受け取る</string>
     <string name="update_center">アップデート センター</string>
