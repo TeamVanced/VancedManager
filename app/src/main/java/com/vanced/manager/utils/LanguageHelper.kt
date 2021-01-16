@@ -16,10 +16,10 @@ import java.util.*
 fun getLanguageFormat(context: Context, language: String): String {
     return when {
         language == "System Default" -> context.getString(R.string.system_default)
-        language.length > 2 -> {
+        language.contains("_") -> {
             val loc = Locale(
-                language.substring(0, language.length - 3),
-                language.substring(language.length - 2)
+                language.substringBefore("_"),
+                language.substringAfter("_")
             )
             loc.getDisplayName(loc).capitalize(Locale.ENGLISH)
         }

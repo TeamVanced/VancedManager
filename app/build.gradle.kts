@@ -71,16 +71,12 @@ android {
 fun getLanguages(): String {
     val langs = arrayListOf("en", "bn_BD", "bn_IN", "pa_IN", "pa_PK", "pt_BR", "pt_PT", "zh_CN", "zh_TW")
     val exceptions = arrayOf("bn", "pa", "pt", "zh")
-    val pattern = "-(\\w+)-".toRegex()
 
     File("$projectDir/src/main/res").listFiles()?.forEach { dir ->
         if (dir.name.startsWith("values-") && !dir.name.contains("v23")) {
-            val match = pattern.find(dir.name)
-            if (match != null) {
-                val matchedDir = match.value.removeSurrounding("-")
-                if (!exceptions.any { matchedDir == it }) {
-                    langs.add(matchedDir)
-                }
+            val dirname = dir.name.substringAfter("-").substringBefore("-")
+            if (!exceptions.any { dirname == it }) {
+                langs.add(dirname)
             }
         }
     }
@@ -114,7 +110,7 @@ dependencies {
 
     //Appearance
     implementation("com.github.madrapps:pikolo:2.0.1")
-    implementation("com.google.android.material:material:1.3.0-beta01")
+    implementation("com.google.android.material:material:1.3.0-rc01")
 
     // JSON parser
     implementation("com.beust:klaxon:5.4")
@@ -139,8 +135,8 @@ dependencies {
     implementation("com.google.android:flexbox:2.0.1")
 
     // Firebase
-    implementation("com.google.firebase:firebase-analytics-ktx:18.0.0")
+    implementation("com.google.firebase:firebase-analytics-ktx:18.0.1")
     implementation("com.google.firebase:firebase-crashlytics:17.3.0")
     implementation("com.google.firebase:firebase-messaging:21.0.1")
-    implementation("com.google.firebase:firebase-perf:19.0.11")
+    implementation("com.google.firebase:firebase-perf:19.1.0")
 }
