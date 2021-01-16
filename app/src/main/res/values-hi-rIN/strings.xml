@@ -57,7 +57,6 @@
     <string name="theme">थीम</string>
     <string name="theme_dark">डार्क थीम</string>
     <string name="theme_light">लाइट थीम</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s पुश सूचनाएँ</string>
     <string name="push_notifications_summary">जब %1$s का अपडेट जारी किया जाता है, तो पुश सूचनाएँ प्राप्त करें</string>
     <string name="update_center">अपडेट केंद्र</string>
