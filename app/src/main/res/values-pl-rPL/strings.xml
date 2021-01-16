@@ -57,7 +57,6 @@
     <string name="theme">Motyw</string>
     <string name="theme_dark">Ciemny Motyw</string>
     <string name="theme_light">Jasny Motyw</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s Powiadomień Push</string>
     <string name="push_notifications_summary">Otrzymuj powiadomienia push po wydaniu aktualizacji dla %1$s</string>
     <string name="update_center">Centrum aktualizacji</string>
