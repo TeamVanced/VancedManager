@@ -57,7 +57,6 @@
     <string name="theme">Vzhled</string>
     <string name="theme_dark">Tmavý vzhled</string>
     <string name="theme_light">Světlý vzhled</string>
-    <string name="update_url">Channel URL</string>
     <string name="push_notifications">%1$s vyskakovací oznámení</string>
     <string name="push_notifications_summary">Po vydání aktualizace pro %1$s obdržíte vyskakovací oznámení</string>
     <string name="update_center">Centrum aktualizací</string>
