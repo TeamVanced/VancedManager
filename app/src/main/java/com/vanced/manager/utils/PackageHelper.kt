@@ -276,7 +276,7 @@ object PackageHelper {
             }
             doCommitSession(sessionId, context)
             Log.d(INSTALLER_TAG,"Success")
-        } catch (e: IOException) {
+        } catch (e: Exception) {
             e.printStackTrace()
         }
         return sessionId

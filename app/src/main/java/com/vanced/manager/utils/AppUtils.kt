@@ -59,6 +59,16 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
         }
     }
 
+    fun sendFailure(error: String, context: Context): Job {
+        return launch {
+            delay(700)
+            val intent = Intent(HomeFragment.INSTALL_FAILED)
+            intent.putExtra("errorMsg", getErrorMessage(error, context))
+            intent.putExtra("fullErrorMsg", error)
+            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+        }
+    }
+
     @Throws(IOException::class)
     fun generateChecksum(data: ByteArray): String {
         try {
