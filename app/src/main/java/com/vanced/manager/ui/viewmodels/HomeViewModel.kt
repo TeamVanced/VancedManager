@@ -43,6 +43,7 @@ import kotlinx.coroutines.launch
 open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     private val prefs = getDefaultSharedPreferences(activity)
+    private val variant get() = prefs.getString("vanced_variant", "nonroot")
 
     val vancedModel = MutableLiveData<DataModel>()
     val vancedRootModel = MutableLiveData<RootDataModel>()
@@ -90,7 +91,6 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
 
     fun openInstallDialog(view: View, app: String) {
-        val variant = prefs.getString("vanced_variant", "nonroot")
         if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microgModel.value?.isAppInstalled?.value!!) {
             microgToast.show()
             return
@@ -147,7 +147,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
 
     fun uninstallPackage(pkg: String) {
-        if (prefs.getString("vanced_variant", "nonroot") == "root" && uninstallRootApk(pkg)) {
+        if (variant == "root" && uninstallRootApk(pkg)) {
             viewModelScope.launch { loadJson(activity) }
         } else {
             uninstallApk(pkg, activity)
@@ -155,11 +155,14 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
 
     init {
-        vancedModel.value = DataModel(vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
-        vancedRootModel.value = RootDataModel(vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced), "vanced")
-        musicModel.value = DataModel(music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
-        musicRootModel.value = RootDataModel(music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music), "music")
-        microgModel.value = DataModel(microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg))
+        if (variant == "root") {
+            vancedRootModel.value = RootDataModel(vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced), "vanced")
+            musicRootModel.value = RootDataModel(music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music), "music")
+        } else {
+            vancedModel.value = DataModel(vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
+            musicModel.value = DataModel(music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
+            microgModel.value = DataModel(microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg))
+        }
         managerModel.value = DataModel(manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher))
     }
 }
