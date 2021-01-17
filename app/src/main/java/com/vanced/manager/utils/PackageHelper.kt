@@ -161,23 +161,28 @@ object PackageHelper {
     }
 
     fun install(path: String, context: Context) {
-        val callbackIntent = Intent(context, AppInstallerService::class.java)
-        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
-        val packageInstaller = context.packageManager.packageInstaller
-        val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
-        val sessionId = packageInstaller.createSession(params)
-        val session = packageInstaller.openSession(sessionId)
-        val inputStream: InputStream = FileInputStream(path)
-        val outputStream = session.openWrite("install", 0, -1)
-        val buffer = ByteArray(65536)
-        var c: Int
-        while (inputStream.read(buffer).also { c = it } != -1) {
-            outputStream.write(buffer, 0, c)
+        try {
+            val callbackIntent = Intent(context, AppInstallerService::class.java)
+            val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
+            val packageInstaller = context.packageManager.packageInstaller
+            val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
+            val sessionId = packageInstaller.createSession(params)
+            val session = packageInstaller.openSession(sessionId)
+            val inputStream: InputStream = FileInputStream(path)
+            val outputStream = session.openWrite("install", 0, -1)
+            val buffer = ByteArray(65536)
+            var c: Int
+            while (inputStream.read(buffer).also { c = it } != -1) {
+                outputStream.write(buffer, 0, c)
+            }
+            session.fsync(outputStream)
+            inputStream.close()
+            outputStream.close()
+            session.commit(pendingIntent.intentSender)
+        } catch (e: IOException) {
+            Log.d(INSTALLER_TAG, e.stackTraceToString())
         }
-        session.fsync(outputStream)
-        inputStream.close()
-        outputStream.close()
-        session.commit(pendingIntent.intentSender)
+
     }
 
     private fun installRootMusic(files: ArrayList<FileInfo>, context: Context): Boolean {
@@ -338,7 +343,6 @@ object PackageHelper {
             } catch (e: IOException) {
                 e.printStackTrace()
             }
-
         } finally {
             session?.close()
         }
