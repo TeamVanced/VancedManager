@@ -2,6 +2,7 @@ package com.vanced.manager.core.downloader
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.logEvent
@@ -15,6 +16,7 @@ import com.vanced.manager.utils.PackageHelper.downloadStockCheck
 import com.vanced.manager.utils.PackageHelper.installVanced
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
 import java.io.File
+import java.lang.Exception
 
 object VancedDownloader {
     
@@ -58,7 +60,13 @@ object VancedDownloader {
         count = 0
 
         vancedVersionCode = vanced.value?.int("versionCode") ?: 0
-        downloadSplits(context)
+        try {
+            downloadSplits(context)
+        } catch (e: Exception) {
+            Log.d("VMDownloader", e.stackTraceToString())
+            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, "Vanced"))
+        }
+
     }
 
     private fun downloadSplits(context: Context, type: String = "theme") {

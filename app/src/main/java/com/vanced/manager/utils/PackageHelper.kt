@@ -161,23 +161,28 @@ object PackageHelper {
     }
 
     fun install(path: String, context: Context) {
-        val callbackIntent = Intent(context, AppInstallerService::class.java)
-        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
-        val packageInstaller = context.packageManager.packageInstaller
-        val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
-        val sessionId = packageInstaller.createSession(params)
-        val session = packageInstaller.openSession(sessionId)
-        val inputStream: InputStream = FileInputStream(path)
-        val outputStream = session.openWrite("install", 0, -1)
-        val buffer = ByteArray(65536)
-        var c: Int
-        while (inputStream.read(buffer).also { c = it } != -1) {
-            outputStream.write(buffer, 0, c)
+        try {
+            val callbackIntent = Intent(context, AppInstallerService::class.java)
+            val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
+            val packageInstaller = context.packageManager.packageInstaller
+            val params = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
+            val sessionId = packageInstaller.createSession(params)
+            val session = packageInstaller.openSession(sessionId)
+            val inputStream: InputStream = FileInputStream(path)
+            val outputStream = session.openWrite("install", 0, -1)
+            val buffer = ByteArray(65536)
+            var c: Int
+            while (inputStream.read(buffer).also { c = it } != -1) {
+                outputStream.write(buffer, 0, c)
+            }
+            session.fsync(outputStream)
+            inputStream.close()
+            outputStream.close()
+            session.commit(pendingIntent.intentSender)
+        } catch (e: IOException) {
+            Log.d(INSTALLER_TAG, e.stackTraceToString())
         }
-        session.fsync(outputStream)
-        inputStream.close()
-        outputStream.close()
-        session.commit(pendingIntent.intentSender)
+
     }
 
     private fun installRootMusic(files: ArrayList<FileInfo>, context: Context): Boolean {
@@ -271,7 +276,7 @@ object PackageHelper {
             }
             doCommitSession(sessionId, context)
             Log.d(INSTALLER_TAG,"Success")
-        } catch (e: IOException) {
+        } catch (e: Exception) {
             e.printStackTrace()
         }
         return sessionId
@@ -326,19 +331,16 @@ object PackageHelper {
     private fun doCommitSession(sessionId: Int, context: Context) {
         var session: PackageInstaller.Session? = null
         try {
-            try {
-                session = context.packageManager.packageInstaller.openSession(sessionId)
-                val callbackIntent = Intent(context, AppInstallerService::class.java)
-                val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
-                session.commit(pendingIntent.intentSender)
-                session.close()
-                Log.d(INSTALLER_TAG, "install request sent")
-                Log.d(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
-                Log.d(INSTALLER_TAG, "doCommitSession: after session commit ")
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
-
+            session = context.packageManager.packageInstaller.openSession(sessionId)
+            val callbackIntent = Intent(context, AppInstallerService::class.java)
+            val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
+            session.commit(pendingIntent.intentSender)
+            session.close()
+            Log.d(INSTALLER_TAG, "install request sent")
+            Log.d(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
+            Log.d(INSTALLER_TAG, "doCommitSession: after session commit ")
+        } catch (e: IOException) {
+            e.printStackTrace()
         } finally {
             session?.close()
         }

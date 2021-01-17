@@ -76,13 +76,13 @@ class AppListAdapter(
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.bind(position)
-
+        val dataModel = if (isRoot) rootDataModels[position] else dataModels[position]
         holder.appCard.setOnClickListener {
             tooltip.close()
             AppInfoDialog.newInstance(
                 appName = apps[position],
-                appIcon = dataModels[position]?.appIcon,
-                changelog = dataModels[position]?.changelog?.value
+                appIcon = dataModel?.appIcon,
+                changelog = dataModel?.changelog?.value
             ).show(context.supportFragmentManager, "info")
         }
     }
@@ -92,15 +92,21 @@ class AppListAdapter(
     init {
 
         if (prefs.getBoolean("enable_vanced", true)) {
-            dataModels.add(viewModel.vancedModel.value)
-            rootDataModels.add(viewModel.vancedRootModel.value)
+            if (isRoot) {
+                rootDataModels.add(viewModel.vancedRootModel.value)
+            } else {
+                dataModels.add(viewModel.vancedModel.value)
+            }
             apps.add(context.getString(R.string.vanced))
             itemCount++
         }
 
         if (prefs.getBoolean("enable_music", true)) {
-            dataModels.add(viewModel.musicModel.value)
-            rootDataModels.add(viewModel.musicRootModel.value)
+            if (isRoot) {
+                rootDataModels.add(viewModel.musicRootModel.value)
+            } else {
+                dataModels.add(viewModel.musicModel.value)
+            }
             apps.add(context.getString(R.string.music))
             itemCount++
         }

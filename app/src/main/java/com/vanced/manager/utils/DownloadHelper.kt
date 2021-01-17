@@ -117,7 +117,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     fun downloadManager(context: Context) {
         val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
-        download(url,"https://github.com/YTVanced/VancedManager", "manager", "manager.apk", context, onDownloadComplete = {
+        download(url,"https://github.com/YTVanced/VancedManager/", "manager", "manager.apk", context, onDownloadComplete = {
             val apk = File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
             val uri =
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)

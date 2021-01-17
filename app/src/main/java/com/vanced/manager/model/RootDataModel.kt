@@ -4,33 +4,30 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import androidx.lifecycle.LiveData
 import com.beust.klaxon.JsonObject
-import com.vanced.manager.R
 import com.vanced.manager.utils.PackageHelper
 
-open class RootDataModel(
+class RootDataModel(
     jsonObject: LiveData<JsonObject?>,
-    private val context: Context,
-    override val appPkg: String,
-    override val appName: String,
-    override val appIcon: Drawable?,
-    private val scriptName: String
+    context: Context,
+    appPkg: String,
+    appName: String,
+    appIcon: Drawable?,
+    //BUG THIS!
+    //kotlin thinks that this value is null if we use
+    //private val scriptName: String
+    //Although it's impossible for it to be null.
+    //Ironic, isn't it?
+    private val scriptName: String?
 ): DataModel(
     jsonObject, context, appPkg, appName, appIcon
 ) {
 
-    override fun getPkgVersionName(pkg: String): String {
-        return if (PackageHelper.scriptExists(scriptName)) {
-            super.getPkgVersionName(pkg)
+    override fun isAppInstalled(pkg: String): Boolean {
+        //Adapt to nullable shit
+        return if (scriptName?.let { PackageHelper.scriptExists(it) } == true) {
+            super.isAppInstalled(appPkg)
         } else {
-            context.getString(R.string.unavailable)
-        }
-    }
-
-    override fun compareInt(int1: Int?, int2: Int?): String {
-        return if (PackageHelper.scriptExists(scriptName)) {
-            super.compareInt(int1, int2)
-        } else {
-            context.getString(R.string.install)
+            false
         }
     }
 
