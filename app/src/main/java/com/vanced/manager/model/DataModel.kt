@@ -16,9 +16,9 @@ import kotlinx.coroutines.launch
 open class DataModel(
     private val jsonObject: LiveData<JsonObject?>,
     private val context: Context,
-    open val appPkg: String,
-    open val appName: String,
-    open val appIcon: Drawable?,
+    val appPkg: String,
+    val appName: String,
+    val appIcon: Drawable?,
 ) {
 
     private val versionCode = MutableLiveData<Int>()
@@ -32,11 +32,9 @@ open class DataModel(
 
     private fun fetch() = CoroutineScope(Dispatchers.IO).launch {
         val jobj = jsonObject.value
-        isAppInstalled.postValue(isPackageInstalled(appPkg, context.packageManager))
+        isAppInstalled.postValue(isAppInstalled(appPkg))
         versionCode.postValue(jobj?.int("versionCode") ?: 0)
-        versionName.postValue(jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(
-                R.string.unavailable
-            ))
+        versionName.postValue(jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
         changelog.postValue(jobj?.string("changelog") ?: context.getString(R.string.unavailable))
     }
 
@@ -50,8 +48,8 @@ open class DataModel(
             }
             this?.let {
                 isAppInstalled.observe(it) {
-                    installedVersionCode.postValue(getPkgVersionCode(appPkg))
-                    installedVersionName.postValue(getPkgVersionName(appPkg))
+                    installedVersionCode.value = getPkgVersionCode(appPkg)
+                    installedVersionName.value = getPkgVersionName(appPkg)
                 }
             }
             this?.let {
@@ -64,7 +62,9 @@ open class DataModel(
         }
     }
 
-    open fun getPkgVersionName(pkg: String): String {
+    open fun isAppInstalled(pkg: String): Boolean = isPackageInstalled(pkg, context.packageManager)
+
+    private fun getPkgVersionName(pkg: String): String {
         val pm = context.packageManager
         return if (isAppInstalled.value == true) {
             pm?.getPackageInfo(pkg, 0)?.versionName?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable)
@@ -84,7 +84,7 @@ open class DataModel(
         } else 0
     }
 
-    open fun compareInt(int1: Int?, int2: Int?): String {
+    private fun compareInt(int1: Int?, int2: Int?): String {
         if (int2 != null && int1 != null) {
             return when {
                 int1 == 0 -> context.getString(R.string.install)
