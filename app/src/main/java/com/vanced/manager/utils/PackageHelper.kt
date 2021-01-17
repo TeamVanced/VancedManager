@@ -331,18 +331,16 @@ object PackageHelper {
     private fun doCommitSession(sessionId: Int, context: Context) {
         var session: PackageInstaller.Session? = null
         try {
-            try {
-                session = context.packageManager.packageInstaller.openSession(sessionId)
-                val callbackIntent = Intent(context, AppInstallerService::class.java)
-                val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
-                session.commit(pendingIntent.intentSender)
-                session.close()
-                Log.d(INSTALLER_TAG, "install request sent")
-                Log.d(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
-                Log.d(INSTALLER_TAG, "doCommitSession: after session commit ")
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
+            session = context.packageManager.packageInstaller.openSession(sessionId)
+            val callbackIntent = Intent(context, AppInstallerService::class.java)
+            val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
+            session.commit(pendingIntent.intentSender)
+            session.close()
+            Log.d(INSTALLER_TAG, "install request sent")
+            Log.d(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
+            Log.d(INSTALLER_TAG, "doCommitSession: after session commit ")
+        } catch (e: IOException) {
+            e.printStackTrace()
         } finally {
             session?.close()
         }
