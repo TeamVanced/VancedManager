@@ -76,13 +76,13 @@ class AppListAdapter(
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.bind(position)
-
+        val dataModel = if (isRoot) rootDataModels[position] else dataModels[position]
         holder.appCard.setOnClickListener {
             tooltip.close()
             AppInfoDialog.newInstance(
                 appName = apps[position],
-                appIcon = dataModels[position]?.appIcon,
-                changelog = dataModels[position]?.changelog?.value
+                appIcon = dataModel?.appIcon,
+                changelog = dataModel?.changelog?.value
             ).show(context.supportFragmentManager, "info")
         }
     }

@@ -2,12 +2,13 @@ package com.vanced.manager.model
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.util.Log
 import androidx.lifecycle.LiveData
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.utils.PackageHelper
 
-open class RootDataModel(
+class RootDataModel(
     jsonObject: LiveData<JsonObject?>,
     private val context: Context,
     override val appPkg: String,
@@ -17,6 +18,10 @@ open class RootDataModel(
 ): DataModel(
     jsonObject, context, appPkg, appName, appIcon
 ) {
+
+    init {
+        Log.d("test", appPkg)
+    }
 
     override fun getPkgVersionName(pkg: String): String {
         return if (PackageHelper.scriptExists(scriptName)) {
