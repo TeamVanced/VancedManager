@@ -67,7 +67,7 @@ open class DataModel(
     open fun getPkgVersionName(pkg: String): String {
         val pm = context.packageManager
         return if (isAppInstalled.value == true) {
-            pm.getPackageInfo(pkg, 0).versionName.removeSuffix("-vanced")
+            pm?.getPackageInfo(pkg, 0)?.versionName?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable)
         } else {
             context.getString(R.string.unavailable)
         }
@@ -75,12 +75,12 @@ open class DataModel(
 
     @Suppress("DEPRECATION")
     private fun getPkgVersionCode(pkg: String): Int {
+        val pm = context.packageManager
         return if (isAppInstalled.value == true) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
-                context.packageManager.getPackageInfo(pkg, 0).longVersionCode.and(0xFFFFFFFF)
-                    .toInt()
+                pm?.getPackageInfo(pkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt() ?: 0
             else
-                context.packageManager.getPackageInfo(pkg, 0).versionCode
+                pm?.getPackageInfo(pkg, 0)?.versionCode ?: 0
         } else 0
     }
 
