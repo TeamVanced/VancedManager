@@ -193,13 +193,12 @@ object PackageHelper {
 
                 //moving apk to tmp folder in order to avoid permission denials
                 val command = Shell.su("pm install $newPath").exec()
+                Shell.su("rm $newPath").exec()
                 if (command.isSuccess) {
-                    Shell.su("rm $newPath").exec()
                     return true
                 } else {
                     sendFailure(command.out, context)
                     sendCloseDialog(context)
-                    Shell.su("rm $newPath").exec()
                 }
 
             }
