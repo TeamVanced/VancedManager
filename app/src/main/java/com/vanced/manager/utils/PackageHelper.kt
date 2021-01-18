@@ -188,13 +188,20 @@ object PackageHelper {
     private fun installRootMusic(files: ArrayList<FileInfo>, context: Context): Boolean {
         files.forEach { apk ->
             if (apk.name != "root.apk") {
-                val command = Shell.su("cat ${apk.file?.path} | pm install -S ${apk.fileSize}").exec()
-                if (command.isSuccess)
+                val newPath = "/data/local/tmp/${apk.file?.name}"
+                Shell.su("mv ${apk.file?.path} $newPath").exec()
+
+                //moving apk to tmp folder in order to avoid permission denials
+                val command = Shell.su("pm install $newPath").exec()
+                if (command.isSuccess) {
+                    Shell.su("rm $newPath").exec()
                     return true
-                else {
+                } else {
                     sendFailure(command.out, context)
                     sendCloseDialog(context)
+                    Shell.su("rm $newPath").exec()
                 }
+
             }
         }
         return false
