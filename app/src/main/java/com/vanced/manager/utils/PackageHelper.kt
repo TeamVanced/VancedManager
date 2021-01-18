@@ -189,9 +189,9 @@ object PackageHelper {
         files.forEach { apk ->
             if (apk.name != "root.apk") {
                 val newPath = "/data/local/tmp/${apk.file?.name}"
-                Shell.su("mv ${apk.file?.path} $newPath").exec()
 
                 //moving apk to tmp folder in order to avoid permission denials
+                Shell.su("mv ${apk.file?.path} $newPath").exec()
                 val command = Shell.su("pm install $newPath").exec()
                 Shell.su("rm $newPath").exec()
                 if (command.isSuccess) {
