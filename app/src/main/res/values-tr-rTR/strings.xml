@@ -104,7 +104,7 @@
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
     <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
     <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
-    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu.  Uygulamanın mevcut sürümünü kaldırın ve ardından tekrar deneyin.</string>
+    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Uygulamanın mevcut sürümünü kaldırın ve ardından tekrar deneyin.</string>
     <string name="installation_failed">Kurulum bilinmeyen nedenlerden dolayı başarısız oldu. Telegram veya Discord\'a katılarak destek alabilirsin.</string>
     <string name="installation_incompatible">Kurulum dosyası cihazınız ile uyumsuz olduğu için kurulum işlemi başarısız oldu. Ayarlar\'da indirilen dosyaları temizleyip, tekrar deneyin.</string>
     <string name="installation_invalid">APK dosyaları çözümlenemediğinden, kurulum başarısız oldu. Lütfen yeniden deneyin.</string>
