@@ -17,7 +17,7 @@ class PreferenceSwitch @JvmOverloads constructor(
     defStyleRes: Int = 0
 ) : FrameLayout(context, attrs, defStyle, defStyleRes) {
 
-    interface OnCheckedListener {
+    fun interface OnCheckedListener {
         fun onChecked(buttonView: CompoundButton, isChecked: Boolean)
     }
 
@@ -64,15 +64,7 @@ class PreferenceSwitch @JvmOverloads constructor(
         }
     }
 
-    fun setOnCheckedListener(method: (buttonView: CompoundButton, isChecked: Boolean) -> Unit) {
-        mListener = object : OnCheckedListener {
-            override fun onChecked(buttonView: CompoundButton, isChecked: Boolean) {
-                method(buttonView, isChecked)
-            }
-        }
-    }
-
-    fun setOnCheckedListener(listener: OnCheckedListener?) {
+    fun setOnCheckedListener(listener: OnCheckedListener) {
         mListener = listener
     }
 
