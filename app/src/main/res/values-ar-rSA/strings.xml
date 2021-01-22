@@ -51,9 +51,9 @@
     <string name="link_title">استخدم علامات تبويب مخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات تبويب مخصصة لمتصفح كروم</string>
     <string name="system_default">الوضع الافتراضي</string>
-    <string name="script_save_failed">فشل حفظ قيمة المؤقت الجديدة</string>
+    <string name="script_save_failed">فشل في حفظ القيمة الزمنية الجديدة</string>
     <string name="script_sleep_timer">Script sleep time للروت</string>
-    <string name="script_sleep_timer_description">اضبط قيمة وقت السكون المستخدمة في النص البرمجي /data/adb/service.d/app.sh ، وهو مفيد لإصلاح مشكلات التثبيت</string>
+    <string name="script_sleep_timer_description">ضبط القيمة الزمنية للنوم المستخدمة في /data/adb/service.d/app.sh script، مفيد لإصلاح مشاكل التركيب</string>
     <string name="theme">السمة</string>
     <string name="theme_dark">السمة الداكنة</string>
     <string name="theme_light">السمة الفاتحة</string>
