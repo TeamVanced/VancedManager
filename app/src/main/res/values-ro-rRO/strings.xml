@@ -52,8 +52,8 @@
     <string name="link_custom_tabs">Link-uri se vor deschide în filele personalizate Chrome</string>
     <string name="system_default">Setarea implicită a sistemului</string>
     <string name="script_save_failed">Salvarea noii valori de timp a eșuat</string>
-    <string name="script_sleep_timer">Dupa cât timp se activează script-ul root</string>
-    <string name="script_sleep_timer_description">Reglaţi dupa cât timp este activat script-ul root folosit în /data/adb/service.d/app.sh script, util pentru remedierea problemelor de montare</string>
+    <string name="script_sleep_timer">După cât timp se activează script-ul root</string>
+    <string name="script_sleep_timer_description">Reglați după cât timp este activat script-ul root folosit în /data/adb/service.d/app.sh script, util pentru remedierea problemelor de montare</string>
     <string name="theme">Temă</string>
     <string name="theme_dark">Temă întunecată</string>
     <string name="theme_light">Temă deschisă</string>
