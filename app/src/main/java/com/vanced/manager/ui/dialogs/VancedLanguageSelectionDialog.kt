@@ -9,7 +9,6 @@ import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.Toast
-import androidx.core.content.edit
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
@@ -17,6 +16,8 @@ import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
 import com.vanced.manager.ui.core.ThemedMaterialCheckbox
 import com.vanced.manager.utils.getDefaultVancedLanguages
+import com.vanced.manager.utils.installPrefs
+import com.vanced.manager.utils.lang
 import com.vanced.manager.utils.vanced
 import java.util.*
 
@@ -30,7 +31,7 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
     }
 
     private val langs = vanced.value?.array<String>("langs")?.value
-    private val prefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
+    private val prefs by lazy { requireActivity().installPrefs }
 
     override fun binding(
         inflater: LayoutInflater,
@@ -56,14 +57,14 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
                     Toast.makeText(requireActivity(), R.string.select_at_least_one_lang, Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
-                prefs?.edit { putString("lang", chosenLangs.joinToString()) }
+                prefs.lang = chosenLangs.joinToString()
                 dismiss()
             }
         }
     }
 
     private fun LinearLayout.loadBoxes() {
-        val langPrefs = prefs.getString("lang", getDefaultVancedLanguages())
+        val langPrefs = prefs.lang
         langs?.forEach { lang ->
             val loc = Locale(lang)
             val box = ThemedMaterialCheckbox(requireActivity()).apply {

@@ -3,7 +3,6 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.edit
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
@@ -36,7 +35,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
     private fun bindData() {
         with(binding) {
             val showLang = mutableListOf<String>()
-            installPrefs.getString("lang", getDefaultVancedLanguages())?.split(", ")?.toTypedArray()?.forEach { lang ->
+            installPrefs.lang?.split(", ")?.toTypedArray()?.forEach { lang ->
                 val loc = Locale(lang)
                 showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
@@ -64,9 +63,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
             }
             vancedInstall.setOnClickListener {
                 if (showLang.isEmpty()) {
-                    installPrefs.edit {
-                        putString("lang", "en")
-                    }
+                    installPrefs.lang = "en"
                 }
                 dismiss()
                 showDialog(

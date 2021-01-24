@@ -142,7 +142,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initDialogs(firstLaunch: Boolean) {
         val prefs = getDefaultSharedPreferences(this)
-        val variant = prefs.getString("vanced_variant", "nonroot")
+        val variant = prefs.managerVariant
         prefs.getBoolean("show_root_dialog", true)
 
         if (intent?.data != null && intent.dataString?.startsWith("https") == true) {

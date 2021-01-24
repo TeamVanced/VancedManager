@@ -3,7 +3,6 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
 import com.vanced.manager.core.downloader.MicrogDownloader.startMicrogInstall
 import com.vanced.manager.core.downloader.MusicDownloader.startMusicInstall
@@ -11,6 +10,8 @@ import com.vanced.manager.core.downloader.VancedDownloader.startVancedInstall
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogInstallationFilesDetectedBinding
+import com.vanced.manager.utils.defPrefs
+import com.vanced.manager.utils.managerVariant
 
 class InstallationFilesDetectedDialog : BindingBottomSheetDialogFragment<DialogInstallationFilesDetectedBinding>() {
 
@@ -55,10 +56,7 @@ class InstallationFilesDetectedDialog : BindingBottomSheetDialogFragment<DialogI
                 when (app) {
                     getString(R.string.vanced) -> startVancedInstall(
                         requireContext(),
-                        getDefaultSharedPreferences(requireContext()).getString(
-                            "vanced_variant",
-                            "nonroot"
-                        )
+                        context?.defPrefs?.managerVariant
                     )
                     getString(R.string.music) -> startMusicInstall(requireContext())
                     getString(R.string.microg) -> startMicrogInstall(requireContext())

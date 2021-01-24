@@ -5,7 +5,6 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.edit
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
@@ -13,6 +12,7 @@ import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
 import com.vanced.manager.ui.core.ThemedMaterialRadioButton
 import com.vanced.manager.utils.convertToAppTheme
 import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.theme
 import com.vanced.manager.utils.vanced
 
 class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRadioButtonBinding>() {
@@ -46,14 +46,14 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
                 )
             }
             dialogTitle.text = requireActivity().getString(R.string.theme)
-            val tag = root.findViewWithTag<ThemedMaterialRadioButton>(prefs.getString("theme", "dark"))
+            val tag = root.findViewWithTag<ThemedMaterialRadioButton>(prefs.theme)
             if (tag != null) {
                 tag.isChecked = true
             }
             dialogSave.setOnClickListener {
                 val checkedTag = binding.dialogRadiogroup.getCheckedButtonTag()
                 if (checkedTag != null) {
-                    prefs.edit { putString("theme", checkedTag) }
+                    prefs.theme = checkedTag
                 }
                 dismiss()
             }
