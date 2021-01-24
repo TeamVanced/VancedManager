@@ -30,7 +30,7 @@
     <string name="latest">Disponibile:</string>
     <string name="no_microg">microG non è installato</string>
     <string name="root_not_granted">Accesso root non consentito</string>
-    <string name="unavailable">Irraggiungibile</string>
+    <string name="unavailable">Non disponibile</string>
     <string name="update">Aggiorna</string>
     <string name="social_media">Social Media</string>
     <string name="support_us">Sostienici</string>
