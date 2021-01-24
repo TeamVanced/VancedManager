@@ -4,15 +4,15 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.vanced.manager.R
-import com.vanced.manager.utils.defAccentColor
-import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.defPrefs
+import com.vanced.manager.utils.managerAccent
 
 class ThemedSwipeRefreshlayout @JvmOverloads constructor(
     context: Context,
     attributeSet: AttributeSet? = null
 ) : SwipeRefreshLayout(context, attributeSet) {
     init {
-        setColorSchemeColors(context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor))
+        setColorSchemeColors(context.defPrefs.managerAccent)
         initAttrs(context, attributeSet)
     }
     private fun initAttrs(context: Context, attributeSet: AttributeSet?) {

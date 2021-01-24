@@ -5,14 +5,14 @@ import android.content.res.ColorStateList
 import android.util.AttributeSet
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.vanced.manager.R
-import com.vanced.manager.utils.defAccentColor
-import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.defPrefs
+import com.vanced.manager.utils.managerAccent
 
 class ThemedMaterialCheckbox @JvmOverloads constructor(
     context: Context,
     attributeSet: AttributeSet? = null,
 ) : MaterialCheckBox(context, attributeSet, R.attr.checkboxStyle) {
     init {
-        buttonTintList = ColorStateList.valueOf(context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor))
+        buttonTintList = ColorStateList.valueOf(context.defPrefs.managerAccent)
     }
 }

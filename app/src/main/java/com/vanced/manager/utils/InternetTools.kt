@@ -56,7 +56,7 @@ fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, ur
 
 suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
     isFetching.postValue(true)
-    val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
+    val installUrl = context.defPrefs.installUrl
     val calendar = Calendar.getInstance()
     val hour = calendar.get(Calendar.HOUR_OF_DAY)
     val minute = calendar.get(Calendar.MINUTE)
@@ -79,7 +79,7 @@ suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
 }
 
 private suspend fun getJsonString(file: String, obj: String, context: Context): String {
-    val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
+    val installUrl = context.defPrefs.installUrl
     return try {
         getJson("$installUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
     } catch (e: Exception) {

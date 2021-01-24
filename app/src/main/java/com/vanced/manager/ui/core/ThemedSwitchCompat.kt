@@ -9,9 +9,9 @@ import androidx.core.graphics.ColorUtils
 import androidx.core.graphics.drawable.DrawableCompat
 import com.vanced.manager.R
 import com.vanced.manager.utils.accentColor
-import com.vanced.manager.utils.defAccentColor
-import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.defPrefs
 import com.vanced.manager.utils.lifecycleOwner
+import com.vanced.manager.utils.managerAccent
 
 class ThemedSwitchCompat @JvmOverloads constructor(
     context: Context,
@@ -21,7 +21,7 @@ class ThemedSwitchCompat @JvmOverloads constructor(
     private val states = arrayOf(intArrayOf(-android.R.attr.state_checked), intArrayOf(android.R.attr.state_checked))
 
     init {
-        setSwitchColors(context.getDefaultPrefs().getInt("manager_accent_color", defAccentColor))
+        setSwitchColors(context.defPrefs.managerAccent)
         context.lifecycleOwner()?.let { owner ->
             accentColor.observe(owner) { color ->
                 setSwitchColors(color.toInt())

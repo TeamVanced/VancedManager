@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.dialogs
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -21,8 +20,8 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
         }
     }
 
-    private val defPrefs by lazy { requireActivity().getDefaultPrefs() }
-    private val installPrefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
+    private val defPrefs by lazy { requireActivity().defPrefs }
+    private val installPrefs by lazy { requireActivity().installPrefs }
 
     override fun binding(
         inflater: LayoutInflater,

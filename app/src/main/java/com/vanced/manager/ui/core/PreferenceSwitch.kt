@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.widget.CompoundButton
 import android.widget.FrameLayout
 import androidx.core.content.edit
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewPreferenceSwitchBinding
+import com.vanced.manager.utils.defPrefs
 
 class PreferenceSwitch @JvmOverloads constructor(
     context: Context,
@@ -21,7 +21,7 @@ class PreferenceSwitch @JvmOverloads constructor(
         fun onChecked(buttonView: CompoundButton, isChecked: Boolean)
     }
 
-    private val prefs by lazy { getDefaultSharedPreferences(context) }
+    private val prefs by lazy { context.defPrefs }
 
     var prefKey: String = ""
         private set

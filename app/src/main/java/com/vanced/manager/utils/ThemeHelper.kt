@@ -12,7 +12,7 @@ val mutableAccentColor = MutableLiveData<Int>()
 val accentColor: LiveData<Int> = mutableAccentColor
 
 fun Activity.setFinalTheme() {
-    when (getDefaultPrefs().getString("manager_theme", "System Default")) {
+    when (defPrefs.managerTheme) {
         "Light" -> setTheme(R.style.LightTheme)
         "Dark" -> setTheme(R.style.DarkTheme)
         "System Default" -> {

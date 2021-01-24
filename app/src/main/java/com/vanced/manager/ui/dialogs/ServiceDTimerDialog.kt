@@ -12,14 +12,14 @@ import com.vanced.manager.utils.PackageHelper
 import com.vanced.manager.utils.PackageHelper.getPackageDir
 import com.vanced.manager.utils.PackageHelper.getPkgNameRoot
 import com.vanced.manager.utils.PackageHelper.scriptExists
-import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.defPrefs
 import com.vanced.manager.utils.writeServiceDScript
 import java.io.IOException
 import java.util.*
 
 class ServiceDTimerDialog : BindingDialogFragment<DialogServicedTimerBinding>() {
 
-    private val prefs by lazy { requireActivity().getDefaultPrefs() }
+    private val prefs by lazy { requireActivity().defPrefs }
 
     override fun binding(
         inflater: LayoutInflater,

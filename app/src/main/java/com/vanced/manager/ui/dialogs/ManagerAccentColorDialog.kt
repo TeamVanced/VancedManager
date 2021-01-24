@@ -10,16 +10,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.edit
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.madrapps.pikolo.listeners.OnColorSelectionListener
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerAccentColorBinding
-import com.vanced.manager.utils.accentColor
-import com.vanced.manager.utils.defAccentColor
-import com.vanced.manager.utils.mutableAccentColor
-import com.vanced.manager.utils.toHex
+import com.vanced.manager.utils.*
 
 class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorBinding>() {
 
@@ -95,7 +91,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                 try {
                     val colorFromEditText = Color.parseColor(hexEdittext.text.toString())
                     mutableAccentColor.value = colorFromEditText
-                    prefs.edit { putInt("manager_accent_color", colorFromEditText) }
+                    prefs.managerAccent = colorFromEditText
                 } catch (e: IllegalArgumentException) {
                     Log.d("VMTheme", getString(R.string.failed_accent))
                     Toast.makeText(requireActivity(), getString(R.string.failed_accent), Toast.LENGTH_SHORT).show()
@@ -105,7 +101,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                 dismiss()
             }
             accentReset.setOnClickListener {
-                prefs.edit { putInt("manager_accent_color", defAccentColor) }
+                prefs.managerAccent = defAccentColor
                 mutableAccentColor.value = defAccentColor
                 dismiss()
             }

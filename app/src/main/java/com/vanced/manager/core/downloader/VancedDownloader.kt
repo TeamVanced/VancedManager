@@ -3,7 +3,6 @@ package com.vanced.manager.core.downloader
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.logEvent
 import com.vanced.manager.R
@@ -41,21 +40,20 @@ object VancedDownloader {
     private var folderName: String? = null
 
     fun downloadVanced(context: Context) {
-        defPrefs = getDefaultSharedPreferences(context)
-        prefs = context.getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
-        variant = defPrefs.getString("vanced_variant", "nonroot")
+        defPrefs = context.defPrefs
+        prefs = context.installPrefs
+        variant = defPrefs.managerVariant
         folderName = "vanced/$variant"
         downloadPath = context.getExternalFilesDir(folderName)?.path
         File(downloadPath.toString()).deleteRecursively()
-        installUrl = defPrefs.getInstallUrl()
-        prefs.getString("lang", getDefaultVancedLanguages())?.let {
+        installUrl = defPrefs.installUrl
+        prefs.lang?.let {
             lang = it.split(", ").toMutableList()
         }
-        theme = prefs.getString("theme", "dark")
-        vancedVersion = defPrefs.getString("vanced_version", "latest")?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))
+        theme = prefs.theme
+        vancedVersion = defPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))
         themePath = "$installUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
-        //newInstaller = defPrefs.getBoolean("new_installer", false)
         arch = getArch()
         count = 0
 
