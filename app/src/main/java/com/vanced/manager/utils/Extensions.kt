@@ -30,16 +30,7 @@ fun DialogFragment.show(activity: FragmentActivity) {
 
 }
 
-//Not sure how much this can affect performance
-//but if anyone can improve this even slightly,
-//feel free to open a PR
-fun List<String>.convertToAppVersions(): List<String> {
-    val versionsModel = arrayListOf("latest")
-    for (i in reversed().indices) {
-        versionsModel.add(this[i])
-    }
-    return versionsModel
-}
+fun List<String>.convertToAppVersions(): List<String> = arrayListOf("latest") + reversed()
 
 fun String.convertToAppTheme(context: Context): String {
     return context.getString(R.string.light_plus_other, this.capitalize(Locale.ROOT))
