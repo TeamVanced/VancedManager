@@ -11,7 +11,6 @@ import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogCustomUrlBinding
 import com.vanced.manager.utils.baseUrl
 import com.vanced.manager.utils.defPrefs
-import com.vanced.manager.utils.installUrl
 import com.vanced.manager.utils.loadJson
 import kotlinx.coroutines.launch
 

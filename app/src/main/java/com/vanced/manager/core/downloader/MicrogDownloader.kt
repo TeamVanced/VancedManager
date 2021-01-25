@@ -14,13 +14,11 @@ object MicrogDownloader {
 
     fun downloadMicrog(context: Context) {
         val url = microg.value?.string("url") ?: ""
-        context.defPrefs.installUrl?.let {
-            download(url, "$it/", folderName, fileName, context, onDownloadComplete = {
-                startMicrogInstall(context)
-            }, onError = {
-                downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, fileName))
-            })
-        }
+        download(url, "$baseInstallUrl/", folderName, fileName, context, onDownloadComplete = {
+            startMicrogInstall(context)
+        }, onError = {
+            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, fileName))
+        })
 
     }
 

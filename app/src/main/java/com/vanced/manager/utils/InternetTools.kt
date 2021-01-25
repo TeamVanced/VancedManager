@@ -13,6 +13,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
+import com.github.kittinunf.fuel.httpGet
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.generateChecksum
 import kotlinx.coroutines.Dispatchers
@@ -32,7 +33,9 @@ val musicVersions = MutableLiveData<JsonArray<String>>()
 
 val isFetching = MutableLiveData<Boolean>()
 
-//var braveTiers = MutableLiveData<JsonObject?>()
+var isMicrogBroken: Boolean = false
+
+var baseInstallUrl = ""
 
 fun openUrl(url: String, color: Int, context: Context) {
     try {
@@ -57,18 +60,25 @@ fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, ur
 suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
     isFetching.postValue(true)
     val installUrl = context.defPrefs.installUrl
+    if (baseInstallUrl == "" && installUrl != null) {
+        baseInstallUrl = installUrl
+    }
+
+    baseInstallUrl.httpGet().response { _, response, _ ->
+        if (response.statusCode / 100 != 2) {
+            baseInstallUrl = "https://mirror.codebucket.de/vanced"
+        }
+    }
+
     val calendar = Calendar.getInstance()
     val hour = calendar.get(Calendar.HOUR_OF_DAY)
     val minute = calendar.get(Calendar.MINUTE)
     val second = calendar.get(Calendar.SECOND)
     val fetchTime = "fetchTime=$hour$minute$second"
-    val latest = getJson("$installUrl/latest.json?$fetchTime")
-    val versions = getJson("$installUrl/versions.json?$fetchTime")
-//      braveTiers.apply {
-//          set(getJson("$installUrl/sponsor.json"))
-//          notifyChange()
-//      }
-
+    
+    val latest = getJson("$baseInstallUrl/latest.json?$fetchTime")
+    val versions = getJson("$baseInstallUrl/versions.json?$fetchTime")
+    isMicrogBroken = latest?.boolean("is_microg_broken") ?: false
     vanced.postValue(latest?.obj("vanced"))
     vancedVersions.postValue(versions?.array("vanced") )
     music.postValue(latest?.obj("music"))
@@ -79,9 +89,8 @@ suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
 }
 
 private suspend fun getJsonString(file: String, obj: String, context: Context): String {
-    val installUrl = context.defPrefs.installUrl
     return try {
-        getJson("$installUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
+        getJson("$baseInstallUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
     } catch (e: Exception) {
         Log.e(TAG, "Error: ", e)
         context.getString(R.string.unavailable)

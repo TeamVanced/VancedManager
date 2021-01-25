@@ -62,6 +62,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                 showDialog(VancedLanguageSelectionDialog())
             }
             vancedInstall.setOnClickListener {
+
                 if (showLang.isEmpty()) {
                     installPrefs.lang = "en"
                 }

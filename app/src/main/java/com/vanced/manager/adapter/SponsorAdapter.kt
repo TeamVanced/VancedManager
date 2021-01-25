@@ -56,26 +56,6 @@ class SponsorAdapter(
 
     override fun getItemCount(): Int = 2
 
-//    fun getCountryFromIP(ipAddress: String?): String? {
-//        val db = context.assets.open("GeoLite2-Country.mmdb")
-//        val reader = DatabaseReader.Builder(db).build()
-//        val inetIp = InetAddress.getByName(ipAddress)
-//        return reader.country(inetIp).country.isoCode
-//    }
-//
-//    init {
-//        json.addOnPropertyChangedCallback(object : Observable.OnPropertyChangedCallback() {
-//            override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
-//                val wm = context.applicationContext.getSystemService(WIFI_SERVICE) as WifiManager?
-//                val ip: String = formatIpAddress(wm!!.connectionInfo.ipAddress)
-//                val promotedTiers = json.get()?.array<String>("tier2")?.value!! + json.get()?.array<String>("tier3")?.value!!
-//                if (promotedTiers.any { getCountryFromIP(ip)?.contains(it)!! })
-//                    sponsors.removeAt(1)
-//            }
-//
-//        })
-//    }
-
     companion object {
         const val BRAVE = "https://vancedapp.com/brave"
         const val ADGUARD = "https://adguard.com/?aid=31141&source=manager"

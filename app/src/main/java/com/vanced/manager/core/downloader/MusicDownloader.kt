@@ -26,7 +26,7 @@ object MusicDownloader {
         version = prefs.musicVersion?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))
         versionCode = music.value?.int("versionCode")
         variant = prefs.managerVariant
-        baseurl = "${prefs.installUrl}/music/v$version"
+        baseurl = "$baseInstallUrl/music/v$version"
         folderName = "music/$variant"
         downloadPath = context.getExternalFilesDir(folderName)?.path
         hashUrl = "$baseurl/hash.json"
