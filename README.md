@@ -3,6 +3,7 @@ Pull requests should be made to the Dev branch as that is the working branch, ma
 For anyone who wants to provide translations please submit them to https://crowdin.com/project/vanced-manager as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
 ======
 Vanced FAQ (from the faq branch) now available on the playstore! https://play.google.com/store/apps/details?id=com.vanced.faq
+##FAQ has just been suspeneded due to "Impersonating Vanced", an appeal has been filed, reporting other apps which impersonate vanced on the playstore is appreciated.
 
 [![Github All Releases](https://img.shields.io/github/downloads/YTVanced/VancedManager/total.svg)](https://github.com/YTVanced/VancedManager/releases/latest) [![Github All Releases](https://img.shields.io/github/release/YTVanced/VancedManager.svg)](https://github.com/YTVanced/VancedManager/releases/latest) 
 # Vanced Manager
