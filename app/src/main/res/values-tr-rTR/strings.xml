@@ -52,8 +52,8 @@
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="system_default">Sistem varsayılanı</string>
     <string name="script_save_failed">Yeni zaman değeri kaydedilemedi</string>
-    <string name="script_sleep_timer">Kök komut dosyası uyku süresi</string>
-    <string name="script_sleep_timer_description">/data/adb/service.d/app.sh komut dosyasında kullanılan uyku süresi değerini ayarlayın, montaj sorunlarını düzeltmek için yararlıdır</string>
+    <string name="script_sleep_timer">Root kurulumu, bekletme süresi</string>
+    <string name="script_sleep_timer_description">[Gelişmiş] Kurulum sırasında çalıştırılan /data/adb/service.d/app.sh dosyasında ki bekletme süresinin değer ayarı. Kurulum sırasında oluşan hatalarda çözüm olabilir</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
