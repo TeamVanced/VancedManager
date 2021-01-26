@@ -14,6 +14,7 @@ import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
 import com.vanced.manager.utils.AppUtils.musicRootPkg
+import com.vanced.manager.utils.AppUtils.playStorePkg
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
@@ -214,6 +215,7 @@ object PackageHelper {
                 val modApk: FileInfo? = fileInfoList.lastOrNull { modApkBool(it.name) }
                 if (modApk != null) {
                     if (overwriteBase(modApk, fileInfoList, appVerCode, pkg, app, context)) {
+                        setInstallerPackage(context, pkg, playStorePkg)
                         Log.d(INSTALLER_TAG, "Finished installation")
                         sendRefresh(context)
                         sendCloseDialog(context)
@@ -647,6 +649,22 @@ object PackageHelper {
                 }
             }
             null
+        }
+    }
+
+    private fun setInstallerPackage(context: Context, target: String, installer: String) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) return
+        try {
+            Log.d(INSTALLER_TAG, "Setting installer package to $installer for $target")
+            val installerUid = context.packageManager.getPackageUid(installer, 0)
+            val res = Shell.su("""su $installerUid -c 'pm set-installer $target $installer'""").exec()
+            if (res.out.any { line -> line.contains("Success") }) {
+                Log.d(INSTALLER_TAG, "Installer package successfully set")
+                return
+            }
+            Log.d(INSTALLER_TAG, "Failed setting installer package")
+        } catch (e: PackageManager.NameNotFoundException) {
+            Log.d(INSTALLER_TAG, "Installer package $installer not found. Skipping setting installer")
         }
     }
 }
