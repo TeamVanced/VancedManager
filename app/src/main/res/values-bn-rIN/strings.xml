@@ -36,11 +36,6 @@
     <string name="support_us">আমাদের সমর্থন</string>
     <!-- Settings -->
     <string name="accent_color">অ্যাকসেন্ট রঙ</string>
-    <string name="accent_blue">নীল</string>
-    <string name="accent_green">সবুজ</string>
-    <string name="accent_purple">বেগুনি</string>
-    <string name="accent_red">লাল</string>
-    <string name="accent_yellow">হলুদ</string>
     <string name="category_appearance">রূপ</string>
     <string name="category_behaviour">আচরণ</string>
     <string name="clear_files">ডাউনলোড করা ফাইলগুলি মুছে ফেলুন</string>
@@ -78,13 +73,11 @@
     <string name="error">ত্রুটি</string>
     <string name="redownload">পুনরায় ডাউনলোড করুন</string>
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vancedapp.com, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
-    <string name="success">সফল!</string>
     <string name="app_installation_preferences">%1$s ইনস্টল করার পছন্দগুলি</string>
-    <string name="vanced_installed">ভ্যান্সড সফলভাবে ইনস্টল করা হয়েছে! এখন চালু করুন?</string>
     <string name="version">সংস্করণ</string>
-    <string name="music_installed">ভ্যান্সড মিউজিক সফলভাবে ইনস্টল করা হয়েছে! এখন খুলুন?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">দয়া করে ধৈর্য ধরুন…</string>
-    <string name="launch">খুলুন</string>
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">ভ্যান্সডের জন্য আপনার পছন্দসই ভাষা(গুলি) চয়ন করুন</string>

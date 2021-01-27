@@ -36,11 +36,6 @@
     <string name="support_us">Unterstütze uns</string>
     <!-- Settings -->
     <string name="accent_color">Akzentfarbe</string>
-    <string name="accent_blue">Blau</string>
-    <string name="accent_green">Grün</string>
-    <string name="accent_purple">Lila</string>
-    <string name="accent_red">Rot</string>
-    <string name="accent_yellow">Gelb</string>
     <string name="category_appearance">Darstellung</string>
     <string name="category_behaviour">Verhalten</string>
     <string name="clear_files">Heruntergeladene Dateien löschen</string>
@@ -52,7 +47,7 @@
     <string name="link_custom_tabs">Links werden in Chrome Custom Tabs geöffnet</string>
     <string name="system_default">Systemstandard</string>
     <string name="script_save_failed">Speichern des neuen Zeitwertes fehlgeschlagen</string>
-    <string name="script_sleep_timer">Haupt Skript Wartezeit</string>
+    <string name="script_sleep_timer">Wartezeit des Root-Skriptes</string>
     <string name="script_sleep_timer_description">Anpassen des Wertes für die Ruhezeit, der im Skript /data/adb/service.d/app.sh verwendet wird, nützlich zur Behebung von Problemen beim Einbinden</string>
     <string name="theme">Theme</string>
     <string name="theme_dark">Dunkles Theme</string>
@@ -71,20 +66,18 @@
     <string name="chosen_theme">Theme: %1$s</string>
     <string name="chosen_version">Version: %1$s</string>
     <string name="guide">Erklärung</string>
-    <string name="hold_on">Stop!</string>
+    <string name="hold_on">Stopp!</string>
     <string name="magisk_vanced">Du benutzt die Magisk/TWRP-Version von Vanced, die nicht mehr unterstützt wird und mit dieser App nicht aktualisiert werden kann. Bitte entferne siie indem du das Magisk-Modul mit dem TWRP Vanced Uninstaller entfernst.</string>
     <string name="miui_one_title">MIUI erkannt!</string>
     <string name="miui_one">Um Vanced zu installieren, musst du die MIUI Optimierungen in den Entwicklereinstellungen deaktivieren. (Du kannst diese Warnung ignorieren, wenn du 20.2.20 oder höher auf xiaomi.eu basierenden ROM verwendest)</string>
     <string name="error">Fehler</string>
     <string name="redownload">Erneut herunterladen</string>
     <string name="security_context">Stelle sicher, dass du die App von vancedapp.com, dem Vanced Discord Server oder dem Vanced GitHub heruntergeladen hast</string>
-    <string name="success">Erfolg!</string>
     <string name="app_installation_preferences">%1$s Installationsoptionen</string>
-    <string name="vanced_installed">Vanced wurde erfolgreich installiert. Jetzt öffnen?</string>
     <string name="version">Version</string>
-    <string name="music_installed">Vanced Musik wurde erfolgreich installiert. Jetzt starten?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Bitte warten…</string>
-    <string name="launch">Öffnen</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wählen Sie ihre bevorzugte Sprache(n) für Vanced</string>

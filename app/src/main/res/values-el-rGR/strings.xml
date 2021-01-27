@@ -36,11 +36,6 @@
     <string name="support_us">Υποστηρίξτε μας</string>
     <!-- Settings -->
     <string name="accent_color">Χρώμα Διεπαφής</string>
-    <string name="accent_blue">Μπλε</string>
-    <string name="accent_green">Πράσινο</string>
-    <string name="accent_purple">Μωβ</string>
-    <string name="accent_red">Κόκκινο</string>
-    <string name="accent_yellow">Κίτρινο</string>
     <string name="category_appearance">Εμφάνιση</string>
     <string name="category_behaviour">Συμπεριφορά</string>
     <string name="clear_files">Εκκαθάριση ληφθέντων αρχείων</string>
@@ -78,13 +73,11 @@
     <string name="error">Σφάλμα</string>
     <string name="redownload">Επανάληψη λήψης</string>
     <string name="security_context">Βεβαιωθείτε ότι κάνατε λήψη της εφαρμογής από το vancedapp.com, τον διακομιστή Discord του Vanced ή το GitHub του Vanced</string>
-    <string name="success">Επιτυχία!</string>
     <string name="app_installation_preferences">Προτιμήσεις Εγκατάστασης του %1$s</string>
-    <string name="vanced_installed">Το Vanced έχει εγκατασταθεί επιτυχώς! Εκκίνηση τώρα;</string>
     <string name="version">Έκδοση</string>
-    <string name="music_installed">Η εγκατάσταση του Vanced Music ολοκληρώθηκε επιτυχώς! Εκκίνηση τώρα;</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Παρακαλώ να είστε υπομονετικοί…</string>
-    <string name="launch">Εκκίνηση</string>
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Επιλέξτε την(/ις) γλώσσα(/ες) που επιθυμείτε για το Vanced</string>

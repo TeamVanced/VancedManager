@@ -36,11 +36,6 @@
     <string name="support_us">ഞങ്ങളെ പിന്തുണയ്ക്കുക</string>
     <!-- Settings -->
     <string name="accent_color">ആക്‌സന്റ് വർണ്ണം</string>
-    <string name="accent_blue">നീല</string>
-    <string name="accent_green">പച്ച</string>
-    <string name="accent_purple">പർപ്പിൾ</string>
-    <string name="accent_red">ചുവപ്പ്</string>
-    <string name="accent_yellow">മഞ്ഞ</string>
     <string name="category_appearance">രൂപം</string>
     <string name="category_behaviour">പെരുമാറ്റം</string>
     <string name="clear_files">ഡൗൺലോഡുചെയ്‌ത ഫയലുകൾ മായ്‌ക്കുക</string>
@@ -78,13 +73,11 @@
     <string name="error">തെറ്റ്</string>
     <string name="redownload">വീണ്ടും ഡൗൺലോഡുചെയ്യുക</string>
     <string name="security_context">നിങ്ങൾ vancedapp.com, Vanced Discord സെർവർ, അല്ലെങ്കിൽ Vanced GitHub എന്നിവയിൽ നിന്ന് അപ്ലിക്കേഷൻ download ൺലോഡ് ചെയ്തുവെന്ന് ഉറപ്പാക്കുക</string>
-    <string name="success">വിജയം!</string>
     <string name="app_installation_preferences">%1$s ഇൻസ്റ്റാളേഷൻ മുൻഗണനകൾ</string>
-    <string name="vanced_installed">വാൻ‌സ്ഡ് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു! ഇപ്പോൾ തുറക്കണോ?</string>
     <string name="version">പതിപ്പ്</string>
-    <string name="music_installed">വാൻസഡ് മ്യൂസിക്ക് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു! ഇപ്പോൾ തുറക്കണോ?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">ദയവായി ക്ഷമിക്കുക…</string>
-    <string name="launch">തുറക്കുക</string>
     <string name="welcome">സ്വാഗതം</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">വാൻസിനായി നിങ്ങൾ ഭാഷ (കൾ) തിരഞ്ഞെടുക്കുക</string>

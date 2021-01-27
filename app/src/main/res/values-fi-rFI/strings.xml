@@ -32,15 +32,10 @@
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
     <string name="update">Päivitä</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">Sosiaalinen media</string>
+    <string name="support_us">Tue meitä</string>
     <!-- Settings -->
     <string name="accent_color">Aksenttiväri</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Ulkoasu</string>
     <string name="category_behaviour">Käyttäytyminen</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
@@ -78,13 +73,11 @@
     <string name="error">Virhe</string>
     <string name="redownload">Uudelleenlataa</string>
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
-    <string name="success">Onnistui!</string>
     <string name="app_installation_preferences">%1$s asennusasetukset</string>
-    <string name="vanced_installed">Vanced on asennettu onnistuneesti! Avaa nyt?</string>
     <string name="version">Versio</string>
-    <string name="music_installed">Vanced Music on asennettu onnistuneesti! Avoinna nyt?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Ole kärsivällinen…</string>
-    <string name="launch">Avaa</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
@@ -98,13 +91,13 @@
     <string name="chown_fail">Ei voitu `chown` APK järjestelmän omistajalle, yritä uudelleen.</string>
     <string name="error_downloading">%1$s lataus epäonnistui</string>
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">Uuden aksenttivärin käyttöönotto epäonnistui</string>
     <string name="files_missing_va">Asennukseen vaadittavien tiedostojen paikannus epäonnistui. Yritä ladata asennustiedostot uudelleen.</string>
     <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti heikentää pakettia. Poista päivitykset YouTube-sovelluksesta ja yritä sitten uudelleen.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>

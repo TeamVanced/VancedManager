@@ -36,11 +36,6 @@
     <string name="support_us">Apóyanos</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
-    <string name="accent_blue">Azul</string>
-    <string name="accent_green">Verde</string>
-    <string name="accent_purple">Morado</string>
-    <string name="accent_red">Rojo</string>
-    <string name="accent_yellow">Amarillo</string>
     <string name="category_appearance">Apariencia</string>
     <string name="category_behaviour">Comportamiento</string>
     <string name="clear_files">Limpiar archivos descargados</string>
@@ -52,8 +47,8 @@
     <string name="link_custom_tabs">Links serán abiertos en Chrome Custom Tabs</string>
     <string name="system_default">Predeterminado del sistema</string>
     <string name="script_save_failed">Error al guardar el nuevo valor de tiempo</string>
-    <string name="script_sleep_timer">Script Root de Tiempo para Dormir</string>
-    <string name="script_sleep_timer_description">Ajustar el valor de tiempo para dormir en el script /data/adb/service.d/app.sh, útil para arreglar problemas de montaje</string>
+    <string name="script_sleep_timer">Tiempo de reposo de script root</string>
+    <string name="script_sleep_timer_description">Ajustar el valor de tiempo de reposo en el script /data/adb/service.d/app.sh, útil para arreglar problemas de montado</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Oscuro</string>
     <string name="theme_light">Tema Claro</string>
@@ -78,13 +73,11 @@
     <string name="error">Error</string>
     <string name="redownload">Volver a descargar</string>
     <string name="security_context">Asegúrate de haber descargado la app desde vancedapp.com, el grupo de Discord de Vanced, o el GitHub de Vanced</string>
-    <string name="success">Éxito!</string>
     <string name="app_installation_preferences">%1$s Preferencias de instalación</string>
-    <string name="vanced_installed">¡Vanced se ha instalado correctamente! ¿Abrir ahora?</string>
     <string name="version">Versión</string>
-    <string name="music_installed">¡Vanced Music se ha instalado correctamente! ¿Abrir ahora?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Por favor, sé paciente…</string>
-    <string name="launch">Abrir</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>

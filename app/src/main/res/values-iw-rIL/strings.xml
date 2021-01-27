@@ -36,11 +36,6 @@
     <string name="support_us">תמכו בנו</string>
     <!-- Settings -->
     <string name="accent_color">צבע הדגשה</string>
-    <string name="accent_blue">כחול</string>
-    <string name="accent_green">ירוק</string>
-    <string name="accent_purple">סגול</string>
-    <string name="accent_red">אדום</string>
-    <string name="accent_yellow">צהוב</string>
     <string name="category_appearance">מראה</string>
     <string name="category_behaviour">התנהגות</string>
     <string name="clear_files">מחק קבצים שהורדו</string>
@@ -78,13 +73,11 @@
     <string name="error">שגיאה</string>
     <string name="redownload">הורד מחדש</string>
     <string name="security_context">ודא שהורדת את האפליקציה מהאתר vancedapp.com, שרת הדיסקורד של Vanced או מהעמוד של Vanced ב־GitHub</string>
-    <string name="success">הצלחה!</string>
     <string name="app_installation_preferences">%1$s העדפות התקנה</string>
-    <string name="vanced_installed">Vanced הותקן בהצלחה! לפתוח עכשיו?</string>
     <string name="version">גרסא</string>
-    <string name="music_installed">Vanced Music הותקן בהצלחה! לפתוח עכשיו?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">אנא התאזר בסבלנות…</string>
-    <string name="launch">פתח</string>
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">בחר את השפה המועדפת עליך ל־Vanced</string>

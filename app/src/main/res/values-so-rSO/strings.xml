@@ -36,11 +36,6 @@
     <string name="support_us">Na taageer</string>
     <!-- Settings -->
     <string name="accent_color">Midabka</string>
-    <string name="accent_blue">Buluug</string>
-    <string name="accent_green">Cagaar</string>
-    <string name="accent_purple">Baarbal</string>
-    <string name="accent_red">Guduud</string>
-    <string name="accent_yellow">Jaalle</string>
     <string name="category_appearance">Muuqaalka</string>
     <string name="category_behaviour">Dabeecada</string>
     <string name="clear_files">Nadiifi waxyaabaha lasoo dajiyay</string>
@@ -57,7 +52,7 @@
     <string name="theme">Nashqada</string>
     <string name="theme_dark">Nashqad Madow</string>
     <string name="theme_light">Nashqad Cad</string>
-    <string name="push_notifications">%1$s Ogaysiisyadisa soodhaca</string>
+    <string name="push_notifications">%1$s Ogaysiisyadiisa</string>
     <string name="push_notifications_summary">Ha kuu soo dhacaan ogaysiisyo marka mid cusub oo %1$s ah lasoo saaro</string>
     <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
     <string name="update_not_found">Majiro wax cusub</string>
@@ -78,13 +73,11 @@
     <string name="error">Khalad</string>
     <string name="redownload">Dib udaji</string>
     <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
-    <string name="success">Waa la fuliyay!</string>
     <string name="app_installation_preferences">Fadhiga Kushubida %1$s</string>
-    <string name="vanced_installed">Vanced waa lagu shubay! Fur hadda?</string>
     <string name="version">Tirsiga</string>
-    <string name="music_installed">Vanced Music waa lagu shubay! Fur hadda?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Fadlan dulqaado…</string>
-    <string name="launch">Fur</string>
     <string name="welcome">Soo dhawoow</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Dooro luuqada(ha) aad rabto ee app-ka Vanced</string>

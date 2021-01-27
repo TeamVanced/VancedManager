@@ -36,11 +36,6 @@
     <string name="support_us">ادعمنا</string>
     <!-- Settings -->
     <string name="accent_color">الألوان</string>
-    <string name="accent_blue">أزرق</string>
-    <string name="accent_green">أخضر</string>
-    <string name="accent_purple">أرجواني</string>
-    <string name="accent_red">أحمر</string>
-    <string name="accent_yellow">أصفر</string>
     <string name="category_appearance">المظهر</string>
     <string name="category_behaviour">السلوك</string>
     <string name="clear_files">مسح الملفات التي تم تنزيلها</string>
@@ -51,7 +46,7 @@
     <string name="link_title">استخدم علامات تبويب مخصصة لمتصفح كروم</string>
     <string name="link_custom_tabs">سيتم فتح الروابط في علامات تبويب مخصصة لمتصفح كروم</string>
     <string name="system_default">الوضع الافتراضي</string>
-    <string name="script_save_failed">فشل حفظ قيمة الوقت الجديد</string>
+    <string name="script_save_failed">فشل في حفظ القيمة الزمنية الجديدة</string>
     <string name="script_sleep_timer">Script sleep time للروت</string>
     <string name="script_sleep_timer_description">ضبط القيمة الزمنية للنوم المستخدمة في /data/adb/service.d/app.sh script، مفيد لإصلاح مشاكل التركيب</string>
     <string name="theme">السمة</string>
@@ -78,13 +73,11 @@
     <string name="error">خطأ</string>
     <string name="redownload">إعادة التنزيل</string>
     <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
-    <string name="success">نجاح!</string>
     <string name="app_installation_preferences">تفضيلات تثبيت %1$s</string>
-    <string name="vanced_installed">تم تثبيت ڤانسد بنجاح! افتح الآن؟</string>
     <string name="version">الإصدار</string>
-    <string name="music_installed">تم تثبيت موسيقى ڤانسد بنجاح! افتح الآن؟</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">الرجاء الانتظار…</string>
-    <string name="launch">فتح</string>
     <string name="welcome">مرحباً بك</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">اختر لغتك(لغاتك) المفضلة لڤانسد</string>

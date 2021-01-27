@@ -36,11 +36,6 @@
     <string name="support_us">پشتگیریکردن</string>
     <!-- Settings -->
     <string name="accent_color">ڕەنگی سەرەکی</string>
-    <string name="accent_blue">شین</string>
-    <string name="accent_green">سەوز</string>
-    <string name="accent_purple">مۆر</string>
-    <string name="accent_red">سوور</string>
-    <string name="accent_yellow">زەرد</string>
     <string name="category_appearance">ڕووکار</string>
     <string name="category_behaviour">ڕێکخستن</string>
     <string name="clear_files">سڕینەوەی فایلە داگیراوەکان</string>
@@ -78,13 +73,11 @@
     <string name="error">هەڵەیەک ڕوویدا</string>
     <string name="redownload">داگرتنەوە</string>
     <string name="security_context">دڵنیابە کە بەرنامەکەت لە سایتی vancedapp.com، سێرڤەری دیسکۆرد یان Vanced GitHub داگرتووە</string>
-    <string name="success">سەرکەوتو بوو!</string>
     <string name="app_installation_preferences">%1$s ڕێکخستنەکانی دامەزراندن</string>
-    <string name="vanced_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
     <string name="version">وەشان</string>
-    <string name="music_installed">بەرنامەکە بەسەرکەوتوویی دابەزێنرا! کردنەوە ئێستا؟</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">تکایە چاوەڕوانبە…</string>
-    <string name="launch">کردنه‌وه‌</string>
     <string name="welcome">بەخێربێیت</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">زمانێک هەڵبژێرە بۆ بەکارهێنانی بەرنامەکە</string>

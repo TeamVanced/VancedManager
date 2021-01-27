@@ -22,6 +22,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     const val musicRootPkg = "com.google.android.apps.youtube.music"
     const val microgPkg = "com.mgoogle.android.gms"
     const val managerPkg = APPLICATION_ID
+    const val playStorePkg = "com.android.vending"
 
     fun sendRefresh(context: Context): Job {
         return launch {

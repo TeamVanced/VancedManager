@@ -36,11 +36,6 @@
     <string name="support_us">Podpořte nás</string>
     <!-- Settings -->
     <string name="accent_color">Doplňková barva</string>
-    <string name="accent_blue">Modrá</string>
-    <string name="accent_green">Zelená</string>
-    <string name="accent_purple">Fialová</string>
-    <string name="accent_red">Červená</string>
-    <string name="accent_yellow">Žlutá</string>
     <string name="category_appearance">Vzhled</string>
     <string name="category_behaviour">Chování</string>
     <string name="clear_files">Vymazat stažené soubory</string>
@@ -78,13 +73,11 @@
     <string name="error">Chyba</string>
     <string name="redownload">Stáhnout znovu</string>
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vancedapp.com, z našeho Discord serveru nebo našeho GitHubu</string>
-    <string name="success">Hotovo!</string>
     <string name="app_installation_preferences">Předvolby instalace %1$s</string>
-    <string name="vanced_installed">Aplikace Vanced byla úspěšně nainstalována! Chcete ji otevřít?</string>
     <string name="version">Verze</string>
-    <string name="music_installed">Aplikace Vanced Music byla úspěšně nainstalována! Chcete ji otevřít?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Chvilku strpení…</string>
-    <string name="launch">Otevřít</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>

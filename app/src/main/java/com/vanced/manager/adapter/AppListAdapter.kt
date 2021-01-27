@@ -14,6 +14,9 @@ import com.vanced.manager.model.DataModel
 import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
+import com.vanced.manager.utils.enableMusic
+import com.vanced.manager.utils.enableVanced
+import com.vanced.manager.utils.managerVariant
 
 class AppListAdapter(
     private val context: FragmentActivity,
@@ -28,7 +31,7 @@ class AppListAdapter(
     private val prefs = getDefaultSharedPreferences(context)
     private var itemCount = 0
 
-    private val isRoot = prefs.getString("vanced_variant", "nonroot") == "root"
+    private val isRoot = prefs.managerVariant == "root"
 
     inner class ListViewHolder(private val binding: ViewAppBinding) : RecyclerView.ViewHolder(binding.root) {
         val appCard = binding.appCard
@@ -36,7 +39,6 @@ class AppListAdapter(
             val dataModel = if (isRoot) rootDataModels[position] else dataModels[position]
             with(binding) {
                 appName.text = dataModel?.appName
-                appInstallButton.text = dataModel?.buttonTxt?.value
                 dataModel?.buttonTxt?.observe(lifecycleOwner) {
                     appInstallButton.text = it
                 }
@@ -57,11 +59,9 @@ class AppListAdapter(
                     appUninstall.isVisible = it
                     appLaunch.isVisible = it
                 }
-                appRemoteVersion.text = dataModel?.versionName?.value
                 dataModel?.versionName?.observe(lifecycleOwner) {
                     appRemoteVersion.text = it
                 }
-                appInstalledVersion.text = dataModel?.installedVersionName?.value
                 dataModel?.installedVersionName?.observe(lifecycleOwner) {
                     appInstalledVersion.text = it
                 }
@@ -91,7 +91,7 @@ class AppListAdapter(
 
     init {
 
-        if (prefs.getBoolean("enable_vanced", true)) {
+        if (prefs.enableVanced) {
             if (isRoot) {
                 rootDataModels.add(viewModel.vancedRootModel.value)
             } else {
@@ -101,7 +101,7 @@ class AppListAdapter(
             itemCount++
         }
 
-        if (prefs.getBoolean("enable_music", true)) {
+        if (prefs.enableMusic) {
             if (isRoot) {
                 rootDataModels.add(viewModel.musicRootModel.value)
             } else {

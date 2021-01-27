@@ -3,19 +3,17 @@ package com.vanced.manager.model
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
-import com.vanced.manager.utils.lifecycleOwner
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 open class DataModel(
     private val jsonObject: LiveData<JsonObject?>,
     private val context: Context,
+    lifecycleOwner: LifecycleOwner,
     val appPkg: String,
     val appName: String,
     val appIcon: Drawable?,
@@ -30,33 +28,27 @@ open class DataModel(
     val buttonTxt = MutableLiveData<String>()
     val changelog = MutableLiveData<String>()
 
-    private fun fetch() = CoroutineScope(Dispatchers.IO).launch {
+    private fun fetch() {
         val jobj = jsonObject.value
-        isAppInstalled.postValue(isAppInstalled(appPkg))
-        versionCode.postValue(jobj?.int("versionCode") ?: 0)
-        versionName.postValue(jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable))
-        changelog.postValue(jobj?.string("changelog") ?: context.getString(R.string.unavailable))
+        isAppInstalled.value = isAppInstalled(appPkg)
+        versionCode.value = jobj?.int("versionCode") ?: 0
+        versionName.value = jobj?.string("version")?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable)
+        changelog.value = jobj?.string("changelog") ?: context.getString(R.string.unavailable)
     }
 
     init {
         fetch()
-        with(context.lifecycleOwner()) {
-            this?.let {
-                jsonObject.observe(it) {
-                    fetch()
-                }
+        with(lifecycleOwner) {
+            jsonObject.observe(this) {
+                fetch()
             }
-            this?.let {
-                isAppInstalled.observe(it) {
-                    installedVersionCode.value = getPkgVersionCode(appPkg)
-                    installedVersionName.value = getPkgVersionName(appPkg)
-                }
+            isAppInstalled.observe(this) {
+                installedVersionCode.value = getPkgVersionCode(appPkg)
+                installedVersionName.value = getPkgVersionName(appPkg)
             }
-            this?.let {
-                versionCode.observe(it) { versionCode ->
-                    installedVersionCode.observe(it) { installedVersionCode ->
-                        buttonTxt.value = compareInt(installedVersionCode, versionCode)
-                    }
+            versionCode.observe(this) { versionCode ->
+                installedVersionCode.observe(this) { installedVersionCode ->
+                    buttonTxt.value = compareInt(installedVersionCode, versionCode)
                 }
             }
         }

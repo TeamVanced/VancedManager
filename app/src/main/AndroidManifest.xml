@@ -21,6 +21,7 @@
         <package android:name="com.vanced.android.apps.youtube.music" />
         <package android:name="com.google.android.apps.youtube.music" />
         <package android:name="com.mgoogle.android.gms" />
+        <package android:name="com.android.vending" />
     </queries>
 
     <application
@@ -71,10 +72,6 @@
             </intent-filter>
 
         </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

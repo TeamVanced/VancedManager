@@ -32,15 +32,10 @@
     <string name="root_not_granted">ไม่ได้รับสิทธิ์ของรูท</string>
     <string name="unavailable">ไม่สามารถใช้ได้</string>
     <string name="update">อัพเดท</string>
-    <string name="social_media">เหมาะสมกับโซเชียลมีเดีย</string>
+    <string name="social_media">สื่อสังคมออนไลน์</string>
     <string name="support_us">สนับสนุนพวกเรา</string>
     <!-- Settings -->
     <string name="accent_color">สีหลัก</string>
-    <string name="accent_blue">สีน้ำเงิน</string>
-    <string name="accent_green">สีเขียว</string>
-    <string name="accent_purple">สีม่วง</string>
-    <string name="accent_red">สีแดง</string>
-    <string name="accent_yellow">สีเหลือง</string>
     <string name="category_appearance">ลักษณะที่ปรากฏ</string>
     <string name="category_behaviour">ลักษณะการทำงาน</string>
     <string name="clear_files">ล้างไฟล์ที่ดาวน์โหลดไว้</string>
@@ -78,13 +73,11 @@
     <string name="error">ผิดพลาด</string>
     <string name="redownload">ดาวน์โหลดอีกครั้ง</string>
     <string name="security_context">ตรวจสอบให้แน่ใจว่าคุณดาวน์โหลดแอพจากช่องทางที่ถูกต้อง vancedapp.com, เซิร์ฟเวอร์ Vanced Discord หรือ Vanced GitHub</string>
-    <string name="success">สำเร็จ!</string>
     <string name="app_installation_preferences">%1$s กำหนดค่าการติดตั้ง</string>
-    <string name="vanced_installed">ติดตั้ง Vanced เรียบร้อยแล้ว! เปิดเดี๋ยวนี้?</string>
     <string name="version">รุ่น</string>
-    <string name="music_installed">ติดตั้ง Vanced Music เรียบร้อยแล้ว! เปิดเดี๋ยวนี้?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">โปรดรอสักครู่…</string>
-    <string name="launch">เปิด</string>
     <string name="welcome">ยินดีต้อนรับ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">เลือกภาษาที่คุณต้องการใช้สำหรับ Vanced</string>

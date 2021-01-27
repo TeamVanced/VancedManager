@@ -18,6 +18,10 @@ import com.vanced.manager.utils.AppUtils.generateChecksum
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
+import java.io.IOException
+import java.net.HttpURLConnection
+import java.net.SocketTimeoutException
+import java.net.URL
 import java.util.*
 
 private const val TAG = "VMNetTools"
@@ -32,7 +36,9 @@ val musicVersions = MutableLiveData<JsonArray<String>>()
 
 val isFetching = MutableLiveData<Boolean>()
 
-//var braveTiers = MutableLiveData<JsonObject?>()
+var isMicrogBroken: Boolean = false
+
+var baseInstallUrl = ""
 
 fun openUrl(url: String, color: Int, context: Context) {
     try {
@@ -54,21 +60,45 @@ fun openUrl(url: String, color: Int, context: Context) {
 
 fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, url.length)
 
+//TODO: Use a better connection method that doesn't cause inappropriate blocks
+@Suppress("BlockingMethodInNonBlockingContext")
 suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
     isFetching.postValue(true)
-    val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
+    val installUrl = context.defPrefs.installUrl
+    if (baseInstallUrl == "" && installUrl != null) {
+        baseInstallUrl = installUrl
+    }
+
+    try {
+        val latestbaseUrl = "$baseInstallUrl/latest.json"
+        val connection = URL(latestbaseUrl).openConnection() as HttpURLConnection
+        connection.apply {
+            connectTimeout = 5000
+            readTimeout = 5000
+            connect()
+        }
+        if (connection.responseCode != 200) {
+            Log.d(TAG, latestbaseUrl + ": " + connection.responseCode.toString())
+            baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
+        }
+    } catch (e: IOException) {
+        baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
+    } catch (e: SocketTimeoutException) {
+        Log.d(TAG, "connection timed out")
+        baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
+    }
+
+    Log.d(TAG, "Fetching using URL: $baseInstallUrl")
+
     val calendar = Calendar.getInstance()
     val hour = calendar.get(Calendar.HOUR_OF_DAY)
     val minute = calendar.get(Calendar.MINUTE)
     val second = calendar.get(Calendar.SECOND)
     val fetchTime = "fetchTime=$hour$minute$second"
-    val latest = getJson("$installUrl/latest.json?$fetchTime")
-    val versions = getJson("$installUrl/versions.json?$fetchTime")
-//      braveTiers.apply {
-//          set(getJson("$installUrl/sponsor.json"))
-//          notifyChange()
-//      }
 
+    val latest = getJson("$baseInstallUrl/latest.json?$fetchTime")
+    val versions = getJson("$baseInstallUrl/versions.json?$fetchTime")
+    isMicrogBroken = latest?.boolean("is_microg_broken") ?: false
     vanced.postValue(latest?.obj("vanced"))
     vancedVersions.postValue(versions?.array("vanced") )
     music.postValue(latest?.obj("music"))
@@ -79,9 +109,8 @@ suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
 }
 
 private suspend fun getJsonString(file: String, obj: String, context: Context): String {
-    val installUrl = context.getDefaultPrefs().getString("install_url", baseUrl)
     return try {
-        getJson("$installUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
+        getJson("$baseInstallUrl/$file")?.string(obj) ?: context.getString(R.string.unavailable)
     } catch (e: Exception) {
         Log.e(TAG, "Error: ", e)
         context.getString(R.string.unavailable)

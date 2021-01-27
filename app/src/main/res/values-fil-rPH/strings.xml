@@ -36,11 +36,6 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Kulay ng font</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Hitsura</string>
     <string name="category_behaviour">Kilos</string>
     <string name="clear_files">Tanggalin ang naka-download na files</string>
@@ -78,13 +73,11 @@
     <string name="error">May pagkamali</string>
     <string name="redownload">I-download ulit</string>
     <string name="security_context">Siguraduhin mo na nai-download mo ang app galing sa vancedapp.com, o sa Discord server ng Vanced, o sa Github ng Vanced</string>
-    <string name="success">Tagumpay!</string>
     <string name="app_installation_preferences">%1$s Kagustuhan sa Pag-install</string>
-    <string name="vanced_installed">Na-install na ang Vanced! Buksan na?</string>
     <string name="version">Bersyon</string>
-    <string name="music_installed">Na-install na ang Vanced Music! Buksan na?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Konting pasensya lang po…</string>
-    <string name="launch">Buksan</string>
     <string name="welcome">Maligayang Pagdating</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Piliin ang ikinagugustong (mga) wika sa Vanced</string>

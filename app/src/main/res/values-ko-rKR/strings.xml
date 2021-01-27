@@ -36,11 +36,6 @@
     <string name="support_us">지원하기</string>
     <!-- Settings -->
     <string name="accent_color">강조 색상</string>
-    <string name="accent_blue">파란색</string>
-    <string name="accent_green">초록색</string>
-    <string name="accent_purple">보라색</string>
-    <string name="accent_red">빨간색</string>
-    <string name="accent_yellow">노란색</string>
     <string name="category_appearance">모양</string>
     <string name="category_behaviour">동작</string>
     <string name="clear_files">다운로드된 파일 모두 지우기</string>
@@ -51,9 +46,9 @@
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="system_default">시스템 기본값</string>
-    <string name="script_save_failed">Failed to save new time value</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_save_failed">새 시간 값을 저장할 수 없습니다</string>
+    <string name="script_sleep_timer">루트 스크립트 지연 시간</string>
+    <string name="script_sleep_timer_description">/data/adb/service.d/app.sh 스크립트에 쓰이는 지연 시간을 조정하십시오, 마운트 관련 문제를 해결할 때 유용합니다.</string>
     <string name="theme">테마</string>
     <string name="theme_dark">다크 테마</string>
     <string name="theme_light">라이트 테마</string>
@@ -78,13 +73,11 @@
     <string name="error">오류</string>
     <string name="redownload">다시 다운로드</string>
     <string name="security_context">항상 vancedapp.com, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 Vanced Manager 앱을 다운로드해주세요.</string>
-    <string name="success">성공!</string>
     <string name="app_installation_preferences">%1$s 설치 설정</string>
-    <string name="vanced_installed">Vanced가 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
     <string name="version">버전</string>
-    <string name="music_installed">Vanced 뮤직이 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">잠시만 기다려 주세요...</string>
-    <string name="launch">열기</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced에서 선호하는 언어를 선택해주세요</string>
@@ -104,7 +97,7 @@
     <string name="installation_aborted">사용자가 설치를 중단했기 때문에 앱을 설치하지 못했습니다.</string>
     <string name="installation_blocked">사용자가 설치를 차단했기 때문에 앱을 설치하지 못했습니다.</string>
     <string name="installation_downgrade">사용자가 패키지를 이전 버전으로 변경하려고 하여 앱을 설치하지 못했습니다. 기본 YouTube 앱을 초기 버전으로 변경한 다음, 설치를 다시 진행해주세요.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">설치하려는 앱이 이미 설치된 앱과 충돌하여 앱을 설치하지 못했습니다. 현재 설치된 앱을 제거한 다음 다시 설치하십시오.</string>
     <string name="installation_failed">알 수 없는 이유가 발생하여 앱을 설치하지 못했습니다. 저희 텔레그램 또는 디스코드에 문제를 제보해주시면 도와드리겠습니다.</string>
     <string name="installation_incompatible">설치 파일이 기기와 호환되지 않아 앱을 설치하지 못했습니다. Manager 설정에서 다운로드된 파일을 모두 삭제한 다음, 설치를 다시 진행해주세요.</string>
     <string name="installation_invalid">APK 파일이 손상되어 앱을 설치하지 못했습니다. 설치를 다시 진행해주세요.</string>

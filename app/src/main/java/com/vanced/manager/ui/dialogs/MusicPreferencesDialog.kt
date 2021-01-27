@@ -8,7 +8,7 @@ import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogMusicPreferencesBinding
 import com.vanced.manager.utils.convertToAppVersions
-import com.vanced.manager.utils.getDefaultPrefs
+import com.vanced.manager.utils.defPrefs
 import com.vanced.manager.utils.musicVersions
 
 class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPreferencesBinding>() {
@@ -20,7 +20,7 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
         }
     }
 
-    private val prefs by lazy { requireActivity().getDefaultPrefs() }
+    private val prefs by lazy { requireActivity().defPrefs }
 
     override fun binding(
         inflater: LayoutInflater,
@@ -34,7 +34,7 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
 
     private fun bindData() {
         with(binding) {
-            val musicVersionsConv = musicVersions.value?.value?.reversed()?.convertToAppVersions()
+            val musicVersionsConv = musicVersions.value?.value?.convertToAppVersions()
             musicInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.music))
             musicVersion.text = getString(R.string.chosen_version, prefs.getString("music_version", "latest"))
             openVersionSelector.setOnClickListener {

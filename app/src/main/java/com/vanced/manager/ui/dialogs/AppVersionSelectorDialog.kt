@@ -11,12 +11,12 @@ import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
 import com.vanced.manager.ui.core.ThemedMaterialRadioButton
+import com.vanced.manager.utils.defPrefs
 import com.vanced.manager.utils.getCheckedButtonTag
-import com.vanced.manager.utils.getDefaultPrefs
 
 class AppVersionSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRadioButtonBinding>() {
 
-    private val prefs by lazy { requireActivity().getDefaultPrefs() }
+    private val prefs by lazy { requireActivity().defPrefs }
 
     companion object {
 

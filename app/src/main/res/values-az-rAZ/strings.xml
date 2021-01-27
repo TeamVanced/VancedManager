@@ -36,11 +36,6 @@
     <string name="support_us">Bizi dəstəklə</string>
     <!-- Settings -->
     <string name="accent_color">Tema rəngi</string>
-    <string name="accent_blue">Göy</string>
-    <string name="accent_green">Yaşıl</string>
-    <string name="accent_purple">Bənövşəyi</string>
-    <string name="accent_red">Qırmızı</string>
-    <string name="accent_yellow">Sarı</string>
     <string name="category_appearance">Görünüş</string>
     <string name="category_behaviour">Davranış</string>
     <string name="clear_files">Endirilmiş faylları təmizlə</string>
@@ -78,13 +73,11 @@
     <string name="error">Xəta</string>
     <string name="redownload">Yenidən endir</string>
     <string name="security_context">Tətbiqi vancedapp.com, Vanced Discord server və ya Vanced GitHub\'dan endirdiyinizə əmin olun</string>
-    <string name="success">Uğurlu!</string>
     <string name="app_installation_preferences">%1$s Qurma Seçimləri</string>
-    <string name="vanced_installed">Vanced uğurla quraşdırıldı! İndi açılsın?</string>
     <string name="version">Versiya</string>
-    <string name="music_installed">Vanced Music uğurla quraşdırıldı! İndi açılsın?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Zəhmət olmasa səbrli olun…</string>
-    <string name="launch">Aç</string>
     <string name="welcome">Xoş gəldiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced üçün tərcih etdiyiniz dili seçin</string>

@@ -3,12 +3,12 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.edit
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerThemeBinding
 import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.managerTheme
 
 class ManagerThemeDialog : BindingBottomSheetDialogFragment<DialogManagerThemeBinding>() {
 
@@ -33,12 +33,12 @@ class ManagerThemeDialog : BindingBottomSheetDialogFragment<DialogManagerThemeBi
 
     private fun bindData() {
         with(binding) {
-            val theme = prefs.getString("manager_theme", "System Default")
+            val theme = prefs.managerTheme
             root.findViewWithTag<MaterialRadioButton>(theme).isChecked = true
             themeSave.setOnClickListener {
                 val newPref = themeRadiogroup.getCheckedButtonTag()
                 if (theme != newPref) {
-                    prefs.edit { putString("manager_theme", newPref) }
+                    prefs.managerTheme = newPref
                     dismiss()
                     requireActivity().recreate()
                 } else {

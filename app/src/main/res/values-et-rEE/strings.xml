@@ -36,11 +36,6 @@
     <string name="support_us">Toetage meid</string>
     <!-- Settings -->
     <string name="accent_color">Rõhuvärv</string>
-    <string name="accent_blue">Sinine</string>
-    <string name="accent_green">Roheline</string>
-    <string name="accent_purple">Lilla</string>
-    <string name="accent_red">Punane</string>
-    <string name="accent_yellow">Kollane</string>
     <string name="category_appearance">Välimus</string>
     <string name="category_behaviour">Käitumine</string>
     <string name="clear_files">Tühjenda allalaaditud failid</string>
@@ -78,13 +73,11 @@
     <string name="error">Viga</string>
     <string name="redownload">Lae uuesti alla</string>
     <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
-    <string name="success">Õnnestus!</string>
     <string name="app_installation_preferences">%1$s Paigalduseelistused</string>
-    <string name="vanced_installed">Vanced on edukalt paigaldatud! Soovite avada kohe?</string>
     <string name="version">Versioon</string>
-    <string name="music_installed">Vanced Music on edukalt paigaldatud! Soovite avada kohe?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Palun olge kannatlik…</string>
-    <string name="launch">Ava</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valige eelistatud keel(ed) Vanced jaoks</string>

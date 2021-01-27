@@ -36,11 +36,6 @@
     <string name="support_us">Podržite nas</string>
     <!-- Settings -->
     <string name="accent_color">Boja naglašavanja</string>
-    <string name="accent_blue">Plava</string>
-    <string name="accent_green">Zelena</string>
-    <string name="accent_purple">Ljubičasta</string>
-    <string name="accent_red">Crvena</string>
-    <string name="accent_yellow">Žuta</string>
     <string name="category_appearance">Izgled</string>
     <string name="category_behaviour">Ponašanje</string>
     <string name="clear_files">Ukloni preuzete datoteke</string>
@@ -51,9 +46,9 @@
     <string name="link_title">Koristi prilagođene kartice Chroma</string>
     <string name="link_custom_tabs">Poveznice će se otvarati u prilagođenim karticama Chroma</string>
     <string name="system_default">Zadano sustavom</string>
-    <string name="script_save_failed">Failed to save new time value</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_save_failed">Neuspjelo spremanje nove vrijednosti vremena</string>
+    <string name="script_sleep_timer">Vrijeme spavanja root skripte</string>
+    <string name="script_sleep_timer_description">Prilagodite vrijeme spavanja korišteno u /data/adb/service.d/app.sh skripti, korisno za ispravak problema s montiranjem</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tamna tema</string>
     <string name="theme_light">Svjetla tema</string>
@@ -78,13 +73,11 @@
     <string name="error">Greška</string>
     <string name="redownload">Ponovno preuzmi</string>
     <string name="security_context">Aplikaciju obavezno preuzmite s vancedapp.com, Vanced Discord poslužitelja ili Vanced GitHuba</string>
-    <string name="success">Uspješno!</string>
     <string name="app_installation_preferences">%1$s postavke instalacije</string>
-    <string name="vanced_installed">Vanced je uspješno instaliran! Otvorite ga odmah?</string>
     <string name="version">Inačica</string>
-    <string name="music_installed">Vanced Glazba je uspješno instalirana! Otvorite ju odmah?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Malo pričekajte…</string>
-    <string name="launch">Otvori</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Odaberite željeni jezika za Vanced</string>

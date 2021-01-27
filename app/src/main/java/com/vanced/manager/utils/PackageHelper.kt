@@ -14,6 +14,7 @@ import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
 import com.vanced.manager.utils.AppUtils.musicRootPkg
+import com.vanced.manager.utils.AppUtils.playStorePkg
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
@@ -32,7 +33,7 @@ object PackageHelper {
 
     const val apkInstallPath = "/data/adb"
     private const val INSTALLER_TAG = "VMInstall"
-    private val vancedThemes = arrayOf("black", "dark", "pink", "blue")
+    private val vancedThemes = vanced.value?.array<String>("themes")?.value ?: listOf("black", "dark", "pink", "blue")
 
     init {
         Shell.enableVerboseLogging = BuildConfig.DEBUG
@@ -188,13 +189,19 @@ object PackageHelper {
     private fun installRootMusic(files: ArrayList<FileInfo>, context: Context): Boolean {
         files.forEach { apk ->
             if (apk.name != "root.apk") {
-                val command = Shell.su("cat ${apk.file?.path} | pm install -S ${apk.fileSize}").exec()
-                if (command.isSuccess)
+                val newPath = "/data/local/tmp/${apk.file?.name}"
+
+                //moving apk to tmp folder in order to avoid permission denials
+                Shell.su("mv ${apk.file?.path} $newPath").exec()
+                val command = Shell.su("pm install $newPath").exec()
+                Shell.su("rm $newPath").exec()
+                if (command.isSuccess) {
                     return true
-                else {
+                } else {
                     sendFailure(command.out, context)
                     sendCloseDialog(context)
                 }
+
             }
         }
         return false
@@ -208,6 +215,7 @@ object PackageHelper {
                 val modApk: FileInfo? = fileInfoList.lastOrNull { modApkBool(it.name) }
                 if (modApk != null) {
                     if (overwriteBase(modApk, fileInfoList, appVerCode, pkg, app, context)) {
+                        setInstallerPackage(context, pkg, playStorePkg)
                         Log.d(INSTALLER_TAG, "Finished installation")
                         sendRefresh(context)
                         sendCloseDialog(context)
@@ -641,6 +649,22 @@ object PackageHelper {
                 }
             }
             null
+        }
+    }
+
+    private fun setInstallerPackage(context: Context, target: String, installer: String) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) return
+        try {
+            Log.d(INSTALLER_TAG, "Setting installer package to $installer for $target")
+            val installerUid = context.packageManager.getPackageUid(installer, 0)
+            val res = Shell.su("""su $installerUid -c 'pm set-installer $target $installer'""").exec()
+            if (res.out.any { line -> line.contains("Success") }) {
+                Log.d(INSTALLER_TAG, "Installer package successfully set")
+                return
+            }
+            Log.d(INSTALLER_TAG, "Failed setting installer package")
+        } catch (e: PackageManager.NameNotFoundException) {
+            Log.d(INSTALLER_TAG, "Installer package $installer not found. Skipping setting installer")
         }
     }
 }

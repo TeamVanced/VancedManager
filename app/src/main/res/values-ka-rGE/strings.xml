@@ -36,11 +36,6 @@
     <string name="support_us">დაგვიჭირეთ მხარი</string>
     <!-- Settings -->
     <string name="accent_color">აქცენტის ფერი</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">შესახედაობა</string>
     <string name="category_behaviour">ფუნქციები</string>
     <string name="clear_files">გადმოწერილი ფაილების გაწმენდა</string>
@@ -78,13 +73,11 @@
     <string name="error">შეცდომა</string>
     <string name="redownload">თავიდან გადმოწერა</string>
     <string name="security_context">დარწმუნდით, რომ აპი გადმოწერეთ vancedapp.com-იდან, Vanced Discord სერვერიდან ან GitHub-იდან</string>
-    <string name="success">წარმატება!</string>
     <string name="app_installation_preferences">%1$s-ის ინსტალაციის პარამეტრები</string>
-    <string name="vanced_installed">Vanced-ი წარმატებით დაყენდა, გსურთ მისი გახსნა?</string>
     <string name="version">ვერსია</string>
-    <string name="music_installed">Vanced Music-ი წარმატებით დაყენდა, გსურთ მისი გახსნა?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">გთხოვთ დაელოდოთ…</string>
-    <string name="launch">გახსნა</string>
     <string name="welcome">მოგესალმებით</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">აირჩიეთ სასურველი ენა(ები) Vanced-ისთვის</string>

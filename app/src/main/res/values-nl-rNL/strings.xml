@@ -36,11 +36,6 @@
     <string name="support_us">Steun ons</string>
     <!-- Settings -->
     <string name="accent_color">Accentkleur</string>
-    <string name="accent_blue">Blauw</string>
-    <string name="accent_green">Groen</string>
-    <string name="accent_purple">Paars</string>
-    <string name="accent_red">Rood</string>
-    <string name="accent_yellow">Geel</string>
     <string name="category_appearance">Weergave</string>
     <string name="category_behaviour">Gedrag</string>
     <string name="clear_files">Gedownloade bestanden verwijderen</string>
@@ -78,20 +73,18 @@
     <string name="error">Fout</string>
     <string name="redownload">Opnieuw downloaden</string>
     <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vancedapp.com, de Vanced Discord-server of Vanced GitHub</string>
-    <string name="success">Gelukt!</string>
     <string name="app_installation_preferences">installatievoorkeuren voor %1$s</string>
-    <string name="vanced_installed">Vanced is succesvol geïnstalleerd! Nu starten?</string>
     <string name="version">Versie</string>
-    <string name="music_installed">Vanced Music is succesvol geïnstalleerd! Nu starten?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Even geduld…</string>
-    <string name="launch">Openen</string>
     <string name="welcome">Welkom</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Kies je gewenste taal/talen voor Vanced</string>
     <string name="light_plus_other">Licht + %1$s</string>
     <string name="select_at_least_one_lang">Selecteer minstens één taal!</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Ontwikkelaars</string>
+    <string name="manager_dev">Manager Dev</string>
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->

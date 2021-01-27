@@ -36,11 +36,6 @@
     <string name="support_us">Hỗ trợ chúng tôi</string>
     <!-- Settings -->
     <string name="accent_color">Màu chủ đạo</string>
-    <string name="accent_blue">Xanh dương</string>
-    <string name="accent_green">Xanh lá</string>
-    <string name="accent_purple">Tím</string>
-    <string name="accent_red">Đỏ</string>
-    <string name="accent_yellow">Vàng</string>
     <string name="category_appearance">Giao diện</string>
     <string name="category_behaviour">Hành vi</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
@@ -51,7 +46,7 @@
     <string name="link_title">Sử dụng Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Các liên kết sẽ mở trong Chrome Custom Tabs</string>
     <string name="system_default">Mặc định hệ thống</string>
-    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_save_failed">Không thể lưu giá trị thời gian mới</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Nền</string>
@@ -78,13 +73,11 @@
     <string name="error">Lỗi</string>
     <string name="redownload">Tải lại</string>
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
-    <string name="success">Thành công!</string>
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
-    <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
     <string name="version">Phiên bản</string>
-    <string name="music_installed">Vanced Music đã được cài đặt thành công! Mở ứng dụng?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Hãy kiên nhẫn…</string>
-    <string name="launch">Mở</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
@@ -104,7 +97,7 @@
     <string name="installation_aborted">Cài đặt không thành công vì người dùng đã hủy cài đặt.</string>
     <string name="installation_blocked">Cài đặt không thành công vì người dùng đã chặn cài đặt.</string>
     <string name="installation_downgrade">Cài đặt không thành công do người dùng đã cố gắng hạ cấp gói. Gỡ cài đặt các bản cập nhật khỏi ứng dụng YouTube có sẵn, sau đó thử lại.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_conflict">Cài đặt thất bại do có xung đột của ứng dụng với ứng dụng đã cài sẵn. Gỡ bỏ phiên bản hiện tại của ứng dụng và thử lại.</string>
     <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, tham gia Telegram hoặc Discord của chúng tôi để được hỗ trợ thêm.</string>
     <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
     <string name="installation_invalid">Cài đặt thất bại do các tệp tin apk bị lỗi, xin hãy thử lại.</string>

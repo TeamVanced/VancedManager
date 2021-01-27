@@ -3,13 +3,13 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.edit
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerVariantBinding
 import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.managerVariant
 
 class ManagerVariantDialog : BindingBottomSheetDialogFragment<DialogManagerVariantBinding>() {
 
@@ -34,18 +34,17 @@ class ManagerVariantDialog : BindingBottomSheetDialogFragment<DialogManagerVaria
 
     private fun bindData() {
         with(binding) {
-            val variant = prefs.getString("vanced_variant", "nonroot")
+            val variant = prefs.managerVariant
             root.findViewWithTag<MaterialRadioButton>(variant).isChecked = true
             variantSave.setOnClickListener {
                 val newPref = variantRadiogroup.getCheckedButtonTag()
                 if (variant != newPref) {
-                    prefs.edit {
+                    prefs.managerVariant =
                         if (newPref == "root" && Shell.rootAccess()) {
-                            putString("vanced_variant", "root")
+                             "root"
                         } else {
-                            putString("vanced_variant", "nonroot")
+                            "nonroot"
                         }
-                    }
                     dismiss()
                     requireActivity().recreate()
                 } else {

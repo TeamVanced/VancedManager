@@ -36,11 +36,6 @@
     <string name="support_us">Dukung kami</string>
     <!-- Settings -->
     <string name="accent_color">Aksen Warna</string>
-    <string name="accent_blue">Biru</string>
-    <string name="accent_green">Hijau</string>
-    <string name="accent_purple">Ungu</string>
-    <string name="accent_red">Merah</string>
-    <string name="accent_yellow">Kuning</string>
     <string name="category_appearance">Penampilan</string>
     <string name="category_behaviour">Perilaku</string>
     <string name="clear_files">Hapus file yang diunduh</string>
@@ -78,13 +73,11 @@
     <string name="error">Terjadi kesalahan</string>
     <string name="redownload">Unduh ulang</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, server Discord Vanced, atau Vanced Github</string>
-    <string name="success">Berhasil!</string>
     <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
-    <string name="vanced_installed">Vanced berhasil dipasang! Buka sekarang?</string>
     <string name="version">Versi</string>
-    <string name="music_installed">Vanced Musik berhasil dipasang! Buka sekarang?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Harap bersabar…</string>
-    <string name="launch">Buka</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>

@@ -1,7 +1,6 @@
 package com.vanced.manager.core.downloader
 
 import android.content.Context
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.R
 import com.vanced.manager.utils.*
 import com.vanced.manager.utils.AppUtils.musicRootPkg
@@ -23,11 +22,11 @@ object MusicDownloader {
     private var hashUrl: String? = null
 
     fun downloadMusic(context: Context) {
-        val prefs = getDefaultSharedPreferences(context)
-        version = prefs.getString("music_version", "latest")?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))
+        val prefs = context.defPrefs
+        version = prefs.musicVersion?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))
         versionCode = music.value?.int("versionCode")
-        variant = prefs.getString("vanced_variant", "nonroot")
-        baseurl = "${prefs.getInstallUrl()}/music/v$version"
+        variant = prefs.managerVariant
+        baseurl = "$baseInstallUrl/music/v$version"
         folderName = "music/$variant"
         downloadPath = context.getExternalFilesDir(folderName)?.path
         hashUrl = "$baseurl/hash.json"
@@ -37,7 +36,7 @@ object MusicDownloader {
 
     private fun downloadApk(context: Context, apk: String = "music") {
         val url = if (apk == "stock") "$baseurl/stock/${getArch()}.apk" else "$baseurl/$variant.apk"
-        download(url, baseurl + "/", folderName!!, getFileNameFromUrl(url), context, onDownloadComplete = {
+        download(url, "$baseurl/", folderName!!, getFileNameFromUrl(url), context, onDownloadComplete = {
             if (variant == "root" && apk != "stock") {
                 downloadApk(context, "stock")
                 return@download
