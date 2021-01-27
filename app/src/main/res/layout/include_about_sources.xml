@@ -41,7 +41,6 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/about_license_button"
                 style="@style/SocialButtonStyle"
-                android:fontFamily="@font/exo_semibold"
                 android:text="GPL"
                 android:textSize="21sp"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.dialogs
 
-import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,7 +14,6 @@ import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedLanguageSelectionBinding
 import com.vanced.manager.ui.core.ThemedMaterialCheckbox
-import com.vanced.manager.utils.getDefaultVancedLanguages
 import com.vanced.manager.utils.installPrefs
 import com.vanced.manager.utils.lang
 import com.vanced.manager.utils.vanced

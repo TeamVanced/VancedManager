@@ -15,7 +15,6 @@ import com.vanced.manager.utils.PackageHelper.downloadStockCheck
 import com.vanced.manager.utils.PackageHelper.installVanced
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
 import java.io.File
-import java.lang.Exception
 
 object VancedDownloader {
     

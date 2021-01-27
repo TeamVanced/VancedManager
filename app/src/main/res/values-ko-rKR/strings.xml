@@ -36,11 +36,6 @@
     <string name="support_us">지원하기</string>
     <!-- Settings -->
     <string name="accent_color">강조 색상</string>
-    <string name="accent_blue">파란색</string>
-    <string name="accent_green">초록색</string>
-    <string name="accent_purple">보라색</string>
-    <string name="accent_red">빨간색</string>
-    <string name="accent_yellow">노란색</string>
     <string name="category_appearance">모양</string>
     <string name="category_behaviour">동작</string>
     <string name="clear_files">다운로드된 파일 모두 지우기</string>
@@ -78,13 +73,9 @@
     <string name="error">오류</string>
     <string name="redownload">다시 다운로드</string>
     <string name="security_context">항상 vancedapp.com, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 Vanced Manager 앱을 다운로드해주세요.</string>
-    <string name="success">성공!</string>
     <string name="app_installation_preferences">%1$s 설치 설정</string>
-    <string name="vanced_installed">Vanced가 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
     <string name="version">버전</string>
-    <string name="music_installed">Vanced 뮤직이 성공적으로 설치되었습니다. 지금 실행하시겠어요?</string>
     <string name="please_be_patient">잠시만 기다려 주세요...</string>
-    <string name="launch">열기</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced에서 선호하는 언어를 선택해주세요</string>

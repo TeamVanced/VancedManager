@@ -36,11 +36,6 @@
     <string name="support_us">Podržite nas</string>
     <!-- Settings -->
     <string name="accent_color">Boja naglašavanja</string>
-    <string name="accent_blue">Plava</string>
-    <string name="accent_green">Zelena</string>
-    <string name="accent_purple">Ljubičasta</string>
-    <string name="accent_red">Crvena</string>
-    <string name="accent_yellow">Žuta</string>
     <string name="category_appearance">Izgled</string>
     <string name="category_behaviour">Ponašanje</string>
     <string name="clear_files">Ukloni preuzete datoteke</string>
@@ -78,13 +73,9 @@
     <string name="error">Greška</string>
     <string name="redownload">Ponovno preuzmi</string>
     <string name="security_context">Aplikaciju obavezno preuzmite s vancedapp.com, Vanced Discord poslužitelja ili Vanced GitHuba</string>
-    <string name="success">Uspješno!</string>
     <string name="app_installation_preferences">%1$s postavke instalacije</string>
-    <string name="vanced_installed">Vanced je uspješno instaliran! Otvorite ga odmah?</string>
     <string name="version">Inačica</string>
-    <string name="music_installed">Vanced Glazba je uspješno instalirana! Otvorite ju odmah?</string>
     <string name="please_be_patient">Malo pričekajte…</string>
-    <string name="launch">Otvori</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Odaberite željeni jezika za Vanced</string>

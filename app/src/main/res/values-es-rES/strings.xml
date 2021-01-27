@@ -36,11 +36,6 @@
     <string name="support_us">Apóyanos</string>
     <!-- Settings -->
     <string name="accent_color">Color de Acento</string>
-    <string name="accent_blue">Azul</string>
-    <string name="accent_green">Verde</string>
-    <string name="accent_purple">Morado</string>
-    <string name="accent_red">Rojo</string>
-    <string name="accent_yellow">Amarillo</string>
     <string name="category_appearance">Apariencia</string>
     <string name="category_behaviour">Comportamiento</string>
     <string name="clear_files">Limpiar archivos descargados</string>
@@ -78,13 +73,9 @@
     <string name="error">Error</string>
     <string name="redownload">Volver a descargar</string>
     <string name="security_context">Asegúrate de haber descargado la app desde vancedapp.com, el grupo de Discord de Vanced, o el GitHub de Vanced</string>
-    <string name="success">Éxito!</string>
     <string name="app_installation_preferences">%1$s Preferencias de instalación</string>
-    <string name="vanced_installed">¡Vanced se ha instalado correctamente! ¿Abrir ahora?</string>
     <string name="version">Versión</string>
-    <string name="music_installed">¡Vanced Music se ha instalado correctamente! ¿Abrir ahora?</string>
     <string name="please_be_patient">Por favor, sé paciente…</string>
-    <string name="launch">Abrir</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>

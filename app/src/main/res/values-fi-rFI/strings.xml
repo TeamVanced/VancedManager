@@ -36,11 +36,6 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Aksenttiväri</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Ulkoasu</string>
     <string name="category_behaviour">Käyttäytyminen</string>
     <string name="clear_files">Tyhjennä ladatut tiedostot</string>
@@ -78,13 +73,9 @@
     <string name="error">Virhe</string>
     <string name="redownload">Uudelleenlataa</string>
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
-    <string name="success">Onnistui!</string>
     <string name="app_installation_preferences">%1$s asennusasetukset</string>
-    <string name="vanced_installed">Vanced on asennettu onnistuneesti! Avaa nyt?</string>
     <string name="version">Versio</string>
-    <string name="music_installed">Vanced Music on asennettu onnistuneesti! Avoinna nyt?</string>
     <string name="please_be_patient">Ole kärsivällinen…</string>
-    <string name="launch">Avaa</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>

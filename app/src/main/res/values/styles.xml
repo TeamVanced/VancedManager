@@ -167,10 +167,6 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="PreferenceSwitch">
-        <item name="colorControlActivated">?colorPrimary</item>
-    </style>
-
     <style name="SnackBar" parent="Widget.MaterialComponents.Snackbar">
         <item name="android:backgroundTint">?colorSurfaceVariant</item>
         <item name="cornerRadius">8dp</item>

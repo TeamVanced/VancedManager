@@ -2,10 +2,11 @@ package com.vanced.manager.core.downloader
 
 import android.content.Context
 import com.vanced.manager.R
-import com.vanced.manager.utils.*
 import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.PackageHelper.install
+import com.vanced.manager.utils.baseInstallUrl
+import com.vanced.manager.utils.microg
 
 object MicrogDownloader {
 

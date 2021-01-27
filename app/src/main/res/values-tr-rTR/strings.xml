@@ -36,11 +36,6 @@
     <string name="support_us">Tıkla, destek ol</string>
     <!-- Settings -->
     <string name="accent_color">Tema Rengi</string>
-    <string name="accent_blue">Mavi</string>
-    <string name="accent_green">Yeşil</string>
-    <string name="accent_purple">Mor</string>
-    <string name="accent_red">Kırmızı</string>
-    <string name="accent_yellow">Sarı</string>
     <string name="category_appearance">Görünüm</string>
     <string name="category_behaviour">Davranış</string>
     <string name="clear_files">İndirilen dosyaları temizle</string>
@@ -78,13 +73,9 @@
     <string name="error">Hata</string>
     <string name="redownload">Tekrar İndir</string>
     <string name="security_context">Uygulamayı vancedapp.com, Vanced Discord sunucusu, veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
-    <string name="success">Başarılı!</string>
     <string name="app_installation_preferences">%1$s Kurulum Tercihleri</string>
-    <string name="vanced_installed">Vanced Başarıyla kuruldu! Başlatılsın mı?</string>
     <string name="version">Sürüm</string>
-    <string name="music_installed">Vanced Music başarıyla kuruldu! Başlatılsın mı?</string>
     <string name="please_be_patient">Biraz zaman alabilir…</string>
-    <string name="launch">Aç</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced için tercih ettiğiniz dil(ler)i seçin</string>

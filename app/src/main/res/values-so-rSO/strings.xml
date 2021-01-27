@@ -36,11 +36,6 @@
     <string name="support_us">Na taageer</string>
     <!-- Settings -->
     <string name="accent_color">Midabka</string>
-    <string name="accent_blue">Buluug</string>
-    <string name="accent_green">Cagaar</string>
-    <string name="accent_purple">Baarbal</string>
-    <string name="accent_red">Guduud</string>
-    <string name="accent_yellow">Jaalle</string>
     <string name="category_appearance">Muuqaalka</string>
     <string name="category_behaviour">Dabeecada</string>
     <string name="clear_files">Nadiifi waxyaabaha lasoo dajiyay</string>
@@ -78,13 +73,9 @@
     <string name="error">Khalad</string>
     <string name="redownload">Dib udaji</string>
     <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
-    <string name="success">Waa la fuliyay!</string>
     <string name="app_installation_preferences">Fadhiga Kushubida %1$s</string>
-    <string name="vanced_installed">Vanced waa lagu shubay! Fur hadda?</string>
     <string name="version">Tirsiga</string>
-    <string name="music_installed">Vanced Music waa lagu shubay! Fur hadda?</string>
     <string name="please_be_patient">Fadlan dulqaado…</string>
-    <string name="launch">Fur</string>
     <string name="welcome">Soo dhawoow</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Dooro luuqada(ha) aad rabto ee app-ka Vanced</string>
