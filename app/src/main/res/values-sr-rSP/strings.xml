@@ -36,11 +36,6 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Боја наглашавања</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Изглед</string>
     <string name="category_behaviour">Понашање</string>
     <string name="clear_files">Обриши преузете датотеке</string>
@@ -78,13 +73,11 @@
     <string name="error">Грешка</string>
     <string name="redownload">Поново преузми</string>
     <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта vancedapp.com, Vanced Discord сервера или Vanced GitHub-а</string>
-    <string name="success">Успешно!</string>
     <string name="app_installation_preferences">%1$s Инсталациона подешавања</string>
-    <string name="vanced_installed">Vanced је успешно инсталиран! Желите да га одмах отворите?</string>
     <string name="version">Верзија</string>
-    <string name="music_installed">Vanced Music је успешно инсталиран! Желите да га одмах отворите?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Молимо Вас да будете стрпљиви…</string>
-    <string name="launch">Отвори</string>
     <string name="welcome">Добро дошли</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Одаберите језик за коришћење Vanced апликације</string>
