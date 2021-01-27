@@ -36,11 +36,6 @@
     <string name="support_us">Støt os</string>
     <!-- Settings -->
     <string name="accent_color">Sekundær farve</string>
-    <string name="accent_blue">Blå</string>
-    <string name="accent_green">Grøn</string>
-    <string name="accent_purple">Lilla</string>
-    <string name="accent_red">Rød</string>
-    <string name="accent_yellow">Gul</string>
     <string name="category_appearance">Udseende</string>
     <string name="category_behaviour">Adfærd</string>
     <string name="clear_files">Ryd hentede filer</string>
@@ -78,13 +73,11 @@
     <string name="error">Fejl</string>
     <string name="redownload">Hent igen</string>
     <string name="security_context">Venligst sørg for kun at have downloaded appen fra vancedapp.com, Vanced Discord serveren eller Vanced GitHub siden</string>
-    <string name="success">Succes!</string>
     <string name="app_installation_preferences">%1$s Installationsindstillinger</string>
-    <string name="vanced_installed">Vanced er nu installeret! Åben appen?</string>
     <string name="version">Version</string>
-    <string name="music_installed">Vanced Music er nu installeret! Åben appen?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Vær tålmodig…</string>
-    <string name="launch">Åbn</string>
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vælg dit fortrukne sprog til Vanced</string>
