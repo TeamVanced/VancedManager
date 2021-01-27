@@ -36,11 +36,6 @@
     <string name="support_us">Hỗ trợ chúng tôi</string>
     <!-- Settings -->
     <string name="accent_color">Màu chủ đạo</string>
-    <string name="accent_blue">Xanh dương</string>
-    <string name="accent_green">Xanh lá</string>
-    <string name="accent_purple">Tím</string>
-    <string name="accent_red">Đỏ</string>
-    <string name="accent_yellow">Vàng</string>
     <string name="category_appearance">Giao diện</string>
     <string name="category_behaviour">Hành vi</string>
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
@@ -78,13 +73,11 @@
     <string name="error">Lỗi</string>
     <string name="redownload">Tải lại</string>
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
-    <string name="success">Thành công!</string>
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
-    <string name="vanced_installed">Vanced đã được cài đặt thành công! Mở ứng dụng?</string>
     <string name="version">Phiên bản</string>
-    <string name="music_installed">Vanced Music đã được cài đặt thành công! Mở ứng dụng?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Hãy kiên nhẫn…</string>
-    <string name="launch">Mở</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
