@@ -36,11 +36,6 @@
     <string name="support_us">எங்களை ஆதரியுங்கள்</string>
     <!-- Settings -->
     <string name="accent_color">கவனங்கவர் நிறம்</string>
-    <string name="accent_blue">நீலம்</string>
-    <string name="accent_green">பச்சை</string>
-    <string name="accent_purple">ஊதா</string>
-    <string name="accent_red">சிவப்பு</string>
-    <string name="accent_yellow">மஞ்சள்</string>
     <string name="category_appearance">தோற்றம்</string>
     <string name="category_behaviour">செயல்பாடு</string>
     <string name="clear_files">பதிவிறக்கிய கோப்புகளை அழிக்கவும்</string>
@@ -78,13 +73,11 @@
     <string name="error">பிழை</string>
     <string name="redownload">மீண்டும் பதிவிறக்கு</string>
     <string name="security_context">பயன்பாட்டை vancedapp.com, Vanced Discord சேவையகம் அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
-    <string name="success">வெற்றி!</string>
     <string name="app_installation_preferences">%1$s நிறுவல் விருப்பத்தேர்வுகள்</string>
-    <string name="vanced_installed">வேன்ட் வெற்றிகரமாக நிறுவப்பட்டது! இப்போது திற?</string>
     <string name="version">பதிப்பு</string>
-    <string name="music_installed">வேன்ஸ்ட் மியூசிக் வெற்றிகரமாக நிறுவப்பட்டுள்ளது! இப்போது திற?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">தயவுசெய்து பொருமைையாயிறு…</string>
-    <string name="launch">திற</string>
     <string name="welcome">வரவேற்பு</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">வேன்ஸ்டுக்காக உங்களுக்கு விருப்பமான மொழியைத் தேர்வுசெய்க</string>
