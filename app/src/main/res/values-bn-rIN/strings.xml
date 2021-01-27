@@ -75,6 +75,8 @@
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vancedapp.com, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
     <string name="app_installation_preferences">%1$s ইনস্টল করার পছন্দগুলি</string>
     <string name="version">সংস্করণ</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">দয়া করে ধৈর্য ধরুন…</string>
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
