@@ -155,14 +155,16 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
 
     init {
-        if (variant == "root") {
-            vancedRootModel.value = RootDataModel(vanced, activity, vancedRootPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced), "vanced")
-            musicRootModel.value = RootDataModel(music, activity, musicRootPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music), "music")
-        } else {
-            vancedModel.value = DataModel(vanced, activity, vancedPkg, activity.getString(R.string.vanced), AppCompatResources.getDrawable(activity, R.drawable.ic_vanced))
-            musicModel.value = DataModel(music, activity, musicPkg, activity.getString(R.string.music), AppCompatResources.getDrawable(activity, R.drawable.ic_music))
-            microgModel.value = DataModel(microg, activity, microgPkg, activity.getString(R.string.microg), AppCompatResources.getDrawable(activity, R.drawable.ic_microg))
+        with (activity) {
+            if (variant == "root") {
+                vancedRootModel.value = RootDataModel(vanced, this, this, vancedRootPkg, this.getString(R.string.vanced), AppCompatResources.getDrawable(this, R.drawable.ic_vanced), "vanced")
+                musicRootModel.value = RootDataModel(music, this, this, musicRootPkg, this.getString(R.string.music), AppCompatResources.getDrawable(this, R.drawable.ic_music), "music")
+            } else {
+                vancedModel.value = DataModel(vanced, this, this, vancedPkg, this.getString(R.string.vanced), AppCompatResources.getDrawable(this, R.drawable.ic_vanced))
+                musicModel.value = DataModel(music, this, this, musicPkg, this.getString(R.string.music), AppCompatResources.getDrawable(this, R.drawable.ic_music))
+                microgModel.value = DataModel(microg, this, this, microgPkg, this.getString(R.string.microg), AppCompatResources.getDrawable(this, R.drawable.ic_microg))
+            }
+            managerModel.value = DataModel(manager, this, this, managerPkg, this.getString(R.string.app_name), AppCompatResources.getDrawable(this, R.mipmap.ic_launcher))
         }
-        managerModel.value = DataModel(manager, activity, managerPkg, activity.getString(R.string.app_name), AppCompatResources.getDrawable(activity, R.mipmap.ic_launcher))
     }
 }

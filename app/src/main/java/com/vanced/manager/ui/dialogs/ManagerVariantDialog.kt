@@ -39,13 +39,12 @@ class ManagerVariantDialog : BindingBottomSheetDialogFragment<DialogManagerVaria
             variantSave.setOnClickListener {
                 val newPref = variantRadiogroup.getCheckedButtonTag()
                 if (variant != newPref) {
-                    with (prefs.managerVariant) {
+                    prefs.managerVariant =
                         if (newPref == "root" && Shell.rootAccess()) {
-                            this == "root"
+                             "root"
                         } else {
-                            this == "nonroot"
+                            "nonroot"
                         }
-                    }
                     dismiss()
                     requireActivity().recreate()
                 } else {

@@ -39,7 +39,6 @@ class AppListAdapter(
             val dataModel = if (isRoot) rootDataModels[position] else dataModels[position]
             with(binding) {
                 appName.text = dataModel?.appName
-                appInstallButton.text = dataModel?.buttonTxt?.value
                 dataModel?.buttonTxt?.observe(lifecycleOwner) {
                     appInstallButton.text = it
                 }
@@ -60,11 +59,9 @@ class AppListAdapter(
                     appUninstall.isVisible = it
                     appLaunch.isVisible = it
                 }
-                appRemoteVersion.text = dataModel?.versionName?.value
                 dataModel?.versionName?.observe(lifecycleOwner) {
                     appRemoteVersion.text = it
                 }
-                appInstalledVersion.text = dataModel?.installedVersionName?.value
                 dataModel?.installedVersionName?.observe(lifecycleOwner) {
                     appInstalledVersion.text = it
                 }

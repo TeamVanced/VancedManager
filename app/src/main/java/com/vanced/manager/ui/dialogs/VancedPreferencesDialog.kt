@@ -3,11 +3,14 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogVancedPreferencesBinding
 import com.vanced.manager.utils.*
+import com.vanced.manager.utils.AppUtils.vancedPkg
+import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 import java.util.*
 
 class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPreferencesBinding>() {
@@ -39,7 +42,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                 val loc = Locale(lang)
                 showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
-            val vancedVersionsConv = vancedVersions.value?.value?.reversed()?.convertToAppVersions()
+            val vancedVersionsConv = vancedVersions.value?.value?.convertToAppVersions()
             vancedInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.vanced))
             vancedTheme.text = getString(R.string.chosen_theme, installPrefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
             vancedVersion.text = getString(R.string.chosen_version, defPrefs.getString("vanced_version", "latest"))
@@ -62,16 +65,36 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                 showDialog(VancedLanguageSelectionDialog())
             }
             vancedInstall.setOnClickListener {
-
                 if (showLang.isEmpty()) {
                     installPrefs.lang = "en"
                 }
-                dismiss()
-                showDialog(
-                    AppDownloadDialog.newInstance(
-                        app = getString(R.string.vanced)
+
+                fun downloadVanced(version: String? = null) {
+                    dismiss()
+                    showDialog(
+                        AppDownloadDialog.newInstance(
+                            app = getString(R.string.vanced),
+                            version = version
+                        )
                     )
-                )
+                }
+
+                if (defPrefs.managerVariant == "nonroot" && isMicrogBroken && installPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))?.take(2)?.toIntOrNull() == 16 && !isPackageInstalled(vancedPkg, requireActivity().packageManager)) {
+                    MaterialAlertDialogBuilder(requireActivity()).apply {
+                        setTitle(R.string.microg_bug)
+                        setMessage(R.string.microg_bug_summary)
+                        setPositiveButton(R.string.auth_dialog_ok) { _, _ ->
+                            downloadVanced("15.43.32")
+                        }
+                        setNeutralButton(R.string.cancel) { _, _ ->
+                            dismiss()
+                        }
+                        create()
+                    }.applyAccent()
+                    return@setOnClickListener
+                }
+
+                downloadVanced()
             }
         }
     }

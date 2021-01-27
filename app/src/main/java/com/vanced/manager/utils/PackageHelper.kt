@@ -32,7 +32,7 @@ object PackageHelper {
 
     const val apkInstallPath = "/data/adb"
     private const val INSTALLER_TAG = "VMInstall"
-    private val vancedThemes = vanced.value?.array<String>("themes")?.value ?: arrayOf("black", "dark", "pink", "blue")
+    private val vancedThemes = vanced.value?.array<String>("themes")?.value ?: listOf("black", "dark", "pink", "blue")
 
     init {
         Shell.enableVerboseLogging = BuildConfig.DEBUG

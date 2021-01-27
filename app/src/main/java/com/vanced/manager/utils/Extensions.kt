@@ -30,7 +30,7 @@ fun DialogFragment.show(activity: FragmentActivity) {
 
 }
 
-fun List<String>.convertToAppVersions(): List<String> = arrayListOf("latest") + reversed()
+fun List<String>.convertToAppVersions(): List<String> = listOf("latest") + reversed()
 
 fun String.convertToAppTheme(context: Context): String {
     return context.getString(R.string.light_plus_other, this.capitalize(Locale.ROOT))

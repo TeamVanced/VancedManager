@@ -9,9 +9,7 @@ import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogCustomUrlBinding
-import com.vanced.manager.utils.baseUrl
-import com.vanced.manager.utils.defPrefs
-import com.vanced.manager.utils.loadJson
+import com.vanced.manager.utils.*
 import kotlinx.coroutines.launch
 
 class URLChangeDialog : BindingDialogFragment<DialogCustomUrlBinding>() {
@@ -61,6 +59,7 @@ class URLChangeDialog : BindingDialogFragment<DialogCustomUrlBinding>() {
     private fun saveUrl(url: String) {
         lifecycleScope.launch {
             prefs.installUrl = url
+            baseInstallUrl = url
             loadJson(requireActivity())
             dismiss()
         }

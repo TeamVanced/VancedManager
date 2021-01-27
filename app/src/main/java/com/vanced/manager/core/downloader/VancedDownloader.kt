@@ -38,7 +38,7 @@ object VancedDownloader {
     private var downloadPath: String? = null
     private var folderName: String? = null
 
-    fun downloadVanced(context: Context) {
+    fun downloadVanced(context: Context, version: String?) {
         defPrefs = context.defPrefs
         prefs = context.installPrefs
         variant = defPrefs.managerVariant
@@ -49,7 +49,7 @@ object VancedDownloader {
             lang = it.split(", ").toMutableList()
         }
         theme = prefs.theme
-        vancedVersion = defPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))
+        vancedVersion = version ?: defPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))
         themePath = "$baseInstallUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         arch = getArch()

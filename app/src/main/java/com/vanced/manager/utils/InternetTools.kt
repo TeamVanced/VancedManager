@@ -13,12 +13,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
-import com.github.kittinunf.fuel.httpGet
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.generateChecksum
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
+import java.io.IOException
+import java.net.ConnectException
+import java.net.HttpURLConnection
+import java.net.SocketTimeoutException
+import java.net.URL
 import java.util.*
 
 private const val TAG = "VMNetTools"
@@ -57,6 +61,8 @@ fun openUrl(url: String, color: Int, context: Context) {
 
 fun getFileNameFromUrl(url: String) = url.substring(url.lastIndexOf('/') + 1, url.length)
 
+//TODO: Use a better connection method that doesn't cause inappropriate blocks
+@Suppress("BlockingMethodInNonBlockingContext")
 suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
     isFetching.postValue(true)
     val installUrl = context.defPrefs.installUrl
@@ -64,18 +70,33 @@ suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
         baseInstallUrl = installUrl
     }
 
-    baseInstallUrl.httpGet().response { _, response, _ ->
-        if (response.statusCode / 100 != 2) {
-            baseInstallUrl = "https://mirror.codebucket.de/vanced"
+    try {
+        val latestbaseUrl = "$baseInstallUrl/latest.json"
+        val connection = URL(latestbaseUrl).openConnection() as HttpURLConnection
+        connection.apply {
+            connectTimeout = 5000
+            readTimeout = 5000
+            connect()
         }
+        if (connection.responseCode != 200) {
+            Log.d(TAG, latestbaseUrl + ": " + connection.responseCode.toString())
+            baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
+        }
+    } catch (e: IOException) {
+        baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
+    } catch (e: SocketTimeoutException) {
+        Log.d(TAG, "connection timed out")
+        baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
     }
+
+    Log.d(TAG, "Fetching using URL: $baseInstallUrl")
 
     val calendar = Calendar.getInstance()
     val hour = calendar.get(Calendar.HOUR_OF_DAY)
     val minute = calendar.get(Calendar.MINUTE)
     val second = calendar.get(Calendar.SECOND)
     val fetchTime = "fetchTime=$hour$minute$second"
-    
+
     val latest = getJson("$baseInstallUrl/latest.json?$fetchTime")
     val versions = getJson("$baseInstallUrl/versions.json?$fetchTime")
     isMicrogBroken = latest?.boolean("is_microg_broken") ?: false
