@@ -75,6 +75,8 @@
     <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
     <string name="app_installation_preferences">%1$s Paigalduseelistused</string>
     <string name="version">Versioon</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Palun olge kannatlik…</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
