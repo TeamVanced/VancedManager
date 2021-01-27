@@ -36,11 +36,6 @@
     <string name="support_us">Support us</string>
     <!-- Settings -->
     <string name="accent_color">Rengê devokê</string>
-    <string name="accent_blue">Blue</string>
-    <string name="accent_green">Green</string>
-    <string name="accent_purple">Purple</string>
-    <string name="accent_red">Red</string>
-    <string name="accent_yellow">Yellow</string>
     <string name="category_appearance">Xuyang</string>
     <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Dosiyayên daxistî paqij bike</string>
@@ -78,13 +73,11 @@
     <string name="error">Çewtî</string>
     <string name="redownload">Ji nû ve daxîne</string>
     <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
-    <string name="success">Bi Ser Ket!</string>
     <string name="app_installation_preferences">%1$s sazkariyên bijarde yên sazkirinê</string>
-    <string name="vanced_installed">Vanced biserketî saz bû! Gelo niha vebe?</string>
     <string name="version">Guherto</string>
-    <string name="music_installed">Vanced Mûzîk biserketî saz bû! Gelo niha vebe?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Jkx tebata xwe bînin...</string>
-    <string name="launch">Veke</string>
     <string name="welcome">Bi xêr hatî</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Ziman(ên) xwe yën dilxwaz ji bo Vanced\'ê hilbijêre</string>
