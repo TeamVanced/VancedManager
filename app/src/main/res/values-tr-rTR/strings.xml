@@ -47,8 +47,8 @@
     <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
     <string name="system_default">Sistem varsayılanı</string>
     <string name="script_save_failed">Yeni zaman değeri kaydedilemedi</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">/data/adb/service.d/app.sh komut dosyasında kullanılan uyku süresi değerini ayarlayın, montaj sorunlarını düzeltmek için yararlıdır</string>
+    <string name="script_sleep_timer">Root kurulumu, bekletme süresi</string>
+    <string name="script_sleep_timer_description">[Gelişmiş] Kurulum sırasında çalıştırılan /data/adb/service.d/app.sh dosyasında ki bekletme süresinin değer ayarı. Kurulum sırasında oluşan hatalarda çözüm olabilir</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
@@ -75,6 +75,8 @@
     <string name="security_context">Uygulamayı vancedapp.com, Vanced Discord sunucusu, veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
     <string name="app_installation_preferences">%1$s Kurulum Tercihleri</string>
     <string name="version">Sürüm</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Biraz zaman alabilir…</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
@@ -95,7 +97,7 @@
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
     <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
     <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
-    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu.  Uygulamanın mevcut sürümünü kaldırın ve ardından tekrar deneyin.</string>
+    <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Uygulamanın mevcut sürümünü kaldırın ve ardından tekrar deneyin.</string>
     <string name="installation_failed">Kurulum bilinmeyen nedenlerden dolayı başarısız oldu. Telegram veya Discord\'a katılarak destek alabilirsin.</string>
     <string name="installation_incompatible">Kurulum dosyası cihazınız ile uyumsuz olduğu için kurulum işlemi başarısız oldu. Ayarlar\'da indirilen dosyaları temizleyip, tekrar deneyin.</string>
     <string name="installation_invalid">APK dosyaları çözümlenemediğinden, kurulum başarısız oldu. Lütfen yeniden deneyin.</string>

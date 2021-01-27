@@ -75,6 +75,8 @@
     <string name="security_context">பயன்பாட்டை vancedapp.com, Vanced Discord சேவையகம் அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
     <string name="app_installation_preferences">%1$s நிறுவல் விருப்பத்தேர்வுகள்</string>
     <string name="version">பதிப்பு</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">தயவுசெய்து பொருமைையாயிறு…</string>
     <string name="welcome">வரவேற்பு</string>
     <!-- Install Page -->

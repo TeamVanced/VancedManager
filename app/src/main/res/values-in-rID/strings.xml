@@ -75,6 +75,8 @@
     <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, server Discord Vanced, atau Vanced Github</string>
     <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
     <string name="version">Versi</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Harap bersabar…</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->

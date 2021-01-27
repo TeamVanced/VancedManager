@@ -75,6 +75,8 @@
     <string name="security_context">დარწმუნდით, რომ აპი გადმოწერეთ vancedapp.com-იდან, Vanced Discord სერვერიდან ან GitHub-იდან</string>
     <string name="app_installation_preferences">%1$s-ის ინსტალაციის პარამეტრები</string>
     <string name="version">ვერსია</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">გთხოვთ დაელოდოთ…</string>
     <string name="welcome">მოგესალმებით</string>
     <!-- Install Page -->

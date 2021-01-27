@@ -75,6 +75,8 @@
     <string name="security_context">請確保您從 vancedapp.com、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="app_installation_preferences">%1$s 安裝偏好設定</string>
     <string name="version">版本</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">請耐心等候…</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
