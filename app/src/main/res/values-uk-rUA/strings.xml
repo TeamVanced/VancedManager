@@ -36,11 +36,6 @@
     <string name="support_us">Підтримайте нас</string>
     <!-- Settings -->
     <string name="accent_color">Вторинний колір</string>
-    <string name="accent_blue">Синій</string>
-    <string name="accent_green">Зелений</string>
-    <string name="accent_purple">Фіолетовий</string>
-    <string name="accent_red">Червоний</string>
-    <string name="accent_yellow">Жовтий</string>
     <string name="category_appearance">Вигляд</string>
     <string name="category_behaviour">Поведінка</string>
     <string name="clear_files">Очистити завантажені файли</string>
@@ -78,13 +73,11 @@
     <string name="error">Помилка</string>
     <string name="redownload">Завантажити заново</string>
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vancedapp.com, Vanced Discord сервер або Vanced GitHub</string>
-    <string name="success">Успіх!</string>
     <string name="app_installation_preferences">Параметри встановлення %1$s</string>
-    <string name="vanced_installed">Vanced був успішно встановлений! Відкрити зараз?</string>
     <string name="version">Версія</string>
-    <string name="music_installed">Vanced Music успішно встановлено! Відкрити зараз?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Будь ласка, зачекайте…</string>
-    <string name="launch">Відкрити</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
