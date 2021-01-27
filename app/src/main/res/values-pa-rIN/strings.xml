@@ -36,11 +36,6 @@
     <string name="support_us">ਸਾਡਾ ਸਮਰਥਨ ਕਰੋ</string>
     <!-- Settings -->
     <string name="accent_color">ਐੱਕਸੈਂਟ ਰੰਗ</string>
-    <string name="accent_blue">ਨੀਲਾ</string>
-    <string name="accent_green">ਹਰਾ</string>
-    <string name="accent_purple">ਜਾਮਨੀ</string>
-    <string name="accent_red">ਲਾਲ</string>
-    <string name="accent_yellow">ਪੀਲਾ</string>
     <string name="category_appearance">ਦਿੱਖ</string>
     <string name="category_behaviour">ਵਿਹਾਰ</string>
     <string name="clear_files">ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਸਾਫ਼ ਕਰੋ</string>
@@ -78,13 +73,11 @@
     <string name="error">ਗਲਤੀ</string>
     <string name="redownload">ਮੁੜ ਡਾਉਨਲੋਡ</string>
     <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vancedapp.com, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
-    <string name="success">ਸਫਲਤਾ!</string>
     <string name="app_installation_preferences">%1$s ਸਥਾਪਨਾ ਚੁਣੋ</string>
-    <string name="vanced_installed">ਵੈਨਸਡ ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਹੋ ਗਿਆ ਹੈ! ਹੁਣ ਖੋਲੋ?</string>
     <string name="version">ਵਰਜਨ</string>
-    <string name="music_installed">ਵੇਂਸਡ ਮਿਊਜ਼ਿਕ ਸਫਲਤਾਪੂਰਵਕ ਸਥਾਪਤ ਕੀਤਾ ਗਿਆ ਹੈ! ਹੁਣ ਖੋਲੋ?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">ਕਿਰਪਾ ਕਰਕੇ ਸਬਰ ਰੱਖੋ…</string>
-    <string name="launch">ਖੋਲੋ</string>
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ (ਏ) ਚੁਣੋ</string>
