@@ -91,7 +91,7 @@
     <string name="light_plus_other">Licht + %1$s</string>
     <string name="select_at_least_one_lang">Selecteer minstens één taal!</string>
     <!-- About Page -->
-    <string name="manager_dev">Manager Ontwikkelaars</string>
+    <string name="manager_dev">Manager Dev</string>
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
