@@ -36,11 +36,6 @@
     <string name="support_us">支持我們</string>
     <!-- Settings -->
     <string name="accent_color">輔色</string>
-    <string name="accent_blue">藍色</string>
-    <string name="accent_green">綠色</string>
-    <string name="accent_purple">紫色</string>
-    <string name="accent_red">紅色</string>
-    <string name="accent_yellow">黃色</string>
     <string name="category_appearance">外觀</string>
     <string name="category_behaviour">行為</string>
     <string name="clear_files">清除已下載的檔案</string>
@@ -78,13 +73,11 @@
     <string name="error">錯誤</string>
     <string name="redownload">重新下載</string>
     <string name="security_context">請確保您從 vancedapp.com、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
-    <string name="success">成功！</string>
     <string name="app_installation_preferences">%1$s 安裝偏好設定</string>
-    <string name="vanced_installed">成功安裝 Vanced ，要開啟它嗎？</string>
     <string name="version">版本</string>
-    <string name="music_installed">成功安裝 Vanced Music ！要開啟它嗎？</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">請耐心等候…</string>
-    <string name="launch">啟動</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
