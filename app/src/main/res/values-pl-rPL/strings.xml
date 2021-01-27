@@ -36,11 +36,6 @@
     <string name="support_us">Wesprzyj nas</string>
     <!-- Settings -->
     <string name="accent_color">Kolor Akcentu</string>
-    <string name="accent_blue">Niebieski</string>
-    <string name="accent_green">Zielony</string>
-    <string name="accent_purple">Fioletowy</string>
-    <string name="accent_red">Czerwony</string>
-    <string name="accent_yellow">Żółty</string>
     <string name="category_appearance">Wygląd</string>
     <string name="category_behaviour">Zachowanie</string>
     <string name="clear_files">Wyczyść pobrane pliki</string>
@@ -78,13 +73,11 @@
     <string name="error">Błąd</string>
     <string name="redownload">Pobierz ponownie</string>
     <string name="security_context">Upewnij się, że pobrałeś aplikację z vancedapp.com, serwera Vanced Discord lub Vanced GitHub</string>
-    <string name="success">Sukces!</string>
     <string name="app_installation_preferences">Preferencje instalacji %1$s</string>
-    <string name="vanced_installed">Vanced został pomyślnie zainstalowany! Uruchomić teraz?</string>
     <string name="version">Wersja</string>
-    <string name="music_installed">Vanced Music został pomyślnie zainstalowany! Uruchomić teraz?</string>
+    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
     <string name="please_be_patient">Prosimy o cierpliwość…</string>
-    <string name="launch">Uruchom</string>
     <string name="welcome">Witaj</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wybierz preferowany język(i) dla Vanced</string>
