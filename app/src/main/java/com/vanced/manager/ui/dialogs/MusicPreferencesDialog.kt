@@ -3,13 +3,12 @@ package com.vanced.manager.ui.dialogs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogMusicPreferencesBinding
-import com.vanced.manager.utils.convertToAppVersions
-import com.vanced.manager.utils.defPrefs
-import com.vanced.manager.utils.musicVersions
+import com.vanced.manager.utils.*
 
 class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPreferencesBinding>() {
 
@@ -21,6 +20,7 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
     }
 
     private val prefs by lazy { requireActivity().defPrefs }
+    private val installPrefs by lazy { requireActivity().installPrefs }
 
     override fun binding(
         inflater: LayoutInflater,
@@ -48,11 +48,37 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
             }
             musicInstall.setOnClickListener {
                 dismiss()
-                showDialog(
-                    AppDownloadDialog.newInstance(
-                        app = getString(R.string.music)
+                fun downloadMusic(version: String? = null) {
+                    showDialog(
+                        AppDownloadDialog.newInstance(
+                            app = getString(R.string.music),
+                            version = version
+                        )
                     )
-                )
+                }
+
+
+                if (prefs.managerVariant == "nonroot" && isMicrogBroken && installPrefs.musicVersion?.getLatestAppVersion(
+                        vancedVersions.value?.value ?: listOf(""))?.take(3)?.toIntOrNull() ?: 0 >= 411 && !PackageHelper.isPackageInstalled(
+                        AppUtils.musicPkg,
+                        requireActivity().packageManager
+                    )
+                ) {
+                    MaterialAlertDialogBuilder(requireActivity()).apply {
+                        setTitle(R.string.microg_bug)
+                        setMessage(R.string.microg_bug_summary_music)
+                        setPositiveButton(R.string.auth_dialog_ok) { _, _ ->
+                            downloadMusic("4.07.51")
+                        }
+                        setNeutralButton(R.string.cancel) { _, _ ->
+                            dismiss()
+                        }
+                        create()
+                    }.applyAccent()
+                    return@setOnClickListener
+                }
+
+                downloadMusic()
             }
         }
     }
