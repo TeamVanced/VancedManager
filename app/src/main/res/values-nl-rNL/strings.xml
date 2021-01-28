@@ -76,7 +76,7 @@
     <string name="app_installation_preferences">installatievoorkeuren voor %1$s</string>
     <string name="version">Versie</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug_summary">Als gevolg van een fout in microG, vereist de installatie van Vanced 16+ dat je versie 15.43.32 eerst installeert, die opent en je aanmeldt en pas daarna kan je versie 16 en hoger installeren. Wil je doorgaan met de installatie van v15.43.32?</string>
     <string name="please_be_patient">Even geduld…</string>
     <string name="welcome">Welkom</string>
     <!-- Install Page -->
