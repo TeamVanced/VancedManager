@@ -76,7 +76,7 @@
     <string name="app_installation_preferences">Preferenze Installazione di %1$s</string>
     <string name="version">Versione</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug_summary">A causa di un bug in microG, l\'installazione di Vanced 16+ richiede la disponibilità della versione 15.43.32, la sua esecuzione e l\'accesso al proprio account Google, prima di effettuare il passaggio alla versione 16. Vuoi procedere all\'installazione della versione 15.43.32?</string>
     <string name="please_be_patient">Si prega di attendere…</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
