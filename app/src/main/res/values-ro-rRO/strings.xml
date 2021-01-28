@@ -75,8 +75,8 @@
     <string name="security_context">Asigurați-vă că ați descărcat aplicația de pe vancedapp.com, de pe serverul Discord Vanced sau de pe GitHub Vanced</string>
     <string name="app_installation_preferences">%1$s Preferințe de instalare</string>
     <string name="version">Versiune</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug">Eroare la microG</string>
+    <string name="microg_bug_summary">Datorită unei erori în microG, pentru a instala Vanced versiunea 16, este nevoie mai întâi să instalați versiunea 15.43.32, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 16 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 15.43.32?</string>
     <string name="please_be_patient">Vă rugăm să aveți răbdare…</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
