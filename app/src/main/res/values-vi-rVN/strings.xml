@@ -75,8 +75,8 @@
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
     <string name="version">Phiên bản</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Lỗi trong microG</string>
+    <string name="microg_bug_summary">Do lỗi trong microG, trước khi cài đặt Vanced 16+ bạn phải cài bản v15.43.32, mở nó và đăng nhập và bạn có thể cài bản v16 và cao hơn. Bạn có muốn tiến hành cài đặt bản v15.32.43?</string>
     <string name="please_be_patient">Hãy kiên nhẫn…</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
