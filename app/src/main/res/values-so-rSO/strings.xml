@@ -24,10 +24,10 @@
     <string name="app_changelog_tooltip">Kusii dhufo si aad u aragto waxa isbadalay.</string>
     <string name="changelog">Waxa isbadalay</string>
     <string name="downloading_file">Dajinaya %1$s</string>
-    <string name="install">Ku shub</string>
-    <string name="button_reinstall">Dib-ugushub</string>
+    <string name="install">Kushub</string>
+    <string name="button_reinstall">Dib ugushub</string>
     <string name="version_installed">Ka kujira:</string>
-    <string name="latest">Kii u dambeeyay:</string>
+    <string name="latest">U dambeeyay:</string>
     <string name="no_microg">microG laguma shubin</string>
     <string name="root_not_granted">\'Root\' looma fasaxin</string>
     <string name="unavailable">Lama heli karo</string>
@@ -75,8 +75,8 @@
     <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
     <string name="app_installation_preferences">Fadhiga Kushubida %1$s</string>
     <string name="version">Tirsiga</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Cillad xaga microG ah</string>
+    <string name="microg_bug_summary">Ayadooy ugu wacantahay cillad xaga microG ga ah, ku shibida Vanced 16+ ugu horayn waxay u baahantahay inaad ku shubto v15.43.32, kadib aad furto ood galiso akoonkaaga markaas kadib umbaad v16 iyo wixii kasareeya ku shubi kartaa. Ma rabtaa inaad kusii socoto ku shubida v15.43.32?</string>
     <string name="please_be_patient">Fadlan dulqaado…</string>
     <string name="welcome">Soo dhawoow</string>
     <!-- Install Page -->
