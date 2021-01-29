@@ -5,7 +5,7 @@
     <string name="close">閉じる</string>
     <string name="reset">リセット</string>
     <string name="save">保存</string>
-    <string name="select_apps">アプリを選択してください</string>
+    <string name="select_apps">アプリの選択</string>
     <!-- Main Activity -->
     <string name="title_about">情報</string>
     <string name="title_home">Manager</string>
