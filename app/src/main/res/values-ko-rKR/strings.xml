@@ -77,6 +77,7 @@
     <string name="version">버전</string>
     <string name="microg_bug">microG의 버그</string>
     <string name="microg_bug_summary">microG의 버그로 인해 v15.43.32를 먼저 설치하고 연 다음 로그인해야 v16 이상을 설치할 수 있습니다. v15.43.32 설치를 진행하시겠습니까?</string>
+    <string name="microg_bug_summary_music">microG의 버그로 인해 v4.07.51를 먼저 설치하고 연 다음 로그인해야 Music v4.11 이상을 설치할 수 있습니다. v4.07.51 설치를 진행하시겠습니까?</string>
     <string name="please_be_patient">잠시만 기다려 주세요...</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
