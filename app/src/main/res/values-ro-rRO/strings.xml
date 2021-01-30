@@ -77,6 +77,7 @@
     <string name="version">Versiune</string>
     <string name="microg_bug">Eroare la microG</string>
     <string name="microg_bug_summary">Datorită unei erori în microG, pentru a instala Vanced versiunea 16, este nevoie mai întâi să instalați versiunea 15.43.32, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 16 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 15.43.32?</string>
+    <string name="microg_bug_summary_music">Datorită unei erori în microG, pentru a instala Vanced versiunea 4.11, este nevoie mai întâi să instalați versiunea 15.07.51, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 16 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 15.07.51?</string>
     <string name="please_be_patient">Vă rugăm să aveți răbdare…</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
