@@ -49,6 +49,7 @@ class SelectAppsDialog : BindingBottomSheetDialogFragment<DialogSelectAppsBindin
                 prefs.edit {
                     ad.apps.forEach { app ->
                         putBoolean("enable_${app.tag}", app.isChecked)
+                        putBoolean("${app.tag}_notifs", app.isChecked)
                     }
                 }
                 dismiss()

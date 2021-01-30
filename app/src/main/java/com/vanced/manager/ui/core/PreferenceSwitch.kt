@@ -38,6 +38,11 @@ class PreferenceSwitch @JvmOverloads constructor(
 
     init {
         _binding = ViewPreferenceSwitchBinding.inflate(LayoutInflater.from(context), this, true)
+        prefs.registerOnSharedPreferenceChangeListener { sharedPreferences, key ->
+            if (key == prefKey) {
+                binding.preferenceSwitch.isChecked = sharedPreferences.getBoolean(key, defValue)
+            }
+        }
         attrs?.let { mAttrs ->
             with(context.obtainStyledAttributes(mAttrs, R.styleable.PreferenceSwitch, 0, 0)) {
                 val title = getText(R.styleable.PreferenceSwitch_switch_title)
@@ -84,5 +89,9 @@ class PreferenceSwitch @JvmOverloads constructor(
     fun setDefaultValue(newVal: Boolean) {
         defValue = newVal
         binding.preferenceSwitch.isChecked = prefs.getBoolean(prefKey, newVal)
+    }
+
+    fun setChecked(checked: Boolean) {
+        binding.preferenceSwitch.isChecked = checked
     }
 }
