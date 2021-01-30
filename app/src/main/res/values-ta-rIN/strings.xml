@@ -75,8 +75,9 @@
     <string name="security_context">பயன்பாட்டை vancedapp.com, Vanced Discord சேவையகம் அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
     <string name="app_installation_preferences">%1$s நிறுவல் விருப்பத்தேர்வுகள்</string>
     <string name="version">பதிப்பு</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug">மைக்ரோஜியில் பிழை</string>
+    <string name="microg_bug_summary">மைக்ரோஜியில் உள்ள பிழை காரணமாக, முதலில் வான்சட் 16+ ஐ நிறுவ நீங்கள் v15.43.32 ஐ நிறுவ வேண்டும், திறக்க வேண்டும், பின்னர் உள்நுழைய வேண்டும், அப்போதுதான் நீங்கள் v16 மற்றும் அதற்கு மேற்பட்டவற்றை நிறுவ முடியும். V15.43.32 இன் நிறுவலுடன் தொடர விரும்புகிறீர்களா?</string>
+    <string name="microg_bug_summary_music">மைக்ரோஜியில் உள்ள பிழை காரணமாக, முதலில் மியூசிக் 4.11+ ஐ நிறுவ நீங்கள் v4.07.51 ஐ நிறுவ வேண்டும், திறக்க வேண்டும், பின்னர் உள்நுழைய வேண்டும், அப்போதுதான் நீங்கள் v16 மற்றும் அதற்கு மேற்பட்டவற்றை நிறுவ முடியும். V4.07.51 இன் நிறுவலுடன் தொடர விரும்புகிறீர்களா?</string>
     <string name="please_be_patient">தயவுசெய்து பொருமைையாயிறு…</string>
     <string name="welcome">வரவேற்பு</string>
     <!-- Install Page -->
