@@ -77,6 +77,7 @@
     <string name="version">Versione</string>
     <string name="microg_bug">Bug in microG</string>
     <string name="microg_bug_summary">A causa di un bug in microG, l\'installazione di Vanced 16+ richiede la disponibilità della versione 15.43.32, la sua esecuzione e l\'accesso al proprio account Google, prima di effettuare il passaggio alla versione 16. Vuoi procedere all\'installazione della versione 15.43.32?</string>
+    <string name="microg_bug_summary_music">A causa di un bug in microG, l\'installazione di Music 4.11+ richiede l\'installazione della versione 4.07.51, la sua esecuzione e l\'accesso al proprio account Google, prima di installare la versione 16 o più recente. Vuoi procedere all\'installazione della versione 4.07.51?</string>
     <string name="please_be_patient">Si prega di attendere…</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
