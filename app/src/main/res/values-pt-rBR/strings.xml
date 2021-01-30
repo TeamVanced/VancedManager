@@ -77,6 +77,7 @@
     <string name="version">Versão</string>
     <string name="microg_bug">Bug no microG</string>
     <string name="microg_bug_summary">Devido a um bug no microG, instalar o Vanced 16+ requer que você instale a versão 15.43.32 primeiro, abra-o, faça login e então você poderá instalar a versão 16 acima. Você deseja continuar a instalação da versão 15.43.32?</string>
+    <string name="microg_bug_summary_music">Devido a um bug no microG, instalar o Music 4.11+ requer que você instale a versão 4.07.51 primeiro, abri-a, fazer login e então você poderá instalar a versão 16 e acima. Você deseja continuar a instalação da versão 4.07.51?</string>
     <string name="please_be_patient">Por favor, seja paciente…</string>
     <string name="welcome">Bem-vindo</string>
     <!-- Install Page -->
