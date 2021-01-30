@@ -77,6 +77,7 @@
     <string name="version">Versioon</string>
     <string name="microg_bug">microG viga</string>
     <string name="microg_bug_summary">Seoses microG veaga, vajab Vanced 16+ paigaldus ennem v15.43.32 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v15.43.32 paigaldusega?</string>
+    <string name="microg_bug_summary_music">Seoses microG veaga, vajab Music 4.11+ paigaldus ennem v4.07.51 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v4.07.51 paigaldusega?</string>
     <string name="please_be_patient">Palun olge kannatlik…</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
