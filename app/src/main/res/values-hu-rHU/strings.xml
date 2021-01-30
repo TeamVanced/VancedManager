@@ -79,6 +79,7 @@ Akarod telepíteni?</string>
     <string name="microg_bug">Hiba a microG-ben</string>
     <string name="microg_bug_summary">Egy a microG-ben található hiba miatt, a Vanced 16+ verzióihoz először telepítsd a 15.43.32-es verziót, nyisd meg, jelentkezz be, majd ezután tudod telepíteni a 16-os vagy újabb verziót.
 Akarod folytatni a 15.43.32-es verzió telepítésével?</string>
+    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Kérjük legyen türelmes... </string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
