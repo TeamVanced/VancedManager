@@ -75,8 +75,9 @@
     <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vancedapp.com, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
     <string name="app_installation_preferences">%1$s ਸਥਾਪਨਾ ਚੁਣੋ</string>
     <string name="version">ਵਰਜਨ</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug">ਮਾਈਕਰੋਜੀ ਵਿੱਚ ਬੱਗ</string>
+    <string name="microg_bug_summary">ਮਾਈਕ੍ਰੋ ਜੀ ਵਿੱਚ ਇੱਕ ਬੱਗ ਦੇ ਕਾਰਨ, ਪਹਿਲਾਂ ਵੈਨਸਡ 16+ ਨੂੰ ਸਥਾਪਤ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ v15.43.32 ਨੂੰ ਸਥਾਪਤ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ, ਇਸ ਨੂੰ ਖੋਲ੍ਹੋ, ਫਿਰ ਲੌਗਇਨ ਕਰੋ ਅਤੇ ਕੇਵਲ ਤਾਂ ਹੀ ਤੁਸੀਂ v16 ਅਤੇ ਇਸਤੋਂ ਵੱਧ ਸਥਾਪਤ ਕਰ ਸਕਦੇ ਹੋ. ਕੀ ਤੁਸੀਂ v15.43.32 ਦੀ ਇੰਸਟਾਲੇਸ਼ਨ ਨਾਲ ਅੱਗੇ ਵਧਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="microg_bug_summary_music">ਮਾਈਕ੍ਰੋ ਜੀ ਵਿੱਚ ਇੱਕ ਬੱਗ ਦੇ ਕਾਰਨ, ਸੰਗੀਤ 4.11+ ਨੂੰ ਸਥਾਪਤ ਕਰਨ ਲਈ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ v4.07.51 ਸਥਾਪਤ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੁੰਦੀ ਹੈ, ਇਸਨੂੰ ਖੋਲ੍ਹੋ, ਫਿਰ ਲੌਗਇਨ ਕਰੋ ਅਤੇ ਕੇਵਲ ਤਾਂ ਹੀ ਤੁਸੀਂ v16 ਅਤੇ ਇਸਤੋਂ ਵੱਧ ਸਥਾਪਤ ਕਰ ਸਕਦੇ ਹੋ. ਕੀ ਤੁਸੀਂ v4.07.51 ਦੀ ਸਥਾਪਨਾ ਨੂੰ ਜਾਰੀ ਰੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="please_be_patient">ਕਿਰਪਾ ਕਰਕੇ ਸਬਰ ਰੱਖੋ…</string>
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ</string>
     <!-- Install Page -->
