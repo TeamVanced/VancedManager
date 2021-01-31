@@ -48,7 +48,7 @@
     <string name="system_default">ברירת מחדל</string>
     <string name="script_save_failed">נכשל בשמירת ערך הזמן החדש</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_sleep_timer_description">תשנה את זמן השינה הנמצא ב /data/adb/service.d/app.sh, זה עוזר כדי לתקן בעיות אתחול</string>
     <string name="theme">ערכת נושא</string>
     <string name="theme_dark">ערכת נושא כהה</string>
     <string name="theme_light">ערכת נושא בהירה</string>
@@ -75,9 +75,9 @@
     <string name="security_context">ודא שהורדת את האפליקציה מהאתר vancedapp.com, שרת הדיסקורד של Vanced או מהעמוד של Vanced ב־GitHub</string>
     <string name="app_installation_preferences">%1$s העדפות התקנה</string>
     <string name="version">גרסא</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug">באג בmicroG</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">אנא התאזר בסבלנות…</string>
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
