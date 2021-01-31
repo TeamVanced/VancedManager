@@ -76,8 +76,8 @@
     <string name="app_installation_preferences">Προτιμήσεις Εγκατάστασης του %1$s</string>
     <string name="version">Έκδοση</string>
     <string name="microg_bug">Σφάλμα στο microG</string>
-    <string name="microg_bug_summary">Λόγο ενός σφάλματος του microG, για να εγκαταστήσετε το Vanced έκδοσης 16+ πρέπει πρώτα να εγκαταστήσετε την έκδοση v15.43.32, να την ανοίξετε, και να συνδεθείτε στον λογαριασμό σας, μόνο τότε μπορείτε να εγκαταστήσετε την έκδοση v16 και άνω. Θέλετε να συνεχίσετε με την εγκατάσταση της έκδοσης v15.43.32;</string>
-    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Παρακαλώ να είστε υπομονετικοί…</string>
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
