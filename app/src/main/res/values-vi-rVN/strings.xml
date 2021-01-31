@@ -47,8 +47,8 @@
     <string name="link_custom_tabs">Các liên kết sẽ mở trong Chrome Custom Tabs</string>
     <string name="system_default">Mặc định hệ thống</string>
     <string name="script_save_failed">Không thể lưu giá trị thời gian mới</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_sleep_timer">Thời gian ngủ của tập lệnh Root</string>
+    <string name="script_sleep_timer_description">Điều chỉnh giá trị thời gian ngủ được sử dụng trong tập lệnh /data/adb/service.d/app.sh, hữu ích để khắc phục sự cố gắn kết</string>
     <string name="theme">Nền</string>
     <string name="theme_dark">Nền tối</string>
     <string name="theme_light">Nền sáng</string>
@@ -76,8 +76,8 @@
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
     <string name="version">Phiên bản</string>
     <string name="microg_bug">Lỗi trong microG</string>
-    <string name="microg_bug_summary">Do lỗi trong microG, trước khi cài đặt Vanced 16+ bạn phải cài bản v15.43.32, mở nó và đăng nhập và bạn có thể cài bản v16 và cao hơn. Bạn có muốn tiến hành cài đặt bản v15.32.43?</string>
-    <string name="microg_bug_summary_music">Do một lỗi trong microG, cài đặt Music 4.11+ trước tiên yêu cầu bạn cài đặt v4.07.51, mở nó, sau đó đăng nhập và chỉ sau đó bạn mới có thể cài đặt v16 trở lên. Bạn có muốn tiếp tục cài đặt v4.07.51 không?</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Hãy kiên nhẫn…</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
