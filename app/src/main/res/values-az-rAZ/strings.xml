@@ -76,8 +76,8 @@
     <string name="app_installation_preferences">%1$s Qurma Seçimləri</string>
     <string name="version">Versiya</string>
     <string name="microg_bug">Amma microG\'də</string>
-    <string name="microg_bug_summary">microG\'də olan xəta səbəbindən Vanced 16+ yükləmək üçün əvvəlcə v15.43.32 versiyasını yükləməlisiniz, bunun üçün onu açıb giriş etməlisiniz, ancaq ondan sonra v16 ya da üstünü quraşdıra bilərsiniz. v15.43.32 versiyasını yükləmək istəyirsiniz?</string>
-    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Zəhmət olmasa səbrli olun…</string>
     <string name="welcome">Xoş gəldiniz</string>
     <!-- Install Page -->
