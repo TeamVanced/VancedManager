@@ -82,8 +82,11 @@
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Світла + %1$s</string>
     <string name="select_at_least_one_lang">Оберіть принаймні одну мову!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Розробники Менеджера</string>
     <string name="sources">Джерела</string>
