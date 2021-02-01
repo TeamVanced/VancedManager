@@ -82,8 +82,11 @@
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ (ਏ) ਚੁਣੋ</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">ਲਾਇਟ + %1$s</string>
     <string name="select_at_least_one_lang">ਘੱਟੋ-ਘੱਟ ਇੱਕ ਭਾਸ਼ਾ ਚੁਣੋ!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">ਪ੍ਬੰਧਕ ਨਿਰਮਾਣਕਰਤਾ</string>
     <string name="sources">ਸਰੋਤ</string>
