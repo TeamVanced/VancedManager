@@ -82,8 +82,11 @@
     <string name="welcome">მოგესალმებით</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">აირჩიეთ სასურველი ენა(ები) Vanced-ისთვის</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">ღია + %1$s</string>
     <string name="select_at_least_one_lang">ერთი ენა მაინც მონიშნეთ!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager-ის დეველოპერები</string>
     <string name="sources">წყაროები</string>
