@@ -82,8 +82,11 @@
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Velg dine foretrukne språk for Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Lys + %1$s</string>
     <string name="select_at_least_one_lang">Velg minst ett språk!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
     <string name="sources">Kilder</string>
