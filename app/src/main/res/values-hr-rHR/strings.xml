@@ -76,8 +76,8 @@
     <string name="app_installation_preferences">%1$s postavke instalacije</string>
     <string name="version">Inačica</string>
     <string name="microg_bug">Pogreška u MicroG aplikac.</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Malo pričekajte…</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
