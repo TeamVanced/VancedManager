@@ -82,8 +82,11 @@
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
+    <string name="install_latest">Nejnovější</string>
     <string name="light_plus_other">Světlý + %1$s</string>
     <string name="select_at_least_one_lang">Vyberte alespoň jeden jazyk!</string>
+    <string name="vanced_black">Černý</string>
+    <string name="vanced_dark">Tmavý</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojáři aplikace</string>
     <string name="sources">Zdrojové kódy</string>
