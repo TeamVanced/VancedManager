@@ -82,8 +82,11 @@
     <string name="welcome">സ്വാഗതം</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">വാൻസിനായി നിങ്ങൾ ഭാഷ (കൾ) തിരഞ്ഞെടുക്കുക</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">പ്രകാശം +%1$s</string>
     <string name="select_at_least_one_lang">ഒരു ഭാഷയെങ്കിലും തിരഞ്ഞെടുക്കുക!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">മാനേജർ ഡവലപ്പർമാർ</string>
     <string name="sources">ഉറവിടങ്ങൾ</string>
