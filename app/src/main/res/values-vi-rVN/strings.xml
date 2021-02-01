@@ -82,8 +82,11 @@
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Sáng + %1$s</string>
     <string name="select_at_least_one_lang">Chọn ít nhất một ngôn ngữ!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Đội ngũ phát triển</string>
     <string name="sources">Nguồn</string>
