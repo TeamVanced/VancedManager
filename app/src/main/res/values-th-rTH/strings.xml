@@ -82,8 +82,11 @@
     <string name="welcome">ยินดีต้อนรับ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">เลือกภาษาที่คุณต้องการใช้สำหรับ Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">เบา + %1$s</string>
     <string name="select_at_least_one_lang">เลือกอย่างน้อยหนึ่งภาษา!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">ตัวจัดการ Devs</string>
     <string name="sources">แหล่งที่มา</string>
