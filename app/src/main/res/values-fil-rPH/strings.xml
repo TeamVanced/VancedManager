@@ -82,8 +82,11 @@
     <string name="welcome">Maligayang Pagdating</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Piliin ang ikinagugustong (mga) wika sa Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Puti + %1$s</string>
     <string name="select_at_least_one_lang">Kumuha ka kahit isang wika!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
     <string name="sources">Pinagkukunan</string>
