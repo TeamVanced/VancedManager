@@ -82,8 +82,11 @@
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Odaberite željeni jezika za Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Svjetla + %1$s</string>
     <string name="select_at_least_one_lang">Odaberite najmanje jedan jezik!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Razvijatelji Vanced upravitelja</string>
     <string name="sources">Izvori</string>
