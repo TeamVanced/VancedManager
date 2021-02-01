@@ -82,8 +82,11 @@
     <string name="welcome">Добро дошли</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Одаберите језик за коришћење Vanced апликације</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Осветљење+%1$s</string>
     <string name="select_at_least_one_lang">Одаберите барем један језик!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Менаџер развоја</string>
     <string name="sources">Извор</string>
