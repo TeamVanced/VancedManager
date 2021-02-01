@@ -82,8 +82,11 @@
     <string name="welcome">بەخێربێیت</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">زمانێک هەڵبژێرە بۆ بەکارهێنانی بەرنامەکە</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">ڕووناک + %1$s</string>
     <string name="select_at_least_one_lang">لانیکەم زمانێک دیاریبکە!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
     <string name="sources">سەرچاوەکان</string>
