@@ -82,8 +82,11 @@
     <string name="welcome">வரவேற்பு</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">வேன்ஸ்டுக்காக உங்களுக்கு விருப்பமான மொழியைத் தேர்வுசெய்க</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">ஒளி + %1$s</string>
     <string name="select_at_least_one_lang">குறைந்தது ஒரு மொழியையாவது தேர்ந்தெடுக்கவும்!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">மேலாளர் டெவலப்பர்கள்</string>
     <string name="sources">மூலம்</string>
