@@ -82,8 +82,11 @@
     <string name="welcome">مرحباً بك</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">اختر لغتك(لغاتك) المفضلة لڤانسد</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">فاتح + %1$s</string>
     <string name="select_at_least_one_lang">اختر لغة واحدة على الأقل!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">مطوري المدير</string>
     <string name="sources">المصادر</string>
