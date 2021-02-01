@@ -12,6 +12,7 @@ import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
 import com.vanced.manager.ui.core.ThemedMaterialRadioButton
 import com.vanced.manager.utils.defPrefs
+import com.vanced.manager.utils.formatVersion
 import com.vanced.manager.utils.getCheckedButtonTag
 
 class AppVersionSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRadioButtonBinding>() {
@@ -75,7 +76,7 @@ class AppVersionSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRa
     private fun loadBoxes() =
         arguments?.getStringArrayList(TAG_VERSIONS)?.map { version ->
             ThemedMaterialRadioButton(requireActivity()).apply {
-                text = version
+                text = version.formatVersion(requireActivity())
                 tag = version
                 textSize = 18f
             }

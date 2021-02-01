@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.dialogs
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -45,7 +46,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
             val vancedVersionsConv = vancedVersions.value?.value?.convertToAppVersions()
             vancedInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.vanced))
             vancedTheme.text = getString(R.string.chosen_theme, installPrefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
-            vancedVersion.text = getString(R.string.chosen_version, defPrefs.getString("vanced_version", "latest"))
+            vancedVersion.text = getString(R.string.chosen_version, defPrefs.getString("vanced_version", "latest")?.formatVersion(requireActivity()))
             vancedLang.text = getString(R.string.chosen_lang, showLang)
             openThemeSelector.setOnClickListener {
                 dismiss()

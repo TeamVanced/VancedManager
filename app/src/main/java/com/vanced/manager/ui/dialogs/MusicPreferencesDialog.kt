@@ -36,7 +36,7 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
         with(binding) {
             val musicVersionsConv = musicVersions.value?.value?.convertToAppVersions()
             musicInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.music))
-            musicVersion.text = getString(R.string.chosen_version, prefs.getString("music_version", "latest"))
+            musicVersion.text = getString(R.string.chosen_version, prefs.getString("music_version", "latest")?.formatVersion(requireActivity()))
             openVersionSelector.setOnClickListener {
                 dismiss()
                 showDialog(

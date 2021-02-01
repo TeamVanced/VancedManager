@@ -32,8 +32,12 @@ fun DialogFragment.show(activity: FragmentActivity) {
 
 fun List<String>.convertToAppVersions(): List<String> = listOf("latest") + reversed()
 
+fun String.formatVersion(context: Context): String = if (this == "latest") context.getString(R.string.install_latest) else this
+
 fun String.convertToAppTheme(context: Context): String {
-    return context.getString(R.string.light_plus_other, this.capitalize(Locale.ROOT))
+    return with(context) {
+        getString(R.string.light_plus_other, if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black))
+    }
 }
 
 fun String.getLatestAppVersion(versions: List<String>): String = if (this == "latest") versions.reversed()[0] else this

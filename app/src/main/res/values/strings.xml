@@ -90,8 +90,11 @@
 
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Light + %1$s</string>
     <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
 
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
