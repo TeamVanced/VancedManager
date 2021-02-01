@@ -82,8 +82,11 @@
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Vaalea + %1$s</string>
     <string name="select_at_least_one_lang">Valitse ainakin yksi kieli!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Managerin kehittäjät</string>
     <string name="sources">Lähdekoodi</string>
