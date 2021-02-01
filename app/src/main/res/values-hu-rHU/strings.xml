@@ -77,14 +77,19 @@ Akarod telepíteni?</string>
     <string name="app_installation_preferences">%1$s Telepítés személyreszabása</string>
     <string name="version">Verzió</string>
     <string name="microg_bug">Hiba a microG-ben</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Egy, a microG-ben jelenlévő hiba miatt, a Vanced 16+ verzióihoz először telepítsd a 15.43.32-es verziót, nyisd meg, jelentkezz be, majd csak ezután tudod telepíteni a 16-os vagy újabb verziót.
+Akarod folytatni a 15.43.32-es verzió telepítésével?</string>
+    <string name="microg_bug_summary_music">Egy, a microG-ben jelenlévő hiba miatt, a Vanced Music 4.11+ verzióihoz először telepítsd a 4.07.51-es verziót, nyisd meg, jelentkezz be, majd csak ezután tudod telepíteni a 4.11-es vagy újabb verziót.
+Akarod folytatni a 4.07.51-es verzió telepítésével?</string>
     <string name="please_be_patient">Kérjük legyen türelmes... </string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced nyelvének kiválasztása</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Világos + %1$s</string>
     <string name="select_at_least_one_lang">Válasszon ki legalább egy nyelvet!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Fejlesztői Menedzser</string>
     <string name="sources">Források</string>
