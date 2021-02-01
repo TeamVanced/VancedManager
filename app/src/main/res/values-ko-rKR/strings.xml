@@ -76,8 +76,8 @@
     <string name="app_installation_preferences">%1$s 설치 설정</string>
     <string name="version">버전</string>
     <string name="microg_bug">microG의 버그</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in microG, installing Music 4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">주요 microG의 버그로 인해 v15.43.32를 먼저 설치하고 연 다음 로그인해야 v16 이상을 설치할 수 있습니다. v15.43.32 설치를 진행하시겠습니까?</string>
+    <string name="microg_bug_summary_music">주요 microG의 버그로 인해 v4.07.51를 먼저 설치하고 연 다음 로그인해야 Music v4.11 이상을 설치할 수 있습니다. v4.07.51 설치를 진행하시겠습니까?</string>
     <string name="please_be_patient">잠시만 기다려 주세요...</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
