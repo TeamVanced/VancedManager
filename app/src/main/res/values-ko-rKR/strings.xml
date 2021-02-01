@@ -82,8 +82,11 @@
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced에서 선호하는 언어를 선택해주세요</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">라이트 + %1$s</string>
     <string name="select_at_least_one_lang">적어도 하나의 언어를 선택해주세요!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 개발자</string>
     <string name="sources">소스 코드</string>
