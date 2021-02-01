@@ -82,8 +82,11 @@
     <string name="welcome">Bem-Vindo</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Escolha a(s) sua(s) língua(s) de preferência para o Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Claro + %1$s</string>
     <string name="select_at_least_one_lang">Selecione ao menos um idioma!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Desenvolvedores do Manager</string>
     <string name="sources">Fontes</string>
