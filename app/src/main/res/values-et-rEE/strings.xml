@@ -76,14 +76,17 @@
     <string name="app_installation_preferences">%1$s Paigalduseelistused</string>
     <string name="version">Versioon</string>
     <string name="microg_bug">microG viga</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Seoses microG pealiini veaga, vajab Vanced v16+ paigaldus ennem v15.43.32 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v15.43.32 paigaldusega?</string>
+    <string name="microg_bug_summary_music">Seoses microG pealiini veaga, vajab Music v4.11+ paigaldus ennem v4.07.51 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v4.11 või uuema. Kas soovite jätkata v4.07.51 paigaldusega?</string>
     <string name="please_be_patient">Palun olge kannatlik…</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valige eelistatud keel(ed) Vanced jaoks</string>
+    <string name="install_latest">Uusim</string>
     <string name="light_plus_other">Hele + %1$s</string>
     <string name="select_at_least_one_lang">Vali vähemalt üks keel!</string>
+    <string name="vanced_black">Must</string>
+    <string name="vanced_dark">Tume</string>
     <!-- About Page -->
     <string name="manager_dev">Halduri arendajad</string>
     <string name="sources">Allikad</string>
