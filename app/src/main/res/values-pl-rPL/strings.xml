@@ -77,16 +77,16 @@
     <string name="version">Wersja</string>
     <string name="microg_bug">Błąd w microG</string>
     <string name="microg_bug_summary">Ze względu na błąd w microG, instalacja Vanced 16+ wymaga najpierw instalacji v15.43.32, otwórz go, a następnie zaloguj się i tylko wtedy możesz zainstalować v16 i nowsze. Czy chcesz kontynuować instalację v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary_music">Ze względu na błąd w microG głównej, instalacja Muzyka v4.11+ wymaga najpierw instalacji v4.07.51, otwórz go, a następnie zaloguj się i tylko wtedy możesz zainstalować v4.11 i nowsze. Czy chcesz kontynuować instalację v4.07.51?</string>
     <string name="please_be_patient">Prosimy o cierpliwość…</string>
     <string name="welcome">Witaj</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wybierz preferowany język(i) dla Vanced</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Najnowsza</string>
     <string name="light_plus_other">Jasny + %1$s</string>
     <string name="select_at_least_one_lang">Wybierz co najmniej jeden język!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Czarny</string>
+    <string name="vanced_dark">Ciemny</string>
     <!-- About Page -->
     <string name="manager_dev">Deweloperzy Menedżera</string>
     <string name="sources">Źródła</string>
