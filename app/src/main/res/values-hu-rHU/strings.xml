@@ -85,11 +85,11 @@ Akarod folytatni a 4.07.51-es verzió telepítésével?</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced nyelvének kiválasztása</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Legújabb</string>
     <string name="light_plus_other">Világos + %1$s</string>
     <string name="select_at_least_one_lang">Válasszon ki legalább egy nyelvet!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Fekete</string>
+    <string name="vanced_dark">Sötét</string>
     <!-- About Page -->
     <string name="manager_dev">Fejlesztői Menedzser</string>
     <string name="sources">Források</string>
