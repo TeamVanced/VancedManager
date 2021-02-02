@@ -82,11 +82,11 @@
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Επιλέξτε την(/ις) γλώσσα(/ες) που επιθυμείτε για το Vanced</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Τελευταία</string>
     <string name="light_plus_other">Ανοιχτόχρωμο + %1$s</string>
     <string name="select_at_least_one_lang">Επιλέξτε τουλάχιστον μια γλώσσα!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Μαύρο</string>
+    <string name="vanced_dark">Σκουρόχρωμο</string>
     <!-- About Page -->
     <string name="manager_dev">Προγραμματιστές Διαχειριστή Vanced</string>
     <string name="sources">Πηγές</string>
