@@ -82,11 +82,11 @@
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Terbaru</string>
     <string name="light_plus_other">Terang + %1$s</string>
     <string name="select_at_least_one_lang">Pilih setidaknya satu bahasa!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Hitam</string>
+    <string name="vanced_dark">Gelap</string>
     <!-- About Page -->
     <string name="manager_dev">Pengembang Manager</string>
     <string name="sources">Sumber</string>
