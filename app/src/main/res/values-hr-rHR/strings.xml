@@ -77,16 +77,16 @@
     <string name="version">Inačica</string>
     <string name="microg_bug">Pogreška u MicroG aplikac.</string>
     <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary_music">Zbog greške u glavnom mikroG-u, instalacija Glazbe v4.11 + prvo zahtijeva da instalirate v4.07.51, otvorite je, a zatim se prijavite i tek tada možete instalirati v4.11 i novije verzije. Želite li nastaviti s instalacijom v4.07.51?</string>
     <string name="please_be_patient">Malo pričekajte…</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Odaberite željeni jezika za Vanced</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Najnovije</string>
     <string name="light_plus_other">Svjetla + %1$s</string>
     <string name="select_at_least_one_lang">Odaberite najmanje jedan jezik!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Crna</string>
+    <string name="vanced_dark">Tamna</string>
     <!-- About Page -->
     <string name="manager_dev">Razvijatelji Vanced upravitelja</string>
     <string name="sources">Izvori</string>
