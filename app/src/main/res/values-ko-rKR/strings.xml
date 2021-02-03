@@ -46,9 +46,9 @@
     <string name="link_title">Chrome 커스텀 탭으로 열기</string>
     <string name="link_custom_tabs">링크가 Chrome 커스텀 탭으로 열립니다</string>
     <string name="system_default">시스템 기본값</string>
-    <string name="script_save_failed">새 시간 값을 저장할 수 없습니다</string>
-    <string name="script_sleep_timer">루트 스크립트 지연 시간</string>
-    <string name="script_sleep_timer_description">/data/adb/service.d/app.sh 스크립트에 쓰이는 지연 시간을 조정하십시오, 마운트 관련 문제를 해결하는 데 유용합니다.</string>
+    <string name="script_save_failed">새 시간 값을 저장할 수 없습니다.</string>
+    <string name="script_sleep_timer">루트 스크립트 대기 시간</string>
+    <string name="script_sleep_timer_description">/data/adb/service.d/app.sh 스크립트에 쓰이는 대기 시간을 조정하십시오. 마운팅 관련 문제를 해결하는 데 유용합니다.</string>
     <string name="theme">테마</string>
     <string name="theme_dark">다크 테마</string>
     <string name="theme_light">라이트 테마</string>
