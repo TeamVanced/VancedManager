@@ -21,7 +21,8 @@
             android:layout_below="@id/serviced_header"
             android:layout_marginTop="24dp"
             android:valueFrom="1"
-            android:valueTo="15"/>
+            android:valueTo="15"
+            app:haloColor=""/>
 
         <RelativeLayout
             android:layout_width="match_parent"
