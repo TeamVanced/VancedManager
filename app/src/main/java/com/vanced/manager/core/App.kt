@@ -2,13 +2,13 @@ package com.vanced.manager.core
 
 import android.app.Application
 import android.content.res.Configuration
-import android.util.Log
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
 import com.crowdin.platform.CrowdinConfig
 import com.crowdin.platform.data.model.AuthConfig
 import com.crowdin.platform.data.remote.NetworkType
 import com.vanced.manager.BuildConfig.*
+import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.loadJson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -35,7 +35,7 @@ open class App: Application() {
                     withSourceLanguage("en")
                     withAuthConfig(AuthConfig(CROWDIN_CLIENT_ID, CROWDIN_CLIENT_SECRET, null))
                     withScreenshotEnabled()
-                    Log.d("test", "crowdin credentials")
+                    log("test", "crowdin credentials")
                 }
             }.build()
         )

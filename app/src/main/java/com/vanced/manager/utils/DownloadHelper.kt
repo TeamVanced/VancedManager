@@ -4,12 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
-import android.util.Log
 import androidx.core.content.FileProvider
 import androidx.lifecycle.MutableLiveData
 import com.vanced.manager.R
 import com.vanced.manager.library.network.providers.createService
 import com.vanced.manager.model.ProgressModel
+import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -55,24 +55,24 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                         } else {
                             onError("Could not save file")
                             downloadProgress.value?.downloadProgress?.postValue(0)
-                            Log.d("VMDownloader", "Failed to save file: $url")
+                            log("VMDownloader", "Failed to save file: $url")
                         }
                     }
                 } else {
                     onError(response.errorBody().toString())
                     downloadProgress.value?.downloadProgress?.postValue(0)
-                    Log.d("VMDownloader", "Failed to download file: $url")
+                    log("VMDownloader", "Failed to download file: $url")
                 }
             }
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 if (call.isCanceled) {
-                    Log.d("VMDownloader", "Download canceled")
+                    log("VMDownloader", "Download canceled")
                     downloadProgress.value?.downloadProgress?.postValue(0)
                 } else {
                     onError(t.stackTraceToString())
                     downloadProgress.value?.downloadProgress?.postValue(0)
-                    Log.d("VMDownloader", "Failed to download file: $url")
+                    log("VMDownloader", "Failed to download file: $url")
                 }
             }
 

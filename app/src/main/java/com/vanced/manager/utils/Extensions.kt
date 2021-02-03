@@ -3,7 +3,6 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.DialogInterface
-import android.util.Log
 import android.widget.RadioGroup
 import androidx.core.graphics.ColorUtils
 import androidx.fragment.app.DialogFragment
@@ -15,6 +14,7 @@ import com.google.android.material.radiobutton.MaterialRadioButton
 import com.topjohnwu.superuser.io.SuFile
 import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.R
+import com.vanced.manager.utils.AppUtils.log
 import java.util.*
 
 fun RadioGroup.getCheckedButtonTag(): String? {
@@ -25,7 +25,7 @@ fun DialogFragment.show(activity: FragmentActivity) {
     try {
         show(activity.supportFragmentManager, "")
     } catch (e: Exception) {
-        Log.d("VMUI", e.stackTraceToString())
+        log("VMUI", e.stackTraceToString())
     }
 
 }

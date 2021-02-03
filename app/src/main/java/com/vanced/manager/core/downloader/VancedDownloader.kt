@@ -2,11 +2,11 @@ package com.vanced.manager.core.downloader
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.util.Log
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.logEvent
 import com.vanced.manager.R
 import com.vanced.manager.utils.*
+import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.validateTheme
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.DownloadHelper.download
@@ -58,7 +58,7 @@ object VancedDownloader {
         try {
             downloadSplits(context)
         } catch (e: Exception) {
-            Log.d("VMDownloader", e.stackTraceToString())
+            log("VMDownloader", e.stackTraceToString())
             downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, "Vanced"))
         }
 

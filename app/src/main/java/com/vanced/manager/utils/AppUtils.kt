@@ -3,6 +3,11 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageInstaller
+import android.graphics.Color
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
@@ -23,6 +28,18 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     const val microgPkg = "com.mgoogle.android.gms"
     const val managerPkg = APPLICATION_ID
     const val playStorePkg = "com.android.vending"
+
+    val logs = mutableListOf<Spannable>()
+
+    fun log(tag: String, message: String) {
+        logs.add(
+            SpannableString("$tag: $message\n").apply {
+                setSpan(ForegroundColorSpan(Color.CYAN), 0, tag.length + 1, 0)
+                setSpan(ForegroundColorSpan(Color.GREEN), tag.length + 2, tag.length + message.length + 2, 0)
+            }
+        )
+        Log.d(tag, message)
+    }
 
     fun sendRefresh(context: Context): Job {
         return launch {
