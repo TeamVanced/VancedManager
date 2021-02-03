@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.dialogs
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -45,8 +44,8 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
             }
             val vancedVersionsConv = vancedVersions.value?.value?.convertToAppVersions()
             vancedInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.vanced))
-            vancedTheme.text = getString(R.string.chosen_theme, installPrefs.getString("theme", "dark")?.convertToAppTheme(requireActivity()))
-            vancedVersion.text = getString(R.string.chosen_version, defPrefs.getString("vanced_version", "latest")?.formatVersion(requireActivity()))
+            vancedTheme.text = getString(R.string.chosen_theme, installPrefs.theme?.convertToAppTheme(requireActivity()))
+            vancedVersion.text = getString(R.string.chosen_version, defPrefs.vancedVersion?.formatVersion(requireActivity()))
             vancedLang.text = getString(R.string.chosen_lang, showLang)
             openThemeSelector.setOnClickListener {
                 dismiss()
@@ -80,7 +79,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                     )
                 }
 
-                if (defPrefs.managerVariant == "nonroot" && isMicrogBroken && installPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))?.take(2)?.toIntOrNull() == 16 && !isPackageInstalled(vancedPkg, requireActivity().packageManager)) {
+                if (defPrefs.managerVariant == "nonroot" && isMicrogBroken && defPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))?.take(2)?.toIntOrNull() == 16 && !isPackageInstalled(vancedPkg, requireActivity().packageManager)) {
                     MaterialAlertDialogBuilder(requireActivity()).apply {
                         setTitle(R.string.microg_bug)
                         setMessage(R.string.microg_bug_summary)

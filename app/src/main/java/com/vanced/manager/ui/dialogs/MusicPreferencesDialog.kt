@@ -20,7 +20,6 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
     }
 
     private val prefs by lazy { requireActivity().defPrefs }
-    private val installPrefs by lazy { requireActivity().installPrefs }
 
     override fun binding(
         inflater: LayoutInflater,
@@ -36,7 +35,7 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
         with(binding) {
             val musicVersionsConv = musicVersions.value?.value?.convertToAppVersions()
             musicInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.music))
-            musicVersion.text = getString(R.string.chosen_version, prefs.getString("music_version", "latest")?.formatVersion(requireActivity()))
+            musicVersion.text = getString(R.string.chosen_version, prefs.musicVersion?.formatVersion(requireActivity()))
             openVersionSelector.setOnClickListener {
                 dismiss()
                 showDialog(
@@ -47,8 +46,8 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
                 )
             }
             musicInstall.setOnClickListener {
-                dismiss()
                 fun downloadMusic(version: String? = null) {
+                    dismiss()
                     showDialog(
                         AppDownloadDialog.newInstance(
                             app = getString(R.string.music),
@@ -56,10 +55,8 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
                         )
                     )
                 }
-
-
-                if (prefs.managerVariant == "nonroot" && isMicrogBroken && installPrefs.musicVersion?.getLatestAppVersion(
-                        vancedVersions.value?.value ?: listOf(""))?.take(3)?.toIntOrNull() ?: 0 >= 411 && !PackageHelper.isPackageInstalled(
+                if (prefs.managerVariant == "nonroot" && isMicrogBroken && prefs.musicVersion?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))?.replace(".", "")?.take(3)?.toIntOrNull() ?: 0 >= 411 &&
+                    !PackageHelper.isPackageInstalled(
                         AppUtils.musicPkg,
                         requireActivity().packageManager
                     )
