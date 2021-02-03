@@ -46,9 +46,9 @@
     <string name="link_title">Sử dụng Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Các liên kết sẽ mở trong Chrome Custom Tabs</string>
     <string name="system_default">Mặc định hệ thống</string>
-    <string name="script_save_failed">Không thể lưu giá trị thời gian mới</string>
-    <string name="script_sleep_timer">Thời gian ngủ của tập lệnh Root</string>
-    <string name="script_sleep_timer_description">Điều chỉnh giá trị thời gian ngủ được sử dụng trong tập lệnh /data/adb/service.d/app.sh, hữu ích để khắc phục sự cố gắn kết</string>
+    <string name="script_save_failed">Lưu giá trị thời gian mới thất bại</string>
+    <string name="script_sleep_timer">Thời gian ngủ của tập lệnh root</string>
+    <string name="script_sleep_timer_description">Điều chỉnh giá trị thời gian ngủ được sử dụng trong tập lệnh /data/adb/service.d/app.sh, hữu ích khi khắc phục các vấn đề về mounting</string>
     <string name="theme">Nền</string>
     <string name="theme_dark">Nền tối</string>
     <string name="theme_light">Nền sáng</string>
@@ -76,17 +76,17 @@
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
     <string name="version">Phiên bản</string>
     <string name="microg_bug">Lỗi trong microG</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Do một lỗi trong microG gốc, cài đặt Vanced v16+ yêu cầu bạn trước hết phải cài v15.43.32, mở nó và đăng nhập, chỉ sau đó bạn mới có thể cài đặt v16+. Tiến hành cài đặt v15.43.32?</string>
+    <string name="microg_bug_summary_music">Do một lỗi trong microG gốc, cài đặt Music v4.11+ yêu cầu bạn trước hết phải cài v4.07.51, mở nó và đăng nhập, chỉ sau đó bạn mới có thể cài đặt v4.11+. Tiến hành cài đặt v4.07.51?</string>
     <string name="please_be_patient">Hãy kiên nhẫn…</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Chọn ngôn ngữ mong muốn cho Vanced</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Mới nhất</string>
     <string name="light_plus_other">Sáng + %1$s</string>
     <string name="select_at_least_one_lang">Chọn ít nhất một ngôn ngữ!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Đen</string>
+    <string name="vanced_dark">Tối</string>
     <!-- About Page -->
     <string name="manager_dev">Đội ngũ phát triển</string>
     <string name="sources">Nguồn</string>
@@ -101,7 +101,7 @@
     <string name="installation_aborted">Cài đặt không thành công vì người dùng đã hủy cài đặt.</string>
     <string name="installation_blocked">Cài đặt không thành công vì người dùng đã chặn cài đặt.</string>
     <string name="installation_downgrade">Cài đặt không thành công do người dùng đã cố gắng hạ cấp gói. Gỡ cài đặt các bản cập nhật khỏi ứng dụng YouTube có sẵn, sau đó thử lại.</string>
-    <string name="installation_conflict">Cài đặt thất bại do có xung đột của ứng dụng với ứng dụng đã cài sẵn. Gỡ bỏ phiên bản hiện tại của ứng dụng và thử lại.</string>
+    <string name="installation_conflict">Cài đặt thất bại do có xung đột với ứng dụng đã được cài đặt trước đó. Gỡ cài đặt phiên bản hiện tại của ứng dụng rồi thử lại.</string>
     <string name="installation_failed">Cài đặt thất bại do lỗi không xác định, tham gia Telegram hoặc Discord của chúng tôi để được hỗ trợ thêm.</string>
     <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
     <string name="installation_invalid">Cài đặt thất bại do các tệp tin apk bị lỗi, xin hãy thử lại.</string>
