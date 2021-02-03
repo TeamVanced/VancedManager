@@ -76,17 +76,17 @@
     <string name="app_installation_preferences">%1$s Preferencias de instalación</string>
     <string name="version">Versión</string>
     <string name="microg_bug">Error en microG</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Debido a un error en microG, para poder instalar Vanced v16+ hay que instalar primero la versión v15.43.32, abrirla, iniciar sesión y solo entonces podrás instalar la versión v16 y superior. ¿Quieres instalar la versión v15.43.32?</string>
+    <string name="microg_bug_summary_music">Debido a un error en microG, para poder instalar Music v4.11+ hay que instalar primero la versión v4.07.51, abrirla, iniciar sesión y solo entonces podrás instalar la versión v4.11 y superior. ¿Quieres instalar la versión v4.07.51?</string>
     <string name="please_be_patient">Por favor, sé paciente…</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Más reciente</string>
     <string name="light_plus_other">Claro + %1$s</string>
     <string name="select_at_least_one_lang">¡Seleccione al menos un idioma!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Negro</string>
+    <string name="vanced_dark">Obscuro</string>
     <!-- About Page -->
     <string name="manager_dev">Desarrolladores del Manager</string>
     <string name="sources">Fuentes</string>
