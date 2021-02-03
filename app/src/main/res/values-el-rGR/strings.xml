@@ -76,8 +76,8 @@
     <string name="app_installation_preferences">Προτιμήσεις Εγκατάστασης του %1$s</string>
     <string name="version">Έκδοση</string>
     <string name="microg_bug">Σφάλμα στο microG</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Λόγο ενός σφάλματος του microG, για να εγκαταστήσετε το Vanced έκδοσης v16+ πρέπει πρώτα να εγκαταστήσετε την έκδοση v15.43.32, να την ανοίξετε, και να συνδεθείτε στον λογαριασμό σας, μόνο τότε μπορείτε να εγκαταστήσετε την έκδοση v16 και άνω. Θέλετε να συνεχίσετε με την εγκατάσταση της έκδοσης v15.43.32;</string>
+    <string name="microg_bug_summary_music">Λόγο ενός σφάλματος του microG, για να εγκαταστήσετε το YouTube Music έκδοσης v4.11+ πρέπει πρώτα να εγκαταστήσετε την έκδοση v4.07.51, να την ανοίξετε, και να συνδεθείτε στον λογαριασμό σας, μόνο τότε μπορείτε να εγκαταστήσετε την έκδοση v4.11 και άνω. Θέλετε να συνεχίσετε με την εγκατάσταση της έκδοσης v4.07.51;</string>
     <string name="please_be_patient">Παρακαλώ να είστε υπομονετικοί…</string>
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
