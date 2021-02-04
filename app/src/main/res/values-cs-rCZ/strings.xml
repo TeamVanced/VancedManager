@@ -8,6 +8,7 @@
     <string name="select_apps">Vyberte své aplikace</string>
     <!-- Main Activity -->
     <string name="title_about">O aplikaci</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Záznamy</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Nastavení</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Nepodařilo se najít soubor apk pro černý/tmavý motiv v úložišti, zkuste to prosím znovu.</string>
     <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
     <string name="installation_blocked">Instalace se nezdařila, protože uživatel zablokoval instalaci.</string>
-    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace YouTube a zkuste to znovu.</string>
+    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace výchozí aplikace a zkuste to znovu.</string>
     <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a zkuste to znovu.</string>
     <string name="installation_failed">Instalace se nezdařila z neznámých důvodů. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
     <string name="installation_incompatible">Instalace se nezdařila, protože instalační soubor není kompatibilní s vaším zařízením. Vymažte stažené soubory v Nastavení a zkuste to znovu.</string>
