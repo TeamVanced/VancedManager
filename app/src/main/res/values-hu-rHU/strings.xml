@@ -8,6 +8,7 @@
     <string name="select_apps">Válaszd ki az Appot</string>
     <!-- Main Activity -->
     <string name="title_about">Rólunk</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Naplók</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Beállítások</string>
@@ -107,8 +108,7 @@ Akarod folytatni a 4.07.51-es verzió telepítésével?</string>
     <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
     <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
-    <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó régebbi verziót próbált telepíteni.
-Távolítsd el a gyári YouTube app frissítéseit, majd próbáld újra.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsd el a jelenlegi verziót és próbáld újra.</string>
     <string name="installation_failed">A telepítés ismeretlen okok miatt nem sikerült, támogatásért csatlakozz a Telegram vagy a Discord csoportunkhoz.</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
