@@ -8,6 +8,7 @@
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">স্টোরেজ থেকে কালো / অন্ধকান থিমের জন্য apk ফাইল সনাক্ত করতে ব্যর্থ হয়েছে, দয়া করে আবার চেষ্টা করুন।.</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।.</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের সাথে বেমানান। সেটিংসে ডাউনলোড করা ফাইল সাফ করুন, তারপরে আবার চেষ্টা করুন।.</string>
