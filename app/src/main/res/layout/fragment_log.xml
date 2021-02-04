@@ -25,7 +25,7 @@
         android:id="@+id/log_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="?colorPrimary"
         android:src="@drawable/ic_baseline_save_24"
