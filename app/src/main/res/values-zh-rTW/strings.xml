@@ -8,6 +8,7 @@
     <string name="select_apps">選擇您需要的應用程式</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
     <string name="update_manager">更新 Manager</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Manager 更新中心</string>
     <string name="update_not_found">沒有更新</string>
     <string name="variant">版本</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">進階設定</string>
     <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
