@@ -8,6 +8,7 @@
     <string name="select_apps">Dooro apps-ka</string>
     <!-- Main Activity -->
     <string name="title_about">Anaga</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Maamule</string>
     <string name="title_settings">Fadhiga</string>
     <string name="update_manager">Cusboonaysii</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
     <string name="update_not_found">Majiro wax cusub</string>
     <string name="variant">Nooca</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Dheeraad ah</string>
     <string name="app_install_files_detected">%1$s faylashiisii kushubi lahaa ayaa la helay!</string>
