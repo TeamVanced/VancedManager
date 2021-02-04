@@ -8,6 +8,7 @@
     <string name="select_apps">Изберете приложения</string>
     <!-- Main Activity -->
     <string name="title_about">Относно</string>
+    <string name="title_logs">Логове</string>
     <string name="title_home">Мениджър</string>
     <string name="title_settings">Настройки</string>
     <string name="update_manager">Обнови Vanced Manager</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Център за актуализация</string>
     <string name="update_not_found">Няма актуализации</string>
     <string name="variant">Вариант</string>
+    <!-- Logs -->
+    <string name="logs_saved">Успешно запазени логове</string>
+    <string name="logs_not_saved">Не могат да се запазят логовете</string>
     <!-- Dialogs -->
     <string name="advanced">Разширени</string>
     <string name="app_install_files_detected">%1$s инсталационни файлове са открити!</string>
