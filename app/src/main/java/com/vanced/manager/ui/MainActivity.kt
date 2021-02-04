@@ -1,6 +1,7 @@
 package com.vanced.manager.ui
 
 import android.content.ActivityNotFoundException
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
@@ -27,7 +28,9 @@ import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.utils.*
+import com.vanced.manager.utils.AppUtils.faqpkg
 import com.vanced.manager.utils.AppUtils.log
+import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 
 class MainActivity : AppCompatActivity() {
@@ -115,12 +118,17 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.toolbar_faq -> {
                 try {
-                    startActivity(
+                    val intent = if (isPackageInstalled(faqpkg, packageManager)) {
+                        Intent().apply {
+                            component = ComponentName(faqpkg, "$faqpkg.ui.MainActivity")
+                        }
+                    } else {
                         Intent(Intent.ACTION_VIEW).apply {
                             data = Uri.parse("https://play.google.com/store/apps/details?id=com.vanced.faq")
                             setPackage("com.android.vending")
                         }
-                    )
+                    }
+                    startActivity(intent)
                     true
                 } catch (e: ActivityNotFoundException) {
                     false
