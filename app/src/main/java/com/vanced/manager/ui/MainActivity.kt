@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     } else {
                         Intent(Intent.ACTION_VIEW).apply {
-                            data = Uri.parse("https://play.google.com/store/apps/details?id=com.vanced.faq")
+                            data = Uri.parse("https://play.google.com/store/apps/details?id=$faqpkg")
                             setPackage("com.android.vending")
                         }
                     }
