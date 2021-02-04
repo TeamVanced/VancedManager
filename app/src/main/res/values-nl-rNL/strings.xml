@@ -8,6 +8,7 @@
     <string name="select_apps">Apps selecteren</string>
     <!-- Main Activity -->
     <string name="title_about">Over</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Instellingen</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Kan het apk-bestand voor black/dark thema niet vinden in opslag. Probeer het opnieuw.</string>
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_blocked">Installatie mislukt omdat de gebruiker de installatie heeft geblokkeerd.</string>
-    <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard YouTube-app en probeer het daarna opnieuw.</string>
+    <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard app en probeer het daarna opnieuw.</string>
     <string name="installation_conflict">Installatie mislukt omdat de app conflicten heeft met een reeds geïnstalleerde app. Verwijder de huidige versie van die app en probeer het opnieuw.</string>
     <string name="installation_failed">Installatie mislukt om onbekende redenen, word lid van onze Telegram of Discord voor verdere ondersteuning.</string>
     <string name="installation_incompatible">Installatie mislukt omdat het installatiebestand niet compatibel is met jouw apparaat. Wis de gedownloade bestanden in de instellingen en probeer het opnieuw.</string>
