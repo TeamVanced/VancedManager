@@ -8,6 +8,7 @@
     <string name="select_apps">เลือกแอปพลิเคชันของคุณ</string>
     <!-- Main Activity -->
     <string name="title_about">ข้อมูลเกี่ยวกับทีมนักพัฒนา</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">ตัวจัดการ</string>
     <string name="title_settings">ตั้งค่า</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">ไม่พบไฟล์ apk สำหรับธีมสีดำ / สีเข้ม จากที่เก็บข้อมูล โปรดลองอีกครั้ง</string>
     <string name="installation_aborted">การติดตั้งล้มเหลวเนื่องจากผู้ใช้ยกเลิกการติดตั้ง</string>
     <string name="installation_blocked">การติดตั้งล้มเหลวเนื่องจากผู้ใช้บล็อกการติดตั้ง</string>
-    <string name="installation_downgrade">การติดตั้งล้มเหลว เนื่องจากผู้ใช้พยายามดาวน์เกรดแพ็กเกจ. กรุณาถอนการติดตั้งการอัปเดตจากแอป YouTube แล้วลองติดตั้งใหม่อีกครั้ง</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">การติดตั้งล้มเหลวโดยไม่ทราบสาเหตุ ลองเข้าร่วม Telegram หรือ Discord ของเรา เพื่อรับการสนับสนุนเพิ่มเติม</string>
     <string name="installation_incompatible">การติดตั้งล้มเหลวเนื่องจากไฟล์การติดตั้งเข้ากันไม่ได้กับอุปกรณ์ของคุณ กรุณาล้างไฟล์ที่ดาวน์โหลดในการตั้งค่า แล้วลองอีกครั้ง</string>
