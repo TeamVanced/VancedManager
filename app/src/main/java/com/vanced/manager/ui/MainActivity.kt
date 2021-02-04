@@ -1,8 +1,10 @@
 package com.vanced.manager.ui
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -110,6 +112,19 @@ class MainActivity : AppCompatActivity() {
             R.id.toolbar_log -> {
                 navHost.navigate(HomeFragmentDirections.toLogFragment())
                 true
+            }
+            R.id.toolbar_faq -> {
+                try {
+                    startActivity(
+                        Intent(Intent.ACTION_VIEW).apply {
+                            data = Uri.parse("https://play.google.com/store/apps/details?id=com.vanced.faq")
+                            setPackage("com.android.vending")
+                        }
+                    )
+                    true
+                } catch (e: ActivityNotFoundException) {
+                    false
+                }
             }
             R.id.toolbar_update_manager -> {
                 ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "manager_update")

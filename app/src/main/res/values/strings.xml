@@ -10,6 +10,7 @@
 
     <!-- Main Activity -->
     <string name="title_about">About</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Settings</string>
