@@ -8,6 +8,7 @@
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">স্টোরেজ থেকে কালো/গাঢ় থিমের জন্য এপিকে ফাইল সনাক্ত করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="installation_aborted">ইনস্টল করা যায়নি কারণ ব্যবহারকারী ইনস্টল করা বাতিল করে দিয়েছেন।</string>
     <string name="installation_blocked">ইনস্টল করা যায়নি কারণ ব্যবহারকারী ইনস্টল করা অবরুদ্ধ করেছেন।</string>
-    <string name="installation_downgrade">ইনস্টল করা যায়নি কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করছিলেন। স্টক ইউটিউব অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ইনস্টলেশন ব্যর্থ হয়েছে কারণ অ্যাপ্লিকেশনটি ইতিমধ্যে ইনস্টল হওয়া অ্যাপ্লিকেশানের সাথে দ্বন্দ্ব রয়েছে ts অ্যাপ্লিকেশনটির বর্তমান সংস্করণটি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।.</string>
     <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের উপযুক্ত নয়। সেটিংসে ডাউনলোড করা ফাইল মুছে ফেলুন, তারপরে আবার চেষ্টা করুন।</string>
