@@ -8,6 +8,7 @@
     <string name="select_apps">Välj dina appar</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Hanterare</string>
     <string name="title_settings">Inställningar</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Det gick inte att hitta apk-fil för svart/mörkt tema från lagring, försök igen.</string>
     <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
-    <string name="installation_downgrade">Installationen misslyckades eftersom användaren försökte nedgradera paketet. Avinstallera uppdateringar från lagerappen YouTube, försök sedan igen.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installationen misslyckades eftersom appen står i konflikt med en redan installerad app. Avinstallera den aktuella versionen av Vanced, försök sedan igen.</string>
     <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
     <string name="installation_incompatible">Installationen misslyckades eftersom installationsfilen är inkompatibel med din enhet. Rensa nedladdade filer i Inställningarna och försök igen.</string>
