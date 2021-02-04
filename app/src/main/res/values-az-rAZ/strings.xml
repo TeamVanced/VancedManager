@@ -8,6 +8,7 @@
     <string name="select_apps">Tətbiqlərinizi Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Haqqında</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Menecer</string>
     <string name="title_settings">Tənzimləmələr</string>
     <string name="update_manager">Yeniləmə Meneceri</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Menecer Yeniləmə Mərkəzi</string>
     <string name="update_not_found">Yeniləmə yoxdur</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Qabaqcıl</string>
     <string name="app_install_files_detected">%1$s quraşdırma faylı aşkarlandı!</string>
