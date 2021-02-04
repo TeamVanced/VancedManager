@@ -8,6 +8,7 @@
     <string name="select_apps">ਹੋਰ ਐਪ ਚੁਣੋ</string>
     <!-- Main Activity -->
     <string name="title_about">ਸਾਡੇ ਬਾਰੇ ਵਿੱਚ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">ਮੈਨੇਜਰ</string>
     <string name="title_settings">ਸੈਟਿੰਗਜ਼</string>
     <string name="update_manager">ਅਪਡੇਟ ਮੈਨੇਜਰ</string>
@@ -57,6 +58,9 @@
     <string name="update_center">ਮੈਨੇਜਰ ਅਪਡੇਟ ਕੇਂਦਰ</string>
     <string name="update_not_found">ਕੋਈ ਨਵੇਂ ਅਪਡੇਟਸ ਨਹੀਂ</string>
     <string name="variant">ਕਿਸਮ</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">ਉੱਨਤ</string>
     <string name="app_install_files_detected">%1$s ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਲੱਭੀਆਂ!</string>
