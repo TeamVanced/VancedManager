@@ -8,6 +8,7 @@
     <string name="select_apps">ਹੋਰ ਐਪ ਚੁਣੋ</string>
     <!-- Main Activity -->
     <string name="title_about">ਸਾਡੇ ਬਾਰੇ ਵਿੱਚ</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">ਮੈਨੇਜਰ</string>
     <string name="title_settings">ਸੈਟਿੰਗਜ਼</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">ਸਟੋਰੇਜ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_aborted">ਇੰਸਟਾਲ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਰੱਦ ਕਰ ਦਿੱਤੀ.</string>
     <string name="installation_blocked">ਇੰਸਟਾਲੇਸ਼ਨ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਬਲਾਕ ਕਰ ਦਿੱਤੀ.</string>
-    <string name="installation_downgrade">ਇੰਸਟਾਲੇਸ਼ਨ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਪੈਕਜ ਨੂੰ ਡਾਉਣਗਰੇਡ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ. ਅਸਲ YouTube ਐਪ ਤੋਂ ਅਪਡੇਟ ਅਨਇੰਸਟਾਲ ਕਰੋ, ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ਸਥਾਪਨਾ ਅਸਫਲ ਕਿਉਂਕਿ ਐਪ ਪਹਿਲਾਂ ਤੋਂ ਸਥਾਪਤ ਐਪ ਨਾਲ ਟਕਰਾਉਂਦੀ ਹੈ. ਐਪ ਦੇ ਮੌਜੂਦਾ ਸੰਸਕਰਣ ਨੂੰ ਅਣਇੰਸਟੌਲ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_failed">ਅਣਜਾਣ ਕਾਰਨਾਂ ਕਰਕੇ ਸਥਾਪਨਾ ਅਸਫਲ ਹੋ ਗਈ, ਹੋਰ ਸਹਾਇਤਾ ਲਈ ਸਾਡੇ ਟੈਲੀਗ੍ਰਾਮ ਜਾਂ ਡਿਸਕੋਰਡ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ.</string>
     <string name="installation_incompatible">ਸਥਾਪਨਾ ਅਸਫਲ ਹੋਈ ਕਿਉਂਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਦੇ ਅਨੁਕੂਲ ਨਹੀਂ ਹੈ. ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਸਾਫ਼ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
