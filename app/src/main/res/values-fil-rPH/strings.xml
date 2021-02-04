@@ -8,6 +8,7 @@
     <string name="select_apps">Piliin ang mga app</string>
     <!-- Main Activity -->
     <string name="title_about">Tungkol sa app</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Mga Log</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Settings</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Nabigo ang paghanap ng apk file para sa itim na tema galing sa storage, ulitin muli.</string>
     <string name="installation_aborted">Nabigo ang pag-install dahil kinansela ito.</string>
     <string name="installation_blocked">Nabigo ang pag-install dahil binlock ito.</string>
-    <string name="installation_downgrade">Nabigo ang pag-install dahil dinowngrade ng gumagamit ang pakete. I-uninstall ang mga updates galing sa stock Youtube app, at ulitin muli.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Nabigo ang pag-install dahil meron hidwaan sa naka-install na app. I-uninstall ang kasalukuyang bersyon ng Vanced, at ulitin muli.</string>
     <string name="installation_failed">Nabigo ang pag-install dahil sa hindi tukoy na dahilan, makiisa sa aming Telegram o Discord para sa karagdagang suporta.</string>
     <string name="installation_incompatible">Nabigo ang pag-install dahil ang installation file ay hindi tugma sa iyong device. Tanggalin ang mga downloaded files sa Settings, at ulitin muli.</string>
