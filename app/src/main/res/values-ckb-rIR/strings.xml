@@ -8,6 +8,7 @@
     <string name="select_apps">بەرنامەکانت دیاریبکە</string>
     <!-- Main Activity -->
     <string name="title_about">دەربارە</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">بەرێوەبردن</string>
     <string name="title_settings">ڕێکخستنەکان</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">سەرکەوتوو نەبوو لەدۆزینەوەی شوێنی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە بیرگەدا، تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_aborted">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر کۆتاییهێنا بە دابەزاندنەکە.</string>
     <string name="installation_blocked">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر ڕێگریکرد لە دابەزاندنەکە.</string>
-    <string name="installation_downgrade">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر هەوڵیدا بۆ نزمکردنەوەی وەشان، نوێکارییەکانی بەرنامەی بنەڕەتی YouTube بسڕەوە و دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">دامەزراندن سەرکەوتو نەبوو لەبەر هۆکاری نادیار، پەیوەندی بکە بە تێلێگرامەکەمان یان Discord بۆ پشتگیری زیاتر.</string>
     <string name="installation_incompatible">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی فایلی دابەزاندن گونجاو نییە لەگەڵ ئامێرەکەت، فایلە داگیراوەکان بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
