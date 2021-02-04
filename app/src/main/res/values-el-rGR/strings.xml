@@ -8,6 +8,7 @@
     <string name="select_apps">Επιλέξτε τις εφαρμογές σας</string>
     <!-- Main Activity -->
     <string name="title_about">Πληροφορίες</string>
+    <string name="title_logs">Αρχείο καταγραφής σφαλμάτων</string>
     <string name="title_home">Διαχειριστής Vanced</string>
     <string name="title_settings">Ρυθμίσεις</string>
     <string name="update_manager">Ενημέρωση Διαχειριστή Vanced</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Κέντρο ενημερώσεων</string>
     <string name="update_not_found">Δεν υπάρχουν νέες ενημερώσεις</string>
     <string name="variant">Παραλλαγή</string>
+    <!-- Logs -->
+    <string name="logs_saved">Επιτυχής αποθήκευση αρχείου καταγραφής σφαλμάτων</string>
+    <string name="logs_not_saved">Αδυναμία αποθήκευσης αρχείου καταγραφής σφαλμάτων</string>
     <!-- Dialogs -->
     <string name="advanced">Για προχωρημένους</string>
     <string name="app_install_files_detected">Ανιχνεύτηκαν τα αρχεία εγκατάστασης του %1$s!</string>
