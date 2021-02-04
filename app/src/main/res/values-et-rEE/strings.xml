@@ -8,6 +8,7 @@
     <string name="select_apps">Valige Oma Rakendused</string>
     <!-- Main Activity -->
     <string name="title_about">Teave</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Haldur</string>
     <string name="title_settings">Seaded</string>
     <string name="update_manager">Uuenduste Haldur</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Halduri värskenduskeskus</string>
     <string name="update_not_found">Uusi uuendusi ei ole</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Täpsustatud</string>
     <string name="app_install_files_detected">%1$s paigaldusfailid on leitud!</string>
