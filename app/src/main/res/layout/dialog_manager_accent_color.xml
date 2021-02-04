@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:contentPaddingLeft="0dp"
     app:contentPaddingRight="0dp"
-    style="@style/BottomDialogCard">
+    style="@style/DialogCard">
 
     <ImageButton
         android:id="@+id/accent_cancel"
@@ -24,7 +24,7 @@
 
         <TextView
             android:text="@string/accent_color"
-            style="@style/BottomDialogCardTitle" />
+            style="@style/DialogCardTitle" />
 
         <com.madrapps.pikolo.HSLColorPicker
             android:id="@+id/accent_picker"
