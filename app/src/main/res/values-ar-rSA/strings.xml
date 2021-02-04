@@ -8,6 +8,7 @@
     <string name="select_apps">اختر تطبيقاتك</string>
     <!-- Main Activity -->
     <string name="title_about">حول</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">السجل</string>
     <string name="title_home">المدير</string>
     <string name="title_settings">الإعدادات</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
-    <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
     <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى التيليجرام أو الديسكورد الخاص بنا لمزيد من الدعم.</string>
     <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. امسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
