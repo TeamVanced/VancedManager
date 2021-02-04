@@ -8,6 +8,7 @@
     <string name="select_apps">Odaberite svoje aplikacije</string>
     <!-- Main Activity -->
     <string name="title_about">O autorima</string>
+    <string name="title_logs">Dnevnici</string>
     <string name="title_home">Upravitelj</string>
     <string name="title_settings">Postavke</string>
     <string name="update_manager">Ažuriranje upravitelja</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Središte ažuriranja upravitelja</string>
     <string name="update_not_found">Nema novih ažuriranja</string>
     <string name="variant">Izdanje</string>
+    <!-- Logs -->
+    <string name="logs_saved">Uspješno spremljeni dnevnici</string>
+    <string name="logs_not_saved">Nije moguće spremiti dnevnike</string>
     <!-- Dialogs -->
     <string name="advanced">Napredno</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
