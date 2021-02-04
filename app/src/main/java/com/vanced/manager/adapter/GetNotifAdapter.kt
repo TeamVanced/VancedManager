@@ -45,7 +45,7 @@ class GetNotifAdapter(private val context: Context) : RecyclerView.Adapter<GetNo
                 setTitle(app.switchTitle)
                 setDefaultValue(true)
                 with (prefs) {
-                    setChecked(getBoolean(app.key.substringBefore("_") + "_enabled", true) && getBoolean(app.key, true))
+                    setChecked(getBoolean( "enable_" + app.key.substringBefore("_"), true) && getBoolean(app.key, true))
                 }
             }
         }
