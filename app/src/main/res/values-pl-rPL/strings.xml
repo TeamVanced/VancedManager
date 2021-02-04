@@ -8,6 +8,7 @@
     <string name="select_apps">Wybierz swoje aplikacje</string>
     <!-- Main Activity -->
     <string name="title_about">O nas</string>
+    <string name="title_logs">Dzienniki</string>
     <string name="title_home">Menedżer</string>
     <string name="title_settings">Ustawienia</string>
     <string name="update_manager">Zaktualizuj Menedżera</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Centrum aktualizacji</string>
     <string name="update_not_found">Brak nowych aktualizacji</string>
     <string name="variant">Wariant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Pomyślnie zapisano dzienniki</string>
+    <string name="logs_not_saved">Nie udało się zapisać dzienników</string>
     <!-- Dialogs -->
     <string name="advanced">Opcje zaawansowane</string>
     <string name="app_install_files_detected">Wykryto %1$s plików instalacyjnych!</string>
