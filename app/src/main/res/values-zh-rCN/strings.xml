@@ -8,6 +8,7 @@
     <string name="select_apps">选择您的应用</string>
     <!-- Main Activity -->
     <string name="title_about">关于</string>
+    <string name="title_logs">日志</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">设置</string>
     <string name="update_manager">更新 Manager</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Manager 更新中心</string>
     <string name="update_not_found">无可用更新</string>
     <string name="variant">版本</string>
+    <!-- Logs -->
+    <string name="logs_saved">日志保存成功</string>
+    <string name="logs_not_saved">无法保存日志</string>
     <!-- Dialogs -->
     <string name="advanced">高级设置</string>
     <string name="app_install_files_detected">检测到 %1$s 安装文件！</string>
