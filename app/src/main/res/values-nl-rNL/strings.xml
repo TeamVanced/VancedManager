@@ -8,6 +8,7 @@
     <string name="select_apps">Apps selecteren</string>
     <!-- Main Activity -->
     <string name="title_about">Over</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Instellingen</string>
     <string name="update_manager">Manager bijwerken</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Manager Update Center</string>
     <string name="update_not_found">Geen nieuwe updates</string>
     <string name="variant">Versie</string>
+    <!-- Logs -->
+    <string name="logs_saved">Logs succesvol opgeslagen</string>
+    <string name="logs_not_saved">Logs niet opgeslagen</string>
     <!-- Dialogs -->
     <string name="advanced">Geavanceerd</string>
     <string name="app_install_files_detected">%1$s installatiebestanden gedetecteerd!</string>
