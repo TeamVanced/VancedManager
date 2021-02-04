@@ -8,6 +8,7 @@
     <string name="select_apps">നിങ്ങളുടെ അപ്ലിക്കേഷനുകൾ തിരഞ്ഞെടുക്കുക</string>
     <!-- Main Activity -->
     <string name="title_about">കുറിച്ച്</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">മാനേജർ</string>
     <string name="title_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="update_manager">മാനേജർ പുതുക്കുക</string>
@@ -57,6 +58,9 @@
     <string name="update_center">മാനേജർ അപ്‌ഡേറ്റ് സെന്റർ</string>
     <string name="update_not_found">പുതിയ അപ്‌ഡേറ്റുകളൊന്നുമില്ല</string>
     <string name="variant">വേരിയൻറ്</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">വിപുലമായത്</string>
     <string name="app_install_files_detected">%1$s ഇൻസ്റ്റാളേഷൻ ഫയലുകൾ കണ്ടെത്തി!</string>
