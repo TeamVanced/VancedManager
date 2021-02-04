@@ -8,6 +8,7 @@
     <string name="select_apps">აირჩიეთ თქვენი აპები</string>
     <!-- Main Activity -->
     <string name="title_about">შესახებ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">მენეჯერი</string>
     <string name="title_settings">პარამეტრები</string>
     <string name="update_manager">მენეჯერის განახლება</string>
@@ -57,6 +58,9 @@
     <string name="update_center">განახლებების ცენტრი</string>
     <string name="update_not_found">განახლება არ არის აღმოჩენილი</string>
     <string name="variant">ვარიანტი</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">გაფართოებული</string>
     <string name="app_install_files_detected">აღმოჩენილია %1$s -ის საინსტალაციო ფაილები!</string>
