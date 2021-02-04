@@ -8,6 +8,7 @@
     <string name="select_apps">설치할 앱 선택하기</string>
     <!-- Main Activity -->
     <string name="title_about">정보</string>
+    <string name="title_logs">로그</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">설정</string>
     <string name="update_manager">매니저 업데이트</string>
@@ -57,6 +58,9 @@
     <string name="update_center">업데이트 센터</string>
     <string name="update_not_found">새로운 업데이트 없음</string>
     <string name="variant">앱 종류</string>
+    <!-- Logs -->
+    <string name="logs_saved">로그 저장됨</string>
+    <string name="logs_not_saved">로그 저장 실패</string>
     <!-- Dialogs -->
     <string name="advanced">고급 설정</string>
     <string name="app_install_files_detected">%1$s 설치에 필요한 파일을 찾았습니다!</string>
