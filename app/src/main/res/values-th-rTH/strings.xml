@@ -8,6 +8,7 @@
     <string name="select_apps">เลือกแอปพลิเคชันของคุณ</string>
     <!-- Main Activity -->
     <string name="title_about">ข้อมูลเกี่ยวกับทีมนักพัฒนา</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">ตัวจัดการ</string>
     <string name="title_settings">ตั้งค่า</string>
     <string name="update_manager">อัพเดทตัวจัดการ</string>
@@ -57,6 +58,9 @@
     <string name="update_center">การจัดการอัพเดพหลัก</string>
     <string name="update_not_found">ไม่มีอัพเดตใหม่</string>
     <string name="variant">ตัวแปร</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">ขั้นสูง</string>
     <string name="app_install_files_detected">%1$s ตรวจพบไฟล์สำหรับการติดตั้ง!</string>
