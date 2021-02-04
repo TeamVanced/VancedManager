@@ -8,6 +8,7 @@
     <string name="select_apps">Selectați aplicațiile</string>
     <!-- Main Activity -->
     <string name="title_about">Despre</string>
+    <string name="title_faq">Întrebări frecvente</string>
     <string name="title_logs">Jurnale</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Configurări</string>
