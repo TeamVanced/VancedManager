@@ -8,6 +8,7 @@
     <string name="select_apps">Sélectionnez vos applications</string>
     <!-- Main Activity -->
     <string name="title_about">À propos</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Journaux</string>
     <string name="title_home">Gestionnaire</string>
     <string name="title_settings">Paramètres</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé, veuillez réessayer.</string>
     <string name="installation_aborted">L\'installation a échoué car l\'utilisateur a abandonné l\'installation.</string>
     <string name="installation_blocked">L\'installation a échoué, car l\'utilisateur a bloqué l\'installation.</string>
-    <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le package. Désinstallez les mises à jour depuis l\'application YouTube d\'origine, puis réessayez.</string>
+    <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le paquet. Désinstallez les mises à jour de l\'application d\'origine, puis réessayez.</string>
     <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
     <string name="installation_failed">L\'installation a échouée pour une raison inconnue, rejoignez notre Telegram ou Discord pour obtenir de l\'aide.</string>
     <string name="installation_incompatible">L\'installation a échoué parce que le fichier d\'installation est incompatible avec votre appareil. Effacer les fichiers téléchargés dans les paramètres, puis réessayer.</string>
