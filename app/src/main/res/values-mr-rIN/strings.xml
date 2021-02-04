@@ -8,6 +8,7 @@
     <string name="select_apps">आपले अप्प्स निवडा</string>
     <!-- Main Activity -->
     <string name="title_about">अॅप बद्दल माहिती</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">मॅनेजर</string>
     <string name="title_settings">सेटिंग</string>
     <string name="update_manager">मॅनेजर ला अपडेट करा</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Manager Update Center</string>
     <string name="update_not_found">No new updates</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s installation files detected!</string>
