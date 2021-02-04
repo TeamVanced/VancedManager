@@ -8,6 +8,7 @@
     <string name="select_apps">Velg dine apper</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Leder</string>
     <string name="title_settings">Innstillinger</string>
     <string name="update_manager">Oppdater administrator</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Oppdateringssenter</string>
     <string name="update_not_found">Ingen nye oppdateringer</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Avansert</string>
     <string name="app_install_files_detected">%1$s installasjonsfiler oppdaget!</string>
