@@ -8,6 +8,7 @@
     <string name="select_apps">Valitse Sovelluksesi</string>
     <!-- Main Activity -->
     <string name="title_about">Tietoja</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Asetukset</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
-    <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti heikentää pakettia. Poista päivitykset YouTube-sovelluksesta ja yritä sitten uudelleen.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
