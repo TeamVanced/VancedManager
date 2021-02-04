@@ -8,7 +8,8 @@
     <string name="select_apps">Виберіть Ваші Додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Логі</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
     <string name="update_manager">Оновіть Менеджер</string>
@@ -59,8 +60,8 @@
     <string name="update_not_found">Оновлень не знайдено</string>
     <string name="variant">Варіант</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">Логи успішно збережені</string>
+    <string name="logs_not_saved">Не вдалося зберегти логи</string>
     <!-- Dialogs -->
     <string name="advanced">Розширені</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Не вдалося знайти apk-файл для чорної/темної теми зі сховища, спробуйте ще раз.</string>
     <string name="installation_aborted">Встановлення не вдалося, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Встановлення не вдалося, оскільки користувач заблокував встановлення.</string>
-    <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався знизити пакет. Видаліть оновлення з програми YouTube на складі, а потім спробуйте ще раз.</string>
+    <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
     <string name="installation_conflict">Встановлення не вдалася, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
     <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
