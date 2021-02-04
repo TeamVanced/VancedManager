@@ -8,6 +8,7 @@
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
     <string name="update_manager">ম্যানেজার আপডেট করুন</string>
@@ -57,6 +58,9 @@
     <string name="update_center">ম্যানেজার আপডেট কেন্দ্র</string>
     <string name="update_not_found">কোনো নতুন আপডেট নেই</string>
     <string name="variant">বিকল্প</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">উন্নত</string>
     <string name="app_install_files_detected">ইনস্টল করার জন্য %1$s ফাইল খুঁজে পাওয়া গেছে!</string>
