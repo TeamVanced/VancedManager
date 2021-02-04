@@ -8,6 +8,7 @@
     <string name="select_apps">अपने ऐप्स चुनें</string>
     <!-- Main Activity -->
     <string name="title_about">हमारे बारे में</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">मैनेजर</string>
     <string name="title_settings">सेटिंग्स</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">भंडारण से काले / अंधेरे विषय के लिए apk फ़ाइल खोजने में विफल, कृपया पुनः प्रयास करें।</string>
     <string name="installation_aborted">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना रद्द कर दी।</string>
     <string name="installation_blocked">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना को ब्लॉक कर दिया।</string>
-    <string name="installation_downgrade">स्थापना विफल रही क्योंकि उपयोगकर्ता ने पैकेज को डाउनग्रेड करने का प्रयास किया। असली YouTube ऐप से अपडेट अनइंस्टॉल करें, फिर प्रयास करें।</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">इंस्टॉलेशन विफल रहा क्योंकि ऐप पहले से इंस्टॉल किए गए ऐप के साथ टकराव करता है। एप्लिकेशन के वर्तमान संस्करण को अनइंस्टॉल करें, फिर प्रयास करें।</string>
     <string name="installation_failed">अज्ञात कारणों से स्थापना विफल हो गई, आगे के समर्थन के लिए हमारे टेलीग्राम या डिसॉर्ड में शामिल हों।</string>
     <string name="installation_incompatible">इंस्टॉलेशन विफल हो गया क्योंकि इंस्टॉलेशन फ़ाइल आपके डिवाइस के साथ असंगत है। सेटिंग्स में डाउनलोड की गई फ़ाइलों को साफ़ करें, फिर प्रयास करें।</string>
