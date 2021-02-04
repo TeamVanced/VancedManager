@@ -8,6 +8,7 @@
     <string name="select_apps">Uygulamalarınızı Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Hakkında</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ayarlar</string>
     <string name="update_manager">Manager\'ı güncelle</string>
@@ -48,7 +49,7 @@
     <string name="system_default">Sistem varsayılanı</string>
     <string name="script_save_failed">Yeni zaman değeri kaydedilemedi</string>
     <string name="script_sleep_timer">Root kurulumu, bekletme süresi</string>
-    <string name="script_sleep_timer_description">[Gelişmiş] Kurulum sırasında çalıştırılan /data/adb/service.d/app.sh dosyasında ki bekletme süresinin değer ayarı. Kurulum sırasında oluşan hatalarda çözüm olabilir</string>
+    <string name="script_sleep_timer_description">[Gelişmiş] Kurulum sırasında çalıştırılan /data/adb/service.d/app.sh dosyasındaki bekletme süresinin değer ayarı. Kurulum sırasında oluşan hatalarda çözüm olabilir</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Manager Güncelleme Merkezi</string>
     <string name="update_not_found">Yeni güncelleme yok</string>
     <string name="variant">Sürüm yapısı</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Gelişmiş</string>
     <string name="app_install_files_detected">%1$s için kurulum dosyaları bulundu!</string>
