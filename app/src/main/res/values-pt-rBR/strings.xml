@@ -8,6 +8,7 @@
     <string name="select_apps">Selecione Seus Aplicativos</string>
     <!-- Main Activity -->
     <string name="title_about">Sobre</string>
+    <string name="title_logs">Registros</string>
     <string name="title_home">Gerenciador</string>
     <string name="title_settings">Configurações</string>
     <string name="update_manager">Gerenciador de Atualização</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Centro de Atualizações</string>
     <string name="update_not_found">Não há novas atualizações</string>
     <string name="variant">Variante</string>
+    <!-- Logs -->
+    <string name="logs_saved">Registros salvos com sucesso</string>
+    <string name="logs_not_saved">Não foi possível salvar os registros</string>
     <!-- Dialogs -->
     <string name="advanced">Avançado</string>
     <string name="app_install_files_detected">%1$s arquivos de instalação detectados!</string>
