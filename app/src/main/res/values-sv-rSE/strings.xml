@@ -8,6 +8,7 @@
     <string name="select_apps">Välj dina appar</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Hanterare</string>
     <string name="title_settings">Inställningar</string>
     <string name="update_manager">Uppdatera hanteraren</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Ansvarig uppdateringscenter</string>
     <string name="update_not_found">Inga nya uppdateringar</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Avancerad</string>
     <string name="app_install_files_detected">%1$s installationsfiler upptäckt!</string>
