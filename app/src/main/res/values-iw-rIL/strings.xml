@@ -8,6 +8,7 @@
     <string name="select_apps">בחר את היישומים שלך</string>
     <!-- Main Activity -->
     <string name="title_about">אודות</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">מנהל</string>
     <string name="title_settings">הגדרות</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">נכשל האיתור של קובץ APK לערכת נושא שחורה/כהה מהאחסון, אנא נסה שוב.</string>
     <string name="installation_aborted">ההתקנה נכשלה כיוון שהמשתמש ביטל אותה.</string>
     <string name="installation_blocked">ההתקנה נכשלה כיוון שהמשתמש חסם אותה.</string>
-    <string name="installation_downgrade">ההתקנה נכשלה כיוון שהמשתמש ניסה לשנמך את גרסת האפליקציה. מחק עדכונים מאפליקציית YouTube הרגילה, ולאחר מכן נסה שוב.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ההתקנה נכשלה כיוון שהאפליקציה מתנגשת עם גרסה מותקנת שלה, מחק את הגרסה הנוכחית של Vanced ולאחר מכן נסה שוב.</string>
     <string name="installation_failed">הפעולה נכשלה בגלל סיבה אינה ידועה, בבקשה הצטרפו לטלגרם או דיסקורד שלנו בשביל עזרה.</string>
     <string name="installation_incompatible">ההתקנה נכשלה מכיוון שההתקנה או הקובץ לא תואמים עם מכשירך. נקה הורדות שהושלמו מתוך ההגדרות, ואז נסה שוב.</string>
