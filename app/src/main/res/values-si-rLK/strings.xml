@@ -8,6 +8,7 @@
     <string name="select_apps">ඔබගේ යෙදුම් තෝරන්න</string>
     <!-- Main Activity -->
     <string name="title_about">මේ ගැන</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">සැකසුම්</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
     <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>
