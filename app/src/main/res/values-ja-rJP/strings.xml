@@ -8,6 +8,7 @@
     <string name="select_apps">アプリの選択</string>
     <!-- Main Activity -->
     <string name="title_about">このアプリについて</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルが見つかりませんでした。もう一度お試しください。</string>
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
-    <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。標準の YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
