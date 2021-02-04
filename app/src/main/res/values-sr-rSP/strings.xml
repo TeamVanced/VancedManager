@@ -8,6 +8,7 @@
     <string name="select_apps">Одабери своје апликације</string>
     <!-- Main Activity -->
     <string name="title_about">О апликацији</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Менаџер</string>
     <string name="title_settings">Поставке</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у меморијском простору, покушајте поново.</string>
     <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
     <string name="installation_blocked">Инсталација није успешна, корисник је блокирао инсталацију.</string>
-    <string name="installation_downgrade">Инсталација није успешна, корисник је покушао да инсталира старију верзију преко новије верзије апликације. Деинсталирајте све до предодређене инсталиране верзије YouTubе апликације, затим покушајте поново.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Инсталација није успеla, услед непознатог разлога, прикључите нам се на Telegram и Discord апликацијама за даљу подршку.</string>
     <string name="installation_incompatible">Инсталација је неуспешна јер инсталациона датотека није компатибилна са вашим уређајем. Очистите преузете датотеке у Подешавањима и затим покушајте поново.</string>
