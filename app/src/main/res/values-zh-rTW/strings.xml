@@ -8,6 +8,8 @@
     <string name="select_apps">選擇您需要的應用程式</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">日誌</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
     <string name="update_manager">更新 Manager</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Manager 更新中心</string>
     <string name="update_not_found">沒有更新</string>
     <string name="variant">版本</string>
+    <!-- Logs -->
+    <string name="logs_saved">日誌成功儲存</string>
+    <string name="logs_not_saved">無法儲存日誌</string>
     <!-- Dialogs -->
     <string name="advanced">進階設定</string>
     <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
@@ -75,14 +80,18 @@
     <string name="security_context">請確保您從 vancedapp.com、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="app_installation_preferences">%1$s 安裝偏好設定</string>
     <string name="version">版本</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">microG 漏洞</string>
+    <string name="microg_bug_summary">由於 microG 的一個 bug，如要安裝 Vanced 16+，您需要先安裝 15.43.32 版、開啟它、登入，然後才能安裝 16 或更新的版本。是否開始安裝 15.43.32 版？</string>
+    <string name="microg_bug_summary_music">由於 microG 的一個 bug，如要安裝 Music 4.11+，您需要先安裝 4.07.51 版、開啟它、登入，然後才能安裝 4.11 或更新的版本。是否開始安裝 4.07.51 版？</string>
     <string name="please_be_patient">請耐心等候…</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
+    <string name="install_latest">最新</string>
     <string name="light_plus_other">淺色 + %1$s</string>
     <string name="select_at_least_one_lang">請至少選擇一種語言！</string>
+    <string name="vanced_black">黑色</string>
+    <string name="vanced_dark">深色</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開發者</string>
     <string name="sources">原始碼</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 apk 檔案，請再試。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
-    <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生 YouTube 的更新，然後重試。</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前的版本，然後重試。</string>
     <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
     <string name="installation_incompatible">安裝檔案與您的裝置不相容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>

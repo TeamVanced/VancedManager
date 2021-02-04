@@ -8,6 +8,8 @@
     <string name="select_apps">Sélectionnez vos applications</string>
     <!-- Main Activity -->
     <string name="title_about">À propos</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Journaux</string>
     <string name="title_home">Gestionnaire</string>
     <string name="title_settings">Paramètres</string>
     <string name="update_manager">Gestionnaire de Mise à Jour</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Centre de mise à jour du Manager</string>
     <string name="update_not_found">Aucune nouvelle mise à jour</string>
     <string name="variant">Variante</string>
+    <!-- Logs -->
+    <string name="logs_saved">Journaux enregistrés avec succès</string>
+    <string name="logs_not_saved">Impossible d\'enregistrer les journaux</string>
     <!-- Dialogs -->
     <string name="advanced">Avancé</string>
     <string name="app_install_files_detected">%1$s fichiers d\'installation détectés !</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="version">Version</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Bogue dans microG</string>
+    <string name="microg_bug_summary">En raison d\'un bogue dans microG, l\'installation de Vanced 16+ nécessite d\'abord l\'installation de la v15.43.32, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v16 ou une version plus récente. Voulez-vous procéder à l\'installation de la v15.43.32&#160;?</string>
+    <string name="microg_bug_summary_music">En raison d\'un bogue dans microG, l\'installation de Music 4.11+ nécessite d\'abord l\'installation de la v4.07.51, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v14.11 ou une version plus récente. Voulez-vous procéder à l\'installation de la v4.07.51&#160;?</string>
     <string name="please_be_patient">Veuillez patienter…</string>
     <string name="welcome">Bienvenue</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Choisir votre langage(s) préféré(s) pour Vanced</string>
+    <string name="install_latest">Dernière version</string>
     <string name="light_plus_other">Lumière + %1$s</string>
     <string name="select_at_least_one_lang">Sélectionnez au moins une langue !</string>
+    <string name="vanced_black">Noir</string>
+    <string name="vanced_dark">Sombre</string>
     <!-- About Page -->
     <string name="manager_dev">Développeurs du Manager</string>
     <string name="sources">Sources</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé, veuillez réessayer.</string>
     <string name="installation_aborted">L\'installation a échoué car l\'utilisateur a abandonné l\'installation.</string>
     <string name="installation_blocked">L\'installation a échoué, car l\'utilisateur a bloqué l\'installation.</string>
-    <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le package. Désinstallez les mises à jour depuis l\'application YouTube d\'origine, puis réessayez.</string>
+    <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le paquet. Désinstallez les mises à jour de l\'application d\'origine, puis réessayez.</string>
     <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
     <string name="installation_failed">L\'installation a échouée pour une raison inconnue, rejoignez notre Telegram ou Discord pour obtenir de l\'aide.</string>
     <string name="installation_incompatible">L\'installation a échoué parce que le fichier d\'installation est incompatible avec votre appareil. Effacer les fichiers téléchargés dans les paramètres, puis réessayer.</string>

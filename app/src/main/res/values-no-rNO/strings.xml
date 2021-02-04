@@ -8,6 +8,8 @@
     <string name="select_apps">Velg dine apper</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Leder</string>
     <string name="title_settings">Innstillinger</string>
     <string name="update_manager">Oppdater administrator</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Oppdateringssenter</string>
     <string name="update_not_found">Ingen nye oppdateringer</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Avansert</string>
     <string name="app_install_files_detected">%1$s installasjonsfiler oppdaget!</string>
@@ -76,13 +81,17 @@
     <string name="app_installation_preferences">%1$s Installasjonsinnstillinger</string>
     <string name="version">Versjon</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Vær tålmodig…</string>
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Velg dine foretrukne språk for Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Lys + %1$s</string>
     <string name="select_at_least_one_lang">Velg minst ett språk!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
     <string name="sources">Kilder</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Klarte ikke å finne apk-filen for svart/mørkt tema på enheten, vennligst prøv igjen.</string>
     <string name="installation_aborted">Installasjonen mislyktes fordi brukeren avbrutt installasjonen.</string>
     <string name="installation_blocked">Installasjonen mislyktes på grunn av at brukeren blokkerte installasjonen.</string>
-    <string name="installation_downgrade">Installasjonen mislyktes fordi brukeren prøvde å nedgradere pakken. Avinstaller oppdateringer fra standard YouTube app, og prøv på nytt.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Installasjonen mislyktes av ukjente årsaker, bli med i vår Telegram eller Discord gruppe for videre støtte.</string>
     <string name="installation_incompatible">Installasjonen mislyktes på grunn av at installasjonsfilen er inkompatibel med enheten. Fjern nedlastede filer i innstillinger og prøv på nytt.</string>
