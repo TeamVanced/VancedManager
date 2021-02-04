@@ -30,8 +30,8 @@ import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.utils.*
 import com.vanced.manager.utils.AppUtils.faqpkg
 import com.vanced.manager.utils.AppUtils.log
+import com.vanced.manager.utils.AppUtils.playStorePkg
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -124,8 +124,12 @@ class MainActivity : AppCompatActivity() {
                         }
                     } else {
                         Intent(Intent.ACTION_VIEW).apply {
-                            data = Uri.parse("https://play.google.com/store/apps/details?id=$faqpkg")
-                            setPackage("com.android.vending")
+                            val uriBuilder = Uri.parse("https://play.google.com/store/apps/details")
+                                .buildUpon()
+                                .appendQueryParameter("id", faqpkg)
+                                .appendQueryParameter("launch", "true")
+                            data = uriBuilder.build()
+                            setPackage(playStorePkg)
                         }
                     }
                     startActivity(intent)
