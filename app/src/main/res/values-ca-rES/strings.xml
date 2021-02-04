@@ -8,6 +8,7 @@
     <string name="select_apps">Select Your Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Quant a</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Gestor</string>
     <string name="title_settings">Configuració</string>
     <string name="update_manager">Update Manager</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Gestor d\'actualitzacions</string>
     <string name="update_not_found">Cap actualització</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Advanced</string>
     <string name="app_install_files_detected">%1$s installation files detected!</string>
