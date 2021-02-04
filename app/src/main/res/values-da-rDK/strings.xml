@@ -8,6 +8,7 @@
     <string name="select_apps">Vælg Dine Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
+    <string name="title_logs">Logfiler</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Indstillinger</string>
     <string name="update_manager">Opdaterings Manager</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Manager opdaterings center</string>
     <string name="update_not_found">Ingen nye opdateringer</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Logfiler gemt succesfuldt</string>
+    <string name="logs_not_saved">Kunne ikke gemme logfil</string>
     <!-- Dialogs -->
     <string name="advanced">Avanceret</string>
     <string name="app_install_files_detected">%1$s installationsfiler fundet!</string>
