@@ -8,6 +8,7 @@
     <string name="select_apps">Изберете приложения</string>
     <!-- Main Activity -->
     <string name="title_about">Относно</string>
+    <string name="title_faq">ЧЗВ</string>
     <string name="title_logs">Логове</string>
     <string name="title_home">Мениджър</string>
     <string name="title_settings">Настройки</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Не може да бъде открит apk файла за черна/тъмна тема, моля опитайте отново.</string>
     <string name="installation_aborted">Инсталацията е неуспешна защото е прекратена от потребителя.</string>
     <string name="installation_blocked">Инсталацията е неуспешна защото е блокирана от потребителя.</string>
-    <string name="installation_downgrade">Инсталацията е неуспешна защото потребителя се опитва да инсталира по-стара версия. Деинсталирайте актуализациите на оригиналното YouTube приложение и опитайте отново.</string>
+    <string name="installation_downgrade">Инсталацията е неуспешна защото потребителя се опитва да инсталира по-стара версия на пакета. Деинсталирайте актуализациите на оригиналното приложение и опитайте отново.</string>
     <string name="installation_conflict">Инсталацията в неуспешна поради конфликт с вече инсталирано приложение. Деинсталирайте го и опитайте отново.</string>
     <string name="installation_failed">Инсталацията в неуспешна поради неизвестна причина, свържете се с нас в Telegram или Discord за повече информация.</string>
     <string name="installation_incompatible">Инсталацията в неуспешна защото инсталационния файл не е съвместим с устройството ви. Изчистете изтеглените файлове от настройките и опитайте отново.</string>
