@@ -8,7 +8,8 @@
     <string name="select_apps">選擇您需要的應用程式</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">日誌</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
     <string name="update_manager">更新 Manager</string>
@@ -59,8 +60,8 @@
     <string name="update_not_found">沒有更新</string>
     <string name="variant">版本</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">日誌成功儲存</string>
+    <string name="logs_not_saved">無法儲存日誌</string>
     <!-- Dialogs -->
     <string name="advanced">進階設定</string>
     <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 apk 檔案，請再試。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
-    <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生 YouTube 的更新，然後重試。</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前的版本，然後重試。</string>
     <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
     <string name="installation_incompatible">安裝檔案與您的裝置不相容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
