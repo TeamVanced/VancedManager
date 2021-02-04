@@ -8,6 +8,7 @@
     <string name="select_apps">Виберіть Ваші Додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
     <string name="update_manager">Оновіть Менеджер</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Центр Оновлень</string>
     <string name="update_not_found">Оновлень не знайдено</string>
     <string name="variant">Варіант</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Розширені</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
