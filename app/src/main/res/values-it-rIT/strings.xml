@@ -8,7 +8,8 @@
     <string name="select_apps">Seleziona le Tue App</string>
     <!-- Main Activity -->
     <string name="title_about">Informazioni</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Registri</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Impostazioni</string>
     <string name="update_manager">Aggiorna Manager</string>
@@ -59,8 +60,8 @@
     <string name="update_not_found">Nessun nuovo aggiornamento</string>
     <string name="variant">Variante</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">Registri salvati correttamente</string>
+    <string name="logs_not_saved">Impossibile salvare i registri</string>
     <!-- Dialogs -->
     <string name="advanced">Avanzate</string>
     <string name="app_install_files_detected">%1$s file di installazione rilevati!</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Impossibile individuare il file apk per il tema nero/scuro dalla memoria, per favore riprova.</string>
     <string name="installation_aborted">Installazione non riuscita. L\'utente ha annullato l\'installazione.</string>
     <string name="installation_blocked">Installazione non riuscita. L\'utente ha bloccato l\'installazione.</string>
-    <string name="installation_downgrade">Installazione non riuscita. L\'utente ha provato ad eseguire il downgrade del pacchetto. Disinstalla gli aggiornamenti dell\'app predefinita di YouTube, poi riprova.</string>
+    <string name="installation_downgrade">Installazione fallita. È stato effettuato un tentativo di downgrade del pacchetto. Disinstalla gli aggiornamenti dall\'app stock, quindi riprova.</string>
     <string name="installation_conflict">Installazione fallita perché l\'applicazione è in conflitto con un\'app già installata. Disinstallare la versione corrente dell\'applicazione, quindi riprovare.</string>
     <string name="installation_failed">Installazione non riuscita a causa di un errore sconosciuto, unisciti al nostro gruppo Telegram o al server di Discord per ricevere ulteriore assistenza.</string>
     <string name="installation_incompatible">Installazione non riuscita, il file di installazione non è compatibile con il tuo dispositivo. Elimina i file scaricati nelle impostazioni, poi riprova.</string>
