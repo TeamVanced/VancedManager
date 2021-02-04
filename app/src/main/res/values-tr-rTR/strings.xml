@@ -8,7 +8,8 @@
     <string name="select_apps">Uygulamalarınızı Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Hakkında</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_faq">S. S. S.</string>
+    <string name="title_logs">Geçmiş kayıtlar</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ayarlar</string>
     <string name="update_manager">Manager\'ı güncelle</string>
@@ -59,8 +60,8 @@
     <string name="update_not_found">Yeni güncelleme yok</string>
     <string name="variant">Sürüm yapısı</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">Kayıtlar başarıyla kaydedildi</string>
+    <string name="logs_not_saved">Kayıtlar kaydedilemedi</string>
     <!-- Dialogs -->
     <string name="advanced">Gelişmiş</string>
     <string name="app_install_files_detected">%1$s için kurulum dosyaları bulundu!</string>
@@ -81,7 +82,7 @@
     <string name="version">Sürüm</string>
     <string name="microg_bug">MicroG\'de sorun var</string>
     <string name="microg_bug_summary">MicroG kaynaklı bir hatadan dolayı, Vanced sürüm 16+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v15.43.32 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v16 veya üzeri sürümün kurulumunu yapabilirsin. Vanced v15.43.32 sürümünün kurulumuna devam edilsin mi?</string>
-    <string name="microg_bug_summary_music">MicroG kaynaklı bir hatadan dolayı, Music v4.11+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v4.07.51 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v4.11 veya üzeri sürümün kurulumunu yapabilirsin. Vanced v4.07.51 sürümünün kurulumuna devam edilsin mi?</string>
+    <string name="microg_bug_summary_music">MicroG kaynaklı bir hatadan dolayı, Music v4.11+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v4.07.51 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v4.11 veya üzeri sürümün kurulumunu yapabilirsin. 4.07.51 sürümünün kurulumuna devam edilsin mi?</string>
     <string name="please_be_patient">Biraz zaman alabilir…</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
