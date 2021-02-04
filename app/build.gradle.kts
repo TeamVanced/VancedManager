@@ -16,8 +16,8 @@ android {
         applicationId = "com.vanced.manager"
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 230
-        versionName = "2.3.0 (MicroShitMoment)"
+        versionCode = 240
+        versionName = "2.4.0 (java.lang.TrashManagerException)"
 
         vectorDrawables.useSupportLibrary = true
 
