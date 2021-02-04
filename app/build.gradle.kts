@@ -44,7 +44,6 @@ android {
     }
 
     buildFeatures {
-        dataBinding = true // ObservableField migrate to flow or liveData
         viewBinding = true
     }
 
@@ -104,8 +103,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
     implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.0.0")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.3")
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
@@ -136,8 +135,8 @@ dependencies {
     implementation("com.google.android:flexbox:2.0.1")
 
     // Firebase
-    implementation("com.google.firebase:firebase-analytics-ktx:18.0.1")
-    implementation("com.google.firebase:firebase-crashlytics:17.3.0")
+    implementation("com.google.firebase:firebase-analytics-ktx:18.0.2")
+    implementation("com.google.firebase:firebase-crashlytics:17.3.1")
     implementation("com.google.firebase:firebase-messaging:21.0.1")
     implementation("com.google.firebase:firebase-perf:19.1.0")
 }
