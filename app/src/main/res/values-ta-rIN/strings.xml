@@ -8,6 +8,7 @@
     <string name="select_apps">உங்கள் பயன்பாடுகளைத் தேர்ந்தெடுக்கவும்</string>
     <!-- Main Activity -->
     <string name="title_about">பற்றி</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">மேலாளர்</string>
     <string name="title_settings">அமைப்புகள்</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">சேமிப்பகத்திலிருந்து கருப்பு / இருண்ட கருப்பொருளுக்கான Apk கோப்பை கண்டுபிடிப்பதில் தோல்வி, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_aborted">பயனர் நிறுவலை நிறுத்தியதால் நிறுவல் தோல்வியடைந்தது.</string>
     <string name="installation_blocked">பயனர் நிறுவலைத் தடுத்ததால் நிறுவல் தோல்வியடைந்தது.</string>
-    <string name="installation_downgrade">பயனர் தொகுப்பை தரமிறக்க முயற்சித்ததால் நிறுவல் தோல்வியடைந்தது. பங்கு YouTube பயன்பாட்டிலிருந்து புதுப்பிப்புகளை நிறுவல் நீக்கி, மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ஏற்கனவே நிறுவப்பட்ட பயன்பாட்டுடன் பயன்பாடு முரண்படுவதால் நிறுவல் தோல்வியடைந்தது. பயன்பாட்டின் தற்போதைய பதிப்பை நிறுவல் நீக்கி, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_failed">அறியப்படாத காரணங்களுக்காக நிறுவல் தோல்வியடைந்தது, மேலும் ஆதரவுக்காக எங்கள் டெலிகிராம் அல்லது டிஸ்கார்ட் இல் சேரவும்.</string>
     <string name="installation_incompatible">நிறுவல் கோப்பு உங்கள் சாதனத்துடன் பொருந்தாததால் நிறுவல் தோல்வியடைந்தது. அமைப்புகளில் பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை அழிக்கவும், பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
