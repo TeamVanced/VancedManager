@@ -8,6 +8,7 @@
     <string name="select_apps">Wybierz swoje aplikacje</string>
     <!-- Main Activity -->
     <string name="title_about">O nas</string>
+    <string name="title_faq">Najczęściej zadawane pytania (FAQ)</string>
     <string name="title_logs">Dzienniki</string>
     <string name="title_home">Menedżer</string>
     <string name="title_settings">Ustawienia</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Nie udało się zlokalizować pliku apk dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
     <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
     <string name="installation_blocked">Instalacja nie powiodła się, ponieważ użytkownik zablokował instalację.</string>
-    <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z aplikacji YouTube, a następnie spróbuj ponownie.</string>
+    <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z domyślnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
     <string name="installation_conflict">Instalacja nie powiodła się ponieważ aplikacja konfliktuje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
