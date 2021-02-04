@@ -8,6 +8,7 @@
     <string name="select_apps">Vælg Dine Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logfiler</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Indstillinger</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Kunne ikke finde apk-fil til sort/mørkt tema fra lager. Prøv venligst igen.</string>
     <string name="installation_aborted">Installationen fejlede fordi brugeren lukkede installationen.</string>
     <string name="installation_blocked">Installationen fejlede fordi brugeren blokerede installationen.</string>
-    <string name="installation_downgrade">Installationen fejlede fordi brugeren prøvede at nedgradere pakken. Fjern opdateringer fra Youtube appen og prøv igen.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installationen fejlede fordi appen konflikter med en allerede installeret app. Fjern den nuværende version af appen og prøv igen.</string>
     <string name="installation_failed">Installationen fejlede af en ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
     <string name="installation_incompatible">Installationen fejlede fordi installationsfilen er inkompatibel med din enhed. Ryd de downloadede filer i indstillingerne og prøv igen.</string>
