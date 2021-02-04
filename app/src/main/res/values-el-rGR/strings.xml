@@ -8,6 +8,7 @@
     <string name="select_apps">Επιλέξτε τις εφαρμογές σας</string>
     <!-- Main Activity -->
     <string name="title_about">Πληροφορίες</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Αρχείο καταγραφής σφαλμάτων</string>
     <string name="title_home">Διαχειριστής Vanced</string>
     <string name="title_settings">Ρυθμίσεις</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Αδυναμία εντοπισμού του αρχείου apk σκουρόχρωμου/απολύτου μαύρου θέματος στον αποθηκευτικό χώρο, παρακαλώ προσπαθήστε ξανά.</string>
     <string name="installation_aborted">Η εγκατάσταση απέτυχε διότι ο χρήστης ακύρωσε την εγκατάσταση.</string>
     <string name="installation_blocked">Η εγκατάσταση απέτυχε διότι ο χρήστης απέκλεισε την εγκατάσταση.</string>
-    <string name="installation_downgrade">Η εγκατάσταση απέτυχε διότι ο χρήστης προσπάθησε να υποβαθμίσει το πακέτο. Απεγκαταστήστε τις ενημερώσεις της αρχικής εφαρμογής YouTube, στη συνέχεια προσπαθήστε ξανά.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Η εγκατάσταση απέτυχε διότι η εφαρμογή αντικρούεται με μια ήδη εγκατεστημένη εφαρμογή. Κάντε απεγκατάσταση την τρέχουσα έκδοση της εφαρμογής, και μετά προσπαθήστε ξανά.</string>
     <string name="installation_failed">Η εγκατάσταση απέτυχε για άγνωστους λόγους, παρακαλούμε μπείτε στο Telegram ή στο Discord μας για περαιτέρω βοήθεια.</string>
     <string name="installation_incompatible">Η εγκατάσταση απέτυχε διότι το αρχείο εγκατάστασης είναι μη συμβατό με την συσκευή σας. Κάντε εκκαθάριση των ληφθέντων αρχείων στις ρυθμίσεις, στην συνέχεια προσπαθήστε ξανά.</string>
