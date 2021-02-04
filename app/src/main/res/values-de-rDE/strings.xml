@@ -8,6 +8,7 @@
     <string name="select_apps">Wähle deine Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Über</string>
+    <string name="title_faq">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Einstellungen</string>
@@ -104,7 +105,7 @@
     <string name="ifile_missing">Apk-Datei für schwarzes/dunkles Theme konnte nicht gefunden werden, bitte versuchen Sie es erneut.</string>
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
     <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer die Installation blockiert hat.</string>
-    <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, das Paket herunterzustufen. Aktualisierungen von YouTube deinstallieren und dann erneut versuchen.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Die Installation ist fehlgeschlagen, weil die App in Konflikt mit einer bereits installierten App steht. Deinstalliere die aktuell installierte Version der App und versuchen es dann erneut.</string>
     <string name="installation_failed">Installation aus unbekannten Grund fehlgeschlagen. Treten Sie bitte unserem Telegram-Chat oder Discord-Server bei, um Support zu erhalten.</string>
     <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
