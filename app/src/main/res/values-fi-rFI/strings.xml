@@ -8,6 +8,7 @@
     <string name="select_apps">Valitse Sovelluksesi</string>
     <!-- Main Activity -->
     <string name="title_about">Tietoja</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Asetukset</string>
     <string name="update_manager">Päivitä hallintasovellus</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Managerin päivityskeskus</string>
     <string name="update_not_found">Ei uusia päivityksiä</string>
     <string name="variant">Variaatio</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Kehittyneet</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
