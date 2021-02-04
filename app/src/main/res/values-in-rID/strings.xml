@@ -8,6 +8,7 @@
     <string name="select_apps">Pilih Aplikasi Anda</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Pengaturan</string>
     <string name="update_manager">Perbarui Manager</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Pusat Pembaruan Manager</string>
     <string name="update_not_found">Tidak ada pembaruan</string>
     <string name="variant">Varian</string>
+    <!-- Logs -->
+    <string name="logs_saved">Berhasil menyimpan logs</string>
+    <string name="logs_not_saved">Tidak bisa menyimpan logs</string>
     <!-- Dialogs -->
     <string name="advanced">Tingkat Lanjut</string>
     <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
