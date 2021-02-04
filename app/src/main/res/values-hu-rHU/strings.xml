@@ -8,6 +8,7 @@
     <string name="select_apps">Válaszd ki az Appot</string>
     <!-- Main Activity -->
     <string name="title_about">Rólunk</string>
+    <string name="title_logs">Naplók</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Beállítások</string>
     <string name="update_manager">Manager frissitése</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Frissítő központ</string>
     <string name="update_not_found">Új frissítések nem elérhetőek</string>
     <string name="variant">Változat</string>
+    <!-- Logs -->
+    <string name="logs_saved">Napló sikeresen mentve</string>
+    <string name="logs_not_saved">A napló mentése nem sikerült</string>
     <!-- Dialogs -->
     <string name="advanced">Haladó</string>
     <string name="app_install_files_detected">%1$s telepítőfájlok észlelve!</string>
