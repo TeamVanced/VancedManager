@@ -8,6 +8,7 @@
     <string name="select_apps">Vyberte své aplikace</string>
     <!-- Main Activity -->
     <string name="title_about">O aplikaci</string>
+    <string name="title_logs">Záznamy</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Nastavení</string>
     <string name="update_manager">Správce aktualizací</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Centrum aktualizací</string>
     <string name="update_not_found">Žádné nové aktualizace</string>
     <string name="variant">Varianta</string>
+    <!-- Logs -->
+    <string name="logs_saved">Záznamy byly úspěšně uloženy</string>
+    <string name="logs_not_saved">Záznamy nelze uložit</string>
     <!-- Dialogs -->
     <string name="advanced">Pokročilé</string>
     <string name="app_install_files_detected">Zjištěné instalační soubory: %1$s</string>
