@@ -8,6 +8,7 @@
     <string name="select_apps">Sélectionnez vos applications</string>
     <!-- Main Activity -->
     <string name="title_about">À propos</string>
+    <string name="title_logs">Journaux</string>
     <string name="title_home">Gestionnaire</string>
     <string name="title_settings">Paramètres</string>
     <string name="update_manager">Gestionnaire de Mise à Jour</string>
@@ -57,6 +58,9 @@
     <string name="update_center">Centre de mise à jour du Manager</string>
     <string name="update_not_found">Aucune nouvelle mise à jour</string>
     <string name="variant">Variante</string>
+    <!-- Logs -->
+    <string name="logs_saved">Journaux enregistrés avec succès</string>
+    <string name="logs_not_saved">Impossible d\'enregistrer les journaux</string>
     <!-- Dialogs -->
     <string name="advanced">Avancé</string>
     <string name="app_install_files_detected">%1$s fichiers d\'installation détectés !</string>
