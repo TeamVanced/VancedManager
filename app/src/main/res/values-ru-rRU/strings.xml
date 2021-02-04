@@ -8,6 +8,7 @@
     <string name="select_apps">Выберите ваши приложения</string>
     <!-- Main Activity -->
     <string name="title_about">О нас</string>
+    <string name="title_faq">Частые вопросы</string>
     <string name="title_logs">Логи</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Настройки</string>
