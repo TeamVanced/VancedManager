@@ -8,6 +8,7 @@
     <string name="select_apps">בחר את היישומים שלך</string>
     <!-- Main Activity -->
     <string name="title_about">אודות</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">מנהל</string>
     <string name="title_settings">הגדרות</string>
     <string name="update_manager">מנהל העדכונים</string>
@@ -57,6 +58,9 @@
     <string name="update_center">מרכז העדכונים</string>
     <string name="update_not_found">אין עדכונים חדשים</string>
     <string name="variant">סוג</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">אפשרויות מתקדמות</string>
     <string name="app_install_files_detected">%1$s קבצי התקנה נמצאו!</string>
