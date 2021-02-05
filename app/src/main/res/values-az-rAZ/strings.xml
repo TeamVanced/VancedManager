@@ -8,7 +8,7 @@
     <string name="select_apps">Tətbiqlərinizi Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Haqqında</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Menecer</string>
     <string name="title_settings">Tənzimləmələr</string>

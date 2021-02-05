@@ -8,7 +8,7 @@
     <string name="select_apps">აირჩიეთ თქვენი აპები</string>
     <!-- Main Activity -->
     <string name="title_about">შესახებ</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">მენეჯერი</string>
     <string name="title_settings">პარამეტრები</string>

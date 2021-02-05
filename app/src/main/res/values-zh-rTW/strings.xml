@@ -8,7 +8,7 @@
     <string name="select_apps">選擇您需要的應用程式</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">日誌</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>

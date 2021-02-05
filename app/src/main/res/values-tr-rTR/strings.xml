@@ -8,7 +8,7 @@
     <string name="select_apps">Uygulamalarınızı Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Hakkında</string>
-    <string name="title_faq">S. S. S.</string>
+    <string name="title_guide">S. S. S.</string>
     <string name="title_logs">Geçmiş kayıtlar</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ayarlar</string>

@@ -8,7 +8,7 @@
     <string name="select_apps">Изберете приложения</string>
     <!-- Main Activity -->
     <string name="title_about">Относно</string>
-    <string name="title_faq">ЧЗВ</string>
+    <string name="title_guide">ЧЗВ</string>
     <string name="title_logs">Логове</string>
     <string name="title_home">Мениджър</string>
     <string name="title_settings">Настройки</string>

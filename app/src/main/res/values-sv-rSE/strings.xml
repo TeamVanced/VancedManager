@@ -8,7 +8,7 @@
     <string name="select_apps">Välj dina appar</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Hanterare</string>
     <string name="title_settings">Inställningar</string>

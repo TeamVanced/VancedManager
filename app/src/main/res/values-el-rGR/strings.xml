@@ -8,7 +8,7 @@
     <string name="select_apps">Επιλέξτε τις εφαρμογές σας</string>
     <!-- Main Activity -->
     <string name="title_about">Πληροφορίες</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">Αρχείο καταγραφής σφαλμάτων</string>
     <string name="title_home">Διαχειριστής Vanced</string>
     <string name="title_settings">Ρυθμίσεις</string>

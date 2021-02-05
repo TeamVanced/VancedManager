@@ -8,7 +8,7 @@
     <string name="select_apps">Odaberite svoje aplikacije</string>
     <!-- Main Activity -->
     <string name="title_about">O autorima</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">Dnevnici</string>
     <string name="title_home">Upravitelj</string>
     <string name="title_settings">Postavke</string>

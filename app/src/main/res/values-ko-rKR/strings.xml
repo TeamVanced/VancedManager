@@ -8,7 +8,7 @@
     <string name="select_apps">설치할 앱 선택하기</string>
     <!-- Main Activity -->
     <string name="title_about">정보</string>
-    <string name="title_faq">자주 묻는 질문</string>
+    <string name="title_guide">자주 묻는 질문</string>
     <string name="title_logs">로그</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">설정</string>

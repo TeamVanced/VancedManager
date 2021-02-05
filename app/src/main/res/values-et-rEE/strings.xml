@@ -8,7 +8,7 @@
     <string name="select_apps">Valige Oma Rakendused</string>
     <!-- Main Activity -->
     <string name="title_about">Teave</string>
-    <string name="title_faq">KKK</string>
+    <string name="title_guide">KKK</string>
     <string name="title_logs">Logid</string>
     <string name="title_home">Haldur</string>
     <string name="title_settings">Seaded</string>

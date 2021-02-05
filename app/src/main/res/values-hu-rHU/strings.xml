@@ -8,7 +8,7 @@
     <string name="select_apps">Válaszd ki az Appot</string>
     <!-- Main Activity -->
     <string name="title_about">Rólunk</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">Naplók</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Beállítások</string>

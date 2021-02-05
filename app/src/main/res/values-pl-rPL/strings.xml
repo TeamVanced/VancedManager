@@ -8,7 +8,7 @@
     <string name="select_apps">Wybierz swoje aplikacje</string>
     <!-- Main Activity -->
     <string name="title_about">O nas</string>
-    <string name="title_faq">Najczęściej zadawane pytania (FAQ)</string>
+    <string name="title_guide">Najczęściej zadawane pytania (FAQ)</string>
     <string name="title_logs">Dzienniki</string>
     <string name="title_home">Menedżer</string>
     <string name="title_settings">Ustawienia</string>

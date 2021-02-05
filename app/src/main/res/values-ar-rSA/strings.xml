@@ -8,7 +8,7 @@
     <string name="select_apps">اختر تطبيقاتك</string>
     <!-- Main Activity -->
     <string name="title_about">حول</string>
-    <string name="title_faq">FAQ</string>
+    <string name="title_guide">FAQ</string>
     <string name="title_logs">السجل</string>
     <string name="title_home">المدير</string>
     <string name="title_settings">الإعدادات</string>

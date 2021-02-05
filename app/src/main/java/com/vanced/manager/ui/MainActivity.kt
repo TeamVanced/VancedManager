@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                 navHost.navigate(HomeFragmentDirections.toLogFragment())
                 true
             }
-            R.id.toolbar_faq -> {
+            R.id.toolbar_guide -> {
                 try {
                     val intent = if (isPackageInstalled(faqpkg, packageManager)) {
                         Intent().apply {
