@@ -8,7 +8,7 @@
     <string name="select_apps">Vælg Dine Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Logfiler</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Indstillinger</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Fejl i microG</string>
     <string name="microg_bug_summary">På grund af en fejl i microG, kræver installationen af Vanced 16+ først at du installerer v15.43.32, åbner, logger ind og først derefter kan du installere v16 og over. Vil du fortsætte med at installere v15.43.32?</string>
     <string name="microg_bug_summary_music">På grund af en fejl i microG, kræver installationen af Music v4.11+ først at du installerer v4.07. 1, åbner, logger ind og først derefter kan du installere v4.11 og over. Vil du at fortsætte med at installere v4.07.51?</string>
-    <string name="please_be_patient">Vær tålmodig…</string>
+    <string name="please_be_patient">Afslut venligst IKKE appen under denne proces!</string>
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vælg dit fortrukne sprog til Vanced</string>
@@ -105,7 +105,7 @@
     <string name="ifile_missing">Kunne ikke finde apk-fil til sort/mørkt tema fra lager. Prøv venligst igen.</string>
     <string name="installation_aborted">Installationen fejlede fordi brugeren lukkede installationen.</string>
     <string name="installation_blocked">Installationen fejlede fordi brugeren blokerede installationen.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">Installationen fejlede fordi brugeren prøvede at nedgradere pakken. Fjern opdateringer fra Youtube appen og prøv igen.</string>
     <string name="installation_conflict">Installationen fejlede fordi appen konflikter med en allerede installeret app. Fjern den nuværende version af appen og prøv igen.</string>
     <string name="installation_failed">Installationen fejlede af en ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
     <string name="installation_incompatible">Installationen fejlede fordi installationsfilen er inkompatibel med din enhed. Ryd de downloadede filer i indstillingerne og prøv igen.</string>
