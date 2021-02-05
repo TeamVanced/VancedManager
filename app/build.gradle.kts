@@ -125,7 +125,7 @@ dependencies {
     implementation("com.github.kittinunf.fuel:fuel:2.3.0")
     implementation("com.github.kittinunf.fuel:fuel-coroutines:2.2.3")
     implementation("com.github.kittinunf.fuel:fuel-json:2.2.3")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 
     // Root permissions
     implementation("com.github.topjohnwu.libsu:core:3.0.2")
