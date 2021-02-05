@@ -8,6 +8,8 @@
     <string name="select_apps">Selecione as suas aplicações</string>
     <!-- Main Activity -->
     <string name="title_about">Sobre</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Gestor</string>
     <string name="title_settings">Configurações</string>
     <string name="update_manager">Gestor de Atualização</string>
@@ -46,9 +48,9 @@
     <string name="link_title">Usar abas personalizadas do Chrome</string>
     <string name="link_custom_tabs">Os links serão abertos em abas personalizadas do Chrome</string>
     <string name="system_default">Padrão do sistema</string>
-    <string name="script_save_failed">Failed to save new time value</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_save_failed">Falhou ao salvar novo valor de tempo</string>
+    <string name="script_sleep_timer">Tempo de suspensão do script Root</string>
+    <string name="script_sleep_timer_description">Ajuste o valor de tempo de suspensão usado no script /data/adb/service.d/app.sh, útil para a correção de problemas de montagem</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Escuro</string>
     <string name="theme_light">Tema Claro</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Centro de Actualizações</string>
     <string name="update_not_found">Sem atualizações</string>
     <string name="variant">Variante</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Avançado</string>
     <string name="app_install_files_detected">%1$s arquivos de instalação detetados!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Certifique-se de que você baixou o aplicativo do vancedapp.com, o servidor Vanced Discord ou o Vanced GitHub</string>
     <string name="app_installation_preferences">Preferências de instalação %1$s</string>
     <string name="version">Versão</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Bug no microG</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Por favor, sejas paciente…</string>
     <string name="welcome">Bem-Vindo</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Escolha a(s) sua(s) língua(s) de preferência para o Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Claro + %1$s</string>
     <string name="select_at_least_one_lang">Selecione ao menos um idioma!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Desenvolvedores do Manager</string>
     <string name="sources">Fontes</string>
@@ -96,8 +105,8 @@
     <string name="ifile_missing">Falha ao localizar o apk para o tema preto/escuro no armazenamento, por favor, tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
-    <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do app do YouTube e, em seguida, tente novamente.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_conflict">A instalação falhou porque o app entra em conflito com um app já instalado. Desinstale a versão atual do app e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por razões desconhecidas, por favor entre no nosso Telegram ou Discord para suporte.</string>
     <string name="installation_incompatible">Falha na instalação porque o pacote de instalação é incompatível com o seu dispositivo. Limpe os pacotes transferidos nas Configurações e tente novamente.</string>
     <string name="installation_invalid">A instalação falhou porque os pacotes apk estão corrompidos, por favor tente novamente.</string>

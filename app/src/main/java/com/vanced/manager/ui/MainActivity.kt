@@ -1,10 +1,12 @@
 package com.vanced.manager.ui
 
+import android.content.ActivityNotFoundException
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -26,7 +28,10 @@ import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.utils.*
-
+import com.vanced.manager.utils.AppUtils.faqpkg
+import com.vanced.manager.utils.AppUtils.log
+import com.vanced.manager.utils.AppUtils.playStorePkg
+import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,11 +41,11 @@ class MainActivity : AppCompatActivity() {
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
         override fun onDataChanged() {
-            Log.d(tag, "Loaded data")
+            log(tag, "Loaded data")
         }
 
         override fun onFailure(throwable: Throwable) {
-            Log.d(tag, "Failed to load data: $throwable")
+            log(tag, "Failed to load data: ${throwable.stackTraceToString()}")
         }
 
     }
@@ -94,21 +99,48 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
+        return when (item.itemId) {
             android.R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
-                return true
+                true
             }
             R.id.toolbar_about -> {
                 navHost.navigate(HomeFragmentDirections.toAboutFragment())
-                return true
+                true
             }
             R.id.toolbar_settings -> {
                 navHost.navigate(HomeFragmentDirections.toSettingsFragment())
-                return true
+                true
+            }
+            R.id.toolbar_log -> {
+                navHost.navigate(HomeFragmentDirections.toLogFragment())
+                true
+            }
+            R.id.toolbar_guide -> {
+                try {
+                    val intent = if (isPackageInstalled(faqpkg, packageManager)) {
+                        Intent().apply {
+                            component = ComponentName(faqpkg, "$faqpkg.ui.MainActivity")
+                        }
+                    } else {
+                        Intent(Intent.ACTION_VIEW).apply {
+                            val uriBuilder = Uri.parse("https://play.google.com/store/apps/details")
+                                .buildUpon()
+                                .appendQueryParameter("id", faqpkg)
+                                .appendQueryParameter("launch", "true")
+                            data = uriBuilder.build()
+                            setPackage(playStorePkg)
+                        }
+                    }
+                    startActivity(intent)
+                    true
+                } catch (e: ActivityNotFoundException) {
+                    false
+                }
             }
             R.id.toolbar_update_manager -> {
                 ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "manager_update")
+                true
             }
             R.id.dev_settings -> {
                 navHost.navigate(SettingsFragmentDirections.toDevSettingsFragment())
@@ -116,8 +148,6 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
-
-        return false
     }
 
     override fun attachBaseContext(newBase: Context) {

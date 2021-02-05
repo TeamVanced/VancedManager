@@ -45,10 +45,10 @@ class InstallationFilesDetectedDialog : BindingBottomSheetDialogFragment<DialogI
             installationDetectedSummary.text = getString(R.string.app_install_files_detected_summary, app)
             installationDetectedRedownload.setOnClickListener {
                 dismiss()
-                if (app == getString(R.string.vanced))
-                    showDialog(VancedPreferencesDialog())
-                else {
-                    showDialog(AppDownloadDialog.newInstance(app))
+                when (app) {
+                    getString(R.string.vanced) -> showDialog(VancedPreferencesDialog())
+                    getString(R.string.music) -> showDialog(MusicPreferencesDialog())
+                    else -> showDialog(AppDownloadDialog.newInstance(app))
                 }
             }
             installationDetectedInstall.setOnClickListener {

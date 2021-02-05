@@ -8,6 +8,8 @@
     <string name="select_apps">Vyberte své aplikace</string>
     <!-- Main Activity -->
     <string name="title_about">O aplikaci</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Záznamy</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Nastavení</string>
     <string name="update_manager">Správce aktualizací</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Centrum aktualizací</string>
     <string name="update_not_found">Žádné nové aktualizace</string>
     <string name="variant">Varianta</string>
+    <!-- Logs -->
+    <string name="logs_saved">Záznamy byly úspěšně uloženy</string>
+    <string name="logs_not_saved">Záznamy nelze uložit</string>
     <!-- Dialogs -->
     <string name="advanced">Pokročilé</string>
     <string name="app_install_files_detected">Zjištěné instalační soubory: %1$s</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vancedapp.com, z našeho Discord serveru nebo našeho GitHubu</string>
     <string name="app_installation_preferences">Předvolby instalace %1$s</string>
     <string name="version">Verze</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Chyba v microG</string>
+    <string name="microg_bug_summary">Kvůli chybě v microG vyžaduje instalace Vanced v16+ nejprve instalaci verze 15.43.32. Otevřete ji, poté se přihlaste a teprve pak nainstalujte verzi 16 a vyšší. Chcete pokračovat v instalaci verze 15.43.32?</string>
+    <string name="microg_bug_summary_music">Kvůli chybě v microG vyžaduje instalace Music v4.11+ nejprve instalaci verze 4.07.51. Otevřete ji, poté se přihlaste a teprve pak nainstalujte verzi 4.11 a vyšší. Chcete pokračovat v instalaci verze 4.07.51?</string>
     <string name="please_be_patient">Chvilku strpení…</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
+    <string name="install_latest">Nejnovější</string>
     <string name="light_plus_other">Světlý + %1$s</string>
     <string name="select_at_least_one_lang">Vyberte alespoň jeden jazyk!</string>
+    <string name="vanced_black">Černý</string>
+    <string name="vanced_dark">Tmavý</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojáři aplikace</string>
     <string name="sources">Zdrojové kódy</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Nepodařilo se najít soubor apk pro černý/tmavý motiv v úložišti, zkuste to prosím znovu.</string>
     <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
     <string name="installation_blocked">Instalace se nezdařila, protože uživatel zablokoval instalaci.</string>
-    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace YouTube a zkuste to znovu.</string>
+    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace výchozí aplikace a zkuste to znovu.</string>
     <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a zkuste to znovu.</string>
     <string name="installation_failed">Instalace se nezdařila z neznámých důvodů. Pro podporu se připojte k našemu Telegramu nebo Discordu.</string>
     <string name="installation_incompatible">Instalace se nezdařila, protože instalační soubor není kompatibilní s vaším zařízením. Vymažte stažené soubory v Nastavení a zkuste to znovu.</string>

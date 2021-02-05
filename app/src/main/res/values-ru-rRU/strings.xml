@@ -8,6 +8,8 @@
     <string name="select_apps">Выберите ваши приложения</string>
     <!-- Main Activity -->
     <string name="title_about">О нас</string>
+    <string name="title_guide">Частые вопросы</string>
+    <string name="title_logs">Логи</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Настройки</string>
     <string name="update_manager">Обновить Менеджер</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Центр обновлений</string>
     <string name="update_not_found">Обновлений не найдено</string>
     <string name="variant">Вариант</string>
+    <!-- Logs -->
+    <string name="logs_saved">Логи успешно сохранены</string>
+    <string name="logs_not_saved">Не удалось сохранить логи</string>
     <!-- Dialogs -->
     <string name="advanced">Доп. настройки</string>
     <string name="app_install_files_detected">Обнаружены установочные файлы для %1$s!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vancedapp.com, сервера Vanced в Discord или с официального GitHub</string>
     <string name="app_installation_preferences">Параметры установки %1$s</string>
     <string name="version">Версия</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Ошибка в microG</string>
+    <string name="microg_bug_summary">В связи с ошибкой в microG, установка Vanced 16+ сначала требует установку v15.43.32, открытия приложения и входа в аккаунт, и только затем можно установить версию 16 и выше. Вы хотите продолжить установку v15.43.32?</string>
+    <string name="microg_bug_summary_music">В связи с ошибкой в microG, установка Music 4.11+ сначала требует установку v4.07.51, открытия приложения и входа в аккаунт, и только затем можно установить версию 4.11 и выше. Вы хотите продолжить установку v4.07.51?</string>
     <string name="please_be_patient">Пожалуйста, подождите…</string>
     <string name="welcome">Добро пожаловать</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Выберите предпочитаемый язык для Vanced</string>
+    <string name="install_latest">Новейшая</string>
     <string name="light_plus_other">Светлая + %1$s</string>
     <string name="select_at_least_one_lang">Выберите хотя бы один язык!</string>
+    <string name="vanced_black">Черный</string>
+    <string name="vanced_dark">Темный</string>
     <!-- About Page -->
     <string name="manager_dev">Разработчики Менеджера</string>
     <string name="sources">Исходники</string>

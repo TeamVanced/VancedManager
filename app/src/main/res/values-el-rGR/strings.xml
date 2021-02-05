@@ -8,6 +8,8 @@
     <string name="select_apps">Επιλέξτε τις εφαρμογές σας</string>
     <!-- Main Activity -->
     <string name="title_about">Πληροφορίες</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Αρχείο καταγραφής σφαλμάτων</string>
     <string name="title_home">Διαχειριστής Vanced</string>
     <string name="title_settings">Ρυθμίσεις</string>
     <string name="update_manager">Ενημέρωση Διαχειριστή Vanced</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Κέντρο ενημερώσεων</string>
     <string name="update_not_found">Δεν υπάρχουν νέες ενημερώσεις</string>
     <string name="variant">Παραλλαγή</string>
+    <!-- Logs -->
+    <string name="logs_saved">Επιτυχής αποθήκευση αρχείου καταγραφής σφαλμάτων</string>
+    <string name="logs_not_saved">Αδυναμία αποθήκευσης αρχείου καταγραφής σφαλμάτων</string>
     <!-- Dialogs -->
     <string name="advanced">Για προχωρημένους</string>
     <string name="app_install_files_detected">Ανιχνεύτηκαν τα αρχεία εγκατάστασης του %1$s!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Βεβαιωθείτε ότι κάνατε λήψη της εφαρμογής από το vancedapp.com, τον διακομιστή Discord του Vanced ή το GitHub του Vanced</string>
     <string name="app_installation_preferences">Προτιμήσεις Εγκατάστασης του %1$s</string>
     <string name="version">Έκδοση</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Σφάλμα στο microG</string>
+    <string name="microg_bug_summary">Λόγο ενός σφάλματος του microG, για να εγκαταστήσετε το Vanced έκδοσης v16+ πρέπει πρώτα να εγκαταστήσετε την έκδοση v15.43.32, να την ανοίξετε, και να συνδεθείτε στον λογαριασμό σας, μόνο τότε μπορείτε να εγκαταστήσετε την έκδοση v16 και άνω. Θέλετε να συνεχίσετε με την εγκατάσταση της έκδοσης v15.43.32;</string>
+    <string name="microg_bug_summary_music">Λόγο ενός σφάλματος του microG, για να εγκαταστήσετε το YouTube Music έκδοσης v4.11+ πρέπει πρώτα να εγκαταστήσετε την έκδοση v4.07.51, να την ανοίξετε, και να συνδεθείτε στον λογαριασμό σας, μόνο τότε μπορείτε να εγκαταστήσετε την έκδοση v4.11 και άνω. Θέλετε να συνεχίσετε με την εγκατάσταση της έκδοσης v4.07.51;</string>
     <string name="please_be_patient">Παρακαλώ να είστε υπομονετικοί…</string>
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Επιλέξτε την(/ις) γλώσσα(/ες) που επιθυμείτε για το Vanced</string>
+    <string name="install_latest">Τελευταία</string>
     <string name="light_plus_other">Ανοιχτόχρωμο + %1$s</string>
     <string name="select_at_least_one_lang">Επιλέξτε τουλάχιστον μια γλώσσα!</string>
+    <string name="vanced_black">Μαύρο</string>
+    <string name="vanced_dark">Σκουρόχρωμο</string>
     <!-- About Page -->
     <string name="manager_dev">Προγραμματιστές Διαχειριστή Vanced</string>
     <string name="sources">Πηγές</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Αδυναμία εντοπισμού του αρχείου apk σκουρόχρωμου/απολύτου μαύρου θέματος στον αποθηκευτικό χώρο, παρακαλώ προσπαθήστε ξανά.</string>
     <string name="installation_aborted">Η εγκατάσταση απέτυχε διότι ο χρήστης ακύρωσε την εγκατάσταση.</string>
     <string name="installation_blocked">Η εγκατάσταση απέτυχε διότι ο χρήστης απέκλεισε την εγκατάσταση.</string>
-    <string name="installation_downgrade">Η εγκατάσταση απέτυχε διότι ο χρήστης προσπάθησε να υποβαθμίσει το πακέτο. Απεγκαταστήστε τις ενημερώσεις της αρχικής εφαρμογής YouTube, στη συνέχεια προσπαθήστε ξανά.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Η εγκατάσταση απέτυχε διότι η εφαρμογή αντικρούεται με μια ήδη εγκατεστημένη εφαρμογή. Κάντε απεγκατάσταση την τρέχουσα έκδοση της εφαρμογής, και μετά προσπαθήστε ξανά.</string>
     <string name="installation_failed">Η εγκατάσταση απέτυχε για άγνωστους λόγους, παρακαλούμε μπείτε στο Telegram ή στο Discord μας για περαιτέρω βοήθεια.</string>
     <string name="installation_incompatible">Η εγκατάσταση απέτυχε διότι το αρχείο εγκατάστασης είναι μη συμβατό με την συσκευή σας. Κάντε εκκαθάριση των ληφθέντων αρχείων στις ρυθμίσεις, στην συνέχεια προσπαθήστε ξανά.</string>

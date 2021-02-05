@@ -8,6 +8,8 @@
     <string name="select_apps">აირჩიეთ თქვენი აპები</string>
     <!-- Main Activity -->
     <string name="title_about">შესახებ</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">მენეჯერი</string>
     <string name="title_settings">პარამეტრები</string>
     <string name="update_manager">მენეჯერის განახლება</string>
@@ -57,6 +59,9 @@
     <string name="update_center">განახლებების ცენტრი</string>
     <string name="update_not_found">განახლება არ არის აღმოჩენილი</string>
     <string name="variant">ვარიანტი</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">გაფართოებული</string>
     <string name="app_install_files_detected">აღმოჩენილია %1$s -ის საინსტალაციო ფაილები!</string>
@@ -76,13 +81,17 @@
     <string name="app_installation_preferences">%1$s-ის ინსტალაციის პარამეტრები</string>
     <string name="version">ვერსია</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">გთხოვთ დაელოდოთ…</string>
     <string name="welcome">მოგესალმებით</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">აირჩიეთ სასურველი ენა(ები) Vanced-ისთვის</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">ღია + %1$s</string>
     <string name="select_at_least_one_lang">ერთი ენა მაინც მონიშნეთ!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager-ის დეველოპერები</string>
     <string name="sources">წყაროები</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
     <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>

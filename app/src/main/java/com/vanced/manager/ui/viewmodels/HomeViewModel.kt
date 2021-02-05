@@ -3,7 +3,6 @@ package com.vanced.manager.ui.viewmodels
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
@@ -27,6 +26,7 @@ import com.vanced.manager.ui.dialogs.InstallationFilesDetectedDialog
 import com.vanced.manager.ui.dialogs.MusicPreferencesDialog
 import com.vanced.manager.ui.dialogs.VancedPreferencesDialog
 import com.vanced.manager.utils.*
+import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.managerPkg
 import com.vanced.manager.utils.AppUtils.microgPkg
 import com.vanced.manager.utils.AppUtils.musicPkg
@@ -85,7 +85,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
         try {
             activity.startActivity(Intent().setComponent(componentName))
         } catch (e: ActivityNotFoundException) {
-            Log.d("VMHMV", e.toString())
+            log("VMHMV", e.toString())
         }
 
     }

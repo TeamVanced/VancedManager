@@ -14,19 +14,19 @@ import com.vanced.manager.utils.PackageHelper.installMusicRoot
 object MusicDownloader {
 
     private var variant: String? = null
-    private var version: String? = null
+    private var musicVersion: String? = null
     private var versionCode: Int? = null
     private var baseurl = ""
     private var folderName: String? = null
     private var downloadPath: String? = null
     private var hashUrl: String? = null
 
-    fun downloadMusic(context: Context) {
+    fun downloadMusic(context: Context, version: String? = null) {
         val prefs = context.defPrefs
-        version = prefs.musicVersion?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))
+        musicVersion = version ?: prefs.musicVersion?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))
         versionCode = music.value?.int("versionCode")
         variant = prefs.managerVariant
-        baseurl = "$baseInstallUrl/music/v$version"
+        baseurl = "$baseInstallUrl/music/v$musicVersion"
         folderName = "music/$variant"
         downloadPath = context.getExternalFilesDir(folderName)?.path
         hashUrl = "$baseurl/hash.json"

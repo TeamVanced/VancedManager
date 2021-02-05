@@ -15,6 +15,7 @@ import com.beust.klaxon.JsonArray
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.generateChecksum
+import com.vanced.manager.utils.AppUtils.log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -55,6 +56,8 @@ fun openUrl(url: String, color: Int, context: Context) {
 
     } catch (e: ActivityNotFoundException) {
         Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
+    } catch (e: SecurityException) {
+        Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
     }
 }
 
@@ -78,17 +81,17 @@ suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
             connect()
         }
         if (connection.responseCode != 200) {
-            Log.d(TAG, latestbaseUrl + ": " + connection.responseCode.toString())
+            log(TAG, latestbaseUrl + ": " + connection.responseCode.toString())
             baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
         }
     } catch (e: IOException) {
         baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
     } catch (e: SocketTimeoutException) {
-        Log.d(TAG, "connection timed out")
+        log(TAG, "connection timed out")
         baseInstallUrl = "https://mirror.codebucket.de/vanced/api/v1"
     }
 
-    Log.d(TAG, "Fetching using URL: $baseInstallUrl")
+    log(TAG, "Fetching using URL: $baseInstallUrl")
 
     val calendar = Calendar.getInstance()
     val hour = calendar.get(Calendar.HOUR_OF_DAY)

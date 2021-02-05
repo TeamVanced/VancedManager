@@ -2,7 +2,11 @@ package com.vanced.manager.utils
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageInstaller
+import android.graphics.Color
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
@@ -21,8 +25,21 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     const val musicPkg = "com.vanced.android.apps.youtube.music"
     const val musicRootPkg = "com.google.android.apps.youtube.music"
     const val microgPkg = "com.mgoogle.android.gms"
+    const val faqpkg = "com.vanced.faq"
     const val managerPkg = APPLICATION_ID
     const val playStorePkg = "com.android.vending"
+
+    val logs = mutableListOf<Spannable>()
+
+    fun log(tag: String, message: String) {
+        logs.add(
+            SpannableString("$tag: $message\n").apply {
+                setSpan(ForegroundColorSpan(Color.CYAN), 0, tag.length + 1, 0)
+                setSpan(ForegroundColorSpan(Color.GREEN), tag.length + 2, tag.length + message.length + 2, 0)
+            }
+        )
+        Log.d(tag, message)
+    }
 
     fun sendRefresh(context: Context): Job {
         return launch {
@@ -39,28 +56,12 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
         }
     }
 
-    fun sendFailure(status: Int, fullError: String?, context: Context): Job {
-        //Delay error broadcast until activity (and fragment) get back to the screen
-        return launch {
-            delay(700)
-            val intent = Intent(HomeFragment.INSTALL_FAILED)
-            intent.putExtra("errorMsg", getErrorMessage(status, context))
-            intent.putExtra("fullErrorMsg", fullError)
-            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
-        }
-    }
-
-    fun sendFailure(error: MutableList<String>, context: Context): Job {
-        return launch {
-            delay(700)
-            val intent = Intent(HomeFragment.INSTALL_FAILED)
-            intent.putExtra("errorMsg", getErrorMessage(error.joinToString(), context))
-            intent.putExtra("fullErrorMsg", error.joinToString(" "))
-            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
-        }
+    fun sendFailure(error: MutableList<String>, context: Context) {
+        sendFailure(error.joinToString(), context)
     }
 
     fun sendFailure(error: String, context: Context): Job {
+        //Delay error broadcast until activity (and fragment) get back to the screen
         return launch {
             delay(700)
             val intent = Intent(HomeFragment.INSTALL_FAILED)
@@ -106,6 +107,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     }
 
     private fun getErrorMessage(status: String, context: Context): String {
+        log("VMInstall", status)
         return when {
             status.contains("INSTALL_FAILED_ABORTED") -> context.getString(R.string.installation_aborted)
             status.contains("INSTALL_FAILED_ALREADY_EXISTS") -> context.getString(R.string.installation_conflict)
@@ -120,22 +122,6 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
             status.contains("ModApk_Missing") -> context.getString(R.string.modapk_missing)
             status.contains("Files_Missing_VA") -> context.getString(R.string.files_missing_va)
             status.contains("Path_Missing") -> context.getString(R.string.path_missing)
-            else ->
-                if (isMiui())
-                    context.getString(R.string.installation_miui)
-                else
-                    context.getString(R.string.installation_failed)
-        }
-    }
-
-    private fun getErrorMessage(status: Int, context: Context): String {
-        return when (status) {
-            PackageInstaller.STATUS_FAILURE_ABORTED -> context.getString(R.string.installation_aborted)
-            PackageInstaller.STATUS_FAILURE_BLOCKED -> context.getString(R.string.installation_blocked)
-            PackageInstaller.STATUS_FAILURE_CONFLICT -> context.getString(R.string.installation_conflict)
-            PackageInstaller.STATUS_FAILURE_INCOMPATIBLE -> context.getString(R.string.installation_incompatible)
-            PackageInstaller.STATUS_FAILURE_INVALID -> context.getString(R.string.installation_invalid)
-            PackageInstaller.STATUS_FAILURE_STORAGE -> context.getString(R.string.installation_storage)
             else ->
                 if (isMiui())
                     context.getString(R.string.installation_miui)

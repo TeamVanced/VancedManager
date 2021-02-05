@@ -8,6 +8,8 @@
     <string name="select_apps">Виберіть Ваші Додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Логі</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
     <string name="update_manager">Оновіть Менеджер</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Центр Оновлень</string>
     <string name="update_not_found">Оновлень не знайдено</string>
     <string name="variant">Варіант</string>
+    <!-- Logs -->
+    <string name="logs_saved">Логи успішно збережені</string>
+    <string name="logs_not_saved">Не вдалося зберегти логи</string>
     <!-- Dialogs -->
     <string name="advanced">Розширені</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vancedapp.com, Vanced Discord сервер або Vanced GitHub</string>
     <string name="app_installation_preferences">Параметри встановлення %1$s</string>
     <string name="version">Версія</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Помилка в microG</string>
+    <string name="microg_bug_summary">У зв\'язку з помилкою в microG, встановлення Vanced 16+ спочатку вимагає встановлення v15.43.32, відкриття додатку і входу в аккаунт, і тільки потім можна встановити версію 16 і вище. Ви хочете продовжити встановлення v15.43.32?</string>
+    <string name="microg_bug_summary_music">У зв\'язку з помилкою в microG, встановлення Music 4.11+ спочатку вимагає встановлення v4.07.51, відкриття додатку і входу в аккаунт, і тільки потім можна встановити версію 4.11 і вище. Ви хочете продовжити встановлення v4.07.51?</string>
     <string name="please_be_patient">Будь ласка, зачекайте…</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
+    <string name="install_latest">Найновіша</string>
     <string name="light_plus_other">Світла + %1$s</string>
     <string name="select_at_least_one_lang">Оберіть принаймні одну мову!</string>
+    <string name="vanced_black">Чорний</string>
+    <string name="vanced_dark">Темний</string>
     <!-- About Page -->
     <string name="manager_dev">Розробники Менеджера</string>
     <string name="sources">Джерела</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Не вдалося знайти apk-файл для чорної/темної теми зі сховища, спробуйте ще раз.</string>
     <string name="installation_aborted">Встановлення не вдалося, оскільки користувач перервав встановлення.</string>
     <string name="installation_blocked">Встановлення не вдалося, оскільки користувач заблокував встановлення.</string>
-    <string name="installation_downgrade">Помилка встановлення, оскільки користувач намагався знизити пакет. Видаліть оновлення з програми YouTube на складі, а потім спробуйте ще раз.</string>
+    <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
     <string name="installation_conflict">Встановлення не вдалася, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
     <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>

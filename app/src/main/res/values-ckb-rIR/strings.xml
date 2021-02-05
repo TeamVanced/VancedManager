@@ -8,6 +8,8 @@
     <string name="select_apps">بەرنامەکانت دیاریبکە</string>
     <!-- Main Activity -->
     <string name="title_about">دەربارە</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">بەرێوەبردن</string>
     <string name="title_settings">ڕێکخستنەکان</string>
     <string name="update_manager">نوێکردنەوەی بەرنامە</string>
@@ -57,6 +59,9 @@
     <string name="update_center">ناوەندی نوێکردنەوە</string>
     <string name="update_not_found">هیچ نوێکردنەوەیەک نیە</string>
     <string name="variant">جۆر</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">پێشکەوتوو</string>
     <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
@@ -76,13 +81,17 @@
     <string name="app_installation_preferences">%1$s ڕێکخستنەکانی دامەزراندن</string>
     <string name="version">وەشان</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">تکایە چاوەڕوانبە…</string>
     <string name="welcome">بەخێربێیت</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">زمانێک هەڵبژێرە بۆ بەکارهێنانی بەرنامەکە</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">ڕووناک + %1$s</string>
     <string name="select_at_least_one_lang">لانیکەم زمانێک دیاریبکە!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
     <string name="sources">سەرچاوەکان</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">سەرکەوتوو نەبوو لەدۆزینەوەی شوێنی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە بیرگەدا، تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_aborted">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر کۆتاییهێنا بە دابەزاندنەکە.</string>
     <string name="installation_blocked">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر ڕێگریکرد لە دابەزاندنەکە.</string>
-    <string name="installation_downgrade">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر هەوڵیدا بۆ نزمکردنەوەی وەشان، نوێکارییەکانی بەرنامەی بنەڕەتی YouTube بسڕەوە و دووبارە هەوڵبدەرەوە.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">دامەزراندن سەرکەوتو نەبوو لەبەر هۆکاری نادیار، پەیوەندی بکە بە تێلێگرامەکەمان یان Discord بۆ پشتگیری زیاتر.</string>
     <string name="installation_incompatible">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی فایلی دابەزاندن گونجاو نییە لەگەڵ ئامێرەکەت، فایلە داگیراوەکان بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>

@@ -5,9 +5,11 @@
     <string name="close">閉じる</string>
     <string name="reset">リセット</string>
     <string name="save">保存</string>
-    <string name="select_apps">アプリを選択してください</string>
+    <string name="select_apps">アプリの選択</string>
     <!-- Main Activity -->
-    <string name="title_about">情報</string>
+    <string name="title_about">このアプリについて</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
     <string name="update_manager">Manager を更新</string>
@@ -43,9 +45,9 @@
     <string name="firebase_title">Firebase アナリティクス</string>
     <string name="firebase_summary">アプリのパフォーマンスとクラッシュログに関する情報を収集できます</string>
     <string name="language_title">言語</string>
-    <string name="link_title">Chrome カスタムタブを使用する</string>
+    <string name="link_title">Chrome カスタムタブを使用</string>
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
-    <string name="system_default">システム標準</string>
+    <string name="system_default">システム設定</string>
     <string name="script_save_failed">Failed to save new time value</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
@@ -54,9 +56,12 @@
     <string name="theme_light">ライトテーマ</string>
     <string name="push_notifications">%1$s プッシュ通知</string>
     <string name="push_notifications_summary">%1$s のアップデートがリリースされたときにプッシュ通知を受け取る</string>
-    <string name="update_center">アップデート センター</string>
+    <string name="update_center">Manager アップデートセンター</string>
     <string name="update_not_found">アップデートはありません</string>
     <string name="variant">種類</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">上級者向け</string>
     <string name="app_install_files_detected">%1$s のインストールに必要なファイルが見つかりました</string>
@@ -68,21 +73,25 @@
     <string name="guide">ガイド</string>
     <string name="hold_on">ストップ！</string>
     <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
-    <string name="miui_one_title">MIUI ユーザーを検知しました！</string>
+    <string name="miui_one_title">MIUI を検知しました！</string>
     <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="error">エラー</string>
     <string name="redownload">再ダウンロード</string>
     <string name="security_context">Vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="app_installation_preferences">%1$s のインストール設定</string>
     <string name="version">バージョン</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">microG のバグ</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">しばらくお待ちください…</string>
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced で使用する言語を選択</string>
+    <string name="install_latest">最新版</string>
     <string name="light_plus_other">ライト + %1$s</string>
     <string name="select_at_least_one_lang">少なくとも一つの言語を選択してください！</string>
+    <string name="vanced_black">ブラック</string>
+    <string name="vanced_dark">ダーク</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開発</string>
     <string name="sources">ソースコード</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルが見つかりませんでした。もう一度お試しください。</string>
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
-    <string name="installation_downgrade">ユーザーがパッケージをダウングレードしようとしたためインストールに失敗しました。標準の YouTube アプリのアップデートをアンインストールしてから、もう一度やり直してください。</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>

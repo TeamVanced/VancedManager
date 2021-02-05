@@ -7,12 +7,12 @@ import android.content.pm.PackageInfo
 import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.os.Build
-import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.core.installer.AppInstallerService
 import com.vanced.manager.core.installer.AppUninstallerService
+import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.musicRootPkg
 import com.vanced.manager.utils.AppUtils.playStorePkg
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
@@ -181,7 +181,13 @@ object PackageHelper {
             outputStream.close()
             session.commit(pendingIntent.intentSender)
         } catch (e: IOException) {
-            Log.d(INSTALLER_TAG, e.stackTraceToString())
+            log(INSTALLER_TAG, e.stackTraceToString())
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
+        } catch (e: SecurityException) {
+            log(INSTALLER_TAG, e.stackTraceToString())
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
         }
 
     }
@@ -216,7 +222,7 @@ object PackageHelper {
                 if (modApk != null) {
                     if (overwriteBase(modApk, fileInfoList, appVerCode, pkg, app, context)) {
                         setInstallerPackage(context, pkg, playStorePkg)
-                        Log.d(INSTALLER_TAG, "Finished installation")
+                        log(INSTALLER_TAG, "Finished installation")
                         sendRefresh(context)
                         sendCloseDialog(context)
                     }
@@ -265,12 +271,14 @@ object PackageHelper {
         try {
             for (listOfFile in listOfFiles!!) {
                 if (listOfFile.isFile) {
-                    Log.d(INSTALLER_TAG, "installApk: " + listOfFile.name)
+                    log(INSTALLER_TAG, "installApk: " + listOfFile.name)
                     nameSizeMap[listOfFile.name] = listOfFile.length()
                     totalSize += listOfFile.length()
                 }
             }
         } catch (e: Exception) {
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
             e.printStackTrace()
             return -1
         }
@@ -278,13 +286,15 @@ object PackageHelper {
         installParams.setSize(totalSize)
         try {
             sessionId = context.packageManager.packageInstaller.createSession(installParams)
-            Log.d(INSTALLER_TAG,"Success: created install session [$sessionId]")
+            log(INSTALLER_TAG,"Success: created install session [$sessionId]")
             for ((key, value) in nameSizeMap) {
                 doWriteSession(sessionId, apkFolderPath + key, value, key, context)
             }
             doCommitSession(sessionId, context)
-            Log.d(INSTALLER_TAG,"Success")
+            log(INSTALLER_TAG,"Success")
         } catch (e: Exception) {
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
             e.printStackTrace()
         }
         return sessionId
@@ -320,10 +330,12 @@ object PackageHelper {
                 out.write(buffer, 0, c)
             }
             session.fsync(out)
-            Log.d(INSTALLER_TAG, "Success: streamed $total bytes")
+            log(INSTALLER_TAG, "Success: streamed $total bytes")
             return PackageInstaller.STATUS_SUCCESS
         } catch (e: IOException) {
-            Log.e(INSTALLER_TAG, "Error: failed to write; " + e.message)
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
+            log(INSTALLER_TAG, "Error: failed to write; " + e.message)
             return PackageInstaller.STATUS_FAILURE
         } finally {
             try {
@@ -331,7 +343,8 @@ object PackageHelper {
                 inputStream?.close()
                 session?.close()
             } catch (e: IOException) {
-                e.printStackTrace()
+                sendFailure(e.stackTraceToString(), context)
+                sendCloseDialog(context)
             }
         }
     }
@@ -344,11 +357,12 @@ object PackageHelper {
             val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
             session.commit(pendingIntent.intentSender)
             session.close()
-            Log.d(INSTALLER_TAG, "install request sent")
-            Log.d(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
-            Log.d(INSTALLER_TAG, "doCommitSession: after session commit ")
+            log(INSTALLER_TAG, "install request sent")
+            log(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
+            log(INSTALLER_TAG, "doCommitSession: after session commit ")
         } catch (e: IOException) {
-            e.printStackTrace()
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
         } finally {
             session?.close()
         }
@@ -357,7 +371,7 @@ object PackageHelper {
     private fun installSplitApkFiles(apkFiles: ArrayList<FileInfo>, context: Context) : Boolean {
         var sessionId: Int?
         val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
-        Log.d(INSTALLER_TAG, "installing split apk files: $apkFiles")
+        log(INSTALLER_TAG, "installing split apk files: $apkFiles")
         run {
             val sessionIdResult = Shell.su("pm install-create -r -t").exec().out
             val sessionIdPattern = Pattern.compile("(\\d+)")
@@ -367,7 +381,7 @@ object PackageHelper {
         }
         apkFiles.forEach { apkFile ->
             if (!filenames.any { apkFile.name == it }) {
-                Log.d(INSTALLER_TAG, "installing APK: ${apkFile.name} ${apkFile.fileSize}")
+                log(INSTALLER_TAG, "installing APK: ${apkFile.name} ${apkFile.fileSize}")
                 val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.fileSize}", "$sessionId", apkFile.name)
                 val process: Process = Runtime.getRuntime().exec(command)
                 val inputPipe = apkFile.getInputStream()
@@ -385,7 +399,7 @@ object PackageHelper {
                 process.waitFor()
             }
         }
-        Log.d(INSTALLER_TAG, "committing...")
+        log(INSTALLER_TAG, "committing...")
         val installResult = Shell.su("pm install-commit $sessionId").exec()
         if (installResult.isSuccess) {
             return true
@@ -473,18 +487,20 @@ object PackageHelper {
     private fun setupScript(apkFPath: String, path: String, app: String, pkg: String, context: Context): Boolean
     {
         try {
-            Log.d(INSTALLER_TAG, "Setting up script")
+            log(INSTALLER_TAG, "Setting up script")
             context.writeServiceDScript(apkFPath, path, app)
             Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep $pkg | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
             return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
         } catch (e: IOException) {
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
             e.printStackTrace()
         }
         return false
     }
 
     private fun linkApp(apkFPath: String, pkg: String, path: String): Boolean {
-        Log.d(INSTALLER_TAG, "Linking app")
+        log(INSTALLER_TAG, "Linking app")
         Shell.su("am force-stop $pkg").exec()
         Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
         val response = Shell.su("""su -mm -c "mount -o bind $apkFPath $path"""").exec()
@@ -499,7 +515,7 @@ object PackageHelper {
 
     //check version and perform action based on result
     private fun checkVersion(versionCode: Int, baseApkFiles: ArrayList<FileInfo>, pkg: String, context: Context): Boolean {
-        Log.d(INSTALLER_TAG, "Checking stock version")
+        log(INSTALLER_TAG, "Checking stock version")
         val path = getPackageDir(context, pkg)
         if (path != null) {
             if (path.contains("/data/app/")) {
@@ -518,7 +534,7 @@ object PackageHelper {
         return try {
             context.packageManager.getPackageInfo(pkg, 0)
         } catch (e:Exception) {
-            Log.d(INSTALLER_TAG, "Unable to get package info")
+            log(INSTALLER_TAG, "Unable to get package info")
             null
         }
     }
@@ -533,7 +549,7 @@ object PackageHelper {
 
     //uninstall current update and install base that works with patch
     private fun fixHigherVer(apkFiles: ArrayList<FileInfo>, pkg: String, context: Context) : Boolean {
-        Log.d(INSTALLER_TAG, "Downgrading stock")
+        log(INSTALLER_TAG, "Downgrading stock")
         if (uninstallRootApk(pkg)) {
             return if (pkg == vancedRootPkg) installSplitApkFiles(apkFiles, context) else installRootMusic(apkFiles, context)
         }
@@ -544,13 +560,13 @@ object PackageHelper {
 
     //install stock youtube matching vanced version
     private fun installStock(baseApkFiles: ArrayList<FileInfo>, pkg: String, context: Context): Boolean {
-        Log.d(INSTALLER_TAG, "Installing stock")
+        log(INSTALLER_TAG, "Installing stock")
         return if (pkg == vancedRootPkg) installSplitApkFiles(baseApkFiles, context) else installRootMusic(baseApkFiles, context)
     }
 
     //set chcon to apk_data_file
     private fun chConV(apkFPath: String, context: Context): Boolean {
-        Log.d(INSTALLER_TAG, "Running chcon")
+        log(INSTALLER_TAG, "Running chcon")
         val response = Shell.su("chcon u:object_r:apk_data_file:s0 $apkFPath").exec()
         //val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
         return if (response.isSuccess) {
@@ -564,7 +580,7 @@ object PackageHelper {
 
     //move patch to data/app
     private fun moveAPK(apkFile: String, path: String, pkg: String, context: Context) : Boolean {
-        Log.d(INSTALLER_TAG, "Moving app")
+        log(INSTALLER_TAG, "Moving app")
         val apkinF = SuFile.open(apkFile)
         val apkoutF = SuFile.open(path)
 
@@ -601,7 +617,7 @@ object PackageHelper {
     @Throws(IOException::class)
     fun copy(src: File, dst: File) {
         val cmd = Shell.su("mv ${src.absolutePath} ${dst.absolutePath}").exec().isSuccess
-        Log.d("ZLog", cmd.toString())
+        log("ZLog", cmd.toString())
     }
 
     @Suppress("DEPRECATION")
@@ -655,16 +671,16 @@ object PackageHelper {
     private fun setInstallerPackage(context: Context, target: String, installer: String) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) return
         try {
-            Log.d(INSTALLER_TAG, "Setting installer package to $installer for $target")
+            log(INSTALLER_TAG, "Setting installer package to $installer for $target")
             val installerUid = context.packageManager.getPackageUid(installer, 0)
             val res = Shell.su("""su $installerUid -c 'pm set-installer $target $installer'""").exec()
             if (res.out.any { line -> line.contains("Success") }) {
-                Log.d(INSTALLER_TAG, "Installer package successfully set")
+                log(INSTALLER_TAG, "Installer package successfully set")
                 return
             }
-            Log.d(INSTALLER_TAG, "Failed setting installer package")
+            log(INSTALLER_TAG, "Failed setting installer package")
         } catch (e: PackageManager.NameNotFoundException) {
-            Log.d(INSTALLER_TAG, "Installer package $installer not found. Skipping setting installer")
+            log(INSTALLER_TAG, "Installer package $installer not found. Skipping setting installer")
         }
     }
 }

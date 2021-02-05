@@ -74,7 +74,7 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
             if (arguments?.getBoolean(TAG_INSTALLING) == false) {
                 when (app) {
                     getString(R.string.vanced) -> downloadVanced(requireContext(), arguments?.getString(TAG_VERSION))
-                    getString(R.string.music) -> downloadMusic(requireContext())
+                    getString(R.string.music) -> downloadMusic(requireContext(), arguments?.getString(TAG_VERSION))
                     getString(R.string.microg) -> downloadMicrog(requireContext())
                 }
             }

@@ -8,6 +8,8 @@
     <string name="select_apps">Selectați aplicațiile</string>
     <!-- Main Activity -->
     <string name="title_about">Despre</string>
+    <string name="title_guide">Întrebări frecvente</string>
+    <string name="title_logs">Jurnale</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Configurări</string>
     <string name="update_manager">Actualizați Manager</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Actualizator</string>
     <string name="update_not_found">Nu există actualizări noi</string>
     <string name="variant">Variantă</string>
+    <!-- Logs -->
+    <string name="logs_saved">Jurnale salvate cu succes</string>
+    <string name="logs_not_saved">Jurnalele nu pot fi salvate</string>
     <!-- Dialogs -->
     <string name="advanced">Avansat</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Asigurați-vă că ați descărcat aplicația de pe vancedapp.com, de pe serverul Discord Vanced sau de pe GitHub Vanced</string>
     <string name="app_installation_preferences">%1$s Preferințe de instalare</string>
     <string name="version">Versiune</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Eroare la microG</string>
+    <string name="microg_bug_summary">Din cauza unei erori în microG, pentru a instala Vanced versiunea 16, este nevoie mai întâi să instalați versiunea 15.43.32, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 16 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 15.43.32?</string>
+    <string name="microg_bug_summary_music">Din cauza unei erori în microG, pentru a instala Music Vanced versiunea 4.11, este nevoie mai întâi să instalați versiunea 4.07.51, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 4.11 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 4.07.51?</string>
     <string name="please_be_patient">Vă rugăm să aveți răbdare…</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Alegeți limba preferată pentru Vanced</string>
+    <string name="install_latest">Cel mai recent</string>
     <string name="light_plus_other">Alb + %1$s</string>
     <string name="select_at_least_one_lang">Selectaţi cel puţin o limbă!</string>
+    <string name="vanced_black">Negru</string>
+    <string name="vanced_dark">Întunecat</string>
     <!-- About Page -->
     <string name="manager_dev">Dezvoltatori</string>
     <string name="sources">Surse</string>

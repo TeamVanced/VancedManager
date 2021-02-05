@@ -2,10 +2,10 @@ package com.vanced.manager.ui.dialogs
 
 import android.content.DialogInterface
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -16,6 +16,7 @@ import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerAccentColorBinding
 import com.vanced.manager.utils.*
+import com.vanced.manager.utils.AppUtils.log
 
 class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorBinding>() {
 
@@ -34,6 +35,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
     ) = DialogManagerAccentColorBinding.inflate(inflater, container, false)
 
     override fun otherSetups() {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         bindData()
     }
 
@@ -93,7 +95,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                     mutableAccentColor.value = colorFromEditText
                     prefs.managerAccent = colorFromEditText
                 } catch (e: IllegalArgumentException) {
-                    Log.d("VMTheme", getString(R.string.failed_accent))
+                    log("VMTheme", getString(R.string.failed_accent))
                     Toast.makeText(requireActivity(), getString(R.string.failed_accent), Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }

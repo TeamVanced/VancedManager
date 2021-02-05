@@ -14,9 +14,7 @@ import com.vanced.manager.model.DataModel
 import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.utils.enableMusic
-import com.vanced.manager.utils.enableVanced
-import com.vanced.manager.utils.managerVariant
+import com.vanced.manager.utils.*
 
 class AppListAdapter(
     private val context: FragmentActivity,
@@ -25,11 +23,10 @@ class AppListAdapter(
     private val tooltip: ViewTooltip
 ) : RecyclerView.Adapter<AppListAdapter.ListViewHolder>() {
 
-    val apps = mutableListOf<String>()
+    private val apps = mutableListOf<String>()
     private val dataModels = mutableListOf<DataModel?>()
     private val rootDataModels = mutableListOf<RootDataModel?>()
     private val prefs = getDefaultSharedPreferences(context)
-    private var itemCount = 0
 
     private val isRoot = prefs.managerVariant == "root"
 
@@ -43,17 +40,17 @@ class AppListAdapter(
                     appInstallButton.text = it
                 }
                 appInstallButton.setOnClickListener {
-                    viewModel.openInstallDialog(it, apps[position])
+                    if (vanced.value != null) {
+                        viewModel.openInstallDialog(it, apps[position])
+                    } else {
+                        return@setOnClickListener
+                    }
                 }
                 appUninstall.setOnClickListener {
                     dataModel?.appPkg?.let { it1 -> viewModel.uninstallPackage(it1) }
                 }
                 appLaunch.setOnClickListener {
                     viewModel.launchApp(apps[position], isRoot)
-                }
-                with(dataModel?.isAppInstalled?.value) {
-                    appUninstall.isVisible = this == true
-                    appLaunch.isVisible = this == true
                 }
                 dataModel?.isAppInstalled?.observe(lifecycleOwner) {
                     appUninstall.isVisible = it
@@ -87,7 +84,7 @@ class AppListAdapter(
         }
     }
 
-    override fun getItemCount(): Int = itemCount
+    override fun getItemCount(): Int = apps.size
 
     init {
 
@@ -98,7 +95,6 @@ class AppListAdapter(
                 dataModels.add(viewModel.vancedModel.value)
             }
             apps.add(context.getString(R.string.vanced))
-            itemCount++
         }
 
         if (prefs.enableMusic) {
@@ -108,13 +104,11 @@ class AppListAdapter(
                 dataModels.add(viewModel.musicModel.value)
             }
             apps.add(context.getString(R.string.music))
-            itemCount++
         }
 
         if (!isRoot) {
             dataModels.add(viewModel.microgModel.value)
             apps.add(context.getString(R.string.microg))
-            itemCount++
         }
 
     }

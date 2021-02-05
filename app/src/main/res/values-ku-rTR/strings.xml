@@ -8,6 +8,8 @@
     <string name="select_apps">Sepanên xwe hilbijêre</string>
     <!-- Main Activity -->
     <string name="title_about">Derbar</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Rêvebirin</string>
     <string name="title_settings">Sazkarî</string>
     <string name="update_manager">Rêveberê hildemîne</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Navenda hildemandina rêveberê</string>
     <string name="update_not_found">Hildema nû nîne</string>
     <string name="variant">Guharto</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Pêşketî</string>
     <string name="app_install_files_detected">%1$s dosiyên sazkirinê peyda bûn!</string>
@@ -76,13 +81,17 @@
     <string name="app_installation_preferences">%1$s sazkariyên bijarde yên sazkirinê</string>
     <string name="version">Guherto</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Jkx tebata xwe bînin...</string>
     <string name="welcome">Bi xêr hatî</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Ziman(ên) xwe yën dilxwaz ji bo Vanced\'ê hilbijêre</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Ronak + %1$s</string>
     <string name="select_at_least_one_lang">Herî kêm zimanekê hilbijêre!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Pêşvebirên rêveberê</string>
     <string name="sources">Çavkanî</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji bîrgehê bi ser neket, jkx dîsa biceribîne.</string>
     <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock YouTube app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Sazkirin ji ber sedemên nenas bi ser neket, ji bo piştgiriya zêdetir tevlî Telegram an Discord\'ê bibin.</string>
     <string name="installation_incompatible">Sazkirin bi ser neket ji ber ku dosiya sazkirinê ligel cîhaza te hevaheng nîne. Dosiyên daxistî ji sazkariyan paqij bike, paşê dîsa biceribîne.</string>

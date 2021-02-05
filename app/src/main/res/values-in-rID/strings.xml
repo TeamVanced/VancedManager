@@ -8,6 +8,8 @@
     <string name="select_apps">Pilih Aplikasi Anda</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
+    <string name="title_guide">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Pengaturan</string>
     <string name="update_manager">Perbarui Manager</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Pusat Pembaruan Manager</string>
     <string name="update_not_found">Tidak ada pembaruan</string>
     <string name="variant">Varian</string>
+    <!-- Logs -->
+    <string name="logs_saved">Berhasil menyimpan logs</string>
+    <string name="logs_not_saved">Tidak bisa menyimpan logs</string>
     <!-- Dialogs -->
     <string name="advanced">Tingkat Lanjut</string>
     <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, server Discord Vanced, atau Vanced Github</string>
     <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
     <string name="version">Versi</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Bug di microG</string>
+    <string name="microg_bug_summary">Dikarenakan bug yang ada di jalur utama microG, memasang Vanced v16+ membutuhkan anda untuk terlebih dahulu memasang v15.43.32, buka aplikasinya, lalu login dan sekarang anda bisa memasang v16 keatas. Apakah anda ingin melanjutkan untuk pemasangan v15.43.32?</string>
+    <string name="microg_bug_summary_music">Dikarenakan bug yang ada di jalur utama microG, memasang Music v4.11+ membutuhkan anda untuk terlebih dahulu memasang v4.07.51, buka aplikasinya, lalu login dan sekarang anda bisa memasang v4.11 keatas. Apakah anda ingin melanjutkan untuk pemasangan v4.07.51?</string>
     <string name="please_be_patient">Harap bersabar…</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
+    <string name="install_latest">Terbaru</string>
     <string name="light_plus_other">Terang + %1$s</string>
     <string name="select_at_least_one_lang">Pilih setidaknya satu bahasa!</string>
+    <string name="vanced_black">Hitam</string>
+    <string name="vanced_dark">Gelap</string>
     <!-- About Page -->
     <string name="manager_dev">Pengembang Manager</string>
     <string name="sources">Sumber</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
     <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
     <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
-    <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba untuk menurunkan versi paket. Hapus pembaruan dari aplikasi YouTube bawaan, lalu coba lagi.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Pemasangan gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang. Copot pemasangan aplikasi versi saat ini, lalu coba lagi.</string>
     <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
     <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>

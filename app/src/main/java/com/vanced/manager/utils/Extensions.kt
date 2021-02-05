@@ -3,7 +3,6 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.DialogInterface
-import android.util.Log
 import android.widget.RadioGroup
 import androidx.core.graphics.ColorUtils
 import androidx.fragment.app.DialogFragment
@@ -15,6 +14,7 @@ import com.google.android.material.radiobutton.MaterialRadioButton
 import com.topjohnwu.superuser.io.SuFile
 import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.R
+import com.vanced.manager.utils.AppUtils.log
 import java.util.*
 
 fun RadioGroup.getCheckedButtonTag(): String? {
@@ -25,15 +25,19 @@ fun DialogFragment.show(activity: FragmentActivity) {
     try {
         show(activity.supportFragmentManager, "")
     } catch (e: Exception) {
-        Log.d("VMUI", e.stackTraceToString())
+        log("VMUI", e.stackTraceToString())
     }
 
 }
 
 fun List<String>.convertToAppVersions(): List<String> = listOf("latest") + reversed()
 
+fun String.formatVersion(context: Context): String = if (this == "latest") context.getString(R.string.install_latest) else this
+
 fun String.convertToAppTheme(context: Context): String {
-    return context.getString(R.string.light_plus_other, this.capitalize(Locale.ROOT))
+    return with(context) {
+        getString(R.string.light_plus_other, if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black))
+    }
 }
 
 fun String.getLatestAppVersion(versions: List<String>): String = if (this == "latest") versions.reversed()[0] else this
