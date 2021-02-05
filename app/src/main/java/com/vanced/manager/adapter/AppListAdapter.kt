@@ -15,7 +15,6 @@ import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.*
-import com.vanced.manager.utils.isFetching
 
 class AppListAdapter(
     private val context: FragmentActivity,
