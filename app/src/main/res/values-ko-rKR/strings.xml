@@ -8,7 +8,7 @@
     <string name="select_apps">설치할 앱 선택하기</string>
     <!-- Main Activity -->
     <string name="title_about">정보</string>
-    <string name="title_guide">자주 묻는 질문</string>
+    <string name="title_guide">가이드</string>
     <string name="title_logs">로그</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">설정</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">microG의 버그</string>
     <string name="microg_bug_summary">주요 microG의 버그로 인해 v15.43.32를 먼저 설치하고 연 다음 로그인해야 v16 이상을 설치할 수 있습니다. v15.43.32 설치를 진행하시겠습니까?</string>
     <string name="microg_bug_summary_music">주요 microG의 버그로 인해 v4.07.51를 먼저 설치하고 연 다음 로그인해야 Music v4.11 이상을 설치할 수 있습니다. v4.07.51 설치를 진행하시겠습니까?</string>
-    <string name="please_be_patient">잠시만 기다려 주세요...</string>
+    <string name="please_be_patient">이 작업을 하는 도중 앱을 종료하지 마세요!</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced에서 선호하는 언어를 선택해주세요</string>
