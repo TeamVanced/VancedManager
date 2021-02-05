@@ -8,7 +8,7 @@
     <string name="select_apps">Vyberte své aplikace</string>
     <!-- Main Activity -->
     <string name="title_about">O aplikaci</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Průvodce</string>
     <string name="title_logs">Záznamy</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Nastavení</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Chyba v microG</string>
     <string name="microg_bug_summary">Kvůli chybě v microG vyžaduje instalace Vanced v16+ nejprve instalaci verze 15.43.32. Otevřete ji, poté se přihlaste a teprve pak nainstalujte verzi 16 a vyšší. Chcete pokračovat v instalaci verze 15.43.32?</string>
     <string name="microg_bug_summary_music">Kvůli chybě v microG vyžaduje instalace Music v4.11+ nejprve instalaci verze 4.07.51. Otevřete ji, poté se přihlaste a teprve pak nainstalujte verzi 4.11 a vyšší. Chcete pokračovat v instalaci verze 4.07.51?</string>
-    <string name="please_be_patient">Chvilku strpení…</string>
+    <string name="please_be_patient">Během tohoto procesu NEUKONČUJTE aplikací!</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte preferovaný jazyk pro Vanced</string>
