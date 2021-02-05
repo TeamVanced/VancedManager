@@ -2,6 +2,7 @@ package com.vanced.manager.ui.dialogs
 
 import android.content.DialogInterface
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -34,6 +35,7 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
     ) = DialogManagerAccentColorBinding.inflate(inflater, container, false)
 
     override fun otherSetups() {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         bindData()
     }
 
