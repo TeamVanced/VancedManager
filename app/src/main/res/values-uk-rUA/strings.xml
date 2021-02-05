@@ -8,7 +8,7 @@
     <string name="select_apps">Виберіть Ваші Додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Логі</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Помилка в microG</string>
     <string name="microg_bug_summary">У зв\'язку з помилкою в microG, встановлення Vanced 16+ спочатку вимагає встановлення v15.43.32, відкриття додатку і входу в аккаунт, і тільки потім можна встановити версію 16 і вище. Ви хочете продовжити встановлення v15.43.32?</string>
     <string name="microg_bug_summary_music">У зв\'язку з помилкою в microG, встановлення Music 4.11+ спочатку вимагає встановлення v4.07.51, відкриття додатку і входу в аккаунт, і тільки потім можна встановити версію 4.11 і вище. Ви хочете продовжити встановлення v4.07.51?</string>
-    <string name="please_be_patient">Будь ласка, зачекайте…</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
