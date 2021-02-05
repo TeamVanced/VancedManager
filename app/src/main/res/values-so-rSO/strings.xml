@@ -8,7 +8,7 @@
     <string name="select_apps">Dooro apps-ka</string>
     <!-- Main Activity -->
     <string name="title_about">Anaga</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Maamule</string>
     <string name="title_settings">Fadhiga</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Cillad xaga microG ah</string>
     <string name="microg_bug_summary">Ayadooy ugu wacantahay cillad xaga microG ga ah, kushibida Vanced 16+ ugu horayn waxay u baahantahay inaad ku shubto v15.43.32, kadib aad furto ood galiso akoonkaaga markaas kadib umbaad v16 iyo wixii kasareeya ku shubi kartaa. Ma rabtaa inaad kusii socoto ku shubida v15.43.32?</string>
     <string name="microg_bug_summary_music">Ayadooy ugu wacantahay cillad xaga microG ga ah, kushibida Music v4.11+ ugu horayn waxay u baahantahay inaad ku shubto v4.07.51, kadib aad furto ood galiso akoonkaaga markaas kadib umbaad v4.11 iyo wixii kasareeya ku shubi kartaa. Ma rabtaa inaad kusii socoto ku shubida v4.07.51?</string>
-    <string name="please_be_patient">Fadlan dulqaado…</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">Soo dhawoow</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Dooro luuqada(ha) aad rabto ee app-ka Vanced</string>
