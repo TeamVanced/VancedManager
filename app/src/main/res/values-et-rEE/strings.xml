@@ -8,7 +8,7 @@
     <string name="select_apps">Valige Oma Rakendused</string>
     <!-- Main Activity -->
     <string name="title_about">Teave</string>
-    <string name="title_guide">KKK</string>
+    <string name="title_guide">Juhend</string>
     <string name="title_logs">Logid</string>
     <string name="title_home">Haldur</string>
     <string name="title_settings">Seaded</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">microG viga</string>
     <string name="microg_bug_summary">Seoses microG pealiini veaga, vajab Vanced v16+ paigaldus ennem v15.43.32 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v15.43.32 paigaldusega?</string>
     <string name="microg_bug_summary_music">Seoses microG pealiini veaga, vajab Music v4.11+ paigaldus ennem v4.07.51 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v4.11 või uuema. Kas soovite jätkata v4.07.51 paigaldusega?</string>
-    <string name="please_be_patient">Palun olge kannatlik…</string>
+    <string name="please_be_patient">Palun ärge väljuge rakendusest protsessi ajal!</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valige eelistatud keel(ed) Vanced jaoks</string>
