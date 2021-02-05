@@ -8,7 +8,7 @@
     <string name="select_apps">Pilih Aplikasi Anda</string>
     <!-- Main Activity -->
     <string name="title_about">Tentang</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Petunjuk</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Pengaturan</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Bug di microG</string>
     <string name="microg_bug_summary">Dikarenakan bug yang ada di jalur utama microG, memasang Vanced v16+ membutuhkan anda untuk terlebih dahulu memasang v15.43.32, buka aplikasinya, lalu login dan sekarang anda bisa memasang v16 keatas. Apakah anda ingin melanjutkan untuk pemasangan v15.43.32?</string>
     <string name="microg_bug_summary_music">Dikarenakan bug yang ada di jalur utama microG, memasang Music v4.11+ membutuhkan anda untuk terlebih dahulu memasang v4.07.51, buka aplikasinya, lalu login dan sekarang anda bisa memasang v4.11 keatas. Apakah anda ingin melanjutkan untuk pemasangan v4.07.51?</string>
-    <string name="please_be_patient">Harap bersabar…</string>
+    <string name="please_be_patient">Mohon untuk TIDAK keluar dari aplikasi saat proses ini!</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
@@ -105,7 +105,7 @@
     <string name="ifile_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
     <string name="installation_aborted">Pemasangan gagal karena pengguna membatalkan pemasangan.</string>
     <string name="installation_blocked">Pemasangan gagal karena pengguna memblokir pemasangan.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">Pemasangan gagal karena pengguna mencoba menurunkan versi paket. Hapus pembaruan dari aplikasi bawaan, lalu coba lagi.</string>
     <string name="installation_conflict">Pemasangan gagal karena aplikasi konflik dengan aplikasi yang sudah terpasang. Copot pemasangan aplikasi versi saat ini, lalu coba lagi.</string>
     <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut.</string>
     <string name="installation_incompatible">Pemasangan gagal karena file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
