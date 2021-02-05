@@ -23,11 +23,10 @@ class AppListAdapter(
     private val tooltip: ViewTooltip
 ) : RecyclerView.Adapter<AppListAdapter.ListViewHolder>() {
 
-    val apps = mutableListOf<String>()
+    private val apps = mutableListOf<String>()
     private val dataModels = mutableListOf<DataModel?>()
     private val rootDataModels = mutableListOf<RootDataModel?>()
     private val prefs = getDefaultSharedPreferences(context)
-    private var itemCount = 0
 
     private val isRoot = prefs.managerVariant == "root"
 
@@ -85,7 +84,7 @@ class AppListAdapter(
         }
     }
 
-    override fun getItemCount(): Int = itemCount
+    override fun getItemCount(): Int = apps.size
 
     init {
 
@@ -96,7 +95,6 @@ class AppListAdapter(
                 dataModels.add(viewModel.vancedModel.value)
             }
             apps.add(context.getString(R.string.vanced))
-            itemCount++
         }
 
         if (prefs.enableMusic) {
@@ -106,13 +104,11 @@ class AppListAdapter(
                 dataModels.add(viewModel.musicModel.value)
             }
             apps.add(context.getString(R.string.music))
-            itemCount++
         }
 
         if (!isRoot) {
             dataModels.add(viewModel.microgModel.value)
             apps.add(context.getString(R.string.microg))
-            itemCount++
         }
 
     }
