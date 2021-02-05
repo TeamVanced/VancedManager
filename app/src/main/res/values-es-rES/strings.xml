@@ -8,7 +8,7 @@
     <string name="select_apps">Selecciona tus aplicaciones</string>
     <!-- Main Activity -->
     <string name="title_about">Información</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Protocolo</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Error en microG</string>
     <string name="microg_bug_summary">Debido a un error en microG, para poder instalar Vanced v16+ hay que instalar primero la versión v15.43.32, abrirla, iniciar sesión y solo entonces podrás instalar la versión v16 y superior. ¿Quieres instalar la versión v15.43.32?</string>
     <string name="microg_bug_summary_music">Debido a un error en microG, para poder instalar Music v4.11+ hay que instalar primero la versión v4.07.51, abrirla, iniciar sesión y solo entonces podrás instalar la versión v4.11 y superior. ¿Quieres instalar la versión v4.07.51?</string>
-    <string name="please_be_patient">Por favor, sé paciente…</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>
