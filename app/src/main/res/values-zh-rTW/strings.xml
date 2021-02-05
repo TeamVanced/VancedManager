@@ -8,7 +8,7 @@
     <string name="select_apps">選擇您需要的應用程式</string>
     <!-- Main Activity -->
     <string name="title_about">關於</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">日誌</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">microG 漏洞</string>
     <string name="microg_bug_summary">由於 microG 的一個 bug，如要安裝 Vanced 16+，您需要先安裝 15.43.32 版、開啟它、登入，然後才能安裝 16 或更新的版本。是否開始安裝 15.43.32 版？</string>
     <string name="microg_bug_summary_music">由於 microG 的一個 bug，如要安裝 Music 4.11+，您需要先安裝 4.07.51 版、開啟它、登入，然後才能安裝 4.11 或更新的版本。是否開始安裝 4.07.51 版？</string>
-    <string name="please_be_patient">請耐心等候…</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">為 Vanced 選擇您偏好的語言</string>
