@@ -8,7 +8,7 @@
     <string name="select_apps">Válaszd ki az Appot</string>
     <!-- Main Activity -->
     <string name="title_about">Rólunk</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Naplók</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Beállítások</string>
@@ -86,7 +86,7 @@ Akarod telepíteni?</string>
 Akarod folytatni a 15.43.32-es verzió telepítésével?</string>
     <string name="microg_bug_summary_music">Egy, a microG-ben jelenlévő hiba miatt, a Vanced Music 4.11+ verzióihoz először telepítsd a 4.07.51-es verziót, nyisd meg, jelentkezz be, majd csak ezután tudod telepíteni a 4.11-es vagy újabb verziót.
 Akarod folytatni a 4.07.51-es verzió telepítésével?</string>
-    <string name="please_be_patient">Kérjük legyen türelmes... </string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced nyelvének kiválasztása</string>
