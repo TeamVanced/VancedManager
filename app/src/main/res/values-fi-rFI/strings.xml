@@ -8,6 +8,8 @@
     <string name="select_apps">Valitse Sovelluksesi</string>
     <!-- Main Activity -->
     <string name="title_about">Tietoja</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Asetukset</string>
     <string name="update_manager">Päivitä hallintasovellus</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Managerin päivityskeskus</string>
     <string name="update_not_found">Ei uusia päivityksiä</string>
     <string name="variant">Variaatio</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Kehittyneet</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s asennusasetukset</string>
     <string name="version">Versio</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Virhe microG:ssä</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Ole kärsivällinen…</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Vaalea + %1$s</string>
     <string name="select_at_least_one_lang">Valitse ainakin yksi kieli!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Managerin kehittäjät</string>
     <string name="sources">Lähdekoodi</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
-    <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti heikentää pakettia. Poista päivitykset YouTube-sovelluksesta ja yritä sitten uudelleen.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>

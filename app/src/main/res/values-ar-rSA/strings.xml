@@ -8,6 +8,8 @@
     <string name="select_apps">اختر تطبيقاتك</string>
     <!-- Main Activity -->
     <string name="title_about">حول</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">السجل</string>
     <string name="title_home">المدير</string>
     <string name="title_settings">الإعدادات</string>
     <string name="update_manager">تحديث المدير</string>
@@ -57,6 +59,9 @@
     <string name="update_center">مركز التحديث</string>
     <string name="update_not_found">لا توجد تحديثات جديدة</string>
     <string name="variant">النوع</string>
+    <!-- Logs -->
+    <string name="logs_saved">تم حفظ السجل بنجاح</string>
+    <string name="logs_not_saved">تعذر حفظ السجل</string>
     <!-- Dialogs -->
     <string name="advanced">إعدادات متقدمة</string>
     <string name="app_install_files_detected">تم اكتشاف ملفات تثبيت %1$s!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="app_installation_preferences">تفضيلات تثبيت %1$s</string>
     <string name="version">الإصدار</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">خطأ في المايكروجي</string>
+    <string name="microg_bug_summary">نظرًا لوجود خطأ في microG الرئيسي، يتطلب تثبيت ڤاسند v16 + أولاً تثبيت الإصدار 15.43.32 ، وفتحه ، ثم تسجيل الدخول وبعد ذلك فقط يمكنك تثبيت الإصدار 16 والإصدارات الأحدث. هل تريد متابعة تثبيت الإصدار 15.43.32؟</string>
+    <string name="microg_bug_summary_music">نظرًا لوجود خطأ في microG الرئيسي، يتطلب تثبيت Music v4.11 + أولاً تثبيت الإصدار 4.07.51، وفتحه، ثم تسجيل الدخول وعندها فقط يمكنك تثبيت الإصدار 4.11 وما بعده. هل تريد متابعة تثبيت الإصدار 4.07.51؟</string>
     <string name="please_be_patient">الرجاء الانتظار…</string>
     <string name="welcome">مرحباً بك</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">اختر لغتك(لغاتك) المفضلة لڤانسد</string>
+    <string name="install_latest">الأحدث</string>
     <string name="light_plus_other">فاتح + %1$s</string>
     <string name="select_at_least_one_lang">اختر لغة واحدة على الأقل!</string>
+    <string name="vanced_black">أسود</string>
+    <string name="vanced_dark">داكن</string>
     <!-- About Page -->
     <string name="manager_dev">مطوري المدير</string>
     <string name="sources">المصادر</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
-    <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
     <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى التيليجرام أو الديسكورد الخاص بنا لمزيد من الدعم.</string>
     <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. امسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>

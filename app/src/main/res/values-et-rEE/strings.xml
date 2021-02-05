@@ -8,6 +8,8 @@
     <string name="select_apps">Valige Oma Rakendused</string>
     <!-- Main Activity -->
     <string name="title_about">Teave</string>
+    <string name="title_faq">KKK</string>
+    <string name="title_logs">Logid</string>
     <string name="title_home">Haldur</string>
     <string name="title_settings">Seaded</string>
     <string name="update_manager">Uuenduste Haldur</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Halduri värskenduskeskus</string>
     <string name="update_not_found">Uusi uuendusi ei ole</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Edukalt salvestatud logid</string>
+    <string name="logs_not_saved">Ei suutnud salvestada logi</string>
     <!-- Dialogs -->
     <string name="advanced">Täpsustatud</string>
     <string name="app_install_files_detected">%1$s paigaldusfailid on leitud!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
     <string name="app_installation_preferences">%1$s Paigalduseelistused</string>
     <string name="version">Versioon</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">microG viga</string>
+    <string name="microg_bug_summary">Seoses microG pealiini veaga, vajab Vanced v16+ paigaldus ennem v15.43.32 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v15.43.32 paigaldusega?</string>
+    <string name="microg_bug_summary_music">Seoses microG pealiini veaga, vajab Music v4.11+ paigaldus ennem v4.07.51 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v4.11 või uuema. Kas soovite jätkata v4.07.51 paigaldusega?</string>
     <string name="please_be_patient">Palun olge kannatlik…</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valige eelistatud keel(ed) Vanced jaoks</string>
+    <string name="install_latest">Uusim</string>
     <string name="light_plus_other">Hele + %1$s</string>
     <string name="select_at_least_one_lang">Vali vähemalt üks keel!</string>
+    <string name="vanced_black">Must</string>
+    <string name="vanced_dark">Tume</string>
     <!-- About Page -->
     <string name="manager_dev">Halduri arendajad</string>
     <string name="sources">Allikad</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Apk faili musta/tumeda teema jaoks leidmine ebaõnnestus, proovige palun uuesti.</string>
     <string name="installation_aborted">Paigaldamine ebaõnnestus kuna kasutaja katkestas selle.</string>
     <string name="installation_blocked">Paigaldamine ebaõnnestus kuna kasutaja peatas selle.</string>
-    <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused YouTube\'i originaalrakendusest ja proovige uuesti.</string>
+    <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused originaalrakendusest ja proovige uuesti.</string>
     <string name="installation_conflict">Paigaldamine ebaõnnestus, kuna tekkis konflikt olemasoleva versiooniga. Eemaldage praegune rakenduse versioon, ning proovige uuesti.</string>
     <string name="installation_failed">Paigaldamine ebaõnnestus teadmata põhjustel, liituge meie Telegrami või Discordiga, et saada edaspidist tuge.</string>
     <string name="installation_incompatible">Paigaldamine ebaõnnestus, kuna paigaldusfail ei sobitu teie seadmega. Puhastage allalaaditud failid seadete alt, ning proovige uuesti.</string>

@@ -8,6 +8,8 @@
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
     <string name="update_manager">ম্যানেজার আপডেট করুন</string>
@@ -57,6 +59,9 @@
     <string name="update_center">ম্যানেজার আপডেট কেন্দ্র</string>
     <string name="update_not_found">কোনো নতুন আপডেট নেই</string>
     <string name="variant">বিকল্প</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">উন্নত</string>
     <string name="app_install_files_detected">ইনস্টল করার জন্য %1$s ফাইল খুঁজে পাওয়া গেছে!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vancedapp.com, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
     <string name="app_installation_preferences">%1$s ইনস্টল করার পছন্দগুলি</string>
     <string name="version">সংস্করণ</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">মাইক্রোজি মধ্যে বাগ</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">দয়া করে ধৈর্য ধরুন…</string>
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">ভ্যান্সডের জন্য আপনার পছন্দসই ভাষা(গুলি) চয়ন করুন</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">হাল্কা + %1$s</string>
     <string name="select_at_least_one_lang">অন্তত একটি ভাষা নির্বাচন করুন!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">ম্যানেজার বিকাশকারীরা</string>
     <string name="sources">উৎসগুলি</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">স্টোরেজ থেকে কালো/গাঢ় থিমের জন্য এপিকে ফাইল সনাক্ত করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="installation_aborted">ইনস্টল করা যায়নি কারণ ব্যবহারকারী ইনস্টল করা বাতিল করে দিয়েছেন।</string>
     <string name="installation_blocked">ইনস্টল করা যায়নি কারণ ব্যবহারকারী ইনস্টল করা অবরুদ্ধ করেছেন।</string>
-    <string name="installation_downgrade">ইনস্টল করা যায়নি কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করছিলেন। স্টক ইউটিউব অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ইনস্টলেশন ব্যর্থ হয়েছে কারণ অ্যাপ্লিকেশনটি ইতিমধ্যে ইনস্টল হওয়া অ্যাপ্লিকেশানের সাথে দ্বন্দ্ব রয়েছে ts অ্যাপ্লিকেশনটির বর্তমান সংস্করণটি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।.</string>
     <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের উপযুক্ত নয়। সেটিংসে ডাউনলোড করা ফাইল মুছে ফেলুন, তারপরে আবার চেষ্টা করুন।</string>

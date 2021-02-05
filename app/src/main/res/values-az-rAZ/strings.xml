@@ -8,6 +8,8 @@
     <string name="select_apps">Tətbiqlərinizi Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Haqqında</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Menecer</string>
     <string name="title_settings">Tənzimləmələr</string>
     <string name="update_manager">Yeniləmə Meneceri</string>
@@ -46,9 +48,9 @@
     <string name="link_title">Chrome Özəl Vərəqlərini istifadə et</string>
     <string name="link_custom_tabs">Bağlantılar Chrome Özəl Vərəqlərində açılacaq</string>
     <string name="system_default">İlkin Sistem</string>
-    <string name="script_save_failed">Failed to save new time value</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_save_failed">Yeni vaxt qiymətini saxlamaq olmadı</string>
+    <string name="script_sleep_timer">Root Qoşma Gözləmə Müddəti</string>
+    <string name="script_sleep_timer_description">/data/adb/service.d/app.sh kodundakı yuxu vaxtı qiymətini nizamlayın, bu qoşma xətalarını aradan qaldırmağa kömək edəcək</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tünd mövzu</string>
     <string name="theme_light">Açıq mövzu</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Menecer Yeniləmə Mərkəzi</string>
     <string name="update_not_found">Yeniləmə yoxdur</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Qabaqcıl</string>
     <string name="app_install_files_detected">%1$s quraşdırma faylı aşkarlandı!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Tətbiqi vancedapp.com, Vanced Discord server və ya Vanced GitHub\'dan endirdiyinizə əmin olun</string>
     <string name="app_installation_preferences">%1$s Qurma Seçimləri</string>
     <string name="version">Versiya</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Amma microG\'də</string>
+    <string name="microg_bug_summary">microG\'də olan xəta səbəbindən Vanced 16+ yükləmək üçün əvvəlcə v15.43.32 versiyasını yükləməlisiniz, bunun üçün onu açıb giriş etməlisiniz, ancaq ondan sonra v16 ya da üstünü quraşdıra bilərsiniz. v15.43.32 versiyasını yükləmək istəyirsiniz?</string>
+    <string name="microg_bug_summary_music">microG\'də olan xəta səbəbindən Music 4.11+ yükləmək üçün əvvəlcə v4.07.51 versiyasını yükləməlisiniz, bunun üçün onu açıb giriş etməlisiniz, ancaq ondan sonra v4.11 ya da üstünü quraşdıra bilərsiniz. v4.15.11 versiyasını yükləmək istəyirsiniz?</string>
     <string name="please_be_patient">Zəhmət olmasa səbrli olun…</string>
     <string name="welcome">Xoş gəldiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced üçün tərcih etdiyiniz dili seçin</string>
+    <string name="install_latest">Ən son</string>
     <string name="light_plus_other">İşıqlı + %1$s</string>
     <string name="select_at_least_one_lang">Ən azı bir dil seçin!</string>
+    <string name="vanced_black">Qara</string>
+    <string name="vanced_dark">Qaranlıq</string>
     <!-- About Page -->
     <string name="manager_dev">Menecer Tərtibatçıları</string>
     <string name="sources">Mənbələr</string>
@@ -96,8 +105,8 @@
     <string name="ifile_missing">Anbarda qara/tünd mövzu üçün apk faylı tapılmadı, yenidən sınayın.</string>
     <string name="installation_aborted">İstifadəçi quraşdırmanı ləğv etdiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_blocked">İstifadəçi quraşdırmanı əngəllədiyi üçün quraşdırılma uğursuz oldu.</string>
-    <string name="installation_downgrade">İstifadəçi paketi alt versiyaya keçirməyə çalışdığı üçün quraşdırılma uğursuz oldu. Stok YouTube tətbiqindən yeniləmələri silib yenidən sınayın.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_conflict">Tətbiq əvvəlcədən quraşdırılmış bir tətbiqlə toqquşduğu üçün quraşdırılma uğursuz oldu. Vanced-in cari versiyasını silib yenidən sınayın.</string>
     <string name="installation_failed">Bilinməyən səbəblərə görə quraşdırılma uğursuz oldu. Dəstək üçün Telegram və ya Discord-a qoşulun.</string>
     <string name="installation_incompatible">Quraşdırma faylı cihazınıza uyğun gəlmədiyi üçün quraşdırılma uğursuz oldu. Tənzimləmələrdən endirilmiş faylları təmizləyib yenidən sınayın.</string>
     <string name="installation_invalid">Apk faylları zədəli olduğu üçün quraşdırılma uğursuz oldu, yenidən sınayın.</string>

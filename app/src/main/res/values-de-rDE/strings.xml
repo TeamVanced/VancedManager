@@ -8,6 +8,8 @@
     <string name="select_apps">Wähle deine Apps</string>
     <!-- Main Activity -->
     <string name="title_about">Über</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Einstellungen</string>
     <string name="update_manager">Update Manager</string>
@@ -15,7 +17,7 @@
     <string name="are_you_rooted">Ist dein Gerät gerootet?</string>
     <string name="grant_root">Root-Berechtigung erteilen</string>
     <string name="select_at_least_one_app">Wähle mindestens eine App!</string>
-    <string name="select_apps_music">Vanced, aber für YouTube Music!\nrelativ weniger funktionsreich, aber erfüllt deine Bedürfnisse.</string>
+    <string name="select_apps_music">Vanced, aber für YouTube Music!\nWeniger funktionsreich, aber erfüllt dennoch deine Bedürfnisse.</string>
     <string name="select_apps_vanced">YouTube Vanced ist die Standard-Android-YouTube-App, aber besser!</string>
     <string name="lets_get_started">Los geht\'s</string>
     <string name="willing_to_use_root">Du weißt nicht was das ist, oder willst die Root-Version nicht benutzen? klicke einfach den blauen Pfeil unten an!</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Update Center</string>
     <string name="update_not_found">Keine neuen Updates</string>
     <string name="variant">Variante</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Erweitert</string>
     <string name="app_install_files_detected">%1$s Installationsdateien erkannt!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Stelle sicher, dass du die App von vancedapp.com, dem Vanced Discord Server oder dem Vanced GitHub heruntergeladen hast</string>
     <string name="app_installation_preferences">%1$s Installationsoptionen</string>
     <string name="version">Version</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Fehler in MicroG</string>
+    <string name="microg_bug_summary">Wegen eines Fehlers in MicroG muss man erst Vanced v15.43.32 installieren, öffnen und sich dort einloggen, um Vanced v16 und höher zu installieren. Wollen Sie mit der Installation von Vanced v15.43.32 fortfahren?</string>
+    <string name="microg_bug_summary_music">Wegen eines Fehlers in MicroG muss man erst Music v4.07.51 installieren, öffnen und sich dort einloggen, um Music v4.11 und höher zu installieren. Wollen Sie mit der Installation von Music v4.07.51 fortfahren?</string>
     <string name="please_be_patient">Bitte warten…</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wählen Sie ihre bevorzugte Sprache(n) für Vanced</string>
+    <string name="install_latest">Neueste</string>
     <string name="light_plus_other">Hell + %1$s</string>
     <string name="select_at_least_one_lang">Wähle mindestens eine Sprache aus!</string>
+    <string name="vanced_black">Schwarz</string>
+    <string name="vanced_dark">Dunkel</string>
     <!-- About Page -->
     <string name="manager_dev">Manager-Entwickler</string>
     <string name="sources">Quellen</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Apk-Datei für schwarzes/dunkles Theme konnte nicht gefunden werden, bitte versuchen Sie es erneut.</string>
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
     <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer die Installation blockiert hat.</string>
-    <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, das Paket herunterzustufen. Aktualisierungen von YouTube deinstallieren und dann erneut versuchen.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Die Installation ist fehlgeschlagen, weil die App in Konflikt mit einer bereits installierten App steht. Deinstalliere die aktuell installierte Version der App und versuchen es dann erneut.</string>
     <string name="installation_failed">Installation aus unbekannten Grund fehlgeschlagen. Treten Sie bitte unserem Telegram-Chat oder Discord-Server bei, um Support zu erhalten.</string>
     <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>

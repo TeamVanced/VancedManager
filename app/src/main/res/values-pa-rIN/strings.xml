@@ -8,6 +8,8 @@
     <string name="select_apps">ਹੋਰ ਐਪ ਚੁਣੋ</string>
     <!-- Main Activity -->
     <string name="title_about">ਸਾਡੇ ਬਾਰੇ ਵਿੱਚ</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">ਮੈਨੇਜਰ</string>
     <string name="title_settings">ਸੈਟਿੰਗਜ਼</string>
     <string name="update_manager">ਅਪਡੇਟ ਮੈਨੇਜਰ</string>
@@ -57,6 +59,9 @@
     <string name="update_center">ਮੈਨੇਜਰ ਅਪਡੇਟ ਕੇਂਦਰ</string>
     <string name="update_not_found">ਕੋਈ ਨਵੇਂ ਅਪਡੇਟਸ ਨਹੀਂ</string>
     <string name="variant">ਕਿਸਮ</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">ਉੱਨਤ</string>
     <string name="app_install_files_detected">%1$s ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਲੱਭੀਆਂ!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vancedapp.com, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
     <string name="app_installation_preferences">%1$s ਸਥਾਪਨਾ ਚੁਣੋ</string>
     <string name="version">ਵਰਜਨ</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">ਮਾਈਕਰੋਜੀ ਵਿੱਚ ਬੱਗ</string>
+    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">ਕਿਰਪਾ ਕਰਕੇ ਸਬਰ ਰੱਖੋ…</string>
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced ਦੇ ਲਈ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ (ਏ) ਚੁਣੋ</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">ਲਾਇਟ + %1$s</string>
     <string name="select_at_least_one_lang">ਘੱਟੋ-ਘੱਟ ਇੱਕ ਭਾਸ਼ਾ ਚੁਣੋ!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">ਪ੍ਬੰਧਕ ਨਿਰਮਾਣਕਰਤਾ</string>
     <string name="sources">ਸਰੋਤ</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">ਸਟੋਰੇਜ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_aborted">ਇੰਸਟਾਲ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਰੱਦ ਕਰ ਦਿੱਤੀ.</string>
     <string name="installation_blocked">ਇੰਸਟਾਲੇਸ਼ਨ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਬਲਾਕ ਕਰ ਦਿੱਤੀ.</string>
-    <string name="installation_downgrade">ਇੰਸਟਾਲੇਸ਼ਨ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਪੈਕਜ ਨੂੰ ਡਾਉਣਗਰੇਡ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ. ਅਸਲ YouTube ਐਪ ਤੋਂ ਅਪਡੇਟ ਅਨਇੰਸਟਾਲ ਕਰੋ, ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ਸਥਾਪਨਾ ਅਸਫਲ ਕਿਉਂਕਿ ਐਪ ਪਹਿਲਾਂ ਤੋਂ ਸਥਾਪਤ ਐਪ ਨਾਲ ਟਕਰਾਉਂਦੀ ਹੈ. ਐਪ ਦੇ ਮੌਜੂਦਾ ਸੰਸਕਰਣ ਨੂੰ ਅਣਇੰਸਟੌਲ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_failed">ਅਣਜਾਣ ਕਾਰਨਾਂ ਕਰਕੇ ਸਥਾਪਨਾ ਅਸਫਲ ਹੋ ਗਈ, ਹੋਰ ਸਹਾਇਤਾ ਲਈ ਸਾਡੇ ਟੈਲੀਗ੍ਰਾਮ ਜਾਂ ਡਿਸਕੋਰਡ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ.</string>
     <string name="installation_incompatible">ਸਥਾਪਨਾ ਅਸਫਲ ਹੋਈ ਕਿਉਂਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਦੇ ਅਨੁਕੂਲ ਨਹੀਂ ਹੈ. ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਸਾਫ਼ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>

@@ -8,6 +8,8 @@
     <string name="select_apps">Dooro apps-ka</string>
     <!-- Main Activity -->
     <string name="title_about">Anaga</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Maamule</string>
     <string name="title_settings">Fadhiga</string>
     <string name="update_manager">Cusboonaysii</string>
@@ -24,10 +26,10 @@
     <string name="app_changelog_tooltip">Kusii dhufo si aad u aragto waxa isbadalay.</string>
     <string name="changelog">Waxa isbadalay</string>
     <string name="downloading_file">Dajinaya %1$s</string>
-    <string name="install">Ku shub</string>
-    <string name="button_reinstall">Dib-ugushub</string>
+    <string name="install">Kushub</string>
+    <string name="button_reinstall">Dib ugushub</string>
     <string name="version_installed">Ka kujira:</string>
-    <string name="latest">Kii u dambeeyay:</string>
+    <string name="latest">U dambeeyay:</string>
     <string name="no_microg">microG laguma shubin</string>
     <string name="root_not_granted">\'Root\' looma fasaxin</string>
     <string name="unavailable">Lama heli karo</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Xarunta Cusboonaysiinta Manager-ka</string>
     <string name="update_not_found">Majiro wax cusub</string>
     <string name="variant">Nooca</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Dheeraad ah</string>
     <string name="app_install_files_detected">%1$s faylashiisii kushubi lahaa ayaa la helay!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
     <string name="app_installation_preferences">Fadhiga Kushubida %1$s</string>
     <string name="version">Tirsiga</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Cillad xaga microG ah</string>
+    <string name="microg_bug_summary">Ayadooy ugu wacantahay cillad xaga microG ga ah, kushibida Vanced 16+ ugu horayn waxay u baahantahay inaad ku shubto v15.43.32, kadib aad furto ood galiso akoonkaaga markaas kadib umbaad v16 iyo wixii kasareeya ku shubi kartaa. Ma rabtaa inaad kusii socoto ku shubida v15.43.32?</string>
+    <string name="microg_bug_summary_music">Ayadooy ugu wacantahay cillad xaga microG ga ah, kushibida Music v4.11+ ugu horayn waxay u baahantahay inaad ku shubto v4.07.51, kadib aad furto ood galiso akoonkaaga markaas kadib umbaad v4.11 iyo wixii kasareeya ku shubi kartaa. Ma rabtaa inaad kusii socoto ku shubida v4.07.51?</string>
     <string name="please_be_patient">Fadlan dulqaado…</string>
     <string name="welcome">Soo dhawoow</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Dooro luuqada(ha) aad rabto ee app-ka Vanced</string>
+    <string name="install_latest">Latest</string>
     <string name="light_plus_other">Cadiin + %1$s</string>
     <string name="select_at_least_one_lang">Ugu yaraan hal luuqad dooro!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Sameeyaasha Manager-ka</string>
     <string name="sources">Tixraacyo</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Laguma guulaysanin in faylka apk-ga ee nashqada madow/mugdiga laga helo kaydka aalaada, fadlan markale isku day.</string>
     <string name="installation_aborted">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa joojiyay.</string>
     <string name="installation_blocked">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa xanibay.</string>
-    <string name="installation_downgrade">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa isku dayay inuu nooc hore ku shubo. Ka saar cusboonaysiinta xaga app-ka YouTube-ka caadiga ah, kadibna markale isku day.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Ku shubidii way guuldaraysatay sababtoo ah app-ka waxay iskhilaafeen mid horay ugu jiray aalada. Ka saar nooca hadda ee kujira, kadib markale ku celi.</string>
     <string name="installation_failed">Ku shubidii way guuldaraysatay sababo aan la garanaynin awgood, kusoo biir Telegram-kanaga ama Discord-ka si aad caawin dheerad ah u hesho.</string>
     <string name="installation_incompatible">Ku shubidii way guuldaraysatay sababtoo ah faylka kuma shaqaynayo aaladaada. Xaga Fadhiga ka saar waxyaabaha lasoo dajiyay, kadib markale isku day.</string>

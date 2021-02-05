@@ -8,6 +8,8 @@
     <string name="select_apps">Selecciona tus aplicaciones</string>
     <!-- Main Activity -->
     <string name="title_about">Información</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Protocolo</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
     <string name="update_manager">Actualizar Manager</string>
@@ -48,7 +50,7 @@
     <string name="system_default">Predeterminado del sistema</string>
     <string name="script_save_failed">Error al guardar el nuevo valor de tiempo</string>
     <string name="script_sleep_timer">Tiempo de reposo de script root</string>
-    <string name="script_sleep_timer_description">Ajustar el valor de tiempo de reposo en el script /data/adb/service.d/app.sh, útil para arreglar problemas de montado</string>
+    <string name="script_sleep_timer_description">Ajustar el valor de tiempo de reposo en el script /data/adb/service.d/app.sh, útil para arreglar problemas de montaje</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Tema Oscuro</string>
     <string name="theme_light">Tema Claro</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Centro de Actualizaciones</string>
     <string name="update_not_found">Sin actualizaciónes nuevas</string>
     <string name="variant">Variante</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Avanzado</string>
     <string name="app_install_files_detected">¡%1$s archivos de instalación detectados!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Asegúrate de haber descargado la app desde vancedapp.com, el grupo de Discord de Vanced, o el GitHub de Vanced</string>
     <string name="app_installation_preferences">%1$s Preferencias de instalación</string>
     <string name="version">Versión</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Error en microG</string>
+    <string name="microg_bug_summary">Debido a un error en microG, para poder instalar Vanced v16+ hay que instalar primero la versión v15.43.32, abrirla, iniciar sesión y solo entonces podrás instalar la versión v16 y superior. ¿Quieres instalar la versión v15.43.32?</string>
+    <string name="microg_bug_summary_music">Debido a un error en microG, para poder instalar Music v4.11+ hay que instalar primero la versión v4.07.51, abrirla, iniciar sesión y solo entonces podrás instalar la versión v4.11 y superior. ¿Quieres instalar la versión v4.07.51?</string>
     <string name="please_be_patient">Por favor, sé paciente…</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Elige tu(s) idioma(s) preferido(s) para Vanced</string>
+    <string name="install_latest">Más reciente</string>
     <string name="light_plus_other">Claro + %1$s</string>
     <string name="select_at_least_one_lang">¡Seleccione al menos un idioma!</string>
+    <string name="vanced_black">Negro</string>
+    <string name="vanced_dark">Obscuro</string>
     <!-- About Page -->
     <string name="manager_dev">Desarrolladores del Manager</string>
     <string name="sources">Fuentes</string>
@@ -96,7 +105,7 @@
     <string name="ifile_missing">Falla al localizar en el almacenamiento el archivo apk para el tema negro/oscuro, por favor intente otra vez.</string>
     <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
     <string name="installation_blocked">La instalación ha fallado debido a que el usuario bloqueo la instalación.</string>
-    <string name="installation_downgrade">La instalación ha fallado debido a que el usuario intento degradar el paquete. Desinstale las actualizaciones de la app original de YouTube y vuelva a intentarlo.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">La instalación ha fallado porque la aplicación entra en conflicto con una aplicación ya instalada. Desinstala la versión actual de la aplicación y vuelve a intentarlo.</string>
     <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro grupo de Telegram o Discord para brindarte soporte.</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>

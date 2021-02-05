@@ -8,6 +8,8 @@
     <string name="select_apps">Välj dina appar</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_logs">Logs</string>
     <string name="title_home">Hanterare</string>
     <string name="title_settings">Inställningar</string>
     <string name="update_manager">Uppdatera hanteraren</string>
@@ -18,7 +20,7 @@
     <string name="select_apps_music">Vanced, men för YouTube Music!\nrelativt mindre funktion rik men uppfyller dina behov.</string>
     <string name="select_apps_vanced">YouTube Vanced är beståndet Android YouTube App, men bättre!</string>
     <string name="lets_get_started">Nu sätter vi igång</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Vet du inte vad detta är eller inte vill använda rotversionen? Klicka bara på den blå pilen nedan!</string>
     <!-- Home Page -->
     <string name="about_app">Cirka %1$s</string>
     <string name="app_changelog_tooltip">Tryck på kortet för att se ändringsloggen.</string>
@@ -32,8 +34,8 @@
     <string name="root_not_granted">Root-åtkomst inte beviljat</string>
     <string name="unavailable">Ej tillgänglig</string>
     <string name="update">Uppdatera</string>
-    <string name="social_media">Social Media</string>
-    <string name="support_us">Support us</string>
+    <string name="social_media">Sociala medier</string>
+    <string name="support_us">Stöd oss</string>
     <!-- Settings -->
     <string name="accent_color">Accentfärg</string>
     <string name="category_appearance">Utseende</string>
@@ -46,9 +48,9 @@
     <string name="link_title">Använd Chrome-anpassade flikar</string>
     <string name="link_custom_tabs">Länkar öppnas i Chrome Custom Tabs</string>
     <string name="system_default">Systemstandard</string>
-    <string name="script_save_failed">Failed to save new time value</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_save_failed">Det gick inte att spara nytt tidsvärde</string>
+    <string name="script_sleep_timer">Root-skript sömntid</string>
+    <string name="script_sleep_timer_description">Justera vilotidsvärde som används i /data/adb/service.d/app.sh skript, användbart för att fixa monteringsproblem</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Mörkt tema</string>
     <string name="theme_light">Ljust tema</string>
@@ -57,6 +59,9 @@
     <string name="update_center">Ansvarig uppdateringscenter</string>
     <string name="update_not_found">Inga nya uppdateringar</string>
     <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
     <string name="advanced">Avancerad</string>
     <string name="app_install_files_detected">%1$s installationsfiler upptäckt!</string>
@@ -75,14 +80,18 @@
     <string name="security_context">Se till att du laddade ner appen från vancedapp.com, den Vanced Discord-servern eller den Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s Valda installationsinställningar</string>
     <string name="version">Version</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in microG, installing Vanced 16+ first requires you to install v15.43.32, open, login and then manually select and install version 16. Do you want to proceed installing v15.43.32?</string>
+    <string name="microg_bug">Bugg i microG</string>
+    <string name="microg_bug_summary">På grund av en bugg i mainline microG, måste du installera Vanced v16+ först installera v15.43. 2, öppna den, sedan logga in och endast då kan du installera v16 och högre. Vill du fortsätta med installationen av v15.43.32?</string>
+    <string name="microg_bug_summary_music">På grund av en bugg i mainline microG, måste du installera Vanced v16+ först installera v15.43. 2, öppna den, sedan logga in och endast då kan du installera v16 och högre. Vill du fortsätta med installationen av v15.11?</string>
     <string name="please_be_patient">Vänligen ha tålamod…</string>
     <string name="welcome">Välkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Välj önskade språk för Vanced</string>
+    <string name="install_latest">Senaste</string>
     <string name="light_plus_other">Ljus + %1$s</string>
     <string name="select_at_least_one_lang">Välj minst ett språk!</string>
+    <string name="vanced_black">Svart</string>
+    <string name="vanced_dark">Mörk</string>
     <!-- About Page -->
     <string name="manager_dev">Hanteraren Dev</string>
     <string name="sources">Källor</string>
@@ -91,13 +100,13 @@
     <string name="chown_fail">Misslyckades att Chown Apk till systemägare, Försök igen.</string>
     <string name="error_downloading">Laddar ned %1$s</string>
     <string name="failed_uninstall">Det gick inte att avinstallera paket %1$s</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">Det gick inte att tillämpa ny accentfärg</string>
     <string name="files_missing_va">Det gick inte att hitta de nödvändiga filerna för installationen. Ladda ner installationsfilerna igen och försök igen.</string>
     <string name="ifile_missing">Det gick inte att hitta apk-fil för svart/mörkt tema från lagring, försök igen.</string>
     <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
-    <string name="installation_downgrade">Installationen misslyckades eftersom användaren försökte nedgradera paketet. Avinstallera uppdateringar från lagerappen YouTube, försök sedan igen.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_conflict">Installationen misslyckades eftersom appen står i konflikt med en redan installerad app. Avinstallera den aktuella versionen av Vanced, försök sedan igen.</string>
     <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
     <string name="installation_incompatible">Installationen misslyckades eftersom installationsfilen är inkompatibel med din enhet. Rensa nedladdade filer i Inställningarna och försök igen.</string>
     <string name="installation_invalid">Installationen misslyckades eftersom apk-filerna är skadade, försök igen.</string>
