@@ -8,8 +8,8 @@
     <string name="select_apps">നിങ്ങളുടെ അപ്ലിക്കേഷനുകൾ തിരഞ്ഞെടുക്കുക</string>
     <!-- Main Activity -->
     <string name="title_about">കുറിച്ച്</string>
-    <string name="title_faq">FAQ</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_faq">പതിവുചോദ്യങ്ങൾ</string>
+    <string name="title_logs">ലോഗുകൾ</string>
     <string name="title_home">മാനേജർ</string>
     <string name="title_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="update_manager">മാനേജർ പുതുക്കുക</string>
@@ -60,8 +60,8 @@
     <string name="update_not_found">പുതിയ അപ്‌ഡേറ്റുകളൊന്നുമില്ല</string>
     <string name="variant">വേരിയൻറ്</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">ലോഗുകൾ വിജയകരമായി സംരക്ഷിച്ചു</string>
+    <string name="logs_not_saved">ലോഗുകൾ സംരക്ഷിക്കാനായില്ല</string>
     <!-- Dialogs -->
     <string name="advanced">വിപുലമായത്</string>
     <string name="app_install_files_detected">%1$s ഇൻസ്റ്റാളേഷൻ ഫയലുകൾ കണ്ടെത്തി!</string>
@@ -81,17 +81,17 @@
     <string name="app_installation_preferences">%1$s ഇൻസ്റ്റാളേഷൻ മുൻഗണനകൾ</string>
     <string name="version">പതിപ്പ്</string>
     <string name="microg_bug">മൈക്രോജിയിൽ ബഗ്</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">മെയിൻ‌ലൈൻ‌ മൈക്രോ ജിയിലെ ഒരു ബഗ് കാരണം, ആദ്യം വാൻ‌സ്ഡ് വി 16 + ഇൻ‌സ്റ്റാൾ‌ ചെയ്യുന്നതിന് നിങ്ങൾ‌ക്ക് v15.43.32 ഇൻ‌സ്റ്റാൾ‌ ചെയ്യാനും അത് തുറക്കാനും പിന്നീട് ലോഗിൻ ചെയ്യാനും മാത്രമേ വി 16 ഉം അതിലും ഉയർന്നതും ഇൻസ്റ്റാൾ ചെയ്യാൻ‌ കഴിയൂ. V15.43.32 ഇൻസ്റ്റാളേഷൻ തുടരാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
+    <string name="microg_bug_summary_music">മെയിൻ‌ലൈൻ മൈക്രോജിയിലെ ഒരു ബഗ് കാരണം, ആദ്യം മ്യൂസിക് v4.11 + ഇൻസ്റ്റാളുചെയ്യുന്നതിന് ആദ്യം v4.07.51 ഇൻസ്റ്റാൾ ചെയ്യാനും അത് തുറക്കാനും പിന്നീട് ലോഗിൻ ചെയ്യാനും മാത്രമേ നിങ്ങൾക്ക് v4.11 ഉം അതിലും ഉയർന്നതും ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിയൂ. V4.07.51 ഇൻസ്റ്റാളേഷൻ തുടരാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
     <string name="please_be_patient">ദയവായി ക്ഷമിക്കുക…</string>
     <string name="welcome">സ്വാഗതം</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">വാൻസിനായി നിങ്ങൾ ഭാഷ (കൾ) തിരഞ്ഞെടുക്കുക</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">ഏറ്റവും പുതിയ</string>
     <string name="light_plus_other">പ്രകാശം +%1$s</string>
     <string name="select_at_least_one_lang">ഒരു ഭാഷയെങ്കിലും തിരഞ്ഞെടുക്കുക!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">കറുപ്പ്</string>
+    <string name="vanced_dark">ഇരുണ്ടത്</string>
     <!-- About Page -->
     <string name="manager_dev">മാനേജർ ഡവലപ്പർമാർ</string>
     <string name="sources">ഉറവിടങ്ങൾ</string>
@@ -105,7 +105,7 @@
     <string name="ifile_missing">സംഭരണത്തിൽ നിന്ന് കറുപ്പ് / ഇരുണ്ട തീമിനായി Apk ഫയൽ കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_aborted">ഉപയോക്താവ് ഇൻസ്റ്റാളേഷൻ നിർത്തലാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
     <string name="installation_blocked">ഉപയോക്താവ് ഇൻസ്റ്റാളേഷൻ തടഞ്ഞതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">ഉപയോക്താവ് പാക്കേജ് തരംതാഴ്ത്താൻ ശ്രമിച്ചതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. സ്റ്റോക്ക് അപ്ലിക്കേഷനിൽ നിന്ന് അപ്‌ഡേറ്റുകൾ അൺഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_conflict">ഇതിനകം ഇൻസ്റ്റാളുചെയ്‌ത അപ്ലിക്കേഷനുമായി അപ്ലിക്കേഷൻ പൊരുത്തപ്പെടുന്നതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. അപ്ലിക്കേഷന്റെ നിലവിലെ പതിപ്പ് അൺ‌ഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_failed">അജ്ഞാതമായ കാരണങ്ങളാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു, കൂടുതൽ പിന്തുണയ്ക്കായി ഞങ്ങളുടെ ടെലിഗ്രാം അല്ലെങ്കിൽ ഡിസ്കോർഡിൽ ചേരുക.</string>
     <string name="installation_incompatible">ഇൻസ്റ്റാളേഷൻ ഫയൽ നിങ്ങളുടെ ഉപകരണവുമായി പൊരുത്തപ്പെടാത്തതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. ക്രമീകരണങ്ങളിൽ ഡ download ൺലോഡ് ചെയ്ത ഫയലുകൾ മായ്‌ക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
