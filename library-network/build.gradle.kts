@@ -46,9 +46,9 @@ dependencies {
     implementation("com.squareup.moshi:moshi-kotlin-codegen:1.11.0")
     implementation("com.squareup.moshi:moshi-adapters:1.11.0")
     
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
 
     implementation("org.koin:koin-android:2.2.1")
     implementation("org.koin:koin-android-viewmodel:2.2.1")
