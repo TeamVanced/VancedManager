@@ -8,8 +8,8 @@
     <string name="select_apps">உங்கள் பயன்பாடுகளைத் தேர்ந்தெடுக்கவும்</string>
     <!-- Main Activity -->
     <string name="title_about">பற்றி</string>
-    <string name="title_faq">FAQ</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_faq">அடிக்கடி கேட்கப்படும் கேள்விகள்</string>
+    <string name="title_logs">பதிவுகள்</string>
     <string name="title_home">மேலாளர்</string>
     <string name="title_settings">அமைப்புகள்</string>
     <string name="update_manager">புதுப்பிப்பு மேலாளர்</string>
@@ -60,8 +60,8 @@
     <string name="update_not_found">புதிய புதுப்பிப்புகள் இல்லை</string>
     <string name="variant">மாறுபாடு</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">பதிவுகள் வெற்றிகரமாக சேமிக்கப்பட்டன</string>
+    <string name="logs_not_saved">பதிவுகளைச் சேமிக்க முடியவில்லை</string>
     <!-- Dialogs -->
     <string name="advanced">மேம்படுத்தபட்ட</string>
     <string name="app_install_files_detected">%1$s நிறுவல் கோப்புகள் கண்டறியப்பட்டன!</string>
@@ -81,17 +81,17 @@
     <string name="app_installation_preferences">%1$s நிறுவல் விருப்பத்தேர்வுகள்</string>
     <string name="version">பதிப்பு</string>
     <string name="microg_bug">மைக்ரோஜியில் பிழை</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">மெயின்லைன் மைக்ரோஜியில் உள்ள பிழை காரணமாக, முதலில் வேன்ஸட் வி 16 + ஐ நிறுவ நீங்கள் வி 15.43.32 ஐ நிறுவ வேண்டும், திறக்க வேண்டும், பின்னர் உள்நுழைய வேண்டும், அப்போதுதான் நீங்கள் வி 16 மற்றும் அதற்கு மேற்பட்டவற்றை நிறுவ முடியும். V15.43.32 இன் நிறுவலுடன் தொடர விரும்புகிறீர்களா?</string>
+    <string name="microg_bug_summary_music">மெயின்லைன் மைக்ரோஜியில் உள்ள பிழை காரணமாக, முதலில் மியூசிக் வி 4.11 + ஐ நிறுவ நீங்கள் வி 4.07.51 ஐ நிறுவ வேண்டும், திறக்க வேண்டும், பின்னர் உள்நுழைய வேண்டும், அப்போதுதான் நீங்கள் வி 4.11 மற்றும் அதற்கு மேற்பட்டவற்றை நிறுவ முடியும். V4.07.51 இன் நிறுவலுடன் தொடர விரும்புகிறீர்களா?</string>
     <string name="please_be_patient">தயவுசெய்து பொருமைையாயிறு…</string>
     <string name="welcome">வரவேற்பு</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">வேன்ஸ்டுக்காக உங்களுக்கு விருப்பமான மொழியைத் தேர்வுசெய்க</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">சமீபத்தியது</string>
     <string name="light_plus_other">ஒளி + %1$s</string>
     <string name="select_at_least_one_lang">குறைந்தது ஒரு மொழியையாவது தேர்ந்தெடுக்கவும்!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">கருப்பு</string>
+    <string name="vanced_dark">இருள்</string>
     <!-- About Page -->
     <string name="manager_dev">மேலாளர் டெவலப்பர்கள்</string>
     <string name="sources">மூலம்</string>
@@ -105,7 +105,7 @@
     <string name="ifile_missing">சேமிப்பகத்திலிருந்து கருப்பு / இருண்ட கருப்பொருளுக்கான Apk கோப்பை கண்டுபிடிப்பதில் தோல்வி, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_aborted">பயனர் நிறுவலை நிறுத்தியதால் நிறுவல் தோல்வியடைந்தது.</string>
     <string name="installation_blocked">பயனர் நிறுவலைத் தடுத்ததால் நிறுவல் தோல்வியடைந்தது.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">பயனர் தொகுப்பை தரமிறக்க முயற்சித்ததால் நிறுவல் தோல்வியடைந்தது. பங்கு பயன்பாட்டிலிருந்து புதுப்பிப்புகளை நிறுவல் நீக்க, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_conflict">ஏற்கனவே நிறுவப்பட்ட பயன்பாட்டுடன் பயன்பாடு முரண்படுவதால் நிறுவல் தோல்வியடைந்தது. பயன்பாட்டின் தற்போதைய பதிப்பை நிறுவல் நீக்கி, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_failed">அறியப்படாத காரணங்களுக்காக நிறுவல் தோல்வியடைந்தது, மேலும் ஆதரவுக்காக எங்கள் டெலிகிராம் அல்லது டிஸ்கார்ட் இல் சேரவும்.</string>
     <string name="installation_incompatible">நிறுவல் கோப்பு உங்கள் சாதனத்துடன் பொருந்தாததால் நிறுவல் தோல்வியடைந்தது. அமைப்புகளில் பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை அழிக்கவும், பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
