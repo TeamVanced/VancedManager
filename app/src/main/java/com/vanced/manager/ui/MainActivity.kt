@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onFailure(throwable: Throwable) {
-            log(tag, "Failed to load data: $throwable")
+            log(tag, "Failed to load data: ${throwable.stackTraceToString()}")
         }
 
     }

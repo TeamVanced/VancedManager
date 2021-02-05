@@ -1,5 +1,6 @@
 package com.vanced.manager.utils
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -129,8 +130,13 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             intent.setDataAndType(uri, "application/vnd.android.package-archive")
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            context.startActivity(intent)
-            sendCloseDialog(context)
+            try {
+                context.startActivity(intent)
+            } catch (e: ActivityNotFoundException) {
+                log("VMDownloader", e.stackTraceToString())
+            } finally {
+                sendCloseDialog(context)
+            }
         }, onError = {
             downloadProgress.value?.downloadingFile?.postValue(
                 context.getString(

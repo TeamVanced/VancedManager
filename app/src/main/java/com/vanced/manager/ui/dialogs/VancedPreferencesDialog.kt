@@ -38,7 +38,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
     private fun bindData() {
         with(binding) {
             val showLang = mutableListOf<String>()
-            installPrefs.lang?.split(", ")?.toTypedArray()?.forEach { lang ->
+            installPrefs.lang?.split(", ")?.forEach { lang ->
                 val loc = Locale(lang)
                 showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }

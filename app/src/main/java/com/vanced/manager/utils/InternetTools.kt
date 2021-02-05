@@ -56,6 +56,8 @@ fun openUrl(url: String, color: Int, context: Context) {
 
     } catch (e: ActivityNotFoundException) {
         Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
+    } catch (e: SecurityException) {
+        Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
     }
 }
 

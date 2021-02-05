@@ -14,9 +14,8 @@ import com.vanced.manager.model.DataModel
 import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
-import com.vanced.manager.utils.enableMusic
-import com.vanced.manager.utils.enableVanced
-import com.vanced.manager.utils.managerVariant
+import com.vanced.manager.utils.*
+import com.vanced.manager.utils.isFetching
 
 class AppListAdapter(
     private val context: FragmentActivity,
@@ -43,17 +42,17 @@ class AppListAdapter(
                     appInstallButton.text = it
                 }
                 appInstallButton.setOnClickListener {
-                    viewModel.openInstallDialog(it, apps[position])
+                    if (vanced.value != null) {
+                        viewModel.openInstallDialog(it, apps[position])
+                    } else {
+                        return@setOnClickListener
+                    }
                 }
                 appUninstall.setOnClickListener {
                     dataModel?.appPkg?.let { it1 -> viewModel.uninstallPackage(it1) }
                 }
                 appLaunch.setOnClickListener {
                     viewModel.launchApp(apps[position], isRoot)
-                }
-                with(dataModel?.isAppInstalled?.value) {
-                    appUninstall.isVisible = this == true
-                    appLaunch.isVisible = this == true
                 }
                 dataModel?.isAppInstalled?.observe(lifecycleOwner) {
                     appUninstall.isVisible = it

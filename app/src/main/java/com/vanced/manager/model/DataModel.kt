@@ -1,6 +1,7 @@
 package com.vanced.manager.model
 
 import android.content.Context
+import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.lifecycle.LifecycleOwner
@@ -58,9 +59,9 @@ open class DataModel(
 
     private fun getPkgVersionName(pkg: String): String {
         val pm = context.packageManager
-        return if (isAppInstalled.value == true) {
+        return try {
             pm?.getPackageInfo(pkg, 0)?.versionName?.removeSuffix("-vanced") ?: context.getString(R.string.unavailable)
-        } else {
+        } catch (e: PackageManager.NameNotFoundException) {
             context.getString(R.string.unavailable)
         }
     }
@@ -68,12 +69,14 @@ open class DataModel(
     @Suppress("DEPRECATION")
     private fun getPkgVersionCode(pkg: String): Int {
         val pm = context.packageManager
-        return if (isAppInstalled.value == true) {
+        return try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P)
                 pm?.getPackageInfo(pkg, 0)?.longVersionCode?.and(0xFFFFFFFF)?.toInt() ?: 0
             else
                 pm?.getPackageInfo(pkg, 0)?.versionCode ?: 0
-        } else 0
+        } catch (e: PackageManager.NameNotFoundException) {
+            0
+        }
     }
 
     private fun compareInt(int1: Int?, int2: Int?): String {

@@ -24,7 +24,7 @@ open class ProgressModel {
 
     init {
         installing.postValue(false)
-        reset()
+        postReset()
     }
     
 }

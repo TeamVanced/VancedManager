@@ -7,7 +7,6 @@ import android.content.pm.PackageInfo
 import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.os.Build
-import android.util.Log
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.BuildConfig
@@ -183,6 +182,12 @@ object PackageHelper {
             session.commit(pendingIntent.intentSender)
         } catch (e: IOException) {
             log(INSTALLER_TAG, e.stackTraceToString())
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
+        } catch (e: SecurityException) {
+            log(INSTALLER_TAG, e.stackTraceToString())
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
         }
 
     }
@@ -272,6 +277,8 @@ object PackageHelper {
                 }
             }
         } catch (e: Exception) {
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
             e.printStackTrace()
             return -1
         }
@@ -286,6 +293,8 @@ object PackageHelper {
             doCommitSession(sessionId, context)
             log(INSTALLER_TAG,"Success")
         } catch (e: Exception) {
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
             e.printStackTrace()
         }
         return sessionId
@@ -324,7 +333,9 @@ object PackageHelper {
             log(INSTALLER_TAG, "Success: streamed $total bytes")
             return PackageInstaller.STATUS_SUCCESS
         } catch (e: IOException) {
-            Log.e(INSTALLER_TAG, "Error: failed to write; " + e.message)
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
+            log(INSTALLER_TAG, "Error: failed to write; " + e.message)
             return PackageInstaller.STATUS_FAILURE
         } finally {
             try {
@@ -332,7 +343,8 @@ object PackageHelper {
                 inputStream?.close()
                 session?.close()
             } catch (e: IOException) {
-                e.printStackTrace()
+                sendFailure(e.stackTraceToString(), context)
+                sendCloseDialog(context)
             }
         }
     }
@@ -349,7 +361,8 @@ object PackageHelper {
             log(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
             log(INSTALLER_TAG, "doCommitSession: after session commit ")
         } catch (e: IOException) {
-            e.printStackTrace()
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
         } finally {
             session?.close()
         }
@@ -479,6 +492,8 @@ object PackageHelper {
             Shell.su("""echo "#!/system/bin/sh\nwhile read line; do echo \${"$"}{line} | grep $pkg | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts" > /data/adb/post-fs-data.d/$app.sh""").exec()
             return Shell.su("chmod 744 /data/adb/service.d/$app.sh").exec().isSuccess
         } catch (e: IOException) {
+            sendFailure(e.stackTraceToString(), context)
+            sendCloseDialog(context)
             e.printStackTrace()
         }
         return false

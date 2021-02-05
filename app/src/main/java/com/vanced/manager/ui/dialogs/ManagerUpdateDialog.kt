@@ -94,6 +94,11 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
         registerReceiver()
     }
 
+    override fun onPause() {
+        super.onPause()
+        localBroadcastManager.unregisterReceiver(broadcastReceiver)
+    }
+
     private fun checkUpdates() {
         if (manager.value?.int("versionCode") ?: 0 > VERSION_CODE) {
             binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
