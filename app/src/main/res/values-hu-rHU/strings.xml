@@ -8,7 +8,7 @@
     <string name="select_apps">Válaszd ki az Appot</string>
     <!-- Main Activity -->
     <string name="title_about">Rólunk</string>
-    <string name="title_guide">Guide</string>
+    <string name="title_guide">Útmutató</string>
     <string name="title_logs">Naplók</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Beállítások</string>
@@ -82,11 +82,11 @@ Akarod telepíteni?</string>
     <string name="app_installation_preferences">%1$s Telepítés személyreszabása</string>
     <string name="version">Verzió</string>
     <string name="microg_bug">Hiba a microG-ben</string>
-    <string name="microg_bug_summary">Egy, a microG-ben jelenlévő hiba miatt, a Vanced 16+ verzióihoz először telepítsd a 15.43.32-es verziót, nyisd meg, jelentkezz be, majd csak ezután tudod telepíteni a 16-os vagy újabb verziót.
-Akarod folytatni a 15.43.32-es verzió telepítésével?</string>
-    <string name="microg_bug_summary_music">Egy, a microG-ben jelenlévő hiba miatt, a Vanced Music 4.11+ verzióihoz először telepítsd a 4.07.51-es verziót, nyisd meg, jelentkezz be, majd csak ezután tudod telepíteni a 4.11-es vagy újabb verziót.
-Akarod folytatni a 4.07.51-es verzió telepítésével?</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="microg_bug_summary">Egy, a microG-ben jelenlévő hiba miatt, a Vanced 16+ verzióihoz először telepítse a 15.43.32-es verziót, nyissa meg, jelentkezzen be, majd csak ezután tudja telepíteni a 16-os vagy újabb verziót.
+Akarja folytatni a 15.43.32-es verzió telepítésével?</string>
+    <string name="microg_bug_summary_music">Egy, a microG-ben jelenlévő hiba miatt, a Vanced Music 4.11+ verzióihoz először telepítse a 4.07.51-es verziót, nyissa meg, jelentkezzen be, majd csak ezután tudja telepíteni a 4.11-es vagy újabb verziót.
+Akarja folytatni a 4.07.51-es verzió telepítésével?</string>
+    <string name="please_be_patient">Kérjük NE lépjen ki a telepítési folyamat alatt!</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced nyelvének kiválasztása</string>
@@ -108,7 +108,7 @@ Akarod folytatni a 4.07.51-es verzió telepítésével?</string>
     <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
     <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó, régebbi verzióra próbált frissíteni. Távolítsa el az eredeti alkalmazás frissítéseit, majd próbálja újra.</string>
     <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsd el a jelenlegi verziót és próbáld újra.</string>
     <string name="installation_failed">A telepítés ismeretlen okok miatt nem sikerült, támogatásért csatlakozz a Telegram vagy a Discord csoportunkhoz.</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
