@@ -63,7 +63,7 @@
     <string name="logs_saved">Successfully saved logs</string>
     <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
-    <string name="advanced">Cải tiến</string>
+    <string name="advanced">Mở rộng</string>
     <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
     <string name="app_install_files_detected_summary">Manager đã tìm thấy tất cả các tệp cần thiết để cài đặt %1$s. Bạn có muốn cài đặt nó không?</string>
     <string name="checking_updates">Đang kiểm tra cập nhật…</string>
