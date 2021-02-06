@@ -9,7 +9,7 @@
     <!-- Main Activity -->
     <string name="title_about">Información</string>
     <string name="title_guide">Guide</string>
-    <string name="title_logs">Protocolo</string>
+    <string name="title_logs">Registros</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ajustes</string>
     <string name="update_manager">Actualizar Manager</string>
