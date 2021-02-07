@@ -277,9 +277,9 @@ object PackageHelper {
                 }
             }
         } catch (e: Exception) {
+            log(INSTALLER_TAG, e.stackTraceToString())
             sendFailure(e.stackTraceToString(), context)
             sendCloseDialog(context)
-            e.printStackTrace()
             return -1
         }
         val installParams = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
@@ -293,9 +293,9 @@ object PackageHelper {
             doCommitSession(sessionId, context)
             log(INSTALLER_TAG,"Success")
         } catch (e: Exception) {
+            log(INSTALLER_TAG, e.stackTraceToString())
             sendFailure(e.stackTraceToString(), context)
             sendCloseDialog(context)
-            e.printStackTrace()
         }
         return sessionId
     }
@@ -343,6 +343,7 @@ object PackageHelper {
                 inputStream?.close()
                 session?.close()
             } catch (e: IOException) {
+                log(INSTALLER_TAG, e.stackTraceToString())
                 sendFailure(e.stackTraceToString(), context)
                 sendCloseDialog(context)
             }
@@ -361,6 +362,7 @@ object PackageHelper {
             log(INSTALLER_TAG, "doCommitSession: " + context.packageManager.packageInstaller.mySessions)
             log(INSTALLER_TAG, "doCommitSession: after session commit ")
         } catch (e: IOException) {
+            log(INSTALLER_TAG, e.stackTraceToString())
             sendFailure(e.stackTraceToString(), context)
             sendCloseDialog(context)
         } finally {
@@ -393,6 +395,7 @@ object PackageHelper {
                     else
                         process.destroy()
 
+                    log(INSTALLER_TAG, e.stackTraceToString())
                     sendFailure(e.stackTrace.map { it.toString() }.toMutableList(), context)
                     sendCloseDialog(context)
                 }
@@ -494,7 +497,7 @@ object PackageHelper {
         } catch (e: IOException) {
             sendFailure(e.stackTraceToString(), context)
             sendCloseDialog(context)
-            e.printStackTrace()
+            log(INSTALLER_TAG, e.stackTraceToString())
         }
         return false
     }
@@ -605,6 +608,7 @@ object PackageHelper {
             {
                 sendFailure(listOf("${e.message}").toMutableList(), context)
                 sendCloseDialog(context)
+                log(INSTALLER_TAG, e.stackTraceToString())
                 return false
             }
         }
