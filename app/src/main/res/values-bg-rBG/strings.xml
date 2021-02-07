@@ -28,7 +28,7 @@
     <string name="downloading_file">Изтегляне на %1$s</string>
     <string name="install">Инсталиране</string>
     <string name="button_reinstall">Преинсталиране</string>
-    <string name="version_installed">Инсталирано:</string>
+    <string name="version_installed">Инсталиранa:</string>
     <string name="latest">Най-нова:</string>
     <string name="no_microg">microG не е инсталирано</string>
     <string name="root_not_granted">Root достъп не е разрешен</string>
