@@ -3,9 +3,11 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.Typeface
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
@@ -34,8 +36,9 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     fun log(tag: String, message: String) {
         logs.add(
             SpannableString("$tag: $message\n").apply {
-                setSpan(ForegroundColorSpan(Color.CYAN), 0, tag.length + 1, 0)
-                setSpan(ForegroundColorSpan(Color.GREEN), tag.length + 2, tag.length + message.length + 2, 0)
+                setSpan(ForegroundColorSpan(Color.parseColor("#2e73ff")), 0, tag.length + 1, 0)
+                setSpan(StyleSpan(Typeface.BOLD), 0, tag.length + 1, 0)
+                setSpan(ForegroundColorSpan(Color.MAGENTA), tag.length + 2, tag.length + message.length + 2, 0)
             }
         )
         Log.d(tag, message)
