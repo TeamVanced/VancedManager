@@ -8,8 +8,8 @@
     <string name="select_apps">アプリの選択</string>
     <!-- Main Activity -->
     <string name="title_about">このアプリについて</string>
-    <string name="title_guide">Guide</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_guide">ガイド</string>
+    <string name="title_logs">ログ</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">設定</string>
     <string name="update_manager">Manager を更新</string>
@@ -60,8 +60,8 @@
     <string name="update_not_found">アップデートはありません</string>
     <string name="variant">種類</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">ログが正常に保存されました</string>
+    <string name="logs_not_saved">ログの保存に失敗しました</string>
     <!-- Dialogs -->
     <string name="advanced">上級者向け</string>
     <string name="app_install_files_detected">%1$s のインストールに必要なファイルが見つかりました</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">microG のバグ</string>
     <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
     <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="please_be_patient">この処理中はアプリを終了しないでください!</string>
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced で使用する言語を選択</string>
