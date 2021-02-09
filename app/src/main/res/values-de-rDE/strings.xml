@@ -83,7 +83,7 @@
     <string name="microg_bug">Fehler in MicroG</string>
     <string name="microg_bug_summary">Wegen eines Fehlers in MicroG muss man erst Vanced v15.43.32 installieren, öffnen und sich dort einloggen, um Vanced v16 und höher zu installieren. Wollen Sie mit der Installation von Vanced v15.43.32 fortfahren?</string>
     <string name="microg_bug_summary_music">Wegen eines Fehlers in MicroG muss man erst Music v4.07.51 installieren, öffnen und sich dort einloggen, um Music v4.11 und höher zu installieren. Wollen Sie mit der Installation von Music v4.07.51 fortfahren?</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="please_be_patient">Bitte schließen Sie die App NICHT während dieses Prozesses!</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Wählen Sie ihre bevorzugte Sprache(n) für Vanced</string>
