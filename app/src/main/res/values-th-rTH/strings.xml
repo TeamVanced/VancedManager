@@ -8,7 +8,7 @@
     <string name="select_apps">เลือกแอปพลิเคชันของคุณ</string>
     <!-- Main Activity -->
     <string name="title_about">ข้อมูลเกี่ยวกับทีมนักพัฒนา</string>
-    <string name="title_guide">Guide</string>
+    <string name="title_guide">แนะนำ</string>
     <string name="title_logs">บันทึกข้อมูลระบบ</string>
     <string name="title_home">ตัวจัดการ</string>
     <string name="title_settings">ตั้งค่า</string>
@@ -34,7 +34,7 @@
     <string name="root_not_granted">ไม่ได้รับสิทธิ์ของรูท</string>
     <string name="unavailable">ไม่สามารถใช้ได้</string>
     <string name="update">อัพเดท</string>
-    <string name="social_media">สื่อสังคมออนไลน์</string>
+    <string name="social_media">สื่อสังคม</string>
     <string name="support_us">สนับสนุนพวกเรา</string>
     <!-- Settings -->
     <string name="accent_color">สีหลัก</string>
@@ -48,7 +48,7 @@
     <string name="link_title">ใช้แท็บที่กำหนดเองของ Chrome</string>
     <string name="link_custom_tabs">ลิ้งค์จะเปิดไปยังแท็บที่กำหนดเองของ Chrome</string>
     <string name="system_default">ค่าเริ่มต้นของระบบ</string>
-    <string name="script_save_failed">บันทึกค่าเวลาใหม่ไม่สำเร็จ</string>
+    <string name="script_save_failed">Failed to save new time value</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">ธีม</string>
