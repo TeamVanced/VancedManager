@@ -9,7 +9,7 @@
     <!-- Main Activity -->
     <string name="title_about">O autorima</string>
     <string name="title_guide">Vodič</string>
-    <string name="title_logs">Dnevnici</string>
+    <string name="title_logs">Zapisi</string>
     <string name="title_home">Upravitelj</string>
     <string name="title_settings">Postavke</string>
     <string name="update_manager">Ažuriranje upravitelja</string>
