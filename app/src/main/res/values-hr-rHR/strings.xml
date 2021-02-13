@@ -61,7 +61,7 @@
     <string name="variant">Izdanje</string>
     <!-- Logs -->
     <string name="logs_saved">Uspješno spremljeni dnevnici</string>
-    <string name="logs_not_saved">Nije moguće spremiti dnevnike</string>
+    <string name="logs_not_saved">Nije moguće spremiti zapise</string>
     <!-- Dialogs -->
     <string name="advanced">Napredno</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
@@ -80,9 +80,9 @@
     <string name="security_context">Aplikaciju obavezno preuzmite s vancedapp.com, Vanced Discord poslužitelja ili Vanced GitHuba</string>
     <string name="app_installation_preferences">%1$s postavke instalacije</string>
     <string name="version">Inačica</string>
-    <string name="microg_bug">Pogreška u MicroG aplikac.</string>
-    <string name="microg_bug_summary">Uslijed greške u microG, instalacija Vanced inačice 16 i novije zahtijeva instalaciju inačice 15.43.32, otvorite ga, zatim se prijavite i tada tek možete instalirati inačicu 16 i noviju. Želite li nastaviti s instalacijom inačice 15.43.32?</string>
-    <string name="microg_bug_summary_music">Uslijed greške u mikroG, instalacija Glazbe inačice 4.11 i novije prvo zahtijeva instalaciju inačice 4.07.51, otvorite ju, zatim se prijavite i tada tek možete instalirati inačicu 4.11 i noviju. Želite li nastaviti s instalacijom inačice 4.07.51?</string>
+    <string name="microg_bug">Pogreška u microG aplikaciji</string>
+    <string name="microg_bug_summary">Zbog pogreške u microG, instaliranje Vanced 16+ prvo zahtijeva da instalirate v15.43.32, otvorite, a zatim se prijavite i tek onda možete instalirati v16 i novije verzije. Želite li nastaviti s instalacijom v15.43.32?</string>
+    <string name="microg_bug_summary_music">Zbog pogreške u microG, za instalaciju Music 4.11+ prvo je potrebno instalirati v4.07.51, otvoriti, a zatim se prijaviti i tek tada možete instalirati v16 i novije verzije. Želite li nastaviti s instalacijom v4.07.51?</string>
     <string name="please_be_patient">Molimo NE izlazite iz aplikacije tijekom ovog postupka!</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
