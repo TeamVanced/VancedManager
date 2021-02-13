@@ -12,7 +12,7 @@ import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.DownloadHelper.download
 import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.PackageHelper.downloadStockCheck
-import com.vanced.manager.utils.PackageHelper.installVanced
+import com.vanced.manager.utils.PackageHelper.installSplitApkFiles
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
 import java.io.File
 
@@ -128,6 +128,6 @@ object VancedDownloader {
         if (variant == "root")
             installVancedRoot(context)
         else
-            installVanced(context)
+            installSplitApkFiles(context, "vanced")
     }
 }
