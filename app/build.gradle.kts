@@ -99,9 +99,9 @@ dependencies {
     implementation("androidx.browser:browser:1.3.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.fragment:fragment-ktx:1.2.5")
-    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
+    implementation("androidx.fragment:fragment-ktx:1.3.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0")
     implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.0.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.3")
@@ -110,9 +110,9 @@ dependencies {
 
     //Appearance
     implementation("com.github.madrapps:pikolo:2.0.1")
-    implementation("com.google.android.material:material:1.3.0-rc01")
+    implementation("com.google.android.material:material:1.3.0")
 
-    // JSON parser
+    // JSON parser-
     implementation("com.beust:klaxon:5.4")
 
     // Crowdin
@@ -128,8 +128,8 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 
     // Root permissions
-    implementation("com.github.topjohnwu.libsu:core:3.0.2")
-    implementation("com.github.topjohnwu.libsu:io:3.0.2")
+    implementation("com.github.topjohnwu.libsu:core:3.1.1")
+    implementation("com.github.topjohnwu.libsu:io:3.1.1")
 
     // Layout
     implementation("com.google.android:flexbox:2.0.1")
@@ -138,5 +138,5 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics-ktx:18.0.2")
     implementation("com.google.firebase:firebase-crashlytics:17.3.1")
     implementation("com.google.firebase:firebase-messaging:21.0.1")
-    implementation("com.google.firebase:firebase-perf:19.1.0")
+    implementation("com.google.firebase:firebase-perf:19.1.1")
 }
