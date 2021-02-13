@@ -8,7 +8,7 @@
     <string name="select_apps">നിങ്ങളുടെ അപ്ലിക്കേഷനുകൾ തിരഞ്ഞെടുക്കുക</string>
     <!-- Main Activity -->
     <string name="title_about">കുറിച്ച്</string>
-    <string name="title_guide">Guide</string>
+    <string name="title_guide">മാർഗരേഖ</string>
     <string name="title_logs">ലോഗുകൾ</string>
     <string name="title_home">മാനേജർ</string>
     <string name="title_settings">ക്രമീകരണങ്ങൾ</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">മൈക്രോജിയിൽ ബഗ്</string>
     <string name="microg_bug_summary">മെയിൻ‌ലൈൻ‌ മൈക്രോ ജിയിലെ ഒരു ബഗ് കാരണം, ആദ്യം വാൻ‌സ്ഡ് വി 16 + ഇൻ‌സ്റ്റാൾ‌ ചെയ്യുന്നതിന് നിങ്ങൾ‌ക്ക് v15.43.32 ഇൻ‌സ്റ്റാൾ‌ ചെയ്യാനും അത് തുറക്കാനും പിന്നീട് ലോഗിൻ ചെയ്യാനും മാത്രമേ വി 16 ഉം അതിലും ഉയർന്നതും ഇൻസ്റ്റാൾ ചെയ്യാൻ‌ കഴിയൂ. V15.43.32 ഇൻസ്റ്റാളേഷൻ തുടരാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
     <string name="microg_bug_summary_music">മെയിൻ‌ലൈൻ മൈക്രോജിയിലെ ഒരു ബഗ് കാരണം, ആദ്യം മ്യൂസിക് v4.11 + ഇൻസ്റ്റാളുചെയ്യുന്നതിന് ആദ്യം v4.07.51 ഇൻസ്റ്റാൾ ചെയ്യാനും അത് തുറക്കാനും പിന്നീട് ലോഗിൻ ചെയ്യാനും മാത്രമേ നിങ്ങൾക്ക് v4.11 ഉം അതിലും ഉയർന്നതും ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിയൂ. V4.07.51 ഇൻസ്റ്റാളേഷൻ തുടരാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="please_be_patient">പ്രോസസ്സ് സമയത്ത് അപ്ലിക്കേഷനിൽ നിന്ന് പുറത്തുകടക്കരുത്!</string>
     <string name="welcome">സ്വാഗതം</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">വാൻസിനായി നിങ്ങൾ ഭാഷ (കൾ) തിരഞ്ഞെടുക്കുക</string>
