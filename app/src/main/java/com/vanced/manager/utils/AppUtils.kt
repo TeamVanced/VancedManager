@@ -19,6 +19,7 @@ import kotlinx.coroutines.*
 import java.io.File
 import java.io.IOException
 import java.security.MessageDigest
+import java.util.*
 
 object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
@@ -32,6 +33,8 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     const val playStorePkg = "com.android.vending"
 
     val logs = mutableListOf<Spannable>()
+
+    var currentLocale: Locale? = null
 
     fun log(tag: String, message: String) {
         logs.add(

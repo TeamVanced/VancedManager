@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import android.util.Log
 import androidx.core.content.FileProvider
 import androidx.lifecycle.MutableLiveData
 import com.vanced.manager.R
@@ -50,7 +51,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
         download.enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
-                    CoroutineScope(Dispatchers.IO).launch {
+                    launch {
                         if (response.body()?.let { writeFile(it, context.getExternalFilesDir(fileFolder)?.path + "/" + fileName) } == true) {
                             onDownloadComplete()
                         } else {
@@ -96,6 +97,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                     outputStream.write(fileReader, 0, read)
                     downloadedBytes += read.toLong()
                     downloadProgress.value?.downloadProgress?.postValue((downloadedBytes * 100 / totalBytes).toInt())
+                    Log.d("test", (downloadedBytes * 100 / totalBytes).toString())
                 }
                 outputStream.flush()
                 true
