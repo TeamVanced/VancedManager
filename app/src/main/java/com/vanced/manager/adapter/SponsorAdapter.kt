@@ -12,8 +12,7 @@ import com.vanced.manager.ui.viewmodels.HomeViewModel
 
 class SponsorAdapter(
     private val context: Context,
-    private val viewModel: HomeViewModel,
-    //private val json: ObservableField<JsonObject?>
+    private val viewModel: HomeViewModel
 ) : RecyclerView.Adapter<SponsorAdapter.LinkViewHolder>() {
 
     private val brave = SponsorModel(
