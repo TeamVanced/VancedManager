@@ -81,8 +81,8 @@
     <string name="app_installation_preferences">%1$s Valda installationsinställningar</string>
     <string name="version">Version</string>
     <string name="microg_bug">Bugg i microG</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">På grund av en bugg i mainline microG, måste du installera Vanced v16+ först installera v15.43. 2, öppna den, sedan logga in och endast då kan du installera v16 och högre. Vill du fortsätta med installationen av v15.43.32?</string>
+    <string name="microg_bug_summary_music">På grund av en bugg i mainline microG, måste du installera Vanced v16+ först installera v15.43. 2, öppna den, sedan logga in och endast då kan du installera v16 och högre. Vill du fortsätta med installationen av v15.11?</string>
     <string name="please_be_patient">Vänligen avsluta INTE appen under denna process!</string>
     <string name="welcome">Välkommen</string>
     <!-- Install Page -->
