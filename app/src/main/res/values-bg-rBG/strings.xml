@@ -94,6 +94,7 @@
     <string name="vanced_dark">Тъмна</string>
     <!-- About Page -->
     <string name="manager_dev">Разработчици</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Източници</string>
     <string name="vanced_team">Екип на Vanced</string>
     <!-- Error messages -->
