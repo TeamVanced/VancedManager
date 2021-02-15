@@ -94,6 +94,7 @@
     <string name="vanced_dark">Σκουρόχρωμο</string>
     <!-- About Page -->
     <string name="manager_dev">Προγραμματιστές Διαχειριστή Vanced</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Πηγές</string>
     <string name="vanced_team">Η ομάδα του Vanced</string>
     <!-- Error messages -->
