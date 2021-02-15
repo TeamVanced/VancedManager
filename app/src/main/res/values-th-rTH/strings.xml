@@ -81,8 +81,8 @@
     <string name="app_installation_preferences">%1$s กำหนดค่าการติดตั้ง</string>
     <string name="version">รุ่น</string>
     <string name="microg_bug">ข้อผิดพลาดใน microG</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">เนื่องจากพบข้อผิดพลาดใน microG การติดตั้ง Vanced v16 + ก่อนอื่นคุณต้องติดตั้ง v15.43.32, เปิดแอพ, จากนั้นเข้าสู่ระบบ, จากนั้นคุณสามารถติดตั้ง v16 ขึ้นไปได้, คุณต้องการดำเนินการติดตั้ง v15.43.32 ต่อไปหรือไม่?</string>
+    <string name="microg_bug_summary_music">เนื่องจากพบข้อผิดพลาดใน microG การติดตั้ง Music v4.11+ ก่อนอื่นคุณต้องติดตั้ง v4.07.51, เปิดแอพ, จากนั้นเข้าสู่ระบบ, จากนั้นคุณสามารถติดตั้ง v4.11 ขึ้นไปได้, คุณต้องการดำเนินการติดตั้ง v4.07.51 ต่อไปหรือไม่?</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">ยินดีต้อนรับ</string>
     <!-- Install Page -->
@@ -94,6 +94,7 @@
     <string name="vanced_dark">สีเข้ม</string>
     <!-- About Page -->
     <string name="manager_dev">ตัวจัดการ Devs</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">แหล่งที่มา</string>
     <string name="vanced_team">ทีมงาน Vanced</string>
     <!-- Error messages -->
