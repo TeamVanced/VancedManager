@@ -94,6 +94,7 @@
     <string name="vanced_dark">تاریک</string>
     <!-- About Page -->
     <string name="manager_dev">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">سەرچاوەکان</string>
     <string name="vanced_team">Vanced تیمی</string>
     <!-- Error messages -->
