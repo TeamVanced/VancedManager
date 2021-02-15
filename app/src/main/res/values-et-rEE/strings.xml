@@ -94,6 +94,7 @@
     <string name="vanced_dark">Tume</string>
     <!-- About Page -->
     <string name="manager_dev">Halduri arendajad</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Allikad</string>
     <string name="vanced_team">Vanced Meeskond</string>
     <!-- Error messages -->
