@@ -94,6 +94,7 @@
     <string name="vanced_dark">داكن</string>
     <!-- About Page -->
     <string name="manager_dev">مطوري المدير</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">المصادر</string>
     <string name="vanced_team">فريق ڤانسد</string>
     <!-- Error messages -->
