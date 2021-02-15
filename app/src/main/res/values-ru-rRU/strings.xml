@@ -81,19 +81,20 @@
     <string name="app_installation_preferences">Параметры установки %1$s</string>
     <string name="version">Версия</string>
     <string name="microg_bug">Ошибка в microG</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">В связи с ошибкой в microG, установка Vanced версии 16+ сначала требует установку версии 15.43.32, затем необходимо открыть приложение, авторизоваться в аккаунте и только после этого можно будет установить версию 16 и выше. Вы хотите продолжить установку версии 15.43.32?</string>
+    <string name="microg_bug_summary_music">В связи с ошибкой в microG, установка Music версии 4.11+ сначала требует установку версии 4.07.51, затем необходимо открыть приложение, авторизоваться в аккаунте и только после этого можно будет установить версию 4.11 и выше. Вы хотите продолжить установку версии 4.07.51?</string>
     <string name="please_be_patient">Пожалуйста, НЕ выходите из приложения в течение этого процесса!</string>
     <string name="welcome">Добро пожаловать</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Выберите предпочитаемый язык для Vanced</string>
-    <string name="install_latest">Новейшая</string>
+    <string name="install_latest">Последняя</string>
     <string name="light_plus_other">Светлая + %1$s</string>
     <string name="select_at_least_one_lang">Выберите хотя бы один язык!</string>
     <string name="vanced_black">Черный</string>
     <string name="vanced_dark">Темный</string>
     <!-- About Page -->
     <string name="manager_dev">Разработчики Менеджера</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Исходники</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
