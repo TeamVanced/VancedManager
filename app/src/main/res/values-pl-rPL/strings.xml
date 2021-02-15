@@ -94,6 +94,7 @@
     <string name="vanced_dark">Ciemny</string>
     <!-- About Page -->
     <string name="manager_dev">Deweloperzy Menedżera</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
     <!-- Error messages -->
