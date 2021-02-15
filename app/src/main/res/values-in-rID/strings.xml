@@ -94,6 +94,7 @@
     <string name="vanced_dark">Gelap</string>
     <!-- About Page -->
     <string name="manager_dev">Pengembang Manager</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Sumber</string>
     <string name="vanced_team">Tim Vanced</string>
     <!-- Error messages -->
