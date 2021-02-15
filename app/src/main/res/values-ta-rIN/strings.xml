@@ -94,6 +94,7 @@
     <string name="vanced_dark">இருள்</string>
     <!-- About Page -->
     <string name="manager_dev">மேலாளர் டெவலப்பர்கள்</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">மூலம்</string>
     <string name="vanced_team">Vanced கூட்டணி</string>
     <!-- Error messages -->
