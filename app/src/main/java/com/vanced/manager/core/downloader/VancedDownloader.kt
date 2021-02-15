@@ -59,7 +59,7 @@ object VancedDownloader {
             downloadSplits(context)
         } catch (e: Exception) {
             log("VMDownloader", e.stackTraceToString())
-            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, "Vanced"))
+            downloadProgress.downloadingFile.postValue(context.getString(R.string.error_downloading, "Vanced"))
         }
 
     }
@@ -113,14 +113,14 @@ object VancedDownloader {
                 }
 
             } else {
-                downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
+                downloadProgress.downloadingFile.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
             }
         })
     }
 
     fun startVancedInstall(context: Context, variant: String? = this.variant) {
-        downloadProgress.value?.installing?.postValue(true)
-        downloadProgress.value?.postReset()
+        downloadProgress.installing.postValue(true)
+        downloadProgress.postReset()
         FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
             variant?.let { param("vanced_variant", it) }
             theme?.let { param("vanced_theme", it) }

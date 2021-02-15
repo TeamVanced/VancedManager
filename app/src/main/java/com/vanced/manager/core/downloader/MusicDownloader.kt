@@ -59,13 +59,13 @@ object MusicDownloader {
                 "stock" -> startMusicInstall(context)
             }
         }, onError = {
-            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
+            downloadProgress.downloadingFile.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
         })
     }
 
     fun startMusicInstall(context: Context) {
-        downloadProgress.value?.installing?.postValue(true)
-        downloadProgress.value?.postReset()
+        downloadProgress.installing.postValue(true)
+        downloadProgress.postReset()
         if (variant == "root")
             installMusicRoot(context)
         else

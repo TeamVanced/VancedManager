@@ -83,27 +83,25 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
 
     private fun DialogAppDownloadBinding.bindDownloadProgress() {
         with(downloadProgress) {
-            observe(viewLifecycleOwner) { progressModel ->
-                progressModel.downloadProgress.observe(viewLifecycleOwner) {
-                    appDownloadProgressbar.progress = it
-                }
-                progressModel.installing.observe(viewLifecycleOwner) { installing ->
-                    appDownloadProgressbar.isVisible = !installing
-                    appInstallProgressbar.isVisible = installing
-                    appDownloadFile.isVisible = !installing
-                    appDownloadCancel.isEnabled = !installing
-                    appDownloadCancel.setOnClickListener {
-                        if (installing) {
-                            return@setOnClickListener
-                        }
-                        progressModel.currentDownload?.cancel()
-                        progressModel.downloadProgress.value = 0
-                        dismiss()
+            downloadProgress.observe(viewLifecycleOwner) {
+                appDownloadProgressbar.progress = it
+            }
+            installing.observe(viewLifecycleOwner) { installing ->
+                appDownloadProgressbar.isVisible = !installing
+                appInstallProgressbar.isVisible = installing
+                appDownloadFile.isVisible = !installing
+                appDownloadCancel.isEnabled = !installing
+                appDownloadCancel.setOnClickListener {
+                    if (installing) {
+                        return@setOnClickListener
                     }
+                    currentDownload?.cancel()
+                    downloadProgress.value = 0
+                    dismiss()
                 }
-                progressModel.downloadingFile.observe(viewLifecycleOwner) {
-                    appDownloadFile.text = it
-                }
+            }
+            downloadingFile.observe(viewLifecycleOwner) {
+                appDownloadFile.text = it
             }
         }
     }

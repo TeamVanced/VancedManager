@@ -18,14 +18,14 @@ object MicrogDownloader {
         download(url, "$baseInstallUrl/", folderName, fileName, context, onDownloadComplete = {
             startMicrogInstall(context)
         }, onError = {
-            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, fileName))
+            downloadProgress.downloadingFile.postValue(context.getString(R.string.error_downloading, fileName))
         })
 
     }
 
     fun startMicrogInstall(context: Context) {
-        downloadProgress.value?.installing?.postValue(true)
-        downloadProgress.value?.postReset()
+        downloadProgress.installing.postValue(true)
+        downloadProgress.postReset()
         install("${context.getExternalFilesDir(folderName)}/$fileName", context)
     }
 }

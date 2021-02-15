@@ -57,7 +57,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     fun sendCloseDialog(context: Context): Job {
         return launch {
             delay(700)
-            downloadProgress.value?.installing?.postValue(false)
+            downloadProgress.installing.postValue(false)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
         }
     }
