@@ -94,6 +94,7 @@
     <string name="vanced_dark">Madilim</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Pinagkukunan</string>
     <string name="vanced_team">Pangkat Vanced</string>
     <!-- Error messages -->
