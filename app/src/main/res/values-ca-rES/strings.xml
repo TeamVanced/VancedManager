@@ -94,6 +94,7 @@
     <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Gestor de desenvolupadors</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Fonts</string>
     <string name="vanced_team">Equip avançat</string>
     <!-- Error messages -->
