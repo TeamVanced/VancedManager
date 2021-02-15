@@ -81,8 +81,8 @@
     <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
     <string name="version">Versi</string>
     <string name="microg_bug">Bug di microG</string>
-    <string name="microg_bug_summary">Dikarenakan bug yang ada microG original, memasang Vanced v16+ membutuhkan anda untuk terlebih dahulu memasang v15.43.32, buka aplikasinya, lalu login dan sekarang anda dapat memasang v16 keatas. Apakah anda ingin melanjutkan untuk pemasangan v15.43.32?</string>
-    <string name="microg_bug_summary_music">Dikarenakan bug yang ada di microG original, memasang Music v4.11+ membutuhkan anda untuk terlebih dahulu memasang v4.07.51, buka aplikasinya, lalu login dan sekarang anda dapat memasang v4.11 keatas. Apakah anda ingin melanjutkan untuk pemasangan v4.07.51?</string>
+    <string name="microg_bug_summary">Dikarenakan bug yang ada pada microG original, memasang Vanced v16+ memerlukan anda untuk terlebih dahulu memasang v15.43.32, buka aplikasinya, lalu login dan sekarang anda dapat memasang v16 keatas. Apakah anda ingin melanjutkan untuk pemasangan v15.43.32?</string>
+    <string name="microg_bug_summary_music">Dikarenakan bug yang ada pada microG original, memasang Music v4.11+ memerlukan anda untuk terlebih dahulu memasang v4.07.51, buka aplikasinya, lalu login dan sekarang anda dapat memasang v4.11 keatas. Apakah anda ingin melanjutkan untuk pemasangan v4.07.51?</string>
     <string name="please_be_patient">Mohon untuk TIDAK keluar dari aplikasi saat proses ini!</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
