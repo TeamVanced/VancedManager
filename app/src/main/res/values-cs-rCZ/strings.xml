@@ -94,6 +94,7 @@
     <string name="vanced_dark">Tmavý</string>
     <!-- About Page -->
     <string name="manager_dev">Vývojáři aplikace Manager</string>
+    <string name="other_contributors">Další přispěvatelé</string>
     <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tým Vanced</string>
     <!-- Error messages -->
