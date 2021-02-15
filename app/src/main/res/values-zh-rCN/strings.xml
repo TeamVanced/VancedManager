@@ -94,6 +94,7 @@
     <string name="vanced_dark">深色</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 开发人员</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">源码</string>
     <string name="vanced_team">Vanced 团队</string>
     <!-- Error messages -->
