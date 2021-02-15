@@ -94,6 +94,7 @@
     <string name="vanced_dark">Mörk</string>
     <!-- About Page -->
     <string name="manager_dev">Hanteraren Dev</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Källor</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
