@@ -94,6 +94,7 @@
     <string name="vanced_dark">ഇരുണ്ടത്</string>
     <!-- About Page -->
     <string name="manager_dev">മാനേജർ ഡവലപ്പർമാർ</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">ഉറവിടങ്ങൾ</string>
     <string name="vanced_team">വാൻ‌സ്ഡ് ടീം</string>
     <!-- Error messages -->
