@@ -94,6 +94,7 @@
     <string name="vanced_dark">Întunecat</string>
     <!-- About Page -->
     <string name="manager_dev">Dezvoltatori</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
