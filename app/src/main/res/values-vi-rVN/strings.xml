@@ -94,6 +94,7 @@
     <string name="vanced_dark">Tối</string>
     <!-- About Page -->
     <string name="manager_dev">Đội ngũ phát triển</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Nguồn</string>
     <string name="vanced_team">Đội ngũ Vanced</string>
     <!-- Error messages -->
