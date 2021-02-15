@@ -94,6 +94,7 @@
     <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">পরিচালক বিকাশকারী</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">সূত্রসমূহ</string>
     <string name="vanced_team">ভান্সড দল</string>
     <!-- Error messages -->
