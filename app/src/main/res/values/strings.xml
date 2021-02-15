@@ -104,6 +104,7 @@
 
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Vanced Team</string>
 

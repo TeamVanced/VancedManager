@@ -37,7 +37,7 @@ class AboutFragment : BindingFragment<FragmentAboutBinding>() {
     @SuppressLint("ClickableViewAccessibility")
     private fun dataBind() {
         requireActivity().title = getString(R.string.title_about)
-        binding.aboutHeader.root.setOnClickListener {
+        binding.root.setOnClickListener {
             showDialog(
                 AppInfoDialog.newInstance(
                     appName = getString(R.string.app_name),
@@ -71,7 +71,7 @@ class AboutFragment : BindingFragment<FragmentAboutBinding>() {
             }
             false
         }
-        binding.aboutSources.aboutGithubButton.setOnClickListener { viewModel.openUrl("https://github.com/YTVanced/VancedInstaller") }
-        binding.aboutSources.aboutLicenseButton.setOnClickListener { viewModel.openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE") }
+        binding.aboutGithubButton.setOnClickListener { viewModel.openUrl("https://github.com/YTVanced/VancedInstaller") }
+        binding.aboutLicenseButton.setOnClickListener { viewModel.openUrl("https://raw.githubusercontent.com/YTVanced/VancedInstaller/dev/LICENSE") }
     }
 }
