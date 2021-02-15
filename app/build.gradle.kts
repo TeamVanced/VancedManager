@@ -16,8 +16,8 @@ android {
         applicationId = "com.vanced.manager"
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 240
-        versionName = "2.4.0 (java.lang.TrashManagerException)"
+        versionCode = 250
+        versionName = "2.5.0 (Weed)"
 
         vectorDrawables.useSupportLibrary = true
 
@@ -90,11 +90,11 @@ dependencies {
 
     implementation(project(":library-network"))
 
-// Kotlin
+    // Kotlin
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
 
-// AndroidX
+    // AndroidX
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("androidx.browser:browser:1.3.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
@@ -108,11 +108,11 @@ dependencies {
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
-    //Appearance
+    // Appearance
     implementation("com.github.madrapps:pikolo:2.0.1")
     implementation("com.google.android.material:material:1.3.0")
 
-    // JSON parser-
+    // JSON parser
     implementation("com.beust:klaxon:5.4")
 
     // Crowdin
