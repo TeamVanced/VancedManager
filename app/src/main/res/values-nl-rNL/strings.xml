@@ -94,6 +94,7 @@
     <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Dev</string>
+    <string name="other_contributors">Andere bijdragers</string>
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
