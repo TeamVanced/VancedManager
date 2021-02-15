@@ -28,7 +28,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="8dp"
-            app:tint="?colorLinkImage"
             tools:src="@drawable/ic_brave" />
 
         <TextView
