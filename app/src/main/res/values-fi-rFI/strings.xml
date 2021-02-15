@@ -94,6 +94,7 @@
     <string name="vanced_dark">Tumma</string>
     <!-- About Page -->
     <string name="manager_dev">Managerin kehittäjät</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
