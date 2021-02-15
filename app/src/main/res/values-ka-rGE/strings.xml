@@ -94,6 +94,7 @@
     <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager-ის დეველოპერები</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">წყაროები</string>
     <string name="vanced_team">Vanced-ის გუნდი</string>
     <!-- Error messages -->
