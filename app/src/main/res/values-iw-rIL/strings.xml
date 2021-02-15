@@ -94,6 +94,7 @@
     <string name="vanced_dark">שחרחר</string>
     <!-- About Page -->
     <string name="manager_dev">מנהל למפתחים</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">מקורות</string>
     <string name="vanced_team">צוות Vanced</string>
     <!-- Error messages -->
