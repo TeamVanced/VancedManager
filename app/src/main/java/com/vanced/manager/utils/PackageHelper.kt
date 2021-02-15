@@ -211,17 +211,22 @@ object PackageHelper {
         return false
     }
 
-    private fun installRootApp(context: Context, app: String, appVerCode: Int, pkg: String, modApkBool: (fileName: String) -> Boolean) = CoroutineScope(Dispatchers.IO).launch {
+    private fun installRootApp(context: Context, app: String, appVerCode: Int?, pkg: String, modApkBool: (fileName: String) -> Boolean) = CoroutineScope(Dispatchers.IO).launch {
         Shell.getShell {
             val apkFilesPath = context.getExternalFilesDir("$app/root")?.path
             val files = File(apkFilesPath.toString()).listFiles()?.toList()
             if (files != null) {
                 val modApk: File? = files.lastOrNull { modApkBool(it.name) }
                 if (modApk != null) {
-                    if (overwriteBase(modApk, files, appVerCode, pkg, app, context)) {
-                        setInstallerPackage(context, pkg, playStorePkg)
-                        log(INSTALLER_TAG, "Finished installation")
-                        sendRefresh(context)
+                    if (appVerCode != null) {
+                        if (overwriteBase(modApk, files, appVerCode, pkg, app, context)) {
+                            setInstallerPackage(context, pkg, playStorePkg)
+                            log(INSTALLER_TAG, "Finished installation")
+                            sendRefresh(context)
+                            sendCloseDialog(context)
+                        }
+                    } else {
+                        sendFailure(listOf("appVerCode is null").toMutableList(), context)
                         sendCloseDialog(context)
                     }
                 } else {
@@ -241,7 +246,7 @@ object PackageHelper {
         installRootApp(
             context,
             "music",
-            music.value?.int("versionCode")!!,
+            music.value?.int("versionCode"),
             musicRootPkg
         ) {
             it == "root.apk"
@@ -252,7 +257,7 @@ object PackageHelper {
         installRootApp(
             context,
             "vanced",
-            vanced.value?.int("versionCode")!!,
+            vanced.value?.int("versionCode"),
             vancedRootPkg
         ) { fileName ->
             vancedThemes.any { fileName == "$it.apk" }
