@@ -1,15 +1,8 @@
 package com.vanced.manager.utils
 
-import com.topjohnwu.superuser.Shell
+import android.content.Context
+import android.provider.Settings
 
-private const val MIUI_PROP = "ro.miui.ui.version.name"
+private const val MIUI_OPTIMIZATION = "miui_optimization"
 
-val isMiui get() = !getSystemProperty(MIUI_PROP).isNullOrEmpty()
-
-fun getSystemProperty(propname: String): String? {
-    return try {
-        Shell.sh("getprop $propname").exec().out.joinToString(" ")
-    } catch (e: Exception) {
-        null
-    }
-}
+val Context.isMiuiOptimizationsEnabled: Boolean get() = Settings.Secure.getString(contentResolver, MIUI_OPTIMIZATION) == "1"
