@@ -81,8 +81,8 @@
     <string name="app_installation_preferences">%1$s 安裝偏好設定</string>
     <string name="version">版本</string>
     <string name="microg_bug">microG 漏洞</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">由於原版 microG 的一個 bug，如要安裝 Vanced 16+，您需要先安裝 15.43.32 版、開啟它、登入，然後才能安裝 16 或更新的版本。是否開始安裝 15.43.32 版？</string>
+    <string name="microg_bug_summary_music">由於 microG 的一個 bug，如要安裝 Music 4.11+，您需要先安裝 4.07.51 版、開啟它、登入，然後才能安裝 4.11 或更新的版本。是否開始安裝 4.07.51 版？</string>
     <string name="please_be_patient">在此過程中請不要退出應用程式！</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
@@ -94,7 +94,7 @@
     <string name="vanced_dark">深色</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開發者</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">其他貢獻者：</string>
     <string name="sources">原始碼</string>
     <string name="vanced_team">Vanced 團隊</string>
     <!-- Error messages -->
