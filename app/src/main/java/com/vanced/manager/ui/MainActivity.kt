@@ -206,10 +206,6 @@ class MainActivity : AppCompatActivity() {
                 subscribeToTopic("Music-Update")
                 subscribeToTopic("MicroG-Update")
             }
-        } else {
-            if (isMiuiOptimizationsEnabled) {
-                DialogContainer.applyAccentMiuiDialog(this)
-            }
         }
 
         if (!prefs.getBoolean("statement", true)) {

@@ -2,9 +2,9 @@ package com.vanced.manager.utils
 
 import com.topjohnwu.superuser.Shell
 
-private const val MIUI_OPTIMIZATIONS_PROP = "persist.sys.miui_optimization"
+private const val MIUI_PROP = "ro.miui.ui.version.name"
 
-val isMiuiOptimizationsEnabled get() = getSystemProperty(MIUI_OPTIMIZATIONS_PROP) == "true"
+val isMiui get() = !getSystemProperty(MIUI_PROP).isNullOrEmpty()
 
 fun getSystemProperty(propname: String): String? {
     return try {

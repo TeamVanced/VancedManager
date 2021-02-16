@@ -6,7 +6,7 @@ import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
 import com.vanced.manager.utils.applyAccent
-import com.vanced.manager.utils.isMiuiOptimizationsEnabled
+import com.vanced.manager.utils.isMiui
 import com.vanced.manager.utils.openUrl
 
 object DialogContainer {
@@ -19,7 +19,7 @@ object DialogContainer {
                 dialog.cancel()
             }
             setOnCancelListener {
-                if (isMiuiOptimizationsEnabled) {
+                if (isMiui) {
                     applyAccentMiuiDialog(context)
                 }
             }
