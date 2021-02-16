@@ -73,8 +73,8 @@
     <string name="guide">Руководство</string>
     <string name="hold_on">Стойте!</string>
     <string name="magisk_vanced">Похоже, вы используете Magisk/TWRP версию Vanced, которая больше не поддерживается и не может быть обновлена с помощью этого приложения. Пожалуйста, удалите модуль Vanced через Magisk или с помощью деинсталлятора Vanced для TWRP.</string>
-    <string name="miui_one_title">Обнаружен пользователь MIUI!</string>
-    <string name="miui_one">Чтобы установить Vanced, вы ДОЛЖНЫ отключить оптимизацию MIUI в настройках разработчика. (Вы можете проигнорировать это предупреждение, если вы используете прошивку на xiaomi.eu версии 20.2.20+)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Ошибка</string>
     <string name="redownload">Скачать заново</string>
     <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vancedapp.com, сервера Vanced в Discord или с официального GitHub</string>
