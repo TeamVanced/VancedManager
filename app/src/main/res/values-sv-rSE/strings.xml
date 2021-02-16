@@ -8,8 +8,8 @@
     <string name="select_apps">Välj dina appar</string>
     <!-- Main Activity -->
     <string name="title_about">Om</string>
-    <string name="title_guide">FAQ</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_guide">Guide</string>
+    <string name="title_logs">Loggar</string>
     <string name="title_home">Hanterare</string>
     <string name="title_settings">Inställningar</string>
     <string name="update_manager">Uppdatera hanteraren</string>
@@ -60,8 +60,8 @@
     <string name="update_not_found">Inga nya uppdateringar</string>
     <string name="variant">Variant</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">Sparades</string>
+    <string name="logs_not_saved">Kunde inte spara sida</string>
     <!-- Dialogs -->
     <string name="advanced">Avancerad</string>
     <string name="app_install_files_detected">%1$s installationsfiler upptäckt!</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Bugg i microG</string>
     <string name="microg_bug_summary">På grund av en bugg i mainline microG, måste du installera Vanced v16+ först installera v15.43. 2, öppna den, sedan logga in och endast då kan du installera v16 och högre. Vill du fortsätta med installationen av v15.43.32?</string>
     <string name="microg_bug_summary_music">På grund av en bugg i mainline microG, måste du installera Vanced v16+ först installera v15.43. 2, öppna den, sedan logga in och endast då kan du installera v16 och högre. Vill du fortsätta med installationen av v15.11?</string>
-    <string name="please_be_patient">Vänligen ha tålamod…</string>
+    <string name="please_be_patient">Vänligen avsluta INTE appen under denna process!</string>
     <string name="welcome">Välkommen</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Välj önskade språk för Vanced</string>
@@ -94,6 +94,7 @@
     <string name="vanced_dark">Mörk</string>
     <!-- About Page -->
     <string name="manager_dev">Hanteraren Dev</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Källor</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
@@ -105,7 +106,7 @@
     <string name="ifile_missing">Det gick inte att hitta apk-fil för svart/mörkt tema från lagring, försök igen.</string>
     <string name="installation_aborted">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">Installationen misslyckades eftersom användaren försökte nedgradera paketet. Avinstallera uppdateringar från lagerappen YouTube, försök sedan igen.</string>
     <string name="installation_conflict">Installationen misslyckades eftersom appen står i konflikt med en redan installerad app. Avinstallera den aktuella versionen av Vanced, försök sedan igen.</string>
     <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
     <string name="installation_incompatible">Installationen misslyckades eftersom installationsfilen är inkompatibel med din enhet. Rensa nedladdade filer i Inställningarna och försök igen.</string>

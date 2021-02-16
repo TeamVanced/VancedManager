@@ -8,7 +8,7 @@
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">ম্যানেজার</string>
     <string name="title_settings">সেটিংস</string>
@@ -81,9 +81,9 @@
     <string name="app_installation_preferences">%1$s ইনস্টল করার পছন্দগুলি</string>
     <string name="version">সংস্করণ</string>
     <string name="microg_bug">মাইক্রোজি মধ্যে বাগ</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
-    <string name="please_be_patient">দয়া করে ধৈর্য ধরুন…</string>
+    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">ভ্যান্সডের জন্য আপনার পছন্দসই ভাষা(গুলি) চয়ন করুন</string>
@@ -94,6 +94,7 @@
     <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">ম্যানেজার বিকাশকারীরা</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">উৎসগুলি</string>
     <string name="vanced_team">ভ্যান্সড টীম</string>
     <!-- Error messages -->

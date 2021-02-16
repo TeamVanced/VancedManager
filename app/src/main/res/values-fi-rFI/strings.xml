@@ -8,8 +8,8 @@
     <string name="select_apps">Valitse Sovelluksesi</string>
     <!-- Main Activity -->
     <string name="title_about">Tietoja</string>
-    <string name="title_guide">FAQ</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_guide">Opas</string>
+    <string name="title_logs">Lokit</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Asetukset</string>
     <string name="update_manager">Päivitä hallintasovellus</string>
@@ -48,7 +48,7 @@
     <string name="link_title">Käytä Chromen mukautettuja välilehtiä</string>
     <string name="link_custom_tabs">Linkit aukeavat Chromen mukautetuissa välilehdissä</string>
     <string name="system_default">Järjestelmän oletus</string>
-    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_save_failed">Uuden ajan tallennus epäonnistui</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">Teema</string>
@@ -60,8 +60,8 @@
     <string name="update_not_found">Ei uusia päivityksiä</string>
     <string name="variant">Variaatio</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">Lokit tallennettiin onnistuneesti</string>
+    <string name="logs_not_saved">Lokeja ei voitu tallentaa</string>
     <!-- Dialogs -->
     <string name="advanced">Kehittyneet</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
@@ -81,19 +81,20 @@
     <string name="app_installation_preferences">%1$s asennusasetukset</string>
     <string name="version">Versio</string>
     <string name="microg_bug">Virhe microG:ssä</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
-    <string name="please_be_patient">Ole kärsivällinen…</string>
+    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="please_be_patient">ÄLÄ poistu sovelluksesta tämän prosessin aikana!</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Valitse Vancedille haluamasi kieli tai kielet</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">Uusin</string>
     <string name="light_plus_other">Vaalea + %1$s</string>
     <string name="select_at_least_one_lang">Valitse ainakin yksi kieli!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Musta</string>
+    <string name="vanced_dark">Tumma</string>
     <!-- About Page -->
     <string name="manager_dev">Managerin kehittäjät</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->

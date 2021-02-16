@@ -8,7 +8,7 @@
     <string name="select_apps">Sélectionnez vos applications</string>
     <!-- Main Activity -->
     <string name="title_about">À propos</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Journaux</string>
     <string name="title_home">Gestionnaire</string>
     <string name="title_settings">Paramètres</string>
@@ -49,7 +49,7 @@
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="system_default">Système par défaut</string>
     <string name="script_save_failed">Impossible d\'enregistrer la nouvelle valeur de temps</string>
-    <string name="script_sleep_timer">Définir un arrêt programmé</string>
+    <string name="script_sleep_timer">Définir une mise en veille programmé</string>
     <string name="script_sleep_timer_description">Ajuster la valeur de l\'heure de veille utilisée dans le script /data/adb/service.d/app.sh, utile pour résoudre les problèmes de montage</string>
     <string name="theme">Thème</string>
     <string name="theme_dark">Thème sombre</string>
@@ -80,10 +80,10 @@
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="version">Version</string>
-    <string name="microg_bug">Bogue dans microG</string>
-    <string name="microg_bug_summary">En raison d\'un bogue dans microG, l\'installation de Vanced 16+ nécessite d\'abord l\'installation de la v15.43.32, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v16 ou une version plus récente. Voulez-vous procéder à l\'installation de la v15.43.32&#160;?</string>
-    <string name="microg_bug_summary_music">En raison d\'un bogue dans microG, l\'installation de Music 4.11+ nécessite d\'abord l\'installation de la v4.07.51, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v14.11 ou une version plus récente. Voulez-vous procéder à l\'installation de la v4.07.51&#160;?</string>
-    <string name="please_be_patient">Veuillez patienter…</string>
+    <string name="microg_bug">Bug dans microG</string>
+    <string name="microg_bug_summary">En raison d\'un bogue dans microG original, l\'installation de Vanced v16+ nécessite d\'abord l\'installation de la v15.43.32, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v16 ou une version plus récente. Voulez-vous procéder à l\'installation de la v15.43.32&#160;?</string>
+    <string name="microg_bug_summary_music">En raison d\'un bogue dans microG original, l\'installation de Music 4.11+ nécessite d\'abord l\'installation de la v4.07.51, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v14.11 ou une version plus récente. Voulez-vous procéder à l\'installation de la v4.07.51&#160;?</string>
+    <string name="please_be_patient">Veuillez NE PAS quitter l\'application pendant que celle-ci est en cours de modification !</string>
     <string name="welcome">Bienvenue</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Choisir votre langage(s) préféré(s) pour Vanced</string>
@@ -94,6 +94,7 @@
     <string name="vanced_dark">Sombre</string>
     <!-- About Page -->
     <string name="manager_dev">Développeurs du Manager</string>
+    <string name="other_contributors">Autres contributeurs</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
     <!-- Error messages -->

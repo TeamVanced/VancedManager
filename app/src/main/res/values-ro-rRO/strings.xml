@@ -8,7 +8,7 @@
     <string name="select_apps">Selectați aplicațiile</string>
     <!-- Main Activity -->
     <string name="title_about">Despre</string>
-    <string name="title_guide">Întrebări frecvente</string>
+    <string name="title_guide">Ghid</string>
     <string name="title_logs">Jurnale</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Configurări</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">Eroare la microG</string>
     <string name="microg_bug_summary">Din cauza unei erori în microG, pentru a instala Vanced versiunea 16, este nevoie mai întâi să instalați versiunea 15.43.32, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 16 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 15.43.32?</string>
     <string name="microg_bug_summary_music">Din cauza unei erori în microG, pentru a instala Music Vanced versiunea 4.11, este nevoie mai întâi să instalați versiunea 4.07.51, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 4.11 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 4.07.51?</string>
-    <string name="please_be_patient">Vă rugăm să aveți răbdare…</string>
+    <string name="please_be_patient">Vă rugăm să NU ieșiți din aplicație în timpul acestui proces!</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Alegeți limba preferată pentru Vanced</string>
@@ -94,6 +94,7 @@
     <string name="vanced_dark">Întunecat</string>
     <!-- About Page -->
     <string name="manager_dev">Dezvoltatori</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
