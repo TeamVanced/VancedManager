@@ -17,8 +17,7 @@ import com.vanced.manager.core.downloader.MusicDownloader.downloadMusic
 import com.vanced.manager.core.downloader.VancedDownloader.downloadVanced
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogAppDownloadBinding
-import com.vanced.manager.utils.DownloadHelper.downloadProgress
-import com.vanced.manager.utils.applyAccent
+import com.vanced.manager.utils.*
 
 class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
 
@@ -82,29 +81,25 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
     }
 
     private fun DialogAppDownloadBinding.bindDownloadProgress() {
-        with(downloadProgress) {
-            observe(viewLifecycleOwner) { progressModel ->
-                progressModel.downloadProgress.observe(viewLifecycleOwner) {
-                    appDownloadProgressbar.progress = it
+        downloadProgress.observe(viewLifecycleOwner) {
+            appDownloadProgressbar.progress = it
+        }
+        installing.observe(viewLifecycleOwner) { installing ->
+            appDownloadProgressbar.isVisible = !installing
+            appInstallProgressbar.isVisible = installing
+            appDownloadFile.isVisible = !installing
+            appDownloadCancel.isEnabled = !installing
+            appDownloadCancel.setOnClickListener {
+                if (installing) {
+                    return@setOnClickListener
                 }
-                progressModel.installing.observe(viewLifecycleOwner) { installing ->
-                    appDownloadProgressbar.isVisible = !installing
-                    appInstallProgressbar.isVisible = installing
-                    appDownloadFile.isVisible = !installing
-                    appDownloadCancel.isEnabled = !installing
-                    appDownloadCancel.setOnClickListener {
-                        if (installing) {
-                            return@setOnClickListener
-                        }
-                        progressModel.currentDownload?.cancel()
-                        progressModel.downloadProgress.value = 0
-                        dismiss()
-                    }
-                }
-                progressModel.downloadingFile.observe(viewLifecycleOwner) {
-                    appDownloadFile.text = it
-                }
+                currentDownload?.cancel()
+                downloadProgress.value = 0
+                dismiss()
             }
+        }
+        downloadingFile.observe(viewLifecycleOwner) {
+            appDownloadFile.text = it
         }
     }
 

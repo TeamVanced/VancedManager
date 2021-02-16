@@ -3,20 +3,22 @@ package com.vanced.manager.utils
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.Typeface
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
+import android.text.style.StyleSpan
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.fragments.HomeFragment
-import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import kotlinx.coroutines.*
 import java.io.File
 import java.io.IOException
 import java.security.MessageDigest
+import java.util.*
 
 object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
@@ -31,11 +33,14 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     val logs = mutableListOf<Spannable>()
 
+    var currentLocale: Locale? = null
+
     fun log(tag: String, message: String) {
         logs.add(
             SpannableString("$tag: $message\n").apply {
-                setSpan(ForegroundColorSpan(Color.CYAN), 0, tag.length + 1, 0)
-                setSpan(ForegroundColorSpan(Color.GREEN), tag.length + 2, tag.length + message.length + 2, 0)
+                setSpan(ForegroundColorSpan(Color.parseColor("#2e73ff")), 0, tag.length + 1, 0)
+                setSpan(StyleSpan(Typeface.BOLD), 0, tag.length + 1, 0)
+                setSpan(ForegroundColorSpan(Color.MAGENTA), tag.length + 2, tag.length + message.length + 2, 0)
             }
         )
         Log.d(tag, message)
@@ -51,13 +56,13 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     fun sendCloseDialog(context: Context): Job {
         return launch {
             delay(700)
-            downloadProgress.value?.installing?.postValue(false)
+            installing.postValue(false)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
         }
     }
 
     fun sendFailure(error: MutableList<String>, context: Context) {
-        sendFailure(error.joinToString(), context)
+        sendFailure(error.joinToString(" "), context)
     }
 
     fun sendFailure(error: String, context: Context): Job {
@@ -122,11 +127,13 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
             status.contains("ModApk_Missing") -> context.getString(R.string.modapk_missing)
             status.contains("Files_Missing_VA") -> context.getString(R.string.files_missing_va)
             status.contains("Path_Missing") -> context.getString(R.string.path_missing)
-            else ->
-                if (isMiui())
+            status.contains("INSTALL_FAILED_INTERNAL_ERROR: Permission Denied") -> {
+                if (isMiuiOptimizationsEnabled)
                     context.getString(R.string.installation_miui)
                 else
-                    context.getString(R.string.installation_failed)
+                    context.getString(R.string.installation_blocked)
+            }
+            else -> context.getString(R.string.installation_failed)
         }
     }
 }

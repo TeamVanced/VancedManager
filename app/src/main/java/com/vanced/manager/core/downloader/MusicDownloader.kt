@@ -6,7 +6,6 @@ import com.vanced.manager.utils.*
 import com.vanced.manager.utils.AppUtils.musicRootPkg
 import com.vanced.manager.utils.AppUtils.validateTheme
 import com.vanced.manager.utils.DownloadHelper.download
-import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.PackageHelper.downloadStockCheck
 import com.vanced.manager.utils.PackageHelper.install
 import com.vanced.manager.utils.PackageHelper.installMusicRoot
@@ -59,13 +58,13 @@ object MusicDownloader {
                 "stock" -> startMusicInstall(context)
             }
         }, onError = {
-            downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
+            downloadingFile.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
         })
     }
 
     fun startMusicInstall(context: Context) {
-        downloadProgress.value?.installing?.postValue(true)
-        downloadProgress.value?.postReset()
+        installing.postValue(true)
+        postReset()
         if (variant == "root")
             installMusicRoot(context)
         else

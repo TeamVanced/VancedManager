@@ -47,11 +47,11 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
             vancedTheme.text = getString(R.string.chosen_theme, installPrefs.theme?.convertToAppTheme(requireActivity()))
             vancedVersion.text = getString(R.string.chosen_version, defPrefs.vancedVersion?.formatVersion(requireActivity()))
             vancedLang.text = getString(R.string.chosen_lang, showLang)
-            openThemeSelector.setOnClickListener {
+            openThemeSelectorLayout.setOnClickListener {
                 dismiss()
                 showDialog(VancedThemeSelectorDialog())
             }
-            openVersionSelector.setOnClickListener {
+            openVersionSelectorLayout.setOnClickListener {
                 dismiss()
                 showDialog(
                     AppVersionSelectorDialog.newInstance(
@@ -60,7 +60,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                     )
                 )
             }
-            openLanguageSelector.setOnClickListener {
+            openLanguageSelectorLayout.setOnClickListener {
                 dismiss()
                 showDialog(VancedLanguageSelectionDialog())
             }

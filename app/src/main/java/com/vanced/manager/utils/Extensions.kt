@@ -80,5 +80,5 @@ fun Context.writeServiceDScript(apkFPath: String, path: String, app: String) {
     val shellFileZ = SuFile.open("/data/adb/service.d/$app.sh")
     shellFileZ.createNewFile()
     val code = """#!/system/bin/sh${"\n"}while [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ]; do sleep ${defPrefs.serviceDSleepTimer}; done${"\n"}chcon u:object_r:apk_data_file:s0 $apkFPath${"\n"}mount -o bind $apkFPath $path"""
-    SuFileOutputStream(shellFileZ).use { out ->  out.write(code.toByteArray())}
+    SuFileOutputStream.open(shellFileZ).use { out ->  out.write(code.toByteArray())}
 }

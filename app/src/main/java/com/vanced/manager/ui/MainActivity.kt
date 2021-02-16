@@ -28,6 +28,7 @@ import com.vanced.manager.ui.dialogs.URLChangeDialog
 import com.vanced.manager.ui.fragments.HomeFragmentDirections
 import com.vanced.manager.ui.fragments.SettingsFragmentDirections
 import com.vanced.manager.utils.*
+import com.vanced.manager.utils.AppUtils.currentLocale
 import com.vanced.manager.utils.AppUtils.faqpkg
 import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.playStorePkg
@@ -154,6 +155,8 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(Crowdin.wrapContext(LanguageContextWrapper.wrap(newBase)))
     }
 
+    //I have no idea why the fuck is super method deprecated
+    @Suppress("DEPRECATION")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         onActivityResult(requestCode)
@@ -161,7 +164,20 @@ class MainActivity : AppCompatActivity() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        recreate() //restarting activity to recreate viewmodels, otherwise some text won't update
+
+        //update manager language when system language is changed
+        @Suppress("DEPRECATION")
+        if (newConfig.locale != currentLocale) {
+            recreate() //restarting activity in order to recreate viewmodels, otherwise some text won't update
+            return
+        }
+
+        when (newConfig.orientation) {
+            Configuration.ORIENTATION_PORTRAIT -> log("VMUI", "screen orientation changed to portrait")
+            Configuration.ORIENTATION_LANDSCAPE -> log("VMUI", "screen orientation changed to landscape")
+            else -> log("VMUI", "screen orientation changed to [REDACTED]")
+        }
+
     }
 
     override fun recreate() {
@@ -183,26 +199,30 @@ class MainActivity : AppCompatActivity() {
             urldialog.show(this)
         }
 
-        when {
-            firstLaunch -> {
-                DialogContainer.showSecurityDialog(this)
-                with(FirebaseMessaging.getInstance()) {
-                    subscribeToTopic("Vanced-Update")
-                    subscribeToTopic("Music-Update")
-                    subscribeToTopic("MicroG-Update")
-                }
+        if (firstLaunch) {
+            DialogContainer.showSecurityDialog(this)
+            with(FirebaseMessaging.getInstance()) {
+                subscribeToTopic("Vanced-Update")
+                subscribeToTopic("Music-Update")
+                subscribeToTopic("MicroG-Update")
             }
-            !prefs.getBoolean("statement", true) -> DialogContainer.statementFalse(this)
-            variant == "root" -> {
-                if (PackageHelper.getPackageVersionName(
-                        "com.google.android.youtube",
-                        packageManager
-                    ) == "14.21.54")
-                    DialogContainer.basicDialog(
-                        getString(R.string.hold_on),
-                        getString(R.string.magisk_vanced),
-                        this
-                    )
+        } else {
+            if (isMiuiOptimizationsEnabled) {
+                DialogContainer.applyAccentMiuiDialog(this)
+            }
+        }
+
+        if (!prefs.getBoolean("statement", true)) {
+            DialogContainer.statementFalse(this)
+        }
+
+        if (variant == "root") {
+            if (PackageHelper.getPackageVersionName("com.google.android.youtube", packageManager) == "14.21.54") {
+                DialogContainer.basicDialog(
+                    getString(R.string.hold_on),
+                    getString(R.string.magisk_vanced),
+                    this
+                )
             }
         }
     }

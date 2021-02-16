@@ -7,20 +7,30 @@ import androidx.lifecycle.MutableLiveData
 import com.vanced.manager.R
 
 const val defAccentColor: Int = -13732865
+const val LIGHT = "Light"
+const val DARK = "Dark"
+const val SYSTEM_DEFAULT = "System Default"
 
 val mutableAccentColor = MutableLiveData<Int>()
 val accentColor: LiveData<Int> = mutableAccentColor
 
+var currentTheme = ""
+
 fun Activity.setFinalTheme() {
     when (defPrefs.managerTheme) {
-        "Light" -> setTheme(R.style.LightTheme)
-        "Dark" -> setTheme(R.style.DarkTheme)
-        "System Default" -> {
+        LIGHT -> setTheme(R.style.LightTheme, LIGHT)
+        DARK -> setTheme(R.style.DarkTheme, DARK)
+        SYSTEM_DEFAULT -> {
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
-                Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme)
-                Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme)
+                Configuration.UI_MODE_NIGHT_YES -> setTheme(R.style.DarkTheme, DARK)
+                Configuration.UI_MODE_NIGHT_NO -> setTheme(R.style.LightTheme, LIGHT)
             }
         }
-        else -> setTheme(R.style.LightTheme)
+        else -> setTheme(R.style.LightTheme, LIGHT)
     }
+}
+
+fun Activity.setTheme(resId: Int, themeValue: String) {
+    setTheme(resId)
+    currentTheme = themeValue
 }

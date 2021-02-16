@@ -12,6 +12,7 @@
             style="@style/BottomDialogCardTitle" />
 
         <RelativeLayout
+            android:id="@+id/open_version_selector_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp">
@@ -23,7 +24,7 @@
                 android:layout_toStartOf="@id/open_version_selector"
                 style="@style/BottomDialogCardTextItem" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/open_version_selector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,11 +33,14 @@
                 android:maxWidth="24dp"
                 android:maxHeight="24dp"
                 android:src="@drawable/ic_baseline_navigate_next_36" />
+
         </RelativeLayout>
 
         <com.vanced.manager.ui.core.ThemedMaterialButton
             android:id="@+id/music_install"
             android:text="@string/install"
             style="@style/BottomDialogButtonStyle" />
+
     </LinearLayout>
+
 </com.google.android.material.card.MaterialCardView>

@@ -1,22 +1,15 @@
 package com.vanced.manager.utils
 
-import java.io.BufferedReader
-import java.io.IOException
-import java.io.InputStreamReader
+import com.topjohnwu.superuser.Shell
 
-private const val MIUI_PROP_NAME = "ro.miui.ui.version.name"
+private const val MIUI_OPTIMIZATIONS_PROP = "persist.sys.miui_optimization"
 
-fun isMiui(): Boolean = !getSystemProps(MIUI_PROP_NAME).isNullOrEmpty()
+val isMiuiOptimizationsEnabled get() = getSystemProperty(MIUI_OPTIMIZATIONS_PROP) == "true"
 
-private fun getSystemProps(propname: String): String? {
-    var input: BufferedReader? = null
+fun getSystemProperty(propname: String): String? {
     return try {
-        val process = Runtime.getRuntime().exec("getprop $propname")
-        input = BufferedReader(InputStreamReader(process.inputStream), 1024)
-        input.readLine()
-    } catch (e: IOException) {
+        Shell.sh("getprop $propname").exec().out.joinToString(" ")
+    } catch (e: Exception) {
         null
-    } finally {
-        input?.close()
     }
 }

@@ -6,10 +6,8 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import androidx.core.content.FileProvider
-import androidx.lifecycle.MutableLiveData
 import com.vanced.manager.R
 import com.vanced.manager.library.network.providers.createService
-import com.vanced.manager.model.ProgressModel
 import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import kotlinx.coroutines.CoroutineScope
@@ -40,28 +38,28 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
         fileFolder: String,
         fileName: String,
         context: Context,
-        onDownloadComplete: () -> Unit,
-        onError: (error: String) -> Unit
+        onDownloadComplete: () -> Unit = {},
+        onError: (error: String) -> Unit = {}
     ) {
-        downloadProgress.value?.downloadingFile?.postValue(context.getString(R.string.downloading_file, fileName))
+        downloadingFile.postValue(context.getString(R.string.downloading_file, fileName))
         val downloadInterface = createService(DownloadHelper::class, baseUrl)
         val download = downloadInterface.download(url)
-        downloadProgress.value?.currentDownload = download
+        currentDownload = download
         download.enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
-                    CoroutineScope(Dispatchers.IO).launch {
+                    launch {
                         if (response.body()?.let { writeFile(it, context.getExternalFilesDir(fileFolder)?.path + "/" + fileName) } == true) {
                             onDownloadComplete()
                         } else {
                             onError("Could not save file")
-                            downloadProgress.value?.downloadProgress?.postValue(0)
+                            downloadProgress.postValue(0)
                             log("VMDownloader", "Failed to save file: $url")
                         }
                     }
                 } else {
                     onError(response.errorBody().toString())
-                    downloadProgress.value?.downloadProgress?.postValue(0)
+                    downloadProgress.postValue(0)
                     log("VMDownloader", "Failed to download file: $url")
                 }
             }
@@ -69,10 +67,10 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 if (call.isCanceled) {
                     log("VMDownloader", "Download canceled")
-                    downloadProgress.value?.downloadProgress?.postValue(0)
+                    downloadProgress.postValue(0)
                 } else {
                     onError(t.stackTraceToString())
-                    downloadProgress.value?.downloadProgress?.postValue(0)
+                    downloadProgress.postValue(0)
                     log("VMDownloader", "Failed to download file: $url")
                 }
             }
@@ -95,7 +93,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                 while (inputStream.read(fileReader).also { read = it } != -1) {
                     outputStream.write(fileReader, 0, read)
                     downloadedBytes += read.toLong()
-                    downloadProgress.value?.downloadProgress?.postValue((downloadedBytes * 100 / totalBytes).toInt())
+                    downloadProgress.postValue((downloadedBytes * 100 / totalBytes).toInt())
                 }
                 outputStream.flush()
                 true
@@ -108,12 +106,6 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
         } catch (e: IOException) {
             false
         }
-    }
-
-    val downloadProgress = MutableLiveData<ProgressModel>()
-
-    init {
-        downloadProgress.value = ProgressModel()
     }
 
     fun downloadManager(context: Context) {
@@ -138,7 +130,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                 sendCloseDialog(context)
             }
         }, onError = {
-            downloadProgress.value?.downloadingFile?.postValue(
+            downloadingFile.postValue(
                 context.getString(
                     R.string.error_downloading,
                     "manager.apk"

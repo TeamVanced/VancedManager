@@ -8,7 +8,7 @@
     <string name="select_apps">აირჩიეთ თქვენი აპები</string>
     <!-- Main Activity -->
     <string name="title_about">შესახებ</string>
-    <string name="title_guide">FAQ</string>
+    <string name="title_guide">Guide</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">მენეჯერი</string>
     <string name="title_settings">პარამეტრები</string>
@@ -81,9 +81,9 @@
     <string name="app_installation_preferences">%1$s-ის ინსტალაციის პარამეტრები</string>
     <string name="version">ვერსია</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
-    <string name="please_be_patient">გთხოვთ დაელოდოთ…</string>
+    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
+    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">მოგესალმებით</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">აირჩიეთ სასურველი ენა(ები) Vanced-ისთვის</string>
@@ -94,6 +94,7 @@
     <string name="vanced_dark">Dark</string>
     <!-- About Page -->
     <string name="manager_dev">Manager-ის დეველოპერები</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">წყაროები</string>
     <string name="vanced_team">Vanced-ის გუნდი</string>
     <!-- Error messages -->

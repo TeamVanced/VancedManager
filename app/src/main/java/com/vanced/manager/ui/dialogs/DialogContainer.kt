@@ -6,7 +6,7 @@ import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
 import com.vanced.manager.utils.applyAccent
-import com.vanced.manager.utils.isMiui
+import com.vanced.manager.utils.isMiuiOptimizationsEnabled
 import com.vanced.manager.utils.openUrl
 
 object DialogContainer {
@@ -16,15 +16,10 @@ object DialogContainer {
             setTitle(context.resources.getString(R.string.welcome))
             setMessage(context.resources.getString(R.string.security_context))
             setPositiveButton(context.resources.getString(R.string.close)) { dialog, _ ->
-                dialog.dismiss()
-            }
-            setOnDismissListener {
-                if (isMiui()) {
-                    applyAccentMiuiDialog(context)
-                }
+                dialog.cancel()
             }
             setOnCancelListener {
-                if (isMiui()) {
+                if (isMiuiOptimizationsEnabled) {
                     applyAccentMiuiDialog(context)
                 }
             }
@@ -35,7 +30,7 @@ object DialogContainer {
         prefs.edit { putBoolean("firstLaunch", false) }
     }
 
-    private fun applyAccentMiuiDialog(context: Context) {
+    fun applyAccentMiuiDialog(context: Context) {
         MaterialAlertDialogBuilder(context).apply {
             setTitle(context.getString(R.string.miui_one_title))
             setMessage(context.getString(R.string.miui_one))

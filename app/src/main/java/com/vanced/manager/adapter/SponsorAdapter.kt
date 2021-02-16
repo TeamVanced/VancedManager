@@ -9,15 +9,18 @@ import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewSponsorBinding
 import com.vanced.manager.model.SponsorModel
 import com.vanced.manager.ui.viewmodels.HomeViewModel
+import com.vanced.manager.utils.LIGHT
+import com.vanced.manager.utils.currentTheme
+import com.vanced.manager.utils.defPrefs
+import com.vanced.manager.utils.managerTheme
 
 class SponsorAdapter(
     private val context: Context,
-    private val viewModel: HomeViewModel,
-    //private val json: ObservableField<JsonObject?>
+    private val viewModel: HomeViewModel
 ) : RecyclerView.Adapter<SponsorAdapter.LinkViewHolder>() {
 
     private val brave = SponsorModel(
-        AppCompatResources.getDrawable(context, R.drawable.ic_brave),
+        if (currentTheme == LIGHT) AppCompatResources.getDrawable(context, R.drawable.ic_brave_light) else AppCompatResources.getDrawable(context, R.drawable.ic_brave),
         "Brave",
         BRAVE
     )
