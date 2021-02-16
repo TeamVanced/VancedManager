@@ -106,7 +106,7 @@
     <string name="ifile_missing">Falha ao localizar o arquivo apk para o tema preto/escuro a partir do armazenamento, por favor tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
-    <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo YouTube padrão e tente novamente.</string>
+    <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo padrão e tente novamente.</string>
     <string name="installation_conflict">A instalação falhou porque o app está em conflito com um app já instalado. Desinstale a versão atual do aplicativo e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por um motivo desconhecido, junte-se ao nosso grupo no Telegram ou Discord para obter suporte.</string>
     <string name="installation_incompatible">A instalação falhou porque o arquivo de instalação é incompatível com o seu dispositivo. Limpe os arquivos baixados nas configurações e tente novamente.</string>
