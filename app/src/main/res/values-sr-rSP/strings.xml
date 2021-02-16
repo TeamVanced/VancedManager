@@ -73,8 +73,8 @@
     <string name="guide">Водич</string>
     <string name="hold_on">Заустави!</string>
     <string name="magisk_vanced">Користите Magisk/TWRP верзију Vanced апликације, која више није подржана и чије коришћење није могуће. Молимо Вас да уклоните ову апликацију из Magisk/TWRP-а путем Vanced апликације за деинсталацију.</string>
-    <string name="miui_one_title">MIUI је детектован!</string>
-    <string name="miui_one">Да би апликација Vanced била исправно инсталирана морате да искључите оптимизацију за ову апликацију у MIUI подешавањима за програмере.( Ову напомену можете да занемарите у случају ако користите верзију 20.2.20 и новију xiaomi.eu ROM-а)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Грешка</string>
     <string name="redownload">Поново преузми</string>
     <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта vancedapp.com, Vanced Discord сервера или Vanced GitHub-а</string>
