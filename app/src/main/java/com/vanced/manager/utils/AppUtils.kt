@@ -14,7 +14,6 @@ import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
 import com.vanced.manager.ui.fragments.HomeFragment
-import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import kotlinx.coroutines.*
 import java.io.File
 import java.io.IOException
@@ -57,13 +56,13 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     fun sendCloseDialog(context: Context): Job {
         return launch {
             delay(700)
-            downloadProgress.installing.postValue(false)
+            installing.postValue(false)
             LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
         }
     }
 
     fun sendFailure(error: MutableList<String>, context: Context) {
-        sendFailure(error.joinToString(), context)
+        sendFailure(error.joinToString(" "), context)
     }
 
     fun sendFailure(error: String, context: Context): Job {

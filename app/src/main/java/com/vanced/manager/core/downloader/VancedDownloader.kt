@@ -10,7 +10,6 @@ import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.validateTheme
 import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.DownloadHelper.download
-import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.PackageHelper.downloadStockCheck
 import com.vanced.manager.utils.PackageHelper.installSplitApkFiles
 import com.vanced.manager.utils.PackageHelper.installVancedRoot
@@ -59,7 +58,7 @@ object VancedDownloader {
             downloadSplits(context)
         } catch (e: Exception) {
             log("VMDownloader", e.stackTraceToString())
-            downloadProgress.downloadingFile.postValue(context.getString(R.string.error_downloading, "Vanced"))
+            downloadingFile.postValue(context.getString(R.string.error_downloading, "Vanced"))
         }
 
     }
@@ -113,14 +112,14 @@ object VancedDownloader {
                 }
 
             } else {
-                downloadProgress.downloadingFile.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
+                downloadingFile.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
             }
         })
     }
 
     fun startVancedInstall(context: Context, variant: String? = this.variant) {
-        downloadProgress.installing.postValue(true)
-        downloadProgress.postReset()
+        installing.postValue(true)
+        postReset()
         FirebaseAnalytics.getInstance(context).logEvent(FirebaseAnalytics.Event.SELECT_ITEM) {
             variant?.let { param("vanced_variant", it) }
             theme?.let { param("vanced_theme", it) }

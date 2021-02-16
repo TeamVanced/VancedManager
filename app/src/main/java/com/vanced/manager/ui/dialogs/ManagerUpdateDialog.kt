@@ -16,8 +16,9 @@ import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogManagerUpdateBinding
 import com.vanced.manager.utils.DownloadHelper.downloadManager
-import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.applyAccent
+import com.vanced.manager.utils.currentDownload
+import com.vanced.manager.utils.downloadProgress
 import com.vanced.manager.utils.manager
 
 class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() {
@@ -68,10 +69,8 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
             isCancelable = false
             managerUpdateProgressbar.applyAccent()
             managerUpdateCancel.setOnClickListener {
-                with(downloadProgress) {
-                    downloadProgress.value = 0
-                    currentDownload?.cancel()
-                }
+                downloadProgress.value = 0
+                currentDownload?.cancel()
                 dismiss()
             }
             bindDownloadProgress()
@@ -79,11 +78,9 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
     }
 
     private fun DialogManagerUpdateBinding.bindDownloadProgress() {
-        with(downloadProgress) {
-            downloadProgress.observe(viewLifecycleOwner) {
-                managerUpdateProgressbar.progress = it
-                managerUpdateProgressbar.isVisible = it != 0
-            }
+        downloadProgress.observe(viewLifecycleOwner) {
+            managerUpdateProgressbar.progress = it
+            managerUpdateProgressbar.isVisible = it != 0
         }
     }
 

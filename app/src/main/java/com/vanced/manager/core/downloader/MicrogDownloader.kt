@@ -2,11 +2,9 @@ package com.vanced.manager.core.downloader
 
 import android.content.Context
 import com.vanced.manager.R
+import com.vanced.manager.utils.*
 import com.vanced.manager.utils.DownloadHelper.download
-import com.vanced.manager.utils.DownloadHelper.downloadProgress
 import com.vanced.manager.utils.PackageHelper.install
-import com.vanced.manager.utils.baseInstallUrl
-import com.vanced.manager.utils.microg
 
 object MicrogDownloader {
 
@@ -18,14 +16,14 @@ object MicrogDownloader {
         download(url, "$baseInstallUrl/", folderName, fileName, context, onDownloadComplete = {
             startMicrogInstall(context)
         }, onError = {
-            downloadProgress.downloadingFile.postValue(context.getString(R.string.error_downloading, fileName))
+            downloadingFile.postValue(context.getString(R.string.error_downloading, fileName))
         })
 
     }
 
     fun startMicrogInstall(context: Context) {
-        downloadProgress.installing.postValue(true)
-        downloadProgress.postReset()
+        installing.postValue(true)
+        postReset()
         install("${context.getExternalFilesDir(folderName)}/$fileName", context)
     }
 }

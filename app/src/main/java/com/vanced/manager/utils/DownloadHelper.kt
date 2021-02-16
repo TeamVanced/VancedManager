@@ -8,7 +8,6 @@ import android.os.Build
 import androidx.core.content.FileProvider
 import com.vanced.manager.R
 import com.vanced.manager.library.network.providers.createService
-import com.vanced.manager.model.ProgressModel
 import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import kotlinx.coroutines.CoroutineScope
@@ -42,10 +41,10 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
         onDownloadComplete: () -> Unit = {},
         onError: (error: String) -> Unit = {}
     ) {
-        downloadProgress.downloadingFile.postValue(context.getString(R.string.downloading_file, fileName))
+        downloadingFile.postValue(context.getString(R.string.downloading_file, fileName))
         val downloadInterface = createService(DownloadHelper::class, baseUrl)
         val download = downloadInterface.download(url)
-        downloadProgress.currentDownload = download
+        currentDownload = download
         download.enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
@@ -54,13 +53,13 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                             onDownloadComplete()
                         } else {
                             onError("Could not save file")
-                            downloadProgress.downloadProgress.postValue(0)
+                            downloadProgress.postValue(0)
                             log("VMDownloader", "Failed to save file: $url")
                         }
                     }
                 } else {
                     onError(response.errorBody().toString())
-                    downloadProgress.downloadProgress.postValue(0)
+                   downloadProgress.postValue(0)
                     log("VMDownloader", "Failed to download file: $url")
                 }
             }
@@ -68,10 +67,10 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 if (call.isCanceled) {
                     log("VMDownloader", "Download canceled")
-                    downloadProgress.downloadProgress.postValue(0)
+                    downloadProgress.postValue(0)
                 } else {
                     onError(t.stackTraceToString())
-                    downloadProgress.downloadProgress.postValue(0)
+                    downloadProgress.postValue(0)
                     log("VMDownloader", "Failed to download file: $url")
                 }
             }
@@ -94,7 +93,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                 while (inputStream.read(fileReader).also { read = it } != -1) {
                     outputStream.write(fileReader, 0, read)
                     downloadedBytes += read.toLong()
-                    downloadProgress.downloadProgress.postValue((downloadedBytes * 100 / totalBytes).toInt())
+                    downloadProgress.postValue((downloadedBytes * 100 / totalBytes).toInt())
                 }
                 outputStream.flush()
                 true
@@ -108,8 +107,6 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             false
         }
     }
-
-    val downloadProgress = ProgressModel()
 
     fun downloadManager(context: Context) {
         val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
@@ -133,7 +130,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                 sendCloseDialog(context)
             }
         }, onError = {
-            downloadProgress.downloadingFile.postValue(
+            downloadingFile.postValue(
                 context.getString(
                     R.string.error_downloading,
                     "manager.apk"
