@@ -8,8 +8,8 @@
     <string name="select_apps">เลือกแอปพลิเคชันของคุณ</string>
     <!-- Main Activity -->
     <string name="title_about">ข้อมูลเกี่ยวกับทีมนักพัฒนา</string>
-    <string name="title_guide">FAQ</string>
-    <string name="title_logs">Logs</string>
+    <string name="title_guide">แนะนำ</string>
+    <string name="title_logs">บันทึกข้อมูลระบบ</string>
     <string name="title_home">ตัวจัดการ</string>
     <string name="title_settings">ตั้งค่า</string>
     <string name="update_manager">อัพเดทตัวจัดการ</string>
@@ -34,7 +34,7 @@
     <string name="root_not_granted">ไม่ได้รับสิทธิ์ของรูท</string>
     <string name="unavailable">ไม่สามารถใช้ได้</string>
     <string name="update">อัพเดท</string>
-    <string name="social_media">สื่อสังคมออนไลน์</string>
+    <string name="social_media">สื่อสังคม</string>
     <string name="support_us">สนับสนุนพวกเรา</string>
     <!-- Settings -->
     <string name="accent_color">สีหลัก</string>
@@ -60,8 +60,8 @@
     <string name="update_not_found">ไม่มีอัพเดตใหม่</string>
     <string name="variant">ตัวแปร</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">ดำเนินการบันทึกเรียบร้อยแล้ว</string>
+    <string name="logs_not_saved">ไม่สามารถบันทึกได้</string>
     <!-- Dialogs -->
     <string name="advanced">ขั้นสูง</string>
     <string name="app_install_files_detected">%1$s ตรวจพบไฟล์สำหรับการติดตั้ง!</string>
@@ -80,20 +80,21 @@
     <string name="security_context">ตรวจสอบให้แน่ใจว่าคุณดาวน์โหลดแอพจากช่องทางที่ถูกต้อง vancedapp.com, เซิร์ฟเวอร์ Vanced Discord หรือ Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s กำหนดค่าการติดตั้ง</string>
     <string name="version">รุ่น</string>
-    <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in mainline microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in mainline microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
-    <string name="please_be_patient">โปรดรอสักครู่…</string>
+    <string name="microg_bug">ข้อผิดพลาดใน microG</string>
+    <string name="microg_bug_summary">เนื่องจากพบข้อผิดพลาดใน microG การติดตั้ง Vanced v16 + ก่อนอื่นคุณต้องติดตั้ง v15.43.32, เปิดแอพ, จากนั้นเข้าสู่ระบบ, จากนั้นคุณสามารถติดตั้ง v16 ขึ้นไปได้, คุณต้องการดำเนินการติดตั้ง v15.43.32 ต่อไปหรือไม่?</string>
+    <string name="microg_bug_summary_music">เนื่องจากพบข้อผิดพลาดใน microG การติดตั้ง Music v4.11+ ก่อนอื่นคุณต้องติดตั้ง v4.07.51, เปิดแอพ, จากนั้นเข้าสู่ระบบ, จากนั้นคุณสามารถติดตั้ง v4.11 ขึ้นไปได้, คุณต้องการดำเนินการติดตั้ง v4.07.51 ต่อไปหรือไม่?</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">ยินดีต้อนรับ</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">เลือกภาษาที่คุณต้องการใช้สำหรับ Vanced</string>
-    <string name="install_latest">Latest</string>
+    <string name="install_latest">ล่าสุด</string>
     <string name="light_plus_other">เบา + %1$s</string>
     <string name="select_at_least_one_lang">เลือกอย่างน้อยหนึ่งภาษา!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">สีดำ</string>
+    <string name="vanced_dark">สีเข้ม</string>
     <!-- About Page -->
     <string name="manager_dev">ตัวจัดการ Devs</string>
+    <string name="other_contributors">Other Contributors</string>
     <string name="sources">แหล่งที่มา</string>
     <string name="vanced_team">ทีมงาน Vanced</string>
     <!-- Error messages -->
@@ -105,7 +106,7 @@
     <string name="ifile_missing">ไม่พบไฟล์ apk สำหรับธีมสีดำ / สีเข้ม จากที่เก็บข้อมูล โปรดลองอีกครั้ง</string>
     <string name="installation_aborted">การติดตั้งล้มเหลวเนื่องจากผู้ใช้ยกเลิกการติดตั้ง</string>
     <string name="installation_blocked">การติดตั้งล้มเหลวเนื่องจากผู้ใช้บล็อกการติดตั้ง</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">การติดตั้งล้มเหลวเนื่องจากผู้ใช้พยายามดาวน์เกรดแพ็กเกจ ถอนการติดตั้งการอัปเดตจากแอปเดิมก่อน แล้วลองอีกครั้ง</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">การติดตั้งล้มเหลวโดยไม่ทราบสาเหตุ ลองเข้าร่วม Telegram หรือ Discord ของเรา เพื่อรับการสนับสนุนเพิ่มเติม</string>
     <string name="installation_incompatible">การติดตั้งล้มเหลวเนื่องจากไฟล์การติดตั้งเข้ากันไม่ได้กับอุปกรณ์ของคุณ กรุณาล้างไฟล์ที่ดาวน์โหลดในการตั้งค่า แล้วลองอีกครั้ง</string>

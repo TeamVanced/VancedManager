@@ -8,7 +8,7 @@
     <string name="select_apps">Uygulamalarınızı Seçin</string>
     <!-- Main Activity -->
     <string name="title_about">Hakkında</string>
-    <string name="title_guide">S. S. S.</string>
+    <string name="title_guide">Rehber</string>
     <string name="title_logs">Geçmiş kayıtlar</string>
     <string name="title_home">Manager</string>
     <string name="title_settings">Ayarlar</string>
@@ -50,7 +50,7 @@
     <string name="system_default">Sistem varsayılanı</string>
     <string name="script_save_failed">Yeni zaman değeri kaydedilemedi</string>
     <string name="script_sleep_timer">Root kurulumu, bekletme süresi</string>
-    <string name="script_sleep_timer_description">[Gelişmiş] Kurulum sırasında çalıştırılan /data/adb/service.d/app.sh dosyasındaki bekletme süresinin değer ayarı. Kurulum sırasında oluşan hatalarda çözüm olabilir</string>
+    <string name="script_sleep_timer_description">[Gelişmiş] Kurulum sırasında çalıştırılan /data/adb/service.d/app.sh dosyasındaki uyku/bekletme süresinin değer ayarı. Kurulum sırasında oluşan hatalara çözüm olabilir</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Koyu Tema</string>
     <string name="theme_light">Açık Tema</string>
@@ -83,7 +83,7 @@
     <string name="microg_bug">MicroG\'de sorun var</string>
     <string name="microg_bug_summary">MicroG kaynaklı bir hatadan dolayı, Vanced sürüm 16+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v15.43.32 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v16 veya üzeri sürümün kurulumunu yapabilirsin. Vanced v15.43.32 sürümünün kurulumuna devam edilsin mi?</string>
     <string name="microg_bug_summary_music">MicroG kaynaklı bir hatadan dolayı, Music v4.11+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v4.07.51 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v4.11 veya üzeri sürümün kurulumunu yapabilirsin. 4.07.51 sürümünün kurulumuna devam edilsin mi?</string>
-    <string name="please_be_patient">Biraz zaman alabilir…</string>
+    <string name="please_be_patient">İşlem süresince LÜTFEN uygulamadan çıkmayın!</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vanced için tercih ettiğiniz dil(ler)i seçin</string>
@@ -94,6 +94,7 @@
     <string name="vanced_dark">Koyu renk</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Geliştiricileri</string>
+    <string name="other_contributors">Katkıda bulunan diğer kişiler</string>
     <string name="sources">Kaynaklar</string>
     <string name="vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->

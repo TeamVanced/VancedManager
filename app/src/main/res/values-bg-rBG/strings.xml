@@ -8,7 +8,7 @@
     <string name="select_apps">Изберете приложения</string>
     <!-- Main Activity -->
     <string name="title_about">Относно</string>
-    <string name="title_guide">ЧЗВ</string>
+    <string name="title_guide">Ръководство</string>
     <string name="title_logs">Логове</string>
     <string name="title_home">Мениджър</string>
     <string name="title_settings">Настройки</string>
@@ -20,7 +20,7 @@
     <string name="select_apps_music">Vanced, но за YouTube Music!\nс по-малко функции, но ще задоволи нуждите Ви.</string>
     <string name="select_apps_vanced">YouTube Vanced е като оригиналното YouTube приложение, но значително подобрено!</string>
     <string name="lets_get_started">Да започваме</string>
-    <string name="willing_to_use_root">Не знаеш какво е това или не искаш да ползваш Root версията? Просто натисни синята стрелка по-долу!</string>
+    <string name="willing_to_use_root">Не знаете какво е това или не искате да ползвате Root версията? Просто натиснете синята стрелка по-долу!</string>
     <!-- Home Page -->
     <string name="about_app">Относно %1$s</string>
     <string name="app_changelog_tooltip">Докоснете картичката, за да видите списъка с промени.</string>
@@ -28,7 +28,7 @@
     <string name="downloading_file">Изтегляне на %1$s</string>
     <string name="install">Инсталиране</string>
     <string name="button_reinstall">Преинсталиране</string>
-    <string name="version_installed">Инсталирано:</string>
+    <string name="version_installed">Инсталиранa:</string>
     <string name="latest">Най-нова:</string>
     <string name="no_microg">microG не е инсталирано</string>
     <string name="root_not_granted">Root достъп не е разрешен</string>
@@ -42,11 +42,11 @@
     <string name="category_behaviour">Поведение</string>
     <string name="clear_files">Изчисти изтеглените файлове</string>
     <string name="cleared_files">Файловете са изчистени успешно</string>
-    <string name="firebase_title">Firebase Analytics</string>
+    <string name="firebase_title">Firebase анализ</string>
     <string name="firebase_summary">Позволява ни да събираме информация за поведението на приложението и доклади за сривове</string>
     <string name="language_title">Език</string>
-    <string name="link_title">Ползвай раздели по избор в Chrome</string>
-    <string name="link_custom_tabs">Връзките ще се отварят в раздели по избор в Chrome</string>
+    <string name="link_title">Ползвай персонализирани раздели на Chrome</string>
+    <string name="link_custom_tabs">Връзките ще се отварят в персонализирани раздели на Chrome</string>
     <string name="system_default">По подразбиране за системата</string>
     <string name="script_save_failed">Неуспешно запазване на новата стойност за времето</string>
     <string name="script_sleep_timer">Време за заспиване на Root скрипта</string>
@@ -54,9 +54,9 @@
     <string name="theme">Тема</string>
     <string name="theme_dark">Тъмна тема</string>
     <string name="theme_light">Светла тема</string>
-    <string name="push_notifications">%1$s изскачащи известия</string>
-    <string name="push_notifications_summary">Получаване на изскачащи известия, когато има нова версия на %1$s</string>
-    <string name="update_center">Център за актуализация</string>
+    <string name="push_notifications">%1$s насочени известия</string>
+    <string name="push_notifications_summary">Получаване на насочени известия, когато има нова версия на %1$s</string>
+    <string name="update_center">Център за актуализации</string>
     <string name="update_not_found">Няма актуализации</string>
     <string name="variant">Вариант</string>
     <!-- Logs -->
@@ -65,25 +65,25 @@
     <!-- Dialogs -->
     <string name="advanced">Разширени</string>
     <string name="app_install_files_detected">%1$s инсталационни файлове са открити!</string>
-    <string name="app_install_files_detected_summary">Мениджъра откри всички необходими файлове за инсталацията на %1$s Желаете ли да инсталирате?</string>
+    <string name="app_install_files_detected_summary">Мениджърът откри всички необходими файлове за инсталацията на %1$s. Желаете ли да го инсталирате?</string>
     <string name="checking_updates">Проверка за актуализации…</string>
     <string name="chosen_lang">Език(ци): %1$s</string>
     <string name="chosen_theme">Тема: %1$s</string>
     <string name="chosen_version">Версия: %1$s</string>
     <string name="guide">Ръководство</string>
     <string name="hold_on">Стоп!</string>
-    <string name="magisk_vanced">Използвате Magisk/TWRP версията на Vanced която е прекратена и не може да се актуализира с това приложение. Премахнете я като премахнете Magisk модула или чрез TWRP Vanced uninstaller.</string>
+    <string name="magisk_vanced">Използвате Magisk/TWRP версията на Vanced, която е прекратена и не може да се актуализира с това приложение. Премахнете я като премахнете Magisk модула или чрез TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Открит е MIUI!</string>
-    <string name="miui_one">За да инсталирате Vanced ТРЯБВА да изключите MIUI оптимизациите в опциите за разработчици. (Това не е валидно ако ползвате 20.2.20 или по-нов ROM базиран на xiaomi.eu)</string>
+    <string name="miui_one">За да инсталирате Vanced, ТРЯБВА да изключите MIUI оптимизациите в настройките за разработчици. (Това не е валидно ако ползвате 20.2.20 или по-нов ROM, базиран на xiaomi.eu)</string>
     <string name="error">Грешка</string>
     <string name="redownload">Изтегли отново</string>
-    <string name="security_context">Уверете се че сте изтеглили приложението от vancedapp.com, Vanced Discord сървъра или от Vanced GitHub</string>
-    <string name="app_installation_preferences">%1$s Настройки за инсталация</string>
+    <string name="security_context">Уверете се, че сте изтеглили приложението от vancedapp.com, Vanced Discord сървъра или от Vanced GitHub</string>
+    <string name="app_installation_preferences">Предпочитания за инсталация на %1$s</string>
     <string name="version">Версия</string>
     <string name="microg_bug">Бъг в microG</string>
-    <string name="microg_bug_summary">Поради бъг в официалната версия на microG, за да инсталирате Vanced версия 16+ е необходимо първо да инсталирате версия 15.43.32, след което да стартирате приложението и да се впишете с Вашият акаунт. Само тогава ще можете да инсталирате версия 16 или по-висока. Желаете ли да продължите с инсталацията на версия 15.43.32?</string>
-    <string name="microg_bug_summary_music">Поради бъг в официалната версия на microG, за да инсталирате Music версия 4.11+ е необходимо първо да инсталирате версия 4.07.51, след което да стартирате приложението и да се впишете с Вашият акаунт. Само тогава ще може да инсталирате версия 4.11 или по-висока. Желаете ли да продължите с инсталацията на версия 4.07.51?</string>
-    <string name="please_be_patient">Бъдете търпеливи…</string>
+    <string name="microg_bug_summary">Поради бъг в microG инсталирането на Vanced версия 16 изисква първо да се инсталира версия 15.43.32 след това да влезете в профила си след което може да инсталирате 16 и по-нова. Да се инсталира ли версия 15.43.32?</string>
+    <string name="microg_bug_summary_music">Поради бъг в microG инсталирането на Music версия 4.11 изисква първо да се инсталира версия 4.07.51 след това да влезете в профила си след което може да инсталирате 4.11 и по-нова. Да се инсталира ли версия 4.07.51?</string>
+    <string name="please_be_patient">Моля, НЕ излизайте от приложението по време на този процес!</string>
     <string name="welcome">Добре дошли</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Изберете предпочитани език(ци) за Vanced</string>
@@ -94,8 +94,9 @@
     <string name="vanced_dark">Тъмна</string>
     <!-- About Page -->
     <string name="manager_dev">Разработчици</string>
+    <string name="other_contributors">Други сътрудници</string>
     <string name="sources">Източници</string>
-    <string name="vanced_team">Vanced Отбор</string>
+    <string name="vanced_team">Екип на Vanced</string>
     <!-- Error messages -->
     <string name="chown_fail">Неуспешно`chown` APK към собственика на системата, моля опитайте отново.</string>
     <string name="error_downloading">Грешка при изтегляне на %1$s</string>
@@ -103,16 +104,16 @@
     <string name="failed_accent">Неуспешно задаване на акцентиращ цвят</string>
     <string name="files_missing_va">Необходимите файлове за инсталация не са открити. Изтеглете ги отново и опитайте пак.</string>
     <string name="ifile_missing">Не може да бъде открит apk файла за черна/тъмна тема, моля опитайте отново.</string>
-    <string name="installation_aborted">Инсталацията е неуспешна защото е прекратена от потребителя.</string>
-    <string name="installation_blocked">Инсталацията е неуспешна защото е блокирана от потребителя.</string>
-    <string name="installation_downgrade">Инсталацията е неуспешна защото потребителя се опитва да инсталира по-стара версия на пакета. Деинсталирайте актуализациите на оригиналното приложение и опитайте отново.</string>
-    <string name="installation_conflict">Инсталацията в неуспешна поради конфликт с вече инсталирано приложение. Деинсталирайте го и опитайте отново.</string>
-    <string name="installation_failed">Инсталацията в неуспешна поради неизвестна причина, свържете се с нас в Telegram или Discord за повече информация.</string>
-    <string name="installation_incompatible">Инсталацията в неуспешна защото инсталационния файл не е съвместим с устройството ви. Изчистете изтеглените файлове от настройките и опитайте отново.</string>
-    <string name="installation_invalid">Инсталацията в неуспешна защото apk файловете за повредени, моля опитайте отново.</string>
-    <string name="installation_signature">Инсталацията в неуспешна поради включена проверка на подписите на apk файловете. Изключете я и опитайте отново.</string>
-    <string name="installation_miui">Инсталацията в неуспешна поради включени MIUI оптимизации. Изключете ги и опитайте отново.</string>
-    <string name="installation_storage">Инсталацията в неуспешна поради грешка в паметта.</string>
+    <string name="installation_aborted">Инсталацията е неуспешна, защото е прекратена от потребителя.</string>
+    <string name="installation_blocked">Инсталацията е неуспешна, защото е блокирана от потребителя.</string>
+    <string name="installation_downgrade">Инсталацията е неуспешна, защото потребителя се опитва да инсталира по-стара версия на пакета. Деинсталирайте актуализациите на оригиналното приложение и опитайте отново.</string>
+    <string name="installation_conflict">Инсталацията е неуспешна, поради конфликт с вече инсталирано приложение. Деинсталирайте го и опитайте отново.</string>
+    <string name="installation_failed">Инсталацията е неуспешна, поради неизвестна причина, свържете се с нас в Telegram или Discord за повече информация.</string>
+    <string name="installation_incompatible">Инсталацията е неуспешна, защото инсталационният файл не е съвместим с устройството ви. Изчистете изтеглените файлове от настройките и опитайте отново.</string>
+    <string name="installation_invalid">Инсталацията е неуспешна, защото apk файловете за повредени, моля опитайте отново.</string>
+    <string name="installation_signature">Инсталацията е неуспешна, поради включена проверка на подписите на apk файловете. Изключете я и опитайте отново.</string>
+    <string name="installation_miui">Инсталацията е неуспешна, поради включени MIUI оптимизации. Изключете ги и опитайте отново.</string>
+    <string name="installation_storage">Инсталацията е неуспешна поради грешка в паметта.</string>
     <string name="modapk_missing">Не е открит apk файл за черна/тъмна тема от инсталатора. Изчистете данните на мениджъра и опитайте отново.</string>
     <string name="path_missing">Не е открит пътя на инсталацията на оригиналното YouTube приложение след разделното инсталиране.</string>
 </resources>
