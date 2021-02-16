@@ -59,7 +59,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                     }
                 } else {
                     onError(response.errorBody().toString())
-                   downloadProgress.postValue(0)
+                    downloadProgress.postValue(0)
                     log("VMDownloader", "Failed to download file: $url")
                 }
             }
