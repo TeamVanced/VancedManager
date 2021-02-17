@@ -73,8 +73,8 @@
     <string name="guide">Hagitaan</string>
     <string name="hold_on">Jooji!</string>
     <string name="magisk_vanced">Waxaad isticmaalaysaa version-ka Vanced ee loogu talagalay Magisk/TWRP, kaasoo aan hada la taageerin halkana lagama cusboonaysiin karo. Fadlan iska saar lifaaqa Magisk/adoo isticmaalaya kasaaraha Vanced ee TWRP-ga xagiisa.</string>
-    <string name="miui_one_title">Waxaad isticmaalaysaa MIUI!</string>
-    <string name="miui_one">Si aad ugu shubto Vanced, WAA INAAD ka xidhaa MIUI Optimizations xaga fadhiga Developer Settings-ka. (Waad iska indhatiri kartaa digniintan hadaad isticmaalayso version-ka 20.2.20 iyo wixii ka dambeeyay ee nidaamka barnaamijyada ROM-ka ee kusalaysan xiaomi.eu)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Khalad</string>
     <string name="redownload">Dib udaji</string>
     <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
