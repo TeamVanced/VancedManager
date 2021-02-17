@@ -73,8 +73,8 @@
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapusnya dengan menghapus modul Magisk/gunakan pencopot Vanced TWRP.</string>
-    <string name="miui_one_title">MIUI terdeteksi!</string>
-    <string name="miui_one">Untuk memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI di pengaturan pengembang. (Anda bisa mengabaikan peringatan ini jika anda menggunakan ROM versi 20.2.20 atau lebih yang didasarkan xiaomi.eu)</string>
+    <string name="miui_one_title">Optimasi MIUI diaktifkan!</string>
+    <string name="miui_one">Install vanced, anda harus mematikan MIUI Optimasi di pengaturan pengembangan. (Kamu bisa Mengabaikan Peringatan ini jika kamu menggunakan 20.2.20 atau baru berbasis xiaomi.eu ROM)</string>
     <string name="error">Terjadi kesalahan</string>
     <string name="redownload">Unduh ulang</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, server Discord Vanced, atau Vanced Github</string>
