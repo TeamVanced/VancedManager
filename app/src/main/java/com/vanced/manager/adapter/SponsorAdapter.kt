@@ -11,8 +11,6 @@ import com.vanced.manager.model.SponsorModel
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.LIGHT
 import com.vanced.manager.utils.currentTheme
-import com.vanced.manager.utils.defPrefs
-import com.vanced.manager.utils.managerTheme
 
 class SponsorAdapter(
     private val context: Context,

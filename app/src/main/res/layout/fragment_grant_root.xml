@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.vanced.manager.ui.core.SlidingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorSurface">
@@ -9,14 +10,16 @@
         android:id="@+id/grant_root_header"
         android:text="@string/are_you_rooted"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/WelcomeHeaderTitle" />
+        style="@style/WelcomeHeaderTitle"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/grant_root_description"
         android:text="@string/willing_to_use_root"
         android:textSize="13sp"
         app:layout_constraintTop_toBottomOf="@id/grant_root_header"
-        style="@style/WelcomeHeaderSubtitle" />
+        style="@style/WelcomeHeaderSubtitle"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/grant_root_fab"
@@ -64,4 +67,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="48dp" />
-</com.vanced.manager.ui.core.SlidingConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

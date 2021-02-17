@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.viewpager2.widget.ViewPager2
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_viewpager"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.WelcomeActivity">
-
-    <fragment
-        android:id="@+id/welcome_navhost"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/welcome_navigation" />
-</RelativeLayout>
+    android:layout_height="match_parent" />

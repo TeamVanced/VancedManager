@@ -130,11 +130,6 @@
         <item name="android:textColor">?colorLinkImage</item>
     </style>
 
-    <style name="AboutDevNames" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">15sp</item>
-        <item name="android:textColor">?colorWelcomeHeaderSubtitle</item>
-    </style>
-
     <style name="WelcomeHeaderSubtitle" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
