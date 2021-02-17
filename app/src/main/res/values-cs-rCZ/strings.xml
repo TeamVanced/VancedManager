@@ -73,7 +73,7 @@
     <string name="guide">Průvodce</string>
     <string name="hold_on">Zadržte!</string>
     <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, jejíž vývoj byl ukončen a kterou nelze pomocí této aplikace aktualizovat. Odstraňte ji prosím odebráním modulu Magisk použitím Vanced odinstalátoru v TWRP.</string>
-    <string name="miui_one_title">Bylo zjištěno MIUI!</string>
+    <string name="miui_one_title">Optimalizace MIUI jsou zapnuty!</string>
     <string name="miui_one">Chcete‑li nainstalovat Vanced, MUSÍTE vypnout optimalizace MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM ze 20. 2. 2020 nebo novější založenou na xiaomi.eu)</string>
     <string name="error">Chyba</string>
     <string name="redownload">Stáhnout znovu</string>
