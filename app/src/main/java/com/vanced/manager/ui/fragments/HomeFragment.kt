@@ -30,7 +30,7 @@ import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
 import com.vanced.manager.utils.isFetching
 
-open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
+class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
     companion object {
         const val INSTALL_FAILED = "INSTALL_FAILED"
@@ -43,7 +43,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
     private val localBroadcastManager by lazy { LocalBroadcastManager.getInstance(requireActivity()) }
     private val prefs by lazy { PreferenceManager.getDefaultSharedPreferences(requireActivity()) }
-    private lateinit var tooltip: ViewTooltip
+    private var tooltip: ViewTooltip? = null
 
     override fun binding(
         inflater: LayoutInflater,
@@ -61,25 +61,26 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
         with (binding) {
             homeRefresh.setOnRefreshListener { viewModel.fetchData() }
             isFetching.observe(viewLifecycleOwner) { homeRefresh.isRefreshing = it }
-            tooltip = ViewTooltip
-                .on(recyclerAppList)
-                .position(ViewTooltip.Position.TOP)
-                .autoHide(false, 0)
-                .color(ResourcesCompat.getColor(requireActivity().resources, R.color.Twitter, null))
-                .withShadow(false)
-                .corner(25)
-                .onHide {
-                    prefs.edit { putBoolean("show_changelog_tooltip", false) }
-                }
-                .text(requireActivity().getString(R.string.app_changelog_tooltip))
 
             if (prefs.getBoolean("show_changelog_tooltip", true)) {
-                tooltip.show()
+                tooltip = ViewTooltip
+                    .on(recyclerAppList)
+                    .position(ViewTooltip.Position.TOP)
+                    .autoHide(false, 0)
+                    .color(ResourcesCompat.getColor(requireActivity().resources, R.color.Twitter, null))
+                    .withShadow(false)
+                    .corner(25)
+                    .onHide {
+                        prefs.edit { putBoolean("show_changelog_tooltip", false) }
+                    }
+                    .text(requireActivity().getString(R.string.app_changelog_tooltip))
+
+                tooltip?.show()
             }
 
             recyclerAppList.apply {
                 layoutManager = LinearLayoutManager(requireActivity())
-                adapter = AppListAdapter(requireActivity(), viewModel, viewLifecycleOwner, tooltip)
+                adapter = AppListAdapter(requireActivity(), viewModel, tooltip)
                 setHasFixedSize(true)
             }
 
@@ -109,7 +110,7 @@ open class HomeFragment : BindingFragment<FragmentHomeBinding>() {
     override fun onPause() {
         super.onPause()
         localBroadcastManager.unregisterReceiver(broadcastReceiver)
-        tooltip.close()
+        tooltip?.close()
     }
 
     override fun onResume() {
