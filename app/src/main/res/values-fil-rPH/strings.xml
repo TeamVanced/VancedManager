@@ -73,8 +73,8 @@
     <string name="guide">Gabay</string>
     <string name="hold_on">Itigil!</string>
     <string name="magisk_vanced">Gumagamit ka ng Magisk/TWRP na bersyon ng Vanced, dahil hindi iyon pinatuloy at hindi mai-uupdate gamit nitong app. Tanggalin po ang Magisk module sa pamamagitan ng TWRP Vanced uninstaller.</string>
-    <string name="miui_one_title">Meron itong MIUI!</string>
-    <string name="miui_one">Para ma-install ang Vanced, DAPAT mong patayin ang MIUI Optimisations sa developer settings. (Puwede mong pabayaan ang babala kung ikaw ay gumagamit ng 20.2.20 or mas bago na xiaomi.eu base na ROM)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">May pagkamali</string>
     <string name="redownload">I-download ulit</string>
     <string name="security_context">Siguraduhin mo na nai-download mo ang app galing sa vancedapp.com, o sa Discord server ng Vanced, o sa Github ng Vanced</string>
