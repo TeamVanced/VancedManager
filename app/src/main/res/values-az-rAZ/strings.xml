@@ -73,8 +73,8 @@
     <string name="guide">Bələdçi</string>
     <string name="hold_on">Dayandır!</string>
     <string name="magisk_vanced">Buraxılışı dayandırılan və bu tətbiq istifadə edərək yenilənə bilməyən Vanced-in Magisk/TWRP versiyasını istifadə edirsiniz. Zəhmət olmasa magisk modulunu/TWRP Vanced silici istifadə edərək silin.</string>
-    <string name="miui_one_title">MIUI aşkarlandı!</string>
-    <string name="miui_one">Vanced-i quraşdırmaq üçün tərtibatçı tənzimləmələrindən MIUI Optimallaşdırmasını sıradan çıxartmaq LAZIMDIR. (20.2.20 və ya yuxarı xiaomi.eu əsaslı ROM istifadə edirsinizsə bu xəbərdarlığı nəzərə almaya bilərsiniz)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Xəta</string>
     <string name="redownload">Yenidən endir</string>
     <string name="security_context">Tətbiqi vancedapp.com, Vanced Discord server və ya Vanced GitHub\'dan endirdiyinizə əmin olun</string>
