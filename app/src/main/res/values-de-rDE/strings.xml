@@ -73,16 +73,16 @@
     <string name="guide">Erklärung</string>
     <string name="hold_on">Stopp!</string>
     <string name="magisk_vanced">Du benutzt die Magisk/TWRP-Version von Vanced, die nicht mehr unterstützt wird und mit dieser App nicht aktualisiert werden kann. Bitte entferne siie indem du das Magisk-Modul mit dem TWRP Vanced Uninstaller entfernst.</string>
-    <string name="miui_one_title">MIUI Optimisationen sind aktiviert!</string>
-    <string name="miui_one">Um Vanced installieren zu können MUSST du MIUI Optimisation in den Entwickleroptionen deaktivieren. (Bitte ignoriere diese Warnung, wenn du xiaomi.eu Roms mit der Version 20.2.20 oder höher verwendest.)</string>
+    <string name="miui_one_title">MIUI Optimierungen sind aktiviert!</string>
+    <string name="miui_one">Um Vanced installieren zu können, MÜSSEN Sie MIUI Optimierungen in den Entwickleroptionen deaktivieren. (Bitte ignorieren Sie diese Warnung, wenn Sie xiaomi.eu Roms mit der Version 20.2.20 oder höher verwenden.)</string>
     <string name="error">Fehler</string>
     <string name="redownload">Erneut herunterladen</string>
     <string name="security_context">Stelle sicher, dass du die App von vancedapp.com, dem Vanced Discord Server oder dem Vanced GitHub heruntergeladen hast</string>
     <string name="app_installation_preferences">%1$s Installationsoptionen</string>
     <string name="version">Version</string>
     <string name="microg_bug">Fehler in MicroG</string>
-    <string name="microg_bug_summary">Aufgrund eines Fehlers beim installieren von Vanced v16+ in MicroG, ist es erforderlich zuerst die Version v15.43.32 zu installieren, öffnen und sich anzumelden. Möchten Sie mit der Installation von v15.43.32 fortfahren?</string>
-    <string name="microg_bug_summary_music">Aufgrund eines Fehlers beim installieren von Music v4.11+ in MicroG, ist es erforderlich zuerst die Version v4.07.51 zu installieren, öffnen und sich anzumelden. Möchten Sie mit der Installation von v4.07.51 fortfahren?</string>
+    <string name="microg_bug_summary">Aufgrund eines Fehlers in MicroG ist es erforderlich, zuerst die Version v15.43.32 zu installieren, öffnen und sich anzumelden, um Vanced v16 und höher zu verwenden. Möchten Sie mit der Installation von v15.43.32 fortfahren?</string>
+    <string name="microg_bug_summary_music">Aufgrund eines Fehlers in MicroG, ist es erforderlich zuerst die Version v4.07.51 zu installieren, öffnen und sich anzumelden, um Vanced Music v4.11+ zu verwenden. Möchten Sie mit der Installation von v4.07.51 fortfahren?</string>
     <string name="please_be_patient">Bitte schließen Sie die App NICHT während dieses Prozesses!</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
