@@ -73,16 +73,16 @@
     <string name="guide">Guida</string>
     <string name="hold_on">Aspetta!</string>
     <string name="magisk_vanced">Stai utilizzando la versione Magisk/TWRP di Vanced, ormai obsoleta e non più aggiornabile tramite questa app. Per favore, rimuovila eliminando il modulo Magisk oppure utilizzando TWRP Vanced uninstaller.</string>
-    <string name="miui_one_title">Rilevata l\'interfaccia MIUI!</string>
-    <string name="miui_one">Per poter installare Vanced, DEVI disattivare le ottimizzazioni MIUI nelle Opzioni Sviluppatore (puoi ignorare questo avviso se stai utilizzando la versione 20.2.20 o successive di una ROM basata su xiaomi.eu)</string>
+    <string name="miui_one_title">Le ottimizzazioni MIUI sono abilitate!</string>
+    <string name="miui_one">Per installare Vanced, DEVI disabilitare le ottimizzazioni MIUI nelle opzioni sviluppatore. (Puoi ignorare questo avviso se stai usando la ROM 20.2.20 o successiva basata su xiaomi.eu)</string>
     <string name="error">Errore</string>
     <string name="redownload">Scarica nuovamente</string>
     <string name="security_context">Assicurati di aver scaricato l\'app da vancedapp.com, dal server Discord di Vanced o dalla pagina GitHub di Vanced</string>
     <string name="app_installation_preferences">Preferenze Installazione di %1$s</string>
     <string name="version">Versione</string>
     <string name="microg_bug">Bug in microG</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">A causa di un bug nel microG originale, l\'installazione di Vanced v16+ richiede prima l\'installazione della v15.43.32, avviarla, quindi effettuare il login e solo allora è possibile installare la v16 e versioni successive. Vuoi procedere con l\'installazione della v15.43.32?</string>
+    <string name="microg_bug_summary_music">A causa di un bug nel microG originale, l\'installazione di Music v4.11+ richiede prima l\'installazione della v4.07.51, avviarla, quindi effettuare il login e solo allora è possibile installare la v4.11 e successive. Vuoi procedere con l\'installazione della v4.07.51?</string>
     <string name="please_be_patient">Si prega di NON uscire dall\'app durante questo processo!</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
