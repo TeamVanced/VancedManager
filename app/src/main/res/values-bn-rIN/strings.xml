@@ -73,8 +73,8 @@
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামুন!</string>
     <string name="magisk_vanced">আপনি ভ্যান্সড ম্যাজিস্ক/TWRP সংস্করণ ব্যবহার করছেন যা বন্ধ হয়ে গেছে এবং আপনি এটিকে আপডেট করতে পারবেন না। দয়া করে ম্যাজিস্ক মডিউলটি সরিয়ে/TWRP ভ্যান্সড আনইনস্টলার ব্যবহার করে এটি মুছে ফেলুন।</string>
-    <string name="miui_one_title">মিআইইউআই শনাক্তকৃত!</string>
-    <string name="miui_one">ভ্যান্সড ইনস্টল করার জন্য, আপনাকে সেটিংসে ডেভেলপারের বিকল্পে গিয়ে MIUI অপটিমাইজেশন নিস্ক্রিয় করতে হবে। (আপনি যদি ২০.২.২০ বা তার পরে xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কতাটিকে এড়িয়ে যেতে পারেন)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">ত্রুটি</string>
     <string name="redownload">পুনরায় ডাউনলোড করুন</string>
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vancedapp.com, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
