@@ -60,8 +60,8 @@
     <string name="update_not_found">Nema novih ažuriranja</string>
     <string name="variant">Izdanje</string>
     <!-- Logs -->
-    <string name="logs_saved">Uspješno spremljeni dnevnici</string>
-    <string name="logs_not_saved">Nije moguće spremiti zapise</string>
+    <string name="logs_saved">Uspješno spremljeni zapisi</string>
+    <string name="logs_not_saved">Nemoguće spremanje zapisa</string>
     <!-- Dialogs -->
     <string name="advanced">Napredno</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
@@ -74,16 +74,16 @@
     <string name="hold_on">Zaustavi!</string>
     <string name="magisk_vanced">Koristite Magisk/TWRP inačicu Vanceda, koja više nije podržana i ne može se ažurirati ovom aplikacijom. Uklonite ju uklanjanjem Magisk modula/koristeći TWRP Vanced deinstalator.</string>
     <string name="miui_one_title">MIUI optimizacija je omogućena!</string>
-    <string name="miui_one">Da biste instalirali Vanced, MORATE onemogućiti MIUI optimizaciju u opcijama za programere. (Ovo upozorenje možete zanemariti ako koristite 20.2.20 ili noviji xiaomi.eu ROM)</string>
+    <string name="miui_one">Kako bi instalirali Vanced, MORATE onemogućiti MIUI optimizaciju u razvojnim mogućnostima. (Ovo upozorenje možete zanemariti ako koristite 20.2.20 ili noviji xiaomi.eu ROM)</string>
     <string name="error">Greška</string>
     <string name="redownload">Ponovno preuzmi</string>
     <string name="security_context">Aplikaciju obavezno preuzmite s vancedapp.com, Vanced Discord poslužitelja ili Vanced GitHuba</string>
     <string name="app_installation_preferences">%1$s postavke instalacije</string>
     <string name="version">Inačica</string>
-    <string name="microg_bug">Pogreška u microG aplikaciji</string>
-    <string name="microg_bug_summary">Zbog pogreške u microG, instaliranje Vanced 16+ prvo zahtijeva da instalirate v15.43.32, otvorite, a zatim se prijavite i tek onda možete instalirati v16 i novije verzije. Želite li nastaviti s instalacijom v15.43.32?</string>
-    <string name="microg_bug_summary_music">Zbog pogreške u microG, za instalaciju Music 4.11+ prvo je potrebno instalirati v4.07.51, otvoriti, a zatim se prijaviti i tek tada možete instalirati v16 i novije verzije. Želite li nastaviti s instalacijom v4.07.51?</string>
-    <string name="please_be_patient">Molimo NE izlazite iz aplikacije tijekom ovog postupka!</string>
+    <string name="microg_bug">Greška u microG aplikaciji</string>
+    <string name="microg_bug_summary">Zbog greške u microG, instaliranje Vanced 16+ prvo zahtijeva instalaciju v15.43.32, otvorite, a zatim se prijavite i tek onda možete instalirati v16 i novije inačice. Želite li nastaviti s instalacijom v15.43.32?</string>
+    <string name="microg_bug_summary_music">Zbog greške u microG, za instalaciju Music 4.11+ prvo je potrebno instalirati v4.07.51, otvoriti, a zatim se prijaviti i tek tada možete instalirati v16 i novije inačice. Želite li nastaviti s instalacijom v4.07.51?</string>
+    <string name="please_be_patient">NE zatvarajte aplikaciju tijekom ovog postupka!</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Odaberite željeni jezika za Vanced</string>
