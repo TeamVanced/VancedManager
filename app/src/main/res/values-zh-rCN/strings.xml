@@ -3,8 +3,8 @@
     <!-- Global Strings -->
     <string name="cancel">取消</string>
     <string name="close">关闭</string>
-    <string name="reset">重设</string>
-    <string name="save">储存</string>
+    <string name="reset">重置</string>
+    <string name="save">保存</string>
     <string name="select_apps">选择您的应用</string>
     <!-- Main Activity -->
     <string name="title_about">关于</string>
@@ -18,7 +18,7 @@
     <string name="grant_root">授予 Root 权限</string>
     <string name="select_at_least_one_app">选择至少一个应用！</string>
     <string name="select_apps_music">Vanced ，不过是 YouTube 音乐！\n功能相对较少，但足以满足您的需求。</string>
-    <string name="select_apps_vanced">YouTube Vanced 是增强版的原生 YouTube ！</string>
+    <string name="select_apps_vanced">YouTube Vanced 是官方 YouTube 应用的增强版！</string>
     <string name="lets_get_started">让我们开始吧</string>
     <string name="willing_to_use_root">不知道这是什么或不想使用 Root 版本？只需点击下面的蓝色箭头！</string>
     <!-- Home Page -->
