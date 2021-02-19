@@ -43,7 +43,7 @@
     <string name="clear_files">Hapus file yang diunduh</string>
     <string name="cleared_files">Berhasil menghapus file</string>
     <string name="firebase_title">Analisis Firebase</string>
-    <string name="firebase_summary">Ini mengizinkan kami mengumpulkan informasi tentang performa aplikasi dan catatan crash</string>
+    <string name="firebase_summary">Analisis firebase mengizinkan kami mengumpulkan informasi tentang performa aplikasi dan catatan crash</string>
     <string name="language_title">Bahasa</string>
     <string name="link_title">Gunakan Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Tautan akan terbuka di Chrome Custom Tabs</string>
@@ -100,7 +100,7 @@
     <!-- Error messages -->
     <string name="chown_fail">Gagal untuk `chown` APK ke pemilik sistem, mohon coba lagi.</string>
     <string name="error_downloading">Gagal Mengunduh %1$s</string>
-    <string name="failed_uninstall">Gagal mencopot pemasangan paket %1$s</string>
+    <string name="failed_uninstall">Gagal untuk mencopot pemasangan paket %1$s</string>
     <string name="failed_accent">Gagal untuk menerapkan warna aksen baru</string>
     <string name="files_missing_va">Gagal untuk menemukan file yang diperlukan untuk instalasi. Unduh ulang file instalasi, lalu coba lagi.</string>
     <string name="ifile_missing">Gagal untuk menemukan file apk untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
