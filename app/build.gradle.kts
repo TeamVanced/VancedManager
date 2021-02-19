@@ -45,6 +45,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        //compose = true
     }
 
     packagingOptions {
@@ -63,6 +64,7 @@ android {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions {
             jvmTarget = "1.8"
+            //useIR = true
         }
     }
 
@@ -85,6 +87,7 @@ fun getLanguages(): String {
 
 dependencies {
 
+    //val composeVersion = "1.0.0-alpha12"
     implementation(project(":core-presentation"))
     implementation(project(":core-ui"))
 
@@ -107,6 +110,17 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.3.3")
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+
+    // Compose
+//    implementation("androidx.compose.ui:ui:$composeVersion")
+//    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
+//    implementation("androidx.compose.foundation:foundation:$composeVersion")
+//    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha02")
+//    implementation("androidx.compose.material:material:$composeVersion")
+//    implementation("androidx.compose.material:material-icons-core:$composeVersion")
+//    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
+//    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
 
     // Appearance
     implementation("com.github.madrapps:pikolo:2.0.1")

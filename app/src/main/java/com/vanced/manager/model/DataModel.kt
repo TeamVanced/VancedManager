@@ -17,7 +17,7 @@ open class DataModel(
     lifecycleOwner: LifecycleOwner,
     val appPkg: String,
     val appName: String,
-    val appIcon: Drawable?,
+    val appIcon: Drawable?
 ) {
 
     private val versionCode = MutableLiveData<Int>()
