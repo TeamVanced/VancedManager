@@ -73,8 +73,8 @@
     <string name="guide">說明</string>
     <string name="hold_on">警告！</string>
     <string name="magisk_vanced">您正使用 Magisk/TWRP 版本的 Vanced ，它已停止支援並無法透過此程式更新。請透過移除 Magisk 模組/使用 TWRP Vanced 解除安裝程式來移除它。</string>
-    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one_title">已啟用 MIUI 優化！</string>
+    <string name="miui_one">欲安裝 Vanced，請先至開發人員選項停用 MIUI 優化。（若您正在使用 20.2.20 或更新版本且基於的 xiaomi.eu 的系統，請忽略此警告）</string>
     <string name="error">錯誤</string>
     <string name="redownload">重新下載</string>
     <string name="security_context">請確保您從 vancedapp.com、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
