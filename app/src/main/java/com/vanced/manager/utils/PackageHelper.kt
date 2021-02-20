@@ -299,7 +299,7 @@ object PackageHelper {
     private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context) : Boolean {
         val sessionId: Int?
         val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
-        log(INSTALLER_TAG, "installing split apk files: $apkFiles")
+        log(INSTALLER_TAG, "installing split apk files: ${apkFiles?.map { it.name }}")
         sessionId = Shell.su("pm install-create -r -t").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
         apkFiles?.forEach { apkFile ->
             if (!filenames.any { apkFile.name == it }) {
