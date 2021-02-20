@@ -22,12 +22,8 @@ import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.io.File
-import java.io.FileInputStream
-import java.io.IOException
-import java.io.InputStream
+import java.io.*
 import java.util.*
-import java.util.regex.Pattern
 
 object PackageHelper {
 
@@ -301,35 +297,25 @@ object PackageHelper {
     }
 
     private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context) : Boolean {
-        var sessionId: Int?
+        val sessionId: Int?
         val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
         log(INSTALLER_TAG, "installing split apk files: $apkFiles")
-        run {
-            val sessionIdResult = Shell.su("pm install-create -r -t").exec().out
-            val sessionIdPattern = Pattern.compile("(\\d+)")
-            val sessionIdMatcher = sessionIdPattern.matcher(sessionIdResult[0])
-            sessionIdMatcher.find()
-            sessionId = Integer.parseInt(sessionIdMatcher.group(1)!!)
-        }
+        sessionId = Shell.su("pm install-create -r -t").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
         apkFiles?.forEach { apkFile ->
             if (!filenames.any { apkFile.name == it }) {
-                log(INSTALLER_TAG, "installing APK: ${apkFile.name} ${apkFile.length()}")
-                val command = arrayOf("su", "-c", "pm", "install-write", "-S", "${apkFile.length()}", "$sessionId", apkFile.name)
-                val process: Process = Runtime.getRuntime().exec(command)
-                val inputPipe = FileInputStream(apkFile)
-                try {
-                    process.outputStream.use { outputStream -> inputPipe.copyTo(outputStream) }
-                } catch (e: Exception) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-                        process.destroyForcibly()
-                    else
-                        process.destroy()
+                val apkName = apkFile.name
+                log(INSTALLER_TAG, "installing APK: $apkName; size: ${apkFile.length()}")
+                val newPath = "/data/local/tmp/$apkName"
 
-                    log(INSTALLER_TAG, e.stackTraceToString())
-                    sendFailure(e.stackTrace.map { it.toString() }.toMutableList(), context)
+                // Moving apk to avoid permission denials
+                Shell.su("mv ${apkFile.path} $newPath").exec()
+                val command = Shell.su("su -c pm install-write -S ${apkFile.length()} $sessionId $apkName $newPath").exec()
+                Shell.su("rm $newPath").exec()
+                if (!command.isSuccess) {
+                    sendFailure(command.out, context)
                     sendCloseDialog(context)
+                    return false
                 }
-                process.waitFor()
             }
         }
         log(INSTALLER_TAG, "committing...")
