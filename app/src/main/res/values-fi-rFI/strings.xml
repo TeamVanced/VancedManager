@@ -108,12 +108,12 @@
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
-    <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
     <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
-    <string name="installation_storage">Asennus epäonnistui tallennustilan virheen vuoksi.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">APK-tiedostoa mustalle/tummalle teemalle ei löytynyt asentajalta. Tyhjennä Managerin sovellustiedot ja yritä uudelleen.</string>
     <string name="path_missing">Youtube-sovelluksen asennuspolkua ei voitu paikantaa jaetun asennuksen jälkeen.</string>
 </resources>
