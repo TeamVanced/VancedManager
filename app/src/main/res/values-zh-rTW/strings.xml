@@ -108,12 +108,12 @@
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
     <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生應用程式的更新，然後重試。</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前的版本，然後重試。</string>
-    <string name="installation_failed">未知原因導致安裝失敗，請至我們的 Telegram 或 Discord 取得更多支援。</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">安裝檔案與您的裝置不相容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
     <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
     <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
     <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
-    <string name="installation_storage">儲存空間發生錯誤導致安裝失敗。</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">在安裝程式中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試。</string>
     <string name="path_missing">分割安裝後無法找到原生 YouTube 安裝路徑。</string>
 </resources>
