@@ -108,12 +108,12 @@
     <string name="installation_blocked">Instalacija nije uspjela jer je korisnik blokirao instalaciju.</string>
     <string name="installation_downgrade">Instalacija nije uspjela jer je korisnik pokušao instalirati stariju inačicu paketa. Deinstalirajte ažuriranja izvorne YouTube aplikacije, zatim pokušajte ponovno.</string>
     <string name="installation_conflict">Instalacija nije uspjela jer je aplikacija u sukobu s već instaliranom aplikacijom. Deinstalirajte trenutnu inačicu aplikacije zatim pokušajte ponovno.</string>
-    <string name="installation_failed">Instalacija nije uspjela iz nepoznatih razloga, pridružite nam se na Telegramu ili Discordu za daljnju podršku.</string>
+    <string name="installation_failed">Neuspjela instalacija, nepoznati razlog. Priključite se našem Telegramu ili Diskordu za našu pomoć. Molimo Vas da priključite sliku ekrana iz Proširenog Menua</string>
     <string name="installation_incompatible">Instalacija nije uspjela zato jer datoteka instalacije nije kompatibilna s vašim uređajem. Uklonite preuzete datoteke u postavkama, zatim pokušajte ponovno.</string>
     <string name="installation_invalid">Instalacija nije uspjela zato jer je apk datoteka oštećena.</string>
     <string name="installation_signature">Instalacija nije uspjela zato jer je provjera potpisa omogućena. Onemogućite apk provjeru potpisa, zatim pokušajte ponovno.</string>
     <string name="installation_miui">Instalacija nije uspjela zato jer je MIUI optimizacija uključena. Isključite MIUI optimizaciju, zatim pokušajte ponovno.</string>
-    <string name="installation_storage">Instalacija nije uspjela uslijed greške pohrane.</string>
+    <string name="installation_storage">Neuspiješna instalacija jer uređaj nema dovoljno slobodnog prostora.</string>
     <string name="modapk_missing">Neuspjeli pronalazak apk datoteke za crnu/tamnu temu u programu instalacije. Uklonite podatke aplikacije upravitelja, zatim pokušajte ponovno.</string>
     <string name="path_missing">Neuspjelo lociranje putanje izvorne YouTube instalacije nakon razdvojene instalacije.</string>
 </resources>
