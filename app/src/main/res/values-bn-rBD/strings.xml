@@ -108,12 +108,12 @@
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
-    <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের সাথে বেমানান। সেটিংসে ডাউনলোড করা ফাইল সাফ করুন, তারপরে আবার চেষ্টা করুন।.</string>
     <string name="installation_invalid">অ্যাপ্লিকেশন ব্যর্থ হয়েছে কারণ এপিপি ফাইলগুলি দূষিত হয়েছে, দয়া করে আবার চেষ্টা করুন।.</string>
     <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
     <string name="installation_miui">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এমআইইউআই অপটিমাইজেশন সক্ষম রয়েছে। MIUI অপ্টিমাইজেশন অক্ষম করুন, তারপরে আবার চেষ্টা করুন।.</string>
-    <string name="installation_storage">স্টোরেজ ত্রুটির কারণে ইনস্টলেশন ব্যর্থ হয়েছে।.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">ইনস্টলার থেকে কালো / অন্ধকার থিমের জন্য সফটওয়্যারের ফাইল খুঁজতে ব্যর্থ। আপনার অ্যাপ্লিকেশনের ডেটা সাফ করুন, তারপরে আবার চেষ্টা করুন।.</string>
     <string name="path_missing">ভিন্ন ভিন্ন ইনস্টলেশন পরে স্টক ইউটিউব ইনস্টলেশন পথ সনাক্ত করতে ব্যর্থ.</string>
 </resources>
