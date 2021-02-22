@@ -108,12 +108,12 @@
     <string name="installation_blocked">ਇੰਸਟਾਲੇਸ਼ਨ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਬਲਾਕ ਕਰ ਦਿੱਤੀ.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ਸਥਾਪਨਾ ਅਸਫਲ ਕਿਉਂਕਿ ਐਪ ਪਹਿਲਾਂ ਤੋਂ ਸਥਾਪਤ ਐਪ ਨਾਲ ਟਕਰਾਉਂਦੀ ਹੈ. ਐਪ ਦੇ ਮੌਜੂਦਾ ਸੰਸਕਰਣ ਨੂੰ ਅਣਇੰਸਟੌਲ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
-    <string name="installation_failed">ਅਣਜਾਣ ਕਾਰਨਾਂ ਕਰਕੇ ਸਥਾਪਨਾ ਅਸਫਲ ਹੋ ਗਈ, ਹੋਰ ਸਹਾਇਤਾ ਲਈ ਸਾਡੇ ਟੈਲੀਗ੍ਰਾਮ ਜਾਂ ਡਿਸਕੋਰਡ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">ਸਥਾਪਨਾ ਅਸਫਲ ਹੋਈ ਕਿਉਂਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਦੇ ਅਨੁਕੂਲ ਨਹੀਂ ਹੈ. ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਸਾਫ਼ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_invalid">ਸਥਾਪਨਾ ਅਸਫਲ ਹੋਈ ਕਿਉਂਕਿ ਏਪੀਕੇ ਫਾਈਲਾਂ ਖ਼ਰਾਬ ਹਨ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_signature">ਸਥਾਪਨਾ ਅਸਫਲ ਕਿਉਂਕਿ ਏਪੀਕੇ ਦਸਤਖਤ ਤਸਦੀਕ ਯੋਗ ਹੈ. ਏਪੀਕੇ ਦਸਤਖਤ ਤਸਦੀਕ ਨੂੰ ਅਯੋਗ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_miui">MIUI ਸਥਾਪਨਾ ਅਸਫਲ, ਕਿਉਂਕਿ Optimization ਯੋਗ ਕੀਤੀ ਗਈ ਸੀ. MIUI Optimization ਅਯੋਗ ਕਰੋ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
-    <string name="installation_storage">ਸਟੋਰੇਜ ਨਾਕਾਮੀ ਦੇ ਕਾਰਨ ਸਥਾਪਨਾ ਅਸਫਲ.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">ਇੰਸਟੌਲਰ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ. ਮੈਨੇਜਰ ਐਪ ਦਾ ਡਾਟਾ ਸਾਫ਼ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="path_missing">ਸਪਲਿਟ ਇੰਸਟਾਲੇਸ਼ਨ ਦੇ ਬਾਅਦ ਸਟਾਕ YouTube ਇੰਸਟਾਲੇਸ਼ਨ ਮਾਰਗ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ.</string>
 </resources>
