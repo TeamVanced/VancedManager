@@ -108,12 +108,12 @@
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
-    <string name="installation_failed">La instal·lació ha fallat per motius desconeguts. Uniu-vos al nostre Telegram o Discord per obtenir més assistència.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">La instal·lació ha fallat perquè el fitxer d\'instal·lació és incompatible amb el dispositiu. Esborreu els fitxers descarregats a Configuració i torneu-ho a provar.</string>
     <string name="installation_invalid">La instal·lació ha fallat perquè els fitxers apk estan danyats. Torneu-ho a provar.</string>
     <string name="installation_signature">La instal·lació ha fallat perquè la verificació de la signatura apk està activada. Desactiveu la verificació de la signatura apk i torneu-ho a provar.</string>
     <string name="installation_miui">La instal·lació ha fallat perquè l\'optimització MIUI està activada. Desactiveu l\'optimització MIUI i torneu-ho a provar.</string>
-    <string name="installation_storage">La instal·lació ha fallat a causa d\'un error d\'emmagatzematge.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>
