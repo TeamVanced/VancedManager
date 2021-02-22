@@ -108,12 +108,12 @@
     <string name="installation_blocked">İstifadəçi quraşdırmanı əngəllədiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_downgrade">İstifadəçi paketi alt versiyaya keçirməyə çalışdığı üçün quraşdırılma uğursuz oldu. Stok YouTube tətbiqindən yeniləmələri silib yenidən sınayın.</string>
     <string name="installation_conflict">Tətbiq əvvəlcədən quraşdırılmış bir tətbiqlə toqquşduğu üçün quraşdırılma uğursuz oldu. Vanced-in cari versiyasını silib yenidən sınayın.</string>
-    <string name="installation_failed">Bilinməyən səbəblərə görə quraşdırılma uğursuz oldu. Dəstək üçün Telegram və ya Discord-a qoşulun.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Quraşdırma faylı cihazınıza uyğun gəlmədiyi üçün quraşdırılma uğursuz oldu. Tənzimləmələrdən endirilmiş faylları təmizləyib yenidən sınayın.</string>
     <string name="installation_invalid">Apk faylları zədəli olduğu üçün quraşdırılma uğursuz oldu, yenidən sınayın.</string>
     <string name="installation_signature">Apk imza təsdiqləmə fəal olduğu üçün quraşdırılma uğursuz oldu. Apk imza təsdiqləməsini sıradan çıxarıb yenidən sınayın.</string>
     <string name="installation_miui">MIUI Optimallaşdırma fəal olduğu üçün quraşdırılma uğursuz oldu. MIUI Optimallaşdırmanı sıradan çıxarıb yenidən sınayın.</string>
-    <string name="installation_storage">Anbar xətasına görə quraşdırılma uğursuz oldu.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Quraşdırıcıda qara/tünd tema üçün apk faylı tapılmadı. Menecer-in tətbiq verilənlərini təmizləyib yenidən sınayın.</string>
     <string name="path_missing">Ayrılmış quraşdırmadan sonra stok YouTube quraşdırma yolu tapılmadı.</string>
 </resources>
