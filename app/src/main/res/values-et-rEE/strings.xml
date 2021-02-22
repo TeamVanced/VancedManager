@@ -108,12 +108,12 @@
     <string name="installation_blocked">Paigaldamine ebaõnnestus kuna kasutaja peatas selle.</string>
     <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused originaalrakendusest ja proovige uuesti.</string>
     <string name="installation_conflict">Paigaldamine ebaõnnestus, kuna tekkis konflikt olemasoleva versiooniga. Eemaldage praegune rakenduse versioon, ning proovige uuesti.</string>
-    <string name="installation_failed">Paigaldamine ebaõnnestus teadmata põhjustel, liituge meie Telegrami või Discordiga, et saada edaspidist tuge.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Paigaldamine ebaõnnestus, kuna paigaldusfail ei sobitu teie seadmega. Puhastage allalaaditud failid seadete alt, ning proovige uuesti.</string>
     <string name="installation_invalid">Paigaldamine ebaõnnestus kuna apk failid on vigased, palun proovige uuesti.</string>
     <string name="installation_signature">Paigaldamine ebaõnnestus kuna apk-allkirja kontrollimine on lubatud. Keelake apk allkirja kinnitamine ja proovige uuesti.</string>
     <string name="installation_miui">Paigaldamine ebaõnnestus, kuna MIUI optimiseerimine on lubatud. Keelake MIUI optimiseerimine ja proovige uuesti.</string>
-    <string name="installation_storage">Paigaldamine ebaõnnestus salvestusvea tõttu.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Apk faili musta/tumeda teema jaoks leidmine paigaldajast ebaõnnestus. Puhastage halduri rakenduse andmed ja proovige uuesti.</string>
     <string name="path_missing">Pärast jagatud paigaldamist ei õnnestunud leida originaal YouTube\'i paigaldus asukohta.</string>
 </resources>
