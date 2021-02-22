@@ -54,13 +54,14 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                         } else {
                             onError("Could not save file")
                             downloadProgress.postValue(0)
-                            log("VMDownloader", "Failed to save file: $url")
+                            log("VMDownloader", "Failed to save file: $url\n${response.errorBody()}")
                         }
                     }
                 } else {
-                    onError(response.errorBody().toString())
+                    val errorBody = response.errorBody().toString()
+                    onError(errorBody)
                     downloadProgress.postValue(0)
-                    log("VMDownloader", "Failed to download file: $url")
+                    log("VMDownloader", "Failed to download file: $url\n$errorBody")
                 }
             }
 
