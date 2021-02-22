@@ -73,7 +73,7 @@
     <string name="guide">Vejledning</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Det ser ud som om du bruger Magisk/TWRP versionen af Vanced. Den er ikke længere understøttet og kan derfor ikke opdateres igennem denne app. Vær venlig at fjerne magisk modulet/brug TWRP Vanced uninstaller.</string>
-    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one_title">MIUI Optimering er aktiveret!</string>
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Fejl</string>
     <string name="redownload">Hent igen</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">Installationen fejlede fordi brugeren blokerede installationen.</string>
     <string name="installation_downgrade">Installationen fejlede fordi brugeren prøvede at nedgradere pakken. Fjern opdateringer fra Youtube appen og prøv igen.</string>
     <string name="installation_conflict">Installationen fejlede fordi appen konflikter med en allerede installeret app. Fjern den nuværende version af appen og prøv igen.</string>
-    <string name="installation_failed">Installationen fejlede af en ukendt årsag, join vores Telegram eller Discord for hjælp.</string>
+    <string name="installation_failed">Installation mislykkedes af ukendte årsager, kom på vores Telegram eller Discord for yderligere hjælp. Vedhæft venligst også et skærmbillede fra menuen Avanceret</string>
     <string name="installation_incompatible">Installationen fejlede fordi installationsfilen er inkompatibel med din enhed. Ryd de downloadede filer i indstillingerne og prøv igen.</string>
     <string name="installation_invalid">Installationen fejlede fordi apk filerne er beskadiget, prøv igen.</string>
     <string name="installation_signature">Installationen fejlede fordi apk signatur verifikation er slået til. Slå apk signatur verifikation fra og prøv igen.</string>
     <string name="installation_miui">Installationen fejlede fordi MIUI optimering er slået til. Slå MIUI optimering fra og prøv igen.</string>
-    <string name="installation_storage">Installationen fejlede på grund af pladsmangel.</string>
+    <string name="installation_storage">Installationen mislykkedes, fordi enheden ikke har nok ledig plads.</string>
     <string name="modapk_missing">Kunne ikke finde apk fil til sort/mørkt tema fra installationsprogrammet. Ryd app data fra Manager, og prøv derefter igen.</string>
     <string name="path_missing">Kunne ikke finde lageret YouTube-installationsstien efter split installation.</string>
 </resources>
