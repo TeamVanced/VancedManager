@@ -79,6 +79,12 @@ fun MaterialAlertDialogBuilder.applyAccent() {
 fun Context.writeServiceDScript(apkFPath: String, path: String, app: String) {
     val shellFileZ = SuFile.open("/data/adb/service.d/$app.sh")
     shellFileZ.createNewFile()
-    val code = """#!/system/bin/sh${"\n"}while [ "`getprop sys.boot_completed | tr -d '\r' `" != "1" ]; do sleep ${defPrefs.serviceDSleepTimer}; done${"\n"}chcon u:object_r:apk_data_file:s0 $apkFPath${"\n"}mount -o bind $apkFPath $path"""
-    SuFileOutputStream.open(shellFileZ).use { out ->  out.write(code.toByteArray())}
+    val script = """
+        #!/system/bin/sh
+        while [ "$(getprop sys.boot_completed | tr -d '\r')" != "1" ]; do sleep 1; done
+        sleep ${defPrefs.serviceDSleepTimer}
+        chcon u:object_r:apk_data_file:s0 $apkFPath
+        mount -o bind $apkFPath $path
+    """.trimIndent()
+    SuFileOutputStream.open(shellFileZ).use { out ->  out.write(script.toByteArray())}
 }
