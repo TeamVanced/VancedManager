@@ -309,7 +309,7 @@ object PackageHelper {
 
                 // Moving apk to avoid permission denials
                 Shell.su("mv ${apkFile.path} $newPath").exec()
-                val command = Shell.su("su -c pm install-write -S ${apkFile.length()} $sessionId $apkName $newPath").exec()
+                val command = Shell.su("pm install-write -S ${apkFile.length()} $sessionId $apkName $newPath").exec()
                 Shell.su("rm $newPath").exec()
                 if (!command.isSuccess) {
                     sendFailure(command.out, context)
