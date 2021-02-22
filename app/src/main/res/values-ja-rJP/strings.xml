@@ -108,12 +108,12 @@
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">アプリをダウングレードしようとしたため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、再度お試しください。</string>
     <string name="installation_conflict">既にインストールされたアプリと競合したため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
     <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>
     <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
-    <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">インストーラーからブラック/ダークテーマの APK ファイルが見つかりませんでした。Manager のアプリデータを消去してから、もう一度お試しください。</string>
     <string name="path_missing">分割インストール後にストックの YouTube アプリのインストールパスが見つかりませんでした。</string>
 </resources>
