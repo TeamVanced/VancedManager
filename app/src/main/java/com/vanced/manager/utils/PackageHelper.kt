@@ -299,22 +299,19 @@ object PackageHelper {
     private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context) : Boolean {
         val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
         log(INSTALLER_TAG, "installing split apk files: ${apkFiles?.map { it.name }}")
-        val sessionId = Shell.su("pm install-create -r -t").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
-        apkFiles?.forEach { apkFile ->
-            if (!filenames.any { apkFile.name == it }) {
-                val apkName = apkFile.name
-                log(INSTALLER_TAG, "installing APK: $apkName")
-                val newPath = "/data/local/tmp/$apkName"
-
-                // Moving apk to avoid permission denials
-                Shell.su("mv ${apkFile.path} $newPath").exec()
-                val command = Shell.su("pm install-write $sessionId $apkName $newPath").exec()
-                Shell.su("rm $newPath").exec()
-                if (!command.isSuccess) {
-                    sendFailure(command.out, context)
-                    sendCloseDialog(context)
-                    return false
-                }
+        val sessionId = Shell.su("pm install-create").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
+        apkFiles?.filter { !filenames.contains(it.name) }?.forEach { apkFile ->
+            val apkName = apkFile.name
+            log(INSTALLER_TAG, "installing APK: $apkName")
+            val newPath = "/data/local/tmp/$apkName"
+            // Moving apk to avoid permission denials
+            Shell.su("mv ${apkFile.path} $newPath").exec()
+            val command = Shell.su("pm install-write $sessionId $apkName $newPath").exec()
+            Shell.su("rm $newPath").exec()
+            if (!command.isSuccess) {
+                sendFailure(command.out, context)
+                sendCloseDialog(context)
+                return false
             }
         }
         log(INSTALLER_TAG, "committing...")
