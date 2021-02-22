@@ -108,12 +108,12 @@
     <string name="installation_blocked">Nabigo ang pag-install dahil binlock ito.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Nabigo ang pag-install dahil meron hidwaan sa naka-install na app. I-uninstall ang kasalukuyang bersyon ng Vanced, at ulitin muli.</string>
-    <string name="installation_failed">Nabigo ang pag-install dahil sa hindi tukoy na dahilan, makiisa sa aming Telegram o Discord para sa karagdagang suporta.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Nabigo ang pag-install dahil ang installation file ay hindi tugma sa iyong device. Tanggalin ang mga downloaded files sa Settings, at ulitin muli.</string>
     <string name="installation_invalid">Nabigo ang pag-install dahil ang mga apk files ay nasira, ulitin muli.</string>
     <string name="installation_signature">Nabigo ang pag-install dahil ang apk signature verification ay naka-on. Patayin ang apk signature verification, at ulitin muli.</string>
     <string name="installation_miui">Nabigo ang pag-install dahil ang MIUI Optimization ay naka-on. Patayin ang MIUI Optimization, at ulitin muli.</string>
-    <string name="installation_storage">Hindi natuloy ang pag-install dahil sa storage error.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Nabigong hanapin ang apk file para sa itim na tema galing sa installer. Tanggalin ang app data ng Manager, tapos ulitin.</string>
     <string name="path_missing">Nabigong hanapin ang stock YouTube installation path pagkatapos ng split installation.</string>
 </resources>
