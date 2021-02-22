@@ -108,12 +108,12 @@
     <string name="installation_blocked">ഉപയോക്താവ് ഇൻസ്റ്റാളേഷൻ തടഞ്ഞതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
     <string name="installation_downgrade">ഉപയോക്താവ് പാക്കേജ് തരംതാഴ്ത്താൻ ശ്രമിച്ചതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. സ്റ്റോക്ക് അപ്ലിക്കേഷനിൽ നിന്ന് അപ്‌ഡേറ്റുകൾ അൺഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_conflict">ഇതിനകം ഇൻസ്റ്റാളുചെയ്‌ത അപ്ലിക്കേഷനുമായി അപ്ലിക്കേഷൻ പൊരുത്തപ്പെടുന്നതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. അപ്ലിക്കേഷന്റെ നിലവിലെ പതിപ്പ് അൺ‌ഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="installation_failed">അജ്ഞാതമായ കാരണങ്ങളാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു, കൂടുതൽ പിന്തുണയ്ക്കായി ഞങ്ങളുടെ ടെലിഗ്രാം അല്ലെങ്കിൽ ഡിസ്കോർഡിൽ ചേരുക.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">ഇൻസ്റ്റാളേഷൻ ഫയൽ നിങ്ങളുടെ ഉപകരണവുമായി പൊരുത്തപ്പെടാത്തതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. ക്രമീകരണങ്ങളിൽ ഡ download ൺലോഡ് ചെയ്ത ഫയലുകൾ മായ്‌ക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_invalid">Apk ഫയലുകൾ‌ കേടായതിനാൽ‌ ഇൻ‌സ്റ്റാളേഷൻ‌ പരാജയപ്പെട്ടു, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_signature">Apk സിഗ്നേച്ചർ പരിശോധന പ്രാപ്തമാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. Apk സിഗ്നേച്ചർ പരിശോധന അപ്രാപ്തമാക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_miui">MIUI ഒപ്റ്റിമൈസേഷൻ പ്രാപ്തമാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. MIUI ഒപ്റ്റിമൈസേഷൻ അപ്രാപ്തമാക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="installation_storage">ഒരു സംഭരണ പിശക് കാരണം ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">ഇൻസ്റ്റാളറിൽ നിന്ന് കറുപ്പ് / ഇരുണ്ട തീമിനായി Apk ഫയൽ കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു. മാനേജറിന്റെ അപ്ലിക്കേഷൻ ഡാറ്റ മായ്‌ക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="path_missing">വിഭജന ഇൻസ്റ്റാളേഷന് ശേഷം സ്റ്റോക്ക് YouTube ഇൻസ്റ്റാളേഷൻ പാത്ത് കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു.</string>
 </resources>
