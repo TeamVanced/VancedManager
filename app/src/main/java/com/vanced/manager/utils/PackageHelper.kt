@@ -297,19 +297,18 @@ object PackageHelper {
     }
 
     private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context) : Boolean {
-        val sessionId: Int?
         val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
         log(INSTALLER_TAG, "installing split apk files: ${apkFiles?.map { it.name }}")
-        sessionId = Shell.su("pm install-create -r -t").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
+        val sessionId = Shell.su("pm install-create -r -t").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
         apkFiles?.forEach { apkFile ->
             if (!filenames.any { apkFile.name == it }) {
                 val apkName = apkFile.name
-                log(INSTALLER_TAG, "installing APK: $apkName; size: ${apkFile.length()}")
+                log(INSTALLER_TAG, "installing APK: $apkName")
                 val newPath = "/data/local/tmp/$apkName"
 
                 // Moving apk to avoid permission denials
                 Shell.su("mv ${apkFile.path} $newPath").exec()
-                val command = Shell.su("pm install-write -S ${apkFile.length()} $sessionId $apkName $newPath").exec()
+                val command = Shell.su("pm install-write $sessionId $apkName $newPath").exec()
                 Shell.su("rm $newPath").exec()
                 if (!command.isSuccess) {
                     sendFailure(command.out, context)
