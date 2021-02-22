@@ -108,12 +108,12 @@
     <string name="installation_blocked">Instalace se nezdařila, protože uživatel zablokoval instalaci.</string>
     <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace a poté to zkuste znovu.</string>
     <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a poté to zkuste znovu.</string>
-    <string name="installation_failed">Instalace se nezdařila z neznámých důvodů. Pro získání další podpory se připojte k našemu Telegramu nebo Discordu.</string>
+    <string name="installation_failed">Instalace se z neznámých důvodů nezdařila. Pro další podporu se připojte k našemu Telegramu nebo Discordu. Připojte také snímek obrazovky z nabídky Pokročilé</string>
     <string name="installation_incompatible">Instalace se nezdařila, protože instalační soubor není kompatibilní s vaším zařízením. Vymažte v Nastavení stažené soubory a poté to zkuste znovu.</string>
     <string name="installation_invalid">Instalace se nezdařila, protože soubory APK jsou poškozeny. Zkuste to prosím znovu.</string>
     <string name="installation_signature">Instalace se nezdařila, protože je povoleno ověření podpisu APK. Zakažte ověření podpisu APK a poté to zkuste znovu.</string>
     <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a poté to zkuste znovu.</string>
-    <string name="installation_storage">Instalace se nezdařila kvůli chybě úložiště.</string>
+    <string name="installation_storage">Instalace se nezdařila, protože v zařízení není dostatek volného místa.</string>
     <string name="modapk_missing">Nepodařilo se najít soubor APK pro černý/tmavý motiv z instalátoru. Vymažte data aplikace Manager a zkuste to znovu.</string>
     <string name="path_missing">Nepodařilo se najít výchozí cestu instalace YouTube po rozdělené instalaci.</string>
 </resources>
