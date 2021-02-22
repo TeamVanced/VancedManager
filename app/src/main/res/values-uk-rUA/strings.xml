@@ -108,12 +108,12 @@
     <string name="installation_blocked">Встановлення не вдалося, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
     <string name="installation_conflict">Встановлення не вдалася, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
-    <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
     <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
-    <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Не вдалося знайти apk-файл для чорної/темної теми в програмі встановлення. Видаліть дані додатка з Менеджера і спробуйте ще раз.</string>
     <string name="path_missing">Не вдалося знайти типовий шлях встановлення YouTube після роздільного встановлення.</string>
 </resources>
