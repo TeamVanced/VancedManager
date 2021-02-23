@@ -131,7 +131,7 @@ dependencies {
     implementation("com.beust:klaxon:5.4")
 
     // Crowdin
-    implementation("com.crowdin.platform:mobile-sdk:1.2.0")
+    implementation("com.github.crowdin.mobile-sdk-android:sdk:1.4.0")
 
     // Tips
     implementation("com.github.florent37:viewtooltip:1.2.2")
@@ -141,6 +141,7 @@ dependencies {
     implementation("com.github.kittinunf.fuel:fuel-coroutines:2.2.3")
     implementation("com.github.kittinunf.fuel:fuel-json:2.2.3")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     // Root permissions
     implementation("com.github.topjohnwu.libsu:core:3.1.1")
