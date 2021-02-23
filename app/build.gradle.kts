@@ -79,7 +79,7 @@ val languages: String get() {
         name.startsWith("values-") && !name.contains("v23")
     }?.forEach { dir ->
         val dirname = dir.name.substringAfter("-").substringBefore("-")
-        if (!exceptions.any { dirname == it }) {
+        if (!exceptions.contains(dirname)) {
             langs.add(dirname)
         }
     }
