@@ -113,7 +113,7 @@
     <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
     <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
     <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">由於裝置的可用空間不足，因此安裝失敗。</string>
     <string name="modapk_missing">在安裝程式中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試。</string>
     <string name="path_missing">分割安裝後無法找到原生 YouTube 安裝路徑。</string>
 </resources>
