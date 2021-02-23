@@ -16,12 +16,12 @@ android {
         applicationId = "com.vanced.manager"
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 250
-        versionName = "2.5.0 (Weed)"
+        versionCode = 251
+        versionName = "2.5.1 (Weed)"
 
         vectorDrawables.useSupportLibrary = true
 
-        buildConfigField("String[]", "MANAGER_LANGUAGES", "{" + getLanguages() + "}")
+        buildConfigField("String[]", "MANAGER_LANGUAGES", "{$languages}")
         buildConfigField("Boolean", "ENABLE_CROWDIN_AUTH", "false")
         buildConfigField("String", "CROWDIN_HASH", "\"${System.getenv("CROWDIN_HASH")}\"")
         buildConfigField("String", "CROWDIN_CLIENT_ID", "\"${System.getenv("CROWDIN_CLIENT_ID")}\"")
@@ -70,16 +70,17 @@ android {
 
 }
 
-fun getLanguages(): String {
+val languages: String get() {
     val langs = arrayListOf("en", "bn_BD", "bn_IN", "pa_IN", "pa_PK", "pt_BR", "pt_PT", "zh_CN", "zh_TW")
     val exceptions = arrayOf("bn", "pa", "pt", "zh")
 
-    File("$projectDir/src/main/res").listFiles()?.forEach { dir ->
-        if (dir.name.startsWith("values-") && !dir.name.contains("v23")) {
-            val dirname = dir.name.substringAfter("-").substringBefore("-")
-            if (!exceptions.any { dirname == it }) {
-                langs.add(dirname)
-            }
+    File("$projectDir/src/main/res").listFiles()?.filter {
+        val name = it.name
+        name.startsWith("values-") && !name.contains("v23")
+    }?.forEach { dir ->
+        val dirname = dir.name.substringAfter("-").substringBefore("-")
+        if (!exceptions.any { dirname == it }) {
+            langs.add(dirname)
         }
     }
     return langs.joinToString(", ") { "\"$it\"" }
