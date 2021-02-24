@@ -73,8 +73,8 @@
     <string name="guide">Hagitaan</string>
     <string name="hold_on">Jooji!</string>
     <string name="magisk_vanced">Waxaad isticmaalaysaa version-ka Vanced ee loogu talagalay Magisk/TWRP, kaasoo aan hada la taageerin halkana lagama cusboonaysiin karo. Fadlan iska saar lifaaqa Magisk/adoo isticmaalaya kasaaraha Vanced ee TWRP-ga xagiisa.</string>
-    <string name="miui_one_title">Waxaad isticmaalaysaa MIUI!</string>
-    <string name="miui_one">Si aad ugu shubto Vanced, WAA INAAD ka xidhaa MIUI Optimizations xaga fadhiga Developer Settings-ka. (Waad iska indhatiri kartaa digniintan hadaad isticmaalayso version-ka 20.2.20 iyo wixii ka dambeeyay ee nidaamka barnaamijyada ROM-ka ee kusalaysan xiaomi.eu)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Khalad</string>
     <string name="redownload">Dib udaji</string>
     <string name="security_context">Iska hubi inaad app-ka kaso dajisatay vancedapp.com, xaga martigaliyaha Discord, ama meesha Vanced ee GitHub</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa xanibay.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Ku shubidii way guuldaraysatay sababtoo ah app-ka waxay iskhilaafeen mid horay ugu jiray aalada. Ka saar nooca hadda ee kujira, kadib markale ku celi.</string>
-    <string name="installation_failed">Ku shubidii way guuldaraysatay sababo aan la garanaynin awgood, kusoo biir Telegram-kanaga ama Discord-ka si aad caawin dheerad ah u hesho.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Ku shubidii way guuldaraysatay sababtoo ah faylka kuma shaqaynayo aaladaada. Xaga Fadhiga ka saar waxyaabaha lasoo dajiyay, kadib markale isku day.</string>
     <string name="installation_invalid">Ku shubidii way guuldaraysatay sababtoo ah faylashii apk-ga ayaa khalkhalsan, markale isku day.</string>
     <string name="installation_signature">Ku shubidii way guuldaraysatay sababtoo ah waxaa furan xaqiijinta saxiixa apk-ga. Xidh xaqiijinta saxiixa apk-ga, kadibna markale ku celi.</string>
     <string name="installation_miui">Ku shubidii way guuldaraysatay sababtoo ah waxaa furan MIUI Optimization. Xidh MIUI Optimization-ka, kadib markale ku celi.</string>
-    <string name="installation_storage">Ku shubidii way guuldaraysatay ayadooy ugu wacan tahay khalad xaga kaydka aalada ah.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Lama helin faylka apk-ga ee nashqada madow/mugdiga ah. Tirtir xogta Manager-ka, kadib markale ku celi.</string>
     <string name="path_missing">Waa lagu guuldaraysatay in la helo wadadii ku shubida app-ka caadiga ah ee YouTube-ka ee kuxigtay ku shubida kala qaybsan.</string>
 </resources>

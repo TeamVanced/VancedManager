@@ -10,7 +10,7 @@ import com.vanced.manager.databinding.ViewPreferenceCategoryBinding
 class PreferenceCategory @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyle: Int = 0,
+    defStyle: Int = 0
 ) : LinearLayout(context, attrs, defStyle) {
 
     private var _binding: ViewPreferenceCategoryBinding? = null

@@ -73,7 +73,7 @@
     <string name="guide">Руководство</string>
     <string name="hold_on">Стойте!</string>
     <string name="magisk_vanced">Похоже, вы используете Magisk/TWRP версию Vanced, которая больше не поддерживается и не может быть обновлена с помощью этого приложения. Пожалуйста, удалите модуль Vanced через Magisk или с помощью деинсталлятора Vanced для TWRP.</string>
-    <string name="miui_one_title">Обнаружен пользователь MIUI!</string>
+    <string name="miui_one_title">Оптимизация MIUI включена!</string>
     <string name="miui_one">Чтобы установить Vanced, вы ДОЛЖНЫ отключить оптимизацию MIUI в настройках разработчика. (Вы можете проигнорировать это предупреждение, если вы используете прошивку на xiaomi.eu версии 20.2.20+)</string>
     <string name="error">Ошибка</string>
     <string name="redownload">Скачать заново</string>
@@ -94,7 +94,7 @@
     <string name="vanced_dark">Темный</string>
     <!-- About Page -->
     <string name="manager_dev">Разработчики Менеджера</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Другие участники</string>
     <string name="sources">Исходники</string>
     <string name="vanced_team">Команда Vanced</string>
     <!-- Error messages -->
@@ -108,12 +108,12 @@
     <string name="installation_blocked">Установка не была выполнена, поскольку пользователь заблокировал установку.</string>
     <string name="installation_downgrade">Установка не удалась, так как пользователь попытался понизить версию приложения. Удалите обновления обычного приложения YouTube, затем повторите попытку.</string>
     <string name="installation_conflict">Установка не удалась, так как приложение конфликтует с уже установленным приложением. Удалите текущую версию приложения, затем повторите попытку.</string>
-    <string name="installation_failed">Установка не удалась по неизвестным причинам. Присоединяйтесь к нашей группе в Telegram или Discord для дальнейшей поддержки.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Установка не удалась, так как установочный файл несовместим с вашим устройством. Очистите загруженные файлы в настройках, затем повторите попытку.</string>
     <string name="installation_invalid">Установка не удалась, так как установочные файлы повреждены, попробуйте еще раз.</string>
     <string name="installation_signature">Установка не удалась, так как включена проверка подписи apk. Отключите проверку подписи apk, а затем повторите попытку.</string>
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
-    <string name="installation_storage">Установка не была выполнена, так как произошла ошибка с доступом к памяти.</string>
+    <string name="installation_storage">Ошибка установки, так как на устройстве недостаточно свободного места.</string>
     <string name="modapk_missing">Не удалось найти apk-файл для черной/темной темы в программе установки. Удалите данные приложения из Менеджера и повторите попытку.</string>
     <string name="path_missing">Не удалось найти стандартный путь установки YouTube после раздельной установки.</string>
 </resources>

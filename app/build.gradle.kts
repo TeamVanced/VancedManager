@@ -16,12 +16,12 @@ android {
         applicationId = "com.vanced.manager"
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 250
-        versionName = "2.5.0 (Weed)"
+        versionCode = 251
+        versionName = "2.5.1 (Weed)"
 
         vectorDrawables.useSupportLibrary = true
 
-        buildConfigField("String[]", "MANAGER_LANGUAGES", "{" + getLanguages() + "}")
+        buildConfigField("String[]", "MANAGER_LANGUAGES", "{$languages}")
         buildConfigField("Boolean", "ENABLE_CROWDIN_AUTH", "false")
         buildConfigField("String", "CROWDIN_HASH", "\"${System.getenv("CROWDIN_HASH")}\"")
         buildConfigField("String", "CROWDIN_CLIENT_ID", "\"${System.getenv("CROWDIN_CLIENT_ID")}\"")
@@ -45,6 +45,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        //compose = true
     }
 
     packagingOptions {
@@ -63,21 +64,23 @@ android {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions {
             jvmTarget = "1.8"
+            //useIR = true
         }
     }
 
 }
 
-fun getLanguages(): String {
+val languages: String get() {
     val langs = arrayListOf("en", "bn_BD", "bn_IN", "pa_IN", "pa_PK", "pt_BR", "pt_PT", "zh_CN", "zh_TW")
     val exceptions = arrayOf("bn", "pa", "pt", "zh")
 
-    File("$projectDir/src/main/res").listFiles()?.forEach { dir ->
-        if (dir.name.startsWith("values-") && !dir.name.contains("v23")) {
-            val dirname = dir.name.substringAfter("-").substringBefore("-")
-            if (!exceptions.any { dirname == it }) {
-                langs.add(dirname)
-            }
+    File("$projectDir/src/main/res").listFiles()?.filter {
+        val name = it.name
+        name.startsWith("values-") && !name.contains("v23")
+    }?.forEach { dir ->
+        val dirname = dir.name.substringAfter("-").substringBefore("-")
+        if (!exceptions.contains(dirname)) {
+            langs.add(dirname)
         }
     }
     return langs.joinToString(", ") { "\"$it\"" }
@@ -85,6 +88,7 @@ fun getLanguages(): String {
 
 dependencies {
 
+    //val composeVersion = "1.0.0-alpha12"
     implementation(project(":core-presentation"))
     implementation(project(":core-ui"))
 
@@ -108,6 +112,17 @@ dependencies {
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
+
+    // Compose
+//    implementation("androidx.compose.ui:ui:$composeVersion")
+//    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
+//    implementation("androidx.compose.foundation:foundation:$composeVersion")
+//    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha02")
+//    implementation("androidx.compose.material:material:$composeVersion")
+//    implementation("androidx.compose.material:material-icons-core:$composeVersion")
+//    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
+//    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
+
     // Appearance
     implementation("com.github.madrapps:pikolo:2.0.1")
     implementation("com.google.android.material:material:1.3.0")
@@ -116,7 +131,7 @@ dependencies {
     implementation("com.beust:klaxon:5.4")
 
     // Crowdin
-    implementation("com.crowdin.platform:mobile-sdk:1.2.0")
+    implementation("com.github.crowdin.mobile-sdk-android:sdk:1.4.0")
 
     // Tips
     implementation("com.github.florent37:viewtooltip:1.2.2")
@@ -126,6 +141,7 @@ dependencies {
     implementation("com.github.kittinunf.fuel:fuel-coroutines:2.2.3")
     implementation("com.github.kittinunf.fuel:fuel-json:2.2.3")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     // Root permissions
     implementation("com.github.topjohnwu.libsu:core:3.1.1")

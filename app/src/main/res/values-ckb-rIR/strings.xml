@@ -73,8 +73,8 @@
     <string name="guide">زانیاری</string>
     <string name="hold_on">وەستاندن!</string>
     <string name="magisk_vanced">تۆ وەشانی Magisk/TWRP ـی Vanced بەکاردێنیت، کە ناتوانرێت بە بەکارهێنانی ئەم بەرنامەیە نوێبکرێتەوە، تکایە لایبدە بە سڕینەوەی مۆدیولی ماگیسک/لەڕێی TWRP Vanced.</string>
-    <string name="miui_one_title">تۆ ڕووکاری MIUI بەکاردێنیت!</string>
-    <string name="miui_one">بۆ ئەوەی Vanced دابمەزرێنیت، پێویستە چاکسازییەکانی ڕووکاری MIUI لە ڕێکبەندەکانی پەرەپێدەر لە کار بخەیت، (دەتوانیت ئەم ئاگاداریە پشتگوێ بخەیت ئەگەر ڕومی تایبەتی وەشانی 20.2.20 یان دواتر xiaomi.eu بەکاردەهێنیت. بەکاردەهێنیت)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">هەڵەیەک ڕوویدا</string>
     <string name="redownload">داگرتنەوە</string>
     <string name="security_context">دڵنیابە کە بەرنامەکەت لە سایتی vancedapp.com، سێرڤەری دیسکۆرد یان Vanced GitHub داگرتووە</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر ڕێگریکرد لە دابەزاندنەکە.</string>
     <string name="installation_downgrade">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر هەوڵیدا بۆ نزمکردنەوەی وەشان، نوێکارییەکانی بەرنامەی بنەڕەتی YouTube بسڕەوە و دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_conflict">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی وەشانێکی تری بەرنامەکە پێشتر دامەزرێنراوە، وەشانی ئێستای Vanced بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
-    <string name="installation_failed">دامەزراندن سەرکەوتو نەبوو لەبەر هۆکاری نادیار، پەیوەندی بکە بە تێلێگرامەکەمان یان Discord بۆ پشتگیری زیاتر.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی فایلی دابەزاندن گونجاو نییە لەگەڵ ئامێرەکەت، فایلە داگیراوەکان بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_invalid">دامەزراندن سەرکەوتوو نەبوو لەبەرئەوەی فایلی apk تێکچووە، تکایە دووبارە هەوڵبدرەوە.</string>
     <string name="installation_signature">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی سەلماندنەکانی apk چالاککراوە، سەلماندنی دووپاتکردنەوەی ئیمزای apk ناچالاک بکە و پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_miui">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی باشکردنی ڕووکاری MIUI چالاککراوە، باشکردنی ڕووکاری MIUI ناچالاک بکە ودووبارە هەوڵبدەرەوە.</string>
-    <string name="installation_storage">دامەزراندن سەرکەوتو نەبوو بەهۆی بوونی کێشە لە بیرگەدا.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">سەرکەوتو نەبوو لە دۆزینەوەی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە دامەزرێنەرەکەدا. داتای بەرنامەکە بسڕەوە لە ڕێکبەندیەکاندا و دووبارە هەوڵبدەرەوە.</string>
     <string name="path_missing">سەرکەوتو نەبوو لە دۆزینەوەی بەرنامەی بنەڕەتی YouTube لەشوێنی دابەزاندن لەپاش دامەزراندنی پێکهاتەکان.</string>
 </resources>

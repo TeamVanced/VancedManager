@@ -8,7 +8,7 @@
     <string name="select_apps">Виберіть Ваші Додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
-    <string name="title_guide">Guide</string>
+    <string name="title_guide">Посібник</string>
     <string name="title_logs">Логі</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
@@ -73,17 +73,17 @@
     <string name="guide">Гайд</string>
     <string name="hold_on">Зупинись!</string>
     <string name="magisk_vanced">Ви використовуєте Magisk/TWRP версію Vanced, яка припиняється і не може бути оновлена за допомогою цього застосунку. Будь ласка, видаліть його, видаливши модуль Magisk / з використання TWRP Vanced uninstaller.</string>
-    <string name="miui_one_title">Виявлено користувача MIUI!</string>
-    <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI у налаштуваннях розробника. (Ви можете ігнорувати це попередження якщо ви використовуєте 20.2.20 або новіші xiaomi.eu based ROM)</string>
+    <string name="miui_one_title">Оптимізацію MIUI увімкнено!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Помилка</string>
     <string name="redownload">Завантажити заново</string>
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vancedapp.com, Vanced Discord сервер або Vanced GitHub</string>
     <string name="app_installation_preferences">Параметри встановлення %1$s</string>
     <string name="version">Версія</string>
     <string name="microg_bug">Помилка в microG</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="microg_bug_summary">У зв\'язку з помилкою в microG, встановлення Vanced версії 16+ спочатку вимагає встановлення версії 15.43.32, потім необхідно відкрити додаток, авторизуватися в акаунті і тільки після цього можна буде встановити версію 16 і вище. Ви хочете продовжити встановлення версії 15.43.32?</string>
+    <string name="microg_bug_summary_music">У зв\'язку з помилкою в microG, встановлення Music версії 4.11+ спочатку вимагає встановлення версії 4.07.51, потім необхідно відкрити додаток, авторизуватися в акаунті і тільки після цього можна буде встановити версію 4.11 і вище. Ви хочете продовжити встановлення версії 4.07.51?</string>
+    <string name="please_be_patient">Будь ласка, НЕ виходите з додатку протягом цього процесу!</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">Встановлення не вдалося, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
     <string name="installation_conflict">Встановлення не вдалася, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
-    <string name="installation_failed">Інсталяція була провалена з невідомих причин. Приєднуйтесь до нашої групи в Telegram або Discord для подальшої підтримки.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
     <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
-    <string name="installation_storage">Операція не вдалася через помилку зберігання.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Не вдалося знайти apk-файл для чорної/темної теми в програмі встановлення. Видаліть дані додатка з Менеджера і спробуйте ще раз.</string>
     <string name="path_missing">Не вдалося знайти типовий шлях встановлення YouTube після роздільного встановлення.</string>
 </resources>

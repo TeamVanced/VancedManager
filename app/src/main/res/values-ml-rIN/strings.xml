@@ -73,8 +73,8 @@
     <string name="guide">മാർഗരേഖ</string>
     <string name="hold_on">നിർത്തുക!</string>
     <string name="magisk_vanced">നിങ്ങൾ വാൻ‌സെഡിന്റെ മാജിസ്ക് / ടി‌ഡബ്ല്യുആർ‌പി പതിപ്പ് ഉപയോഗിക്കുന്നു, അത് നിർത്തലാക്കുകയും ഈ അപ്ലിക്കേഷൻ ഉപയോഗിച്ച് അപ്‌ഡേറ്റ് ചെയ്യാൻ കഴിയില്ല. മാജിസ്ക് മൊഡ്യൂൾ നീക്കംചെയ്ത് / ടി‌ഡബ്ല്യുആർ‌പി വാൻ‌സ്ഡ് അൺ‌ഇൻ‌സ്റ്റാളർ ഉപയോഗിച്ച് ഇത് നീക്കംചെയ്യുക.</string>
-    <string name="miui_one_title">MIUI കണ്ടെത്തി!</string>
-    <string name="miui_one">വാൻ‌സ്ഡ് ഇൻ‌സ്റ്റാൾ‌ ചെയ്യുന്നതിന്, ഡവലപ്പർ‌ ക്രമീകരണങ്ങളിൽ‌ നിങ്ങൾ‌ MIUI ഒപ്റ്റിമൈസേഷനുകൾ‌ അപ്രാപ്‌തമാക്കണം. (നിങ്ങൾ 20.2.20 അല്ലെങ്കിൽ അതിനുശേഷമുള്ള xiaomi.eu അടിസ്ഥാനമാക്കിയുള്ള റോം ഉപയോഗിക്കുകയാണെങ്കിൽ നിങ്ങൾക്ക് ഈ മുന്നറിയിപ്പ് അവഗണിക്കാം)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">തെറ്റ്</string>
     <string name="redownload">വീണ്ടും ഡൗൺലോഡുചെയ്യുക</string>
     <string name="security_context">നിങ്ങൾ vancedapp.com, Vanced Discord സെർവർ, അല്ലെങ്കിൽ Vanced GitHub എന്നിവയിൽ നിന്ന് അപ്ലിക്കേഷൻ download ൺലോഡ് ചെയ്തുവെന്ന് ഉറപ്പാക്കുക</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">ഉപയോക്താവ് ഇൻസ്റ്റാളേഷൻ തടഞ്ഞതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
     <string name="installation_downgrade">ഉപയോക്താവ് പാക്കേജ് തരംതാഴ്ത്താൻ ശ്രമിച്ചതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. സ്റ്റോക്ക് അപ്ലിക്കേഷനിൽ നിന്ന് അപ്‌ഡേറ്റുകൾ അൺഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_conflict">ഇതിനകം ഇൻസ്റ്റാളുചെയ്‌ത അപ്ലിക്കേഷനുമായി അപ്ലിക്കേഷൻ പൊരുത്തപ്പെടുന്നതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. അപ്ലിക്കേഷന്റെ നിലവിലെ പതിപ്പ് അൺ‌ഇൻസ്റ്റാൾ ചെയ്യുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="installation_failed">അജ്ഞാതമായ കാരണങ്ങളാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു, കൂടുതൽ പിന്തുണയ്ക്കായി ഞങ്ങളുടെ ടെലിഗ്രാം അല്ലെങ്കിൽ ഡിസ്കോർഡിൽ ചേരുക.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">ഇൻസ്റ്റാളേഷൻ ഫയൽ നിങ്ങളുടെ ഉപകരണവുമായി പൊരുത്തപ്പെടാത്തതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. ക്രമീകരണങ്ങളിൽ ഡ download ൺലോഡ് ചെയ്ത ഫയലുകൾ മായ്‌ക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_invalid">Apk ഫയലുകൾ‌ കേടായതിനാൽ‌ ഇൻ‌സ്റ്റാളേഷൻ‌ പരാജയപ്പെട്ടു, ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_signature">Apk സിഗ്നേച്ചർ പരിശോധന പ്രാപ്തമാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. Apk സിഗ്നേച്ചർ പരിശോധന അപ്രാപ്തമാക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_miui">MIUI ഒപ്റ്റിമൈസേഷൻ പ്രാപ്തമാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. MIUI ഒപ്റ്റിമൈസേഷൻ അപ്രാപ്തമാക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
-    <string name="installation_storage">ഒരു സംഭരണ പിശക് കാരണം ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">ഇൻസ്റ്റാളറിൽ നിന്ന് കറുപ്പ് / ഇരുണ്ട തീമിനായി Apk ഫയൽ കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു. മാനേജറിന്റെ അപ്ലിക്കേഷൻ ഡാറ്റ മായ്‌ക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="path_missing">വിഭജന ഇൻസ്റ്റാളേഷന് ശേഷം സ്റ്റോക്ക് YouTube ഇൻസ്റ്റാളേഷൻ പാത്ത് കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു.</string>
 </resources>

@@ -19,7 +19,7 @@ object DialogContainer {
                 dialog.cancel()
             }
             setOnCancelListener {
-                if (isMiuiOptimizationsEnabled) {
+                if (context.isMiuiOptimizationsEnabled) {
                     applyAccentMiuiDialog(context)
                 }
             }

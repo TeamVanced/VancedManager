@@ -73,8 +73,8 @@
     <string name="guide">Guide</string>
     <string name="hold_on">Stopp!</string>
     <string name="magisk_vanced">Du bruker Magisk/TWRP-versjonen av Vansert, som seponeres og som ikke kan oppdateres ved hjelp av denne appen. Vennligst fjern den ved å fjerne Magisk modul/bruke TWRP Vanced uninstaller.</string>
-    <string name="miui_one_title">MIUI oppdaget!</string>
-    <string name="miui_one">For å installere Vananced, MÅ du deaktivere MIUI Optimaliseringer i utviklerinnstillingene. (Du kan ignorere denne advarselen hvis du bruker 20.2.20 eller senere xiaomi.eu basert ROM)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Feil</string>
     <string name="redownload">Last ned på nytt</string>
     <string name="security_context">Sørg for at du lastet ned appen fra vancedapp.com, Vanced Discord server, eller Vanced GitHub</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">Installasjonen mislyktes på grunn av at brukeren blokkerte installasjonen.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
-    <string name="installation_failed">Installasjonen mislyktes av ukjente årsaker, bli med i vår Telegram eller Discord gruppe for videre støtte.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Installasjonen mislyktes på grunn av at installasjonsfilen er inkompatibel med enheten. Fjern nedlastede filer i innstillinger og prøv på nytt.</string>
     <string name="installation_invalid">Installasjonen mislyktes fordi apk-filene er ødelagt, vennligst prøv på nytt.</string>
     <string name="installation_signature">Installasjon feilet fordi apk signaturverifikasjon er aktivert. Deaktiver apk signaturverifikasjon og prøv på nytt.</string>
     <string name="installation_miui">Installasjonen mislyktes fordi MIUI-optimalisering er aktivert. Deaktiver MIUI-optimalisering og prøv på nytt.</string>
-    <string name="installation_storage">Installasjonen mislyktes på grunn av lagringsfeil.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Finner ikke apk-filen for svart/mørkt tema fra installatøren. Fjern data fra denne appen og prøv på nytt.</string>
     <string name="path_missing">Klarte ikke å lokalisere YouTube installasjonsstien etter splittet installasjon.</string>
 </resources>

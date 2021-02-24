@@ -73,7 +73,7 @@
     <string name="guide">Juhend</string>
     <string name="hold_on">Peata!</string>
     <string name="magisk_vanced">Te kasutate Vanced Magisk/TWRP versiooni, mis on katkestatud, ning seda ei saa uuendada kasutades seda äppi. Palun eemaldage Magisk moodul kasutades TWRP Vanced eemaldajat.</string>
-    <string name="miui_one_title">MIUI on tuvastatud!</string>
+    <string name="miui_one_title">MIUI optimiseerimine on lubatud!</string>
     <string name="miui_one">Et paigaldada Vanced, PEAB keelama MIUI optimiseerimise arendaja valikute alt. (Võite seda igroneerida kui kasutate 20.2.20 või uuemat xiaomi.eu põhist ROMi)</string>
     <string name="error">Viga</string>
     <string name="redownload">Lae uuesti alla</string>
@@ -81,8 +81,8 @@
     <string name="app_installation_preferences">%1$s Paigalduseelistused</string>
     <string name="version">Versioon</string>
     <string name="microg_bug">microG viga</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Seoses originaal microG veaga, vajab Vanced v16+ paigaldus ennem v15.43.32 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v15.43.32 paigaldusega?</string>
+    <string name="microg_bug_summary_music">Seoses originaal microG veaga, vajab Music v4.11+ paigaldus ennem v4.07.51 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v4.11 või uuema. Kas soovite jätkata v4.07.51 paigaldusega?</string>
     <string name="please_be_patient">Palun ärge väljuge rakendusest protsessi ajal!</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
@@ -94,7 +94,7 @@
     <string name="vanced_dark">Tume</string>
     <!-- About Page -->
     <string name="manager_dev">Halduri arendajad</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Teised kaastöötajad</string>
     <string name="sources">Allikad</string>
     <string name="vanced_team">Vanced Meeskond</string>
     <!-- Error messages -->
@@ -108,12 +108,12 @@
     <string name="installation_blocked">Paigaldamine ebaõnnestus kuna kasutaja peatas selle.</string>
     <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused originaalrakendusest ja proovige uuesti.</string>
     <string name="installation_conflict">Paigaldamine ebaõnnestus, kuna tekkis konflikt olemasoleva versiooniga. Eemaldage praegune rakenduse versioon, ning proovige uuesti.</string>
-    <string name="installation_failed">Paigaldamine ebaõnnestus teadmata põhjustel, liituge meie Telegrami või Discordiga, et saada edaspidist tuge.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Paigaldamine ebaõnnestus, kuna paigaldusfail ei sobitu teie seadmega. Puhastage allalaaditud failid seadete alt, ning proovige uuesti.</string>
     <string name="installation_invalid">Paigaldamine ebaõnnestus kuna apk failid on vigased, palun proovige uuesti.</string>
     <string name="installation_signature">Paigaldamine ebaõnnestus kuna apk-allkirja kontrollimine on lubatud. Keelake apk allkirja kinnitamine ja proovige uuesti.</string>
     <string name="installation_miui">Paigaldamine ebaõnnestus, kuna MIUI optimiseerimine on lubatud. Keelake MIUI optimiseerimine ja proovige uuesti.</string>
-    <string name="installation_storage">Paigaldamine ebaõnnestus salvestusvea tõttu.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Apk faili musta/tumeda teema jaoks leidmine paigaldajast ebaõnnestus. Puhastage halduri rakenduse andmed ja proovige uuesti.</string>
     <string name="path_missing">Pärast jagatud paigaldamist ei õnnestunud leida originaal YouTube\'i paigaldus asukohta.</string>
 </resources>

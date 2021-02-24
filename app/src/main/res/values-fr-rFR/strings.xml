@@ -73,8 +73,8 @@
     <string name="guide">Guide</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Vous utilisez la version Magisk/TWRP de Vanced, qui n\'est plus entretenu et ne peut pas être mise à jour à l\'aide de cette application. Veuillez la retirer en supprimant le module Magisk/en utilisant le désinstallateur TWRP pour Vanced.</string>
-    <string name="miui_one_title">MIUI détecté!</string>
-    <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres développeur. (Vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure de xiaomi.eu)</string>
+    <string name="miui_one_title">Les optimisations MIUI sont activées&#160;!</string>
+    <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres développeur (vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure de xiaomi.eu).</string>
     <string name="error">Erreur</string>
     <string name="redownload">Re-télécharger</string>
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">L\'installation a échoué, car l\'utilisateur a bloqué l\'installation.</string>
     <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le paquet. Désinstallez les mises à jour de l\'application d\'origine, puis réessayez.</string>
     <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
-    <string name="installation_failed">L\'installation a échouée pour une raison inconnue, rejoignez notre Telegram ou Discord pour obtenir de l\'aide.</string>
+    <string name="installation_failed">L\'installation a échoué pour des raisons inconnues, rejoignez notre Telegram ou Discord pour plus de support. Veuillez également joindre une capture d\'écran dans le menu Avancé</string>
     <string name="installation_incompatible">L\'installation a échoué parce que le fichier d\'installation est incompatible avec votre appareil. Effacer les fichiers téléchargés dans les paramètres, puis réessayer.</string>
     <string name="installation_invalid">L\'installation a échouée car les fichiers apk sont corrompus, veuillez réessayer.</string>
     <string name="installation_signature">L\'installation a échoué car la vérification de la signature apk est activée. Désactivez la vérification de la signature apk, puis réessayez.</string>
     <string name="installation_miui">L\'installation a échouée car l\'optimisation MIUI est activée. Désactivez l\'optimisation MIUI, puis réessayez.</string>
-    <string name="installation_storage">L\'opération à échouée, une erreur de stockage s\'est produite.</string>
+    <string name="installation_storage">L\'installation a échoué parce que le périphérique n\'a pas assez d\'espace disponible.</string>
     <string name="modapk_missing">Impossible de trouver le fichier apk pour le thème noir/foncé de l\'installateur. Effacez les données de l\'application de Manager, puis réessayez.</string>
     <string name="path_missing">Impossible de localiser le chemin d\'installation du YouTube original après l\'installation fractionnée.</string>
 </resources>

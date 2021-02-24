@@ -8,7 +8,7 @@
     <string name="select_apps">अपने ऐप्स चुनें</string>
     <!-- Main Activity -->
     <string name="title_about">हमारे बारे में</string>
-    <string name="title_guide">Guide</string>
+    <string name="title_guide">निदेशिका</string>
     <string name="title_logs">Logs</string>
     <string name="title_home">मैनेजर</string>
     <string name="title_settings">सेटिंग्स</string>
@@ -73,8 +73,8 @@
     <string name="guide">गाइड</string>
     <string name="hold_on">रुकें!</string>
     <string name="magisk_vanced">आप Vanced के Magisk / TWRP संस्करण का उपयोग कर रहे हैं, जिसे बंद कर दिया गया है और इस ऐप का उपयोग करके अपडेट नहीं किया जा सकता है। कृपया इस Magisk मॉड्यूल को हटाकर / TWRP Vanced uninstaller का उपयोग करके हटा दें।</string>
-    <string name="miui_one_title">पता लगाया MiUI उपयोगकर्ता!</string>
-    <string name="miui_one">Vanced इनस्टॉल करने के लिए, आप डेवलपर सेटिंग में MIUI ऑप्टिमाइज़ेशन को निष्क्रिय करें। (यदि आप 20.2.20 या बाद में xiaomi.eu आधारित ROM का उपयोग कर रहे हैं तो आप इस चेतावनी को अनदेखा कर सकते हैं)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">त्रुटि</string>
     <string name="redownload">फिर से डाउनलोड करें</string>
     <string name="security_context">सुनिश्चित करें कि आपने vancedapp.com, Vanced Discord सर्वर, या Vanced GitHub से ऐप डाउनलोड किया है</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">स्थापना विफल रही क्योंकि उपयोगकर्ता ने स्थापना को ब्लॉक कर दिया।</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">इंस्टॉलेशन विफल रहा क्योंकि ऐप पहले से इंस्टॉल किए गए ऐप के साथ टकराव करता है। एप्लिकेशन के वर्तमान संस्करण को अनइंस्टॉल करें, फिर प्रयास करें।</string>
-    <string name="installation_failed">अज्ञात कारणों से स्थापना विफल हो गई, आगे के समर्थन के लिए हमारे टेलीग्राम या डिसॉर्ड में शामिल हों।</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">इंस्टॉलेशन विफल हो गया क्योंकि इंस्टॉलेशन फ़ाइल आपके डिवाइस के साथ असंगत है। सेटिंग्स में डाउनलोड की गई फ़ाइलों को साफ़ करें, फिर प्रयास करें।</string>
     <string name="installation_invalid">स्थापना विफल रही क्योंकि एपीके फ़ाइलें दूषित हैं, कृपया पुनः प्रयास करें।</string>
     <string name="installation_signature">स्थापना विफल रही क्योंकि एपीके हस्ताक्षर सत्यापन सक्षम है। एपीके हस्ताक्षर सत्यापन अक्षम करें, फिर प्रयास करें।</string>
     <string name="installation_miui">MIUI ऑप्टिमाइज़ेशन सक्षम होने के कारण स्थापना विफल रही। MIUI ऑप्टिमाइज़ेशन अक्षम करें, फिर प्रयास करें।</string>
-    <string name="installation_storage">संग्रहण त्रुटि के कारण स्थापना विफल रही।</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">इंस्टॉलर से ब्लैक / डार्क थीम के लिए एपीके फ़ाइल खोजने में विफल। प्रबंधक का एप्लिकेशन डेटा साफ़ करें, फिर प्रयास करें।</string>
     <string name="path_missing">विभाजन स्थापना के बाद स्टॉक YouTube इंस्टॉलेशन पथ का पता लगाने में विफल</string>
 </resources>
