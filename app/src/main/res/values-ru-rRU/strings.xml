@@ -113,7 +113,7 @@
     <string name="installation_invalid">Установка не удалась, так как установочные файлы повреждены, попробуйте еще раз.</string>
     <string name="installation_signature">Установка не удалась, так как включена проверка подписи apk. Отключите проверку подписи apk, а затем повторите попытку.</string>
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">Ошибка установки, так как на устройстве недостаточно свободного места.</string>
     <string name="modapk_missing">Не удалось найти apk-файл для черной/темной темы в программе установки. Удалите данные приложения из Менеджера и повторите попытку.</string>
     <string name="path_missing">Не удалось найти стандартный путь установки YouTube после раздельной установки.</string>
 </resources>
