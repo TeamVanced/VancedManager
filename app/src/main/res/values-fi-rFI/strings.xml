@@ -73,16 +73,16 @@
     <string name="guide">Opas</string>
     <string name="hold_on">Pysähdy!</string>
     <string name="magisk_vanced">Käytät Magisk / TWRP versio Vanced, joka on lopetettu ja ei voi päivittää käyttämällä tätä sovellusta. Poista se poistamalla Magisk moduuli / käyttämällä TWRP Vanced asennuksen.</string>
-    <string name="miui_one_title">MIUI tunnistettu!</string>
-    <string name="miui_one">Jos haluat asentaa Vanced, sinun täytyy poistaa MIUI-optimoinnit käytöstä kehittäjän asetuksista. (Voit ohittaa tämän varoituksen, jos käytät 20.2.20 tai myöhemmin xiaomi.eu-pohjaista ROM:ia)</string>
+    <string name="miui_one_title">MIUI-optimoinnit ovat käytössä!</string>
+    <string name="miui_one">Vancedin asentamiseksi, sinun täytyy poistaa MIUI-optimoinnit käytöstä kehittäjän asetuksista. (Voit ohittaa tämän varoituksen, jos käytät 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM:ia)</string>
     <string name="error">Virhe</string>
     <string name="redownload">Uudelleenlataa</string>
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s asennusasetukset</string>
     <string name="version">Versio</string>
     <string name="microg_bug">Virhe microG:ssä</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Alkuperäisessä microG:ssä olevan bugin takia sinun tulee asentaa Vancedin versio 15.43.32, avata se ja kirjautua sisään, ennen kuin voin asentaa version 16 tai uudemman. Haluatko jatkaa version 15.43.32 asentamista?</string>
+    <string name="microg_bug_summary_music">Alkuperäisessä microG:ssä olevan bugin takia sinun tulee asentaa Musicin versio 4.07.51, avata se ja kirjautua sisään, ennen kuin voin asentaa version 4.11 tai uudemman. Haluatko jatkaa version 4.07.51 asentamista?</string>
     <string name="please_be_patient">ÄLÄ poistu sovelluksesta tämän prosessin aikana!</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
@@ -94,7 +94,7 @@
     <string name="vanced_dark">Tumma</string>
     <!-- About Page -->
     <string name="manager_dev">Managerin kehittäjät</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Muut avustajat</string>
     <string name="sources">Lähdekoodi</string>
     <string name="vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
@@ -106,14 +106,14 @@
     <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
-    <string name="installation_failed">Asennus epäonnistui tuntemattomista syistä, liity Telegramiin tai Discordiin saadaksesi lisätukea.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
     <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
-    <string name="installation_storage">Asennus epäonnistui tallennustilan virheen vuoksi.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">APK-tiedostoa mustalle/tummalle teemalle ei löytynyt asentajalta. Tyhjennä Managerin sovellustiedot ja yritä uudelleen.</string>
     <string name="path_missing">Youtube-sovelluksen asennuspolkua ei voitu paikantaa jaetun asennuksen jälkeen.</string>
 </resources>

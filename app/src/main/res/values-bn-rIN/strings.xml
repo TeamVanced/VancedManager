@@ -73,8 +73,8 @@
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামুন!</string>
     <string name="magisk_vanced">আপনি ভ্যান্সড ম্যাজিস্ক/TWRP সংস্করণ ব্যবহার করছেন যা বন্ধ হয়ে গেছে এবং আপনি এটিকে আপডেট করতে পারবেন না। দয়া করে ম্যাজিস্ক মডিউলটি সরিয়ে/TWRP ভ্যান্সড আনইনস্টলার ব্যবহার করে এটি মুছে ফেলুন।</string>
-    <string name="miui_one_title">মিআইইউআই শনাক্তকৃত!</string>
-    <string name="miui_one">ভ্যান্সড ইনস্টল করার জন্য, আপনাকে সেটিংসে ডেভেলপারের বিকল্পে গিয়ে MIUI অপটিমাইজেশন নিস্ক্রিয় করতে হবে। (আপনি যদি ২০.২.২০ বা তার পরে xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কতাটিকে এড়িয়ে যেতে পারেন)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">ত্রুটি</string>
     <string name="redownload">পুনরায় ডাউনলোড করুন</string>
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vancedapp.com, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
@@ -108,12 +108,12 @@
     <string name="installation_blocked">ইনস্টল করা যায়নি কারণ ব্যবহারকারী ইনস্টল করা অবরুদ্ধ করেছেন।</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">ইনস্টলেশন ব্যর্থ হয়েছে কারণ অ্যাপ্লিকেশনটি ইতিমধ্যে ইনস্টল হওয়া অ্যাপ্লিকেশানের সাথে দ্বন্দ্ব রয়েছে ts অ্যাপ্লিকেশনটির বর্তমান সংস্করণটি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।.</string>
-    <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন।</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের উপযুক্ত নয়। সেটিংসে ডাউনলোড করা ফাইল মুছে ফেলুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_invalid">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এপিকে ফাইলগুলি দূষিত, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="installation_signature">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এপিকে স্বাক্ষর যাচাইকরণ সক্ষম করা আছে। এপিকে স্বাক্ষর যাচাইকরণ অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_miui">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এমআইইউআই অপটিমাইজেশন সক্ষম আছে। এমআইইউআই অপ্টিমাইজেশন অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
-    <string name="installation_storage">স্টোরেজ ত্রুটির কারণে ইনস্টলেশন ব্যর্থ হয়েছে।</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">ইনস্টলার থেকে কালো/গাঢ় থিমের জন্য সফটওয়্যারের ফাইল খুঁজতে ব্যর্থ। ম্যানেজারের ডেটা সাফ করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="path_missing">স্পিল্ট ফাইলগুলি ইনস্টল করার পরে স্টক ইউটিউবের ইনস্টলেশন পাথ সনাক্ত করতে ব্যর্থ।</string>
 </resources>

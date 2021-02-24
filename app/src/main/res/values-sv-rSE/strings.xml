@@ -73,7 +73,7 @@
     <string name="guide">Guide</string>
     <string name="hold_on">Stopp!</string>
     <string name="magisk_vanced">Ser ut som om du använder Magisk versionen av Vanced, som är avbruten och inte kan uppdateras med den här appen. Ta bort den först genom att ta bort magisk modulen.</string>
-    <string name="miui_one_title">MIUI upptäckt!</string>
+    <string name="miui_one_title">MIUI Optimeringar är aktiverade!</string>
     <string name="miui_one">För att installera Vanced, måste du inaktivera MIUI Optimisations i utvecklarinställningarna. (Du kan ignorera denna varning om du använder 20.2.20 eller senare xiaomi.eu-baserad ROM)</string>
     <string name="error">Fel</string>
     <string name="redownload">Ladda ner igen</string>
@@ -94,7 +94,7 @@
     <string name="vanced_dark">Mörk</string>
     <!-- About Page -->
     <string name="manager_dev">Hanteraren Dev</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Andra bidragsgivare</string>
     <string name="sources">Källor</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->
@@ -108,12 +108,12 @@
     <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_downgrade">Installationen misslyckades eftersom användaren försökte nedgradera paketet. Avinstallera uppdateringar från lagerappen YouTube, försök sedan igen.</string>
     <string name="installation_conflict">Installationen misslyckades eftersom appen står i konflikt med en redan installerad app. Avinstallera den aktuella versionen av Vanced, försök sedan igen.</string>
-    <string name="installation_failed">Operation misslyckades av okänd anledning, vänligen gå med i vårt Telegram eller Discord för support.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Installationen misslyckades eftersom installationsfilen är inkompatibel med din enhet. Rensa nedladdade filer i Inställningarna och försök igen.</string>
     <string name="installation_invalid">Installationen misslyckades eftersom apk-filerna är skadade, försök igen.</string>
     <string name="installation_signature">Installationen misslyckades eftersom apk signaturverifiering är aktiverad. Inaktivera apk signaturverifiering och försök igen.</string>
     <string name="installation_miui">Installationen misslyckades eftersom MIUI-optimering är aktiverad. Inaktivera MIUI-optimering och försök igen.</string>
-    <string name="installation_storage">Åtgärden misslyckades på grund av ett lagringsfel.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Det gick inte att hitta apk-fil för svart/mörkt tema från installationsprogrammet. Rensa appdata från Manager och försök igen.</string>
     <string name="path_missing">Det gick inte att hitta sökvägen för lagerinstallationen på YouTube efter delad installation.</string>
 </resources>

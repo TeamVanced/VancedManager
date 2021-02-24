@@ -3,8 +3,8 @@
     <!-- Global Strings -->
     <string name="cancel">取消</string>
     <string name="close">关闭</string>
-    <string name="reset">重设</string>
-    <string name="save">储存</string>
+    <string name="reset">重置</string>
+    <string name="save">保存</string>
     <string name="select_apps">选择您的应用</string>
     <!-- Main Activity -->
     <string name="title_about">关于</string>
@@ -18,7 +18,7 @@
     <string name="grant_root">授予 Root 权限</string>
     <string name="select_at_least_one_app">选择至少一个应用！</string>
     <string name="select_apps_music">Vanced ，不过是 YouTube 音乐！\n功能相对较少，但足以满足您的需求。</string>
-    <string name="select_apps_vanced">YouTube Vanced 是增强版的原生 YouTube ！</string>
+    <string name="select_apps_vanced">YouTube Vanced 是官方 YouTube 应用的增强版！</string>
     <string name="lets_get_started">让我们开始吧</string>
     <string name="willing_to_use_root">不知道这是什么或不想使用 Root 版本？只需点击下面的蓝色箭头！</string>
     <!-- Home Page -->
@@ -73,8 +73,8 @@
     <string name="guide">说明</string>
     <string name="hold_on">警告！</string>
     <string name="magisk_vanced">您正在使用 Magisk/TWRP 版的 Vanced，它已被停止支持且无法通过此应用更新。请通过移除 Magisk 模块 / 使用 TWRP Vanced 卸载器来移除它。</string>
-    <string name="miui_one_title">检测到 MIUI！</string>
-    <string name="miui_one">为了能够正确安装 Vanced ，您必须在开发者设置中禁用 MIUI 优化。 (如果您正在使用基于 xiomi.eu 20.2.20或更新的 ROM，您可以忽略此警告)</string>
+    <string name="miui_one_title">MIUI 优化已启用！</string>
+    <string name="miui_one">为了能够安装 Vanced，您必须在开发者设置中禁用 MIUI 优化。（如果您正在使用基于 xiaomi.eu 20.2.20 或更新的 ROM，您可以忽略此警告）</string>
     <string name="error">错误</string>
     <string name="redownload">重新下载</string>
     <string name="security_context">请确保您是从 vancedapp.com 、 Vanced Discord 服务器或 Vanced Github 下载本应用</string>
@@ -94,7 +94,7 @@
     <string name="vanced_dark">深色</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 开发人员</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">其它贡献者：</string>
     <string name="sources">源码</string>
     <string name="vanced_team">Vanced 团队</string>
     <!-- Error messages -->
@@ -108,12 +108,12 @@
     <string name="installation_blocked">用户封锁安装导致安装失败。</string>
     <string name="installation_downgrade">用户试图降级应用导致安装失败。卸载官方应用的更新，然后重试。</string>
     <string name="installation_conflict">应用与已安装的应用发生冲突导致安装失败。卸载当前的版本，然后重试。</string>
-    <string name="installation_failed">未知原因导致安装失败，加入我们的 Telegram 或 Discord 寻求更多支援。</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">安装文件与您的设备不相容导致安装失败。请在设置中清除已下载的文件，然后重试。</string>
     <string name="installation_invalid">apk 文件已被损坏导致安装失败，请重试。</string>
     <string name="installation_signature">apk 签名验证已被启用导致安装失败。禁用apk 签名验证，然后重试。</string>
     <string name="installation_miui">MIUI 优化已被启用导致安装失败。禁用 MIUI 优化，然后重试。</string>
-    <string name="installation_storage">存储错误导致安装失败。</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">无法从安装程式中找到黑色/深色主题的 apk 文件。清除 Manager 的应用数据，然后重试。</string>
     <string name="path_missing">分包安装后无法定位原生 YouTube 的安装路径。</string>
 </resources>
