@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Annuler</string>
     <string name="close">Fermer</string>
+    <string name="description_vanced">Un client YouTube modifié avec de nombreuses fonctionnalités utiles&#160;!</string>
+    <string name="description_vanced_music">Vanced, mais pour YouTube Music&#160;! Relativement moins riche en fonctionnalités mais répond à vos besoins.</string>
+    <string name="description_microg">Une implémentation GMS personnalisée pour Vanced basée sur le projet microG.</string>
     <string name="reset">Réinitialiser</string>
     <string name="save">Sauvegarder</string>
     <string name="select_apps">Sélectionnez vos applications</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Votre appareil est-il rooté ?</string>
     <string name="grant_root">Accorder l’accès root</string>
     <string name="select_at_least_one_app">Sélectionnez au moins une application !</string>
-    <string name="select_apps_music">Vanced, mais pour YouTube Music!\nrelativement moins riche en fonctionnalités mais répond à vos besoins.</string>
-    <string name="select_apps_vanced">YouTube Vanced est l\'application YouTube Android par défaut, mais en mieux !</string>
     <string name="lets_get_started">Commençons</string>
     <string name="willing_to_use_root">Vous ne savez pas ce que c\'est ou vous ne voulez pas utiliser la version « root » ? Cliquez simplement sur la flèche bleue ci-dessous !</string>
     <!-- Home Page -->
     <string name="about_app">À propos de %1$s</string>
-    <string name="app_changelog_tooltip">Appuyez sur la carte pour voir le changelog.</string>
+    <string name="apps">Applications</string>
     <string name="changelog">Changelog</string>
     <string name="downloading_file">Téléchargement de %1$s</string>
     <string name="install">Installer</string>
-    <string name="button_reinstall">Réinstaller</string>
     <string name="version_installed">Version installée:</string>
     <string name="latest">Dernière version:</string>
     <string name="no_microg">microG n\'est pas installé</string>
     <string name="root_not_granted">Accès root non autorisé</string>
     <string name="unavailable">Indisponible</string>
-    <string name="update">Mettre à jour</string>
     <string name="social_media">Réseaux sociaux</string>
     <string name="support_us">Soutenez-nous</string>
     <!-- Settings -->
