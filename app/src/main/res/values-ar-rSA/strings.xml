@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">إلغاء</string>
     <string name="close">إغلاق</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">إعادة تعيين</string>
     <string name="save">حفظ</string>
     <string name="select_apps">اختر تطبيقاتك</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">هل جهازك مروت؟</string>
     <string name="grant_root">امنح صلاحيات الروت</string>
     <string name="select_at_least_one_app">حدد تطبيق واحد على الأقل!</string>
-    <string name="select_apps_music">ڤانسد، ولكن لموسيقى يوتيوب! \n نسبياً فيه مميزات أقل ولكن يلبي احتياجاتك.</string>
-    <string name="select_apps_vanced">يوتيوب ڤانسد هو يوتيوب الأندرويد العادي، ولكن أفضل!</string>
     <string name="lets_get_started">فلنبدأ</string>
     <string name="willing_to_use_root">لا تعرف ما هذا أو لا تود استخدام نسخة الروت؟ اضغط على السهم الأزرق في الأسفل!</string>
     <!-- Home Page -->
     <string name="about_app">حوالي %1$s</string>
-    <string name="app_changelog_tooltip">أضغط على إحدى البطاقات لعرض سجل التغييرات.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">سجل التغييرات</string>
     <string name="downloading_file">جارٍ تنزيل %1$s</string>
     <string name="install">تثبيت</string>
-    <string name="button_reinstall">إعادة التثبيت</string>
     <string name="version_installed">مثبت:</string>
     <string name="latest">الأحدث:</string>
     <string name="no_microg">لم يتم تثبيت microG</string>
     <string name="root_not_granted">لم يتم منح صلاحيات الروت</string>
     <string name="unavailable">غير متاح</string>
-    <string name="update">تحديث</string>
     <string name="social_media">وسائل التواصل الإجتماعي</string>
     <string name="support_us">ادعمنا</string>
     <!-- Settings -->
