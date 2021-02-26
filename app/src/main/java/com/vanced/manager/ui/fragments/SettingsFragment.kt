@@ -7,6 +7,7 @@ import android.view.MenuInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.fragment.app.FragmentActivity
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -34,6 +35,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
 
     private lateinit var variant: String
+    private lateinit var parentActivity: FragmentActivity
 
     override fun binding(
         inflater: LayoutInflater,
@@ -43,6 +45,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     override fun otherSetups() {
         setHasOptionsMenu(true)
+        parentActivity = requireActivity()
         bindData()
     }
 
@@ -63,8 +66,8 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     private fun FragmentSettingsBinding.bindRecycler() {
         notificationsRecycler.apply {
-            layoutManager = LinearLayoutManager(requireActivity())
-            adapter = GetNotifAdapter(requireActivity())
+            layoutManager = LinearLayoutManager(parentActivity)
+            adapter = GetNotifAdapter(parentActivity)
         }
     }
 
@@ -72,7 +75,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
         firebase.setOnCheckedListener { _, isChecked ->
             FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(isChecked)
             FirebasePerformance.getInstance().isPerformanceCollectionEnabled = isChecked
-            FirebaseAnalytics.getInstance(requireActivity()).setAnalyticsCollectionEnabled(isChecked)
+            FirebaseAnalytics.getInstance(parentActivity).setAnalyticsCollectionEnabled(isChecked)
         }
     }
 
@@ -128,7 +131,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindManagerLanguage() {
         val langPref = prefs.getString("manager_lang", "System Default")
         managerLanguage.apply {
-            setSummary(getLanguageFormat(requireActivity(), requireNotNull(langPref)))
+            setSummary(getLanguageFormat(parentActivity, requireNotNull(langPref)))
             setOnClickListener { showDialog(ManagerLanguageDialog()) }
         }
 
