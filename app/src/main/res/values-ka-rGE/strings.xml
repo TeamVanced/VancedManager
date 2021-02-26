@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">გაუქმება</string>
     <string name="close">დახურვა</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">განულება</string>
     <string name="save">შენახვა</string>
     <string name="select_apps">აირჩიეთ თქვენი აპები</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">არის თქვენი მოწყობილობა დარუთული?</string>
     <string name="grant_root">მიეცით root წვდომა</string>
     <string name="select_at_least_one_app">ერთი აპი მაინც მონიშნეთ!</string>
-    <string name="select_apps_music">Vanced-ი, მაგრამ YouTube Music-ისთვის!\nშესაბამისად ნაკლებად ფუნქციონალური მაგრამ აბსოლიტურად დაგაკმაყოფილებთ.</string>
-    <string name="select_apps_vanced">YouTube Vanced-ი არის ჩვეულებრივი YouTube-ის აპი, მაგრამ კიდევ უფრო უკეთესი!</string>
     <string name="lets_get_started">დავიწყოთ</string>
     <string name="willing_to_use_root">არ იცით ეს რა არის ან არ გინდათ root ვერსიით სარგებობა? უბრალოდ დააჭირეთ ქვემოთ მოცემულ ლურჯ ისარს!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-ის შესახებ</string>
-    <string name="app_changelog_tooltip">დააჭირეთ ბარათს ცვლილებების სანახავად.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">ცვლილებები</string>
     <string name="downloading_file">მიმდინარეობს %1$s-ის გადმოწერა</string>
     <string name="install">ინსტალაცია</string>
-    <string name="button_reinstall">რეინსტალაცია</string>
     <string name="version_installed">დაინსტალირებული:</string>
     <string name="latest">უახლესი:</string>
     <string name="no_microg">microG არ არის დაინსტალირებული</string>
     <string name="root_not_granted">Root წვდომა არ არის მინიჭებული</string>
     <string name="unavailable">ხელმიუწვდომელია</string>
-    <string name="update">განახლება</string>
     <string name="social_media">სოციალური მედია</string>
     <string name="support_us">დაგვიჭირეთ მხარი</string>
     <!-- Settings -->
