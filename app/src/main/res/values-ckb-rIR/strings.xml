@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">هەڵوەشاندنەوە</string>
     <string name="close">داخستن</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">ڕێکخستنەوە</string>
     <string name="save">پاراستن</string>
     <string name="select_apps">بەرنامەکانت دیاریبکە</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">مۆبایلەکەت ڕۆت کراوە؟</string>
     <string name="grant_root">ڕێگەپێدانی ڕۆت Root</string>
     <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
-    <string name="select_apps_music">Vanced، بەڵام بۆ یوتوب میوزیک!\nتایبەتمەندی کەمتر بەڵام پڕتر لە پێویستیەکانت.</string>
-    <string name="select_apps_vanced">YouTube Vanced هەمان بەرنامەی یوتوبە بەڵام بەشێوەکی باشتر!</string>
     <string name="lets_get_started">دەست پێکردن</string>
     <string name="willing_to_use_root">ئەگەر نازانیت ئەمە چییە یان ناتەوێ بەشێوەی ڕۆت بەکاری بهێنیت، پەنجە بنێ بە دوگمە شینەکەدا!</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
-    <string name="app_changelog_tooltip">پەنجەی پێدابنێ بۆ بینینی گۆڕانکارییەکان.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">گۆڕانکارییەکان</string>
     <string name="downloading_file">داگرتنی %1$s</string>
     <string name="install">دامەزراندن</string>
-    <string name="button_reinstall">دامەزراندنەوە</string>
     <string name="version_installed">دامەزرێنراو:</string>
     <string name="latest">دوایین:</string>
     <string name="no_microg">دانەبەزێنراوە microG</string>
     <string name="root_not_granted">ڕێگەپێدانی Root نەدراوە</string>
     <string name="unavailable">بەردەست نیە</string>
-    <string name="update">نوێکردنەوە</string>
     <string name="social_media">تۆڕە کۆمەڵایەتییەکان</string>
     <string name="support_us">پشتگیریکردن</string>
     <!-- Settings -->
