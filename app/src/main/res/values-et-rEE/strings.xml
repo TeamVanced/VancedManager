@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Katkesta</string>
     <string name="close">Sulge</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Lähtesta</string>
     <string name="save">Salvesta</string>
     <string name="select_apps">Valige Oma Rakendused</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Kas teie seade on juuritud?</string>
     <string name="grant_root">Anna juurluba</string>
     <string name="select_at_least_one_app">Vali vähemalt üks rakendus!</string>
-    <string name="select_apps_music">Vanced, kuid YouTube Musicu jaoks! \nsuhteliselt vähem funktsioonirikas, kuid vastab teie vajadustele.</string>
-    <string name="select_apps_vanced">YouTube Vanced on tavaline Androidi YouTube äpp, aga parem!</string>
     <string name="lets_get_started">Alustame</string>
     <string name="willing_to_use_root">Kas te ei tea mis see on, või ei soovi kasutada rooditud versiooni? vajutage allpool sinist noolt!</string>
     <!-- Home Page -->
     <string name="about_app">Umbes %1$s</string>
-    <string name="app_changelog_tooltip">Vajuta kaardile, et näha muudatusi.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Muudatuste logi</string>
     <string name="downloading_file">Allalaadimine %1$s</string>
     <string name="install">Installi</string>
-    <string name="button_reinstall">Installi uuesti</string>
     <string name="version_installed">Installitud:</string>
     <string name="latest">Uusim:</string>
     <string name="no_microg">microG pole installitud</string>
     <string name="root_not_granted">Administraatoriõigusi ei tagatud</string>
     <string name="unavailable">Pole saadaval</string>
-    <string name="update">Uuenda</string>
     <string name="social_media">Sotsiaalmeedia</string>
     <string name="support_us">Toetage meid</string>
     <!-- Settings -->
