@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Anulaţi</string>
     <string name="close">Închide</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Resetează</string>
     <string name="save">Salvează</string>
     <string name="select_apps">Selectați aplicațiile</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Dispozitivul tău este rootat?</string>
     <string name="grant_root">Acordați permisiunea Root</string>
     <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
-    <string name="select_apps_music">Vanced pentru YouTube Music!\noferă mai puține funcții, dar are tot ce trebuie.</string>
-    <string name="select_apps_vanced">YouTube Vanced este aplicația YouTube stoc, dar mai bună!</string>
     <string name="lets_get_started">Să începem</string>
     <string name="willing_to_use_root">Nu știți ce este sau nu vreți să folosiți versiunea root? Apăsați săgeata albastră de mai jos!</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
-    <string name="app_changelog_tooltip">Atinge cardul pentru a vedea schimbările.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Schimbări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
-    <string name="button_reinstall">Reinstalare</string>
     <string name="version_installed">Instalat:</string>
     <string name="latest">Ultima:</string>
     <string name="no_microg">microG nu este instalat</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
-    <string name="update">Actualizare</string>
     <string name="social_media">Rețele sociale</string>
     <string name="support_us">Ajutați-ne</string>
     <!-- Settings -->
