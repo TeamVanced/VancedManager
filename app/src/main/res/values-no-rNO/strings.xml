@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Avbryt</string>
     <string name="close">Lukk</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Tilbakestill</string>
     <string name="save">Lagre</string>
     <string name="select_apps">Velg dine apper</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Er enheten tilkoblet?</string>
     <string name="grant_root">Gi root-tillatelse</string>
     <string name="select_at_least_one_app">Velg minst en app!</string>
-    <string name="select_apps_music">Benyttet for YouTube-Musikk!\nrelativt mindre funksjonsrik men dekker dine behov.</string>
-    <string name="select_apps_vanced">YouTube Vanced er standard Android YouTube App, men bedre!</string>
     <string name="lets_get_started">La oss komme i gang</string>
     <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
-    <string name="app_changelog_tooltip">Trykk på kortet for å se endringsloggen.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Endringslogg</string>
     <string name="downloading_file">Laster ned %1$s</string>
     <string name="install">Installer</string>
-    <string name="button_reinstall">Reinstaller</string>
     <string name="version_installed">Installert:</string>
     <string name="latest">Siste:</string>
     <string name="no_microg">microG er ikke installert</string>
     <string name="root_not_granted">Root-tilgang ikke godkjent</string>
     <string name="unavailable">Utilgjengelig</string>
-    <string name="update">Oppdater</string>
     <string name="social_media">Social Media</string>
     <string name="support_us">Support us</string>
     <!-- Settings -->
