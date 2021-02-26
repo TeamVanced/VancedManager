@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">අවලංගු කරන්න</string>
     <string name="close">වසන්න</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">ප්‍රතිස්ථාපනය කරන්න</string>
     <string name="save">සුරකින්න</string>
     <string name="select_apps">ඔබගේ යෙදුම් තෝරන්න</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Is Your Device Rooted?</string>
     <string name="grant_root">Grant Root Permission</string>
     <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
     <string name="lets_get_started">Let\'s get started</string>
     <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Changelog</string>
     <string name="downloading_file">Downloading %1$s</string>
     <string name="install">ස්ථාපනය</string>
-    <string name="button_reinstall">නැවත ස්ථාපනය කරන්න</string>
     <string name="version_installed">ස්ථාපනය:</string>
     <string name="latest">අලුත්</string>
     <string name="no_microg">මයික්‍රො ජී ස්ථාපනය කර නැත</string>
     <string name="root_not_granted">මූල ප්‍රවේශය ලබා දී නොමැත</string>
     <string name="unavailable">නොමැත</string>
-    <string name="update">යාවත්කාලීන කරන්න</string>
     <string name="social_media">Social Media</string>
     <string name="support_us">Support us</string>
     <!-- Settings -->
