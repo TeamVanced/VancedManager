@@ -70,7 +70,7 @@
     <string name="guide">คู่มือ</string>
     <string name="hold_on">หยุด!</string>
     <string name="magisk_vanced">คุณกำลังใช้ Vanced เวอร์ชัน Magisk / TWRP ซึ่งถูกยกเลิกและไม่สามารถอัปเดตได้จากแอปนี้ กรุณาลบออกโดยการถอดโมดูล Magisk / ใช้โปรแกรมถอนการติดตั้ง TWRP Vanced</string>
-    <string name="miui_one_title">ตรวจพบ MIUI!</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="miui_one">ในการติดตั้ง Vanced คุณต้องปิดใช้งาน MIUI Optimisations ในการตั้งค่าสำหรับนักพัฒนา (คุณสามารถเพิกเฉยต่อคำเตือนนี้ได้หากคุณใช้ ROM ที่ใช้ xiaomi.eu 20.2.20 ขึ้นไป)</string>
     <string name="error">ผิดพลาด</string>
     <string name="redownload">ดาวน์โหลดอีกครั้ง</string>
@@ -105,12 +105,12 @@
     <string name="installation_blocked">การติดตั้งล้มเหลวเนื่องจากผู้ใช้บล็อกการติดตั้ง</string>
     <string name="installation_downgrade">การติดตั้งล้มเหลวเนื่องจากผู้ใช้พยายามดาวน์เกรดแพ็กเกจ ถอนการติดตั้งการอัปเดตจากแอปเดิมก่อน แล้วลองอีกครั้ง</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
-    <string name="installation_failed">การติดตั้งล้มเหลวโดยไม่ทราบสาเหตุ ลองเข้าร่วม Telegram หรือ Discord ของเรา เพื่อรับการสนับสนุนเพิ่มเติม</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">การติดตั้งล้มเหลวเนื่องจากไฟล์การติดตั้งเข้ากันไม่ได้กับอุปกรณ์ของคุณ กรุณาล้างไฟล์ที่ดาวน์โหลดในการตั้งค่า แล้วลองอีกครั้ง</string>
     <string name="installation_invalid">การติดตั้งล้มเหลวเนื่องจากไฟล์ apk เสียหายโปรดลองอีกครั้ง</string>
     <string name="installation_signature">การติดตั้งล้มเหลวเนื่องจากเปิดใช้งานการตรวจสอบลายเซ็น apk กรุณาปิดใช้งานการตรวจสอบลายเซ็น apk แล้วลองอีกครั้ง</string>
     <string name="installation_miui">การติดตั้งล้มเหลวเนื่องจากเปิดใช้งาน MIUI Optimization โปรดปิดการใช้งาน MIUI Optimization แล้วลองอีกครั้ง</string>
-    <string name="installation_storage">การติดตั้งล้มเหลวเนื่องจากข้อผิดพลาดในการจัดเก็บ</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">ไม่พบไฟล์ apk สำหรับธีมสีดำ / สีเข้มจากโปรแกรมติดตั้ง กรุณาล้างข้อมูลแอปVanced-Manager แล้วลองอีกครั้ง</string>
     <string name="path_missing">ไม่พบเส้นทางการติดตั้งสต็อกของ YouTube หลังจากการติดตั้งแบบแยก</string>
 </resources>

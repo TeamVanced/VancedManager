@@ -57,8 +57,8 @@
     <string name="update_not_found">Nema novih ažuriranja</string>
     <string name="variant">Izdanje</string>
     <!-- Logs -->
-    <string name="logs_saved">Uspješno spremljeni dnevnici</string>
-    <string name="logs_not_saved">Nije moguće spremiti zapise</string>
+    <string name="logs_saved">Uspješno spremljeni zapisi</string>
+    <string name="logs_not_saved">Nemoguće spremanje zapisa</string>
     <!-- Dialogs -->
     <string name="advanced">Napredno</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
@@ -70,17 +70,17 @@
     <string name="guide">Vodič</string>
     <string name="hold_on">Zaustavi!</string>
     <string name="magisk_vanced">Koristite Magisk/TWRP inačicu Vanceda, koja više nije podržana i ne može se ažurirati ovom aplikacijom. Uklonite ju uklanjanjem Magisk modula/koristeći TWRP Vanced deinstalator.</string>
-    <string name="miui_one_title">MIUI je otkriven!</string>
-    <string name="miui_one">Kako bi instalirali Vanced, MORATE isključiti MIUI optimizaciju u razvijateljskim postavkama. (Možete zanemariti ovo upozorenje ako koristite 20.2.20 ili noviji xiaomi.eu temeljeni ROM)</string>
+    <string name="miui_one_title">MIUI optimizacija je omogućena!</string>
+    <string name="miui_one">Kako bi instalirali Vanced, MORATE onemogućiti MIUI optimizaciju u razvojnim mogućnostima. (Ovo upozorenje možete zanemariti ako koristite 20.2.20 ili noviji xiaomi.eu ROM)</string>
     <string name="error">Greška</string>
     <string name="redownload">Ponovno preuzmi</string>
     <string name="security_context">Aplikaciju obavezno preuzmite s vancedapp.com, Vanced Discord poslužitelja ili Vanced GitHuba</string>
     <string name="app_installation_preferences">%1$s postavke instalacije</string>
     <string name="version">Inačica</string>
-    <string name="microg_bug">Pogreška u microG aplikaciji</string>
-    <string name="microg_bug_summary">Zbog pogreške u microG, instaliranje Vanced 16+ prvo zahtijeva da instalirate v15.43.32, otvorite, a zatim se prijavite i tek onda možete instalirati v16 i novije verzije. Želite li nastaviti s instalacijom v15.43.32?</string>
-    <string name="microg_bug_summary_music">Zbog pogreške u microG, za instalaciju Music 4.11+ prvo je potrebno instalirati v4.07.51, otvoriti, a zatim se prijaviti i tek tada možete instalirati v16 i novije verzije. Želite li nastaviti s instalacijom v4.07.51?</string>
-    <string name="please_be_patient">Molimo NE izlazite iz aplikacije tijekom ovog postupka!</string>
+    <string name="microg_bug">Greška u microG aplikaciji</string>
+    <string name="microg_bug_summary">Zbog greške u microG, instaliranje Vanced 16+ prvo zahtijeva instalaciju v15.43.32, otvorite, a zatim se prijavite i tek onda možete instalirati v16 i novije inačice. Želite li nastaviti s instalacijom v15.43.32?</string>
+    <string name="microg_bug_summary_music">Zbog greške u microG, za instalaciju Music 4.11+ prvo je potrebno instalirati v4.07.51, otvoriti, a zatim se prijaviti i tek tada možete instalirati v16 i novije inačice. Želite li nastaviti s instalacijom v4.07.51?</string>
+    <string name="please_be_patient">NE zatvarajte aplikaciju tijekom ovog postupka!</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Odaberite željeni jezika za Vanced</string>
@@ -105,12 +105,12 @@
     <string name="installation_blocked">Instalacija nije uspjela jer je korisnik blokirao instalaciju.</string>
     <string name="installation_downgrade">Instalacija nije uspjela jer je korisnik pokušao instalirati stariju inačicu paketa. Deinstalirajte ažuriranja izvorne YouTube aplikacije, zatim pokušajte ponovno.</string>
     <string name="installation_conflict">Instalacija nije uspjela jer je aplikacija u sukobu s već instaliranom aplikacijom. Deinstalirajte trenutnu inačicu aplikacije zatim pokušajte ponovno.</string>
-    <string name="installation_failed">Instalacija nije uspjela iz nepoznatih razloga, pridružite nam se na Telegramu ili Discordu za daljnju podršku.</string>
+    <string name="installation_failed">Neuspjela instalacija, nepoznati razlog. Priključite se našem Telegramu ili Diskordu za našu pomoć. Molimo Vas da priključite sliku ekrana iz Proširenog Menua</string>
     <string name="installation_incompatible">Instalacija nije uspjela zato jer datoteka instalacije nije kompatibilna s vašim uređajem. Uklonite preuzete datoteke u postavkama, zatim pokušajte ponovno.</string>
     <string name="installation_invalid">Instalacija nije uspjela zato jer je apk datoteka oštećena.</string>
     <string name="installation_signature">Instalacija nije uspjela zato jer je provjera potpisa omogućena. Onemogućite apk provjeru potpisa, zatim pokušajte ponovno.</string>
     <string name="installation_miui">Instalacija nije uspjela zato jer je MIUI optimizacija uključena. Isključite MIUI optimizaciju, zatim pokušajte ponovno.</string>
-    <string name="installation_storage">Instalacija nije uspjela uslijed greške pohrane.</string>
+    <string name="installation_storage">Neuspiješna instalacija jer uređaj nema dovoljno slobodnog prostora.</string>
     <string name="modapk_missing">Neuspjeli pronalazak apk datoteke za crnu/tamnu temu u programu instalacije. Uklonite podatke aplikacije upravitelja, zatim pokušajte ponovno.</string>
     <string name="path_missing">Neuspjelo lociranje putanje izvorne YouTube instalacije nakon razdvojene instalacije.</string>
 </resources>

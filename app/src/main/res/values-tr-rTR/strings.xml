@@ -60,7 +60,7 @@
     <string name="logs_saved">Kayıtlar başarıyla kaydedildi</string>
     <string name="logs_not_saved">Kayıtlar kaydedilemedi</string>
     <!-- Dialogs -->
-    <string name="advanced">Gelişmiş</string>
+    <string name="advanced">Detaylar</string>
     <string name="app_install_files_detected">%1$s için kurulum dosyaları bulundu!</string>
     <string name="app_install_files_detected_summary">Manager, %1$s kurulumu için gerekli olan dosyaları belirledi. Yüklemek ister misiniz?</string>
     <string name="checking_updates">Güncellemeler kontrol ediliyor…</string>
@@ -70,8 +70,8 @@
     <string name="guide">Kılavuz</string>
     <string name="hold_on">Durdur!</string>
     <string name="magisk_vanced">Geliştirilmesi durdurulan ve bu uygulama ile güncellenemeyen Vanced\'ın, Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen Magisk/TWRP sürümünü cihazınızdan kaldırın.</string>
-    <string name="miui_one_title">MIUI tespit edildi!</string>
-    <string name="miui_one">Vanced\'i yüklemek için geliştirici ayarlarından MIUI Optimizasyonları, devre dışı bırakılmalıdır. (xiaomi.eu tabanlı 20.2.20 veya üzeri bir ROM kullanıyorsanız, bu uyarıyı göz ardı edebilirsiniz)</string>
+    <string name="miui_one_title">MIUI Optimizasyonu aktif gözüküyor!</string>
+    <string name="miui_one">Vanced\'ı yükleyebilmek için, geliştirici ayarlarından/seçeneklerinden MIUI optimizasyonunu devre dışı bırakmalısın. (xiaomi.eu tabanlı 20.2.20 sürüm veya üzeri ROM kullanıyorsan, bu uyarıyı göz ardı edebilirsin)</string>
     <string name="error">Hata</string>
     <string name="redownload">Tekrar İndir</string>
     <string name="security_context">Uygulamayı vancedapp.com, Vanced Discord sunucusu, veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
@@ -105,12 +105,12 @@
     <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
     <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
     <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Uygulamanın mevcut sürümünü kaldırın ve ardından tekrar deneyin.</string>
-    <string name="installation_failed">Kurulum bilinmeyen nedenlerden dolayı başarısız oldu. Telegram veya Discord\'a katılarak destek alabilirsin.</string>
+    <string name="installation_failed">Kurulum, bilinmeyen sebeplerden dolayı başarısız oldu. Telegram grubu veya Discord sunucusundan destek alabilirsin. Ayrıca, detaylar ekranının bir ekran görüntüsünü alıp, yardım talebinle birlikte iletmeyi unutma lütfen. </string>
     <string name="installation_incompatible">Kurulum dosyası cihazınız ile uyumsuz olduğu için kurulum işlemi başarısız oldu. Ayarlar\'da indirilen dosyaları temizleyip, tekrar deneyin.</string>
     <string name="installation_invalid">APK dosyaları çözümlenemediğinden, kurulum başarısız oldu. Lütfen yeniden deneyin.</string>
     <string name="installation_signature">APK imza doğrulaması etkin olduğundan, kurulum başarısız oldu. APK imza doğrulamasını devre dışı bırakıp, yeniden deneyin.</string>
     <string name="installation_miui">MIUI Optimizasyonu etkin olduğundan, kurulum başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp, yeniden deneyin.</string>
-    <string name="installation_storage">Kurulum, depoloma hatası sebebiyle başarısız oldu.</string>
+    <string name="installation_storage">Yetersiz depolama alanından dolayı kurulum başarısız oldu.</string>
     <string name="modapk_missing">Yükleyicide Siyah/Koyu tema için APK dosyalarını ararken bir hata oluştu. Manager\'ın verilerini temizleyip, yeniden deneyin.</string>
     <string name="path_missing">Ayrı kurulum işleminden sonra orijinal YouTube kurulum yolu belirlenemedi.</string>
 </resources>

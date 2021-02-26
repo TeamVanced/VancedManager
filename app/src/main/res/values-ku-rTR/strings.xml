@@ -70,8 +70,8 @@
     <string name="guide">Rêzan</string>
     <string name="hold_on">Rawestîne!</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
-    <string name="miui_one_title">MIUI destnîşan bû!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimisations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">Çewtî</string>
     <string name="redownload">Ji nû ve daxîne</string>
     <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
@@ -105,12 +105,12 @@
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
-    <string name="installation_failed">Sazkirin ji ber sedemên nenas bi ser neket, ji bo piştgiriya zêdetir tevlî Telegram an Discord\'ê bibin.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Sazkirin bi ser neket ji ber ku dosiya sazkirinê ligel cîhaza te hevaheng nîne. Dosiyên daxistî ji sazkariyan paqij bike, paşê dîsa biceribîne.</string>
     <string name="installation_invalid">Sazkirin bi ser neket ji ber ku dosiyên apk\'ayê xirab in, jkx dîsa biceribîne.</string>
     <string name="installation_signature">Sazkirin bi ser neket ji ber ku rastandina îmzeya apk\'ayê çalak e. Rastandina îmzeya apk\'ayê neçalak bikin, paşê dîsa biceribînin.</string>
     <string name="installation_miui">Sazkirin bi ser neket ji ber ku MIUI Optimization çalak e. MIUI Optimization\'ê neçalak bikin, paşê dîsa biceribînin.</string>
-    <string name="installation_storage">Sazkirinê ji ber çewtiyeke depoyê bi ser neket.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji sazkirinê bi ser neket. Daneyên sepanê ji rêveberê paqij bikin, paşê dîsa biceribîne.</string>
     <string name="path_missing">Piştî sazkirina dabeşkirî, dozîna rêka sazkirina YouTube stokê bi ser neket.</string>
 </resources>

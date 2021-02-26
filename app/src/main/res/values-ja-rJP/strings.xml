@@ -45,7 +45,7 @@
     <string name="link_title">Chrome カスタムタブを使用</string>
     <string name="link_custom_tabs">Chrome カスタムタブでリンクを開く</string>
     <string name="system_default">システム設定</string>
-    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_save_failed">新しいタイマーの値の保存に失敗しました</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">テーマ</string>
@@ -70,8 +70,8 @@
     <string name="guide">ガイド</string>
     <string name="hold_on">ストップ！</string>
     <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
-    <string name="miui_one_title">MIUI を検知しました！</string>
-    <string name="miui_one">Vanced をインストールするには、開発者設定で MIUI の最適化を無効化しなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
+    <string name="miui_one_title">MIUI 最適化が有効です!</string>
+    <string name="miui_one">Vanced をインストールするには、開発者設定から MIUI 最適化を無効にしなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="error">エラー</string>
     <string name="redownload">再ダウンロード</string>
     <string name="security_context">Vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
@@ -91,7 +91,7 @@
     <string name="vanced_dark">ダーク</string>
     <!-- About Page -->
     <string name="manager_dev">Manager 開発</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">他の貢献者</string>
     <string name="sources">ソースコード</string>
     <string name="vanced_team">Vanced チーム</string>
     <!-- Error messages -->
@@ -105,12 +105,12 @@
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">アプリをダウングレードしようとしたため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、再度お試しください。</string>
     <string name="installation_conflict">既にインストールされたアプリと競合したため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_failed">何らかの理由によりインストールに失敗しました、サポートのために Telegram または Discord に参加してください。</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
     <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>
     <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
-    <string name="installation_storage">ストレージのエラーによりインストールに失敗しました。</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">インストーラーからブラック/ダークテーマの APK ファイルが見つかりませんでした。Manager のアプリデータを消去してから、もう一度お試しください。</string>
     <string name="path_missing">分割インストール後にストックの YouTube アプリのインストールパスが見つかりませんでした。</string>
 </resources>

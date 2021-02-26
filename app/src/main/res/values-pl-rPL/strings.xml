@@ -70,16 +70,16 @@
     <string name="guide">Przewodnik</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Używasz wersji Magisk/TWRP Vanced, która została przerwana i nie może zostać zaktualizowana za pomocą tej aplikacji. Proszę go usunąć usuwając moduł Magisk/używając TWRP Vanced deinstalatora.</string>
-    <string name="miui_one_title">MIUI wykryte!</string>
-    <string name="miui_one">Aby zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli używasz oprogramowania 20.2.20 lub później z bazą na xiaomi.eu)</string>
+    <string name="miui_one_title">Optymalizacja MIUI jest włączona!</string>
+    <string name="miui_one">Aby zainstalować Vanced, MUSISZ wyłączyć optymalizację MIUI w ustawieniach dewelopera. (Możesz zignorować to ostrzeżenie, jeśli korzystasz z ROM 20.2.20 lub późniejszego xiaomi.eu)</string>
     <string name="error">Błąd</string>
     <string name="redownload">Pobierz ponownie</string>
     <string name="security_context">Upewnij się, że pobrałeś aplikację z vancedapp.com, serwera Vanced Discord lub Vanced GitHub</string>
     <string name="app_installation_preferences">Preferencje instalacji %1$s</string>
     <string name="version">Wersja</string>
     <string name="microg_bug">Błąd w microG</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Ze względu na błąd w microG, instalacja Vanced 16+ wymaga najpierw instalacji v15.43.32, otwórz go, a następnie zaloguj się i tylko wtedy możesz zainstalować v16 i nowsze. Czy chcesz kontynuować instalację v15.43.32?</string>
+    <string name="microg_bug_summary_music">Ze względu na błąd w microG głównej, instalacja Muzyka v4.11+ wymaga najpierw instalacji v4.07.51, otwórz go, a następnie zaloguj się i tylko wtedy możesz zainstalować v4.11 i nowsze. Czy chcesz kontynuować instalację v4.07.51?</string>
     <string name="please_be_patient">NIE wychodź z aplikacji podczas trwania tego procesu!</string>
     <string name="welcome">Witaj</string>
     <!-- Install Page -->
@@ -91,7 +91,7 @@
     <string name="vanced_dark">Ciemny</string>
     <!-- About Page -->
     <string name="manager_dev">Deweloperzy Menedżera</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Inni współtwórcy</string>
     <string name="sources">Źródła</string>
     <string name="vanced_team">Zespół Vanced</string>
     <!-- Error messages -->
@@ -105,12 +105,12 @@
     <string name="installation_blocked">Instalacja nie powiodła się, ponieważ użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z domyślnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
     <string name="installation_conflict">Instalacja nie powiodła się ponieważ aplikacja konfliktuje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
-    <string name="installation_failed">Operacja nie powiodła się z nieznanego powodu. Aby uzyskać wsparcie, dołącz do naszego Telegram\'u lub Discord\'a.</string>
+    <string name="installation_failed">Instalacja nie powiodła się z nieznanych powodów, dołącz do naszego Telegrama lub Discorda, aby uzyskać dalsze wsparcie. Proszę również dołączyć zrzut ekranu z zaawansowanego menu</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
     <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>
     <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
-    <string name="installation_storage">Instalacja nie powiodła się z powodu błędu pamięci.</string>
+    <string name="installation_storage">Instalacja nie powiodła się, ponieważ urządzenie nie ma wystarczającej ilości wolnego miejsca.</string>
     <string name="modapk_missing">Nie udało się znaleźć pliku apk dla czarnego/ciemnego motywu z instalatora. Wyczyść dane aplikacji Menedżera i spróbuj ponownie.</string>
     <string name="path_missing">Nie udało się zlokalizować ścieżki instalacji YouTube po podzieleniu instalacji.</string>
 </resources>

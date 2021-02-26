@@ -70,8 +70,8 @@
     <string name="guide">ინსტრუქცია</string>
     <string name="hold_on">შეჩერდი!</string>
     <string name="magisk_vanced">თქვენ იყენებთ Vanced-ის Magisk/TWRP ვერსიას, მაგრამ მისი მენეჯერიდან განახლება შეუძლებელია. გთხოვთ წაშალოთ იგი Magisk-იდან/TWRP-ს დეინსტალერიდან.</string>
-    <string name="miui_one_title">აღმოჩენილია MIUI-ის მომხმარებელი!</string>
-    <string name="miui_one">Vanced-ის დასაინსტალირებლად, საჭიროა გამორთოთ MIUI-ს ოპტიმიზაციები დეველოპერის პარამეტრებიდან. (შეგიძლიათ გამოტოვოთ ეს შენიშვნა თუ თქვენი სისტემა დაფუძნებულია xiaomi.eu-ს ვერსია 20.2.20-ზე ან უფრო ახალზე)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">შეცდომა</string>
     <string name="redownload">თავიდან გადმოწერა</string>
     <string name="security_context">დარწმუნდით, რომ აპი გადმოწერეთ vancedapp.com-იდან, Vanced Discord სერვერიდან ან GitHub-იდან</string>
@@ -105,12 +105,12 @@
     <string name="installation_blocked">Installation failed because the user blocked the installation.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>
     <string name="installation_invalid">Installation failed because the apk files are corrupted, please try again.</string>
     <string name="installation_signature">Installation failed because apk signature verification is enabled. Disable apk signature verification, then try again.</string>
     <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
-    <string name="installation_storage">Installation failed due to a storage error.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
 </resources>

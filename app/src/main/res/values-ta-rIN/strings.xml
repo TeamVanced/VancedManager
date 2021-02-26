@@ -70,8 +70,8 @@
     <string name="guide">வழிகாட்டி</string>
     <string name="hold_on">நிறுத்து!</string>
     <string name="magisk_vanced">நீங்கள் வேன்ஸின் மேஜிஸ்க் / டி. டபிள்யூ. ஆர். பி பதிப்பைப் பயன்படுத்துகிறீர்கள், இது நிறுத்தப்பட்டது மற்றும் இந்த பயன்பாட்டைப் பயன்படுத்தி புதுப்பிக்க முடியாது. மேஜிஸ்க் தொகுதியை அகற்றி / TWRP Vanced uninstaller ஐப் பயன்படுத்தி அதை அகற்றவும்.</string>
-    <string name="miui_one_title">MIUI கண்டறியப்பட்டது!</string>
-    <string name="miui_one">Vanced ஐ நிறுவ, டெவலப்பர் அமைப்புகளில் MIUI உகப்பாக்கங்களை முடக்க வேண்டும். (நீங்கள் 20.2.20 அல்லது அதற்குப் பிறகு xiaomi.eu அடிப்படையிலான ROM ஐப் பயன்படுத்துகிறீர்கள் என்றால் இந்த எச்சரிக்கையை நீங்கள் புறக்கணிக்கலாம்)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">பிழை</string>
     <string name="redownload">மீண்டும் பதிவிறக்கு</string>
     <string name="security_context">பயன்பாட்டை vancedapp.com, Vanced Discord சேவையகம் அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
@@ -105,12 +105,12 @@
     <string name="installation_blocked">பயனர் நிறுவலைத் தடுத்ததால் நிறுவல் தோல்வியடைந்தது.</string>
     <string name="installation_downgrade">பயனர் தொகுப்பை தரமிறக்க முயற்சித்ததால் நிறுவல் தோல்வியடைந்தது. பங்கு பயன்பாட்டிலிருந்து புதுப்பிப்புகளை நிறுவல் நீக்க, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_conflict">ஏற்கனவே நிறுவப்பட்ட பயன்பாட்டுடன் பயன்பாடு முரண்படுவதால் நிறுவல் தோல்வியடைந்தது. பயன்பாட்டின் தற்போதைய பதிப்பை நிறுவல் நீக்கி, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
-    <string name="installation_failed">அறியப்படாத காரணங்களுக்காக நிறுவல் தோல்வியடைந்தது, மேலும் ஆதரவுக்காக எங்கள் டெலிகிராம் அல்லது டிஸ்கார்ட் இல் சேரவும்.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">நிறுவல் கோப்பு உங்கள் சாதனத்துடன் பொருந்தாததால் நிறுவல் தோல்வியடைந்தது. அமைப்புகளில் பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை அழிக்கவும், பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_invalid">நிறுவல் தோல்வியுற்றது, ஏனெனில் Apk கோப்புகள் சிதைந்துள்ளன, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_signature">Apk கையொப்ப சரிபார்ப்பு இயக்கப்பட்டிருப்பதால் நிறுவல் தோல்வியடைந்தது. Apk கையொப்ப சரிபார்ப்பை முடக்கு, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="installation_miui">MIUI உகப்பாக்கம் இயக்கப்பட்டிருப்பதால் நிறுவல் தோல்வியடைந்தது. MIUI உகப்பாக்கத்தை முடக்கு, பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
-    <string name="installation_storage">சேமிப்பக பிழை காரணமாக நிறுவல் தோல்வியடைந்தது.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
     <string name="modapk_missing">நிறுவியிலிருந்து கருப்பு / இருண்ட கருப்பொருளுக்கான Apk கோப்பைக் கண்டுபிடிப்பதில் தோல்வி. மேலாளரின் பயன்பாட்டுத் தரவை அழிக்கவும், பின்னர் மீண்டும் முயற்சிக்கவும்.</string>
     <string name="path_missing">பிளவு நிறுவலுக்குப் பிறகு பங்கு YouTube நிறுவல் பாதையை கண்டுபிடிப்பதில் தோல்வி.</string>
 </resources>
