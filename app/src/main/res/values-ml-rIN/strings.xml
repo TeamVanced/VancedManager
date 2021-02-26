@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">റദ്ദാക്കുക</string>
     <string name="close">അടക്കുക</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">പുനഃക്രമീകരിക്കുക</string>
     <string name="save">സൂക്ഷിക്കുക</string>
     <string name="select_apps">നിങ്ങളുടെ അപ്ലിക്കേഷനുകൾ തിരഞ്ഞെടുക്കുക</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">നിങ്ങളുടെ ഉപകരണം റൂട്ടു ചെയ്തതാണോ?</string>
     <string name="grant_root">റൂട്ട് അനുമതി നൽകുക</string>
     <string name="select_at_least_one_app">ഒരു അപ്ലിക്കേഷനെങ്കിലും തിരഞ്ഞെടുക്കുക!</string>
-    <string name="select_apps_music">വാൻ‌സ്ഡ്, പക്ഷേ YouTube സംഗീതത്തിനായി! \nFeatures സവിശേഷത കുറവായെങ്കിലും നിങ്ങളുടെ ആവശ്യങ്ങൾ നിറവേറ്റുന്നു.</string>
-    <string name="select_apps_vanced">Android YouTube അപ്ലിക്കേഷനാണ് YouTube Vanced, എന്നാൽ മികച്ചതാണ്!</string>
     <string name="lets_get_started">നമുക്ക് തുടങ്ങാം</string>
     <string name="willing_to_use_root">ഇത് എന്താണെന്ന് അറിയില്ല അല്ലെങ്കിൽ റൂട്ട് പതിപ്പ് ഉപയോഗിക്കാൻ ആഗ്രഹിക്കുന്നില്ലേ? ചുവടെയുള്ള നീല അമ്പടയാളത്തിൽ ക്ലിക്കുചെയ്യുക!</string>
     <!-- Home Page -->
     <string name="about_app">ഏകദേശം %1$s</string>
-    <string name="app_changelog_tooltip">ചേഞ്ചലോഗ് കാണാൻ കാർഡിൽ തൊടുക.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">ചേഞ്ച് ലോഗ്</string>
     <string name="downloading_file">%1$s ഡൗൺലോഡ് ചെയ്യുന്നു</string>
     <string name="install">ഇൻസ്റ്റാൾ ചെയ്യുക</string>
-    <string name="button_reinstall">വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യുക</string>
     <string name="version_installed">ഇൻസ്റ്റാൾ ചെയ്തു:</string>
     <string name="latest">ഏറ്റവും പുതിയത്:</string>
     <string name="no_microg">മൈക്രോജി ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല</string>
     <string name="root_not_granted">റൂട്ട് ആക്സസ് അനുവദിച്ചിട്ടില്ല</string>
     <string name="unavailable">ലഭ്യമല്ല</string>
-    <string name="update">പരിഷ്കരിക്കുക</string>
     <string name="social_media">സോഷ്യൽ മീഡിയ</string>
     <string name="support_us">ഞങ്ങളെ പിന്തുണയ്ക്കുക</string>
     <!-- Settings -->
