@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">ביטול</string>
     <string name="close">סגור</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">איפוס</string>
     <string name="save">שמור</string>
     <string name="select_apps">בחר את היישומים שלך</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">האם המכשיר שלך בעל הרשאות Root?</string>
     <string name="grant_root">הענק הרשאות Root</string>
     <string name="select_at_least_one_app">בחר לפחות יישום אחד!</string>
-    <string name="select_apps_music">Vacned, אבל של YouTube Music!\nיחסית פחות עשיר בתכונות, אבל ממלא את צרכיך.</string>
-    <string name="select_apps_vanced">YouTube Vanced היא כמו אפליקציית YouTube לאנדרואיד, אבל יותר טובה!</string>
     <string name="lets_get_started">בואו נתחיל</string>
     <string name="willing_to_use_root">לא יודעים מה זה או לא רוצים להשתמש בגרסת ה־Root? פשוט לחצו על החץ הכחול למטה!</string>
     <!-- Home Page -->
     <string name="about_app">אודות %1$s</string>
-    <string name="app_changelog_tooltip">לחץ על הכרטיס כדי לראות מה חדש.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">היסטורית שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
     <string name="install">התקן</string>
-    <string name="button_reinstall">התקן מחדש</string>
     <string name="version_installed">מותקן:</string>
     <string name="latest">החדש ביותר:</string>
     <string name="no_microg">microG לא הותקן</string>
     <string name="root_not_granted">לא הוענקו הרשאות Root</string>
     <string name="unavailable">לא זמין</string>
-    <string name="update">עדכן</string>
     <string name="social_media">רשתות חברתיות</string>
     <string name="support_us">תמכו בנו</string>
     <!-- Settings -->
