@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Откажи</string>
     <string name="close">Затвори</string>
+    <string name="description_vanced">Модификовани YouTube клијент са многим корисним функцијама!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Ресетуј</string>
     <string name="save">Сачувај</string>
     <string name="select_apps">Одабери своје апликације</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Да ли је ваш уређај рутован?</string>
     <string name="grant_root">Омогућите дозволу за рут</string>
     <string name="select_at_least_one_app">Одабери барем једну апликацију!</string>
-    <string name="select_apps_music">Vanced, али за YouTube Music!\nрелативно са мање напредних карактеристикама, али ће задовољити ваше потребе.</string>
-    <string name="select_apps_vanced">YouTube Vanced је фабрички Android YouTube апликација, али много боља!</string>
     <string name="lets_get_started">Хајде да почнемо</string>
     <string name="willing_to_use_root">Не знате шта је ово или не желите да користите роот верзију апликације? Само кликните на плаву стрелицу испод!</string>
     <!-- Home Page -->
     <string name="about_app">О %s</string>
-    <string name="app_changelog_tooltip">Кликните на картицу да видите историју измена.</string>
+    <string name="apps">Апликације</string>
     <string name="changelog">Историја измена</string>
     <string name="downloading_file">Преузимање %1$s</string>
     <string name="install">Инсталација</string>
-    <string name="button_reinstall">Реинсталирај</string>
     <string name="version_installed">Инсталирана:</string>
     <string name="latest">Најновија:</string>
     <string name="no_microg">microG апликација није инсталирана</string>
     <string name="root_not_granted">Root приступ није омогућен</string>
     <string name="unavailable">Недоступно</string>
-    <string name="update">Ажурирај</string>
     <string name="social_media">Социјалне мреже</string>
     <string name="support_us">Подржите нас</string>
     <!-- Settings -->
