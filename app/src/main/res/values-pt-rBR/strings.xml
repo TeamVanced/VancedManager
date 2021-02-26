@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Cancelar</string>
     <string name="close">Fechar</string>
+    <string name="description_vanced">Um cliente modificado do YouTube com muitos recursos úteis!</string>
+    <string name="description_vanced_music">Vanced, mas para o YouTube Music! Relativamente menos funções, mas satisfaz suas necessidades.</string>
+    <string name="description_microg">Uma implementação personalizada de GMS para Vanced com base no projeto microG.</string>
     <string name="reset">Resetar</string>
     <string name="save">Salvar</string>
     <string name="select_apps">Selecione Seus Aplicativos</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Seu Dispositivo Tem Root?</string>
     <string name="grant_root">Conceder Permissão de Root</string>
     <string name="select_at_least_one_app">Selecione pelo menos um aplicativo!</string>
-    <string name="select_apps_music">Vanced, mas para o YouTube Music!\nrelativamente menos funções, mas satisfaz suas necessidades.</string>
-    <string name="select_apps_vanced">YouTube Vanced é o aplicativo nativo de Android YouTube, mas melhor!</string>
     <string name="lets_get_started">Vamos começar</string>
     <string name="willing_to_use_root">Não sabe o que isto é ou não quer usar a versão root? basta clicar na seta azul abaixo!</string>
     <!-- Home Page -->
     <string name="about_app">Sobre %1$s</string>
-    <string name="app_changelog_tooltip">Toque no cartão para ver o registro de mudanças.</string>
+    <string name="apps">Aplicativos</string>
     <string name="changelog">Registro de mudanças</string>
     <string name="downloading_file">Baixando %1$s</string>
     <string name="install">Instalar</string>
-    <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais recente:</string>
     <string name="no_microg">O microG não está instalado</string>
     <string name="root_not_granted">Acesso root não concedido</string>
     <string name="unavailable">Indisponível</string>
-    <string name="update">Atualizar</string>
     <string name="social_media">Mídias Sociais</string>
     <string name="support_us">Apoie-nos</string>
     <!-- Settings -->
