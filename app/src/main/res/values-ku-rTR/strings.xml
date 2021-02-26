@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Betal bike</string>
     <string name="close">Bigire</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Nûsaz bike</string>
     <string name="save">Tomar bike</string>
     <string name="select_apps">Sepanên xwe hilbijêre</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Gelo cîhaza te Root e?</string>
     <string name="grant_root">Destûra Root\'ê bide</string>
     <string name="select_at_least_one_app">Herî kêm sepanekê hilbijêre!</string>
-    <string name="select_apps_music">Vanced, but for YouTube Music!\nrelatively less feature-rich but fulfills your needs.</string>
-    <string name="select_apps_vanced">YouTube Vanced is the stock Android YouTube App, but better!</string>
     <string name="lets_get_started">Dest pê kirin</string>
     <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
-    <string name="app_changelog_tooltip">Tap on the card to see the changelog.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Guherîn</string>
     <string name="downloading_file">Tê daxistin %1$s</string>
     <string name="install">Saz bike</string>
-    <string name="button_reinstall">Ji nû ve saz bike</string>
     <string name="version_installed">Saz bike:</string>
     <string name="latest">Dawîn:</string>
     <string name="no_microg">microG saz nebûye</string>
     <string name="root_not_granted">Rê li gihana Root nehate dayîn</string>
     <string name="unavailable">Berdest nîne</string>
-    <string name="update">Hildemîne</string>
     <string name="social_media">Social Media</string>
     <string name="support_us">Support us</string>
     <!-- Settings -->
