@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Cancelar</string>
     <string name="close">Fechar</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Resetar</string>
     <string name="save">Guardar</string>
     <string name="select_apps">Selecione as suas aplicações</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Seu Dispositivo Tem Root?</string>
     <string name="grant_root">Conceder Permissão de Root</string>
     <string name="select_at_least_one_app">Selecione pelo menos uma aplicação!</string>
-    <string name="select_apps_music">Vanced, mas para o YouTube Music!\nrelativamente menos rico em recursos, mas atende às suas necessidades.</string>
-    <string name="select_apps_vanced">YouTube Vanced é o App YouTube Android original, mas melhor!</string>
     <string name="lets_get_started">Vamos começar</string>
     <string name="willing_to_use_root">Não sabes o que é isto ou não queres utilizar a versão root? apenas clique a seta azul abaixo!</string>
     <!-- Home Page -->
     <string name="about_app">Acerca de %1$s</string>
-    <string name="app_changelog_tooltip">Toque no cartão para ver o registro de mudanças.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Lista de alterações</string>
     <string name="downloading_file">Transferindo %1$s</string>
     <string name="install">Instalar</string>
-    <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais Recente:</string>
     <string name="no_microg">microG não está instalada</string>
     <string name="root_not_granted">Acesso root negado.</string>
     <string name="unavailable">Indisponível</string>
-    <string name="update">Atualizar</string>
     <string name="social_media">Redes Sociais</string>
     <string name="support_us">Suporte-nos</string>
     <!-- Settings -->
