@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Ka noqo</string>
     <string name="close">Xidh</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Dib uceli</string>
     <string name="save">Kaydi</string>
     <string name="select_apps">Dooro apps-ka</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Aaladaada miyay root-garaysan tahay?</string>
     <string name="grant_root">U Ogolow Fasaxa Root-ka</string>
     <string name="select_at_least_one_app">Ugu yaraan hal app dooro!</string>
-    <string name="select_apps_music">Waa Vanced, laakiin loogu talagalay YouTube Music!\nwuu ka yara wax qabad yaryahay Vanced-ka laakiin baahiyahaaga wuu fulin.</string>
-    <string name="select_apps_vanced">YouTube Vanced waa YouTube-kii android ka caadiga ahaa, laakiin wuu ka fiican yahay!</string>
     <string name="lets_get_started">Aan bilawno</string>
     <string name="willing_to_use_root">Ma aqaano wuxuu kani yahay ama ma doonayo inaan isticmaalo midka root-ka ah? Aayar taabo falaadha buluuga ah ee hoose!</string>
     <!-- Home Page -->
     <string name="about_app">Ku saabsan %1$s</string>
-    <string name="app_changelog_tooltip">Kusii dhufo si aad u aragto waxa isbadalay.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Waxa isbadalay</string>
     <string name="downloading_file">Dajinaya %1$s</string>
     <string name="install">Kushub</string>
-    <string name="button_reinstall">Dib ugushub</string>
     <string name="version_installed">Ka kujira:</string>
     <string name="latest">U dambeeyay:</string>
     <string name="no_microg">microG laguma shubin</string>
     <string name="root_not_granted">\'Root\' looma fasaxin</string>
     <string name="unavailable">Lama heli karo</string>
-    <string name="update">Cusboonaysii</string>
     <string name="social_media">Baraha Bulshada</string>
     <string name="support_us">Na taageer</string>
     <!-- Settings -->
