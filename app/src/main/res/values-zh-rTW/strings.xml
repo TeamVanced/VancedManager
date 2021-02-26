@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">取消</string>
     <string name="close">關閉</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">重設</string>
     <string name="save">儲存</string>
     <string name="select_apps">選擇您需要的應用程式</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">您的裝置擁有 Root 權限嗎？</string>
     <string name="grant_root">授予 Root 權限</string>
     <string name="select_at_least_one_app">請至少選擇一個應用程式！</string>
-    <string name="select_apps_music">Vanced ，不過是 YouTube 音樂！\n功能相對較少但足以滿足您的需要。</string>
-    <string name="select_apps_vanced">YouTube Vanced 是安卓更高級的原生 YouTube 應用程式！</string>
     <string name="lets_get_started">讓我們開始吧</string>
     <string name="willing_to_use_root">不知道這是什麼，或者不想使用 Root 版本？只需點選下面的藍色箭頭！</string>
     <!-- Home Page -->
     <string name="about_app">關於 %1$s</string>
-    <string name="app_changelog_tooltip">點選卡片以檢視更新日誌</string>
+    <string name="apps">Apps</string>
     <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
-    <string name="button_reinstall">重新安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
     <string name="no_microg">未安裝 MicroG</string>
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="unavailable">無法使用</string>
-    <string name="update">更新</string>
     <string name="social_media">社交媒體</string>
     <string name="support_us">支持我們</string>
     <!-- Settings -->
