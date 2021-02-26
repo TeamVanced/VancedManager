@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Thiết Bị Của Bạn Đã Được Root?</string>
     <string name="grant_root">Cấp quyền root</string>
     <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
-    <string name="select_apps_music">Vanced, nhưng cho YouTube Music!\ntương đối ít tính năng nhưng đáp ứng những gì bạn cần.</string>
-    <string name="select_apps_vanced">YouTube Vanced cũng là ứng dụng YouTube gốc nhưng tốt hơn!</string>
+    <string name="description_vanced_music">Vanced, nhưng cho YouTube Music!\ntương đối ít tính năng nhưng đáp ứng những gì bạn cần.</string>
+    <string name="description_vanced">YouTube Vanced cũng là ứng dụng YouTube gốc nhưng tốt hơn!</string>
     <string name="lets_get_started">Bắt đầu nào</string>
     <string name="willing_to_use_root">Bạn không biết đây là gì hoặc không muốn sử dụng phiên bản root? chỉ cần nhấp vào mũi tên màu xanh bên dưới!</string>
     <!-- Home Page -->
     <string name="about_app">Thông tin về %1$s</string>
-    <string name="app_changelog_tooltip">Nhấn vào thẻ để xem các thay đổi.</string>
     <string name="changelog">Các thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
     <string name="install">Cài đặt</string>
-    <string name="button_reinstall">Cài đặt lại</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
     <string name="no_microg">microG chưa được cài đặt</string>
     <string name="root_not_granted">Quyền root không được cấp</string>
     <string name="unavailable">Không tồn tại</string>
-    <string name="update">Cập nhật</string>
     <string name="social_media">Mạng xã hội</string>
     <string name="support_us">Hỗ trợ chúng tôi</string>
     <!-- Settings -->

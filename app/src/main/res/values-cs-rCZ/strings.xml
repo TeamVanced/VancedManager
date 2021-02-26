@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Má vaše zařízení oprávnění root?</string>
     <string name="grant_root">Udělit oprávnění root</string>
     <string name="select_at_least_one_app">Vyberte alespoň jednu aplikaci!</string>
-    <string name="select_apps_music">Vanced, ale YouTube Music!\nObsahuje o trochu méně funkcí, ale splní vaše potřeby.</string>
-    <string name="select_apps_vanced">YouTube Vanced je vylepšená výchozí aplikace YouTube!</string>
+    <string name="description_vanced_music">Vanced, ale YouTube Music!\nObsahuje o trochu méně funkcí, ale splní vaše potřeby.</string>
+    <string name="description_vanced">YouTube Vanced je vylepšená výchozí aplikace YouTube!</string>
     <string name="lets_get_started">Začínáme</string>
     <string name="willing_to_use_root">Nevíte, co to je, nebo nechcete používat verzi s přístupem root? V tom případě klikněte na modrou šipku níže!</string>
     <!-- Home Page -->
     <string name="about_app">O aplikaci %1$s</string>
-    <string name="app_changelog_tooltip">Klepnutím na kartu zobrazíte seznam změn.</string>
     <string name="changelog">Seznam změn</string>
     <string name="downloading_file">Stahování %1$s</string>
     <string name="install">Nainstalovat</string>
-    <string name="button_reinstall">Přeinstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
     <string name="no_microg">microG není nainstalováno</string>
     <string name="root_not_granted">Root přístup nebyl udělen</string>
     <string name="unavailable">Není k dispozici</string>
-    <string name="update">Aktualizovat</string>
     <string name="social_media">Sociální média</string>
     <string name="support_us">Podpořte nás</string>
     <!-- Settings -->

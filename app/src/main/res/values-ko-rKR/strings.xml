@@ -17,23 +17,20 @@
     <string name="are_you_rooted">기기가 루팅되어 있나요?</string>
     <string name="grant_root">루트 권한 부여</string>
     <string name="select_at_least_one_app">적어도 하나의 앱을 선택해주세요</string>
-    <string name="select_apps_music">YouTube Music의 Vanced 버전입니다.\n추가된 기능이 그렇게 많지는 않지만 충분히 만족하실 거예요.</string>
-    <string name="select_apps_vanced">YouTube Vanced는 기본 안드로이드 YouTube 앱의 향상된 버전입니다.</string>
+    <string name="description_vanced_music">YouTube Music의 Vanced 버전입니다.\n추가된 기능이 그렇게 많지는 않지만 충분히 만족하실 거예요.</string>
+    <string name="description_vanced">YouTube Vanced는 기본 안드로이드 YouTube 앱의 향상된 버전입니다.</string>
     <string name="lets_get_started">시작하기</string>
     <string name="willing_to_use_root">이게 무슨 뜻인지 모르시거나 루트 버전을 사용하고 싶으시다고요? 그냥 아래의 파란색 화살표를 클릭하세요!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s 정보</string>
-    <string name="app_changelog_tooltip">카드를 클릭하시면 앱의 변경 사항을 확인할 수 있습니다.</string>
     <string name="changelog">변경 사항</string>
     <string name="downloading_file">%1$s 다운로드 중</string>
     <string name="install">설치</string>
-    <string name="button_reinstall">재설치</string>
     <string name="version_installed">설치됨:</string>
     <string name="latest">최신:</string>
     <string name="no_microg">microG가 설치되지 않았습니다</string>
     <string name="root_not_granted">루트 권한이 부여되지 않았습니다</string>
     <string name="unavailable">사용 불가</string>
-    <string name="update">업데이트</string>
     <string name="social_media">소셜 미디어</string>
     <string name="support_us">지원하기</string>
     <!-- Settings -->

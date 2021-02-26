@@ -17,23 +17,20 @@
     <string name="are_you_rooted">क्या आपका डिवाइस रुट किया गया है?</string>
     <string name="grant_root">रूट की अनुमति प्रदान करें</string>
     <string name="select_at_least_one_app">कम से कम एक ऐप चुनें!</string>
-    <string name="select_apps_music">Vanced, लेकिन यूट्यूब संगीत के लिए! \nतुलना में कम सुविधा संपन्न लेकिन आपकी आवश्यकताओं को पूरा करता है।</string>
-    <string name="select_apps_vanced">यूट्यूब वेंस्ड यूट्यूब ऐप ही है, लेकिन बेहतर है!</string>
+    <string name="description_vanced_music">Vanced, लेकिन यूट्यूब संगीत के लिए! \nतुलना में कम सुविधा संपन्न लेकिन आपकी आवश्यकताओं को पूरा करता है।</string>
+    <string name="description_vanced">यूट्यूब वेंस्ड यूट्यूब ऐप ही है, लेकिन बेहतर है!</string>
     <string name="lets_get_started">चलिए शुरू करते है</string>
     <string name="willing_to_use_root">नहीं जानते ये क्या है या रूट वर्जन इस्तेमाल नहीं करना चाहते? बस नीचे वाला बटन दबाइए!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s के बारे में</string>
-    <string name="app_changelog_tooltip">परिवर्तन पत्र देखने के लिए कार्ड पर टैप करें।</string>
     <string name="changelog">परिवर्तन पत्र</string>
     <string name="downloading_file">डाउनलोड हो रहा है %1$s</string>
     <string name="install">इंस्टॉल</string>
-    <string name="button_reinstall">पुनः इंस्टॉल करें</string>
     <string name="version_installed">इंस्टॉल हुआ।</string>
     <string name="latest">सबसे नया</string>
     <string name="no_microg">microG स्थापित नहीं है</string>
     <string name="root_not_granted">रूट एक्सेस प्रदान नहीं किया गया</string>
     <string name="unavailable">अनुपलब्ध</string>
-    <string name="update">अपडेट करें</string>
     <string name="social_media">सामाजिक नेटवर्क</string>
     <string name="support_us">हमें सहयोग दीजिये</string>
     <!-- Settings -->

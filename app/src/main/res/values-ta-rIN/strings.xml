@@ -17,23 +17,20 @@
     <string name="are_you_rooted">உங்கள் சாதனம் வேரூன்றியதா?</string>
     <string name="grant_root">கிராண்ட் ரூட் அனுமதி</string>
     <string name="select_at_least_one_app">குறைந்தது ஒரு பயன்பாட்டையாவது தேர்ந்தெடுக்கவும்!</string>
-    <string name="select_apps_music">வேன்ட், ஆனால் யூடியூப் இசைக்கு! \nஒப்பீட்டளவில் குறைவான அம்சம் நிறைந்த ஆனால் உங்கள் தேவைகளை பூர்த்தி செய்கிறது.</string>
-    <string name="select_apps_vanced">YouTube Vanced என்பது Android YouTube பயன்பாடாகும், ஆனால் சிறந்தது!</string>
+    <string name="description_vanced_music">வேன்ட், ஆனால் யூடியூப் இசைக்கு! \nஒப்பீட்டளவில் குறைவான அம்சம் நிறைந்த ஆனால் உங்கள் தேவைகளை பூர்த்தி செய்கிறது.</string>
+    <string name="description_vanced">YouTube Vanced என்பது Android YouTube பயன்பாடாகும், ஆனால் சிறந்தது!</string>
     <string name="lets_get_started">தொடங்குவோம்</string>
     <string name="willing_to_use_root">இது என்னவென்று தெரியவில்லையா அல்லது ரூட் பதிப்பைப் பயன்படுத்த விரும்பவில்லையா? கீழே உள்ள நீல அம்புக்குறியைக் கிளிக் செய்க!</string>
     <!-- Home Page -->
     <string name="about_app">பற்றி %1$s</string>
-    <string name="app_changelog_tooltip">சேஞ்ச்லாக் பார்க்க அட்டையில் தட்டவும்.</string>
     <string name="changelog">சேஞ்ச்லாக்</string>
     <string name="downloading_file">%1$s ஐப் பதிவிறக்குகிறது</string>
     <string name="install">நிறுவு</string>
-    <string name="button_reinstall">மீண்டும் நிறுவவும்</string>
     <string name="version_installed">நிறுவப்பட்டது:</string>
     <string name="latest">சமீபத்தியது:</string>
     <string name="no_microg">microG நிறுவப்படவில்லை</string>
     <string name="root_not_granted">ரூட் அக்சஸ் வழங்கப்படவில்லை</string>
     <string name="unavailable">கிடைக்கவில்லை</string>
-    <string name="update">புதுப்பை</string>
     <string name="social_media">சமூக ஊடகம்</string>
     <string name="support_us">எங்களை ஆதரியுங்கள்</string>
     <!-- Settings -->

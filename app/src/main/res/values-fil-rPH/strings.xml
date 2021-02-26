@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Naka-root ba ang device mo?</string>
     <string name="grant_root">Pahintulutin ang Root</string>
     <string name="select_at_least_one_app">Mag-marka ka kahit isa lang na app!</string>
-    <string name="select_apps_music">Vanced, pero para sa Youtube Music\nhindi kasing dami ang tampok, pero gaganapin ang pangangailangan mo.</string>
-    <string name="select_apps_vanced">Ang YouTube Vanced ay katulad sa Android Youtube App, pero mas mabuti!</string>
+    <string name="description_vanced_music">Vanced, pero para sa Youtube Music\nhindi kasing dami ang tampok, pero gaganapin ang pangangailangan mo.</string>
+    <string name="description_vanced">Ang YouTube Vanced ay katulad sa Android Youtube App, pero mas mabuti!</string>
     <string name="lets_get_started">Magsimula na tayo</string>
     <string name="willing_to_use_root">Hindi mo alam ito o huwag gamitin ang root bersyon? I-click ang asul na arrow sa baba!</string>
     <!-- Home Page -->
     <string name="about_app">Tungkol sa %1$s</string>
-    <string name="app_changelog_tooltip">Tapikin ang card para makita ang changelog.</string>
     <string name="changelog">Changelog</string>
     <string name="downloading_file">Downloading %1$s</string>
     <string name="install">I-install</string>
-    <string name="button_reinstall">I-install ulit</string>
     <string name="version_installed">Naka-install:</string>
     <string name="latest">Bago:</string>
     <string name="no_microg">Hindi naka-install ang microG</string>
     <string name="root_not_granted">Walang binigay na root access</string>
     <string name="unavailable">Di-makukuha</string>
-    <string name="update">I-update</string>
     <string name="social_media">Social Media</string>
     <string name="support_us">Suportahin kami</string>
     <!-- Settings -->

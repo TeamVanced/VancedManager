@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Je li vaš uređaj rootan?</string>
     <string name="grant_root">Dopusti root dozvolu</string>
     <string name="select_at_least_one_app">Odaberite najmanje jednu aplikaciju!</string>
-    <string name="select_apps_music">Vanced, ali za YouTube Glazbu!\nS manje značajki ali tako da ispunjava vaše potrebe.</string>
-    <string name="select_apps_vanced">YouTube Vanced je izvorna Android YouTube aplikacija, ali mnogo bolja!</string>
+    <string name="description_vanced_music">Vanced, ali za YouTube Glazbu!\nS manje značajki ali tako da ispunjava vaše potrebe.</string>
+    <string name="description_vanced">YouTube Vanced je izvorna Android YouTube aplikacija, ali mnogo bolja!</string>
     <string name="lets_get_started">Započnite</string>
     <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root izdanje? Jednostavno kliknite na plavu strelicu ispod!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
-    <string name="app_changelog_tooltip">Dodirnite karticu kako bi vidjeli zapis promjena.</string>
     <string name="changelog">Zapis promjena</string>
     <string name="downloading_file">Preuzimam %1$s</string>
     <string name="install">Instaliraj</string>
-    <string name="button_reinstall">Reinstaliraj</string>
     <string name="version_installed">Instalirano:</string>
     <string name="latest">Dostupno:</string>
     <string name="no_microg">microG nije instaliran</string>
     <string name="root_not_granted">Root pristup nije dopušten</string>
     <string name="unavailable">Nedostupno</string>
-    <string name="update">Ažuriraj</string>
     <string name="social_media">Društvene mreže</string>
     <string name="support_us">Podržite nas</string>
     <!-- Settings -->

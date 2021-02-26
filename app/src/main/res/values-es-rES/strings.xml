@@ -17,23 +17,20 @@
     <string name="are_you_rooted">¿Su dispositivo está rooteado?</string>
     <string name="grant_root">Otorgar permiso root</string>
     <string name="select_at_least_one_app">¡Seleccione al menos una aplicación!</string>
-    <string name="select_apps_music">Vanced, pero para YouTube Music!\nrelativamente menos características, pero satisface tus necesidades.</string>
-    <string name="select_apps_vanced">YouTube Vanced es la aplicación original de YouTube para Android, pero mejorada!</string>
+    <string name="description_vanced_music">Vanced, pero para YouTube Music!\nrelativamente menos características, pero satisface tus necesidades.</string>
+    <string name="description_vanced">YouTube Vanced es la aplicación original de YouTube para Android, pero mejorada!</string>
     <string name="lets_get_started">Comencemos</string>
     <string name="willing_to_use_root">¿No sabes que es esto o no quieres usar la versión root? ¡Haz clic en la flecha azul de abajo!</string>
     <!-- Home Page -->
     <string name="about_app">Acerca de %1$s</string>
-    <string name="app_changelog_tooltip">Toque en la tarjeta para ver el historial de actualizaciones.</string>
     <string name="changelog">Historial de actualizaciones</string>
     <string name="downloading_file">Descargando %1$s</string>
     <string name="install">Instalar</string>
-    <string name="button_reinstall">Reinstalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Más reciente:</string>
     <string name="no_microg">microG no está instalado</string>
     <string name="root_not_granted">Acceso root no concedido</string>
     <string name="unavailable">No Disponible</string>
-    <string name="update">Actualizar</string>
     <string name="social_media">Redes Sociales</string>
     <string name="support_us">Apóyanos</string>
     <!-- Settings -->

@@ -17,23 +17,20 @@
     <string name="are_you_rooted">อุปกรณ์ของคุณได้รูทหรือไม่?</string>
     <string name="grant_root">ให้สิทธิ์การใช้งานของรูท</string>
     <string name="select_at_least_one_app">เลือกแอปพลิเคชั่นอย่างน้อยหนึ่งรายการ!</string>
-    <string name="select_apps_music">Vanced เมื่อใช้งาน YouTube Music! \n ไม่ค่อยมีลูกเล่นอะไรเยอะแยะ แต่ มันตอบสนองกับความต้องการของคุณแน่นอน</string>
-    <string name="select_apps_vanced">YouTube Vanced เป็นแอป YouTube บน Android ที่ดีกว่า!</string>
+    <string name="description_vanced_music">Vanced เมื่อใช้งาน YouTube Music! \n ไม่ค่อยมีลูกเล่นอะไรเยอะแยะ แต่ มันตอบสนองกับความต้องการของคุณแน่นอน</string>
+    <string name="description_vanced">YouTube Vanced เป็นแอป YouTube บน Android ที่ดีกว่า!</string>
     <string name="lets_get_started">เริ่มกันเลย!</string>
     <string name="willing_to_use_root">ไม่รู้/ไม่ต้องการใช้เวอร์ชั่นรูท? แค่คลิ๊กบนไอคอนธนูสีฟ้า!</string>
     <!-- Home Page -->
     <string name="about_app">เกี่ยวกับ %1$s</string>
-    <string name="app_changelog_tooltip">แตะบนการ์ดเพื่อดูบันทึกการเปลี่ยนแปลง</string>
     <string name="changelog">บันทึกการเปลี่ยนแปลง</string>
     <string name="downloading_file">กำลังดาวน์โหลด %1$s</string>
     <string name="install">ติดตั้ง</string>
-    <string name="button_reinstall">ติดตั้งใหม่</string>
     <string name="version_installed">ติดตั้งแล้ว:</string>
     <string name="latest">ล่าสุด:</string>
     <string name="no_microg">microG ไม่ได้ถูกติดตั้ง</string>
     <string name="root_not_granted">ไม่ได้รับสิทธิ์ของรูท</string>
     <string name="unavailable">ไม่สามารถใช้ได้</string>
-    <string name="update">อัพเดท</string>
     <string name="social_media">สื่อสังคม</string>
     <string name="support_us">สนับสนุนพวกเรา</string>
     <!-- Settings -->

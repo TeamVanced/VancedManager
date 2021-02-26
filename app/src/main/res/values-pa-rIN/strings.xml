@@ -17,23 +17,20 @@
     <string name="are_you_rooted">ਕੀ ਤੁਹਾਡੀ ਡਵਿਾਈਸ ਰੂਟ ਕੀਤਾ ਹੈ?</string>
     <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
     <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
-    <string name="select_apps_music">ਬਦਲੇ ਗਏ, ਪਰ YouTube Music ਲਈ!\nਮੁਕਾਬਲਤਨ ਘੱਟ ਵਿਸ਼ੇਸ਼ਤਾ ਹੈ, ਪਰ ਤੁਹਾਡੀ ਲੋੜ ਨੂੰ ਪੂਰਾ ਕਰਦਾ ਹੈ.</string>
-    <string name="select_apps_vanced">YouTube Vanced ਸਟਾਕ ਐਂਡਰਾਇਡ YouTube ਐਪ ਹੈ, ਪਰ ਬਿਹਤਰ!</string>
+    <string name="description_vanced_music">ਬਦਲੇ ਗਏ, ਪਰ YouTube Music ਲਈ!\nਮੁਕਾਬਲਤਨ ਘੱਟ ਵਿਸ਼ੇਸ਼ਤਾ ਹੈ, ਪਰ ਤੁਹਾਡੀ ਲੋੜ ਨੂੰ ਪੂਰਾ ਕਰਦਾ ਹੈ.</string>
+    <string name="description_vanced">YouTube Vanced ਸਟਾਕ ਐਂਡਰਾਇਡ YouTube ਐਪ ਹੈ, ਪਰ ਬਿਹਤਰ!</string>
     <string name="lets_get_started">ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ</string>
     <string name="willing_to_use_root">ਪਤਾ ਨਹੀਂ ਇਹ ਕੀ ਹੈ ਜਾਂ ਰੂਟ ਵਰਜ਼ਨ ਨਹੀਂ ਵਰਤਣਾ ਚਾਹੁੰਦੇ? ਹੇਠ ਦਿੱਤੇ ਨੀਲੇ ਤੀਰ ਤੇ ਕਲਿਕ ਕਰੋ!</string>
     <!-- Home Page -->
     <string name="about_app">ਬਾਰੇ %1$s</string>
-    <string name="app_changelog_tooltip">ਚੇਂਜਲਾਗ ਦੇਖਣ ਲਈ ਕਾਰਡ \'ਤੇ ਟੈਪ ਕਰੋ.</string>
     <string name="changelog">ਤਬਦੀਲੀਆਂ</string>
     <string name="downloading_file">ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ %1$s</string>
     <string name="install">ਸਥਾਪਨਾ</string>
-    <string name="button_reinstall">ਮੁੜ ਸਥਾਪਨਾ</string>
     <string name="version_installed">ਸਥਾਪਿਤ:</string>
     <string name="latest">ਨਵੀਨਤਮ:</string>
     <string name="no_microg">microG ਸਥਾਪਿਤ ਨਹੀਂ ਹੈ</string>
     <string name="root_not_granted">ਰੂਟ ਐਕਸੈਸ ਨਹੀਂ ਦਿੱਤੀ ਗਈ</string>
     <string name="unavailable">ਮੋਜੂਦ ਨਹੀਂ ਹੈ</string>
-    <string name="update">ਅੱਪਡੇਟ</string>
     <string name="social_media">ਸੋਸ਼ਲ ਮੀਡੀਆ</string>
     <string name="support_us">ਸਾਡਾ ਸਮਰਥਨ ਕਰੋ</string>
     <!-- Settings -->

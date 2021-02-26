@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.edit
 import androidx.fragment.app.viewModels
 import androidx.preference.PreferenceManager
@@ -41,7 +40,7 @@ class AboutFragment : BindingFragment<FragmentAboutBinding>() {
             showDialog(
                 AppInfoDialog.newInstance(
                     appName = getString(R.string.app_name),
-                    appIcon = AppCompatResources.getDrawable(requireActivity(), R.mipmap.ic_launcher),
+                    appIcon = R.mipmap.ic_launcher,
                     changelog = manager.value?.string("changelog")
                 )
             )

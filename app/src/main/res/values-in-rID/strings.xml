@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Apakah Perangkat Anda Mempunyai Akses Root?</string>
     <string name="grant_root">Berikan Izin Root</string>
     <string name="select_at_least_one_app">Pilih setidaknya satu aplikasi!</string>
-    <string name="select_apps_music">Vanced, tetapi untuk YouTube Music!\nfitur yang relatif kurang kaya tetapi memenuhi kebutuhan anda.</string>
-    <string name="select_apps_vanced">YouTube Vanced adalah Aplikasi YouTube bawaan Android, tetapi lebih baik!</string>
+    <string name="description_vanced_music">Vanced, tetapi untuk YouTube Music!\nfitur yang relatif kurang kaya tetapi memenuhi kebutuhan anda.</string>
+    <string name="description_vanced">YouTube Vanced adalah Aplikasi YouTube bawaan Android, tetapi lebih baik!</string>
     <string name="lets_get_started">Mari memulai</string>
     <string name="willing_to_use_root">Tidak tahu apa ini atau tidak ingin menggunakan versi root? cukup klik panah biru di bawah!</string>
     <!-- Home Page -->
     <string name="about_app">Tentang %1$s</string>
-    <string name="app_changelog_tooltip">Tekan kartu untuk melihat catatan perubahan.</string>
     <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
-    <string name="button_reinstall">Pasang ulang</string>
     <string name="version_installed">Terpasang:</string>
     <string name="latest">Terbaru:</string>
     <string name="no_microg">microG tidak terpasang</string>
     <string name="root_not_granted">Akses Root tidak diberikan</string>
     <string name="unavailable">Tidak tersedia</string>
-    <string name="update">Perbarui</string>
     <string name="social_media">Media Sosial</string>
     <string name="support_us">Dukung kami</string>
     <!-- Settings -->

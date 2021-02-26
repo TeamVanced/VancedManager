@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Cihazın rootlu mu?</string>
     <string name="grant_root">Root yetkisi ver</string>
     <string name="select_at_least_one_app">En az bir uygulama seçin!</string>
-    <string name="select_apps_music">Yine Vanced, ama YouTube Music için!\nKıyasen daha az özelliğe sahip fakat ihtiyaçlarını karşılar</string>
-    <string name="select_apps_vanced">YouTube Vanced, temelde YouTube Android Uygulamasıdır, ancak orijinalinden daha iyidir!</string>
+    <string name="description_vanced_music">Yine Vanced, ama YouTube Music için!\nKıyasen daha az özelliğe sahip fakat ihtiyaçlarını karşılar</string>
+    <string name="description_vanced">YouTube Vanced, temelde YouTube Android Uygulamasıdır, ancak orijinalinden daha iyidir!</string>
     <string name="lets_get_started">Haydi başlayalım</string>
     <string name="willing_to_use_root">Root\'un ne olduğunu bilmiyor veya root sürümünü kullanmak istemiyorsan, alttaki mavi oka tıklayabilirsin!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s hakkında</string>
-    <string name="app_changelog_tooltip">Uygulama alanına dokunarak değişiklikleri görebilirsin.</string>
     <string name="changelog">Sürüm Notları</string>
     <string name="downloading_file">%1$s indiriliyor</string>
     <string name="install">Yükle</string>
-    <string name="button_reinstall">Yeniden yükle</string>
     <string name="version_installed">Yüklü:</string>
     <string name="latest">En son:</string>
     <string name="no_microg">microG yüklü değil</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Yüklenmemiş</string>
-    <string name="update">Güncelle</string>
     <string name="social_media">Sosyal Medya</string>
     <string name="support_us">Tıkla, destek ol</string>
     <!-- Settings -->

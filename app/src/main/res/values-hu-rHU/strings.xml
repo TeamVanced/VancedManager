@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Rootolt az eszközöd?</string>
     <string name="grant_root">Root hozzáférés engedélyezése</string>
     <string name="select_at_least_one_app">Legalább egy appot válassz!</string>
-    <string name="select_apps_music">Vanced, a YouTube Music-ra!\nKevésbé funkciógazdag, de kielégíti az igényeidet.</string>
-    <string name="select_apps_vanced">A Youtube Vanced a gyári Android YouTube alkalmazás, csak jobb nála!</string>
+    <string name="description_vanced_music">Vanced, a YouTube Music-ra!\nKevésbé funkciógazdag, de kielégíti az igényeidet.</string>
+    <string name="description_vanced">A Youtube Vanced a gyári Android YouTube alkalmazás, csak jobb nála!</string>
     <string name="lets_get_started">Lássunk neki</string>
     <string name="willing_to_use_root">Nem tudod mi ez vagy csak nem akarod használni a root verziót? Csak kattins a lenti kék nyílra!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s- ról</string>
-    <string name="app_changelog_tooltip">Kattintson a kártyára a változás lista megtekintéséhez.</string>
     <string name="changelog">Változáslista</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="install">Telepítés</string>
-    <string name="button_reinstall">Újratelepítés</string>
     <string name="version_installed">Telepítve:</string>
     <string name="latest">Legújabb:</string>
     <string name="no_microg">microG nincs telepítve</string>
     <string name="root_not_granted">A root hozzáférés nincs megadva</string>
     <string name="unavailable">Nem elérhető</string>
-    <string name="update">Frissítés</string>
     <string name="social_media">Közösségi média</string>
     <string name="support_us">Támogass minket</string>
     <!-- Settings -->

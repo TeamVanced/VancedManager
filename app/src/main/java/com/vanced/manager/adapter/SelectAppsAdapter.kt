@@ -18,14 +18,14 @@ class SelectAppsAdapter(private val context: Context) :
 
     private val vanced = SelectAppModel(
         context.getString(R.string.vanced),
-        context.getString(R.string.select_apps_vanced),
+        context.getString(R.string.description_vanced),
         "vanced",
         prefs.enableVanced
     )
 
     private val music = SelectAppModel(
         context.getString(R.string.music),
-        context.getString(R.string.select_apps_music),
+        context.getString(R.string.description_vanced_music),
         "music",
         prefs.enableMusic
     )

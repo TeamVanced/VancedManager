@@ -17,23 +17,20 @@
     <string name="are_you_rooted">আপনার ডিভাইসটিতে আপনার রুট অ্যাক্সেস আছে?</string>
     <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
     <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
-    <string name="select_apps_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য!\nতুলনামূলকভাবে কম বৈশিষ্ট্যযুক্ত, তবে আপনার চাহিদা পূরণ করবে।</string>
-    <string name="select_apps_vanced">ইউটিউব ভ্যান্সড হল স্টক অ্যান্ড্রয়েড ইউটিউব অ্যাপ, তবে আরো ভাল!</string>
+    <string name="description_vanced_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য!\nতুলনামূলকভাবে কম বৈশিষ্ট্যযুক্ত, তবে আপনার চাহিদা পূরণ করবে।</string>
+    <string name="description_vanced">ইউটিউব ভ্যান্সড হল স্টক অ্যান্ড্রয়েড ইউটিউব অ্যাপ, তবে আরো ভাল!</string>
     <string name="lets_get_started">শুরু করা যাক</string>
     <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s এর সম্বন্ধে</string>
-    <string name="app_changelog_tooltip">পরিবর্তন নথি দেখতে কার্ডে আলতো চাপুন।</string>
     <string name="changelog">পরিবর্তন নথি</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="install">ইনস্টল করুন</string>
-    <string name="button_reinstall">পুনরায় ইনস্টল করুন</string>
     <string name="version_installed">ইনস্টল করা আছে:</string>
     <string name="latest">সর্বশেষ:</string>
     <string name="no_microg">মাইক্রোজি ইনস্টল করা নেই</string>
     <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
     <string name="unavailable">অনুপলব্ধ</string>
-    <string name="update">আপডেট</string>
     <string name="social_media">সামাজিক মাধ্যম</string>
     <string name="support_us">আমাদের সমর্থন</string>
     <!-- Settings -->

@@ -22,6 +22,23 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="AppActionButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppVersionText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="AppVersionTextNumber" parent="AppVersionText">
+        <item name="android:layout_marginStart">4dp</item>
+    </style>
+
     <style name="OutlinedButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -121,13 +138,6 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:textSize">28sp</item>
         <item name="android:layout_marginTop">@dimen/top_header_margin</item>
-    </style>
-
-    <style name="AppVersionText" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:letterSpacing">0.02</item>
-        <item name="android:textColor">?colorLinkImage</item>
     </style>
 
     <style name="WelcomeHeaderSubtitle" parent="Widget.AppCompat.TextView">

@@ -17,23 +17,20 @@
     <string name="are_you_rooted">Имате ли Root достъп на устройството си?</string>
     <string name="grant_root">Разрешете Root достъп</string>
     <string name="select_at_least_one_app">Изберете поне едно приложение!</string>
-    <string name="select_apps_music">Vanced, но за YouTube Music!\nс по-малко функции, но ще задоволи нуждите Ви.</string>
-    <string name="select_apps_vanced">YouTube Vanced е като оригиналното YouTube приложение, но значително подобрено!</string>
+    <string name="description_vanced_music">Vanced, но за YouTube Music!\nс по-малко функции, но ще задоволи нуждите Ви.</string>
+    <string name="description_vanced">YouTube Vanced е като оригиналното YouTube приложение, но значително подобрено!</string>
     <string name="lets_get_started">Да започваме</string>
     <string name="willing_to_use_root">Не знаете какво е това или не искате да ползвате Root версията? Просто натиснете синята стрелка по-долу!</string>
     <!-- Home Page -->
     <string name="about_app">Относно %1$s</string>
-    <string name="app_changelog_tooltip">Докоснете картичката, за да видите списъка с промени.</string>
     <string name="changelog">Списък с промени</string>
     <string name="downloading_file">Изтегляне на %1$s</string>
     <string name="install">Инсталиране</string>
-    <string name="button_reinstall">Преинсталиране</string>
     <string name="version_installed">Инсталиранa:</string>
     <string name="latest">Най-нова:</string>
     <string name="no_microg">microG не е инсталирано</string>
     <string name="root_not_granted">Root достъп не е разрешен</string>
     <string name="unavailable">Недостъпно</string>
-    <string name="update">Обновяване</string>
     <string name="social_media">Социални медии</string>
     <string name="support_us">Подкрепете ни</string>
     <!-- Settings -->
