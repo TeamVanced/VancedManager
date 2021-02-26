@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
+    <string name="description_vanced">Een aangepaste versie van YouTube met veel handige functies!</string>
+    <string name="description_vanced_music">Vanced, maar voor YouTube Music!\nMinder functies maar voldoet aan al je wensen.</string>
+    <string name="description_microg">Een aangepaste GMS implementatie voor Vanced gebaseerd op het microG project.</string>
     <string name="reset">Herstellen</string>
     <string name="save">Bewaren</string>
     <string name="select_apps">Apps selecteren</string>
@@ -17,23 +20,19 @@
     <string name="are_you_rooted">Is je apparaat geroot?</string>
     <string name="grant_root">Root machtiging toestaan</string>
     <string name="select_at_least_one_app">Selecteer minstens één app!</string>
-    <string name="select_apps_music">Vanced voor YouTube Music !\nMinder functies maar voldoet zeker aan je wensen.</string>
-    <string name="select_apps_vanced">YouTube Vanced is de standaard Android YouTube app, maar nog beter !</string>
     <string name="lets_get_started">Aan de slag !</string>
     <string name="willing_to_use_root">Weet je niet wat dit is of wil je de root-versie niet gebruiken? Klik gewoon op de blauwe pijl hieronder!</string>
     <!-- Home Page -->
     <string name="about_app">Over %1$s</string>
-    <string name="app_changelog_tooltip">Tik op de kaart om de wijzigingen te zien.</string>
+    <string name="apps">Apps</string>
     <string name="changelog">Wijzigingen</string>
     <string name="downloading_file">%1$s downloaden</string>
     <string name="install">Installeren</string>
-    <string name="button_reinstall">Herinstalleren</string>
     <string name="version_installed">Geïnstalleerd:</string>
     <string name="latest">Recentste:</string>
     <string name="no_microg">microG is niet geïnstalleerd</string>
     <string name="root_not_granted">Root machtiging niet toegestaan</string>
     <string name="unavailable">Niet beschikbaar</string>
-    <string name="update">Bijwerken</string>
     <string name="social_media">Sociale Media</string>
     <string name="support_us">Steun ons</string>
     <!-- Settings -->
