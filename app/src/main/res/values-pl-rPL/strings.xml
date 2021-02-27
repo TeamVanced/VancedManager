@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Anuluj</string>
     <string name="close">Zamknij</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_vanced">Zmodyfikowany klient YouTube z wieloma przydatnymi funkcjami!</string>
+    <string name="description_vanced_music">Vanced, ale dla YouTube Music! Stosunkowo mniej bogaty w funkcje, ale spełnia Twoje potrzeby.</string>
+    <string name="description_microg">Niestandardowa implementacja GMS dla Vanced w oparciu o projekt microG.</string>
     <string name="reset">Zresetuj</string>
     <string name="save">Zapisz</string>
     <string name="select_apps">Wybierz swoje aplikacje</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Nie wiesz, co to jest lub nie chcesz użyć wersji z rootem? Po prostu kliknij niebieską strzałkę poniżej!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
-    <string name="apps">Apps</string>
+    <string name="apps">Aplikacje</string>
     <string name="changelog">Lista zmian</string>
     <string name="downloading_file">Pobieranie %1$s</string>
     <string name="install">Zainstaluj</string>
