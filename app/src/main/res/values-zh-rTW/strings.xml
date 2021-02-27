@@ -4,7 +4,7 @@
     <string name="cancel">取消</string>
     <string name="close">關閉</string>
     <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_vanced_music">Vanced ，不過是 YouTube Music！功能相對較少但足以滿足您的需要。</string>
     <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">重設</string>
     <string name="save">儲存</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">不知道這是什麼，或者不想使用 Root 版本？只需點選下面的藍色箭頭！</string>
     <!-- Home Page -->
     <string name="about_app">關於 %1$s</string>
-    <string name="apps">Apps</string>
+    <string name="apps">應用程式</string>
     <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
@@ -112,7 +112,7 @@
     <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
     <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
     <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
-    <string name="installation_storage">由於裝置的可用空間不足，因此安裝失敗。</string>
+    <string name="installation_storage">裝置的可用空間不足導致安裝失敗。</string>
     <string name="modapk_missing">在安裝程式中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試。</string>
     <string name="path_missing">分割安裝後無法找到原生 YouTube 安裝路徑。</string>
 </resources>
