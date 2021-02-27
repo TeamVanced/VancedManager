@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Batal</string>
     <string name="close">Tutup</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_vanced">Klien YouTube termodifikasi dengan berbagai fitur berguna!</string>
+    <string name="description_vanced_music">Vanced, tetapi untuk YouTube Music! Relatif memiliki fitur yang kurang kaya tetapi memenuhi kebutuhan anda.</string>
+    <string name="description_microg">Penerapan GMS kustom untuk Vanced yang didasarkan pada proyek microG.</string>
     <string name="reset">Atur ulang</string>
     <string name="save">Simpan</string>
     <string name="select_apps">Pilih Aplikasi Anda</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Tidak tahu apa ini atau tidak ingin menggunakan versi root? cukup klik panah biru di bawah!</string>
     <!-- Home Page -->
     <string name="about_app">Tentang %1$s</string>
-    <string name="apps">Apps</string>
+    <string name="apps">Aplikasi</string>
     <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
     <string name="install">Pasang</string>
