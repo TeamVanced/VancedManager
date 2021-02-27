@@ -55,24 +55,22 @@ class ExpandableAppListAdapter(
                 appDownload.setOnClickListener {
                     viewModel.openInstallDialog(dataModel?.buttonTag?.value, apps[position])
                 }
-                appExpandCard.setOnClickListener {
+                appClickableLayout.setOnClickListener {
                     if (isAnimationRunning) return@setOnClickListener
                     val rootHeight = root.measuredHeight
                     val expandedViewHeight = appExpandedView.height
-                    val expandedTranslation = appExpandCard.height.toFloat()
+                    val expandedTranslation = appClickableLayout.height.toFloat()
 
                     when (isExpanded.also { isExpanded = !isExpanded }) {
                         true -> {
                             appExpandedView.toggle(0f, 0.8f, -expandedTranslation)
                             root.toggleCard(rootHeight - expandedViewHeight) { addAnimListener() }
                             appExpandArrow.rotateArrow(90f)
-                            appExpandCard.animateCardRadius(0f, 16f)
                         }
                         false -> {
                             root.toggleCard(rootHeight + expandedViewHeight) { addAnimListener() }
                             appExpandedView.toggle(1f, 1f, expandedTranslation)
                             appExpandArrow.rotateArrow(-90f)
-                            appExpandCard.animateCardRadius(16f, 0f)
                         }
                     }
                 }
@@ -139,14 +137,6 @@ class ExpandableAppListAdapter(
             alpha(alpha)
             translationYBy(translation)
         }
-    }
-
-    private fun MaterialCardView.animateCardRadius(startPoint: Float, endPoint: Float) {
-        ValueAnimator.ofFloat(startPoint, endPoint).setDuration(animationDuration).apply {
-            addUpdateListener {
-                radius = it.animatedValue as Float
-            }
-        }.start()
     }
 
     private inline fun MaterialCardView.toggleCard(

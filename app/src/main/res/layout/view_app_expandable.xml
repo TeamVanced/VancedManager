@@ -112,18 +112,19 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/app_expand_card"
+        android:id="@+id/app_clickable_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contentPadding="16dp"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="0dp"
         app:cardElevation="0dp"
         app:cardBackgroundColor="?colorLinkBG"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/app_icon"
