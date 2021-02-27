@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">これが何であるか分からないか、またはRootバージョンを使用したくない場合は、下の青い矢印をタップしてください！</string>
     <!-- Home Page -->
     <string name="about_app">%1$s について</string>
-    <string name="apps">Apps</string>
+    <string name="apps">アプリ</string>
     <string name="changelog">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="install">インストール</string>
