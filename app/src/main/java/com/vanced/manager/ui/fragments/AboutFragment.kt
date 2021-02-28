@@ -36,7 +36,7 @@ class AboutFragment : BindingFragment<FragmentAboutBinding>() {
     @SuppressLint("ClickableViewAccessibility")
     private fun dataBind() {
         requireActivity().title = getString(R.string.title_about)
-        binding.root.setOnClickListener {
+        binding.aboutVersionCard.setOnClickListener {
             showDialog(
                 AppInfoDialog.newInstance(
                     appName = getString(R.string.app_name),
