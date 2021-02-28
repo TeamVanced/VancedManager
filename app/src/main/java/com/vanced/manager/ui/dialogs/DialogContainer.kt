@@ -5,7 +5,7 @@ import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
-import com.vanced.manager.utils.applyAccent
+import com.vanced.manager.utils.showWithAccent
 import com.vanced.manager.utils.isMiuiOptimizationsEnabled
 import com.vanced.manager.utils.openUrl
 
@@ -24,7 +24,7 @@ object DialogContainer {
                 }
             }
             create()
-            applyAccent()
+            showWithAccent()
         }
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit { putBoolean("firstLaunch", false) }
@@ -44,7 +44,7 @@ object DialogContainer {
             }
             setCancelable(false)
             create()
-            applyAccent()
+            showWithAccent()
         }
     }
 
@@ -54,7 +54,7 @@ object DialogContainer {
             setMessage("So this statement is false huh? I'll go with True!")
             setPositiveButton("wut?") { dialog, _ -> dialog.dismiss() }
             create()
-            applyAccent()
+            showWithAccent()
         }
 
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
@@ -89,7 +89,7 @@ object DialogContainer {
                 }
             }
             create()
-            applyAccent()
+            showWithAccent()
         }
     }
 
@@ -99,7 +99,7 @@ object DialogContainer {
             setMessage(msg)
             setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
             create()
-            applyAccent()
+            showWithAccent()
         }
     }
 

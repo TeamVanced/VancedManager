@@ -90,7 +90,7 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                             dismiss()
                         }
                         create()
-                    }.applyAccent()
+                    }.showWithAccent()
                     return@setOnClickListener
                 }
 

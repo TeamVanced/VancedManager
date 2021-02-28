@@ -71,7 +71,7 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
                             dismiss()
                         }
                         create()
-                    }.applyAccent()
+                    }.showWithAccent()
                     return@setOnClickListener
                 }
 

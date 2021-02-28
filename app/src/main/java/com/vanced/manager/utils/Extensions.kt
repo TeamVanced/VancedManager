@@ -25,7 +25,6 @@ fun DialogFragment.show(activity: FragmentActivity) {
     } catch (e: Exception) {
         log("VMUI", e.stackTraceToString())
     }
-
 }
 
 fun List<String>.convertToAppVersions(): List<String> = listOf("latest") + reversed()
@@ -49,14 +48,14 @@ fun Int.toHex(): String = java.lang.String.format("#%06X", 0xFFFFFF and this)
 //Material team decided to keep their LinearProgressIndicator final
 //At least extension methods exist
 fun LinearProgressIndicator.applyAccent() {
-    with(accentColor.value ?: context.defPrefs.managerAccent) {
+    with(accentColor.value!!) {
         setIndicatorColor(this)
         trackColor = ColorUtils.setAlphaComponent(this, 70)
     }
 }
 
-fun MaterialAlertDialogBuilder.applyAccent() {
-    with(accentColor.value ?: context.defPrefs.managerAccent) {
+fun MaterialAlertDialogBuilder.showWithAccent() {
+    with(accentColor.value!!) {
         show().apply {
             getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(this@with)
             getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(this@with)
