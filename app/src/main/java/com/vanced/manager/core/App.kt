@@ -10,6 +10,8 @@ import com.crowdin.platform.data.remote.NetworkType
 import com.vanced.manager.BuildConfig.*
 import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.loadJson
+import com.vanced.manager.utils.managerAccent
+import com.vanced.manager.utils.mutableAccentColor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -23,7 +25,7 @@ open class App: Application() {
     override fun onCreate() {
         scope.launch { loadJson(this@App) }
         super.onCreate()
-
+        mutableAccentColor.value = prefs.managerAccent
         Crowdin.init(this,
             CrowdinConfig.Builder().apply {
                 withDistributionHash(CROWDIN_HASH)

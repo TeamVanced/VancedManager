@@ -4,8 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import com.google.android.material.card.MaterialCardView
-import com.vanced.manager.utils.defPrefs
-import com.vanced.manager.utils.managerAccent
+import com.vanced.manager.utils.accentColor
 
 class ThemedAppCard @JvmOverloads constructor(
     context: Context,
@@ -14,7 +13,7 @@ class ThemedAppCard @JvmOverloads constructor(
 ) : MaterialCardView(context, attributeSet, defStyleAttr) {
 
     init {
-        setCardBackgroundColor(ColorStateList.valueOf(context.defPrefs.managerAccent).withAlpha(35))
+        setCardBackgroundColor(ColorStateList.valueOf(accentColor.value!!).withAlpha(35))
     }
 
 }

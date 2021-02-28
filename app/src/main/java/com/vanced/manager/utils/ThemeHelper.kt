@@ -11,7 +11,7 @@ const val LIGHT = "Light"
 const val DARK = "Dark"
 const val SYSTEM_DEFAULT = "System Default"
 
-val mutableAccentColor = MutableLiveData<Int>()
+val mutableAccentColor = MutableLiveData(defAccentColor)
 val accentColor: LiveData<Int> = mutableAccentColor
 
 var currentTheme = ""

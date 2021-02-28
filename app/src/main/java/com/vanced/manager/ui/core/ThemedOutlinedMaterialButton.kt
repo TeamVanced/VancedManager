@@ -6,10 +6,7 @@ import android.util.AttributeSet
 import androidx.core.graphics.ColorUtils
 import com.google.android.material.button.MaterialButton
 import com.vanced.manager.utils.accentColor
-import com.vanced.manager.utils.defPrefs
 import com.vanced.manager.utils.lifecycleOwner
-import com.vanced.manager.utils.managerAccent
-
 
 class ThemedOutlinedMaterialButton @JvmOverloads constructor(
     context: Context,
@@ -17,7 +14,6 @@ class ThemedOutlinedMaterialButton @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : MaterialButton(context, attributeSet, defStyleAttr) {
     init {
-        applyAccent(context.defPrefs.managerAccent)
         context.lifecycleOwner()?.let { owner ->
             accentColor.observe(owner) { color ->
                 applyAccent(color.toInt())

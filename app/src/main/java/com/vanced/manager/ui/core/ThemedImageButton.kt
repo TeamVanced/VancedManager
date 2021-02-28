@@ -4,8 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageButton
-import com.vanced.manager.utils.defPrefs
-import com.vanced.manager.utils.managerAccent
+import com.vanced.manager.utils.accentColor
 
 class ThemedImageButton @JvmOverloads constructor(
     context: Context,
@@ -14,7 +13,7 @@ class ThemedImageButton @JvmOverloads constructor(
 ) : AppCompatImageButton(context, attributeSet, defStyleAttr) {
 
     init {
-        imageTintList = ColorStateList.valueOf(context.defPrefs.managerAccent)
+        imageTintList = ColorStateList.valueOf(accentColor.value!!)
     }
 
 }
