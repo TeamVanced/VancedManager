@@ -21,23 +21,42 @@
             android:text="@string/checking_updates"
             style="@style/DialogCardSubtitle"/>
 
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:id="@+id/manager_update_progressbar"
+        <RelativeLayout
+            android:id="@+id/manager_update_progressbar_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/manager_update_patient"
-            android:layout_marginTop="32dp"
-            android:paddingBottom="8dp"
-            app:trackCornerRadius="15dp"
-            tools:progress="10"
-            tools:visibility="visible" />
+            android:layout_marginTop="18dp">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/manager_update_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:trackCornerRadius="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/manager_update_progress"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                tools:progress="10" />
+
+            <TextView
+                android:id="@+id/manager_update_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                tools:text="20%" />
+
+        </RelativeLayout>
 
         <com.vanced.manager.ui.core.ThemedOutlinedMaterialButton
             android:id="@+id/manager_update_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_below="@id/manager_update_progressbar"
+            android:layout_below="@id/manager_update_progressbar_container"
+            android:layout_marginTop="8dp"
             android:text="@string/cancel"
             style="@style/OutlinedButtonStyle" />
 

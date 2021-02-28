@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.dialogs
 
+import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -77,10 +78,12 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun DialogManagerUpdateBinding.bindDownloadProgress() {
         downloadProgress.observe(viewLifecycleOwner) {
             managerUpdateProgressbar.progress = it
-            managerUpdateProgressbar.isVisible = it != 0
+            managerUpdateProgressbarContainer.isVisible = it != 0
+            managerUpdateProgress.text = "$it%"
         }
     }
 
