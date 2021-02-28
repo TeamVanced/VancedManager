@@ -102,10 +102,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-                true
-            }
             R.id.toolbar_about -> {
                 navHost.navigate(HomeFragmentDirections.toAboutFragment())
                 true
