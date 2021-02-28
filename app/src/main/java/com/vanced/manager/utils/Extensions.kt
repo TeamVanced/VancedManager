@@ -42,17 +42,10 @@ fun String.convertToAppTheme(context: Context): String {
 
 fun String.getLatestAppVersion(versions: List<String>): String = if (this == "latest") versions.reversed()[0] else this
 
-fun Context.lifecycleOwner(): LifecycleOwner? {
-    var curContext = this
-    var maxDepth = 20
-    while (maxDepth-- > 0 && curContext !is LifecycleOwner) {
-        curContext = (curContext as ContextWrapper).baseContext
-    }
-    return if (curContext is LifecycleOwner) {
-        curContext
-    } else {
-        null
-    }
+val Context.lifecycleOwner: LifecycleOwner? get() = when (this) {
+    is LifecycleOwner -> this
+    !is LifecycleOwner -> (this as ContextWrapper).baseContext as LifecycleOwner
+    else -> null
 }
 
 fun Int.toHex(): String = java.lang.String.format("#%06X", 0xFFFFFF and this)
