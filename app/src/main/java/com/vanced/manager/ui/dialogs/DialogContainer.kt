@@ -20,7 +20,7 @@ object DialogContainer {
             }
             setOnCancelListener {
                 if (context.isMiuiOptimizationsEnabled) {
-                    applyAccentMiuiDialog(context)
+                    miuiDialog(context)
                 }
             }
             create()
@@ -30,7 +30,7 @@ object DialogContainer {
         prefs.edit { putBoolean("firstLaunch", false) }
     }
 
-    fun applyAccentMiuiDialog(context: Context) {
+    fun miuiDialog(context: Context) {
         MaterialAlertDialogBuilder(context).apply {
             setTitle(context.getString(R.string.miui_one_title))
             setMessage(context.getString(R.string.miui_one))

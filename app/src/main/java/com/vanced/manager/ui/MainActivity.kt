@@ -32,6 +32,7 @@ import com.vanced.manager.utils.AppUtils.currentLocale
 import com.vanced.manager.utils.AppUtils.faqpkg
 import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.playStorePkg
+import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 class MainActivity : AppCompatActivity() {
@@ -74,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         initDialogs(intent.getBooleanExtra("firstLaunch", false))
         manager.observe(this) {
             if (manager.value?.int("versionCode") ?: 0 > VERSION_CODE) {
-                ManagerUpdateDialog.newInstance(false).show(this)
+                ManagerUpdateDialog.newInstance(true).show(this)
             }
         }
     }
@@ -208,7 +209,7 @@ class MainActivity : AppCompatActivity() {
             }
         } else {
             if (isMiuiOptimizationsEnabled) {
-                DialogContainer.applyAccentMiuiDialog(this)
+                DialogContainer.miuiDialog(this)
             }
         }
 
@@ -217,7 +218,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (variant == "root") {
-            if (PackageHelper.getPackageVersionName("com.google.android.youtube", packageManager) == "14.21.54") {
+            if (PackageHelper.getPackageVersionName(vancedRootPkg, packageManager) == "14.21.54") {
                 DialogContainer.basicDialog(
                     getString(R.string.hold_on),
                     getString(R.string.magisk_vanced),
