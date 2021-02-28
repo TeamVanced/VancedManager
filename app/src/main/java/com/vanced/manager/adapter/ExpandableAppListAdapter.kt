@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.core.animation.addListener
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.FragmentActivity
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.RecyclerView
@@ -35,15 +35,19 @@ class ExpandableAppListAdapter(
         private var isExpanded = false
         private var isAnimationRunning = false
 
-        private fun Animator.addAnimListener() {
-            addListener(
-                onStart = {
-                    isAnimationRunning = true
-                },
-                onEnd = {
-                    isAnimationRunning = false
-                }
-            )
+        private val animationListener = object : Animator.AnimatorListener {
+            override fun onAnimationStart(animation: Animator?) {
+                isAnimationRunning = true
+            }
+
+            override fun onAnimationEnd(animation: Animator?) {
+                isAnimationRunning = false
+            }
+
+            override fun onAnimationCancel(animation: Animator?) {}
+
+            override fun onAnimationRepeat(animation: Animator?) {}
+
         }
 
         fun bind(position: Int) {
@@ -64,11 +68,11 @@ class ExpandableAppListAdapter(
                     when (isExpanded.also { isExpanded = !isExpanded }) {
                         true -> {
                             appExpandedView.toggle(0f, 0.8f, -expandedTranslation)
-                            root.toggleCard(rootHeight - expandedViewHeight) { addAnimListener() }
+                            root.toggleCard(rootHeight - expandedViewHeight, animationListener)
                             appExpandArrow.rotateArrow(90f)
                         }
                         false -> {
-                            root.toggleCard(rootHeight + expandedViewHeight) { addAnimListener() }
+                            root.toggleCard(rootHeight + expandedViewHeight, animationListener)
                             appExpandedView.toggle(1f, 1f, expandedTranslation)
                             appExpandArrow.rotateArrow(-90f)
                         }
@@ -139,16 +143,18 @@ class ExpandableAppListAdapter(
         }
     }
 
-    private inline fun MaterialCardView.toggleCard(
+    private fun MaterialCardView.toggleCard(
         resultHeight: Int,
-        onAnimation: Animator.() -> Unit
+        listener: Animator.AnimatorListener
     ) {
         ValueAnimator.ofInt(measuredHeight, resultHeight).apply {
             duration = animationDuration
             addUpdateListener { value ->
-                layoutParams = layoutParams.apply { height = value.animatedValue as Int }
+                updateLayoutParams {
+                    height = value.animatedValue as Int
+                }
             }
-            onAnimation()
+            addListener(listener)
         }.start()
     }
 
