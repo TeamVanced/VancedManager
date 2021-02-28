@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Peruuta</string>
     <string name="close">Sulje</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced">Muokattu YouTube-sovellus, jossa on monia hyödyllisiä ominaisuuksia!</string>
     <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
     <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Palauta</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Etkö tiedä mikä tämä on tai etkö halua käyttää rootattua versiota? Klikkaa alla olevaa sinistä nuolta!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
-    <string name="apps">Apps</string>
+    <string name="apps">Sovellukset</string>
     <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
@@ -112,7 +112,7 @@
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
     <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">Asennus epäonnistui, koska laitteella ei ole tarpeeksi vapaata tilaa.</string>
     <string name="modapk_missing">APK-tiedostoa mustalle/tummalle teemalle ei löytynyt asentajalta. Tyhjennä Managerin sovellustiedot ja yritä uudelleen.</string>
     <string name="path_missing">Youtube-sovelluksen asennuspolkua ei voitu paikantaa jaetun asennuksen jälkeen.</string>
 </resources>
