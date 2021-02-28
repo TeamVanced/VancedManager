@@ -17,9 +17,7 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.log
 import java.util.*
 
-fun RadioGroup.getCheckedButtonTag(): String? {
-    return findViewById<MaterialRadioButton>(checkedRadioButtonId)?.tag?.toString()
-}
+val RadioGroup.checkedButtonTag: String? get() = findViewById<MaterialRadioButton>(checkedRadioButtonId)?.tag?.toString()
 
 fun DialogFragment.show(activity: FragmentActivity) {
     try {
@@ -34,10 +32,8 @@ fun List<String>.convertToAppVersions(): List<String> = listOf("latest") + rever
 
 fun String.formatVersion(context: Context): String = if (this == "latest") context.getString(R.string.install_latest) else this
 
-fun String.convertToAppTheme(context: Context): String {
-    return with(context) {
-        getString(R.string.light_plus_other, if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black))
-    }
+fun String.convertToAppTheme(context: Context): String = with(context) {
+    getString(R.string.light_plus_other, if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black))
 }
 
 fun String.getLatestAppVersion(versions: List<String>): String = if (this == "latest") versions.reversed()[0] else this

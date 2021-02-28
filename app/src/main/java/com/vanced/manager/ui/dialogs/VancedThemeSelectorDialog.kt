@@ -11,7 +11,7 @@ import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
 import com.vanced.manager.ui.core.ThemedMaterialRadioButton
 import com.vanced.manager.utils.convertToAppTheme
-import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.checkedButtonTag
 import com.vanced.manager.utils.theme
 import com.vanced.manager.utils.vanced
 
@@ -51,7 +51,7 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
                 tag.isChecked = true
             }
             dialogSave.setOnClickListener {
-                val checkedTag = binding.dialogRadiogroup.getCheckedButtonTag()
+                val checkedTag = binding.dialogRadiogroup.checkedButtonTag
                 if (checkedTag != null) {
                     prefs.theme = checkedTag
                 }
