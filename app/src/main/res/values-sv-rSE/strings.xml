@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Avbryt</string>
     <string name="close">Stäng</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_vanced">En modifierad YouTube-klient med många användbara funktioner!</string>
+    <string name="description_vanced_music">Vanced, men för YouTube Music! relativt mindre funktion rik men uppfyller dina behov.</string>
+    <string name="description_microg">En anpassad GMS Implementation för Vanced baserad på microG-projektet.</string>
     <string name="reset">Återställ</string>
     <string name="save">Spara</string>
     <string name="select_apps">Välj dina appar</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Vet du inte vad detta är eller inte vill använda rotversionen? Klicka bara på den blå pilen nedan!</string>
     <!-- Home Page -->
     <string name="about_app">Cirka %1$s</string>
-    <string name="apps">Apps</string>
+    <string name="apps">Appar</string>
     <string name="changelog">Ändringslogg</string>
     <string name="downloading_file">Laddar ned %1$s</string>
     <string name="install">Install</string>
@@ -107,12 +107,12 @@
     <string name="installation_blocked">Åtgärden misslyckades eftersom användaren avbröt installationen.</string>
     <string name="installation_downgrade">Installationen misslyckades eftersom användaren försökte nedgradera paketet. Avinstallera uppdateringar från lagerappen YouTube, försök sedan igen.</string>
     <string name="installation_conflict">Installationen misslyckades eftersom appen står i konflikt med en redan installerad app. Avinstallera den aktuella versionen av Vanced, försök sedan igen.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">Installationen misslyckades av okända skäl, gå med i vårt Telegram eller Discord för ytterligare stöd. Vänligen bifoga även en skärmdump från menyn Avancerat</string>
     <string name="installation_incompatible">Installationen misslyckades eftersom installationsfilen är inkompatibel med din enhet. Rensa nedladdade filer i Inställningarna och försök igen.</string>
     <string name="installation_invalid">Installationen misslyckades eftersom apk-filerna är skadade, försök igen.</string>
     <string name="installation_signature">Installationen misslyckades eftersom apk signaturverifiering är aktiverad. Inaktivera apk signaturverifiering och försök igen.</string>
     <string name="installation_miui">Installationen misslyckades eftersom MIUI-optimering är aktiverad. Inaktivera MIUI-optimering och försök igen.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">Installationen misslyckades eftersom enheten inte har tillräckligt med ledigt utrymme.</string>
     <string name="modapk_missing">Det gick inte att hitta apk-fil för svart/mörkt tema från installationsprogrammet. Rensa appdata från Manager och försök igen.</string>
     <string name="path_missing">Det gick inte att hitta sökvägen för lagerinstallationen på YouTube efter delad installation.</string>
 </resources>
