@@ -3,16 +3,16 @@
     <!-- Global Strings -->
     <string name="cancel">Скасувати</string>
     <string name="close">Закрити</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_vanced">Модифікований клієнт YouTube з безліччю корисних функцій!</string>
+    <string name="description_vanced_music">Vanced, але для YouTube Music! Відносно менш функціональний, але задовольняє ваші потреби.</string>
+    <string name="description_microg">Модифікований GMS для Vanced на основі проекту microG.</string>
     <string name="reset">Скинути</string>
     <string name="save">Зберегти</string>
     <string name="select_apps">Виберіть Ваші Додатки</string>
     <!-- Main Activity -->
     <string name="title_about">Про нас</string>
     <string name="title_guide">Посібник</string>
-    <string name="title_logs">Логі</string>
+    <string name="title_logs">Логи</string>
     <string name="title_home">Менеджер</string>
     <string name="title_settings">Налаштування</string>
     <string name="update_manager">Оновіть Менеджер</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Не знаєте, що це або не хочете використовувати рутовану версію? Просто натисніть синю стрілку внизу!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
-    <string name="apps">Apps</string>
+    <string name="apps">Додатки</string>
     <string name="changelog">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
     <string name="install">Встановити</string>
@@ -47,7 +47,7 @@
     <string name="link_title">Використовувати Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Відкривати посилання в Chrome Custom Tabs</string>
     <string name="system_default">Системна</string>
-    <string name="script_save_failed">Неможливо зберегти нове значення часу</string>
+    <string name="script_save_failed">Не вдалося зберегти нове значення часу</string>
     <string name="script_sleep_timer">Скрипт Таймера сну</string>
     <string name="script_sleep_timer_description">Налаштування значення часу сну, використовуваного в скрипті /data/adb/service.d/app.sh, корисно для вирішення проблем монтування</string>
     <string name="theme">Тема</string>
@@ -73,7 +73,7 @@
     <string name="hold_on">Зупинись!</string>
     <string name="magisk_vanced">Ви використовуєте Magisk/TWRP версію Vanced, яка припиняється і не може бути оновлена за допомогою цього застосунку. Будь ласка, видаліть його, видаливши модуль Magisk / з використання TWRP Vanced uninstaller.</string>
     <string name="miui_one_title">Оптимізацію MIUI увімкнено!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI у налаштуваннях розробника. (Ви можете ігнорувати це попередження якщо ви використовуєте 20.2.20 або новіші xiaomi.eu ROM)</string>
     <string name="error">Помилка</string>
     <string name="redownload">Завантажити заново</string>
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vancedapp.com, Vanced Discord сервер або Vanced GitHub</string>
@@ -82,7 +82,7 @@
     <string name="microg_bug">Помилка в microG</string>
     <string name="microg_bug_summary">У зв\'язку з помилкою в microG, встановлення Vanced версії 16+ спочатку вимагає встановлення версії 15.43.32, потім необхідно відкрити додаток, авторизуватися в акаунті і тільки після цього можна буде встановити версію 16 і вище. Ви хочете продовжити встановлення версії 15.43.32?</string>
     <string name="microg_bug_summary_music">У зв\'язку з помилкою в microG, встановлення Music версії 4.11+ спочатку вимагає встановлення версії 4.07.51, потім необхідно відкрити додаток, авторизуватися в акаунті і тільки після цього можна буде встановити версію 4.11 і вище. Ви хочете продовжити встановлення версії 4.07.51?</string>
-    <string name="please_be_patient">Будь ласка, НЕ виходите з додатку протягом цього процесу!</string>
+    <string name="please_be_patient">Будь ласка, НЕ завершуйте роботу додатку під час цього процесу!</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Виберіть бажану мову(и) для Vanced</string>
@@ -107,7 +107,7 @@
     <string name="installation_blocked">Встановлення не вдалося, оскільки користувач заблокував встановлення.</string>
     <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
     <string name="installation_conflict">Встановлення не вдалася, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">Не вдалося встановити з невідомих причин, підключіться до нашої Telegram групи або Discord сервера для подальшої підтримки. Будь ласка, додайте знімок екрану з розширеного меню</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
     <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>
     <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
