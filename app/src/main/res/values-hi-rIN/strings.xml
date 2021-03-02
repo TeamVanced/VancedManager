@@ -3,8 +3,8 @@
     <!-- Global Strings -->
     <string name="cancel">रद्द करें</string>
     <string name="close">बंद करे</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_vanced">कई उपयोगी सुविधाओं के साथ एक संशोधित यूट्यूब क्लाइंट!</string>
+    <string name="description_vanced_music">नृत्य किया, लेकिन यूट्यूब संगीत के लिए! अपेक्षाकृत कम सुविधा संपन्न लेकिन आपकी जरूरतों को पूरा करता है।</string>
     <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">रिसेट</string>
     <string name="save">सहेजें</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">नहीं जानते ये क्या है या रूट वर्जन इस्तेमाल नहीं करना चाहते? बस नीचे वाला बटन दबाइए!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s के बारे में</string>
-    <string name="apps">Apps</string>
+    <string name="apps">आधुनिक संगणक एप्लीकेशन.</string>
     <string name="changelog">परिवर्तन पत्र</string>
     <string name="downloading_file">डाउनलोड हो रहा है %1$s</string>
     <string name="install">इंस्टॉल</string>
@@ -59,8 +59,8 @@
     <string name="update_not_found">कोई नया अपडेट नहीं</string>
     <string name="variant">संस्करण</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">सफलतापूर्वक लॉग सहेजे गए</string>
+    <string name="logs_not_saved">लॉग सहेज नहीं सका</string>
     <!-- Dialogs -->
     <string name="advanced">एडवांस्ड</string>
     <string name="app_install_files_detected">%1$s इंस्टालेशन फ़ाइलों का पता चला!</string>
