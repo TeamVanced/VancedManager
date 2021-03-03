@@ -49,7 +49,7 @@
     <string name="system_default">Järjestelmän oletus</string>
     <string name="script_save_failed">Uuden ajan tallennus epäonnistui</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_sleep_timer_description">Säädä lepoajan arvoa jota käytetään /data/adb/service.d/app.sh skriptissä, joka on hyödyllinen asennusongelmien korjaamisessa</string>
     <string name="theme">Teema</string>
     <string name="theme_dark">Tumma teema</string>
     <string name="theme_light">Vaalea teema</string>
