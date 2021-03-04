@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Visszavonás</string>
     <string name="close">Bezárás</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_vanced">Egy módosított YouTube kliens számos hasznos funkcióval!</string>
+    <string name="description_vanced_music">Vanced, a YouTube Music-ra! Kevésbé funkciógazdag, de kielégíti az igényeidet.</string>
+    <string name="description_microg">Egyedi GMS implementáció a Vanced számára a microG Projekt alapján.</string>
     <string name="reset">Visszaállítás</string>
     <string name="save">Mentés</string>
     <string name="select_apps">Válaszd ki az Appot</string>
@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Nem tudod mi ez vagy csak nem akarod használni a root verziót? Csak kattins a lenti kék nyílra!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s- ról</string>
-    <string name="apps">Apps</string>
+    <string name="apps">Alkalmazások</string>
     <string name="changelog">Változáslista</string>
     <string name="downloading_file">%1$s letöltése</string>
     <string name="install">Telepítés</string>
@@ -73,8 +73,8 @@ Akarod telepíteni?</string>
     <string name="guide">Útmutató</string>
     <string name="hold_on">Állj!</string>
     <string name="magisk_vanced">A Vanced Magisk/TWRP verzióját használod, ami már nem támogatott és nem frissíthető ezzel az alkalmazással. Távolítsd el a Magisk modul eltávolításával vagy TWRP Vanced eltávolítóval.</string>
-    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one_title">MIUI optimalizálások engedélyezve!</string>
+    <string name="miui_one">Hogy a Vanced-et telepítsd, ki KELL kapcsolnod a MIUI Optimalizációt a fejlesztői beállításokban. (Ezt figyelmen kívül hagyhatod ha 20.2.20 vagy későbbi xiaomi.eu alapú ROM-ot használsz)</string>
     <string name="error">Hiba</string>
     <string name="redownload">Újra letölt</string>
     <string name="security_context">Arra kérünk, győződj meg róla, hogy ezt az alkalmazást a vancedapp.com oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötted le</string>
