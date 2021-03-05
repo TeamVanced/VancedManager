@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Hủy</string>
     <string name="close">Đóng</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced">Một ứng dụng khách YouTube đã được sửa đổi với nhiều tính năng hữu ích!</string>
     <string name="description_vanced_music">Vanced, nhưng cho YouTube Music! Tương đối ít tính năng nhưng đáp ứng những gì bạn cần.</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_microg">Triển khai GMS tùy chỉnh cho Vanced dựa trên Dự án microG.</string>
     <string name="reset">Đặt lại</string>
     <string name="save">Lưu</string>
     <string name="select_apps">Chọn ứng dụng của bạn</string>
