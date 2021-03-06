@@ -80,7 +80,7 @@
     <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="version">Version</string>
     <string name="microg_bug">Bug dans microG</string>
-    <string name="microg_bug_summary">En raison d\'un bogue dans microG original, l\'installation de Vanced v16+ nécessite d\'abord l\'installation de la v15.43.32, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v16 ou une version plus récente. Voulez-vous procéder à l\'installation de la v15.43.32&#160;?</string>
+    <string name="microg_bug_summary">En raison d\'un bug dans microG original, l\'installation de Vanced v16+ nécessite d\'abord l\'installation de la v15.43.32. Ouvrez cette-dernière, puis connectez-vous et vous pourrez ainsi installer la v16 ou une version plus récente. Voulez-vous procéder à l\'installation de la v15.43.32&#160;?</string>
     <string name="microg_bug_summary_music">En raison d\'un bogue dans microG original, l\'installation de Music 4.11+ nécessite d\'abord l\'installation de la v4.07.51, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v14.11 ou une version plus récente. Voulez-vous procéder à l\'installation de la v4.07.51&#160;?</string>
     <string name="please_be_patient">Veuillez NE PAS quitter l\'application pendant que celle-ci est en cours de modification !</string>
     <string name="welcome">Bienvenue</string>
