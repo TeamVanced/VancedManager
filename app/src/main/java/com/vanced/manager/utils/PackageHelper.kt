@@ -299,10 +299,17 @@ object PackageHelper {
         }
     }
 
-    private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context) : Boolean {
+    private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context): Boolean {
         val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
         log(INSTALLER_TAG, "installing split apk files: ${apkFiles?.map { it.name }}")
-        val sessionId = Shell.su("pm install-create -r").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
+        val sessionId = Shell.su("pm install-create -r").exec().out.joinToString(" ").filter { it.isDigit() }.toIntOrNull()
+
+        if (sessionId == null) {
+            sendFailure("Session ID is null", context)
+            sendCloseDialog(context)
+            return false
+        }
+
         apkFiles?.filter { !filenames.contains(it.name) }?.forEach { apkFile ->
             val apkName = apkFile.name
             log(INSTALLER_TAG, "installing APK: $apkName")
