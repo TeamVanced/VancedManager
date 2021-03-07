@@ -4,7 +4,7 @@
     <string name="cancel">Anuluj</string>
     <string name="close">Zamknij</string>
     <string name="description_vanced">Zmodyfikowany klient YouTube z wieloma przydatnymi funkcjami!</string>
-    <string name="description_vanced_music">Vanced, ale dla YouTube Music! Stosunkowo mniej bogaty w funkcje, ale spełnia Twoje potrzeby.</string>
+    <string name="description_vanced_music">Vanced, ale dla Muzyki YouTube! Stosunkowo mniej bogaty w funkcje, ale spełnia Twoje potrzeby.</string>
     <string name="description_microg">Niestandardowa implementacja GMS dla Vanced w oparciu o projekt microG.</string>
     <string name="reset">Zresetuj</string>
     <string name="save">Zapisz</string>
