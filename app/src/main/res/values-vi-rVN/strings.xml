@@ -42,7 +42,7 @@
     <string name="clear_files">Xóa các tệp tin đã tải về</string>
     <string name="cleared_files">Xóa các tệp tin thành công</string>
     <string name="firebase_title">Firebase Analytics</string>
-    <string name="firebase_summary">Điều này cho phép chúng tôi thu thập thông tin về hiệu suất và sự cố của ứng dụng</string>
+    <string name="firebase_summary">Cho phép chúng tôi thu thập thông tin về hiệu suất và sự cố của ứng dụng</string>
     <string name="language_title">Ngôn ngữ</string>
     <string name="link_title">Sử dụng Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Các liên kết sẽ mở trong Chrome Custom Tabs</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Lưu nhật ký thành công</string>
     <string name="logs_not_saved">Lưu nhật ký thất bại</string>
     <!-- Dialogs -->
-    <string name="advanced">Mở rộng</string>
+    <string name="advanced">Chi tiết</string>
     <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
     <string name="app_install_files_detected_summary">Manager đã tìm thấy tất cả các tệp cần thiết để cài đặt %1$s. Bạn có muốn cài đặt nó không?</string>
     <string name="checking_updates">Đang kiểm tra cập nhật…</string>
@@ -107,7 +107,7 @@
     <string name="installation_blocked">Cài đặt thất bại do người dùng cản trở.</string>
     <string name="installation_downgrade">Cài đặt thất bại do người dùng cố hạ cấp ứng dụng. Gỡ cài đặt các bản cập nhật khỏi ứng dụng gốc rồi thử lại.</string>
     <string name="installation_conflict">Cài đặt thất bại do có xung đột với ứng dụng đã được cài đặt trước đó. Gỡ cài đặt phiên bản hiện tại của ứng dụng rồi thử lại.</string>
-    <string name="installation_failed">Cài đặt thất bại vì sự cố không xác định, tham gia Telegram hoặc Discord để được hỗ trợ. Vui lòng kèm theo ảnh chụp màn hình từ menu Mở rộng</string>
+    <string name="installation_failed">Cài đặt thất bại do lí do không xác định, tham gia Telegram hoặc Discord để được hỗ trợ. Vui lòng kèm theo ảnh chụp màn hình từ phần Chi tiết</string>
     <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
     <string name="installation_invalid">Cài đặt thất bại do các tệp tin apk bị lỗi, xin hãy thử lại.</string>
     <string name="installation_signature">Cài đặt thất bại do xác minh chứng chỉ apk được kích hoạt. Vô hiệu hóa xác minh chứng chỉ apk rồi thử lại.</string>
