@@ -30,7 +30,7 @@
     <string name="install">ස්ථාපනය</string>
     <string name="version_installed">ස්ථාපනය:</string>
     <string name="latest">අලුත්</string>
-    <string name="no_microg">මයික්‍රො ජී ස්ථාපනය කර නැත</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">මූල ප්‍රවේශය ලබා දී නොමැත</string>
     <string name="unavailable">නොමැත</string>
     <string name="social_media">Social Media</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Successfully saved logs</string>
     <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
-    <string name="advanced">Advanced</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s installation files detected!</string>
     <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
     <string name="checking_updates">Checking for updates…</string>
