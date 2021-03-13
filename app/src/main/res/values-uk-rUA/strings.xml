@@ -30,7 +30,7 @@
     <string name="install">Встановити</string>
     <string name="version_installed">Встановлена:</string>
     <string name="latest">Найновіша:</string>
-    <string name="no_microg">microG не встановлено</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">Права суперкористувача не були надані</string>
     <string name="unavailable">Недоступно</string>
     <string name="social_media">Соціальні мережі</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Логи успішно збережені</string>
     <string name="logs_not_saved">Не вдалося зберегти логи</string>
     <!-- Dialogs -->
-    <string name="advanced">Розширені</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
     <string name="app_install_files_detected_summary">Менеджер виявив, що всі необхідні файли для %1$s встановлення було знайдено. Бажаєте встановити їх?</string>
     <string name="checking_updates">Перевірка оновлень…</string>
