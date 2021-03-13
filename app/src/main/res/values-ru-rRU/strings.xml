@@ -30,7 +30,7 @@
     <string name="install">Установить</string>
     <string name="version_installed">Установлена:</string>
     <string name="latest">Последняя:</string>
-    <string name="no_microg">microG не установлен</string>
+    <string name="no_microg">Сначала установите Vanced microG</string>
     <string name="root_not_granted">Рут-доступ не предоставлен</string>
     <string name="unavailable">Недоступно</string>
     <string name="social_media">Социальные сети</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Логи успешно сохранены</string>
     <string name="logs_not_saved">Не удалось сохранить логи</string>
     <!-- Dialogs -->
-    <string name="advanced">Доп. настройки</string>
+    <string name="advanced">Подробнее</string>
     <string name="app_install_files_detected">Обнаружены установочные файлы для %1$s!</string>
     <string name="app_install_files_detected_summary">Менеджер обнаружил все необходимые файлы для установки %1$s. Продолжить установку?</string>
     <string name="checking_updates">Проверка обновлений…</string>
