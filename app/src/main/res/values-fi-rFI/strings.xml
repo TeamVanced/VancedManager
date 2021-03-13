@@ -30,7 +30,7 @@
     <string name="install">Asenna</string>
     <string name="version_installed">Asennettu:</string>
     <string name="latest">Uusin:</string>
-    <string name="no_microg">microG:tä ei ole asennettu</string>
+    <string name="no_microg">Asenna Vanced microG ensin</string>
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
     <string name="social_media">Sosiaalinen media</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Lokit tallennettiin onnistuneesti</string>
     <string name="logs_not_saved">Lokeja ei voitu tallentaa</string>
     <!-- Dialogs -->
-    <string name="advanced">Kehittyneet</string>
+    <string name="advanced">Lisätiedot</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
     <string name="app_install_files_detected_summary">Hallitsija havaitsi, että kaikki tarvittavat tiedostot %1$s asennusta varten. Haluatko asentaa sen?</string>
     <string name="checking_updates">Tarkistetaan päivityksiä…</string>
