@@ -30,7 +30,7 @@
     <string name="install">நிறுவு</string>
     <string name="version_installed">நிறுவப்பட்டது:</string>
     <string name="latest">சமீபத்தியது:</string>
-    <string name="no_microg">microG நிறுவப்படவில்லை</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">ரூட் அக்சஸ் வழங்கப்படவில்லை</string>
     <string name="unavailable">கிடைக்கவில்லை</string>
     <string name="social_media">சமூக ஊடகம்</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">பதிவுகள் வெற்றிகரமாக சேமிக்கப்பட்டன</string>
     <string name="logs_not_saved">பதிவுகளைச் சேமிக்க முடியவில்லை</string>
     <!-- Dialogs -->
-    <string name="advanced">மேம்படுத்தபட்ட</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s நிறுவல் கோப்புகள் கண்டறியப்பட்டன!</string>
     <string name="app_install_files_detected_summary">%1$s நிறுவலுக்கு தேவையான அனைத்து கோப்புகளும் கண்டறியப்பட்டதை மேலாளர் கண்டறிந்தார். நீங்கள் அதை நிறுவ விரும்புகிறீர்களா?</string>
     <string name="checking_updates">புதுப்பிப்புகளைச் சரிபார்க்கிறது…</string>
