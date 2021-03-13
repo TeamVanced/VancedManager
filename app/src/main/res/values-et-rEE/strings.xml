@@ -30,7 +30,7 @@
     <string name="install">Installi</string>
     <string name="version_installed">Installitud:</string>
     <string name="latest">Uusim:</string>
-    <string name="no_microg">microG pole installitud</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">Administraatoriõigusi ei tagatud</string>
     <string name="unavailable">Pole saadaval</string>
     <string name="social_media">Sotsiaalmeedia</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Edukalt salvestatud logid</string>
     <string name="logs_not_saved">Ei suutnud salvestada logi</string>
     <!-- Dialogs -->
-    <string name="advanced">Täpsustatud</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s paigaldusfailid on leitud!</string>
     <string name="app_install_files_detected_summary">Haldur tuvastas, et kõik failid paigaldamaks %1$s on leitud. Kas soovite seda paigaldada?</string>
     <string name="checking_updates">Uuenduste otsimine…</string>
