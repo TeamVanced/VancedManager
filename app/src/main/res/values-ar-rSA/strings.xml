@@ -30,7 +30,7 @@
     <string name="install">تثبيت</string>
     <string name="version_installed">مثبت:</string>
     <string name="latest">الأحدث:</string>
-    <string name="no_microg">لم يتم تثبيت microG</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">لم يتم منح صلاحيات الروت</string>
     <string name="unavailable">غير متاح</string>
     <string name="social_media">وسائل التواصل الإجتماعي</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">تم حفظ السجل بنجاح</string>
     <string name="logs_not_saved">تعذر حفظ السجل</string>
     <!-- Dialogs -->
-    <string name="advanced">إعدادات متقدمة</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">تم اكتشاف ملفات تثبيت %1$s!</string>
     <string name="app_install_files_detected_summary">اكتشف المدير أن جميع الملفات اللازمة لتثبيت %1$s موجودة. هل تريد التثبيت؟</string>
     <string name="checking_updates">جارٍ التحقق من وجود تحديثات…</string>
