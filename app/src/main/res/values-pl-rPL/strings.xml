@@ -30,7 +30,7 @@
     <string name="install">Zainstaluj</string>
     <string name="version_installed">Zainstalowano:</string>
     <string name="latest">Najnowsza:</string>
-    <string name="no_microg">microG nie jest zainstalowany</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">Root nie został przyznany</string>
     <string name="unavailable">Niedostępne</string>
     <string name="social_media">Media Społecznościowe</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Pomyślnie zapisano dzienniki</string>
     <string name="logs_not_saved">Nie udało się zapisać dzienników</string>
     <!-- Dialogs -->
-    <string name="advanced">Opcje zaawansowane</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">Wykryto %1$s plików instalacyjnych!</string>
     <string name="app_install_files_detected_summary">Menedżer wykrył, że znaleziono wszystkie pliki niezbędne do instalacji %1$s. Czy chcesz zainstalować?</string>
     <string name="checking_updates">Sprawdzam aktualizacje…</string>
