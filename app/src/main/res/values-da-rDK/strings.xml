@@ -30,7 +30,7 @@
     <string name="install">Installer</string>
     <string name="version_installed">Installeret:</string>
     <string name="latest">Seneste:</string>
-    <string name="no_microg">microG er ikke installeret</string>
+    <string name="no_microg">Installer først Vanced microG</string>
     <string name="root_not_granted">Root adgang ikke tildelt</string>
     <string name="unavailable">Utilgængelig</string>
     <string name="social_media">Sociale medier</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Logfiler gemt succesfuldt</string>
     <string name="logs_not_saved">Kunne ikke gemme logfil</string>
     <!-- Dialogs -->
-    <string name="advanced">Avanceret</string>
+    <string name="advanced">Detaljer</string>
     <string name="app_install_files_detected">%1$s installationsfiler fundet!</string>
     <string name="app_install_files_detected_summary">Manageren opdagede, at alle nødvendige filer til %1$s installationen blev fundet. Vil du installere den?</string>
     <string name="checking_updates">Søger efter opdateringer…</string>
