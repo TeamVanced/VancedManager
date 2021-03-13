@@ -127,12 +127,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
             status.contains("ModApk_Missing") -> context.getString(R.string.modapk_missing)
             status.contains("Files_Missing_VA") -> context.getString(R.string.files_missing_va)
             status.contains("Path_Missing") -> context.getString(R.string.path_missing)
-            status.contains("INSTALL_FAILED_INTERNAL_ERROR: Permission Denied") -> {
-                if (context.isMiuiOptimizationsEnabled)
-                    context.getString(R.string.installation_miui)
-                else
-                    context.getString(R.string.installation_blocked)
-            }
+            status.contains("INSTALL_FAILED_INTERNAL_ERROR: Permission Denied") -> context.getString(R.string.installation_miui)
             else -> context.getString(R.string.installation_failed)
         }
     }
