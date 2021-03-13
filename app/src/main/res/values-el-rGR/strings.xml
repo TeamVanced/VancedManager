@@ -30,7 +30,7 @@
     <string name="install">Εγκατάσταση</string>
     <string name="version_installed">Εγκατεστημένη έκδοση:</string>
     <string name="latest">Τελευταία έκδοση:</string>
-    <string name="no_microg">το microG δεν είναι εγκατεστημένο</string>
+    <string name="no_microg">Εγκαταστήστε πρώτα το Vanced microG</string>
     <string name="root_not_granted">Δεν επιτράπηκε η πρόσβαση Root</string>
     <string name="unavailable">Μη διαθέσιμο</string>
     <string name="social_media">Μέσα Κοινωνικής Δικτύωσης</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Επιτυχής αποθήκευση αρχείου καταγραφής σφαλμάτων</string>
     <string name="logs_not_saved">Αδυναμία αποθήκευσης αρχείου καταγραφής σφαλμάτων</string>
     <!-- Dialogs -->
-    <string name="advanced">Για προχωρημένους</string>
+    <string name="advanced">Πληροφορίες</string>
     <string name="app_install_files_detected">Ανιχνεύτηκαν τα αρχεία εγκατάστασης του %1$s!</string>
     <string name="app_install_files_detected_summary">Ο Διαχειριστής του Vanced ανίχνευσε ότι βρέθηκαν όλα τα απαραίτητα αρχεία για την εγκατάσταση του %1$s. Θέλετε να εγκατασταθεί;</string>
     <string name="checking_updates">Έλεγχος για ενημερώσεις…</string>
