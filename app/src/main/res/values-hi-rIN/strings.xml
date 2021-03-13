@@ -30,7 +30,7 @@
     <string name="install">इंस्टॉल</string>
     <string name="version_installed">इंस्टॉल हुआ।</string>
     <string name="latest">सबसे नया</string>
-    <string name="no_microg">microG स्थापित नहीं है</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">रूट एक्सेस प्रदान नहीं किया गया</string>
     <string name="unavailable">अनुपलब्ध</string>
     <string name="social_media">सामाजिक नेटवर्क</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">सफलतापूर्वक लॉग सहेजे गए</string>
     <string name="logs_not_saved">लॉग सहेज नहीं सका</string>
     <!-- Dialogs -->
-    <string name="advanced">एडवांस्ड</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s इंस्टालेशन फ़ाइलों का पता चला!</string>
     <string name="app_install_files_detected_summary">प्रबंधक ने पाया कि %1$s इंस्टॉलेशन के लिए सभी आवश्यक फाइलें मिलीं। क्या आप इंस्टॉल करना चाहते हैं?</string>
     <string name="checking_updates">अपडेट्स के लिए जांच हो रही है…</string>
