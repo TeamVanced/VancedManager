@@ -30,7 +30,7 @@
     <string name="install">Quraşdır</string>
     <string name="version_installed">Qurulan:</string>
     <string name="latest">Ən son:</string>
-    <string name="no_microg">microG quraşdırılmayıb</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">Root icazəsi verilməyib</string>
     <string name="unavailable">Əlçatmazdır</string>
     <string name="social_media">Sosial Media</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Qeydlər uğurla saxlandı</string>
     <string name="logs_not_saved">Qeydləri saxlamaq olmadı</string>
     <!-- Dialogs -->
-    <string name="advanced">Qabaqcıl</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s quraşdırma faylı aşkarlandı!</string>
     <string name="app_install_files_detected_summary">Menecer %1$s quraşdırması üçün lazımi bütün faylların tapıldığını aşkarladı. Quraşdırmaq istəyirsiniz?</string>
     <string name="checking_updates">Yeniləmələr yoxlanılır…</string>
