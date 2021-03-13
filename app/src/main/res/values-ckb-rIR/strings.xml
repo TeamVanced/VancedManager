@@ -30,7 +30,7 @@
     <string name="install">دامەزراندن</string>
     <string name="version_installed">دامەزرێنراو:</string>
     <string name="latest">دوایین:</string>
-    <string name="no_microg">دانەبەزێنراوە microG</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">ڕێگەپێدانی Root نەدراوە</string>
     <string name="unavailable">بەردەست نیە</string>
     <string name="social_media">تۆڕە کۆمەڵایەتییەکان</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">تۆمارەکە بەسەرکەوتوویی پارێزرا</string>
     <string name="logs_not_saved">نەتوانرا تۆمارەکە بپارێزرێت</string>
     <!-- Dialogs -->
-    <string name="advanced">پێشکەوتوو</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
     <string name="app_install_files_detected_summary">بەرنامەکە هەموو ئەو فایلانەی دۆزیەوە %1$s کە پێویستن بۆ دابەزاندن، ئەتەوێ دایان مەزرێنیت؟</string>
     <string name="checking_updates">پشکنین بۆ نوێکردنەوە…</string>
