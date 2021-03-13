@@ -30,7 +30,7 @@
     <string name="install">Yükle</string>
     <string name="version_installed">Yüklü:</string>
     <string name="latest">En son:</string>
-    <string name="no_microg">microG yüklü değil</string>
+    <string name="no_microg">İlk önce Vanced microG\'yi kurun</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Yüklenmemiş</string>
     <string name="social_media">Sosyal Medya</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Kayıtlar başarıyla kaydedildi</string>
     <string name="logs_not_saved">Kayıtlar kaydedilemedi</string>
     <!-- Dialogs -->
-    <string name="advanced">Detaylar</string>
+    <string name="advanced">Ayrıntılar</string>
     <string name="app_install_files_detected">%1$s için kurulum dosyaları bulundu!</string>
     <string name="app_install_files_detected_summary">Manager, %1$s kurulumu için gerekli olan dosyaları belirledi. Yüklemek ister misiniz?</string>
     <string name="checking_updates">Güncellemeler kontrol ediliyor…</string>
