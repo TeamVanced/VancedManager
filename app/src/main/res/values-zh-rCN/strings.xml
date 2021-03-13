@@ -30,7 +30,7 @@
     <string name="install">安装</string>
     <string name="version_installed">已安装：</string>
     <string name="latest">最新：</string>
-    <string name="no_microg">没有安装 MicroG</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">未授予 Root 权限</string>
     <string name="unavailable">不可用</string>
     <string name="social_media">社交媒体</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">日志保存成功</string>
     <string name="logs_not_saved">无法保存日志</string>
     <!-- Dialogs -->
-    <string name="advanced">高级设置</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">检测到 %1$s 安装文件！</string>
     <string name="app_install_files_detected_summary">Manager 检测到 %1$s 所需要的安装文件。您想现在安装吗？</string>
     <string name="checking_updates">正在检查更新…</string>
