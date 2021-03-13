@@ -30,7 +30,7 @@
     <string name="install">Installeren</string>
     <string name="version_installed">Geïnstalleerd:</string>
     <string name="latest">Recentste:</string>
-    <string name="no_microg">microG is niet geïnstalleerd</string>
+    <string name="no_microg">Installeer eerst Vanced microG</string>
     <string name="root_not_granted">Root machtiging niet toegestaan</string>
     <string name="unavailable">Niet beschikbaar</string>
     <string name="social_media">Sociale Media</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Logs succesvol opgeslagen</string>
     <string name="logs_not_saved">Logs niet opgeslagen</string>
     <!-- Dialogs -->
-    <string name="advanced">Geavanceerd</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s installatiebestanden gedetecteerd!</string>
     <string name="app_install_files_detected_summary">Manager heeft alle nodige bestanden gedetecteerd voor het installeren van %1$s. Wil je ze installeren?</string>
     <string name="checking_updates">Controleren op updates…</string>
