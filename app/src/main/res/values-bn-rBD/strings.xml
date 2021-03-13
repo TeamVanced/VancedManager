@@ -30,7 +30,7 @@
     <string name="install">ইনস্টল করুন</string>
     <string name="version_installed">ইনস্টল করা আছে:</string>
     <string name="latest">সর্বশেষ:</string>
-    <string name="no_microg">মাইক্রোজি ইনস্টল করা নেই</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
     <string name="unavailable">অনুপলব্ধ</string>
     <string name="social_media">Social Media</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Successfully saved logs</string>
     <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
-    <string name="advanced">সূক্ষ্ম</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s ইন্সটল করার জন্য ফাইল পাওয়া গেছে!</string>
     <string name="app_install_files_detected_summary">ম্যানেজার সনাক্ত করেছে যে %1$s এর ইনস্টলেসনের জন্য সকল ফাইল পাওয়া গেছে। আপনি কি এটি ইনস্টল করতে চান?</string>
     <string name="checking_updates">আপডেট আছে কিনা দেখা হচ্ছে…</string>
