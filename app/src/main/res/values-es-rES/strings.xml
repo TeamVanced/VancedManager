@@ -30,7 +30,7 @@
     <string name="install">Instalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Más reciente:</string>
-    <string name="no_microg">microG no está instalado</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">Acceso root no concedido</string>
     <string name="unavailable">No Disponible</string>
     <string name="social_media">Redes Sociales</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Registros guardados con éxito</string>
     <string name="logs_not_saved">No se pudieron guardar los registros</string>
     <!-- Dialogs -->
-    <string name="advanced">Avanzado</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">¡%1$s archivos de instalación detectados!</string>
     <string name="app_install_files_detected_summary">El Manager detectó que todos los archivos necesarios para la instalación de %1$s se encontraron. ¿Quieres instalarlo?</string>
     <string name="checking_updates">Buscando actualizaciones…</string>
