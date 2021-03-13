@@ -30,7 +30,7 @@
     <string name="install">Инсталиране</string>
     <string name="version_installed">Инсталиранa:</string>
     <string name="latest">Най-нова:</string>
-    <string name="no_microg">microG не е инсталирано</string>
+    <string name="no_microg">Инсталирайте първо Vanced microG</string>
     <string name="root_not_granted">Root достъп не е разрешен</string>
     <string name="unavailable">Недостъпно</string>
     <string name="social_media">Социални медии</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Успешно запазени логове</string>
     <string name="logs_not_saved">Не могат да се запазят логовете</string>
     <!-- Dialogs -->
-    <string name="advanced">Разширени</string>
+    <string name="advanced">Подробности</string>
     <string name="app_install_files_detected">%1$s инсталационни файлове са открити!</string>
     <string name="app_install_files_detected_summary">Мениджърът откри всички необходими файлове за инсталацията на %1$s. Желаете ли да го инсталирате?</string>
     <string name="checking_updates">Проверка за актуализации…</string>
@@ -85,7 +85,7 @@
     <string name="please_be_patient">Моля, НЕ излизайте от приложението по време на този процес!</string>
     <string name="welcome">Добре дошли</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Изберете предпочитани език(ци) за Vanced</string>
+    <string name="choose_preferred_language">Изберете предпочитан(и) език(ци) за Vanced</string>
     <string name="install_latest">Най-нова</string>
     <string name="light_plus_other">Светла + %1$s</string>
     <string name="select_at_least_one_lang">Изберете поне един език!</string>
