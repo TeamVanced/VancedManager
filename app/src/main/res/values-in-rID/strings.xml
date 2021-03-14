@@ -30,7 +30,7 @@
     <string name="install">Pasang</string>
     <string name="version_installed">Terpasang:</string>
     <string name="latest">Terbaru:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Pasang Vanced microG terlebih dahulu</string>
     <string name="root_not_granted">Akses Root tidak diberikan</string>
     <string name="unavailable">Tidak tersedia</string>
     <string name="social_media">Media Sosial</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Berhasil menyimpan log</string>
     <string name="logs_not_saved">Tidak bisa menyimpan log</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Rincian</string>
     <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
     <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasangnya?</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
