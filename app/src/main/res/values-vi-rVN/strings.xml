@@ -30,7 +30,7 @@
     <string name="install">Cài đặt</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Cài đặt Vanced microG đầu</string>
     <string name="root_not_granted">Quyền root không được cấp</string>
     <string name="unavailable">Không tồn tại</string>
     <string name="social_media">Mạng xã hội</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Lưu nhật ký thành công</string>
     <string name="logs_not_saved">Lưu nhật ký thất bại</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Chi tiết</string>
     <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
     <string name="app_install_files_detected_summary">Manager đã tìm thấy tất cả các tệp cần thiết để cài đặt %1$s. Bạn có muốn cài đặt nó không?</string>
     <string name="checking_updates">Đang kiểm tra cập nhật…</string>
