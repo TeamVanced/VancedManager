@@ -4,8 +4,8 @@
     <string name="cancel">Avbryt</string>
     <string name="close">Stäng</string>
     <string name="description_vanced">En modifierad YouTube-klient med många användbara funktioner!</string>
-    <string name="description_vanced_music">Vanced, men för YouTube Music! relativt mindre funktion rik men uppfyller dina behov.</string>
-    <string name="description_microg">En anpassad GMS Implementation för Vanced baserad på microG-projektet.</string>
+    <string name="description_vanced_music">Vanced, men för YouTube Music! Relativt mindre funktionsrika men uppfyller dina behov.</string>
+    <string name="description_microg">En anpassad GMS-implementering för Vanced baserad på microG-projektet.</string>
     <string name="reset">Återställ</string>
     <string name="save">Spara</string>
     <string name="select_apps">Välj dina appar</string>
@@ -30,7 +30,7 @@
     <string name="install">Install</string>
     <string name="version_installed">Installerad:</string>
     <string name="latest">Senaste:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Installera Vanced microG först</string>
     <string name="root_not_granted">Root-åtkomst inte beviljat</string>
     <string name="unavailable">Ej tillgänglig</string>
     <string name="social_media">Sociala medier</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Sparades</string>
     <string name="logs_not_saved">Kunde inte spara sida</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Detaljer</string>
     <string name="app_install_files_detected">%1$s installationsfiler upptäckt!</string>
     <string name="app_install_files_detected_summary">Manager upptäckte att alla nödvändiga filer för %1$s installation hittades. Vill du installera?</string>
     <string name="checking_updates">Söker efter uppdateringar…</string>
