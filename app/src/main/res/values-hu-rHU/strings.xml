@@ -30,11 +30,11 @@
     <string name="install">Telepítés</string>
     <string name="version_installed">Telepítve:</string>
     <string name="latest">Legújabb:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Először telepítse a MicroG-t</string>
     <string name="root_not_granted">A root hozzáférés nincs megadva</string>
     <string name="unavailable">Nem elérhető</string>
     <string name="social_media">Közösségi média</string>
-    <string name="support_us">Támogass minket</string>
+    <string name="support_us">Támogasson bennünket</string>
     <!-- Settings -->
     <string name="accent_color">Kiemelés színe</string>
     <string name="category_appearance">Megjelenítés</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Napló sikeresen mentve</string>
     <string name="logs_not_saved">A napló mentése nem sikerült</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Részletek</string>
     <string name="app_install_files_detected">%1$s telepítőfájlok észlelve!</string>
     <string name="app_install_files_detected_summary">A Manager észlelte a %1$s telepítéséhez szükséges fájlokat.
 Akarod telepíteni?</string>
@@ -81,8 +81,10 @@ Akarod telepíteni?</string>
     <string name="app_installation_preferences">%1$s Telepítés személyreszabása</string>
     <string name="version">Verzió</string>
     <string name="microg_bug">Hiba a microG-ben</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">Egy, a microG-ben jelenlévő hiba miatt, a Vanced 16+ verzióihoz először telepítse a 15.43.32-es verziót, nyissa meg, jelentkezzen be, majd csak ezután tudja telepíteni a 16-os vagy újabb verziót.
+Akarja folytatni a 15.43.32-es verzió telepítésével?</string>
+    <string name="microg_bug_summary_music">Egy, a microG-ben jelenlévő hiba miatt, a Vanced Music 4.11+ verzióihoz először telepítse a 4.07.51-es verziót, nyissa meg, jelentkezzen be, majd csak ezután tudja telepíteni a 4.11-es vagy újabb verziót.
+Akarja folytatni a 4.07.51-es verzió telepítésével?</string>
     <string name="please_be_patient">Kérjük NE lépjen ki a telepítési folyamat alatt!</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
@@ -94,7 +96,7 @@ Akarod telepíteni?</string>
     <string name="vanced_dark">Sötét</string>
     <!-- About Page -->
     <string name="manager_dev">Fejlesztői Menedzser</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Egyéb Közreműködők</string>
     <string name="sources">Források</string>
     <string name="vanced_team">Vanced csapat</string>
     <!-- Error messages -->
@@ -108,13 +110,13 @@ Akarod telepíteni?</string>
     <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó, régebbi verzióra próbált frissíteni. Távolítsa el az eredeti alkalmazás frissítéseit, majd próbálja újra.</string>
     <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsd el a jelenlegi verziót és próbáld újra.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">A telepítés ismeretlen ok miatt meghiúsult, kérjük csatlakozzon a Telegram vagy a Discord csatornánkhoz további támogatásért. Kérjük egy képernyőképet is mellékeljen ami a Haladó menüben készült</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
     <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok korruptak, próbáld újra.</string>
     <string name="installation_signature">A telepítés nem sikerült, mert az apk aláírás ellenőrzés engedélyezve van.
 Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
     <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsold ki a MIUI Optimalizációt és próbáld újra.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">A telepítés nem sikerült, mert nincs elég szabad hely.</string>
     <string name="modapk_missing">Nem sikerült megtalálni az apk file-t a fekete/sötét kinézethez a telepítőből. Törölje a Manager alkalmazás adatait, majd próbálja újra.</string>
     <string name="path_missing">Nem sikerült megtalálni az alap YouTube telepítési útvonalat a(z) split telepítés után.</string>
 </resources>
