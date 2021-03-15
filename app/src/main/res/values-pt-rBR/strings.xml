@@ -30,7 +30,7 @@
     <string name="install">Instalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Mais recente:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Instale o microG Vanced primeiro</string>
     <string name="root_not_granted">Acesso root não concedido</string>
     <string name="unavailable">Indisponível</string>
     <string name="social_media">Mídias Sociais</string>
