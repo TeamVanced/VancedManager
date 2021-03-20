@@ -4,8 +4,8 @@
     <string name="cancel">Cancelar</string>
     <string name="close">Cerrar</string>
     <string name="description_vanced">¡Un cliente de YouTube modificado con muchas características útiles!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_vanced_music">Vanced, pero para YouTube Music! Tiene relativamente menos características, pero satisface tus necesidades.</string>
+    <string name="description_microg">Una implementación de GMS personalizada para Vanced basada en el proyecto microG.</string>
     <string name="reset">Restablecer</string>
     <string name="save">Guardar</string>
     <string name="select_apps">Selecciona tus aplicaciones</string>
@@ -30,7 +30,7 @@
     <string name="install">Instalar</string>
     <string name="version_installed">Instalado:</string>
     <string name="latest">Más reciente:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Primero, instala Vanced microG</string>
     <string name="root_not_granted">Acceso root no concedido</string>
     <string name="unavailable">No Disponible</string>
     <string name="social_media">Redes Sociales</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Registros guardados con éxito</string>
     <string name="logs_not_saved">No se pudieron guardar los registros</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Detalles</string>
     <string name="app_install_files_detected">¡%1$s archivos de instalación detectados!</string>
     <string name="app_install_files_detected_summary">El Manager detectó que todos los archivos necesarios para la instalación de %1$s se encontraron. ¿Quieres instalarlo?</string>
     <string name="checking_updates">Buscando actualizaciones…</string>
@@ -107,12 +107,12 @@
     <string name="installation_blocked">La instalación ha fallado debido a que el usuario bloqueo la instalación.</string>
     <string name="installation_downgrade">La instalación falló porque el usuario trató de degradar el paquete. Desinstala las actualizaciones de la aplicación original e intenta de nuevo.</string>
     <string name="installation_conflict">La instalación ha fallado porque la aplicación entra en conflicto con una aplicación ya instalada. Desinstala la versión actual de la aplicación y vuelve a intentarlo.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro Telegram o Discord para más soporte. Por favor, también adjunta una captura de pantalla desde el menú Avanzado</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
     <string name="installation_invalid">La instalación falló porque los archivos apk están corruptos, por favor inténtalo de nuevo.</string>
     <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de apk está habilitada. Desactiva la verificación de la firmas de apk, y vuelve a intentarlo.</string>
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">La instalación falló porque el dispositivo no tiene suficiente espacio libre.</string>
     <string name="modapk_missing">Falla al encontrar en el instalador el archivo apk para el tema negro/oscuro. Limpia los datos del Manager y vuelva a intentarlo.</string>
     <string name="path_missing">Falla al localizar la ruta de instalación de YouTube después de la instalación split.</string>
 </resources>
