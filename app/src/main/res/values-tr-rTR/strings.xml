@@ -30,7 +30,7 @@
     <string name="install">Yükle</string>
     <string name="version_installed">Yüklü:</string>
     <string name="latest">En son:</string>
-    <string name="no_microg">İlk önce Vanced microG\'yi kurun</string>
+    <string name="no_microg">Vanced microG\'yi kurmalısın</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="unavailable">Yüklenmemiş</string>
     <string name="social_media">Sosyal Medya</string>
