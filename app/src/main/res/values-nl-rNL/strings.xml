@@ -89,8 +89,8 @@
     <string name="install_latest">Nieuwste versie</string>
     <string name="light_plus_other">Licht + %1$s</string>
     <string name="select_at_least_one_lang">Selecteer minstens één taal!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Zwart</string>
+    <string name="vanced_dark">Donker</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Dev</string>
     <string name="other_contributors">Andere bijdrages</string>
@@ -102,7 +102,7 @@
     <string name="failed_uninstall">Deïnstalleren van pakket %1$s mislukt</string>
     <string name="failed_accent">Nieuwe accentkleur toepassen mislukt</string>
     <string name="files_missing_va">Kan de vereiste bestanden voor de installatie niet vinden. Download de installatiebestanden opnieuw en probeer het opnieuw.</string>
-    <string name="ifile_missing">Kan het apk-bestand voor black/dark thema niet vinden in opslag. Probeer het opnieuw.</string>
+    <string name="ifile_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in opslag. Probeer het opnieuw.</string>
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_blocked">Installatie mislukt omdat de gebruiker de installatie heeft geblokkeerd.</string>
     <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard app en probeer het daarna opnieuw.</string>
@@ -113,6 +113,6 @@
     <string name="installation_signature">Installatie mislukt omdat apk-handtekeningverificatie is ingeschakeld. Schakel apk-handtekeningverificatie uit en probeer het opnieuw.</string>
     <string name="installation_miui">Installatie mislukt omdat MIUI-optimalisatie is ingeschakeld. Schakel MIUI-optimalisatie uit en probeer het opnieuw.</string>
     <string name="installation_storage">Installatie mislukt omdat het apparaat niet genoeg vrije ruimte heeft.</string>
-    <string name="modapk_missing">Kan het apk-bestand voor black/dark thema niet vinden in het installatiebestand. Verwijder de appdata van Vanced Manager en probeer het opnieuw.</string>
+    <string name="modapk_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in het installatiebestand. Verwijder de appdata van Vanced Manager en probeer het opnieuw.</string>
     <string name="path_missing">Kan het standaard YouTube-installatiepad niet vinden na de gesplitste installatie.</string>
 </resources>
