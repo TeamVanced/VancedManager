@@ -4,7 +4,7 @@
     <string name="cancel">Anulaţi</string>
     <string name="close">Închide</string>
     <string name="description_vanced">Un client YouTube modificat, cu multe caracteristici utile!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_vanced_music">Vansat, dar pentru muzica YouTube! Relativ mai puțin bogat în caracteristici, dar îți îndeplinește nevoile.</string>
     <string name="description_microg">O implementare personalizată a GMS pentru Vanced pe baza proiectului microG.</string>
     <string name="reset">Resetează</string>
     <string name="save">Salvează</string>
@@ -30,7 +30,7 @@
     <string name="install">Instalează</string>
     <string name="version_installed">Instalat:</string>
     <string name="latest">Ultima:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Instalați Vanced microG mai întâi</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
     <string name="social_media">Rețele sociale</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Jurnale salvate cu succes</string>
     <string name="logs_not_saved">Jurnalele nu pot fi salvate</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Detalii</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
     <string name="app_install_files_detected_summary">Manager a detectat că au fost găsite toate fişierele necesare pentru instalarea %1$s . Doriţi să le instalaţi?</string>
     <string name="checking_updates">Verificare actualizări…</string>
