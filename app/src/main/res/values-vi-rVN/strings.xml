@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Hủy</string>
     <string name="close">Đóng</string>
-    <string name="description_vanced">Một ứng dụng khách YouTube đã được sửa đổi với nhiều tính năng hữu ích!</string>
+    <string name="description_vanced">Một ứng dụng YouTube đã được sửa đổi với nhiều tính năng hữu ích!</string>
     <string name="description_vanced_music">Vanced, nhưng cho YouTube Music! Tương đối ít tính năng nhưng đáp ứng những gì bạn cần.</string>
     <string name="description_microg">Triển khai GMS tùy chỉnh cho Vanced dựa trên Dự án microG.</string>
     <string name="reset">Đặt lại</string>
@@ -30,7 +30,7 @@
     <string name="install">Cài đặt</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
-    <string name="no_microg">Cài đặt Vanced microG đầu</string>
+    <string name="no_microg">Cài đặt Vanced microG đầu tiên</string>
     <string name="root_not_granted">Quyền root không được cấp</string>
     <string name="unavailable">Không tồn tại</string>
     <string name="social_media">Mạng xã hội</string>
