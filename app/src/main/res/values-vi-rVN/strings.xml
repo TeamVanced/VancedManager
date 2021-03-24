@@ -30,7 +30,7 @@
     <string name="install">Cài đặt</string>
     <string name="version_installed">Đã cài đặt:</string>
     <string name="latest">Mới nhất:</string>
-    <string name="no_microg">Cài đặt Vanced microG đầu tiên</string>
+    <string name="no_microg">Cài đặt Vanced microG trước tiên</string>
     <string name="root_not_granted">Quyền root không được cấp</string>
     <string name="unavailable">Không tồn tại</string>
     <string name="social_media">Mạng xã hội</string>
@@ -80,8 +80,8 @@
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
     <string name="version">Phiên bản</string>
     <string name="microg_bug">Lỗi trong microG</string>
-    <string name="microg_bug_summary">Do một lỗi trong microG gốc, cài đặt Vanced v16+ yêu cầu bạn phải cài v15.43.32 trước, mở nó và đăng nhập, sau đó bạn mới có thể cài đặt v16+. Tiến hành cài đặt v15.43.32?</string>
-    <string name="microg_bug_summary_music">Do một lỗi trong microG gốc, cài đặt Music v4.11+ yêu cầu bạn phải cài v4.07.51 trước, mở nó và đăng nhập, sau đó bạn mới có thể cài đặt v4.11+. Tiến hành cài đặt v4.07.51?</string>
+    <string name="microg_bug_summary">Do một lỗi trong microG gốc, để cài đặt Vanced v16+ yêu cầu bạn phải cài v15.43.32 trước, mở nó và đăng nhập, sau đó bạn mới có thể cài đặt v16 và mới hơn. Tiến hành cài đặt v15.43.32?</string>
+    <string name="microg_bug_summary_music">Do một lỗi trong microG gốc, để cài đặt Music v4.11+ yêu cầu bạn phải cài v4.07.51 trước, mở nó và đăng nhập, sau đó bạn mới có thể cài đặt v4.11 và mới hơn. Tiến hành cài đặt v4.07.51?</string>
     <string name="please_be_patient">Vui lòng KHÔNG thoát khỏi ứng dụng trong tiến trình này!</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
