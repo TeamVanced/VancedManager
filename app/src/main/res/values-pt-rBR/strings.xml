@@ -62,7 +62,7 @@
     <string name="logs_saved">Registros salvos com sucesso</string>
     <string name="logs_not_saved">Não foi possível salvar os registros</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Detalhes</string>
     <string name="app_install_files_detected">%1$s arquivos de instalação detectados!</string>
     <string name="app_install_files_detected_summary">O gerenciador detectou que todos os arquivos necessários para a instalação de %1$s foram encontrados. Você quer instalar?</string>
     <string name="checking_updates">Verificando por atualizações…</string>
