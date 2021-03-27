@@ -30,7 +30,7 @@
     <string name="install">Инсталација</string>
     <string name="version_installed">Инсталирана:</string>
     <string name="latest">Најновија:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Инсталирајте прво Vanced microG</string>
     <string name="root_not_granted">Root приступ није омогућен</string>
     <string name="unavailable">Недоступно</string>
     <string name="social_media">Социјалне мреже</string>
@@ -47,9 +47,9 @@
     <string name="link_title">Користите Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="system_default">Системски подразумевано</string>
-    <string name="script_save_failed">Грешка при снимању врдности за ново време</string>
+    <string name="script_save_failed">Грешка при снимању вредности за ново време</string>
     <string name="script_sleep_timer">Роот скрипта за Време спавања</string>
-    <string name="script_sleep_timer_description">Подесите време спавања путем у/подаци/адб/услуге/апп.сх скрипте, ово је корисно код грешке при повезивању</string>
+    <string name="script_sleep_timer_description">Подесите време спавања путем у /data/adb/service.d/app.sh скрипти, ово је корисно код грешке при повезивању</string>
     <string name="theme">Тема</string>
     <string name="theme_dark">Тамна тема</string>
     <string name="theme_light">Светла тема</string>
@@ -62,7 +62,7 @@
     <string name="logs_saved">Успешно сачувани дневници</string>
     <string name="logs_not_saved">Није могуће снимити дневнике</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Детаљи</string>
     <string name="app_install_files_detected">%1$s верзија је пронађена!</string>
     <string name="app_install_files_detected_summary">Менаџер је пронашао све датотеке за %1$s верзију инсталације. Да ли желите да инсталирате?</string>
     <string name="checking_updates">Провера ажурирања…</string>
