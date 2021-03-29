@@ -30,7 +30,7 @@
     <string name="install">ഇൻസ്റ്റാൾ ചെയ്യുക</string>
     <string name="version_installed">ഇൻസ്റ്റാൾ ചെയ്തു:</string>
     <string name="latest">ഏറ്റവും പുതിയത്:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">ആധ്യം വാൻസ്ഡ് മൈക്രോ-ജി ഇൻസ്റ്റാൾ ചെയ്യുക്ക</string>
     <string name="root_not_granted">റൂട്ട് ആക്സസ് അനുവദിച്ചിട്ടില്ല</string>
     <string name="unavailable">ലഭ്യമല്ല</string>
     <string name="social_media">സോഷ്യൽ മീഡിയ</string>
