@@ -3,8 +3,8 @@
     <!-- Global Strings -->
     <string name="cancel">Annuler</string>
     <string name="close">Fermer</string>
-    <string name="description_vanced">Un client YouTube modifié avec de nombreuses fonctionnalités utiles&#160;!</string>
-    <string name="description_vanced_music">Vanced, mais pour YouTube Music&#160;! Relativement moins riche en fonctionnalités mais répond à vos besoins.</string>
+    <string name="description_vanced">Un client YouTube modifié avec de nombreuses fonctionnalités utiles !</string>
+    <string name="description_vanced_music">Vanced, mais pour YouTube Music ! Relativement moins riche en fonctionnalités mais répond à vos besoins.</string>
     <string name="description_microg">Une implémentation GMS personnalisée pour Vanced basée sur le projet microG.</string>
     <string name="reset">Réinitialiser</string>
     <string name="save">Sauvegarder</string>
@@ -48,7 +48,7 @@
     <string name="link_custom_tabs">Les liens s\'ouvriront dans les onglets personnalisés Chrome</string>
     <string name="system_default">Système par défaut</string>
     <string name="script_save_failed">Impossible d\'enregistrer la nouvelle valeur de temps</string>
-    <string name="script_sleep_timer">Définir une mise en veille programmé</string>
+    <string name="script_sleep_timer">Temps de veille du script root</string>
     <string name="script_sleep_timer_description">Ajuster la valeur de l\'heure de veille utilisée dans le script /data/adb/service.d/app.sh, utile pour résoudre les problèmes de montage</string>
     <string name="theme">Thème</string>
     <string name="theme_dark">Thème sombre</string>
@@ -72,16 +72,16 @@
     <string name="guide">Guide</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Vous utilisez la version Magisk/TWRP de Vanced, qui n\'est plus entretenu et ne peut pas être mise à jour à l\'aide de cette application. Veuillez la retirer en supprimant le module Magisk/en utilisant le désinstallateur TWRP pour Vanced.</string>
-    <string name="miui_one_title">Les optimisations MIUI sont activées&#160;!</string>
-    <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres développeur (vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure de xiaomi.eu).</string>
+    <string name="miui_one_title">Les optimisations MIUI sont activées !</string>
+    <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres développeur (vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure de xiaomi.eu)</string>
     <string name="error">Erreur</string>
     <string name="redownload">Re-télécharger</string>
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="version">Version</string>
     <string name="microg_bug">Bug dans microG</string>
-    <string name="microg_bug_summary">En raison d\'un bug dans microG original, l\'installation de Vanced v16+ nécessite d\'abord l\'installation de la v15.43.32. Ouvrez cette-dernière, puis connectez-vous et vous pourrez ainsi installer la v16 ou une version plus récente. Voulez-vous procéder à l\'installation de la v15.43.32&#160;?</string>
-    <string name="microg_bug_summary_music">En raison d\'un bogue dans microG original, l\'installation de Music 4.11+ nécessite d\'abord l\'installation de la v4.07.51, ouvrez-la, puis connectez-vous et vous pourrez ainsi installer la v14.11 ou une version plus récente. Voulez-vous procéder à l\'installation de la v4.07.51&#160;?</string>
+    <string name="microg_bug_summary">En raison d\'un bug dans le microG d\'origine, l\'installation de Vanced v16+ nécessite d\'abord l\'installation de la v15.43.32., ouvrez celle-ci, puis connectez-vous et vous pourrez désormais installer la v16 ou plus. Voulez-vous procéder à l\'installation de la v15.43.32 ?</string>
+    <string name="microg_bug_summary_music">En raison d\'un but dans le microG d\'origine, l\'installation de Music 4.11+ nécessite d\'abord l\'installation de la v4.07.51, ouvrez-la, puis connectez-vous et vous pourrez désormais installer la v14.11 et plus. Voulez-vous procéder à l\'installation de la v4.07.51 ?</string>
     <string name="please_be_patient">Veuillez NE PAS quitter l\'application pendant que celle-ci est en cours de modification !</string>
     <string name="welcome">Bienvenue</string>
     <!-- Install Page -->
@@ -93,7 +93,7 @@
     <string name="vanced_dark">Sombre</string>
     <!-- About Page -->
     <string name="manager_dev">Développeurs du Manager</string>
-    <string name="other_contributors">Autres contributeurs</string>
+    <string name="other_contributors">Autres Contributeurs</string>
     <string name="sources">Sources</string>
     <string name="vanced_team">Équipe Vanced</string>
     <!-- Error messages -->
@@ -112,7 +112,7 @@
     <string name="installation_invalid">L\'installation a échouée car les fichiers apk sont corrompus, veuillez réessayer.</string>
     <string name="installation_signature">L\'installation a échoué car la vérification de la signature apk est activée. Désactivez la vérification de la signature apk, puis réessayez.</string>
     <string name="installation_miui">L\'installation a échouée car l\'optimisation MIUI est activée. Désactivez l\'optimisation MIUI, puis réessayez.</string>
-    <string name="installation_storage">L\'installation a échoué parce que le périphérique n\'a pas assez d\'espace disponible.</string>
+    <string name="installation_storage">L\'installation a échoué car l\'appareil n\'a pas assez d\'espace disponible.</string>
     <string name="modapk_missing">Impossible de trouver le fichier apk pour le thème noir/foncé de l\'installateur. Effacez les données de l\'application de Manager, puis réessayez.</string>
     <string name="path_missing">Impossible de localiser le chemin d\'installation du YouTube original après l\'installation fractionnée.</string>
 </resources>
