@@ -48,7 +48,7 @@
     <string name="link_custom_tabs">A linkek egyéni Chrome ablakban nyílnak meg</string>
     <string name="system_default">Rendszer alapértelmezett</string>
     <string name="script_save_failed">Nem sikerült az időzítő új értékének mentése</string>
-    <string name="script_sleep_timer">Alvás idő script (Root)</string>
+    <string name="script_sleep_timer">Root alvás idő script</string>
     <string name="script_sleep_timer_description">Alvás idő beállítás a /data/adb/service.d/app.sh scriptben, hasznos a csatlakoztatási problémák javítására</string>
     <string name="theme">Kinézet</string>
     <string name="theme_dark">Sötét téma</string>
