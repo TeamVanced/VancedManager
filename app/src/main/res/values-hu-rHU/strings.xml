@@ -30,7 +30,7 @@
     <string name="install">Telepítés</string>
     <string name="version_installed">Telepítve:</string>
     <string name="latest">Legújabb:</string>
-    <string name="no_microg">Először telepítse a MicroG-t</string>
+    <string name="no_microg">Először telepítse a Vanced microG-t</string>
     <string name="root_not_granted">A root hozzáférés nincs megadva</string>
     <string name="unavailable">Nem elérhető</string>
     <string name="social_media">Közösségi média</string>
@@ -72,12 +72,12 @@ Akarod telepíteni?</string>
     <string name="chosen_version">Verzió: %1$s</string>
     <string name="guide">Útmutató</string>
     <string name="hold_on">Állj!</string>
-    <string name="magisk_vanced">A Vanced Magisk/TWRP verzióját használod, ami már nem támogatott és nem frissíthető ezzel az alkalmazással. Távolítsd el a Magisk modul eltávolításával vagy TWRP Vanced eltávolítóval.</string>
+    <string name="magisk_vanced">A Vanced Magisk/TWRP verzióját használja, ami már nem támogatott és nem frissíthető ezzel az alkalmazással. Távolítsa el a Magisk modul eltávolításával vagy TWRP Vanced eltávolítóval.</string>
     <string name="miui_one_title">MIUI optimalizálások engedélyezve!</string>
     <string name="miui_one">Hogy a Vanced-et telepítsd, ki KELL kapcsolnod a MIUI Optimalizációt a fejlesztői beállításokban. (Ezt figyelmen kívül hagyhatod ha 20.2.20 vagy későbbi xiaomi.eu alapú ROM-ot használsz)</string>
     <string name="error">Hiba</string>
     <string name="redownload">Újra letölt</string>
-    <string name="security_context">Arra kérünk, győződj meg róla, hogy ezt az alkalmazást a vancedapp.com oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötted le</string>
+    <string name="security_context">Arra kérünk, győződjön meg róla, hogy ezt az alkalmazást a vancedapp.com oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötte le</string>
     <string name="app_installation_preferences">%1$s Telepítés személyreszabása</string>
     <string name="version">Verzió</string>
     <string name="microg_bug">Hiba a microG-ben</string>
