@@ -21,7 +21,7 @@
     <string name="grant_root">루트 권한 부여</string>
     <string name="select_at_least_one_app">적어도 하나의 앱을 선택해주세요</string>
     <string name="lets_get_started">시작하기</string>
-    <string name="willing_to_use_root">이게 무슨 뜻인지 모르시거나 루트 버전을 사용하고 싶으시다고요? 그냥 아래의 파란색 화살표를 클릭하세요!</string>
+    <string name="willing_to_use_root">이게 무슨 뜻인지 모르시거나 루트 버전을 사용하고 싶지 않으시다고요? 그냥 아래의 파란색 화살표를 클릭하세요!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s 정보</string>
     <string name="apps">앱</string>
