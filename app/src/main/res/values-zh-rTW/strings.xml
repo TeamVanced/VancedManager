@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">取消</string>
     <string name="close">關閉</string>
+    <string name="description_vanced">經過修改而具有許多有用功能的 YouTube 客戶端！</string>
+    <string name="description_vanced_music">Vanced ，不過是 YouTube Music！功能相對較少但足以滿足您的需要。</string>
+    <string name="description_microg">以 microG 項目為基礎並用於 Vanced 的 GMS 工具。</string>
     <string name="reset">重設</string>
     <string name="save">儲存</string>
     <string name="select_apps">選擇您需要的應用程式</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">您的裝置擁有 Root 權限嗎？</string>
     <string name="grant_root">授予 Root 權限</string>
     <string name="select_at_least_one_app">請至少選擇一個應用程式！</string>
-    <string name="description_vanced_music">Vanced ，不過是 YouTube 音樂！\n功能相對較少但足以滿足您的需要。</string>
-    <string name="description_vanced">YouTube Vanced 是安卓更高級的原生 YouTube 應用程式！</string>
     <string name="lets_get_started">讓我們開始吧</string>
     <string name="willing_to_use_root">不知道這是什麼，或者不想使用 Root 版本？只需點選下面的藍色箭頭！</string>
     <!-- Home Page -->
     <string name="about_app">關於 %1$s</string>
+    <string name="apps">應用程式</string>
     <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
     <string name="version_installed">已安裝：</string>
     <string name="latest">最新：</string>
-    <string name="no_microg">未安裝 MicroG</string>
+    <string name="no_microg">請先安裝 Vanced microG</string>
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="unavailable">無法使用</string>
     <string name="social_media">社交媒體</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">日誌成功儲存</string>
     <string name="logs_not_saved">無法儲存日誌</string>
     <!-- Dialogs -->
-    <string name="advanced">進階設定</string>
+    <string name="advanced">詳細資訊</string>
     <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
     <string name="app_install_files_detected_summary">Manager 找到所有 %1$s 所需的安裝檔案。您打算安裝嗎？</string>
     <string name="checking_updates">正在檢查更新…</string>
@@ -105,12 +107,12 @@
     <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
     <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生應用程式的更新，然後重試。</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前的版本，然後重試。</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">未知原因導致安裝失敗，請附上進階設定的截圖至我們的 Telegram 或 Discord 取得更多支援</string>
     <string name="installation_incompatible">安裝檔案與您的裝置不相容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
     <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
     <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
     <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
-    <string name="installation_storage">由於裝置的可用空間不足，因此安裝失敗。</string>
+    <string name="installation_storage">裝置的可用空間不足導致安裝失敗。</string>
     <string name="modapk_missing">在安裝程式中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試。</string>
     <string name="path_missing">分割安裝後無法找到原生 YouTube 安裝路徑。</string>
 </resources>

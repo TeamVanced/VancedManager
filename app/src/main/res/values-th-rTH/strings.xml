@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">ยกเลิก</string>
     <string name="close">ปิด</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">ล้างค่าเริ่มต้น</string>
     <string name="save">บันทึก</string>
     <string name="select_apps">เลือกแอปพลิเคชันของคุณ</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">อุปกรณ์ของคุณได้รูทหรือไม่?</string>
     <string name="grant_root">ให้สิทธิ์การใช้งานของรูท</string>
     <string name="select_at_least_one_app">เลือกแอปพลิเคชั่นอย่างน้อยหนึ่งรายการ!</string>
-    <string name="description_vanced_music">Vanced เมื่อใช้งาน YouTube Music! \n ไม่ค่อยมีลูกเล่นอะไรเยอะแยะ แต่ มันตอบสนองกับความต้องการของคุณแน่นอน</string>
-    <string name="description_vanced">YouTube Vanced เป็นแอป YouTube บน Android ที่ดีกว่า!</string>
     <string name="lets_get_started">เริ่มกันเลย!</string>
     <string name="willing_to_use_root">ไม่รู้/ไม่ต้องการใช้เวอร์ชั่นรูท? แค่คลิ๊กบนไอคอนธนูสีฟ้า!</string>
     <!-- Home Page -->
     <string name="about_app">เกี่ยวกับ %1$s</string>
+    <string name="apps">Apps</string>
     <string name="changelog">บันทึกการเปลี่ยนแปลง</string>
     <string name="downloading_file">กำลังดาวน์โหลด %1$s</string>
     <string name="install">ติดตั้ง</string>
     <string name="version_installed">ติดตั้งแล้ว:</string>
     <string name="latest">ล่าสุด:</string>
-    <string name="no_microg">microG ไม่ได้ถูกติดตั้ง</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">ไม่ได้รับสิทธิ์ของรูท</string>
     <string name="unavailable">ไม่สามารถใช้ได้</string>
     <string name="social_media">สื่อสังคม</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">ดำเนินการบันทึกเรียบร้อยแล้ว</string>
     <string name="logs_not_saved">ไม่สามารถบันทึกได้</string>
     <!-- Dialogs -->
-    <string name="advanced">ขั้นสูง</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s ตรวจพบไฟล์สำหรับการติดตั้ง!</string>
     <string name="app_install_files_detected_summary">ตรวจพบการอัพเดทไฟล์สำหรับติดตั้งใหม่ที่จำเป็น %1$s คุณต้องการติดตั้งหรือไม่?</string>
     <string name="checking_updates">ตรวจหาการปรับปรุงใหม่ๆ…</string>
