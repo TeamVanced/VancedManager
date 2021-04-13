@@ -16,8 +16,8 @@ android {
         applicationId = "com.vanced.manager"
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 251
-        versionName = "2.5.1 (Weed)"
+        versionCode = 260
+        versionName = "2.6.0 (Crimson)"
 
         vectorDrawables.useSupportLibrary = true
 
