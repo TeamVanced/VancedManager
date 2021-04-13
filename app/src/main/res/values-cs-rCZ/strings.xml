@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Zrušit</string>
     <string name="close">Zavřít</string>
+    <string name="description_vanced">Upravený klient YouTube se spoustou užitečných funkcí!</string>
+    <string name="description_vanced_music">Vanced, ale YouTube Music! Obsahuje o trochu méně funkcí, ale splní vaše potřeby.</string>
+    <string name="description_microg">Vlastní implementace GMS pro Vanced založená na projektu microG.</string>
     <string name="reset">Resetovat</string>
     <string name="save">Uložit</string>
     <string name="select_apps">Vyberte své aplikace</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">Má vaše zařízení oprávnění root?</string>
     <string name="grant_root">Udělit oprávnění root</string>
     <string name="select_at_least_one_app">Vyberte alespoň jednu aplikaci!</string>
-    <string name="description_vanced_music">Vanced, ale YouTube Music!\nObsahuje o trochu méně funkcí, ale splní vaše potřeby.</string>
-    <string name="description_vanced">YouTube Vanced je vylepšená výchozí aplikace YouTube!</string>
     <string name="lets_get_started">Začínáme</string>
     <string name="willing_to_use_root">Nevíte, co to je, nebo nechcete používat verzi s přístupem root? V tom případě klikněte na modrou šipku níže!</string>
     <!-- Home Page -->
     <string name="about_app">O aplikaci %1$s</string>
+    <string name="apps">Aplikace</string>
     <string name="changelog">Seznam změn</string>
     <string name="downloading_file">Stahování %1$s</string>
     <string name="install">Nainstalovat</string>
     <string name="version_installed">Nainstalováno:</string>
     <string name="latest">Nejnovější:</string>
-    <string name="no_microg">microG není nainstalováno</string>
+    <string name="no_microg">Nejprve nainstalujte Vanced microG</string>
     <string name="root_not_granted">Root přístup nebyl udělen</string>
     <string name="unavailable">Není k dispozici</string>
     <string name="social_media">Sociální média</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">Záznamy byly úspěšně uloženy</string>
     <string name="logs_not_saved">Záznamy nelze uložit</string>
     <!-- Dialogs -->
-    <string name="advanced">Pokročilé</string>
+    <string name="advanced">Podrobnosti</string>
     <string name="app_install_files_detected">Počet zjištěných instalačních souborů: %1$s</string>
     <string name="app_install_files_detected_summary">Manager nalezl všechny soubory potřebné pro instalaci aplikace %1$s. Chcete ji nyní nainstalovat?</string>
     <string name="checking_updates">Kontrola aktualizací…</string>
