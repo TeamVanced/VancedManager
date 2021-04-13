@@ -1,13 +1,16 @@
 package com.vanced.manager.ui.dialogs
 
 import android.content.Context
+import android.os.Build
 import androidx.core.content.edit
+import androidx.fragment.app.FragmentActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
 import com.vanced.manager.utils.showWithAccent
 import com.vanced.manager.utils.isMiuiOptimizationsEnabled
 import com.vanced.manager.utils.openUrl
+import com.vanced.manager.utils.requestStoragePerms
 
 object DialogContainer {
 
@@ -28,6 +31,23 @@ object DialogContainer {
         }
         val prefs = PreferenceManager.getDefaultSharedPreferences(context)
         prefs.edit { putBoolean("firstLaunch", false) }
+    }
+
+    fun storageDialog(activity: FragmentActivity) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
+            return
+
+        MaterialAlertDialogBuilder(activity).apply {
+            setTitle(R.string.storage_access_required)
+            setMessage(R.string.storage_access_required_summary)
+            setPositiveButton(R.string.auth_dialog_ok) { dialog, _ ->
+                dialog.cancel()
+                requestStoragePerms(activity)
+            }
+            setCancelable(false)
+            create()
+            showWithAccent()
+        }
     }
 
     fun miuiDialog(context: Context) {

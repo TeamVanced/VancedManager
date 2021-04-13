@@ -8,11 +8,17 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <!--  is required for some Android 5.x devices  -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
 
     <queries>
         <package android:name="com.vanced.android.youtube" />
@@ -32,7 +38,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:ignore="UnusedAttribute">
+        tools:ignore="UnusedAttribute"
+        android:requestLegacyExternalStorage="true">
+        <!-- Only because MANAGE_EXTERNAL_STORAGE is not available in android Q -->
 
         <activity
             android:name=".ui.core.SplashScreenActivity"
@@ -51,7 +59,7 @@
 
         <activity
             android:name=".ui.WelcomeActivity"
-            android:theme="@style/DarkTheme"/>
+            android:theme="@style/DarkTheme" />
 
         <activity
             android:name=".ui.MainActivity"
@@ -62,12 +70,14 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
-                    android:scheme="https"
                     android:host="vancedapp.com"
-                    android:pathPrefix="/downloads"/>
+                    android:pathPrefix="/downloads"
+                    android:scheme="https" />
 
             </intent-filter>
 

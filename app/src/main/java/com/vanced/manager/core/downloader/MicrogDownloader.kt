@@ -24,6 +24,6 @@ object MicrogDownloader {
     fun startMicrogInstall(context: Context) {
         installing.postValue(true)
         postReset()
-        install("${context.getExternalFilesDir(folderName)}/$fileName", context)
+        install("$folderName/$fileName".managerFilepath, context)
     }
 }

@@ -40,6 +40,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     private val navHost by lazy { findNavController(R.id.nav_host) }
 
+    companion object {
+        const val REQUEST_CODE = 69
+    }
+
     private val loadingObserver = object : LoadingStateListener {
         val tag = "VMLocalisation"
         override fun onDataChanged() {
@@ -98,6 +102,9 @@ class MainActivity : AppCompatActivity() {
         setFinalTheme()
         super.onResume()
         Crowdin.registerDataLoadingObserver(loadingObserver)
+        if (!canAccessStorage(this)) {
+            DialogContainer.storageDialog(this)
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

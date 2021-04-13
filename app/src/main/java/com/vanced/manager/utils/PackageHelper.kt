@@ -100,16 +100,16 @@ object PackageHelper {
         }
     }
 
-    fun apkExist(context: Context, apk: String): Boolean {
-        val apkPath = File(context.getExternalFilesDir(apk.substring(0, apk.length - 4))?.path, apk)
+    fun apkExist(apk: String): Boolean {
+        val apkPath = File("${apk.removeSuffix(".apk")}/$apk".managerFilepath)
         if (apkPath.exists())
             return true
 
         return false
     }
 
-    fun musicApkExists(context: Context): Boolean {
-        val apkPath = File(context.getExternalFilesDir("music/nonroot")?.path, "nonroot.apk")
+    fun musicApkExists(): Boolean {
+        val apkPath = File("music/nonroot/nonroot.apk".managerFilepath)
         if (apkPath.exists()) {
             return true
         }
@@ -117,8 +117,8 @@ object PackageHelper {
         return false
     }
 
-    fun vancedInstallFilesExist(context: Context): Boolean {
-        val apksPath = File(context.getExternalFilesDir("vanced/nonroot")?.path.toString())
+    fun vancedInstallFilesExist(): Boolean {
+        val apksPath = File("vanced/nonroot".managerFilepath)
         val splitFiles = mutableListOf<String>()
         if (apksPath.exists()) {
             val files = apksPath.listFiles()
@@ -212,8 +212,8 @@ object PackageHelper {
 
     private fun installRootApp(context: Context, app: String, appVerCode: Int?, pkg: String, modApkBool: (fileName: String) -> Boolean) = CoroutineScope(Dispatchers.IO).launch {
         Shell.getShell {
-            val apkFilesPath = context.getExternalFilesDir("$app/root")?.path
-            val files = File(apkFilesPath.toString()).listFiles()?.toList()
+            val apkFilesPath = "$app/root".managerFilepath
+            val files = File(apkFilesPath).listFiles()?.toList()
             if (files != null) {
                 val modApk: File? = files.lastOrNull { modApkBool(it.name) }
                 if (modApk != null) {
@@ -268,7 +268,7 @@ object PackageHelper {
         appName: String
     ) {
         val packageInstaller = context.packageManager.packageInstaller
-        val folder = File(context.getExternalFilesDir("$appName/nonroot")?.path.toString())
+        val folder = File("$appName/nonroot".managerFilepath)
         var session: PackageInstaller.Session? = null
         val sessionId: Int
         val sessionParams = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
@@ -299,17 +299,10 @@ object PackageHelper {
         }
     }
 
-    private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context): Boolean {
+    private fun installSplitApkFilesRoot(apkFiles: List<File>?, context: Context) : Boolean {
         val filenames = arrayOf("black.apk", "dark.apk", "blue.apk", "pink.apk", "hash.json")
         log(INSTALLER_TAG, "installing split apk files: ${apkFiles?.map { it.name }}")
-        val sessionId = Shell.su("pm install-create -r").exec().out.joinToString(" ").filter { it.isDigit() }.toIntOrNull()
-
-        if (sessionId == null) {
-            sendFailure("Session ID is null", context)
-            sendCloseDialog(context)
-            return false
-        }
-
+        val sessionId = Shell.su("pm install-create").exec().out.joinToString(" ").filter { it.isDigit() }.toInt()
         apkFiles?.filter { !filenames.contains(it.name) }?.forEach { apkFile ->
             val apkName = apkFile.name
             log(INSTALLER_TAG, "installing APK: $apkName")
