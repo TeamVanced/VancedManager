@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Откажи</string>
     <string name="close">Затвори</string>
+    <string name="description_vanced">Модификовани YouTube клијент са многим корисним функцијама!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Ресетуј</string>
     <string name="save">Сачувај</string>
     <string name="select_apps">Одабери своје апликације</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">Да ли је ваш уређај рутован?</string>
     <string name="grant_root">Омогућите дозволу за рут</string>
     <string name="select_at_least_one_app">Одабери барем једну апликацију!</string>
-    <string name="description_vanced_music">Vanced, али за YouTube Music!\nрелативно са мање напредних карактеристикама, али ће задовољити ваше потребе.</string>
-    <string name="description_vanced">YouTube Vanced је фабрички Android YouTube апликација, али много боља!</string>
     <string name="lets_get_started">Хајде да почнемо</string>
     <string name="willing_to_use_root">Не знате шта је ово или не желите да користите роот верзију апликације? Само кликните на плаву стрелицу испод!</string>
     <!-- Home Page -->
     <string name="about_app">О %s</string>
+    <string name="apps">Апликације</string>
     <string name="changelog">Историја измена</string>
     <string name="downloading_file">Преузимање %1$s</string>
     <string name="install">Инсталација</string>
     <string name="version_installed">Инсталирана:</string>
     <string name="latest">Најновија:</string>
-    <string name="no_microg">microG апликација није инсталирана</string>
+    <string name="no_microg">Инсталирајте прво Vanced microG</string>
     <string name="root_not_granted">Root приступ није омогућен</string>
     <string name="unavailable">Недоступно</string>
     <string name="social_media">Социјалне мреже</string>
@@ -45,9 +47,9 @@
     <string name="link_title">Користите Chrome Custom Tabs</string>
     <string name="link_custom_tabs">Линкови ће бити отворени у Chrome Custom Tabs</string>
     <string name="system_default">Системски подразумевано</string>
-    <string name="script_save_failed">Грешка при снимању врдности за ново време</string>
+    <string name="script_save_failed">Грешка при снимању вредности за ново време</string>
     <string name="script_sleep_timer">Роот скрипта за Време спавања</string>
-    <string name="script_sleep_timer_description">Подесите време спавања путем у/подаци/адб/услуге/апп.сх скрипте, ово је корисно код грешке при повезивању</string>
+    <string name="script_sleep_timer_description">Подесите време спавања путем у /data/adb/service.d/app.sh скрипти, ово је корисно код грешке при повезивању</string>
     <string name="theme">Тема</string>
     <string name="theme_dark">Тамна тема</string>
     <string name="theme_light">Светла тема</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">Успешно сачувани дневници</string>
     <string name="logs_not_saved">Није могуће снимити дневнике</string>
     <!-- Dialogs -->
-    <string name="advanced">Napredan</string>
+    <string name="advanced">Детаљи</string>
     <string name="app_install_files_detected">%1$s верзија је пронађена!</string>
     <string name="app_install_files_detected_summary">Менаџер је пронашао све датотеке за %1$s верзију инсталације. Да ли желите да инсталирате?</string>
     <string name="checking_updates">Провера ажурирања…</string>
