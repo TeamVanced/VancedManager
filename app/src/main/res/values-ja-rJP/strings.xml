@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">キャンセル</string>
     <string name="close">閉じる</string>
+    <string name="description_vanced">多くの便利な機能を備えた、改造されたYouTubeアプリ!</string>
+    <string name="description_vanced_music">YouTube Music のための Vanced! 比較的機能は少ないですが、あなたの欲望を満たします。</string>
+    <string name="description_microg">microG Project をベースにした、Vanced のためのGMSのカスタム実装</string>
     <string name="reset">リセット</string>
     <string name="save">保存</string>
     <string name="select_apps">アプリの選択</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">端末をルート化していますか？</string>
     <string name="grant_root">root 権限を付与</string>
     <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
-    <string name="description_vanced_music">YouTube Musicを楽しめます!\n機能は多くありませんが、あなたのニーズを満たすことができます。</string>
-    <string name="description_vanced">YouTube VancedはAndoroid標準のYouTubeアプリより良いです！</string>
     <string name="lets_get_started">さあ、始めましょう</string>
     <string name="willing_to_use_root">これが何であるか分からないか、またはRootバージョンを使用したくない場合は、下の青い矢印をタップしてください！</string>
     <!-- Home Page -->
     <string name="about_app">%1$s について</string>
+    <string name="apps">アプリ</string>
     <string name="changelog">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
     <string name="install">インストール</string>
     <string name="version_installed">インストール済み:</string>
     <string name="latest">最新版:</string>
-    <string name="no_microg">microG はインストールされていません</string>
+    <string name="no_microg">はじめに Vanced microG をインストールしてください</string>
     <string name="root_not_granted">Root アクセスは許可されていません</string>
     <string name="unavailable">利用不可</string>
     <string name="social_media">ソーシャルメディア</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">ログが正常に保存されました</string>
     <string name="logs_not_saved">ログの保存に失敗しました</string>
     <!-- Dialogs -->
-    <string name="advanced">上級者向け</string>
+    <string name="advanced">詳細</string>
     <string name="app_install_files_detected">%1$s のインストールに必要なファイルが見つかりました</string>
     <string name="app_install_files_detected_summary">%1$s のインストールに必要な全てのファイル準備が整いました。インストールしますか？</string>
     <string name="checking_updates">アップデートを確認中...</string>
@@ -78,8 +80,8 @@
     <string name="app_installation_preferences">%1$s のインストール設定</string>
     <string name="version">バージョン</string>
     <string name="microg_bug">microG のバグ</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
+    <string name="microg_bug_summary">最新版の microG のバグにより、Vanced のバージョン16以上をインストールするには、先にバージョン15.43.32をインストールし、起動して、ログインする必要があります。バージョン15.43.32をインストールしますか?</string>
+    <string name="microg_bug_summary_music">最新版の microG のバグにより、Music のバージョン4.11以上をインストールするには、先にバージョン4.07.51をインストールし、起動して、ログインする必要があります。バージョン4.07.51をインストールしますか？</string>
     <string name="please_be_patient">この処理中はアプリを終了しないでください!</string>
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->
@@ -105,12 +107,12 @@
     <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">アプリをダウングレードしようとしたため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、再度お試しください。</string>
     <string name="installation_conflict">既にインストールされたアプリと競合したため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、もう一度やり直してください。</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">不明な理由でインストールに失敗しました。さらなるサポートのためには、Telegram か Discord に参加してください。詳細メニューからスクリーンショットを添付してください。</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
     <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>
     <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">デバイスに十分な空き容量がないため、インストールに失敗しました。</string>
     <string name="modapk_missing">インストーラーからブラック/ダークテーマの APK ファイルが見つかりませんでした。Manager のアプリデータを消去してから、もう一度お試しください。</string>
     <string name="path_missing">分割インストール後にストックの YouTube アプリのインストールパスが見つかりませんでした。</string>
 </resources>
