@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Katkesta</string>
     <string name="close">Sulge</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">Lähtesta</string>
     <string name="save">Salvesta</string>
     <string name="select_apps">Valige Oma Rakendused</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">Kas teie seade on juuritud?</string>
     <string name="grant_root">Anna juurluba</string>
     <string name="select_at_least_one_app">Vali vähemalt üks rakendus!</string>
-    <string name="description_vanced_music">Vanced, kuid YouTube Musicu jaoks! \nsuhteliselt vähem funktsioonirikas, kuid vastab teie vajadustele.</string>
-    <string name="description_vanced">YouTube Vanced on tavaline Androidi YouTube äpp, aga parem!</string>
     <string name="lets_get_started">Alustame</string>
     <string name="willing_to_use_root">Kas te ei tea mis see on, või ei soovi kasutada rooditud versiooni? vajutage allpool sinist noolt!</string>
     <!-- Home Page -->
     <string name="about_app">Umbes %1$s</string>
+    <string name="apps">Rakendused</string>
     <string name="changelog">Muudatuste logi</string>
     <string name="downloading_file">Allalaadimine %1$s</string>
     <string name="install">Installi</string>
     <string name="version_installed">Installitud:</string>
     <string name="latest">Uusim:</string>
-    <string name="no_microg">microG pole installitud</string>
+    <string name="no_microg">Installi Vanced MicroG esimesena</string>
     <string name="root_not_granted">Administraatoriõigusi ei tagatud</string>
     <string name="unavailable">Pole saadaval</string>
     <string name="social_media">Sotsiaalmeedia</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">Edukalt salvestatud logid</string>
     <string name="logs_not_saved">Ei suutnud salvestada logi</string>
     <!-- Dialogs -->
-    <string name="advanced">Täpsustatud</string>
+    <string name="advanced">Üksikasjad</string>
     <string name="app_install_files_detected">%1$s paigaldusfailid on leitud!</string>
     <string name="app_install_files_detected_summary">Haldur tuvastas, et kõik failid paigaldamaks %1$s on leitud. Kas soovite seda paigaldada?</string>
     <string name="checking_updates">Uuenduste otsimine…</string>
@@ -110,7 +112,7 @@
     <string name="installation_invalid">Paigaldamine ebaõnnestus kuna apk failid on vigased, palun proovige uuesti.</string>
     <string name="installation_signature">Paigaldamine ebaõnnestus kuna apk-allkirja kontrollimine on lubatud. Keelake apk allkirja kinnitamine ja proovige uuesti.</string>
     <string name="installation_miui">Paigaldamine ebaõnnestus, kuna MIUI optimiseerimine on lubatud. Keelake MIUI optimiseerimine ja proovige uuesti.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">Installimist ei saadud viia lõpule kuna seadmes pole piisvalt vaba ruumi.</string>
     <string name="modapk_missing">Apk faili musta/tumeda teema jaoks leidmine paigaldajast ebaõnnestus. Puhastage halduri rakenduse andmed ja proovige uuesti.</string>
     <string name="path_missing">Pärast jagatud paigaldamist ei õnnestunud leida originaal YouTube\'i paigaldus asukohta.</string>
 </resources>
