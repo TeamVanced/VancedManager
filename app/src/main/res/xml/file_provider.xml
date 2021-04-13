@@ -5,4 +5,8 @@
         name="files"
         path="." />
 
+    <external-path
+        name="files"
+        path="." />
+
 </paths>
