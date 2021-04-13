@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Peruuta</string>
     <string name="close">Sulje</string>
+    <string name="description_vanced">Muokattu YouTube-sovellus, jossa on monia hyödyllisiä ominaisuuksia!</string>
+    <string name="description_vanced_music">Vanced, mutta YouTube Musicille! Suhteellisen vähemmän ominaisuuksia, mutta täyttää tarpeesi.</string>
+    <string name="description_microg">Mukautettu GMS-Toteutus Vancedille perustuen microG projektiin.</string>
     <string name="reset">Palauta</string>
     <string name="save">Tallenna</string>
     <string name="select_apps">Valitse Sovelluksesi</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">Onko laitteesi rootattu?</string>
     <string name="grant_root">Anna root-oikeudet</string>
     <string name="select_at_least_one_app">Valitse ainakin yksi sovellus!</string>
-    <string name="description_vanced_music">Vanhentunut, mutta YouTube Music!\nsuhteellisen vähemmän ominaisuus-rikas, mutta täyttää tarpeesi.</string>
-    <string name="description_vanced">YouTube Vanced on Androidin Youtube-vakiosovellus, mutta parempi!</string>
     <string name="lets_get_started">Aloitetaan</string>
     <string name="willing_to_use_root">Etkö tiedä mikä tämä on tai etkö halua käyttää rootattua versiota? Klikkaa alla olevaa sinistä nuolta!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
+    <string name="apps">Sovellukset</string>
     <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
     <string name="install">Asenna</string>
     <string name="version_installed">Asennettu:</string>
     <string name="latest">Uusin:</string>
-    <string name="no_microg">microG:tä ei ole asennettu</string>
+    <string name="no_microg">Asenna Vanced microG ensin</string>
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
     <string name="unavailable">Ei saatavilla</string>
     <string name="social_media">Sosiaalinen media</string>
@@ -46,8 +48,8 @@
     <string name="link_custom_tabs">Linkit aukeavat Chromen mukautetuissa välilehdissä</string>
     <string name="system_default">Järjestelmän oletus</string>
     <string name="script_save_failed">Uuden ajan tallennus epäonnistui</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_sleep_timer">Juuren Skriptin Nukkumisaika</string>
+    <string name="script_sleep_timer_description">Säädä lepoajan arvoa jota käytetään /data/adb/service.d/app.sh skriptissä, joka on hyödyllinen asennusongelmien korjaamisessa</string>
     <string name="theme">Teema</string>
     <string name="theme_dark">Tumma teema</string>
     <string name="theme_light">Vaalea teema</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">Lokit tallennettiin onnistuneesti</string>
     <string name="logs_not_saved">Lokeja ei voitu tallentaa</string>
     <!-- Dialogs -->
-    <string name="advanced">Kehittyneet</string>
+    <string name="advanced">Lisätiedot</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
     <string name="app_install_files_detected_summary">Hallitsija havaitsi, että kaikki tarvittavat tiedostot %1$s asennusta varten. Haluatko asentaa sen?</string>
     <string name="checking_updates">Tarkistetaan päivityksiä…</string>
@@ -71,7 +73,7 @@
     <string name="hold_on">Pysähdy!</string>
     <string name="magisk_vanced">Käytät Magisk / TWRP versio Vanced, joka on lopetettu ja ei voi päivittää käyttämällä tätä sovellusta. Poista se poistamalla Magisk moduuli / käyttämällä TWRP Vanced asennuksen.</string>
     <string name="miui_one_title">MIUI-optimoinnit ovat käytössä!</string>
-    <string name="miui_one">Vancedin asentamiseksi, sinun täytyy poistaa MIUI-optimoinnit käytöstä kehittäjän asetuksista. (Voit ohittaa tämän varoituksen, jos käytät 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM:ia)</string>
+    <string name="miui_one">Asentaaksesi Vancedin, sinun täytyy poistaa MIUI-optimisaatiot käytöstä kehittäjäasetuksista. (Voit ohittaa tämän varoituksen, jos käytät versiota 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM:ia)</string>
     <string name="error">Virhe</string>
     <string name="redownload">Uudelleenlataa</string>
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
@@ -105,12 +107,12 @@
     <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">Asennus epäonnistui tuntemattomasta syystä, liity Vancedin Telegramiin tai Discordiin saadaksesi tukea. Liitä myös kuvankaappaus Lisäasetukset valikosta</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
     <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">Asennus epäonnistui, koska laitteella ei ole tarpeeksi vapaata tilaa.</string>
     <string name="modapk_missing">APK-tiedostoa mustalle/tummalle teemalle ei löytynyt asentajalta. Tyhjennä Managerin sovellustiedot ja yritä uudelleen.</string>
     <string name="path_missing">Youtube-sovelluksen asennuspolkua ei voitu paikantaa jaetun asennuksen jälkeen.</string>
 </resources>
