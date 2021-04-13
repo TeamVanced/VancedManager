@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingHorizontal="8dp"
-        android:paddingTop="16dp">
+        android:paddingVertical="12dp">
 
         <com.vanced.manager.ui.core.PreferenceCategory
             android:layout_width="match_parent"

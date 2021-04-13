@@ -16,10 +16,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingVertical="12dp">
 
             <com.vanced.manager.ui.core.ThemedTextView
-                android:layout_marginTop="12dp"
                 android:layout_marginStart="20dp"
                 android:text="@string/apps"
                 style="@style/CardTextHeader" />
@@ -59,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:nestedScrollingEnabled="false"
-                android:paddingBottom="8dp"
                 tools:itemCount="6"
                 tools:listitem="@layout/view_social_link" />
 

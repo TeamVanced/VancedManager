@@ -66,7 +66,7 @@
     <style name="MaterialCard" parent="Widget.MaterialComponents.CardView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="cardCornerRadius">8dp</item>
+        <item name="cardCornerRadius">12dp</item>
         <item name="cardBackgroundColor">?colorSurfaceVariant</item>
         <item name="cardElevation">0dp</item>
         <item name="contentPaddingLeft">8dp</item>
