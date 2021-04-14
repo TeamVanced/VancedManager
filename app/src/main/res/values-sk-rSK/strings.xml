@@ -12,7 +12,7 @@
     <!-- Main Activity -->
     <string name="title_about">O aplikácií</string>
     <string name="title_guide">Sprievodca</string>
-    <string name="title_logs">Záznamy</string>
+    <string name="title_logs">Logy</string>
     <string name="title_home">Manažér</string>
     <string name="title_settings">Nastavenia</string>
     <string name="update_manager">Aktualizovať Manažéra</string>
@@ -42,7 +42,7 @@
     <string name="clear_files">Vymazať stiahnuté súbory</string>
     <string name="cleared_files">Súbory boli úspešne vymazané</string>
     <string name="firebase_title">Firebase Analytics</string>
-    <string name="firebase_summary">Toto nám umožňuje zhromažďovať informácie o výkonnosti aplikácie a záznamy o zlyhaní</string>
+    <string name="firebase_summary">Toto nám umožňuje zhromažďovať informácie o výkone aplikácie a logy o zlyhaní</string>
     <string name="language_title">Jazyk</string>
     <string name="link_title">Používať vlastné karty prehliadača Chrome</string>
     <string name="link_custom_tabs">Odkazy sa otvoria na vlastných kartách prehliadača Chrome</string>
@@ -59,8 +59,8 @@
     <string name="update_not_found">Žiadne nové aktualizácie</string>
     <string name="variant">Varianta</string>
     <!-- Logs -->
-    <string name="logs_saved">Záznamy boli úspešne uložené</string>
-    <string name="logs_not_saved">Záznamy nebolo možné uložiť</string>
+    <string name="logs_saved">Logy boli úspešne uložené</string>
+    <string name="logs_not_saved">Logy nebolo možné uložiť</string>
     <!-- Dialogs -->
     <string name="advanced">Podrobnosti</string>
     <string name="app_install_files_detected">Nájdených %1$s inštalačných súborov!</string>
@@ -81,7 +81,7 @@
     <string name="version">Verzia</string>
     <string name="microg_bug">Chyba v microG</string>
     <string name="microg_bug_summary">Kvôli chybe v pôvodnom microG si inštalácia Vanced v16+ vyžaduje najskôr inštaláciu v15.43.32, otvorenie, následné prihlásenie a až potom môžete nainštalovať v16 ​​a vyššiu. Chcete pokračovať v inštalácii verzie 15.43.32?</string>
-    <string name="microg_bug_summary_music">Kvôli chybe v pôvodnom microG si inštalácia aplikácie Music v4.11+ vyžaduje najskôr inštaláciu verzie 4.0.0.51, otvorenie, následné prihlásenie a až potom môžete nainštalovať verziu 4.14 a vyššiu. Chcete pokračovať v inštalácii verzie v4.07.51?</string>
+    <string name="microg_bug_summary_music">Kvôli chybe v pôvodnom microG, inštalácia aplikácie Music v4.11+ vyžaduje najskôr inštaláciu verzie 4.07.51, otvorenie, následné prihlásenie a až potom môžete nainštalovať verziu 4.11 a vyššiu. Chcete pokračovať v inštalácii verzie 4.07.51?</string>
     <string name="please_be_patient">Počas tohto procesu NEODCHÁDZAJTE z aplikácie!</string>
     <string name="welcome">Vitajte</string>
     <!-- Install Page -->
@@ -97,12 +97,12 @@
     <string name="sources">Zdrojové kódy</string>
     <string name="vanced_team">Tím Vanced</string>
     <!-- Error messages -->
-    <string name="chown_fail">Nepodarilo sa zmeniť vlastníka súboru APK na vlastníka systému, skúste to znovu prosím.</string>
+    <string name="chown_fail">Nepodarilo sa zmeniť vlastníka súboru APK na vlastníka systému. Skúste to znovu prosím.</string>
     <string name="error_downloading">Chyba pri sťahovaní %1$s</string>
     <string name="failed_uninstall">Nepodarilo sa odinštalovať balíček %1$s</string>
     <string name="failed_accent">Nepodarilo sa nastaviť novú sekundárnu farbu</string>
     <string name="files_missing_va">Nepodarilo sa nájsť požadované súbory na inštaláciu. Opätovne stiahnite inštalačné súbory a skúste to znova.</string>
-    <string name="ifile_missing">V lokálnom úložisku sa nepodarilo nájsť APK súbor pre čiernu/tmavú tému. Skúste to prosím znova.</string>
+    <string name="ifile_missing">V lokálnom úložisku sa nepodarilo nájsť APK súbor pre čiernu/tmavú tému. Skúste to znovu prosím.</string>
     <string name="installation_aborted">Inštalácia zlyhala, kvôli zrušeniu užívateľom.</string>
     <string name="installation_blocked">Inštalácia zlyhala, kvôli zablokovaniu užívateľom.</string>
     <string name="installation_downgrade">Inštalácia zlyhala, pretože užívateľ sa pokúsil downgradovať balík. Odinštalujte aktualizácie z pôvodnej aplikácie a potom to skúste znova.</string>
