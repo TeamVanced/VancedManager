@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Abbrechen</string>
     <string name="close">Schließen</string>
+    <string name="description_vanced">Ein modifizierter YouTube-Client mit vielen nützlichen Funktionen!</string>
+    <string name="description_vanced_music">Vanced, aber für YouTube Music! Weniger Funktionen, stillt aber deine Bedürfnisse.</string>
+    <string name="description_microg">Eine eigene GMD-Implementation für Vanced, basierend auf dem microG-Projekt.</string>
     <string name="reset">Zurücksetzen</string>
     <string name="save">Speichern</string>
     <string name="select_apps">Wähle deine Apps</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">Ist dein Gerät gerootet?</string>
     <string name="grant_root">Root-Berechtigung erteilen</string>
     <string name="select_at_least_one_app">Wähle mindestens eine App!</string>
-    <string name="description_vanced_music">Vanced, aber für YouTube Music!\nWeniger funktionsreich, aber erfüllt dennoch deine Bedürfnisse.</string>
-    <string name="description_vanced">YouTube Vanced ist die Standard-Android-YouTube-App, aber besser!</string>
     <string name="lets_get_started">Los geht\'s</string>
     <string name="willing_to_use_root">Du weißt nicht was das ist, oder willst die Root-Version nicht benutzen? klicke einfach den blauen Pfeil unten an!</string>
     <!-- Home Page -->
     <string name="about_app">Über %1$s</string>
+    <string name="apps">Programme</string>
     <string name="changelog">Änderungen</string>
     <string name="downloading_file">%1$s wird heruntergeladen</string>
     <string name="install">Installieren</string>
     <string name="version_installed">Installiert:</string>
     <string name="latest">Neueste:</string>
-    <string name="no_microg">microG ist nicht installiert</string>
+    <string name="no_microg">Installiere zuerst Vanced microG</string>
     <string name="root_not_granted">Root-Zugriff nicht erteilt</string>
     <string name="unavailable">Nicht verfügbar</string>
     <string name="social_media">Soziale Medien</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">Protokolle erfolgreich gespeichert</string>
     <string name="logs_not_saved">Protokolle konnten nicht gespeichert werden</string>
     <!-- Dialogs -->
-    <string name="advanced">Erweitert</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s Installationsdateien erkannt!</string>
     <string name="app_install_files_detected_summary">Manager hat festgestellt, dass alle notwendigen Dateien für die Installation von %1$s gefunden wurden. Möchtest Du sie installieren?</string>
     <string name="checking_updates">Suche nach Updates…</string>
@@ -103,9 +105,9 @@
     <string name="ifile_missing">Apk-Datei für schwarzes/dunkles Theme konnte nicht gefunden werden, bitte versuchen Sie es erneut.</string>
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
     <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer die Installation blockiert hat.</string>
-    <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der stock YouTube App und versuchen Sie es erneut.</string>
+    <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
     <string name="installation_conflict">Die Installation ist fehlgeschlagen, weil die App in Konflikt mit einer bereits installierten App steht. Deinstalliere die aktuell installierte Version der App und versuchen es dann erneut.</string>
-    <string name="installation_failed">Die Installation ist aus unbekannten Gründen fehlgeschlagen, betrete unser Telegram oder Discord für weitere Unterstützung. Bitte füge auch einen Screenshot aus dem Erweiterten Menü zu</string>
+    <string name="installation_failed">Die Installation ist aus unbekannten Gründen fehlgeschlagen. Betrete unser Telegram Chat oder Discord Server für weitere Unterstützung und halte bitte einen Screenshot aus dem erweiterten Menü bereit</string>
     <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
     <string name="installation_invalid">Installation fehlgeschlagen, da die apk-Dateien beschädigt sind, bitte versuchen Sie es erneut.</string>
     <string name="installation_signature">Installation fehlgeschlagen, da die apk Signaturüberprüfung aktiviert ist. Deaktivieren Sie die apk Signaturüberprüfung, dann versuchen Sie es erneut.</string>

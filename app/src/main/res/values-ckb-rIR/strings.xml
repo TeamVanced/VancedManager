@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">هەڵوەشاندنەوە</string>
     <string name="close">داخستن</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">ڕێکخستنەوە</string>
     <string name="save">پاراستن</string>
     <string name="select_apps">بەرنامەکانت دیاریبکە</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">مۆبایلەکەت ڕۆت کراوە؟</string>
     <string name="grant_root">ڕێگەپێدانی ڕۆت Root</string>
     <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
-    <string name="description_vanced_music">Vanced، بەڵام بۆ یوتوب میوزیک!\nتایبەتمەندی کەمتر بەڵام پڕتر لە پێویستیەکانت.</string>
-    <string name="description_vanced">YouTube Vanced هەمان بەرنامەی یوتوبە بەڵام بەشێوەکی باشتر!</string>
     <string name="lets_get_started">دەست پێکردن</string>
     <string name="willing_to_use_root">ئەگەر نازانیت ئەمە چییە یان ناتەوێ بەشێوەی ڕۆت بەکاری بهێنیت، پەنجە بنێ بە دوگمە شینەکەدا!</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
+    <string name="apps">بەرنامەکان</string>
     <string name="changelog">گۆڕانکارییەکان</string>
     <string name="downloading_file">داگرتنی %1$s</string>
     <string name="install">دامەزراندن</string>
     <string name="version_installed">دامەزرێنراو:</string>
     <string name="latest">دوایین:</string>
-    <string name="no_microg">دانەبەزێنراوە microG</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">ڕێگەپێدانی Root نەدراوە</string>
     <string name="unavailable">بەردەست نیە</string>
     <string name="social_media">تۆڕە کۆمەڵایەتییەکان</string>
@@ -46,7 +48,7 @@
     <string name="link_custom_tabs">بەستەرەکان لە پەنجەرەی تایبەتی گۆگڵ کرۆمدا دەکرێنەوە</string>
     <string name="system_default">سیستەم</string>
     <string name="script_save_failed">پاشکەوتکردنی بیرخەرەوە سەرکەوتو نەبوو</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer">ماوەی وەستاندنی سکریپتی Root</string>
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="theme">ڕووکار</string>
     <string name="theme_dark">تاریک</string>
@@ -57,10 +59,10 @@
     <string name="update_not_found">هیچ نوێکردنەوەیەک نیە</string>
     <string name="variant">جۆر</string>
     <!-- Logs -->
-    <string name="logs_saved">Successfully saved logs</string>
-    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">تۆمارەکە بەسەرکەوتوویی پارێزرا</string>
+    <string name="logs_not_saved">نەتوانرا تۆمارەکە بپارێزرێت</string>
     <!-- Dialogs -->
-    <string name="advanced">پێشکەوتوو</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
     <string name="app_install_files_detected_summary">بەرنامەکە هەموو ئەو فایلانەی دۆزیەوە %1$s کە پێویستن بۆ دابەزاندن، ئەتەوێ دایان مەزرێنیت؟</string>
     <string name="checking_updates">پشکنین بۆ نوێکردنەوە…</string>
@@ -70,14 +72,14 @@
     <string name="guide">زانیاری</string>
     <string name="hold_on">وەستاندن!</string>
     <string name="magisk_vanced">تۆ وەشانی Magisk/TWRP ـی Vanced بەکاردێنیت، کە ناتوانرێت بە بەکارهێنانی ئەم بەرنامەیە نوێبکرێتەوە، تکایە لایبدە بە سڕینەوەی مۆدیولی ماگیسک/لەڕێی TWRP Vanced.</string>
-    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="miui_one_title">باشترکردنی MIUI چالاککراوە!</string>
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="error">هەڵەیەک ڕوویدا</string>
     <string name="redownload">داگرتنەوە</string>
     <string name="security_context">دڵنیابە کە بەرنامەکەت لە سایتی vancedapp.com، سێرڤەری دیسکۆرد یان Vanced GitHub داگرتووە</string>
     <string name="app_installation_preferences">%1$s ڕێکخستنەکانی دامەزراندن</string>
     <string name="version">وەشان</string>
-    <string name="microg_bug">Bug in microG</string>
+    <string name="microg_bug">کێشە لە microG</string>
     <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
     <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
@@ -91,7 +93,7 @@
     <string name="vanced_dark">تاریک</string>
     <!-- About Page -->
     <string name="manager_dev">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">وەرگێڕانی کوردی - گۆران غەریب </string>
     <string name="sources">سەرچاوەکان</string>
     <string name="vanced_team">Vanced تیمی</string>
     <!-- Error messages -->

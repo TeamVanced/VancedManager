@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Anulaţi</string>
     <string name="close">Închide</string>
+    <string name="description_vanced">Un client YouTube modificat, cu multe caracteristici utile!</string>
+    <string name="description_vanced_music">Vansat, dar pentru muzica YouTube! Relativ mai puțin bogat în caracteristici, dar îți îndeplinește nevoile.</string>
+    <string name="description_microg">O implementare personalizată a GMS pentru Vanced pe baza proiectului microG.</string>
     <string name="reset">Resetează</string>
     <string name="save">Salvează</string>
     <string name="select_apps">Selectați aplicațiile</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">Dispozitivul tău este rootat?</string>
     <string name="grant_root">Acordați permisiunea Root</string>
     <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
-    <string name="description_vanced_music">Vanced pentru YouTube Music!\noferă mai puține funcții, dar are tot ce trebuie.</string>
-    <string name="description_vanced">YouTube Vanced este aplicația YouTube stoc, dar mai bună!</string>
     <string name="lets_get_started">Să începem</string>
     <string name="willing_to_use_root">Nu știți ce este sau nu vreți să folosiți versiunea root? Apăsați săgeata albastră de mai jos!</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
+    <string name="apps">Aplicații</string>
     <string name="changelog">Schimbări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
     <string name="install">Instalează</string>
     <string name="version_installed">Instalat:</string>
     <string name="latest">Ultima:</string>
-    <string name="no_microg">microG nu este instalat</string>
+    <string name="no_microg">Instalați Vanced microG mai întâi</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
     <string name="unavailable">Indisponibil</string>
     <string name="social_media">Rețele sociale</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">Jurnale salvate cu succes</string>
     <string name="logs_not_saved">Jurnalele nu pot fi salvate</string>
     <!-- Dialogs -->
-    <string name="advanced">Avansat</string>
+    <string name="advanced">Detalii</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
     <string name="app_install_files_detected_summary">Manager a detectat că au fost găsite toate fişierele necesare pentru instalarea %1$s . Doriţi să le instalaţi?</string>
     <string name="checking_updates">Verificare actualizări…</string>
@@ -70,8 +72,8 @@
     <string name="guide">Ghid</string>
     <string name="hold_on">Oprește!</string>
     <string name="magisk_vanced">Folosiți versiunea Magisk/TWRP a Vanced, care nu mai este în uz și nu poate fi actualizată folosind această aplicație. Vă rugăm să o eliminați prin eliminarea modulului Magisk/folosind dezinstalatorul Vanced TWRP.</string>
-    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one_title">Optimizările MIUI sunt activate!</string>
+    <string name="miui_one">Pentru a instala Vanced, TREBUIE să dezactivați Optimizările MIUI în setările pentru dezvoltatori. (Puteți ignora această avertizare dacă utilizați un ROM bazat pe xiaomi.eu cu versiunea 20.2.20 sau mai recent)</string>
     <string name="error">Eroare</string>
     <string name="redownload">Redescărcare</string>
     <string name="security_context">Asigurați-vă că ați descărcat aplicația de pe vancedapp.com, de pe serverul Discord Vanced sau de pe GitHub Vanced</string>
@@ -91,7 +93,7 @@
     <string name="vanced_dark">Întunecat</string>
     <!-- About Page -->
     <string name="manager_dev">Dezvoltatori</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Alți Contribuitori</string>
     <string name="sources">Surse</string>
     <string name="vanced_team">Echipa Vanced</string>
     <!-- Error messages -->

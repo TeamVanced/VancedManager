@@ -3,6 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">ਰੱਦ ਕਰੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="reset">ਰੀਸੈੱਟ</string>
     <string name="save">ਸੁੱਰਖਿਅਤ ਕਰੋ</string>
     <string name="select_apps">ਹੋਰ ਐਪ ਚੁਣੋ</string>
@@ -17,18 +20,17 @@
     <string name="are_you_rooted">ਕੀ ਤੁਹਾਡੀ ਡਵਿਾਈਸ ਰੂਟ ਕੀਤਾ ਹੈ?</string>
     <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
     <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
-    <string name="description_vanced_music">ਬਦਲੇ ਗਏ, ਪਰ YouTube Music ਲਈ!\nਮੁਕਾਬਲਤਨ ਘੱਟ ਵਿਸ਼ੇਸ਼ਤਾ ਹੈ, ਪਰ ਤੁਹਾਡੀ ਲੋੜ ਨੂੰ ਪੂਰਾ ਕਰਦਾ ਹੈ.</string>
-    <string name="description_vanced">YouTube Vanced ਸਟਾਕ ਐਂਡਰਾਇਡ YouTube ਐਪ ਹੈ, ਪਰ ਬਿਹਤਰ!</string>
     <string name="lets_get_started">ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ</string>
     <string name="willing_to_use_root">ਪਤਾ ਨਹੀਂ ਇਹ ਕੀ ਹੈ ਜਾਂ ਰੂਟ ਵਰਜ਼ਨ ਨਹੀਂ ਵਰਤਣਾ ਚਾਹੁੰਦੇ? ਹੇਠ ਦਿੱਤੇ ਨੀਲੇ ਤੀਰ ਤੇ ਕਲਿਕ ਕਰੋ!</string>
     <!-- Home Page -->
     <string name="about_app">ਬਾਰੇ %1$s</string>
+    <string name="apps">Apps</string>
     <string name="changelog">ਤਬਦੀਲੀਆਂ</string>
     <string name="downloading_file">ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ %1$s</string>
     <string name="install">ਸਥਾਪਨਾ</string>
     <string name="version_installed">ਸਥਾਪਿਤ:</string>
     <string name="latest">ਨਵੀਨਤਮ:</string>
-    <string name="no_microg">microG ਸਥਾਪਿਤ ਨਹੀਂ ਹੈ</string>
+    <string name="no_microg">Install Vanced microG first</string>
     <string name="root_not_granted">ਰੂਟ ਐਕਸੈਸ ਨਹੀਂ ਦਿੱਤੀ ਗਈ</string>
     <string name="unavailable">ਮੋਜੂਦ ਨਹੀਂ ਹੈ</string>
     <string name="social_media">ਸੋਸ਼ਲ ਮੀਡੀਆ</string>
@@ -60,7 +62,7 @@
     <string name="logs_saved">Successfully saved logs</string>
     <string name="logs_not_saved">Could not save logs</string>
     <!-- Dialogs -->
-    <string name="advanced">ਉੱਨਤ</string>
+    <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਲੱਭੀਆਂ!</string>
     <string name="app_install_files_detected_summary">ਮੈਨੇਜਰ ਨੇ ਖੋਜਿਆ ਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਇਲਾਂ %1$s ਮਿਲੀਆਂ ਹਨ. ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਸਥਾਪਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="checking_updates">ਅੱਪਡੇਟ ਲਈ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…</string>
