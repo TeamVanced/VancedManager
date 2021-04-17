@@ -82,8 +82,8 @@
     <string name="please_be_patient">Моля, НЕ излизайте от приложението по време на този процес!</string>
     <string name="redownload">Изтегли отново</string>
     <string name="security_context">Уверете се, че сте изтеглили приложението от vancedapp.com, Vanced Discord сървъра или от Vanced GitHub</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Нужен е достъп до хранилището</string>
+    <string name="storage_access_required_summary">За да работи Vanced Manager, трябва да предоставите разрешение за съхранение</string>
     <string name="version">Версия</string>
     <string name="welcome">Добре дошли</string>
     <!-- Install Page -->
