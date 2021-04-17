@@ -41,7 +41,8 @@
     <fragment
         android:id="@+id/settings_fragment"
         android:name="com.vanced.manager.ui.fragments.SettingsFragment"
-        android:label="@string/title_settings">
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings">
 
         <action
             android:id="@+id/toDevSettingsFragment"
@@ -76,6 +77,7 @@
     <fragment
         android:id="@+id/dev_settings_fragment"
         android:name="com.vanced.manager.ui.fragments.DevSettingsFragment"
-        android:label="Dev Settings" />
+        android:label="Dev Settings"
+        tools:layout="@layout/fragment_dev_settings"/>
 
 </navigation>
