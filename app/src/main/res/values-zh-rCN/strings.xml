@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">不知道这是什么或不想使用 Root 版本？只需点击下面的蓝色箭头！</string>
     <!-- Home Page -->
     <string name="about_app">关于 %1$s</string>
+    <string name="accessibility_download">下载</string>
+    <string name="accessibility_info">信息</string>
+    <string name="accessibility_launch">打开</string>
+    <string name="accessibility_uninstall">卸载</string>
+    <string name="accessibility_update">更新</string>
     <string name="apps">应用</string>
     <string name="changelog">变更日志</string>
     <string name="downloading_file">正在下载 %1$s</string>
@@ -82,8 +87,8 @@
     <string name="please_be_patient">请不要在此过程中退出应用！</string>
     <string name="redownload">重新下载</string>
     <string name="security_context">请确保您是从 vancedapp.com 、 Vanced Discord 服务器或 Vanced Github 下载本应用</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">需要存储访问权限</string>
+    <string name="storage_access_required_summary">为了使Vanced Manager工作, 您必须授予存储权限</string>
     <string name="version">版本</string>
     <string name="welcome">欢迎</string>
     <!-- Install Page -->
