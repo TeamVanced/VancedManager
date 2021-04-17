@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">ഇത് എന്താണെന്ന് അറിയില്ല അല്ലെങ്കിൽ റൂട്ട് പതിപ്പ് ഉപയോഗിക്കാൻ ആഗ്രഹിക്കുന്നില്ലേ? ചുവടെയുള്ള നീല അമ്പടയാളത്തിൽ ക്ലിക്കുചെയ്യുക!</string>
     <!-- Home Page -->
     <string name="about_app">ഏകദേശം %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">അപ്ലിക്കേഷനുകൾ</string>
     <string name="changelog">ചേഞ്ച് ലോഗ്</string>
     <string name="downloading_file">%1$s ഡൗൺലോഡ് ചെയ്യുന്നു</string>
@@ -82,8 +87,8 @@
     <string name="please_be_patient">പ്രോസസ്സ് സമയത്ത് അപ്ലിക്കേഷനിൽ നിന്ന് പുറത്തുകടക്കരുത്!</string>
     <string name="redownload">വീണ്ടും ഡൗൺലോഡുചെയ്യുക</string>
     <string name="security_context">നിങ്ങൾ vancedapp.com, Vanced Discord സെർവർ, അല്ലെങ്കിൽ Vanced GitHub എന്നിവയിൽ നിന്ന് അപ്ലിക്കേഷൻ download ൺലോഡ് ചെയ്തുവെന്ന് ഉറപ്പാക്കുക</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">സംഭരണ ആക്സസ് ആവശ്യമാണ്</string>
+    <string name="storage_access_required_summary">പ്രവർത്തിക്കാൻ വി. എസ്. വൈ. നിങ്ങൾ സംഭരണ അനുമതി നൽകണം</string>
     <string name="version">പതിപ്പ്</string>
     <string name="welcome">സ്വാഗതം</string>
     <!-- Install Page -->
