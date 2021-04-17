@@ -16,7 +16,19 @@ For anyone who wants to provide translations please submit them to https://crowd
 - [ ] Migrate to Jetpack Compose when it's officially released
 
 ## Building [![Build](https://github.com/YTVanced/VancedManager/actions/workflows/debug.yml/badge.svg?branch=dev)](https://github.com/YTVanced/VancedManager/actions/workflows/debug.yml)
+### In Android Studio
 Clone the repo, open it in Android Studio and build the app.
+
+### In command line
+#### On Windows:
+```powershell
+.\gradlew.bat assembleDebug
+```
+#### On Linux/macOS:
+```bash
+chmod +x gradlew
+./gradlew assembleDebug
+```
 
 ## Vanced FAQ
 Vanced FAQ (from the faq branch) now available on the playstore! https://play.google.com/store/apps/details?id=com.vanced.faq
