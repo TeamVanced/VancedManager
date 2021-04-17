@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Etkö tiedä mikä tämä on tai etkö halua käyttää rootattua versiota? Klikkaa alla olevaa sinistä nuolta!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Sovellukset</string>
     <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
