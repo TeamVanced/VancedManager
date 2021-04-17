@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Não sabe o que isto é ou não quer usar a versão root? basta clicar na seta azul abaixo!</string>
     <!-- Home Page -->
     <string name="about_app">Sobre %1$s</string>
+    <string name="accessibility_download">Baixar</string>
+    <string name="accessibility_info">Informações</string>
+    <string name="accessibility_launch">Iniciar</string>
+    <string name="accessibility_uninstall">Desinstalar</string>
+    <string name="accessibility_update">Atualizar</string>
     <string name="apps">Aplicativos</string>
     <string name="changelog">Registro de mudanças</string>
     <string name="downloading_file">Baixando %1$s</string>
