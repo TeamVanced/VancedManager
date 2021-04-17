@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Vet du inte vad detta är eller inte vill använda rotversionen? Klicka bara på den blå pilen nedan!</string>
     <!-- Home Page -->
     <string name="about_app">Cirka %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Appar</string>
     <string name="changelog">Ändringslogg</string>
     <string name="downloading_file">Laddar ned %1$s</string>
