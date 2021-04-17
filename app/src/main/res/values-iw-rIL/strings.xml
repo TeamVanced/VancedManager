@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">לא יודעים מה זה או לא רוצים להשתמש בגרסת ה־Root? פשוט לחצו על החץ הכחול למטה!</string>
     <!-- Home Page -->
     <string name="about_app">אודות %1$s</string>
+    <string name="accessibility_download">הורדה</string>
+    <string name="accessibility_info">מידע</string>
+    <string name="accessibility_launch">הפעל</string>
+    <string name="accessibility_uninstall">הסרת ההתקנה</string>
+    <string name="accessibility_update">עדכן</string>
     <string name="apps">יישומים</string>
     <string name="changelog">היסטורית שינויים</string>
     <string name="downloading_file">מוריד את %1$s</string>
