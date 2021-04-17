@@ -43,16 +43,6 @@ class ExpandableAppListAdapter(
                 appTitle.text = dataModel?.appName
                 appDescription.text = dataModel?.appDescription
                 dataModel?.appIcon?.let { appIcon.setImageResource(it) }
-                appDownload.apply {
-                    val buttonTag = dataModel?.buttonTag?.value
-                    setOnClickListener { viewModel.openInstallDialog(buttonTag, apps[position]) }
-                    contentDescription = activity.getString(
-                        if (buttonTag == ButtonTag.UPDATE)
-                            R.string.accessibility_update
-                        else
-                            R.string.accessibility_download
-                    )
-                }
                 appClickableLayout.setOnClickListener {
                     if (isAnimationRunning) return@setOnClickListener
                     val rootHeight = root.measuredHeight
@@ -84,6 +74,17 @@ class ExpandableAppListAdapter(
                         appIcon = dataModel?.appIcon,
                         changelog = dataModel?.changelog?.value
                     ).show(activity.supportFragmentManager, "info")
+                }
+                dataModel?.buttonTag?.observe(activity) { buttonTag ->
+                    appDownload.apply {
+                        setOnClickListener { viewModel.openInstallDialog(buttonTag, apps[position]) }
+                        contentDescription = activity.getString(
+                            if (buttonTag == ButtonTag.UPDATE)
+                                R.string.accessibility_update
+                            else
+                                R.string.accessibility_download
+                        )
+                    }
                 }
                 dataModel?.isAppInstalled?.observe(activity) {
                     appUninstall.isVisible = it
