@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Ma aqaano wuxuu kani yahay ama ma doonayo inaan isticmaalo midka root-ka ah? Aayar taabo falaadha buluuga ah ee hoose!</string>
     <!-- Home Page -->
     <string name="about_app">Ku saabsan %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Apps</string>
     <string name="changelog">Waxa isbadalay</string>
     <string name="downloading_file">Dajinaya %1$s</string>
