@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">এটি জানেন না বা মূল সংস্করণটি ব্যবহার করতে চান না? কেবল নীচের নীল তীর চিহ্নটি ক্লিক করুন!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s এর সম্বন্ধে</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">অ্যাপস</string>
     <string name="changelog">পরিবর্তন নথি</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
