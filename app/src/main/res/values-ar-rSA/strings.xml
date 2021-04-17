@@ -82,8 +82,8 @@
     <string name="please_be_patient">الرجاء عدم الخروج من التطبيق أثناء هذه العملية!</string>
     <string name="redownload">إعادة التنزيل</string>
     <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">مطلوب إذن الوصول إلى ذاكرة التخزين</string>
+    <string name="storage_access_required_summary">لكي يعمل مدير فانسد، يجب عليك منح إذن التخزين</string>
     <string name="version">الإصدار</string>
     <string name="welcome">مرحباً بك</string>
     <!-- Install Page -->
