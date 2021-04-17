@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Не знате шта је ово или не желите да користите роот верзију апликације? Само кликните на плаву стрелицу испод!</string>
     <!-- Home Page -->
     <string name="about_app">О %s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Апликације</string>
     <string name="changelog">Историја измена</string>
     <string name="downloading_file">Преузимање %1$s</string>
