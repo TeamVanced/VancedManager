@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Не знаете, что это, или не хотите использовать рут версию? Просто нажмите на синюю стрелку ниже!</string>
     <!-- Home Page -->
     <string name="about_app">О %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Приложения</string>
     <string name="changelog">Список изменений</string>
     <string name="downloading_file">Загрузка %1$s</string>
