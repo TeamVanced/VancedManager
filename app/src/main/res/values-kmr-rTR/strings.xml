@@ -82,8 +82,8 @@
     <string name="please_be_patient">Ji kerema xwe di vê pêvajoyê de ji sepanê dernakeve!</string>
     <string name="redownload">Ji nû ve daxîne</string>
     <string name="security_context">Pê bawer bin ku te ev sepan ji vancedapp.com, servera Discord a Vanced an jî JiGitHub ya Vanced dakêşandine</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Gihîştina depo pêdivî ye</string>
+    <string name="storage_access_required_summary">Divê hûn destûra hilanînê bidin Vanced Manager ku bixebite</string>
     <string name="version">Versiyon</string>
     <string name="welcome">Bi xêr hatî</string>
     <!-- Install Page -->
