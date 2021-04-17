@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Root\'un ne olduğunu bilmiyor veya root sürümünü kullanmak istemiyorsan, alttaki mavi oka tıklayabilirsin!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s hakkında</string>
+    <string name="accessibility_download">İndir</string>
+    <string name="accessibility_info">Bilgi</string>
+    <string name="accessibility_launch">Başlat</string>
+    <string name="accessibility_uninstall">Kaldır</string>
+    <string name="accessibility_update">Güncelleştir</string>
     <string name="apps">Uygulamalar</string>
     <string name="changelog">Sürüm Notları</string>
     <string name="downloading_file">%1$s indiriliyor</string>
