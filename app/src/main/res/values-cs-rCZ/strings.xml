@@ -82,8 +82,8 @@
     <string name="please_be_patient">Během tohoto procesu NEUKONČUJTE aplikaci!</string>
     <string name="redownload">Stáhnout znovu</string>
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vancedapp.com, z našeho Vanced Discord serveru nebo z našeho GitHubu</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Je požadován přístup k úložišti</string>
+    <string name="storage_access_required_summary">Aby mohla aplikace Vanced Manager pracovat, musíte udělit oprávnění k úložišti</string>
     <string name="version">Verze</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
