@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Nie wiesz, co to jest lub nie chcesz użyć wersji z rootem? Po prostu kliknij niebieską strzałkę poniżej!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Aplikacje</string>
     <string name="changelog">Lista zmian</string>
     <string name="downloading_file">Pobieranie %1$s</string>
