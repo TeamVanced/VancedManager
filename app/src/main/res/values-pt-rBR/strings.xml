@@ -82,8 +82,8 @@
     <string name="please_be_patient">Por favor NÃO saia do aplicativo durante este processo!</string>
     <string name="redownload">Baixar novamente</string>
     <string name="security_context">Certifique-se de fazer o download do aplicativo em vancedapp.com, no servidor Vanced Discord ou no Vanced GitHub</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Acesso ao armazenamento necessário</string>
+    <string name="storage_access_required_summary">Para que o Gerenciador do Vanced funcione, você deve conceder a permissão de armazenamento</string>
     <string name="version">Versão</string>
     <string name="welcome">Bem-vindo</string>
     <!-- Install Page -->
