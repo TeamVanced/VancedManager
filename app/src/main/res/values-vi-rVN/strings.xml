@@ -82,8 +82,8 @@
     <string name="please_be_patient">Vui lòng KHÔNG thoát khỏi ứng dụng trong tiến trình này!</string>
     <string name="redownload">Tải lại</string>
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Yêu cầu quyền truy cập bộ nhớ</string>
+    <string name="storage_access_required_summary">Để Vanced Manager hoạt động, bạn phải cấp quyền truy cập bộ nhớ</string>
     <string name="version">Phiên bản</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
