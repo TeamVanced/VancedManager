@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Kas te ei tea mis see on, või ei soovi kasutada rooditud versiooni? vajutage allpool sinist noolt!</string>
     <!-- Home Page -->
     <string name="about_app">Umbes %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Rakendused</string>
     <string name="changelog">Muudatuste logi</string>
     <string name="downloading_file">Allalaadimine %1$s</string>
