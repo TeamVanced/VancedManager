@@ -82,8 +82,8 @@
     <string name="please_be_patient">נא לא לצאת מהיישום במהלך תהליך זה!</string>
     <string name="redownload">הורד מחדש</string>
     <string name="security_context">ודא שהורדת את האפליקציה מהאתר vancedapp.com, שרת הדיסקורד של Vanced או מהעמוד של Vanced ב־GitHub</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">נדרשת הרשאת אחסון</string>
+    <string name="storage_access_required_summary">כדי ש־Vanced Manager יעבוד, עליך להעניק לו הרשאה לאחסון</string>
     <string name="version">גרסא</string>
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
