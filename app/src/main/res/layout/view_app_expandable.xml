@@ -14,8 +14,8 @@
         android:id="@+id/app_expanded_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
         android:alpha="0"
         android:scaleX="0.8"
         android:scaleY="0.8"
@@ -75,37 +75,41 @@
             app:flexWrap="wrap"
             app:flexDirection="row_reverse">
 
-            <com.vanced.manager.ui.core.ThemedImageButton
+            <com.vanced.manager.ui.core.ThemedIconButton
                 android:id="@+id/app_download"
                 style="@style/AppActionButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_app_download"/>
+                app:icon="@drawable/ic_app_download"
+                android:contentDescription="@string/accessibility_download"/>
 
-            <com.vanced.manager.ui.core.ThemedImageButton
+            <com.vanced.manager.ui.core.ThemedIconButton
                 android:id="@+id/app_launch"
                 style="@style/AppActionButton"
                 app:layout_constraintEnd_toStartOf="@id/app_download"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_baseline_launch_24"/>
+                app:icon="@drawable/ic_baseline_launch_24"
+                android:contentDescription="@string/accessibility_launch"/>
 
-            <com.vanced.manager.ui.core.ThemedImageButton
+            <com.vanced.manager.ui.core.ThemedIconButton
                 android:id="@+id/app_uninstall"
                 style="@style/AppActionButton"
                 app:layout_constraintEnd_toStartOf="@id/app_launch"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_app_uninstall"/>
+                app:icon="@drawable/ic_app_uninstall"
+                android:contentDescription="@string/accessibility_uninstall"/>
 
-            <com.vanced.manager.ui.core.ThemedImageButton
+            <com.vanced.manager.ui.core.ThemedIconButton
                 android:id="@+id/app_info"
                 style="@style/AppActionButton"
                 app:layout_constraintEnd_toStartOf="@id/app_uninstall"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_app_info"/>
+                app:icon="@drawable/ic_app_info"
+                android:contentDescription="@string/accessibility_info"/>
 
         </com.google.android.flexbox.FlexboxLayout>
 
@@ -115,7 +119,7 @@
         android:id="@+id/app_clickable_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:contentPadding="16dp"
+        app:contentPadding="12dp"
         app:cardCornerRadius="0dp"
         app:cardElevation="0dp"
         app:cardBackgroundColor="?colorLinkBG"

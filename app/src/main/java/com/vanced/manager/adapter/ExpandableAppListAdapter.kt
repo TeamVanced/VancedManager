@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ViewAppExpandableBinding
+import com.vanced.manager.model.ButtonTag
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
@@ -42,8 +43,15 @@ class ExpandableAppListAdapter(
                 appTitle.text = dataModel?.appName
                 appDescription.text = dataModel?.appDescription
                 dataModel?.appIcon?.let { appIcon.setImageResource(it) }
-                appDownload.setOnClickListener {
-                    viewModel.openInstallDialog(dataModel?.buttonTag?.value, apps[position])
+                appDownload.apply {
+                    val buttonTag = dataModel?.buttonTag?.value
+                    setOnClickListener { viewModel.openInstallDialog(buttonTag, apps[position]) }
+                    contentDescription = activity.getString(
+                        if (buttonTag == ButtonTag.UPDATE)
+                            R.string.accessibility_update
+                        else
+                            R.string.accessibility_download
+                    )
                 }
                 appClickableLayout.setOnClickListener {
                     if (isAnimationRunning) return@setOnClickListener
@@ -90,7 +98,7 @@ class ExpandableAppListAdapter(
                 }
                 dataModel?.buttonImage?.observe(activity) {
                     if (it != null) {
-                        appDownload.setImageDrawable(it)
+                        appDownload.icon = it
                     }
                 }
             }

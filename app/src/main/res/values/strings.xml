@@ -28,6 +28,11 @@
 
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Apps</string>
     <string name="changelog">Changelog</string>
     <string name="downloading_file">Downloading %1$s</string>
