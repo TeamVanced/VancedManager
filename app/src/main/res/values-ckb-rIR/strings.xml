@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">ئەگەر نازانیت ئەمە چییە یان ناتەوێ بەشێوەی ڕۆت بەکاری بهێنیت، پەنجە بنێ بە دوگمە شینەکەدا!</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">بەرنامەکان</string>
     <string name="changelog">گۆڕانکارییەکان</string>
     <string name="downloading_file">داگرتنی %1$s</string>
