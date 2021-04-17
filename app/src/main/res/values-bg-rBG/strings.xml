@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Не знаете какво е това или не искате да ползвате Root версията? Просто натиснете синята стрелка по-долу!</string>
     <!-- Home Page -->
     <string name="about_app">Относно %1$s</string>
+    <string name="accessibility_download">Изтегляне</string>
+    <string name="accessibility_info">Информация</string>
+    <string name="accessibility_launch">Стартиране</string>
+    <string name="accessibility_uninstall">Деинсталиране</string>
+    <string name="accessibility_update">Актуализиране</string>
     <string name="apps">Приложения</string>
     <string name="changelog">Списък с промени</string>
     <string name="downloading_file">Изтегляне на %1$s</string>
