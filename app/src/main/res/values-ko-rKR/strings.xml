@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">이게 무슨 뜻인지 모르시거나 루트 버전을 사용하고 싶지 않으시다고요? 그냥 아래의 파란색 화살표를 클릭하세요!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s 정보</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">앱</string>
     <string name="changelog">변경 사항</string>
     <string name="downloading_file">%1$s 다운로드 중</string>
