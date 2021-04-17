@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Vet du ikke hva detter er eller ikke ønsker å bruke rot-versjonen? Bare klikk på den blå pilen nedenfor!</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Apper</string>
     <string name="changelog">Endringslogg</string>
     <string name="downloading_file">Laster ned %1$s</string>
