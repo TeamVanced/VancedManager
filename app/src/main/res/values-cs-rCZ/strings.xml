@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Nevíte, co to je, nebo nechcete používat verzi s přístupem root? V tom případě klikněte na modrou šipku níže!</string>
     <!-- Home Page -->
     <string name="about_app">O aplikaci %1$s</string>
+    <string name="accessibility_download">Stáhnout</string>
+    <string name="accessibility_info">Informace</string>
+    <string name="accessibility_launch">Spustit</string>
+    <string name="accessibility_uninstall">Odinstalovat</string>
+    <string name="accessibility_update">Aktualizovat</string>
     <string name="apps">Aplikace</string>
     <string name="changelog">Seznam změn</string>
     <string name="downloading_file">Stahování %1$s</string>
