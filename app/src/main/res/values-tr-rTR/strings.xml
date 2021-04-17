@@ -82,8 +82,8 @@
     <string name="please_be_patient">İşlem süresince LÜTFEN uygulamadan çıkmayın!</string>
     <string name="redownload">Tekrar İndir</string>
     <string name="security_context">Uygulamayı vancedapp.com, Vanced Discord sunucusu, veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Depolama izni gerekiyor</string>
+    <string name="storage_access_required_summary">Vanced Manager\'ın düzgün çalışabilmesi için \"Depolama\" izni vermelisin</string>
     <string name="version">Sürüm</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
