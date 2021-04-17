@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Nem tudod mi ez vagy csak nem akarod használni a root verziót? Csak kattins a lenti kék nyílra!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s- ról</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Alkalmazások</string>
     <string name="changelog">Változáslista</string>
     <string name="downloading_file">%1$s letöltése</string>
