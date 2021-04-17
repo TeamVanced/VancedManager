@@ -82,8 +82,8 @@
     <string name="please_be_patient">이 작업을 하는 동안 이 앱에서 나가지 마세요!</string>
     <string name="redownload">다시 다운로드</string>
     <string name="security_context">항상 vancedapp.com, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 Vanced Manager 앱을 다운로드해주세요.</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">저장소 접근 권한 필요</string>
+    <string name="storage_access_required_summary">Vanced Manager가 작동하려면 저장공간 접근 권한이 필요합니다.</string>
     <string name="version">버전</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->
