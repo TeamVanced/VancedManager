@@ -82,8 +82,8 @@
     <string name="please_be_patient">Mohon untuk TIDAK keluar dari aplikasi saat proses ini!</string>
     <string name="redownload">Unduh ulang</string>
     <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, server Discord Vanced, atau Vanced Github</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Akses penyimpanan dibutuhkan</string>
+    <string name="storage_access_required_summary">Agar Vanced Manager dapat bekerja, anda harus mengizinkan akses penyimpanan</string>
     <string name="version">Versi</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
