@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">এটা কী জানেন না অথবা রুট ভার্সন ব্যবহার করতে চাচ্ছেন না? শুধু নিচের নীল তীর চিহ্নটিতে ক্লিক করুন!</string>
     <!-- Home Page -->
     <string name="about_app">সম্পর্কিত তথ্য %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Apps</string>
     <string name="changelog">পরিবর্তন তালিকা</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
