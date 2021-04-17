@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">¿No sabes que es esto o no quieres usar la versión root? ¡Haz clic en la flecha azul de abajo!</string>
     <!-- Home Page -->
     <string name="about_app">Acerca de %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Apps</string>
     <string name="changelog">Historial de actualizaciones</string>
     <string name="downloading_file">Descargando %1$s</string>
@@ -82,8 +87,8 @@
     <string name="please_be_patient">¡Por favor, NO salga de la aplicación durante este proceso!</string>
     <string name="redownload">Volver a descargar</string>
     <string name="security_context">Asegúrate de haber descargado la app desde vancedapp.com, el grupo de Discord de Vanced, o el GitHub de Vanced</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Acceso al almacenamiento requerido</string>
+    <string name="storage_access_required_summary">Para que Vanced Manager funcione, debes conceder el permiso de almacenamiento</string>
     <string name="version">Versión</string>
     <string name="welcome">Bienvenido</string>
     <!-- Install Page -->
