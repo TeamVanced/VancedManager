@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Δεν ξέρετε τι είναι αυτό ή δεν θέλετε να χρησιμοποιήσετε την έκδοση root; Τότε απλώς πατήστε το μπλε βέλος παρακάτω!</string>
     <!-- Home Page -->
     <string name="about_app">Σχετικά με το %1$s</string>
+    <string name="accessibility_download">Λήψη</string>
+    <string name="accessibility_info">Πληροφορίες</string>
+    <string name="accessibility_launch">Εκκίνηση</string>
+    <string name="accessibility_uninstall">Απεγκατάσταση</string>
+    <string name="accessibility_update">Ενημέρωση</string>
     <string name="apps">Εφαρμογές</string>
     <string name="changelog">Αρχείο καταγραφής αλλαγών</string>
     <string name="downloading_file">Λήψη %1$s</string>
@@ -82,8 +87,8 @@
     <string name="please_be_patient">Παρακαλώ ΜΗΝ βγείτε από την εφαρμογή κατά τη διάρκεια αυτής της διαδικασίας!</string>
     <string name="redownload">Επανάληψη λήψης</string>
     <string name="security_context">Βεβαιωθείτε ότι κάνατε λήψη της εφαρμογής από το vancedapp.com, τον διακομιστή Discord του Vanced ή το GitHub του Vanced</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Απαιτείται πρόσβαση στον αποθηκευτικό χώρο</string>
+    <string name="storage_access_required_summary">Για να λειτουργήσει ο Διαχειριστής Vanced, πρέπει να εκχωρήσετε άδεια αποθηκευτικού χώρου</string>
     <string name="version">Έκδοση</string>
     <string name="welcome">Καλώς ορίσατε</string>
     <!-- Install Page -->
