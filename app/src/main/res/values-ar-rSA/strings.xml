@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">لا تعرف ما هذا أو لا تود استخدام نسخة الروت؟ اضغط على السهم الأزرق في الأسفل!</string>
     <!-- Home Page -->
     <string name="about_app">حوالي %1$s</string>
+    <string name="accessibility_download">تنزيل</string>
+    <string name="accessibility_info">المعلومات</string>
+    <string name="accessibility_launch">بدء</string>
+    <string name="accessibility_uninstall">إلغاء التثبيت</string>
+    <string name="accessibility_update">تحديث</string>
     <string name="apps">التطبيقات</string>
     <string name="changelog">سجل التغييرات</string>
     <string name="downloading_file">جارٍ تنزيل %1$s</string>
