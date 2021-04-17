@@ -24,6 +24,11 @@
     <string name="willing_to_use_root">Root versiyasının nə olduğunu bilmirsiz ya da sadəcə istifadə etmək istəmirsiz? onda aşağıdakı göy oxa toxunun!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Haqqında</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
     <string name="apps">Tətbiqlər</string>
     <string name="changelog">Dəyişikliklər</string>
     <string name="downloading_file">%1$s endirilir</string>
