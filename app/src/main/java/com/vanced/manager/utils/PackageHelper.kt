@@ -100,16 +100,16 @@ object PackageHelper {
         }
     }
 
-    fun apkExist(apk: String): Boolean {
-        val apkPath = File("${apk.removeSuffix(".apk")}/$apk".managerFilepath)
+    fun apkExist(apk: String, context: Context): Boolean {
+        val apkPath = File(context.getFilePathInStorage("${apk.removeSuffix(".apk")}/$apk"))
         if (apkPath.exists())
             return true
 
         return false
     }
 
-    fun musicApkExists(): Boolean {
-        val apkPath = File("music/nonroot/nonroot.apk".managerFilepath)
+    fun musicApkExists(context: Context): Boolean {
+        val apkPath = File(context.getFilePathInStorage("music/nonroot/nonroot.apk"))
         if (apkPath.exists()) {
             return true
         }
@@ -117,8 +117,8 @@ object PackageHelper {
         return false
     }
 
-    fun vancedInstallFilesExist(): Boolean {
-        val apksPath = File("vanced/nonroot".managerFilepath)
+    fun vancedInstallFilesExist(context: Context): Boolean {
+        val apksPath = File(context.getFilePathInStorage("vanced/nonroot"))
         val splitFiles = mutableListOf<String>()
         if (apksPath.exists()) {
             val files = apksPath.listFiles()
@@ -212,7 +212,7 @@ object PackageHelper {
 
     private fun installRootApp(context: Context, app: String, appVerCode: Int?, pkg: String, modApkBool: (fileName: String) -> Boolean) = CoroutineScope(Dispatchers.IO).launch {
         Shell.getShell {
-            val apkFilesPath = "$app/root".managerFilepath
+            val apkFilesPath = context.getFilePathInStorage("$app/root")
             val files = File(apkFilesPath).listFiles()?.toList()
             if (files != null) {
                 val modApk: File? = files.lastOrNull { modApkBool(it.name) }
@@ -268,7 +268,7 @@ object PackageHelper {
         appName: String
     ) {
         val packageInstaller = context.packageManager.packageInstaller
-        val folder = File("$appName/nonroot".managerFilepath)
+        val folder = File(context.getFilePathInStorage("$appName/nonroot"))
         var session: PackageInstaller.Session? = null
         val sessionId: Int
         val sessionParams = PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)

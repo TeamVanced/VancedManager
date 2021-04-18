@@ -50,6 +50,12 @@
                 app:preference_title="@string/variant" />
 
             <com.vanced.manager.ui.core.EmptyPreference
+                android:id="@+id/manager_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:preference_title="@string/storage" />
+
+            <com.vanced.manager.ui.core.EmptyPreference
                 android:id="@+id/serviced_timer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

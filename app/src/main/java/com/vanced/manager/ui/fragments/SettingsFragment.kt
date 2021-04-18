@@ -19,10 +19,7 @@ import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.FragmentSettingsBinding
 import com.vanced.manager.ui.dialogs.*
-import com.vanced.manager.utils.accentColor
-import com.vanced.manager.utils.defAccentColor
-import com.vanced.manager.utils.getLanguageFormat
-import com.vanced.manager.utils.toHex
+import com.vanced.manager.utils.*
 import java.io.File
 
 class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
@@ -60,6 +57,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
             bindManagerTheme()
             bindManagerAccentColor()
             bindManagerLanguage()
+            bindManagerStorage()
             selectApps.setOnClickListener { showDialog(SelectAppsDialog()) }
         }
     }
@@ -86,6 +84,21 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
         }
     }
 
+    private fun FragmentSettingsBinding.bindManagerStorage() {
+        managerStorage.apply {
+            setSummary(
+                getString(
+                    if (prefs.managerStorage == externalPath) {
+                        R.string.storage_external
+                    } else {
+                        R.string.storage_internal
+                    }
+                )
+            )
+            setOnClickListener { showDialog(ManagerStorageDialog()) }
+        }
+    }
+
     private fun FragmentSettingsBinding.bindServiceDTimer() {
         servicedTimer.apply {
             if (variant == "root") this.isVisible = true
@@ -96,10 +109,13 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindClearFiles() {
         clearFiles.setOnClickListener {
             with(requireActivity()) {
-                listOf("vanced/nonroot", "vanced/root", "music/nonroot", "music/root", "microg").forEach { dir ->
-                    File(getExternalFilesDir(dir)?.path.toString()).deleteRecursively()
+                performStorageAction(this) { managerPath ->
+                    if (File(managerPath).deleteRecursively()) {
+                        Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, getString(R.string.clear_files_failed), Toast.LENGTH_SHORT).show()
+                    }
                 }
-                Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT).show()
             }
         }
     }

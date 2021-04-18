@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BottomDialogCard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/storage"
+            style="@style/BottomDialogCardTitle" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/storage_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText">
+
+                <com.vanced.manager.ui.core.ThemedMaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/internal_storage_path"
+                    android:text="@string/storage_internal"
+                    android:textSize="18sp" />
+
+                <com.vanced.manager.ui.core.ThemedMaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="@string/external_storage_path"
+                    android:text="@string/storage_external"
+                    android:textSize="18sp" />
+            </RadioGroup>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.vanced.manager.ui.core.ThemedMaterialButton
+            android:id="@+id/storage_save"
+            android:text="@string/save"
+            style="@style/BottomDialogButtonStyle" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

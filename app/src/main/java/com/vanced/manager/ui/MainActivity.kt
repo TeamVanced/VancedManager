@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         setFinalTheme()
         super.onResume()
         Crowdin.registerDataLoadingObserver(loadingObserver)
-        if (!canAccessStorage(this)) {
+        if (defPrefs.managerStorage == externalPath && !canAccessStorage(this)) {
             DialogContainer.storageDialog(this)
         }
     }
