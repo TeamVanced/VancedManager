@@ -19,10 +19,6 @@ var SharedPreferences.managerVariant
     get() = getString("vanced_variant", "nonroot")
     set(value) = edit { putString("vanced_variant", value) }
 
-var SharedPreferences.managerStorage
-    get() = getString("manager_storage", internalPath)
-    set(value) = edit { putString("manager_storage", value) }
-
 var SharedPreferences.managerLang
     get() = getString("manager_lang", "System Default")
     set(value) = edit { putString("manager_lang", value) }

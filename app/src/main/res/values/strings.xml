@@ -50,7 +50,6 @@
     <string name="category_appearance">Appearance</string>
     <string name="category_behaviour">Behavior</string>
     <string name="clear_files">Clear downloaded files</string>
-    <string name="clear_files_failed">Failed to clear files</string>
     <string name="cleared_files">Successfully cleared files</string>
     <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
     <string name="firebase_title">Firebase Analytics</string>
@@ -96,11 +95,8 @@
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="redownload">Redownload</string>
     <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
-    <string name="storage">Storage</string>
     <string name="storage_access_required">Storage access required</string>
     <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
-    <string name="storage_external">Internal Storage</string>
-    <string name="storage_internal">App-Specific Storage</string>
     <string name="version">Version</string>
     <string name="welcome">Welcome</string>
 

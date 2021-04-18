@@ -49,7 +49,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
                     launch {
-                        if (response.body()?.let { writeFile(it, fileFolder, fileName, context) } == true) {
+                        if (response.body()?.let { writeFile(it, fileFolder, fileName) } == true) {
                             onDownloadComplete()
                         } else {
                             onError(response.errorBody().toString())
@@ -78,12 +78,12 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
         })
     }
 
-    fun writeFile(body: ResponseBody, folderName: String, fileName: String, context: Context): Boolean =
+    fun writeFile(body: ResponseBody, folderName: String, fileName: String): Boolean =
         try {
             val totalBytes = body.contentLength()
             val fileReader = ByteArray(8096)
             var downloadedBytes: Long = 0
-            val dir = File(context.getFilePathInStorage(folderName)).apply {
+            val dir = File(managerPath, folderName).apply {
                 if (!exists()) {
                     mkdirs()
                 }
@@ -114,7 +114,7 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             "manager.apk",
             context,
             onDownloadComplete = {
-                val apk = File(context.getFilePathInStorage("manager/manager.apk"))
+                val apk = File("manager/manager.apk".managerFilepath)
                 val uri =
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                         FileProvider.getUriForFile(context, "${context.packageName}.provider", apk)

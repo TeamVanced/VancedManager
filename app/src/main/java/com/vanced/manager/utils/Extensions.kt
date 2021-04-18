@@ -19,6 +19,8 @@ import java.util.*
 
 val RadioGroup.checkedButtonTag: String? get() = findViewById<MaterialRadioButton>(checkedRadioButtonId)?.tag?.toString()
 
+val String.managerFilepath get() = "$managerPath/$this"
+
 fun DialogFragment.show(activity: FragmentActivity) {
     try {
         show(activity.supportFragmentManager, "")

@@ -1,63 +1,40 @@
 package com.vanced.manager.utils
 
 import android.Manifest
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Environment
 import android.provider.Settings
-import androidx.activity.result.ActivityResultLauncher
 import androidx.fragment.app.FragmentActivity
+import com.vanced.manager.ui.MainActivity
 import com.vanced.manager.ui.dialogs.DialogContainer.storageDialog
 
-const val storage = "/storage/emulated/0"
+@Suppress("DEPRECATION")
+val managerPath get() = "${Environment.getExternalStorageDirectory().path}/Vanced Manager"
 
-const val internalPath = "$storage/Android/data/com.vanced.manager/files"
-const val externalPath = "$storage/Vanced Manager"
-
-val Context.managerPath: String
-    get() {
-        var path = defPrefs.managerStorage ?: internalPath
-
-        if (path == externalPath && !canAccessStorage(this)) {
-            path = internalPath
-        }
-
-        return path
-    }
-
-fun Context.getFilePathInStorage(child: String): String = "$managerPath/$child"
-
-
-inline fun performStorageAction(activity: FragmentActivity, action: (managerPath: String) -> Unit) {
-    val managerPath = activity.managerPath
-
-    if (managerPath == internalPath) {
-        return action(managerPath)
-    }
-
+inline fun performStorageAction(activity: FragmentActivity, action: () -> Unit) {
     if (canAccessStorage(activity)) {
-        action(managerPath)
+        action()
     } else {
         storageDialog(activity)
     }
 }
 
-fun canAccessStorage(context: Context): Boolean = when {
+fun canAccessStorage(activity: FragmentActivity): Boolean = when {
     Build.VERSION.SDK_INT >= Build.VERSION_CODES.R -> Environment.isExternalStorageManager()
     Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> {
         listOf(
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
         ).all {
-            context.checkSelfPermission(it) == PackageManager.PERMISSION_GRANTED
+            activity.checkSelfPermission(it) == PackageManager.PERMISSION_GRANTED
         }
     }
     else -> true
 }
 
-fun requestStoragePerms(activity: FragmentActivity, permissionLauncher: ActivityResultLauncher<Array<String>>?) {
+fun requestStoragePerms(activity: FragmentActivity) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
         activity.startActivity(
             Intent(
@@ -65,11 +42,12 @@ fun requestStoragePerms(activity: FragmentActivity, permissionLauncher: Activity
             )
         )
     } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        permissionLauncher?.launch(
+        activity.requestPermissions(
             arrayOf(
-                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.READ_EXTERNAL_STORAGE
-            )
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            ),
+            MainActivity.REQUEST_CODE
         )
     }
 }

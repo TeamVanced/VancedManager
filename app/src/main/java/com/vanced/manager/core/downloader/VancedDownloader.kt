@@ -41,7 +41,7 @@ object VancedDownloader {
         prefs = context.installPrefs
         variant = defPrefs.managerVariant
         folderName = "vanced/$variant"
-        downloadPath = context.getFilePathInStorage(folderName!!)
+        downloadPath = context.getExternalFilesDir(folderName)?.path
         File(downloadPath.toString()).deleteRecursively()
         prefs.lang?.let {
             lang = it.split(", ").toMutableList()

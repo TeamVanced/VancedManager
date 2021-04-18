@@ -10,7 +10,7 @@ import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.databinding.FragmentLogBinding
 import com.vanced.manager.utils.AppUtils
 import com.vanced.manager.utils.AppUtils.logs
-import com.vanced.manager.utils.getFilePathInStorage
+import com.vanced.manager.utils.managerFilepath
 import com.vanced.manager.utils.performStorageAction
 import java.io.File
 import java.io.FileWriter
@@ -42,7 +42,7 @@ class LogFragment : BindingFragment<FragmentLogBinding>() {
             val second = calendar.get(Calendar.SECOND)
             try {
                 performStorageAction(requireActivity()) {
-                    val logPath = File(requireActivity().getFilePathInStorage("logs")).apply {
+                    val logPath = File("logs".managerFilepath).apply {
                         if (!exists()) {
                             mkdirs()
                         }

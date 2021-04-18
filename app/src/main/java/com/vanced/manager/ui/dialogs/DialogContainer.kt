@@ -42,7 +42,7 @@ object DialogContainer {
             setMessage(R.string.storage_access_required_summary)
             setPositiveButton(R.string.auth_dialog_ok) { dialog, _ ->
                 dialog.cancel()
-                requestStoragePerms(activity, null)
+                requestStoragePerms(activity)
             }
             setCancelable(false)
             create()

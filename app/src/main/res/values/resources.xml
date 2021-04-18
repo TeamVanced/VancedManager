@@ -16,7 +16,4 @@
     <!-- prefs -->
     <string name="use_custom_tabs" translatable="false">use_custom_tabs</string>
 
-    <string name="internal_storage_path" translatable="false">/storage/emulated/0/Android/data/com.vanced.manager/files</string>
-    <string name="external_storage_path" translatable="false">/storage/emulated/0/Vanced Manager</string>
-
 </resources>
