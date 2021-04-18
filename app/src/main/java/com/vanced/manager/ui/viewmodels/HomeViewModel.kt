@@ -51,7 +51,7 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     val microgModel = MutableLiveData<DataModel>()
     val musicModel = MutableLiveData<DataModel>()
     val musicRootModel = MutableLiveData<RootDataModel>()
-    private val managerModel = MutableLiveData<DataModel>()
+    val managerModel = MutableLiveData<DataModel>()
 
     fun fetchData() {
         viewModelScope.launch {
@@ -110,7 +110,7 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             activity.getString(R.string.vanced) -> {
                 when (variant) {
                     "nonroot" -> {
-                        if (vancedInstallFilesExist()) {
+                        if (vancedInstallFilesExist(activity)) {
                             InstallationFilesDetectedDialog.newInstance(app).show(activity)
                         } else {
                             VancedPreferencesDialog().show(activity)
@@ -124,7 +124,7 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             activity.getString(R.string.music) -> {
                 when (variant) {
                     "nonroot" -> {
-                        if (musicApkExists()) {
+                        if (musicApkExists(activity)) {
                             InstallationFilesDetectedDialog.newInstance(app).show(activity)
                         } else {
                             MusicPreferencesDialog().show(activity)
@@ -136,7 +136,7 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
                 }
             }
             activity.getString(R.string.microg) -> {
-                if (apkExist("microg.apk")) {
+                if (apkExist(activity, "microg.apk")) {
                     InstallationFilesDetectedDialog.newInstance(app).show(activity)
                 } else {
                     AppDownloadDialog.newInstance(app).show(activity)
