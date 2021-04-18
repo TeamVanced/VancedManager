@@ -24,11 +24,11 @@
     <string name="willing_to_use_root">Bạn không biết đây là gì hoặc không muốn sử dụng phiên bản root? hãy nhấp vào dấu > bên dưới!</string>
     <!-- Home Page -->
     <string name="about_app">Thông tin về %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Tải xuống</string>
+    <string name="accessibility_info">Thông tin</string>
+    <string name="accessibility_launch">Mở</string>
+    <string name="accessibility_uninstall">Gỡ cài đặt</string>
+    <string name="accessibility_update">Cập nhật</string>
     <string name="apps">Các ứng dụng</string>
     <string name="changelog">Các thay đổi</string>
     <string name="downloading_file">Đang tải xuống %1$s</string>
