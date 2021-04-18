@@ -24,11 +24,11 @@
     <string name="willing_to_use_root">Tidak tahu apa ini atau tidak ingin menggunakan versi root? cukup klik panah biru di bawah!</string>
     <!-- Home Page -->
     <string name="about_app">Tentang %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Unduh</string>
+    <string name="accessibility_info">Informasi</string>
+    <string name="accessibility_launch">Buka</string>
+    <string name="accessibility_uninstall">Copot pemasangan</string>
+    <string name="accessibility_update">Perbarui</string>
     <string name="apps">Aplikasi</string>
     <string name="changelog">Catatan perubahan</string>
     <string name="downloading_file">Mengunduh %1$s</string>
