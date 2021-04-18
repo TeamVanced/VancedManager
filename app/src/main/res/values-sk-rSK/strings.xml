@@ -24,11 +24,11 @@
     <string name="willing_to_use_root">Neviete, čo to je alebo nechcete používať verziu s prístupom root? Stačí kliknúť na modrú šípku dole!</string>
     <!-- Home Page -->
     <string name="about_app">O aplikácií %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Stiahnuť</string>
+    <string name="accessibility_info">Informácie</string>
+    <string name="accessibility_launch">Spustiť</string>
+    <string name="accessibility_uninstall">Odinštalovať</string>
+    <string name="accessibility_update">Aktualizovať</string>
     <string name="apps">Aplikácie</string>
     <string name="changelog">Zoznam zmien</string>
     <string name="downloading_file">Sťahovanie %1$s</string>
@@ -87,8 +87,8 @@
     <string name="please_be_patient">Počas tohto procesu NEODCHÁDZAJTE z aplikácie!</string>
     <string name="redownload">Stiahnuť znova</string>
     <string name="security_context">Uistite sa, že ste si aplikáciu stiahli zo stránky vancedapp.com, servera Vanced Discord alebo Vanced GitHub</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Vyžaduje sa prístup k úložisku</string>
+    <string name="storage_access_required_summary">Aby mohla aplikácia Vanced Manager pracovať, musíte udeliť oprávnenie k úložisku</string>
     <string name="version">Verzia</string>
     <string name="welcome">Vitajte</string>
     <!-- Install Page -->
