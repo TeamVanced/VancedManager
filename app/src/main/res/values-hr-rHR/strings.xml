@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Odustani</string>
     <string name="close">Zatvori</string>
-    <string name="description_microg">Proizvoljna implementacija GMS za Vanced zasnovana na microG projektu.</string>
-    <string name="description_vanced">Modifikovani YouTube klijent sa mnogo korisnih značajki!</string>
-    <string name="description_vanced_music">Vanced ali za YouTube Music! Možda ima malo manje značajki ali ima sve što vam je potrebno.</string>
+    <string name="description_microg">Prilagođena GMS implementacija za Vanced zasnovana na microG projektu.</string>
+    <string name="description_vanced">Modificirani YouTube klijent sa mnogo korisnih značajki!</string>
+    <string name="description_vanced_music">Vanced, ali za YouTube Music! S manje značajki ali ispunjava vaše potrebe.</string>
     <string name="reset">Resetiraj</string>
     <string name="save">Spremi</string>
     <string name="select_apps">Odaberite svoje aplikacije</string>
@@ -24,17 +24,17 @@
     <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root izdanje? Jednostavno kliknite na plavu strelicu ispod!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Preuzmi</string>
+    <string name="accessibility_info">Informacije</string>
+    <string name="accessibility_launch">Pokreni</string>
+    <string name="accessibility_uninstall">Deinstaliraj</string>
+    <string name="accessibility_update">Ažuriraj</string>
     <string name="apps">Aplikacije</string>
     <string name="changelog">Zapis promjena</string>
     <string name="downloading_file">Preuzimam %1$s</string>
     <string name="install">Instaliraj</string>
     <string name="latest">Dostupno:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">Prvo instaliraj Vanced MicroG</string>
     <string name="root_not_granted">Root pristup nije dopušten</string>
     <string name="social_media">Društvene mreže</string>
     <string name="support_us">Podržite nas</string>
@@ -67,7 +67,7 @@
     <string name="logs_not_saved">Nije moguće spremiti zapise</string>
     <string name="logs_saved">Uspješno spremljeni zapisi</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Detalji</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
     <string name="app_install_files_detected_summary">Upravitelj je otkrio da su sve potrebne datoteke za %1$s instalaciju pronađene. Želite li nastaviti instalaciju?</string>
     <string name="app_installation_preferences">%1$s postavke instalacije</string>
@@ -81,14 +81,14 @@
     <string name="magisk_vanced">Koristite Magisk/TWRP inačicu Vanceda, koja više nije podržana i ne može se ažurirati ovom aplikacijom. Uklonite ju uklanjanjem Magisk modula/koristeći TWRP Vanced deinstalator.</string>
     <string name="microg_bug">Greška u microG aplikaciji</string>
     <string name="microg_bug_summary">Zbog greške u microG, instaliranje Vanced 16+ prvo zahtijeva instalaciju v15.43.32, otvorite, a zatim se prijavite i tek onda možete instalirati v16 i novije inačice. Želite li nastaviti s instalacijom v15.43.32?</string>
-    <string name="microg_bug_summary_music">Zbog greške u microG, za instalaciju Music 4.11+ prvo je potrebno instalirati v4.07.51, otvoriti, a zatim se prijaviti i tek tada možete instalirati v16 i novije inačice. Želite li nastaviti s instalacijom v4.07.51?</string>
-    <string name="miui_one">Da biste instalirali Vanced, MORATE onemogućiti MIUI optimizaciju u razvojnim mogućnostima. (Ovo upozorenje možete zanemariti, ako koristite 20.2.20 ili noviji xiaomi.eu ROM)</string>
+    <string name="microg_bug_summary_music">Zbog greške u microG, za instaliranje Music 4.11+ prvo je potrebno instalirati v4.07.51, otvoriti, a zatim se prijaviti i tek tada možete instalirati v4.11 i novije inačice. Želite li nastaviti s instalacijom v4.07.51?</string>
+    <string name="miui_one">Kako bi instalirali Vanced, MORATE onemogućiti MIUI optimizaciju u razvojnim mogućnostima. (Ovo upozorenje možete zanemariti ako koristite 20.2.20 ili noviji xiaomi.eu ROM)</string>
     <string name="miui_one_title">MIUI optimizacija je omogućena!</string>
     <string name="please_be_patient">NE zatvarajte aplikaciju tijekom ovog postupka!</string>
     <string name="redownload">Ponovno preuzmi</string>
     <string name="security_context">Aplikaciju obavezno preuzmite s vancedapp.com, Vanced Discord poslužitelja ili Vanced GitHuba</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
+    <string name="storage_access_required">Potrebna je dozvola pristupa pohrani</string>
+    <string name="storage_access_required_summary">Kako bi Vanced Manager funkcionirao, prvo mu moraš dati dozvolu za pristup pohrani</string>
     <string name="version">Inačica</string>
     <string name="welcome">Dobrodošli</string>
     <!-- Install Page -->
@@ -119,7 +119,7 @@
     <string name="installation_invalid">Instalacija nije uspjela zato jer je apk datoteka oštećena.</string>
     <string name="installation_miui">Instalacija nije uspjela zato jer je MIUI optimizacija uključena. Isključite MIUI optimizaciju, zatim pokušajte ponovno.</string>
     <string name="installation_signature">Instalacija nije uspjela zato jer je provjera potpisa omogućena. Onemogućite apk provjeru potpisa, zatim pokušajte ponovno.</string>
-    <string name="installation_storage">Neuspiješna instalacija jer uređaj nema dovoljno slobodnog prostora.</string>
+    <string name="installation_storage">Neuspješna instalacija jer na uređaju nema dovoljno slobodnog prostora.</string>
     <string name="modapk_missing">Neuspjeli pronalazak apk datoteke za crnu/tamnu temu u programu instalacije. Uklonite podatke aplikacije upravitelja, zatim pokušajte ponovno.</string>
     <string name="path_missing">Neuspjelo lociranje putanje izvorne YouTube instalacije nakon razdvojene instalacije.</string>
 </resources>
