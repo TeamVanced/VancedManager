@@ -81,14 +81,11 @@
     <string name="magisk_vanced">คุณกำลังใช้ Vanced เวอร์ชัน Magisk / TWRP ซึ่งถูกยกเลิกและไม่สามารถอัปเดตได้จากแอปนี้ กรุณาลบออกโดยการถอดโมดูล Magisk / ใช้โปรแกรมถอนการติดตั้ง TWRP Vanced</string>
     <string name="microg_bug">ข้อผิดพลาดใน microG</string>
     <string name="microg_bug_summary">เนื่องจากพบข้อผิดพลาดใน microG การติดตั้ง Vanced v16 + ก่อนอื่นคุณต้องติดตั้ง v15.43.32, เปิดแอพ, จากนั้นเข้าสู่ระบบ, จากนั้นคุณสามารถติดตั้ง v16 ขึ้นไปได้, คุณต้องการดำเนินการติดตั้ง v15.43.32 ต่อไปหรือไม่?</string>
-    <string name="microg_bug_summary_music">เนื่องจากพบข้อผิดพลาดใน microG การติดตั้ง Music v4.11+ ก่อนอื่นคุณต้องติดตั้ง v4.07.51, เปิดแอพ, จากนั้นเข้าสู่ระบบ, จากนั้นคุณสามารถติดตั้ง v4.11 ขึ้นไปได้, คุณต้องการดำเนินการติดตั้ง v4.07.51 ต่อไปหรือไม่?</string>
     <string name="miui_one">ในการติดตั้ง Vanced คุณต้องปิดใช้งาน MIUI Optimisations ในการตั้งค่าสำหรับนักพัฒนา (คุณสามารถเพิกเฉยต่อคำเตือนนี้ได้หากคุณใช้ ROM ที่ใช้ xiaomi.eu 20.2.20 ขึ้นไป)</string>
     <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="redownload">ดาวน์โหลดอีกครั้ง</string>
     <string name="security_context">ตรวจสอบให้แน่ใจว่าคุณดาวน์โหลดแอพจากช่องทางที่ถูกต้อง vancedapp.com, เซิร์ฟเวอร์ Vanced Discord หรือ Vanced GitHub</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">รุ่น</string>
     <string name="welcome">ยินดีต้อนรับ</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">ไม่สามารถค้นหาไฟล์สำหรับการติดตั้งที่ต้องการได้. กรุณาดาวน์โหลดไฟล์สำหรับการติดตั้งใหม่แล้วลองอีกครั้ง</string>
     <string name="ifile_missing">ไม่พบไฟล์ apk สำหรับธีมสีดำ / สีเข้ม จากที่เก็บข้อมูล โปรดลองอีกครั้ง</string>
     <string name="installation_aborted">การติดตั้งล้มเหลวเนื่องจากผู้ใช้ยกเลิกการติดตั้ง</string>
-    <string name="installation_blocked">การติดตั้งล้มเหลวเนื่องจากผู้ใช้บล็อกการติดตั้ง</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_downgrade">การติดตั้งล้มเหลวเนื่องจากผู้ใช้พยายามดาวน์เกรดแพ็กเกจ ถอนการติดตั้งการอัปเดตจากแอปเดิมก่อน แล้วลองอีกครั้ง</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
