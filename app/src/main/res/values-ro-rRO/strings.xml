@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Folosiți versiunea Magisk/TWRP a Vanced, care nu mai este în uz și nu poate fi actualizată folosind această aplicație. Vă rugăm să o eliminați prin eliminarea modulului Magisk/folosind dezinstalatorul Vanced TWRP.</string>
     <string name="microg_bug">Eroare la microG</string>
     <string name="microg_bug_summary">Din cauza unei erori în microG, pentru a instala Vanced versiunea 16, este nevoie mai întâi să instalați versiunea 15.43.32, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 16 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 15.43.32?</string>
-    <string name="microg_bug_summary_music">Din cauza unei erori în microG, pentru a instala Music Vanced versiunea 4.11, este nevoie mai întâi să instalați versiunea 4.07.51, să o deschideți, apoi să vă autentificați și abia apoi puteți instala versiunea 4.11 și alte versiuni ulterioare. Doriți să continuați cu instalarea versiunii 4.07.51?</string>
     <string name="miui_one">Pentru a instala Vanced, TREBUIE să dezactivați Optimizările MIUI în setările pentru dezvoltatori. (Puteți ignora această avertizare dacă utilizați un ROM bazat pe xiaomi.eu cu versiunea 20.2.20 sau mai recent)</string>
     <string name="miui_one_title">Optimizările MIUI sunt activate!</string>
     <string name="please_be_patient">Vă rugăm să NU ieșiți din aplicație în timpul acestui proces!</string>
     <string name="redownload">Redescărcare</string>
     <string name="security_context">Asigurați-vă că ați descărcat aplicația de pe vancedapp.com, de pe serverul Discord Vanced sau de pe GitHub Vanced</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Versiune</string>
     <string name="welcome">Bun venit</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Nu s-a reușit localizarea fișierelor necesare pentru instalare. Redescărcați fișierele de instalare, apoi încercați din nou.</string>
     <string name="ifile_missing">Nu s-a reuşit localizarea fişierului apk pentru tema neagră/întunecată din stocare, vă rugăm să încercaţi din nou.</string>
     <string name="installation_aborted">Instalarea a eșuat deoarece utilizatorul a anulat instalarea.</string>
-    <string name="installation_blocked">Instalarea a eșuat deoarece utilizatorul a blocat instalarea.</string>
     <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă a aplicației, apoi încercați din nou.</string>
     <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările din aplicația stock YouTube, apoi încercați din nou.</string>
     <string name="installation_failed">Instalarea a eșuat din motive necunoscute. Pentru asistență, intră pe grupul nostru de Telegram sau Discord. Te rugăm să atașezi și o captură de ecran din meniul Avansat</string>
