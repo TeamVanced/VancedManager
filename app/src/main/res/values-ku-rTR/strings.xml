@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Hûn niha guhertoya Magisk/TWRP ji Vanced\'ê bi kar tînin, ku qut bûye û bi saya vê sepanê naye hildemandin. Jkx magsik module/bi alîkariya TWRP Vanced uninstaller\'ê rakin.</string>
     <string name="microg_bug">Bug in microG</string>
     <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="miui_one">Ji bo ku Vanced were sazkirin, DIVÊ hûn Optimîzasyonên MIUI-yê di sazkariyên pêşvebirinê de neçalak bikin. (Hûn dikarin vê hişyariyê paşguh bikin heke hûn ROM\'a li ser esasa xiaomi.eu 20.2.20 an jortir bi kar tînin)</string>
     <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="redownload">Ji nû ve daxîne</string>
     <string name="security_context">Piştrast bin ku we sepan ji vancedapp.com\'ê, ji servera Vanced Discord\'ê an Vanced GitHub\'ê daxistiye</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Guherto</string>
     <string name="welcome">Bi xêr hatî</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Dozîna dosiyên pêwîst ji bo sazkirinê bi ser neket. Dosiyên sazkirinê dîsa daxîne, paşê dubare biceribîne.</string>
     <string name="ifile_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji bîrgehê bi ser neket, jkx dîsa biceribîne.</string>
     <string name="installation_aborted">Sazkirin bi ser neket ji ber ku bikarîner dawî li pêvajoya sazkirinê anî.</string>
-    <string name="installation_blocked">Sazkirin bi ser neket ji ber ku bikarînerê sazkirin asteng kir.</string>
     <string name="installation_conflict">Sazkirin bi ser neket ji ber ku ev bernameya ligel bernameyeke din ya sazkirî li hev nake. Guhertoya heyî ya Vanced\'ê rakin, paşê dîsa biceribînin.</string>
     <string name="installation_downgrade">Sazkirin bi ser neket ji ber ku bikarîner hewl dida derecebendiya pakêtê kêm bike. Hildeman ji bernameya YouTube\'ê ya heyî rakin, paşê dîsa biceribînin.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
