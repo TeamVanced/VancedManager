@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Det ser ud som om du bruger Magisk/TWRP versionen af Vanced. Den er ikke længere understøttet og kan derfor ikke opdateres igennem denne app. Vær venlig at fjerne magisk modulet/brug TWRP Vanced uninstaller.</string>
     <string name="microg_bug">Fejl i microG</string>
     <string name="microg_bug_summary">På grund af en fejl i microG, kræver installationen af Vanced 16+ først at du installerer v15.43.32, åbner, logger ind og først derefter kan du installere v16 og over. Vil du fortsætte med at installere v15.43.32?</string>
-    <string name="microg_bug_summary_music">På grund af en fejl i microG, kræver installationen af Music v4.11+ først at du installerer v4.07.51, åbner, logger ind og først derefter kan du installere v4.11 og over. Vil du at fortsætte med at installere v4.07.51?</string>
     <string name="miui_one">For at installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
     <string name="miui_one_title">MIUI Optimering er aktiveret!</string>
     <string name="please_be_patient">Afslut venligst IKKE appen under denne proces!</string>
     <string name="redownload">Hent igen</string>
     <string name="security_context">Venligst sørg for kun at have downloaded appen fra vancedapp.com, Vanced Discord serveren eller Vanced GitHub siden</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Version</string>
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Kunne ikke finde de påkrævede filer til installation. Download installationsfilerne igen, og prøv igen.</string>
     <string name="ifile_missing">Kunne ikke finde apk-fil til sort/mørkt tema fra lager. Prøv venligst igen.</string>
     <string name="installation_aborted">Installationen fejlede fordi brugeren lukkede installationen.</string>
-    <string name="installation_blocked">Installationen fejlede fordi brugeren blokerede installationen.</string>
     <string name="installation_conflict">Installationen fejlede fordi appen konflikter med en allerede installeret app. Fjern den nuværende version af appen og prøv igen.</string>
     <string name="installation_downgrade">Installationen fejlede fordi brugeren prøvede at nedgradere pakken. Fjern opdateringer fra Youtube appen og prøv igen.</string>
     <string name="installation_failed">Installation mislykkedes af ukendte årsager, kom på vores Telegram eller Discord for yderligere hjælp. Vedhæft venligst også et skærmbillede fra menuen Avanceret</string>
