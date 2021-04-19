@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Geliştirilmesi durdurulan ve bu uygulama ile güncellenemeyen Vanced\'ın, Magisk/TWRP sürümünü kullanıyorsunuz. Lütfen Magisk/TWRP sürümünü cihazınızdan kaldırın.</string>
     <string name="microg_bug">MicroG\'de sorun var</string>
     <string name="microg_bug_summary">MicroG kaynaklı bir hatadan dolayı, Vanced sürüm 16+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v15.43.32 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v16 veya üzeri sürümün kurulumunu yapabilirsin. Vanced v15.43.32 sürümünün kurulumuna devam edilsin mi?</string>
-    <string name="microg_bug_summary_music">MicroG kaynaklı bir hatadan dolayı, Music v4.11+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v4.07.51 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v4.11 veya üzeri sürümün kurulumunu yapabilirsin. 4.07.51 sürümünün kurulumuna devam edilsin mi?</string>
     <string name="miui_one">Vanced\'ı yükleyebilmek için, geliştirici ayarlarından/seçeneklerinden MIUI optimizasyonunu devre dışı bırakmalısın. (xiaomi.eu tabanlı 20.2.20 sürüm veya üzeri ROM kullanıyorsan, bu uyarıyı göz ardı edebilirsin)</string>
     <string name="miui_one_title">MIUI Optimizasyonu aktif gözüküyor!</string>
     <string name="please_be_patient">İşlem süresince LÜTFEN uygulamadan çıkmayın!</string>
     <string name="redownload">Tekrar İndir</string>
     <string name="security_context">Uygulamayı vancedapp.com, Vanced Discord sunucusu, veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
-    <string name="storage_access_required">Depolama izni gerekiyor</string>
-    <string name="storage_access_required_summary">Vanced Manager\'ın düzgün çalışabilmesi için \"Depolama\" izni vermelisin</string>
     <string name="version">Sürüm</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Kurulum için gerekli olan dosyaları belirlerken bir hata oluştu. Kurulum dosyalarını tekrar indirip, yeniden deneyin.</string>
     <string name="ifile_missing">Depolama alanında Siyah/Koyu temanın APK dosyasını belirlerken bir hata oluştu. Tekrar deneyin lütfen.</string>
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
-    <string name="installation_blocked">Kullanıcı kurulumu engellediği için kurulum başarısız oldu.</string>
     <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Uygulamanın mevcut sürümünü kaldırın ve ardından tekrar deneyin.</string>
     <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
     <string name="installation_failed">Kurulum, bilinmeyen sebeplerden dolayı başarısız oldu. Telegram grubu veya Discord sunucusundan destek alabilirsin. Ayrıca, detaylar ekranının bir ekran görüntüsünü alıp, yardım talebinle birlikte iletmeyi unutma lütfen. </string>
