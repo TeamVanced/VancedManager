@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Bạn đang sử dụng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ mô-đun Magisk/flash trình gỡ cài đặt TWRP.</string>
     <string name="microg_bug">Lỗi trong microG</string>
     <string name="microg_bug_summary">Do một lỗi trong microG gốc, bạn phải cài v15.43.32, mở nó lên và đăng nhập, sau đó bạn mới có thể cài đặt v16 và mới hơn. Tiến hành cài đặt v15.43.32?</string>
-    <string name="microg_bug_summary_music">Do một lỗi trong microG gốc (đã được sửa), bạn phải cài v4.07.51, sau đó bạn mới có thể cài đặt v4.11 và mới hơn. Tiến hành cài đặt v15.43.32?</string>
     <string name="miui_one">Để cài Vanced, bạn PHẢI vô hiệu hóa Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="miui_one_title">Tối ưu hoá MIUI đang được kích hoạt!</string>
     <string name="please_be_patient">Vui lòng KHÔNG thoát khỏi ứng dụng trong tiến trình này!</string>
     <string name="redownload">Tải lại</string>
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
-    <string name="storage_access_required">Yêu cầu quyền truy cập bộ nhớ</string>
-    <string name="storage_access_required_summary">Để Vanced Manager hoạt động, bạn phải cấp quyền truy cập bộ nhớ</string>
     <string name="version">Phiên bản</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->
@@ -111,8 +108,6 @@
     <string name="files_missing_va">Không thể xác định các tệp tin cần thiết để cài đặt. Tải lại các tệp cài đặt rồi thử lại.</string>
     <string name="ifile_missing">Xác định tệp tin apk cho nền đen/tối từ bộ nhớ thất bại, vui lòng thử lại.</string>
     <string name="installation_aborted">Cài đặt thất bại do người dùng hủy.</string>
-    <string name="installation_blocked">Cài đặt thất bại do người dùng cản trở.
-(Tắt Tối ưu hoá MIUI đi :v)</string>
     <string name="installation_conflict">Cài đặt thất bại do có xung đột với ứng dụng đã được cài đặt trước đó. Gỡ cài đặt phiên bản hiện tại của ứng dụng rồi thử lại.</string>
     <string name="installation_downgrade">Cài đặt thất bại do người dùng cố hạ cấp ứng dụng. Gỡ cài đặt các bản cập nhật khỏi ứng dụng gốc rồi thử lại.</string>
     <string name="installation_failed">Cài đặt thất bại do lí do không xác định, tham gia Telegram hoặc Discord để được hỗ trợ. Vui lòng kèm theo ảnh chụp màn hình từ phần Chi tiết</string>
