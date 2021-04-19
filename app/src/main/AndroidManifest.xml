@@ -12,6 +12,7 @@
     <!--  is required for some Android 5.x devices  -->
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22"
         tools:ignore="ScopedStorage" />
 
     <queries>
