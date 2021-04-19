@@ -83,15 +83,11 @@ Akarod telepíteni?</string>
     <string name="microg_bug">Hiba a microG-ben</string>
     <string name="microg_bug_summary">Egy, a microG-ben jelenlévő hiba miatt, a Vanced 16+ verzióihoz először telepítse a 15.43.32-es verziót, nyissa meg, jelentkezzen be, majd csak ezután tudja telepíteni a 16-os vagy újabb verziót.
 Akarja folytatni a 15.43.32-es verzió telepítésével?</string>
-    <string name="microg_bug_summary_music">Egy, a microG-ben jelenlévő hiba miatt, a Vanced Music 4.11+ verzióihoz először telepítse a 4.07.51-es verziót, nyissa meg, jelentkezzen be, majd csak ezután tudja telepíteni a 4.11-es vagy újabb verziót.
-Akarja folytatni a 4.07.51-es verzió telepítésével?</string>
     <string name="miui_one">Hogy a Vanced-et telepítsd, ki KELL kapcsolnod a MIUI Optimalizációt a fejlesztői beállításokban. (Ezt figyelmen kívül hagyhatod ha 20.2.20 vagy későbbi xiaomi.eu alapú ROM-ot használsz)</string>
     <string name="miui_one_title">MIUI optimalizálások engedélyezve!</string>
     <string name="please_be_patient">Kérjük NE lépjen ki a telepítési folyamat alatt!</string>
     <string name="redownload">Újra letölt</string>
     <string name="security_context">Arra kérünk, győződjön meg róla, hogy ezt az alkalmazást a vancedapp.com oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötte le</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Verzió</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->
@@ -114,7 +110,6 @@ Akarja folytatni a 4.07.51-es verzió telepítésével?</string>
     <string name="files_missing_va">A telepítéshez szükséges file-ok megtalálása meghiúsult. Töltse le újra a telepítőfile-okat és próbálja újra.</string>
     <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
-    <string name="installation_blocked">A telepítés nem sikerült, mert a felhasználó megszakította azt.</string>
     <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsd el a jelenlegi verziót és próbáld újra.</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó, régebbi verzióra próbált frissíteni. Távolítsa el az eredeti alkalmazás frissítéseit, majd próbálja újra.</string>
     <string name="installation_failed">A telepítés ismeretlen ok miatt meghiúsult, kérjük csatlakozzon a Telegram vagy a Discord csatornánkhoz további támogatásért. Kérjük egy képernyőképet is mellékeljen ami a Haladó menüben készült</string>
