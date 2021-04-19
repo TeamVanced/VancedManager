@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, jejíž vývoj byl ukončen a kterou nelze pomocí této aplikace aktualizovat. Odstraňte ji prosím odebráním modulu Magisk použitím Vanced odinstalátoru v TWRP.</string>
     <string name="microg_bug">Chyba v microG</string>
     <string name="microg_bug_summary">Kvůli chybě v původním microG, vyžaduje instalace Vanced v16+ nejprve instalaci verze 15.43.32. Otevřete ji, poté se přihlaste ke svému účtu a teprve poté nainstalujte verzi 16 a vyšší. Přejete si pokračovat v instalaci verze 15.43.32?</string>
-    <string name="microg_bug_summary_music">Kvůli chybě v původním microG, vyžaduje instalace Music v4.11+ nejprve instalaci verze 4.07.51. Otevřete ji, poté se přihlaste ke svému účtu a teprve poté nainstalujte verzi 4.11 a vyšší. Přejete si pokračovat v instalaci verze 4.07.51?</string>
     <string name="miui_one">Chcete‑li nainstalovat Vanced, MUSÍTE vypnout optimalizace MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM ze 20. 2. 2020 nebo novější založenou na xiaomi.eu)</string>
     <string name="miui_one_title">Optimalizace MIUI jsou zapnuty!</string>
     <string name="please_be_patient">Během tohoto procesu NEUKONČUJTE aplikaci!</string>
     <string name="redownload">Stáhnout znovu</string>
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vancedapp.com, z našeho Vanced Discord serveru nebo z našeho GitHubu</string>
-    <string name="storage_access_required">Je požadován přístup k úložišti</string>
-    <string name="storage_access_required_summary">Aby mohla aplikace Vanced Manager pracovat, musíte udělit oprávnění k úložišti</string>
     <string name="version">Verze</string>
     <string name="welcome">Vítejte</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Nepodařilo se najít požadované soubory pro instalaci. Stáhněte znovu instalační soubory a poté to zkuste znovu.</string>
     <string name="ifile_missing">Ve vnitřním úložišti se nepodařilo najít soubor APK pro černý/tmavý motiv. Zkuste to prosím znovu.</string>
     <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
-    <string name="installation_blocked">Instalace se nezdařila, protože uživatel zablokoval instalaci.</string>
     <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a poté to zkuste znovu.</string>
     <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace a poté to zkuste znovu.</string>
     <string name="installation_failed">Instalace se z neznámých důvodů nezdařila. Pro další podporu se připojte k našemu Telegramu nebo Discordu. Připojte také snímek obrazovky z nabídky Pokročilé</string>
