@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Gumagamit ka ng Magisk/TWRP na bersyon ng Vanced, dahil hindi iyon pinatuloy at hindi mai-uupdate gamit nitong app. Tanggalin po ang Magisk module sa pamamagitan ng TWRP Vanced uninstaller.</string>
     <string name="microg_bug">Bug sa microG</string>
     <string name="microg_bug_summary">Dahil sa bug sa MicroG, para ma-install ang Vanced v16+ kinakailangan mong i-install ang v15.43.32, buksan ito, mag-login at pwede ka na maka-install ng v16 pataas. Gusto mo bang magpatuloy ng instalasyon ng v15.43.32?</string>
-    <string name="microg_bug_summary_music">Dahil sa bug sa MicroG, para ma-install ang Music v4.11+ kinakailangan mong i-install ang v4.07.51, buksan ito, mag-login at pwede ka na maka-install ng v4.11 pataas. Gusto mo bang magpatuloy ng instalasyon ng v4.07.51?</string>
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="redownload">I-download ulit</string>
     <string name="security_context">Siguraduhin mo na nai-download mo ang app galing sa vancedapp.com, o sa Discord server ng Vanced, o sa Github ng Vanced</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Bersyon</string>
     <string name="welcome">Maligayang Pagdating</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Nabigo ang paghanap sa kailangan na files para sa installation. I-download ulit ang mga installation files, at ulitin muli.</string>
     <string name="ifile_missing">Nabigo ang paghanap ng apk file para sa itim na tema galing sa storage, ulitin muli.</string>
     <string name="installation_aborted">Nabigo ang pag-install dahil kinansela ito.</string>
-    <string name="installation_blocked">Nabigo ang pag-install dahil binlock ito.</string>
     <string name="installation_conflict">Nabigo ang pag-install dahil meron hidwaan sa naka-install na app. I-uninstall ang kasalukuyang bersyon ng Vanced, at ulitin muli.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
