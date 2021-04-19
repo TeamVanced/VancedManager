@@ -41,7 +41,7 @@ import kotlinx.coroutines.launch
 
 //TODO fix leak
 @SuppressLint("StaticFieldLeak")
-class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
+class HomeViewModel(private val activity: FragmentActivity) : ViewModel() {
 
     private val prefs = getDefaultSharedPreferences(activity)
     private val variant get() = prefs.getString("vanced_variant", "nonroot")
@@ -59,7 +59,7 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             Crowdin.forceUpdate(activity)
         }
     }
-    
+
     private val microgToast = Toast.makeText(activity, R.string.no_microg, Toast.LENGTH_LONG)
 
     fun openUrl(url: String) {
@@ -72,15 +72,24 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
                 BRAVE -> R.color.Brave
                 else -> R.color.Vanced
             }
-            
+
         openUrl(url, color, activity)
     }
 
     fun launchApp(app: String, isRoot: Boolean) {
         val componentName = when (app) {
-            activity.getString(R.string.vanced) -> if (isRoot) ComponentName(vancedRootPkg, "$vancedRootPkg.HomeActivity") else ComponentName(vancedPkg, "$vancedRootPkg.HomeActivity")
-            activity.getString(R.string.music) -> if (isRoot) ComponentName(musicRootPkg, "$musicRootPkg.activities.MusicActivity") else ComponentName(musicPkg, "$musicRootPkg.activities.MusicActivity")
-            activity.getString(R.string.microg) -> ComponentName(microgPkg, "org.microg.gms.ui.SettingsActivity")
+            activity.getString(R.string.vanced) -> if (isRoot) ComponentName(
+                vancedRootPkg,
+                "$vancedRootPkg.HomeActivity"
+            ) else ComponentName(vancedPkg, "$vancedRootPkg.HomeActivity")
+            activity.getString(R.string.music) -> if (isRoot) ComponentName(
+                musicRootPkg,
+                "$musicRootPkg.activities.MusicActivity"
+            ) else ComponentName(musicPkg, "$musicRootPkg.activities.MusicActivity")
+            activity.getString(R.string.microg) -> ComponentName(
+                microgPkg,
+                "org.microg.gms.ui.SettingsActivity"
+            )
             else -> throw IllegalArgumentException("Can't open this app")
         }
         try {
@@ -101,7 +110,7 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             when (app) {
                 activity.getString(R.string.vanced) -> VancedPreferencesDialog().show(activity)
                 activity.getString(R.string.music) -> MusicPreferencesDialog().show(activity)
-                else ->  AppDownloadDialog.newInstance(app).show(activity)
+                else -> AppDownloadDialog.newInstance(app).show(activity)
             }
             return
         }
@@ -155,16 +164,66 @@ class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
 
     init {
-        with (activity) {
+        with(activity) {
             if (variant == "root") {
-                vancedRootModel.value = RootDataModel(vanced, this, this, vancedRootPkg, this.getString(R.string.vanced), activity.getString(R.string.description_vanced), R.drawable.ic_vanced, "vanced")
-                musicRootModel.value = RootDataModel(music, this, this, musicRootPkg, this.getString(R.string.music), activity.getString(R.string.description_vanced_music), R.drawable.ic_music, "music")
+                vancedRootModel.value = RootDataModel(
+                    vanced,
+                    this,
+                    this,
+                    vancedRootPkg,
+                    this.getString(R.string.vanced),
+                    activity.getString(R.string.description_vanced),
+                    R.drawable.ic_vanced,
+                    "vanced"
+                )
+                musicRootModel.value = RootDataModel(
+                    music,
+                    this,
+                    this,
+                    musicRootPkg,
+                    this.getString(R.string.music),
+                    activity.getString(R.string.description_vanced_music),
+                    R.drawable.ic_music,
+                    "music"
+                )
             } else {
-                vancedModel.value = DataModel(vanced, this, this, vancedPkg, this.getString(R.string.vanced), activity.getString(R.string.description_vanced), R.drawable.ic_vanced)
-                musicModel.value = DataModel(music, this, this, musicPkg, this.getString(R.string.music), activity.getString(R.string.description_vanced_music), R.drawable.ic_music)
-                microgModel.value = DataModel(microg, this, this, microgPkg, this.getString(R.string.microg), activity.getString(R.string.description_microg), R.drawable.ic_microg)
+                vancedModel.value = DataModel(
+                    vanced,
+                    this,
+                    this,
+                    vancedPkg,
+                    this.getString(R.string.vanced),
+                    activity.getString(R.string.description_vanced),
+                    R.drawable.ic_vanced
+                )
+                musicModel.value = DataModel(
+                    music,
+                    this,
+                    this,
+                    musicPkg,
+                    this.getString(R.string.music),
+                    activity.getString(R.string.description_vanced_music),
+                    R.drawable.ic_music
+                )
+                microgModel.value = DataModel(
+                    microg,
+                    this,
+                    this,
+                    microgPkg,
+                    this.getString(R.string.microg),
+                    activity.getString(R.string.description_microg),
+                    R.drawable.ic_microg
+                )
             }
-            managerModel.value = DataModel(manager, this, this, managerPkg, this.getString(R.string.app_name), "Just manager meh", R.mipmap.ic_launcher)
+            managerModel.value = DataModel(
+                manager,
+                this,
+                this,
+                managerPkg,
+                this.getString(R.string.app_name),
+                "Just manager meh",
+                R.mipmap.ic_launcher
+            )
         }
     }
 }

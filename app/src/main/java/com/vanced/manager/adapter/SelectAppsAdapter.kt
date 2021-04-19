@@ -32,7 +32,8 @@ class SelectAppsAdapter(private val context: Context) :
 
     val apps = arrayOf(vanced, music)
 
-    inner class SelectAppsViewHolder(binding: ViewAppCheckboxBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class SelectAppsViewHolder(binding: ViewAppCheckboxBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         val appName = binding.appCheckboxText
         val appDescription = binding.appCheckboxDescription
         val appCard = binding.appCheckboxBg

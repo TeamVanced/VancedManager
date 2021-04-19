@@ -45,7 +45,7 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        with (binding) {
+        with(binding) {
             if (welcomeViewpager.currentItem == 0) {
                 super.onBackPressed()
             } else {
@@ -63,7 +63,7 @@ class WelcomeActivity : AppCompatActivity() {
     //Shit way to implement animation duration, but at least it works
     private var ViewPager2.currentPosition: Int
         get() = currentItem
-        set(value)  {
+        set(value) {
             val pixelsToDrag: Int = width * (value - currentItem)
             val animator = ValueAnimator.ofInt(0, pixelsToDrag)
             var previousValue = 0

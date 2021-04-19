@@ -81,7 +81,6 @@
     <string name="version">バージョン</string>
     <string name="microg_bug">microG のバグ</string>
     <string name="microg_bug_summary">最新版の microG のバグにより、Vanced のバージョン16以上をインストールするには、先にバージョン15.43.32をインストールし、起動して、ログインする必要があります。バージョン15.43.32をインストールしますか?</string>
-    <string name="microg_bug_summary_music">最新版の microG のバグにより、Music のバージョン4.11以上をインストールするには、先にバージョン4.07.51をインストールし、起動して、ログインする必要があります。バージョン4.07.51をインストールしますか？</string>
     <string name="please_be_patient">この処理中はアプリを終了しないでください!</string>
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">インストールに必要なファイルが見つかりませんでした。再ダウンロードし、もう一度お試しください。</string>
     <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルが見つかりませんでした。もう一度お試しください。</string>
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
-    <string name="installation_blocked">ユーザーがインストールをブロックしたためインストールに失敗しました。</string>
     <string name="installation_downgrade">アプリをダウングレードしようとしたため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、再度お試しください。</string>
     <string name="installation_conflict">既にインストールされたアプリと競合したため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、もう一度やり直してください。</string>
     <string name="installation_failed">不明な理由でインストールに失敗しました。さらなるサポートのためには、Telegram か Discord に参加してください。詳細メニューからスクリーンショットを添付してください。</string>

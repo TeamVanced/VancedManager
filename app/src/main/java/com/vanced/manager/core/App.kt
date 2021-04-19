@@ -17,7 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 
-open class App: Application() {
+open class App : Application() {
 
     private val prefs by lazy { getDefaultSharedPreferences(this) }
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -26,7 +26,8 @@ open class App: Application() {
         scope.launch { loadJson(this@App) }
         super.onCreate()
         mutableAccentColor.value = prefs.managerAccent
-        Crowdin.init(this,
+        Crowdin.init(
+            this,
             CrowdinConfig.Builder().apply {
                 withDistributionHash(CROWDIN_HASH)
                 withNetworkType(NetworkType.WIFI)

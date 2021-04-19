@@ -81,7 +81,6 @@
     <string name="version">Version</string>
     <string name="microg_bug">Fehler in MicroG</string>
     <string name="microg_bug_summary">Aufgrund eines Fehlers in MicroG ist es erforderlich, zuerst die Version v15.43.32 zu installieren, öffnen und sich anzumelden, um Vanced v16 und höher zu verwenden. Möchten Sie mit der Installation von v15.43.32 fortfahren?</string>
-    <string name="microg_bug_summary_music">Aufgrund eines Fehlers in MicroG, ist es erforderlich zuerst die Version v4.07.51 zu installieren, öffnen und sich anzumelden, um Vanced Music v4.11+ zu verwenden. Möchten Sie mit der Installation von v4.07.51 fortfahren?</string>
     <string name="please_be_patient">Bitte schließen Sie die App NICHT während dieses Prozesses!</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Die benötigten Dateien für die Installation konnten nicht gefunden werden. Laden Sie die Installationsdateien erneut herunter und versuchen Sie es erneut.</string>
     <string name="ifile_missing">Apk-Datei für schwarzes/dunkles Theme konnte nicht gefunden werden, bitte versuchen Sie es erneut.</string>
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
-    <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer die Installation blockiert hat.</string>
     <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
     <string name="installation_conflict">Die Installation ist fehlgeschlagen, weil die App in Konflikt mit einer bereits installierten App steht. Deinstalliere die aktuell installierte Version der App und versuchen es dann erneut.</string>
     <string name="installation_failed">Die Installation ist aus unbekannten Gründen fehlgeschlagen. Betrete unser Telegram Chat oder Discord Server für weitere Unterstützung und halte bitte einen Screenshot aus dem erweiterten Menü bereit</string>

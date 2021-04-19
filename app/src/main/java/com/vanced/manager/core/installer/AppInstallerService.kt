@@ -9,7 +9,7 @@ import com.vanced.manager.utils.AppUtils.sendCloseDialog
 import com.vanced.manager.utils.AppUtils.sendFailure
 import com.vanced.manager.utils.AppUtils.sendRefresh
 
-class AppInstallerService: Service() {
+class AppInstallerService : Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
@@ -31,7 +31,7 @@ class AppInstallerService: Service() {
             else -> {
                 sendCloseDialog(this)
                 intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE)?.let {
-                    sendFailure(it,this)
+                    sendFailure(it, this)
                 }
             }
         }

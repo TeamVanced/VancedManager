@@ -33,8 +33,12 @@ class MusicPreferencesDialog : BindingBottomSheetDialogFragment<DialogMusicPrefe
     private fun bindData() {
         with(binding) {
             val musicVersionsConv = musicVersions.value?.value?.convertToAppVersions()
-            musicInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.music))
-            musicVersion.text = getString(R.string.chosen_version, prefs.musicVersion?.formatVersion(requireActivity()))
+            musicInstallTitle.text =
+                getString(R.string.app_installation_preferences, getString(R.string.music))
+            musicVersion.text = getString(
+                R.string.chosen_version,
+                prefs.musicVersion?.formatVersion(requireActivity())
+            )
             openVersionSelectorLayout.setOnClickListener {
                 dismiss()
                 showDialog(

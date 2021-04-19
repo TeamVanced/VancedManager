@@ -18,7 +18,10 @@ class SponsorAdapter(
 ) : RecyclerView.Adapter<SponsorAdapter.LinkViewHolder>() {
 
     private val brave = SponsorModel(
-        if (currentTheme == LIGHT) AppCompatResources.getDrawable(context, R.drawable.ic_brave_light) else AppCompatResources.getDrawable(context, R.drawable.ic_brave),
+        if (currentTheme == LIGHT) AppCompatResources.getDrawable(
+            context,
+            R.drawable.ic_brave_light
+        ) else AppCompatResources.getDrawable(context, R.drawable.ic_brave),
         "Brave",
         BRAVE
     )

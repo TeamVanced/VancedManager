@@ -32,11 +32,12 @@ class PreferenceSwitch @JvmOverloads constructor(
 
     private var mListener: OnCheckedListener? = null
 
-    private val prefListener = SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->
-        if (key == prefKey) {
-            binding.preferenceSwitch.isChecked = sharedPreferences.getBoolean(key, defValue)
+    private val prefListener =
+        SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->
+            if (key == prefKey) {
+                binding.preferenceSwitch.isChecked = sharedPreferences.getBoolean(key, defValue)
+            }
         }
-    }
 
     private var _binding: ViewPreferenceSwitchBinding? = null
 

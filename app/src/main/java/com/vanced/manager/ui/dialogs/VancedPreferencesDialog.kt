@@ -43,9 +43,16 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                 showLang.add(loc.getDisplayLanguage(loc).capitalize(Locale.ROOT))
             }
             val vancedVersionsConv = vancedVersions.value?.value?.convertToAppVersions()
-            vancedInstallTitle.text = getString(R.string.app_installation_preferences, getString(R.string.vanced))
-            vancedTheme.text = getString(R.string.chosen_theme, installPrefs.theme?.convertToAppTheme(requireActivity()))
-            vancedVersion.text = getString(R.string.chosen_version, defPrefs.vancedVersion?.formatVersion(requireActivity()))
+            vancedInstallTitle.text =
+                getString(R.string.app_installation_preferences, getString(R.string.vanced))
+            vancedTheme.text = getString(
+                R.string.chosen_theme,
+                installPrefs.theme?.convertToAppTheme(requireActivity())
+            )
+            vancedVersion.text = getString(
+                R.string.chosen_version,
+                defPrefs.vancedVersion?.formatVersion(requireActivity())
+            )
             vancedLang.text = getString(R.string.chosen_lang, showLang)
             openThemeSelectorLayout.setOnClickListener {
                 dismiss()
@@ -79,7 +86,13 @@ class VancedPreferencesDialog : BindingBottomSheetDialogFragment<DialogVancedPre
                     )
                 }
 
-                if (defPrefs.managerVariant == "nonroot" && isMicrogBroken && defPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))?.take(2)?.toIntOrNull() == 16 && !isPackageInstalled(vancedPkg, requireActivity().packageManager)) {
+                if (defPrefs.managerVariant == "nonroot" && isMicrogBroken && defPrefs.vancedVersion?.getLatestAppVersion(
+                        vancedVersions.value?.value ?: listOf("")
+                    )?.take(2)?.toIntOrNull() == 16 && !isPackageInstalled(
+                        vancedPkg,
+                        requireActivity().packageManager
+                    )
+                ) {
                     MaterialAlertDialogBuilder(requireActivity()).apply {
                         setTitle(R.string.microg_bug)
                         setMessage(R.string.microg_bug_summary)

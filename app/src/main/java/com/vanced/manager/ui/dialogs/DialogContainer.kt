@@ -5,9 +5,9 @@ import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vanced.manager.R
-import com.vanced.manager.utils.showWithAccent
 import com.vanced.manager.utils.isMiuiOptimizationsEnabled
 import com.vanced.manager.utils.openUrl
+import com.vanced.manager.utils.showWithAccent
 
 object DialogContainer {
 
@@ -68,24 +68,50 @@ object DialogContainer {
             when (msg) {
                 context.getString(R.string.installation_signature) -> {
                     setPositiveButton(context.getString(R.string.guide)) { _, _ ->
-                        openUrl("https://lmgtfy.com/?q=andnixsh+apk+verification+disable", R.color.Twitter, context)
+                        openUrl(
+                            "https://lmgtfy.com/?q=andnixsh+apk+verification+disable",
+                            R.color.Twitter,
+                            context
+                        )
                     }
                     setNeutralButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
                     if (fullMsg != null)
-                        setNegativeButton(context.getString(R.string.advanced)) { _, _ -> basicDialog(context.getString(R.string.advanced), fullMsg, context) }
+                        setNegativeButton(context.getString(R.string.advanced)) { _, _ ->
+                            basicDialog(
+                                context.getString(R.string.advanced),
+                                fullMsg,
+                                context
+                            )
+                        }
                 }
                 context.getString(R.string.installation_miui) -> {
                     setPositiveButton(context.getString(R.string.guide)) { _, _ ->
-                        openUrl("https://telegra.ph/How-to-install-v15-on-MIUI-02-11", R.color.Telegram, context)
+                        openUrl(
+                            "https://telegra.ph/How-to-install-v15-on-MIUI-02-11",
+                            R.color.Telegram,
+                            context
+                        )
                     }
                     setNeutralButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
                     if (fullMsg != null)
-                        setNegativeButton(context.getString(R.string.advanced)) { _, _ -> basicDialog(context.getString(R.string.advanced), fullMsg, context) }
+                        setNegativeButton(context.getString(R.string.advanced)) { _, _ ->
+                            basicDialog(
+                                context.getString(R.string.advanced),
+                                fullMsg,
+                                context
+                            )
+                        }
                 }
                 else -> {
                     setPositiveButton(context.getString(R.string.close)) { dialog, _ -> dialog.dismiss() }
                     if (fullMsg != null)
-                        setNegativeButton(context.getString(R.string.advanced)) { _, _ -> basicDialog(context.getString(R.string.advanced), fullMsg, context) }
+                        setNegativeButton(context.getString(R.string.advanced)) { _, _ ->
+                            basicDialog(
+                                context.getString(R.string.advanced),
+                                fullMsg,
+                                context
+                            )
+                        }
                 }
             }
             create()

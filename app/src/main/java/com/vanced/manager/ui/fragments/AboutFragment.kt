@@ -60,10 +60,18 @@ class AboutFragment : BindingFragment<FragmentAboutBinding>() {
                     val prefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
                     val devSettings = prefs.getBoolean("devSettings", false)
                     if (!devSettings) {
-                        Toast.makeText(requireContext(), "Dev options unlocked!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            requireContext(),
+                            "Dev options unlocked!",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         prefs.edit { putBoolean("devSettings", true) }
                     } else
-                        Toast.makeText(requireContext(), "Dev options already unlocked", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            requireContext(),
+                            "Dev options already unlocked",
+                            Toast.LENGTH_SHORT
+                        ).show()
 
                 }
                 return@setOnTouchListener true

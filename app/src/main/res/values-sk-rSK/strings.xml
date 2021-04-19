@@ -81,7 +81,6 @@
     <string name="version">Verzia</string>
     <string name="microg_bug">Chyba v microG</string>
     <string name="microg_bug_summary">Kvôli chybe v pôvodnom microG si inštalácia Vanced v16+ vyžaduje najskôr inštaláciu v15.43.32, otvorenie, následné prihlásenie a až potom môžete nainštalovať v16 ​​a vyššiu. Chcete pokračovať v inštalácii verzie 15.43.32?</string>
-    <string name="microg_bug_summary_music">Kvôli chybe v pôvodnom microG si inštalácia aplikácie Music v4.11+ vyžaduje najskôr inštaláciu verzie 4.0.0.51, otvorenie, následné prihlásenie a až potom môžete nainštalovať verziu 4.14 a vyššiu. Chcete pokračovať v inštalácii verzie v4.07.51?</string>
     <string name="please_be_patient">Počas tohto procesu NEODCHÁDZAJTE z aplikácie!</string>
     <string name="welcome">Vitajte</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Nepodarilo sa nájsť požadované súbory na inštaláciu. Opätovne stiahnite inštalačné súbory a skúste to znova.</string>
     <string name="ifile_missing">V lokálnom úložisku sa nepodarilo nájsť APK súbor pre čiernu/tmavú tému. Skúste to prosím znova.</string>
     <string name="installation_aborted">Inštalácia zlyhala, kvôli zrušeniu užívateľom.</string>
-    <string name="installation_blocked">Inštalácia zlyhala, kvôli zablokovaniu užívateľom.</string>
     <string name="installation_downgrade">Inštalácia zlyhala, pretože užívateľ sa pokúsil downgradovať balík. Odinštalujte aktualizácie z pôvodnej aplikácie a potom to skúste znova.</string>
     <string name="installation_conflict">Inštalácia zlyhala, pretože aplikácia je v konflikte s už nainštalovanou aplikáciou. Odinštalujte aktuálnu verziu aplikácie a potom to skúste znova.</string>
     <string name="installation_failed">Inštalácia zlyhala z neznámych dôvodov. Pre poskytnutie podpory sa pripojte sa k nášmu Telegramu alebo Discordu. Pripojte tiež snímky obrazovky z ponuky Pokročilé</string>

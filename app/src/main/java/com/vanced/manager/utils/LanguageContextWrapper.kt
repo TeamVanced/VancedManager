@@ -23,7 +23,10 @@ class LanguageContextWrapper(base: Context?) : ContextWrapper(base) {
             val sysLocale = Resources.getSystem().configuration.locale
             val locale = when {
                 pref == "System Default" -> Locale(sysLocale.language, sysLocale.country)
-                pref?.length!! > 2 -> Locale(pref.substring(0, pref.length - 3), pref.substring(pref.length - 2))
+                pref?.length!! > 2 -> Locale(
+                    pref.substring(0, pref.length - 3),
+                    pref.substring(pref.length - 2)
+                )
                 else -> Locale(pref)
             }
             currentLocale = locale

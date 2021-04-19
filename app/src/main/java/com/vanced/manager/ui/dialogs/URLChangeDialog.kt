@@ -45,11 +45,12 @@ class URLChangeDialog : BindingDialogFragment<DialogCustomUrlBinding>() {
                 TextView.BufferType.EDITABLE
             )
             urlSave.setOnClickListener {
-                val finalUrl = if (urlInput.text?.startsWith("https://") == true || urlInput.text?.startsWith("http://") == true) {
-                    urlInput.text?.removeSuffix("/").toString()
-                } else {
-                    "https://${urlInput.text}".removeSuffix("/")
-                }
+                val finalUrl =
+                    if (urlInput.text?.startsWith("https://") == true || urlInput.text?.startsWith("http://") == true) {
+                        urlInput.text?.removeSuffix("/").toString()
+                    } else {
+                        "https://${urlInput.text}".removeSuffix("/")
+                    }
                 saveUrl(finalUrl)
             }
             urlReset.setOnClickListener { saveUrl(baseUrl) }

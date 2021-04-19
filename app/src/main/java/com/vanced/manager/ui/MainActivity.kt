@@ -86,7 +86,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        binding.toolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
+        binding.toolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(
+            this,
+            R.drawable.ic_keyboard_backspace_black_24dp
+        ) else null
     }
 
     override fun onPause() {
@@ -137,7 +140,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             R.id.toolbar_update_manager -> {
-                ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "manager_update")
+                ManagerUpdateDialog.newInstance(false)
+                    .show(supportFragmentManager, "manager_update")
                 true
             }
             R.id.dev_settings -> {
@@ -170,8 +174,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         when (newConfig.orientation) {
-            Configuration.ORIENTATION_PORTRAIT -> log("VMUI", "screen orientation changed to portrait")
-            Configuration.ORIENTATION_LANDSCAPE -> log("VMUI", "screen orientation changed to landscape")
+            Configuration.ORIENTATION_PORTRAIT -> log(
+                "VMUI",
+                "screen orientation changed to portrait"
+            )
+            Configuration.ORIENTATION_LANDSCAPE -> log(
+                "VMUI",
+                "screen orientation changed to landscape"
+            )
             else -> log("VMUI", "screen orientation changed to [REDACTED]")
         }
 

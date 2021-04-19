@@ -81,7 +81,6 @@
     <string name="version">Versione</string>
     <string name="microg_bug">Bug in microG</string>
     <string name="microg_bug_summary">A causa di un bug nel microG originale, l\'installazione di Vanced v16+ richiede prima l\'installazione della v15.43.32, avviarla, quindi effettuare il login e solo allora è possibile installare la v16 e versioni successive. Vuoi procedere con l\'installazione della v15.43.32?</string>
-    <string name="microg_bug_summary_music">A causa di un bug nel microG originale, l\'installazione di Music v4.11+ richiede prima l\'installazione della v4.07.51, avviarla, quindi effettuare il login e solo allora è possibile installare la v4.11 e successive. Vuoi procedere con l\'installazione della v4.07.51?</string>
     <string name="please_be_patient">Si prega di NON uscire dall\'app durante questo processo!</string>
     <string name="welcome">Benvenuto</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Impossibile individuare i file richiesti per l\'installazione. Scaricali nuovamente e riprova.</string>
     <string name="ifile_missing">Impossibile individuare il file apk per il tema nero/scuro dalla memoria, per favore riprova.</string>
     <string name="installation_aborted">Installazione non riuscita. L\'utente ha annullato l\'installazione.</string>
-    <string name="installation_blocked">Installazione non riuscita. L\'utente ha bloccato l\'installazione.</string>
     <string name="installation_downgrade">Installazione fallita. È stato effettuato un tentativo di downgrade del pacchetto. Disinstalla gli aggiornamenti dall\'app stock, quindi riprova.</string>
     <string name="installation_conflict">Installazione fallita perché l\'applicazione è in conflitto con un\'app già installata. Disinstallare la versione corrente dell\'applicazione, quindi riprovare.</string>
     <string name="installation_failed">Installazione non riuscita per motivi sconosciuti, unisciti al nostro Telegram o Discord per ulteriore supporto. Allega anche uno screenshot dal menu Avanzate</string>

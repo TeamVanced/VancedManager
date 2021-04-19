@@ -16,7 +16,8 @@ class ThemedSwitchCompat @JvmOverloads constructor(
     attributeSet: AttributeSet? = null,
 ) : SwitchCompat(context, attributeSet, R.attr.switchStyle) {
 
-    private val states = arrayOf(intArrayOf(-android.R.attr.state_checked), intArrayOf(android.R.attr.state_checked))
+    private val states =
+        arrayOf(intArrayOf(-android.R.attr.state_checked), intArrayOf(android.R.attr.state_checked))
 
     init {
         context.lifecycleOwner?.let { owner ->
@@ -29,7 +30,13 @@ class ThemedSwitchCompat @JvmOverloads constructor(
     private fun setSwitchColors(color: Int) {
         val thumbColors = intArrayOf(Color.LTGRAY, color)
         val trackColors = intArrayOf(Color.GRAY, ColorUtils.setAlphaComponent(color, 70))
-        DrawableCompat.setTintList(DrawableCompat.wrap(thumbDrawable), ColorStateList(states, thumbColors))
-        DrawableCompat.setTintList(DrawableCompat.wrap(trackDrawable), ColorStateList(states, trackColors))
+        DrawableCompat.setTintList(
+            DrawableCompat.wrap(thumbDrawable),
+            ColorStateList(states, thumbColors)
+        )
+        DrawableCompat.setTintList(
+            DrawableCompat.wrap(trackDrawable),
+            ColorStateList(states, trackColors)
+        )
     }
 }

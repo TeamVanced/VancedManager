@@ -96,7 +96,13 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindClearFiles() {
         clearFiles.setOnClickListener {
             with(requireActivity()) {
-                listOf("vanced/nonroot", "vanced/root", "music/nonroot", "music/root", "microg").forEach { dir ->
+                listOf(
+                    "vanced/nonroot",
+                    "vanced/root",
+                    "music/nonroot",
+                    "music/root",
+                    "microg"
+                ).forEach { dir ->
                     File(getExternalFilesDir(dir)?.path.toString()).deleteRecursively()
                 }
                 Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT).show()
@@ -119,7 +125,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     }
 
     private fun FragmentSettingsBinding.bindManagerAccentColor() {
-        managerAccentColor.apply{
+        managerAccentColor.apply {
             setSummary(prefs.getInt("manager_accent_color", defAccentColor).toHex())
             setOnClickListener { showDialog(ManagerAccentColorDialog()) }
             accentColor.observe(viewLifecycleOwner) {
@@ -138,7 +144,8 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        val devSettings = getDefaultSharedPreferences(requireActivity()).getBoolean("devSettings", false)
+        val devSettings =
+            getDefaultSharedPreferences(requireActivity()).getBoolean("devSettings", false)
         if (devSettings) {
             inflater.inflate(R.menu.dev_settings_menu, menu)
         }

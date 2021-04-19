@@ -17,7 +17,10 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.log
 import java.util.*
 
-val RadioGroup.checkedButtonTag: String? get() = findViewById<MaterialRadioButton>(checkedRadioButtonId)?.tag?.toString()
+val RadioGroup.checkedButtonTag: String?
+    get() = findViewById<MaterialRadioButton>(
+        checkedRadioButtonId
+    )?.tag?.toString()
 
 fun DialogFragment.show(activity: FragmentActivity) {
     try {
@@ -29,19 +32,25 @@ fun DialogFragment.show(activity: FragmentActivity) {
 
 fun List<String>.convertToAppVersions(): List<String> = listOf("latest") + reversed()
 
-fun String.formatVersion(context: Context): String = if (this == "latest") context.getString(R.string.install_latest) else this
+fun String.formatVersion(context: Context): String =
+    if (this == "latest") context.getString(R.string.install_latest) else this
 
 fun String.convertToAppTheme(context: Context): String = with(context) {
-    getString(R.string.light_plus_other, if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black))
+    getString(
+        R.string.light_plus_other,
+        if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black)
+    )
 }
 
-fun String.getLatestAppVersion(versions: List<String>): String = if (this == "latest") versions.reversed()[0] else this
+fun String.getLatestAppVersion(versions: List<String>): String =
+    if (this == "latest") versions.reversed()[0] else this
 
-val Context.lifecycleOwner: LifecycleOwner? get() = when (this) {
-    is LifecycleOwner -> this
-    !is LifecycleOwner -> (this as ContextWrapper).baseContext as LifecycleOwner
-    else -> null
-}
+val Context.lifecycleOwner: LifecycleOwner?
+    get() = when (this) {
+        is LifecycleOwner -> this
+        !is LifecycleOwner -> (this as ContextWrapper).baseContext as LifecycleOwner
+        else -> null
+    }
 
 fun Int.toHex(): String = java.lang.String.format("#%06X", 0xFFFFFF and this)
 
@@ -74,5 +83,5 @@ fun Context.writeServiceDScript(apkFPath: String, path: String, app: String) {
         chcon u:object_r:apk_data_file:s0 $apkFPath
         mount -o bind $apkFPath $path
     """.trimIndent()
-    SuFileOutputStream.open(shellFileZ).use { out ->  out.write(script.toByteArray())}
+    SuFileOutputStream.open(shellFileZ).use { out -> out.write(script.toByteArray()) }
 }

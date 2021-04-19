@@ -41,7 +41,7 @@ class ManagerVariantDialog : BindingBottomSheetDialogFragment<DialogManagerVaria
                 if (variant != newPref) {
                     prefs.managerVariant =
                         if (newPref == "root" && Shell.rootAccess()) {
-                             "root"
+                            "root"
                         } else {
                             "nonroot"
                         }

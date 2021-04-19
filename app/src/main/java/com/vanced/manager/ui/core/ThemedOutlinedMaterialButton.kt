@@ -23,6 +23,9 @@ class ThemedOutlinedMaterialButton @JvmOverloads constructor(
 
     private fun applyAccent(color: Int) {
         setTextColor(color)
-        rippleColor = ColorStateList(arrayOf(intArrayOf()), intArrayOf(ColorUtils.setAlphaComponent(color, 50)))
+        rippleColor = ColorStateList(
+            arrayOf(intArrayOf()),
+            intArrayOf(ColorUtils.setAlphaComponent(color, 50))
+        )
     }
 }

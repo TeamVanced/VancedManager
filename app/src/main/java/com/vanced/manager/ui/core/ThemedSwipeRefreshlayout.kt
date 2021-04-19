@@ -14,10 +14,17 @@ class ThemedSwipeRefreshlayout @JvmOverloads constructor(
         setColorSchemeColors(accentColor.value!!)
         initAttrs(context, attributeSet)
     }
+
     private fun initAttrs(context: Context, attributeSet: AttributeSet?) {
         attributeSet.let {
-            val typedAttrs = context.obtainStyledAttributes(it, R.styleable.ThemedSwipeRefreshlayout, 0, 0)
-            setProgressBackgroundColorSchemeColor(typedAttrs.getColor(R.styleable.ThemedSwipeRefreshlayout_progressBackgroundColor, 0))
+            val typedAttrs =
+                context.obtainStyledAttributes(it, R.styleable.ThemedSwipeRefreshlayout, 0, 0)
+            setProgressBackgroundColorSchemeColor(
+                typedAttrs.getColor(
+                    R.styleable.ThemedSwipeRefreshlayout_progressBackgroundColor,
+                    0
+                )
+            )
             typedAttrs.recycle()
         }
     }

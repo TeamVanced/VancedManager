@@ -81,7 +81,6 @@
     <string name="version">Bersyon</string>
     <string name="microg_bug">Bug sa microG</string>
     <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">Maligayang Pagdating</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Nabigo ang paghanap sa kailangan na files para sa installation. I-download ulit ang mga installation files, at ulitin muli.</string>
     <string name="ifile_missing">Nabigo ang paghanap ng apk file para sa itim na tema galing sa storage, ulitin muli.</string>
     <string name="installation_aborted">Nabigo ang pag-install dahil kinansela ito.</string>
-    <string name="installation_blocked">Nabigo ang pag-install dahil binlock ito.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Nabigo ang pag-install dahil meron hidwaan sa naka-install na app. I-uninstall ang kasalukuyang bersyon ng Vanced, at ulitin muli.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>

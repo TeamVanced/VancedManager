@@ -81,7 +81,6 @@
     <string name="version">Versão</string>
     <string name="microg_bug">Bug no microG</string>
     <string name="microg_bug_summary">Devido a um bug no microG original, instalar a versão 16+ requer que você instale a versão 15.43.32, abra ela, faça login e só então você pode instalar a versão 16 em diante. Você deseja proceder com a instalação da versão 15.43.32?</string>
-    <string name="microg_bug_summary_music">Devido a um erro no microG original, instalar a versão 4.11+ do Music primeiro requer que você instale a versão 4.07.51, abra ela, faça login e só então você pode instalar a versão 4.11 e adiante. Você deseja proceder com a instalação da versão 4.07.51?</string>
     <string name="please_be_patient">Por favor NÃO saia do aplicativo durante este processo!</string>
     <string name="welcome">Bem-vindo</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Baixe novamente os arquivos de instalação e tente novamente.</string>
     <string name="ifile_missing">Falha ao localizar o arquivo apk para o tema preto/escuro a partir do armazenamento, por favor tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
-    <string name="installation_blocked">A instalação falhou porque o usuário bloqueou a instalação.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo padrão e tente novamente.</string>
     <string name="installation_conflict">A instalação falhou porque o app está em conflito com um app já instalado. Desinstale a versão atual do aplicativo e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por razões desconhecidas, junte-se ao nosso Telegram ou Discord para obter mais suporte. Por favor, anexe também uma captura de tela do menu Avançado</string>

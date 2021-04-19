@@ -1,7 +1,6 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
 
-    <dimen name="stdp">16dp</dimen>
     <dimen name="top_header_margin">128dp</dimen>
 
 </resources>

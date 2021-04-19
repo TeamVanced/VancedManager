@@ -21,7 +21,7 @@ class RootDataModel(
     //Although it's impossible for it to be null.
     //Ironic, isn't it?
     private val scriptName: String?
-): DataModel(
+) : DataModel(
     jsonObject, context, lifecycleOwner, appPkg, appName, appDescription, appIcon
 ) {
 

@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import com.vanced.manager.R
 import com.vanced.manager.utils.openUrl
 
-class AboutViewModel(application: Application): AndroidViewModel(application) {
+class AboutViewModel(application: Application) : AndroidViewModel(application) {
 
     fun openUrl(url: String) {
         openUrl(url, R.color.GitHub, getApplication())

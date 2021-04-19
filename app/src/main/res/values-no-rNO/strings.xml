@@ -81,7 +81,6 @@
     <string name="version">Versjon</string>
     <string name="microg_bug">Bug in microG</string>
     <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">Velkommen</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Kunne ikke finne de nødvendige filene for installasjon. Last ned installasjonsfilene på nytt, og prøv på nytt.</string>
     <string name="ifile_missing">Klarte ikke å finne apk-filen for svart/mørkt tema på enheten, vennligst prøv igjen.</string>
     <string name="installation_aborted">Installasjonen mislyktes fordi brukeren avbrutt installasjonen.</string>
-    <string name="installation_blocked">Installasjonen mislyktes på grunn av at brukeren blokkerte installasjonen.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>

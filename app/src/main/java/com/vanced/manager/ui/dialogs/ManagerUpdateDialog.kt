@@ -58,7 +58,8 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
         dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         bindData()
         if (arguments?.getBoolean(TAG_FORCE_UPDATE) == true) {
-            binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
+            binding.managerUpdatePatient.text =
+                requireActivity().getString(R.string.please_be_patient)
             downloadManager(requireActivity())
         } else {
             checkUpdates()
@@ -99,10 +100,12 @@ class ManagerUpdateDialog : BindingDialogFragment<DialogManagerUpdateBinding>() 
 
     private fun checkUpdates() {
         if (manager.value?.int("versionCode") ?: 0 > VERSION_CODE) {
-            binding.managerUpdatePatient.text = requireActivity().getString(R.string.please_be_patient)
+            binding.managerUpdatePatient.text =
+                requireActivity().getString(R.string.please_be_patient)
             downloadManager(requireActivity())
         } else {
-            binding.managerUpdatePatient.text = requireActivity().getString(R.string.update_not_found)
+            binding.managerUpdatePatient.text =
+                requireActivity().getString(R.string.update_not_found)
         }
     }
 

@@ -81,7 +81,6 @@
     <string name="version">Versio</string>
     <string name="microg_bug">Virhe microG:ssä</string>
     <string name="microg_bug_summary">Alkuperäisessä microG:ssä olevan bugin takia sinun tulee asentaa Vancedin versio 15.43.32, avata se ja kirjautua sisään, ennen kuin voin asentaa version 16 tai uudemman. Haluatko jatkaa version 15.43.32 asentamista?</string>
-    <string name="microg_bug_summary_music">Alkuperäisessä microG:ssä olevan bugin takia sinun tulee asentaa Musicin versio 4.07.51, avata se ja kirjautua sisään, ennen kuin voin asentaa version 4.11 tai uudemman. Haluatko jatkaa version 4.07.51 asentamista?</string>
     <string name="please_be_patient">ÄLÄ poistu sovelluksesta tämän prosessin aikana!</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Asennukseen vaadittavien tiedostojen paikannus epäonnistui. Yritä ladata asennustiedostot uudelleen.</string>
     <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
-    <string name="installation_blocked">Asennus epäonnistui, koska käyttäjä on estänyt asennuksen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomasta syystä, liity Vancedin Telegramiin tai Discordiin saadaksesi tukea. Liitä myös kuvankaappaus Lisäasetukset valikosta</string>

@@ -81,7 +81,6 @@
     <string name="version">版本</string>
     <string name="microg_bug">microG 漏洞</string>
     <string name="microg_bug_summary">由於原版 microG 的一個 bug，如要安裝 Vanced 16+，您需要先安裝 15.43.32 版、開啟它、登入，然後才能安裝 16 或更新的版本。是否開始安裝 15.43.32 版？</string>
-    <string name="microg_bug_summary_music">由於 microG 的一個 bug，如要安裝 Music 4.11+，您需要先安裝 4.07.51 版、開啟它、登入，然後才能安裝 4.11 或更新的版本。是否開始安裝 4.07.51 版？</string>
     <string name="please_be_patient">在此過程中請不要退出應用程式！</string>
     <string name="welcome">歡迎</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">無法找到安裝所需的檔案。請重新下載安裝檔案，然後再試。</string>
     <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 apk 檔案，請再試。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
-    <string name="installation_blocked">使用者封鎖安裝導致安裝失敗。</string>
     <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生應用程式的更新，然後重試。</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前的版本，然後重試。</string>
     <string name="installation_failed">未知原因導致安裝失敗，請附上進階設定的截圖至我們的 Telegram 或 Discord 取得更多支援</string>

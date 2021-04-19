@@ -81,7 +81,6 @@
     <string name="version">Wersja</string>
     <string name="microg_bug">Błąd w microG</string>
     <string name="microg_bug_summary">Ze względu na błąd w microG, instalacja Vanced 16+ wymaga najpierw instalacji v15.43.32, otwórz go, a następnie zaloguj się i tylko wtedy możesz zainstalować v16 i nowsze. Czy chcesz kontynuować instalację v15.43.32?</string>
-    <string name="microg_bug_summary_music">Ze względu na błąd w microG głównej, instalacja Muzyka v4.11+ wymaga najpierw instalacji v4.07.51, otwórz go, a następnie zaloguj się i tylko wtedy możesz zainstalować v4.11 i nowsze. Czy chcesz kontynuować instalację v4.07.51?</string>
     <string name="please_be_patient">NIE wychodź z aplikacji podczas trwania tego procesu!</string>
     <string name="welcome">Witaj</string>
     <!-- Install Page -->
@@ -104,7 +103,6 @@
     <string name="files_missing_va">Nie udało się zlokalizować wymaganych plików do instalacji. Pobierz ponownie pliki instalacyjne, a następnie spróbuj ponownie.</string>
     <string name="ifile_missing">Nie udało się zlokalizować pliku apk dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
     <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
-    <string name="installation_blocked">Instalacja nie powiodła się, ponieważ użytkownik zablokował instalację.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z domyślnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
     <string name="installation_conflict">Instalacja nie powiodła się ponieważ aplikacja konfliktuje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Instalacja nie powiodła się z nieznanych powodów, dołącz do naszego Telegrama lub Discorda, aby uzyskać dalsze wsparcie. Proszę również dołączyć zrzut ekranu z zaawansowanego menu</string>

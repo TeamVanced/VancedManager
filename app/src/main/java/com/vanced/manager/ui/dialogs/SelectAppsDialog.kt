@@ -43,7 +43,11 @@ class SelectAppsDialog : BindingBottomSheetDialogFragment<DialogSelectAppsBindin
             }
             selectAppsSave.setOnClickListener {
                 if (ad.apps.all { app -> !app.isChecked }) {
-                    Toast.makeText(requireActivity(), R.string.select_at_least_one_app, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireActivity(),
+                        R.string.select_at_least_one_app,
+                        Toast.LENGTH_SHORT
+                    ).show()
                     return@setOnClickListener
                 }
                 prefs.edit {

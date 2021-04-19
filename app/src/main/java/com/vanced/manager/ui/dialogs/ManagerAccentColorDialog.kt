@@ -50,9 +50,20 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
             hexEdittext.apply {
                 setText(accent.toHex(), TextView.BufferType.EDITABLE)
                 addTextChangedListener(object : TextWatcher {
-                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+                    override fun beforeTextChanged(
+                        s: CharSequence?,
+                        start: Int,
+                        count: Int,
+                        after: Int
+                    ) {
+                    }
 
-                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    override fun onTextChanged(
+                        s: CharSequence?,
+                        start: Int,
+                        before: Int,
+                        count: Int
+                    ) {
                         if (length() == 0) {
                             setText("#")
                             setSelection(1)
@@ -63,7 +74,8 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                                 val colorFromEditText = Color.parseColor(text.toString())
                                 accentPicker.setColor(colorFromEditText)
                                 mutableAccentColor.value = colorFromEditText
-                            } catch (e: IllegalArgumentException) {}
+                            } catch (e: IllegalArgumentException) {
+                            }
                         }
                     }
 
@@ -96,7 +108,11 @@ class ManagerAccentColorDialog : BindingDialogFragment<DialogManagerAccentColorB
                     prefs.managerAccent = colorFromEditText
                 } catch (e: IllegalArgumentException) {
                     log("VMTheme", getString(R.string.failed_accent))
-                    Toast.makeText(requireActivity(), getString(R.string.failed_accent), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireActivity(),
+                        getString(R.string.failed_accent),
+                        Toast.LENGTH_SHORT
+                    ).show()
                     return@setOnClickListener
                 }
 

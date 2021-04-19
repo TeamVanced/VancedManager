@@ -52,13 +52,13 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>() {
     private fun bindData() {
         requireActivity().title = getString(R.string.title_home)
         setHasOptionsMenu(true)
-        with (binding) {
+        with(binding) {
             homeRefresh.setOnRefreshListener { viewModel.fetchData() }
             isFetching.observe(viewLifecycleOwner) { homeRefresh.isRefreshing = it }
 
             recyclerAppList.apply {
                 layoutManager = LinearLayoutManager(requireActivity())
-                adapter = ExpandableAppListAdapter(requireActivity(), viewModel /*, tooltip*/ )
+                adapter = ExpandableAppListAdapter(requireActivity(), viewModel /*, tooltip*/)
                 setHasFixedSize(true)
             }
 
@@ -98,7 +98,11 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>() {
     private val broadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (intent.action) {
-                INSTALL_FAILED -> installAlertBuilder(intent.getStringExtra("errorMsg").toString(), intent.getStringExtra("fullErrorMsg"), requireActivity())
+                INSTALL_FAILED -> installAlertBuilder(
+                    intent.getStringExtra("errorMsg").toString(),
+                    intent.getStringExtra("fullErrorMsg"),
+                    requireActivity()
+                )
                 REFRESH_HOME -> viewModel.fetchData()
             }
         }

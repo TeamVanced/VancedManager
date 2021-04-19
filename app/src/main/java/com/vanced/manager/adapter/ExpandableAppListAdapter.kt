@@ -34,7 +34,8 @@ class ExpandableAppListAdapter(
 
     private var isAnimationRunning = false
 
-    inner class ListViewHolder(private val binding: ViewAppExpandableBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ListViewHolder(private val binding: ViewAppExpandableBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         private var isExpanded = false
 
         fun bind(position: Int) {
@@ -77,7 +78,12 @@ class ExpandableAppListAdapter(
                 }
                 dataModel?.buttonTag?.observe(activity) { buttonTag ->
                     appDownload.apply {
-                        setOnClickListener { viewModel.openInstallDialog(buttonTag, apps[position]) }
+                        setOnClickListener {
+                            viewModel.openInstallDialog(
+                                buttonTag,
+                                apps[position]
+                            )
+                        }
                         contentDescription = activity.getString(
                             if (buttonTag == ButtonTag.UPDATE)
                                 R.string.accessibility_update

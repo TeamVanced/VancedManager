@@ -19,7 +19,8 @@ import com.vanced.manager.utils.lang
 import com.vanced.manager.utils.vanced
 import java.util.*
 
-class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVancedLanguageSelectionBinding>() {
+class VancedLanguageSelectionDialog :
+    BindingBottomSheetDialogFragment<DialogVancedLanguageSelectionBinding>() {
 
     companion object {
 
@@ -52,7 +53,11 @@ class VancedLanguageSelectionDialog : BindingBottomSheetDialogFragment<DialogVan
                     }
                 }
                 if (chosenLangs.isEmpty()) {
-                    Toast.makeText(requireActivity(), R.string.select_at_least_one_lang, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireActivity(),
+                        R.string.select_at_least_one_lang,
+                        Toast.LENGTH_SHORT
+                    ).show()
                     return@setOnClickListener
                 }
                 prefs.lang = chosenLangs.joinToString()
