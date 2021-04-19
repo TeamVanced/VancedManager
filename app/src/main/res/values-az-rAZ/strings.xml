@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Buraxılışı dayandırılan və bu tətbiq istifadə edərək yenilənə bilməyən Vanced-in Magisk/TWRP versiyasını istifadə edirsiniz. Zəhmət olmasa magisk modulunu/TWRP Vanced silici istifadə edərək silin.</string>
     <string name="microg_bug">Amma microG\'də</string>
     <string name="microg_bug_summary">microG\'də olan xəta səbəbindən Vanced 16+ yükləmək üçün əvvəlcə v15.43.32 versiyasını yükləməlisiniz, bunun üçün onu açıb giriş etməlisiniz, ancaq ondan sonra v16 ya da üstünü quraşdıra bilərsiniz. v15.43.32 versiyasını yükləmək istəyirsiniz?</string>
-    <string name="microg_bug_summary_music">microG\'də olan xəta səbəbindən Music 4.11+ yükləmək üçün əvvəlcə v4.07.51 versiyasını yükləməlisiniz, bunun üçün onu açıb giriş etməlisiniz, ancaq ondan sonra v4.11 ya da üstünü quraşdıra bilərsiniz. v4.15.11 versiyasını yükləmək istəyirsiniz?</string>
     <string name="miui_one">Vanced-i quraşdırmaq üçün tərtibatçı tənzimləmələrindən MIUI Optimallaşdırmasını sıradan çıxartmaq LAZIMDIR. (20.2.20 və ya yuxarı xiaomi.eu əsaslı ROM istifadə edirsinizsə bu xəbərdarlığı nəzərə almaya bilərsiniz)</string>
     <string name="miui_one_title">MIUI Optimizasiyaları açıqdır!</string>
     <string name="please_be_patient">Xahiş olunur iş gedərkən tətbiqi TƏRK ETMƏYİN!</string>
     <string name="redownload">Yenidən endir</string>
     <string name="security_context">Tətbiqi vancedapp.com, Vanced Discord server və ya Vanced GitHub\'dan endirdiyinizə əmin olun</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Versiya</string>
     <string name="welcome">Xoş gəlmisiniz</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Quraşdırmaq üçün lazımi fayllar tapılmadı. Quraşdırma fayllarını yenidən endirib təkrar sınayın.</string>
     <string name="ifile_missing">Anbarda qara/tünd mövzu üçün apk faylı tapılmadı, yenidən sınayın.</string>
     <string name="installation_aborted">İstifadəçi quraşdırmanı ləğv etdiyi üçün quraşdırılma uğursuz oldu.</string>
-    <string name="installation_blocked">İstifadəçi quraşdırmanı əngəllədiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_conflict">Tətbiq əvvəlcədən quraşdırılmış bir tətbiqlə toqquşduğu üçün quraşdırılma uğursuz oldu. Vanced-in cari versiyasını silib yenidən sınayın.</string>
     <string name="installation_downgrade">İstifadəçi paketi alt versiyaya keçirməyə çalışdığı üçün quraşdırılma uğursuz oldu. Stok YouTube tətbiqindən yeniləmələri silib yenidən sınayın.</string>
     <string name="installation_failed">Bilinməyən səbəblərdən qurma alınmadı, əlavə yardım üçün Telegram və ya Discordumuza qoşulun. Xahiş olunur Qabaqcıl bölməsindən ekran görüntüsü də əlavə edin</string>
