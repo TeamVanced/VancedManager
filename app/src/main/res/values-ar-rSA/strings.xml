@@ -81,14 +81,11 @@
     <string name="magisk_vanced">يبدو أنك تستخدم إصدار ماجيسك/TWRP من ڤانسد، الذي قد تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً من قائمة إضافات ماجيسك أو بإستخدام أداة إلغاء تثبيت ڤانسد من TWRP.</string>
     <string name="microg_bug">خطأ في المايكروجي</string>
     <string name="microg_bug_summary">نظرًا لوجود خطأ في microG الأساسي، يتطلب تثبيت ڤاسند v16 + أولاً تثبيت الإصدار 15.43.32 ، وفتحه ، ثم تسجيل الدخول وبعد ذلك فقط يمكنك تثبيت الإصدار 16 والإصدارات الأحدث. هل تريد متابعة تثبيت الإصدار 15.43.32؟</string>
-    <string name="microg_bug_summary_music">نظرًا لوجود خطأ في microG الرئيسي، يتطلب تثبيت Music v4.11 + أولاً تثبيت الإصدار 4.07.51، وفتحه، ثم تسجيل الدخول وعندها فقط يمكنك تثبيت الإصدار 4.11 وما بعده. هل تريد متابعة تثبيت الإصدار 4.07.51؟</string>
     <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة إذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند إلى نسخة نظام شاومي أوروبا)</string>
     <string name="miui_one_title">تحسينات MIUI مفعلة!</string>
     <string name="please_be_patient">الرجاء عدم الخروج من التطبيق أثناء هذه العملية!</string>
     <string name="redownload">إعادة التنزيل</string>
     <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
-    <string name="storage_access_required">مطلوب إذن الوصول إلى ذاكرة التخزين</string>
-    <string name="storage_access_required_summary">لكي يعمل مدير فانسد، يجب عليك منح إذن التخزين</string>
     <string name="version">الإصدار</string>
     <string name="welcome">مرحباً بك</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
-    <string name="installation_blocked">فشل التثبيت لأن المستخدم قام بحظر التثبيت.</string>
     <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
     <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
     <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم. يرجى أيضاً إرفاق لقطة الشاشة من القائمة المتقدمة</string>
