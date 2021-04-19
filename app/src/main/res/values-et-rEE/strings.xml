@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Te kasutate Vanced Magisk/TWRP versiooni, mis on katkestatud, ning seda ei saa uuendada kasutades seda äppi. Palun eemaldage Magisk moodul kasutades TWRP Vanced eemaldajat.</string>
     <string name="microg_bug">microG viga</string>
     <string name="microg_bug_summary">Seoses originaal microG veaga, vajab Vanced v16+ paigaldus ennem v15.43.32 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v15.43.32 paigaldusega?</string>
-    <string name="microg_bug_summary_music">Seoses originaal microG veaga, vajab Music v4.11+ paigaldus ennem v4.07.51 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v4.11 või uuema. Kas soovite jätkata v4.07.51 paigaldusega?</string>
     <string name="miui_one">Et paigaldada Vanced, PEAB keelama MIUI optimiseerimise arendaja valikute alt. (Võite seda igroneerida kui kasutate 20.2.20 või uuemat xiaomi.eu põhist ROMi)</string>
     <string name="miui_one_title">MIUI optimiseerimine on lubatud!</string>
     <string name="please_be_patient">Palun ärge väljuge rakendusest protsessi ajal!</string>
     <string name="redownload">Lae uuesti alla</string>
     <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Versioon</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Paigalduseks vajalike failide leidmine ebaõnnestus. Laadige paigaldusfailid uuesti alla ja proovige uuesti.</string>
     <string name="ifile_missing">Apk faili musta/tumeda teema jaoks leidmine ebaõnnestus, proovige palun uuesti.</string>
     <string name="installation_aborted">Paigaldamine ebaõnnestus kuna kasutaja katkestas selle.</string>
-    <string name="installation_blocked">Paigaldamine ebaõnnestus kuna kasutaja peatas selle.</string>
     <string name="installation_conflict">Paigaldamine ebaõnnestus, kuna tekkis konflikt olemasoleva versiooniga. Eemaldage praegune rakenduse versioon, ning proovige uuesti.</string>
     <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused originaalrakendusest ja proovige uuesti.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
