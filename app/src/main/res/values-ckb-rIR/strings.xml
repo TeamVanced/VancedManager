@@ -81,14 +81,11 @@
     <string name="magisk_vanced">تۆ وەشانی Magisk/TWRP ـی Vanced بەکاردێنیت، کە ناتوانرێت بە بەکارهێنانی ئەم بەرنامەیە نوێبکرێتەوە، تکایە لایبدە بە سڕینەوەی مۆدیولی ماگیسک/لەڕێی TWRP Vanced.</string>
     <string name="microg_bug">کێشە لە microG</string>
     <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="miui_one_title">باشترکردنی MIUI چالاککراوە!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="redownload">داگرتنەوە</string>
     <string name="security_context">دڵنیابە کە بەرنامەکەت لە سایتی vancedapp.com، سێرڤەری دیسکۆرد یان Vanced GitHub داگرتووە</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">وەشان</string>
     <string name="welcome">بەخێربێیت</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">سەرکەوتو نەبوو لە دۆزینەوەی فایلە پێویستەکان بۆ دامەزراندن، فایلە پێویستیەکان دووبارە دابگرەوە بۆ جێگیرکردن، پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="ifile_missing">سەرکەوتوو نەبوو لەدۆزینەوەی شوێنی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە بیرگەدا، تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_aborted">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر کۆتاییهێنا بە دابەزاندنەکە.</string>
-    <string name="installation_blocked">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر ڕێگریکرد لە دابەزاندنەکە.</string>
     <string name="installation_conflict">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی وەشانێکی تری بەرنامەکە پێشتر دامەزرێنراوە، وەشانی ئێستای Vanced بسڕەوە و پاشان دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_downgrade">دامەزراندن سەرکەوتو نەبوو، لەبەر ئەوەی بەکارهێنەر هەوڵیدا بۆ نزمکردنەوەی وەشان، نوێکارییەکانی بەرنامەی بنەڕەتی YouTube بسڕەوە و دووبارە هەوڵبدەرەوە.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
