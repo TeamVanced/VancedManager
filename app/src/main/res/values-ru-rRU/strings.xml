@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Похоже, вы используете Magisk/TWRP версию Vanced, которая больше не поддерживается и не может быть обновлена с помощью этого приложения. Пожалуйста, удалите модуль Vanced через Magisk или с помощью деинсталлятора Vanced для TWRP.</string>
     <string name="microg_bug">Ошибка в microG</string>
     <string name="microg_bug_summary">В связи с ошибкой в microG, установка Vanced версии 16+ сначала требует установку версии 15.43.32, затем необходимо открыть приложение, авторизоваться в аккаунте и только после этого можно будет установить версию 16 и выше. Вы хотите продолжить установку версии 15.43.32?</string>
-    <string name="microg_bug_summary_music">В связи с ошибкой в microG, установка Music версии 4.11+ сначала требует установку версии 4.07.51, затем необходимо открыть приложение, авторизоваться в аккаунте и только после этого можно будет установить версию 4.11 и выше. Вы хотите продолжить установку версии 4.07.51?</string>
     <string name="miui_one">Чтобы установить Vanced, вы ДОЛЖНЫ отключить оптимизацию MIUI в настройках разработчика. (Вы можете проигнорировать это предупреждение, если вы используете прошивку на xiaomi.eu версии 20.2.20+)</string>
     <string name="miui_one_title">Оптимизация MIUI включена!</string>
     <string name="please_be_patient">Пожалуйста, НЕ выходите из приложения в течение этого процесса!</string>
     <string name="redownload">Скачать заново</string>
     <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vancedapp.com, сервера Vanced в Discord или с официального GitHub</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">Версия</string>
     <string name="welcome">Добро пожаловать</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Не удалось найти необходимые файлы для установки. Повторно загрузите установочные файлы и попробуйте еще раз.</string>
     <string name="ifile_missing">Не удалось найти apk-файл для черной/темной темы в памяти устройства, повторите попытку.</string>
     <string name="installation_aborted">Установка не была выполнена, поскольку пользователь прервал установку.</string>
-    <string name="installation_blocked">Установка не была выполнена, поскольку пользователь заблокировал установку.</string>
     <string name="installation_conflict">Установка не удалась, так как приложение конфликтует с уже установленным приложением. Удалите текущую версию приложения, затем повторите попытку.</string>
     <string name="installation_downgrade">Установка не удалась, так как пользователь попытался понизить версию приложения. Удалите обновления обычного приложения YouTube, затем повторите попытку.</string>
     <string name="installation_failed">Установка не удалась по неизвестным причинам, присоединитесь к нашим каналам Telegram или Discord для дальнейшей поддержки. Пожалуйста, также прикрепите скриншот из расширенного меню</string>
