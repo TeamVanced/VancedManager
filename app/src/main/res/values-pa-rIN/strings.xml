@@ -81,14 +81,11 @@
     <string name="magisk_vanced">ਤੁਸੀਂ Vanced ਦੇ Magisk / TWRP ਸੰਸਕਰਣ ਦਾ ਉਪਯੋਗ ਕਰ ਰਹੇ ਹੋ, ਜਿਸਨੂੰ ਬੰਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ ਅੱਤੇ ਇਸ ਐਪ ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਅੱਪਡੇਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ| ਕਿਰਪਾ ਇਸ Magisk ਮੋਡੂਅਲ ਨੂੰ / TWRP Vanced uninstaller ਦਾ ਉਪਯੋਗ ਕਰਕੇ ਹੱਟਾ ਦੇਵੋਂ.</string>
     <string name="microg_bug">ਮਾਈਕਰੋਜੀ ਵਿੱਚ ਬੱਗ</string>
     <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
-    <string name="microg_bug_summary_music">Due to a bug in the original microG, installing Music v4.11+ first requires you to install v4.07.51, open it, then login and only then can you install v4.11 and higher. Do you want to proceed with the installation of v4.07.51?</string>
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="redownload">ਮੁੜ ਡਾਉਨਲੋਡ</string>
     <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vancedapp.com, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
-    <string name="storage_access_required">Storage access required</string>
-    <string name="storage_access_required_summary">In order for Vanced Manager to work, you must grant the storage permission</string>
     <string name="version">ਵਰਜਨ</string>
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਈਲਾਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ. ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਨੂੰ ਮੁੜ ਡਾਉਨਲੋਡ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="ifile_missing">ਸਟੋਰੇਜ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_aborted">ਇੰਸਟਾਲ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਰੱਦ ਕਰ ਦਿੱਤੀ.</string>
-    <string name="installation_blocked">ਇੰਸਟਾਲੇਸ਼ਨ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਬਲਾਕ ਕਰ ਦਿੱਤੀ.</string>
     <string name="installation_conflict">ਸਥਾਪਨਾ ਅਸਫਲ ਕਿਉਂਕਿ ਐਪ ਪਹਿਲਾਂ ਤੋਂ ਸਥਾਪਤ ਐਪ ਨਾਲ ਟਕਰਾਉਂਦੀ ਹੈ. ਐਪ ਦੇ ਮੌਜੂਦਾ ਸੰਸਕਰਣ ਨੂੰ ਅਣਇੰਸਟੌਲ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
