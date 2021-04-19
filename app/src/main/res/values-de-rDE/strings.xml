@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Du benutzt die Magisk/TWRP-Version von Vanced, die nicht mehr unterstützt wird und mit dieser App nicht aktualisiert werden kann. Bitte entferne siie indem du das Magisk-Modul mit dem TWRP Vanced Uninstaller entfernst.</string>
     <string name="microg_bug">Fehler in MicroG</string>
     <string name="microg_bug_summary">Aufgrund eines Fehlers in MicroG ist es erforderlich, zuerst die Version v15.43.32 zu installieren, öffnen und sich anzumelden, um Vanced v16 und höher zu verwenden. Möchten Sie mit der Installation von v15.43.32 fortfahren?</string>
-    <string name="microg_bug_summary_music">Aufgrund eines Fehlers in MicroG, ist es erforderlich zuerst die Version v4.07.51 zu installieren, öffnen und sich anzumelden, um Vanced Music v4.11+ zu verwenden. Möchten Sie mit der Installation von v4.07.51 fortfahren?</string>
     <string name="miui_one">Um Vanced installieren zu können, MÜSSEN Sie MIUI Optimierungen in den Entwickleroptionen deaktivieren. (Bitte ignorieren Sie diese Warnung, wenn Sie xiaomi.eu Roms mit der Version 20.2.20 oder höher verwenden.)</string>
     <string name="miui_one_title">MIUI Optimierungen sind aktiviert!</string>
     <string name="please_be_patient">Bitte schließen Sie die App NICHT während dieses Prozesses!</string>
     <string name="redownload">Erneut herunterladen</string>
     <string name="security_context">Stelle sicher, dass du die App von vancedapp.com, dem Vanced Discord Server oder dem Vanced GitHub heruntergeladen hast</string>
-    <string name="storage_access_required">Speicherberechtigung erforderlich</string>
-    <string name="storage_access_required_summary">Damit Vanced Manager funktionieren kann, müssen Sie die Speicherberechtigung akzeptieren</string>
     <string name="version">Version</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Die benötigten Dateien für die Installation konnten nicht gefunden werden. Laden Sie die Installationsdateien erneut herunter und versuchen Sie es erneut.</string>
     <string name="ifile_missing">Apk-Datei für schwarzes/dunkles Theme konnte nicht gefunden werden, bitte versuchen Sie es erneut.</string>
     <string name="installation_aborted">Installation fehlgeschlagen, da der Benutzer die Installation abgebrochen hat.</string>
-    <string name="installation_blocked">Installation fehlgeschlagen, da der Benutzer die Installation blockiert hat.</string>
     <string name="installation_conflict">Die Installation ist fehlgeschlagen, weil die App in Konflikt mit einer bereits installierten App steht. Deinstalliere die aktuell installierte Version der App und versuchen es dann erneut.</string>
     <string name="installation_downgrade">Installation fehlgeschlagen, da der Benutzer versucht hat, eine ältere Version des Paketes zu installieren. Deinstallieren Sie Updates von der YouTube App und versuchen Sie es erneut.</string>
     <string name="installation_failed">Die Installation ist aus unbekannten Gründen fehlgeschlagen. Betrete unser Telegram Chat oder Discord Server für weitere Unterstützung und halte bitte einen Screenshot aus dem erweiterten Menü bereit</string>
