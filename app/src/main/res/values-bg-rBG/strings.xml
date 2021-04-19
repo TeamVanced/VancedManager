@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Използвате Magisk/TWRP версията на Vanced, която е прекратена и не може да се актуализира с това приложение. Премахнете я като премахнете Magisk модула или чрез TWRP Vanced uninstaller.</string>
     <string name="microg_bug">Бъг в microG</string>
     <string name="microg_bug_summary">Поради бъг в microG инсталирането на Vanced версия 16 изисква първо да се инсталира версия 15.43.32 след това да влезете в профила си след което може да инсталирате 16 и по-нова. Да се инсталира ли версия 15.43.32?</string>
-    <string name="microg_bug_summary_music">Поради бъг в microG инсталирането на Music версия 4.11 изисква първо да се инсталира версия 4.07.51 след това да влезете в профила си след което може да инсталирате 4.11 и по-нова. Да се инсталира ли версия 4.07.51?</string>
     <string name="miui_one">За да инсталирате Vanced, ТРЯБВА да изключите MIUI оптимизациите в настройките за разработчици. (Това не е валидно ако ползвате 20.2.20 или по-нов ROM, базиран на xiaomi.eu)</string>
     <string name="miui_one_title">MIUI оптимизациите са включени!</string>
     <string name="please_be_patient">Моля, НЕ излизайте от приложението по време на този процес!</string>
     <string name="redownload">Изтегли отново</string>
     <string name="security_context">Уверете се, че сте изтеглили приложението от vancedapp.com, Vanced Discord сървъра или от Vanced GitHub</string>
-    <string name="storage_access_required">Нужен е достъп до хранилището</string>
-    <string name="storage_access_required_summary">За да работи Vanced Manager, трябва да предоставите разрешение за съхранение</string>
     <string name="version">Версия</string>
     <string name="welcome">Добре дошли</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Необходимите файлове за инсталация не са открити. Изтеглете ги отново и опитайте пак.</string>
     <string name="ifile_missing">Не може да бъде открит apk файла за черна/тъмна тема, моля опитайте отново.</string>
     <string name="installation_aborted">Инсталацията е неуспешна, защото е прекратена от потребителя.</string>
-    <string name="installation_blocked">Инсталацията е неуспешна, защото е блокирана от потребителя.</string>
     <string name="installation_conflict">Инсталацията е неуспешна, поради конфликт с вече инсталирано приложение. Деинсталирайте го и опитайте отново.</string>
     <string name="installation_downgrade">Инсталацията е неуспешна, защото потребителя се опитва да инсталира по-стара версия на пакета. Деинсталирайте актуализациите на оригиналното приложение и опитайте отново.</string>
     <string name="installation_failed">Инсталацията не бе успешна по неизвестни причини, присъединете се към нашия Telegram или Discord за допълнителна поддръжка. Моля, прикачете и екранна снимка от меню Разширени</string>
