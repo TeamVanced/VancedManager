@@ -81,14 +81,11 @@
     <string name="magisk_vanced">נדמה שאתה משתמש בגרסת ה־Magisk/TWRP של Vanced, שהתמיכה בה הופסקה והיא לא יכולה להתעדכן להתעדכן בעזרת האפליקציה הזו. אנא מחק אותה על ידי מחיקת ה־Module ב־Magisk או בשימוש במסיר ההתקנה של TWRP Vanced.</string>
     <string name="microg_bug">באג בmicroG</string>
     <string name="microg_bug_summary">עקב באג בשירותי microG המקוריים, התקנת גרסת Vanced 16 ומעלה מחייבת תחילה להתקין את גרסה 15.43.32, לפתוח אותה, להתחבר למשתמש שלך ורק אז ניתן להתקין את גרסה 16 ומעלה. האם ברצונך להמשיך בהתקנת גרסה 15.43.32?</string>
-    <string name="microg_bug_summary_music">עקב באג בשירותי microG המקוריים, התקנת גרסת Music 4.11 ומעלה מחייבת תחילה להתקין את גרסה 4.07.51, לפתוח אותה, להתחבר למשתמש שלך ורק אז ניתן להתקין את גרסה 4.11 ומעלה. האם ברצונך להמשיך בהתקנת גרסה 4.07.51?</string>
     <string name="miui_one">על מנת להתקין את Vanced, עליך להשבית מיטוב ל־MIUI בהגדרות מפתחים. (אתה יכול להתעלם מאזהרה זו אם אתה משתמש בגרסה 20.2.2 של הרום הבין־לאומי של שיאומי או גרסה מאוחרת יותר)</string>
     <string name="miui_one_title">מיטוב למערכת ההפעלה MIUI פועל!</string>
     <string name="please_be_patient">נא לא לצאת מהיישום במהלך תהליך זה!</string>
     <string name="redownload">הורד מחדש</string>
     <string name="security_context">ודא שהורדת את האפליקציה מהאתר vancedapp.com, שרת הדיסקורד של Vanced או מהעמוד של Vanced ב־GitHub</string>
-    <string name="storage_access_required">נדרשת הרשאת אחסון</string>
-    <string name="storage_access_required_summary">כדי ש־Vanced Manager יעבוד, עליך להעניק לו הרשאה לאחסון</string>
     <string name="version">גרסא</string>
     <string name="welcome">ברוכים הבאים</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">איתור הקבצים הנדרשים להתקנה נכשל. הורד מחדש את קבצי ההתקנה ונסה שוב.</string>
     <string name="ifile_missing">נכשל האיתור של קובץ APK לערכת נושא שחורה/כהה מהאחסון, אנא נסה שוב.</string>
     <string name="installation_aborted">ההתקנה נכשלה כיוון שהמשתמש ביטל אותה.</string>
-    <string name="installation_blocked">ההתקנה נכשלה כיוון שהמשתמש חסם אותה.</string>
     <string name="installation_conflict">ההתקנה נכשלה כיוון שהאפליקציה מתנגשת עם גרסה מותקנת שלה, מחק את הגרסה הנוכחית של Vanced ולאחר מכן נסה שוב.</string>
     <string name="installation_downgrade">ההתקנה נכשלה כיוון שהמשתמש ניסה לשנמך את גרסת היישום. מחק עדכונים מאפליקציית YouTube הרגילה, ולאחר מכן נסה שוב.</string>
     <string name="installation_failed">ההתקנה נכשלה מסיבות לא ידועות, הצטרף לטלגרם או לדיסקורד לקבלת תמיכה נוספת. אנא צרף גם צילום מסך מהתפריט המתקדם</string>
