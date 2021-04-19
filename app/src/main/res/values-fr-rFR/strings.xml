@@ -81,14 +81,11 @@
     <string name="magisk_vanced">Vous utilisez la version Magisk/TWRP de Vanced, qui n\'est plus entretenu et ne peut pas être mise à jour à l\'aide de cette application. Veuillez la retirer en supprimant le module Magisk/en utilisant le désinstallateur TWRP pour Vanced.</string>
     <string name="microg_bug">Bug dans microG</string>
     <string name="microg_bug_summary">En raison d\'un bug dans le microG d\'origine, l\'installation de Vanced v16+ nécessite d\'abord l\'installation de la v15.43.32., ouvrez celle-ci, puis connectez-vous et vous pourrez désormais installer la v16 ou plus. Voulez-vous procéder à l\'installation de la v15.43.32 ?</string>
-    <string name="microg_bug_summary_music">En raison d\'un but dans le microG d\'origine, l\'installation de Music 4.11+ nécessite d\'abord l\'installation de la v4.07.51, ouvrez-la, puis connectez-vous et vous pourrez désormais installer la v14.11 et plus. Voulez-vous procéder à l\'installation de la v4.07.51 ?</string>
     <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres développeur (vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure de xiaomi.eu)</string>
     <string name="miui_one_title">Les optimisations MIUI sont activées !</string>
     <string name="please_be_patient">Veuillez NE PAS quitter l\'application pendant que celle-ci est en cours de modification !</string>
     <string name="redownload">Re-télécharger</string>
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
-    <string name="storage_access_required">L\'accès au stockage est requis</string>
-    <string name="storage_access_required_summary">Vous devez accorder l\'autorisation de stockage pour que Vanced Manager fonctionne</string>
     <string name="version">Version</string>
     <string name="welcome">Bienvenue</string>
     <!-- Install Page -->
@@ -111,7 +108,6 @@
     <string name="files_missing_va">Impossible de localiser les fichiers nécessaires à l\'installation. Retéléchargez les fichiers d\'installation, puis réessayez.</string>
     <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé, veuillez réessayer.</string>
     <string name="installation_aborted">L\'installation a échoué car l\'utilisateur a abandonné l\'installation.</string>
-    <string name="installation_blocked">L\'installation a échoué, car l\'utilisateur a bloqué l\'installation.</string>
     <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
     <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le paquet. Désinstallez les mises à jour de l\'application d\'origine, puis réessayez.</string>
     <string name="installation_failed">L\'installation a échoué pour des raisons inconnues, rejoignez notre Telegram ou Discord pour plus de support. Veuillez également joindre une capture d\'écran dans le menu Avancé</string>
