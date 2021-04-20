@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.fragment.app.DialogFragment
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -33,7 +34,6 @@ abstract class BindingBottomSheetDialogFragment<VB : ViewBinding> : BottomSheetD
             if (bottomSheetDialogFragment != null) {
                 BottomSheetBehavior.from(bottomSheetDialogFragment).apply {
                     state = BottomSheetBehavior.STATE_EXPANDED
-                    peekHeight = 0
                 }
             }
         }
