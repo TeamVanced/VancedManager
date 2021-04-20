@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Откажи</string>
     <string name="close">Затвори</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_microg">Независна GMS имплементација за Vanced заснована на microG пројекту.</string>
     <string name="description_vanced">Модификовани YouTube клијент са многим корисним функцијама!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_vanced_music">Vanced, али за YouTube Music! Релативно са мање напредних карактеристикама, али ће задовољити ваше потребе.</string>
     <string name="reset">Ресетуј</string>
     <string name="save">Сачувај</string>
     <string name="select_apps">Одабери своје апликације</string>
@@ -24,11 +24,11 @@
     <string name="willing_to_use_root">Не знате шта је ово или не желите да користите роот верзију апликације? Само кликните на плаву стрелицу испод!</string>
     <!-- Home Page -->
     <string name="about_app">О %s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Преузми</string>
+    <string name="accessibility_info">Инфо</string>
+    <string name="accessibility_launch">Покрени</string>
+    <string name="accessibility_uninstall">Деинсталирај</string>
+    <string name="accessibility_update">Ажурирај</string>
     <string name="apps">Апликације</string>
     <string name="changelog">Историја измена</string>
     <string name="downloading_file">Преузимање %1$s</string>
