@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">বাতিল করুন</string>
     <string name="close">বন্ধ করুন</string>
-    <string name="description_microg">মাইক্রোজি প্রকল্পের ভিত্তিতে ভ্যান্সডের জন্য একটি কাস্টম জিএমএস বাস্তবায়ন।</string>
+    <string name="description_microg">মাইক্রোজি প্রকল্পের ভিত্তিতে ভ্যান্সডের জন্য একটি কাস্টম জিএমএস বাস্তবায়ন।.</string>
     <string name="description_vanced">অনেক দরকারী বৈশিষ্ট্য সহ একটি পরিবর্তিত ইউটিউব ক্লায়েন্ট!</string>
-    <string name="description_vanced_music">ভ্যানডড, তবে ইউটিউব মিউজিকের জন্য! তুলনামূলকভাবে কম বৈশিষ্ট্য সমৃদ্ধ তবে আপনার প্রয়োজনীয়তা পূরণ করবে।</string>
+    <string name="description_vanced_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য! তুলনামূলকভাবে কম বৈশিষ্ট্য সমৃদ্ধ তবে আপনার চাহিদা পূরণ করবে।.</string>
     <string name="reset">পুনরায় স্থির করুন</string>
     <string name="save">সংরক্ষণ করুন</string>
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
@@ -21,14 +21,14 @@
     <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
     <string name="lets_get_started">শুরু করা যাক</string>
     <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
-    <string name="willing_to_use_root">এটি জানেন না বা মূল সংস্করণটি ব্যবহার করতে চান না? কেবল নীচের নীল তীর চিহ্নটি ক্লিক করুন!</string>
+    <string name="willing_to_use_root">এটি কি তা জানেন না বা রুট ভার্সনটি ব্যবহার করতে চান না? কেবল নীচের নীল তীর চিহ্নটি ক্লিক করুন!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s এর সম্বন্ধে</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">ডাউনলোড</string>
+    <string name="accessibility_info">তথ্য</string>
+    <string name="accessibility_launch">লঞ্চ করুন</string>
+    <string name="accessibility_uninstall">আনইনস্টল</string>
+    <string name="accessibility_update">আপডেট</string>
     <string name="apps">অ্যাপস</string>
     <string name="changelog">পরিবর্তন নথি</string>
     <string name="downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
@@ -53,9 +53,9 @@
     <string name="link_title">ক্রোম কাস্টম ট্যাবস ব্যবহার করুন</string>
     <string name="push_notifications">%1$s পুশ বিজ্ঞপ্তিগুলি</string>
     <string name="push_notifications_summary">%1$s এর আপডেট প্রকাশিত হলে পুশ বিজ্ঞপ্তি পান</string>
-    <string name="script_save_failed">নতুন সময়ের মান সংরক্ষণ করতে ব্যর্থ</string>
+    <string name="script_save_failed">নতুন সময়ের মান সংরক্ষণ করতে ব্যর্থ হয়েছে</string>
     <string name="script_sleep_timer">রুট স্ক্রিপ্ট স্লিপ টাইম</string>
-    <string name="script_sleep_timer_description">মাউন্টিং ঠিক করার জন্য দরকারী /data/adb/service.d/app.sh স্ক্রিপ্টে ব্যবহৃত স্লিপ টাইম মানটি অ্যাডজাস্ট করুন</string>
+    <string name="script_sleep_timer_description">মাউন্টিং ইস্যু ফিক্স করার জন্য দরকারী /data/adb/service.d/app.sh স্ক্রিপ্টে ব্যবহৃত স্লিপ টাইম মানটি অ্যাডজাস্ট করুন</string>
     <string name="system_default">সিস্টেম দ্বারা র্নির্ধারিত</string>
     <string name="theme">থিম</string>
     <string name="theme_dark">গাঢ় থিম</string>
@@ -79,9 +79,9 @@
     <string name="guide">সহায়িকা</string>
     <string name="hold_on">থামুন!</string>
     <string name="magisk_vanced">আপনি ভ্যান্সড ম্যাজিস্ক/TWRP সংস্করণ ব্যবহার করছেন যা বন্ধ হয়ে গেছে এবং আপনি এটিকে আপডেট করতে পারবেন না। দয়া করে ম্যাজিস্ক মডিউলটি সরিয়ে/TWRP ভ্যান্সড আনইনস্টলার ব্যবহার করে এটি মুছে ফেলুন।</string>
-    <string name="microg_bug">মাইক্রোজি তে ত্রুটি</string>
-    <string name="microg_bug_summary">আসল মাইক্রোজিতে ত্রুটির কারণে, ভ্যান্সড ভি১৬+ ইনস্টল করার জন্য প্রথমে আপনাকে ভি১৫.৪৩.৩২ ইনস্টল করতে হবে, এটি খুলুন, তারপরে লগইন করুন এবং তারপরেই আপনি ভি১৬ এবং পরবর্তী ভার্সন ইনস্টল করতে পারবেন। আপনি কি ভি১৫.৪৩.৩২ এর ইনস্টলেশনের মধ্য দিয়ে এগিয়ে যেতে চান?</string>
-    <string name="miui_one">ভ্যান্সড ইনস্টল করতে, আপনাকে ডেভেলপার সেটিংসে MIUI অপটিমাইজেশন বন্ধ করতে হবে। (আপনি যদি 20.2.20 বা তার পরবর্তী xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কবার্তাটি এড়িয়ে যেতে পারেন)</string>
+    <string name="microg_bug">মাইক্রোজির মধ্যে বাগ</string>
+    <string name="microg_bug_summary">আসল মাইক্রোজিতে একটি বাগের কারণে, ভ্যান্সড ভি১৬+ ইনস্টল করার জন্য প্রথমে আপনাকে ভি১৫. ৪৩. ৩২ ইনস্টল করতে হবে, তারপর এটি খুলুন, তারপরে লগইন করুন এবং তবেই আপনি ভি১৬ এবং পরবর্তী ভার্সন ইনস্টল করতে পারবেন। আপনি কি ভি১৫. ৪৩. ৩২ এর ইনস্টলেশনের মধ্য দিয়ে এগিয়ে যেতে চান?</string>
+    <string name="miui_one">ভ্যান্সড ইনস্টল করতে হলে, আপনাকে ডেভেলপার সেটিংসে MIUI অপটিমাইজেশন বন্ধ করতে হবে। (আপনি যদি ২০.২.২০ বা তার পরবর্তী xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কবার্তাটি এড়িয়ে যেতে পারেন)</string>
     <string name="miui_one_title">MIUI অপটিমাইজেশন সক্ষম করা আছে!</string>
     <string name="please_be_patient">এই প্রক্রিয়া চলাকালীন দয়া করে অ্যাপ্লিকেশন থেকে কোনোমতেই প্রস্থান করবেন না!</string>
     <string name="redownload">পুনরায় ডাউনলোড করুন</string>
