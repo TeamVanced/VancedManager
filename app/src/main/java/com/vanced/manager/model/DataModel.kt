@@ -100,6 +100,7 @@ open class DataModel(
         if (int2 != null && int1 != null) {
             return when {
                 int1 == 0 -> ContextCompat.getDrawable(context, R.drawable.ic_app_download)!!
+                int1 == int2 -> ContextCompat.getDrawable(context, R.drawable.ic_app_reinstall)!!
                 int2 > int1 -> ContextCompat.getDrawable(context, R.drawable.ic_app_update)!!
                 else -> ContextCompat.getDrawable(context, R.drawable.ic_app_download)!!
             }

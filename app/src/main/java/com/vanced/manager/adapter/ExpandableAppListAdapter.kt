@@ -85,10 +85,11 @@ class ExpandableAppListAdapter(
                             )
                         }
                         contentDescription = activity.getString(
-                            if (buttonTag == ButtonTag.UPDATE)
-                                R.string.accessibility_update
-                            else
-                                R.string.accessibility_download
+                            when (buttonTag) {
+                                ButtonTag.UPDATE -> R.string.accessibility_update
+                                ButtonTag.REINSTALL -> R.string.accessibility_reinstall
+                                else -> R.string.accessibility_download
+                            }
                         )
                     }
                 }
