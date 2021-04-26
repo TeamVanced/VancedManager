@@ -67,8 +67,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:scheme="https"
-                    android:host="api.vancedapp.com"
-                    android:pathPrefix="/downloads"/>
+                    android:host="api.vancedapp.com"/>
 
             </intent-filter>
 
