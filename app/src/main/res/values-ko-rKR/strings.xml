@@ -27,7 +27,7 @@
     <string name="accessibility_download">다운로드</string>
     <string name="accessibility_info">정보</string>
     <string name="accessibility_launch">실행</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">재설치</string>
     <string name="accessibility_uninstall">제거</string>
     <string name="accessibility_update">업데이트</string>
     <string name="apps">앱</string>
