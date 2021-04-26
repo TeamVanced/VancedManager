@@ -27,7 +27,7 @@
     <string name="accessibility_download">Pobierz</string>
     <string name="accessibility_info">Informacja</string>
     <string name="accessibility_launch">Uruchom</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">Przeinstaluj</string>
     <string name="accessibility_uninstall">Odinstaluj</string>
     <string name="accessibility_update">Aktualizuj</string>
     <string name="apps">Aplikacje</string>
