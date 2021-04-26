@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">إلغاء</string>
     <string name="close">إغلاق</string>
-    <string name="description_microg">نسخة خاصة من GMS لتطبيق ڤانسد تستند إلى مشروع MicroG.</string>
+    <string name="description_microg">نسخة خاصة من خدمات جوجل للجوال معدة خصيصا لتطبيق ڤانسد بناءً على مشروع microG.</string>
     <string name="description_vanced">تطبيق يوتيوب معدل مع العديد من الميزات المفيدة!</string>
     <string name="description_vanced_music">ڤانسد، ولكن لموسيقى يوتيوب! نسبياً فيه مميزات أقل ولكن يلبي احتياجاتك.</string>
     <string name="reset">إعادة تعيين</string>
