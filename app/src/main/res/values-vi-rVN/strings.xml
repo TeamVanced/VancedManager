@@ -79,8 +79,6 @@
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
     <string name="version">Phiên bản</string>
-    <string name="microg_bug">Lỗi trong microG</string>
-    <string name="microg_bug_summary">Do một lỗi trong microG gốc, bạn phải cài v15.43.32, mở nó lên và đăng nhập, sau đó bạn mới có thể cài đặt v16 và mới hơn. Tiến hành cài đặt v15.43.32?</string>
     <string name="please_be_patient">Vui lòng KHÔNG thoát khỏi ứng dụng trong tiến trình này!</string>
     <string name="welcome">Chào mừng</string>
     <!-- Install Page -->

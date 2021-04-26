@@ -79,8 +79,6 @@
     <string name="security_context">ตรวจสอบให้แน่ใจว่าคุณดาวน์โหลดแอพจากช่องทางที่ถูกต้อง vancedapp.com, เซิร์ฟเวอร์ Vanced Discord หรือ Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s กำหนดค่าการติดตั้ง</string>
     <string name="version">รุ่น</string>
-    <string name="microg_bug">ข้อผิดพลาดใน microG</string>
-    <string name="microg_bug_summary">เนื่องจากพบข้อผิดพลาดใน microG การติดตั้ง Vanced v16 + ก่อนอื่นคุณต้องติดตั้ง v15.43.32, เปิดแอพ, จากนั้นเข้าสู่ระบบ, จากนั้นคุณสามารถติดตั้ง v16 ขึ้นไปได้, คุณต้องการดำเนินการติดตั้ง v15.43.32 ต่อไปหรือไม่?</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">ยินดีต้อนรับ</string>
     <!-- Install Page -->

@@ -79,8 +79,6 @@
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vancedapp.com, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
     <string name="app_installation_preferences">%1$s ইনস্টল করার পছন্দগুলি</string>
     <string name="version">সংস্করণ</string>
-    <string name="microg_bug">মাইক্রোজি তে ত্রুটি</string>
-    <string name="microg_bug_summary">আসল মাইক্রোজিতে ত্রুটির কারণে, ভ্যান্সড ভি১৬+ ইনস্টল করার জন্য প্রথমে আপনাকে ভি১৫.৪৩.৩২ ইনস্টল করতে হবে, এটি খুলুন, তারপরে লগইন করুন এবং তারপরেই আপনি ভি১৬ এবং পরবর্তী ভার্সন ইনস্টল করতে পারবেন। আপনি কি ভি১৫.৪৩.৩২ এর ইনস্টলেশনের মধ্য দিয়ে এগিয়ে যেতে চান?</string>
     <string name="please_be_patient">এই প্রক্রিয়া চলাকালীন দয়া করে অ্যাপ্লিকেশন থেকে কোনোমতেই প্রস্থান করবেন না!</string>
     <string name="welcome">স্বাগত</string>
     <!-- Install Page -->

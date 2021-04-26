@@ -79,8 +79,6 @@
     <string name="security_context">항상 vancedapp.com, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 Vanced Manager 앱을 다운로드해주세요.</string>
     <string name="app_installation_preferences">%1$s 설치 설정</string>
     <string name="version">버전</string>
-    <string name="microg_bug">microG의 버그</string>
-    <string name="microg_bug_summary">기존 microG의 버그로 인해 v15.43.32를 먼저 설치하고 연 다음 로그인해야 Vanced v16 이상을 설치할 수 있습니다. v15.43.32 설치를 진행하시겠습니까?</string>
     <string name="please_be_patient">이 작업을 하는 동안 이 앱에서 나가지 마세요!</string>
     <string name="welcome">환영합니다</string>
     <!-- Install Page -->

@@ -79,8 +79,6 @@
     <string name="security_context">Certifique-se de fazer o download do aplicativo em vancedapp.com, no servidor Vanced Discord ou no Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s Preferências de Instalação</string>
     <string name="version">Versão</string>
-    <string name="microg_bug">Bug no microG</string>
-    <string name="microg_bug_summary">Devido a um bug no microG original, instalar a versão 16+ requer que você instale a versão 15.43.32, abra ela, faça login e só então você pode instalar a versão 16 em diante. Você deseja proceder com a instalação da versão 15.43.32?</string>
     <string name="please_be_patient">Por favor NÃO saia do aplicativo durante este processo!</string>
     <string name="welcome">Bem-vindo</string>
     <!-- Install Page -->

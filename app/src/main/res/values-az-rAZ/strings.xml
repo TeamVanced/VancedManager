@@ -79,8 +79,6 @@
     <string name="security_context">Tətbiqi vancedapp.com, Vanced Discord server və ya Vanced GitHub\'dan endirdiyinizə əmin olun</string>
     <string name="app_installation_preferences">%1$s Qurma Seçimləri</string>
     <string name="version">Versiya</string>
-    <string name="microg_bug">Amma microG\'də</string>
-    <string name="microg_bug_summary">microG\'də olan xəta səbəbindən Vanced 16+ yükləmək üçün əvvəlcə v15.43.32 versiyasını yükləməlisiniz, bunun üçün onu açıb giriş etməlisiniz, ancaq ondan sonra v16 ya da üstünü quraşdıra bilərsiniz. v15.43.32 versiyasını yükləmək istəyirsiniz?</string>
     <string name="please_be_patient">Xahiş olunur iş gedərkən tətbiqi TƏRK ETMƏYİN!</string>
     <string name="welcome">Xoş gəlmisiniz</string>
     <!-- Install Page -->

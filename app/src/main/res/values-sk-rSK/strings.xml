@@ -79,8 +79,6 @@
     <string name="security_context">Uistite sa, že ste si aplikáciu stiahli zo stránky vancedapp.com, servera Vanced Discord alebo Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s Predvoľby inštalácie</string>
     <string name="version">Verzia</string>
-    <string name="microg_bug">Chyba v microG</string>
-    <string name="microg_bug_summary">Kvôli chybe v pôvodnom microG si inštalácia Vanced v16+ vyžaduje najskôr inštaláciu v15.43.32, otvorenie, následné prihlásenie a až potom môžete nainštalovať v16 ​​a vyššiu. Chcete pokračovať v inštalácii verzie 15.43.32?</string>
     <string name="please_be_patient">Počas tohto procesu NEODCHÁDZAJTE z aplikácie!</string>
     <string name="welcome">Vitajte</string>
     <!-- Install Page -->

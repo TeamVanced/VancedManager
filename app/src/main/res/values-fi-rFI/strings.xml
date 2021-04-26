@@ -79,8 +79,6 @@
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
     <string name="app_installation_preferences">%1$s asennusasetukset</string>
     <string name="version">Versio</string>
-    <string name="microg_bug">Virhe microG:ssä</string>
-    <string name="microg_bug_summary">Alkuperäisessä microG:ssä olevan bugin takia sinun tulee asentaa Vancedin versio 15.43.32, avata se ja kirjautua sisään, ennen kuin voin asentaa version 16 tai uudemman. Haluatko jatkaa version 15.43.32 asentamista?</string>
     <string name="please_be_patient">ÄLÄ poistu sovelluksesta tämän prosessin aikana!</string>
     <string name="welcome">Tervetuloa</string>
     <!-- Install Page -->

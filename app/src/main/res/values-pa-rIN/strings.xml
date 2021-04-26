@@ -79,8 +79,6 @@
     <string name="security_context">ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ vancedapp.com, Vanced Discord ਸਰਵਰ ਜਾਂ Vanced GitHub ਤੋਂ ਐਪ ਡਾਉਨਲੋਡ ਕੀਤਾ ਹੈ</string>
     <string name="app_installation_preferences">%1$s ਸਥਾਪਨਾ ਚੁਣੋ</string>
     <string name="version">ਵਰਜਨ</string>
-    <string name="microg_bug">ਮਾਈਕਰੋਜੀ ਵਿੱਚ ਬੱਗ</string>
-    <string name="microg_bug_summary">Due to a bug in the original microG, installing Vanced v16+ first requires you to install v15.43.32, open it, then login and only then can you install v16 and higher. Do you want to proceed with the installation of v15.43.32?</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
     <string name="welcome">ਜੀ ਆਇਆਂ ਨੂੰ</string>
     <!-- Install Page -->

@@ -79,8 +79,6 @@
     <string name="security_context">Pê bawer bin ku te ev sepan ji vancedapp.com, servera Discord a Vanced an jî JiGitHub ya Vanced dakêşandine</string>
     <string name="app_installation_preferences">Vebijarkên Sazkirinê yên %1$s</string>
     <string name="version">Versiyon</string>
-    <string name="microg_bug">Çewtî di MicroG de</string>
-    <string name="microg_bug_summary">Ji ber çewtiyek di mîkroG ya orîjînal de, sazkirina Vanced v16+ yekem hewce dike ku hûn v15.43.32 saz bikin, vekin, paşê têbikevin û tenê paşê hûn dikarin v16 û bilindtir saz bikin. Hûn dixwazin sazkirina v15.43.32 berdewam bikin?</string>
     <string name="please_be_patient">Ji kerema xwe di vê pêvajoyê de ji sepanê dernakeve!</string>
     <string name="welcome">Bi xêr hatî</string>
     <!-- Install Page -->

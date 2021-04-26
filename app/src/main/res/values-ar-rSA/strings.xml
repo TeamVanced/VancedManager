@@ -79,8 +79,6 @@
     <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="app_installation_preferences">تفضيلات تثبيت %1$s</string>
     <string name="version">الإصدار</string>
-    <string name="microg_bug">خطأ في المايكروجي</string>
-    <string name="microg_bug_summary">نظرًا لوجود خطأ في microG الأساسي، يتطلب تثبيت ڤاسند v16 + أولاً تثبيت الإصدار 15.43.32 ، وفتحه ، ثم تسجيل الدخول وبعد ذلك فقط يمكنك تثبيت الإصدار 16 والإصدارات الأحدث. هل تريد متابعة تثبيت الإصدار 15.43.32؟</string>
     <string name="please_be_patient">الرجاء عدم الخروج من التطبيق أثناء هذه العملية!</string>
     <string name="welcome">مرحباً بك</string>
     <!-- Install Page -->

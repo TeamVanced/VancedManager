@@ -79,8 +79,6 @@
     <string name="security_context">നിങ്ങൾ vancedapp.com, Vanced Discord സെർവർ, അല്ലെങ്കിൽ Vanced GitHub എന്നിവയിൽ നിന്ന് അപ്ലിക്കേഷൻ download ൺലോഡ് ചെയ്തുവെന്ന് ഉറപ്പാക്കുക</string>
     <string name="app_installation_preferences">%1$s ഇൻസ്റ്റാളേഷൻ മുൻഗണനകൾ</string>
     <string name="version">പതിപ്പ്</string>
-    <string name="microg_bug">മൈക്രോജിയിൽ ബഗ്</string>
-    <string name="microg_bug_summary">യഥാർത്ഥ മൈക്രോജിയിലെ ഒരു ബഗ് കാരണം, ആദ്യം വാൻ‌സ്ഡ് വി 16 + ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന് നിങ്ങൾ വി 15.43.32 ഇൻസ്റ്റാൾ ചെയ്യേണ്ടതുണ്ട്, അത് തുറക്കുക, തുടർന്ന് ലോഗിൻ ചെയ്യുക, അതിനുശേഷം മാത്രമേ നിങ്ങൾക്ക് വി 16 ഉം അതിലും ഉയർന്നതും ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിയൂ. V15.43.32 ഇൻസ്റ്റാളേഷൻ തുടരാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</string>
     <string name="please_be_patient">പ്രോസസ്സ് സമയത്ത് അപ്ലിക്കേഷനിൽ നിന്ന് പുറത്തുകടക്കരുത്!</string>
     <string name="welcome">സ്വാഗതം</string>
     <!-- Install Page -->

@@ -79,8 +79,6 @@
     <string name="security_context">Uygulamayı vancedapp.com, Vanced Discord sunucusu, veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
     <string name="app_installation_preferences">%1$s Kurulum Tercihleri</string>
     <string name="version">Sürüm</string>
-    <string name="microg_bug">MicroG\'de sorun var</string>
-    <string name="microg_bug_summary">MicroG kaynaklı bir hatadan dolayı, Vanced sürüm 16+ kurulumunun yapılabilmesi için öncelikle ve sırasıyla v15.43.32 sürümünün cihaza kurulması, çalıştırılması/açılması ve Google hesabı ile oturum açılması gerekiyor. Sonrasında v16 veya üzeri sürümün kurulumunu yapabilirsin. Vanced v15.43.32 sürümünün kurulumuna devam edilsin mi?</string>
     <string name="please_be_patient">İşlem süresince LÜTFEN uygulamadan çıkmayın!</string>
     <string name="welcome">Hoş Geldiniz</string>
     <!-- Install Page -->

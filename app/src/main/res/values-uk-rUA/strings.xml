@@ -79,8 +79,6 @@
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vancedapp.com, Vanced Discord сервер або Vanced GitHub</string>
     <string name="app_installation_preferences">Параметри встановлення %1$s</string>
     <string name="version">Версія</string>
-    <string name="microg_bug">Помилка в microG</string>
-    <string name="microg_bug_summary">У зв\'язку з помилкою в microG, встановлення Vanced версії 16+ спочатку вимагає встановлення версії 15.43.32, потім необхідно відкрити додаток, авторизуватися в акаунті і тільки після цього можна буде встановити версію 16 і вище. Ви хочете продовжити встановлення версії 15.43.32?</string>
     <string name="please_be_patient">Будь ласка, НЕ завершуйте роботу додатку під час цього процесу!</string>
     <string name="welcome">Привіт!</string>
     <!-- Install Page -->

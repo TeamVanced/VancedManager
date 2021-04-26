@@ -79,8 +79,6 @@
     <string name="security_context">Vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="app_installation_preferences">%1$s のインストール設定</string>
     <string name="version">バージョン</string>
-    <string name="microg_bug">microG のバグ</string>
-    <string name="microg_bug_summary">最新版の microG のバグにより、Vanced のバージョン16以上をインストールするには、先にバージョン15.43.32をインストールし、起動して、ログインする必要があります。バージョン15.43.32をインストールしますか?</string>
     <string name="please_be_patient">この処理中はアプリを終了しないでください!</string>
     <string name="welcome">ようこそ</string>
     <!-- Install Page -->

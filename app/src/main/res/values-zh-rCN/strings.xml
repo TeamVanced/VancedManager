@@ -79,8 +79,6 @@
     <string name="security_context">请确保您是从 vancedapp.com 、 Vanced Discord 服务器或 Vanced Github 下载本应用</string>
     <string name="app_installation_preferences">%1$s 安装首选设定</string>
     <string name="version">版本</string>
-    <string name="microg_bug">microG 中的缺陷</string>
-    <string name="microg_bug_summary">由于原版 microG 中的一处缺陷，安装 Vanced v16+ 需要您先安装 v15.43.32，打开并登录，然后您才能安装 v16 及更高版本。您想要继续安装 v15.43.32 吗？</string>
     <string name="please_be_patient">请不要在此过程中退出应用！</string>
     <string name="welcome">欢迎</string>
     <!-- Install Page -->

@@ -80,9 +80,6 @@ Akarod telepíteni?</string>
     <string name="security_context">Arra kérünk, győződjön meg róla, hogy ezt az alkalmazást a vancedapp.com oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötte le</string>
     <string name="app_installation_preferences">%1$s Telepítés személyreszabása</string>
     <string name="version">Verzió</string>
-    <string name="microg_bug">Hiba a microG-ben</string>
-    <string name="microg_bug_summary">Egy, a microG-ben jelenlévő hiba miatt, a Vanced 16+ verzióihoz először telepítse a 15.43.32-es verziót, nyissa meg, jelentkezzen be, majd csak ezután tudja telepíteni a 16-os vagy újabb verziót.
-Akarja folytatni a 15.43.32-es verzió telepítésével?</string>
     <string name="please_be_patient">Kérjük NE lépjen ki a telepítési folyamat alatt!</string>
     <string name="welcome">Üdvözöljük</string>
     <!-- Install Page -->

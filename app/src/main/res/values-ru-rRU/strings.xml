@@ -79,8 +79,6 @@
     <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vancedapp.com, сервера Vanced в Discord или с официального GitHub</string>
     <string name="app_installation_preferences">Параметры установки %1$s</string>
     <string name="version">Версия</string>
-    <string name="microg_bug">Ошибка в microG</string>
-    <string name="microg_bug_summary">В связи с ошибкой в microG, установка Vanced версии 16+ сначала требует установку версии 15.43.32, затем необходимо открыть приложение, авторизоваться в аккаунте и только после этого можно будет установить версию 16 и выше. Вы хотите продолжить установку версии 15.43.32?</string>
     <string name="please_be_patient">Пожалуйста, НЕ выходите из приложения в течение этого процесса!</string>
     <string name="welcome">Добро пожаловать</string>
     <!-- Install Page -->

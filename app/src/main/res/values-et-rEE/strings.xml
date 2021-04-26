@@ -79,8 +79,6 @@
     <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
     <string name="app_installation_preferences">%1$s Paigalduseelistused</string>
     <string name="version">Versioon</string>
-    <string name="microg_bug">microG viga</string>
-    <string name="microg_bug_summary">Seoses originaal microG veaga, vajab Vanced v16+ paigaldus ennem v15.43.32 versiooni paigaldust, sisselogimist ja alles siis saab paigaldada v16 või uuema. Kas soovite jätkata v15.43.32 paigaldusega?</string>
     <string name="please_be_patient">Palun ärge väljuge rakendusest protsessi ajal!</string>
     <string name="welcome">Tere tulemast</string>
     <!-- Install Page -->

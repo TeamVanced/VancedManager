@@ -79,8 +79,6 @@
     <string name="security_context">Stelle sicher, dass du die App von vancedapp.com, dem Vanced Discord Server oder dem Vanced GitHub heruntergeladen hast</string>
     <string name="app_installation_preferences">%1$s Installationsoptionen</string>
     <string name="version">Version</string>
-    <string name="microg_bug">Fehler in MicroG</string>
-    <string name="microg_bug_summary">Aufgrund eines Fehlers in MicroG ist es erforderlich, zuerst die Version v15.43.32 zu installieren, öffnen und sich anzumelden, um Vanced v16 und höher zu verwenden. Möchten Sie mit der Installation von v15.43.32 fortfahren?</string>
     <string name="please_be_patient">Bitte schließen Sie die App NICHT während dieses Prozesses!</string>
     <string name="welcome">Willkommen</string>
     <!-- Install Page -->

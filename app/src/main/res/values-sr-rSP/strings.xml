@@ -79,8 +79,6 @@
     <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта vancedapp.com, Vanced Discord сервера или Vanced GitHub-а</string>
     <string name="app_installation_preferences">%1$s Инсталациона подешавања</string>
     <string name="version">Верзија</string>
-    <string name="microg_bug">Грешка у МикроГ апликацији</string>
-    <string name="microg_bug_summary">Услед грешке у оригиналној МикроГ апликацији инсталација Vanced v16+ захтева инсталирање v15.43.32 апликације, отворите улогујете се и онда инсталирати v16 или новију верзију. Желите да наставите инсталацију v15.43.32?</string>
     <string name="please_be_patient">Немојте излазити из апликације у току овога процеса!</string>
     <string name="welcome">Добро дошли</string>
     <!-- Install Page -->

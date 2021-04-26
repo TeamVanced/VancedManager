@@ -79,8 +79,6 @@
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="app_installation_preferences">%1$s Préférences d\'installation</string>
     <string name="version">Version</string>
-    <string name="microg_bug">Bug dans microG</string>
-    <string name="microg_bug_summary">En raison d\'un bug dans le microG d\'origine, l\'installation de Vanced v16+ nécessite d\'abord l\'installation de la v15.43.32., ouvrez celle-ci, puis connectez-vous et vous pourrez désormais installer la v16 ou plus. Voulez-vous procéder à l\'installation de la v15.43.32 ?</string>
     <string name="please_be_patient">Veuillez NE PAS quitter l\'application pendant que celle-ci est en cours de modification !</string>
     <string name="welcome">Bienvenue</string>
     <!-- Install Page -->
