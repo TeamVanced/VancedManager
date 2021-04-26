@@ -23,95 +23,91 @@
         tools:scaleX="1"
         tools:scaleY="1">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/app_version_container"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constrainedWidth="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/app_button_container">
 
-            <com.vanced.manager.ui.core.ThemedTextView
-                android:id="@+id/app_version_latest_text"
-                style="@style/AppVersionText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="@string/latest" />
+            <com.google.android.flexbox.FlexboxLayout
+                app:flexWrap="wrap"
+                app:flexDirection="row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            <com.vanced.manager.ui.core.ThemedTextView
-                android:id="@+id/app_version_latest"
-                style="@style/AppVersionTextNumber"
-                app:layout_constraintStart_toEndOf="@id/app_version_latest_text"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="16.XX.XX" />
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_latest_text"
+                    style="@style/AppVersionText"
+                    android:text="@string/latest" />
 
-            <com.vanced.manager.ui.core.ThemedTextView
-                android:id="@+id/app_version_installed_text"
-                style="@style/AppVersionText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/app_version_latest_text"
-                android:text="@string/version_installed"/>
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_latest"
+                    style="@style/AppVersionTextNumber"
+                    tools:text="16.XX.XX" />
 
-            <com.vanced.manager.ui.core.ThemedTextView
-                android:id="@+id/app_version_installed"
-                style="@style/AppVersionTextNumber"
-                app:layout_constraintStart_toEndOf="@id/app_version_installed_text"
-                app:layout_constraintTop_toBottomOf="@id/app_version_latest"
-                android:textSize="12sp"
-                tools:text="16.XX.XX" />
+            </com.google.android.flexbox.FlexboxLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.flexbox.FlexboxLayout
+                app:flexWrap="wrap"
+                app:flexDirection="row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-        <com.google.android.flexbox.FlexboxLayout
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_installed_text"
+                    style="@style/AppVersionText"
+                    android:text="@string/version_installed"/>
+
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_installed"
+                    style="@style/AppVersionTextNumber"
+                    android:textSize="12sp"
+                    tools:text="16.XX.XX" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/app_button_container"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/app_version_container"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constrainedWidth="true"
-            android:layout_marginStart="16dp"
-            app:flexWrap="wrap"
-            app:flexDirection="row_reverse">
-
-            <com.vanced.manager.ui.core.ThemedIconButton
-                android:id="@+id/app_download"
-                style="@style/AppActionButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:icon="@drawable/ic_app_download"
-                android:contentDescription="@string/accessibility_download"/>
-
-            <com.vanced.manager.ui.core.ThemedIconButton
-                android:id="@+id/app_launch"
-                style="@style/AppActionButton"
-                app:layout_constraintEnd_toStartOf="@id/app_download"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:icon="@drawable/ic_baseline_launch_24"
-                android:contentDescription="@string/accessibility_launch"/>
-
-            <com.vanced.manager.ui.core.ThemedIconButton
-                android:id="@+id/app_uninstall"
-                style="@style/AppActionButton"
-                app:layout_constraintEnd_toStartOf="@id/app_launch"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:icon="@drawable/ic_app_uninstall"
-                android:contentDescription="@string/accessibility_uninstall"/>
+            android:layout_marginStart="16dp">
 
             <com.vanced.manager.ui.core.ThemedIconButton
                 android:id="@+id/app_info"
                 style="@style/AppActionButton"
-                app:layout_constraintEnd_toStartOf="@id/app_uninstall"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:icon="@drawable/ic_app_info"
                 android:contentDescription="@string/accessibility_info"/>
 
-        </com.google.android.flexbox.FlexboxLayout>
+            <com.vanced.manager.ui.core.ThemedIconButton
+                android:id="@+id/app_uninstall"
+                style="@style/AppActionButton"
+                app:icon="@drawable/ic_app_uninstall"
+                android:contentDescription="@string/accessibility_uninstall"/>
+
+            <com.vanced.manager.ui.core.ThemedIconButton
+                android:id="@+id/app_launch"
+                style="@style/AppActionButton"
+                app:icon="@drawable/ic_baseline_launch_24"
+                android:contentDescription="@string/accessibility_launch"/>
+
+            <com.vanced.manager.ui.core.ThemedIconButton
+                android:id="@+id/app_download"
+                style="@style/AppActionButton"
+                app:icon="@drawable/ic_app_download"
+                android:contentDescription="@string/accessibility_download"/>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
