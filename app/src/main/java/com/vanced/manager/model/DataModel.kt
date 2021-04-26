@@ -89,7 +89,7 @@ open class DataModel(
             return when {
                 int1 == 0 -> ButtonTag.INSTALL
                 int2 > int1 -> ButtonTag.UPDATE
-                int2 == int1 || int1 > int2 -> ButtonTag.REINSTALL
+                int1 >= int2 -> ButtonTag.REINSTALL
                 else -> ButtonTag.INSTALL
             }
         }
@@ -100,8 +100,8 @@ open class DataModel(
         if (int2 != null && int1 != null) {
             return when {
                 int1 == 0 -> ContextCompat.getDrawable(context, R.drawable.ic_app_download)!!
-                int1 == int2 -> ContextCompat.getDrawable(context, R.drawable.ic_app_reinstall)!!
                 int2 > int1 -> ContextCompat.getDrawable(context, R.drawable.ic_app_update)!!
+                int1 >= int2 -> ContextCompat.getDrawable(context, R.drawable.ic_app_reinstall)!!
                 else -> ContextCompat.getDrawable(context, R.drawable.ic_app_download)!!
             }
         }
