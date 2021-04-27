@@ -52,7 +52,7 @@
     <string name="language_title">Taal</string>
     <string name="link_custom_tabs">Links zullen openen in aangepaste Chrome-tabs</string>
     <string name="link_title">Aangepaste Chrome-tabs gebruiken</string>
-    <string name="push_notifications">Pushmeldingen voor %1$s</string>
+    <string name="push_notifications">Pushmeldingen %1$s</string>
     <string name="push_notifications_summary">Pushmeldingen ontvangen wanneer er een update voor %1$s beschikbaar is</string>
     <string name="script_save_failed">Bewaren van nieuwe waarde voor slaaptimer mislukt</string>
     <string name="script_sleep_timer">Slaaptimer root script</string>
