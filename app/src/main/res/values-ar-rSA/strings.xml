@@ -5,29 +5,29 @@
     <string name="close">إغلاق</string>
     <string name="description_microg">نسخة خاصة من خدمات جوجل للجوال معدة خصيصا لتطبيق ڤانسد بناءً على مشروع microG.</string>
     <string name="description_vanced">تطبيق يوتيوب معدل مع العديد من الميزات المفيدة!</string>
-    <string name="description_vanced_music">ڤانسد، ولكن لموسيقى يوتيوب! نسبياً فيه مميزات أقل ولكن يلبي احتياجاتك.</string>
+    <string name="description_vanced_music">ڤانسد لموسيقى يوتيوب! يلبي احتياجاتك حتى وان كان يضم ميزات اقل من ڤانسد.</string>
     <string name="reset">إعادة تعيين</string>
     <string name="save">حفظ</string>
     <string name="select_apps">اختر تطبيقاتك</string>
     <!-- Main Activity -->
     <string name="title_about">حول</string>
-    <string name="title_guide">الدليل</string>
+    <string name="title_guide">دليل الاستخدام</string>
     <string name="title_home">المدير</string>
-    <string name="title_logs">السجل</string>
+    <string name="title_logs">السجلات</string>
     <string name="title_settings">الإعدادات</string>
     <string name="update_manager">تحديث المدير</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">هل جهازك مروت؟</string>
     <string name="grant_root">امنح صلاحيات الروت</string>
     <string name="lets_get_started">فلنبدأ</string>
-    <string name="select_at_least_one_app">حدد تطبيق واحد على الأقل!</string>
+    <string name="select_at_least_one_app">اختر تطبيقاً واحداً على الأقل!</string>
     <string name="willing_to_use_root">لا تعرف ما هذا أو لا تود استخدام نسخة الروت؟ اضغط على السهم الأزرق في الأسفل!</string>
     <!-- Home Page -->
-    <string name="about_app">حوالي %1$s</string>
+    <string name="about_app">حول %1$s</string>
     <string name="accessibility_download">تنزيل</string>
     <string name="accessibility_info">المعلومات</string>
     <string name="accessibility_launch">تشغيل</string>
-    <string name="accessibility_reinstall">إعادة التثبيت</string>
+    <string name="accessibility_reinstall">أعد التثبيت</string>
     <string name="accessibility_uninstall">إلغاء التثبيت</string>
     <string name="accessibility_update">تحديث</string>
     <string name="apps">التطبيقات</string>
@@ -103,7 +103,7 @@
     <string name="chown_fail">فشل تغيير ملكية حزمة التثبيت الى مالك النظام، الرجاء المحاولة مرة أخرى.</string>
     <string name="error_downloading">خطأ في تنزيل %1$s</string>
     <string name="failed_accent">فشل تطبيق لون النسق الجديد</string>
-    <string name="failed_uninstall">فشل في الغاء تثبيت الحزمة %1$s</string>
+    <string name="failed_uninstall">فشل في الغاء تثبيت حزمة %1$s</string>
     <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
