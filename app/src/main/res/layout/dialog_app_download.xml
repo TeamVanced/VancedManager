@@ -17,18 +17,39 @@
 
         <TextView
             android:id="@+id/app_download_patient"
+            style="@style/DialogCardSubtitle"
+            android:layout_height="wrap_content"
             android:layout_below="@id/app_download_header"
-            android:text="@string/please_be_patient"
-            style="@style/DialogCardSubtitle" />
+            android:layout_marginBottom="18dp"
+            android:text="@string/please_be_patient" />
 
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:id="@+id/app_download_progressbar"
+        <RelativeLayout
+            android:id="@+id/app_download_progressbar_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/app_download_patient"
-            android:layout_marginTop="24dp"
-            app:trackCornerRadius="15dp"
-            tools:progress="10" />
+            android:layout_below="@id/app_download_patient">
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/app_download_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:trackCornerRadius="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/app_download_progress"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                tools:progress="10" />
+
+            <TextView
+                android:id="@+id/app_download_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                tools:text="20%" />
+
+        </RelativeLayout>
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/app_install_progressbar"
@@ -36,8 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@id/app_download_progressbar"
-            android:layout_marginTop="24dp"
+            android:layout_below="@id/app_download_progressbar_container"
             android:indeterminate="true"
             app:trackCornerRadius="15dp" />
 
@@ -45,7 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/app_install_progressbar"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="6dp">
 
             <TextView
                 android:id="@+id/app_download_file"

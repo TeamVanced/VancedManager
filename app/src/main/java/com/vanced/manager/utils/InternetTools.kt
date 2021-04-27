@@ -43,16 +43,23 @@ var baseInstallUrl = ""
 
 fun openUrl(url: String, color: Int, context: Context) {
     try {
-        val customTabPrefs = getDefaultSharedPreferences(context).getBoolean("use_custom_tabs", true)
+        val customTabPrefs =
+            getDefaultSharedPreferences(context).getBoolean("use_custom_tabs", true)
         if (customTabPrefs) {
             val builder = CustomTabsIntent.Builder()
-            val params = CustomTabColorSchemeParams.Builder().setToolbarColor(ContextCompat.getColor(context, color))
+            val params = CustomTabColorSchemeParams.Builder()
+                .setToolbarColor(ContextCompat.getColor(context, color))
             builder.setDefaultColorSchemeParams(params.build())
             val customTabsIntent = builder.build()
             customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             customTabsIntent.launchUrl(context, url.toUri())
         } else
-            context.startActivity(Intent(Intent.ACTION_VIEW, url.toUri()).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+            context.startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    url.toUri()
+                ).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            )
 
     } catch (e: ActivityNotFoundException) {
         Toast.makeText(context, R.string.error, Toast.LENGTH_SHORT).show()
@@ -103,7 +110,7 @@ suspend fun loadJson(context: Context) = withContext(Dispatchers.IO) {
     val versions = getJson("$baseInstallUrl/versions.json?$fetchTime")
     isMicrogBroken = latest?.boolean("is_microg_broken") ?: false
     vanced.postValue(latest?.obj("vanced"))
-    vancedVersions.postValue(versions?.array("vanced") )
+    vancedVersions.postValue(versions?.array("vanced"))
     music.postValue(latest?.obj("music"))
     musicVersions.postValue(versions?.array("music"))
     microg.postValue(latest?.obj("microg"))
@@ -137,4 +144,4 @@ fun checkSHA256(sha256: String, updateFile: File): Boolean {
     }
 }
 
-const val baseUrl = "https://vancedapp.com/api/v1"
+const val baseUrl = "https://api.vancedapp.com/api/v1"

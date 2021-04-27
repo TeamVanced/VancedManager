@@ -2,11 +2,10 @@ package com.vanced.manager.ui.dialogs
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.toBitmap
+import androidx.annotation.DrawableRes
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogAppInfoBinding
@@ -21,13 +20,15 @@ class AppInfoDialog : BindingDialogFragment<DialogAppInfoBinding>() {
 
         fun newInstance(
             appName: String?,
-            appIcon: Drawable?,
+            @DrawableRes appIcon: Int?,
             changelog: String?
         ): AppInfoDialog = AppInfoDialog().apply {
             arguments = Bundle().apply {
                 putString(TAG_APP_NAME, appName)
                 putString(TAG_CHANGELOG, changelog)
-                putParcelable(TAG_APP_ICON, appIcon?.toBitmap())
+                if (appIcon != null) {
+                    putInt(TAG_APP_ICON, appIcon)
+                }
             }
         }
     }
@@ -47,7 +48,7 @@ class AppInfoDialog : BindingDialogFragment<DialogAppInfoBinding>() {
         with(binding) {
             aboutAppName.text = getString(R.string.about_app, arguments?.getString(TAG_APP_NAME))
             aboutAppChangelog.text = arguments?.getString(TAG_CHANGELOG)
-            aboutAppImage.setImageBitmap(arguments?.getParcelable(TAG_APP_ICON))
+            arguments?.getInt(TAG_APP_ICON)?.let { aboutAppImage.setImageResource(it) }
         }
     }
 }

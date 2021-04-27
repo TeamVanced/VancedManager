@@ -7,6 +7,7 @@ import android.view.MenuInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.fragment.app.FragmentActivity
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -34,6 +35,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private val prefs by lazy { getDefaultSharedPreferences(requireActivity()) }
 
     private lateinit var variant: String
+    private lateinit var parentActivity: FragmentActivity
 
     override fun binding(
         inflater: LayoutInflater,
@@ -43,6 +45,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     override fun otherSetups() {
         setHasOptionsMenu(true)
+        parentActivity = requireActivity()
         bindData()
     }
 
@@ -63,8 +66,8 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
 
     private fun FragmentSettingsBinding.bindRecycler() {
         notificationsRecycler.apply {
-            layoutManager = LinearLayoutManager(requireActivity())
-            adapter = GetNotifAdapter(requireActivity())
+            layoutManager = LinearLayoutManager(parentActivity)
+            adapter = GetNotifAdapter(parentActivity)
         }
     }
 
@@ -72,7 +75,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
         firebase.setOnCheckedListener { _, isChecked ->
             FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(isChecked)
             FirebasePerformance.getInstance().isPerformanceCollectionEnabled = isChecked
-            FirebaseAnalytics.getInstance(requireActivity()).setAnalyticsCollectionEnabled(isChecked)
+            FirebaseAnalytics.getInstance(parentActivity).setAnalyticsCollectionEnabled(isChecked)
         }
     }
 
@@ -93,7 +96,13 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindClearFiles() {
         clearFiles.setOnClickListener {
             with(requireActivity()) {
-                listOf("vanced/nonroot", "vanced/root", "music/nonroot", "music/root", "microg").forEach { dir ->
+                listOf(
+                    "vanced/nonroot",
+                    "vanced/root",
+                    "music/nonroot",
+                    "music/root",
+                    "microg"
+                ).forEach { dir ->
                     File(getExternalFilesDir(dir)?.path.toString()).deleteRecursively()
                 }
                 Toast.makeText(this, getString(R.string.cleared_files), Toast.LENGTH_SHORT).show()
@@ -116,7 +125,7 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     }
 
     private fun FragmentSettingsBinding.bindManagerAccentColor() {
-        managerAccentColor.apply{
+        managerAccentColor.apply {
             setSummary(prefs.getInt("manager_accent_color", defAccentColor).toHex())
             setOnClickListener { showDialog(ManagerAccentColorDialog()) }
             accentColor.observe(viewLifecycleOwner) {
@@ -128,14 +137,15 @@ class SettingsFragment : BindingFragment<FragmentSettingsBinding>() {
     private fun FragmentSettingsBinding.bindManagerLanguage() {
         val langPref = prefs.getString("manager_lang", "System Default")
         managerLanguage.apply {
-            setSummary(getLanguageFormat(requireActivity(), requireNotNull(langPref)))
+            setSummary(getLanguageFormat(parentActivity, requireNotNull(langPref)))
             setOnClickListener { showDialog(ManagerLanguageDialog()) }
         }
 
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        val devSettings = getDefaultSharedPreferences(requireActivity()).getBoolean("devSettings", false)
+        val devSettings =
+            getDefaultSharedPreferences(requireActivity()).getBoolean("devSettings", false)
         if (devSettings) {
             inflater.inflate(R.menu.dev_settings_menu, menu)
         }

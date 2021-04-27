@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.core
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.CompoundButton
@@ -31,6 +32,13 @@ class PreferenceSwitch @JvmOverloads constructor(
 
     private var mListener: OnCheckedListener? = null
 
+    private val prefListener =
+        SharedPreferences.OnSharedPreferenceChangeListener { sharedPreferences, key ->
+            if (key == prefKey) {
+                binding.preferenceSwitch.isChecked = sharedPreferences.getBoolean(key, defValue)
+            }
+        }
+
     private var _binding: ViewPreferenceSwitchBinding? = null
 
     val binding: ViewPreferenceSwitchBinding
@@ -38,11 +46,7 @@ class PreferenceSwitch @JvmOverloads constructor(
 
     init {
         _binding = ViewPreferenceSwitchBinding.inflate(LayoutInflater.from(context), this, true)
-        prefs.registerOnSharedPreferenceChangeListener { sharedPreferences, key ->
-            if (key == prefKey) {
-                binding.preferenceSwitch.isChecked = sharedPreferences.getBoolean(key, defValue)
-            }
-        }
+        prefs.registerOnSharedPreferenceChangeListener(prefListener)
         attrs?.let { mAttrs ->
             with(context.obtainStyledAttributes(mAttrs, R.styleable.PreferenceSwitch, 0, 0)) {
                 val title = getText(R.styleable.PreferenceSwitch_switch_title)

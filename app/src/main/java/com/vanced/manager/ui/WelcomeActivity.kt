@@ -1,10 +1,10 @@
 package com.vanced.manager.ui
 
-import android.animation.Animator
 import android.animation.ValueAnimator
 import android.os.Bundle
-import android.view.animation.AccelerateDecelerateInterpolator
+import android.util.LayoutDirection
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.animation.addListener
 import androidx.viewpager2.widget.ViewPager2
 import com.vanced.manager.adapter.WelcomePageAdapter
 import com.vanced.manager.databinding.ActivityWelcomeBinding
@@ -12,21 +12,22 @@ import kotlin.math.abs
 
 class WelcomeActivity : AppCompatActivity() {
 
-    private lateinit var viewPager2: ViewPager2
     private lateinit var binding: ActivityWelcomeBinding
+    private var isRtl = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewPager2 = binding.welcomeViewpager
-        viewPager2.apply {
+        isRtl = resources.configuration.layoutDirection == LayoutDirection.RTL
+
+        binding.welcomeViewpager.apply {
             adapter = WelcomePageAdapter(this@WelcomeActivity)
             isUserInputEnabled = false
             setPageTransformer { page, position ->
                 page.apply {
-                    val pageWidth = width
+                    val pageWidth = width.toFloat()
                     //Thank you, fragula dev!
                     when {
                         position > 0 && position < 1 -> {
@@ -35,7 +36,7 @@ class WelcomeActivity : AppCompatActivity() {
                         }
                         position > -1 && position <= 0 -> {
                             alpha = 1.0f - abs(position * 0.7f)
-                            translationX = -pageWidth * position / 1.3F
+                            translationX = pageWidth.rtlCompat * position / 1.3F
                         }
                     }
                 }
@@ -44,21 +45,25 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (viewPager2.currentItem == 0) {
-            super.onBackPressed()
-        } else {
-            navigateTo(viewPager2.currentItem - 1)
+        with(binding) {
+            if (welcomeViewpager.currentItem == 0) {
+                super.onBackPressed()
+            } else {
+                navigateTo(welcomeViewpager.currentItem - 1)
+            }
         }
     }
 
     fun navigateTo(position: Int) {
-        viewPager2.currentPosition = position
+        binding.welcomeViewpager.currentPosition = position
     }
+
+    private val Float.rtlCompat get() = if (isRtl) this else -this
 
     //Shit way to implement animation duration, but at least it works
     private var ViewPager2.currentPosition: Int
         get() = currentItem
-        set(value)  {
+        set(value) {
             val pixelsToDrag: Int = width * (value - currentItem)
             val animator = ValueAnimator.ofInt(0, pixelsToDrag)
             var previousValue = 0
@@ -66,16 +71,13 @@ class WelcomeActivity : AppCompatActivity() {
                 addUpdateListener { valueAnimator ->
                     val currentValue = valueAnimator.animatedValue as Int
                     val currentPxToDrag = (currentValue - previousValue).toFloat()
-                    fakeDragBy(-currentPxToDrag)
+                    fakeDragBy(currentPxToDrag.rtlCompat)
                     previousValue = currentValue
                 }
-                addListener(object : Animator.AnimatorListener {
-                    override fun onAnimationStart(animation: Animator?) { beginFakeDrag() }
-                    override fun onAnimationEnd(animation: Animator?) { endFakeDrag() }
-                    override fun onAnimationCancel(animation: Animator?) {}
-                    override fun onAnimationRepeat(animation: Animator?) {}
-                })
-                interpolator = AccelerateDecelerateInterpolator()
+                addListener(
+                    onStart = { beginFakeDrag() },
+                    onEnd = { endFakeDrag() }
+                )
                 duration = 500
                 start()
             }

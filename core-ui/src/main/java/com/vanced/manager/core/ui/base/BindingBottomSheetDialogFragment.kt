@@ -33,7 +33,6 @@ abstract class BindingBottomSheetDialogFragment<VB : ViewBinding> : BottomSheetD
             if (bottomSheetDialogFragment != null) {
                 BottomSheetBehavior.from(bottomSheetDialogFragment).apply {
                     state = BottomSheetBehavior.STATE_EXPANDED
-                    peekHeight = 0
                 }
             }
         }

@@ -45,7 +45,8 @@ class SelectAppsFragment : BindingFragment<FragmentSelectAppsBinding>() {
 
     private fun actionOnClickAppsFab() {
         if (selectAdapter.apps.all { app -> !app.isChecked }) {
-            Toast.makeText(requireActivity(), R.string.select_at_least_one_app, Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireActivity(), R.string.select_at_least_one_app, Toast.LENGTH_SHORT)
+                .show()
             return
         }
         val prefs = getDefaultSharedPreferences(requireActivity())

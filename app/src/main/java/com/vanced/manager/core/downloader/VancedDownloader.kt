@@ -16,7 +16,7 @@ import com.vanced.manager.utils.PackageHelper.installVancedRoot
 import java.io.File
 
 object VancedDownloader {
-    
+
     private lateinit var prefs: SharedPreferences
     private lateinit var defPrefs: SharedPreferences
     private lateinit var arch: String
@@ -47,7 +47,9 @@ object VancedDownloader {
             lang = it.split(", ").toMutableList()
         }
         theme = prefs.theme
-        vancedVersion = version ?: defPrefs.vancedVersion?.getLatestAppVersion(vancedVersions.value?.value ?: listOf(""))
+        vancedVersion = version ?: defPrefs.vancedVersion?.getLatestAppVersion(
+            vancedVersions.value?.value ?: listOf("")
+        )
         themePath = "$baseInstallUrl/apks/v$vancedVersion/$variant/Theme"
         hashUrl = "apks/v$vancedVersion/$variant/Theme/hash.json"
         arch = getArch()
@@ -68,53 +70,68 @@ object VancedDownloader {
             "theme" -> "$themePath/$theme.apk"
             "arch" -> "$baseInstallUrl/apks/v$vancedVersion/$variant/Arch/split_config.$arch.apk"
             "stock" -> "$themePath/stock.apk"
-            "dpi" ->  "$themePath/dpi.apk"
+            "dpi" -> "$themePath/dpi.apk"
             "lang" -> "$baseInstallUrl/apks/v$vancedVersion/$variant/Language/split_config.${lang[count]}.apk"
             else -> throw NotImplementedError("This type of APK is NOT valid. What the hell did you even do?")
         }
 
-        download(url, "$baseInstallUrl/", folderName!!, getFileNameFromUrl(url), context, onDownloadComplete = {
-            when (type) {
-                "theme" ->
-                    if (variant == "root") {
-                        if (validateTheme(downloadPath!!, theme!!, hashUrl, context)) {
-                            if (downloadStockCheck(vancedRootPkg, vancedVersionCode, context))
-                                downloadSplits(context, "arch")
-                            else
-                                startVancedInstall(context)
+        download(
+            url,
+            "$baseInstallUrl/",
+            folderName!!,
+            getFileNameFromUrl(url),
+            context,
+            onDownloadComplete = {
+                when (type) {
+                    "theme" ->
+                        if (variant == "root") {
+                            if (validateTheme(downloadPath!!, theme!!, hashUrl, context)) {
+                                if (downloadStockCheck(vancedRootPkg, vancedVersionCode, context))
+                                    downloadSplits(context, "arch")
+                                else
+                                    startVancedInstall(context)
+                            } else
+                                downloadSplits(context, "theme")
                         } else
-                            downloadSplits(context, "theme")
-                    } else
-                        downloadSplits(context, "arch")
-                "arch" -> if (variant == "root") downloadSplits(context, "stock") else downloadSplits(context, "lang")
-                "stock" -> downloadSplits(context, "dpi")
-                "dpi" -> downloadSplits(context, "lang")
-                "lang" -> {
-                    count++
-                    succesfulLangCount++
-                    if (count < lang.size)
-                        downloadSplits(context, "lang")
-                    else
-                        startVancedInstall(context)
-                }
-
-            }
-        }, onError = {
-            if (type == "lang") {
-                count++
-                when {
-                    count < lang.size -> downloadSplits(context, "lang")
-                    succesfulLangCount == 0 -> {
-                        lang.add("en")
-                        downloadSplits(context, "lang")
+                            downloadSplits(context, "arch")
+                    "arch" -> if (variant == "root") downloadSplits(
+                        context,
+                        "stock"
+                    ) else downloadSplits(context, "lang")
+                    "stock" -> downloadSplits(context, "dpi")
+                    "dpi" -> downloadSplits(context, "lang")
+                    "lang" -> {
+                        count++
+                        succesfulLangCount++
+                        if (count < lang.size)
+                            downloadSplits(context, "lang")
+                        else
+                            startVancedInstall(context)
                     }
-                    else -> startVancedInstall(context)
-                }
 
-            } else {
-                downloadingFile.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
-            }
-        })
+                }
+            },
+            onError = {
+                if (type == "lang") {
+                    count++
+                    when {
+                        count < lang.size -> downloadSplits(context, "lang")
+                        succesfulLangCount == 0 -> {
+                            lang.add("en")
+                            downloadSplits(context, "lang")
+                        }
+                        else -> startVancedInstall(context)
+                    }
+
+                } else {
+                    downloadingFile.postValue(
+                        context.getString(
+                            R.string.error_downloading,
+                            getFileNameFromUrl(url)
+                        )
+                    )
+                }
+            })
     }
 
     fun startVancedInstall(context: Context, variant: String? = this.variant) {

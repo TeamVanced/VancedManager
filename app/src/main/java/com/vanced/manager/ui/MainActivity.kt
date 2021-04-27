@@ -32,6 +32,7 @@ import com.vanced.manager.utils.AppUtils.currentLocale
 import com.vanced.manager.utils.AppUtils.faqpkg
 import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.playStorePkg
+import com.vanced.manager.utils.AppUtils.vancedRootPkg
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 class MainActivity : AppCompatActivity() {
@@ -74,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         initDialogs(intent.getBooleanExtra("firstLaunch", false))
         manager.observe(this) {
             if (manager.value?.int("versionCode") ?: 0 > VERSION_CODE) {
-                ManagerUpdateDialog.newInstance(false).show(this)
+                ManagerUpdateDialog.newInstance(true).show(this)
             }
         }
     }
@@ -85,7 +86,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setDisplayHomeAsUpEnabled(isNeeded: Boolean) {
-        binding.toolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(this, R.drawable.ic_keyboard_backspace_black_24dp) else null
+        binding.toolbar.navigationIcon = if (isNeeded) ContextCompat.getDrawable(
+            this,
+            R.drawable.ic_keyboard_backspace_black_24dp
+        ) else null
     }
 
     override fun onPause() {
@@ -101,10 +105,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-                true
-            }
             R.id.toolbar_about -> {
                 navHost.navigate(HomeFragmentDirections.toAboutFragment())
                 true
@@ -140,7 +140,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             R.id.toolbar_update_manager -> {
-                ManagerUpdateDialog.newInstance(false).show(supportFragmentManager, "manager_update")
+                ManagerUpdateDialog.newInstance(false)
+                    .show(supportFragmentManager, "manager_update")
                 true
             }
             R.id.dev_settings -> {
@@ -173,8 +174,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         when (newConfig.orientation) {
-            Configuration.ORIENTATION_PORTRAIT -> log("VMUI", "screen orientation changed to portrait")
-            Configuration.ORIENTATION_LANDSCAPE -> log("VMUI", "screen orientation changed to landscape")
+            Configuration.ORIENTATION_PORTRAIT -> log(
+                "VMUI",
+                "screen orientation changed to portrait"
+            )
+            Configuration.ORIENTATION_LANDSCAPE -> log(
+                "VMUI",
+                "screen orientation changed to landscape"
+            )
             else -> log("VMUI", "screen orientation changed to [REDACTED]")
         }
 
@@ -208,7 +215,7 @@ class MainActivity : AppCompatActivity() {
             }
         } else {
             if (isMiuiOptimizationsEnabled) {
-                DialogContainer.applyAccentMiuiDialog(this)
+                DialogContainer.miuiDialog(this)
             }
         }
 
@@ -217,7 +224,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (variant == "root") {
-            if (PackageHelper.getPackageVersionName("com.google.android.youtube", packageManager) == "14.21.54") {
+            if (PackageHelper.getPackageVersionName(vancedRootPkg, packageManager) == "14.21.54") {
                 DialogContainer.basicDialog(
                     getString(R.string.hold_on),
                     getString(R.string.magisk_vanced),

@@ -1,11 +1,9 @@
-package com.vanced.manager.ui.core
+package com.vanced.manager.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.vanced.manager.ui.MainActivity
-import com.vanced.manager.ui.WelcomeActivity
 
 class SplashScreenActivity : AppCompatActivity() {
 

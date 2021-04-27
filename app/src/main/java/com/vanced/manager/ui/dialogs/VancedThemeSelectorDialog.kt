@@ -10,12 +10,13 @@ import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.DialogBottomRadioButtonBinding
 import com.vanced.manager.ui.core.ThemedMaterialRadioButton
+import com.vanced.manager.utils.checkedButtonTag
 import com.vanced.manager.utils.convertToAppTheme
-import com.vanced.manager.utils.getCheckedButtonTag
 import com.vanced.manager.utils.theme
 import com.vanced.manager.utils.vanced
 
-class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomRadioButtonBinding>() {
+class VancedThemeSelectorDialog :
+    BindingBottomSheetDialogFragment<DialogBottomRadioButtonBinding>() {
 
     companion object {
 
@@ -24,7 +25,12 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
         }
     }
 
-    private val prefs by lazy { requireActivity().getSharedPreferences("installPrefs", Context.MODE_PRIVATE) }
+    private val prefs by lazy {
+        requireActivity().getSharedPreferences(
+            "installPrefs",
+            Context.MODE_PRIVATE
+        )
+    }
 
     override fun binding(
         inflater: LayoutInflater,
@@ -51,7 +57,7 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
                 tag.isChecked = true
             }
             dialogSave.setOnClickListener {
-                val checkedTag = binding.dialogRadiogroup.getCheckedButtonTag()
+                val checkedTag = binding.dialogRadiogroup.checkedButtonTag
                 if (checkedTag != null) {
                     prefs.theme = checkedTag
                 }
@@ -60,7 +66,7 @@ class VancedThemeSelectorDialog : BindingBottomSheetDialogFragment<DialogBottomR
         }
     }
 
-    private fun loadButtons() = vanced.value?.array<String>("themes")?.value?.map {theme ->
+    private fun loadButtons() = vanced.value?.array<String>("themes")?.value?.map { theme ->
         ThemedMaterialRadioButton(requireActivity()).apply {
             text = theme.convertToAppTheme(requireActivity())
             tag = theme

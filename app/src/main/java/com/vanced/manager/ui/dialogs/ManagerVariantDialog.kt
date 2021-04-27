@@ -8,7 +8,7 @@ import com.google.android.material.radiobutton.MaterialRadioButton
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerVariantBinding
-import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.checkedButtonTag
 import com.vanced.manager.utils.managerVariant
 
 class ManagerVariantDialog : BindingBottomSheetDialogFragment<DialogManagerVariantBinding>() {
@@ -37,11 +37,11 @@ class ManagerVariantDialog : BindingBottomSheetDialogFragment<DialogManagerVaria
             val variant = prefs.managerVariant
             root.findViewWithTag<MaterialRadioButton>(variant).isChecked = true
             variantSave.setOnClickListener {
-                val newPref = variantRadiogroup.getCheckedButtonTag()
+                val newPref = variantRadiogroup.checkedButtonTag
                 if (variant != newPref) {
                     prefs.managerVariant =
                         if (newPref == "root" && Shell.rootAccess()) {
-                             "root"
+                            "root"
                         } else {
                             "nonroot"
                         }

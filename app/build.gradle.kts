@@ -16,8 +16,8 @@ android {
         applicationId = "com.vanced.manager"
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 251
-        versionName = "2.5.1 (Weed)"
+        versionCode = 260
+        versionName = "2.6.0 (Crimson)"
 
         vectorDrawables.useSupportLibrary = true
 
@@ -103,12 +103,12 @@ dependencies {
     implementation("androidx.browser:browser:1.3.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.fragment:fragment-ktx:1.3.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0")
+    implementation("androidx.fragment:fragment-ktx:1.3.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.0.0")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.3")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.3")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
@@ -128,31 +128,28 @@ dependencies {
     implementation("com.google.android.material:material:1.3.0")
 
     // JSON parser
-    implementation("com.beust:klaxon:5.4")
+    implementation("com.beust:klaxon:5.5")
 
     // Crowdin
     implementation("com.github.crowdin.mobile-sdk-android:sdk:1.4.0")
 
-    // Tips
-    implementation("com.github.florent37:viewtooltip:1.2.2")
-
     // HTTP networking
-    implementation("com.github.kittinunf.fuel:fuel:2.3.0")
-    implementation("com.github.kittinunf.fuel:fuel-coroutines:2.2.3")
-    implementation("com.github.kittinunf.fuel:fuel-json:2.2.3")
+    implementation("com.github.kittinunf.fuel:fuel:2.3.1")
+    implementation("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
+    implementation("com.github.kittinunf.fuel:fuel-json:2.3.1")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     // Root permissions
-    implementation("com.github.topjohnwu.libsu:core:3.1.1")
-    implementation("com.github.topjohnwu.libsu:io:3.1.1")
+    implementation("com.github.topjohnwu.libsu:core:3.1.2")
+    implementation("com.github.topjohnwu.libsu:io:3.1.2")
 
     // Layout
     implementation("com.google.android:flexbox:2.0.1")
 
     // Firebase
-    implementation("com.google.firebase:firebase-analytics-ktx:18.0.2")
-    implementation("com.google.firebase:firebase-crashlytics:17.3.1")
-    implementation("com.google.firebase:firebase-messaging:21.0.1")
+    implementation("com.google.firebase:firebase-analytics-ktx:18.0.3")
+    implementation("com.google.firebase:firebase-crashlytics:17.4.1")
+    implementation("com.google.firebase:firebase-messaging:21.1.0")
     implementation("com.google.firebase:firebase-perf:19.1.1")
 }

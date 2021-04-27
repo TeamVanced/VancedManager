@@ -7,7 +7,7 @@ import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.google.android.material.radiobutton.MaterialRadioButton
 import com.vanced.manager.core.ui.base.BindingBottomSheetDialogFragment
 import com.vanced.manager.databinding.DialogManagerThemeBinding
-import com.vanced.manager.utils.getCheckedButtonTag
+import com.vanced.manager.utils.checkedButtonTag
 import com.vanced.manager.utils.managerTheme
 
 class ManagerThemeDialog : BindingBottomSheetDialogFragment<DialogManagerThemeBinding>() {
@@ -36,7 +36,7 @@ class ManagerThemeDialog : BindingBottomSheetDialogFragment<DialogManagerThemeBi
             val theme = prefs.managerTheme
             root.findViewWithTag<MaterialRadioButton>(theme).isChecked = true
             themeSave.setOnClickListener {
-                val newPref = themeRadiogroup.getCheckedButtonTag()
+                val newPref = themeRadiogroup.checkedButtonTag
                 if (theme != newPref) {
                     prefs.managerTheme = newPref
                     dismiss()

@@ -17,9 +17,10 @@ import com.vanced.manager.R
 import com.vanced.manager.utils.AppUtils.log
 import java.util.*
 
-fun RadioGroup.getCheckedButtonTag(): String? {
-    return findViewById<MaterialRadioButton>(checkedRadioButtonId)?.tag?.toString()
-}
+val RadioGroup.checkedButtonTag: String?
+    get() = findViewById<MaterialRadioButton>(
+        checkedRadioButtonId
+    )?.tag?.toString()
 
 fun DialogFragment.show(activity: FragmentActivity) {
     try {
@@ -27,47 +28,43 @@ fun DialogFragment.show(activity: FragmentActivity) {
     } catch (e: Exception) {
         log("VMUI", e.stackTraceToString())
     }
-
 }
 
 fun List<String>.convertToAppVersions(): List<String> = listOf("latest") + reversed()
 
-fun String.formatVersion(context: Context): String = if (this == "latest") context.getString(R.string.install_latest) else this
+fun String.formatVersion(context: Context): String =
+    if (this == "latest") context.getString(R.string.install_latest) else this
 
-fun String.convertToAppTheme(context: Context): String {
-    return with(context) {
-        getString(R.string.light_plus_other, if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black))
-    }
+fun String.convertToAppTheme(context: Context): String = with(context) {
+    getString(
+        R.string.light_plus_other,
+        if (this@convertToAppTheme == "dark") getString(R.string.vanced_dark) else getString(R.string.vanced_black)
+    )
 }
 
-fun String.getLatestAppVersion(versions: List<String>): String = if (this == "latest") versions.reversed()[0] else this
+fun String.getLatestAppVersion(versions: List<String>): String =
+    if (this == "latest") versions.reversed()[0] else this
 
-fun Context.lifecycleOwner(): LifecycleOwner? {
-    var curContext = this
-    var maxDepth = 20
-    while (maxDepth-- > 0 && curContext !is LifecycleOwner) {
-        curContext = (curContext as ContextWrapper).baseContext
+val Context.lifecycleOwner: LifecycleOwner?
+    get() = when (this) {
+        is LifecycleOwner -> this
+        !is LifecycleOwner -> (this as ContextWrapper).baseContext as LifecycleOwner
+        else -> null
     }
-    return if (curContext is LifecycleOwner) {
-        curContext
-    } else {
-        null
-    }
-}
 
 fun Int.toHex(): String = java.lang.String.format("#%06X", 0xFFFFFF and this)
 
 //Material team decided to keep their LinearProgressIndicator final
 //At least extension methods exist
 fun LinearProgressIndicator.applyAccent() {
-    with(accentColor.value ?: context.defPrefs.managerAccent) {
+    with(accentColor.value!!) {
         setIndicatorColor(this)
         trackColor = ColorUtils.setAlphaComponent(this, 70)
     }
 }
 
-fun MaterialAlertDialogBuilder.applyAccent() {
-    with(accentColor.value ?: context.defPrefs.managerAccent) {
+fun MaterialAlertDialogBuilder.showWithAccent() {
+    with(accentColor.value!!) {
         show().apply {
             getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(this@with)
             getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(this@with)
@@ -86,5 +83,5 @@ fun Context.writeServiceDScript(apkFPath: String, path: String, app: String) {
         chcon u:object_r:apk_data_file:s0 $apkFPath
         mount -o bind $apkFPath $path
     """.trimIndent()
-    SuFileOutputStream.open(shellFileZ).use { out ->  out.write(script.toByteArray())}
+    SuFileOutputStream.open(shellFileZ).use { out -> out.write(script.toByteArray()) }
 }

@@ -31,7 +31,7 @@ class EmptyPreference @JvmOverloads constructor(
     }
 
     fun setSummary(newSummary: String) {
-        with (binding) {
+        with(binding) {
             preferenceSummary.text = newSummary
             preferenceSummary.isVisible = true
             preferenceTitle.setPadding(0, 0, 0, 0)
@@ -40,10 +40,11 @@ class EmptyPreference @JvmOverloads constructor(
 
     private fun initAttrs(context: Context, attrs: AttributeSet?) {
         attrs?.let { mAttrs ->
-            val typedArray = context.obtainStyledAttributes(mAttrs, R.styleable.EmptyPreference, 0, 0)
+            val typedArray =
+                context.obtainStyledAttributes(mAttrs, R.styleable.EmptyPreference, 0, 0)
             val title = typedArray.getText(R.styleable.EmptyPreference_preference_title)
             val summary = typedArray.getText(R.styleable.EmptyPreference_preference_summary)
-            with (binding) {
+            with(binding) {
                 if (summary != null) {
                     preferenceSummary.text = summary
                 } else {

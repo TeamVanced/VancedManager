@@ -13,7 +13,8 @@ import com.vanced.manager.databinding.DialogInstallationFilesDetectedBinding
 import com.vanced.manager.utils.defPrefs
 import com.vanced.manager.utils.managerVariant
 
-class InstallationFilesDetectedDialog : BindingBottomSheetDialogFragment<DialogInstallationFilesDetectedBinding>() {
+class InstallationFilesDetectedDialog :
+    BindingBottomSheetDialogFragment<DialogInstallationFilesDetectedBinding>() {
 
     companion object {
 
@@ -40,9 +41,11 @@ class InstallationFilesDetectedDialog : BindingBottomSheetDialogFragment<DialogI
 
     private fun bindData() {
         with(binding) {
-            val app = arguments?.getString(TAG_APP) ?: throw IllegalArgumentException("app name is null")
+            val app =
+                arguments?.getString(TAG_APP) ?: throw IllegalArgumentException("app name is null")
             installationDetectedTitle.text = getString(R.string.app_install_files_detected, app)
-            installationDetectedSummary.text = getString(R.string.app_install_files_detected_summary, app)
+            installationDetectedSummary.text =
+                getString(R.string.app_install_files_detected_summary, app)
             installationDetectedRedownload.setOnClickListener {
                 dismiss()
                 when (app) {

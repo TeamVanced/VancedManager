@@ -20,7 +20,7 @@ import java.io.IOException
 import java.security.MessageDigest
 import java.util.*
 
-object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
+object AppUtils : CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     const val vancedPkg = "com.vanced.android.youtube"
     const val vancedRootPkg = "com.google.android.youtube"
@@ -40,7 +40,12 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
             SpannableString("$tag: $message\n").apply {
                 setSpan(ForegroundColorSpan(Color.parseColor("#2e73ff")), 0, tag.length + 1, 0)
                 setSpan(StyleSpan(Typeface.BOLD), 0, tag.length + 1, 0)
-                setSpan(ForegroundColorSpan(Color.MAGENTA), tag.length + 2, tag.length + message.length + 2, 0)
+                setSpan(
+                    ForegroundColorSpan(Color.MAGENTA),
+                    tag.length + 2,
+                    tag.length + message.length + 2,
+                    0
+                )
             }
         )
         Log.d(tag, message)
@@ -49,7 +54,8 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     fun sendRefresh(context: Context): Job {
         return launch {
             delay(700)
-            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
+            LocalBroadcastManager.getInstance(context)
+                .sendBroadcast(Intent(HomeFragment.REFRESH_HOME))
         }
     }
 
@@ -57,7 +63,8 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
         return launch {
             delay(700)
             installing.postValue(false)
-            LocalBroadcastManager.getInstance(context).sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
+            LocalBroadcastManager.getInstance(context)
+                .sendBroadcast(Intent(AppDownloadDialog.CLOSE_DIALOG))
         }
     }
 
@@ -92,7 +99,7 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
     private fun printableHexString(data: ByteArray): String {
         // Create Hex String
         val hexString: StringBuilder = StringBuilder()
-        for (aMessageDigest:Byte in data) {
+        for (aMessageDigest: Byte in data) {
             var h: String = Integer.toHexString(0xFF and aMessageDigest.toInt())
             while (h.length < 2)
                 h = "0$h"
@@ -127,12 +134,9 @@ object AppUtils: CoroutineScope by CoroutineScope(Dispatchers.IO) {
             status.contains("ModApk_Missing") -> context.getString(R.string.modapk_missing)
             status.contains("Files_Missing_VA") -> context.getString(R.string.files_missing_va)
             status.contains("Path_Missing") -> context.getString(R.string.path_missing)
-            status.contains("INSTALL_FAILED_INTERNAL_ERROR: Permission Denied") -> {
-                if (context.isMiuiOptimizationsEnabled)
-                    context.getString(R.string.installation_miui)
-                else
-                    context.getString(R.string.installation_blocked)
-            }
+            status.contains("INSTALL_FAILED_INTERNAL_ERROR: Permission Denied") -> context.getString(
+                R.string.installation_miui
+            )
             else -> context.getString(R.string.installation_failed)
         }
     }

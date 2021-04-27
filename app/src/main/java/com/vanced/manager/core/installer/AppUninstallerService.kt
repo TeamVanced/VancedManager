@@ -7,7 +7,7 @@ import android.os.IBinder
 import com.vanced.manager.utils.AppUtils.log
 import com.vanced.manager.utils.AppUtils.sendRefresh
 
-class AppUninstallerService: Service() {
+class AppUninstallerService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val pkgName = intent?.getStringExtra("pkg")

@@ -27,7 +27,8 @@ class PreferenceCategory @JvmOverloads constructor(
 
     private fun initAttrs(context: Context, attrs: AttributeSet?) {
         attrs.let { mAttrs ->
-            val typedArray = context.obtainStyledAttributes(mAttrs, R.styleable.PreferenceCategory, 0, 0)
+            val typedArray =
+                context.obtainStyledAttributes(mAttrs, R.styleable.PreferenceCategory, 0, 0)
             val title = typedArray.getText(R.styleable.PreferenceCategory_category_title)
 
             binding.categoryTitle.text = title

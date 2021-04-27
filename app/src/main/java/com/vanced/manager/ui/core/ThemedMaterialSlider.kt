@@ -4,8 +4,7 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
 import com.google.android.material.slider.Slider
-import com.vanced.manager.utils.defPrefs
-import com.vanced.manager.utils.managerAccent
+import com.vanced.manager.utils.accentColor
 
 class ThemedMaterialSlider @JvmOverloads constructor(
     context: Context,
@@ -14,7 +13,7 @@ class ThemedMaterialSlider @JvmOverloads constructor(
 ) : Slider(context, attributeSet, defStyleAttr) {
 
     init {
-        val accentValue = ColorStateList.valueOf(context.defPrefs.managerAccent)
+        val accentValue = ColorStateList.valueOf(accentColor.value!!)
         thumbTintList = accentValue
         trackActiveTintList = accentValue
         trackInactiveTintList = accentValue.withAlpha(70)

@@ -22,7 +22,9 @@ object MusicDownloader {
 
     fun downloadMusic(context: Context, version: String? = null) {
         val prefs = context.defPrefs
-        musicVersion = version ?: prefs.musicVersion?.getLatestAppVersion(musicVersions.value?.value ?: listOf(""))
+        musicVersion = version ?: prefs.musicVersion?.getLatestAppVersion(
+            musicVersions.value?.value ?: listOf("")
+        )
         versionCode = music.value?.int("versionCode")
         variant = prefs.managerVariant
         baseurl = "$baseInstallUrl/music/v$musicVersion"
@@ -35,31 +37,43 @@ object MusicDownloader {
 
     private fun downloadApk(context: Context, apk: String = "music") {
         val url = if (apk == "stock") "$baseurl/stock/${getArch()}.apk" else "$baseurl/$variant.apk"
-        download(url, "$baseurl/", folderName!!, getFileNameFromUrl(url), context, onDownloadComplete = {
-            if (variant == "root" && apk != "stock") {
-                downloadApk(context, "stock")
-                return@download
-            }
-
-            when (apk) {
-                "music" -> {
-                    if (variant == "root") {
-                        if (validateTheme(downloadPath!!, "root", hashUrl!!, context)) {
-                            if (downloadStockCheck(musicRootPkg, versionCode!!, context))
-                                downloadApk(context, "stock")
-                            else
-                                startMusicInstall(context)
-                        } else {
-                            downloadApk(context, apk)
-                        }
-                    } else
-                        startMusicInstall(context)
+        download(
+            url,
+            "$baseurl/",
+            folderName!!,
+            getFileNameFromUrl(url),
+            context,
+            onDownloadComplete = {
+                if (variant == "root" && apk != "stock") {
+                    downloadApk(context, "stock")
+                    return@download
                 }
-                "stock" -> startMusicInstall(context)
-            }
-        }, onError = {
-            downloadingFile.postValue(context.getString(R.string.error_downloading, getFileNameFromUrl(url)))
-        })
+
+                when (apk) {
+                    "music" -> {
+                        if (variant == "root") {
+                            if (validateTheme(downloadPath!!, "root", hashUrl!!, context)) {
+                                if (downloadStockCheck(musicRootPkg, versionCode!!, context))
+                                    downloadApk(context, "stock")
+                                else
+                                    startMusicInstall(context)
+                            } else {
+                                downloadApk(context, apk)
+                            }
+                        } else
+                            startMusicInstall(context)
+                    }
+                    "stock" -> startMusicInstall(context)
+                }
+            },
+            onError = {
+                downloadingFile.postValue(
+                    context.getString(
+                        R.string.error_downloading,
+                        getFileNameFromUrl(url)
+                    )
+                )
+            })
     }
 
     fun startMusicInstall(context: Context) {

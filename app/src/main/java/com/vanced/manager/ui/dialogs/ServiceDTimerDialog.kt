@@ -32,7 +32,7 @@ class ServiceDTimerDialog : BindingDialogFragment<DialogServicedTimerBinding>() 
     }
 
     private fun bindData() {
-        with (binding) {
+        with(binding) {
             servicedSlider.value = prefs.getInt("serviced_sleep_timer", 1).toFloat()
             servicedCancel.setOnClickListener {
                 dismiss()
@@ -41,12 +41,26 @@ class ServiceDTimerDialog : BindingDialogFragment<DialogServicedTimerBinding>() 
                 try {
                     arrayOf("vanced", "music").forEach { app ->
                         if (scriptExists(app)) {
-                            val apkFPath = "${PackageHelper.apkInstallPath}/${app.capitalize(Locale.ROOT)}/base.apk"
-                            getPackageDir(requireActivity(), getPkgNameRoot(app))?.let { it1 -> requireActivity().writeServiceDScript(apkFPath, it1, app) }
+                            val apkFPath =
+                                "${PackageHelper.apkInstallPath}/${app.capitalize(Locale.ROOT)}/base.apk"
+                            getPackageDir(
+                                requireActivity(),
+                                getPkgNameRoot(app)
+                            )?.let { it1 ->
+                                requireActivity().writeServiceDScript(
+                                    apkFPath,
+                                    it1,
+                                    app
+                                )
+                            }
                         }
                     }
                 } catch (e: IOException) {
-                    Toast.makeText(requireActivity(), R.string.script_save_failed, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireActivity(),
+                        R.string.script_save_failed,
+                        Toast.LENGTH_SHORT
+                    ).show()
                     return@setOnClickListener
                 }
 

@@ -67,7 +67,7 @@
         <item name="toolbarIconColor">?colorOnPrimary</item>
         <item name="DialogBG">#111111</item>
         <item name="colorLinkImage">#FFFFFF</item>
-        <item name="colorLinkBG">#161616</item>
+        <item name="colorLinkBG">#191919</item>
         <item name="colorSettingsTitle">#ffffff</item>
         <item name="colorSecondaryText">#B3FFFFFF</item>
         <item name="colorWelcomeHeaderSubtitle">#99FFFFFF</item>

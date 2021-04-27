@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.dialogs
 
+import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -72,20 +73,28 @@ class AppDownloadDialog : BindingDialogFragment<DialogAppDownloadBinding>() {
             appDownloadHeader.text = app
             if (arguments?.getBoolean(TAG_INSTALLING) == false) {
                 when (app) {
-                    getString(R.string.vanced) -> downloadVanced(requireContext(), arguments?.getString(TAG_VERSION))
-                    getString(R.string.music) -> downloadMusic(requireContext(), arguments?.getString(TAG_VERSION))
+                    getString(R.string.vanced) -> downloadVanced(
+                        requireContext(),
+                        arguments?.getString(TAG_VERSION)
+                    )
+                    getString(R.string.music) -> downloadMusic(
+                        requireContext(),
+                        arguments?.getString(TAG_VERSION)
+                    )
                     getString(R.string.microg) -> downloadMicrog(requireContext())
                 }
             }
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun DialogAppDownloadBinding.bindDownloadProgress() {
         downloadProgress.observe(viewLifecycleOwner) {
             appDownloadProgressbar.progress = it
+            appDownloadProgress.text = "$it%"
         }
         installing.observe(viewLifecycleOwner) { installing ->
-            appDownloadProgressbar.isVisible = !installing
+            appDownloadProgressbarContainer.isVisible = !installing
             appInstallProgressbar.isVisible = installing
             appDownloadFile.isVisible = !installing
             appDownloadCancel.isEnabled = !installing

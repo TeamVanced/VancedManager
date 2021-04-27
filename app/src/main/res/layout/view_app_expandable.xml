@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vanced.manager.ui.core.ThemedAppCard
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app_expanded_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
+        android:alpha="0"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        tools:alpha="100"
+        tools:scaleX="1"
+        tools:scaleY="1">
+
+        <LinearLayout
+            android:id="@+id/app_version_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/app_button_container">
+
+            <com.google.android.flexbox.FlexboxLayout
+                app:flexWrap="wrap"
+                app:flexDirection="row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_latest_text"
+                    style="@style/AppVersionText"
+                    android:text="@string/latest" />
+
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_latest"
+                    style="@style/AppVersionTextNumber"
+                    tools:text="16.XX.XX" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                app:flexWrap="wrap"
+                app:flexDirection="row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_installed_text"
+                    style="@style/AppVersionText"
+                    android:text="@string/version_installed"/>
+
+                <com.vanced.manager.ui.core.ThemedTextView
+                    android:id="@+id/app_version_installed"
+                    style="@style/AppVersionTextNumber"
+                    android:textSize="12sp"
+                    tools:text="16.XX.XX" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/app_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/app_version_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp">
+
+            <com.vanced.manager.ui.core.ThemedIconButton
+                android:id="@+id/app_info"
+                style="@style/AppActionButton"
+                app:icon="@drawable/ic_app_info"
+                android:contentDescription="@string/accessibility_info"/>
+
+            <com.vanced.manager.ui.core.ThemedIconButton
+                android:id="@+id/app_uninstall"
+                style="@style/AppActionButton"
+                app:icon="@drawable/ic_app_uninstall"
+                android:contentDescription="@string/accessibility_uninstall"/>
+
+            <com.vanced.manager.ui.core.ThemedIconButton
+                android:id="@+id/app_launch"
+                style="@style/AppActionButton"
+                app:icon="@drawable/ic_baseline_launch_24"
+                android:contentDescription="@string/accessibility_launch"/>
+
+            <com.vanced.manager.ui.core.ThemedIconButton
+                android:id="@+id/app_download"
+                style="@style/AppActionButton"
+                app:icon="@drawable/ic_app_download"
+                android:contentDescription="@string/accessibility_download"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/app_clickable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="12dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="?colorLinkBG"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/app_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/app_image_placeholder"/>
+
+            <LinearLayout
+                android:id="@+id/app_info_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/app_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/app_expand_arrow"
+                app:layout_constrainedWidth="true"
+                android:layout_marginHorizontal="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/app_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="YouTube Vanced"
+                    android:textColor="?colorLinkImage"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/app_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    tools:text="The way we see the world" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/app_expand_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_baseline_navigate_next_36"
+                android:rotation="90"
+                app:tint="?colorLinkImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</com.vanced.manager.ui.core.ThemedAppCard>
+

@@ -4,7 +4,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 
-val Context.installPrefs: SharedPreferences get() = getSharedPreferences("installPrefs", Context.MODE_PRIVATE)
+val Context.installPrefs: SharedPreferences
+    get() = getSharedPreferences(
+        "installPrefs",
+        Context.MODE_PRIVATE
+    )
 
 var SharedPreferences.lang
     get() = getString("lang", getDefaultVancedLanguages())

@@ -49,12 +49,20 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
                     launch {
-                        if (response.body()?.let { writeFile(it, context.getExternalFilesDir(fileFolder)?.path + "/" + fileName) } == true) {
+                        if (response.body()?.let {
+                                writeFile(
+                                    it,
+                                    context.getExternalFilesDir(fileFolder)?.path + "/" + fileName
+                                )
+                            } == true) {
                             onDownloadComplete()
                         } else {
                             onError("Could not save file")
                             downloadProgress.postValue(0)
-                            log("VMDownloader", "Failed to save file: $url\n${response.errorBody()}")
+                            log(
+                                "VMDownloader",
+                                "Failed to save file: $url\n${response.errorBody()}"
+                            )
                         }
                     }
                 } else {
@@ -111,33 +119,40 @@ object DownloadHelper : CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
     fun downloadManager(context: Context) {
         val url = "https://github.com/YTVanced/VancedManager/releases/latest/download/manager.apk"
-        download(url,"https://github.com/YTVanced/VancedManager/", "manager", "manager.apk", context, onDownloadComplete = {
-            val apk = File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
-            val uri =
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                    FileProvider.getUriForFile(context, "${context.packageName}.provider", apk)
-                else
-                    Uri.fromFile(apk)
+        download(
+            url,
+            "https://github.com/YTVanced/VancedManager/",
+            "manager",
+            "manager.apk",
+            context,
+            onDownloadComplete = {
+                val apk = File("${context.getExternalFilesDir("manager")?.path}/manager.apk")
+                val uri =
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                        FileProvider.getUriForFile(context, "${context.packageName}.provider", apk)
+                    else
+                        Uri.fromFile(apk)
 
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.setDataAndType(uri, "application/vnd.android.package-archive")
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            try {
-                context.startActivity(intent)
-            } catch (e: ActivityNotFoundException) {
-                log("VMDownloader", e.stackTraceToString())
-            } finally {
-                sendCloseDialog(context)
-            }
-        }, onError = {
-            downloadingFile.postValue(
-                context.getString(
-                    R.string.error_downloading,
-                    "manager.apk"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.setDataAndType(uri, "application/vnd.android.package-archive")
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                try {
+                    context.startActivity(intent)
+                } catch (e: ActivityNotFoundException) {
+                    log("VMDownloader", e.stackTraceToString())
+                } finally {
+                    sendCloseDialog(context)
+                }
+            },
+            onError = {
+                downloadingFile.postValue(
+                    context.getString(
+                        R.string.error_downloading,
+                        "manager.apk"
+                    )
                 )
-            )
-        })
+            })
     }
 
 }

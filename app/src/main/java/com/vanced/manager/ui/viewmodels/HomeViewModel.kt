@@ -1,24 +1,23 @@
 package com.vanced.manager.ui.viewmodels
 
+import android.annotation.SuppressLint
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
-import android.view.View
 import android.widget.Toast
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.crowdin.platform.Crowdin
-import com.google.android.material.button.MaterialButton
 import com.vanced.manager.R
 import com.vanced.manager.adapter.LinkAdapter.Companion.DISCORD
 import com.vanced.manager.adapter.LinkAdapter.Companion.REDDIT
 import com.vanced.manager.adapter.LinkAdapter.Companion.TELEGRAM
 import com.vanced.manager.adapter.LinkAdapter.Companion.TWITTER
 import com.vanced.manager.adapter.SponsorAdapter.Companion.BRAVE
+import com.vanced.manager.model.ButtonTag
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.model.RootDataModel
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
@@ -40,7 +39,9 @@ import com.vanced.manager.utils.PackageHelper.uninstallRootApk
 import com.vanced.manager.utils.PackageHelper.vancedInstallFilesExist
 import kotlinx.coroutines.launch
 
-open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
+//TODO fix leak
+@SuppressLint("StaticFieldLeak")
+class HomeViewModel(private val activity: FragmentActivity) : ViewModel() {
 
     private val prefs = getDefaultSharedPreferences(activity)
     private val variant get() = prefs.getString("vanced_variant", "nonroot")
@@ -58,7 +59,7 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
             Crowdin.forceUpdate(activity)
         }
     }
-    
+
     private val microgToast = Toast.makeText(activity, R.string.no_microg, Toast.LENGTH_LONG)
 
     fun openUrl(url: String) {
@@ -71,15 +72,24 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
                 BRAVE -> R.color.Brave
                 else -> R.color.Vanced
             }
-            
+
         openUrl(url, color, activity)
     }
 
     fun launchApp(app: String, isRoot: Boolean) {
         val componentName = when (app) {
-            activity.getString(R.string.vanced) -> if (isRoot) ComponentName(vancedRootPkg, "$vancedRootPkg.HomeActivity") else ComponentName(vancedPkg, "$vancedRootPkg.HomeActivity")
-            activity.getString(R.string.music) -> if (isRoot) ComponentName(musicRootPkg, "$musicRootPkg.activities.MusicActivity") else ComponentName(musicPkg, "$musicRootPkg.activities.MusicActivity")
-            activity.getString(R.string.microg) -> ComponentName(microgPkg, "org.microg.gms.ui.SettingsActivity")
+            activity.getString(R.string.vanced) -> if (isRoot) ComponentName(
+                vancedRootPkg,
+                "$vancedRootPkg.HomeActivity"
+            ) else ComponentName(vancedPkg, "$vancedRootPkg.HomeActivity")
+            activity.getString(R.string.music) -> if (isRoot) ComponentName(
+                musicRootPkg,
+                "$musicRootPkg.activities.MusicActivity"
+            ) else ComponentName(musicPkg, "$musicRootPkg.activities.MusicActivity")
+            activity.getString(R.string.microg) -> ComponentName(
+                microgPkg,
+                "org.microg.gms.ui.SettingsActivity"
+            )
             else -> throw IllegalArgumentException("Can't open this app")
         }
         try {
@@ -90,19 +100,18 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
 
     }
 
-    fun openInstallDialog(view: View, app: String) {
+    fun openInstallDialog(buttonTag: ButtonTag?, app: String) {
         if (variant == "nonroot" && app != activity.getString(R.string.microg) && !microgModel.value?.isAppInstalled?.value!!) {
             microgToast.show()
             return
         }
 
-        if ((view as MaterialButton).text == activity.getString(R.string.update)) {
+        if (buttonTag == ButtonTag.UPDATE) {
             when (app) {
                 activity.getString(R.string.vanced) -> VancedPreferencesDialog().show(activity)
                 activity.getString(R.string.music) -> MusicPreferencesDialog().show(activity)
-                else ->  AppDownloadDialog.newInstance(app).show(activity)
+                else -> AppDownloadDialog.newInstance(app).show(activity)
             }
-
             return
         }
 
@@ -155,16 +164,66 @@ open class HomeViewModel(private val activity: FragmentActivity): ViewModel() {
     }
 
     init {
-        with (activity) {
+        with(activity) {
             if (variant == "root") {
-                vancedRootModel.value = RootDataModel(vanced, this, this, vancedRootPkg, this.getString(R.string.vanced), AppCompatResources.getDrawable(this, R.drawable.ic_vanced), "vanced")
-                musicRootModel.value = RootDataModel(music, this, this, musicRootPkg, this.getString(R.string.music), AppCompatResources.getDrawable(this, R.drawable.ic_music), "music")
+                vancedRootModel.value = RootDataModel(
+                    vanced,
+                    this,
+                    this,
+                    vancedRootPkg,
+                    this.getString(R.string.vanced),
+                    activity.getString(R.string.description_vanced),
+                    R.drawable.ic_vanced,
+                    "vanced"
+                )
+                musicRootModel.value = RootDataModel(
+                    music,
+                    this,
+                    this,
+                    musicRootPkg,
+                    this.getString(R.string.music),
+                    activity.getString(R.string.description_vanced_music),
+                    R.drawable.ic_music,
+                    "music"
+                )
             } else {
-                vancedModel.value = DataModel(vanced, this, this, vancedPkg, this.getString(R.string.vanced), AppCompatResources.getDrawable(this, R.drawable.ic_vanced))
-                musicModel.value = DataModel(music, this, this, musicPkg, this.getString(R.string.music), AppCompatResources.getDrawable(this, R.drawable.ic_music))
-                microgModel.value = DataModel(microg, this, this, microgPkg, this.getString(R.string.microg), AppCompatResources.getDrawable(this, R.drawable.ic_microg))
+                vancedModel.value = DataModel(
+                    vanced,
+                    this,
+                    this,
+                    vancedPkg,
+                    this.getString(R.string.vanced),
+                    activity.getString(R.string.description_vanced),
+                    R.drawable.ic_vanced
+                )
+                musicModel.value = DataModel(
+                    music,
+                    this,
+                    this,
+                    musicPkg,
+                    this.getString(R.string.music),
+                    activity.getString(R.string.description_vanced_music),
+                    R.drawable.ic_music
+                )
+                microgModel.value = DataModel(
+                    microg,
+                    this,
+                    this,
+                    microgPkg,
+                    this.getString(R.string.microg),
+                    activity.getString(R.string.description_microg),
+                    R.drawable.ic_microg
+                )
             }
-            managerModel.value = DataModel(manager, this, this, managerPkg, this.getString(R.string.app_name), AppCompatResources.getDrawable(this, R.mipmap.ic_launcher))
+            managerModel.value = DataModel(
+                manager,
+                this,
+                this,
+                managerPkg,
+                this.getString(R.string.app_name),
+                "Just manager meh",
+                R.mipmap.ic_launcher
+            )
         }
     }
 }

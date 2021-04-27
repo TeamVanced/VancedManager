@@ -1,7 +1,7 @@
 package com.vanced.manager.model
 
 import android.content.Context
-import android.graphics.drawable.Drawable
+import androidx.annotation.DrawableRes
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import com.beust.klaxon.JsonObject
@@ -13,15 +13,16 @@ class RootDataModel(
     lifecycleOwner: LifecycleOwner,
     appPkg: String,
     appName: String,
-    appIcon: Drawable?,
+    appDescription: String,
+    @DrawableRes appIcon: Int,
     //BUG THIS!
     //kotlin thinks that this value is null if we use
     //private val scriptName: String
     //Although it's impossible for it to be null.
     //Ironic, isn't it?
     private val scriptName: String?
-): DataModel(
-    jsonObject, context, lifecycleOwner, appPkg, appName, appIcon
+) : DataModel(
+    jsonObject, context, lifecycleOwner, appPkg, appName, appDescription, appIcon
 ) {
 
     override fun isAppInstalled(pkg: String): Boolean {
