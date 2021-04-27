@@ -27,7 +27,7 @@
     <string name="accessibility_download">İndir</string>
     <string name="accessibility_info">Bilgi</string>
     <string name="accessibility_launch">Başlat</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">Yeniden yükle</string>
     <string name="accessibility_uninstall">Kaldır</string>
     <string name="accessibility_update">Güncelleştir</string>
     <string name="apps">Uygulamalar</string>
