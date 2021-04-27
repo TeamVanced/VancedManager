@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Не знаєте, що це або не хочете використовувати рутовану версію? Просто натисніть синю стрілку внизу!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
-    <string name="accessibility_download">Download</string>
+    <string name="accessibility_download">Завантаження</string>
     <string name="accessibility_info">Інформація</string>
     <string name="accessibility_launch">Відкрити</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">Перевстановити</string>
     <string name="accessibility_uninstall">Видалити</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_update">Оновити</string>
     <string name="apps">Додатки</string>
     <string name="changelog">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
