@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Gelo ev çi ye an naxwazî versiyona root bi kar bîne? tenê tîrê şîn ê jêrîn bitikînin!</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Dakêşe</string>
+    <string name="accessibility_info">Agahî</string>
+    <string name="accessibility_launch">Destpêkirin</string>
+    <string name="accessibility_reinstall">Ji nû ve saz bike</string>
+    <string name="accessibility_uninstall">Rake</string>
+    <string name="accessibility_update">Nûve bike</string>
     <string name="apps">Sepanan</string>
     <string name="changelog">Gurankarî</string>
     <string name="downloading_file">Dakêşe %1$s</string>
