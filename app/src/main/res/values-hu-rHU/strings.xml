@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Nem tudod mi ez vagy csak nem akarod használni a root verziót? Csak kattins a lenti kék nyílra!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s- ról</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_download">Letöltés</string>
+    <string name="accessibility_info">Infó</string>
+    <string name="accessibility_launch">Indítás</string>
     <string name="accessibility_reinstall">Újratelepítés</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_uninstall">Eltávolítás</string>
+    <string name="accessibility_update">Frissítés</string>
     <string name="apps">Alkalmazások</string>
     <string name="changelog">Változáslista</string>
     <string name="downloading_file">%1$s letöltése</string>
@@ -108,14 +108,14 @@ Akarod telepíteni?</string>
     <string name="files_missing_va">A telepítéshez szükséges file-ok megtalálása meghiúsult. Töltse le újra a telepítőfile-okat és próbálja újra.</string>
     <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
-    <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsd el a jelenlegi verziót és próbáld újra.</string>
+    <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsa el a jelenlegi verziót és próbálja újra.</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó, régebbi verzióra próbált frissíteni. Távolítsa el az eredeti alkalmazás frissítéseit, majd próbálja újra.</string>
-    <string name="installation_failed">A telepítés ismeretlen ok miatt meghiúsult, kérjük csatlakozzon a Telegram vagy a Discord csatornánkhoz további támogatásért. Kérjük egy képernyőképet is mellékeljen ami a Haladó menüben készült</string>
-    <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis az eszközöddel. Töröld ki a letöltött fájlokat a beállításokban és próbáld újra.</string>
-    <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok korruptak, próbáld újra.</string>
-    <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsold ki a MIUI Optimalizációt és próbáld újra.</string>
+    <string name="installation_failed">A telepítés ismeretlen ok miatt meghiúsult, kérjük csatlakozzon a Telegram vagy a Discord csatornánkhoz további támogatásért. Kérjük mellékeljen egy olyan képernyőképet is, ami a Haladó menüben készült</string>
+    <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis a készülékével. Kérjük törölje a letöltött fájlokat a Beállításokban és próbálja újra.</string>
+    <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok sérültek. Kérjük próbálja újra.</string>
+    <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsolja ki a MIUI Optimalizációt és próbálja újra.</string>
     <string name="installation_signature">A telepítés nem sikerült, mert az apk aláírás ellenőrzés engedélyezve van.
-Kapcsold ki az apk aláírás ellenőrzését és próbáld újra.</string>
+Kapcsolja ki az apk aláírás ellenőrzését és próbálja újra.</string>
     <string name="installation_storage">A telepítés nem sikerült, mert nincs elég szabad hely.</string>
     <string name="modapk_missing">Nem sikerült megtalálni az apk file-t a fekete/sötét kinézethez a telepítőből. Törölje a Manager alkalmazás adatait, majd próbálja újra.</string>
     <string name="path_missing">Nem sikerült megtalálni az alap YouTube telepítési útvonalat a(z) split telepítés után.</string>
