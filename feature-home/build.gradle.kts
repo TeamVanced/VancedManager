@@ -55,9 +55,9 @@ dependencies {
 	implementation(kotlin("stdlib"))
 	implementation("androidx.appcompat:appcompat:1.2.0")
 	implementation("androidx.core:core-ktx:1.3.2")
-	implementation("androidx.fragment:fragment-ktx:1.3.0")
-	implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.0")
-	implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0")
+	implementation("androidx.fragment:fragment-ktx:1.3.3")
+	implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1")
+	implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
 	implementation("com.google.android.material:material:1.3.0")
 	implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
@@ -75,9 +75,9 @@ dependencies {
 	implementation("org.koin:koin-android-viewmodel:2.2.1")
 	implementation("org.koin:koin-android-ext:2.2.1")
 
-	testImplementation("io.kotest:kotest-runner-junit5:4.4.1")
-	testImplementation("io.kotest:kotest-assertions-core:4.4.1")
-	testImplementation("io.kotest:kotest-property:4.4.1")
+	testImplementation("io.kotest:kotest-runner-junit5:4.4.3")
+	testImplementation("io.kotest:kotest-assertions-core:4.4.3")
+	testImplementation("io.kotest:kotest-property:4.4.3")
 	testImplementation("io.mockk:mockk:1.10.6")
 
 	androidTestImplementation("io.mockk:mockk-android:1.10.6")
