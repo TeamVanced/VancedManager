@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">नहीं जानते ये क्या है या रूट वर्जन इस्तेमाल नहीं करना चाहते? बस नीचे वाला बटन दबाइए!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s के बारे में</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">डाउनलोड करें</string>
+    <string name="accessibility_info">जानकारी</string>
+    <string name="accessibility_launch">लॉन्च</string>
+    <string name="accessibility_reinstall">पुनः इंस्टॉल करें</string>
+    <string name="accessibility_uninstall">अनइंस्टॉल</string>
+    <string name="accessibility_update">अपडेट करें</string>
     <string name="apps">ऐप</string>
     <string name="changelog">परिवर्तन पत्र</string>
     <string name="downloading_file">डाउनलोड हो रहा है %1$s</string>
