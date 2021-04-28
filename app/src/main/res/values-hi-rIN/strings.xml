@@ -56,7 +56,7 @@
     <string name="push_notifications_summary">जब %1$s का अपडेट जारी किया जाता है, तो पुश सूचनाएँ प्राप्त करें</string>
     <string name="script_save_failed">नया समय मान सहेजने में विफल</string>
     <string name="script_sleep_timer">रूट स्क्रिप्ट स्लीप का समय</string>
-    <string name="script_sleep_timer_description">बढ़ते मुद्दों को ठीक करने के लिए उपयोगी /data/adb/service.d/app.sh स्क्रिप्ट में उपयोग की गई नींद के समय को समायोजित करें</string>
+    <string name="script_sleep_timer_description">माउन्ट मुद्दों को ठीक करने के लिए उपयोगी /data/adb/service.d/app.sh स्क्रिप्ट में उपयोग की गई नींद के समय को समायोजित करें</string>
     <string name="system_default">सिस्टम डिफ़ॉल्ट</string>
     <string name="theme">थीम</string>
     <string name="theme_dark">डार्क थीम</string>
