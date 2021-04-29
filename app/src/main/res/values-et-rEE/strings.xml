@@ -83,8 +83,8 @@
     <string name="miui_one">Et paigaldada Vanced, PEAB keelama MIUI optimiseerimise arendaja valikute alt. (Võite seda igroneerida kui kasutate 20.2.20 või uuemat xiaomi.eu põhist ROMi)</string>
     <string name="miui_one_title">MIUI optimiseerimine on lubatud!</string>
     <string name="please_be_patient">Palun ärge väljuge rakendusest protsessi ajal!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="uninstall_app_text">Kas soovite kindlasti desinstallida %1$s?</string>
+    <string name="uninstall">Desinstalli</string>
     <string name="redownload">Lae uuesti alla</string>
     <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
     <string name="version">Versioon</string>
