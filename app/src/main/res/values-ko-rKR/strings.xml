@@ -83,6 +83,8 @@
     <string name="miui_one">Vanced를 올바르게 설치하려면, 개발자 설정으로 들어가서 MIUI 최적화 기능을 반드시 끄셔야 합니다. (단, 버전이 20.2.20 이상인 xiaomi.eu 기반 ROM을 사용하는 경우 이 경고를 무시하셔도 좋습니다)</string>
     <string name="miui_one_title">MIUI 최적화 기능이 켜져 있습니다!</string>
     <string name="please_be_patient">이 작업을 하는 동안 이 앱에서 나가지 마세요!</string>
+    <string name="uninstall_app_text">정말로 %1$s 앱을 제거하시겠습니까?</string>
+    <string name="uninstall">제거</string>
     <string name="redownload">다시 다운로드</string>
     <string name="security_context">항상 vancedapp.com, 공식 Vanced 디스코드 서버 또는 공식 GitHub 저장소에서 Vanced Manager 앱을 다운로드해주세요.</string>
     <string name="version">버전</string>
