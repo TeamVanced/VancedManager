@@ -84,6 +84,8 @@ Akarod telepíteni?</string>
     <string name="miui_one">Hogy a Vanced-et telepítsd, ki KELL kapcsolnod a MIUI Optimalizációt a fejlesztői beállításokban. (Ezt figyelmen kívül hagyhatod ha 20.2.20 vagy későbbi xiaomi.eu alapú ROM-ot használsz)</string>
     <string name="miui_one_title">MIUI optimalizálások engedélyezve!</string>
     <string name="please_be_patient">Kérjük NE lépjen ki a telepítési folyamat alatt!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Újra letölt</string>
     <string name="security_context">Arra kérünk, győződjön meg róla, hogy ezt az alkalmazást a vancedapp.com oldalról, a Vanced Discord szerveréről vagy a Vanced GitHub-ról töltötte le</string>
     <string name="version">Verzió</string>
