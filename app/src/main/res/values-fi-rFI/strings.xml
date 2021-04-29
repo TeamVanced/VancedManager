@@ -83,6 +83,8 @@
     <string name="miui_one">Asentaaksesi Vancedin, sinun täytyy poistaa MIUI-optimisaatiot käytöstä kehittäjäasetuksista. (Voit ohittaa tämän varoituksen, jos käytät versiota 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM:ia)</string>
     <string name="miui_one_title">MIUI-optimoinnit ovat käytössä!</string>
     <string name="please_be_patient">ÄLÄ poistu sovelluksesta tämän prosessin aikana!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Uudelleenlataa</string>
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
     <string name="version">Versio</string>
