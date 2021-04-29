@@ -83,6 +83,8 @@
     <string name="miui_one">Ak chcete nainštalovať Vanced, MUSÍTE deaktivovať optimalizáciu MIUI v nastaveniach pre vývojárov. (Toto varovanie môžete ignorovať, ak používate ROM 20.2.20 alebo novšiu, založenú na xiaomi.eu)</string>
     <string name="miui_one_title">Optimalizácie MIUI sú zapnuté!</string>
     <string name="please_be_patient">Počas tohto procesu NEODCHÁDZAJTE z aplikácie!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Stiahnuť znova</string>
     <string name="security_context">Uistite sa, že ste si aplikáciu stiahli zo stránky vancedapp.com, servera Vanced Discord alebo Vanced GitHub</string>
     <string name="version">Verzia</string>
