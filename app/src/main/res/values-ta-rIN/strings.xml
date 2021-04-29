@@ -83,6 +83,8 @@
     <string name="miui_one">Vanced நிறுவ, நீங்கள் டெவலப்பர் அமைப்புகளில் Miui மேம்படுத்தல்களை முடக்க வேண்டும். (நீங்கள் 20.2.20 அல்லது பின்னர் xiaomi.eu அடிப்படையிலான ROM ஐப் பயன்படுத்துகிறீர்களானால் இந்த எச்சரிக்கையை நீங்கள் புறக்கணிக்கலாம்)</string>
     <string name="miui_one_title">MIUI மேம்படுத்தல்கள் இயக்கப்பட்டன!</string>
     <string name="please_be_patient">இந்த செயல்முறையின் போது பயன்பாட்டை விட்டு வெளியேற வேண்டாம்!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">மீண்டும் பதிவிறக்கு</string>
     <string name="security_context">பயன்பாட்டை vancedapp.com, Vanced Discord சேவையகம் அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
     <string name="version">பதிப்பு</string>
