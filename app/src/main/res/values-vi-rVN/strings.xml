@@ -83,6 +83,8 @@
     <string name="miui_one">Để cài Vanced, bạn PHẢI vô hiệu hóa Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="miui_one_title">Tối ưu hoá MIUI đang được kích hoạt!</string>
     <string name="please_be_patient">Vui lòng KHÔNG thoát khỏi ứng dụng trong tiến trình này!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Tải lại</string>
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
     <string name="version">Phiên bản</string>
