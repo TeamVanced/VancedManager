@@ -83,6 +83,8 @@
     <string name="miui_one">Ji bo sazkirina Vanced, divê tu optimîzasyonên MIUI di mîhengên pêşdebiran de neçalak bikî. (Heke hûn 20.2.20 an jî paşê bi romê xiaomi.eu vê hişyariyê paşguh bikin)</string>
     <string name="miui_one_title">Optimîzasyonên MIUI tên çalak kirin!</string>
     <string name="please_be_patient">Ji kerema xwe di vê pêvajoyê de ji sepanê dernakeve!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Ji nû ve daxîne</string>
     <string name="security_context">Pê bawer bin ku te ev sepan ji vancedapp.com, servera Discord a Vanced an jî JiGitHub ya Vanced dakêşandine</string>
     <string name="version">Versiyon</string>
