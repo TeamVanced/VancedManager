@@ -83,6 +83,8 @@
     <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة إذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند إلى نسخة نظام شاومي أوروبا)</string>
     <string name="miui_one_title">تحسينات MIUI مفعلة!</string>
     <string name="please_be_patient">الرجاء عدم الخروج من التطبيق أثناء هذه العملية!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">إعادة التنزيل</string>
     <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="version">الإصدار</string>
