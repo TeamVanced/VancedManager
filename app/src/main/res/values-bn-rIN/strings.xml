@@ -83,6 +83,8 @@
     <string name="miui_one">ভ্যান্সড ইনস্টল করতে হলে, আপনাকে ডেভেলপার সেটিংসে MIUI অপটিমাইজেশন বন্ধ করতে হবে। (আপনি যদি ২০.২.২০ বা তার পরবর্তী xiaomi.eu ভিত্তিক রম ব্যবহার করেন তবে আপনি এই সতর্কবার্তাটি এড়িয়ে যেতে পারেন)</string>
     <string name="miui_one_title">MIUI অপটিমাইজেশন সক্ষম করা আছে!</string>
     <string name="please_be_patient">এই প্রক্রিয়া চলাকালীন দয়া করে অ্যাপ্লিকেশন থেকে কোনোমতেই প্রস্থান করবেন না!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">পুনরায় ডাউনলোড করুন</string>
     <string name="security_context">নিশ্চিত করুন যে আপনি অ্যাপটি vancedapp.com, ভ্যান্সড ডিসকার্ড সার্ভার বা ভ্যান্সড গিটহাব থেকে ডাউনলোড করেছেন</string>
     <string name="version">সংস্করণ</string>
