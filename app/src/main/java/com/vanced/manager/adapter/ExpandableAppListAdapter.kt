@@ -18,6 +18,7 @@ import com.vanced.manager.databinding.ViewAppExpandableBinding
 import com.vanced.manager.model.ButtonTag
 import com.vanced.manager.model.DataModel
 import com.vanced.manager.ui.dialogs.AppInfoDialog
+import com.vanced.manager.ui.dialogs.AppUninstallDialog
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.utils.*
 
@@ -64,7 +65,7 @@ class ExpandableAppListAdapter(
                     }
                 }
                 appUninstall.setOnClickListener {
-                    dataModel?.appPkg?.let { it1 -> viewModel.uninstallPackage(it1) }
+                    AppUninstallDialog.newInstance(apps[position]).show(activity.supportFragmentManager, null)
                 }
                 appLaunch.setOnClickListener {
                     viewModel.launchApp(apps[position], isRoot)
