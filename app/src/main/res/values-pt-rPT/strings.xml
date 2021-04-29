@@ -83,6 +83,8 @@
     <string name="miui_one">Para instalar o Vanced, você DEVE desativar as Otimizações MIUI nas configurações do desenvolvedor. (Você pode ignorar este aviso se você estiver usando ROM baseada em 20.2.20 ou mais tarde xiaomi.eu)</string>
     <string name="miui_one_title">Optimizações MIUI estão habilitadas!</string>
     <string name="please_be_patient">Por favor NÃO saia do aplicativo durante este processo!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Voltar a descarregar</string>
     <string name="security_context">Certifique-se de que você baixou o aplicativo do vancedapp.com, o servidor Vanced Discord ou o Vanced GitHub</string>
     <string name="version">Versão</string>
