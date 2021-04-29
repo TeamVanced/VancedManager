@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">İptal</string>
     <string name="close">Kapat</string>
-    <string name="description_microg">Vanced için geliştirilmiş microG Projesi tabanlı GMH sürümü.</string>
+    <string name="description_microg">Vanced uygulamaları için geliştirilen microG tabanlı özel bir GMS uygulamasıdır.</string>
     <string name="description_vanced">İşe yarar birçok özellikle modifiye edilmiş YouTube sürümü!</string>
     <string name="description_vanced_music">Yine Vanced, ama YouTube Music için! Kıyasen daha az özelliğe sahip ama beklentilerini karşılayacaktır.</string>
     <string name="reset">Sıfırla</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Vanced\'ı yükleyebilmek için, geliştirici ayarlarından/seçeneklerinden MIUI optimizasyonunu devre dışı bırakmalısın. (xiaomi.eu tabanlı 20.2.20 sürüm veya üzeri ROM kullanıyorsan, bu uyarıyı göz ardı edebilirsin)</string>
     <string name="miui_one_title">MIUI Optimizasyonu aktif gözüküyor!</string>
     <string name="please_be_patient">İşlem süresince LÜTFEN uygulamadan çıkmayın!</string>
+    <string name="uninstall_app_text">%1$s uygulamasını kaldırmak istediğinden emin misin?</string>
+    <string name="uninstall">Kaldır</string>
     <string name="redownload">Tekrar İndir</string>
     <string name="security_context">Uygulamayı vancedapp.com, Vanced Discord sunucusu, veya Vanced GitHub\'dan indirdiğinizden emin olun</string>
     <string name="version">Sürüm</string>
