@@ -83,8 +83,8 @@
     <string name="miui_one">欲安裝 Vanced，請先至開發人員選項停用 MIUI 優化。（若您正在使用 20.2.20 或更新版本且基於的 xiaomi.eu 的系統，請忽略此警告）</string>
     <string name="miui_one_title">已啟用 MIUI 優化！</string>
     <string name="please_be_patient">在此過程中請不要退出應用程式！</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="uninstall_app_text">你確定要解除安裝 %1$s 嗎？</string>
+    <string name="uninstall">解除安裝</string>
     <string name="redownload">重新下載</string>
     <string name="security_context">請確保您從 vancedapp.com、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="version">版本</string>
