@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">இது என்னவென்று தெரியவில்லையா அல்லது ரூட் பதிப்பைப் பயன்படுத்த விரும்பவில்லையா? கீழே உள்ள நீல அம்புக்குறியைக் கிளிக் செய்க!</string>
     <!-- Home Page -->
     <string name="about_app">பற்றி %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">பதிவிறக்க</string>
+    <string name="accessibility_info">தகவல்</string>
+    <string name="accessibility_launch">தொடங்க</string>
+    <string name="accessibility_reinstall">மீண்டும் நிறுவவும்</string>
+    <string name="accessibility_uninstall">நிறுவல் நீக்கு</string>
+    <string name="accessibility_update">புதுப்பிப்பு</string>
     <string name="apps">பயன்பாடுகள்</string>
     <string name="changelog">சேஞ்ச்லாக்</string>
     <string name="downloading_file">%1$s ஐப் பதிவிறக்குகிறது</string>
@@ -83,8 +83,8 @@
     <string name="miui_one">Vanced நிறுவ, நீங்கள் டெவலப்பர் அமைப்புகளில் Miui மேம்படுத்தல்களை முடக்க வேண்டும். (நீங்கள் 20.2.20 அல்லது பின்னர் xiaomi.eu அடிப்படையிலான ROM ஐப் பயன்படுத்துகிறீர்களானால் இந்த எச்சரிக்கையை நீங்கள் புறக்கணிக்கலாம்)</string>
     <string name="miui_one_title">MIUI மேம்படுத்தல்கள் இயக்கப்பட்டன!</string>
     <string name="please_be_patient">இந்த செயல்முறையின் போது பயன்பாட்டை விட்டு வெளியேற வேண்டாம்!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="uninstall_app_text">%1$s ஐ நிறுவல் நீக்க விரும்புகிறீர்களா?</string>
+    <string name="uninstall">நிறுவல் நீக்கு</string>
     <string name="redownload">மீண்டும் பதிவிறக்கு</string>
     <string name="security_context">பயன்பாட்டை vancedapp.com, Vanced Discord சேவையகம் அல்லது Vanced GitHub இலிருந்து பதிவிறக்கம் செய்துள்ளீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்</string>
     <string name="version">பதிப்பு</string>
