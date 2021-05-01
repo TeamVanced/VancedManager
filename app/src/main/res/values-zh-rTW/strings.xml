@@ -25,7 +25,7 @@
     <!-- Home Page -->
     <string name="about_app">關於 %1$s</string>
     <string name="accessibility_download">下載</string>
-    <string name="accessibility_info">關於</string>
+    <string name="accessibility_info">資訊</string>
     <string name="accessibility_launch">啟動</string>
     <string name="accessibility_reinstall">重新安裝</string>
     <string name="accessibility_uninstall">解除安裝</string>
