@@ -83,8 +83,8 @@
     <string name="miui_one">על מנת להתקין את Vanced, עליך להשבית מיטוב ל־MIUI בהגדרות מפתחים. (אתה יכול להתעלם מאזהרה זו אם אתה משתמש בגרסה 20.2.2 של הרום הבין־לאומי של שיאומי או גרסה מאוחרת יותר)</string>
     <string name="miui_one_title">מיטוב למערכת ההפעלה MIUI פועל!</string>
     <string name="please_be_patient">נא לא לצאת מהיישום במהלך תהליך זה!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="uninstall_app_text">האם אתה בטוח שברצונך להסיר את ההתקנה של %1$s?</string>
+    <string name="uninstall">הסר התקנה</string>
     <string name="redownload">הורד מחדש</string>
     <string name="security_context">ודא שהורדת את האפליקציה מהאתר vancedapp.com, שרת הדיסקורד של Vanced או מהעמוד של Vanced ב־GitHub</string>
     <string name="version">גרסא</string>
