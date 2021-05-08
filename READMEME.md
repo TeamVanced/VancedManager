@@ -42,11 +42,12 @@ Isn't this lovely and beautiful?
 
 - Nautilus: 
 ![Attached Message](https://static.wikia.nocookie.net/jerma-lore/images/e/e3/JermaSus.jpg/revision/latest?cb=20201206225609)
-- Response: Amogus. Sus 😳
+- Response: Amogus Sus 😳
 
 ## How does it suck?™
-Vanced Manager sucks 100% of your CPU to mine Bitcoins, this is a new technique called CryptocurrencySucker2077. Basically we load up your shit MediaTek MT 8163 with processes that help us mine cryptocurrency, this is how Vanced Team makes money (excluding BAT and AdGuard referrals)   
-
+Vanced Manager sucks 100% of your CPU to mine Bitcoins, this is a new technique called CryptocurrencySucker2077. Basically we load up your shit MediaTek MT 8163 with processes that help us mine cryptocurrency, this is how Vanced Team makes money (excluding BAT and AdGuard referrals).
+**Note: Each zuccer delivers a high performance structure unless you delete the app or smash your device and flush it in the toilet.**
+ 
 ## Credits
 ### Vanced Manager developers  
 - X1nto (UI, UX, Downloader, Installer, Signature Checker, PussiSlayer69, Collector of 400 BAT, A great liar)
