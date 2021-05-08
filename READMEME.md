@@ -1,4 +1,8 @@
-![Signed APK Builder](https://github.com/X1nto/VancedInstaller/workflows/Signed%20APK%20Builder/badge.svg?branch=master)
+<div align="center">
+
+![Build Info](https://img.shields.io/badge/build-failing%20%F0%9F%98%82-success?style=for-the-badge) ![OwO](https://img.shields.io/badge/UwU-What's%20This-ff0066?style=for-the-badge) ![General](https://img.shields.io/badge/sussus-amogus-f44336?style=for-the-badge&labelColor=brightgreen) ![Devinfo](https://img.shields.io/badge/dewuloper-cockman%20--%20Steve%20cock-blueviolet?style=for-the-badge)
+ 
+</div>
 
 # Prelude
 Hi, my name is Steve Cock, I'm the main developer for the upcoming Vanced Manager. When xfileFIN first published Vanced 15.05.54, people were upset because new Vanced used split apk files. The reason for that was pretty simple:  
@@ -26,11 +30,16 @@ Isn't this lovely and beautiful?
   
 - Noobbot: The app is not useful because I have YT Premium. Thank you bye  
 - Response: I hope you get sucked by a di- 
+- Guy1™: Lol wtf
+- Response: -ban @Guy1™
 
 =================== 
   
 - Vortextriangle: The app is so useful that I uninstalled it after installing Vanced  
 - Response: yo that's finna woke  
+
+===================
+
 
 ## How does it suck?™
 Vanced Manager sucks 100% of your CPU to mine Bitcoins, this is a new technique called CryptocurrencySucker2077. Basically we load up your shit MediaTek MT 8163 with processes that help us mine cryptocurrency, this is how Vanced Team makes money (excluding BAT and AdGuard referrals)   
