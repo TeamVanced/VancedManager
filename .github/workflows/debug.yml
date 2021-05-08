@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - dev
+    paths-ignore:
+      - '**.md'
   pull_request:
     branches:
       - dev
+    paths-ignore:
+      - '**.md'
 
 jobs:
   build:
