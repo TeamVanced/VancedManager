@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Splash screen color for dark/night theme-->
+    <color name="splash">#131317</color>
+
+</resources>
+
