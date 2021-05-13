@@ -12,6 +12,7 @@
     <color name="Gray">#5F5E5E</color>
     <color name="White">#ffffff</color>
     <color name="Black">#000000</color>
-    <color name="splash">#131317</color>
+    <!--Splash screen color for light/day theme-->
+    <color name="splash">#cfcfcf</color>
 
 </resources>
