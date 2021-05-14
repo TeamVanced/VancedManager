@@ -21,7 +21,7 @@
     <string name="grant_root">Udeliť oprávnenie root</string>
     <string name="lets_get_started">Začnime</string>
     <string name="select_at_least_one_app">Vyberte aspoň jednu aplikáciu!</string>
-    <string name="willing_to_use_root">Neviete, čo to je alebo nechcete používať verziu s prístupom root? Stačí kliknúť na modrú šípku dole!</string>
+    <string name="willing_to_use_root">Neviete, čo to je, alebo nechcete používať verziu s prístupom root? Stačí kliknúť na modrú šípku nižšie!</string>
     <!-- Home Page -->
     <string name="about_app">O aplikácií %1$s</string>
     <string name="accessibility_download">Stiahnuť</string>
