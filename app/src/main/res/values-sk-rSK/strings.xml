@@ -5,7 +5,7 @@
     <string name="close">Zavrieť</string>
     <string name="description_microg">Vlastná implementácia GMS pre Vanced založená na projekte microG.</string>
     <string name="description_vanced">Upravený YouTube klient s mnohými užitočnými funkciami!</string>
-    <string name="description_vanced_music">Vanced, ale YouTube Music! Obsahuje o trochu menej funkcií, ale splní vaše potreby.</string>
+    <string name="description_vanced_music">Vanced, ale YouTube Music! Obsahuje o trochu menej funkcií, no splní vaše potreby.</string>
     <string name="reset">Resetovať</string>
     <string name="save">Uložiť</string>
     <string name="select_apps">Vyberte svoje aplikácie</string>
@@ -92,7 +92,7 @@
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte si jeden alebo viac preferovaných jazykov pre Vanced</string>
     <string name="install_latest">Najnovšie</string>
-    <string name="light_plus_other">Svetlý + %1$s</string>
+    <string name="light_plus_other">Svetlá + %1$s</string>
     <string name="select_at_least_one_lang">Vyberte aspoň jeden jazyk!</string>
     <string name="vanced_black">Čierna</string>
     <string name="vanced_dark">Tmavá</string>
