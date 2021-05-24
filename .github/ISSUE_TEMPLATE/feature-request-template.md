@@ -7,9 +7,8 @@ assignees: ''
 
 ---
 
-**Please check all boxes below by replacing space with** `x`
-- [ ] I am using the latest version
-- [ ] This is a suggestion for in the Vanced Manager and ONLY Vanced Manager (NOT Youtube Vanced/Music/microG)
+**Please only open the issue if the following is true**
+- This is an issue in the Vanced Manager and ONLY Vanced Manager (NOT Youtube Vanced/Music/microG)
 
 **Suggestion:**
 

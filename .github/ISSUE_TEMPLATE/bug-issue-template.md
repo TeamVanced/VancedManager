@@ -7,12 +7,8 @@ assignees: ''
 
 ---
 
-**Please check all boxes below by replacing space with** `x`
-- [ ] I installed the App from [vancedapp.com](https://vancedapp.com), this github repository or the Vanced Discord server
-- [ ] I am using the latest version
-- [ ] This is an issue in the Vanced Manager and ONLY Vanced Manager (NOT Youtube Vanced/Music/microG)
-- [ ] This issue keeps re-occurring every time I try
-- [ ] I disabled MIUI optimisations (MIUI ONLY)
+**Please only open the issue if the following is true**
+- This is an issue in the Vanced Manager and ONLY Vanced Manager (NOT Youtube Vanced/Music/microG)
 
 **Phone Specifications:**
 - Brand:
