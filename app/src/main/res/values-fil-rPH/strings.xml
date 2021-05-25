@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Hindi mo alam ito o huwag gamitin ang root bersyon? I-click ang asul na arrow sa baba!</string>
     <!-- Home Page -->
     <string name="about_app">Tungkol sa %1$s</string>
-    <string name="accessibility_download">Download</string>
+    <string name="accessibility_download">I-download</string>
     <string name="accessibility_info">Info</string>
     <string name="accessibility_launch">Launch</string>
     <string name="accessibility_reinstall">Reinstall</string>
