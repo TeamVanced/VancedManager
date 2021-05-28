@@ -38,14 +38,15 @@ class LogFragment : BindingFragment<FragmentLogBinding>() {
                 val hour = calendar.get(Calendar.HOUR_OF_DAY)
                 val minute = calendar.get(Calendar.MINUTE)
                 val second = calendar.get(Calendar.SECOND)
+                val savePath = requireActivity().getExternalFilesDir("logs")?.path + "/$year$month${day}_$hour$minute$second.log"
                 val log =
-                    File(requireActivity().getExternalFilesDir("logs")?.path + "/$year$month${day}_$hour$minute$second.log")
+                    File(savePath)
                 FileWriter(log).apply {
                     append(logs)
                     flush()
                     close()
                 }
-                Toast.makeText(requireActivity(), R.string.logs_saved, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), getString(R.string.logs_saved, savePath), Toast.LENGTH_SHORT).show()
             } catch (e: IOException) {
                 Toast.makeText(requireActivity(), R.string.logs_not_saved, Toast.LENGTH_SHORT)
                     .show()
