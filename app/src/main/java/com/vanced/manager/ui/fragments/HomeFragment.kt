@@ -62,18 +62,18 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>() {
             isFetching.observe(viewLifecycleOwner) { homeRefresh.isRefreshing = it }
 
             val prefs = PreferenceManager.getDefaultSharedPreferences(context)
-            if (prefs.getInt("LastVersionCode", VERSION_CODE) < VERSION_CODE) {
-                showDialog(
-                    AppInfoDialog.newInstance(
-                        appName = getString(R.string.app_name),
-                        appIcon = R.mipmap.ic_launcher,
-                        changelog = manager.value?.string("changelog")
+            if (prefs.contains("LastVersionCode")) {
+                if (prefs.getInt("LastVersionCode", -1) < VERSION_CODE) {
+                    showDialog(
+                        AppInfoDialog.newInstance(
+                            appName = getString(R.string.app_name),
+                            appIcon = R.mipmap.ic_launcher,
+                            changelog = manager.value?.string("changelog")
+                        )
                     )
-                )
-                prefs.edit().putInt("LastVersionCode", VERSION_CODE).apply()
-            } else {
-                prefs.edit().putInt("LastVersionCode", VERSION_CODE).apply()
-            }
+                    prefs.edit().putInt("LastVersionCode", VERSION_CODE).apply()
+                }
+            } else prefs.edit().putInt("LastVersionCode", VERSION_CODE).apply()
 
             recyclerAppList.apply {
                 layoutManager = LinearLayoutManager(requireActivity())
