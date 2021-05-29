@@ -11,20 +11,25 @@ import android.view.MenuInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.crowdin.platform.util.inflateWithCrowdin
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
+import com.vanced.manager.BuildConfig.VERSION_CODE
 import com.vanced.manager.R
 import com.vanced.manager.adapter.ExpandableAppListAdapter
 import com.vanced.manager.adapter.LinkAdapter
 import com.vanced.manager.adapter.SponsorAdapter
 import com.vanced.manager.core.ui.base.BindingFragment
+import com.vanced.manager.core.ui.ext.showDialog
 import com.vanced.manager.databinding.FragmentHomeBinding
+import com.vanced.manager.ui.dialogs.AppInfoDialog
 import com.vanced.manager.ui.dialogs.DialogContainer.installAlertBuilder
 import com.vanced.manager.ui.viewmodels.HomeViewModel
 import com.vanced.manager.ui.viewmodels.HomeViewModelFactory
 import com.vanced.manager.utils.isFetching
+import com.vanced.manager.utils.manager
 
 class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 
@@ -55,6 +60,20 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>() {
         with(binding) {
             homeRefresh.setOnRefreshListener { viewModel.fetchData() }
             isFetching.observe(viewLifecycleOwner) { homeRefresh.isRefreshing = it }
+
+            val prefs = PreferenceManager.getDefaultSharedPreferences(context)
+            if (prefs.contains("LastVersionCode")) {
+                if (prefs.getInt("LastVersionCode", -1) < VERSION_CODE) {
+                    showDialog(
+                        AppInfoDialog.newInstance(
+                            appName = getString(R.string.app_name),
+                            appIcon = R.mipmap.ic_launcher,
+                            changelog = manager.value?.string("changelog")
+                        )
+                    )
+                    prefs.edit().putInt("LastVersionCode", VERSION_CODE).apply()
+                }
+            } else prefs.edit().putInt("LastVersionCode", VERSION_CODE).apply()
 
             recyclerAppList.apply {
                 layoutManager = LinearLayoutManager(requireActivity())

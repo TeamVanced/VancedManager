@@ -73,7 +73,7 @@
 
     <!-- Logs -->
     <string name="logs_not_saved">Could not save logs</string>
-    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
 
     <!-- Dialogs -->
     <string name="advanced">Details</string>
