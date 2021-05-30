@@ -66,7 +66,7 @@
     <string name="variant">種類</string>
     <!-- Logs -->
     <string name="logs_not_saved">ログの保存に失敗しました</string>
-    <string name="logs_saved">ログが正常に保存されました</string>
+    <string name="logs_saved">%1$s にログを保存しました</string>
     <!-- Dialogs -->
     <string name="advanced">詳細</string>
     <string name="app_install_files_detected">%1$s のインストールに必要なファイルが見つかりました</string>
