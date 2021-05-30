@@ -66,7 +66,7 @@
     <string name="variant">Varianta</string>
     <!-- Logs -->
     <string name="logs_not_saved">Logy nebolo možné uložiť</string>
-    <string name="logs_saved">Logy boli úspešne uložené</string>
+    <string name="logs_saved">Logy boli úspešne uložené do %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Podrobnosti</string>
     <string name="app_install_files_detected">Nájdených %1$s inštalačných súborov!</string>
