@@ -66,7 +66,7 @@
     <string name="variant">Варијанта</string>
     <!-- Logs -->
     <string name="logs_not_saved">Није могуће снимити дневнике</string>
-    <string name="logs_saved">Успешно сачувани дневници</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Детаљи</string>
     <string name="app_install_files_detected">%1$s верзија је пронађена!</string>
