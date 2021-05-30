@@ -66,7 +66,7 @@
     <string name="variant">ตัวแปร</string>
     <!-- Logs -->
     <string name="logs_not_saved">ไม่สามารถบันทึกได้</string>
-    <string name="logs_saved">ดำเนินการบันทึกเรียบร้อยแล้ว</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">รายละเอียด</string>
     <string name="app_install_files_detected">%1$s ตรวจพบไฟล์สำหรับการติดตั้ง!</string>
