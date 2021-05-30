@@ -66,7 +66,7 @@
     <string name="variant">النوع</string>
     <!-- Logs -->
     <string name="logs_not_saved">تعذر حفظ السجل</string>
-    <string name="logs_saved">تم حفظ السجل بنجاح</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">التفاصيل</string>
     <string name="app_install_files_detected">تم اكتشاف ملفات تثبيت %1$s!</string>
