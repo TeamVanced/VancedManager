@@ -66,7 +66,7 @@
     <string name="variant">Variaatio</string>
     <!-- Logs -->
     <string name="logs_not_saved">Lokeja ei voitu tallentaa</string>
-    <string name="logs_saved">Lokit tallennettiin onnistuneesti</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Lisätiedot</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
