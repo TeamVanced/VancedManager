@@ -66,7 +66,7 @@
     <string name="variant">রকমফের</string>
     <!-- Logs -->
     <string name="logs_not_saved">Could not save logs</string>
-    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s ইন্সটল করার জন্য ফাইল পাওয়া গেছে!</string>
