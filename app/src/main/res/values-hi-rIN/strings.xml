@@ -66,7 +66,7 @@
     <string name="variant">संस्करण</string>
     <!-- Logs -->
     <string name="logs_not_saved">लॉग नहीं सहेजे गए</string>
-    <string name="logs_saved">सफलतापूर्वक लॉग सहेजे गए</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">विवरण</string>
     <string name="app_install_files_detected">%1$s इंस्टालेशन फ़ाइलों का पता चला!</string>
