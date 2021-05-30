@@ -1,85 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- BASE LIGHT -->
-    <style name="BaseLight" parent="Theme.MaterialComponents.Light.NoActionBar">
-
-        <item name="colorPrimary">#2e73ff</item>
-        <item name="colorPrimaryVariant">#2C7EB9</item>
-        <item name="colorSecondary">#3E78AF</item>
-        <item name="colorSecondaryVariant">#803E78AF</item>
-        <item name="colorSurface">#e9e9e9</item>
-        <item name="colorSurfaceVariant">#F3F3F3</item>
-        <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
-        <item name="colorOnPrimary">#F9F9F9</item>
-        <item name="colorOnPrimaryVariant">#e8e8e8</item>
-        <item name="colorOnSecondary">#F9F9F9</item>
-        <item name="colorOnBackground">?colorOnSurface</item>
-        <item name="colorError">#FF0032</item>
-        <item name="colorOnError">#F9F9F9</item>
-        <item name="colorOnSurface">#444444</item>
-        <item name="colorOnSurfaceVariant">#C3131313</item>
-        <item name="colorDisabled">@color/Gray</item>
-        <item name="colorDisabledVariant">#000000</item>
-        <item name="iconColor">?colorPrimaryVariant</item>
-        <item name="toolbarIconColor">#111111</item>
-        <item name="DialogBG">#ffffff</item>
-        <item name="colorLinkImage">#000000</item>
-        <item name="colorLinkBG">#F7F7F7</item>
-        <item name="colorSettingsTitle">#000000</item>
-        <item name="colorSecondaryText">#B3000000</item>
-        <item name="colorWelcomeHeaderSubtitle">#99000000</item>
-        <item name="android:windowBackground">?colorSurface</item>
-        <item name="android:statusBarColor">#787777</item>
-        <item name="materialAlertDialogTheme">@style/DialogStyle</item>
-        <item name="snackbarStyle">@style/SnackBar</item>
-        <item name="snackbarButtonStyle">@style/SnackButton</item>
-        <item name="snackbarTextViewStyle">@style/SnackBarText</item>
-
-    </style>
-
-    <!-- LIGHT -->
-
-    <style name="LightTheme" parent="BaseLight"/>
-
-    <!-- DARK -->
-
-    <style name="DarkTheme" parent="Theme.MaterialComponents.NoActionBar">
-
-        <item name="colorPrimary">#2e73ff</item>
-        <item name="colorPrimaryVariant">#2C7EB9</item>
-        <item name="colorSecondary">#3E78AF</item>
-        <item name="colorSecondaryVariant">#803E78AF</item>
-        <item name="colorSurface">#111111</item>
-        <item name="colorSurfaceVariant">#111111</item>
-        <item name="colorSurfaceSurfaceVariant">?colorSurface</item>
-        <item name="colorOnPrimary">#F9F9F9</item>
-        <item name="colorOnPrimaryVariant">#111111</item>
-        <item name="colorOnSecondary">#F9F9F9</item>
-        <item name="colorOnBackground">?colorOnSurface</item>
-        <item name="colorError">#CC0047</item>
-        <item name="colorOnError">#F9F9F9</item>
-        <item name="colorOnSurface">#444444</item>
-        <item name="colorOnSurfaceVariant">#FFFFFF</item>
-        <item name="colorDisabled">@color/Gray</item>
-        <item name="colorDisabledVariant">#66808080</item>
-        <item name="iconColor">?colorPrimaryVariant</item>
-        <item name="toolbarIconColor">?colorOnPrimary</item>
-        <item name="DialogBG">#111111</item>
-        <item name="colorLinkImage">#FFFFFF</item>
-        <item name="colorLinkBG">#191919</item>
-        <item name="colorSettingsTitle">#ffffff</item>
-        <item name="colorSecondaryText">#B3FFFFFF</item>
-        <item name="colorWelcomeHeaderSubtitle">#99FFFFFF</item>
-        <item name="colorBackgroundFloating">#111111</item>
-        <item name="android:windowBackground">?colorSurface</item>
-        <item name="android:statusBarColor">?colorSurface</item>
-        <item name="android:navigationBarColor">#000000</item>
-        <item name="materialAlertDialogTheme">@style/DialogStyle</item>
-        <item name="snackbarStyle">@style/SnackBar</item>
-        <item name="snackbarButtonStyle">@style/SnackButton</item>
-        <item name="snackbarTextViewStyle">@style/SnackBarText</item>
-
+    <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
 </resources>

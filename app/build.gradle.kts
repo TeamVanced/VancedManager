@@ -1,39 +1,27 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("kapt")
-    id("com.google.gms.google-services")
-    id("com.google.firebase.crashlytics")
-    id("com.google.firebase.firebase-perf")
-    id("androidx.navigation.safeargs.kotlin")
-    id("kotlin-android")
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdk = 30
 
     defaultConfig {
+        minSdk = 21
+        targetSdk = 30
+
         applicationId = "com.vanced.manager"
-        minSdkVersion(21)
-        targetSdkVersion(30)
-        versionCode = 260
-        versionName = "2.6.0 (Crimson)"
+
+        versionCode = 3000
+        versionName = "3.0.0 (Re@Composed)"
 
         vectorDrawables.useSupportLibrary = true
 
         buildConfigField("String[]", "MANAGER_LANGUAGES", "{$languages}")
-        buildConfigField("Boolean", "ENABLE_CROWDIN_AUTH", "false")
-        buildConfigField("String", "CROWDIN_HASH", "\"${System.getenv("CROWDIN_HASH")}\"")
-        buildConfigField("String", "CROWDIN_CLIENT_ID", "\"${System.getenv("CROWDIN_CLIENT_ID")}\"")
-        buildConfigField("String", "CROWDIN_CLIENT_SECRET", "\"${System.getenv("CROWDIN_CLIENT_SECRET")}\"")
     }
 
-    lintOptions {
+    lint {
         disable("MissingTranslation", "ExtraTranslation")
-    }
-
-    applicationVariants.all {
-        resValue("string", "versionName", versionName)
     }
 
     buildTypes {
@@ -44,30 +32,29 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true
-        //compose = true
+        compose = true
     }
 
     packagingOptions {
-        exclude("META-INF/DEPENDENCIES")
-        exclude("META-INF/*.kotlin_module")
+        resources.excludes.add("META-INF/DEPENDENCIES")
+        resources.excludes.add("META-INF/*.kotlin_module")
     }
 
-// To inline the bytecode built with JVM target 1.8 into
-// bytecode that is being built with JVM target 1.6. (e.g. navArgs)
-
+    // To inline the bytecode built with JVM target 1.8 into
+    // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "1.8"
-            //useIR = true
-        }
-    }
+}
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        useIR = true
+        freeCompilerArgs = freeCompilerArgs + "-Xopt-in=kotlin.RequiresOptIn"
+    }
 }
 
 val languages: String get() {
@@ -76,7 +63,7 @@ val languages: String get() {
 
     File("$projectDir/src/main/res").listFiles()?.filter {
         val name = it.name
-        name.startsWith("values-") && !name.contains("v23")
+        name.startsWith("values") && !name.contains("v23") && !name.contains("night")
     }?.forEach { dir ->
         val dirname = dir.name.substringAfter("-").substringBefore("-")
         if (!exceptions.contains(dirname)) {
@@ -87,69 +74,49 @@ val languages: String get() {
 }
 
 dependencies {
-
-    //val composeVersion = "1.0.0-alpha12"
-    implementation(project(":core-presentation"))
-    implementation(project(":core-ui"))
-
-    implementation(project(":library-network"))
-
-    // Kotlin
-    implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
 
-    // AndroidX
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.browser:browser:1.3.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.fragment:fragment-ktx:1.3.3")
-    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-    implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.0.0")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
-    implementation("androidx.preference:preference-ktx:1.1.1")
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
-
-
-    // Compose
-//    implementation("androidx.compose.ui:ui:$composeVersion")
-//    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
-//    implementation("androidx.compose.foundation:foundation:$composeVersion")
-//    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha02")
-//    implementation("androidx.compose.material:material:$composeVersion")
-//    implementation("androidx.compose.material:material-icons-core:$composeVersion")
-//    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
-//    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
-
-    // Appearance
-    implementation("com.github.madrapps:pikolo:2.0.1")
+    implementation("androidx.core:core-ktx:1.5.0")
+    implementation("androidx.appcompat:appcompat:1.3.0")
     implementation("com.google.android.material:material:1.3.0")
+    implementation("androidx.browser:browser:1.3.0")
 
-    // JSON parser
-    implementation("com.beust:klaxon:5.5")
+    val composeVersion = "1.0.0-beta07"
+    implementation("androidx.compose.ui:ui:$composeVersion")
+    implementation("androidx.compose.material:material:$composeVersion")
+    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
+    implementation("androidx.compose.ui:ui-util:$composeVersion")
+    implementation("androidx.compose.foundation:foundation:$composeVersion")
+    implementation("androidx.compose.material:material:$composeVersion")
+    implementation("androidx.compose.material:material-icons-core:$composeVersion")
+    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
+    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
 
-    // Crowdin
-    implementation("com.github.crowdin.mobile-sdk-android:sdk:1.4.0")
+    implementation("androidx.activity:activity-compose:1.3.0-alpha08")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha01")
+    implementation("androidx.preference:preference-ktx:1.1.1")
 
-    // HTTP networking
-    implementation("com.github.kittinunf.fuel:fuel:2.3.1")
-    implementation("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
-    implementation("com.github.kittinunf.fuel:fuel-json:2.3.1")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    val accompanistVersion = "0.10.0"
+    implementation("com.google.accompanist:accompanist-glide:$accompanistVersion")
+    implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
 
-    // Root permissions
-    implementation("com.github.topjohnwu.libsu:core:3.1.2")
-    implementation("com.github.topjohnwu.libsu:io:3.1.2")
+    implementation("com.github.madrapps:pikolo:2.0.1")
 
-    // Layout
-    implementation("com.google.android:flexbox:2.0.1")
+    val koinVersion = "3.0.1"
+    implementation("io.insert-koin:koin-android:$koinVersion")
+    implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
 
-    // Firebase
-    implementation("com.google.firebase:firebase-analytics-ktx:18.0.3")
-    implementation("com.google.firebase:firebase-crashlytics:17.4.1")
-    implementation("com.google.firebase:firebase-messaging:21.1.0")
-    implementation("com.google.firebase:firebase-perf:19.1.1")
+    val retrofitVersion = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+
+    implementation("dev.burnoo:compose-remember-preference:0.3.0")
+
+    implementation("com.github.x1nto:apkhelper:1.1.0")
+
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
 }

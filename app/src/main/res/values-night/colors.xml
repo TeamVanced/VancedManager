@@ -2,7 +2,7 @@
 <resources>
 
     <!--Splash screen color for dark/night theme-->
-    <color name="splash">#131317</color>
+    <color name="splash_background">#131317</color>
 
 </resources>
 
