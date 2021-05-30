@@ -66,7 +66,7 @@
     <string name="variant">Variantă</string>
     <!-- Logs -->
     <string name="logs_not_saved">Jurnalele nu pot fi salvate</string>
-    <string name="logs_saved">Jurnale salvate cu succes</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalii</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
