@@ -66,7 +66,7 @@
     <string name="variant">Sürüm yapısı</string>
     <!-- Logs -->
     <string name="logs_not_saved">Kayıtlar kaydedilemedi</string>
-    <string name="logs_saved">Kayıtlar başarıyla kaydedildi</string>
+    <string name="logs_saved">Kayıtlar %1$s dosyasına kaydedildi</string>
     <!-- Dialogs -->
     <string name="advanced">Ayrıntılar</string>
     <string name="app_install_files_detected">%1$s için kurulum dosyaları bulundu!</string>
