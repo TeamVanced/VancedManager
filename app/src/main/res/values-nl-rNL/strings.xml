@@ -66,7 +66,7 @@
     <string name="variant">Versie</string>
     <!-- Logs -->
     <string name="logs_not_saved">Logs niet opgeslagen</string>
-    <string name="logs_saved">Logs succesvol opgeslagen</string>
+    <string name="logs_saved">Logs succesvol opgeslagen naar %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Details</string>
     <string name="app_install_files_detected">Installatiebestanden voor %1$s gedetecteerd!</string>
