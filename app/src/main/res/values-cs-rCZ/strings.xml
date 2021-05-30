@@ -66,7 +66,7 @@
     <string name="variant">Varianta</string>
     <!-- Logs -->
     <string name="logs_not_saved">Záznamy nelze uložit</string>
-    <string name="logs_saved">Záznamy byly úspěšně uloženy</string>
+    <string name="logs_saved">Záznamy úspěšně uloženy do %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Podrobnosti</string>
     <string name="app_install_files_detected">Počet zjištěných instalačních souborů: %1$s</string>
