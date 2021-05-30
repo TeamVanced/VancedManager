@@ -66,7 +66,7 @@
     <string name="variant">版本</string>
     <!-- Logs -->
     <string name="logs_not_saved">無法儲存日誌</string>
-    <string name="logs_saved">日誌成功儲存</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">詳細資訊</string>
     <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
