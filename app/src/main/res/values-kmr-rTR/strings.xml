@@ -66,7 +66,7 @@
     <string name="variant">Varyant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Torkirina rojnivîsk bi ser neket</string>
-    <string name="logs_saved">Rojnivîsk bi serkeftî torandin</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Kîtekît</string>
     <string name="app_install_files_detected">Pelên sazkirinê %1$s hatin tespîtkirin!</string>
