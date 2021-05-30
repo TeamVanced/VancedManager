@@ -66,7 +66,7 @@
     <string name="variant">വേരിയൻറ്</string>
     <!-- Logs -->
     <string name="logs_not_saved">ലോഗുകൾ സംരക്ഷിക്കാനായില്ല</string>
-    <string name="logs_saved">ലോഗുകൾ വിജയകരമായി സംരക്ഷിച്ചു</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">വിശദാംശങ്ങൾ</string>
     <string name="app_install_files_detected">%1$s ഇൻസ്റ്റാളേഷൻ ഫയലുകൾ കണ്ടെത്തി!</string>
