@@ -66,7 +66,7 @@
     <string name="variant">Variante</string>
     <!-- Logs -->
     <string name="logs_not_saved">Impossibile salvare i registri</string>
-    <string name="logs_saved">Registri salvati correttamente</string>
+    <string name="logs_saved">Registri salvati con successo in %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Dettagli</string>
     <string name="app_install_files_detected">%1$s file di installazione rilevati!</string>
