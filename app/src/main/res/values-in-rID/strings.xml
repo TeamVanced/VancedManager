@@ -66,7 +66,7 @@
     <string name="variant">Varian</string>
     <!-- Logs -->
     <string name="logs_not_saved">Tidak bisa menyimpan log</string>
-    <string name="logs_saved">Berhasil menyimpan log</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Rincian</string>
     <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
