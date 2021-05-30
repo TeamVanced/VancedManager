@@ -66,7 +66,7 @@
     <string name="variant">Variante</string>
     <!-- Logs -->
     <string name="logs_not_saved">No se pudieron guardar los registros</string>
-    <string name="logs_saved">Registros guardados con éxito</string>
+    <string name="logs_saved">Registros guardados correctamente en %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalles</string>
     <string name="app_install_files_detected">¡%1$s archivos de instalación detectados!</string>
