@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Ei suutnud salvestada logi</string>
-    <string name="logs_saved">Edukalt salvestatud logid</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Üksikasjad</string>
     <string name="app_install_files_detected">%1$s paigaldusfailid on leitud!</string>
