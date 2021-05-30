@@ -66,7 +66,7 @@
     <string name="variant">앱 종류</string>
     <!-- Logs -->
     <string name="logs_not_saved">로그 저장 실패</string>
-    <string name="logs_saved">로그 저장됨</string>
+    <string name="logs_saved">%1$s에 로그를 성공적으로 저장되었습니다.</string>
     <!-- Dialogs -->
     <string name="advanced">자세히</string>
     <string name="app_install_files_detected">%1$s 설치에 필요한 파일을 찾았습니다!</string>
