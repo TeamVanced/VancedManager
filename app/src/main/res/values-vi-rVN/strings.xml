@@ -66,7 +66,7 @@
     <string name="variant">Phiên bản</string>
     <!-- Logs -->
     <string name="logs_not_saved">Lưu nhật ký thất bại</string>
-    <string name="logs_saved">Lưu nhật ký thành công</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Chi tiết</string>
     <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
