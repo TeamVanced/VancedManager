@@ -66,7 +66,7 @@
     <string name="variant">ვარიანტი</string>
     <!-- Logs -->
     <string name="logs_not_saved">Could not save logs</string>
-    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">დეტალები</string>
     <string name="app_install_files_detected">აღმოჩენილია %1$s -ის საინსტალაციო ფაილები!</string>
