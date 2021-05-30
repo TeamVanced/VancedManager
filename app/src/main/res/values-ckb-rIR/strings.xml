@@ -66,7 +66,7 @@
     <string name="variant">جۆر</string>
     <!-- Logs -->
     <string name="logs_not_saved">نەتوانرا تۆمارەکە بپارێزرێت</string>
-    <string name="logs_saved">تۆمارەکە بەسەرکەوتوویی پارێزرا</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
