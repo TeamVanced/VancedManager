@@ -66,7 +66,7 @@
     <string name="variant">বিকল্প</string>
     <!-- Logs -->
     <string name="logs_not_saved">লগগুলি সংরক্ষণ করা যায়নি</string>
-    <string name="logs_saved">সফলভাবে লগ সংরক্ষণ করা হয়েছে</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">বিশদ</string>
     <string name="app_install_files_detected">ইনস্টল করার জন্য %1$s ফাইল খুঁজে পাওয়া গেছে!</string>
