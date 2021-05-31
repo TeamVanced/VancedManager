@@ -8,9 +8,9 @@ import com.vanced.manager.downloader.base.BaseDownloader
 import com.vanced.manager.downloader.impl.MicrogDownloader
 import com.vanced.manager.downloader.impl.MusicDownloader
 import com.vanced.manager.downloader.impl.VancedDownloader
-import com.vanced.manager.network.util.microgName
-import com.vanced.manager.network.util.musicName
-import com.vanced.manager.network.util.vancedName
+import com.vanced.manager.network.util.MICROG_NAME
+import com.vanced.manager.network.util.MUSIC_NAME
+import com.vanced.manager.network.util.VANCED_NAME
 
 class AppDtoMapper(
     private val packageInformationDataSource: PackageInformationDataSource,
@@ -73,9 +73,9 @@ class AppDtoMapper(
 
     private fun getDownloader(app: String?): BaseDownloader? =
         when (app) {
-            vancedName -> vancedDownloader
-            musicName -> MusicDownloader
-            microgName -> MicrogDownloader
+            VANCED_NAME -> vancedDownloader
+            MUSIC_NAME -> MusicDownloader
+            MICROG_NAME -> MicrogDownloader
             else -> null
         }
 }

@@ -16,53 +16,11 @@ import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.vanced.manager.R
 import com.vanced.manager.domain.model.App
-import com.vanced.manager.domain.model.Link
 import com.vanced.manager.ui.composables.*
 import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.util.socialMedia
+import com.vanced.manager.util.sponsors
 import org.koin.androidx.compose.getViewModel
-
-private val sponsors = listOf(
-    Link(
-        title = "Brave"
-    ),
-    Link(
-        title = "Adguard"
-    )
-)
-
-//Lol
-private val socialMedia = listOf(
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-    Link(
-        title = "Instagram"
-    ),
-)
 
 @ExperimentalAnimationApi
 @Composable
