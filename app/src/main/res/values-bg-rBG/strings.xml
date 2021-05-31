@@ -66,7 +66,7 @@
     <string name="variant">Вариант</string>
     <!-- Logs -->
     <string name="logs_not_saved">Не могат да се запазят логовете</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Успешно запазени логове в %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Подробности</string>
     <string name="app_install_files_detected">%1$s инсталационни файлове са открити!</string>
