@@ -3,6 +3,8 @@ package com.vanced.manager.ui.viewmodel
 import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
@@ -15,18 +17,19 @@ class HomeViewModel(
     private val repository: JsonRepository
 ) : ViewModel() {
 
-    private val vanced = mutableStateOf(App())
-    private val music = mutableStateOf(App())
-    private val microg = mutableStateOf(App())
-    private var manager = mutableStateOf(App())
+    private val vanced = MutableLiveData<App>()
+    private val music = MutableLiveData<App>()
+    private val microg = MutableLiveData<App>()
+    private var manager = MutableLiveData<App>()
 
-    var isFetching by mutableStateOf(false)
+    private val _isFetching = MutableLiveData<Boolean>()
+    val isFetching: LiveData<Boolean> = _isFetching
 
-    val apps = mutableStateListOf<MutableState<App>>()
+    val apps = mutableListOf<LiveData<App>>()
 
     fun fetch() {
         viewModelScope.launch {
-            isFetching = true
+            _isFetching.value = true
             try {
                 with(repository.fetch()) {
                     this@HomeViewModel.vanced.value = vanced
@@ -37,11 +40,12 @@ class HomeViewModel(
                 Log.d("HomeViewModel", "failed to fetch: $e")
             }
 
-            isFetching = false
+            _isFetching.value = false
         }
     }
 
     init {
+
 
         val prefs = getDefaultSharedPreferences(context)
         val variant = prefs.getString("manager_variant", "nonroot")
