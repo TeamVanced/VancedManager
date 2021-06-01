@@ -5,7 +5,7 @@
     <string name="close">إغلاق</string>
     <string name="description_microg">نسخة خاصة من خدمات جوجل للجوال معدة خصيصا لتطبيق ڤانسد بناءً على مشروع microG.</string>
     <string name="description_vanced">تطبيق يوتيوب معدل مع العديد من الميزات المفيدة!</string>
-    <string name="description_vanced_music">ڤانسد لموسيقى يوتيوب! يلبي احتياجاتك حتى وان كان يضم ميزات اقل من ڤانسد.</string>
+    <string name="description_vanced_music">ڤانسد لموسيقى يوتيوب! يلبي احتياجاتك حتى وإن كان يضم ميزات أقل من ڤانسد.</string>
     <string name="reset">إعادة تعيين</string>
     <string name="save">حفظ</string>
     <string name="select_apps">اختر تطبيقاتك</string>
@@ -66,7 +66,7 @@
     <string name="variant">النوع</string>
     <!-- Logs -->
     <string name="logs_not_saved">تعذر حفظ السجل</string>
-    <string name="logs_saved">تم حفظ السجل بنجاح</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">التفاصيل</string>
     <string name="app_install_files_detected">تم اكتشاف ملفات تثبيت %1$s!</string>
@@ -79,10 +79,12 @@
     <string name="error">خطأ</string>
     <string name="guide">الدليل</string>
     <string name="hold_on">إيقاف!</string>
-    <string name="magisk_vanced">يبدو أنك تستخدم إصدار ماجيسك/TWRP من ڤانسد، الذي قد تم إيقافه ولا يمكن تحديثه بإستخدام هذا التطبيق. الرجاء إزالته أولاً من قائمة إضافات ماجيسك أو بإستخدام أداة إلغاء تثبيت ڤانسد من TWRP.</string>
+    <string name="magisk_vanced">أنت تستخدم نسخة قديمة من ڤانسد magisk/twrp، والتي لا تتلقى تحديثات عن طريق هذا التطبيق. الرجاء قم بمحو الإضافة عن طريق مزيل ڤانسد الخاص بـ twrp.</string>
     <string name="miui_one">من أجل تثبيت ڤانسد، عليك تعطيل تحسينات MIUI في إعدادات المطور. (يمكنك تجاهل هذه الرسالة إذا كنت تستخدم نسخة رقم 20.2.20 أو أجدد تستند إلى نسخة نظام شاومي أوروبا)</string>
     <string name="miui_one_title">تحسينات MIUI مفعلة!</string>
     <string name="please_be_patient">الرجاء عدم الخروج من التطبيق أثناء هذه العملية!</string>
+    <string name="uninstall_app_text">هل أنت متأكد أنك تريد إلغاء تثبيت %1$s ؟</string>
+    <string name="uninstall">إلغاء التثبيت</string>
     <string name="redownload">إعادة التنزيل</string>
     <string name="security_context">تأكد من أنك قمت بتنزيل التطبيق من موقع vancedapp.com، أو خادم الديسكورد لڤانسد أو Vanced GitHub</string>
     <string name="version">الإصدار</string>
@@ -107,7 +109,7 @@
     <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
     <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
-    <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من Vanced، ثم حاول مرة أخرى.</string>
+    <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من ڤانسد، ثم حاول مرة أخرى.</string>
     <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
     <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم. يرجى أيضاً إرفاق لقطة الشاشة من القائمة المتقدمة</string>
     <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. امسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
