@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">ഇത് എന്താണെന്ന് അറിയില്ല അല്ലെങ്കിൽ റൂട്ട് പതിപ്പ് ഉപയോഗിക്കാൻ ആഗ്രഹിക്കുന്നില്ലേ? ചുവടെയുള്ള നീല അമ്പടയാളത്തിൽ ക്ലിക്കുചെയ്യുക!</string>
     <!-- Home Page -->
     <string name="about_app">ഏകദേശം %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">ഡൗൺലോഡ്</string>
+    <string name="accessibility_info">വിവരം</string>
+    <string name="accessibility_launch">സമാരംഭിക്കുക</string>
+    <string name="accessibility_reinstall">വീണ്ടും ഇൻസ്റ്റാൾ ചെയ്യുക</string>
+    <string name="accessibility_uninstall">അൺ‌ഇൻ‌സ്റ്റാൾ‌ ചെയ്യുക</string>
+    <string name="accessibility_update">അപ്ഡേറ്റ് ചെയ്യുക</string>
     <string name="apps">അപ്ലിക്കേഷനുകൾ</string>
     <string name="changelog">ചേഞ്ച് ലോഗ്</string>
     <string name="downloading_file">%1$s ഡൗൺലോഡ് ചെയ്യുന്നു</string>
@@ -66,7 +66,7 @@
     <string name="variant">വേരിയൻറ്</string>
     <!-- Logs -->
     <string name="logs_not_saved">ലോഗുകൾ സംരക്ഷിക്കാനായില്ല</string>
-    <string name="logs_saved">ലോഗുകൾ വിജയകരമായി സംരക്ഷിച്ചു</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">വിശദാംശങ്ങൾ</string>
     <string name="app_install_files_detected">%1$s ഇൻസ്റ്റാളേഷൻ ഫയലുകൾ കണ്ടെത്തി!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">വാൻ‌സ്ഡ് ഇൻ‌സ്റ്റാൾ‌ ചെയ്യുന്നതിന്, ഡവലപ്പർ‌ ക്രമീകരണങ്ങളിൽ‌ നിങ്ങൾ‌ MIUI ഒപ്റ്റിമൈസേഷനുകൾ‌ അപ്രാപ്‌തമാക്കണം. (നിങ്ങൾ 20.2.20 അല്ലെങ്കിൽ അതിനുശേഷമുള്ള xiaomi.eu അടിസ്ഥാനമാക്കിയുള്ള റോം ഉപയോഗിക്കുകയാണെങ്കിൽ നിങ്ങൾക്ക് ഈ മുന്നറിയിപ്പ് അവഗണിക്കാം)</string>
     <string name="miui_one_title">MIUI ഒപ്റ്റിമൈസേഷനുകൾ പ്രാപ്തമാക്കി!</string>
     <string name="please_be_patient">പ്രോസസ്സ് സമയത്ത് അപ്ലിക്കേഷനിൽ നിന്ന് പുറത്തുകടക്കരുത്!</string>
+    <string name="uninstall_app_text">%1$s അൺ‌ഇൻസ്റ്റാൾ ചെയ്യണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
+    <string name="uninstall">അൺ‌ഇൻ‌സ്റ്റാൾ‌ ചെയ്യുക</string>
     <string name="redownload">വീണ്ടും ഡൗൺലോഡുചെയ്യുക</string>
     <string name="security_context">നിങ്ങൾ vancedapp.com, Vanced Discord സെർവർ, അല്ലെങ്കിൽ Vanced GitHub എന്നിവയിൽ നിന്ന് അപ്ലിക്കേഷൻ download ൺലോഡ് ചെയ്തുവെന്ന് ഉറപ്പാക്കുക</string>
     <string name="version">പതിപ്പ്</string>
