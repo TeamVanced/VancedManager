@@ -24,18 +24,18 @@
     <string name="willing_to_use_root">ئەگەر نازانیت ئەمە چییە یان ناتەوێ بەشێوەی ڕۆت بەکاری بهێنیت، پەنجە بنێ بە دوگمە شینەکەدا!</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">داگرتن</string>
+    <string name="accessibility_info">زانیاری</string>
+    <string name="accessibility_launch">کردنەوە</string>
+    <string name="accessibility_reinstall">دامەزراندنەوە</string>
+    <string name="accessibility_uninstall">سڕینەوە</string>
+    <string name="accessibility_update">نوێکردنەوە</string>
     <string name="apps">بەرنامەکان</string>
     <string name="changelog">گۆڕانکارییەکان</string>
     <string name="downloading_file">داگرتنی %1$s</string>
     <string name="install">دامەزراندن</string>
     <string name="latest">دوایین:</string>
-    <string name="no_microg">Install Vanced microG first</string>
+    <string name="no_microg">سەرەتا Vanced microG دابەزێنە</string>
     <string name="root_not_granted">ڕێگەپێدانی Root نەدراوە</string>
     <string name="social_media">تۆڕە کۆمەڵایەتییەکان</string>
     <string name="support_us">پشتگیریکردن</string>
@@ -66,9 +66,9 @@
     <string name="variant">جۆر</string>
     <!-- Logs -->
     <string name="logs_not_saved">نەتوانرا تۆمارەکە بپارێزرێت</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">تۆماری گۆڕانکاری بەسەرکەوتووی پارێزرا لە %1$s</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">زانیاری</string>
     <string name="app_install_files_detected">%1$s فایل دۆزرایەوە بۆ دابەزاندن!</string>
     <string name="app_install_files_detected_summary">بەرنامەکە هەموو ئەو فایلانەی دۆزیەوە %1$s کە پێویستن بۆ دابەزاندن، ئەتەوێ دایان مەزرێنیت؟</string>
     <string name="app_installation_preferences">%1$s ڕێکخستنەکانی دامەزراندن</string>
@@ -80,11 +80,11 @@
     <string name="guide">زانیاری</string>
     <string name="hold_on">وەستاندن!</string>
     <string name="magisk_vanced">تۆ وەشانی Magisk/TWRP ـی Vanced بەکاردێنیت، کە ناتوانرێت بە بەکارهێنانی ئەم بەرنامەیە نوێبکرێتەوە، تکایە لایبدە بە سڕینەوەی مۆدیولی ماگیسک/لەڕێی TWRP Vanced.</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">بۆ ئەوەی Vanced دابمەزرێنیت، پێویستە چاکسازییەکانی ڕووکاری MIUI لە ڕێکبەندەکانی پەرەپێدەر لە کار بخەیت، (دەتوانیت ئەم ئاگاداریە پشتگوێ بخەیت ئەگەر ڕومی تایبەتی وەشانی 20.2.20 یان دواتر xiaomi.eu بەکاردەهێنیت. بەکاردەهێنیت)</string>
     <string name="miui_one_title">باشترکردنی MIUI چالاککراوە!</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="please_be_patient">تکایە بەرنامەکە دامەخە لەکاتی ئەنجامدانی ئەم پڕۆسەیەدا!</string>
+    <string name="uninstall_app_text">ئایا دڵنیایت لە سڕینەوەی %1$s ؟</string>
+    <string name="uninstall">سڕینەوە</string>
     <string name="redownload">داگرتنەوە</string>
     <string name="security_context">دڵنیابە کە بەرنامەکەت لە سایتی vancedapp.com، سێرڤەری دیسکۆرد یان Vanced GitHub داگرتووە</string>
     <string name="version">وەشان</string>
@@ -116,7 +116,7 @@
     <string name="installation_invalid">دامەزراندن سەرکەوتوو نەبوو لەبەرئەوەی فایلی apk تێکچووە، تکایە دووبارە هەوڵبدرەوە.</string>
     <string name="installation_miui">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی باشکردنی ڕووکاری MIUI چالاککراوە، باشکردنی ڕووکاری MIUI ناچالاک بکە ودووبارە هەوڵبدەرەوە.</string>
     <string name="installation_signature">دامەزراندن سەرکەوتو نەبوو لەبەرئەوەی سەلماندنەکانی apk چالاککراوە، سەلماندنی دووپاتکردنەوەی ئیمزای apk ناچالاک بکە و پاشان دووبارە هەوڵبدەرەوە.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="installation_storage">دامەزراندن سەرکەوتو نەبوو چونکە شوێنی پێویستی بەتاڵ بەردەست نیە لە مۆبایلەکەتدا.</string>
     <string name="modapk_missing">سەرکەوتو نەبوو لە دۆزینەوەی فایلی Apk بۆ ڕووکاری ڕەش/تاریک لە دامەزرێنەرەکەدا. داتای بەرنامەکە بسڕەوە لە ڕێکبەندیەکاندا و دووبارە هەوڵبدەرەوە.</string>
     <string name="path_missing">سەرکەوتو نەبوو لە دۆزینەوەی بەرنامەی بنەڕەتی YouTube لەشوێنی دابەزاندن لەپاش دامەزراندنی پێکهاتەکان.</string>
 </resources>
