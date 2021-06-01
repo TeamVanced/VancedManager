@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Peruuta</string>
     <string name="close">Sulje</string>
-    <string name="description_microg">Mukautettu GMS-Toteutus Vancedille perustuen microG projektiin.</string>
+    <string name="description_microg">MicroG-projektiin perustuva mukautettu GMS-toteutus Vancedille.</string>
     <string name="description_vanced">Muokattu YouTube-sovellus, jossa on monia hyödyllisiä ominaisuuksia!</string>
-    <string name="description_vanced_music">Vanced, mutta YouTube Musicille! Suhteellisen vähemmän ominaisuuksia, mutta täyttää tarpeesi.</string>
+    <string name="description_vanced_music">Vanced, Youtube Musicille! Vähemmän ominaisuuksia, mutta täyttää tarpeesi.</string>
     <string name="reset">Palauta</string>
     <string name="save">Tallenna</string>
     <string name="select_apps">Valitse Sovelluksesi</string>
@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Etkö tiedä mikä tämä on tai etkö halua käyttää rootattua versiota? Klikkaa alla olevaa sinistä nuolta!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Lataa</string>
+    <string name="accessibility_info">Tietoa</string>
+    <string name="accessibility_launch">Avaa</string>
+    <string name="accessibility_reinstall">Uudelleenasenna</string>
+    <string name="accessibility_uninstall">Poista asennus</string>
+    <string name="accessibility_update">Päivitä</string>
     <string name="apps">Sovellukset</string>
     <string name="changelog">Muutoshistoria</string>
     <string name="downloading_file">Ladataan %1$s</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variaatio</string>
     <!-- Logs -->
     <string name="logs_not_saved">Lokeja ei voitu tallentaa</string>
-    <string name="logs_saved">Lokit tallennettiin onnistuneesti</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Lisätiedot</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Asentaaksesi Vancedin, sinun täytyy poistaa MIUI-optimisaatiot käytöstä kehittäjäasetuksista. (Voit ohittaa tämän varoituksen, jos käytät versiota 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM:ia)</string>
     <string name="miui_one_title">MIUI-optimoinnit ovat käytössä!</string>
     <string name="please_be_patient">ÄLÄ poistu sovelluksesta tämän prosessin aikana!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Poista</string>
     <string name="redownload">Uudelleenlataa</string>
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>
     <string name="version">Versio</string>
@@ -109,7 +111,7 @@
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
-    <string name="installation_failed">Asennus epäonnistui tuntemattomasta syystä, liity Vancedin Telegramiin tai Discordiin saadaksesi tukea. Liitä myös kuvankaappaus Lisäasetukset valikosta</string>
+    <string name="installation_failed">Asennus epäonnistui tuntemattomasta syystä, liity Vancedin Telegramiin tai Discordiin saadaksesi tukea. Liitä myös kuvankaappaus Lisäasetukset-valikosta</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
     <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
