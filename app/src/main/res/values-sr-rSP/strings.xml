@@ -66,7 +66,7 @@
     <string name="variant">Варијанта</string>
     <!-- Logs -->
     <string name="logs_not_saved">Није могуће снимити дневнике</string>
-    <string name="logs_saved">Успешно сачувани дневници</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Детаљи</string>
     <string name="app_install_files_detected">%1$s верзија је пронађена!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Да би апликација Vanced била исправно инсталирана морате да искључите оптимизацију за ову апликацију у MIUI подешавањима за програмере.( Ову напомену можете да занемарите у случају ако користите верзију 20.2.20 и новију xiaomi.eu ROM-а)</string>
     <string name="miui_one_title">MIUI оптимизација је укључена!</string>
     <string name="please_be_patient">Немојте излазити из апликације у току овога процеса!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Поново преузми</string>
     <string name="security_context">Преузмите апликацију само са официјелног Vanced сајта vancedapp.com, Vanced Discord сервера или Vanced GitHub-а</string>
     <string name="version">Верзија</string>
