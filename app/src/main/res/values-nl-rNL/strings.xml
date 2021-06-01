@@ -66,7 +66,7 @@
     <string name="variant">Versie</string>
     <!-- Logs -->
     <string name="logs_not_saved">Logs niet opgeslagen</string>
-    <string name="logs_saved">Logs succesvol opgeslagen</string>
+    <string name="logs_saved">Logs succesvol opgeslagen naar %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Details</string>
     <string name="app_install_files_detected">Installatiebestanden voor %1$s gedetecteerd!</string>
@@ -78,11 +78,13 @@
     <string name="chosen_version">Versie: %1$s</string>
     <string name="error">Fout</string>
     <string name="guide">Handleiding</string>
-    <string name="hold_on">Stoppen!</string>
+    <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">Je gebruikt de Magisk/TWRP-versie van Vanced, die is stopgezet en niet met deze app kan worden bijgewerkt. Verwijder deze eerst door de Magisk-module te verwijderen of door de TWRP Vanced-uninstaller te gebruiken.</string>
-    <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kunt deze waarschuwing negeren als je de op xiaomi.eu gebaseerde ROM 20.2.20 of later gebruikt)</string>
+    <string name="miui_one">Om Vanced te installeren MOET je MIUI-optimalisaties uitschakelen in de ontwikkelaarsinstellingen (je kan deze waarschuwing negeren als je de op xiaomi.eu gebaseerde ROM 20.2.20 of later gebruikt)</string>
     <string name="miui_one_title">MIUI-optimalisaties zijn ingeschakeld!</string>
     <string name="please_be_patient">Sluit de app NIET af tijdens dit proces!</string>
+    <string name="uninstall_app_text">Weet je zeker dat je %1$s wil verwijderen?</string>
+    <string name="uninstall">Verwijderen</string>
     <string name="redownload">Opnieuw downloaden</string>
     <string name="security_context">Zorg ervoor dat je de app hebt gedownload van vancedapp.com, de Vanced Discord-server of Vanced GitHub</string>
     <string name="version">Versie</string>
@@ -95,7 +97,7 @@
     <string name="vanced_black">Zwart</string>
     <string name="vanced_dark">Donker</string>
     <!-- About Page -->
-    <string name="manager_dev">Ontwikkelaars Manager</string>
+    <string name="manager_dev">Ontwikkelaars</string>
     <string name="other_contributors">Andere bijdrages</string>
     <string name="sources">Bronnen</string>
     <string name="vanced_team">Vanced Team</string>
@@ -109,7 +111,7 @@
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_conflict">Installatie mislukt omdat de app conflicten heeft met een reeds geïnstalleerde app. Verwijder de huidige versie van die app en probeer het opnieuw.</string>
     <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard app en probeer het daarna opnieuw.</string>
-    <string name="installation_failed">Installatie is mislukt om onbekende redenen, ga naar Telegram of Discord voor verdere ondersteuning. Voeg een screenshot toe via het menu Geavanceerd.</string>
+    <string name="installation_failed">Installatie mislukt om onbekende redenen, ga naar Telegram of Discord voor verdere ondersteuning. Voeg een screenshot toe via het menu Geavanceerd.</string>
     <string name="installation_incompatible">Installatie mislukt omdat het installatiebestand niet compatibel is met jouw apparaat. Wis de gedownloade bestanden in de instellingen en probeer het opnieuw.</string>
     <string name="installation_invalid">Installatie mislukt omdat de apk-bestanden beschadigd zijn. Probeer het opnieuw.</string>
     <string name="installation_miui">Installatie mislukt omdat MIUI-optimalisatie is ingeschakeld. Schakel MIUI-optimalisatie uit en probeer het opnieuw.</string>
