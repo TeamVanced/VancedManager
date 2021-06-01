@@ -37,7 +37,7 @@
     <string name="latest">Nejnovější:</string>
     <string name="no_microg">Nejprve nainstalujte Vanced microG</string>
     <string name="root_not_granted">Root přístup nebyl udělen</string>
-    <string name="social_media">Sociální média</string>
+    <string name="social_media">Sociální sítě</string>
     <string name="support_us">Podpořte nás</string>
     <string name="unavailable">Není k dispozici</string>
     <string name="version_installed">Nainstalováno:</string>
@@ -52,8 +52,8 @@
     <string name="language_title">Jazyk</string>
     <string name="link_custom_tabs">Odkazy se budou otevírat na vlastních kartách prohlížeče Chrome</string>
     <string name="link_title">Používat vlastní karty prohlížeče Chrome</string>
-    <string name="push_notifications">%1$s vyskakovací oznámení</string>
-    <string name="push_notifications_summary">Po vydání aktualizace pro %1$s obdržíte vyskakovací oznámení</string>
+    <string name="push_notifications">%1$s oznámení</string>
+    <string name="push_notifications_summary">Po vydání aktualizace pro %1$s obdržíte oznámení</string>
     <string name="script_save_failed">Nepodařilo se uložit novou hodnotu času</string>
     <string name="script_sleep_timer">Doba nečinnosti kořenového skriptu</string>
     <string name="script_sleep_timer_description">Upravte hodnotu doby nečinnosti použitou ve skriptu /data/adb/service.d/app.sh, která je užitečná pro opravu problémů s připojením</string>
@@ -66,7 +66,7 @@
     <string name="variant">Varianta</string>
     <!-- Logs -->
     <string name="logs_not_saved">Záznamy nelze uložit</string>
-    <string name="logs_saved">Záznamy byly úspěšně uloženy</string>
+    <string name="logs_saved">Záznamy byly úspěšně uloženy do %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Podrobnosti</string>
     <string name="app_install_files_detected">Počet zjištěných instalačních souborů: %1$s</string>
@@ -80,9 +80,11 @@
     <string name="guide">Průvodce</string>
     <string name="hold_on">Zadržte!</string>
     <string name="magisk_vanced">Používáte verzi Vanced pro Magisk/TWRP, jejíž vývoj byl ukončen a kterou nelze pomocí této aplikace aktualizovat. Odstraňte ji prosím odebráním modulu Magisk použitím Vanced odinstalátoru v TWRP.</string>
-    <string name="miui_one">Chcete‑li nainstalovat Vanced, MUSÍTE vypnout optimalizace MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM ze 20. 2. 2020 nebo novější založenou na xiaomi.eu)</string>
+    <string name="miui_one">Chcete‑li nainstalovat Vanced, MUSÍTE vypnout optimalizace MIUI v nastavení pro vývojáře. (Toto varování můžete ignorovat, pokud používáte ROM založenou na xiaomi.eu verze 20.2.20 nebo novější)</string>
     <string name="miui_one_title">Optimalizace MIUI jsou zapnuty!</string>
     <string name="please_be_patient">Během tohoto procesu NEUKONČUJTE aplikaci!</string>
+    <string name="uninstall_app_text">Opravdu si přejete odinstalovat aplikaci %1$s?</string>
+    <string name="uninstall">Odinstalovat</string>
     <string name="redownload">Stáhnout znovu</string>
     <string name="security_context">Ujistěte se, že jste si aplikaci stáhli z našeho webu vancedapp.com, z našeho Vanced Discord serveru nebo z našeho GitHubu</string>
     <string name="version">Verze</string>
@@ -104,12 +106,12 @@
     <string name="error_downloading">Chyba při stahování %1$s</string>
     <string name="failed_accent">Nepodařilo se nastavit novou doplňkovou barvu</string>
     <string name="failed_uninstall">Nepodařilo se odinstalovat balíček %1$s</string>
-    <string name="files_missing_va">Nepodařilo se najít požadované soubory pro instalaci. Stáhněte znovu instalační soubory a poté to zkuste znovu.</string>
+    <string name="files_missing_va">Nepodařilo se najít soubory potřebné pro instalaci. Stáhněte instalační soubory znovu a poté akci opakujte.</string>
     <string name="ifile_missing">Ve vnitřním úložišti se nepodařilo najít soubor APK pro černý/tmavý motiv. Zkuste to prosím znovu.</string>
-    <string name="installation_aborted">Instalace se nezdařila, protože uživatel přerušil instalaci.</string>
+    <string name="installation_aborted">Instalace se nezdařila, protože byla zrušena uživatelem.</string>
     <string name="installation_conflict">Instalace se nezdařila, protože aplikace je v konfliktu s již nainstalovanou aplikací. Odinstalujte aktuální verzi aplikace a poté to zkuste znovu.</string>
-    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil balíček downgradovat. Odinstalujte aktualizace z výchozí aplikace a poté to zkuste znovu.</string>
-    <string name="installation_failed">Instalace se z neznámých důvodů nezdařila. Pro další podporu se připojte k našemu Telegramu nebo Discordu. Připojte také snímek obrazovky z nabídky Pokročilé</string>
+    <string name="installation_downgrade">Instalace se nezdařila, protože se uživatel pokusil nainstalovat starší verzi balíčku. Odinstalujte aktualizace z výchozí aplikace a poté to zkuste znovu.</string>
+    <string name="installation_failed">Instalace se z neznámých důvodů nezdařila. Pro další podporu se připojte k našemu Telegramu nebo Discordu. Přiložte prosím také snímek obrazovky z nabídky Pokročilé</string>
     <string name="installation_incompatible">Instalace se nezdařila, protože instalační soubor není kompatibilní s vaším zařízením. Vymažte v Nastavení stažené soubory a poté to zkuste znovu.</string>
     <string name="installation_invalid">Instalace se nezdařila, protože soubory APK jsou poškozeny. Zkuste to prosím znovu.</string>
     <string name="installation_miui">Instalace se nezdařila, protože je zapnuta optimalizace MIUI. Vypněte optimalizaci MIUI a poté to zkuste znovu.</string>
