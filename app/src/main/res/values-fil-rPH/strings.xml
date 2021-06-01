@@ -24,7 +24,7 @@
     <string name="willing_to_use_root">Hindi mo alam ito o huwag gamitin ang root bersyon? I-click ang asul na arrow sa baba!</string>
     <!-- Home Page -->
     <string name="about_app">Tungkol sa %1$s</string>
-    <string name="accessibility_download">Download</string>
+    <string name="accessibility_download">I-download</string>
     <string name="accessibility_info">Info</string>
     <string name="accessibility_launch">Launch</string>
     <string name="accessibility_reinstall">Reinstall</string>
@@ -66,7 +66,7 @@
     <string name="variant">Klase</string>
     <!-- Logs -->
     <string name="logs_not_saved">Hindi ma-save ang logs</string>
-    <string name="logs_saved">Natagumpay na i-save ang logs</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Mga Detalye</string>
     <string name="app_install_files_detected">%1$s Nandito ang installation files!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">I-download ulit</string>
     <string name="security_context">Siguraduhin mo na nai-download mo ang app galing sa vancedapp.com, o sa Discord server ng Vanced, o sa Github ng Vanced</string>
     <string name="version">Bersyon</string>

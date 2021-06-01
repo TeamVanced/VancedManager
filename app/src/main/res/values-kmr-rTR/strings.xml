@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Gelo ev çi ye an naxwazî versiyona root bi kar bîne? tenê tîrê şîn ê jêrîn bitikînin!</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Dakêşe</string>
+    <string name="accessibility_info">Agahî</string>
+    <string name="accessibility_launch">Destpêkirin</string>
+    <string name="accessibility_reinstall">Ji nû ve saz bike</string>
+    <string name="accessibility_uninstall">Rake</string>
+    <string name="accessibility_update">Nûve bike</string>
     <string name="apps">Sepanan</string>
     <string name="changelog">Gurankarî</string>
     <string name="downloading_file">Dakêşe %1$s</string>
@@ -66,7 +66,7 @@
     <string name="variant">Varyant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Torkirina rojnivîsk bi ser neket</string>
-    <string name="logs_saved">Rojnivîsk bi serkeftî torandin</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Kîtekît</string>
     <string name="app_install_files_detected">Pelên sazkirinê %1$s hatin tespîtkirin!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Ji bo sazkirina Vanced, divê tu optimîzasyonên MIUI di mîhengên pêşdebiran de neçalak bikî. (Heke hûn 20.2.20 an jî paşê bi romê xiaomi.eu vê hişyariyê paşguh bikin)</string>
     <string name="miui_one_title">Optimîzasyonên MIUI tên çalak kirin!</string>
     <string name="please_be_patient">Ji kerema xwe di vê pêvajoyê de ji sepanê dernakeve!</string>
+    <string name="uninstall_app_text">Tu bawerî ku tu dixwazî %1$s rakî?</string>
+    <string name="uninstall">Rake</string>
     <string name="redownload">Ji nû ve daxîne</string>
     <string name="security_context">Pê bawer bin ku te ev sepan ji vancedapp.com, servera Discord a Vanced an jî JiGitHub ya Vanced dakêşandine</string>
     <string name="version">Versiyon</string>

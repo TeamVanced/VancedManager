@@ -25,7 +25,7 @@
     <!-- Home Page -->
     <string name="about_app">關於 %1$s</string>
     <string name="accessibility_download">下載</string>
-    <string name="accessibility_info">關於</string>
+    <string name="accessibility_info">資訊</string>
     <string name="accessibility_launch">啟動</string>
     <string name="accessibility_reinstall">重新安裝</string>
     <string name="accessibility_uninstall">解除安裝</string>
@@ -34,7 +34,7 @@
     <string name="changelog">更新日誌</string>
     <string name="downloading_file">正在下載 %1$s</string>
     <string name="install">安裝</string>
-    <string name="latest">最新：</string>
+    <string name="latest">最新版本：</string>
     <string name="no_microg">請先安裝 Vanced microG</string>
     <string name="root_not_granted">未授予 Root 權限</string>
     <string name="social_media">社交媒體</string>
@@ -43,7 +43,7 @@
     <string name="version_installed">已安裝：</string>
     <!-- Settings -->
     <string name="accent_color">輔色</string>
-    <string name="category_appearance">外觀</string>
+    <string name="category_appearance">介面外觀</string>
     <string name="category_behaviour">行為</string>
     <string name="clear_files">清除已下載的檔案</string>
     <string name="cleared_files">成功清除檔案</string>
@@ -54,7 +54,7 @@
     <string name="link_title">使用 Chrome Custom Tabs</string>
     <string name="push_notifications">%1$s 推送通知</string>
     <string name="push_notifications_summary">有可用更新時接收 %1$s 推送通知</string>
-    <string name="script_save_failed">儲存定時器時間失敗</string>
+    <string name="script_save_failed">儲存新時間值失敗</string>
     <string name="script_sleep_timer">Root 腳本休眠時間</string>
     <string name="script_sleep_timer_description">調整 /data/adb/service.d/app.sh 指令碼中的休眠時間值，對修復掛載問題很有用</string>
     <string name="system_default">系統預設</string>
@@ -66,7 +66,7 @@
     <string name="variant">版本</string>
     <!-- Logs -->
     <string name="logs_not_saved">無法儲存日誌</string>
-    <string name="logs_saved">日誌成功儲存</string>
+    <string name="logs_saved">已成功將日誌儲存到 %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">詳細資訊</string>
     <string name="app_install_files_detected">偵測到 %1$s 的安裝檔案！</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">欲安裝 Vanced，請先至開發人員選項停用 MIUI 優化。（若您正在使用 20.2.20 或更新版本且基於的 xiaomi.eu 的系統，請忽略此警告）</string>
     <string name="miui_one_title">已啟用 MIUI 優化！</string>
     <string name="please_be_patient">在此過程中請不要退出應用程式！</string>
+    <string name="uninstall_app_text">你確定要解除安裝 %1$s 嗎？</string>
+    <string name="uninstall">解除安裝</string>
     <string name="redownload">重新下載</string>
     <string name="security_context">請確保您從 vancedapp.com、Vanced Discord 伺服器或 Vanced GitHub 下載本程式</string>
     <string name="version">版本</string>
@@ -112,9 +114,9 @@
     <string name="installation_failed">未知原因導致安裝失敗，請附上進階設定的截圖至我們的 Telegram 或 Discord 取得更多支援</string>
     <string name="installation_incompatible">安裝檔案與您的裝置不相容導致安裝失敗。請在設定中清除已下載的檔案，然後重試。</string>
     <string name="installation_invalid">apk 檔案已被損毀導致安裝失敗，請重試。</string>
-    <string name="installation_miui">MIUI 優化已被啟用導致安裝失敗。停用 MIUI 優化，然後重試。</string>
+    <string name="installation_miui">MIUI 優化已啟用導致安裝失敗。請停用 MIUI 優化，然後重試。</string>
     <string name="installation_signature">apk 簽名驗證已被啟用導致安裝失敗。停用 apk 簽名驗證，然後重試。</string>
-    <string name="installation_storage">裝置的可用空間不足導致安裝失敗。</string>
-    <string name="modapk_missing">在安裝程式中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試。</string>
+    <string name="installation_storage">由於裝置的可用空間不足，因此安裝失敗。</string>
+    <string name="modapk_missing">在安裝器中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試一次。</string>
     <string name="path_missing">分割安裝後無法找到原生 YouTube 安裝路徑。</string>
 </resources>

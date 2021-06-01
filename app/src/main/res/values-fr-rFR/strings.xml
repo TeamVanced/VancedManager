@@ -66,7 +66,7 @@
     <string name="variant">Variante</string>
     <!-- Logs -->
     <string name="logs_not_saved">Impossible d\'enregistrer les journaux</string>
-    <string name="logs_saved">Journaux enregistrés avec succès</string>
+    <string name="logs_saved">Les journaux ont bien été enregistrés dans %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Détails</string>
     <string name="app_install_files_detected">%1$s fichiers d\'installation détectés !</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Afin d\'installer Vanced, vous DEVEZ désactiver les optimisations MIUI dans les paramètres développeur (vous pouvez ignorer cet avertissement si vous utilisez une ROM basée sur 20.2.20 ou ultérieure de xiaomi.eu)</string>
     <string name="miui_one_title">Les optimisations MIUI sont activées !</string>
     <string name="please_be_patient">Veuillez NE PAS quitter l\'application pendant que celle-ci est en cours de modification !</string>
+    <string name="uninstall_app_text">Êtes-vous sûr de vouloir désinstaller %1$s ?</string>
+    <string name="uninstall">Désinstaller</string>
     <string name="redownload">Re-télécharger</string>
     <string name="security_context">Assurez-vous d\'avoir téléchargé l\'application depuis vancedapp.com, le serveur Discord Vanced ou sur le Github Vanced</string>
     <string name="version">Version</string>

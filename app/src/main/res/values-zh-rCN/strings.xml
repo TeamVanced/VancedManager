@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">取消</string>
     <string name="close">关闭</string>
-    <string name="description_microg">以 microG 项目为基础並只用于 Vanced 的自定义 Google 移动服务。</string>
+    <string name="description_microg">以 microG 项目为基础，为 Vanced 打造的定制化 Google 服务</string>
     <string name="description_vanced">经过修改的 YouTube 客户端，具有许多有用的功能！</string>
     <string name="description_vanced_music">Vanced ，不过是 YouTube Music ！功能相对较少，但足以满足您的需求。</string>
     <string name="reset">重置</string>
@@ -27,7 +27,7 @@
     <string name="accessibility_download">下载</string>
     <string name="accessibility_info">信息</string>
     <string name="accessibility_launch">打开</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">重新安装</string>
     <string name="accessibility_uninstall">卸载</string>
     <string name="accessibility_update">更新</string>
     <string name="apps">应用</string>
@@ -66,7 +66,7 @@
     <string name="variant">版本</string>
     <!-- Logs -->
     <string name="logs_not_saved">无法保存日志</string>
-    <string name="logs_saved">日志保存成功</string>
+    <string name="logs_saved">成功将日志保存至 %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">详细信息</string>
     <string name="app_install_files_detected">检测到 %1$s 安装文件！</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">为了能够安装 Vanced，您必须在开发者设置中禁用 MIUI 优化。（如果您正在使用基于 xiaomi.eu 20.2.20 或更新的 ROM，您可以忽略此警告）</string>
     <string name="miui_one_title">MIUI 优化已启用！</string>
     <string name="please_be_patient">请不要在此过程中退出应用！</string>
+    <string name="uninstall_app_text">确定要卸载 %1$s 吗？</string>
+    <string name="uninstall">卸载</string>
     <string name="redownload">重新下载</string>
     <string name="security_context">请确保您是从 vancedapp.com 、 Vanced Discord 服务器或 Vanced Github 下载本应用</string>
     <string name="version">版本</string>

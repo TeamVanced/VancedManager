@@ -66,7 +66,7 @@
     <string name="variant">রকমফের</string>
     <!-- Logs -->
     <string name="logs_not_saved">Could not save logs</string>
-    <string name="logs_saved">Successfully saved logs</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Details</string>
     <string name="app_install_files_detected">%1$s ইন্সটল করার জন্য ফাইল পাওয়া গেছে!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
     <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Redownload</string>
     <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
     <string name="version">Version</string>

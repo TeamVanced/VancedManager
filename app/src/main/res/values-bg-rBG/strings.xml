@@ -27,7 +27,7 @@
     <string name="accessibility_download">Изтегляне</string>
     <string name="accessibility_info">Информация</string>
     <string name="accessibility_launch">Стартиране</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">Преинсталиране</string>
     <string name="accessibility_uninstall">Деинсталиране</string>
     <string name="accessibility_update">Актуализиране</string>
     <string name="apps">Приложения</string>
@@ -66,7 +66,7 @@
     <string name="variant">Вариант</string>
     <!-- Logs -->
     <string name="logs_not_saved">Не могат да се запазят логовете</string>
-    <string name="logs_saved">Успешно запазени логове</string>
+    <string name="logs_saved">Успешно запазени логове в %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Подробности</string>
     <string name="app_install_files_detected">%1$s инсталационни файлове са открити!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">За да инсталирате Vanced, ТРЯБВА да изключите MIUI оптимизациите в настройките за разработчици. (Това не е валидно ако ползвате 20.2.20 или по-нов ROM, базиран на xiaomi.eu)</string>
     <string name="miui_one_title">MIUI оптимизациите са включени!</string>
     <string name="please_be_patient">Моля, НЕ излизайте от приложението по време на този процес!</string>
+    <string name="uninstall_app_text">Наистина ли искате да деинсталирате %1$s?</string>
+    <string name="uninstall">Деинсталиране</string>
     <string name="redownload">Изтегли отново</string>
     <string name="security_context">Уверете се, че сте изтеглили приложението от vancedapp.com, Vanced Discord сървъра или от Vanced GitHub</string>
     <string name="version">Версия</string>

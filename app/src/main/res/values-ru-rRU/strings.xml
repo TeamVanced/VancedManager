@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Отмена</string>
     <string name="close">Закрыть</string>
-    <string name="description_microg">Пользовательская реализация GMS (сервисов Google) для Vanced создана на основе microG.</string>
+    <string name="description_microg">Пользовательская реализация GMS (сервисов Google) для Vanced, созданная на основе проекта microG.</string>
     <string name="description_vanced">Модифицированный клиент YouTube с массой полезных функций!</string>
     <string name="description_vanced_music">Vanced, но для YouTube Music! Относительно меньше возможностей, но удовлетворит ваши потребности.</string>
     <string name="reset">Сброс</string>
@@ -66,7 +66,7 @@
     <string name="variant">Вариант</string>
     <!-- Logs -->
     <string name="logs_not_saved">Не удалось сохранить логи</string>
-    <string name="logs_saved">Логи успешно сохранены</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Подробнее</string>
     <string name="app_install_files_detected">Обнаружены установочные файлы для %1$s!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Чтобы установить Vanced, вы ДОЛЖНЫ отключить оптимизацию MIUI в настройках разработчика. (Вы можете проигнорировать это предупреждение, если вы используете прошивку на xiaomi.eu версии 20.2.20+)</string>
     <string name="miui_one_title">Оптимизация MIUI включена!</string>
     <string name="please_be_patient">Пожалуйста, НЕ выходите из приложения в течение этого процесса!</string>
+    <string name="uninstall_app_text">Вы уверены, что вы хотите удалить %1$s?</string>
+    <string name="uninstall">Удалить</string>
     <string name="redownload">Скачать заново</string>
     <string name="security_context">Пожалуйста, убедитесь, что вы скачали это приложение с vancedapp.com, сервера Vanced в Discord или с официального GitHub</string>
     <string name="version">Версия</string>

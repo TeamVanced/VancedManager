@@ -66,7 +66,7 @@
     <string name="variant">Παραλλαγή</string>
     <!-- Logs -->
     <string name="logs_not_saved">Αδυναμία αποθήκευσης αρχείου καταγραφής σφαλμάτων</string>
-    <string name="logs_saved">Επιτυχής αποθήκευση αρχείου καταγραφής σφαλμάτων</string>
+    <string name="logs_saved">Επιτυχής αποθήκευση αρχείου καταγραφής στην διαδρομή %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Πληροφορίες</string>
     <string name="app_install_files_detected">Ανιχνεύτηκαν τα αρχεία εγκατάστασης του %1$s!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Για να εγκαταστήσετε το Vanced, ΠΡΕΠΕΙ να απενεργοποιήσετε τις Βελτιστοποιήσεις MIUI στις ρυθμίσεις για προγραμματιστές. (Μπορείτε να αγνοήσετε αυτή την προειδοποίηση αν χρησιμοποιείτε την έκδοση ROM 20.2.20 ή μεταγενέστερη, βάσει του xiaomi.eu)</string>
     <string name="miui_one_title">Η βελτιστοποίηση MIUI είναι ενεργή!</string>
     <string name="please_be_patient">Παρακαλώ ΜΗΝ βγείτε από την εφαρμογή κατά τη διάρκεια αυτής της διαδικασίας!</string>
+    <string name="uninstall_app_text">Είστε βέβαιοι ότι θέλετε να απεγκαταστήσετε το %1$s ;</string>
+    <string name="uninstall">Απεγκατάσταση</string>
     <string name="redownload">Επανάληψη λήψης</string>
     <string name="security_context">Βεβαιωθείτε ότι κάνατε λήψη της εφαρμογής από το vancedapp.com, τον διακομιστή Discord του Vanced ή το GitHub του Vanced</string>
     <string name="version">Έκδοση</string>

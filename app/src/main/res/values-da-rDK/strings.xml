@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Kunne ikke gemme logfil</string>
-    <string name="logs_saved">Logfiler gemt succesfuldt</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detaljer</string>
     <string name="app_install_files_detected">%1$s installationsfiler fundet!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">For at installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
     <string name="miui_one_title">MIUI Optimering er aktiveret!</string>
     <string name="please_be_patient">Afslut venligst IKKE appen under denne proces!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">Hent igen</string>
     <string name="security_context">Venligst sørg for kun at have downloaded appen fra vancedapp.com, Vanced Discord serveren eller Vanced GitHub siden</string>
     <string name="version">Version</string>

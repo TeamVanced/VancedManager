@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">Katkesta</string>
     <string name="close">Sulge</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">Kohandatud GMS-i juurutamine Vancedile, mis põhineb microG-projektil.</string>
+    <string name="description_vanced">Modifitseeritud YouTube klient, mitmete kasulike funktsioonidega!</string>
+    <string name="description_vanced_music">Vanced, kuid YouTube Musicu jaoks! suhteliselt vähem funktsioonirikas, kuid vastab teie vajadustele.</string>
     <string name="reset">Lähtesta</string>
     <string name="save">Salvesta</string>
     <string name="select_apps">Valige Oma Rakendused</string>
@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Kas te ei tea mis see on, või ei soovi kasutada rooditud versiooni? vajutage allpool sinist noolt!</string>
     <!-- Home Page -->
     <string name="about_app">Umbes %1$s</string>
-    <string name="accessibility_download">Download</string>
+    <string name="accessibility_download">Allalaadimine</string>
     <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_launch">Käivita</string>
+    <string name="accessibility_reinstall">Installi uuesti</string>
+    <string name="accessibility_uninstall">Desinstalli</string>
+    <string name="accessibility_update">Uuenda</string>
     <string name="apps">Rakendused</string>
     <string name="changelog">Muudatuste logi</string>
     <string name="downloading_file">Allalaadimine %1$s</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Ei suutnud salvestada logi</string>
-    <string name="logs_saved">Edukalt salvestatud logid</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Üksikasjad</string>
     <string name="app_install_files_detected">%1$s paigaldusfailid on leitud!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Et paigaldada Vanced, PEAB keelama MIUI optimiseerimise arendaja valikute alt. (Võite seda igroneerida kui kasutate 20.2.20 või uuemat xiaomi.eu põhist ROMi)</string>
     <string name="miui_one_title">MIUI optimiseerimine on lubatud!</string>
     <string name="please_be_patient">Palun ärge väljuge rakendusest protsessi ajal!</string>
+    <string name="uninstall_app_text">Kas soovite kindlasti desinstallida %1$s?</string>
+    <string name="uninstall">Desinstalli</string>
     <string name="redownload">Lae uuesti alla</string>
     <string name="security_context">Veenduge, et laadisite rakenduse alla vancedapp.com, Vanced Discordi serverist või Vanced GitHubist</string>
     <string name="version">Versioon</string>
@@ -109,7 +111,7 @@
     <string name="installation_aborted">Paigaldamine ebaõnnestus kuna kasutaja katkestas selle.</string>
     <string name="installation_conflict">Paigaldamine ebaõnnestus, kuna tekkis konflikt olemasoleva versiooniga. Eemaldage praegune rakenduse versioon, ning proovige uuesti.</string>
     <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused originaalrakendusest ja proovige uuesti.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_failed">Paigaldamine ebaõnnestus teadmata põhjustel. Lisateabe saamiseks liituge meie telegrammi või Discordiga. Palun manustage ekraanipilt läbi täpsema menüü</string>
     <string name="installation_incompatible">Paigaldamine ebaõnnestus, kuna paigaldusfail ei sobitu teie seadmega. Puhastage allalaaditud failid seadete alt, ning proovige uuesti.</string>
     <string name="installation_invalid">Paigaldamine ebaõnnestus kuna apk failid on vigased, palun proovige uuesti.</string>
     <string name="installation_miui">Paigaldamine ebaõnnestus, kuna MIUI optimiseerimine on lubatud. Keelake MIUI optimiseerimine ja proovige uuesti.</string>

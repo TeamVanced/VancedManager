@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">キャンセル</string>
     <string name="close">閉じる</string>
-    <string name="description_microg">microG Project をベースにした、Vanced のためのGMSのカスタム実装</string>
-    <string name="description_vanced">多くの便利な機能を備えた、改造されたYouTubeアプリ!</string>
-    <string name="description_vanced_music">YouTube Music のための Vanced! 比較的機能は少ないですが、あなたの欲望を満たします。</string>
+    <string name="description_microg">microG Project をベースにした、Vanced のための GMS カスタム実装</string>
+    <string name="description_vanced">多くの便利な機能を備えた、改造された YouTube クライアント</string>
+    <string name="description_vanced_music">YouTube Music のための Vanced。機能は多くありませんが、あなたのニーズを満たします。</string>
     <string name="reset">リセット</string>
     <string name="save">保存</string>
     <string name="select_apps">アプリの選択</string>
@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">これが何であるか分からないか、またはRootバージョンを使用したくない場合は、下の青い矢印をタップしてください！</string>
     <!-- Home Page -->
     <string name="about_app">%1$s について</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">ダウンロード</string>
+    <string name="accessibility_info">情報</string>
+    <string name="accessibility_launch">起動</string>
+    <string name="accessibility_reinstall">再インストール</string>
+    <string name="accessibility_uninstall">アンインストール</string>
+    <string name="accessibility_update">アップデート</string>
     <string name="apps">アプリ</string>
     <string name="changelog">更新履歴</string>
     <string name="downloading_file">%1$s をダウンロードしています</string>
@@ -55,8 +55,8 @@
     <string name="push_notifications">%1$s プッシュ通知</string>
     <string name="push_notifications_summary">%1$s のアップデートがリリースされたときにプッシュ通知を受け取る</string>
     <string name="script_save_failed">新しいタイマーの値の保存に失敗しました</string>
-    <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_sleep_timer">Root スクリプト スリープ時間</string>
+    <string name="script_sleep_timer_description">/data/adb/service.d/app.sh で使用されるスリープ時間を調整します。マウントの問題を修正するのに役立ちます。</string>
     <string name="system_default">システム設定</string>
     <string name="theme">テーマ</string>
     <string name="theme_dark">ダークテーマ</string>
@@ -66,7 +66,7 @@
     <string name="variant">種類</string>
     <!-- Logs -->
     <string name="logs_not_saved">ログの保存に失敗しました</string>
-    <string name="logs_saved">ログが正常に保存されました</string>
+    <string name="logs_saved">%1$s にログを保存しました</string>
     <!-- Dialogs -->
     <string name="advanced">詳細</string>
     <string name="app_install_files_detected">%1$s のインストールに必要なファイルが見つかりました</string>
@@ -82,7 +82,9 @@
     <string name="magisk_vanced">Vanced の Magisk/TWRP バージョンを使用しているようです。このバージョンは廃止されており、このアプリでは更新できません。 まず Magisk モジュールを削除するか、TWRP で Vanced uninstaller を使用してください。</string>
     <string name="miui_one">Vanced をインストールするには、開発者設定から MIUI 最適化を無効にしなければなりません。 (20.2.20 以降の xiaomi.eu ベースの ROM の場合はこの警告は無視してください)</string>
     <string name="miui_one_title">MIUI 最適化が有効です!</string>
-    <string name="please_be_patient">この処理中はアプリを終了しないでください!</string>
+    <string name="please_be_patient">この処理中はアプリを終了しないでください！</string>
+    <string name="uninstall_app_text">%1$s をアンインストールしてよろしいですか？</string>
+    <string name="uninstall">アンインストール</string>
     <string name="redownload">再ダウンロード</string>
     <string name="security_context">Vancedapp.com、Vanced の Discord サーバーまたは GitHub からアプリをダウンロードしたことを確認してください</string>
     <string name="version">バージョン</string>

@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Root versiyasının nə olduğunu bilmirsiz ya da sadəcə istifadə etmək istəmirsiz? onda aşağıdakı göy oxa toxunun!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Haqqında</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Yüklə</string>
+    <string name="accessibility_info">Məlumat</string>
+    <string name="accessibility_launch">Başlat</string>
+    <string name="accessibility_reinstall">Yenidən qur</string>
+    <string name="accessibility_uninstall">Sil</string>
+    <string name="accessibility_update">Yenilə</string>
     <string name="apps">Tətbiqlər</string>
     <string name="changelog">Dəyişikliklər</string>
     <string name="downloading_file">%1$s endirilir</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Qeydləri saxlamaq olmadı</string>
-    <string name="logs_saved">Qeydlər uğurla saxlandı</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Təfsilatlar</string>
     <string name="app_install_files_detected">%1$s quraşdırma faylı aşkarlandı!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Vanced-i quraşdırmaq üçün tərtibatçı tənzimləmələrindən MIUI Optimallaşdırmasını sıradan çıxartmaq LAZIMDIR. (20.2.20 və ya yuxarı xiaomi.eu əsaslı ROM istifadə edirsinizsə bu xəbərdarlığı nəzərə almaya bilərsiniz)</string>
     <string name="miui_one_title">MIUI Optimizasiyaları açıqdır!</string>
     <string name="please_be_patient">Xahiş olunur iş gedərkən tətbiqi TƏRK ETMƏYİN!</string>
+    <string name="uninstall_app_text">%1$s tətbiqini silmək istəyirsiniz?</string>
+    <string name="uninstall">Sil</string>
     <string name="redownload">Yenidən endir</string>
     <string name="security_context">Tətbiqi vancedapp.com, Vanced Discord server və ya Vanced GitHub\'dan endirdiyinizə əmin olun</string>
     <string name="version">Versiya</string>
