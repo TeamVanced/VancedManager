@@ -2,18 +2,5 @@
 <resources>
 
     <string name="app_name" translatable="false">Vanced Manager</string>
-    <string name="vanced" translatable="false">YouTube Vanced</string>
-    <string name="microg" translatable="false">Vanced microG</string>
-    <string name="music" translatable="false">YouTube Music Vanced</string>
-
-    <string name="nonroot">nonroot</string>
-
-    <string name="about_app_devs" translatable="false">Xinto (Main stuff)\nKoopah (Shell God)\nAioiLight (GitHub)\nLogan (UI)</string>
-    <string name="about_vanced_devs" translatable="false">xfileFIN\nKevinX8\nZaneZam\nLaura Almeida</string>
-    <string name="about_other_contributors" translatable="false">bhatVikrant (Website)\nbawm (Sponsorblock)</string>
-    <string name="gpl" translatable="false">GPL</string>
-
-    <!-- prefs -->
-    <string name="use_custom_tabs" translatable="false">use_custom_tabs</string>
 
 </resources>
