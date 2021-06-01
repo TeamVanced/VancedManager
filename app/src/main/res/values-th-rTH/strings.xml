@@ -26,8 +26,8 @@
     <string name="about_app">เกี่ยวกับ %1$s</string>
     <string name="accessibility_download">ดาวน์โหลด</string>
     <string name="accessibility_info">ข้อมูล</string>
-    <string name="accessibility_launch">เปิด</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_launch">ตัวเปิด</string>
+    <string name="accessibility_reinstall">ติดตั้งใหม่</string>
     <string name="accessibility_uninstall">ถอนการติดตั้ง</string>
     <string name="accessibility_update">อัพเดท</string>
     <string name="apps">แอป</string>
@@ -66,7 +66,7 @@
     <string name="variant">ตัวแปร</string>
     <!-- Logs -->
     <string name="logs_not_saved">ไม่สามารถบันทึกได้</string>
-    <string name="logs_saved">ดำเนินการบันทึกเรียบร้อยแล้ว</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">รายละเอียด</string>
     <string name="app_install_files_detected">%1$s ตรวจพบไฟล์สำหรับการติดตั้ง!</string>
@@ -81,8 +81,10 @@
     <string name="hold_on">หยุด!</string>
     <string name="magisk_vanced">คุณกำลังใช้ Vanced เวอร์ชัน Magisk / TWRP ซึ่งถูกยกเลิกและไม่สามารถอัปเดตได้จากแอปนี้ กรุณาลบออกโดยการถอดโมดูล Magisk / ใช้โปรแกรมถอนการติดตั้ง TWRP Vanced</string>
     <string name="miui_one">ในการติดตั้ง Vanced คุณต้องปิดใช้งาน การเพิ่มประสิทธิภาพ MIUI ในการตั้งค่าสำหรับนักพัฒนา (คุณสามารถเพิกเฉยต่อคำเตือนนี้ได้ หากคุณใช้ based ROM xiaomi.eu 20.2.20 หรือใหม่กว่า)</string>
-    <string name="miui_one_title">เปิดใช้งานการเพิ่มประสิทธิภาพ MIUI แล้ว!</string>
+    <string name="miui_one_title">การเพิ่มประสิทธิภาพ MIUI เปิดอยู่!</string>
     <string name="please_be_patient">โปรดอย่าออกจากแอปในระหว่างขั้นตอนนี้!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
     <string name="redownload">ดาวน์โหลดอีกครั้ง</string>
     <string name="security_context">ตรวจสอบให้แน่ใจว่าคุณดาวน์โหลดแอพจากช่องทางที่ถูกต้อง vancedapp.com, เซิร์ฟเวอร์ Vanced Discord หรือ Vanced GitHub</string>
     <string name="version">รุ่น</string>
