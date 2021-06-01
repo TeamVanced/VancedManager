@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Nu știți ce este sau nu vreți să folosiți versiunea root? Apăsați săgeata albastră de mai jos!</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Descarcă</string>
+    <string name="accessibility_info">Informaţii</string>
+    <string name="accessibility_launch">Lansează</string>
+    <string name="accessibility_reinstall">Reinstalează</string>
+    <string name="accessibility_uninstall">Dezinstalează</string>
+    <string name="accessibility_update">Actualizare</string>
     <string name="apps">Aplicații</string>
     <string name="changelog">Schimbări</string>
     <string name="downloading_file">Se descarcă %1$s</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variantă</string>
     <!-- Logs -->
     <string name="logs_not_saved">Jurnalele nu pot fi salvate</string>
-    <string name="logs_saved">Jurnale salvate cu succes</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalii</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Pentru a instala Vanced, TREBUIE să dezactivați Optimizările MIUI în setările pentru dezvoltatori. (Puteți ignora această avertizare dacă utilizați un ROM bazat pe xiaomi.eu cu versiunea 20.2.20 sau mai recent)</string>
     <string name="miui_one_title">Optimizările MIUI sunt activate!</string>
     <string name="please_be_patient">Vă rugăm să NU ieșiți din aplicație în timpul acestui proces!</string>
+    <string name="uninstall_app_text">Sunteţi sigur că doriţi să dezinstalaţi %1$s?</string>
+    <string name="uninstall">Dezinstalează</string>
     <string name="redownload">Redescărcare</string>
     <string name="security_context">Asigurați-vă că ați descărcat aplicația de pe vancedapp.com, de pe serverul Discord Vanced sau de pe GitHub Vanced</string>
     <string name="version">Versiune</string>
