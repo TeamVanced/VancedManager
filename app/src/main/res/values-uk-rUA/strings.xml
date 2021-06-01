@@ -24,12 +24,12 @@
     <string name="willing_to_use_root">Не знаєте, що це або не хочете використовувати рутовану версію? Просто натисніть синю стрілку внизу!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
-    <string name="accessibility_download">Download</string>
+    <string name="accessibility_download">Завантажити</string>
     <string name="accessibility_info">Інформація</string>
     <string name="accessibility_launch">Відкрити</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">Перевстановити</string>
     <string name="accessibility_uninstall">Видалити</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_update">Оновити</string>
     <string name="apps">Додатки</string>
     <string name="changelog">Список змін</string>
     <string name="downloading_file">Завантаження %1$s</string>
@@ -66,7 +66,7 @@
     <string name="variant">Варіант</string>
     <!-- Logs -->
     <string name="logs_not_saved">Не вдалося зберегти логи</string>
-    <string name="logs_saved">Логи успішно збережені</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Детальніше</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Щоб встановити Vanced, ви ПОВИННІ вимкнути оптимізацію MIUI у налаштуваннях розробника. (Ви можете ігнорувати це попередження якщо ви використовуєте 20.2.20 або новіші xiaomi.eu ROM)</string>
     <string name="miui_one_title">Оптимізацію MIUI увімкнено!</string>
     <string name="please_be_patient">Будь ласка, НЕ завершуйте роботу додатку під час цього процесу!</string>
+    <string name="uninstall_app_text">Ви впевнені, що хочете видалити %1$s ?</string>
+    <string name="uninstall">Видалити</string>
     <string name="redownload">Завантажити заново</string>
     <string name="security_context">Переконайтеся, що ви завантажили додаток з vancedapp.com, Vanced Discord сервер або Vanced GitHub</string>
     <string name="version">Версія</string>
