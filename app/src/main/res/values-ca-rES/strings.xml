@@ -27,7 +27,7 @@
     <string name="accessibility_download">Descarrega</string>
     <string name="accessibility_info">Informació</string>
     <string name="accessibility_launch">Llança</string>
-    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_reinstall">Reinstal·la</string>
     <string name="accessibility_uninstall">Desinstal·la</string>
     <string name="accessibility_update">Actualitza</string>
     <string name="apps">Aplicacions</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">No s\'han pogut desar els registres</string>
-    <string name="logs_saved">Registres desats satisfactòriament</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalls</string>
     <string name="app_install_files_detected">Arxius d\'instal·lació de %1$s detectats!</string>
@@ -79,42 +79,44 @@
     <string name="error">Error</string>
     <string name="guide">Guia</string>
     <string name="hold_on">Atura\'t!</string>
-    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
-    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
-    <string name="redownload">Redownload</string>
-    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
-    <string name="version">Version</string>
+    <string name="magisk_vanced">Esteu utilitzant la versió Magisk/TWRP de Vanced, la qual està discontinuada i no es pot actualitzar mitjançant aquesta aplicació. Si us plau, elimineu-la traient el mòdul de Magisk o utilitzant el desinstal·lador Vanced TWRP.</string>
+    <string name="miui_one">Per a instal·lar Vanced cal que desactiveu les Optimitzacions de MIUI a la Configuració de Desenvolupador. (Podeu ignorar aquest avís si feu servir la ROM basada en xiaomi.eu versió 20.2.20 o posterior)</string>
+    <string name="miui_one_title">Les Optimitzacions de MIUI estan activades!</string>
+    <string name="please_be_patient">Si us plau, NO sortiu de l\'aplicació durant aquest procés!</string>
+    <string name="uninstall_app_text">Esteu segurs que voleu desinstal·lar %1$s?</string>
+    <string name="uninstall">Desinstal·la</string>
+    <string name="redownload">Descarrega de nou</string>
+    <string name="security_context">Assegureu-vos que heu descarregat l\'aplicació des de vancedapp.com, el servidor de Discord de Vanced o el GitHub de Vanced</string>
+    <string name="version">Versió</string>
     <string name="welcome">Benvingut</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Trieu els vostres idiomes preferits per a Vanced</string>
-    <string name="install_latest">Latest</string>
-    <string name="light_plus_other">Light + %1$s</string>
-    <string name="select_at_least_one_lang">Select at least one language!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="install_latest">Darrera</string>
+    <string name="light_plus_other">Clar + %1$s</string>
+    <string name="select_at_least_one_lang">Seleccioneu almenys una llengua!</string>
+    <string name="vanced_black">Negre</string>
+    <string name="vanced_dark">Fosc</string>
     <!-- About Page -->
     <string name="manager_dev">Gestor de desenvolupadors</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Altres col·laboradors</string>
     <string name="sources">Fonts</string>
     <string name="vanced_team">Equip avançat</string>
     <!-- Error messages -->
-    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
+    <string name="chown_fail">Error a l\'executar `chown` al propietari del sistema, si us plau intenteu-ho de nou.</string>
     <string name="error_downloading">Error en descarregar %1$s</string>
-    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_accent">No s\'ha pogut aplicar el nou color d\'accent</string>
     <string name="failed_uninstall">Error en instal·lar el paquet %1$s</string>
-    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
-    <string name="ifile_missing">Failed to locate apk file for black/dark theme from storage, please try again.</string>
-    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
-    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="files_missing_va">No s\'ha pogut localitzar els fitxers necessaris per a la instal·lació. Torneu a descarregar els fitxers d\'instal·lació i intenteu-ho de nou.</string>
+    <string name="ifile_missing">No s\'ha pogut localitzar el fitxer apk per al tema negre/fosc a l\'emmagatzematge, si us plau intenteu-ho de nou.</string>
+    <string name="installation_aborted">La instal·lació ha fallat perquè l\'usuari ha cancel·lat la instal·lació.</string>
+    <string name="installation_conflict">La instal·lació ha fallat perquè l\'aplicació entra en conflicte amb una aplicació ja instal·lada. Desinstal·leu la versió actual de Vanced i intenteu-ho de nou.</string>
+    <string name="installation_downgrade">La instal·lació ha fallat perquè l\'usuari ha tractat de rebaixar el paquet. Desinstal·leu les actualitzacions de l\'aplicació original i intenteu-ho de nou.</string>
+    <string name="installation_failed">La instal·lació ha fallat per motius desconeguts, uniu-vos al nostre Telegram o Discord per a més suport. Si us plau, adjunteu-hi també una captura de pantalla des del menú Avançat</string>
     <string name="installation_incompatible">La instal·lació ha fallat perquè el fitxer d\'instal·lació és incompatible amb el dispositiu. Esborreu els fitxers descarregats a Configuració i torneu-ho a provar.</string>
     <string name="installation_invalid">La instal·lació ha fallat perquè els fitxers apk estan danyats. Torneu-ho a provar.</string>
     <string name="installation_miui">La instal·lació ha fallat perquè l\'optimització MIUI està activada. Desactiveu l\'optimització MIUI i torneu-ho a provar.</string>
     <string name="installation_signature">La instal·lació ha fallat perquè la verificació de la signatura apk està activada. Desactiveu la verificació de la signatura apk i torneu-ho a provar.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
-    <string name="modapk_missing">Failed to find apk file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
-    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+    <string name="installation_storage">La instal·lació ha fallat perquè el dispositiu no disposa de prou espai lliure.</string>
+    <string name="modapk_missing">No s\'ha trobat el fitxer apk per al tema negre/fosc a l\'instal·lador. Netejeu les dades del Gestor i intenteu-ho de nou.</string>
+    <string name="path_missing">No s\'ha pogut localitzar la ruta de instal·lació de YouTube després de la instal·lació \'split\'.</string>
 </resources>
