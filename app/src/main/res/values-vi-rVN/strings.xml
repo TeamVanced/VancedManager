@@ -4,7 +4,7 @@
     <string name="cancel">Hủy</string>
     <string name="close">Đóng</string>
     <string name="description_microg">GMS Nhúng đã được tuỳ chỉnh cho Vanced dựa trên Dự án microG.</string>
-    <string name="description_vanced">Một ứng dụng YouTube đã được sửa đổi với nhiều tính năng hữu ích!</string>
+    <string name="description_vanced">Ứng dụng YouTube đã được sửa đổi với nhiều tính năng hữu ích!</string>
     <string name="description_vanced_music">Vanced, nhưng cho YouTube Music! Khá ít tính năng nhưng đáp ứng được nhu cầu của bạn.</string>
     <string name="reset">Đặt lại</string>
     <string name="save">Lưu</string>
@@ -66,7 +66,7 @@
     <string name="variant">Phiên bản</string>
     <!-- Logs -->
     <string name="logs_not_saved">Lưu nhật ký thất bại</string>
-    <string name="logs_saved">Lưu nhật ký thành công</string>
+    <string name="logs_saved">Lưu nhật ký thành công tại %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Chi tiết</string>
     <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
@@ -83,6 +83,8 @@
     <string name="miui_one">Để cài Vanced, bạn PHẢI vô hiệu hóa Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
     <string name="miui_one_title">Tối ưu hoá MIUI đang được kích hoạt!</string>
     <string name="please_be_patient">Vui lòng KHÔNG thoát khỏi ứng dụng trong tiến trình này!</string>
+    <string name="uninstall_app_text">Bạn có chắc chắn muốn gỡ cài đặt %1$s không?</string>
+    <string name="uninstall">Gỡ cài đặt</string>
     <string name="redownload">Tải lại</string>
     <string name="security_context">Chắc chắn rằng bạn đã tải ứng dụng này từ vancedapp.com, server Discord của Vanced hoặc GitHub của Vanced</string>
     <string name="version">Phiên bản</string>
