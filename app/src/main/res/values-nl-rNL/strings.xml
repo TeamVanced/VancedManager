@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
-    <string name="description_microg">Een aangepaste GMS-implementatie voor Vanced gebaseerd op het microG-project.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Een aangepaste versie van YouTube met veel handige functies!</string>
     <string name="description_vanced_music">Vanced, maar voor YouTube Music!\nMinder functies maar voldoet aan al je wensen.</string>
     <string name="reset">Herstellen</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Root-machtiging toestaan</string>
     <string name="lets_get_started">Aan de slag!</string>
     <string name="select_at_least_one_app">Selecteer minstens één app!</string>
-    <string name="willing_to_use_root">Weet je niet wat dit is of wil je de root-versie niet gebruiken? Klik dan op de blauwe pijl hieronder!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Over %1$s</string>
     <string name="accessibility_download">Downloaden</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Nieuwe accentkleur toepassen mislukt</string>
     <string name="failed_uninstall">Deïnstalleren van pakket %1$s mislukt</string>
     <string name="files_missing_va">Kan de vereiste bestanden voor de installatie niet vinden. Download de installatiebestanden opnieuw en probeer het opnieuw.</string>
-    <string name="ifile_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in opslag. Probeer het opnieuw.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Installatie mislukt omdat de gebruiker de installatie heeft afgebroken.</string>
     <string name="installation_conflict">Installatie mislukt omdat de app conflicten heeft met een reeds geïnstalleerde app. Verwijder de huidige versie van die app en probeer het opnieuw.</string>
     <string name="installation_downgrade">Installatie mislukt omdat de gebruiker het pakket probeerde te downgraden. Verwijder updates van de standaard app en probeer het daarna opnieuw.</string>
     <string name="installation_failed">Installatie mislukt om onbekende redenen, ga naar Telegram of Discord voor verdere ondersteuning. Voeg een screenshot toe via het menu Geavanceerd.</string>
     <string name="installation_incompatible">Installatie mislukt omdat het installatiebestand niet compatibel is met jouw apparaat. Wis de gedownloade bestanden in de instellingen en probeer het opnieuw.</string>
-    <string name="installation_invalid">Installatie mislukt omdat de apk-bestanden beschadigd zijn. Probeer het opnieuw.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Installatie mislukt omdat MIUI-optimalisatie is ingeschakeld. Schakel MIUI-optimalisatie uit en probeer het opnieuw.</string>
-    <string name="installation_signature">Installatie mislukt omdat apk-handtekeningverificatie is ingeschakeld. Schakel apk-handtekeningverificatie uit en probeer het opnieuw.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Installatie mislukt omdat het apparaat niet genoeg vrije ruimte heeft.</string>
-    <string name="modapk_missing">Kan het apk-bestand voor zwart/donker thema niet vinden in het installatiebestand. Verwijder de appdata van Vanced Manager en probeer het opnieuw.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Kan het standaard YouTube-installatiepad niet vinden na de gesplitste installatie.</string>
 </resources>
