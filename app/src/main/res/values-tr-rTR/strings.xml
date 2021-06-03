@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">İptal</string>
     <string name="close">Kapat</string>
-    <string name="description_microg">Vanced uygulamaları için geliştirilen microG tabanlı özel bir GMS uygulamasıdır.</string>
+    <string name="description_microg">Vanced uygulamaları için özel olarak geliştirilmiş microG tabanlı GMH uygulamasıdır.</string>
     <string name="description_vanced">İşe yarar birçok özellikle modifiye edilmiş YouTube sürümü!</string>
     <string name="description_vanced_music">Yine Vanced, ama YouTube Music için! Kıyasen daha az özelliğe sahip ama beklentilerini karşılayacaktır.</string>
     <string name="reset">Sıfırla</string>
@@ -29,12 +29,12 @@
     <string name="accessibility_launch">Başlat</string>
     <string name="accessibility_reinstall">Yeniden yükle</string>
     <string name="accessibility_uninstall">Kaldır</string>
-    <string name="accessibility_update">Güncelleştir</string>
+    <string name="accessibility_update">Güncelle</string>
     <string name="apps">Uygulamalar</string>
     <string name="changelog">Sürüm Notları</string>
     <string name="downloading_file">%1$s indiriliyor</string>
     <string name="install">Yükle</string>
-    <string name="latest">En son:</string>
+    <string name="latest">Güncel sürüm:</string>
     <string name="no_microg">Vanced microG\'yi kurmalısın</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
     <string name="social_media">Sosyal Medya</string>
@@ -50,8 +50,8 @@
     <string name="firebase_summary">Uygulama hakkında performans ve hata kayıtlarını toplamamıza izin verir</string>
     <string name="firebase_title">Firebase Analizi</string>
     <string name="language_title">Dil</string>
-    <string name="link_custom_tabs">Bağlantılar Chrome Özel Sekmelerinde açılacaktır</string>
-    <string name="link_title">Chrome Özel Sekmelerini kullan</string>
+    <string name="link_custom_tabs">Linklerin uygulama içerisinde hızlıca açılmasını sağlar</string>
+    <string name="link_title">Chrome Özel Sekmeleri\'ni kullan</string>
     <string name="push_notifications">%1$s Anlık Bildirimleri</string>
     <string name="push_notifications_summary">%1$s için bir güncelleme yayınlandığında anlık bildirimler alın</string>
     <string name="script_save_failed">Yeni zaman değeri kaydedilemedi</string>
@@ -107,13 +107,13 @@
     <string name="failed_accent">Yeni vurgu rengi uygulanamadı</string>
     <string name="failed_uninstall">%1$s kaldırılırken hata oluştu</string>
     <string name="files_missing_va">Kurulum için gerekli olan dosyaları belirlerken bir hata oluştu. Kurulum dosyalarını tekrar indirip, yeniden deneyin.</string>
-    <string name="ifile_missing">Depolama alanında Siyah/Koyu temanın APK dosyasını belirlerken bir hata oluştu. Tekrar deneyin lütfen.</string>
+    <string name="ifile_missing">Depolama alanında Siyah/Koyu temanın APK dosyasını belirlerken bir hata oluştu. Tekrar dener misin?</string>
     <string name="installation_aborted">Kullanıcı kurulumu iptal ettiği için kurulum başarısız oldu.</string>
     <string name="installation_conflict">Uygulama önceden yüklenmiş bir uygulamayla çakıştığından yükleme başarısız oldu. Uygulamanın mevcut sürümünü kaldırın ve ardından tekrar deneyin.</string>
     <string name="installation_downgrade">Kullanıcı eski sürümü yüklemeye çalıştığı için kurulum tamamlanamadı. Orijinal YouTube uygulamasının güncellemelerini kaldırdıktan sonra yeniden deneyin.</string>
     <string name="installation_failed">Kurulum, bilinmeyen sebeplerden dolayı başarısız oldu. Telegram grubu veya Discord sunucusundan destek alabilirsin. Ayrıca, detaylar ekranının bir ekran görüntüsünü alıp, yardım talebinle birlikte iletmeyi unutma lütfen. </string>
     <string name="installation_incompatible">Kurulum dosyası cihazınız ile uyumsuz olduğu için kurulum işlemi başarısız oldu. Ayarlar\'da indirilen dosyaları temizleyip, tekrar deneyin.</string>
-    <string name="installation_invalid">APK dosyaları çözümlenemediğinden, kurulum başarısız oldu. Lütfen yeniden deneyin.</string>
+    <string name="installation_invalid">Apk dosyaları bozuk olduğundan yükleme başarısız oldu. Tekrar deneyebilir misin?</string>
     <string name="installation_miui">MIUI Optimizasyonu etkin olduğundan, kurulum başarısız oldu. MIUI Optimizasyonunu devre dışı bırakıp, yeniden deneyin.</string>
     <string name="installation_signature">APK imza doğrulaması etkin olduğundan, kurulum başarısız oldu. APK imza doğrulamasını devre dışı bırakıp, yeniden deneyin.</string>
     <string name="installation_storage">Yetersiz depolama alanından dolayı kurulum başarısız oldu.</string>
