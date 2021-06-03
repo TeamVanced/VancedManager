@@ -24,7 +24,7 @@
     <string name="grant_root">Grant Root Permission</string>
     <string name="lets_get_started">Let\'s get started</string>
     <string name="select_at_least_one_app">Select at least one app!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
 
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
