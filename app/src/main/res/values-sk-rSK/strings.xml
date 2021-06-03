@@ -113,10 +113,10 @@
     <string name="installation_downgrade">Inštalácia zlyhala, pretože užívateľ sa pokúsil downgradovať balík. Odinštalujte aktualizácie z pôvodnej aplikácie a potom to skúste znova.</string>
     <string name="installation_failed">Inštalácia zlyhala z neznámych dôvodov. Pre poskytnutie podpory sa pripojte sa k nášmu Telegramu alebo Discordu. Pripojte tiež snímky obrazovky z ponuky Pokročilé</string>
     <string name="installation_incompatible">Inštalácia zlyhala, pretože inštalačný súbor nie je kompatibilný s vaším zariadením. V Nastaveniach vymažte stiahnuté súbory a potom to skúste znova.</string>
-    <string name="installation_invalid">Inštalácia zlyhala, pretože súbory APK sú poškodené. Skúste to prosím znova.</string>
+    <string name="installation_invalid">Inštalácia zlyhala, pretože súbory APK sú poškodené. Skúste to, prosím, znova.</string>
     <string name="installation_miui">Inštalácia zlyhala, pretože je povolená optimalizácia MIUI. Zakážte optimalizáciu MIUI a potom to skúste znova.</string>
-    <string name="installation_signature">Inštalácia zlyhala, pretože overenie podpisu APK je povolené. Zakážte overenie podpisu APK a potom to skúste znova.</string>
+    <string name="installation_signature">Inštalácia zlyhala, pretože overenie podpisu APK je povolené. Zakážte overenie podpisu APK, a potom to skúste znova.</string>
     <string name="installation_storage">Inštalácia zlyhala, pretože v zariadení nie je dostatok voľného miesta.</string>
-    <string name="modapk_missing">Z inštalačného programu sa nepodarilo nájsť súbor APK pre čiernu/tmavú tému. Vymažte údaje aplikácie Vanced Manager a potom to skúste znova.</string>
+    <string name="modapk_missing">Z inštalačného programu sa nepodarilo nájsť súbor APK pre čiernu/tmavú tému. Vymažte údaje aplikácie Vanced Manager, a potom to skúste znova.</string>
     <string name="path_missing">Po split inštalácii aplikácie sa nepodarilo nájsť cestu inštalácie originálnej YouTube aplikácie.</string>
 </resources>
