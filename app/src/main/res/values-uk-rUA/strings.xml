@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Скасувати</string>
     <string name="close">Закрити</string>
-    <string name="description_microg">Модифікований GMS для Vanced на основі проекту microG.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Модифікований клієнт YouTube з безліччю корисних функцій!</string>
     <string name="description_vanced_music">Vanced, але для YouTube Music! Відносно менш функціональний, але задовольняє ваші потреби.</string>
     <string name="reset">Скинути</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Надати Root Права</string>
     <string name="lets_get_started">Почнімо</string>
     <string name="select_at_least_one_app">Оберіть принаймні один додаток!</string>
-    <string name="willing_to_use_root">Не знаєте, що це або не хочете використовувати рутовану версію? Просто натисніть синю стрілку внизу!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
     <string name="accessibility_download">Завантажити</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Не вдалося застосувати новий другорядний колір</string>
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
     <string name="files_missing_va">Не вдалося знайти необхідні файли для встановлення. Повторно завантажте файли і спробуйте ще раз.</string>
-    <string name="ifile_missing">Не вдалося знайти apk-файл для чорної/темної теми зі сховища, спробуйте ще раз.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Встановлення не вдалося, оскільки користувач перервав встановлення.</string>
     <string name="installation_conflict">Встановлення не вдалася, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
     <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
     <string name="installation_failed">Не вдалося встановити з невідомих причин, підключіться до нашої Telegram групи або Discord сервера для подальшої підтримки. Будь ласка, додайте знімок екрану з розширеного меню</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
-    <string name="installation_invalid">Встановлення неможливе, оскільки apk-файли пошкоджені, будь ласка, спробуйте ще раз.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
-    <string name="installation_signature">Помилка встановлення, оскільки увімкнено перевірку підпису apk. Вимкніть перевірку підпису apk, а потім спробуйте ще раз.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Помилка встановлення, так як на пристрої недостатньо вільного місця.</string>
-    <string name="modapk_missing">Не вдалося знайти apk-файл для чорної/темної теми в програмі встановлення. Видаліть дані додатка з Менеджера і спробуйте ще раз.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Не вдалося знайти типовий шлях встановлення YouTube після роздільного встановлення.</string>
 </resources>
