@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Anuluj</string>
     <string name="close">Zamknij</string>
-    <string name="description_microg">Niestandardowa implementacja GMS dla Vanced w oparciu o projekt microG.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Zmodyfikowany klient YouTube z wieloma przydatnymi funkcjami!</string>
     <string name="description_vanced_music">Vanced, ale dla Muzyki YouTube! Stosunkowo mniej bogaty w funkcje, ale spełnia Twoje potrzeby.</string>
     <string name="reset">Zresetuj</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Przyznaj uprawnienie root</string>
     <string name="lets_get_started">Zaczynajmy</string>
     <string name="select_at_least_one_app">Wybierz co najmniej jedną aplikację!</string>
-    <string name="willing_to_use_root">Nie wiesz, co to jest lub nie chcesz użyć wersji z rootem? Po prostu kliknij niebieską strzałkę poniżej!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="accessibility_download">Pobierz</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Nie udało się zastosować nowego koloru akcentu</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
     <string name="files_missing_va">Nie udało się zlokalizować wymaganych plików do instalacji. Pobierz ponownie pliki instalacyjne, a następnie spróbuj ponownie.</string>
-    <string name="ifile_missing">Nie udało się zlokalizować pliku apk dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
     <string name="installation_conflict">Instalacja nie powiodła się ponieważ aplikacja konfliktuje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z domyślnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Instalacja nie powiodła się z nieznanych powodów, dołącz do naszego Telegrama lub Discorda, aby uzyskać dalsze wsparcie. Proszę również dołączyć zrzut ekranu z zaawansowanego menu</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
-    <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
-    <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Instalacja nie powiodła się, ponieważ urządzenie nie ma wystarczającej ilości wolnego miejsca.</string>
-    <string name="modapk_missing">Nie udało się znaleźć pliku apk dla czarnego/ciemnego motywu z instalatora. Wyczyść dane aplikacji Menedżera i spróbuj ponownie.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Nie udało się zlokalizować ścieżki instalacji YouTube po podzieleniu instalacji.</string>
 </resources>
