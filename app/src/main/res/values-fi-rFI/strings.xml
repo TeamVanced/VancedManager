@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Peruuta</string>
     <string name="close">Sulje</string>
-    <string name="description_microg">MicroG-projektiin perustuva mukautettu GMS-toteutus Vancedille.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Muokattu YouTube-sovellus, jossa on monia hyödyllisiä ominaisuuksia!</string>
     <string name="description_vanced_music">Vanced, Youtube Musicille! Vähemmän ominaisuuksia, mutta täyttää tarpeesi.</string>
     <string name="reset">Palauta</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Anna root-oikeudet</string>
     <string name="lets_get_started">Aloitetaan</string>
     <string name="select_at_least_one_app">Valitse ainakin yksi sovellus!</string>
-    <string name="willing_to_use_root">Etkö tiedä mikä tämä on tai etkö halua käyttää rootattua versiota? Klikkaa alla olevaa sinistä nuolta!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s-tietoja</string>
     <string name="accessibility_download">Lataa</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Uuden aksenttivärin käyttöönotto epäonnistui</string>
     <string name="failed_uninstall">Paketin %1$s asennus epäonnistui</string>
     <string name="files_missing_va">Asennukseen vaadittavien tiedostojen paikannus epäonnistui. Yritä ladata asennustiedostot uudelleen.</string>
-    <string name="ifile_missing">APK-tiedostoa mustalle/tummalle teemalle ei voitu paikantaa tallennustilasta, yritä uudelleen.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Asennus epäonnistui, koska käyttäjä keskeytti asennuksen.</string>
     <string name="installation_conflict">Asennus epäonnistui, koska sovellus on ristiriidassa jo asennetun sovelluksen kanssa. Poista sovelluksen nykyinen versio ja yritä uudelleen.</string>
     <string name="installation_downgrade">Asennus epäonnistui, koska käyttäjä yritti asentaa paketin vanhempaa versiota. Poista YouTube-sovelluksen päivitykset ja yritä sitten uudelleen.</string>
     <string name="installation_failed">Asennus epäonnistui tuntemattomasta syystä, liity Vancedin Telegramiin tai Discordiin saadaksesi tukea. Liitä myös kuvankaappaus Lisäasetukset-valikosta</string>
     <string name="installation_incompatible">Asennus epäonnistui, koska asennustiedosto ei ole yhteensopiva laitteesi kanssa. Tyhjennä ladatut tiedostot asetuksista ja yritä uudelleen.</string>
-    <string name="installation_invalid">Asennus epäonnistui, koska APK-tiedostot ovat vioittuneet, yritä uudelleen.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Asennus epäonnistui, koska MIUI-optimointi on käytössä. Poista MIUI-optimointi käytöstä ja yritä uudelleen.</string>
-    <string name="installation_signature">Asennus epäonnistui, koska APK-allekirjoituksen vahvistus on käytössä. Poista APK-allekirjoituksen vahvistus käytöstä, ja yritä uudelleen.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Asennus epäonnistui, koska laitteella ei ole tarpeeksi vapaata tilaa.</string>
-    <string name="modapk_missing">APK-tiedostoa mustalle/tummalle teemalle ei löytynyt asentajalta. Tyhjennä Managerin sovellustiedot ja yritä uudelleen.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Youtube-sovelluksen asennuspolkua ei voitu paikantaa jaetun asennuksen jälkeen.</string>
 </resources>
