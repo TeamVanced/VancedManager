@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">إلغاء</string>
     <string name="close">إغلاق</string>
-    <string name="description_microg">نسخة خاصة من خدمات جوجل للجوال معدة خصيصا لتطبيق ڤانسد بناءً على مشروع microG.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">تطبيق يوتيوب معدل مع العديد من الميزات المفيدة!</string>
     <string name="description_vanced_music">ڤانسد لموسيقى يوتيوب! يلبي احتياجاتك حتى وإن كان يضم ميزات أقل من ڤانسد.</string>
     <string name="reset">إعادة تعيين</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">امنح صلاحيات الروت</string>
     <string name="lets_get_started">فلنبدأ</string>
     <string name="select_at_least_one_app">اختر تطبيقاً واحداً على الأقل!</string>
-    <string name="willing_to_use_root">لا تعرف ما هذا أو لا تود استخدام نسخة الروت؟ اضغط على السهم الأزرق في الأسفل!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">حول %1$s</string>
     <string name="accessibility_download">تنزيل</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">فشل تطبيق لون النسق الجديد</string>
     <string name="failed_uninstall">فشل في الغاء تثبيت حزمة %1$s</string>
     <string name="files_missing_va">فشل العثور على الملفات المطلوبة للتثبيت. أعد تحميل ملفات التثبيت، ثم حاول مرة أخرى.</string>
-    <string name="ifile_missing">فشل العثور على حزمة تثبيت السمة السوداء/المظلمة من وحدة التخزين، الرجاء المحاولة مرة أخرى.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من ڤانسد، ثم حاول مرة أخرى.</string>
     <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
     <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم. يرجى أيضاً إرفاق لقطة الشاشة من القائمة المتقدمة</string>
     <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. امسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
-    <string name="installation_invalid">فشل التثبيت لأن حزم التثبيت تالفة، الرجاء المحاولة مرة أخرى.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">فشل التثبيت لأن تحسينات MIUI مفعلة. قم بتعطيل تحسينات MIUI ، ثم حاول مرة أخرى.</string>
-    <string name="installation_signature">فشل التثبيت لأن التحقق من توقيع حزم التثبيت مفعل. الرجاء تعطيل التحقق من توقيع حزم التثبيت, ثم المحاولة مرة أخرى.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">فشل التثبيت، مساحة جهازك الخالية لا تكفي. </string>
-    <string name="modapk_missing">فشل العثور على حزمة التثبيت للسمة السوداء/المظلمة من المثبت. امسح بيانات التطبيق لمدير ڤانسد، ثم حاول مرة أخرى.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">فشل تحديد مسار تثبيت اليوتيوب الأصلي بعد تثبيت الحزم المنفصلة.</string>
 </resources>
