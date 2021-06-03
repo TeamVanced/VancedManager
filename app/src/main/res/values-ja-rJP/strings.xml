@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">キャンセル</string>
     <string name="close">閉じる</string>
-    <string name="description_microg">microG Project をベースにした、Vanced のための GMS カスタム実装</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">多くの便利な機能を備えた、改造された YouTube クライアント</string>
     <string name="description_vanced_music">YouTube Music のための Vanced。機能は多くありませんが、あなたのニーズを満たします。</string>
     <string name="reset">リセット</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">root 権限を付与</string>
     <string name="lets_get_started">さあ、始めましょう</string>
     <string name="select_at_least_one_app">アプリを少なくとも一つ選択してください！</string>
-    <string name="willing_to_use_root">これが何であるか分からないか、またはRootバージョンを使用したくない場合は、下の青い矢印をタップしてください！</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s について</string>
     <string name="accessibility_download">ダウンロード</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">新しいアクセントカラーの適用に失敗しました</string>
     <string name="failed_uninstall">パッケージ %1$s のアンインストールに失敗しました</string>
     <string name="files_missing_va">インストールに必要なファイルが見つかりませんでした。再ダウンロードし、もう一度お試しください。</string>
-    <string name="ifile_missing">ストレージからブラック/ダークテーマの APK ファイルが見つかりませんでした。もう一度お試しください。</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">ユーザーがインストールを中断したためインストールに失敗しました。</string>
     <string name="installation_conflict">既にインストールされたアプリと競合したため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、もう一度やり直してください。</string>
     <string name="installation_downgrade">アプリをダウングレードしようとしたため、インストールに失敗しました。インストールされたアプリをアンインストールしてから、再度お試しください。</string>
     <string name="installation_failed">不明な理由でインストールに失敗しました。さらなるサポートのためには、Telegram か Discord に参加してください。詳細メニューからスクリーンショットを添付してください。</string>
     <string name="installation_incompatible">インストールするファイルがお使いのデバイスと互換性がないためインストールに失敗しました。設定でダウンロードしたファイルを削除してから、もう一度やり直してください。</string>
-    <string name="installation_invalid">APK ファイルが破損しているためインストールに失敗しました、もう一度やり直してください。</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">MIUI の最適化が有効になっているためインストールに失敗しました。MIUI の最適化を無効化してから、もう一度やり直してください。</string>
-    <string name="installation_signature">APK の署名検証が有効化されているためインストールに失敗しました。APK の署名検証を無効化してから、もう一度やり直してください。</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">デバイスに十分な空き容量がないため、インストールに失敗しました。</string>
-    <string name="modapk_missing">インストーラーからブラック/ダークテーマの APK ファイルが見つかりませんでした。Manager のアプリデータを消去してから、もう一度お試しください。</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">分割インストール後にストックの YouTube アプリのインストールパスが見つかりませんでした。</string>
 </resources>
