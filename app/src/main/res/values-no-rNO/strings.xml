@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Avbryt</string>
     <string name="close">Lukk</string>
-    <string name="description_microg">En tilpasset GMS-implementering for Vanced basert på microG-prosjektet.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">En modifisert YouTube klient med mange nyttige funksjoner!</string>
     <string name="description_vanced_music">Vanced, med for YouTube Musikk! Relativt mindre funkjonsrik men dekker dine behov.</string>
     <string name="reset">Tilbakestill</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Gi root-tillatelse</string>
     <string name="lets_get_started">La oss komme i gang</string>
     <string name="select_at_least_one_app">Velg minst en app!</string>
-    <string name="willing_to_use_root">Vet du ikke hva detter er eller ikke ønsker å bruke rot-versjonen? Bare klikk på den blå pilen nedenfor!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
     <string name="accessibility_download">Download</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Failed to apply new accent color</string>
     <string name="failed_uninstall">Kunne ikke avinstallere pakken %1$s</string>
     <string name="files_missing_va">Kunne ikke finne de nødvendige filene for installasjon. Last ned installasjonsfilene på nytt, og prøv på nytt.</string>
-    <string name="ifile_missing">Klarte ikke å finne apk-filen for svart/mørkt tema på enheten, vennligst prøv igjen.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Installasjonen mislyktes fordi brukeren avbrutt installasjonen.</string>
     <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Installasjonen mislyktes på grunn av at installasjonsfilen er inkompatibel med enheten. Fjern nedlastede filer i innstillinger og prøv på nytt.</string>
-    <string name="installation_invalid">Installasjonen mislyktes fordi apk-filene er ødelagt, vennligst prøv på nytt.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Installasjonen mislyktes fordi MIUI-optimalisering er aktivert. Deaktiver MIUI-optimalisering og prøv på nytt.</string>
-    <string name="installation_signature">Installasjon feilet fordi apk signaturverifikasjon er aktivert. Deaktiver apk signaturverifikasjon og prøv på nytt.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
-    <string name="modapk_missing">Finner ikke apk-filen for svart/mørkt tema fra installatøren. Fjern data fra denne appen og prøv på nytt.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Klarte ikke å lokalisere YouTube installasjonsstien etter splittet installasjon.</string>
 </resources>
