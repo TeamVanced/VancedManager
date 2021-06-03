@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">ਰੱਦ ਕਰੋ</string>
     <string name="close">ਬੰਦ ਕਰੋ</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">A modified YouTube client with many useful features!</string>
     <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
     <string name="reset">ਰੀਸੈੱਟ</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">ਰੂਟ ਹਿਦਾਇਤਾਂ ਜਾਰੀ</string>
     <string name="lets_get_started">ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ</string>
     <string name="select_at_least_one_app">ਘੱਟੋ ਘੱਟ ਇੱਕ ਐਪ ਦੀ ਚੋਣ ਕਰੋ!</string>
-    <string name="willing_to_use_root">ਪਤਾ ਨਹੀਂ ਇਹ ਕੀ ਹੈ ਜਾਂ ਰੂਟ ਵਰਜ਼ਨ ਨਹੀਂ ਵਰਤਣਾ ਚਾਹੁੰਦੇ? ਹੇਠ ਦਿੱਤੇ ਨੀਲੇ ਤੀਰ ਤੇ ਕਲਿਕ ਕਰੋ!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">ਬਾਰੇ %1$s</string>
     <string name="accessibility_download">Download</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">ਨਵਾਂ ਲਹਿਜ਼ਾ ਰੰਗ ਲਾਗੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="failed_uninstall">ਪੈਕਜ ਦੀ ਸਥਾਪਨਾ ਰੱਦ ਕਰਨ ਵਿੱਚ ਨਾਕਾਮ %1$s</string>
     <string name="files_missing_va">ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਲੋੜੀਂਦੀਆਂ ਫਾਈਲਾਂ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ. ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲਾਂ ਨੂੰ ਮੁੜ ਡਾਉਨਲੋਡ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
-    <string name="ifile_missing">ਸਟੋਰੇਜ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">ਇੰਸਟਾਲ ਨਾਕਾਮ ਰਹੀ ਕਿਓਂਕਿ ਉਪਯੋਗਕਰਤਾ ਨੇ ਇੰਸਟਾਲੇਸ਼ਨ ਰੱਦ ਕਰ ਦਿੱਤੀ.</string>
     <string name="installation_conflict">ਸਥਾਪਨਾ ਅਸਫਲ ਕਿਉਂਕਿ ਐਪ ਪਹਿਲਾਂ ਤੋਂ ਸਥਾਪਤ ਐਪ ਨਾਲ ਟਕਰਾਉਂਦੀ ਹੈ. ਐਪ ਦੇ ਮੌਜੂਦਾ ਸੰਸਕਰਣ ਨੂੰ ਅਣਇੰਸਟੌਲ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">ਸਥਾਪਨਾ ਅਸਫਲ ਹੋਈ ਕਿਉਂਕਿ ਇੰਸਟਾਲੇਸ਼ਨ ਫਾਈਲ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਦੇ ਅਨੁਕੂਲ ਨਹੀਂ ਹੈ. ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਡਾਉਨਲੋਡ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਸਾਫ਼ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
-    <string name="installation_invalid">ਸਥਾਪਨਾ ਅਸਫਲ ਹੋਈ ਕਿਉਂਕਿ ਏਪੀਕੇ ਫਾਈਲਾਂ ਖ਼ਰਾਬ ਹਨ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">MIUI ਸਥਾਪਨਾ ਅਸਫਲ, ਕਿਉਂਕਿ Optimization ਯੋਗ ਕੀਤੀ ਗਈ ਸੀ. MIUI Optimization ਅਯੋਗ ਕਰੋ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
-    <string name="installation_signature">ਸਥਾਪਨਾ ਅਸਫਲ ਕਿਉਂਕਿ ਏਪੀਕੇ ਦਸਤਖਤ ਤਸਦੀਕ ਯੋਗ ਹੈ. ਏਪੀਕੇ ਦਸਤਖਤ ਤਸਦੀਕ ਨੂੰ ਅਯੋਗ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
-    <string name="modapk_missing">ਇੰਸਟੌਲਰ ਤੋਂ ਕਾਲੇ / ਹਨੇਰੇ ਥੀਮ ਲਈ ਏਪੀਕੇ ਫਾਈਲ ਲੱਭਣ ਵਿੱਚ ਅਸਫਲ. ਮੈਨੇਜਰ ਐਪ ਦਾ ਡਾਟਾ ਸਾਫ਼ ਕਰੋ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">ਸਪਲਿਟ ਇੰਸਟਾਲੇਸ਼ਨ ਦੇ ਬਾਅਦ ਸਟਾਕ YouTube ਇੰਸਟਾਲੇਸ਼ਨ ਮਾਰਗ ਦਾ ਪਤਾ ਲਗਾਉਣ ਵਿੱਚ ਅਸਫਲ.</string>
 </resources>
