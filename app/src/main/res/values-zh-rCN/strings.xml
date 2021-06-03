@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">取消</string>
     <string name="close">关闭</string>
-    <string name="description_microg">以 microG 项目为基础，为 Vanced 打造的定制化 Google 服务</string>
+    <string name="description_microg">以 microG 项目为基础，为 Vanced 打造的定制化 Google 移动服务</string>
     <string name="description_vanced">经过修改的 YouTube 客户端，具有许多有用的功能！</string>
     <string name="description_vanced_music">Vanced ，不过是 YouTube Music ！功能相对较少，但足以满足您的需求。</string>
     <string name="reset">重置</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">授予 Root 权限</string>
     <string name="lets_get_started">让我们开始吧</string>
     <string name="select_at_least_one_app">选择至少一个应用！</string>
-    <string name="willing_to_use_root">不知道这是什么或不想使用 Root 版本？只需点击下面的蓝色箭头！</string>
+    <string name="willing_to_use_root">不知道这是什么，或不想使用 Root 版本？只需点击下面的蓝色箭头！</string>
     <!-- Home Page -->
     <string name="about_app">关于 %1$s</string>
     <string name="accessibility_download">下载</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">无法应用新的强调色</string>
     <string name="failed_uninstall">%1$s 卸载失败</string>
     <string name="files_missing_va">无法找到需要安装的文件。重新下载安装文件，然后重试。</string>
-    <string name="ifile_missing">无法从存储中找到黑色/深色主题的 apk 文件，请重试。</string>
+    <string name="ifile_missing">无法在存储中找到黑色/深色主题的 APK 文件，请重试。</string>
     <string name="installation_aborted">用户放弃安装导致安装失败。</string>
     <string name="installation_conflict">应用与已安装的应用发生冲突导致安装失败。卸载当前的版本，然后重试。</string>
     <string name="installation_downgrade">用户试图降级应用导致安装失败。卸载官方应用的更新，然后重试。</string>
     <string name="installation_failed">未知原因导致安装失败，请加入我们的 Telegram 或 Discord 并附上高级设置中的截图以获得更多支援。</string>
     <string name="installation_incompatible">安装文件与您的设备不相容导致安装失败。请在设置中清除已下载的文件，然后重试。</string>
-    <string name="installation_invalid">apk 文件已被损坏导致安装失败，请重试。</string>
+    <string name="installation_invalid">APK 文件损坏导致安装失败，请重试。</string>
     <string name="installation_miui">MIUI 优化已被启用导致安装失败。禁用 MIUI 优化，然后重试。</string>
-    <string name="installation_signature">apk 签名验证已被启用导致安装失败。禁用apk 签名验证，然后重试。</string>
+    <string name="installation_signature">APK 签名验证已被启用导致安装失败。请禁用 APK 签名验证，然后重试。</string>
     <string name="installation_storage">设备的可用空间不足导致安装失败。</string>
-    <string name="modapk_missing">无法从安装程式中找到黑色/深色主题的 apk 文件。清除 Manager 的应用数据，然后重试。</string>
+    <string name="modapk_missing">无法在安装器中找到黑色/深色主题的 APK 文件。请清除 Manager 的应用数据，然后重试。</string>
     <string name="path_missing">分包安装后无法定位原生 YouTube 的安装路径。</string>
 </resources>
