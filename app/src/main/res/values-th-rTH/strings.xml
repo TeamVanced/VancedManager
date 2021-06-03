@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">ยกเลิก</string>
     <string name="close">ปิด</string>
-    <string name="description_microg">การปรับใช้ GMS แบบกำหนดเองสำหรับ Vanced ตามโครงการ microG</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">ไคลเอนต์ YouTube ที่ได้รับการแก้ไขพร้อมคุณสมบัติที่มีประโยชน์มากมาย!</string>
     <string name="description_vanced_music">Vanced สำหรับ YouTube Music!  คุณสมบัติค่อนข้างน้อย แต่ตอบสนองความต้องการของคุณ</string>
     <string name="reset">ล้างค่าเริ่มต้น</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">ให้สิทธิ์การใช้งานของรูท</string>
     <string name="lets_get_started">เริ่มกันเลย!</string>
     <string name="select_at_least_one_app">เลือกแอปพลิเคชั่นอย่างน้อยหนึ่งรายการ!</string>
-    <string name="willing_to_use_root">ไม่รู้/ไม่ต้องการใช้เวอร์ชั่นรูท? แค่คลิ๊กบนไอคอนธนูสีฟ้า!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">เกี่ยวกับ %1$s</string>
     <string name="accessibility_download">ดาวน์โหลด</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">การใช้สีที่เน้นใหม่มีความผิดพลาด</string>
     <string name="failed_uninstall">ถอนการติดตั้งแพ็กเกจไม่สำเร็จ %1$s</string>
     <string name="files_missing_va">ไม่สามารถค้นหาไฟล์สำหรับการติดตั้งที่ต้องการได้. กรุณาดาวน์โหลดไฟล์สำหรับการติดตั้งใหม่แล้วลองอีกครั้ง</string>
-    <string name="ifile_missing">ไม่พบไฟล์ apk สำหรับธีมสีดำ / สีเข้ม จากที่เก็บข้อมูล โปรดลองอีกครั้ง</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">การติดตั้งล้มเหลวเนื่องจากผู้ใช้ยกเลิกการติดตั้ง</string>
     <string name="installation_conflict">การติดตั้งล้มเหลวเนื่องจากแอปขัดแย้งกับแอปที่ติดตั้งไว้ก่อนหน้า ถอนการติดตั้งแอปเวอร์ชันปัจจุบันแล้วลองอีกครั้ง</string>
     <string name="installation_downgrade">การติดตั้งล้มเหลวเนื่องจากผู้ใช้พยายามดาวน์เกรดแพ็กเกจ ถอนการติดตั้งการอัปเดตจากแอปเดิมก่อน แล้วลองอีกครั้ง</string>
     <string name="installation_failed">การติดตั้งล้มเหลวโดยไม่ทราบสาเหตุเข้าร่วม Telegram หรือ Discord ของเราเพื่อรับการสนับสนุนเพิ่มเติม  โปรดแนบภาพหน้าจอจากเมนู</string>
     <string name="installation_incompatible">การติดตั้งล้มเหลวเนื่องจากไฟล์การติดตั้งเข้ากันไม่ได้กับอุปกรณ์ของคุณ กรุณาล้างไฟล์ที่ดาวน์โหลดในการตั้งค่า แล้วลองอีกครั้ง</string>
-    <string name="installation_invalid">การติดตั้งล้มเหลวเนื่องจากไฟล์ apk เสียหายโปรดลองอีกครั้ง</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">การติดตั้งล้มเหลวเนื่องจากเปิดใช้งาน MIUI Optimization โปรดปิดการใช้งาน MIUI Optimization แล้วลองอีกครั้ง</string>
-    <string name="installation_signature">การติดตั้งล้มเหลวเนื่องจากเปิดใช้งานการตรวจสอบลายเซ็น apk กรุณาปิดใช้งานการตรวจสอบลายเซ็น apk แล้วลองอีกครั้ง</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">การติดตั้งล้มเหลวเนื่องจากอุปกรณ์มีพื้นที่ว่างไม่เพียงพอ</string>
-    <string name="modapk_missing">ไม่พบไฟล์ apk สำหรับธีมสีดำ / สีเข้มจากโปรแกรมติดตั้ง กรุณาล้างข้อมูลแอปVanced-Manager แล้วลองอีกครั้ง</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">ไม่พบเส้นทางการติดตั้งสต็อกของ YouTube หลังจากการติดตั้งแบบแยก</string>
 </resources>
