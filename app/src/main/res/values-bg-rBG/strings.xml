@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Отказ</string>
     <string name="close">Затвори</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Персонализирано внедряване на GMS за Vanced въз основа на проекта microG.</string>
     <string name="description_vanced">Модифициран клиент за YouTube с много полезни функции!</string>
     <string name="description_vanced_music">Vanced, но за YouTube Music! Относително по-малко богат на функции, но ще отговори на вашите нужди.</string>
     <string name="reset">Изчисти</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Разрешете Root достъп</string>
     <string name="lets_get_started">Да започваме</string>
     <string name="select_at_least_one_app">Изберете поне едно приложение!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Не знаете какво е това или не искате да ползвате Root версията? Просто натиснете синята стрелка по-долу!</string>
     <!-- Home Page -->
     <string name="about_app">Относно %1$s</string>
     <string name="accessibility_download">Изтегляне</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Неуспешно задаване на акцентиращ цвят</string>
     <string name="failed_uninstall">Неуспешно деинсталиране на %1$s</string>
     <string name="files_missing_va">Необходимите файлове за инсталация не са открити. Изтеглете ги отново и опитайте пак.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">Не може да бъде открит apk файла за черна/тъмна тема, моля опитайте отново.</string>
     <string name="installation_aborted">Инсталацията е неуспешна, защото е прекратена от потребителя.</string>
     <string name="installation_conflict">Инсталацията е неуспешна, поради конфликт с вече инсталирано приложение. Деинсталирайте го и опитайте отново.</string>
     <string name="installation_downgrade">Инсталацията е неуспешна, защото потребителя се опитва да инсталира по-стара версия на пакета. Деинсталирайте актуализациите на оригиналното приложение и опитайте отново.</string>
     <string name="installation_failed">Инсталацията не бе успешна по неизвестни причини, присъединете се към нашия Telegram или Discord за допълнителна поддръжка. Моля, прикачете и екранна снимка от меню Разширени</string>
     <string name="installation_incompatible">Инсталацията е неуспешна, защото инсталационният файл не е съвместим с устройството ви. Изчистете изтеглените файлове от настройките и опитайте отново.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">Инсталацията е неуспешна, защото apk файловете за повредени, моля опитайте отново.</string>
     <string name="installation_miui">Инсталацията е неуспешна, поради включени MIUI оптимизации. Изключете ги и опитайте отново.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">Инсталацията е неуспешна, поради включена проверка на подписите на apk файловете. Изключете я и опитайте отново.</string>
     <string name="installation_storage">Инсталацията не бе успешна, тъй като устройството няма достатъчно свободно място.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Не е открит apk файл за черна/тъмна тема от инсталатора. Изчистете данните на мениджъра и опитайте отново.</string>
     <string name="path_missing">Не е открит пътя на инсталацията на оригиналното YouTube приложение след разделното инсталиране.</string>
 </resources>
