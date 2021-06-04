@@ -107,13 +107,13 @@
     <string name="failed_accent">Nepodarilo sa nastaviť novú sekundárnu farbu</string>
     <string name="failed_uninstall">Nepodarilo sa odinštalovať balíček %1$s</string>
     <string name="files_missing_va">Nepodarilo sa nájsť požadované súbory na inštaláciu. Opätovne stiahnite inštalačné súbory a skúste to znova.</string>
-    <string name="ifile_missing">V lokálnom úložisku sa nepodarilo nájsť APK súbor pre čiernu/tmavú tému. Skúste to znovu prosím.</string>
+    <string name="ifile_missing">V lokálnom úložisku sa nepodarilo nájsť APK súbor pre čiernu/tmavú tému. Skúste to znova prosím.</string>
     <string name="installation_aborted">Inštalácia zlyhala, kvôli zrušeniu užívateľom.</string>
     <string name="installation_conflict">Inštalácia zlyhala, pretože aplikácia je v konflikte s už nainštalovanou aplikáciou. Odinštalujte aktuálnu verziu aplikácie a potom to skúste znova.</string>
     <string name="installation_downgrade">Inštalácia zlyhala, pretože užívateľ sa pokúsil downgradovať balík. Odinštalujte aktualizácie z pôvodnej aplikácie a potom to skúste znova.</string>
     <string name="installation_failed">Inštalácia zlyhala z neznámych dôvodov. Pre poskytnutie podpory sa pripojte sa k nášmu Telegramu alebo Discordu. Pripojte tiež snímky obrazovky z ponuky Pokročilé</string>
     <string name="installation_incompatible">Inštalácia zlyhala, pretože inštalačný súbor nie je kompatibilný s vaším zariadením. V Nastaveniach vymažte stiahnuté súbory a potom to skúste znova.</string>
-    <string name="installation_invalid">Inštalácia zlyhala, pretože súbory APK sú poškodené. Skúste to, prosím, znova.</string>
+    <string name="installation_invalid">Inštalácia zlyhala, pretože súbory APK sú poškodené. Skúste to znova prosím.</string>
     <string name="installation_miui">Inštalácia zlyhala, pretože je povolená optimalizácia MIUI. Zakážte optimalizáciu MIUI a potom to skúste znova.</string>
     <string name="installation_signature">Inštalácia zlyhala, pretože overenie podpisu APK je povolené. Zakážte overenie podpisu APK, a potom to skúste znova.</string>
     <string name="installation_storage">Inštalácia zlyhala, pretože v zariadení nie je dostatok voľného miesta.</string>
