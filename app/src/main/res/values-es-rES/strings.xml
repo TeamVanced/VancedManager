@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Cancelar</string>
     <string name="close">Cerrar</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Una implementación personalizada de GMS para Vanced basada en el proyecto microG.</string>
     <string name="description_vanced">¡Un cliente de YouTube modificado con muchas características útiles!</string>
     <string name="description_vanced_music">Vanced, pero para YouTube Music! Tiene relativamente menos características, pero satisface tus necesidades.</string>
     <string name="reset">Restablecer</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Otorgar permiso root</string>
     <string name="lets_get_started">Comencemos</string>
     <string name="select_at_least_one_app">¡Seleccione al menos una aplicación!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">¿No sabes qué es esto o no quieres usar la versión root? ¡Haz clic en la flecha azul de abajo!</string>
     <!-- Home Page -->
     <string name="about_app">Acerca de %1$s</string>
     <string name="accessibility_download">Descargar</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Falla al aplicar el nuevo color de acento</string>
     <string name="failed_uninstall">Falla al desinstalar paquete %1$s</string>
     <string name="files_missing_va">Falla al localizar los archivos necesarios para la instalación. Vuelva a descargar los archivos de instalación y vuelva a intentarlo.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">No se pudo encontrar el archivo APK para el tema negro/oscuro en el almacenamiento, por favor inténtelo de nuevo.</string>
     <string name="installation_aborted">La instalación ha fallado debido a que el usuario ha abortado la instalación.</string>
     <string name="installation_conflict">La instalación ha fallado porque la aplicación entra en conflicto con una aplicación ya instalada. Desinstala la versión actual de la aplicación y vuelve a intentarlo.</string>
     <string name="installation_downgrade">La instalación falló porque el usuario trató de degradar el paquete. Desinstala las actualizaciones de la aplicación original e intenta de nuevo.</string>
     <string name="installation_failed">La instalación ha fallado por razones desconocidas, únete a nuestro Telegram o Discord para más soporte. Por favor, también adjunta una captura de pantalla desde el menú Avanzado</string>
     <string name="installation_incompatible">La instalación ha fallado porque el archivo de instalación es incompatible con tu dispositivo. Limpia los archivos descargados en la ajustes y vuelve a intentarlo.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">La instalación falló porque los archivos APK están corruptos, por favor inténtelo de nuevo.</string>
     <string name="installation_miui">La instalación ha fallado porque la Optimización MIUI está activada. Desactiva la optimización MIUI y vuelva a intentarlo.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">La instalación ha fallado porque la verificación de firmas de APK está habilitada. Deshabilita la verificación de firmas de APK y vuelve a intentarlo.</string>
     <string name="installation_storage">La instalación falló porque el dispositivo no tiene suficiente espacio libre.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">No se pudo encontrar el archivo APK para el tema negro/oscuro desde el instalador. Limpia los datos de la aplicación Vanced Manager y vuelve a intentarlo.</string>
     <string name="path_missing">Falla al localizar la ruta de instalación de YouTube después de la instalación split.</string>
 </resources>
