@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">取消</string>
     <string name="close">關閉</string>
-    <string name="description_microg">以 microG 項目為基礎並用於 Vanced 的 GMS 工具。</string>
+    <string name="description_microg">以 microG 專案為基礎並用於 Vanced 的 GMS 工具。</string>
     <string name="description_vanced">經過修改而具有許多有用功能的 YouTube 客戶端！</string>
     <string name="description_vanced_music">Vanced ，不過是 YouTube Music！功能相對較少但足以滿足您的需要。</string>
     <string name="reset">重設</string>
@@ -107,7 +107,7 @@
     <string name="failed_accent">無法套用新的輔色</string>
     <string name="failed_uninstall">%1$s 解除安裝失敗</string>
     <string name="files_missing_va">無法找到安裝所需的檔案。請重新下載安裝檔案，然後再試。</string>
-    <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 apk 檔案，請再試一次。</string>
+    <string name="ifile_missing">無法在儲存空間中找到深色/黑色主題的 APK 檔案，請再試一次。</string>
     <string name="installation_aborted">使用者放棄安裝導致安裝失敗。</string>
     <string name="installation_conflict">程式與已安裝的程式發生衝突導致安裝失敗。解除安裝當前的版本，然後重試。</string>
     <string name="installation_downgrade">使用者試圖降級導致安裝失敗。解除安裝原生應用程式的更新，然後重試。</string>
@@ -117,6 +117,6 @@
     <string name="installation_miui">MIUI 優化已啟用導致安裝失敗。請停用 MIUI 優化，然後重試。</string>
     <string name="installation_signature">APK 簽名驗證已被啟用導致安裝失敗。停用 APK 簽名驗證，然後重試。</string>
     <string name="installation_storage">由於裝置的可用空間不足，因此安裝失敗。</string>
-    <string name="modapk_missing">在安裝器中找不到深色/黑色主題的 apk 檔案。請清除 Manager 應用程式的資料，然後再試一次。</string>
+    <string name="modapk_missing">在安裝器中找不到深色/黑色主題的 APK 檔案。請清除 Manager 應用程式的資料，然後再試一次。</string>
     <string name="path_missing">分割安裝後無法找到原生 YouTube 安裝路徑。</string>
 </resources>
