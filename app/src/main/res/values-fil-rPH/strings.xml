@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Kanselahin</string>
     <string name="close">Isara</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Pasadyang Implementasyon ng GMS para sa Vanced na nakabase sa proyektong microG.</string>
     <string name="description_vanced">Isang binagong YouTube na kliyente na may maraming kapaki-pakinabang na features!</string>
     <string name="description_vanced_music">Vanced, pero para sa Youtube Music! Hindi kasing dami ang mga features, pero natutupad ang iyong pangangailangan.</string>
     <string name="reset">I-reset</string>
