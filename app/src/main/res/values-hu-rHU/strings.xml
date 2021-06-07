@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Visszavonás</string>
     <string name="close">Bezárás</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Egyedi GMS implementáció a Vanced számára a microG Projekt alapján.</string>
     <string name="description_vanced">Egy módosított YouTube kliens számos hasznos funkcióval!</string>
     <string name="description_vanced_music">Vanced, a YouTube Music-ra! Kevésbé funkciógazdag, de kielégíti az igényeidet.</string>
     <string name="reset">Visszaállítás</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Root hozzáférés engedélyezése</string>
     <string name="lets_get_started">Lássunk neki</string>
     <string name="select_at_least_one_app">Legalább egy appot válassz!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Nem tudod mi ez vagy csak nem akarod használni a root verziót? Csak kattins a lenti kék nyílra!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s- ról</string>
     <string name="accessibility_download">Letöltés</string>
@@ -108,16 +108,17 @@ Akarod telepíteni?</string>
     <string name="failed_accent">Nem sikerült az új kiemelés szín beállítása</string>
     <string name="failed_uninstall">A %1$s-t nem sikerült eltávolítani</string>
     <string name="files_missing_va">A telepítéshez szükséges file-ok megtalálása meghiúsult. Töltse le újra a telepítőfile-okat és próbálja újra.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">Nem sikerült az apk file-t megtalálni a fekete/sötét kinézethez, kérjük próbálja újra.</string>
     <string name="installation_aborted">A művelet végrehajtása nem sikerült, mert a felhasználó megszakította a telepítést.</string>
     <string name="installation_conflict">A telepítés nem sikerült, mert az alkalmazás egy másik, már telepített alkalmazással ütközik. Távolítsa el a jelenlegi verziót és próbálja újra.</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó, régebbi verzióra próbált frissíteni. Távolítsa el az eredeti alkalmazás frissítéseit, majd próbálja újra.</string>
     <string name="installation_failed">A telepítés ismeretlen ok miatt meghiúsult, kérjük csatlakozzon a Telegram vagy a Discord csatornánkhoz további támogatásért. Kérjük mellékeljen egy olyan képernyőképet is, ami a Haladó menüben készült</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis a készülékével. Kérjük törölje a letöltött fájlokat a Beállításokban és próbálja újra.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok sérültek. Kérjük próbálja újra.</string>
     <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsolja ki a MIUI Optimalizációt és próbálja újra.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">A telepítés nem sikerült, mert az apk aláírás ellenőrzés engedélyezve van.
+Kapcsolja ki az apk aláírás ellenőrzését és próbálja újra.</string>
     <string name="installation_storage">A telepítés nem sikerült, mert nincs elég szabad hely.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Nem sikerült megtalálni az apk file-t a fekete/sötét kinézethez a telepítőből. Törölje a Manager alkalmazás adatait, majd próbálja újra.</string>
     <string name="path_missing">Nem sikerült megtalálni az alap YouTube telepítési útvonalat a(z) split telepítés után.</string>
 </resources>
