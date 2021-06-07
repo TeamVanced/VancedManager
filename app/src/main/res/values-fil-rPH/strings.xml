@@ -3,8 +3,8 @@
     <!-- Global Strings -->
     <string name="cancel">Kanselahin</string>
     <string name="close">Isara</string>
-    <string name="description_microg">Pasadyang Implementasyon ng GMS para sa Vanced na nakabase sa proyektong microG.</string>
-    <string name="description_vanced">Isang binagong YouTube na kliyente na may maraming kapaki-pakinabang na features!</string>
+    <string name="description_microg">Pasadyang Implementasyon ng Mga Serbisyo ng Google Mobile para sa Vanced na nakabase sa proyektong microG.</string>
+    <string name="description_vanced">Isang binagong kliyente ng YouTube na may maraming kapaki-pakinabang na features!</string>
     <string name="description_vanced_music">Vanced, pero para sa Youtube Music! Hindi kasing dami ang mga features, pero natutupad ang iyong pangangailangan.</string>
     <string name="reset">I-reset</string>
     <string name="save">I-save</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Pahintulutin ang Root</string>
     <string name="lets_get_started">Magsimula na tayo</string>
     <string name="select_at_least_one_app">Mag-marka ka kahit isa lang na app!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Hindi mo ba alam kung ano ito o ayaw mo lang talagang gamitin ang root na bersiyon? Kung ganoon, i-click mo lang ang asul na arrow na nasa ibaba!</string>
     <!-- Home Page -->
     <string name="about_app">Tungkol sa %1$s</string>
     <string name="accessibility_download">I-download</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Nabigo na gamitin ang bagong kulay aksento</string>
     <string name="failed_uninstall">Nabigo sa pag-uninstall ng pakete %1$s</string>
     <string name="files_missing_va">Nabigo ang paghanap sa kailangan na files para sa installation. I-download ulit ang mga installation files, at ulitin muli.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">Nabigong hanapin sa storage ang APK file para sa black/dark na tema, pakisubukang muli.</string>
     <string name="installation_aborted">Nabigo ang pag-install dahil kinansela ito.</string>
     <string name="installation_conflict">Nabigo ang pag-install dahil meron hidwaan sa naka-install na app. I-uninstall ang kasalukuyang bersyon ng Vanced, at ulitin muli.</string>
     <string name="installation_downgrade">Nabigo ang pag-install dahil sinubukan ng user nai-downgrade ang package. Paki-uninstall ang updates ng stock app, at subakan muli.</string>
     <string name="installation_failed">Nabiga ang pag-install at hindi alam ang dahilan, sumali sa aming Telegram o Discord para sa kadagdagang suporta. Paki-attach narin ng screenshot ng Advanced menu</string>
     <string name="installation_incompatible">Nabigo ang pag-install dahil ang installation file ay hindi tugma sa iyong device. Tanggalin ang mga downloaded files sa Settings, at ulitin muli.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">Nabigo ang pag-install dahil ang mga APK file ay sira, pakisubakang muli.</string>
     <string name="installation_miui">Nabigo ang pag-install dahil ang MIUI Optimization ay naka-on. Patayin ang MIUI Optimization, at ulitin muli.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">Nabigo ang pag-install dahil naka-on ang APK signature verification. Patayin ang APK signature verification, at subukang muli.</string>
     <string name="installation_storage">Nabigo ang pag-install dahil hindi sapat ang storage ng device.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Nabigong hanapin ang APK file para sa black/dark na tema galing sa installer. I-clear ang app data ng Manager, at subukang muli.</string>
     <string name="path_missing">Nabigong hanapin ang stock YouTube installation path pagkatapos ng split installation.</string>
 </resources>
