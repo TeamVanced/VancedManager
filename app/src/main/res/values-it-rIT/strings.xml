@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Annulla</string>
     <string name="close">Chiudi</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Un\'implementazione GMS personalizzata per Vanced basata sul progetto microG.</string>
     <string name="description_vanced">Un client YouTube modificato con molte utili funzionalità!</string>
     <string name="description_vanced_music">Vanced, ma per YouTube Music! Relativamente meno ricco di funzionalità ma ugualmente adattabile alle tue esigenze.</string>
     <string name="reset">Reimposta</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Concedi i Permessi di Root</string>
     <string name="lets_get_started">Iniziamo</string>
     <string name="select_at_least_one_app">Seleziona almeno un\'app!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Non sai cos\'è o non vuoi usare la versione root? Clicca sulla freccia blu qui in basso!</string>
     <!-- Home Page -->
     <string name="about_app">Informazioni su %1$s</string>
     <string name="accessibility_download">Scarica</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Impossibile applicare il nuovo colore di accento</string>
     <string name="failed_uninstall">Impossibile disinstallare il pacchetto %1$s</string>
     <string name="files_missing_va">Impossibile individuare i file richiesti per l\'installazione. Scaricali nuovamente e riprova.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">Impossibile individuare il file APK per il tema nero/scuro dalla memoria interna, si prega di riprovare.</string>
     <string name="installation_aborted">Installazione non riuscita. L\'utente ha annullato l\'installazione.</string>
     <string name="installation_conflict">Installazione fallita perché l\'applicazione è in conflitto con un\'app già installata. Disinstallare la versione corrente dell\'applicazione, quindi riprovare.</string>
     <string name="installation_downgrade">Installazione fallita. È stato effettuato un tentativo di downgrade del pacchetto. Disinstalla gli aggiornamenti dall\'app stock, quindi riprova.</string>
     <string name="installation_failed">Installazione non riuscita per motivi sconosciuti, unisciti al nostro Telegram o Discord per ulteriore supporto. Allega anche uno screenshot dal menu Avanzate</string>
     <string name="installation_incompatible">Installazione non riuscita, il file di installazione non è compatibile con il tuo dispositivo. Elimina i file scaricati nelle impostazioni, poi riprova.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">Installazione non riuscita a causa di file APK corrotti, si prega di riprovare.</string>
     <string name="installation_miui">Installazione non riuscita, le ottimizzazioni di MIUI sono attivate. Disattiva le ottimizzazioni di MIUI, poi riprova.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">Installazione non riuscita, la verifica della firma APK è attiva. Disattivala, poi riprova.</string>
     <string name="installation_storage">Installazione non riuscita perché il dispositivo non dispone di sufficiente spazio libero.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Impossibile trovare il file APK per il tema nero/scuro dal programma di installazione. Cancella i dati dell\'app Manager, quindi riprova.</string>
     <string name="path_missing">Impossibile individuare il percorso di installazione di YouTube stock dopo l\'installazione divisa.</string>
 </resources>
