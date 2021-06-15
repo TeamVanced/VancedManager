@@ -115,8 +115,8 @@
     <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
     <string name="installation_invalid">Installation fehlgeschlagen, da die APK-Dateien beschädigt sind, bitte versuchen Sie es erneut.</string>
     <string name="installation_miui">Installation fehlgeschlagen, da die MIUI-Optimierung aktiviert ist. Deaktivieren Sie die MIUI-Optimierung, und versuchen Sie es erneut.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">Installation fehlgeschlagen, da die APK-Signaturüberprüfung aktiviert ist. Deaktivieren Sie die APK-Signaturüberprüfung und versuchen Sie es dann erneut.</string>
     <string name="installation_storage">Installation fehlgeschlagen, da das Gerät nicht genügend freien Speicherplatz hat.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">APK-Datei für schwarzes/dunkles Theme konnte nicht gefunden vom Installer werden. Löschen Sie die App-Daten des Managers und versuchen Sie es erneut.</string>
     <string name="path_missing">Fehler beim Auffinden des YouTube-Installationspfades nach der geteilten Installation.</string>
 </resources>
