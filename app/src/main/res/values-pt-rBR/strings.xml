@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Cancelar</string>
     <string name="close">Fechar</string>
-    <string name="description_microg">Uma implementação personalizada de GMS para o Vanced com base no projeto microG.</string>
+    <string name="description_microg">Uma implementação personalizada do GMS para o Vanced com base no projeto microG.</string>
     <string name="description_vanced">Um cliente modificado do YouTube com muitos recursos úteis!</string>
     <string name="description_vanced_music">Vanced, mas para o YouTube Music! Relativamente menos funções, mas satisfaz suas necessidades.</string>
     <string name="reset">Resetar</string>
