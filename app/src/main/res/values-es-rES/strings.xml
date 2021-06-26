@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstalar</string>
     <string name="accessibility_app_uninstall">Desinstalar</string>
     <string name="accessibility_app_update">Actualizar</string>
-    <string name="home_header_apps">Apps</string>
+    <string name="home_category_apps">Apps</string>
     <string name="app_info_changelog_header">Historial de actualizaciones</string>
     <string name="app_download_dialog_downloading_file">Descargando %1$s</string>
     <string name="app_options_install">Instalar</string>
     <string name="latest">Más reciente:</string>
     <string name="app_microg_error">Primero, instala Vanced microG</string>
     <string name="root_not_granted">Acceso root no concedido</string>
-    <string name="home_header_social_media">Redes Sociales</string>
-    <string name="home_header_support_us">Apóyanos</string>
+    <string name="home_category_social_media">Redes Sociales</string>
+    <string name="home_category_support_us">Apóyanos</string>
     <string name="app_content_unavailable">No Disponible</string>
     <string name="version_installed">Instalado:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Negro</string>
     <string name="app_theme_dialog_option_dark">Oscuro</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Desarrolladores del Manager</string>
-    <string name="about_credits_other">Otros colaboradores</string>
-    <string name="about_sources">Fuentes</string>
-    <string name="about_credits_vanced_team">Equipo Vanced</string>
+    <string name="about_category_credits_manager_devs">Desarrolladores del Manager</string>
+    <string name="about_category_credits_other">Otros colaboradores</string>
+    <string name="about_category_sources">Fuentes</string>
+    <string name="about_category_credits_vanced_team">Equipo Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Fallo al ejecutar `chown` al propietario del sistema, por favor inténtalo de nuevo.</string>
     <string name="install_error_downloading">Error al descargar %1$s</string>

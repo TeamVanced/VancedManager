@@ -1,5 +1,6 @@
 package com.vanced.manager.network.model
 
+import com.vanced.manager.R
 import com.vanced.manager.domain.datasource.PackageInformationDataSource
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.domain.model.AppStatus
@@ -11,6 +12,14 @@ import com.vanced.manager.downloader.impl.VancedDownloader
 import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
+import com.vanced.manager.ui.preferences.*
+import com.vanced.manager.ui.preferences.holder.musicVersionPref
+import com.vanced.manager.ui.preferences.holder.vancedLanguagesPref
+import com.vanced.manager.ui.preferences.holder.vancedThemePref
+import com.vanced.manager.ui.preferences.holder.vancedVersionPref
+import com.vanced.manager.ui.widgets.home.installation.CheckboxInstallationOption
+import com.vanced.manager.ui.widgets.home.installation.InstallationOption
+import com.vanced.manager.ui.widgets.home.installation.RadiobuttonInstallationOption
 
 class AppDtoMapper(
     private val packageInformationDataSource: PackageInformationDataSource,
@@ -38,25 +47,11 @@ class AppDtoMapper(
                 iconUrl = iconUrl,
                 changelog = changelog,
                 url = url,
+                versions = versions,
                 themes = themes,
                 languages = languages,
-                downloader = getDownloader(name)
-            )
-        }
-
-    override suspend fun mapFromModel(model: App): AppDto =
-        with (model) {
-            AppDto(
-                name = name,
-                version = remoteVersion,
-                versionCode = remoteVersionCode,
-                changelog = changelog,
-                url = url,
-                themes = themes,
-                languages = languages,
-                packageName = packageName,
-                packageNameRoot = packageNameRoot,
-                iconUrl = iconUrl
+                downloader = getDownloader(name),
+                installationOptions = getInstallationOptions(entity)
             )
         }
 
@@ -76,6 +71,55 @@ class AppDtoMapper(
             VANCED_NAME -> vancedDownloader
             MUSIC_NAME -> MusicDownloader
             MICROG_NAME -> MicrogDownloader
+            else -> null
+        }
+
+    private fun getInstallationOptions(app: AppDto): List<InstallationOption>? =
+        when (app.name) {
+            VANCED_NAME -> listOf(
+                RadiobuttonInstallationOption(
+                    title = R.string.app_installation_options_theme,
+                    preference = vancedThemePref,
+                    buttons = app.versions?.map {
+                        RadioButtonPreference(
+                            title = it,
+                            key = it
+                        )
+                    } ?: emptyList()
+                ),
+                RadiobuttonInstallationOption(
+                    title = R.string.app_installation_options_version,
+                    preference = vancedVersionPref,
+                    buttons = app.versions?.map {
+                        RadioButtonPreference(
+                            title = it,
+                            key = it
+                        )
+                    } ?: emptyList()
+                ),
+                CheckboxInstallationOption(
+                    title = R.string.app_installation_options_language,
+                    preference = vancedLanguagesPref,
+                    buttons = app.versions?.map {
+                        CheckboxPreference(
+                            title = it,
+                            key = it
+                        )
+                    } ?: emptyList()
+                ),
+            )
+            MUSIC_NAME -> listOf(
+                RadiobuttonInstallationOption(
+                    title = R.string.app_installation_options_version,
+                    preference = musicVersionPref,
+                    buttons = app.versions?.map {
+                        RadioButtonPreference(
+                            title = it,
+                            key = it
+                        )
+                    } ?: emptyList()
+                ),
+            )
             else -> null
         }
 }

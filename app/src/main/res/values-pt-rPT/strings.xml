@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Aplicações</string>
+    <string name="home_category_apps">Aplicações</string>
     <string name="app_info_changelog_header">Lista de alterações</string>
     <string name="app_download_dialog_downloading_file">Transferindo %1$s</string>
     <string name="app_options_install">Instalar</string>
     <string name="latest">Mais Recente:</string>
     <string name="app_microg_error">Instale o microG Vanced primeiro</string>
     <string name="root_not_granted">Acesso root negado.</string>
-    <string name="home_header_social_media">Redes Sociais</string>
-    <string name="home_header_support_us">Suporte-nos</string>
+    <string name="home_category_social_media">Redes Sociais</string>
+    <string name="home_category_support_us">Suporte-nos</string>
     <string name="app_content_unavailable">Indisponível</string>
     <string name="version_installed">Instalado:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Preto</string>
     <string name="app_theme_dialog_option_dark">Escuro</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Desenvolvedores do Manager</string>
-    <string name="about_credits_other">Outros Colaboradores</string>
-    <string name="about_sources">Fontes</string>
-    <string name="about_credits_vanced_team">Equipa Vanced</string>
+    <string name="about_category_credits_manager_devs">Desenvolvedores do Manager</string>
+    <string name="about_category_credits_other">Outros Colaboradores</string>
+    <string name="about_category_sources">Fontes</string>
+    <string name="about_category_credits_vanced_team">Equipa Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Falhou na mudança de dono do Apk para o proprietário do sistema, por favor, tente novamente.</string>
     <string name="install_error_downloading">Erro Transferindo %1$s</string>

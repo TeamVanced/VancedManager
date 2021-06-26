@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Neu installieren</string>
     <string name="accessibility_app_uninstall">Deinstallieren</string>
     <string name="accessibility_app_update">Aktualisieren</string>
-    <string name="home_header_apps">Anwendungen</string>
+    <string name="home_category_apps">Anwendungen</string>
     <string name="app_info_changelog_header">Änderungen</string>
     <string name="app_download_dialog_downloading_file">%1$s wird heruntergeladen</string>
     <string name="app_options_install">Installieren</string>
     <string name="latest">Neueste:</string>
     <string name="app_microg_error">Installiere zuerst Vanced MicroG</string>
     <string name="root_not_granted">Root-Zugriff nicht erteilt</string>
-    <string name="home_header_social_media">Soziale Medien</string>
-    <string name="home_header_support_us">Unterstütze uns</string>
+    <string name="home_category_social_media">Soziale Medien</string>
+    <string name="home_category_support_us">Unterstütze uns</string>
     <string name="app_content_unavailable">Nicht verfügbar</string>
     <string name="version_installed">Installiert:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Schwarz</string>
     <string name="app_theme_dialog_option_dark">Dunkel</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager-Entwickler</string>
-    <string name="about_credits_other">Weitere Mitwirkende</string>
-    <string name="about_sources">Quellen</string>
-    <string name="about_credits_vanced_team">Vanced Team</string>
+    <string name="about_category_credits_manager_devs">Manager-Entwickler</string>
+    <string name="about_category_credits_other">Weitere Mitwirkende</string>
+    <string name="about_category_sources">Quellen</string>
+    <string name="about_category_credits_vanced_team">Vanced Team</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Fehler beim `chown` der APK zum Systembesitzer, bitte versuche es erneut.</string>
     <string name="install_error_downloading">Download von %1$s fehlgeschlagen</string>

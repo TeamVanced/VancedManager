@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">재설치</string>
     <string name="accessibility_app_uninstall">제거</string>
     <string name="accessibility_app_update">업데이트</string>
-    <string name="home_header_apps">앱</string>
+    <string name="home_category_apps">앱</string>
     <string name="app_info_changelog_header">변경 사항</string>
     <string name="app_download_dialog_downloading_file">%1$s 다운로드 중</string>
     <string name="app_options_install">설치</string>
     <string name="latest">최신:</string>
     <string name="app_microg_error">Vanced microG를 우선 설치하십시오</string>
     <string name="root_not_granted">루트 권한이 부여되지 않았습니다</string>
-    <string name="home_header_social_media">소셜 미디어</string>
-    <string name="home_header_support_us">지원하기</string>
+    <string name="home_category_social_media">소셜 미디어</string>
+    <string name="home_category_support_us">지원하기</string>
     <string name="app_content_unavailable">사용 불가</string>
     <string name="version_installed">설치됨:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">검정</string>
     <string name="app_theme_dialog_option_dark">다크</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager 개발자</string>
-    <string name="about_credits_other">기타 기여자</string>
-    <string name="about_sources">소스 코드</string>
-    <string name="about_credits_vanced_team">Vanced 팀</string>
+    <string name="about_category_credits_manager_devs">Manager 개발자</string>
+    <string name="about_category_credits_other">기타 기여자</string>
+    <string name="about_category_sources">소스 코드</string>
+    <string name="about_category_credits_vanced_team">Vanced 팀</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">APK의 소유권을 시스템 관리자로 변경하던 중에 오류가 발생하였습니다. 다시 시도하십시오.</string>
     <string name="install_error_downloading">%1$s 다운로드 중 오류 발생</string>

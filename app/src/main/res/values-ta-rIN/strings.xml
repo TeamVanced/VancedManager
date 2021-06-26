@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">பயன்பாடுகள்</string>
+    <string name="home_category_apps">பயன்பாடுகள்</string>
     <string name="app_info_changelog_header">சேஞ்ச்லாக்</string>
     <string name="app_download_dialog_downloading_file">%1$s ஐப் பதிவிறக்குகிறது</string>
     <string name="app_options_install">நிறுவு</string>
     <string name="latest">சமீபத்தியது:</string>
     <string name="app_microg_error">முதலில் Vanced Microg ஐ நிறுவவும்</string>
     <string name="root_not_granted">ரூட் அக்சஸ் வழங்கப்படவில்லை</string>
-    <string name="home_header_social_media">சமூக ஊடகம்</string>
-    <string name="home_header_support_us">எங்களை ஆதரியுங்கள்</string>
+    <string name="home_category_social_media">சமூக ஊடகம்</string>
+    <string name="home_category_support_us">எங்களை ஆதரியுங்கள்</string>
     <string name="app_content_unavailable">கிடைக்கவில்லை</string>
     <string name="version_installed">நிறுவப்பட்டது:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">கருப்பு</string>
     <string name="app_theme_dialog_option_dark">இருள்</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">மேலாளர் டெவலப்பர்கள்</string>
-    <string name="about_credits_other">பிற பங்களிப்பாளர்கள்</string>
-    <string name="about_sources">மூலம்</string>
-    <string name="about_credits_vanced_team">Vanced கூட்டணி</string>
+    <string name="about_category_credits_manager_devs">மேலாளர் டெவலப்பர்கள்</string>
+    <string name="about_category_credits_other">பிற பங்களிப்பாளர்கள்</string>
+    <string name="about_category_sources">மூலம்</string>
+    <string name="about_category_credits_vanced_team">Vanced கூட்டணி</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">கணினி உரிமையாளருக்கு APK ஐத் தேடுவதில் தோல்வி, தயவுசெய்து மீண்டும் முயற்சிக்கவும்.</string>
     <string name="install_error_downloading">%1$s பதிவிறக்குவதில் தோழ்வி</string>

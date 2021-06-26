@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Yeniden yükle</string>
     <string name="accessibility_app_uninstall">Kaldır</string>
     <string name="accessibility_app_update">Güncelleştir</string>
-    <string name="home_header_apps">Uygulamalar</string>
+    <string name="home_category_apps">Uygulamalar</string>
     <string name="app_info_changelog_header">Sürüm Notları</string>
     <string name="app_download_dialog_downloading_file">%1$s indiriliyor</string>
     <string name="app_options_install">Yükle</string>
     <string name="latest">En son:</string>
     <string name="app_microg_error">Vanced microG\'yi kurmalısın</string>
     <string name="root_not_granted">Root erişimi verilmedi</string>
-    <string name="home_header_social_media">Sosyal Medya</string>
-    <string name="home_header_support_us">Tıkla, destek ol</string>
+    <string name="home_category_social_media">Sosyal Medya</string>
+    <string name="home_category_support_us">Tıkla, destek ol</string>
     <string name="app_content_unavailable">Yüklenmemiş</string>
     <string name="version_installed">Yüklü:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Siyah (amoled)</string>
     <string name="app_theme_dialog_option_dark">Koyu renk</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager Geliştiricileri</string>
-    <string name="about_credits_other">Katkıda bulunan diğer kişiler</string>
-    <string name="about_sources">Kaynaklar</string>
-    <string name="about_credits_vanced_team">Vanced Ekibi</string>
+    <string name="about_category_credits_manager_devs">Manager Geliştiricileri</string>
+    <string name="about_category_credits_other">Katkıda bulunan diğer kişiler</string>
+    <string name="about_category_sources">Kaynaklar</string>
+    <string name="about_category_credits_vanced_team">Vanced Ekibi</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">APK dosyasına sistem yetkisi atanamadı, lütfen tekrar deneyin.</string>
     <string name="install_error_downloading">%1$s indirilirken hata oluştu</string>

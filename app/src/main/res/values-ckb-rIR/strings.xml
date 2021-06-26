@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">بەرنامەکان</string>
+    <string name="home_category_apps">بەرنامەکان</string>
     <string name="app_info_changelog_header">گۆڕانکارییەکان</string>
     <string name="app_download_dialog_downloading_file">داگرتنی %1$s</string>
     <string name="app_options_install">دامەزراندن</string>
     <string name="latest">دوایین:</string>
     <string name="app_microg_error">Install Vanced microG first</string>
     <string name="root_not_granted">ڕێگەپێدانی Root نەدراوە</string>
-    <string name="home_header_social_media">تۆڕە کۆمەڵایەتییەکان</string>
-    <string name="home_header_support_us">پشتگیریکردن</string>
+    <string name="home_category_social_media">تۆڕە کۆمەڵایەتییەکان</string>
+    <string name="home_category_support_us">پشتگیریکردن</string>
     <string name="app_content_unavailable">بەردەست نیە</string>
     <string name="version_installed">دامەزرێنراو:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">ڕەش</string>
     <string name="app_theme_dialog_option_dark">تاریک</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
-    <string name="about_credits_other">وەرگێڕانی کوردی - گۆران غەریب </string>
-    <string name="about_sources">سەرچاوەکان</string>
-    <string name="about_credits_vanced_team">Vanced تیمی</string>
+    <string name="about_category_credits_manager_devs">کراوە بە کوردی لەلایەن: گۆران غەریب(کوردرۆید)</string>
+    <string name="about_category_credits_other">وەرگێڕانی کوردی - گۆران غەریب </string>
+    <string name="about_category_sources">سەرچاوەکان</string>
+    <string name="about_category_credits_vanced_team">Vanced تیمی</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">سەرکەوتو نەبوو `chown` بۆ دانان وەک بەرنامەی سیستەم, تکایە دووبارە هەوڵبدەرەوە.</string>
     <string name="install_error_downloading">کێشە ڕوویدا لە داگرتنی %1$s</string>

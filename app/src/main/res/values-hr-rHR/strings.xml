@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstaliraj</string>
     <string name="accessibility_app_uninstall">Deinstaliraj</string>
     <string name="accessibility_app_update">Ažuriraj</string>
-    <string name="home_header_apps">Aplikacije</string>
+    <string name="home_category_apps">Aplikacije</string>
     <string name="app_info_changelog_header">Zapis promjena</string>
     <string name="app_download_dialog_downloading_file">Preuzimam %1$s</string>
     <string name="app_options_install">Instaliraj</string>
     <string name="latest">Dostupno:</string>
     <string name="app_microg_error">Prvo instaliraj Vanced MicroG</string>
     <string name="root_not_granted">Root pristup nije dopušten</string>
-    <string name="home_header_social_media">Društvene mreže</string>
-    <string name="home_header_support_us">Podržite nas</string>
+    <string name="home_category_social_media">Društvene mreže</string>
+    <string name="home_category_support_us">Podržite nas</string>
     <string name="app_content_unavailable">Nedostupno</string>
     <string name="version_installed">Instalirano:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Crna</string>
     <string name="app_theme_dialog_option_dark">Tamna</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Razvijatelji Vanced upravitelja</string>
-    <string name="about_credits_other">Ostali suradnici</string>
-    <string name="about_sources">Izvori</string>
-    <string name="about_credits_vanced_team">Vanced tim</string>
+    <string name="about_category_credits_manager_devs">Razvijatelji Vanced upravitelja</string>
+    <string name="about_category_credits_other">Ostali suradnici</string>
+    <string name="about_category_sources">Izvori</string>
+    <string name="about_category_credits_vanced_team">Vanced tim</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Neuspjela promjena `chown` APK u vlasnika sustava, pokušajte ponovno.</string>
     <string name="install_error_downloading">Greška preuzimanja %1$s</string>

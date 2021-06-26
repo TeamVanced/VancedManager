@@ -14,13 +14,15 @@ class ManagerApplication : Application() {
             androidContext(this@ManagerApplication)
 
             modules(
+                apiModule,
+                downloaderModule,
                 mapperModule,
-                viewModelModule,
-                serviceModule,
-                repositoryModule,
-                packageManagerModule,
                 networkModule,
-                downloaderModule
+                packageManagerModule,
+                preferenceModule,
+                repositoryModule,
+                serviceModule,
+                viewModelModule,
             )
         }
     }

@@ -2,110 +2,71 @@ package com.vanced.manager.downloader.impl
 
 import com.vanced.manager.downloader.api.VancedAPI
 import com.vanced.manager.downloader.base.BaseDownloader
-import com.vanced.manager.ui.composables.InstallationOption
-import com.vanced.manager.ui.composables.InstallationOptionKey
 
 class VancedDownloader(
-    private val vancedAPI: VancedAPI
+    private val vancedAPI: VancedAPI,
 ) : BaseDownloader(
     appName = "vanced"
 ) {
 
-    private val themeInstallationOption = InstallationOption(
-        title = "Languages",
-        descriptionKey = InstallationOptionKey(
-            keyName = "vanced_languages",
-            keyDefaultValue = "en"
-        )
-    ) { show, preference ->
-//        DialogRadioButtonPreference(
-//            preferenceTitle = "Language",
-//            preferenceKey = ,
-//            defaultValue = ,
-//            buttons =
-//        )
-    }
+    private lateinit var version: String
+    private lateinit var variant: String
 
-    private val versionInstallationOption = InstallationOption(
-        title = "Languages",
-        descriptionKey = InstallationOptionKey(
-            keyName = "vanced_languages",
-            keyDefaultValue = "en"
-        )
-    ) { show, preference ->
-//        DialogRadioButtonPreference(
-//            preferenceTitle = "Language",
-//            preferenceKey = ,
-//            defaultValue = ,
-//            buttons =
-//        )
-    }
-
-    private val languageInstallationOption = InstallationOption(
-        title = "Languages",
-        descriptionKey = InstallationOptionKey(
-            keyName = "vanced_languages",
-            keyDefaultValue = "en"
-        )
-    ) { show, preference ->
-//        DialogRadioButtonPreference(
-//            preferenceTitle = "Language",
-//            preferenceKey = ,
-//            defaultValue = ,
-//            buttons =
-//        )
-    }
-
-    override val installationOptions: List<InstallationOption> get() = listOf(
-        languageInstallationOption
-    )
+    private lateinit var folderStructure: String
 
     override suspend fun download() {
+        version = "v16.16.38"
+        variant = "nonroot"
+        folderStructure = "$appName/$version/$variant"
         downloadTheme()
     }
 
     private suspend fun downloadTheme() {
-        downloadFile(
-            vancedAPI.getApk(
-                version = "16.16.38",
-                variant = "nonroot",
-                type = "Theme",
-                apkName = "black.apk"
-            ),
-            folderStructure = "vanced/nonroot/v16.16.38",
-            fileName = "black.apk"
+        downloadVancedApk(
+            type = "Theme",
+            apkName = "black.apk"
         ) {
             downloadArch()
         }
     }
 
     private suspend fun downloadArch() {
-        downloadFile(
-            vancedAPI.getApk(
-                version = "16.16.38",
-                variant = "nonroot",
-                type = "Arch",
-                apkName = "split_config.x86.apk"
-            ),
-            folderStructure = "vanced/nonroot/arch",
-            fileName = "black.apk"
+        downloadVancedApk(
+            type = "Arch",
+            apkName = "split_config.x86.apk"
         ) {
             downloadLanguage()
         }
     }
 
     private suspend fun downloadLanguage() {
+        downloadVancedApk(
+            type = "Language",
+            apkName = "split_config.en.apk"
+        ) {
+            appInstaller.installVanced(version)
+        }
+    }
+
+    private suspend fun downloadVancedApk(
+        type: String,
+        apkName: String,
+        onDownload: suspend () -> Unit,
+    ) {
         downloadFile(
             vancedAPI.getApk(
-                version = "16.16.38",
-                variant = "nonroot",
-                type = "Arch",
-                apkName = "split_config.x86.apk"
+                version = version,
+                variant = variant,
+                type = type,
+                apkName = apkName
             ),
-            folderStructure = "vanced/nonroot/lang",
-            fileName = "black.apk"
+            folderStructure = folderStructure,
+            fileName = apkName,
+            onError = {
+
+            }
         ) {
-            downloadLanguage()
+            onDownload()
         }
     }
 

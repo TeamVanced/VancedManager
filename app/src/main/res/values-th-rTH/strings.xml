@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">ถอนการติดตั้ง</string>
     <string name="accessibility_app_update">อัพเดท</string>
-    <string name="home_header_apps">แอป</string>
+    <string name="home_category_apps">แอป</string>
     <string name="app_info_changelog_header">บันทึกการเปลี่ยนแปลง</string>
     <string name="app_download_dialog_downloading_file">กำลังดาวน์โหลด %1$s</string>
     <string name="app_options_install">ติดตั้ง</string>
     <string name="latest">ล่าสุด:</string>
     <string name="app_microg_error">ติดตั้ง Vanced microG ก่อน</string>
     <string name="root_not_granted">ไม่ได้รับสิทธิ์ของรูท</string>
-    <string name="home_header_social_media">สื่อสังคม</string>
-    <string name="home_header_support_us">สนับสนุนพวกเรา</string>
+    <string name="home_category_social_media">สื่อสังคม</string>
+    <string name="home_category_support_us">สนับสนุนพวกเรา</string>
     <string name="app_content_unavailable">ไม่สามารถใช้ได้</string>
     <string name="version_installed">ติดตั้งแล้ว:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">สีดำ</string>
     <string name="app_theme_dialog_option_dark">สีเข้ม</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">ตัวจัดการ Devs</string>
-    <string name="about_credits_other">ผู้ร่วมให้ข้อมูลอื่น ๆ</string>
-    <string name="about_sources">แหล่งที่มา</string>
-    <string name="about_credits_vanced_team">ทีมงาน Vanced</string>
+    <string name="about_category_credits_manager_devs">ตัวจัดการ Devs</string>
+    <string name="about_category_credits_other">ผู้ร่วมให้ข้อมูลอื่น ๆ</string>
+    <string name="about_category_sources">แหล่งที่มา</string>
+    <string name="about_category_credits_vanced_team">ทีมงาน Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">ไม่สามารถ `chown` APK ในระบบได้ โปรดลองอีกครั้ง</string>
     <string name="install_error_downloading">เกิดข้อผิดพลาดในการดาวน์โหลด %1$s</string>

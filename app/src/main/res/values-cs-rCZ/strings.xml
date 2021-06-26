@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Přeinstalovat</string>
     <string name="accessibility_app_uninstall">Odinstalovat</string>
     <string name="accessibility_app_update">Aktualizovat</string>
-    <string name="home_header_apps">Aplikace</string>
+    <string name="home_category_apps">Aplikace</string>
     <string name="app_info_changelog_header">Seznam změn</string>
     <string name="app_download_dialog_downloading_file">Stahování %1$s</string>
     <string name="app_options_install">Nainstalovat</string>
     <string name="latest">Nejnovější:</string>
     <string name="app_microg_error">Nejprve nainstalujte Vanced microG</string>
     <string name="root_not_granted">Root přístup nebyl udělen</string>
-    <string name="home_header_social_media">Sociální média</string>
-    <string name="home_header_support_us">Podpořte nás</string>
+    <string name="home_category_social_media">Sociální média</string>
+    <string name="home_category_support_us">Podpořte nás</string>
     <string name="app_content_unavailable">Není k dispozici</string>
     <string name="version_installed">Nainstalováno:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Černý</string>
     <string name="app_theme_dialog_option_dark">Tmavý</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Vývojáři aplikace Manager</string>
-    <string name="about_credits_other">Další přispěvatelé</string>
-    <string name="about_sources">Zdrojové kódy</string>
-    <string name="about_credits_vanced_team">Tým Vanced</string>
+    <string name="about_category_credits_manager_devs">Vývojáři aplikace Manager</string>
+    <string name="about_category_credits_other">Další přispěvatelé</string>
+    <string name="about_category_sources">Zdrojové kódy</string>
+    <string name="about_category_credits_vanced_team">Tým Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Nepodařilo se změnit vlastníka souboru APK na vlastníka systému, zkuste to prosím znovu.</string>
     <string name="install_error_downloading">Chyba při stahování %1$s</string>

@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Mga Apps</string>
+    <string name="home_category_apps">Mga Apps</string>
     <string name="app_info_changelog_header">Changelog</string>
     <string name="app_download_dialog_downloading_file">Downloading %1$s</string>
     <string name="app_options_install">I-install</string>
     <string name="latest">Bago:</string>
     <string name="app_microg_error">I-install muna ang Vanced microG</string>
     <string name="root_not_granted">Walang binigay na root access</string>
-    <string name="home_header_social_media">Social Media</string>
-    <string name="home_header_support_us">Suportahin kami</string>
+    <string name="home_category_social_media">Social Media</string>
+    <string name="home_category_support_us">Suportahin kami</string>
     <string name="app_content_unavailable">Di-makukuha</string>
     <string name="version_installed">Naka-install:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Itim</string>
     <string name="app_theme_dialog_option_dark">Madilim</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager Devs</string>
-    <string name="about_credits_other">Other Contributors</string>
-    <string name="about_sources">Pinagkukunan</string>
-    <string name="about_credits_vanced_team">Pangkat Vanced</string>
+    <string name="about_category_credits_manager_devs">Manager Devs</string>
+    <string name="about_category_credits_other">Other Contributors</string>
+    <string name="about_category_sources">Pinagkukunan</string>
+    <string name="about_category_credits_vanced_team">Pangkat Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Nabigo sa `pag-chown` ng APK sa system owner, ulitin muli.</string>
     <string name="install_error_downloading">May pagkamali sa pag-download %1$s</string>

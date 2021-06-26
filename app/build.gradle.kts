@@ -1,3 +1,9 @@
+import Dependencies.accompanistVersion
+import Dependencies.composeVersion
+import Dependencies.koinVersion
+import Dependencies.orchestraVersion
+import Dependencies.retrofitVersion
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -47,13 +53,16 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion = composeVersion
+    }
+
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
-        useIR = true
-        freeCompilerArgs = freeCompilerArgs + "-Xopt-in=kotlin.RequiresOptIn"
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
 }
 
@@ -81,38 +90,35 @@ dependencies {
     implementation("com.google.android.material:material:1.3.0")
     implementation("androidx.browser:browser:1.3.0")
 
-    val composeVersion = "1.0.0-beta07"
-    implementation("androidx.compose.ui:ui:$composeVersion")
-    implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
-    implementation("androidx.compose.ui:ui-util:$composeVersion")
+    implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
-    implementation("androidx.compose.material:material:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
+    implementation("androidx.compose.material:material:$composeVersion")
+    implementation("androidx.compose.material:material:$composeVersion")
     implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
+    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
+    implementation("androidx.compose.ui:ui-util:$composeVersion")
+    implementation("androidx.compose.ui:ui:$composeVersion")
 
-    implementation("androidx.activity:activity-compose:1.3.0-alpha08")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha01")
-    implementation("androidx.preference:preference-ktx:1.1.1")
+    implementation("androidx.activity:activity-compose:1.3.0-beta02")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha02")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha03")
 
-    val accompanistVersion = "0.10.0"
     implementation("com.google.accompanist:accompanist-glide:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
+    implementation("com.google.accompanist:accompanist-placeholder-material:$accompanistVersion")
 
-    implementation("com.github.madrapps:pikolo:2.0.1")
+    implementation("com.github.skydoves:orchestra-colorpicker:$orchestraVersion")
 
-    val koinVersion = "3.0.1"
+    implementation("androidx.datastore:datastore-preferences:1.0.0-beta02")
+
     implementation("io.insert-koin:koin-android:$koinVersion")
     implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
 
-    val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-
-    implementation("dev.burnoo:compose-remember-preference:0.3.0")
 
     implementation("com.github.x1nto:apkhelper:1.1.0")
 

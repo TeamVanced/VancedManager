@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Desinstal·la</string>
     <string name="accessibility_app_update">Actualitza</string>
-    <string name="home_header_apps">Aplicacions</string>
+    <string name="home_category_apps">Aplicacions</string>
     <string name="app_info_changelog_header">Registre de canvis</string>
     <string name="app_download_dialog_downloading_file">Descarregant %1$s</string>
     <string name="app_options_install">Instal·lar</string>
     <string name="latest">Darrera:</string>
     <string name="app_microg_error">Instal·la primer Vanced microG</string>
     <string name="root_not_granted">L\'accés arrel no s\'ha concedit</string>
-    <string name="home_header_social_media">Xarxes socials</string>
-    <string name="home_header_support_us">Dóna\'ns suport</string>
+    <string name="home_category_social_media">Xarxes socials</string>
+    <string name="home_category_support_us">Dóna\'ns suport</string>
     <string name="app_content_unavailable">No disponible</string>
     <string name="version_installed">Instal·lat:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Black</string>
     <string name="app_theme_dialog_option_dark">Dark</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Gestor de desenvolupadors</string>
-    <string name="about_credits_other">Other Contributors</string>
-    <string name="about_sources">Fonts</string>
-    <string name="about_credits_vanced_team">Equip avançat</string>
+    <string name="about_category_credits_manager_devs">Gestor de desenvolupadors</string>
+    <string name="about_category_credits_other">Other Contributors</string>
+    <string name="about_category_sources">Fonts</string>
+    <string name="about_category_credits_vanced_team">Equip avançat</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="install_error_downloading">Error en descarregar %1$s</string>

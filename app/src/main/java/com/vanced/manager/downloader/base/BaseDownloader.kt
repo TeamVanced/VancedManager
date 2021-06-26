@@ -4,17 +4,19 @@ import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import com.vanced.manager.ui.composables.InstallationOption
+import com.vanced.manager.installer.AppInstaller
 import com.vanced.manager.util.log
 import okhttp3.ResponseBody
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import retrofit2.Call
 import retrofit2.awaitResponse
-import java.io.*
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
 
 abstract class BaseDownloader(
-    private val appName: String
+    val appName: String
 ) : KoinComponent {
 
     var downloadProgress by mutableStateOf(0f)
@@ -27,13 +29,12 @@ abstract class BaseDownloader(
 
     private lateinit var call: Call<ResponseBody>
 
-    private val context: Context by inject()
+    private val tag = this::class.simpleName!!
+
+    val context: Context by inject()
+    val appInstaller: AppInstaller by inject()
 
     abstract suspend fun download()
-
-    abstract val installationOptions: List<InstallationOption>
-
-    private val tag = this::class.simpleName!!
 
     suspend fun downloadFile(
         call: Call<ResponseBody>,
@@ -61,7 +62,6 @@ abstract class BaseDownloader(
                 val error = response.errorBody()?.toString()
                 if (error != null) {
                     error(error)
-                    log(tag, error)
                 }
             }
         } catch (e: Exception) {

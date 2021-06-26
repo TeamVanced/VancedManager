@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">アプリ</string>
+    <string name="home_category_apps">アプリ</string>
     <string name="app_info_changelog_header">更新履歴</string>
     <string name="app_download_dialog_downloading_file">%1$s をダウンロードしています</string>
     <string name="app_options_install">インストール</string>
     <string name="latest">最新版:</string>
     <string name="app_microg_error">はじめに Vanced microG をインストールしてください</string>
     <string name="root_not_granted">Root アクセスは許可されていません</string>
-    <string name="home_header_social_media">ソーシャルメディア</string>
-    <string name="home_header_support_us">サポート</string>
+    <string name="home_category_social_media">ソーシャルメディア</string>
+    <string name="home_category_support_us">サポート</string>
     <string name="app_content_unavailable">利用不可</string>
     <string name="version_installed">インストール済み:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">ブラック</string>
     <string name="app_theme_dialog_option_dark">ダーク</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager 開発</string>
-    <string name="about_credits_other">他の貢献者</string>
-    <string name="about_sources">ソースコード</string>
-    <string name="about_credits_vanced_team">Vanced チーム</string>
+    <string name="about_category_credits_manager_devs">Manager 開発</string>
+    <string name="about_category_credits_other">他の貢献者</string>
+    <string name="about_category_sources">ソースコード</string>
+    <string name="about_category_credits_vanced_team">Vanced チーム</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">システム所有者への APK の Chown ができませんでした、もう一度やり直してください.</string>
     <string name="install_error_downloading">%1$s のダウンロード中にエラー</string>

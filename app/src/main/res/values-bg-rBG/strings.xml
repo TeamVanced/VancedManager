@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Деинсталиране</string>
     <string name="accessibility_app_update">Актуализиране</string>
-    <string name="home_header_apps">Приложения</string>
+    <string name="home_category_apps">Приложения</string>
     <string name="app_info_changelog_header">Списък с промени</string>
     <string name="app_download_dialog_downloading_file">Изтегляне на %1$s</string>
     <string name="app_options_install">Инсталиране</string>
     <string name="latest">Най-нова:</string>
     <string name="app_microg_error">Инсталирайте първо Vanced microG</string>
     <string name="root_not_granted">Root достъп не е разрешен</string>
-    <string name="home_header_social_media">Социални медии</string>
-    <string name="home_header_support_us">Подкрепете ни</string>
+    <string name="home_category_social_media">Социални медии</string>
+    <string name="home_category_support_us">Подкрепете ни</string>
     <string name="app_content_unavailable">Недостъпно</string>
     <string name="version_installed">Инсталиранa:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Черна</string>
     <string name="app_theme_dialog_option_dark">Тъмна</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Разработчици</string>
-    <string name="about_credits_other">Други сътрудници</string>
-    <string name="about_sources">Източници</string>
-    <string name="about_credits_vanced_team">Екип на Vanced</string>
+    <string name="about_category_credits_manager_devs">Разработчици</string>
+    <string name="about_category_credits_other">Други сътрудници</string>
+    <string name="about_category_sources">Източници</string>
+    <string name="about_category_credits_vanced_team">Екип на Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Неуспешно`chown` APK към собственика на системата, моля опитайте отново.</string>
     <string name="install_error_downloading">Грешка при изтегляне на %1$s</string>

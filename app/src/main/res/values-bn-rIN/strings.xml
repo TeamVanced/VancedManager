@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">আনইনস্টল</string>
     <string name="accessibility_app_update">আপডেট</string>
-    <string name="home_header_apps">অ্যাপস</string>
+    <string name="home_category_apps">অ্যাপস</string>
     <string name="app_info_changelog_header">পরিবর্তন নথি</string>
     <string name="app_download_dialog_downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="app_options_install">ইনস্টল করুন</string>
     <string name="latest">সর্বশেষ:</string>
     <string name="app_microg_error">প্রথমে ভ্যান্সড মাইক্রোজি ইনস্টল করুন</string>
     <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
-    <string name="home_header_social_media">সোশ্যাল মিডিয়া</string>
-    <string name="home_header_support_us">আমাদের সমর্থন করুন</string>
+    <string name="home_category_social_media">সোশ্যাল মিডিয়া</string>
+    <string name="home_category_support_us">আমাদের সমর্থন করুন</string>
     <string name="app_content_unavailable">অনুপলব্ধ</string>
     <string name="version_installed">ইনস্টল করা আছে:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">কালো</string>
     <string name="app_theme_dialog_option_dark">অন্ধকার</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">ম্যানেজার বিকাশকারীরা</string>
-    <string name="about_credits_other">অন্যান্য অবদানকারী</string>
-    <string name="about_sources">উৎসগুলি</string>
-    <string name="about_credits_vanced_team">ভ্যান্সড টীম</string>
+    <string name="about_category_credits_manager_devs">ম্যানেজার বিকাশকারীরা</string>
+    <string name="about_category_credits_other">অন্যান্য অবদানকারী</string>
+    <string name="about_category_sources">উৎসগুলি</string>
+    <string name="about_category_credits_vanced_team">ভ্যান্সড টীম</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">System owner কে APK `chown` করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
     <string name="install_error_downloading">%1$s ডাউনলোড করার সময় ত্রুটি</string>

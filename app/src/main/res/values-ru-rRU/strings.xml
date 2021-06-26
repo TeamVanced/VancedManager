@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Переустановить</string>
     <string name="accessibility_app_uninstall">Удалить</string>
     <string name="accessibility_app_update">Обновить</string>
-    <string name="home_header_apps">Приложения</string>
+    <string name="home_category_apps">Приложения</string>
     <string name="app_info_changelog_header">Список изменений</string>
     <string name="app_download_dialog_downloading_file">Загрузка %1$s</string>
     <string name="app_options_install">Установить</string>
     <string name="latest">Последняя:</string>
     <string name="app_microg_error">Сначала установите Vanced microG</string>
     <string name="root_not_granted">Рут-доступ не предоставлен</string>
-    <string name="home_header_social_media">Социальные сети</string>
-    <string name="home_header_support_us">Поддержите нас</string>
+    <string name="home_category_social_media">Социальные сети</string>
+    <string name="home_category_support_us">Поддержите нас</string>
     <string name="app_content_unavailable">Недоступно</string>
     <string name="version_installed">Установлена:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Черный</string>
     <string name="app_theme_dialog_option_dark">Темный</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Разработчики Менеджера</string>
-    <string name="about_credits_other">Другие участники</string>
-    <string name="about_sources">Исходники</string>
-    <string name="about_credits_vanced_team">Команда Vanced</string>
+    <string name="about_category_credits_manager_devs">Разработчики Менеджера</string>
+    <string name="about_category_credits_other">Другие участники</string>
+    <string name="about_category_sources">Исходники</string>
+    <string name="about_category_credits_vanced_team">Команда Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Не удалось передать apk владельцу системы, попробуйте еще раз.</string>
     <string name="install_error_downloading">Ошибка загрузки %1$s</string>

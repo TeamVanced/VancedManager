@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Видалити</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Додатки</string>
+    <string name="home_category_apps">Додатки</string>
     <string name="app_info_changelog_header">Список змін</string>
     <string name="app_download_dialog_downloading_file">Завантаження %1$s</string>
     <string name="app_options_install">Встановити</string>
     <string name="latest">Найновіша:</string>
     <string name="app_microg_error">Спочатку встановіть Vanced microG</string>
     <string name="root_not_granted">Права суперкористувача не були надані</string>
-    <string name="home_header_social_media">Соціальні мережі</string>
-    <string name="home_header_support_us">Підтримайте нас</string>
+    <string name="home_category_social_media">Соціальні мережі</string>
+    <string name="home_category_support_us">Підтримайте нас</string>
     <string name="app_content_unavailable">Недоступно</string>
     <string name="version_installed">Встановлена:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Чорний</string>
     <string name="app_theme_dialog_option_dark">Темний</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Розробники Менеджера</string>
-    <string name="about_credits_other">Інші учасники</string>
-    <string name="about_sources">Джерела</string>
-    <string name="about_credits_vanced_team">Команда Vanced</string>
+    <string name="about_category_credits_manager_devs">Розробники Менеджера</string>
+    <string name="about_category_credits_other">Інші учасники</string>
+    <string name="about_category_sources">Джерела</string>
+    <string name="about_category_credits_vanced_team">Команда Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Не вдалося створити файл APK системного власника програми, будь ласка, повторіть спробу.</string>
     <string name="install_error_downloading">Помилка Завантаження %1$s</string>

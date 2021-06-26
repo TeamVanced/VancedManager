@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">卸载</string>
     <string name="accessibility_app_update">更新</string>
-    <string name="home_header_apps">应用</string>
+    <string name="home_category_apps">应用</string>
     <string name="app_info_changelog_header">变更日志</string>
     <string name="app_download_dialog_downloading_file">正在下载 %1$s</string>
     <string name="app_options_install">安装</string>
     <string name="latest">最新：</string>
     <string name="app_microg_error">请先安装 Vanced microG</string>
     <string name="root_not_granted">未授予 Root 权限</string>
-    <string name="home_header_social_media">社交媒体</string>
-    <string name="home_header_support_us">支持我们</string>
+    <string name="home_category_social_media">社交媒体</string>
+    <string name="home_category_support_us">支持我们</string>
     <string name="app_content_unavailable">不可用</string>
     <string name="version_installed">已安装：</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">黑色</string>
     <string name="app_theme_dialog_option_dark">深色</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager 开发人员</string>
-    <string name="about_credits_other">其它贡献者：</string>
-    <string name="about_sources">源码</string>
-    <string name="about_credits_vanced_team">Vanced 团队</string>
+    <string name="about_category_credits_manager_devs">Manager 开发人员</string>
+    <string name="about_category_credits_other">其它贡献者：</string>
+    <string name="about_category_sources">源码</string>
+    <string name="about_category_credits_vanced_team">Vanced 团队</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">无法 `chown` apk 为系统拥有者，请重试。</string>
     <string name="install_error_downloading">%1$s 下载错误</string>

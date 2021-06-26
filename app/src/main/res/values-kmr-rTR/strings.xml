@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Sepanan</string>
+    <string name="home_category_apps">Sepanan</string>
     <string name="app_info_changelog_header">Gurankarî</string>
     <string name="app_download_dialog_downloading_file">Dakêşe %1$s</string>
     <string name="app_options_install">Saz bike</string>
     <string name="latest">Dawîn:</string>
     <string name="app_microg_error">Pêşîn Vanced microG saz bikin</string>
     <string name="root_not_granted">Destlênedanên kokê nayê dayîn</string>
-    <string name="home_header_social_media">Medyaya Civakî</string>
-    <string name="home_header_support_us">Piştgiriya me bikin</string>
+    <string name="home_category_social_media">Medyaya Civakî</string>
+    <string name="home_category_support_us">Piştgiriya me bikin</string>
     <string name="app_content_unavailable">Neberdest</string>
     <string name="version_installed">Sazkirî:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Reş</string>
     <string name="app_theme_dialog_option_dark">Tarî</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Pêşvebirên Rêveberê</string>
-    <string name="about_credits_other">Beşdarên din</string>
-    <string name="about_sources">Çavkanî</string>
-    <string name="about_credits_vanced_team">Koma Vanced\'ê</string>
+    <string name="about_category_credits_manager_devs">Pêşvebirên Rêveberê</string>
+    <string name="about_category_credits_other">Beşdarên din</string>
+    <string name="about_category_sources">Çavkanî</string>
+    <string name="about_category_credits_vanced_team">Koma Vanced\'ê</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">APK\'yê ji xwediyê pergalê re \'chown\' bi ser neket, ji kerema xwe re careke din biceribînin.</string>
     <string name="install_error_downloading">Di daxistina %1$s de çewtî</string>

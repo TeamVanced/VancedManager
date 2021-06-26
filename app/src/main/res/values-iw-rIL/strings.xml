@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">התקן מחדש</string>
     <string name="accessibility_app_uninstall">הסרת ההתקנה</string>
     <string name="accessibility_app_update">עדכן</string>
-    <string name="home_header_apps">יישומים</string>
+    <string name="home_category_apps">יישומים</string>
     <string name="app_info_changelog_header">היסטורית שינויים</string>
     <string name="app_download_dialog_downloading_file">מוריד את %1$s</string>
     <string name="app_options_install">התקן</string>
     <string name="latest">החדש ביותר:</string>
     <string name="app_microg_error">התקן את שירותי Google של Vanced תחילה</string>
     <string name="root_not_granted">לא הוענקו הרשאות Root</string>
-    <string name="home_header_social_media">רשתות חברתיות</string>
-    <string name="home_header_support_us">תמכו בנו</string>
+    <string name="home_category_social_media">רשתות חברתיות</string>
+    <string name="home_category_support_us">תמכו בנו</string>
     <string name="app_content_unavailable">לא זמין</string>
     <string name="version_installed">מותקן:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">שחור</string>
     <string name="app_theme_dialog_option_dark">שחרחר</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">מנהל למפתחים</string>
-    <string name="about_credits_other">תורמים אחרים</string>
-    <string name="about_sources">מקורות</string>
-    <string name="about_credits_vanced_team">צוות Vanced</string>
+    <string name="about_category_credits_manager_devs">מנהל למפתחים</string>
+    <string name="about_category_credits_other">תורמים אחרים</string>
+    <string name="about_category_sources">מקורות</string>
+    <string name="about_category_credits_vanced_team">צוות Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">נכשל בהחלפת הבעלים של קובץ ה־APK, אנא נסה בשנית.</string>
     <string name="install_error_downloading">תקלה בהורדה של %1$s</string>

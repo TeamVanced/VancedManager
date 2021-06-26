@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Preinštalovať</string>
     <string name="accessibility_app_uninstall">Odinštalovať</string>
     <string name="accessibility_app_update">Aktualizovať</string>
-    <string name="home_header_apps">Aplikácie</string>
+    <string name="home_category_apps">Aplikácie</string>
     <string name="app_info_changelog_header">Zoznam zmien</string>
     <string name="app_download_dialog_downloading_file">Sťahovanie %1$s</string>
     <string name="app_options_install">Inštalovať</string>
     <string name="latest">Najnovšie:</string>
     <string name="app_microg_error">Najprv nainštalujte Vanced microG</string>
     <string name="root_not_granted">Root prístup nebol udelený</string>
-    <string name="home_header_social_media">Sociálne médiá</string>
-    <string name="home_header_support_us">Podporte nás</string>
+    <string name="home_category_social_media">Sociálne médiá</string>
+    <string name="home_category_support_us">Podporte nás</string>
     <string name="app_content_unavailable">Nedostupné</string>
     <string name="version_installed">Nainštalované:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Čierna</string>
     <string name="app_theme_dialog_option_dark">Tmavá</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Vývojári aplikácie</string>
-    <string name="about_credits_other">Ostatní prispievatelia</string>
-    <string name="about_sources">Zdrojové kódy</string>
-    <string name="about_credits_vanced_team">Tím Vanced</string>
+    <string name="about_category_credits_manager_devs">Vývojári aplikácie</string>
+    <string name="about_category_credits_other">Ostatní prispievatelia</string>
+    <string name="about_category_sources">Zdrojové kódy</string>
+    <string name="about_category_credits_vanced_team">Tím Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Nepodarilo sa zmeniť vlastníka súboru APK na vlastníka systému. Skúste to znovu prosím.</string>
     <string name="install_error_downloading">Chyba pri sťahovaní %1$s</string>

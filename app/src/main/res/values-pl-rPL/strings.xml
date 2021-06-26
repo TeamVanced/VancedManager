@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Przeinstaluj</string>
     <string name="accessibility_app_uninstall">Odinstaluj</string>
     <string name="accessibility_app_update">Aktualizuj</string>
-    <string name="home_header_apps">Aplikacje</string>
+    <string name="home_category_apps">Aplikacje</string>
     <string name="app_info_changelog_header">Lista zmian</string>
     <string name="app_download_dialog_downloading_file">Pobieranie %1$s</string>
     <string name="app_options_install">Zainstaluj</string>
     <string name="latest">Najnowsza:</string>
     <string name="app_microg_error">Najpierw zainstaluj Vanced microG</string>
     <string name="root_not_granted">Root nie został przyznany</string>
-    <string name="home_header_social_media">Media Społecznościowe</string>
-    <string name="home_header_support_us">Wesprzyj nas</string>
+    <string name="home_category_social_media">Media Społecznościowe</string>
+    <string name="home_category_support_us">Wesprzyj nas</string>
     <string name="app_content_unavailable">Niedostępne</string>
     <string name="version_installed">Zainstalowano:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Czarny</string>
     <string name="app_theme_dialog_option_dark">Ciemny</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Deweloperzy Menedżera</string>
-    <string name="about_credits_other">Inni współtwórcy</string>
-    <string name="about_sources">Źródła</string>
-    <string name="about_credits_vanced_team">Zespół Vanced</string>
+    <string name="about_category_credits_manager_devs">Deweloperzy Menedżera</string>
+    <string name="about_category_credits_other">Inni współtwórcy</string>
+    <string name="about_category_sources">Źródła</string>
+    <string name="about_category_credits_vanced_team">Zespół Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Nie udało się `chown` APK dla właściciela systemu, spróbuj ponownie.</string>
     <string name="install_error_downloading">Błąd pobierania %1$s</string>

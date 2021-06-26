@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Apper</string>
+    <string name="home_category_apps">Apper</string>
     <string name="app_info_changelog_header">Endringslogg</string>
     <string name="app_download_dialog_downloading_file">Laster ned %1$s</string>
     <string name="app_options_install">Installer</string>
     <string name="latest">Siste:</string>
     <string name="app_microg_error">Installer Vanced microG først</string>
     <string name="root_not_granted">Root-tilgang ikke godkjent</string>
-    <string name="home_header_social_media">Sosiale Medier</string>
-    <string name="home_header_support_us">Støtt oss</string>
+    <string name="home_category_social_media">Sosiale Medier</string>
+    <string name="home_category_support_us">Støtt oss</string>
     <string name="app_content_unavailable">Utilgjengelig</string>
     <string name="version_installed">Installert:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Black</string>
     <string name="app_theme_dialog_option_dark">Dark</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager Devs</string>
-    <string name="about_credits_other">Other Contributors</string>
-    <string name="about_sources">Kilder</string>
-    <string name="about_credits_vanced_team">Vanced Team</string>
+    <string name="about_category_credits_manager_devs">Manager Devs</string>
+    <string name="about_category_credits_other">Other Contributors</string>
+    <string name="about_category_sources">Kilder</string>
+    <string name="about_category_credits_vanced_team">Vanced Team</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Kan ikke `chown` APK til systemeieren, vennligst prøv igjen.</string>
     <string name="install_error_downloading">Feil ved nedlasting %1$s</string>

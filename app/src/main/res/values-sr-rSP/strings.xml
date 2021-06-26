@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Деинсталирај</string>
     <string name="accessibility_app_update">Ажурирај</string>
-    <string name="home_header_apps">Апликације</string>
+    <string name="home_category_apps">Апликације</string>
     <string name="app_info_changelog_header">Историја измена</string>
     <string name="app_download_dialog_downloading_file">Преузимање %1$s</string>
     <string name="app_options_install">Инсталација</string>
     <string name="latest">Најновија:</string>
     <string name="app_microg_error">Инсталирајте прво Vanced microG</string>
     <string name="root_not_granted">Root приступ није омогућен</string>
-    <string name="home_header_social_media">Социјалне мреже</string>
-    <string name="home_header_support_us">Подржите нас</string>
+    <string name="home_category_social_media">Социјалне мреже</string>
+    <string name="home_category_support_us">Подржите нас</string>
     <string name="app_content_unavailable">Недоступно</string>
     <string name="version_installed">Инсталирана:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Црно</string>
     <string name="app_theme_dialog_option_dark">Тамно</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Менаџер развоја</string>
-    <string name="about_credits_other">Други покровитељи</string>
-    <string name="about_sources">Извор</string>
-    <string name="about_credits_vanced_team">Vanced Тим</string>
+    <string name="about_category_credits_manager_devs">Менаџер развоја</string>
+    <string name="about_category_credits_other">Други покровитељи</string>
+    <string name="about_category_sources">Извор</string>
+    <string name="about_category_credits_vanced_team">Vanced Тим</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Грешка при додели apk власнику система, покушајте поново.</string>
     <string name="install_error_downloading">Грешка приликом преузимања %1$s</string>

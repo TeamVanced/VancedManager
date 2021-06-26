@@ -1,13 +1,23 @@
 package com.vanced.manager.ui.layouts
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.vanced.manager.ui.composables.*
+import androidx.datastore.preferences.core.booleanPreferencesKey
+import com.vanced.manager.R
+import com.vanced.manager.ui.components.*
+import com.vanced.manager.ui.components.layout.ManagerScrollableColumn
+import com.vanced.manager.ui.components.preference.CheckboxPreference
+import com.vanced.manager.ui.components.preference.Preference
+import com.vanced.manager.ui.components.preference.RadiobuttonDialogPreference
 import com.vanced.manager.ui.preferences.RadioButtonPreference
-import com.vanced.manager.ui.theme.managerTheme
+import com.vanced.manager.ui.preferences.holder.managerVariantPref
+import com.vanced.manager.ui.preferences.holder.useCustomTabsPref
+import com.vanced.manager.ui.preferences.managerBooleanPreference
+import com.vanced.manager.ui.utils.defaultContentPaddingVertical
+import com.vanced.manager.ui.widgets.layout.CategoryLayout
+import com.vanced.manager.ui.widgets.settings.SettingsAccentColorItem
+import com.vanced.manager.ui.widgets.settings.ThemeSettingsItem
 
 data class NotificationPrefModel(
     val app: String,
@@ -29,89 +39,66 @@ private val notificationApps = arrayOf(
     )
 )
 
-@ExperimentalStdlibApi
-@ExperimentalMaterialApi
 @Composable
 fun SettingsLayout() {
-    var showDialog by remember { mutableStateOf(false) }
-    ManagerScrollableColumn {
-        HeaderCard(headerName = "Behaviour") {
-            SwitchPreference(
-                preferenceTitle = "Use Custom Tabs",
-                preferenceDescription = "Links will open in chrome custom tabs",
-                preferenceKey = "use_custom_tabs"
-            )
-            notificationApps.forEach {
-                with (it) {
-                    SwitchPreference(
-                        preferenceTitle = "$app Push Notifications",
-                        preferenceDescription = "Receive push notifications when an update for $app is released",
-                        preferenceKey = "${prefKey}_notifications"
-                    )
+    ManagerScrollableColumn(
+        contentPaddingVertical = defaultContentPaddingVertical,
+        itemSpacing = 12.dp
+    ) {
+        CategoryLayout(
+            categoryNameId = R.string.settings_category_behaviour,
+            contentPaddingHorizontal = 0.dp,
+            categoryNameSpacing = 4.dp
+        ) {
+            Column {
+                CheckboxPreference(
+                    preferenceTitle = R.string.settings_preference_use_custom_tabs_title,
+                    preferenceDescription = R.string.settings_preference_use_custom_tabs_summary,
+                    preference = useCustomTabsPref
+                )
+                notificationApps.forEach {
+                    with(it) {
+                        CheckboxPreference(
+                            preferenceTitle = "$app Push Notifications",
+                            preferenceDescription = "Receive push notifications when an update for $app is released",
+                            preference = managerBooleanPreference(
+                                key = booleanPreferencesKey("${prefKey}_notifications"),
+                                defaultValue = true
+                            )
+                        )
+                    }
                 }
-            }
-            Preference(
-                preferenceTitle = "Variant",
-                preferenceDescription = "nonroot",
-                onClick = {}
-            )
-            Preference(
-                preferenceTitle = "Clear downloaded files",
-                onClick = {}
-            )
-        }
-        Spacer(modifier = Modifier.size(12.dp))
-        HeaderCard(headerName = "Appearance") {
-            Preference(
-                preferenceTitle = "Accent Color",
-                onClick = {
-                    showDialog = true
-                }
-            )
-            DialogRadioButtonPreference(
-                preferenceTitle = "Theme",
-                preferenceKey = "manager_theme",
-                defaultValue = "Light",
-                buttons = listOf(
-                    RadioButtonPreference(
-                        title = "Light Theme",
-                        preferenceValue = "Light"
-                    ),
-                    RadioButtonPreference(
-                        title = "Dark Theme",
-                        preferenceValue = "Dark"
-                    ),
-                    RadioButtonPreference(
-                        title = "System Default",
-                        preferenceValue = "System Default"
+                RadiobuttonDialogPreference(
+                    preferenceTitle = R.string.settings_preference_variant_title,
+                    preference = managerVariantPref,
+                    buttons = listOf(
+                        RadioButtonPreference(
+                            title = "nonroot",
+                            key = "nonroot"
+                        ),
+                        RadioButtonPreference(
+                            title = "root",
+                            key = "root"
+                        ),
                     )
                 )
-            ) {
-                managerTheme = it
+                Preference(
+                    preferenceTitleId = R.string.settings_preference_clear_files_title,
+                    preferenceDescriptionId = null,
+                    onClick = {}
+                )
             }
         }
-    }
-    if (showDialog) {
-        AlertDialog(
-            onDismissRequest = { showDialog = false },
-            text = {
-                HSLColorPicker()
-//                    AndroidView(
-//                        factory = {
-//                            HSLColorPicker(it)
-//                        },
-//                        update = { view ->
-//                            view.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 800)
-//                            view.setColorSelectionListener(object : SimpleColorSelectionListener() {
-//                                override fun onColorSelected(color: Int) {
-//                                    accentColorInt = color
-//                                }
-//                            })
-//                        }
-//                    )
-            },
-            buttons = {}
-        )
+        CategoryLayout(
+            categoryNameId = R.string.settings_category_appearance,
+            contentPaddingHorizontal = 0.dp,
+            categoryNameSpacing = 4.dp
+        ) {
+            Column {
+                SettingsAccentColorItem()
+                ThemeSettingsItem()
+            }
+        }
     }
 
 }

@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Επανεγκατάσταση</string>
     <string name="accessibility_app_uninstall">Απεγκατάσταση</string>
     <string name="accessibility_app_update">Ενημέρωση</string>
-    <string name="home_header_apps">Εφαρμογές</string>
+    <string name="home_category_apps">Εφαρμογές</string>
     <string name="app_info_changelog_header">Αρχείο καταγραφής αλλαγών</string>
     <string name="app_download_dialog_downloading_file">Λήψη %1$s</string>
     <string name="app_options_install">Εγκατάσταση</string>
     <string name="latest">Τελευταία έκδοση:</string>
     <string name="app_microg_error">Εγκαταστήστε πρώτα το Vanced microG</string>
     <string name="root_not_granted">Δεν επιτράπηκε η πρόσβαση Root</string>
-    <string name="home_header_social_media">Μέσα Κοινωνικής Δικτύωσης</string>
-    <string name="home_header_support_us">Υποστηρίξτε μας</string>
+    <string name="home_category_social_media">Μέσα Κοινωνικής Δικτύωσης</string>
+    <string name="home_category_support_us">Υποστηρίξτε μας</string>
     <string name="app_content_unavailable">Μη διαθέσιμο</string>
     <string name="version_installed">Εγκατεστημένη έκδοση:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Μαύρο</string>
     <string name="app_theme_dialog_option_dark">Σκουρόχρωμο</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Προγραμματιστές Διαχειριστή Vanced</string>
-    <string name="about_credits_other">Άλλοι Συνεισφέροντες</string>
-    <string name="about_sources">Πηγές</string>
-    <string name="about_credits_vanced_team">Η ομάδα του Vanced</string>
+    <string name="about_category_credits_manager_devs">Προγραμματιστές Διαχειριστή Vanced</string>
+    <string name="about_category_credits_other">Άλλοι Συνεισφέροντες</string>
+    <string name="about_category_sources">Πηγές</string>
+    <string name="about_category_credits_vanced_team">Η ομάδα του Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Αποτυχία παραχώρησης ιδιοκτησίας του APK στον κάτοχο συστήματος, παρακαλούμε προσπαθείστε ξανά.</string>
     <string name="install_error_downloading">Σφάλμα λήψης του %1$s</string>

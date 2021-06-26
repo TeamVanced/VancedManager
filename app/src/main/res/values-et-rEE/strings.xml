@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Rakendused</string>
+    <string name="home_category_apps">Rakendused</string>
     <string name="app_info_changelog_header">Muudatuste logi</string>
     <string name="app_download_dialog_downloading_file">Allalaadimine %1$s</string>
     <string name="app_options_install">Installi</string>
     <string name="latest">Uusim:</string>
     <string name="app_microg_error">Installi Vanced MicroG esimesena</string>
     <string name="root_not_granted">Administraatoriõigusi ei tagatud</string>
-    <string name="home_header_social_media">Sotsiaalmeedia</string>
-    <string name="home_header_support_us">Toetage meid</string>
+    <string name="home_category_social_media">Sotsiaalmeedia</string>
+    <string name="home_category_support_us">Toetage meid</string>
     <string name="app_content_unavailable">Pole saadaval</string>
     <string name="version_installed">Installitud:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Must</string>
     <string name="app_theme_dialog_option_dark">Tume</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Halduri arendajad</string>
-    <string name="about_credits_other">Teised kaastöötajad</string>
-    <string name="about_sources">Allikad</string>
-    <string name="about_credits_vanced_team">Vanced Meeskond</string>
+    <string name="about_category_credits_manager_devs">Halduri arendajad</string>
+    <string name="about_category_credits_other">Teised kaastöötajad</string>
+    <string name="about_category_sources">Allikad</string>
+    <string name="about_category_credits_vanced_team">Vanced Meeskond</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">APK edastamine süsteemi omanikule ebaõnnestus, proovige uuesti.</string>
     <string name="install_error_downloading">Viga allalaadimisel %1$s</string>

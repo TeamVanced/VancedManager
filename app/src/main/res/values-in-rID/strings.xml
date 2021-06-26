@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Pasang ulang</string>
     <string name="accessibility_app_uninstall">Copot pemasangan</string>
     <string name="accessibility_app_update">Perbarui</string>
-    <string name="home_header_apps">Aplikasi</string>
+    <string name="home_category_apps">Aplikasi</string>
     <string name="app_info_changelog_header">Catatan perubahan</string>
     <string name="app_download_dialog_downloading_file">Mengunduh %1$s</string>
     <string name="app_options_install">Pasang</string>
     <string name="latest">Terbaru:</string>
     <string name="app_microg_error">Pasang Vanced microG terlebih dahulu</string>
     <string name="root_not_granted">Akses Root tidak diberikan</string>
-    <string name="home_header_social_media">Media Sosial</string>
-    <string name="home_header_support_us">Dukung kami</string>
+    <string name="home_category_social_media">Media Sosial</string>
+    <string name="home_category_support_us">Dukung kami</string>
     <string name="app_content_unavailable">Tidak tersedia</string>
     <string name="version_installed">Terpasang:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Hitam</string>
     <string name="app_theme_dialog_option_dark">Gelap</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Pengembang Manager</string>
-    <string name="about_credits_other">Kontributor Lain</string>
-    <string name="about_sources">Sumber</string>
-    <string name="about_credits_vanced_team">Tim Vanced</string>
+    <string name="about_category_credits_manager_devs">Pengembang Manager</string>
+    <string name="about_category_credits_other">Kontributor Lain</string>
+    <string name="about_category_sources">Sumber</string>
+    <string name="about_category_credits_vanced_team">Tim Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Gagal untuk `chown` APK ke pemilik sistem, mohon coba lagi.</string>
     <string name="install_error_downloading">Gagal Mengunduh %1$s</string>

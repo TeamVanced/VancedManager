@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstalla</string>
     <string name="accessibility_app_uninstall">Disinstalla</string>
     <string name="accessibility_app_update">Aggiorna</string>
-    <string name="home_header_apps">App</string>
+    <string name="home_category_apps">App</string>
     <string name="app_info_changelog_header">Novità</string>
     <string name="app_download_dialog_downloading_file">Download in corso di %1$s</string>
     <string name="app_options_install">Installa</string>
     <string name="latest">Disponibile:</string>
     <string name="app_microg_error">Installa prima Vanced microG</string>
     <string name="root_not_granted">Accesso root non consentito</string>
-    <string name="home_header_social_media">Social Media</string>
-    <string name="home_header_support_us">Sostienici</string>
+    <string name="home_category_social_media">Social Media</string>
+    <string name="home_category_support_us">Sostienici</string>
     <string name="app_content_unavailable">Non disponibile</string>
     <string name="version_installed">Installata:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Nero</string>
     <string name="app_theme_dialog_option_dark">Scuro</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Sviluppatori di Manager</string>
-    <string name="about_credits_other">Altri Collaboratori</string>
-    <string name="about_sources">Codice Sorgente</string>
-    <string name="about_credits_vanced_team">Il Team di Vanced</string>
+    <string name="about_category_credits_manager_devs">Sviluppatori di Manager</string>
+    <string name="about_category_credits_other">Altri Collaboratori</string>
+    <string name="about_category_sources">Codice Sorgente</string>
+    <string name="about_category_credits_vanced_team">Il Team di Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Impossibile modificare il proprietario dell\'apk nel proprietario di sistema, per favore riprova.</string>
     <string name="install_error_downloading">Errore nel Download di %1$s</string>

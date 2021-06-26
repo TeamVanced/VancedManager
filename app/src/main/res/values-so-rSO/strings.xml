@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Apps</string>
+    <string name="home_category_apps">Apps</string>
     <string name="app_info_changelog_header">Waxa isbadalay</string>
     <string name="app_download_dialog_downloading_file">Dajinaya %1$s</string>
     <string name="app_options_install">Kushub</string>
     <string name="latest">U dambeeyay:</string>
     <string name="app_microg_error">Install Vanced microG first</string>
     <string name="root_not_granted">\'Root\' looma fasaxin</string>
-    <string name="home_header_social_media">Baraha Bulshada</string>
-    <string name="home_header_support_us">Na taageer</string>
+    <string name="home_category_social_media">Baraha Bulshada</string>
+    <string name="home_category_support_us">Na taageer</string>
     <string name="app_content_unavailable">Lama heli karo</string>
     <string name="version_installed">Ka kujira:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Black</string>
     <string name="app_theme_dialog_option_dark">Dark</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Sameeyaasha Manager-ka</string>
-    <string name="about_credits_other">Other Contributors</string>
-    <string name="about_sources">Tixraacyo</string>
-    <string name="about_credits_vanced_team">Kooxda Vanced</string>
+    <string name="about_category_credits_manager_devs">Sameeyaasha Manager-ka</string>
+    <string name="about_category_credits_other">Other Contributors</string>
+    <string name="about_category_sources">Tixraacyo</string>
+    <string name="about_category_credits_vanced_team">Kooxda Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Laguma guulaysan in APK-ga `mulkiilihiisa loo badalo` barnaamijka aaladu kushaqayso, fadlan markale kuceli.</string>
     <string name="install_error_downloading">Khalad ayaa ka dhacay soo dajintii %1$s</string>

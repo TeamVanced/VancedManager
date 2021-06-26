@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Réinstaller</string>
     <string name="accessibility_app_uninstall">Désinstaller</string>
     <string name="accessibility_app_update">Mettre à jour</string>
-    <string name="home_header_apps">Applications</string>
+    <string name="home_category_apps">Applications</string>
     <string name="app_info_changelog_header">Changelog</string>
     <string name="app_download_dialog_downloading_file">Téléchargement de %1$s</string>
     <string name="app_options_install">Installer</string>
     <string name="latest">Dernière version:</string>
     <string name="app_microg_error">Installez d\'abord Vanced microG</string>
     <string name="root_not_granted">Accès root non autorisé</string>
-    <string name="home_header_social_media">Réseaux sociaux</string>
-    <string name="home_header_support_us">Soutenez-nous</string>
+    <string name="home_category_social_media">Réseaux sociaux</string>
+    <string name="home_category_support_us">Soutenez-nous</string>
     <string name="app_content_unavailable">Indisponible</string>
     <string name="version_installed">Version installée:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Noir</string>
     <string name="app_theme_dialog_option_dark">Sombre</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Développeurs du Manager</string>
-    <string name="about_credits_other">Autres Contributeurs</string>
-    <string name="about_sources">Sources</string>
-    <string name="about_credits_vanced_team">Équipe Vanced</string>
+    <string name="about_category_credits_manager_devs">Développeurs du Manager</string>
+    <string name="about_category_credits_other">Autres Contributeurs</string>
+    <string name="about_category_sources">Sources</string>
+    <string name="about_category_credits_vanced_team">Équipe Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Échec de la commande `chown` APK vers le propriétaire du système, veuillez réessayer.</string>
     <string name="install_error_downloading">Erreur en téléchargeant %1$s</string>

@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">أعد التثبيت</string>
     <string name="accessibility_app_uninstall">إلغاء التثبيت</string>
     <string name="accessibility_app_update">تحديث</string>
-    <string name="home_header_apps">التطبيقات</string>
+    <string name="home_category_apps">التطبيقات</string>
     <string name="app_info_changelog_header">سجل التغييرات</string>
     <string name="app_download_dialog_downloading_file">جارٍ تنزيل %1$s</string>
     <string name="app_options_install">تثبيت</string>
     <string name="latest">الأحدث:</string>
     <string name="app_microg_error">قم بتثبيت Vanced microG أولاً</string>
     <string name="root_not_granted">لم يتم منح صلاحيات الروت</string>
-    <string name="home_header_social_media">وسائل التواصل الإجتماعي</string>
-    <string name="home_header_support_us">ادعمنا</string>
+    <string name="home_category_social_media">وسائل التواصل الإجتماعي</string>
+    <string name="home_category_support_us">ادعمنا</string>
     <string name="app_content_unavailable">غير متاح</string>
     <string name="version_installed">مثبت:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">أسود</string>
     <string name="app_theme_dialog_option_dark">داكن</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">مطوري المدير</string>
-    <string name="about_credits_other">مساهمين آخرين</string>
-    <string name="about_sources">المصادر</string>
-    <string name="about_credits_vanced_team">فريق ڤانسد</string>
+    <string name="about_category_credits_manager_devs">مطوري المدير</string>
+    <string name="about_category_credits_other">مساهمين آخرين</string>
+    <string name="about_category_sources">المصادر</string>
+    <string name="about_category_credits_vanced_team">فريق ڤانسد</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">فشل تغيير ملكية حزمة التثبيت الى مالك النظام، الرجاء المحاولة مرة أخرى.</string>
     <string name="install_error_downloading">خطأ في تنزيل %1$s</string>

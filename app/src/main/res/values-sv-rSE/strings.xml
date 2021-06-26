@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Appar</string>
+    <string name="home_category_apps">Appar</string>
     <string name="app_info_changelog_header">Ändringslogg</string>
     <string name="app_download_dialog_downloading_file">Laddar ned %1$s</string>
     <string name="app_options_install">Install</string>
     <string name="latest">Senaste:</string>
     <string name="app_microg_error">Installera Vanced microG först</string>
     <string name="root_not_granted">Root-åtkomst inte beviljat</string>
-    <string name="home_header_social_media">Sociala medier</string>
-    <string name="home_header_support_us">Stöd oss</string>
+    <string name="home_category_social_media">Sociala medier</string>
+    <string name="home_category_support_us">Stöd oss</string>
     <string name="app_content_unavailable">Ej tillgänglig</string>
     <string name="version_installed">Installerad:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Svart</string>
     <string name="app_theme_dialog_option_dark">Mörk</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Hanteraren Dev</string>
-    <string name="about_credits_other">Andra bidragsgivare</string>
-    <string name="about_sources">Källor</string>
-    <string name="about_credits_vanced_team">Vanced Team</string>
+    <string name="about_category_credits_manager_devs">Hanteraren Dev</string>
+    <string name="about_category_credits_other">Andra bidragsgivare</string>
+    <string name="about_category_sources">Källor</string>
+    <string name="about_category_credits_vanced_team">Vanced Team</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Misslyckades att Chown Apk till systemägare, Försök igen.</string>
     <string name="install_error_downloading">Laddar ned %1$s</string>

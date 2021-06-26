@@ -6,12 +6,11 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
+import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
+import com.vanced.manager.ui.preferences.holder.managerThemePref
 
-var managerTheme by mutableStateOf<String?>("")
+const val defAccentColor = 0xFF0477E1
 
 private val DarkColorPalette = darkColors(
     primary = purple200,
@@ -28,10 +27,10 @@ private val LightColorPalette = lightColors(
 
 val Colors.cardColor: Color get() = if (isLight) Color(0xFFF7F7F7) else Color(0xFF191919)
 
-val Colors.managerAccentColor: Color get() = Color(0xFF2E73FF)
+val Colors.managerAccentColor: Color get() = Color(managerAccentColorPref.value.value)
 
 @Composable
-fun isDark(): Boolean = when (managerTheme) {
+fun isDark(): Boolean = when (managerThemePref.value.value) {
     "Dark" -> true
     "Light" -> false
     "System Default" -> isSystemInDarkTheme()
@@ -39,7 +38,7 @@ fun isDark(): Boolean = when (managerTheme) {
 }
 
 @Composable
-fun ComposeTestTheme(
+fun ManagerTheme(
     content: @Composable () -> Unit
 ) {
     val colors = if (isDark()) DarkColorPalette else LightColorPalette

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
 
+    <!-- Dummy -->
+    <string name="dummy_placeholder_text">DPT</string>
+
     <!-- Welcome Page -->
     <string name="welcome_app_description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
     <string name="welcome_app_description_vanced">A modified YouTube client with many useful features!</string>
@@ -13,9 +16,9 @@
     <string name="welcome_select_apps_error">Select at least one app!</string>
 
     <!-- Home Page -->
-    <string name="home_header_apps">Apps</string>
-    <string name="home_header_social_media">Social Media</string>
-    <string name="home_header_support_us">Support us</string>
+    <string name="home_category_apps">Apps</string>
+    <string name="home_category_social_media">Social Media</string>
+    <string name="home_category_support_us">Support us</string>
     <string name="root_not_granted">Root access not granted</string>
 
     <!-- Settings Page-->
@@ -44,10 +47,12 @@
     <string name="dev_settings_preference_update_url_title">Base download URL</string>
 
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager Devs</string>
-    <string name="about_credits_other">Other Contributors</string>
-    <string name="about_credits_vanced_team">Vanced Team</string>
-    <string name="about_sources">Sources</string>
+    <string name="about_category_credits_manager_devs">Manager Devs</string>
+    <string name="about_category_credits_other">Other Contributors</string>
+    <string name="about_category_credits_vanced_team">Vanced Team</string>
+    <string name="about_category_sources">Sources</string>
+    <string name="about_sources_source_code">Source Code</string>
+    <string name="about_sources_license">License</string>
 
     <!-- Logs Page-->
     <string name="logs_save_error">Successfully saved logs</string>
@@ -74,6 +79,7 @@
     <string name="app_options_install">Install</string>
     <string name="app_version_installed">Installed: %1$s</string>
     <string name="app_version_latest">Latest: %1$s</string>
+    <string name="app_versions">Versions</string>
 
     <!-- App Installation Options Menu -->
     <string name="app_installation_options_language">Language(s)</string>

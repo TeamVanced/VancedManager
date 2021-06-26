@@ -1,15 +1,18 @@
 package com.vanced.manager.installer
 
+import android.content.Context
+import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.xinto.apkhelper.installSplitApks
 import com.xinto.apkhelper.statusCallback
 import com.xinto.apkhelper.statusCallbackBuilder
-import com.vanced.manager.ui.viewmodel.HomeViewModel
 
 class AppInstaller(
+    private val context: Context,
     private val viewModel: HomeViewModel
 ) {
 
-    fun installVanced() {
-
+    fun installVanced(version: String) {
+        installSplitApks(context.getExternalFilesDir("vanced/$version")!!.path, context)
     }
 
     fun installMusic() {

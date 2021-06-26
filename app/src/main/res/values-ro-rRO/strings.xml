@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Aplicații</string>
+    <string name="home_category_apps">Aplicații</string>
     <string name="app_info_changelog_header">Schimbări</string>
     <string name="app_download_dialog_downloading_file">Se descarcă %1$s</string>
     <string name="app_options_install">Instalează</string>
     <string name="latest">Ultima:</string>
     <string name="app_microg_error">Instalați Vanced microG mai întâi</string>
     <string name="root_not_granted">Accesul root nu este permis</string>
-    <string name="home_header_social_media">Rețele sociale</string>
-    <string name="home_header_support_us">Ajutați-ne</string>
+    <string name="home_category_social_media">Rețele sociale</string>
+    <string name="home_category_support_us">Ajutați-ne</string>
     <string name="app_content_unavailable">Indisponibil</string>
     <string name="version_installed">Instalat:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Negru</string>
     <string name="app_theme_dialog_option_dark">Întunecat</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Dezvoltatori</string>
-    <string name="about_credits_other">Alți Contribuitori</string>
-    <string name="about_sources">Surse</string>
-    <string name="about_credits_vanced_team">Echipa Vanced</string>
+    <string name="about_category_credits_manager_devs">Dezvoltatori</string>
+    <string name="about_category_credits_other">Alți Contribuitori</string>
+    <string name="about_category_sources">Surse</string>
+    <string name="about_category_credits_vanced_team">Echipa Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Nu s-a reușit comanda chown pentru APK la proprietarul sistemului. Încercați din nou.</string>
     <string name="install_error_downloading">Eroare la descărcarea %1$s</string>

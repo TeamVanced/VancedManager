@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Tətbiqlər</string>
+    <string name="home_category_apps">Tətbiqlər</string>
     <string name="app_info_changelog_header">Dəyişikliklər</string>
     <string name="app_download_dialog_downloading_file">%1$s endirilir</string>
     <string name="app_options_install">Quraşdır</string>
     <string name="latest">Ən son:</string>
     <string name="app_microg_error">Əvvəlcə Vanced microG-ni quraşdırın</string>
     <string name="root_not_granted">Root icazəsi verilməyib</string>
-    <string name="home_header_social_media">Sosial Media</string>
-    <string name="home_header_support_us">Bizi dəstəklə</string>
+    <string name="home_category_social_media">Sosial Media</string>
+    <string name="home_category_support_us">Bizi dəstəklə</string>
     <string name="app_content_unavailable">Əlçatmazdır</string>
     <string name="version_installed">Qurulan:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Qara</string>
     <string name="app_theme_dialog_option_dark">Qaranlıq</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Menecer Tərtibatçıları</string>
-    <string name="about_credits_other">Digər Dəstəkçilər</string>
-    <string name="about_sources">Mənbələr</string>
-    <string name="about_credits_vanced_team">Vanced Birliyi</string>
+    <string name="about_category_credits_manager_devs">Menecer Tərtibatçıları</string>
+    <string name="about_category_credits_other">Digər Dəstəkçilər</string>
+    <string name="about_category_sources">Mənbələr</string>
+    <string name="about_category_credits_vanced_team">Vanced Birliyi</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Apk, sistem sahibinə dəyişdirilmədi, yenidən sınayın.</string>
     <string name="install_error_downloading">%1$s Yüklənərkən xəta</string>

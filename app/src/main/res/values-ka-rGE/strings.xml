@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">რეინსტალაცია</string>
     <string name="accessibility_app_uninstall">დეინსტალაცია</string>
     <string name="accessibility_app_update">განახლება</string>
-    <string name="home_header_apps">აპები</string>
+    <string name="home_category_apps">აპები</string>
     <string name="app_info_changelog_header">ცვლილებები</string>
     <string name="app_download_dialog_downloading_file">მიმდინარეობს %1$s-ის გადმოწერა</string>
     <string name="app_options_install">ინსტალაცია</string>
     <string name="latest">უახლესი:</string>
     <string name="app_microg_error">Install Vanced microG first</string>
     <string name="root_not_granted">Root წვდომა არ არის მინიჭებული</string>
-    <string name="home_header_social_media">სოციალური მედია</string>
-    <string name="home_header_support_us">დაგვიჭირეთ მხარი</string>
+    <string name="home_category_social_media">სოციალური მედია</string>
+    <string name="home_category_support_us">დაგვიჭირეთ მხარი</string>
     <string name="app_content_unavailable">ხელმიუწვდომელია</string>
     <string name="version_installed">დაინსტალირებული:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">შავი</string>
     <string name="app_theme_dialog_option_dark">მუქი</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Manager-ის დეველოპერები</string>
-    <string name="about_credits_other">Other Contributors</string>
-    <string name="about_sources">წყაროები</string>
-    <string name="about_credits_vanced_team">Vanced-ის გუნდი</string>
+    <string name="about_category_credits_manager_devs">Manager-ის დეველოპერები</string>
+    <string name="about_category_credits_other">Other Contributors</string>
+    <string name="about_category_sources">წყაროები</string>
+    <string name="about_category_credits_vanced_team">Vanced-ის გუნდი</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">`chown`-ის დროს მოხდა შეცდომა, გთცოვთ სცადოთ თავიდან.</string>
     <string name="install_error_downloading">შეცდომა %1$s-ის გადმოწერის დროს</string>

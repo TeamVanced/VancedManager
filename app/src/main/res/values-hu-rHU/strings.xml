@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Újratelepítés</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Alkalmazások</string>
+    <string name="home_category_apps">Alkalmazások</string>
     <string name="app_info_changelog_header">Változáslista</string>
     <string name="app_download_dialog_downloading_file">%1$s letöltése</string>
     <string name="app_options_install">Telepítés</string>
     <string name="latest">Legújabb:</string>
     <string name="app_microg_error">Először telepítse a Vanced microG-t</string>
     <string name="root_not_granted">A root hozzáférés nincs megadva</string>
-    <string name="home_header_social_media">Közösségi média</string>
-    <string name="home_header_support_us">Támogasson bennünket</string>
+    <string name="home_category_social_media">Közösségi média</string>
+    <string name="home_category_support_us">Támogasson bennünket</string>
     <string name="app_content_unavailable">Nem elérhető</string>
     <string name="version_installed">Telepítve:</string>
     <!-- Settings -->
@@ -96,10 +96,10 @@ Akarod telepíteni?</string>
     <string name="app_theme_dialog_option_black">Fekete</string>
     <string name="app_theme_dialog_option_dark">Sötét</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Fejlesztői Menedzser</string>
-    <string name="about_credits_other">Egyéb Közreműködők</string>
-    <string name="about_sources">Források</string>
-    <string name="about_credits_vanced_team">Vanced csapat</string>
+    <string name="about_category_credits_manager_devs">Fejlesztői Menedzser</string>
+    <string name="about_category_credits_other">Egyéb Közreműködők</string>
+    <string name="about_category_sources">Források</string>
+    <string name="about_category_credits_vanced_team">Vanced csapat</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Nem sikerült az APK beállítása a rendszer tulajdonoshoz, kérjük próbálja újra.</string>
     <string name="install_error_downloading">%1$s letöltése nem sikerült</string>

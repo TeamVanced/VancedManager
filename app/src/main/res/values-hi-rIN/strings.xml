@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">ऐप</string>
+    <string name="home_category_apps">ऐप</string>
     <string name="app_info_changelog_header">परिवर्तन पत्र</string>
     <string name="app_download_dialog_downloading_file">डाउनलोड हो रहा है %1$s</string>
     <string name="app_options_install">इंस्टॉल</string>
     <string name="latest">सबसे नया</string>
     <string name="app_microg_error">सबसे पहले Vanced microG इंस्टॉल करें</string>
     <string name="root_not_granted">रूट एक्सेस प्रदान नहीं किया गया</string>
-    <string name="home_header_social_media">सोशल मीडिया</string>
-    <string name="home_header_support_us">हमें सहयोग दीजिये</string>
+    <string name="home_category_social_media">सोशल मीडिया</string>
+    <string name="home_category_support_us">हमें सहयोग दीजिये</string>
     <string name="app_content_unavailable">अनुपलब्ध</string>
     <string name="version_installed">इंस्टॉल हुआ।</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">काला</string>
     <string name="app_theme_dialog_option_dark">डार्क</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">प्रबंधक डेवलपर्स</string>
-    <string name="about_credits_other">अन्य योगदानकर्ता</string>
-    <string name="about_sources">स्रोत</string>
-    <string name="about_credits_vanced_team">वांसड टीम</string>
+    <string name="about_category_credits_manager_devs">प्रबंधक डेवलपर्स</string>
+    <string name="about_category_credits_other">अन्य योगदानकर्ता</string>
+    <string name="about_category_sources">स्रोत</string>
+    <string name="about_category_credits_vanced_team">वांसड टीम</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">सिस्टम के मालिक को APK को Chown करने में विफल, फिर से प्रयास करें।</string>
     <string name="install_error_downloading">डाउनलोड करने में त्रुटि %1$s</string>

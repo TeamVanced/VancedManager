@@ -7,9 +7,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.preference.PreferenceManager.getDefaultSharedPreferences
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.repository.JsonRepository
+import com.vanced.manager.ui.preferences.holder.managerVariantPref
+import com.vanced.manager.ui.preferences.holder.musicEnabled
+import com.vanced.manager.ui.preferences.holder.vancedEnabled
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
@@ -45,26 +47,10 @@ class HomeViewModel(
     }
 
     init {
-
-
-        val prefs = getDefaultSharedPreferences(context)
-        val variant = prefs.getString("manager_variant", "nonroot")
-        val vancedEnabled = prefs.getBoolean("manager_vanced_enabled", true)
-        val musicEnabled = prefs.getBoolean("manager_music_enabled", true)
-
         apps.apply {
-            if (vancedEnabled) {
-                add(vanced)
-            }
-
-            if (musicEnabled) {
-                add(music)
-            }
-
-            if (variant == "nonroot") {
-                add(microg)
-            }
-
+            if (vancedEnabled.value.value) add(vanced)
+            if (musicEnabled.value.value) add(music)
+            if (managerVariantPref.value.value == "nonroot") add(microg)
         }
 
         fetch()

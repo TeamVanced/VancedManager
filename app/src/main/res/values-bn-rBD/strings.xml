@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Apps</string>
+    <string name="home_category_apps">Apps</string>
     <string name="app_info_changelog_header">পরিবর্তন তালিকা</string>
     <string name="app_download_dialog_downloading_file">%1$s ডাউনলোড করা হচ্ছে</string>
     <string name="app_options_install">ইনস্টল করুন</string>
     <string name="latest">সর্বশেষ:</string>
     <string name="app_microg_error">Install Vanced microG first</string>
     <string name="root_not_granted">রুট অনুমতি দেয়া হয়নি</string>
-    <string name="home_header_social_media">Social Media</string>
-    <string name="home_header_support_us">Support us</string>
+    <string name="home_category_social_media">Social Media</string>
+    <string name="home_category_support_us">Support us</string>
     <string name="app_content_unavailable">অনুপলব্ধ</string>
     <string name="version_installed">ইনস্টল করা আছে:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Black</string>
     <string name="app_theme_dialog_option_dark">Dark</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">পরিচালক বিকাশকারী</string>
-    <string name="about_credits_other">Other Contributors</string>
-    <string name="about_sources">সূত্রসমূহ</string>
-    <string name="about_credits_vanced_team">ভান্সড দল</string>
+    <string name="about_category_credits_manager_devs">পরিচালক বিকাশকারী</string>
+    <string name="about_category_credits_other">Other Contributors</string>
+    <string name="about_category_sources">সূত্রসমূহ</string>
+    <string name="about_category_credits_vanced_team">ভান্সড দল</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Failed to `chown` APK to system owner, please try again.</string>
     <string name="install_error_downloading">%1$s ডাউনলোড করার সময় ত্রুটি</string>

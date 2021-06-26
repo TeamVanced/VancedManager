@@ -1,193 +1,205 @@
 package com.vanced.manager.ui.layouts
 
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Circle
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.vanced.manager.ui.composables.HeaderCard
-import com.vanced.manager.ui.composables.ManagerCard
-import com.vanced.manager.ui.composables.ManagerLazyColumn
-import com.vanced.manager.ui.composables.managerTextColor
-import com.vanced.manager.ui.theme.ComposeTestTheme
-import com.vanced.manager.ui.theme.vancedBlue
-import com.vanced.manager.ui.theme.vancedRed
+import androidx.compose.ui.util.fastForEach
+import com.vanced.manager.R
+import com.vanced.manager.ui.components.card.ManagerLinkCard
+import com.vanced.manager.ui.components.card.ManagerThemedCard
+import com.vanced.manager.ui.components.layout.ManagerScrollableColumn
+import com.vanced.manager.ui.components.layout.ScrollableItemRow
+import com.vanced.manager.ui.components.lifecycle.managerString
+import com.vanced.manager.ui.components.list.ManagerListItem
+import com.vanced.manager.ui.components.text.ManagerText
+import com.vanced.manager.ui.widgets.layout.CategoryLayout
+
+data class Person(
+    val name: String,
+    val contribution: String
+)
 
 data class Credit(
-    val creditName: String,
-    val persons: List<String>
+    @StringRes val nameId: Int,
+    val persons: List<Person>
 )
 
 data class Source(
-    val sourceLink: String
+    @StringRes val nameId: Int,
+    @DrawableRes val iconId: Int,
+    val link: String
 )
 
 private val credits = listOf(
     Credit(
-        creditName = "Vanced Team",
+        nameId = R.string.about_category_credits_vanced_team,
         persons = listOf(
-            "xfileFIN",
-            "ZaneZam",
-            "Laura Almeida",
-            "KevinX8"
+            Person(
+                name = "xfileFIN",
+                contribution = "Mods, Theming, Support"
+            ),
+            Person(
+                name = "Laura",
+                contribution = "Theming, Support"
+            ),
+            Person(
+                name = "ZaneZam",
+                contribution = "Publishing, Support"
+            ),
+            Person(
+                name = "KevinX8",
+                contribution = "Overlord, Support"
+            )
         )
     ),
     Credit(
-        creditName = "Manager Team",
+        nameId = R.string.about_category_credits_manager_devs,
         persons = listOf(
-            "Xinto",
-            "Koopah",
-            "Logan"
+            Person(
+                name = "Xinto",
+                contribution = "Manager Core"
+            ),
+            Person(
+                name = "Koopah",
+                contribution = "Root installer"
+            ),
+            Person(
+                name = "Logan",
+                contribution = "UI"
+            ),
+            Person(
+                name = "HaliksaR",
+                contribution = "Refactoring, UI"
+            ),
         )
     ),
     Credit(
-        creditName = "Other Contributors",
+        nameId = R.string.about_category_credits_other,
         persons = listOf(
-            "bhatVikrant",
-            "bawm",
-            "AioiLight",
-            "HaliksaR"
+            Person(
+                name = "bhatVikrant",
+                contribution = "Website"
+            ),
+            Person(
+                name = "bawm",
+                contribution = "Sponsorblock"
+            ),
+            Person(
+                name = "cane",
+                contribution = "Sponsorblock"
+            ),
         )
     )
 )
 
 private val sources = listOf(
     Source(
-        ""
+        nameId = R.string.about_sources_source_code,
+        iconId = R.drawable.ic_github,
+        link = "https://github.com/YTVanced/VancedManager"
     ),
     Source(
-        ""
+        nameId = R.string.about_sources_license,
+        iconId = R.drawable.ic_round_assignment_24,
+        link = "https://raw.githubusercontent.com/YTVanced/VancedManager/dev/LICENSE"
     )
 )
 
-@ExperimentalStdlibApi
-@Composable
-@Preview(
-    showSystemUi = true,
-    uiMode = UI_MODE_NIGHT_YES
-)
-fun AboutDarkMode() {
-    ComposeTestTheme {
-        AboutLayout()
-    }
-}
-
-@ExperimentalStdlibApi
-@Composable
-@Preview(
-    showSystemUi = true
-)
-fun AboutLightMode() {
-    MaterialTheme {
-        AboutLayout()
-    }
-}
-
-@ExperimentalStdlibApi
 @Composable
 fun AboutLayout() {
-    ManagerLazyColumn {
-        item {
-            ManagerCard {
-                Column(
-                    modifier = Modifier
-                        .background(
-                            Brush.horizontalGradient(
-                                colors = listOf(
-                                    vancedBlue,
-                                    vancedRed
-                                ),
-                            )
-                        )
-                ) {
-                    Spacer(modifier = Modifier.size(width = 0.dp, height = 8.dp))
-                    Text(
-                        text = "Vanced Manager",
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth(),
-                        fontSize = 30.sp,
-                        color = Color.White
-                    )
-                    Text(
-                        text = buildAnnotatedString {
-                            append("Re")
-                            withStyle(style = SpanStyle(Color(0xFFBBB529))) {
-                                append("@Compose")
+    ManagerScrollableColumn(
+        itemSpacing = 12.dp
+    ) {
+        AboutManagerCard()
+        credits.fastForEach { credit ->
+            CategoryLayout(
+                categoryNameId = credit.nameId,
+                categoryNameSpacing = 4.dp
+            ) {
+                Column {
+                    credit.persons.fastForEach { person ->
+                        ManagerListItem(
+                            title = {
+                                ManagerText(
+                                    text = person.name,
+                                    textStyle = MaterialTheme.typography.h6
+                                )
+                            },
+                            description = {
+                                ManagerText(
+                                    text = person.contribution,
+                                    textStyle = MaterialTheme.typography.subtitle1
+                                )
                             }
-                            append("d")
-                        },
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth(),
-                        fontSize = 16.sp,
-                        color = Color.White
-                    )
-                    Spacer(modifier = Modifier.size(width = 0.dp, height = 8.dp))
+                        )
+                    }
                 }
             }
         }
-
-        items(credits) { credit ->
-            Spacer(modifier = Modifier.size(width = 0.dp, height = 12.dp))
-            CreditsCard(creditName = credit.creditName, persons = credit.persons)
-        }
-
-        item {
-            Spacer(modifier = Modifier.size(width = 0.dp, height = 12.dp))
-            HeaderCard(
-                headerName = "Sources"
-            ) {
-                Row(modifier = Modifier.fillMaxWidth()) {
-                    sources.forEach { _ ->
-                        Box(
-                            modifier = Modifier.weight(1f),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Icon(imageVector = Icons.Default.Circle, contentDescription = null, modifier = Modifier.size(36.dp))
-                        }
-                    }
-                }
-                Spacer(modifier = Modifier.size(8.dp))
+        CategoryLayout(categoryNameId = R.string.about_category_sources) {
+            ScrollableItemRow(items = sources) { source ->
+                ManagerLinkCard(
+                    title = managerString(source.nameId),
+                    icon = source.iconId,
+                    link = source.link
+                )
             }
         }
     }
 }
 
 @Composable
-@ExperimentalStdlibApi
-fun CreditsCard(
-    creditName: String,
-    persons: List<String>
-) {
-    HeaderCard(
-        headerName = creditName
-    ) {
-        CompositionLocalProvider(
-            LocalContentAlpha provides ContentAlpha.medium,
-            LocalContentColor provides managerTextColor()
+fun AboutManagerCard() {
+    ManagerThemedCard {
+        Column(
+            modifier = Modifier
+//                .clip(managerShape())
+//                .background(
+//                    Brush.horizontalGradient(
+//                        colors = listOf(
+//                            vancedBlue,
+//                            vancedRed
+//                        )
+//                    )
+//                )
         ) {
             Text(
-                text = persons.joinToString("\n"),
+                text = "Vanced Manager",
+                textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 12.dp),
-                fontSize = 13.sp
+                    .padding(top = 8.dp),
+                fontSize = 30.sp,
+                color = Color.White
+            )
+            Text(
+                text = buildAnnotatedString {
+                    append("Re")
+                    withStyle(style = SpanStyle(Color(0xFFBBB529))) {
+                        append("@Compose")
+                    }
+                    append("d")
+                },
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 8.dp),
+                fontSize = 16.sp,
+                color = Color.White
             )
         }
-        Spacer(modifier = Modifier.size(width = 0.dp, height = 2.dp))
     }
 }

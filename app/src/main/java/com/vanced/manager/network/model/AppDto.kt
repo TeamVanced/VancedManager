@@ -11,6 +11,7 @@ data class AppDto(
     @SerializedName("package_name_root") val packageNameRoot: String? = null,
     @SerializedName("icon_url") val iconUrl: String? = null,
     @SerializedName("url") val url: String? = null,
+    @SerializedName("versions") val versions: List<String>? = null,
     @SerializedName("themes") val themes: List<String>? = null,
     @SerializedName("languages") val languages: List<String>? = null
 )

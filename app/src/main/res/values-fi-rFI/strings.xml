@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Reinstall</string>
     <string name="accessibility_app_uninstall">Uninstall</string>
     <string name="accessibility_app_update">Update</string>
-    <string name="home_header_apps">Sovellukset</string>
+    <string name="home_category_apps">Sovellukset</string>
     <string name="app_info_changelog_header">Muutoshistoria</string>
     <string name="app_download_dialog_downloading_file">Ladataan %1$s</string>
     <string name="app_options_install">Asenna</string>
     <string name="latest">Uusin:</string>
     <string name="app_microg_error">Asenna Vanced microG ensin</string>
     <string name="root_not_granted">Pääkäyttäjän oikeuksia ei ole annettu</string>
-    <string name="home_header_social_media">Sosiaalinen media</string>
-    <string name="home_header_support_us">Tue meitä</string>
+    <string name="home_category_social_media">Sosiaalinen media</string>
+    <string name="home_category_support_us">Tue meitä</string>
     <string name="app_content_unavailable">Ei saatavilla</string>
     <string name="version_installed">Asennettu:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Musta</string>
     <string name="app_theme_dialog_option_dark">Tumma</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Managerin kehittäjät</string>
-    <string name="about_credits_other">Muut avustajat</string>
-    <string name="about_sources">Lähdekoodi</string>
-    <string name="about_credits_vanced_team">Vanced kehitystiimi</string>
+    <string name="about_category_credits_manager_devs">Managerin kehittäjät</string>
+    <string name="about_category_credits_other">Muut avustajat</string>
+    <string name="about_category_sources">Lähdekoodi</string>
+    <string name="about_category_credits_vanced_team">Vanced kehitystiimi</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Ei voitu `chown` APK järjestelmän omistajalle, yritä uudelleen.</string>
     <string name="install_error_downloading">%1$s lataus epäonnistui</string>

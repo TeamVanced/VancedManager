@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Herinstalleren</string>
     <string name="accessibility_app_uninstall">Verwijderen</string>
     <string name="accessibility_app_update">Bijwerken</string>
-    <string name="home_header_apps">Apps</string>
+    <string name="home_category_apps">Apps</string>
     <string name="app_info_changelog_header">Wijzigingen</string>
     <string name="app_download_dialog_downloading_file">%1$s downloaden</string>
     <string name="app_options_install">Installeren</string>
     <string name="latest">Recentste:</string>
     <string name="app_microg_error">Installeer eerst Vanced microG</string>
     <string name="root_not_granted">Root machtiging niet toegestaan</string>
-    <string name="home_header_social_media">Sociale media</string>
-    <string name="home_header_support_us">Steun ons</string>
+    <string name="home_category_social_media">Sociale media</string>
+    <string name="home_category_support_us">Steun ons</string>
     <string name="app_content_unavailable">Niet beschikbaar</string>
     <string name="version_installed">Geïnstalleerd:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Zwart</string>
     <string name="app_theme_dialog_option_dark">Donker</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Ontwikkelaars Manager</string>
-    <string name="about_credits_other">Andere bijdrages</string>
-    <string name="about_sources">Bronnen</string>
-    <string name="about_credits_vanced_team">Vanced Team</string>
+    <string name="about_category_credits_manager_devs">Ontwikkelaars Manager</string>
+    <string name="about_category_credits_other">Andere bijdrages</string>
+    <string name="about_category_sources">Bronnen</string>
+    <string name="about_category_credits_vanced_team">Vanced Team</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Wijzigen van APK-eigenaar naar systeemeigenaar mislukt. Probeer het opnieuw.</string>
     <string name="install_error_downloading">Fout bij downloaden van %1$s</string>

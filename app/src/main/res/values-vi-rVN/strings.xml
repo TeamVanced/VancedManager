@@ -30,15 +30,15 @@
     <string name="accessibility_app_reinstall">Cài đặt lại</string>
     <string name="accessibility_app_uninstall">Gỡ cài đặt</string>
     <string name="accessibility_app_update">Cập nhật</string>
-    <string name="home_header_apps">Các ứng dụng</string>
+    <string name="home_category_apps">Các ứng dụng</string>
     <string name="app_info_changelog_header">Các thay đổi</string>
     <string name="app_download_dialog_downloading_file">Đang tải xuống %1$s</string>
     <string name="app_options_install">Cài đặt</string>
     <string name="latest">Mới nhất:</string>
     <string name="app_microg_error">Bạn phải cài Vanced microG trước</string>
     <string name="root_not_granted">Quyền root không được cấp</string>
-    <string name="home_header_social_media">Mạng xã hội</string>
-    <string name="home_header_support_us">Hỗ trợ chúng tôi</string>
+    <string name="home_category_social_media">Mạng xã hội</string>
+    <string name="home_category_support_us">Hỗ trợ chúng tôi</string>
     <string name="app_content_unavailable">Chưa cài</string>
     <string name="version_installed">Đã cài đặt:</string>
     <!-- Settings -->
@@ -95,10 +95,10 @@
     <string name="app_theme_dialog_option_black">Đen</string>
     <string name="app_theme_dialog_option_dark">Tối</string>
     <!-- About Page -->
-    <string name="about_credits_manager_devs">Đội ngũ phát triển</string>
-    <string name="about_credits_other">Những người đóng góp khác</string>
-    <string name="about_sources">Nguồn</string>
-    <string name="about_credits_vanced_team">Đội ngũ Vanced</string>
+    <string name="about_category_credits_manager_devs">Đội ngũ phát triển</string>
+    <string name="about_category_credits_other">Những người đóng góp khác</string>
+    <string name="about_category_sources">Nguồn</string>
+    <string name="about_category_credits_vanced_team">Đội ngũ Vanced</string>
     <!-- Error messages -->
     <string name="install_error_chown_fail">Thay đổi quyền sở hữu APK cho chủ hệ thống thất bại, vui lòng thử lại.</string>
     <string name="install_error_downloading">Lỗi khi tải xuống %1$s</string>

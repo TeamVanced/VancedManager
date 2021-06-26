@@ -18,15 +18,4 @@ class JsonDtoMapper(
             )
         }
 
-    override suspend fun mapFromModel(model: Json): JsonDto =
-        with (model) {
-            JsonDto(
-                isMicrogBroken = isMicrogBroken,
-                manager = appDtoMapper.mapFromModel(manager),
-                vanced = appDtoMapper.mapFromModel(vanced),
-                music = appDtoMapper.mapFromModel(music),
-                microg = appDtoMapper.mapFromModel(microg)
-            )
-        }
-
 }

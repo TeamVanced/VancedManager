@@ -10,9 +10,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.vanced.manager.ui.composables.ManagerLazyColumn
-import com.vanced.manager.ui.composables.managerAccentColor
-import com.vanced.manager.ui.composables.managerSurfaceColor
+import com.vanced.manager.ui.components.color.managerAccentColor
+import com.vanced.manager.ui.components.color.managerSurfaceColor
+import com.vanced.manager.ui.components.layout.ManagerLazyColumn
 import com.vanced.manager.util.logs
 
 @Composable
