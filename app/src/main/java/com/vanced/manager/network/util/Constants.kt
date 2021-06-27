@@ -7,8 +7,8 @@ const val VANCED_NAME = "YouTube Vanced"
 const val MUSIC_NAME = "YouTube Vanced Music"
 const val MICROG_NAME = "Vanced microG"
 
-const val BRAVE = ""
-const val ADGUARD = ""
+const val BRAVE = "https://vancedapp.com/brave"
+const val ADGUARD = "https://adguard.com/?aid=31141&source=manager"
 
 const val INSTAGRAM = "https://instagram.com/vanced.youtube"
 const val YOUTUBE = "https://youtube.com/c/YouTubeVanced"
