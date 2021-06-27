@@ -12,8 +12,13 @@
 #   public *;
 #}
 
--keep class com.vanced.manager.core.App
--keep class com.crowdin.platform.* { *; }
+-keep class com.vanced.manager.network.model.AppDto {
+     *;
+}
+
+-keep class com.vanced.manager.network.model.JsonDto {
+     *;
+}
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
