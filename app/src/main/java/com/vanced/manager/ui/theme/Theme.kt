@@ -10,14 +10,14 @@ import com.vanced.manager.ui.preferences.holder.managerThemePref
 const val defAccentColor = 0xFF0477E1
 
 private val DarkColorPalette = darkColors(
-    primary = accentColor,
-    primaryVariant = accentColorVariant,
+    primary = primaryColor,
+    primaryVariant = primaryColorVariant,
     onSurface = darkOnSurface
 )
 
 private val LightColorPalette = lightColors(
-    primary = accentColor,
-    primaryVariant = accentColorVariant,
+    primary = primaryColor,
+    primaryVariant = primaryColorVariant,
     surface = lightSurface,
     onSurface = lightOnSurface
 )

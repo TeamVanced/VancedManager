@@ -6,6 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
@@ -15,8 +16,10 @@ import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.vanced.manager.R
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.ui.components.card.ManagerLinkCard
+import com.vanced.manager.ui.components.color.managerAccentColor
 import com.vanced.manager.ui.components.layout.ManagerScrollableColumn
 import com.vanced.manager.ui.components.layout.ScrollableItemRow
+import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 import com.vanced.manager.ui.utils.defaultContentPaddingVertical
 import com.vanced.manager.ui.viewmodel.HomeViewModel
 import com.vanced.manager.ui.widgets.home.apps.card.AppCard
@@ -39,7 +42,7 @@ fun HomeLayout() {
                 state = state,
                 refreshTriggerDistance = trigger,
                 scale = true,
-                contentColor = MaterialTheme.colors.primary
+                contentColor = managerAccentColor()
             )
         }
     ) {

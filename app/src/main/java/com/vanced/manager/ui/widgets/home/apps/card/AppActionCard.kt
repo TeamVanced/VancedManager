@@ -27,44 +27,42 @@ fun AppActionCard(
     showInstallationOptions: MutableState<Boolean>,
     hasInstallationOptions: Boolean
 ) {
-    ThemedCardContentColorProvider {
-        Row(
-            modifier = Modifier.padding(horizontal = defaultContentPaddingHorizontal, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically
+    Row(
+        modifier = Modifier.padding(horizontal = defaultContentPaddingHorizontal, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .wrapContentWidth(Alignment.Start),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .wrapContentWidth(Alignment.Start),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
-            ) {
-                ManagerText(stringId = R.string.app_versions)
-                AppVersionText(
-                    stringId = R.string.app_version_latest,
-                    version = appRemoteVersion
-                )
-                AppVersionText(
-                    stringId = R.string.app_version_installed,
-                    version = appInstalledVersion
-                )
+            ManagerText(stringId = R.string.app_versions)
+            AppVersionText(
+                stringId = R.string.app_version_latest,
+                version = appRemoteVersion
+            )
+            AppVersionText(
+                stringId = R.string.app_version_installed,
+                version = appInstalledVersion
+            )
+        }
+        Row(
+            modifier = Modifier
+                .weight(1f)
+                .padding(start = 4.dp)
+                .wrapContentWidth(Alignment.End)
+        ) {
+            IconButton(icon = Icons.Outlined.Info, contentDescription = "App Info") {
+                showAppInfo.value = true
             }
-            Row(
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(start = 4.dp)
-                    .wrapContentWidth(Alignment.End)
-            ) {
-                IconButton(icon = Icons.Outlined.Info, contentDescription = "App Info") {
-                    showAppInfo.value = true
-                }
-                IconButton(icon = Icons.Rounded.DeleteForever, contentDescription = "Uninstall") {}
-                IconButton(icon = Icons.Rounded.Launch, contentDescription = "Launch") {}
-                IconButton(icon = Icons.Rounded.Download, contentDescription = "Install") {
-                    if (hasInstallationOptions) {
-                        showInstallationOptions.value = true
-                    } else {
-                        showDownloadDialog.value = true
-                    }
+            IconButton(icon = Icons.Rounded.DeleteForever, contentDescription = "Uninstall") {}
+            IconButton(icon = Icons.Rounded.Launch, contentDescription = "Launch") {}
+            IconButton(icon = Icons.Rounded.Download, contentDescription = "Install") {
+                if (hasInstallationOptions) {
+                    showInstallationOptions.value = true
+                } else {
+                    showDownloadDialog.value = true
                 }
             }
         }

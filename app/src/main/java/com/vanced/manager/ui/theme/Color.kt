@@ -1,10 +1,11 @@
 package com.vanced.manager.ui.theme
 
 import androidx.compose.ui.graphics.Color
+import com.vanced.manager.ui.components.color.managerAccentColor
 import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
-val accentColor = Color(managerAccentColorPref.value.value)
-val accentColorVariant = accentColor.copy(alpha = 0.25f)
+val primaryColor = Color(defAccentColor)
+val primaryColorVariant = primaryColor.copy(alpha = 0.25f)
 
 val darkOnSurface = Color(0xFFD5D5D5)
 

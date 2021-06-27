@@ -14,11 +14,14 @@ import androidx.compose.material.icons.rounded.Done
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.components.card.ManagerCard
 import com.vanced.manager.ui.components.color.contentColorForColor
+import com.vanced.manager.ui.components.color.managerAccentColor
 import com.vanced.manager.ui.components.color.managerAnimatedColor
 import com.vanced.manager.ui.components.color.managerThemedCardColor
+import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
 @SuppressLint("UnusedTransitionTargetStateParameter")
 @Composable
@@ -26,7 +29,7 @@ fun ManagerCheckbox(
     isChecked: Boolean,
     onCheckedChange: (isChecked: Boolean) -> Unit
 ) {
-    val accentColor = MaterialTheme.colors.primary
+    val accentColor = managerAccentColor()
     val transition = updateTransition(targetState = isChecked, label = "Checked")
     val cardSize by transition.animateDp(
         transitionSpec = {

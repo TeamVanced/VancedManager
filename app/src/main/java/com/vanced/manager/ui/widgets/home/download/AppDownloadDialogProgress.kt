@@ -3,11 +3,13 @@ package com.vanced.manager.ui.widgets.home.download
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.LinearProgressIndicator
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import com.vanced.manager.ui.components.color.managerAccentColor
+import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
 @Composable
 fun AppDownloadDialogProgress(
@@ -18,10 +20,10 @@ fun AppDownloadDialogProgress(
 ) {
     if (showProgress) {
         when (installing) {
-            true -> LinearProgressIndicator(color = MaterialTheme.colors.primary)
+            true -> LinearProgressIndicator(color = managerAccentColor())
             false -> LinearProgressIndicator(
                 progress = progress,
-                color = MaterialTheme.colors.primary
+                color = managerAccentColor()
             )
         }
         Row {
