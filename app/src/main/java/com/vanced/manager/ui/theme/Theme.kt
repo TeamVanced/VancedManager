@@ -12,6 +12,7 @@ const val defAccentColor = 0xFF0477E1
 private val DarkColorPalette = darkColors(
     primary = accentColor,
     primaryVariant = accentColorVariant,
+    onSurface = darkOnSurface
 )
 
 private val LightColorPalette = lightColors(
