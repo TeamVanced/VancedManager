@@ -2,32 +2,34 @@ package com.vanced.manager.ui.components.preference
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
 import com.vanced.manager.ui.components.button.ManagerThemedTextButton
-import com.vanced.manager.ui.components.list.RadiobuttonItem
+import com.vanced.manager.ui.components.list.CheckboxItem
+import com.vanced.manager.ui.preferences.CheckboxPreference
 import com.vanced.manager.ui.preferences.ManagerPreference
-import com.vanced.manager.ui.preferences.RadioButtonPreference
 import kotlinx.coroutines.launch
 
 @Composable
-fun RadiobuttonDialogPreference(
+fun CheckboxDialogPreference(
     @StringRes preferenceTitle: Int,
-    preference: ManagerPreference<String>,
+    @StringRes preferenceDescription: Int? = null,
+    preference: ManagerPreference<Set<String>>,
     trailing: @Composable () -> Unit = {},
-    buttons: List<RadioButtonPreference>,
-    onSave: (newPref: String?) -> Unit = {}
+    buttons: List<CheckboxPreference>,
+    onSave: (checkedButtons: List<String>) -> Unit = {}
 ) {
+    val selectedButtons = remember { preference.value.value.toMutableStateList() }
     val coroutineScope = rememberCoroutineScope()
-    var currentSelection by remember { mutableStateOf(preference.value.value) }
     DialogPreference(
         preferenceTitleId = preferenceTitle,
-        preferenceDescription = currentSelection,
+        preferenceDescriptionId = preferenceDescription,
         trailing = trailing,
         buttons = { isShown ->
             ManagerThemedTextButton(
@@ -36,24 +38,27 @@ fun RadiobuttonDialogPreference(
                 onClick = {
                     coroutineScope.launch {
                         isShown.value = false
-                        preference.save(currentSelection)
-                        onSave(currentSelection)
+                        preference.save(selectedButtons.toSet())
+                        onSave(selectedButtons)
                     }
                 }
             )
         }
     ) {
         LazyColumn(
-            modifier = Modifier.heightIn(max = 400.dp)
+            modifier = Modifier
         ) {
             items(buttons) { button ->
                 val (title, key) = button
-                RadiobuttonItem(
+                CheckboxItem(
                     text = title,
-                    tag = key,
-                    selected = currentSelection == key,
-                    onSelect = {
-                        currentSelection = it
+                    isChecked = selectedButtons.contains(key),
+                    onCheck = { isChecked ->
+                        if (isChecked) {
+                            selectedButtons.add(key)
+                        } else {
+                            selectedButtons.remove(key)
+                        }
                     }
                 )
             }
