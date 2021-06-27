@@ -23,6 +23,7 @@ import com.vanced.manager.ui.components.color.managerAnimatedColor
 import com.vanced.manager.ui.components.color.managerSurfaceColor
 import com.vanced.manager.ui.components.color.managerTextColor
 import com.vanced.manager.ui.components.menu.ManagerDropdownMenuItem
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.screens.Screen
 import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
@@ -90,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         val currentScreenRoute = navController.currentBackStackEntryAsState().value?.destination?.route
         TopAppBar(
             title = {
-                ToolbarTitleText(screens.find { it.route == currentScreenRoute }?.displayName)
+                ToolbarTitleText(managerString(stringId = screens.find { it.route == currentScreenRoute }?.displayName))
             },
             backgroundColor = managerAnimatedColor(color = MaterialTheme.colors.surface),
             actions = {

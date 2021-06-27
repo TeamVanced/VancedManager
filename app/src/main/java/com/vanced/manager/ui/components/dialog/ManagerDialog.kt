@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.components.dialog
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -14,27 +13,6 @@ import androidx.compose.ui.window.Dialog
 import com.vanced.manager.ui.components.card.ManagerCard
 import com.vanced.manager.ui.components.text.ManagerText
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
-
-@Composable
-fun ManagerDialog(
-    @StringRes titleId: Int,
-    onDismissRequest: () -> Unit,
-    buttons: @Composable ColumnScope.() -> Unit,
-    content: @Composable ColumnScope.() -> Unit,
-) {
-    ManagerDialog(
-        title = {
-            ManagerText(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
-                stringId = titleId,
-                textStyle = MaterialTheme.typography.h2
-            )
-        },
-        onDismissRequest = onDismissRequest,
-        buttons = buttons,
-        content = content
-    )
-}
 
 @Composable
 fun ManagerDialog(

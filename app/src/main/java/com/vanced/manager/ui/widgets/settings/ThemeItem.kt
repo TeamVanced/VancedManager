@@ -5,25 +5,41 @@ import com.vanced.manager.R
 import com.vanced.manager.ui.components.preference.RadiobuttonDialogPreference
 import com.vanced.manager.ui.preferences.RadioButtonPreference
 import com.vanced.manager.ui.preferences.holder.managerThemePref
+import com.vanced.manager.ui.resources.managerString
 
 @Composable
 fun ThemeSettingsItem() {
+    val lightTheme = managerString(stringId = R.string.settings_preference_theme_light)
+    val darkTheme = managerString(stringId = R.string.settings_preference_theme_dark)
+    val sysDefTheme = managerString(stringId = R.string.settings_option_system_default)
+
+    val lightKey = "Light"
+    val darkKey = "Dark"
+    val sysDefKey = "System Default"
+
     RadiobuttonDialogPreference(
-        preferenceTitle = R.string.settings_preference_theme_title,
+        preferenceTitle = managerString(stringId = R.string.settings_preference_theme_title),
         preference = managerThemePref,
         buttons = listOf(
             RadioButtonPreference(
-                title = "Light Theme",
-                key = "Light"
+                title = lightTheme,
+                key = lightKey
             ),
             RadioButtonPreference(
-                title = "Dark Theme",
-                key = "Dark"
+                title = darkTheme,
+                key = darkKey
             ),
             RadioButtonPreference(
-                title = "System Default",
-                key = "System Default"
+                title = sysDefTheme,
+                key = sysDefKey
             )
-        )
+        ),
+        preferenceDescriptionConverter = {
+            when (it) {
+                lightKey -> lightTheme
+                darkKey -> darkTheme
+                else -> sysDefTheme
+            }
+        }
     )
 }

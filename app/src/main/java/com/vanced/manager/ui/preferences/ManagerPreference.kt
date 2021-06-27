@@ -27,6 +27,10 @@ class ManagerPreference<T>(
 
     operator fun getValue(thisRef: Any?, property: KProperty<*>) = value.value
 
+    operator fun setValue(thisRef: Any?, property: KProperty<*>, newValue: T) {
+        save(newValue)
+    }
+
     fun save(newValue: T) {
         _value.value = newValue
         sharedPreferences.edit {
@@ -34,7 +38,7 @@ class ManagerPreference<T>(
         }
     }
 
-    //It's Chewsday innit - © Bri'ish ppl
+    //It's Chewsday innit
     init {
         _value.value = getter(sharedPreferences)
     }

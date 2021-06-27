@@ -10,11 +10,11 @@ import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
 
 @Composable
 fun CategoryTitleText(
-    @StringRes stringId: Int
+    text: String
 ) {
     ManagerText(
         modifier = Modifier.padding(start = defaultContentPaddingHorizontal),
-        stringId = stringId,
+        text = text,
         textStyle = MaterialTheme.typography.h2,
         color = managerAnimatedColor(MaterialTheme.colors.onSurface)
     )

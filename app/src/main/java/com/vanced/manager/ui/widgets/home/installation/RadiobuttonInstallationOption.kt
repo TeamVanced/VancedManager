@@ -4,15 +4,16 @@ import androidx.annotation.StringRes
 import com.vanced.manager.ui.components.preference.RadiobuttonDialogPreference
 import com.vanced.manager.ui.preferences.ManagerPreference
 import com.vanced.manager.ui.preferences.RadioButtonPreference
+import com.vanced.manager.ui.resources.managerString
 
 data class RadiobuttonInstallationOption(
-    @StringRes val title: Int,
+    @StringRes val titleId: Int,
     val preference: ManagerPreference<String>,
     val buttons: List<RadioButtonPreference>
 ) : InstallationOption(
     item = {
         RadiobuttonDialogPreference(
-            preferenceTitle = title,
+            preferenceTitle = managerString(stringId = titleId),
             preference = preference,
             buttons = buttons
         )

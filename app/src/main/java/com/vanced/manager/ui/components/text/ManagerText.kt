@@ -6,23 +6,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
-import com.vanced.manager.ui.components.lifecycle.managerString
-
-@Composable
-fun ManagerText(
-    vararg formatArgs: Any,
-    modifier: Modifier = Modifier,
-    color: Color = Color.Unspecified,
-    textStyle: TextStyle = LocalTextStyle.current,
-    stringId: Int?,
-) {
-    ManagerText(
-        modifier = modifier,
-        color = color,
-        textStyle = textStyle,
-        text = managerString(stringId, *formatArgs),
-    )
-}
 
 @Composable
 fun ManagerText(

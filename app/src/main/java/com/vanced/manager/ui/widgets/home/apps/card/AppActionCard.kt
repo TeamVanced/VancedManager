@@ -10,10 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
 import com.vanced.manager.ui.components.button.IconButton
-import com.vanced.manager.ui.components.color.ThemedCardContentColorProvider
 import com.vanced.manager.ui.components.text.ManagerText
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
 import com.vanced.manager.ui.components.text.AppVersionText
@@ -37,14 +37,24 @@ fun AppActionCard(
                 .wrapContentWidth(Alignment.Start),
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
-            ManagerText(stringId = R.string.app_versions)
-            AppVersionText(
-                stringId = R.string.app_version_latest,
-                version = appRemoteVersion
+            ManagerText(
+                text = stringResource(id = R.string.app_versions)
             )
             AppVersionText(
-                stringId = R.string.app_version_installed,
-                version = appInstalledVersion
+                text = stringResource(
+                    id = R.string.app_version_latest,
+                    appRemoteVersion ?: stringResource(
+                        id = R.string.app_content_unavailable
+                    )
+                )
+            )
+            AppVersionText(
+                text = stringResource(
+                    id = R.string.app_version_installed,
+                    appInstalledVersion ?: stringResource(
+                        id = R.string.app_content_unavailable
+                    )
+                )
             )
         }
         Row(

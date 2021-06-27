@@ -23,7 +23,7 @@
 
     <!-- Settings Page-->
     <string name="settings_category_appearance">Appearance</string>
-    <string name="settings_category_behaviour">Behavior</string>
+    <string name="settings_category_behaviour">Behaviour</string>
     <string name="settings_option_system_default">System Default</string>
     <string name="settings_preference_accent_color_title">Accent Color</string>
     <string name="settings_preference_clear_files_title">Clear downloaded files</string>

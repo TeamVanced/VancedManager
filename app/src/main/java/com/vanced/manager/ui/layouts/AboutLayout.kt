@@ -3,16 +3,15 @@ package com.vanced.manager.ui.layouts
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -22,7 +21,7 @@ import com.vanced.manager.ui.components.card.ManagerLinkCard
 import com.vanced.manager.ui.components.card.ManagerThemedCard
 import com.vanced.manager.ui.components.layout.ManagerScrollableColumn
 import com.vanced.manager.ui.components.layout.ScrollableItemRow
-import com.vanced.manager.ui.components.lifecycle.managerString
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.components.list.ManagerListItem
 import com.vanced.manager.ui.components.text.ManagerText
 import com.vanced.manager.ui.widgets.layout.CategoryLayout
@@ -126,7 +125,7 @@ fun AboutLayout() {
         AboutManagerCard()
         credits.fastForEach { credit ->
             CategoryLayout(
-                categoryNameId = credit.nameId,
+                categoryName = managerString(stringId = credit.nameId),
                 categoryNameSpacing = 4.dp
             ) {
                 Column {
@@ -149,7 +148,11 @@ fun AboutLayout() {
                 }
             }
         }
-        CategoryLayout(categoryNameId = R.string.about_category_sources) {
+        CategoryLayout(
+            categoryName = managerString(
+                stringId = R.string.about_category_sources
+            ),
+        ) {
             ScrollableItemRow(items = sources) { source ->
                 ManagerLinkCard(
                     title = managerString(source.nameId),
@@ -165,25 +168,14 @@ fun AboutLayout() {
 fun AboutManagerCard() {
     ManagerThemedCard {
         Column(
-            modifier = Modifier
-//                .clip(managerShape())
-//                .background(
-//                    Brush.horizontalGradient(
-//                        colors = listOf(
-//                            vancedBlue,
-//                            vancedRed
-//                        )
-//                    )
-//                )
+            modifier = Modifier,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Vanced Manager",
-                textAlign = TextAlign.Center,
+                text = managerString(stringId = R.string.app_name),
                 modifier = Modifier
-                    .fillMaxWidth()
                     .padding(top = 8.dp),
                 fontSize = 30.sp,
-                color = Color.White
             )
             Text(
                 text = buildAnnotatedString {
@@ -193,12 +185,9 @@ fun AboutManagerCard() {
                     }
                     append("d")
                 },
-                textAlign = TextAlign.Center,
                 modifier = Modifier
-                    .fillMaxWidth()
                     .padding(bottom = 8.dp),
                 fontSize = 16.sp,
-                color = Color.White
             )
         }
     }

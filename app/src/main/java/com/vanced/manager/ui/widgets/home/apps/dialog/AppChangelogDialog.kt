@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.widgets.home.apps.dialog
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -8,10 +7,10 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
-import com.vanced.manager.ui.components.button.ManagerThemedTextButton
 import com.vanced.manager.ui.components.dialog.ManagerDialog
-import com.vanced.manager.ui.components.lifecycle.managerString
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.components.text.ManagerText
+import com.vanced.manager.ui.widgets.button.ManagerCloseButton
 
 @Composable
 fun AppChangelogDialog(
@@ -24,10 +23,7 @@ fun AppChangelogDialog(
             title = managerString(R.string.app_info_title, appName),
             onDismissRequest = { showDialog.value = false },
             buttons = {
-                ManagerThemedTextButton(
-                    modifier = Modifier.fillMaxWidth(),
-                    stringId = R.string.dialog_button_close
-                ) {
+                ManagerCloseButton {
                     showDialog.value = false
                 }
             }

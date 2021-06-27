@@ -1,11 +1,9 @@
 package com.vanced.manager.ui.widgets.home.download
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.ui.Modifier
-import com.vanced.manager.R
-import com.vanced.manager.ui.components.button.ManagerThemedTextButton
+import com.vanced.manager.ui.widgets.button.ManagerCancelButton
+import com.vanced.manager.ui.widgets.button.ManagerDownloadButton
 
 @Composable
 fun AppDownloadDialogButtons(
@@ -14,15 +12,7 @@ fun AppDownloadDialogButtons(
     onCancelClick: () -> Unit,
 ) {
     when (showProgress.value) {
-        true -> ManagerThemedTextButton(
-            stringId = R.string.dialog_button_cancel,
-            modifier = Modifier.fillMaxWidth(),
-            onClick = onCancelClick
-        )
-        false -> ManagerThemedTextButton(
-            stringId = R.string.app_download_dialog_confirm,
-            modifier = Modifier.fillMaxWidth(),
-            onClick = onDownloadClick
-        )
+        true -> ManagerCancelButton(onClick = onCancelClick)
+        false -> ManagerDownloadButton(onClick = onDownloadClick)
     }
 }

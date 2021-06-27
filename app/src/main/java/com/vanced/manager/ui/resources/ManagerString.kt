@@ -1,4 +1,4 @@
-package com.vanced.manager.ui.components.lifecycle
+package com.vanced.manager.ui.resources
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable

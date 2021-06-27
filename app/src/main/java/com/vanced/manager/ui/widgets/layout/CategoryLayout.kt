@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.widgets.layout
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,7 +10,7 @@ import com.vanced.manager.ui.components.text.CategoryTitleText
 
 @Composable
 fun CategoryLayout(
-    @StringRes categoryNameId: Int,
+    categoryName: String,
     contentPaddingHorizontal: Dp = defaultContentPaddingHorizontal,
     categoryNameSpacing: Dp = defaultContentPaddingVertical,
     content: @Composable () -> Unit,
@@ -20,7 +19,7 @@ fun CategoryLayout(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(categoryNameSpacing),
     ) {
-        CategoryTitleText(stringId = categoryNameId)
+        CategoryTitleText(text = categoryName)
         Box(
             modifier = Modifier.padding(horizontal = contentPaddingHorizontal)
         ) {

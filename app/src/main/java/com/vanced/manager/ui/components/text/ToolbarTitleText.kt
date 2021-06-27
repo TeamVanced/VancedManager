@@ -6,10 +6,10 @@ import com.vanced.manager.ui.components.color.managerAnimatedColor
 
 @Composable
 fun ToolbarTitleText(
-    stringId: Int?
+    text: String
 ) {
     ManagerText(
-        stringId = stringId,
+        text = text,
         textStyle = MaterialTheme.typography.h1,
         color = managerAnimatedColor(MaterialTheme.colors.onSurface)
     )

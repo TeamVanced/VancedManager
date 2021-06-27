@@ -13,7 +13,7 @@ import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 fun ManagerThemedTextButton(
     modifier: Modifier = Modifier,
     backgroundColor: Color = managerAccentColor(),
-    @StringRes stringId: Int,
+    text: String,
     onClick: () -> Unit
 ) {
     ManagerThemedButton(
@@ -21,6 +21,6 @@ fun ManagerThemedTextButton(
         backgroundColor = backgroundColor,
         onClick = onClick
     ) {
-        ManagerText(stringId = stringId)
+        ManagerText(text = text)
     }
 }

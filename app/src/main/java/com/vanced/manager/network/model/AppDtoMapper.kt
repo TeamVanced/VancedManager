@@ -78,7 +78,7 @@ class AppDtoMapper(
         when (app.name) {
             VANCED_NAME -> listOf(
                 RadiobuttonInstallationOption(
-                    title = R.string.app_installation_options_theme,
+                    titleId = R.string.app_installation_options_theme,
                     preference = vancedThemePref,
                     buttons = app.versions?.map {
                         RadioButtonPreference(
@@ -88,7 +88,7 @@ class AppDtoMapper(
                     } ?: emptyList()
                 ),
                 RadiobuttonInstallationOption(
-                    title = R.string.app_installation_options_version,
+                    titleId = R.string.app_installation_options_version,
                     preference = vancedVersionPref,
                     buttons = app.versions?.map {
                         RadioButtonPreference(
@@ -98,7 +98,7 @@ class AppDtoMapper(
                     } ?: emptyList()
                 ),
                 CheckboxInstallationOption(
-                    title = R.string.app_installation_options_language,
+                    titleId = R.string.app_installation_options_language,
                     preference = vancedLanguagesPref,
                     buttons = app.versions?.map {
                         CheckboxPreference(
@@ -110,7 +110,7 @@ class AppDtoMapper(
             )
             MUSIC_NAME -> listOf(
                 RadiobuttonInstallationOption(
-                    title = R.string.app_installation_options_version,
+                    titleId = R.string.app_installation_options_version,
                     preference = musicVersionPref,
                     buttons = app.versions?.map {
                         RadioButtonPreference(
