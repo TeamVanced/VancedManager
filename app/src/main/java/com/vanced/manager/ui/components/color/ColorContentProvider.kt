@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.components.color
 
 import androidx.compose.material.LocalContentColor
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 
@@ -9,7 +10,7 @@ fun ThemedItemContentColorProvider(
     content: @Composable () -> Unit
 ) {
     CompositionLocalProvider(
-        LocalContentColor provides contentColorForColor(managerAccentColor()),
+        LocalContentColor provides contentColorForColor(MaterialTheme.colors.primary),
         content = content
     )
 }
@@ -19,7 +20,7 @@ fun ThemedCardContentColorProvider(
     content: @Composable () -> Unit
 ) {
     CompositionLocalProvider(
-        LocalContentColor provides contentColorForColor(managerThemedCardColor()),
+        LocalContentColor provides contentColorForColor(MaterialTheme.colors.primaryVariant),
         content = content
     )
 }
@@ -29,7 +30,7 @@ fun ThemedContentColorProvider(
     content: @Composable () -> Unit
 ) {
     CompositionLocalProvider(
-        LocalContentColor provides managerAccentColor(),
+        LocalContentColor provides MaterialTheme.colors.primary,
         content = content
     )
 }

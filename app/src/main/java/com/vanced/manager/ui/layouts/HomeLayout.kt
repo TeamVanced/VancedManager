@@ -2,6 +2,7 @@ package com.vanced.manager.ui.layouts
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
@@ -13,9 +14,7 @@ import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.vanced.manager.R
 import com.vanced.manager.domain.model.App
-import com.vanced.manager.ui.components.*
 import com.vanced.manager.ui.components.card.ManagerLinkCard
-import com.vanced.manager.ui.components.color.managerAccentColor
 import com.vanced.manager.ui.components.layout.ManagerScrollableColumn
 import com.vanced.manager.ui.components.layout.ScrollableItemRow
 import com.vanced.manager.ui.utils.defaultContentPaddingVertical
@@ -40,7 +39,7 @@ fun HomeLayout() {
                 state = state,
                 refreshTriggerDistance = trigger,
                 scale = true,
-                contentColor = managerAccentColor()
+                contentColor = MaterialTheme.colors.primary
             )
         }
     ) {

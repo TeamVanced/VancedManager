@@ -20,7 +20,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.vanced.manager.ui.components.color.managerAnimatedColor
-import com.vanced.manager.ui.components.color.managerCardColor
 import com.vanced.manager.ui.components.color.managerSurfaceColor
 import com.vanced.manager.ui.components.color.managerTextColor
 import com.vanced.manager.ui.components.menu.ManagerDropdownMenuItem
@@ -111,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                         onDismissRequest = {
                             isMenuExpanded.value = false
                         },
-                        modifier = Modifier.background(managerCardColor())
+                        modifier = Modifier.background(MaterialTheme.colors.surface)
                     ) {
                         screens.filter { it.route != currentScreenRoute }.forEach {
                             ManagerDropdownMenuItem(

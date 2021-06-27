@@ -6,10 +6,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
-import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
-import com.vanced.manager.ui.theme.cardColor
-
-fun managerAccentColor(): Color = Color(managerAccentColorPref.value.value)
 
 @Composable
 fun contentColorForColor(color: Color) =
@@ -19,19 +15,13 @@ fun contentColorForColor(color: Color) =
         Color.White
 
 @Composable
-fun managerThemedCardColor() = managerAccentColor().copy(alpha = 0.2f)
+fun managerThemedCardColor() = MaterialTheme.colors.primary.copy(alpha = 0.2f)
 
 @Composable
 fun managerTextColor(): Color = managerAnimatedColor(color = MaterialTheme.colors.onSurface)
 
 @Composable
 fun managerSurfaceColor(): Color = managerAnimatedColor(color = MaterialTheme.colors.surface)
-
-@Composable
-fun managerCardColor(): Color = managerAnimatedColor(color = MaterialTheme.colors.cardColor)
-
-@Composable
-fun animatedManagerAccentColor(): Color = managerAnimatedColor(color = managerAccentColor())
 
 @Composable
 fun managerAnimatedColor(

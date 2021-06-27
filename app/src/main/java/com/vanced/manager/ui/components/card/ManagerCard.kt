@@ -8,7 +8,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
-import com.vanced.manager.ui.components.color.managerCardColor
 
 @Composable
 fun ManagerCard(
@@ -31,7 +30,7 @@ fun ManagerCard(
 fun ManagerCard(
     modifier: Modifier = Modifier,
     shape: Shape = MaterialTheme.shapes.medium,
-    backgroundColor: Color = managerCardColor(),
+    backgroundColor: Color = MaterialTheme.colors.surface,
     onClick: () -> Unit,
     content: @Composable () -> Unit,
 ) {

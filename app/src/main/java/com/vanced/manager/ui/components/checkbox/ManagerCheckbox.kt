@@ -7,6 +7,7 @@ import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Done
@@ -16,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.components.card.ManagerCard
 import com.vanced.manager.ui.components.color.contentColorForColor
-import com.vanced.manager.ui.components.color.managerAccentColor
 import com.vanced.manager.ui.components.color.managerAnimatedColor
 import com.vanced.manager.ui.components.color.managerThemedCardColor
 
@@ -26,6 +26,7 @@ fun ManagerCheckbox(
     isChecked: Boolean,
     onCheckedChange: (isChecked: Boolean) -> Unit
 ) {
+    val accentColor = MaterialTheme.colors.primary
     val transition = updateTransition(targetState = isChecked, label = "Checked")
     val cardSize by transition.animateDp(
         transitionSpec = {
@@ -49,8 +50,8 @@ fun ManagerCheckbox(
         },
         label = "Icon size"
     ) { 24.dp }
-    val cardColor = managerAnimatedColor(if (isChecked) managerAccentColor() else managerThemedCardColor())
-    val iconTint = managerAnimatedColor(if (isChecked) contentColorForColor(cardColor) else managerAccentColor())
+    val cardColor = managerAnimatedColor(if (isChecked) accentColor else managerThemedCardColor())
+    val iconTint = managerAnimatedColor(if (isChecked) contentColorForColor(cardColor) else accentColor)
 
     ManagerCard(
         modifier = Modifier.size(cardSize),

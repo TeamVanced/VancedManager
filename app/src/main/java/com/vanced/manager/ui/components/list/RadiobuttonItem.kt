@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vanced.manager.ui.components.color.managerTextColor
-import com.vanced.manager.ui.theme.managerAccentColor
 
 @Composable
 fun <T> RadiobuttonItem(
@@ -39,7 +38,7 @@ fun <T> RadiobuttonItem(
             selected = selected,
             onClick = onClick,
             colors = RadioButtonDefaults.colors(
-                MaterialTheme.colors.managerAccentColor,
+                MaterialTheme.colors.primary,
                 Color.LightGray
             )
         )

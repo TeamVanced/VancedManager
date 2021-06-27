@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vanced.manager.ui.components.color.managerTextColor
-import com.vanced.manager.ui.theme.managerAccentColor
 
 @Composable
 fun CheckboxItem(
@@ -40,7 +39,7 @@ fun CheckboxItem(
                 toggle()
             },
             colors = CheckboxDefaults.colors(
-                MaterialTheme.colors.managerAccentColor,
+                MaterialTheme.colors.primary,
                 Color.LightGray
             )
         )

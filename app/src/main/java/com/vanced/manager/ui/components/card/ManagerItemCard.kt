@@ -15,7 +15,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vanced.manager.ui.components.color.ThemedItemContentColorProvider
-import com.vanced.manager.ui.components.color.managerAccentColor
 
 private val cardModifier = Modifier.sizeIn(
     minHeight = 95.dp,
@@ -53,9 +52,10 @@ private fun ManagerItemCardContent(
     title: String,
     @DrawableRes icon: Int? = null,
 ) {
+    val accentColor = MaterialTheme.colors.primary
     Canvas(modifier = Modifier.requiredSize(72.dp)) {
         drawCircle(
-            color = managerAccentColor(),
+            color = accentColor,
             center = Offset(32f,32f)
         )
     }
