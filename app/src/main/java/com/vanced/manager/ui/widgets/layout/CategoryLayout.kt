@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
 import com.vanced.manager.ui.utils.defaultContentPaddingVertical
-import com.vanced.manager.ui.widgets.text.CategoryTitleText
+import com.vanced.manager.ui.components.text.CategoryTitleText
 
 @Composable
 fun CategoryLayout(

@@ -16,7 +16,7 @@ import com.vanced.manager.ui.components.button.IconButton
 import com.vanced.manager.ui.components.color.ThemedCardContentColorProvider
 import com.vanced.manager.ui.components.text.ManagerText
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
-import com.vanced.manager.ui.widgets.text.AppVersionText
+import com.vanced.manager.ui.components.text.AppVersionText
 
 @Composable
 fun AppActionCard(
