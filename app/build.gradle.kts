@@ -101,6 +101,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-util:$composeVersion")
     implementation("androidx.compose.ui:ui:$composeVersion")
 
+    implementation("androidx.preference:preference-ktx:1.1.1")
+
     implementation("androidx.activity:activity-compose:1.3.0-beta02")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha02")
     implementation("androidx.navigation:navigation-compose:2.4.0-alpha03")
@@ -111,8 +113,6 @@ dependencies {
     implementation("com.google.accompanist:accompanist-placeholder-material:$accompanistVersion")
 
     implementation("com.github.skydoves:orchestra-colorpicker:$orchestraVersion")
-
-    implementation("androidx.datastore:datastore-preferences:1.0.0-beta02")
 
     implementation("io.insert-koin:koin-android:$koinVersion")
     implementation("io.insert-koin:koin-androidx-compose:$koinVersion")

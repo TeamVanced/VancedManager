@@ -3,9 +3,7 @@ package com.vanced.manager.ui.layouts
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.*
 import androidx.compose.ui.unit.dp
-import androidx.datastore.preferences.core.booleanPreferencesKey
 import com.vanced.manager.R
-import com.vanced.manager.ui.components.*
 import com.vanced.manager.ui.components.layout.ManagerScrollableColumn
 import com.vanced.manager.ui.components.preference.CheckboxPreference
 import com.vanced.manager.ui.components.preference.Preference
@@ -62,7 +60,7 @@ fun SettingsLayout() {
                             preferenceTitle = "$app Push Notifications",
                             preferenceDescription = "Receive push notifications when an update for $app is released",
                             preference = managerBooleanPreference(
-                                key = booleanPreferencesKey("${prefKey}_notifications"),
+                                key = "${prefKey}_notifications",
                                 defaultValue = true
                             )
                         )
