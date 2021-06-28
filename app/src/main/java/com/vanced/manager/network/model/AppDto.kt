@@ -6,12 +6,12 @@ data class AppDto(
     @SerializedName("name") val name: String? = null,
     @SerializedName("version") val version: String? = null,
     @SerializedName("versionCode") val versionCode: Int? = null,
-    @SerializedName("changelog") val changelog: String? = null,
-    @SerializedName("package_name") val packageName: String? = null,
-    @SerializedName("package_name_root") val packageNameRoot: String? = null,
-    @SerializedName("icon_url") val iconUrl: String? = null,
-    @SerializedName("url") val url: String? = null,
     @SerializedName("versions") val versions: List<String>? = null,
     @SerializedName("themes") val themes: List<String>? = null,
-    @SerializedName("languages") val languages: List<String>? = null
+    @SerializedName("langs") val languages: List<String>? = null,
+    @SerializedName("package_name") val packageName: String? = null,
+    @SerializedName("package_name_root") val packageNameRoot: String? = null,
+    @SerializedName("changelog") val changelog: String? = null,
+    @SerializedName("icon_url") val iconUrl: String? = null,
+    @SerializedName("url") val url: String? = null,
 )

@@ -82,7 +82,7 @@ class AppDtoMapper(
                 RadiobuttonInstallationOption(
                     titleId = R.string.app_installation_options_theme,
                     preference = vancedThemePref,
-                    buttons = app.versions?.map { version ->
+                    buttons = app.themes?.map { version ->
                         RadioButtonPreference(
                             title = version.replaceFirstChar { it.titlecase(Locale.getDefault()) },
                             key = version
@@ -102,7 +102,7 @@ class AppDtoMapper(
                 CheckboxInstallationOption(
                     titleId = R.string.app_installation_options_language,
                     preference = vancedLanguagesPref,
-                    buttons = app.versions?.map {
+                    buttons = app.languages?.map {
                         CheckboxPreference(
                             title = Locale(it).displayName,
                             key = it
