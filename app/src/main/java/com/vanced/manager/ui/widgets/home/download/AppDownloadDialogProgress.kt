@@ -1,9 +1,11 @@
 package com.vanced.manager.ui.widgets.home.download
 
+import androidx.compose.animation.core.animateIntAsState
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.vanced.manager.R
@@ -20,6 +22,7 @@ fun AppDownloadDialogProgress(
         true -> ManagerProgressIndicator()
         false -> ManagerProgressIndicator(progress = progress)
     }
+    val animatedProgress by animateIntAsState(targetValue = progress.toInt())
     Row {
         Text(
             modifier = Modifier
@@ -34,7 +37,7 @@ fun AppDownloadDialogProgress(
             modifier = Modifier
                 .weight(1f)
                 .wrapContentWidth(Alignment.End),
-            text = "%$progress"
+            text = "%$animatedProgress"
         )
     }
 }
