@@ -1,4 +1,4 @@
-package com.vanced.manager.ui.components.placeholder
+package com.vanced.manager.ui.components.modifier
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed

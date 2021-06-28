@@ -11,7 +11,7 @@ import com.google.accompanist.imageloading.ImageLoadState
 import com.google.accompanist.imageloading.LoadPainter
 import com.vanced.manager.ui.components.card.ManagerCard
 import com.vanced.manager.ui.components.list.ManagerListItem
-import com.vanced.manager.ui.components.placeholder.managerPlaceholder
+import com.vanced.manager.ui.components.modifier.managerPlaceholder
 import com.vanced.manager.ui.components.text.ManagerText
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
 

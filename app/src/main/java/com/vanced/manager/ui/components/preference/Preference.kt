@@ -10,6 +10,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import com.vanced.manager.ui.components.color.managerAnimatedColor
 import com.vanced.manager.ui.components.list.ManagerListItem
+import com.vanced.manager.ui.components.modifier.managerClickable
 import com.vanced.manager.ui.components.text.ManagerText
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
 
@@ -40,7 +41,7 @@ fun Preference(
     val color = managerAnimatedColor(color = MaterialTheme.colors.onSurface)
     ManagerListItem(
         modifier = Modifier
-            .clickable(onClick = onClick)
+            .managerClickable(onClick = onClick)
             .padding(horizontal = defaultContentPaddingHorizontal),
         title = {
             CompositionLocalProvider(
