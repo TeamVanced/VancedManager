@@ -1,13 +1,10 @@
 package com.vanced.manager.ui.components.dialog
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.vanced.manager.ui.components.card.ManagerCard
@@ -24,8 +21,10 @@ fun ManagerDialog(
     ManagerDialog(
         title = {
             ManagerText(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
+                modifier = Modifier
+                    .fillMaxWidth(),
                 textStyle = MaterialTheme.typography.h2,
+                textAlign = TextAlign.Center,
                 text = title
             )
         },
