@@ -4,7 +4,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.RadioButton
 import androidx.compose.material.RadioButtonDefaults
 import androidx.compose.material.Text
@@ -16,7 +15,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vanced.manager.ui.components.color.managerAccentColor
 import com.vanced.manager.ui.components.color.managerTextColor
-import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
 @Composable
 fun <T> RadiobuttonItem(

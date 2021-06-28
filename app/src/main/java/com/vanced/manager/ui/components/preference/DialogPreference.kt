@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.components.preference
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState

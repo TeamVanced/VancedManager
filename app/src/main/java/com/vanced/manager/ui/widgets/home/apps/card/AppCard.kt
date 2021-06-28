@@ -1,14 +1,16 @@
 package com.vanced.manager.ui.widgets.home.apps.card
 
-import androidx.compose.animation.*
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.glide.rememberGlidePainter
 import com.vanced.manager.domain.model.App
@@ -27,14 +29,21 @@ fun AppCard(
     app: App,
     fetching: Boolean
 ) {
-    val showDownloadDialog = remember { mutableStateOf(false) }
-    val showAppInfo = remember { mutableStateOf(false) }
-    val showInstallationOptions = remember { mutableStateOf(false) }
+    var showDownloadDialog by remember { mutableStateOf(false) }
+    var showAppInfoDialog by remember { mutableStateOf(false) }
+    var showInstallationOptions by remember { mutableStateOf(false) }
+
     val icon = rememberGlidePainter(
         request = app.iconUrl ?: "",
         fadeIn = true
     )
-    val hasInstallationOption = app.installationOptions != null
+
+    val hasInstallationOptions = app.installationOptions != null
+    val animationSpec = tween<IntSize>(400)
+
+    fun download() {
+
+    }
 
     Column {
         ManagerThemedCard {
@@ -50,23 +59,31 @@ fun AppCard(
                     AppActionCard(
                         appInstalledVersion = app.installedVersion,
                         appRemoteVersion = app.remoteVersion,
-                        showDownloadDialog = showDownloadDialog,
-                        showAppInfo = showAppInfo,
-                        showInstallationOptions = showInstallationOptions,
-                        hasInstallationOptions = hasInstallationOption
+                        onDownloadClick = {
+                            if (hasInstallationOptions) {
+                                showInstallationOptions = true
+                            } else {
+                                showDownloadDialog = true
+                            }
+                        },
+                        onInfoClick = {
+                            showAppInfoDialog = true
+                        },
+                        onLaunchClick = {},
+                        onUninstallClick = {}
                     )
                 }
             }
         }
-        if (hasInstallationOption) {
+        if (hasInstallationOptions) {
             AnimatedVisibility(
                 modifier = Modifier.fillMaxWidth(),
-                visible = showInstallationOptions.value,
+                visible = showInstallationOptions,
                 enter = expandVertically(
-                    animationSpec = tween(400)
+                    animationSpec = animationSpec
                 ),
                 exit = shrinkVertically(
-                    animationSpec = tween(400)
+                    animationSpec = animationSpec
                 )
             ) {
                 Column(
@@ -81,10 +98,10 @@ fun AppCard(
                             .padding(top = defaultContentPaddingVertical)
                     ) {
                         ManagerDownloadButton {
-                            showDownloadDialog.value = true
+                            showDownloadDialog = true
                         }
                         ManagerCancelButton {
-                            showInstallationOptions.value = false
+                            showInstallationOptions = false
                         }
                     }
                 }
@@ -92,19 +109,23 @@ fun AppCard(
         }
     }
 
-    if (app.name != null && app.downloader != null) {
+    if (app.name != null && app.downloader != null && showDownloadDialog) {
         AppDownloadDialog(
             app = app.name,
             downloader = app.downloader,
-            showDialog = showDownloadDialog
+            onCancelClick = {
+                showDownloadDialog = false
+            }
         )
     }
 
-    if (app.name != null && app.changelog != null) {
+    if (app.name != null && app.changelog != null && showAppInfoDialog) {
         AppChangelogDialog(
             appName = app.name,
             changelog = app.changelog,
-            showDialog = showAppInfo
+            onDismissRequest = {
+                showAppInfoDialog = false
+            }
         )
     }
 }

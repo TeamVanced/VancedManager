@@ -1,8 +1,6 @@
 package com.vanced.manager.ui.theme
 
 import androidx.compose.ui.graphics.Color
-import com.vanced.manager.ui.components.color.managerAccentColor
-import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
 val primaryColor = Color(defAccentColor)
 val primaryColorVariant = primaryColor.copy(alpha = 0.25f)

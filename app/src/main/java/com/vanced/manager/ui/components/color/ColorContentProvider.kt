@@ -1,11 +1,8 @@
 package com.vanced.manager.ui.components.color
 
 import androidx.compose.material.LocalContentColor
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.ui.graphics.Color
-import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
 @Composable
 fun ThemedItemContentColorProvider(

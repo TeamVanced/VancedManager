@@ -7,21 +7,18 @@ import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Done
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.components.card.ManagerCard
 import com.vanced.manager.ui.components.color.contentColorForColor
 import com.vanced.manager.ui.components.color.managerAccentColor
 import com.vanced.manager.ui.components.color.managerAnimatedColor
 import com.vanced.manager.ui.components.color.managerThemedCardColor
-import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
 @SuppressLint("UnusedTransitionTargetStateParameter")
 @Composable

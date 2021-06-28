@@ -7,25 +7,24 @@ import androidx.compose.material.icons.rounded.DeleteForever
 import androidx.compose.material.icons.rounded.Download
 import androidx.compose.material.icons.rounded.Launch
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
 import com.vanced.manager.ui.components.button.IconButton
+import com.vanced.manager.ui.components.text.AppVersionText
 import com.vanced.manager.ui.components.text.ManagerText
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
-import com.vanced.manager.ui.components.text.AppVersionText
 
 @Composable
 fun AppActionCard(
     appRemoteVersion: String?,
     appInstalledVersion: String?,
-    showDownloadDialog: MutableState<Boolean>,
-    showAppInfo: MutableState<Boolean>,
-    showInstallationOptions: MutableState<Boolean>,
-    hasInstallationOptions: Boolean
+    onInfoClick: () -> Unit,
+    onUninstallClick: () -> Unit,
+    onLaunchClick: () -> Unit,
+    onDownloadClick: () -> Unit,
 ) {
     Row(
         modifier = Modifier.padding(
@@ -65,18 +64,26 @@ fun AppActionCard(
                 .padding(start = 4.dp)
                 .wrapContentWidth(Alignment.End)
         ) {
-            IconButton(icon = Icons.Outlined.Info, contentDescription = "App Info") {
-                showAppInfo.value = true
-            }
-            IconButton(icon = Icons.Rounded.DeleteForever, contentDescription = "Uninstall") {}
-            IconButton(icon = Icons.Rounded.Launch, contentDescription = "Launch") {}
-            IconButton(icon = Icons.Rounded.Download, contentDescription = "Install") {
-                if (hasInstallationOptions) {
-                    showInstallationOptions.value = true
-                } else {
-                    showDownloadDialog.value = true
-                }
-            }
+            IconButton(
+                icon = Icons.Outlined.Info,
+                contentDescription = "App Info",
+                onClick = onInfoClick
+            )
+            IconButton(
+                icon = Icons.Rounded.DeleteForever,
+                contentDescription = "Uninstall",
+                onClick = onUninstallClick
+            )
+            IconButton(
+                icon = Icons.Rounded.Launch,
+                contentDescription = "Launch",
+                onClick = onLaunchClick
+            )
+            IconButton(
+                icon = Icons.Rounded.Download,
+                contentDescription = "Install",
+                onClick = onDownloadClick
+            )
         }
     }
 }

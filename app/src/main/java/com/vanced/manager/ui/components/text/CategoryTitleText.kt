@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.components.text
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable

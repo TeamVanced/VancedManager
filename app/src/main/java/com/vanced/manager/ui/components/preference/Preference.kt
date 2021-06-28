@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.components.preference
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.LocalContentColor
 import androidx.compose.material.LocalTextStyle

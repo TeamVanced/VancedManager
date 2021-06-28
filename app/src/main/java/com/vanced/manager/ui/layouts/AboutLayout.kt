@@ -21,9 +21,9 @@ import com.vanced.manager.ui.components.card.ManagerLinkCard
 import com.vanced.manager.ui.components.card.ManagerThemedCard
 import com.vanced.manager.ui.components.layout.ManagerScrollableColumn
 import com.vanced.manager.ui.components.layout.ScrollableItemRow
-import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.components.list.ManagerListItem
 import com.vanced.manager.ui.components.text.ManagerText
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.widgets.layout.CategoryLayout
 
 data class Person(

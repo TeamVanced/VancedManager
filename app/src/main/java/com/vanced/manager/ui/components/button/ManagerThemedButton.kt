@@ -11,7 +11,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.components.color.managerAccentColor
-import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
 
 @Composable
 fun ManagerThemedButton(

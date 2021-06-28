@@ -5,8 +5,8 @@ import androidx.compose.ui.graphics.Color
 import com.vanced.manager.R
 import com.vanced.manager.ui.components.color.ManagerColorPicker
 import com.vanced.manager.ui.components.preference.DialogPreference
-import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.preferences.holder.managerAccentColorPref
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.widgets.button.ManagerSaveButton
 
 @Composable

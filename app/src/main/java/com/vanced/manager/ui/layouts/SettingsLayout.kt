@@ -1,7 +1,6 @@
 package com.vanced.manager.ui.layouts
 
-import androidx.compose.runtime.*
-import androidx.compose.ui.res.stringResource
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
 import com.vanced.manager.ui.components.layout.ManagerScrollableColumn

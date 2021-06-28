@@ -12,7 +12,8 @@ import com.vanced.manager.downloader.impl.VancedDownloader
 import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
-import com.vanced.manager.ui.preferences.*
+import com.vanced.manager.ui.preferences.CheckboxPreference
+import com.vanced.manager.ui.preferences.RadioButtonPreference
 import com.vanced.manager.ui.preferences.holder.musicVersionPref
 import com.vanced.manager.ui.preferences.holder.vancedLanguagesPref
 import com.vanced.manager.ui.preferences.holder.vancedThemePref
