@@ -44,7 +44,7 @@ fun RadiobuttonDialogPreference(
                 RadiobuttonItem(
                     text = title,
                     tag = key,
-                    selected = currentSelection == key,
+                    isSelected = currentSelection == key,
                     onSelect = {
                         currentSelection = it
                     }

@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.components.preference
 
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
@@ -9,6 +10,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
 import com.vanced.manager.ui.components.button.ManagerThemedTextButton
 import com.vanced.manager.ui.components.list.CheckboxItem
@@ -33,7 +35,7 @@ fun CheckboxDialogPreference(
             selectedButtons.any { selectedButton ->
                 button.key == selectedButton
             }
-        }.joinToString(separator = ", ") { it.title },
+        }.sortedBy { it.title }.joinToString(separator = ", ") { it.title },
         trailing = trailing,
         buttons = { isShown ->
             ManagerThemedTextButton(
@@ -50,7 +52,7 @@ fun CheckboxDialogPreference(
         }
     ) {
         LazyColumn(
-            modifier = Modifier
+            modifier = Modifier.heightIn(max = 400.dp)
         ) {
             items(buttons) { button ->
                 val (title, key) = button

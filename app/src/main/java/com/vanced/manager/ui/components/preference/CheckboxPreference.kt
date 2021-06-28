@@ -2,6 +2,7 @@ package com.vanced.manager.ui.components.preference
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.components.checkbox.ManagerCheckbox
 import com.vanced.manager.ui.preferences.ManagerPreference
 import kotlinx.coroutines.launch
@@ -29,7 +30,8 @@ fun CheckboxPreference(
         trailing = {
             ManagerCheckbox(
                 isChecked = isChecked,
-                onCheckedChange = { onClick() }
+                onCheckedChange = { onClick() },
+                size = 40.dp
             )
         }
     )
