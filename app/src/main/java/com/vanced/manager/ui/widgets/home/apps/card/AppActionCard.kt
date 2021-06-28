@@ -28,7 +28,9 @@ fun AppActionCard(
     hasInstallationOptions: Boolean
 ) {
     Row(
-        modifier = Modifier.padding(horizontal = defaultContentPaddingHorizontal, vertical = 12.dp),
+        modifier = Modifier.padding(
+            horizontal = defaultContentPaddingHorizontal
+        ),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(
