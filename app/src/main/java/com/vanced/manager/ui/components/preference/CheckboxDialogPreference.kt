@@ -19,7 +19,6 @@ import kotlinx.coroutines.launch
 @Composable
 fun CheckboxDialogPreference(
     preferenceTitle: String,
-    preferenceDescriptionConverter: (values: List<String>) -> String = { it.joinToString(separator = ", ") },
     preference: ManagerPreference<Set<String>>,
     trailing: @Composable () -> Unit = {},
     buttons: List<CheckboxPreference>,
@@ -30,7 +29,11 @@ fun CheckboxDialogPreference(
     val coroutineScope = rememberCoroutineScope()
     DialogPreference(
         preferenceTitle = preferenceTitle,
-        preferenceDescription = preferenceDescriptionConverter(selectedButtons),
+        preferenceDescription = buttons.filter { button ->
+            selectedButtons.any { selectedButton ->
+                button.key == selectedButton
+            }
+        }.joinToString(separator = ", ") { it.title },
         trailing = trailing,
         buttons = { isShown ->
             ManagerThemedTextButton(

@@ -21,6 +21,7 @@ import com.vanced.manager.ui.preferences.holder.vancedVersionPref
 import com.vanced.manager.ui.widgets.home.installation.CheckboxInstallationOption
 import com.vanced.manager.ui.widgets.home.installation.InstallationOption
 import com.vanced.manager.ui.widgets.home.installation.RadiobuttonInstallationOption
+import java.util.*
 
 class AppDtoMapper(
     private val packageInformationDataSource: PackageInformationDataSource,
@@ -81,10 +82,10 @@ class AppDtoMapper(
                 RadiobuttonInstallationOption(
                     titleId = R.string.app_installation_options_theme,
                     preference = vancedThemePref,
-                    buttons = app.versions?.map {
+                    buttons = app.versions?.map { version ->
                         RadioButtonPreference(
-                            title = it,
-                            key = it
+                            title = version.replaceFirstChar { it.titlecase(Locale.getDefault()) },
+                            key = version
                         )
                     } ?: emptyList()
                 ),
@@ -103,7 +104,7 @@ class AppDtoMapper(
                     preference = vancedLanguagesPref,
                     buttons = app.versions?.map {
                         CheckboxPreference(
-                            title = it,
+                            title = Locale(it).displayName,
                             key = it
                         )
                     } ?: emptyList()

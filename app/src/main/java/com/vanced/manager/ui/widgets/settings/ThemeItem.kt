@@ -9,37 +9,22 @@ import com.vanced.manager.ui.resources.managerString
 
 @Composable
 fun ThemeSettingsItem() {
-    val lightTheme = managerString(stringId = R.string.settings_preference_theme_light)
-    val darkTheme = managerString(stringId = R.string.settings_preference_theme_dark)
-    val sysDefTheme = managerString(stringId = R.string.settings_option_system_default)
-
-    val lightKey = "Light"
-    val darkKey = "Dark"
-    val sysDefKey = "System Default"
-
     RadiobuttonDialogPreference(
         preferenceTitle = managerString(stringId = R.string.settings_preference_theme_title),
         preference = managerThemePref,
         buttons = listOf(
             RadioButtonPreference(
-                title = lightTheme,
-                key = lightKey
+                title = managerString(stringId = R.string.settings_preference_theme_light),
+                key = "Light"
             ),
             RadioButtonPreference(
-                title = darkTheme,
-                key = darkKey
+                title = managerString(stringId = R.string.settings_preference_theme_dark),
+                key = "Dark"
             ),
             RadioButtonPreference(
-                title = sysDefTheme,
-                key = sysDefKey
+                title = managerString(stringId = R.string.settings_option_system_default),
+                key = "System Default"
             )
-        ),
-        preferenceDescriptionConverter = {
-            when (it) {
-                lightKey -> lightTheme
-                darkKey -> darkTheme
-                else -> sysDefTheme
-            }
-        }
+        )
     )
 }

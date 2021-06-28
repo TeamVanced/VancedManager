@@ -15,7 +15,6 @@ import kotlinx.coroutines.launch
 @Composable
 fun RadiobuttonDialogPreference(
     preferenceTitle: String,
-    preferenceDescriptionConverter: (value: String) -> String = { it },
     preference: ManagerPreference<String>,
     trailing: @Composable () -> Unit = {},
     buttons: List<RadioButtonPreference>,
@@ -25,7 +24,7 @@ fun RadiobuttonDialogPreference(
     var currentSelection by remember { mutableStateOf(preference.value.value) }
     DialogPreference(
         preferenceTitle = preferenceTitle,
-        preferenceDescription = preferenceDescriptionConverter(currentSelection),
+        preferenceDescription = buttons.find { it.key == currentSelection }?.title,
         trailing = trailing,
         buttons = { isShown ->
             ManagerSaveButton {
