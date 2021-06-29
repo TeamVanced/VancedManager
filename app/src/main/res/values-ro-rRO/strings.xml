@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Anulaţi</string>
     <string name="close">Închide</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">O implementare personalizată a GMS pentru Vanced pe baza proiectului microG.</string>
     <string name="description_vanced">Un client YouTube modificat, cu multe caracteristici utile!</string>
     <string name="description_vanced_music">Vansat, dar pentru muzica YouTube! Relativ mai puțin bogat în caracteristici, dar îți îndeplinește nevoile.</string>
     <string name="reset">Resetează</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Acordați permisiunea Root</string>
     <string name="lets_get_started">Să începem</string>
     <string name="select_at_least_one_app">Selectaţi cel puţin o aplicație!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Nu știi care este sau nu vrei să folosești versiunea root? Doar dă click pe săgeata albastră de mai jos!</string>
     <!-- Home Page -->
     <string name="about_app">Despre %1$s</string>
     <string name="accessibility_download">Descarcă</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variantă</string>
     <!-- Logs -->
     <string name="logs_not_saved">Jurnalele nu pot fi salvate</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Jurnale salvate cu succes în %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalii</string>
     <string name="app_install_files_detected">%1$s fișiere de instalare detectate!</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Nu s-a putut aplica noua culoare de evidențiere</string>
     <string name="failed_uninstall">Dezinstalarea pachetului %1$s a eșuat</string>
     <string name="files_missing_va">Nu s-a reușit localizarea fișierelor necesare pentru instalare. Redescărcați fișierele de instalare, apoi încercați din nou.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">Nu s-a reuşit localizarea fişierului APK pentru tema neagră/întunecată în mediul de stocare, încercaţi din nou.</string>
     <string name="installation_aborted">Instalarea a eșuat deoarece utilizatorul a anulat instalarea.</string>
     <string name="installation_conflict">Instalarea a eșuat deoarece aplicația intră în conflict cu o aplicație deja instalată. Dezinstalați versiunea curentă a aplicației, apoi încercați din nou.</string>
     <string name="installation_downgrade">Instalarea a eșuat deoarece utilizatorul a încercat să retrogradeze pachetul. Dezinstalați actualizările din aplicația stock YouTube, apoi încercați din nou.</string>
     <string name="installation_failed">Instalarea a eșuat din motive necunoscute. Pentru asistență, intră pe grupul nostru de Telegram sau Discord. Te rugăm să atașezi și o captură de ecran din meniul Avansat</string>
     <string name="installation_incompatible">Instalarea a eșuat deoarece fișierul de instalare este incompatibil cu dispozitivul dvs. Ștergeți fișierele descărcate din Setări, apoi încercați din nou.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">Instalarea a eșuat deoarece fișierele APK sunt corupte, încercați din nou.</string>
     <string name="installation_miui">Instalarea a eșuat deoarece este activată optimizarea MIUI. Dezactivați optimizarea MIUI, apoi încercați din nou.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">Instalarea a eșuat deoarece verificarea semnăturii APK este activată. Dezactivează verificarea semnăturii APK, apoi încearcă din nou.</string>
     <string name="installation_storage">Instalarea a eșuat deoarece dispozitivul nu are suficient spațiu liber.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Nu s-a putut găsi fișierul APK pentru tema neagră/întunecată din instalator. Ștergeți datele aplicației din Manager, apoi încercați din nou.</string>
     <string name="path_missing">Localizarea instalarii YouTube-ului stock a eșuat dupa instalarea divizată.</string>
 </resources>
