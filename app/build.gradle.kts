@@ -85,9 +85,9 @@ val languages: String get() {
 dependencies {
     implementation(kotlin("reflect"))
 
-    implementation("androidx.core:core-ktx:1.5.0")
+    implementation("androidx.core:core-ktx:1.6.0")
     implementation("androidx.appcompat:appcompat:1.3.0")
-    implementation("com.google.android.material:material:1.3.0")
+    implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.browser:browser:1.3.0")
 
     implementation("androidx.compose.compiler:compiler:$composeVersion")
@@ -103,9 +103,9 @@ dependencies {
 
     implementation("androidx.preference:preference-ktx:1.1.1")
 
-    implementation("androidx.activity:activity-compose:1.3.0-beta02")
+    implementation("androidx.activity:activity-compose:1.3.0-rc01")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha02")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha03")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha04")
 
     implementation("com.google.accompanist:accompanist-glide:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
@@ -123,6 +123,6 @@ dependencies {
     implementation("com.github.x1nto:apkhelper:1.1.2")
 
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
