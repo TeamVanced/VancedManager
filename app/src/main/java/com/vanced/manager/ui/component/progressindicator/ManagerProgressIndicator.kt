@@ -15,13 +15,9 @@ import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.component.color.managerAccentColor
 
 private val progressBarModifier = Modifier.composed {
-    then(
-        height(5.dp)
-    ).then(
-        fillMaxWidth()
-    ).then(
-        clip(MaterialTheme.shapes.medium)
-    )
+    then(height(5.dp))
+        .then(fillMaxWidth())
+        .then(clip(MaterialTheme.shapes.medium))
 }
 
 @Composable

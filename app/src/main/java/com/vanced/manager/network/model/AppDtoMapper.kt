@@ -5,6 +5,11 @@ import com.vanced.manager.domain.datasource.PackageInformationDataSource
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.domain.model.AppStatus
 import com.vanced.manager.domain.util.EntityMapper
+import com.vanced.manager.downloader.base.AppDownloader
+import com.vanced.manager.downloader.impl.MicrogDownloader
+import com.vanced.manager.downloader.impl.MusicDownloader
+import com.vanced.manager.downloader.impl.VancedDownloader
+import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
 import com.vanced.manager.preferences.CheckboxPreference
@@ -16,11 +21,13 @@ import com.vanced.manager.preferences.holder.vancedVersionPref
 import com.vanced.manager.ui.widget.screens.home.installation.CheckboxInstallationOption
 import com.vanced.manager.ui.widget.screens.home.installation.InstallationOption
 import com.vanced.manager.ui.widget.screens.home.installation.RadiobuttonInstallationOption
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 import java.util.*
 
 class AppDtoMapper(
     private val packageInformationDataSource: PackageInformationDataSource
-) : EntityMapper<AppDto, App> {
+) : EntityMapper<AppDto, App>, KoinComponent {
 
     override suspend fun mapToModel(entity: AppDto): App =
         with (entity) {
@@ -46,6 +53,7 @@ class AppDtoMapper(
                 versions = versions,
                 themes = themes,
                 languages = languages,
+                downloader = getDownloader(name),
                 installationOptions = getInstallationOptions(entity)
             )
         }
@@ -107,6 +115,14 @@ class AppDtoMapper(
                     } ?: emptyList()
                 ),
             )
+            else -> null
+        }
+
+    private fun getDownloader(app: String?): AppDownloader? =
+        when (app) {
+            VANCED_NAME -> get<VancedDownloader>()
+            MUSIC_NAME -> get<MusicDownloader>()
+            MICROG_NAME -> get<MicrogDownloader>()
             else -> null
         }
 }
