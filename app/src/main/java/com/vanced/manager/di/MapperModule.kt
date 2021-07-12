@@ -10,10 +10,8 @@ val mapperModule = module {
 
     fun provideAppMapper(
         packageInformationDataSource: PackageInformationDataSource,
-        vancedDownloader: VancedDownloader,
     ): AppDtoMapper = AppDtoMapper(
-        packageInformationDataSource = packageInformationDataSource,
-        vancedDownloader = vancedDownloader
+        packageInformationDataSource = packageInformationDataSource
     )
 
     fun provideJsonMapper(
@@ -22,7 +20,7 @@ val mapperModule = module {
         appDtoMapper = appDtoMapper
     )
 
-    single { provideAppMapper(get(), get()) }
+    single { provideAppMapper(get()) }
     single { provideJsonMapper(get()) }
 
 }

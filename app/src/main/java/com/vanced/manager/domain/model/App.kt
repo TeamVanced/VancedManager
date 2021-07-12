@@ -1,6 +1,6 @@
 package com.vanced.manager.domain.model
 
-import com.vanced.manager.downloader.base.BaseDownloader
+import com.vanced.manager.downloader.base.AppDownloader
 import com.vanced.manager.ui.widgets.home.installation.InstallationOption
 
 data class App(
@@ -21,6 +21,6 @@ data class App(
     val versions: List<String>? = null,
     val themes: List<String>? = null,
     val languages: List<String>? = null,
-    val downloader: BaseDownloader? = null,
+    val downloader: AppDownloader? = null,
     val installationOptions: List<InstallationOption>? = null
 )

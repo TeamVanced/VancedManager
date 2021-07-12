@@ -1,15 +1,19 @@
 package com.vanced.manager.di
 
-import android.content.Context
-import com.vanced.manager.installer.AppInstaller
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.installer.MicrogInstaller
+import com.vanced.manager.installer.MusicInstaller
+import com.vanced.manager.installer.VancedInstaller
 import org.koin.dsl.module
 
 val installerModule = module {
-    fun provideAppInstaller(
-        context: Context,
-        homeViewModel: HomeViewModel
-    ) = AppInstaller(context, homeViewModel)
 
-    single { provideAppInstaller(get(), get()) }
+    fun provideVancedInstaller() = VancedInstaller()
+
+    fun provideMusicInstaller() = MusicInstaller()
+
+    fun provideMicrogInstaller() = MicrogInstaller()
+
+    single { provideVancedInstaller() }
+    single { provideMusicInstaller() }
+    single { provideMicrogInstaller() }
 }

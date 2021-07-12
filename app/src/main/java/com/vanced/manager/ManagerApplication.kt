@@ -16,6 +16,7 @@ class ManagerApplication : Application() {
             modules(
                 apiModule,
                 downloaderModule,
+                installerModule,
                 mapperModule,
                 networkModule,
                 packageManagerModule,

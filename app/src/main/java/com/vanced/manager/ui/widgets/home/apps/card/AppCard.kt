@@ -1,14 +1,12 @@
 package com.vanced.manager.ui.widgets.home.apps.card
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.*
 import androidx.compose.animation.core.tween
-import androidx.compose.animation.expandVertically
-import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
@@ -18,20 +16,24 @@ import com.vanced.manager.ui.components.card.ManagerThemedCard
 import com.vanced.manager.ui.components.layout.ManagerButtonColumn
 import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
 import com.vanced.manager.ui.utils.defaultContentPaddingVertical
+import com.vanced.manager.ui.viewmodel.HomeViewModel
 import com.vanced.manager.ui.widgets.button.ManagerCancelButton
 import com.vanced.manager.ui.widgets.button.ManagerDownloadButton
 import com.vanced.manager.ui.widgets.home.apps.dialog.AppChangelogDialog
 import com.vanced.manager.ui.widgets.home.apps.dialog.AppDownloadDialog
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AppCard(
     app: App,
-    fetching: Boolean
+    viewModel: HomeViewModel
 ) {
-    var showDownloadDialog by remember { mutableStateOf(false) }
-    var showAppInfoDialog by remember { mutableStateOf(false) }
+    var showAppInfoDialog by rememberSaveable { mutableStateOf(false) }
     var showInstallationOptions by remember { mutableStateOf(false) }
+
+    val coroutineScope = rememberCoroutineScope { Dispatchers.IO }
 
     val icon = rememberGlidePainter(
         request = app.iconUrl ?: "",
@@ -41,17 +43,21 @@ fun AppCard(
     val hasInstallationOptions = app.installationOptions != null
     val animationSpec = tween<IntSize>(400)
 
-    fun download() {
+    val downloader = app.downloader
 
+    val download: () -> Unit = {
+        showInstallationOptions = false
+        coroutineScope.launch {
+            downloader!!.download(app, viewModel)
+        }
     }
 
     Column {
         ManagerThemedCard {
             Column {
                 AppInfoCard(
-                    appName = app.name ?: "",
+                    appName = app.name,
                     icon = icon,
-                    fetching = fetching
                 )
                 Column(
                     modifier = Modifier.padding(vertical = defaultContentPaddingVertical)
@@ -63,7 +69,7 @@ fun AppCard(
                             if (hasInstallationOptions) {
                                 showInstallationOptions = true
                             } else {
-                                showDownloadDialog = true
+                                download()
                             }
                         },
                         onInfoClick = {
@@ -97,9 +103,9 @@ fun AppCard(
                             .padding(horizontal = defaultContentPaddingHorizontal)
                             .padding(top = defaultContentPaddingVertical)
                     ) {
-                        ManagerDownloadButton {
-                            showDownloadDialog = true
-                        }
+                        ManagerDownloadButton(
+                            onClick = download
+                        )
                         ManagerCancelButton {
                             showInstallationOptions = false
                         }
@@ -109,12 +115,12 @@ fun AppCard(
         }
     }
 
-    if (app.name != null && app.downloader != null && showDownloadDialog) {
+    if (app.name != null && downloader != null && downloader.showDownloadScreen.value) {
         AppDownloadDialog(
             app = app.name,
-            downloader = app.downloader,
+            downloader = downloader,
             onCancelClick = {
-                showDownloadDialog = false
+                downloader.cancelDownload()
             }
         )
     }

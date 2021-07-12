@@ -1,8 +1,7 @@
 package com.vanced.manager.ui.widgets.home.apps.dialog
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import com.vanced.manager.downloader.base.BaseDownloader
+import com.vanced.manager.downloader.base.AppDownloader
 import com.vanced.manager.ui.components.dialog.ManagerDialog
 import com.vanced.manager.ui.widgets.button.ManagerCancelButton
 import com.vanced.manager.ui.widgets.home.download.AppDownloadDialogProgress
@@ -10,13 +9,9 @@ import com.vanced.manager.ui.widgets.home.download.AppDownloadDialogProgress
 @Composable
 fun AppDownloadDialog(
     app: String,
-    downloader: BaseDownloader,
+    downloader: AppDownloader,
     onCancelClick: () -> Unit,
 ) {
-    val rememberProgress = remember { downloader.downloadProgress }
-    val rememberFile = remember { downloader.downloadFile }
-    val rememberInstalling = remember { downloader.installing }
-
     ManagerDialog(
         title = app,
         onDismissRequest = {},
@@ -25,9 +20,9 @@ fun AppDownloadDialog(
         }
     ) {
         AppDownloadDialogProgress(
-            progress = rememberProgress,
-            file = rememberFile,
-            installing = rememberInstalling
+            progress = downloader.downloadProgress,
+            file = downloader.downloadFile,
+            installing = downloader.installing
         )
     }
 }

@@ -5,11 +5,6 @@ import com.vanced.manager.domain.datasource.PackageInformationDataSource
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.domain.model.AppStatus
 import com.vanced.manager.domain.util.EntityMapper
-import com.vanced.manager.downloader.base.BaseDownloader
-import com.vanced.manager.downloader.impl.MicrogDownloader
-import com.vanced.manager.downloader.impl.MusicDownloader
-import com.vanced.manager.downloader.impl.VancedDownloader
-import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
 import com.vanced.manager.ui.preferences.CheckboxPreference
@@ -24,8 +19,7 @@ import com.vanced.manager.ui.widgets.home.installation.RadiobuttonInstallationOp
 import java.util.*
 
 class AppDtoMapper(
-    private val packageInformationDataSource: PackageInformationDataSource,
-    private val vancedDownloader: VancedDownloader
+    private val packageInformationDataSource: PackageInformationDataSource
 ) : EntityMapper<AppDto, App> {
 
     override suspend fun mapToModel(entity: AppDto): App =
@@ -52,7 +46,6 @@ class AppDtoMapper(
                 versions = versions,
                 themes = themes,
                 languages = languages,
-                downloader = getDownloader(name),
                 installationOptions = getInstallationOptions(entity)
             )
         }
@@ -66,14 +59,6 @@ class AppDtoMapper(
             }
         } else {
             AppStatus.Install
-        }
-
-    private fun getDownloader(app: String?): BaseDownloader? =
-        when (app) {
-            VANCED_NAME -> vancedDownloader
-            MUSIC_NAME -> MusicDownloader
-            MICROG_NAME -> MicrogDownloader
-            else -> null
         }
 
     private fun getInstallationOptions(app: AppDto): List<InstallationOption>? =

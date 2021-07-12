@@ -1,73 +1,119 @@
 package com.vanced.manager.downloader.impl
 
+import com.vanced.manager.domain.model.App
 import com.vanced.manager.downloader.api.VancedAPI
-import com.vanced.manager.downloader.base.BaseDownloader
+import com.vanced.manager.downloader.base.AppDownloader
+import com.vanced.manager.installer.VancedInstaller
+import com.vanced.manager.ui.preferences.holder.managerVariantPref
+import com.vanced.manager.ui.preferences.holder.vancedLanguagesPref
+import com.vanced.manager.ui.preferences.holder.vancedThemePref
+import com.vanced.manager.ui.preferences.holder.vancedVersionPref
+import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.util.arch
+import com.vanced.manager.util.log
 
 class VancedDownloader(
     private val vancedAPI: VancedAPI,
-) : BaseDownloader(
-    appName = "vanced"
+    vancedInstaller: VancedInstaller
+) : AppDownloader(
+    appName = "vanced",
+    appInstaller = vancedInstaller
 ) {
 
-    private lateinit var version: String
-    private lateinit var variant: String
+    private val theme by vancedThemePref
+    private val version by vancedVersionPref
+    private val variant by managerVariantPref
+    private val languages by vancedLanguagesPref
 
-    private lateinit var folderStructure: String
-
-    override suspend fun download() {
-        version = "v16.16.38"
-        variant = "nonroot"
-        folderStructure = "$appName/$version/$variant"
-        downloadTheme()
-    }
-
-    private suspend fun downloadTheme() {
-        downloadVancedApk(
-            type = "Theme",
-            apkName = "black.apk"
-        ) {
-            downloadArch()
+    override suspend fun download(app: App, viewModel: HomeViewModel) {
+        val files = listOf(
+            getFile(
+                type = "Theme",
+                apkName = "$theme.apk"
+            ),
+            getFile(
+                type = "Arch",
+                apkName = "split_config.$arch.apk"
+            )
+        ) + languages.map { language ->
+            getFile("Language", "split_config.$language.apk")
         }
+        downloadFiles(
+            files = files,
+            viewModel,
+            folderStructure = "$version/$variant",
+            onError = {
+                log("error", it)
+            }
+        )
     }
 
-    private suspend fun downloadArch() {
-        downloadVancedApk(
-            type = "Arch",
-            apkName = "split_config.x86.apk"
-        ) {
-            downloadLanguage()
-        }
-    }
-
-    private suspend fun downloadLanguage() {
-        downloadVancedApk(
-            type = "Language",
-            apkName = "split_config.en.apk"
-        ) {
-            appInstaller.installVanced(version)
-        }
-    }
-
-    private suspend fun downloadVancedApk(
+    private fun getFile(
         type: String,
         apkName: String,
-        onDownload: suspend () -> Unit,
-    ) {
-        downloadFile(
-            vancedAPI.getApk(
-                version = version,
-                variant = variant,
-                type = type,
-                apkName = apkName
-            ),
-            folderStructure = folderStructure,
-            fileName = apkName,
-            onError = {
+    ) = File(
+        call = vancedAPI.getApk(
+            version = version,
+            variant = variant,
+            type = type,
+            apkName = apkName
+        ),
+        fileName = apkName
+    )
 
-            }
-        ) {
-            onDownload()
-        }
-    }
+//    private suspend fun downloadTheme() {
+//        val theme by vancedThemePref
+//        downloadVancedApk(
+//            type = "Theme",
+//            apkName = "$theme.apk"
+//        ) {
+//            downloadArch()
+//        }
+//    }
+//
+//    private suspend fun downloadArch() {
+//        downloadVancedApk(
+//            type = "Arch",
+//            apkName = "split_config.x86.apk"
+//        ) {
+//            downloadLanguage()
+//        }
+//    }
+//
+//    private suspend fun downloadLanguage() {
+//        val languages by vancedLanguagesPref
+//        languages.forEach { language ->
+//            downloadVancedApk(
+//                type = "Language",
+//                apkName = "split_config.$language.apk"
+//            ) {}
+//        }
+//        install()
+//    }
+//
+//
+//
+//
+//    private suspend fun downloadVancedApk(
+//        type: String,
+//        apkName: String,
+//        onDownload: suspend () -> Unit,
+//    ) {
+//        downloadFile(
+//            vancedAPI.getApk(
+//                version = version,
+//                variant = variant,
+//                type = type,
+//                apkName = apkName
+//            ),
+//            folderStructure = "$version/$variant",
+//            fileName = apkName,
+//            onError = {
+//                log("error", it)
+//            }
+//        ) {
+//            onDownload()
+//        }
+//    }
 
 }

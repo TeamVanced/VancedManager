@@ -13,15 +13,14 @@ import com.vanced.manager.ui.widgets.home.apps.card.AppCard
 
 @Composable
 fun HomeAppsItem(
-    viewModel: HomeViewModel,
-    isFetching: Boolean
+    viewModel: HomeViewModel
 ) {
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         viewModel.apps.fastForEach { app ->
             val observedApp by app.observeAsState(initial = App())
-            AppCard(observedApp, isFetching)
+            AppCard(observedApp, viewModel)
         }
     }
 }

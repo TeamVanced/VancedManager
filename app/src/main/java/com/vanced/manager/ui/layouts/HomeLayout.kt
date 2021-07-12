@@ -38,7 +38,7 @@ fun HomeLayout() {
                 ),
                 contentPaddingHorizontal = 0.dp
             ) {
-                HomeAppsItem(viewModel, isFetching)
+                HomeAppsItem(viewModel)
             }
             CategoryLayout(
                 categoryName = managerString(

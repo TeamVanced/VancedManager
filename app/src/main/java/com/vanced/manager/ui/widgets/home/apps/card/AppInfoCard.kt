@@ -17,9 +17,8 @@ import com.vanced.manager.ui.utils.defaultContentPaddingHorizontal
 
 @Composable
 fun AppInfoCard(
-    appName: String,
+    appName: String?,
     icon: LoadPainter<Any>,
-    fetching: Boolean
 ) {
     ManagerCard {
         ManagerListItem(
@@ -29,8 +28,8 @@ fun AppInfoCard(
             ),
             title = {
                 ManagerText(
-                    modifier = Modifier.managerPlaceholder(fetching),
-                    text = appName,
+                    modifier = Modifier.managerPlaceholder(appName == null),
+                    text = appName ?: "",
                     textStyle = MaterialTheme.typography.h5
                 )
             },

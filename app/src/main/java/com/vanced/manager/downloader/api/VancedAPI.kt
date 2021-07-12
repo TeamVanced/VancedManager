@@ -8,7 +8,7 @@ import retrofit2.http.Streaming
 
 interface VancedAPI {
 
-    @GET("apks/{version}/{variant}/{type}/{apkName}.apk")
+    @GET("apks/v{version}/{variant}/{type}/{apkName}")
     @Streaming
     fun getApk(
         @Path("version") version: String,
