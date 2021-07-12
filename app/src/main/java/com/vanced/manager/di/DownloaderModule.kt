@@ -1,7 +1,11 @@
 package com.vanced.manager.di
 
 import com.vanced.manager.downloader.api.VancedAPI
+import com.vanced.manager.downloader.impl.MicrogDownloader
+import com.vanced.manager.downloader.impl.MusicDownloader
 import com.vanced.manager.downloader.impl.VancedDownloader
+import com.vanced.manager.installer.MicrogInstaller
+import com.vanced.manager.installer.MusicInstaller
 import com.vanced.manager.installer.VancedInstaller
 import org.koin.dsl.module
 
@@ -10,20 +14,18 @@ val downloaderModule = module {
     fun provideVancedDownloader(
         vancedAPI: VancedAPI,
         vancedInstaller: VancedInstaller
-    ): VancedDownloader = VancedDownloader(vancedAPI, vancedInstaller)
+    ) = VancedDownloader(vancedAPI, vancedInstaller)
 
     fun provideMusicDownloader(
-        vancedAPI: VancedAPI,
-        vancedInstaller: VancedInstaller
-    ): VancedDownloader = VancedDownloader(vancedAPI, vancedInstaller)
+        musicInstaller: MusicInstaller
+    ) = MusicDownloader(musicInstaller)
 
     fun provideMicrogDownloader(
-        vancedAPI: VancedAPI,
-        vancedInstaller: VancedInstaller
-    ): VancedDownloader = VancedDownloader(vancedAPI, vancedInstaller)
+        microgInstaller: MicrogInstaller
+    ) = MicrogDownloader(microgInstaller)
 
     single { provideVancedDownloader(get(), get()) }
-    single { provideMusicDownloader(get(), get()) }
-    single { provideMicrogDownloader(get(), get()) }
+    single { provideMusicDownloader(get()) }
+    single { provideMicrogDownloader(get()) }
 
 }

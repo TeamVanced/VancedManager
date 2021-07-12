@@ -4,10 +4,10 @@ import com.vanced.manager.domain.model.App
 import com.vanced.manager.downloader.api.VancedAPI
 import com.vanced.manager.downloader.base.AppDownloader
 import com.vanced.manager.installer.VancedInstaller
-import com.vanced.manager.ui.preferences.holder.managerVariantPref
-import com.vanced.manager.ui.preferences.holder.vancedLanguagesPref
-import com.vanced.manager.ui.preferences.holder.vancedThemePref
-import com.vanced.manager.ui.preferences.holder.vancedVersionPref
+import com.vanced.manager.preferences.holder.managerVariantPref
+import com.vanced.manager.preferences.holder.vancedLanguagesPref
+import com.vanced.manager.preferences.holder.vancedThemePref
+import com.vanced.manager.preferences.holder.vancedVersionPref
 import com.vanced.manager.ui.viewmodel.HomeViewModel
 import com.vanced.manager.util.arch
 import com.vanced.manager.util.log

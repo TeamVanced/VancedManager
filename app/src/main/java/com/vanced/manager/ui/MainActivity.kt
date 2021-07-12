@@ -1,8 +1,8 @@
 package com.vanced.manager.ui
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -19,17 +19,17 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.vanced.manager.ui.components.color.managerAnimatedColor
-import com.vanced.manager.ui.components.color.managerSurfaceColor
-import com.vanced.manager.ui.components.color.managerTextColor
-import com.vanced.manager.ui.components.menu.ManagerDropdownMenuItem
-import com.vanced.manager.ui.components.text.ToolbarTitleText
+import com.vanced.manager.ui.component.color.managerAnimatedColor
+import com.vanced.manager.ui.component.color.managerSurfaceColor
+import com.vanced.manager.ui.component.color.managerTextColor
+import com.vanced.manager.ui.component.menu.ManagerDropdownMenuItem
+import com.vanced.manager.ui.component.text.ToolbarTitleText
 import com.vanced.manager.ui.resources.managerString
-import com.vanced.manager.ui.screens.Screen
+import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             },
-            navigationIcon = if (currentScreenRoute != Screen.Home.route) { {
+            navigationIcon = if (currentScreenRoute != Screen.Home.route) {{
                 IconButton(onClick = {
                     navController.popBackStack()
                 }) {

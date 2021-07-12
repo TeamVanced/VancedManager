@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.repository.JsonRepository
-import com.vanced.manager.ui.preferences.holder.managerVariantPref
-import com.vanced.manager.ui.preferences.holder.musicEnabled
-import com.vanced.manager.ui.preferences.holder.vancedEnabled
+import com.vanced.manager.preferences.holder.managerVariantPref
+import com.vanced.manager.preferences.holder.musicEnabled
+import com.vanced.manager.preferences.holder.vancedEnabled
 import kotlinx.coroutines.launch
 
 class HomeViewModel(

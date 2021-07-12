@@ -1,10 +1,8 @@
 package com.vanced.manager.installer
 
-import androidx.compose.runtime.MutableState
 import com.vanced.manager.installer.base.AppInstaller
-import com.vanced.manager.ui.preferences.holder.managerVariantPref
-import com.vanced.manager.ui.preferences.holder.vancedVersionPref
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.preferences.holder.managerVariantPref
+import com.vanced.manager.preferences.holder.vancedVersionPref
 import com.xinto.apkhelper.installSplitApks
 
 class MicrogInstaller : AppInstaller() {

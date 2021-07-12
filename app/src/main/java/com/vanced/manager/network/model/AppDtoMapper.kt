@@ -7,15 +7,15 @@ import com.vanced.manager.domain.model.AppStatus
 import com.vanced.manager.domain.util.EntityMapper
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
-import com.vanced.manager.ui.preferences.CheckboxPreference
-import com.vanced.manager.ui.preferences.RadioButtonPreference
-import com.vanced.manager.ui.preferences.holder.musicVersionPref
-import com.vanced.manager.ui.preferences.holder.vancedLanguagesPref
-import com.vanced.manager.ui.preferences.holder.vancedThemePref
-import com.vanced.manager.ui.preferences.holder.vancedVersionPref
-import com.vanced.manager.ui.widgets.home.installation.CheckboxInstallationOption
-import com.vanced.manager.ui.widgets.home.installation.InstallationOption
-import com.vanced.manager.ui.widgets.home.installation.RadiobuttonInstallationOption
+import com.vanced.manager.preferences.CheckboxPreference
+import com.vanced.manager.preferences.RadioButtonPreference
+import com.vanced.manager.preferences.holder.musicVersionPref
+import com.vanced.manager.preferences.holder.vancedLanguagesPref
+import com.vanced.manager.preferences.holder.vancedThemePref
+import com.vanced.manager.preferences.holder.vancedVersionPref
+import com.vanced.manager.ui.widget.screens.home.installation.CheckboxInstallationOption
+import com.vanced.manager.ui.widget.screens.home.installation.InstallationOption
+import com.vanced.manager.ui.widget.screens.home.installation.RadiobuttonInstallationOption
 import java.util.*
 
 class AppDtoMapper(

@@ -5,13 +5,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import com.vanced.manager.ui.preferences.holder.managerThemePref
+import com.vanced.manager.preferences.holder.managerThemePref
 
 const val defAccentColor = 0xFF0477E1
 
 private val DarkColorPalette = darkColors(
     primary = primaryColor,
     primaryVariant = primaryColorVariant,
+    surface = darkSurface,
     onSurface = darkOnSurface
 )
 
@@ -19,7 +20,7 @@ private val LightColorPalette = lightColors(
     primary = primaryColor,
     primaryVariant = primaryColorVariant,
     surface = lightSurface,
-    onSurface = lightOnSurface
+    onSurface = lightOnSurface,
 )
 
 @Composable

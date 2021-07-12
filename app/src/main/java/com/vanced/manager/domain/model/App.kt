@@ -1,7 +1,7 @@
 package com.vanced.manager.domain.model
 
 import com.vanced.manager.downloader.base.AppDownloader
-import com.vanced.manager.ui.widgets.home.installation.InstallationOption
+import com.vanced.manager.ui.widget.screens.home.installation.InstallationOption
 
 data class App(
     val name: String? = null,
