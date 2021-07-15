@@ -20,6 +20,7 @@ import com.vanced.manager.ui.component.color.contentColorForColor
 import com.vanced.manager.ui.component.color.managerAccentColor
 import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.color.managerThemedCardColor
+import com.vanced.manager.util.log
 
 @SuppressLint("UnusedTransitionTargetStateParameter")
 @Composable
@@ -29,12 +30,11 @@ fun ManagerCheckbox(
     shape: Shape = MaterialTheme.shapes.medium,
     onCheckedChange: (isChecked: Boolean) -> Unit
 ) {
-    val accentColor = managerAccentColor()
     val transition = updateTransition(targetState = isChecked, label = "Checked")
     val cardSize by transition.springAnimation(initialValue = size, label = "Checkbox Size")
     val iconSize = cardSize / 1.6f
-    val cardColor = managerAnimatedColor(if (isChecked) accentColor else managerThemedCardColor())
-    val iconTint = managerAnimatedColor(if (isChecked) contentColorForColor(cardColor) else accentColor)
+    val cardColor = managerAnimatedColor(if (isChecked) managerAccentColor() else managerThemedCardColor())
+    val iconTint = managerAnimatedColor(if (isChecked) contentColorForColor(cardColor) else managerAccentColor())
     
     ManagerCard(
         modifier = Modifier.size(cardSize),

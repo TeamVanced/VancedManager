@@ -4,7 +4,6 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import com.vanced.manager.preferences.holder.managerAccentColorPref
@@ -19,7 +18,7 @@ fun contentColorForColor(color: Color) =
 @Composable
 fun managerAccentColor(): Color {
     val accentColor by managerAccentColorPref
-    return remember { Color(accentColor) }
+    return Color(accentColor)
 }
 
 @Composable
