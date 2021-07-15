@@ -3,8 +3,8 @@ package com.vanced.manager.ui.component.preference
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.unit.dp
-import com.vanced.manager.ui.component.checkbox.ManagerCheckbox
 import com.vanced.manager.preferences.ManagerPreference
+import com.vanced.manager.ui.component.checkbox.ManagerCheckbox
 import kotlinx.coroutines.launch
 
 @Composable

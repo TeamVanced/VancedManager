@@ -3,8 +3,8 @@ package com.vanced.manager.ui.widget.screens.settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.vanced.manager.R
-import com.vanced.manager.ui.component.preference.CheckboxPreference
 import com.vanced.manager.preferences.holder.useCustomTabsPref
+import com.vanced.manager.ui.component.preference.CheckboxPreference
 
 @Composable
 fun SettingsCustomTabsItem() {

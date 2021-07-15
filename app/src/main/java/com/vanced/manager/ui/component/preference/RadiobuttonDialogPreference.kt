@@ -6,9 +6,9 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.vanced.manager.ui.component.list.RadiobuttonItem
 import com.vanced.manager.preferences.ManagerPreference
 import com.vanced.manager.preferences.RadioButtonPreference
+import com.vanced.manager.ui.component.list.RadiobuttonItem
 import com.vanced.manager.ui.widget.button.ManagerSaveButton
 import kotlinx.coroutines.launch
 

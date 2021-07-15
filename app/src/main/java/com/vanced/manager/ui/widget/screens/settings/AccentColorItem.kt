@@ -3,9 +3,9 @@ package com.vanced.manager.ui.widget.screens.settings
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import com.vanced.manager.R
+import com.vanced.manager.preferences.holder.managerAccentColorPref
 import com.vanced.manager.ui.component.color.ManagerColorPicker
 import com.vanced.manager.ui.component.preference.DialogPreference
-import com.vanced.manager.preferences.holder.managerAccentColorPref
 import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.widget.button.ManagerSaveButton
 

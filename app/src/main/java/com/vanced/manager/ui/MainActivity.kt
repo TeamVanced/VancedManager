@@ -25,9 +25,9 @@ import com.vanced.manager.ui.component.color.managerTextColor
 import com.vanced.manager.ui.component.menu.ManagerDropdownMenuItem
 import com.vanced.manager.ui.component.text.ToolbarTitleText
 import com.vanced.manager.ui.resources.managerString
-import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
+import com.vanced.manager.ui.util.Screen
 
 class MainActivity : ComponentActivity() {
 

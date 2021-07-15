@@ -12,10 +12,10 @@ import com.vanced.manager.ui.component.layout.ManagerSwipeRefresh
 import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.util.defaultContentPaddingVertical
 import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.widget.layout.CategoryLayout
 import com.vanced.manager.ui.widget.screens.home.apps.HomeAppsItem
 import com.vanced.manager.ui.widget.screens.home.socialmedia.HomeSocialMediaItem
 import com.vanced.manager.ui.widget.screens.home.sponsors.HomeSponsorsItem
-import com.vanced.manager.ui.widget.layout.CategoryLayout
 import org.koin.androidx.compose.getViewModel
 
 @Composable

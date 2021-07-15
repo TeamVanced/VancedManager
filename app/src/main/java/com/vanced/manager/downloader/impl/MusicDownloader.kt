@@ -3,7 +3,6 @@ package com.vanced.manager.downloader.impl
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.downloader.base.AppDownloader
 import com.vanced.manager.installer.MusicInstaller
-import com.vanced.manager.installer.VancedInstaller
 import com.vanced.manager.ui.viewmodel.HomeViewModel
 
 class MusicDownloader(

@@ -1,9 +1,9 @@
 package com.vanced.manager.ui.widget.screens.home.installation
 
 import androidx.annotation.StringRes
-import com.vanced.manager.ui.component.preference.CheckboxDialogPreference
 import com.vanced.manager.preferences.CheckboxPreference
 import com.vanced.manager.preferences.ManagerPreference
+import com.vanced.manager.ui.component.preference.CheckboxDialogPreference
 import com.vanced.manager.ui.resources.managerString
 
 data class CheckboxInstallationOption(
