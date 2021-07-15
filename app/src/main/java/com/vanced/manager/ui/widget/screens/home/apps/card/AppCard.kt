@@ -10,7 +10,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.glide.rememberGlidePainter
+import coil.compose.rememberImagePainter
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.ui.component.card.ManagerThemedCard
 import com.vanced.manager.ui.component.layout.ManagerButtonColumn
@@ -35,9 +35,8 @@ fun AppCard(
 
     val coroutineScope = rememberCoroutineScope { Dispatchers.IO }
 
-    val icon = rememberGlidePainter(
-        request = app.iconUrl ?: "",
-        fadeIn = true
+    val icon = rememberImagePainter(
+        data = app.iconUrl
     )
 
     val hasInstallationOptions = app.installationOptions != null

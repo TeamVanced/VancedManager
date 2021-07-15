@@ -1,24 +1,27 @@
 package com.vanced.manager.ui.widget.screens.home.apps.card
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.imageloading.ImageLoadState
-import com.google.accompanist.imageloading.LoadPainter
+import coil.annotation.ExperimentalCoilApi
+import coil.compose.ImagePainter
 import com.vanced.manager.ui.component.card.ManagerCard
 import com.vanced.manager.ui.component.list.ManagerListItem
 import com.vanced.manager.ui.component.modifier.managerPlaceholder
 import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.util.defaultContentPaddingHorizontal
 
+@OptIn(ExperimentalCoilApi::class)
 @Composable
 fun AppInfoCard(
     appName: String?,
-    icon: LoadPainter<Any>,
+    icon: ImagePainter,
 ) {
     ManagerCard {
         ManagerListItem(
@@ -35,11 +38,11 @@ fun AppInfoCard(
             },
             icon = {
                 Image(
+                    modifier = Modifier
+                        .size(48.dp)
+                        .managerPlaceholder(icon.state is ImagePainter.State.Loading),
                     painter = icon,
                     contentDescription = "",
-                    modifier = Modifier
-                        .size(48.dp, 48.dp)
-                        .managerPlaceholder(icon.loadState is ImageLoadState.Loading)
                 )
             }
         )
