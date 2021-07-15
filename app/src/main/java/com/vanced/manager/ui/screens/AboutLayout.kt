@@ -1,11 +1,12 @@
-package com.vanced.manager.ui.layouts
+package com.vanced.manager.ui.screens
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -14,7 +15,6 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.util.fastForEach
 import com.vanced.manager.R
 import com.vanced.manager.ui.component.card.ManagerLinkCard
@@ -24,6 +24,7 @@ import com.vanced.manager.ui.component.layout.ScrollableItemRow
 import com.vanced.manager.ui.component.list.ManagerListItem
 import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.resources.managerString
+import com.vanced.manager.ui.util.defaultContentPaddingVertical
 import com.vanced.manager.ui.widget.layout.CategoryLayout
 
 data class Person(
@@ -166,18 +167,21 @@ fun AboutLayout() {
 
 @Composable
 fun AboutManagerCard() {
-    ManagerThemedCard {
+    ManagerThemedCard(
+        modifier = Modifier.fillMaxWidth()
+    ) {
         Column(
-            modifier = Modifier,
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier = Modifier.padding(vertical = defaultContentPaddingVertical),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
-            Text(
-                text = managerString(stringId = R.string.app_name),
-                modifier = Modifier
-                    .padding(top = 8.dp),
-                fontSize = 30.sp,
+            ManagerText(
+                modifier = Modifier,
+                text = managerString(R.string.app_name),
+                textStyle = MaterialTheme.typography.h1
             )
-            Text(
+            ManagerText(
+                modifier = Modifier,
                 text = buildAnnotatedString {
                     append("Re")
                     withStyle(style = SpanStyle(Color(0xFFBBB529))) {
@@ -185,9 +189,7 @@ fun AboutManagerCard() {
                     }
                     append("d")
                 },
-                modifier = Modifier
-                    .padding(bottom = 8.dp),
-                fontSize = 16.sp,
+                textStyle = MaterialTheme.typography.h5
             )
         }
     }

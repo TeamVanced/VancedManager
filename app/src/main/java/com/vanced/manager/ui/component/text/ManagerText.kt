@@ -5,6 +5,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 
@@ -15,6 +16,23 @@ fun ManagerText(
     textStyle: TextStyle = LocalTextStyle.current,
     textAlign: TextAlign? = null,
     text: String,
+) {
+    Text(
+        modifier = modifier,
+        text = text,
+        color = color,
+        style = textStyle,
+        textAlign = textAlign
+    )
+}
+
+@Composable
+fun ManagerText(
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textStyle: TextStyle = LocalTextStyle.current,
+    textAlign: TextAlign? = null,
+    text: AnnotatedString,
 ) {
     Text(
         modifier = modifier,
