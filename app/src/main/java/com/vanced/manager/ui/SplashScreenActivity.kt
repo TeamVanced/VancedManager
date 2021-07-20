@@ -12,6 +12,7 @@ class SplashScreenActivity : ComponentActivity() {
         startActivity(
             Intent(this, MainActivity::class.java)
         )
+        finish()
     }
 
 }
