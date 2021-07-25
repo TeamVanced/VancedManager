@@ -1,11 +1,11 @@
-package com.vanced.manager.installer
+package com.vanced.manager.installer.impl
 
 import com.vanced.manager.installer.base.AppInstaller
 import com.vanced.manager.preferences.holder.managerVariantPref
 import com.vanced.manager.preferences.holder.vancedVersionPref
 import com.xinto.apkhelper.installSplitApks
 
-class MicrogInstaller : AppInstaller() {
+class VancedInstaller : AppInstaller() {
 
     override fun install(
         onDone: () -> Unit

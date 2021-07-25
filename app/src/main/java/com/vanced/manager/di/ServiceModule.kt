@@ -19,5 +19,4 @@ val serviceModule = module {
             .create(JsonService::class.java)
 
     single { provideRetrofitService(get()) }
-
 }

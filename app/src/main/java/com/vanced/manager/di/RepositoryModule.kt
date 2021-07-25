@@ -17,5 +17,4 @@ val repositoryModule = module {
     )
 
     single { provideJsonRepository(get(), get()) }
-
 }

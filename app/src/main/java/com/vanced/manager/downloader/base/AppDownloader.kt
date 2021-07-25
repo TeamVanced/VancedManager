@@ -17,6 +17,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
+//TODO remove showDownloadScreen and viewModel references
 abstract class AppDownloader(
     val appName: String,
     val appInstaller: AppInstaller

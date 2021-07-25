@@ -1,5 +1,7 @@
 package com.vanced.manager.di
 
+import com.vanced.manager.downloader.api.MicrogAPI
+import com.vanced.manager.downloader.api.MusicAPI
 import com.vanced.manager.downloader.api.VancedAPI
 import com.vanced.manager.network.util.BASE
 import okhttp3.OkHttpClient
@@ -10,12 +12,29 @@ val apiModule = module {
 
     fun provideVancedAPI(
         okHttpClient: OkHttpClient
-    ): VancedAPI = Retrofit.Builder()
+    ) = Retrofit.Builder()
         .baseUrl(BASE)
         .client(okHttpClient)
         .build()
         .create(VancedAPI::class.java)
 
-    single { provideVancedAPI(get()) }
+    fun provideMusicAPI(
+        okHttpClient: OkHttpClient
+    )= Retrofit.Builder()
+        .baseUrl(BASE)
+        .client(okHttpClient)
+        .build()
+        .create(MusicAPI::class.java)
 
+    fun provideMicrogAPI(
+        okHttpClient: OkHttpClient
+    ) = Retrofit.Builder()
+        .baseUrl("https://github.com/YTVanced/VancedMicroG/")
+        .client(okHttpClient)
+        .build()
+        .create(MicrogAPI::class.java)
+
+    single { provideVancedAPI(get()) }
+    single { provideMusicAPI(get()) }
+    single { provideMicrogAPI(get()) }
 }

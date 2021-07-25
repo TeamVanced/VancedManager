@@ -21,5 +21,4 @@ val mapperModule = module {
 
     single { provideAppMapper(get()) }
     single { provideJsonMapper(get()) }
-
 }

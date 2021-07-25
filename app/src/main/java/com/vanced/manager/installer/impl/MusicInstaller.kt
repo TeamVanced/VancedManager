@@ -1,9 +1,9 @@
-package com.vanced.manager.installer
+package com.vanced.manager.installer.impl
 
 import com.vanced.manager.installer.base.AppInstaller
 import com.vanced.manager.preferences.holder.managerVariantPref
-import com.vanced.manager.preferences.holder.vancedVersionPref
-import com.xinto.apkhelper.installSplitApks
+import com.vanced.manager.preferences.holder.musicVersionPref
+import com.xinto.apkhelper.installApk
 
 class MusicInstaller : AppInstaller() {
 
@@ -12,11 +12,11 @@ class MusicInstaller : AppInstaller() {
     ) {
         super.install(onDone)
 
-        val version by vancedVersionPref
+        val version by musicVersionPref
         val variant by managerVariantPref
 
-        installSplitApks(
-            apksPath = context.getExternalFilesDir("vanced/$version/$variant")!!.path,
+        installApk(
+            apkPath = context.getExternalFilesDir("music/$version/$variant/music.apk")!!.path,
             context = context
         )
     }
