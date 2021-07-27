@@ -20,21 +20,22 @@ fun RadiobuttonDialogPreference(
     buttons: List<RadioButtonPreference>,
     onSave: (newPref: String?) -> Unit = {}
 ) {
+    var pref by preference
+    var currentSelection by remember { mutableStateOf(pref) }
     val coroutineScope = rememberCoroutineScope()
-    var currentSelection by remember { mutableStateOf(preference.value.value) }
     DialogPreference(
         preferenceTitle = preferenceTitle,
-        preferenceDescription = buttons.find { it.key == currentSelection }?.title,
+        preferenceDescription = buttons.find { it.key == pref }?.title,
         trailing = trailing,
         buttons = { isShown ->
             ManagerSaveButton {
                 coroutineScope.launch {
                     isShown.value = false
-                    preference.save(currentSelection)
+                    pref = currentSelection
                     onSave(currentSelection)
                 }
             }
-        }
+        },
     ) {
         LazyColumn(
             modifier = Modifier.heightIn(max = 400.dp)

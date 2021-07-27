@@ -32,7 +32,7 @@ fun CheckboxDialogPreference(
     DialogPreference(
         preferenceTitle = preferenceTitle,
         preferenceDescription = buttons.filter { button ->
-            selectedButtons.any { selectedButton ->
+            pref.any { selectedButton ->
                 button.key == selectedButton
             }
         }.sortedBy { it.title }.joinToString(separator = ", ") { it.title },

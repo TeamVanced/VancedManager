@@ -11,6 +11,7 @@ import com.vanced.manager.ui.component.dialog.ManagerDialog
 fun DialogPreference(
     preferenceTitle: String,
     preferenceDescription: String? = null,
+    onDismissRequest: () -> Unit = {},
     trailing: @Composable () -> Unit = {},
     buttons: @Composable ColumnScope.(isShown: MutableState<Boolean>) -> Unit,
     content: @Composable ColumnScope.() -> Unit
@@ -27,6 +28,7 @@ fun DialogPreference(
         ManagerDialog(
             title = preferenceTitle,
             onDismissRequest = {
+                onDismissRequest()
                 isShown.value = false
             },
             buttons = { buttons(isShown) },
