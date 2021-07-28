@@ -5,7 +5,7 @@
     <string name="close">Tutup</string>
     <string name="description_microg">Penerapan GMS kustom untuk Vanced yang didasarkan pada proyek microG.</string>
     <string name="description_vanced">Klien YouTube termodifikasi dengan berbagai fitur berguna!</string>
-    <string name="description_vanced_music">Vanced, tetapi untuk YouTube Musik! Relatif memiliki fitur yang kurang kaya tetapi memenuhi kebutuhan anda.</string>
+    <string name="description_vanced_music">Vanced, tetapi untuk YouTube Musik! Relatif memiliki fitur yang kurang kaya tetapi memenuhi kebutuhan Anda.</string>
     <string name="reset">Atur ulang</string>
     <string name="save">Simpan</string>
     <string name="select_apps">Pilih Aplikasi Anda</string>
@@ -70,7 +70,7 @@
     <!-- Dialogs -->
     <string name="advanced">Rincian</string>
     <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
-    <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah anda ingin memasangnya?</string>
+    <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah Anda ingin memasangnya?</string>
     <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
@@ -80,17 +80,17 @@
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapusnya dengan menghapus modul Magisk/gunakan pencopot Vanced TWRP.</string>
-    <string name="miui_one">Untuk memasang Vanced, anda HARUS menonaktifkan Optimisasi MIUI pada pengaturan developer. (Anda dapat mengabaikan peringatan ini apabila anda menggunakan ROM versi 20.2.20 atau lebih yang berbasis xiaomi.eu)</string>
+    <string name="miui_one">Untuk memasang Vanced, Anda HARUS menonaktifkan Optimisasi MIUI pada pengaturan developer. (Anda dapat mengabaikan peringatan ini apabila Anda menggunakan ROM versi 20.2.20 atau lebih yang berbasis xiaomi.eu)</string>
     <string name="miui_one_title">Optimisasi MIUI diaktifkan!</string>
     <string name="please_be_patient">Mohon untuk TIDAK keluar dari aplikasi saat proses ini!</string>
-    <string name="uninstall_app_text">Apakah anda yakin ingin mencopot pemasangan %1$s ?</string>
+    <string name="uninstall_app_text">Apakah Anda yakin ingin mencopot pemasangan %1$s ?</string>
     <string name="uninstall">Copot pemasangan</string>
     <string name="redownload">Unduh ulang</string>
-    <string name="security_context">Pastikan anda mengunduh aplikasi ini dari vancedapp.com, server Discord Vanced, atau Vanced Github</string>
+    <string name="security_context">Pastikan Anda mengunduh aplikasi ini dari vancedapp.com, server Discord Vanced, atau Vanced Github</string>
     <string name="version">Versi</string>
     <string name="welcome">Selamat datang</string>
     <!-- Install Page -->
-    <string name="choose_preferred_language">Pilih bahasa yang anda inginkan untuk Vanced</string>
+    <string name="choose_preferred_language">Pilih bahasa yang Anda inginkan untuk Vanced</string>
     <string name="install_latest">Terbaru</string>
     <string name="light_plus_other">Terang + %1$s</string>
     <string name="select_at_least_one_lang">Pilih setidaknya satu bahasa!</string>
@@ -112,7 +112,7 @@
     <string name="installation_conflict">Pemasangan gagal dikarenakan aplikasi konflik dengan aplikasi yang sudah terpasang. Copot pemasangan aplikasi versi saat ini, lalu coba lagi.</string>
     <string name="installation_downgrade">Pemasangan gagal dikarenakan pengguna mencoba menurunkan versi paket. Hapus pembaruan dari aplikasi bawaan, lalu coba lagi.</string>
     <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut. Mohon untuk melampirkan screenshot dari menu Tingkat Lanjut</string>
-    <string name="installation_incompatible">Pemasangan gagal dikarenakan file pemasangan tidak kompatibel dengan perangkat anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
+    <string name="installation_incompatible">Pemasangan gagal dikarenakan file pemasangan tidak kompatibel dengan perangkat Anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
     <string name="installation_invalid">Pemasangan gagal dikarenakan file APK rusak, mohon coba lagi.</string>
     <string name="installation_miui">Pemasangan gagal dikarenakan Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
     <string name="installation_signature">Pemasangan gagal dikarenakan APK signature verification diaktifkan. Nonaktifkan APK signature verification, lalu coba lagi.</string>
