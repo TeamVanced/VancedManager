@@ -3,9 +3,9 @@
     <!-- Global Strings -->
     <string name="cancel">هەڵوەشاندنەوە</string>
     <string name="close">داخستن</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_microg">نەرمەواڵەی GMS تایبەتە بە Vanced بۆ پرۆژەی microG.</string>
+    <string name="description_vanced">نەرمەواڵەی یوتیوبی پەرەپێدراو لە گەڵ چەندها تایبەتمەندی بەسود!</string>
+    <string name="description_vanced_music">Vanced، بۆ یوتوب میوزیک! سەرەڕای تایبەتمەندی کەمتر بەڵام پێداویستییەکانی ئێوە دابین دەکات.</string>
     <string name="reset">ڕێکخستنەوە</string>
     <string name="save">پاراستن</string>
     <string name="select_apps">بەرنامەکانت دیاریبکە</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">ڕێگەپێدانی ڕۆت Root</string>
     <string name="lets_get_started">دەست پێکردن</string>
     <string name="select_at_least_one_app">لانیکەم دانەیەک دیاریبکە!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">ئەگەر نازانیت ئەمە چییە یان ناتەوێ وەشانی ڕۆتکراو بەکار بهێنیت؟ پەنجە بنێ بە دوگمە شینەکەدا!</string>
     <!-- Home Page -->
     <string name="about_app">دەربارەی %1$s</string>
     <string name="accessibility_download">داگرتن</string>
