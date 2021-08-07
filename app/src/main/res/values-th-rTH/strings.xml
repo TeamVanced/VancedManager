@@ -21,7 +21,7 @@
     <string name="grant_root">ให้สิทธิ์การใช้งานของรูท</string>
     <string name="lets_get_started">เริ่มกันเลย!</string>
     <string name="select_at_least_one_app">เลือกแอปพลิเคชั่นอย่างน้อยหนึ่งรายการ!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">หากคุณไม่รู้หรือไม่ต้องการใช้เวอร์ชั่นรูทให้กดไอคอนรูปธนูสีฟ้าเพื่อไปต่อ</string>
     <!-- Home Page -->
     <string name="about_app">เกี่ยวกับ %1$s</string>
     <string name="accessibility_download">ดาวน์โหลด</string>
