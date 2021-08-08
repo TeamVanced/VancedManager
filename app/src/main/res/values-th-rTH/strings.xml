@@ -83,7 +83,7 @@
     <string name="miui_one">ในการติดตั้ง Vanced คุณต้องปิดใช้งาน การเพิ่มประสิทธิภาพ MIUI ในการตั้งค่าสำหรับนักพัฒนา (คุณสามารถเพิกเฉยต่อคำเตือนนี้ได้ หากคุณใช้ based ROM xiaomi.eu 20.2.20 หรือใหม่กว่า)</string>
     <string name="miui_one_title">การเพิ่มประสิทธิภาพ MIUI เปิดอยู่!</string>
     <string name="please_be_patient">โปรดอย่าออกจากแอปในระหว่างขั้นตอนนี้!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall_app_text">คุณแน่ใจหรือไม่ที่จะยกเลิกการติดตั้งแอปนี้</string>
     <string name="uninstall">Uninstall</string>
     <string name="redownload">ดาวน์โหลดอีกครั้ง</string>
     <string name="security_context">ตรวจสอบให้แน่ใจว่าคุณดาวน์โหลดแอพจากช่องทางที่ถูกต้อง vancedapp.com, เซิร์ฟเวอร์ Vanced Discord หรือ Vanced GitHub</string>
@@ -115,7 +115,7 @@
     <string name="installation_incompatible">การติดตั้งล้มเหลวเนื่องจากไฟล์การติดตั้งเข้ากันไม่ได้กับอุปกรณ์ของคุณ กรุณาล้างไฟล์ที่ดาวน์โหลดในการตั้งค่า แล้วลองอีกครั้ง</string>
     <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">การติดตั้งล้มเหลวเนื่องจากเปิดใช้งาน MIUI Optimization โปรดปิดการใช้งาน MIUI Optimization แล้วลองอีกครั้ง</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">การติดตั้งล้มเหลวเนื่องจากมีการเปิดใช้งานการตรวจสอบลายเซ็น apk กรุณาปิดใช้งานการตรวจสอบลายเซ็น apk แล้วลองอีกครั้ง</string>
     <string name="installation_storage">การติดตั้งล้มเหลวเนื่องจากอุปกรณ์มีพื้นที่ว่างไม่เพียงพอ</string>
     <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">ไม่พบเส้นทางการติดตั้งสต็อกของ YouTube หลังจากการติดตั้งแบบแยก</string>
