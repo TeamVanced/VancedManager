@@ -117,6 +117,6 @@
     <string name="installation_miui">Installation fehlgeschlagen, da die MIUI-Optimierung aktiviert ist. Deaktivieren Sie die MIUI-Optimierung, und versuchen Sie es erneut.</string>
     <string name="installation_signature">Installation fehlgeschlagen, da die APK-Signaturüberprüfung aktiviert ist. Deaktivieren Sie die APK-Signaturüberprüfung und versuchen Sie es dann erneut.</string>
     <string name="installation_storage">Installation fehlgeschlagen, da das Gerät nicht genügend freien Speicherplatz hat.</string>
-    <string name="modapk_missing">APK-Datei für schwarzes/dunkles Theme konnte nicht gefunden vom Installer werden. Löschen Sie die App-Daten des Managers und versuchen Sie es erneut.</string>
+    <string name="modapk_missing">APK-Datei für schwarzes/dunkles Theme konnte vom Installer nicht gefunden werden. Löschen Sie die App-Daten des Managers und versuchen Sie es erneut.</string>
     <string name="path_missing">Fehler beim Auffinden des YouTube-Installationspfades nach der geteilten Installation.</string>
 </resources>
