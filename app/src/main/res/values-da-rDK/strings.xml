@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Annuller</string>
     <string name="close">Luk</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">En brugerdefineret GMS implementering til Vanced baseret på mikroG-projektet.</string>
     <string name="description_vanced">En modificeret YouTube klient med mange nyttige funktioner!</string>
     <string name="description_vanced_music">Vanced, men for YouTube Music! Relativt mindre funktionsrig men opfylder dine behov.</string>
     <string name="reset">Nulstil</string>
@@ -21,15 +21,15 @@
     <string name="grant_root">Tildel Root Tilladelse</string>
     <string name="lets_get_started">Lad os komme igang</string>
     <string name="select_at_least_one_app">Vælg mindst én app!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Ved du ikke hvad dette er, eller ønsker du ikke at bruge \"rod\" versionen? Bare klik på den blå pil nedenfor!</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
-    <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_download">Hent ned</string>
+    <string name="accessibility_info">Information</string>
+    <string name="accessibility_launch">Start</string>
+    <string name="accessibility_reinstall">Geninstaller</string>
+    <string name="accessibility_uninstall">Afinstaller</string>
+    <string name="accessibility_update">Opdatér</string>
     <string name="apps">Apps</string>
     <string name="changelog">Ændringslog</string>
     <string name="downloading_file">Downloader %1$s</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Kunne ikke gemme logfil</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Logfiler gemt succesfuldt til %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detaljer</string>
     <string name="app_install_files_detected">%1$s installationsfiler fundet!</string>
@@ -83,8 +83,8 @@
     <string name="miui_one">For at installere Vanced er du NØDT til at slå MIUI optimering fra i udvikler indstillingerne. (Du kan ignorere denne advarsel hvis du bruger en 20.2.20 eller nyere xiaomi.eu baseret ROM)</string>
     <string name="miui_one_title">MIUI Optimering er aktiveret!</string>
     <string name="please_be_patient">Afslut venligst IKKE appen under denne proces!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="uninstall_app_text">Er du sikker på, at du vil afinstallere %1$s?</string>
+    <string name="uninstall">Afinstaller</string>
     <string name="redownload">Hent igen</string>
     <string name="security_context">Venligst sørg for kun at have downloaded appen fra vancedapp.com, Vanced Discord serveren eller Vanced GitHub siden</string>
     <string name="version">Version</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Kunne ikke anvende ny accentfarve</string>
     <string name="failed_uninstall">Fejlede i at fjerne pakke %1$s</string>
     <string name="files_missing_va">Kunne ikke finde de påkrævede filer til installation. Download installationsfilerne igen, og prøv igen.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">Kunne ikke finde apk-fil til sort/mørkt tema fra lager. Prøv venligst igen.</string>
     <string name="installation_aborted">Installationen fejlede fordi brugeren lukkede installationen.</string>
     <string name="installation_conflict">Installationen fejlede fordi appen konflikter med en allerede installeret app. Fjern den nuværende version af appen og prøv igen.</string>
     <string name="installation_downgrade">Installationen fejlede fordi brugeren prøvede at nedgradere pakken. Fjern opdateringer fra Youtube appen og prøv igen.</string>
     <string name="installation_failed">Installation mislykkedes af ukendte årsager, kom på vores Telegram eller Discord for yderligere hjælp. Vedhæft venligst også et skærmbillede fra menuen Avanceret</string>
     <string name="installation_incompatible">Installationen fejlede fordi installationsfilen er inkompatibel med din enhed. Ryd de downloadede filer i indstillingerne og prøv igen.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">Installationen fejlede fordi apk filerne er beskadiget, prøv igen.</string>
     <string name="installation_miui">Installationen fejlede fordi MIUI optimering er slået til. Slå MIUI optimering fra og prøv igen.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">Installationen fejlede fordi apk signatur verifikation er slået til. Slå apk signatur verifikation fra og prøv igen.</string>
     <string name="installation_storage">Installationen mislykkedes, fordi enheden ikke har nok ledig plads.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Kunne ikke finde apk fil til sort/mørkt tema fra installationsprogrammet. Ryd app data fra Manager, og prøv derefter igen.</string>
     <string name="path_missing">Kunne ikke finde lageret YouTube-installationsstien efter split installation.</string>
 </resources>
