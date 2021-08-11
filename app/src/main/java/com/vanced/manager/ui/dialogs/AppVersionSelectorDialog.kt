@@ -64,11 +64,13 @@ class AppVersionSelectorDialog :
                 tag.isChecked = true
             }
             dialogTitle.text = getString(R.string.version)
-            dialogSave.setOnClickListener {
+            dialogRadiogroup.setOnCheckedChangeListener { _, _ ->
                 val checkedTag = dialogRadiogroup.checkedButtonTag
+
                 if (checkedTag != null) {
                     prefs.edit { putString("${arguments?.getString(TAG_APP)}_version", checkedTag) }
                 }
+
                 dismiss()
             }
         }

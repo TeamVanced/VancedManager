@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/BottomDialogCard">
+                                                   xmlns:tools="http://schemas.android.com/tools" style="@style/BottomDialogCard">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,14 +18,8 @@
             <RadioGroup
                 android:id="@+id/dialog_radiogroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </RadioGroup>
+                android:layout_height="wrap_content"/>
         </androidx.core.widget.NestedScrollView>
 
-        <com.vanced.manager.ui.core.ThemedMaterialButton
-            android:id="@+id/dialog_save"
-            android:text="@string/save"
-            style="@style/BottomDialogButtonStyle" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

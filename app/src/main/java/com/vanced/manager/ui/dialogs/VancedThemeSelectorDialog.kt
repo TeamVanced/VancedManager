@@ -56,7 +56,7 @@ class VancedThemeSelectorDialog :
             if (tag != null) {
                 tag.isChecked = true
             }
-            dialogSave.setOnClickListener {
+            dialogRadiogroup.setOnCheckedChangeListener { _, _ ->
                 val checkedTag = binding.dialogRadiogroup.checkedButtonTag
                 if (checkedTag != null) {
                     prefs.theme = checkedTag
