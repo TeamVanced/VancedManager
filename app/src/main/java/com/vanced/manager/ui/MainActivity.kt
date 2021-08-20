@@ -2,8 +2,11 @@ package com.vanced.manager.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
+import androidx.compose.animation.AnimatedContentScope
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -13,15 +16,18 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.util.fastForEach
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
+import com.google.accompanist.navigation.animation.AnimatedNavHost
+import com.google.accompanist.navigation.animation.composable
+import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.color.managerSurfaceColor
 import com.vanced.manager.ui.component.color.managerTextColor
 import com.vanced.manager.ui.component.menu.ManagerDropdownMenuItem
 import com.vanced.manager.ui.component.text.ToolbarTitleText
-import com.vanced.manager.ui.navigation.ManagerNavigator
-import com.vanced.manager.ui.navigation.NavigationController
-import com.vanced.manager.ui.navigation.rememberNavigationController
 import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
@@ -38,15 +44,14 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    @OptIn(ExperimentalAnimationApi::class)
     @Composable
     fun MainActivityLayout() {
         val systemUiController = rememberSystemUiController()
         val surfaceColor = managerSurfaceColor()
         val isDark = isDark()
 
-        val navController = rememberNavigationController<Screen>(
-            initialScreen = Screen.Home
-        )
+        val navController = rememberAnimatedNavController()
 
         val screens = listOf(
             Screen.Home,
@@ -59,12 +64,6 @@ class MainActivity : ComponentActivity() {
             systemUiController.setSystemBarsColor(surfaceColor, !isDark)
         }
 
-        BackHandler {
-            if (!navController.pop()) {
-                finish()
-            }
-        }
-
         Scaffold(
             topBar = {
                 MainToolbar(
@@ -74,22 +73,41 @@ class MainActivity : ComponentActivity() {
             },
             backgroundColor = surfaceColor
         ) {
-            ManagerNavigator(
-                navigationController = navController
+            AnimatedNavHost(
+                navController = navController,
+                startDestination = "home",
             ) {
-                it.content()
+                screens.fastForEach { screen ->
+                    composable(
+                        route = screen.route,
+                        enterTransition = { _, _ ->
+                            slideIntoContainer(AnimatedContentScope.SlideDirection.Start) + fadeIn()
+                        },
+                        exitTransition = { _, _ ->
+                            slideOutOfContainer(AnimatedContentScope.SlideDirection.End) + fadeOut()
+                        },
+                        popEnterTransition = { _, _ ->
+                            slideIntoContainer(AnimatedContentScope.SlideDirection.End) + fadeIn()
+                        },
+                        popExitTransition = { _, _ ->
+                            slideOutOfContainer(AnimatedContentScope.SlideDirection.Start) + fadeOut()
+                        }
+                    ) {
+                        screen.content()
+                    }
+                }
             }
         }
     }
 
     @Composable
     fun MainToolbar(
-        navController: NavigationController<Screen>,
+        navController: NavHostController,
         screens: List<Screen>,
     ) {
         var isMenuExpanded by remember { mutableStateOf(false) }
 
-        val currentScreenRoute = navController.screens.last().route
+        val currentScreenRoute = navController.currentBackStackEntryAsState().value?.destination?.route
         TopAppBar(
             title = {
                 ToolbarTitleText(managerString(stringId = screens.find { it.route == currentScreenRoute }?.displayName))
@@ -114,12 +132,12 @@ class MainActivity : ComponentActivity() {
                         },
                         modifier = Modifier.background(MaterialTheme.colors.surface)
                     ) {
-                        screens.filter { it.route != currentScreenRoute }.forEach {
+                        screens.filter { it.route != currentScreenRoute }.forEach { screen ->
                             ManagerDropdownMenuItem(
-                                title = stringResource(id = it.displayName)
+                                title = stringResource(id = screen.displayName)
                             ) {
                                 isMenuExpanded = !isMenuExpanded
-                                navController.push(it)
+                                navController.navigate(screen.route)
                             }
                         }
                     }
@@ -127,7 +145,7 @@ class MainActivity : ComponentActivity() {
             },
             navigationIcon = if (currentScreenRoute != Screen.Home.route) {{
                 IconButton(onClick = {
-                    navController.pop()
+                    navController.popBackStack()
                 }) {
                     Icon(
                         imageVector = Icons.Default.ArrowBackIos,
