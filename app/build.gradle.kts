@@ -102,7 +102,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha03")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
 
-    val accompanistVersion = "0.14.0"
+    val accompanistVersion = "0.17.0"
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-placeholder-material:$accompanistVersion")
