@@ -77,7 +77,7 @@ class MainActivity : ComponentActivity() {
             ManagerNavigator(
                 navigationController = navController
             ) {
-                it.last().content()
+                it.content()
             }
         }
     }
