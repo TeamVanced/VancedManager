@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.viewmodel
 
-import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.*
 import androidx.lifecycle.ViewModel
@@ -16,7 +15,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    context: Context,
     private val repository: JsonRepository
 ) : ViewModel() {
 
