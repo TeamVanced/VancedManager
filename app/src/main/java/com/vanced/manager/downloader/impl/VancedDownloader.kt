@@ -8,7 +8,7 @@ import com.vanced.manager.preferences.holder.managerVariantPref
 import com.vanced.manager.preferences.holder.vancedLanguagesPref
 import com.vanced.manager.preferences.holder.vancedThemePref
 import com.vanced.manager.preferences.holder.vancedVersionPref
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.util.arch
 import com.vanced.manager.util.log
 
@@ -27,7 +27,7 @@ class VancedDownloader(
 
     override suspend fun download(
         app: App,
-        viewModel: HomeViewModel
+        viewModel: MainViewModel
     ) {
         val files = listOf(
             getFile(

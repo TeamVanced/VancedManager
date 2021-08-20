@@ -6,7 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.installer.base.AppInstaller
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.util.log
 import okhttp3.ResponseBody
 import org.koin.core.component.KoinComponent
@@ -58,10 +58,10 @@ abstract class AppDownloader(
 
     abstract suspend fun download(
         app: App,
-        viewModel: HomeViewModel
+        viewModel: MainViewModel
     )
 
-    private fun install(viewModel: HomeViewModel) {
+    private fun install(viewModel: MainViewModel) {
         installing = true
         appInstaller.install {
             viewModel.fetch()
@@ -71,7 +71,7 @@ abstract class AppDownloader(
 
     suspend fun downloadFile(
         file: File,
-        viewModel: HomeViewModel,
+        viewModel: MainViewModel,
         folderStructure: String,
         onError: (error: String) -> Unit = {},
     ) {
@@ -85,7 +85,7 @@ abstract class AppDownloader(
 
     suspend fun downloadFiles(
         files: List<File>,
-        viewModel: HomeViewModel,
+        viewModel: MainViewModel,
         folderStructure: String,
         onError: (error: String) -> Unit = {},
     ) {

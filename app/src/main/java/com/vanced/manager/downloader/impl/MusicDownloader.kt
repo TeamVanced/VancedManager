@@ -6,7 +6,7 @@ import com.vanced.manager.downloader.base.AppDownloader
 import com.vanced.manager.installer.impl.MusicInstaller
 import com.vanced.manager.preferences.holder.managerVariantPref
 import com.vanced.manager.preferences.holder.musicVersionPref
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 
 class MusicDownloader(
     musicInstaller: MusicInstaller,
@@ -21,7 +21,7 @@ class MusicDownloader(
 
     override suspend fun download(
         app: App,
-        viewModel: HomeViewModel
+        viewModel: MainViewModel
     ) {
         downloadFile(
             file = File(

@@ -19,7 +19,7 @@ import com.vanced.manager.ui.component.card.ManagerThemedCard
 import com.vanced.manager.ui.component.layout.ManagerButtonColumn
 import com.vanced.manager.ui.util.defaultContentPaddingHorizontal
 import com.vanced.manager.ui.util.defaultContentPaddingVertical
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.ui.widget.button.ManagerCancelButton
 import com.vanced.manager.ui.widget.button.ManagerDownloadButton
 import com.vanced.manager.ui.widget.screens.home.apps.dialog.AppChangelogDialog
@@ -31,7 +31,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun AppCard(
     app: App,
-    viewModel: HomeViewModel
+    viewModel: MainViewModel
 ) {
     var showAppInfoDialog by rememberSaveable { mutableStateOf(false) }
     var showInstallationOptions by rememberSaveable { mutableStateOf(false) }

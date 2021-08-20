@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class HomeViewModel(
+class MainViewModel(
     context: Context,
     private val repository: JsonRepository
 ) : ViewModel() {
@@ -23,7 +23,7 @@ class HomeViewModel(
     private val vanced = MutableStateFlow(App())
     private val music = MutableStateFlow(App())
     private val microg = MutableStateFlow(App())
-    private var manager = MutableStateFlow(App())
+    private val manager = MutableStateFlow(App())
 
     private val _isFetching = MutableStateFlow(false)
     val isFetching: StateFlow<Boolean> = _isFetching
@@ -35,9 +35,9 @@ class HomeViewModel(
             _isFetching.value = true
             try {
                 with(repository.fetch()) {
-                    this@HomeViewModel.vanced.value = vanced
-                    this@HomeViewModel.music.value = music
-                    this@HomeViewModel.microg.value = microg
+                    this@MainViewModel.vanced.value = vanced
+                    this@MainViewModel.music.value = music
+                    this@MainViewModel.microg.value = microg
                 }
             } catch (e: Exception) {
                 Log.d("HomeViewModel", "failed to fetch: $e")

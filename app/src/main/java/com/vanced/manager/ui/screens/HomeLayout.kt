@@ -11,7 +11,7 @@ import com.vanced.manager.ui.component.layout.ManagerScrollableColumn
 import com.vanced.manager.ui.component.layout.ManagerSwipeRefresh
 import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.util.defaultContentPaddingVertical
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.ui.widget.layout.CategoryLayout
 import com.vanced.manager.ui.widget.screens.home.apps.HomeAppsItem
 import com.vanced.manager.ui.widget.screens.home.socialmedia.HomeSocialMediaItem
@@ -21,7 +21,7 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 @Preview
 fun HomeLayout() {
-    val viewModel: HomeViewModel = getViewModel()
+    val viewModel: MainViewModel = getViewModel()
     val isFetching by viewModel.isFetching.collectAsState()
     val refreshState = rememberSwipeRefreshState(isRefreshing = isFetching)
     ManagerSwipeRefresh(

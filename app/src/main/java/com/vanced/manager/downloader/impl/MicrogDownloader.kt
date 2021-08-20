@@ -4,7 +4,7 @@ import com.vanced.manager.domain.model.App
 import com.vanced.manager.downloader.api.MicrogAPI
 import com.vanced.manager.downloader.base.AppDownloader
 import com.vanced.manager.installer.impl.MicrogInstaller
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 
 class MicrogDownloader(
     microgInstaller: MicrogInstaller,
@@ -16,7 +16,7 @@ class MicrogDownloader(
 
     override suspend fun download(
         app: App,
-        viewModel: HomeViewModel
+        viewModel: MainViewModel
     ) {
         downloadFile(
             file = File(

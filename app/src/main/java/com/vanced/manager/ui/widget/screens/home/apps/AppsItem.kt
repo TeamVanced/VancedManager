@@ -7,12 +7,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
-import com.vanced.manager.ui.viewmodel.HomeViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.ui.widget.screens.home.apps.card.AppCard
 
 @Composable
 fun HomeAppsItem(
-    viewModel: HomeViewModel
+    viewModel: MainViewModel
 ) {
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp)
