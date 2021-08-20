@@ -15,7 +15,7 @@ fun ManagerDropdownMenuItem(
     ) {
         ManagerText(
             text = title,
-            textStyle = MaterialTheme.typography.body1
+            textStyle = MaterialTheme.typography.h6
         )
     }
 }
