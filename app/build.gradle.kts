@@ -1,9 +1,3 @@
-import Dependencies.accompanistVersion
-import Dependencies.composeVersion
-import Dependencies.koinVersion
-import Dependencies.orchestraVersion
-import Dependencies.retrofitVersion
-
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -54,7 +48,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = composeVersion
+        kotlinCompilerExtensionVersion = "1.0.1"
     }
 
 }
@@ -86,10 +80,11 @@ dependencies {
     implementation(kotlin("reflect"))
 
     implementation("androidx.core:core-ktx:1.6.0")
-    implementation("androidx.appcompat:appcompat:1.3.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.browser:browser:1.3.0")
 
+    val composeVersion = "1.0.1"
     implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
@@ -103,21 +98,24 @@ dependencies {
 
     implementation("androidx.preference:preference-ktx:1.1.1")
 
-    implementation("androidx.activity:activity-compose:1.3.0-rc02")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha02")
+    implementation("androidx.activity:activity-compose:1.3.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha03")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
 
+    val accompanistVersion = "0.14.0"
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-placeholder-material:$accompanistVersion")
 
     implementation("io.coil-kt:coil-compose:1.3.0")
 
-    implementation("com.github.skydoves:orchestra-colorpicker:$orchestraVersion")
+    implementation("com.github.skydoves:orchestra-colorpicker:1.0.7")
 
+    val koinVersion = "3.1.2"
     implementation("io.insert-koin:koin-android:$koinVersion")
     implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
 
+    val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
