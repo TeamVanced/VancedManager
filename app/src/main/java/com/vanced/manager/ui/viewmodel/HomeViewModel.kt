@@ -3,8 +3,6 @@ package com.vanced.manager.ui.viewmodel
 import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.*
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vanced.manager.domain.model.App
@@ -12,6 +10,9 @@ import com.vanced.manager.preferences.holder.managerVariantPref
 import com.vanced.manager.preferences.holder.musicEnabled
 import com.vanced.manager.preferences.holder.vancedEnabled
 import com.vanced.manager.repository.JsonRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
@@ -19,18 +20,18 @@ class HomeViewModel(
     private val repository: JsonRepository
 ) : ViewModel() {
 
-    private val vanced = MutableLiveData<App>()
-    private val music = MutableLiveData<App>()
-    private val microg = MutableLiveData<App>()
-    private var manager = MutableLiveData<App>()
+    private val vanced = MutableStateFlow(App())
+    private val music = MutableStateFlow(App())
+    private val microg = MutableStateFlow(App())
+    private var manager = MutableStateFlow(App())
 
-    private val _isFetching = MutableLiveData<Boolean>()
-    val isFetching: LiveData<Boolean> = _isFetching
+    private val _isFetching = MutableStateFlow(false)
+    val isFetching: StateFlow<Boolean> = _isFetching
 
-    val apps = mutableListOf<LiveData<App>>()
+    val apps = mutableListOf<StateFlow<App>>()
 
     fun fetch() {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             _isFetching.value = true
             try {
                 with(repository.fetch()) {

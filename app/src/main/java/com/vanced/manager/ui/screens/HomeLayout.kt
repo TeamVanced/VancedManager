@@ -1,8 +1,8 @@
 package com.vanced.manager.ui.screens
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
@@ -22,7 +22,7 @@ import org.koin.androidx.compose.getViewModel
 @Preview
 fun HomeLayout() {
     val viewModel: HomeViewModel = getViewModel()
-    val isFetching by viewModel.isFetching.observeAsState(false)
+    val isFetching by viewModel.isFetching.collectAsState()
     val refreshState = rememberSwipeRefreshState(isRefreshing = isFetching)
     ManagerSwipeRefresh(
         refreshState = refreshState,

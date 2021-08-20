@@ -20,7 +20,6 @@ import com.vanced.manager.ui.component.color.contentColorForColor
 import com.vanced.manager.ui.component.color.managerAccentColor
 import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.color.managerThemedCardColor
-import com.vanced.manager.util.log
 
 @SuppressLint("UnusedTransitionTargetStateParameter")
 @Composable
