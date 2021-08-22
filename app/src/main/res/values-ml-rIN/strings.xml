@@ -117,6 +117,6 @@
     <string name="installation_miui">MIUI ഒപ്റ്റിമൈസേഷൻ പ്രാപ്തമാക്കിയതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു. MIUI ഒപ്റ്റിമൈസേഷൻ അപ്രാപ്തമാക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">ഉപകരണത്തിന് മതിയായ ഇടമില്ലാത്തതിനാൽ ഇൻസ്റ്റാളേഷൻ പരാജയപ്പെട്ടു.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">ഇൻസ്റ്റാളറിൽനിന്ന് കറുത്ത/ഇരുണ്ട തീമിനുള്ള APK ഫയൽ കണ്ടെത്താനായില്ല. മാനേജരുടെ ആപ്പ് ഡാറ്റ മായ്‌ക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="path_missing">വിഭജന ഇൻസ്റ്റാളേഷന് ശേഷം സ്റ്റോക്ക് YouTube ഇൻസ്റ്റാളേഷൻ പാത്ത് കണ്ടെത്തുന്നതിൽ പരാജയപ്പെട്ടു.</string>
 </resources>
