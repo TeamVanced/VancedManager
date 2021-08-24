@@ -21,17 +21,18 @@ fun CheckboxItem(
 ) {
     val toggle = { onCheck(!isChecked) }
 
-    Row(
+    ManagerSelectableListItem(
         modifier = Modifier
             .fillMaxWidth()
-            .managerClickable(onClick = toggle)
-            .padding(horizontal = 8.dp, vertical = 6.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Box(
-            modifier = Modifier.size(30.dp),
-            contentAlignment = Alignment.Center
-        ) {
+            .managerClickable(onClick = toggle),
+        title = {
+            Text(
+                text = text,
+                color = managerTextColor(),
+                fontSize = 18.sp
+            )
+        },
+        trailing = {
             ManagerAnimatedCheckbox(
                 size = 24.dp,
                 shape = CircleShape,
@@ -40,11 +41,5 @@ fun CheckboxItem(
                 toggle()
             }
         }
-        Text(
-            modifier = Modifier.padding(start = 12.dp),
-            text = text,
-            color = managerTextColor(),
-            fontSize = 18.sp
-        )
-    }
+    )
 }

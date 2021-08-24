@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vanced.manager.ui.component.color.managerTextColor
+import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.radiobutton.ManagerRadiobutton
 import com.vanced.manager.ui.widget.radiobutton.ManagerAnimatedRadiobutton
 
@@ -21,18 +22,18 @@ fun <T> RadiobuttonItem(
     onSelect: (tag: T) -> Unit
 ) {
     val onClick = { onSelect(tag) }
-
-    Row(
+    ManagerSelectableListItem(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(horizontal = 8.dp, vertical = 6.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Box(
-            modifier = Modifier.size(30.dp),
-            contentAlignment = Alignment.Center
-        ) {
+            .managerClickable(onClick = onClick),
+        title = {
+            Text(
+                text = text,
+                color = managerTextColor(),
+                fontSize = 18.sp
+            )
+        },
+        trailing = {
             ManagerAnimatedRadiobutton(
                 size = 24.dp,
                 shape = CircleShape,
@@ -40,11 +41,5 @@ fun <T> RadiobuttonItem(
                 onClick = onClick
             )
         }
-        Text(
-            modifier = Modifier.padding(start = 12.dp),
-            text = text,
-            color = managerTextColor(),
-            fontSize = 18.sp
-        )
-    }
+    )
 }
