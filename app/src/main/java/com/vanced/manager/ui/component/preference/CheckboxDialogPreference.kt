@@ -15,7 +15,7 @@ import com.vanced.manager.R
 import com.vanced.manager.preferences.CheckboxPreference
 import com.vanced.manager.preferences.ManagerPreference
 import com.vanced.manager.ui.component.button.ManagerThemedTextButton
-import com.vanced.manager.ui.component.list.CheckboxItem
+import com.vanced.manager.ui.widget.list.CheckboxItem
 import kotlinx.coroutines.launch
 
 @Composable
