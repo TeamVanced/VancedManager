@@ -54,10 +54,11 @@ private fun ManagerItemCardContent(
     @DrawableRes icon: Int? = null,
 ) {
     val accentColor = managerAccentColor()
+    val circleOffset = 32.dp.value
     Canvas(modifier = Modifier.requiredSize(72.dp)) {
         drawCircle(
             color = accentColor,
-            center = Offset(32f,32f)
+            center = Offset(circleOffset, circleOffset)
         )
     }
     Box(
