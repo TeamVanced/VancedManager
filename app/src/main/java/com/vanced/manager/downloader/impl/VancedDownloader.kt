@@ -10,6 +10,7 @@ import com.vanced.manager.preferences.holder.vancedThemePref
 import com.vanced.manager.preferences.holder.vancedVersionPref
 import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.util.arch
+import com.vanced.manager.util.getLatestOrProvidedAppVersion
 import com.vanced.manager.util.log
 
 class VancedDownloader(
@@ -29,22 +30,32 @@ class VancedDownloader(
         app: App,
         viewModel: MainViewModel
     ) {
+        val correctVersion = getLatestOrProvidedAppVersion(
+            version = version,
+            app = app
+        )
         val files = listOf(
             getFile(
                 type = "Theme",
-                apkName = "$theme.apk"
+                apkName = "$theme.apk",
+                version = correctVersion
             ),
             getFile(
                 type = "Arch",
-                apkName = "split_config.$arch.apk"
+                apkName = "split_config.$arch.apk",
+                version = correctVersion
             )
         ) + languages.map { language ->
-            getFile("Language", "split_config.$language.apk")
+            getFile(
+                type = "Language",
+                apkName = "split_config.$language.apk",
+                version = correctVersion
+            )
         }
         downloadFiles(
             files = files,
             viewModel,
-            folderStructure = "$version/$variant",
+            folderStructure = "$correctVersion/$variant",
             onError = {
                 log("error", it)
             }
@@ -54,6 +65,7 @@ class VancedDownloader(
     private fun getFile(
         type: String,
         apkName: String,
+        version: String,
     ) = File(
         call = vancedAPI.getFiles(
             version = version,

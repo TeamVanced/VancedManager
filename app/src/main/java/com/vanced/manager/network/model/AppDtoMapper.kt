@@ -1,5 +1,6 @@
 package com.vanced.manager.network.model
 
+import android.content.Context
 import com.vanced.manager.R
 import com.vanced.manager.domain.datasource.PackageInformationDataSource
 import com.vanced.manager.domain.model.App
@@ -23,11 +24,19 @@ import com.vanced.manager.ui.widget.screens.home.installation.InstallationOption
 import com.vanced.manager.ui.widget.screens.home.installation.RadiobuttonInstallationOption
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.get
+import org.koin.core.component.inject
 import java.util.*
 
-class AppDtoMapper(
-    private val packageInformationDataSource: PackageInformationDataSource
-) : EntityMapper<AppDto, App>, KoinComponent {
+class AppDtoMapper : EntityMapper<AppDto, App>, KoinComponent {
+
+    private val packageInformationDataSource: PackageInformationDataSource by inject()
+    private val context: Context by inject()
+
+    private val latestVersionRadioButton =
+        RadioButtonPreference(
+            title = context.getString(R.string.app_version_dialog_option_latest),
+            key = "latest"
+        )
 
     override suspend fun mapToModel(entity: AppDto): App =
         with (entity) {
@@ -90,7 +99,7 @@ class AppDtoMapper(
                             title = it,
                             key = it
                         )
-                    } ?: emptyList()
+                    }?.plus(latestVersionRadioButton)?.reversed() ?: emptyList()
                 ),
                 CheckboxInstallationOption(
                     titleId = R.string.app_installation_options_language,
@@ -112,7 +121,7 @@ class AppDtoMapper(
                             title = it,
                             key = it
                         )
-                    } ?: emptyList()
+                    }?.plus(latestVersionRadioButton)?.reversed() ?: emptyList()
                 ),
             )
             else -> null

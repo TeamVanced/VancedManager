@@ -7,6 +7,7 @@ import com.vanced.manager.installer.impl.MusicInstaller
 import com.vanced.manager.preferences.holder.managerVariantPref
 import com.vanced.manager.preferences.holder.musicVersionPref
 import com.vanced.manager.ui.viewmodel.MainViewModel
+import com.vanced.manager.util.getLatestOrProvidedAppVersion
 
 class MusicDownloader(
     musicInstaller: MusicInstaller,
@@ -23,16 +24,20 @@ class MusicDownloader(
         app: App,
         viewModel: MainViewModel
     ) {
+        val correctVersion = getLatestOrProvidedAppVersion(
+            version = version,
+            app = app
+        )
         downloadFile(
             file = File(
                 call = musicAPI.getFiles(
-                    version = version,
+                    version = correctVersion,
                     variant = variant,
                 ),
                 fileName = "music.apk"
             ),
             viewModel = viewModel,
-            folderStructure = "$version/$variant"
+            folderStructure = "$correctVersion/$variant"
         )
     }
 
