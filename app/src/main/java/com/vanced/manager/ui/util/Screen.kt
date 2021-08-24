@@ -16,7 +16,7 @@ sealed class Screen(
 
     object Home : Screen(
         route = "home",
-        displayName = R.string.toolbar_home,
+        displayName = R.string.app_name,
         content = {
             HomeLayout()
         }
