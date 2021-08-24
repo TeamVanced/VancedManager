@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vanced.manager.ui.component.color.managerTextColor
 import com.vanced.manager.ui.component.radiobutton.ManagerRadiobutton
+import com.vanced.manager.ui.widget.radiobutton.ManagerAnimatedRadiobutton
 
 @Composable
 fun <T> RadiobuttonItem(
@@ -32,7 +33,7 @@ fun <T> RadiobuttonItem(
             modifier = Modifier.size(30.dp),
             contentAlignment = Alignment.Center
         ) {
-            ManagerRadiobutton(
+            ManagerAnimatedRadiobutton(
                 size = 24.dp,
                 shape = CircleShape,
                 isSelected = isSelected,

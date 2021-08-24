@@ -10,7 +10,7 @@ import androidx.compose.ui.unit.dp
 
 @SuppressLint("UnusedTransitionTargetStateParameter")
 @Composable
-fun <T> Transition<T>.springAnimation(
+fun <T> Transition<T>.jumpAnimation(
     initialValue: Dp,
     label: String
 ) = animateDp(

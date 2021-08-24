@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.sp
 import com.vanced.manager.ui.component.checkbox.ManagerCheckbox
 import com.vanced.manager.ui.component.color.managerTextColor
 import com.vanced.manager.ui.component.modifier.managerClickable
+import com.vanced.manager.ui.widget.checkbox.ManagerAnimatedCheckbox
 
 @Composable
 fun CheckboxItem(
@@ -31,7 +32,7 @@ fun CheckboxItem(
             modifier = Modifier.size(30.dp),
             contentAlignment = Alignment.Center
         ) {
-            ManagerCheckbox(
+            ManagerAnimatedCheckbox(
                 size = 24.dp,
                 shape = CircleShape,
                 isChecked = isChecked
