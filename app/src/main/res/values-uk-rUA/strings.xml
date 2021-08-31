@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Скасувати</string>
     <string name="close">Закрити</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Призначена для користувача реалізація GMS (сервісів Google) для Vanced, створена на основі проекту microG.</string>
     <string name="description_vanced">Модифікований клієнт YouTube з безліччю корисних функцій!</string>
     <string name="description_vanced_music">Vanced, але для YouTube Music! Відносно менш функціональний, але задовольняє ваші потреби.</string>
     <string name="reset">Скинути</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Надати Root Права</string>
     <string name="lets_get_started">Почнімо</string>
     <string name="select_at_least_one_app">Оберіть принаймні один додаток!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Не знаєте що це, або не хочете використовувати рут версію? Просто натисніть на синю стрілку нижче!</string>
     <!-- Home Page -->
     <string name="about_app">Про %1$s</string>
     <string name="accessibility_download">Завантажити</string>
@@ -66,7 +66,7 @@
     <string name="variant">Варіант</string>
     <!-- Logs -->
     <string name="logs_not_saved">Не вдалося зберегти логи</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Логі успішно збережені в %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Детальніше</string>
     <string name="app_install_files_detected">Знайдено %1$s файлів для встановлення!</string>
@@ -107,7 +107,7 @@
     <string name="failed_accent">Не вдалося застосувати новий другорядний колір</string>
     <string name="failed_uninstall">Не вдалося видалити пакет %1$s</string>
     <string name="files_missing_va">Не вдалося знайти необхідні файли для встановлення. Повторно завантажте файли і спробуйте ще раз.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">Не вдалося знайти APK-файл для чорної/темної теми в пам\'яті пристрою, спробуйте ще раз.</string>
     <string name="installation_aborted">Встановлення не вдалося, оскільки користувач перервав встановлення.</string>
     <string name="installation_conflict">Встановлення не вдалася, так як додаток конфліктує з уже встановленим додатком. Видаліть поточну версію додатку, і спробуйте ще раз.</string>
     <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
