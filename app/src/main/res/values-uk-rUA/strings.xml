@@ -113,10 +113,10 @@
     <string name="installation_downgrade">Встановлення не вдалася, так як користувач спробував знизити версію програми. Видаліть поновлення звичайного додатку YouTube, спробуйте ще раз.</string>
     <string name="installation_failed">Не вдалося встановити з невідомих причин, підключіться до нашої Telegram групи або Discord сервера для подальшої підтримки. Будь ласка, додайте знімок екрану з розширеного меню</string>
     <string name="installation_incompatible">Помилка встановлення, оскільки файл несумісний з вашим пристроєм. Очистіть завантажені файли в Налаштуваннях, а потім спробуйте ще раз.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">Встановлення не вдалося, так як APK-файли пошкоджені, спробуйте ще раз.</string>
     <string name="installation_miui">Помилка встановлення, оскільки увімкнена оптимізація MIUI. Вимкніть оптимізацію MIUI і спробуйте ще раз.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">Встановлення не вдалося, так як включена перевірка підпису APK. Вимкніть перевірку підпису APK, а потім спробуйте ще раз.</string>
     <string name="installation_storage">Помилка встановлення, так як на пристрої недостатньо вільного місця.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">Не вдалося знайти APK-файл для чорної/темної теми в програмі встановлення. Видаліть дані додатка з Manager і спробуйте ще раз.</string>
     <string name="path_missing">Не вдалося знайти типовий шлях встановлення YouTube після роздільного встановлення.</string>
 </resources>
