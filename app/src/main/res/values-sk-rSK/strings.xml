@@ -10,7 +10,7 @@
     <string name="save">Uložiť</string>
     <string name="select_apps">Vyberte svoje aplikácie</string>
     <!-- Main Activity -->
-    <string name="title_about">O aplikácií</string>
+    <string name="title_about">O aplikácii</string>
     <string name="title_guide">Sprievodca</string>
     <string name="title_home">Manažér</string>
     <string name="title_logs">Logy</string>
@@ -23,7 +23,7 @@
     <string name="select_at_least_one_app">Vyberte aspoň jednu aplikáciu!</string>
     <string name="willing_to_use_root">Neviete, čo to je, alebo nechcete používať verziu s prístupom root? Stačí kliknúť na modrú šípku nižšie!</string>
     <!-- Home Page -->
-    <string name="about_app">O aplikácií %1$s</string>
+    <string name="about_app">O aplikácii %1$s</string>
     <string name="accessibility_download">Stiahnuť</string>
     <string name="accessibility_info">Informácie</string>
     <string name="accessibility_launch">Spustiť</string>
@@ -91,7 +91,7 @@
     <string name="welcome">Vitajte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte si jeden alebo viac preferovaných jazykov pre Vanced</string>
-    <string name="install_latest">Najnovšie</string>
+    <string name="install_latest">Najnovšia</string>
     <string name="light_plus_other">Svetlá + %1$s</string>
     <string name="select_at_least_one_lang">Vyberte aspoň jeden jazyk!</string>
     <string name="vanced_black">Čierna</string>
