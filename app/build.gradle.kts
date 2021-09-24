@@ -43,19 +43,19 @@ android {
     // To inline the bytecode built with JVM target 1.8 into
     // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.1"
+        kotlinCompilerExtensionVersion = "1.1.0-alpha04"
     }
 
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
         freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
     }
 }
@@ -84,7 +84,7 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.browser:browser:1.3.0")
 
-    val composeVersion = "1.0.1"
+    val composeVersion = "1.1.0-alpha04"
     implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
@@ -99,18 +99,20 @@ dependencies {
     implementation("androidx.preference:preference-ktx:1.1.1")
 
     implementation("androidx.activity:activity-compose:1.3.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha03")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
 
-    val accompanistVersion = "0.17.0"
+    val lifecycleVersion = "2.4.0-beta01"
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
+
+    val accompanistVersion = "0.18.0"
     implementation("com.google.accompanist:accompanist-navigation-animation:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-placeholder-material:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
 
-    implementation("io.coil-kt:coil-compose:1.3.0")
+    implementation("io.coil-kt:coil-compose:1.3.2")
 
-    implementation("com.github.skydoves:orchestra-colorpicker:1.0.7")
+    implementation("com.github.skydoves:orchestra-colorpicker:1.1.0")
 
     val koinVersion = "3.1.2"
     implementation("io.insert-koin:koin-android:$koinVersion")
