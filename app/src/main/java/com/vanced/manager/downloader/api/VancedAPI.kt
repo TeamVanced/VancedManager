@@ -15,6 +15,6 @@ interface VancedAPI {
         @Path("variant") variant: String,
         @Path("type") type: String,
         @Path("apkName") apkName: String,
-    ) : Call<ResponseBody>
+    ): Call<ResponseBody>
 
 }

@@ -19,7 +19,7 @@ fun ManagerAnimatedCheckbox(
     onCheckedChange: (isChecked: Boolean) -> Unit,
 ) {
     val transition = updateTransition(
-        targetState = isChecked, 
+        targetState = isChecked,
         label = "Checkbox Animation"
     )
     val animatedSize by transition.jumpAnimation(
@@ -28,7 +28,7 @@ fun ManagerAnimatedCheckbox(
     )
     ManagerCheckbox(
         modifier = Modifier.size(animatedSize),
-        isChecked = isChecked, 
+        isChecked = isChecked,
         shape = shape,
         onCheckedChange = onCheckedChange
     )

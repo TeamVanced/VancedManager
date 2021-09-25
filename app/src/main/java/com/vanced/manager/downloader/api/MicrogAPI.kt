@@ -9,6 +9,6 @@ interface MicrogAPI {
 
     @GET("releases/latest/download/microg.apk")
     @Streaming
-    fun getFile() : Call<ResponseBody>
+    fun getFile(): Call<ResponseBody>
 
 }

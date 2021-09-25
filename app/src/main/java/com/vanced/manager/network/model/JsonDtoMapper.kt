@@ -8,7 +8,7 @@ class JsonDtoMapper(
 ) : EntityMapper<JsonDto, Json> {
 
     override suspend fun mapToModel(entity: JsonDto): Json =
-        with (entity) {
+        with(entity) {
             Json(
                 isMicrogBroken = isMicrogBroken,
                 manager = appDtoMapper.mapToModel(manager),

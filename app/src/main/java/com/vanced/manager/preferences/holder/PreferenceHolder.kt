@@ -14,7 +14,8 @@ val managerAccentColorPref = managerLongPreference(MANAGER_ACCENT_COLOR_KEY, def
 
 val vancedThemePref = managerStringPreference(APP_VANCED_THEME_KEY, VANCED_THEME_DEFAULT_VALUE)
 val vancedVersionPref = managerStringPreference(APP_VANCED_VERSION_KEY, APP_VERSION_DEFAULT_VALUE)
-val vancedLanguagesPref = managerStringSetPreference(APP_VANCED_LANGUAGE_KEY, VANCED_LANGUAGE_DEFAULT_VALUE)
+val vancedLanguagesPref =
+    managerStringSetPreference(APP_VANCED_LANGUAGE_KEY, VANCED_LANGUAGE_DEFAULT_VALUE)
 
 val musicVersionPref = managerStringPreference(APP_MUSIC_VERSION_KEY, APP_VERSION_DEFAULT_VALUE)
 

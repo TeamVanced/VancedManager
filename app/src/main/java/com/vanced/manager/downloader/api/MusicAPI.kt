@@ -13,6 +13,6 @@ interface MusicAPI {
     fun getFiles(
         @Path("version") version: String,
         @Path("variant") variant: String,
-    ) : Call<ResponseBody>
+    ): Call<ResponseBody>
 
 }

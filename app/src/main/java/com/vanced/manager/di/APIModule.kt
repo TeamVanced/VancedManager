@@ -20,7 +20,7 @@ val apiModule = module {
 
     fun provideMusicAPI(
         okHttpClient: OkHttpClient
-    )= Retrofit.Builder()
+    ) = Retrofit.Builder()
         .baseUrl(BASE)
         .client(okHttpClient)
         .build()

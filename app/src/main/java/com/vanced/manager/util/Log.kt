@@ -19,10 +19,12 @@ fun log(tag: String, message: String) {
     logs.add(
         LogContent(
             body = buildAnnotatedString {
-                withStyle(SpanStyle(
-                    color = Color(0xFF2E73FF),
-                    fontWeight = FontWeight.Bold
-                )) {
+                withStyle(
+                    SpanStyle(
+                        color = Color(0xFF2E73FF),
+                        fontWeight = FontWeight.Bold
+                    )
+                ) {
                     append("$tag:")
                 }
                 append("")

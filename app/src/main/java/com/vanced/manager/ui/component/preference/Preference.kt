@@ -22,9 +22,11 @@ fun Preference(
 ) {
     Preference(
         preferenceTitle = { ManagerText(text = preferenceTitle) },
-        preferenceDescription = if (preferenceDescription != null) {{
-            ManagerText(text = preferenceDescription)
-        }} else null,
+        preferenceDescription = if (preferenceDescription != null) {
+            {
+                ManagerText(text = preferenceDescription)
+            }
+        } else null,
         trailing = trailing,
         onClick = onClick
     )
@@ -50,14 +52,16 @@ fun Preference(
                 preferenceTitle()
             }
         },
-        description = if (preferenceDescription != null) {{
-            CompositionLocalProvider(
-                LocalContentColor provides color,
-                LocalTextStyle provides MaterialTheme.typography.subtitle1
-            ) {
-                preferenceDescription()
+        description = if (preferenceDescription != null) {
+            {
+                CompositionLocalProvider(
+                    LocalContentColor provides color,
+                    LocalTextStyle provides MaterialTheme.typography.subtitle1
+                ) {
+                    preferenceDescription()
+                }
             }
-        }} else null,
+        } else null,
         trailing = trailing,
     )
 }

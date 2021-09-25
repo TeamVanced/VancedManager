@@ -23,10 +23,10 @@ fun <T : Screen> ManagerNavigator(
         transitionSpec = {
             if (targetState.size > initialState.size) {
                 slideIntoContainer(AnimatedContentScope.SlideDirection.Start) with
-                slideOutOfContainer(AnimatedContentScope.SlideDirection.End)
+                        slideOutOfContainer(AnimatedContentScope.SlideDirection.End)
             } else {
                 slideIntoContainer(AnimatedContentScope.SlideDirection.End) with
-                slideOutOfContainer(AnimatedContentScope.SlideDirection.Start)
+                        slideOutOfContainer(AnimatedContentScope.SlideDirection.Start)
             }
         },
         targetState = screens

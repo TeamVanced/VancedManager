@@ -8,8 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.preferences.ManagerPreference
 import com.vanced.manager.preferences.RadioButtonPreference
-import com.vanced.manager.ui.widget.list.RadiobuttonItem
 import com.vanced.manager.ui.widget.button.ManagerSaveButton
+import com.vanced.manager.ui.widget.list.RadiobuttonItem
 import kotlinx.coroutines.launch
 
 @Composable

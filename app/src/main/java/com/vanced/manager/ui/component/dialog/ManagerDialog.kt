@@ -5,7 +5,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.vanced.manager.ui.component.card.ManagerCard
 import com.vanced.manager.ui.component.text.ManagerText
@@ -55,6 +54,6 @@ fun ManagerDialog(
                     buttons()
                 }
             }
-        }
+        },
     )
 }

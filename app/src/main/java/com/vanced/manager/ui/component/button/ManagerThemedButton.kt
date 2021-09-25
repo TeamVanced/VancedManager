@@ -26,10 +26,10 @@ fun ManagerThemedButton(
         colors = ButtonDefaults.buttonColors(
             backgroundColor = backgroundColor,
             contentColor =
-                if (backgroundColor.luminance() > 0.7)
-                    Color.Black
-                else
-                    Color.White
+            if (backgroundColor.luminance() > 0.7)
+                Color.Black
+            else
+                Color.White
         ),
         elevation = ButtonDefaults.elevation(0.dp, 0.dp, 0.dp)
     ) {

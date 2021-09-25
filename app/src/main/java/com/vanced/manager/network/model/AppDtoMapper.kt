@@ -39,11 +39,13 @@ class AppDtoMapper : EntityMapper<AppDto, App>, KoinComponent {
         )
 
     override suspend fun mapToModel(entity: AppDto): App =
-        with (entity) {
+        with(entity) {
             val localVersionCode = packageInformationDataSource.getVersionCode(packageName ?: "")
-            val localVersionCodeRoot = packageInformationDataSource.getVersionCode(packageNameRoot ?: "")
+            val localVersionCodeRoot =
+                packageInformationDataSource.getVersionCode(packageNameRoot ?: "")
             val localVersionName = packageInformationDataSource.getVersionName(packageName ?: "")
-            val localVersionNameRoot = packageInformationDataSource.getVersionName(packageNameRoot ?: "")
+            val localVersionNameRoot =
+                packageInformationDataSource.getVersionName(packageNameRoot ?: "")
             App(
                 name = name,
                 remoteVersion = version,

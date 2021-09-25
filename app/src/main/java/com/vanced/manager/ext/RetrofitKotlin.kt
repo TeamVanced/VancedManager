@@ -4,7 +4,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-fun <T: Any> Call<T>.enqueue(
+fun <T : Any> Call<T>.enqueue(
     onResponse: (call: Call<T>, response: Response<T>) -> Unit,
     onFailure: (call: Call<T>, t: Throwable) -> Unit
 ) {

@@ -26,8 +26,10 @@ fun ManagerCheckbox(
     shape: Shape = MaterialTheme.shapes.medium,
     onCheckedChange: (isChecked: Boolean) -> Unit
 ) {
-    val cardColor = managerAnimatedColor(if (isChecked) managerAccentColor() else managerThemedCardColor())
-    val iconTint = managerAnimatedColor(if (isChecked) contentColorForColor(cardColor) else managerAccentColor())
+    val cardColor =
+        managerAnimatedColor(if (isChecked) managerAccentColor() else managerThemedCardColor())
+    val iconTint =
+        managerAnimatedColor(if (isChecked) contentColorForColor(cardColor) else managerAccentColor())
 
     ManagerCard(
         modifier = modifier,
