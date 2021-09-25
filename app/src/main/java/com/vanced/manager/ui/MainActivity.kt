@@ -6,8 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.animateDpAsState
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.*
@@ -26,7 +24,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.color.managerSurfaceColor
 import com.vanced.manager.ui.component.color.managerTextColor
@@ -35,7 +32,6 @@ import com.vanced.manager.ui.component.menu.ManagerDropdownMenuItem
 import com.vanced.manager.ui.component.text.ToolbarTitleText
 import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.theme.ManagerTheme
-import com.vanced.manager.ui.theme.isDark
 import com.vanced.manager.ui.util.Screen
 
 class MainActivity : ComponentActivity() {
@@ -60,9 +56,7 @@ class MainActivity : ComponentActivity() {
             shouldBlur = !hasFocus
         }
 
-        val systemUiController = rememberSystemUiController()
         val surfaceColor = managerSurfaceColor()
-        val isDark = isDark()
 
         val navController = rememberAnimatedNavController()
 
@@ -72,10 +66,6 @@ class MainActivity : ComponentActivity() {
             Screen.About,
             Screen.Logs
         )
-
-        SideEffect {
-            systemUiController.setSystemBarsColor(surfaceColor, !isDark)
-        }
         
         val animatedBlurRadius by animateDpAsState(
             targetValue = if (shouldBlur) 5.dp else 0.dp
@@ -98,16 +88,24 @@ class MainActivity : ComponentActivity() {
                     navController = navController,
                     startDestination = Screen.Home.route,
                     enterTransition = { _, _ ->
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.Start) + fadeIn()
+                        slideIntoContainer(
+                            towards = AnimatedContentScope.SlideDirection.Start
+                        )
                     },
                     exitTransition = { _, _ ->
-                        slideOutOfContainer(AnimatedContentScope.SlideDirection.End) + fadeOut()
+                        slideOutOfContainer(
+                            towards = AnimatedContentScope.SlideDirection.End
+                        )
                     },
                     popEnterTransition = { _, _ ->
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.End) + fadeIn()
+                        slideIntoContainer(
+                            towards = AnimatedContentScope.SlideDirection.End
+                        )
                     },
                     popExitTransition = { _, _ ->
-                        slideOutOfContainer(AnimatedContentScope.SlideDirection.Start) + fadeOut()
+                        slideOutOfContainer(
+                            towards = AnimatedContentScope.SlideDirection.Start
+                        )
                     }
                 ) {
                     screens.fastForEach { screen ->
