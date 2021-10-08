@@ -43,12 +43,13 @@ android {
 
     buildFeatures {
         viewBinding = true
-        //compose = true
     }
 
     packagingOptions {
-        exclude("META-INF/DEPENDENCIES")
-        exclude("META-INF/*.kotlin_module")
+        resources {
+            excludes += "META-INF/DEPENDENCIES"
+            excludes += "META-INF/*.kotlin_module"
+        }
     }
 
 // To inline the bytecode built with JVM target 1.8 into
@@ -62,7 +63,6 @@ android {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions {
             jvmTarget = "1.8"
-            //useIR = true
         }
     }
 
@@ -86,7 +86,6 @@ val languages: String get() {
 
 dependencies {
 
-    //val composeVersion = "1.0.0-alpha12"
     implementation(project(":core-presentation"))
     implementation(project(":core-ui"))
 
@@ -111,18 +110,6 @@ dependencies {
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("androidx.work:work-runtime-ktx:2.7.0-rc01")
 
-
-    // Compose
-//    implementation("androidx.compose.ui:ui:$composeVersion")
-//    implementation("androidx.compose.ui:ui-tooling:$composeVersion")
-//    implementation("androidx.compose.foundation:foundation:$composeVersion")
-//    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha02")
-//    implementation("androidx.compose.material:material:$composeVersion")
-//    implementation("androidx.compose.material:material-icons-core:$composeVersion")
-//    implementation("androidx.compose.material:material-icons-extended:$composeVersion")
-//    implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
-
-    // Appearance
     implementation("com.github.madrapps:pikolo:2.0.1")
     implementation("com.google.android.material:material:1.4.0")
 
