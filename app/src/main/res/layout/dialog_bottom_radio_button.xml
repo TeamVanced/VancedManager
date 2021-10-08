@@ -13,14 +13,14 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <RadioGroup
                 android:id="@+id/dialog_radiogroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content" />
 
-            </RadioGroup>
         </androidx.core.widget.NestedScrollView>
 
         <com.vanced.manager.ui.core.ThemedMaterialButton
