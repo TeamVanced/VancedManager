@@ -10,7 +10,7 @@
     <string name="save">Uložiť</string>
     <string name="select_apps">Vyberte svoje aplikácie</string>
     <!-- Main Activity -->
-    <string name="title_about">O aplikácií</string>
+    <string name="title_about">O aplikácii</string>
     <string name="title_guide">Sprievodca</string>
     <string name="title_home">Manažér</string>
     <string name="title_logs">Logy</string>
@@ -23,7 +23,7 @@
     <string name="select_at_least_one_app">Vyberte aspoň jednu aplikáciu!</string>
     <string name="willing_to_use_root">Neviete, čo to je, alebo nechcete používať verziu s prístupom root? Stačí kliknúť na modrú šípku nižšie!</string>
     <!-- Home Page -->
-    <string name="about_app">O aplikácií %1$s</string>
+    <string name="about_app">O aplikácii %1$s</string>
     <string name="accessibility_download">Stiahnuť</string>
     <string name="accessibility_info">Informácie</string>
     <string name="accessibility_launch">Spustiť</string>
@@ -91,7 +91,7 @@
     <string name="welcome">Vitajte</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Vyberte si jeden alebo viac preferovaných jazykov pre Vanced</string>
-    <string name="install_latest">Najnovšie</string>
+    <string name="install_latest">Najnovšia</string>
     <string name="light_plus_other">Svetlá + %1$s</string>
     <string name="select_at_least_one_lang">Vyberte aspoň jeden jazyk!</string>
     <string name="vanced_black">Čierna</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Nepodarilo sa nastaviť novú sekundárnu farbu</string>
     <string name="failed_uninstall">Nepodarilo sa odinštalovať balíček %1$s</string>
     <string name="files_missing_va">Nepodarilo sa nájsť požadované súbory na inštaláciu. Opätovne stiahnite inštalačné súbory a skúste to znova.</string>
-    <string name="ifile_missing">V lokálnom úložisku sa nepodarilo nájsť APK súbor pre čiernu/tmavú tému. Skúste to znovu prosím.</string>
+    <string name="ifile_missing">V lokálnom úložisku sa nepodarilo nájsť APK súbor pre čiernu/tmavú tému. Skúste to znova prosím.</string>
     <string name="installation_aborted">Inštalácia zlyhala, kvôli zrušeniu užívateľom.</string>
     <string name="installation_conflict">Inštalácia zlyhala, pretože aplikácia je v konflikte s už nainštalovanou aplikáciou. Odinštalujte aktuálnu verziu aplikácie a potom to skúste znova.</string>
     <string name="installation_downgrade">Inštalácia zlyhala, pretože užívateľ sa pokúsil downgradovať balík. Odinštalujte aktualizácie z pôvodnej aplikácie a potom to skúste znova.</string>
     <string name="installation_failed">Inštalácia zlyhala z neznámych dôvodov. Pre poskytnutie podpory sa pripojte sa k nášmu Telegramu alebo Discordu. Pripojte tiež snímky obrazovky z ponuky Pokročilé</string>
     <string name="installation_incompatible">Inštalácia zlyhala, pretože inštalačný súbor nie je kompatibilný s vaším zariadením. V Nastaveniach vymažte stiahnuté súbory a potom to skúste znova.</string>
-    <string name="installation_invalid">Inštalácia zlyhala, pretože súbory APK sú poškodené. Skúste to prosím znova.</string>
+    <string name="installation_invalid">Inštalácia zlyhala, pretože súbory APK sú poškodené. Skúste to znova prosím.</string>
     <string name="installation_miui">Inštalácia zlyhala, pretože je povolená optimalizácia MIUI. Zakážte optimalizáciu MIUI a potom to skúste znova.</string>
-    <string name="installation_signature">Inštalácia zlyhala, pretože overenie podpisu APK je povolené. Zakážte overenie podpisu APK a potom to skúste znova.</string>
+    <string name="installation_signature">Inštalácia zlyhala, pretože overenie podpisu APK je povolené. Zakážte overenie podpisu APK, a potom to skúste znova.</string>
     <string name="installation_storage">Inštalácia zlyhala, pretože v zariadení nie je dostatok voľného miesta.</string>
-    <string name="modapk_missing">Z inštalačného programu sa nepodarilo nájsť súbor APK pre čiernu/tmavú tému. Vymažte údaje aplikácie Vanced Manager a potom to skúste znova.</string>
+    <string name="modapk_missing">Z inštalačného programu sa nepodarilo nájsť súbor APK pre čiernu/tmavú tému. Vymažte údaje aplikácie Vanced Manager, a potom to skúste znova.</string>
     <string name="path_missing">Po split inštalácii aplikácie sa nepodarilo nájsť cestu inštalácie originálnej YouTube aplikácie.</string>
 </resources>

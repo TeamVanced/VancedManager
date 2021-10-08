@@ -21,7 +21,7 @@
     <string name="grant_root">Dopusti root dozvolu</string>
     <string name="lets_get_started">Započnite</string>
     <string name="select_at_least_one_app">Odaberite najmanje jednu aplikaciju!</string>
-    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root izdanje? Jednostavno kliknite na plavu strelicu ispod!</string>
+    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root verziju? Jednostavno kliknite na plavu strelicu ispod!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="accessibility_download">Preuzmi</string>
@@ -66,7 +66,7 @@
     <string name="variant">Izdanje</string>
     <!-- Logs -->
     <string name="logs_not_saved">Nije moguće spremiti zapise</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Dnevnici su uspješno spremljeni u %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalji</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Neuspjelo primijenjivanje nove boje naglašavanja</string>
     <string name="failed_uninstall">Neuspjela deinstalacija %1$s paketa</string>
     <string name="files_missing_va">Neuspjelo lociranje potrebnih datoteka za instalaciju. Ponovno preuzmite datoteke za instalaciju, zatim ponovno pokušajte.</string>
-    <string name="ifile_missing">Neuspjelo lociranje apk datoteke za crnu/tamnu temu iz pohrane, pokušajte ponovno.</string>
+    <string name="ifile_missing">Neuspjelo lociranje APK datoteke za crnu/tamnu temu iz pohrane, pokušajte ponovno.</string>
     <string name="installation_aborted">Instalacija je prekinuta zato jer ju je korisnik prekinuo.</string>
     <string name="installation_conflict">Instalacija nije uspjela jer je aplikacija u sukobu s već instaliranom aplikacijom. Deinstalirajte trenutnu inačicu aplikacije zatim pokušajte ponovno.</string>
     <string name="installation_downgrade">Instalacija nije uspjela jer je korisnik pokušao instalirati stariju inačicu paketa. Deinstalirajte ažuriranja izvorne YouTube aplikacije, zatim pokušajte ponovno.</string>
     <string name="installation_failed">Neuspjela instalacija, nepoznati razlog. Priključite se našem Telegramu ili Diskordu za našu pomoć. Molimo Vas da priključite sliku ekrana iz Proširenog Menua</string>
     <string name="installation_incompatible">Instalacija nije uspjela zato jer datoteka instalacije nije kompatibilna s vašim uređajem. Uklonite preuzete datoteke u postavkama, zatim pokušajte ponovno.</string>
-    <string name="installation_invalid">Instalacija nije uspjela zato jer je apk datoteka oštećena.</string>
+    <string name="installation_invalid">Instalacija nije uspjela jer su APK datoteke oštećene, pokušajte ponovo.</string>
     <string name="installation_miui">Instalacija nije uspjela zato jer je MIUI optimizacija uključena. Isključite MIUI optimizaciju, zatim pokušajte ponovno.</string>
-    <string name="installation_signature">Instalacija nije uspjela zato jer je provjera potpisa omogućena. Onemogućite apk provjeru potpisa, zatim pokušajte ponovno.</string>
+    <string name="installation_signature">Instalacija nije uspjela jer je omogućena provjera potpisa APK -a. Onemogućite provjeru potpisa APK -a, a zatim pokušajte ponovno.</string>
     <string name="installation_storage">Neuspješna instalacija jer na uređaju nema dovoljno slobodnog prostora.</string>
-    <string name="modapk_missing">Neuspjeli pronalazak apk datoteke za crnu/tamnu temu u programu instalacije. Uklonite podatke aplikacije upravitelja, zatim pokušajte ponovno.</string>
+    <string name="modapk_missing">Instalacijski program nije uspio pronaći APK datoteku za crnu/tamnu temu. Izbrišite podatke aplikacije Managera, a zatim pokušajte ponovno.</string>
     <string name="path_missing">Neuspjelo lociranje putanje izvorne YouTube instalacije nakon razdvojene instalacije.</string>
 </resources>

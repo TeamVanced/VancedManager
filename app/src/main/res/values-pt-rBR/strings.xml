@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Cancelar</string>
     <string name="close">Fechar</string>
-    <string name="description_microg">Uma implementação personalizada de GMS para Vanced com base no projeto microG.</string>
+    <string name="description_microg">Uma implementação personalizada do GMS - Serviços do Google Mobile - para o Vanced baseado no projeto microG.</string>
     <string name="description_vanced">Um cliente modificado do YouTube com muitos recursos úteis!</string>
     <string name="description_vanced_music">Vanced, mas para o YouTube Music! Relativamente menos funções, mas satisfaz suas necessidades.</string>
     <string name="reset">Resetar</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Conceder Permissão de Root</string>
     <string name="lets_get_started">Vamos começar</string>
     <string name="select_at_least_one_app">Selecione pelo menos um aplicativo!</string>
-    <string name="willing_to_use_root">Não sabe o que isto é ou não quer usar a versão root? basta clicar na seta azul abaixo!</string>
+    <string name="willing_to_use_root">Não sabe o que isto é ou não quer usar a versão root? Basta clicar na seta azul abaixo!</string>
     <!-- Home Page -->
     <string name="about_app">Sobre %1$s</string>
     <string name="accessibility_download">Baixar</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Falha ao aplicar nova cor de destaque</string>
     <string name="failed_uninstall">Falha ao desinstalar o pacote %1$s</string>
     <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Baixe novamente os arquivos de instalação e tente novamente.</string>
-    <string name="ifile_missing">Falha ao localizar o arquivo apk para o tema preto/escuro a partir do armazenamento, por favor tente novamente.</string>
+    <string name="ifile_missing">Falha ao localizar o arquivo APK para o tema preto/escuro a partir do armazenamento, por favor tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_conflict">A instalação falhou porque o app está em conflito com um app já instalado. Desinstale a versão atual do aplicativo e tente novamente.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo padrão e tente novamente.</string>
     <string name="installation_failed">A instalação falhou por razões desconhecidas, junte-se ao nosso Telegram ou Discord para obter mais suporte. Por favor, anexe também uma captura de tela do menu Avançado</string>
     <string name="installation_incompatible">A instalação falhou porque o arquivo de instalação é incompatível com o seu dispositivo. Limpe os arquivos baixados nas configurações e tente novamente.</string>
-    <string name="installation_invalid">A instalação falhou porque os arquivos apk estão corrompidos, tente novamente.</string>
+    <string name="installation_invalid">A instalação falhou porque os arquivos APK estão corrompidos, por favor tente novamente.</string>
     <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
-    <string name="installation_signature">A instalação falhou porque a verificação de assinatura do apk está ativado. Desative a verificação de assinatura do apk e tente novamente.</string>
+    <string name="installation_signature">A instalação falhou porque a verificação de assinatura do APK está ativada. Desative a verificação de assinatura do APK e tente novamente.</string>
     <string name="installation_storage">A instalação falhou porque o dispositivo não tem espaço livre suficiente.</string>
-    <string name="modapk_missing">Falha ao encontrar o arquivo apk para o tema preto/escuro a partir do instalador. Limpe os \"dados do app\" do Manager e tente novamente.</string>
+    <string name="modapk_missing">Falha ao encontrar o arquivo APK para o tema preto/escuro a partir do instalador. Limpe os \"dados do app\" do Gerenciador e tente novamente.</string>
     <string name="path_missing">Falha ao localizar o caminho de instalação padrão do YouTube após a instalação dividida (split).</string>
 </resources>

@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">إلغاء</string>
     <string name="close">إغلاق</string>
-    <string name="description_microg">نسخة خاصة من خدمات جوجل للجوال معدة خصيصا لتطبيق ڤانسد بناءً على مشروع microG.</string>
+    <string name="description_microg">تطبيق GMS مخصص لـ Vanced مرتكز على مشروع microG.</string>
     <string name="description_vanced">تطبيق يوتيوب معدل مع العديد من الميزات المفيدة!</string>
     <string name="description_vanced_music">ڤانسد لموسيقى يوتيوب! يلبي احتياجاتك حتى وإن كان يضم ميزات أقل من ڤانسد.</string>
     <string name="reset">إعادة تعيين</string>
@@ -66,7 +66,7 @@
     <string name="variant">النوع</string>
     <!-- Logs -->
     <string name="logs_not_saved">تعذر حفظ السجل</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">تم حفظ السجلات بنجاح إلى %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">التفاصيل</string>
     <string name="app_install_files_detected">تم اكتشاف ملفات تثبيت %1$s!</string>
@@ -111,7 +111,7 @@
     <string name="installation_aborted">فشل التثبيت لأن المستخدم ألغى التثبيت.</string>
     <string name="installation_conflict">فشل التثبيت، لأن هذا التطبيق يتعارض مع تطبيق مثبت بالفعل. قم بإلغاء تثبيت الإصدار الحالي من ڤانسد، ثم حاول مرة أخرى.</string>
     <string name="installation_downgrade">فشل التثبيت لأن المستخدم حاول تثبيت إصدار قديم. قم بألغاء تثبيت التحديثات الخاصة باليوتيوب الأصلي، ثم حاول مرة أخرى.</string>
-    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم. يرجى أيضاً إرفاق لقطة الشاشة من القائمة المتقدمة</string>
+    <string name="installation_failed">فشل التثبيت لأسباب غير معروفة، انضم إلى تيليجرام أو ديسكورد لمزيد من الدعم. يرجى أيضاً إرفاق لقطة الشاشة من زر \"التفاصيل\" أدناه</string>
     <string name="installation_incompatible">فشل التثبيت لأن ملف التثبيت غير متوافق مع جهازك. امسح الملفات التي تم تنزيلها في الإعدادات، ثم حاول مرة أخرى.</string>
     <string name="installation_invalid">فشل التثبيت لأن حزم التثبيت تالفة، الرجاء المحاولة مرة أخرى.</string>
     <string name="installation_miui">فشل التثبيت لأن تحسينات MIUI مفعلة. قم بتعطيل تحسينات MIUI ، ثم حاول مرة أخرى.</string>

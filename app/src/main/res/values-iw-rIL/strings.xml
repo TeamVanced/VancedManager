@@ -113,9 +113,9 @@
     <string name="installation_downgrade">ההתקנה נכשלה כיוון שהמשתמש ניסה לשנמך את גרסת היישום. מחק עדכונים מאפליקציית YouTube הרגילה, ולאחר מכן נסה שוב.</string>
     <string name="installation_failed">ההתקנה נכשלה מסיבות לא ידועות, הצטרף לטלגרם או לדיסקורד לקבלת תמיכה נוספת. אנא צרף גם צילום מסך מהתפריט המתקדם</string>
     <string name="installation_incompatible">ההתקנה נכשלה מכיוון שההתקנה או הקובץ לא תואמים עם מכשירך. נקה הורדות שהושלמו מתוך ההגדרות, ואז נסה שוב.</string>
-    <string name="installation_invalid">ההתקנה נכשלה מכיוון שקבצי הישום הרוסים, בבקשה נסה שוב.</string>
+    <string name="installation_invalid">ההתקנה נכשלה כיוון שקבצי היישום הרוסים, בבקשה נסה שנית.</string>
     <string name="installation_miui">ההתקנה נכשלה מכיוון שאופטימיזצית MIUI פעילה. השבת את אופטימיזצית MIUI, ואז נסה שוב.</string>
-    <string name="installation_signature">ההתקנה נכשלה מכיוון שאימות החתימה בישום פעילה. השבת את אימות החתימה בישום, ואז נסה שוב.</string>
+    <string name="installation_signature">ההתקנה נכשלה כיוון שאימות החתימה ביישום פעיל. השבת את אימות החתימה ביישום, ואז נסה שנית.</string>
     <string name="installation_storage">ההתקנה נכשלה כיוון שאין מספיק מקום פנוי במכשיר.</string>
     <string name="modapk_missing">נכשל במציאת קובץ APK של ערכת נושא שחורה/כהה. נקה את נתוני האפליקציה Vanced Manager, ולאחר מכן נסה שוב.</string>
     <string name="path_missing">נכשל איתור נתיב ההתקנה של YouTube הרגיל לאחר התקנה מפוצלת.</string>

@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Откажи</string>
     <string name="close">Затвори</string>
-    <string name="description_microg">Независна GMS имплементација за Vanced заснована на microG пројекту.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Модификовани YouTube клијент са многим корисним функцијама!</string>
     <string name="description_vanced_music">Vanced, али за YouTube Music! Релативно са мање напредних карактеристикама, али ће задовољити ваше потребе.</string>
     <string name="reset">Ресетуј</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Омогућите дозволу за рут</string>
     <string name="lets_get_started">Хајде да почнемо</string>
     <string name="select_at_least_one_app">Одабери барем једну апликацију!</string>
-    <string name="willing_to_use_root">Не знате шта је ово или не желите да користите роот верзију апликације? Само кликните на плаву стрелицу испод!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">О %s</string>
     <string name="accessibility_download">Преузми</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Неуспешно постављање нове носеће боје</string>
     <string name="failed_uninstall">Неуспешно деинсталирање пакета %1$s</string>
     <string name="files_missing_va">Није могуће пронаћи датотеке за инсталацију. Преузмите их поново и поновите инсталацију.</string>
-    <string name="ifile_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у меморијском простору, покушајте поново.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Инсталација није успешна, корисник је обуставио инсталацију.</string>
     <string name="installation_conflict">Инсталација неуспешна, зато што је дошло до конфликта са већ инсталираном верзијом. Деинсталирајте тренутну верзију Vanced-а и затим покушајте поново.</string>
     <string name="installation_downgrade">Инсталација није успешна, корисник је покушао да инсталира старију верзију преко новије верзије апликације. Деинсталирајте све до предодређене инсталиране верзије YouTubе апликације, затим покушајте поново.</string>
     <string name="installation_failed">Неуспешна инсталација услед непознатих разлога, Прикључите се нашем Telegram или Discord каналима за помоћ. Молимо да прикључите снимак екрана из Проширеног Менија</string>
     <string name="installation_incompatible">Инсталација је неуспешна јер инсталациона датотека није компатибилна са вашим уређајем. Очистите преузете датотеке у Подешавањима и затим покушајте поново.</string>
-    <string name="installation_invalid">Инсталација није успеla јер је apk датотека оштећена, покушајте поново.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Инсталација неуспешна јер је укључена оптимизација за ову апликацију у MIUI систему. Искључите MIUI оптимизацију за ову апликацију и затим покушајте поново.</string>
-    <string name="installation_signature">Инсталација неуспешна јер је укључена провера потписа преузете apk датотеке. Искључите apk проверу и затим покушајте поново.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Инсталација неуспешна јер на уређају нема довољно слободног простора.</string>
-    <string name="modapk_missing">Није могуће пронаћи apk датотеку за црно/тамну тему у инсталационим датотекама. Очистите податке у Менаџеру и покушајте поново.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Није могуће пронаћи подразумевану YouTube локацију за инсталацију после подељене инсталације.</string>
 </resources>

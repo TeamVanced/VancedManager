@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">বাতিল করুন</string>
     <string name="close">বন্ধ করুন</string>
-    <string name="description_microg">মাইক্রোজি প্রকল্পের ভিত্তিতে ভ্যান্সডের জন্য একটি কাস্টম জিএমএস বাস্তবায়ন।.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">অনেক দরকারী বৈশিষ্ট্য সহ একটি পরিবর্তিত ইউটিউব ক্লায়েন্ট!</string>
     <string name="description_vanced_music">ভ্যান্সড, তবে ইউটিউব মিউজিকের জন্য! তুলনামূলকভাবে কম বৈশিষ্ট্য সমৃদ্ধ তবে আপনার চাহিদা পূরণ করবে।.</string>
     <string name="reset">পুনরায় স্থির করুন</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">রুট অনুমতি মঞ্জুর করুন</string>
     <string name="lets_get_started">শুরু করা যাক</string>
     <string name="select_at_least_one_app">অন্তত একটি অ্যাপ নির্বাচন করুন!</string>
-    <string name="willing_to_use_root">এটি কি তা জানেন না বা রুট ভার্সনটি ব্যবহার করতে চান না? কেবল নীচের নীল তীর চিহ্নটি ক্লিক করুন!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s এর সম্বন্ধে</string>
     <string name="accessibility_download">ডাউনলোড</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">নতুন অ্যাকসেন্ট রঙ প্রয়োগ করতে ব্যর্থ হয়েছে</string>
     <string name="failed_uninstall">%1$s পেকেজ আন‌ইনস্টল করা যাইনি</string>
     <string name="files_missing_va">ইনস্টলেশনের জন্য প্রয়োজনীয় ফাইলগুলি খুঁজে পাওয়া যায় নি। ইনস্টল করার জন্য ফাইলগুলি পুনরায় ডাউনলোড করুন, তারপরে আবার চেষ্টা করুন।</string>
-    <string name="ifile_missing">স্টোরেজ থেকে কালো/গাঢ় থিমের জন্য এপিকে ফাইল সনাক্ত করতে ব্যর্থ, দয়া করে আবার চেষ্টা করুন।</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">ইনস্টল করা যায়নি কারণ ব্যবহারকারী ইনস্টল করা বাতিল করে দিয়েছেন।</string>
     <string name="installation_conflict">ইনস্টলেশন ব্যর্থ হয়েছে কারণ অ্যাপ্লিকেশনটি ইতিমধ্যে ইনস্টল হওয়া আরেকটি অ্যাপ্লিকেশানের সাথে দ্বন্দ্ব করেছে। অ্যাপটির বর্তমান সংস্করণটি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_downgrade">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ব্যবহারকারী প্যাকেজটি ডাউনগ্রেড করার চেষ্টা করেছিল। স্টক অ্যাপ্লিকেশন থেকে আপডেটগুলি আনইনস্টল করুন, তারপরে আবার চেষ্টা করুন।</string>
     <string name="installation_failed">অজানা কারণে ইনস্টলেশন ব্যর্থ হয়েছে, আরও সহায়তার জন্য আমাদের টেলিগ্রাম বা ডিসকর্ডে যোগ দিন। অ্যাডভান্সড মেনু থেকে স্ক্রিনশটটিও সংযুক্ত করুন</string>
     <string name="installation_incompatible">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ইনস্টলেশন ফাইলটি আপনার ডিভাইসের উপযুক্ত নয়। সেটিংসে ডাউনলোড করা ফাইল মুছে ফেলুন, তারপরে আবার চেষ্টা করুন।</string>
-    <string name="installation_invalid">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এপিকে ফাইলগুলি দূষিত, দয়া করে আবার চেষ্টা করুন।</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এমআইইউআই অপটিমাইজেশন সক্ষম আছে। এমআইইউআই অপ্টিমাইজেশন অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
-    <string name="installation_signature">ইনস্টলেশন ব্যর্থ হয়েছে কারণ এপিকে স্বাক্ষর যাচাইকরণ সক্ষম করা আছে। এপিকে স্বাক্ষর যাচাইকরণ অক্ষম করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">ইনস্টলেশন ব্যর্থ হয়েছে কারণ ডিভাইসে পর্যাপ্ত ফাঁকা জায়গা নেই।</string>
-    <string name="modapk_missing">ইনস্টলার থেকে কালো/গাঢ় থিমের জন্য সফটওয়্যারের ফাইল খুঁজতে ব্যর্থ। ম্যানেজারের ডেটা সাফ করুন, তারপরে আবার চেষ্টা করুন।</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">স্পিল্ট ফাইলগুলি ইনস্টল করার পরে স্টক ইউটিউবের ইনস্টলেশন পাথ সনাক্ত করতে ব্যর্থ।</string>
 </resources>

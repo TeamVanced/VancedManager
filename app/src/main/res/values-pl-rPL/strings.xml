@@ -66,7 +66,7 @@
     <string name="variant">Wariant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Nie udało się zapisać dzienników</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Pomyślnie zapisano dzienniki do %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Szczegóły</string>
     <string name="app_install_files_detected">Wykryto %1$s plików instalacyjnych!</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Nie udało się zastosować nowego koloru akcentu</string>
     <string name="failed_uninstall">Nie udało się odinstalować pakietu %1$s</string>
     <string name="files_missing_va">Nie udało się zlokalizować wymaganych plików do instalacji. Pobierz ponownie pliki instalacyjne, a następnie spróbuj ponownie.</string>
-    <string name="ifile_missing">Nie udało się zlokalizować pliku apk dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
+    <string name="ifile_missing">Nie udało się zlokalizować pliku APK dla czarnego/ciemnego motywu, spróbuj ponownie.</string>
     <string name="installation_aborted">Instalacja nie powiodła się, ponieważ użytkownik przerwał instalację.</string>
     <string name="installation_conflict">Instalacja nie powiodła się ponieważ aplikacja konfliktuje z już zainstalowaną aplikacją. Odinstaluj aktualną wersję aplikacji a następnie spróbuj ponownie.</string>
     <string name="installation_downgrade">Instalacja nie powiodła się, ponieważ użytkownik próbował obniżyć paczkę. Odinstaluj aktualizacje z domyślnej aplikacji YouTube, a następnie spróbuj ponownie.</string>
     <string name="installation_failed">Instalacja nie powiodła się z nieznanych powodów, dołącz do naszego Telegrama lub Discorda, aby uzyskać dalsze wsparcie. Proszę również dołączyć zrzut ekranu z zaawansowanego menu</string>
     <string name="installation_incompatible">Instalacja nie powiodła się, ponieważ plik instalacyjny jest niezgodny z Twoim urządzeniem. Wyczyść pobrane pliki w Ustawieniach, a następnie spróbuj ponownie.</string>
-    <string name="installation_invalid">Instalacja nie powiodła się, bo pliki apk są uszkodzone, spróbuj jeszcze raz.</string>
+    <string name="installation_invalid">Instalacja nie powiodła się, bo pliki APK są uszkodzone, spróbuj jeszcze raz.</string>
     <string name="installation_miui">Instalacja nie powiodła się, ponieważ optymalizacja MIUI jest włączona. Wyłącz optymalizację MIUI, a następnie spróbuj ponownie.</string>
-    <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu apk. Wyłącz weryfikację podpisu apk, a następnie spróbuj ponownie.</string>
+    <string name="installation_signature">Instalacja nie powiodła się, ponieważ włączona jest weryfikacja podpisu APK. Wyłącz weryfikację podpisu APK, a następnie spróbuj ponownie.</string>
     <string name="installation_storage">Instalacja nie powiodła się, ponieważ urządzenie nie ma wystarczającej ilości wolnego miejsca.</string>
-    <string name="modapk_missing">Nie udało się znaleźć pliku apk dla czarnego/ciemnego motywu z instalatora. Wyczyść dane aplikacji Menedżera i spróbuj ponownie.</string>
+    <string name="modapk_missing">Nie udało się znaleźć pliku APK dla czarnego/ciemnego motywu z instalatora. Wyczyść dane aplikacji Menedżera i spróbuj ponownie.</string>
     <string name="path_missing">Nie udało się zlokalizować ścieżki instalacji YouTube po podzieleniu instalacji.</string>
 </resources>

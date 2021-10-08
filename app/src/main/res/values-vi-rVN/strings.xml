@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Hủy</string>
     <string name="close">Đóng</string>
-    <string name="description_microg">GMS Nhúng đã được tuỳ chỉnh cho Vanced dựa trên Dự án microG.</string>
+    <string name="description_microg">GMS bổ sung được tuỳ chỉnh dựa trên dự án microG.</string>
     <string name="description_vanced">Ứng dụng YouTube đã được sửa đổi với nhiều tính năng hữu ích!</string>
     <string name="description_vanced_music">Vanced, nhưng cho YouTube Music! Khá ít tính năng nhưng đáp ứng được nhu cầu của bạn.</string>
     <string name="reset">Đặt lại</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Cấp quyền root</string>
     <string name="lets_get_started">Bắt đầu</string>
     <string name="select_at_least_one_app">Chọn ít nhất một ứng dụng!</string>
-    <string name="willing_to_use_root">Bạn không biết đây là gì hoặc không muốn sử dụng phiên bản root? hãy nhấp vào dấu > bên dưới!</string>
+    <string name="willing_to_use_root">Không biết đây là gì hoặc không muốn sử dụng bản root? Hãy nhấn vào mũi tên bên dưới!</string>
     <!-- Home Page -->
     <string name="about_app">Thông tin về %1$s</string>
     <string name="accessibility_download">Tải xuống</string>
@@ -45,8 +45,8 @@
     <string name="accent_color">Màu chủ đạo</string>
     <string name="category_appearance">Giao diện</string>
     <string name="category_behaviour">Ứng dụng</string>
-    <string name="clear_files">Xóa các tệp tin đã tải về</string>
-    <string name="cleared_files">Xóa các tệp tin thành công</string>
+    <string name="clear_files">Xóa các file đã tải về</string>
+    <string name="cleared_files">Xóa các file thành công</string>
     <string name="firebase_summary">Cho phép chúng tôi thu thập thông tin về hiệu suất và sự cố của ứng dụng</string>
     <string name="firebase_title">Firebase Analytics</string>
     <string name="language_title">Ngôn ngữ</string>
@@ -69,8 +69,8 @@
     <string name="logs_saved">Lưu nhật ký thành công tại %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Chi tiết</string>
-    <string name="app_install_files_detected">Phát hiện tệp cài đặt của %1$s!</string>
-    <string name="app_install_files_detected_summary">Manager đã tìm thấy tất cả các tệp cần thiết để cài đặt %1$s. Bạn có muốn cài đặt nó không?</string>
+    <string name="app_install_files_detected">Phát hiện file cài đặt của %1$s!</string>
+    <string name="app_install_files_detected_summary">Manager đã tìm thấy tất cả các file cần thiết để cài đặt %1$s. Bạn có muốn cài đặt nó không?</string>
     <string name="app_installation_preferences">%1$s Tùy biến Cài đặt</string>
     <string name="checking_updates">Đang kiểm tra cập nhật…</string>
     <string name="chosen_lang">Ngôn ngữ: %1$s</string>
@@ -80,8 +80,8 @@
     <string name="guide">Hướng dẫn</string>
     <string name="hold_on">Khoan đã!</string>
     <string name="magisk_vanced">Bạn đang sử dụng phiên bản Magisk/TWRP của Vanced, hiện đã bị ngừng phát triển và không thể được cập nhập bằng ứng dụng này. Hãy gỡ mô-đun Magisk/flash trình gỡ cài đặt TWRP.</string>
-    <string name="miui_one">Để cài Vanced, bạn PHẢI vô hiệu hóa Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
-    <string name="miui_one_title">Tối ưu hoá MIUI đang được kích hoạt!</string>
+    <string name="miui_one">Để cài Vanced, bạn PHẢI tắt Tối ưu hóa MIUI trong cài đặt nhà phát triển. (Bỏ qua cảnh báo này nếu bạn đang sử dụng ROM dựa trên xiaomi.eu phiên bản 20.2.20 hoặc mới hơn)</string>
+    <string name="miui_one_title">Tối ưu hoá MIUI đang bật!</string>
     <string name="please_be_patient">Vui lòng KHÔNG thoát khỏi ứng dụng trong tiến trình này!</string>
     <string name="uninstall_app_text">Bạn có chắc chắn muốn gỡ cài đặt %1$s không?</string>
     <string name="uninstall">Gỡ cài đặt</string>
@@ -106,17 +106,17 @@
     <string name="error_downloading">Lỗi khi tải xuống %1$s</string>
     <string name="failed_accent">Áp dụng màu chủ đạo mới thất bại</string>
     <string name="failed_uninstall">Gỡ cài đặt %1$s thất bại</string>
-    <string name="files_missing_va">Không thể xác định các tệp tin cần thiết để cài đặt. Tải lại các tệp cài đặt rồi thử lại.</string>
-    <string name="ifile_missing">Xác định tệp tin apk cho nền đen/tối từ bộ nhớ thất bại, vui lòng thử lại.</string>
+    <string name="files_missing_va">Không thể xác định các file cần thiết để cài đặt. Tải lại các tệp cài đặt rồi thử lại.</string>
+    <string name="ifile_missing">Không thể xác định file APK cho nền đen/tối từ bộ nhớ, vui lòng thử lại.</string>
     <string name="installation_aborted">Cài đặt thất bại do người dùng hủy.</string>
     <string name="installation_conflict">Cài đặt thất bại do có xung đột với ứng dụng đã được cài đặt trước đó. Gỡ cài đặt phiên bản hiện tại của ứng dụng rồi thử lại.</string>
     <string name="installation_downgrade">Cài đặt thất bại do người dùng cố hạ cấp ứng dụng. Gỡ cài đặt các bản cập nhật khỏi ứng dụng gốc rồi thử lại.</string>
     <string name="installation_failed">Cài đặt thất bại do lí do không xác định, tham gia Telegram hoặc Discord để được hỗ trợ. Vui lòng kèm theo ảnh chụp màn hình từ phần Chi tiết</string>
-    <string name="installation_incompatible">Cài đặt thất bại do tệp tin cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
-    <string name="installation_invalid">Cài đặt thất bại do các tệp tin apk bị lỗi, xin hãy thử lại.</string>
-    <string name="installation_miui">Cài đặt thất bại do Tối ưu hóa MIUI được kích hoạt. Vô hiệu hóa Tối ưu hóa MIUI rồi thử lại.</string>
-    <string name="installation_signature">Cài đặt thất bại do xác minh chứng chỉ apk được kích hoạt. Vô hiệu hóa xác minh chứng chỉ apk rồi thử lại.</string>
+    <string name="installation_incompatible">Cài đặt thất bại do file cài đặt không tương thích với thiết bị của bạn. Xóa các tệp tin đã tải về trong Cài đặt rồi thử lại.</string>
+    <string name="installation_invalid">Cài đặt thất bại do file APK bị lỗi, vui lòng thử lại.</string>
+    <string name="installation_miui">Cài đặt thất bại do Tối ưu hóa MIUI đang bật. Tắt Tối ưu hóa MIUI rồi thử lại.</string>
+    <string name="installation_signature">Cài đặt thất bại do xác minh chứng chỉ APK đang bật. Tắt xác minh chứng chỉ APK rồi thử lại.</string>
     <string name="installation_storage">Cài đặt thất bại do thiết bị của bạn không có đủ bộ nhớ trống.</string>
-    <string name="modapk_missing">Tìm kiếm tệp tin apk cho nền đen/tối từ trình cài đặt thất bại. Xoá dữ liệu của Manager rồi thử lại.</string>
+    <string name="modapk_missing">Không tìm thấy file APK cho nền đen/tối từ trình cài đặt. Xóa dữ liệu ứng dụng của Manager rồi thử lại.</string>
     <string name="path_missing">Không thể xác định thư mục cài đặt của YouTube gốc sau khi tải split.</string>
 </resources>

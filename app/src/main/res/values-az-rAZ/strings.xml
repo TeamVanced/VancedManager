@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">İmtina</string>
     <string name="close">Bağla</string>
-    <string name="description_microg">microG Layihəsi əsasında Vanced üçün təkmilləşdirilmiş özəl bir GMS tətbiqi.</string>
+    <string name="description_microg">microG layihəsi əsasında Vanced üçün təkmilləşdirilmiş özəl bir GMS tətbiqi.</string>
     <string name="description_vanced">Çoxlu faydalı özəllikləri ilə modifikasiya edilmiş YouTube versiyası!</string>
     <string name="description_vanced_music">Yenə Vanced, ancaq YouTube Msuic üçün! Nisbətən daha az özəlliyi olsa da, ehtiyaclarınızı qarşılayacaq.</string>
     <string name="reset">Sıfırla</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Root İcazəsi Ver</string>
     <string name="lets_get_started">Gəlin başlayaq</string>
     <string name="select_at_least_one_app">Ən azı bir tətbiq seçin!</string>
-    <string name="willing_to_use_root">Root versiyasının nə olduğunu bilmirsiz ya da sadəcə istifadə etmək istəmirsiz? onda aşağıdakı göy oxa toxunun!</string>
+    <string name="willing_to_use_root">Bunun nə olduğunu bilmirsiniz və ya root (kök) versiyasını istifadə etmək istəmirsiniz? Sadəcə aşağıdakı göy oxa toxunun!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Haqqında</string>
     <string name="accessibility_download">Yüklə</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">Qeydləri saxlamaq olmadı</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Jurnallar uğurla %1$s kataloqunda saxlanıldı</string>
     <!-- Dialogs -->
     <string name="advanced">Təfsilatlar</string>
     <string name="app_install_files_detected">%1$s quraşdırma faylı aşkarlandı!</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Yeni ikinci rəngi təyin etmək alınmadı</string>
     <string name="failed_uninstall">%1$s paketini silmək olmur</string>
     <string name="files_missing_va">Quraşdırmaq üçün lazımi fayllar tapılmadı. Quraşdırma fayllarını yenidən endirib təkrar sınayın.</string>
-    <string name="ifile_missing">Anbarda qara/tünd mövzu üçün apk faylı tapılmadı, yenidən sınayın.</string>
+    <string name="ifile_missing">Anbarda tünd/qara tema üçün APK faylı tapılmadı, zəhmət olmasa yenidən sınayın.</string>
     <string name="installation_aborted">İstifadəçi quraşdırmanı ləğv etdiyi üçün quraşdırılma uğursuz oldu.</string>
     <string name="installation_conflict">Tətbiq əvvəlcədən quraşdırılmış bir tətbiqlə toqquşduğu üçün quraşdırılma uğursuz oldu. Vanced-in cari versiyasını silib yenidən sınayın.</string>
     <string name="installation_downgrade">İstifadəçi paketi alt versiyaya keçirməyə çalışdığı üçün quraşdırılma uğursuz oldu. Stok YouTube tətbiqindən yeniləmələri silib yenidən sınayın.</string>
     <string name="installation_failed">Bilinməyən səbəblərdən qurma alınmadı, əlavə yardım üçün Telegram və ya Discordumuza qoşulun. Xahiş olunur Qabaqcıl bölməsindən ekran görüntüsü də əlavə edin</string>
     <string name="installation_incompatible">Quraşdırma faylı cihazınıza uyğun gəlmədiyi üçün quraşdırılma uğursuz oldu. Tənzimləmələrdən endirilmiş faylları təmizləyib yenidən sınayın.</string>
-    <string name="installation_invalid">Apk faylları zədəli olduğu üçün quraşdırılma uğursuz oldu, yenidən sınayın.</string>
+    <string name="installation_invalid">Apk faylları zədəli olduğu üçün quraşdırılmadı, zəhmət olmasa yenidən sınayın.</string>
     <string name="installation_miui">MIUI Optimallaşdırma fəal olduğu üçün quraşdırılma uğursuz oldu. MIUI Optimallaşdırmanı sıradan çıxarıb yenidən sınayın.</string>
-    <string name="installation_signature">Apk imza təsdiqləmə fəal olduğu üçün quraşdırılma uğursuz oldu. Apk imza təsdiqləməsini sıradan çıxarıb yenidən sınayın.</string>
+    <string name="installation_signature">APK imza təsdiqləmə fəal olduğu üçün quraşdırılmadı. APK imza təsdiqləməsini sıradan çıxarıb yenidən sınayın.</string>
     <string name="installation_storage">Cihazda yaddaş az olduğundan qurma alınmadı.</string>
-    <string name="modapk_missing">Quraşdırıcıda qara/tünd tema üçün apk faylı tapılmadı. Menecer-in tətbiq verilənlərini təmizləyib yenidən sınayın.</string>
+    <string name="modapk_missing">Quraşdırıcıda qara/tünd tema üçün APK faylı tapılmadı. Manager-in tətbiq verilənlərini təmizləyib yenidən sınayın.</string>
     <string name="path_missing">Ayrılmış quraşdırmadan sonra stok YouTube quraşdırma yolu tapılmadı.</string>
 </resources>

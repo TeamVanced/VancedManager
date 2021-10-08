@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Katkesta</string>
     <string name="close">Sulge</string>
-    <string name="description_microg">Kohandatud GMS-i juurutamine Vancedile, mis põhineb microG-projektil.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Modifitseeritud YouTube klient, mitmete kasulike funktsioonidega!</string>
     <string name="description_vanced_music">Vanced, kuid YouTube Musicu jaoks! suhteliselt vähem funktsioonirikas, kuid vastab teie vajadustele.</string>
     <string name="reset">Lähtesta</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Anna juurluba</string>
     <string name="lets_get_started">Alustame</string>
     <string name="select_at_least_one_app">Vali vähemalt üks rakendus!</string>
-    <string name="willing_to_use_root">Kas te ei tea mis see on, või ei soovi kasutada rooditud versiooni? vajutage allpool sinist noolt!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Umbes %1$s</string>
     <string name="accessibility_download">Allalaadimine</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Uue rõhuvärvi rakendamine ebaõnnestus</string>
     <string name="failed_uninstall">Paketi %1$s eemaldamine ebaõnnestus</string>
     <string name="files_missing_va">Paigalduseks vajalike failide leidmine ebaõnnestus. Laadige paigaldusfailid uuesti alla ja proovige uuesti.</string>
-    <string name="ifile_missing">Apk faili musta/tumeda teema jaoks leidmine ebaõnnestus, proovige palun uuesti.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Paigaldamine ebaõnnestus kuna kasutaja katkestas selle.</string>
     <string name="installation_conflict">Paigaldamine ebaõnnestus, kuna tekkis konflikt olemasoleva versiooniga. Eemaldage praegune rakenduse versioon, ning proovige uuesti.</string>
     <string name="installation_downgrade">Paigaldamine ebaõnnestus kuna kasutaja proovis paketti madalamale versioonile üle viia. Eemaldage värskendused originaalrakendusest ja proovige uuesti.</string>
     <string name="installation_failed">Paigaldamine ebaõnnestus teadmata põhjustel. Lisateabe saamiseks liituge meie telegrammi või Discordiga. Palun manustage ekraanipilt läbi täpsema menüü</string>
     <string name="installation_incompatible">Paigaldamine ebaõnnestus, kuna paigaldusfail ei sobitu teie seadmega. Puhastage allalaaditud failid seadete alt, ning proovige uuesti.</string>
-    <string name="installation_invalid">Paigaldamine ebaõnnestus kuna apk failid on vigased, palun proovige uuesti.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Paigaldamine ebaõnnestus, kuna MIUI optimiseerimine on lubatud. Keelake MIUI optimiseerimine ja proovige uuesti.</string>
-    <string name="installation_signature">Paigaldamine ebaõnnestus kuna apk-allkirja kontrollimine on lubatud. Keelake apk allkirja kinnitamine ja proovige uuesti.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Installimist ei saadud viia lõpule kuna seadmes pole piisvalt vaba ruumi.</string>
-    <string name="modapk_missing">Apk faili musta/tumeda teema jaoks leidmine paigaldajast ebaõnnestus. Puhastage halduri rakenduse andmed ja proovige uuesti.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Pärast jagatud paigaldamist ei õnnestunud leida originaal YouTube\'i paigaldus asukohta.</string>
 </resources>

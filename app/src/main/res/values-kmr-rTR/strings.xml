@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Betal bike</string>
     <string name="close">Bigire</string>
-    <string name="description_microg">Ji bo Projeya microG ji bo Vanced tê tetbîqkirin.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Mişterîya YouTube bi gelek taybetmendiyên kêrhatî guherî!</string>
     <string name="description_vanced_music">Vanced, lê ji bo YouTube Music!. Ji bo hewcedariyên te, hinekî kêm-dewlemend e.</string>
     <string name="reset">Nûsaz bike</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Destûra Root\'ê bide</string>
     <string name="lets_get_started">Em dest pê bikin</string>
     <string name="select_at_least_one_app">Herî kêm sepanekê hilbijêre!</string>
-    <string name="willing_to_use_root">Gelo ev çi ye an naxwazî versiyona root bi kar bîne? tenê tîrê şîn ê jêrîn bitikînin!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Derbar %1$s</string>
     <string name="accessibility_download">Dakêşe</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Lêpirandina rengê nû yê zaravayê biserneket</string>
     <string name="failed_uninstall">Sazkirina pakêta %1$s bi ser neket</string>
     <string name="files_missing_va">Sazkirina pelên pêwîst bi ser neket. Pelên sazkirinê ji nû ve dakêşin, piştre dîsa biceribînin.</string>
-    <string name="ifile_missing">Nekarî pelê apk ji bo dirba reş/tarî ji hilanînê bicîh bike, ji kerema xwe re dîsa biceribîne.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Sazkirin bi ser neket ji ber ku bikarhêner sazkirin bete betalkirin.</string>
     <string name="installation_conflict">Sazkirin bi ser neket ji ber ku pêvek bi pêvek berê sazkirî re naqede. Vê versiyona heyî ya vê appê saz bike, paşê dîsa biceribîne.</string>
     <string name="installation_downgrade">Sazkirin bi ser neket ji ber ku bikarhêner hewl da pakêtê kêm bike. Nûvekirinên ji parsûyê rabike, paşê dîsa biceribîne.</string>
     <string name="installation_failed">Sazkirin ji ber sedemên nediyar têk çû, ji bo piştgiriya zêdetir tevlî Telegram an Jî Discordê me bibin. Ji kerema xwe dîmenek ekranê jî ji menuya Pêşkeftî ve girêdayî bikin</string>
     <string name="installation_incompatible">Sazkirin bi ser neket ji ber ku pelê sazkirinê bi cîhaza we re ne hevkar e. Mîhengên daxistinî paqij bike, paşê dîsa biceribîne.</string>
-    <string name="installation_invalid">Sazkirin bi ser neket ji ber ku pelên apk\'ê nebaş in, ji kerema xwe careke din biceribînin.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Sazkirin bi ser neket ji ber ku MIUI Optimization çalak e. MIUI Optimization\'ê neçalak bikin, paşê dîsa biceribînin.</string>
-    <string name="installation_signature">Sazkirin bi ser neket ji ber ku rastandina îmzeya apk\'ayê çalak e. Rastandina îmzeya apk\'ayê neçalak bikin, paşê dîsa biceribînin.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Sazkirin bi ser neket ji ber ku cîhaz têra xwe cihê belaş tune.</string>
-    <string name="modapk_missing">Dozîna dosiya apk ji bo rûkara reş/tarî ji sazkirinê bi ser neket. Daneyên sepanê ji rêveberê paqij bikin, paşê dîsa biceribîne.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Piştî sazkirina dabeşkirî, dozîna rêka sazkirina YouTube stokê bi ser neket.</string>
 </resources>

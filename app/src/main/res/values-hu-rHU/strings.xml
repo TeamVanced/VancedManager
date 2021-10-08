@@ -66,7 +66,7 @@
     <string name="variant">Változat</string>
     <!-- Logs -->
     <string name="logs_not_saved">A napló mentése nem sikerült</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Napló sikeresen mentve ide %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Részletek</string>
     <string name="app_install_files_detected">%1$s telepítőfájlok észlelve!</string>
