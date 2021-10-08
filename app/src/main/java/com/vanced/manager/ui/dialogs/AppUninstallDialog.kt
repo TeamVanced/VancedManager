@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.dialogs
 
-import android.app.Activity
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -9,16 +8,23 @@ import android.view.ViewGroup
 import com.vanced.manager.R
 import com.vanced.manager.core.ui.base.BindingDialogFragment
 import com.vanced.manager.databinding.DialogAppUninstallBinding
+import com.vanced.manager.utils.PackageHelper
 
 class AppUninstallDialog : BindingDialogFragment<DialogAppUninstallBinding>() {
 
     companion object {
 
-        private var TAG_APP_NAME: String? = null
+        private const val TAG_APP_NAME = "APP_NAME"
+        private const val TAG_APP_PACKAGE = "APP_PACKAGE"
 
-        fun newInstance(appName: String?) : AppUninstallDialog = AppUninstallDialog().apply {
+
+        fun newInstance(
+            appName: String?,
+            appPackage: String?,
+        ) = AppUninstallDialog().apply {
             arguments = Bundle().apply {
-                TAG_APP_NAME = appName
+                putString(TAG_APP_NAME, appName)
+                putString(TAG_APP_PACKAGE, appPackage)
             }
         }
     }
@@ -35,16 +41,22 @@ class AppUninstallDialog : BindingDialogFragment<DialogAppUninstallBinding>() {
     }
 
     private fun bindData() {
+        val appName = arguments?.getString(TAG_APP_NAME)
+        val appPackage = arguments?.getString(TAG_APP_PACKAGE)
         with(binding) {
             appUninstallConfirm.setOnClickListener {
-                //uninstall instruction ??
-                //dataModel?.appPkg?.let { it1 -> viewModel.uninstallPackage(it1) } (taken from original ExpandanbleAppListAdapter.kt)
-                //but uninstallPackage method is not static so I would be forced to spawn a new HomeViewModel instance
+                if (appPackage != null) {
+                    PackageHelper.uninstallApk(
+                        pkg = appPackage,
+                        context = requireActivity()
+                    )
+                }
+                dismiss()
             }
             appUninstallCancel.setOnClickListener {
                 dismiss()
             }
-            appUninstallMessage.text = getString(R.string.uninstall_app_text, TAG_APP_NAME)
+            appUninstallMessage.text = getString(R.string.uninstall_app_text, appName)
         }
     }
 }

@@ -65,7 +65,10 @@ class ExpandableAppListAdapter(
                     }
                 }
                 appUninstall.setOnClickListener {
-                    AppUninstallDialog.newInstance(apps[position]).show(activity.supportFragmentManager, null)
+                    AppUninstallDialog.newInstance(
+                        dataModel?.appName,
+                        dataModel?.appPkg
+                    ).show(activity.supportFragmentManager, null)
                 }
                 appLaunch.setOnClickListener {
                     viewModel.launchApp(apps[position], isRoot)
