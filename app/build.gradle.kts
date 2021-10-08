@@ -10,16 +10,18 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdk = 31
 
     defaultConfig {
         applicationId = "com.vanced.manager"
-        minSdkVersion(21)
-        targetSdkVersion(30)
+        minSdk = 21
+        targetSdk = 31
         versionCode = 260
         versionName = "2.6.0 (Crimson)"
 
-        vectorDrawables.useSupportLibrary = true
+        vectorDrawables {
+            useSupportLibrary = true
+        }
 
         buildConfigField("String[]", "MANAGER_LANGUAGES", "{$languages}")
         buildConfigField("Boolean", "ENABLE_CROWDIN_AUTH", "false")
@@ -28,7 +30,7 @@ android {
         buildConfigField("String", "CROWDIN_CLIENT_SECRET", "\"${System.getenv("CROWDIN_CLIENT_SECRET")}\"")
     }
 
-    lintOptions {
+    lint {
         disable("MissingTranslation", "ExtraTranslation")
     }
 
@@ -99,11 +101,11 @@ dependencies {
     implementation(kotlin("reflect"))
 
     // AndroidX
-    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.browser:browser:1.3.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    implementation("androidx.core:core-ktx:1.3.2")
-    implementation("androidx.fragment:fragment-ktx:1.3.3")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.1")
+    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.fragment:fragment-ktx:1.3.6")
     implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.0.0")
@@ -125,7 +127,7 @@ dependencies {
 
     // Appearance
     implementation("com.github.madrapps:pikolo:2.0.1")
-    implementation("com.google.android.material:material:1.3.0")
+    implementation("com.google.android.material:material:1.4.0")
 
     // JSON parser
     implementation("com.beust:klaxon:5.5")
@@ -148,8 +150,8 @@ dependencies {
     implementation("com.google.android:flexbox:2.0.1")
 
     // Firebase
-    implementation("com.google.firebase:firebase-analytics-ktx:18.0.3")
-    implementation("com.google.firebase:firebase-crashlytics:17.4.1")
-    implementation("com.google.firebase:firebase-messaging:21.1.0")
-    implementation("com.google.firebase:firebase-perf:19.1.1")
+    implementation("com.google.firebase:firebase-analytics-ktx:19.0.2")
+    implementation("com.google.firebase:firebase-crashlytics:18.2.3")
+    implementation("com.google.firebase:firebase-messaging:22.0.0")
+    implementation("com.google.firebase:firebase-perf:20.0.3")
 }
