@@ -41,12 +41,12 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-moshi:$retrofitVersion")
 
-    val moshiVersion = "1.11.0"
+    val moshiVersion = "1.12.0"
     implementation("com.squareup.moshi:moshi-kotlin:$moshiVersion")
     implementation("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
     implementation("com.squareup.moshi:moshi-adapters:$moshiVersion")
     
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 

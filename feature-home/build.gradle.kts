@@ -61,23 +61,23 @@ dependencies {
 
 	implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
-	val moshiVersion = "1.11.0"
+	val moshiVersion = "1.12.0"
 	implementation("com.squareup.moshi:moshi-kotlin:$moshiVersion")
 	implementation("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
 	implementation("com.squareup.moshi:moshi-adapters:$moshiVersion")
 
-	implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+	implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
 
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 
 	implementation("io.insert-koin:koin-android:3.1.2")
 
-	val kotestVersion = "4.4.3"
+	val kotestVersion = "5.0.0.M2"
 	testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
 	testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
 	testImplementation("io.kotest:kotest-property:$kotestVersion")
 
-	val mockkVersion = "1.10.6"
+	val mockkVersion = "1.12.0"
 	testImplementation("io.mockk:mockk:$mockkVersion")
 
 	androidTestImplementation("io.mockk:mockk-android:$mockkVersion")
