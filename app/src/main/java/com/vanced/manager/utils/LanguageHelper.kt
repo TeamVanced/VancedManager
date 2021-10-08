@@ -1,15 +1,10 @@
 package com.vanced.manager.utils
 
-import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.content.res.Resources
-import android.net.Uri
 import android.os.Build
 import android.os.LocaleList
-import android.provider.Settings
 import androidx.annotation.RequiresApi
-import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
 import java.util.*
 
@@ -56,26 +51,4 @@ fun LocaleList.toLangTags(): Array<String> {
         langTags[i] = langTags[i].substring(0, 2)
     }
     return langTags
-}
-
-fun Activity.authCrowdin() {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        if (!Settings.canDrawOverlays(this)) {
-            val intent = Intent(
-                Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                Uri.parse("package:$packageName")
-            )
-            startActivityForResult(intent, 69)
-            return
-        }
-        Crowdin.authorize(this)
-    }
-}
-
-fun Activity.onActivityResult(requestCode: Int) {
-    if (requestCode == 69 && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        if (Settings.canDrawOverlays(this)) {
-            Crowdin.authorize(this)
-        }
-    }
 }

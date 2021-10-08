@@ -15,10 +15,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.crowdin.platform.Crowdin
-import com.crowdin.platform.LoadingStateListener
 import com.google.firebase.messaging.FirebaseMessaging
-import com.vanced.manager.BuildConfig.ENABLE_CROWDIN_AUTH
 import com.vanced.manager.BuildConfig.VERSION_CODE
 import com.vanced.manager.R
 import com.vanced.manager.databinding.ActivityMainBinding
@@ -40,23 +37,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     private val navHost by lazy { findNavController(R.id.nav_host) }
 
-    private val loadingObserver = object : LoadingStateListener {
-        val tag = "VMLocalisation"
-        override fun onDataChanged() {
-            log(tag, "Loaded data")
-        }
-
-        override fun onFailure(throwable: Throwable) {
-            log(tag, "Failed to load data: ${throwable.stackTraceToString()}")
-        }
-
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         setFinalTheme()
         super.onCreate(savedInstanceState)
-        if (ENABLE_CROWDIN_AUTH)
-            authCrowdin()
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -92,15 +75,9 @@ class MainActivity : AppCompatActivity() {
         ) else null
     }
 
-    override fun onPause() {
-        super.onPause()
-        Crowdin.unregisterDataLoadingObserver(loadingObserver)
-    }
-
     override fun onResume() {
         setFinalTheme()
         super.onResume()
-        Crowdin.registerDataLoadingObserver(loadingObserver)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -153,14 +130,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(Crowdin.wrapContext(LanguageContextWrapper.wrap(newBase)))
-    }
-
-    //I have no idea why the fuck is super method deprecated
-    @Suppress("DEPRECATION")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        onActivityResult(requestCode)
+        super.attachBaseContext(LanguageContextWrapper.wrap(newBase))
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {

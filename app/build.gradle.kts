@@ -24,10 +24,6 @@ android {
         }
 
         buildConfigField("String[]", "MANAGER_LANGUAGES", "{$languages}")
-        buildConfigField("Boolean", "ENABLE_CROWDIN_AUTH", "false")
-        buildConfigField("String", "CROWDIN_HASH", "\"${System.getenv("CROWDIN_HASH")}\"")
-        buildConfigField("String", "CROWDIN_CLIENT_ID", "\"${System.getenv("CROWDIN_CLIENT_ID")}\"")
-        buildConfigField("String", "CROWDIN_CLIENT_SECRET", "\"${System.getenv("CROWDIN_CLIENT_SECRET")}\"")
     }
 
     lint {
@@ -132,9 +128,6 @@ dependencies {
 
     // JSON parser
     implementation("com.beust:klaxon:5.5")
-
-    // Crowdin
-    implementation("com.github.crowdin.mobile-sdk-android:sdk:1.4.7")
 
     // HTTP networking
     implementation("com.github.kittinunf.fuel:fuel:2.3.1")

@@ -13,7 +13,6 @@ import androidx.fragment.app.viewModels
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.crowdin.platform.util.inflateWithCrowdin
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.flexbox.JustifyContent
 import com.vanced.manager.BuildConfig.VERSION_CODE
@@ -100,8 +99,7 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflateWithCrowdin(R.menu.toolbar_menu, menu, resources)
-        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.toolbar_menu, menu)
     }
 
     override fun onPause() {

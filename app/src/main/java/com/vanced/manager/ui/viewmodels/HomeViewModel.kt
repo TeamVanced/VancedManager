@@ -10,7 +10,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.crowdin.platform.Crowdin
 import com.vanced.manager.R
 import com.vanced.manager.adapter.LinkAdapter.Companion.DISCORD
 import com.vanced.manager.adapter.LinkAdapter.Companion.REDDIT
@@ -56,7 +55,6 @@ class HomeViewModel(private val activity: FragmentActivity) : ViewModel() {
     fun fetchData() {
         viewModelScope.launch {
             loadJson(activity)
-            Crowdin.forceUpdate(activity)
         }
     }
 
