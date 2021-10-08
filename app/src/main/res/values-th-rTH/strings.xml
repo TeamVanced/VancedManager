@@ -83,7 +83,7 @@
     <string name="miui_one">ในการติดตั้ง Vanced คุณต้องปิดใช้งาน การเพิ่มประสิทธิภาพ MIUI ในการตั้งค่าสำหรับนักพัฒนา (คุณสามารถเพิกเฉยต่อคำเตือนนี้ได้ หากคุณใช้ based ROM xiaomi.eu 20.2.20 หรือใหม่กว่า)</string>
     <string name="miui_one_title">การเพิ่มประสิทธิภาพ MIUI เปิดอยู่!</string>
     <string name="please_be_patient">โปรดอย่าออกจากแอปในระหว่างขั้นตอนนี้!</string>
-    <string name="uninstall_app_text">คุณแน่ใจหรือไม่ที่จะยกเลิกการติดตั้งแอปนี้</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s?</string>
     <string name="uninstall">Uninstall</string>
     <string name="redownload">ดาวน์โหลดอีกครั้ง</string>
     <string name="security_context">ตรวจสอบให้แน่ใจว่าคุณดาวน์โหลดแอพจากช่องทางที่ถูกต้อง vancedapp.com, เซิร์ฟเวอร์ Vanced Discord หรือ Vanced GitHub</string>
