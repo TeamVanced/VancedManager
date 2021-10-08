@@ -85,7 +85,6 @@ val languages: String get() {
 }
 
 dependencies {
-
     implementation(project(":core-presentation"))
     implementation(project(":core-ui"))
 
@@ -128,7 +127,7 @@ dependencies {
     implementation("com.github.topjohnwu.libsu:io:3.1.2")
 
     // Layout
-    implementation("com.google.android:flexbox:2.0.1")
+    implementation("com.google.android.flexbox:flexbox:3.0.0")
 
     // Firebase
     implementation("com.google.firebase:firebase-analytics-ktx:19.0.2")
