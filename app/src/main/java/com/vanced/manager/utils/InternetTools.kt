@@ -32,8 +32,8 @@ val music = MutableLiveData<JsonObject?>()
 val microg = MutableLiveData<JsonObject?>()
 val manager = MutableLiveData<JsonObject?>()
 
-val vancedVersions = MutableLiveData<JsonArray<String>>()
-val musicVersions = MutableLiveData<JsonArray<String>>()
+val vancedVersions = MutableLiveData<JsonArray<String>?>()
+val musicVersions = MutableLiveData<JsonArray<String>?>()
 
 val isFetching = MutableLiveData<Boolean>()
 
