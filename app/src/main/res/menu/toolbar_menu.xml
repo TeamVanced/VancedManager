@@ -17,8 +17,4 @@
         android:id="@+id/toolbar_log"
         android:title="@string/title_logs" />
 
-    <item
-        android:id="@+id/toolbar_guide"
-        android:title="@string/title_guide" />
-
 </menu>

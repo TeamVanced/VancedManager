@@ -94,28 +94,6 @@ class MainActivity : AppCompatActivity() {
                 navHost.navigate(HomeFragmentDirections.toLogFragment())
                 true
             }
-            R.id.toolbar_guide -> {
-                try {
-                    val intent = if (isPackageInstalled(faqpkg, packageManager)) {
-                        Intent().apply {
-                            component = ComponentName(faqpkg, "$faqpkg.ui.MainActivity")
-                        }
-                    } else {
-                        Intent(Intent.ACTION_VIEW).apply {
-                            val uriBuilder = Uri.parse("https://play.google.com/store/apps/details")
-                                .buildUpon()
-                                .appendQueryParameter("id", faqpkg)
-                                .appendQueryParameter("launch", "true")
-                            data = uriBuilder.build()
-                            setPackage(playStorePkg)
-                        }
-                    }
-                    startActivity(intent)
-                    true
-                } catch (e: ActivityNotFoundException) {
-                    false
-                }
-            }
             R.id.toolbar_update_manager -> {
                 ManagerUpdateDialog.newInstance(false)
                     .show(supportFragmentManager, "manager_update")
