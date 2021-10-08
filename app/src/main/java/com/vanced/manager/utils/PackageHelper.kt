@@ -159,7 +159,7 @@ object PackageHelper {
     fun uninstallApk(pkg: String, context: Context) {
         val callbackIntent = Intent(context, AppUninstallerService::class.java)
         callbackIntent.putExtra("pkg", pkg)
-        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
+        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, intentFlags)
         try {
             context.packageManager.packageInstaller.uninstall(pkg, pendingIntent.intentSender)
         } catch (e: Exception) {
@@ -169,7 +169,7 @@ object PackageHelper {
 
     fun install(path: String, context: Context) {
         val callbackIntent = Intent(context, AppInstallerService::class.java)
-        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
+        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, intentFlags)
         val packageInstaller = context.packageManager.packageInstaller
         val params =
             PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
@@ -289,7 +289,7 @@ object PackageHelper {
         val sessionParams =
             PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
         val callbackIntent = Intent(context, AppInstallerService::class.java)
-        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, 0)
+        val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, intentFlags)
         try {
             sessionId = packageInstaller.createSession(sessionParams)
             session = packageInstaller.openSession(sessionId)
