@@ -51,35 +51,39 @@ dependencies {
 	implementation(project(":library-network"))
 
 	implementation(kotlin("stdlib"))
-	implementation("androidx.appcompat:appcompat:1.2.0")
-	implementation("androidx.core:core-ktx:1.3.2")
-	implementation("androidx.fragment:fragment-ktx:1.3.3")
+	implementation("androidx.appcompat:appcompat:1.3.1")
+	implementation("androidx.core:core-ktx:1.6.0")
+	implementation("androidx.fragment:fragment-ktx:1.3.6")
 	implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1")
 	implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
-	implementation("com.google.android.material:material:1.3.0")
+	implementation("com.google.android.material:material:1.4.0")
 	implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
 	implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
-	implementation("com.squareup.moshi:moshi-kotlin:1.11.0")
-	implementation("com.squareup.moshi:moshi-kotlin-codegen:1.11.0")
-	implementation("com.squareup.moshi:moshi-adapters:1.11.0")
+	val moshiVersion = "1.11.0"
+	implementation("com.squareup.moshi:moshi-kotlin:$moshiVersion")
+	implementation("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
+	implementation("com.squareup.moshi:moshi-adapters:$moshiVersion")
 
 	implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 
-	implementation("org.koin:koin-android:2.2.1")
-	implementation("org.koin:koin-android-viewmodel:2.2.1")
-	implementation("org.koin:koin-android-ext:2.2.1")
+	implementation("io.insert-koin:koin-android:3.1.2")
 
-	testImplementation("io.kotest:kotest-runner-junit5:4.4.3")
-	testImplementation("io.kotest:kotest-assertions-core:4.4.3")
-	testImplementation("io.kotest:kotest-property:4.4.3")
-	testImplementation("io.mockk:mockk:1.10.6")
+	val kotestVersion = "4.4.3"
+	testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+	testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+	testImplementation("io.kotest:kotest-property:$kotestVersion")
 
-	androidTestImplementation("io.mockk:mockk-android:1.10.6")
-	androidTestImplementation("androidx.test:core:1.3.0")
-	androidTestImplementation("androidx.test:runner:1.3.0")
-	androidTestImplementation("androidx.test:rules:1.3.0")
+	val mockkVersion = "1.10.6"
+	testImplementation("io.mockk:mockk:$mockkVersion")
+
+	androidTestImplementation("io.mockk:mockk-android:$mockkVersion")
+
+	val androidxTestVersion = "1.4.0"
+	androidTestImplementation("androidx.test:core:$androidxTestVersion")
+	androidTestImplementation("androidx.test:runner:$androidxTestVersion")
+	androidTestImplementation("androidx.test:rules:$androidxTestVersion")
 }

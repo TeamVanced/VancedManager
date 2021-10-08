@@ -35,20 +35,20 @@ android {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("androidx.core:core-ktx:1.3.2")
+    implementation("androidx.core:core-ktx:1.6.0")
 
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
-    
-    implementation("com.squareup.moshi:moshi-kotlin:1.11.0")
-    implementation("com.squareup.moshi:moshi-kotlin-codegen:1.11.0")
-    implementation("com.squareup.moshi:moshi-adapters:1.11.0")
+    val retrofitVersion = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-moshi:$retrofitVersion")
+
+    val moshiVersion = "1.11.0"
+    implementation("com.squareup.moshi:moshi-kotlin:$moshiVersion")
+    implementation("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
+    implementation("com.squareup.moshi:moshi-adapters:$moshiVersion")
     
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
 
-    implementation("org.koin:koin-android:2.2.1")
-    implementation("org.koin:koin-android-viewmodel:2.2.1")
-    implementation("org.koin:koin-android-ext:2.2.1")
+    implementation("io.insert-koin:koin-android:3.1.2")
 }
