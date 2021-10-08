@@ -110,7 +110,7 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.7.0-rc01")
 
     implementation("com.github.madrapps:pikolo:2.0.1")
-    implementation("com.google.android.material:material:1.4.0")
+    implementation("com.google.android.material:material:1.5.0-alpha04")
 
     // JSON parser
     implementation("com.beust:klaxon:5.5")
