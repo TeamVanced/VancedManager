@@ -1,0 +1,27 @@
+name: Feature Request
+description: Request a feature
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees:
+  - X1nto
+body:
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggestion
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion-relevancy
+    attributes:
+      label: Additional Information
+      description: Why is this suggestion relevant?
+    validations:
+      required: true
+  - type: checkboxes
+    id: is-manager-suggestion
+    attributes:
+      label: Additional checks
+      options:
+      - label: This is a suggestion for Vanced Manager and NOT YouTube Vanced/YouTube Vanced Music/Vanced microG.
+        required: true

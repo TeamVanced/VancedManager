@@ -6,6 +6,5 @@ app/src/main/java/com/vanced/manager/core/base/DummyJava.java
 app/build/
 app/release
 local.properties
-/.github/
 *.iml
 .vscode/
