@@ -133,7 +133,7 @@ dependencies {
     implementation("com.beust:klaxon:5.5")
 
     // Crowdin
-    implementation("com.github.crowdin.mobile-sdk-android:sdk:1.4.0")
+    implementation("com.github.crowdin.mobile-sdk-android:sdk:1.4.7")
 
     // HTTP networking
     implementation("com.github.kittinunf.fuel:fuel:2.3.1")

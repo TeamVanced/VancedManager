@@ -12,7 +12,6 @@
     <!--  is required for some Android 5.x devices  -->
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="22"
         tools:ignore="ScopedStorage" />
 
     <queries>
@@ -32,13 +31,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        tools:ignore="UnusedAttribute">
+        android:supportsRtl="true">
 
         <activity
             android:name=".ui.SplashScreenActivity"
             android:label="@string/app_name"
-            android:theme="@style/SplashTheme">
+            android:theme="@style/SplashTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,9 +56,9 @@
         <activity
             android:name=".ui.MainActivity"
             android:configChanges="layoutDirection|locale|keyboardHidden|orientation|screenSize"
-            android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/DarkTheme">
+            android:theme="@style/DarkTheme"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -76,8 +75,8 @@
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true"
+            android:exported="false">
 
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
