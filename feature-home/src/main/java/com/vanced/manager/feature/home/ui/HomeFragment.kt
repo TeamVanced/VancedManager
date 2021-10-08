@@ -7,7 +7,7 @@ import com.vanced.manager.core.ui.base.BindingFragment
 import com.vanced.manager.feature.home.databinding.FragmentHomeBinding
 import com.vanced.manager.feature.home.presentation.HomeViewModel
 import com.vanced.manager.feature.home.ui.bind.bindData
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : BindingFragment<FragmentHomeBinding>() {
 

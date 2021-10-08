@@ -13,7 +13,7 @@ import com.vanced.manager.feature.home.domain.usecase.GetAppsInfoUseCase
 import com.vanced.manager.feature.home.presentation.HomeViewModel
 import com.vanced.manager.library.network.service.createRetrofitService
 import org.koin.android.ext.koin.androidContext
-import org.koin.android.viewmodel.dsl.viewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
