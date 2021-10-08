@@ -109,7 +109,7 @@ dependencies {
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("androidx.work:work-runtime-ktx:2.7.0-rc01")
 
-    implementation("com.github.madrapps:pikolo:2.0.1")
+    implementation("com.github.madrapps:pikolo:2.0.2")
     implementation("com.google.android.material:material:1.5.0-alpha04")
 
     // JSON parser
@@ -119,7 +119,7 @@ dependencies {
     implementation("com.github.kittinunf.fuel:fuel:2.3.1")
     implementation("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
     implementation("com.github.kittinunf.fuel:fuel-json:2.3.1")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     // Root permissions
