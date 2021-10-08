@@ -21,7 +21,7 @@
     <string name="grant_root">Accorder l’accès root</string>
     <string name="lets_get_started">Commençons</string>
     <string name="select_at_least_one_app">Sélectionnez au moins une application !</string>
-    <string name="willing_to_use_root">Vous ne savez pas ce que c\'est ou vous ne voulez pas utiliser la version « root » ? Cliquez simplement sur la flèche bleue ci-dessous !</string>
+    <string name="willing_to_use_root">Vous ne savez pas ce que c\'est ou vous ne voulez pas utiliser la version « root »&#160;? Cliquez simplement sur la flèche bleue ci-dessous&#160;!</string>
     <!-- Home Page -->
     <string name="about_app">À propos de %1$s</string>
     <string name="accessibility_download">Télécharger</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Impossible d\'appliquer la nouvelle couleur d\'accentuation</string>
     <string name="failed_uninstall">N\'a pas pu désinstaller le paquet %1$s</string>
     <string name="files_missing_va">Impossible de localiser les fichiers nécessaires à l\'installation. Retéléchargez les fichiers d\'installation, puis réessayez.</string>
-    <string name="ifile_missing">Impossible de localiser le fichier apk pour le thème noir/foncé, veuillez réessayer.</string>
+    <string name="ifile_missing">Impossible de localiser le fichier APK pour le thème noir/foncé, veuillez réessayer.</string>
     <string name="installation_aborted">L\'installation a échoué car l\'utilisateur a abandonné l\'installation.</string>
     <string name="installation_conflict">L\'installation a échoué parce que l\'application est en conflit avec une application déjà installée. Désinstallez la version actuelle de Vanced, puis réessayez.</string>
     <string name="installation_downgrade">L\'installation a échoué parce que l\'utilisateur a essayé de downgrader le paquet. Désinstallez les mises à jour de l\'application d\'origine, puis réessayez.</string>
     <string name="installation_failed">L\'installation a échoué pour des raisons inconnues, rejoignez notre Telegram ou Discord pour plus de support. Veuillez également joindre une capture d\'écran dans le menu Avancé</string>
     <string name="installation_incompatible">L\'installation a échoué parce que le fichier d\'installation est incompatible avec votre appareil. Effacer les fichiers téléchargés dans les paramètres, puis réessayer.</string>
-    <string name="installation_invalid">L\'installation a échouée car les fichiers apk sont corrompus, veuillez réessayer.</string>
+    <string name="installation_invalid">L\'installation a échouée car les fichiers APK sont corrompus, veuillez réessayer.</string>
     <string name="installation_miui">L\'installation a échouée car l\'optimisation MIUI est activée. Désactivez l\'optimisation MIUI, puis réessayez.</string>
-    <string name="installation_signature">L\'installation a échoué car la vérification de la signature apk est activée. Désactivez la vérification de la signature apk, puis réessayez.</string>
+    <string name="installation_signature">L\'installation a échoué car la vérification de la signature APK est activée. Désactivez la vérification de la signature APK , puis réessayez.</string>
     <string name="installation_storage">L\'installation a échoué car l\'appareil n\'a pas assez d\'espace disponible.</string>
-    <string name="modapk_missing">Impossible de trouver le fichier apk pour le thème noir/foncé de l\'installateur. Effacez les données de l\'application de Manager, puis réessayez.</string>
+    <string name="modapk_missing">Impossible de trouver le fichier APK pour le thème noir/foncé depuis l\'installateur. Effacez les données application du Gestionnaire Vanced, puis réessayez.</string>
     <string name="path_missing">Impossible de localiser le chemin d\'installation du YouTube original après l\'installation fractionnée.</string>
 </resources>

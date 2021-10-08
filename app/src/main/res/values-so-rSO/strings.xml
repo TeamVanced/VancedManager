@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Ka noqo</string>
     <string name="close">Xidh</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG Project.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">A modified YouTube client with many useful features!</string>
     <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
     <string name="reset">Dib uceli</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">U Ogolow Fasaxa Root-ka</string>
     <string name="lets_get_started">Aan bilawno</string>
     <string name="select_at_least_one_app">Ugu yaraan hal app dooro!</string>
-    <string name="willing_to_use_root">Ma aqaano wuxuu kani yahay ama ma doonayo inaan isticmaalo midka root-ka ah? Aayar taabo falaadha buluuga ah ee hoose!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Ku saabsan %1$s</string>
     <string name="accessibility_download">Download</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Laguma guulaysanin in midabka cusub lagu fadhiisiyo</string>
     <string name="failed_uninstall">Laguma guulaysan in laga saaro %1$s</string>
     <string name="files_missing_va">Laguma guulaysan in la helo faylashii ku shubi lahaa. Dib-usoodaji faylasha, kadibna isku day markale.</string>
-    <string name="ifile_missing">Laguma guulaysanin in faylka apk-ga ee nashqada madow/mugdiga laga helo kaydka aalaada, fadlan markale isku day.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">Ku shubidii way guuldaraysatay sababtoo ah qofka aalada isticmaalaya ayaa joojiyay.</string>
     <string name="installation_conflict">Ku shubidii way guuldaraysatay sababtoo ah app-ka waxay iskhilaafeen mid horay ugu jiray aalada. Ka saar nooca hadda ee kujira, kadib markale ku celi.</string>
     <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
     <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
     <string name="installation_incompatible">Ku shubidii way guuldaraysatay sababtoo ah faylka kuma shaqaynayo aaladaada. Xaga Fadhiga ka saar waxyaabaha lasoo dajiyay, kadib markale isku day.</string>
-    <string name="installation_invalid">Ku shubidii way guuldaraysatay sababtoo ah faylashii apk-ga ayaa khalkhalsan, markale isku day.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">Ku shubidii way guuldaraysatay sababtoo ah waxaa furan MIUI Optimization. Xidh MIUI Optimization-ka, kadib markale ku celi.</string>
-    <string name="installation_signature">Ku shubidii way guuldaraysatay sababtoo ah waxaa furan xaqiijinta saxiixa apk-ga. Xidh xaqiijinta saxiixa apk-ga, kadibna markale ku celi.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
-    <string name="modapk_missing">Lama helin faylka apk-ga ee nashqada madow/mugdiga ah. Tirtir xogta Manager-ka, kadib markale ku celi.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Waa lagu guuldaraysatay in la helo wadadii ku shubida app-ka caadiga ah ee YouTube-ka ee kuxigtay ku shubida kala qaybsan.</string>
 </resources>

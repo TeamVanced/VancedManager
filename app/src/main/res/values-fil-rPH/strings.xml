@@ -3,8 +3,8 @@
     <!-- Global Strings -->
     <string name="cancel">Kanselahin</string>
     <string name="close">Isara</string>
-    <string name="description_microg">Custom na Implementasyon sa GMS para sa Vanced nakabatay sa proyekto ng microG.</string>
-    <string name="description_vanced">Binagong client ng Youtube na maraming nakatutulong na features!</string>
+    <string name="description_microg">Pasadyang Implementasyon ng Mga Serbisyo ng Google Mobile para sa Vanced na nakabase sa proyektong microG.</string>
+    <string name="description_vanced">Isang binagong kliyente ng YouTube na may maraming kapaki-pakinabang na features!</string>
     <string name="description_vanced_music">Vanced, pero para sa Youtube Music! Hindi kasing dami ang mga features, pero natutupad ang iyong pangangailangan.</string>
     <string name="reset">I-reset</string>
     <string name="save">I-save</string>
@@ -21,15 +21,15 @@
     <string name="grant_root">Pahintulutin ang Root</string>
     <string name="lets_get_started">Magsimula na tayo</string>
     <string name="select_at_least_one_app">Mag-marka ka kahit isa lang na app!</string>
-    <string name="willing_to_use_root">Hindi mo alam ito o huwag gamitin ang root bersyon? I-click ang asul na arrow sa baba!</string>
+    <string name="willing_to_use_root">Hindi mo ba alam kung ano ito o ayaw mo lang talagang gamitin ang root na bersiyon? Kung ganoon, i-click mo lang ang asul na arrow na nasa ibaba!</string>
     <!-- Home Page -->
     <string name="about_app">Tungkol sa %1$s</string>
     <string name="accessibility_download">I-download</string>
-    <string name="accessibility_info">Info</string>
-    <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_info">Impormasyon</string>
+    <string name="accessibility_launch">Simulan</string>
+    <string name="accessibility_reinstall">Muling i-install</string>
+    <string name="accessibility_uninstall">Tanggalin ang app</string>
+    <string name="accessibility_update">I-update</string>
     <string name="apps">Mga Apps</string>
     <string name="changelog">Changelog</string>
     <string name="downloading_file">Downloading %1$s</string>
@@ -56,7 +56,7 @@
     <string name="push_notifications_summary">Tumanggap ng push notifications kapag ang update sa %1$s ay nailabas</string>
     <string name="script_save_failed">Nabigo na i-save ang bagong time value</string>
     <string name="script_sleep_timer">Root Script Sleep Time</string>
-    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="script_sleep_timer_description">Baguhin ang \"sleep time value\" ng script na nasa \"/data/adb/service.d/app.sh\", dahil ito ay mapakinabangan upang maiiayos ang mga problema sa pagma-mount.</string>
     <string name="system_default">Sistemang Default</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Itim na tema</string>
@@ -66,7 +66,7 @@
     <string name="variant">Klase</string>
     <!-- Logs -->
     <string name="logs_not_saved">Hindi ma-save ang logs</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Matugumpay na nai-save ang logs sa %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Mga Detalye</string>
     <string name="app_install_files_detected">%1$s Nandito ang installation files!</string>
@@ -80,11 +80,11 @@
     <string name="guide">Gabay</string>
     <string name="hold_on">Itigil!</string>
     <string name="magisk_vanced">Gumagamit ka ng Magisk/TWRP na bersyon ng Vanced, dahil hindi iyon pinatuloy at hindi mai-uupdate gamit nitong app. Tanggalin po ang Magisk module sa pamamagitan ng TWRP Vanced uninstaller.</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
-    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
-    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="miui_one">Upang ma-install ang Vanced, KAILANGAN mong patayin ang MIUI Optimizations na nasa developer settings. (Puwede mong pabayaan ang babala na ito kung ikaw ay gumagamit ng bersyon 20.2.20 o mas bago pa na xiaomi.eu na nakabase na ROM)</string>
+    <string name="miui_one_title">Naka-on ang MIUI Optimizations!</string>
+    <string name="please_be_patient">Pakiusap WAG patayin ang app habang ginagawa niya ang proseso na ito!</string>
+    <string name="uninstall_app_text">Sigurado ka ba na gusto mong tanggalin ang %1$s?</string>
+    <string name="uninstall">Tanggalin ang app</string>
     <string name="redownload">I-download ulit</string>
     <string name="security_context">Siguraduhin mo na nai-download mo ang app galing sa vancedapp.com, o sa Discord server ng Vanced, o sa Github ng Vanced</string>
     <string name="version">Bersyon</string>
@@ -98,7 +98,7 @@
     <string name="vanced_dark">Madilim</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Iba Pang Mga Tao Na May Naiambag</string>
     <string name="sources">Pinagkukunan</string>
     <string name="vanced_team">Pangkat Vanced</string>
     <!-- Error messages -->
@@ -107,16 +107,16 @@
     <string name="failed_accent">Nabigo na gamitin ang bagong kulay aksento</string>
     <string name="failed_uninstall">Nabigo sa pag-uninstall ng pakete %1$s</string>
     <string name="files_missing_va">Nabigo ang paghanap sa kailangan na files para sa installation. I-download ulit ang mga installation files, at ulitin muli.</string>
-    <string name="ifile_missing">Nabigo ang paghanap ng apk file para sa itim na tema galing sa storage, ulitin muli.</string>
+    <string name="ifile_missing">Nabigong hanapin sa storage ang APK file para sa black/dark na tema, pakisubukang muli.</string>
     <string name="installation_aborted">Nabigo ang pag-install dahil kinansela ito.</string>
     <string name="installation_conflict">Nabigo ang pag-install dahil meron hidwaan sa naka-install na app. I-uninstall ang kasalukuyang bersyon ng Vanced, at ulitin muli.</string>
-    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
-    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_downgrade">Nabigo ang pag-install dahil sinubukan ng user nai-downgrade ang package. Paki-uninstall ang updates ng stock app, at subakan muli.</string>
+    <string name="installation_failed">Nabiga ang pag-install at hindi alam ang dahilan, sumali sa aming Telegram o Discord para sa kadagdagang suporta. Paki-attach narin ng screenshot ng Advanced menu</string>
     <string name="installation_incompatible">Nabigo ang pag-install dahil ang installation file ay hindi tugma sa iyong device. Tanggalin ang mga downloaded files sa Settings, at ulitin muli.</string>
-    <string name="installation_invalid">Nabigo ang pag-install dahil ang mga apk files ay nasira, ulitin muli.</string>
+    <string name="installation_invalid">Nabigo ang pag-install dahil ang mga APK file ay sira, pakisubakang muli.</string>
     <string name="installation_miui">Nabigo ang pag-install dahil ang MIUI Optimization ay naka-on. Patayin ang MIUI Optimization, at ulitin muli.</string>
-    <string name="installation_signature">Nabigo ang pag-install dahil ang apk signature verification ay naka-on. Patayin ang apk signature verification, at ulitin muli.</string>
-    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
-    <string name="modapk_missing">Nabigong hanapin ang apk file para sa itim na tema galing sa installer. Tanggalin ang app data ng Manager, tapos ulitin.</string>
+    <string name="installation_signature">Nabigo ang pag-install dahil naka-on ang APK signature verification. Patayin ang APK signature verification, at subukang muli.</string>
+    <string name="installation_storage">Nabigo ang pag-install dahil hindi sapat ang storage ng device.</string>
+    <string name="modapk_missing">Nabigong hanapin ang APK file para sa black/dark na tema galing sa installer. I-clear ang app data ng Manager, at subukang muli.</string>
     <string name="path_missing">Nabigong hanapin ang stock YouTube installation path pagkatapos ng split installation.</string>
 </resources>

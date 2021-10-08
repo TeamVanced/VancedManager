@@ -55,7 +55,7 @@
     <string name="push_notifications">%1$s Push-ilmoitusta</string>
     <string name="push_notifications_summary">Vastaanota push-ilmoituksia, kun %1$s:lle on julkaistu päivitys</string>
     <string name="script_save_failed">Uuden ajan tallennus epäonnistui</string>
-    <string name="script_sleep_timer">Juuren Skriptin Nukkumisaika</string>
+    <string name="script_sleep_timer">Root Skriptin Lepoaika</string>
     <string name="script_sleep_timer_description">Säädä lepoajan arvoa jota käytetään /data/adb/service.d/app.sh skriptissä, joka on hyödyllinen asennusongelmien korjaamisessa</string>
     <string name="system_default">Järjestelmän oletus</string>
     <string name="theme">Teema</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variaatio</string>
     <!-- Logs -->
     <string name="logs_not_saved">Lokeja ei voitu tallentaa</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Lokit tallennettiin onnistuneesti sijaintiin %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Lisätiedot</string>
     <string name="app_install_files_detected">%1$s asennustiedostoa havaittu!</string>
@@ -83,7 +83,7 @@
     <string name="miui_one">Asentaaksesi Vancedin, sinun täytyy poistaa MIUI-optimisaatiot käytöstä kehittäjäasetuksista. (Voit ohittaa tämän varoituksen, jos käytät versiota 20.2.20 tai uudempaa xiaomi.eu-pohjaista ROM:ia)</string>
     <string name="miui_one_title">MIUI-optimoinnit ovat käytössä!</string>
     <string name="please_be_patient">ÄLÄ poistu sovelluksesta tämän prosessin aikana!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall_app_text">Oletko varma, että haluat poistaa %1$s asennuksen?</string>
     <string name="uninstall">Poista</string>
     <string name="redownload">Uudelleenlataa</string>
     <string name="security_context">Varmista, että latasit sovelluksen osoitteesta vancedapp.com, Vanced Discord-palvelin tai Vanced GitHub</string>

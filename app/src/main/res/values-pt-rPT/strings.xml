@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Cancelar</string>
     <string name="close">Fechar</string>
-    <string name="description_microg">Uma implementação personalizada de GMS para Vanced com base no projeto microG.</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">Um cliente modificado do YouTube com muitos recursos úteis!</string>
     <string name="description_vanced_music">Vanced, mas para o YouTube Music! Relativamente menos rico em recursos, mas atende às suas necessidades.</string>
     <string name="reset">Resetar</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Conceder Permissão de Root</string>
     <string name="lets_get_started">Vamos começar</string>
     <string name="select_at_least_one_app">Selecione pelo menos uma aplicação!</string>
-    <string name="willing_to_use_root">Não sabes o que é isto ou não queres utilizar a versão root? apenas clique a seta azul abaixo!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
     <!-- Home Page -->
     <string name="about_app">Acerca de %1$s</string>
     <string name="accessibility_download">Baixar</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">Falha ao aplicar nova cor de destaque</string>
     <string name="failed_uninstall">Erro a desinstalar pacote %1$s</string>
     <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Faça o download dos arquivos de instalação e tente novamente.</string>
-    <string name="ifile_missing">Falha ao localizar o apk para o tema preto/escuro no armazenamento, por favor, tente novamente.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_conflict">A instalação falhou porque o app entra em conflito com um app já instalado. Desinstale a versão atual do app e tente novamente.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do app do YouTube e, em seguida, tente novamente.</string>
     <string name="installation_failed">A instalação falhou por razões desconhecidas, junte-se ao nosso Telegram ou Discord para mais suporte. Por favor, anexe também uma captura de tela do menu Avançado</string>
     <string name="installation_incompatible">Falha na instalação porque o pacote de instalação é incompatível com o seu dispositivo. Limpe os pacotes transferidos nas Configurações e tente novamente.</string>
-    <string name="installation_invalid">A instalação falhou porque os pacotes apk estão corrompidos, por favor tente novamente.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
     <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
-    <string name="installation_signature">A instalação falhou porque a verificação de assinatura apk está ativa. Desative a verificação de assinatura apk e tente novamente.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
     <string name="installation_storage">A instalação falhou porque o dispositivo não tem espaço livre suficiente.</string>
-    <string name="modapk_missing">Falha ao encontrar o arquivo apk para o tema preto/escuro no instalador. Limpe os dados do app do Gerenciador (Vanced Manager) e tente novamente.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
     <string name="path_missing">Falha ao localizar o caminho de instalação padrão do YouTube após instalação dividida.</string>
 </resources>
