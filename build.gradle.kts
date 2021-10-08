@@ -4,7 +4,7 @@ buildscript {
     val kotlinVersion by extra("1.5.30")
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -23,7 +23,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven(url = "https://jitpack.io")
     }
 }
