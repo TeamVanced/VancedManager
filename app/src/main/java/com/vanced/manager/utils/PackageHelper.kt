@@ -35,15 +35,6 @@ object PackageHelper {
     private val vancedThemes =
         vanced.value?.array<String>("themes")?.value ?: listOf("black", "dark", "pink", "blue")
 
-    init {
-        Shell.enableVerboseLogging = BuildConfig.DEBUG
-        Shell.setDefaultBuilder(
-            Shell.Builder.create()
-                .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                .setTimeout(10)
-        )
-    }
-
     private fun getAppNameRoot(pkg: String): String {
         return when (pkg) {
             vancedRootPkg -> "vanced"

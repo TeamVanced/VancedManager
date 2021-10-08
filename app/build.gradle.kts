@@ -123,8 +123,10 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
 
     // Root permissions
-    implementation("com.github.topjohnwu.libsu:core:3.1.2")
-    implementation("com.github.topjohnwu.libsu:io:3.1.2")
+    val libsuVersion = "3.1.2"
+    implementation("com.github.topjohnwu.libsu:core:$libsuVersion")
+    implementation("com.github.topjohnwu.libsu:io:$libsuVersion")
+    implementation("com.github.topjohnwu.libsu:busybox:$libsuVersion")
 
     // Layout
     implementation("com.google.android.flexbox:flexbox:3.0.0")

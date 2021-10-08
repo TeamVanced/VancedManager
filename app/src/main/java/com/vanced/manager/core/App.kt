@@ -2,7 +2,9 @@ package com.vanced.manager.core
 
 import android.app.Application
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.vanced.manager.BuildConfig.*
+import com.topjohnwu.superuser.BusyBoxInstaller
+import com.topjohnwu.superuser.Shell
+import com.vanced.manager.BuildConfig
 import com.vanced.manager.utils.loadJson
 import com.vanced.manager.utils.managerAccent
 import com.vanced.manager.utils.mutableAccentColor
@@ -20,6 +22,14 @@ class App : Application() {
         scope.launch { loadJson(this@App) }
         super.onCreate()
         mutableAccentColor.value = prefs.managerAccent
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
+        Shell.setDefaultBuilder(
+            Shell.Builder
+                .create()
+                .setFlags(Shell.FLAG_REDIRECT_STDERR)
+                .setInitializers(BusyBoxInstaller::class.java)
+                .setTimeout(10)
+        )
     }
 
 }
