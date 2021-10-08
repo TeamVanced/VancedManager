@@ -1,6 +1,6 @@
 package com.vanced.manager.core.ui.base
 
-import android.app.Dialog
+import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,13 +22,7 @@ abstract class BindingBottomSheetDialogFragment<VB : ViewBinding> : BottomSheetD
 		savedInstanceState: Bundle?
 	): View {
         _binding = binding(inflater, container, savedInstanceState)
-        otherSetups()
-        return binding.root
-    }
-
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val dialog = super.onCreateDialog(savedInstanceState)
-        dialog.setOnShowListener {
+        dialog?.setOnShowListener {
             val bottomSheetDialogFragment = (it as BottomSheetDialog).findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)
             if (bottomSheetDialogFragment != null) {
                 BottomSheetBehavior.from(bottomSheetDialogFragment).apply {
@@ -36,7 +30,8 @@ abstract class BindingBottomSheetDialogFragment<VB : ViewBinding> : BottomSheetD
                 }
             }
         }
-        return dialog
+        otherSetups()
+        return binding.root
     }
 
     protected abstract fun binding(
