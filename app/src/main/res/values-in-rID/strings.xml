@@ -111,7 +111,7 @@
     <string name="installation_aborted">Pemasangan gagal dikarenakan pengguna membatalkan pemasangan.</string>
     <string name="installation_conflict">Pemasangan gagal dikarenakan aplikasi konflik dengan aplikasi yang sudah terpasang. Copot pemasangan aplikasi versi saat ini, lalu coba lagi.</string>
     <string name="installation_downgrade">Pemasangan gagal dikarenakan pengguna mencoba menurunkan versi paket. Hapus pembaruan dari aplikasi bawaan, lalu coba lagi.</string>
-    <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut. Mohon untuk melampirkan screenshot dari menu Tingkat Lanjut</string>
+    <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut. Mohon untuk melampirkan screenshot dari menu Rincian</string>
     <string name="installation_incompatible">Pemasangan gagal dikarenakan file pemasangan tidak kompatibel dengan perangkat Anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
     <string name="installation_invalid">Pemasangan gagal dikarenakan file APK rusak, mohon coba lagi.</string>
     <string name="installation_miui">Pemasangan gagal dikarenakan Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
