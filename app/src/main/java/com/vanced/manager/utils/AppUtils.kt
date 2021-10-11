@@ -10,6 +10,7 @@ import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.vanced.manager.BuildConfig
 import com.vanced.manager.BuildConfig.APPLICATION_ID
 import com.vanced.manager.R
 import com.vanced.manager.ui.dialogs.AppDownloadDialog
@@ -48,7 +49,9 @@ object AppUtils : CoroutineScope by CoroutineScope(Dispatchers.IO) {
                 )
             }
         )
-        Log.d(tag, message)
+        if (BuildConfig.DEBUG) {
+            Log.d(tag, message)
+        }
     }
 
     fun sendRefresh(context: Context): Job {
@@ -68,7 +71,7 @@ object AppUtils : CoroutineScope by CoroutineScope(Dispatchers.IO) {
         }
     }
 
-    fun sendFailure(error: MutableList<String>, context: Context) {
+    fun sendFailure(error: List<String>, context: Context) {
         sendFailure(error.joinToString(" "), context)
     }
 
