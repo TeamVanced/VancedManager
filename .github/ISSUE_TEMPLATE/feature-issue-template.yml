@@ -23,5 +23,7 @@ body:
     attributes:
       label: Additional checks
       options:
+      - label: I have checked other feature requests and this is not a duplicate.
+        required: true
       - label: This is a suggestion for Vanced Manager and NOT YouTube Vanced/YouTube Vanced Music/Vanced microG.
         required: true

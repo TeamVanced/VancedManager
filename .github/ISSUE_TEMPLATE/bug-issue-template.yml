@@ -35,5 +35,7 @@ body:
     attributes:
       label: Additional checks
       options:
+      - label: I have checked other bug reports and this is not a duplicate.
+        required: true
       - label: This is a bug in Vanced Manager and NOT YouTube Vanced/YouTube Vanced Music/Vanced microG.
         required: true
