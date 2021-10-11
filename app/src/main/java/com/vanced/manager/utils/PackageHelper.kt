@@ -193,20 +193,18 @@ object PackageHelper {
             if (apk.name != "root.apk") {
                 val newPath = "/data/local/tmp/${apk.name}"
 
-                //moving apk to tmp folder in order to avoid permission denials
-                Shell.su("mv ${apk.path} $newPath").exec()
+                //Copy apk to tmp folder in order to avoid permission denials
+                Shell.su("cp ${apk.path} $newPath").exec()
                 val command = Shell.su("pm install -r $newPath").exec()
                 Shell.su("rm $newPath").exec()
-                if (command.isSuccess) {
-                    return true
-                } else {
+                if (!command.isSuccess) {
                     sendFailure(command.out, context)
                     sendCloseDialog(context)
+                    return false
                 }
-
             }
         }
-        return false
+        return true
     }
 
     private fun installRootApp(
@@ -216,32 +214,35 @@ object PackageHelper {
         pkg: String,
         modApkBool: (fileName: String) -> Boolean
     ) = CoroutineScope(Dispatchers.IO).launch {
-        Shell.getShell {
-            val apkFilesPath = context.getExternalFilesDir("$app/root")?.path
-            val files = File(apkFilesPath.toString()).listFiles()?.toList()
-            if (files != null) {
-                val modApk: File? = files.lastOrNull { modApkBool(it.name) }
-                if (modApk != null) {
-                    if (appVerCode != null) {
-                        if (overwriteBase(modApk, files, appVerCode, pkg, app, context)) {
-                            setInstallerPackage(context, pkg, playStorePkg)
-                            log(INSTALLER_TAG, "Finished installation")
-                            sendRefresh(context)
-                            sendCloseDialog(context)
-                        }
-                    } else {
-                        sendFailure(listOf("appVerCode is null").toMutableList(), context)
+        if (!isMagiskInstalled()) {
+            sendFailure("NO_MAGISK", context)
+            sendCloseDialog(context)
+            return@launch
+        }
+
+        val apkFilesPath = context.getExternalFilesDir("$app/root")?.path
+        val files = File(apkFilesPath.toString()).listFiles()?.toList()
+        if (files != null) {
+            val modApk: File? = files.lastOrNull { modApkBool(it.name) }
+            if (modApk != null) {
+                if (appVerCode != null) {
+                    if (overwriteBase(modApk, files, appVerCode, pkg, app, context)) {
+                        setInstallerPackage(context, pkg, playStorePkg)
+                        log(INSTALLER_TAG, "Finished installation")
+                        sendRefresh(context)
                         sendCloseDialog(context)
                     }
                 } else {
-                    sendFailure(listOf("ModApk_Missing").toMutableList(), context)
+                    sendFailure("appVerCode is null", context)
                     sendCloseDialog(context)
                 }
             } else {
-                sendFailure(listOf("Files_Missing_VA").toMutableList(), context)
+                sendFailure("ModApk_Missing", context)
                 sendCloseDialog(context)
             }
-
+        } else {
+            sendFailure("Files_Missing_VA", context)
+            sendCloseDialog(context)
         }
 
     }
@@ -322,8 +323,8 @@ object PackageHelper {
             val apkName = apkFile.name
             log(INSTALLER_TAG, "installing APK: $apkName")
             val newPath = "/data/local/tmp/$apkName"
-            // Moving apk to avoid permission denials
-            Shell.su("mv ${apkFile.path} $newPath").exec()
+            //Copy apk to tmp folder in order to avoid permission denials
+            Shell.su("cp ${apkFile.path} $newPath").exec()
             val command = Shell.su("pm install-write $sessionId $apkName $newPath").exec()
             Shell.su("rm $newPath").exec()
             if (!command.isSuccess) {
@@ -334,12 +335,12 @@ object PackageHelper {
         }
         log(INSTALLER_TAG, "committing...")
         val installResult = Shell.su("pm install-commit $sessionId").exec()
-        if (installResult.isSuccess) {
-            return true
+        if (!installResult.isSuccess) {
+            sendFailure(installResult.out, context)
+            sendCloseDialog(context)
+            return false
         }
-        sendFailure(installResult.out, context)
-        sendCloseDialog(context)
-        return false
+        return true
     }
 
 
@@ -469,59 +470,48 @@ object PackageHelper {
         ) else installRootMusic(baseApkFiles, context)
     }
 
+    private fun isMagiskInstalled() = Shell.su("magisk -c").exec().isSuccess
+
     //set chcon to apk_data_file
     private fun chConV(apkFPath: String, context: Context): Boolean {
         log(INSTALLER_TAG, "Running chcon")
         val response = Shell.su("chcon u:object_r:apk_data_file:s0 $apkFPath").exec()
         //val response = Shell.su("chcon -R u:object_r:system_file:s0 $path").exec()
-        return if (response.isSuccess) {
-            true
-        } else {
+        if (!response.isSuccess) {
             sendFailure(response.out, context)
             sendCloseDialog(context)
-            false
+            return false
         }
+        return true
     }
 
     //move patch to data/app
     private fun moveAPK(apkFile: String, path: String, pkg: String, context: Context): Boolean {
         log(INSTALLER_TAG, "Moving app")
-        val apkinF = SuFile.open(apkFile)
-        val apkoutF = SuFile.open(path)
+        Shell.su("am force-stop $pkg").exec()
 
-        if (apkinF.exists()) {
-            try {
-                Shell.su("am force-stop $pkg").exec()
-
-                //Shell.su("rm -r SuFile.open(path).parent")
-
-                copy(apkinF, apkoutF)
-                Shell.su("chmod 644 $path").exec().isSuccess
-                return if (Shell.su("chown system:system $path").exec().isSuccess) {
-                    true
-                } else {
-                    sendFailure(listOf("Chown_Fail").toMutableList(), context)
-                    sendCloseDialog(context)
-                    false
-                }
-
-            } catch (e: IOException) {
-                sendFailure(listOf("${e.message}").toMutableList(), context)
-                sendCloseDialog(context)
-                log(INSTALLER_TAG, e.stackTraceToString())
-                return false
-            }
+        val mv = Shell.su("cp $apkFile $path").exec()
+        if (!mv.isSuccess) {
+            sendFailure(mv.out.apply { add(0, "MV_Fail") }, context)
+            sendCloseDialog(context)
+            return false
         }
-        sendFailure(listOf("IFile_Missing").toMutableList(), context)
-        sendCloseDialog(context)
-        return false
-    }
 
+        val chmod = Shell.su("chmod 644 $path").exec()
+        if (!chmod.isSuccess) {
+            sendFailure(chmod.out.apply { add(0, "Chmod_Fail") }, context)
+            sendCloseDialog(context)
+            return false
+        }
 
-    @Throws(IOException::class)
-    fun copy(src: File, dst: File) {
-        val cmd = Shell.su("mv ${src.absolutePath} ${dst.absolutePath}").exec().isSuccess
-        log("ZLog", cmd.toString())
+        val chown = Shell.su("chown system:system $path").exec()
+        if (!chown.isSuccess) {
+            sendFailure(chown.out.apply { add(0, "Chown_Fail") }, context)
+            sendCloseDialog(context)
+            return false
+        }
+
+        return true
     }
 
     @Suppress("DEPRECATION")
