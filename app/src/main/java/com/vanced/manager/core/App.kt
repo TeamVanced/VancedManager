@@ -2,7 +2,6 @@ package com.vanced.manager.core
 
 import android.app.Application
 import androidx.preference.PreferenceManager.getDefaultSharedPreferences
-import com.topjohnwu.superuser.BusyBoxInstaller
 import com.topjohnwu.superuser.Shell
 import com.vanced.manager.BuildConfig
 import com.vanced.manager.utils.loadJson
@@ -27,7 +26,7 @@ class App : Application() {
             Shell.Builder
                 .create()
                 .setFlags(Shell.FLAG_REDIRECT_STDERR)
-                .setInitializers(BusyBoxInstaller::class.java)
+                //.setInitializers(BusyBoxInstaller::class.java) //TODO fix busybox
                 .setTimeout(10)
         )
     }

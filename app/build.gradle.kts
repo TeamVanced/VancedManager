@@ -126,7 +126,7 @@ dependencies {
     val libsuVersion = "3.1.2"
     implementation("com.github.topjohnwu.libsu:core:$libsuVersion")
     implementation("com.github.topjohnwu.libsu:io:$libsuVersion")
-    implementation("com.github.topjohnwu.libsu:busybox:$libsuVersion")
+    //implementation("com.github.topjohnwu.libsu:busybox:$libsuVersion")
 
     // Layout
     implementation("com.google.android.flexbox:flexbox:3.0.0")
