@@ -115,8 +115,8 @@
     <string name="installation_incompatible">Instalacija nije uspjela zato jer datoteka instalacije nije kompatibilna s vašim uređajem. Uklonite preuzete datoteke u postavkama, zatim pokušajte ponovno.</string>
     <string name="installation_invalid">Instalacija nije uspjela jer su APK datoteke oštećene, pokušajte ponovo.</string>
     <string name="installation_miui">Instalacija nije uspjela zato jer je MIUI optimizacija uključena. Isključite MIUI optimizaciju, zatim pokušajte ponovno.</string>
-    <string name="installation_signature">Instalacija nije uspjela jer je omogućena provjera potpisa APK -a. Onemogućite provjeru potpisa APK -a, a zatim pokušajte ponovno.</string>
+    <string name="installation_signature">Instalacija nije uspjela jer je omogućena provjera APK potpisa. Onemogućite provjeru APK potpisa, a zatim pokušajte ponovno.</string>
     <string name="installation_storage">Neuspješna instalacija jer na uređaju nema dovoljno slobodnog prostora.</string>
-    <string name="modapk_missing">Instalacijski program nije uspio pronaći APK datoteku za crnu/tamnu temu. Izbrišite podatke aplikacije Managera, a zatim pokušajte ponovno.</string>
+    <string name="modapk_missing">Instalacijski program nije uspio pronaći APK datoteku za crnu/tamnu temu. Uklonite podatke aplikacije Upravitelja, a zatim pokušajte ponovno.</string>
     <string name="path_missing">Neuspjelo lociranje putanje izvorne YouTube instalacije nakon razdvojene instalacije.</string>
 </resources>
