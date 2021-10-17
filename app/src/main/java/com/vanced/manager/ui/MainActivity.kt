@@ -5,17 +5,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBackIos
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
-import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
@@ -27,7 +26,6 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.color.managerSurfaceColor
 import com.vanced.manager.ui.component.color.managerTextColor
-import com.vanced.manager.ui.component.layout.ManagerScrim
 import com.vanced.manager.ui.component.menu.ManagerDropdownMenuItem
 import com.vanced.manager.ui.component.text.ToolbarTitleText
 import com.vanced.manager.ui.resources.managerString
@@ -50,14 +48,7 @@ class MainActivity : ComponentActivity() {
     fun MainActivityLayout() {
         val isMenuExpanded = remember { mutableStateOf(false) }
 
-        var shouldBlur by remember { mutableStateOf(false) }
-
-        LocalView.current.viewTreeObserver.addOnWindowFocusChangeListener { hasFocus ->
-            shouldBlur = !hasFocus
-        }
-
         val surfaceColor = managerSurfaceColor()
-
         val navController = rememberAnimatedNavController()
 
         val screens = listOf(
@@ -66,58 +57,48 @@ class MainActivity : ComponentActivity() {
             Screen.About,
             Screen.Logs
         )
-        
-        val animatedBlurRadius by animateDpAsState(
-            targetValue = if (shouldBlur) 5.dp else 0.dp
-        )
-
-        Box(
-            modifier = Modifier.blur(animatedBlurRadius)
+        Scaffold(
+            topBar = {
+                MainToolbar(
+                    navController = navController,
+                    screens = screens,
+                    isMenuExpanded = isMenuExpanded
+                )
+            },
+            backgroundColor = surfaceColor
         ) {
-            Scaffold(
-                topBar = {
-                    MainToolbar(
-                        navController = navController,
-                        screens = screens,
-                        isMenuExpanded = isMenuExpanded
+            AnimatedNavHost(
+                navController = navController,
+                startDestination = Screen.Home.route,
+                enterTransition = { _, _ ->
+                    slideIntoContainer(
+                        towards = AnimatedContentScope.SlideDirection.Start
                     )
                 },
-                backgroundColor = surfaceColor
+                exitTransition = { _, _ ->
+                    slideOutOfContainer(
+                        towards = AnimatedContentScope.SlideDirection.End
+                    )
+                },
+                popEnterTransition = { _, _ ->
+                    slideIntoContainer(
+                        towards = AnimatedContentScope.SlideDirection.End
+                    )
+                },
+                popExitTransition = { _, _ ->
+                    slideOutOfContainer(
+                        towards = AnimatedContentScope.SlideDirection.Start
+                    )
+                }
             ) {
-                AnimatedNavHost(
-                    navController = navController,
-                    startDestination = Screen.Home.route,
-                    enterTransition = { _, _ ->
-                        slideIntoContainer(
-                            towards = AnimatedContentScope.SlideDirection.Start
-                        )
-                    },
-                    exitTransition = { _, _ ->
-                        slideOutOfContainer(
-                            towards = AnimatedContentScope.SlideDirection.End
-                        )
-                    },
-                    popEnterTransition = { _, _ ->
-                        slideIntoContainer(
-                            towards = AnimatedContentScope.SlideDirection.End
-                        )
-                    },
-                    popExitTransition = { _, _ ->
-                        slideOutOfContainer(
-                            towards = AnimatedContentScope.SlideDirection.Start
-                        )
-                    }
-                ) {
-                    screens.fastForEach { screen ->
-                        composable(
-                            route = screen.route,
-                        ) {
-                            screen.content()
-                        }
+                screens.fastForEach { screen ->
+                    composable(
+                        route = screen.route,
+                    ) {
+                        screen.content()
                     }
                 }
             }
-            ManagerScrim(show = isMenuExpanded.value)
         }
     }
 
