@@ -48,7 +48,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.0-alpha04"
+        kotlinCompilerExtensionVersion = "1.1.0-alpha06"
     }
 
 }
@@ -56,7 +56,7 @@ android {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         jvmTarget = "11"
-        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
+        freeCompilerArgs = freeCompilerArgs + "-Xopt-in=kotlin.RequiresOptIn"
     }
 }
 
@@ -84,7 +84,7 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.browser:browser:1.3.0")
 
-    val composeVersion = "1.1.0-alpha04"
+    val composeVersion = "1.1.0-alpha06"
     implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
@@ -104,13 +104,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
 
-    val accompanistVersion = "0.18.0"
+    val accompanistVersion = "0.20.0"
     implementation("com.google.accompanist:accompanist-navigation-animation:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-placeholder-material:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
 
-    implementation("io.coil-kt:coil-compose:1.3.2")
+    implementation("io.coil-kt:coil-compose:1.4.0")
 
     implementation("com.github.skydoves:orchestra-colorpicker:1.1.0")
 
