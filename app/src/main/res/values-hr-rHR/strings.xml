@@ -21,7 +21,7 @@
     <string name="grant_root">Dopusti root dozvolu</string>
     <string name="lets_get_started">Započnite</string>
     <string name="select_at_least_one_app">Odaberite najmanje jednu aplikaciju!</string>
-    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root inačicu? Jednostavno kliknite na plavu strelicu ispod!</string>
+    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root izdanje? Jednostavno kliknite na plavu strelicu ispod!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="accessibility_download">Preuzmi</string>
@@ -113,7 +113,7 @@
     <string name="installation_downgrade">Instalacija nije uspjela jer je korisnik pokušao instalirati stariju inačicu paketa. Deinstalirajte ažuriranja izvorne YouTube aplikacije, zatim pokušajte ponovno.</string>
     <string name="installation_failed">Neuspjela instalacija, nepoznati razlog. Priključite se našem Telegramu ili Diskordu za našu pomoć. Molimo Vas da priključite sliku ekrana iz Proširenog Menua</string>
     <string name="installation_incompatible">Instalacija nije uspjela zato jer datoteka instalacije nije kompatibilna s vašim uređajem. Uklonite preuzete datoteke u postavkama, zatim pokušajte ponovno.</string>
-    <string name="installation_invalid">Instalacija nije uspjela jer su APK datoteke oštećene, pokušajte ponovo.</string>
+    <string name="installation_invalid">Instalacija nije uspjela jer su APK datoteke oštećene, pokušajte ponovno.</string>
     <string name="installation_miui">Instalacija nije uspjela zato jer je MIUI optimizacija uključena. Isključite MIUI optimizaciju, zatim pokušajte ponovno.</string>
     <string name="installation_signature">Instalacija nije uspjela jer je omogućena provjera APK potpisa. Onemogućite provjeru APK potpisa, a zatim pokušajte ponovno.</string>
     <string name="installation_storage">Neuspješna instalacija jer na uređaju nema dovoljno slobodnog prostora.</string>
