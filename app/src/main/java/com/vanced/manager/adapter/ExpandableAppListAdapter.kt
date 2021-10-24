@@ -88,6 +88,7 @@ class ExpandableAppListAdapter(
                                 apps[position]
                             )
                         }
+                        appDownload.setIconResource(buttonTag.image)
                         contentDescription = activity.getString(
                             when (buttonTag) {
                                 ButtonTag.UPDATE -> R.string.accessibility_update
@@ -107,11 +108,6 @@ class ExpandableAppListAdapter(
                 }
                 dataModel?.installedVersionName?.observe(activity) {
                     appVersionInstalled.text = it
-                }
-                dataModel?.buttonImage?.observe(activity) {
-                    if (it != null) {
-                        appDownload.icon = it
-                    }
                 }
             }
         }
