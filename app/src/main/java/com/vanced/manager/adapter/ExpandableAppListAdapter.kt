@@ -84,6 +84,7 @@ class ExpandableAppListAdapter(
                     appDownload.apply {
                         setOnClickListener {
                             viewModel.openInstallDialog(
+                                activity.supportFragmentManager,
                                 buttonTag,
                                 apps[position]
                             )

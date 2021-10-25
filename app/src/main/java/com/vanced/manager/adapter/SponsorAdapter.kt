@@ -42,7 +42,7 @@ class SponsorAdapter(
             with(binding) {
                 sponsorName.text = sponsors[position].name
                 cardSponsor.setOnClickListener {
-                    viewModel.openUrl(sponsors[position].url)
+                    viewModel.openUrl(context, sponsors[position].url)
                 }
             }
         }
