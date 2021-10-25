@@ -64,7 +64,7 @@ class LinkAdapter(
 
         fun bind(position: Int) {
             binding.linkBg.setOnClickListener {
-                viewModel.openUrl(links[position].linkUrl)
+                viewModel.openUrl(context, links[position].linkUrl)
             }
         }
     }

@@ -5,63 +5,46 @@ import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.*
 import com.beust.klaxon.JsonObject
 import com.vanced.manager.R
+import com.vanced.manager.core.CombinedLiveData
 import com.vanced.manager.utils.PackageHelper.isPackageInstalled
 
 open class DataModel(
-    private val jsonObject: LiveData<JsonObject?>,
-    private val context: Context,
-    lifecycleOwner: LifecycleOwner,
+    jsonObject: LiveData<JsonObject?>,
+    context: Context,
     val appPkg: String,
     val appName: String,
     val appDescription: String,
     @DrawableRes val appIcon: Int
 ) {
 
-    private val versionCode = MutableLiveData<Int>()
-    private val installedVersionCode = MutableLiveData<Int>()
+    val isAppInstalled = Transformations.map(jsonObject) { isAppInstalled(appPkg) }
+
+    private val versionCode = Transformations.map(jsonObject) { jobj ->
+        jobj?.int("versionCode") ?: 0
+    }
+    private val installedVersionCode = Transformations.map(isAppInstalled) {
+        getPkgVersionCode(appPkg, it)
+    }
     private val unavailable = context.getString(R.string.unavailable)
     private val pm = context.packageManager
 
-    val isAppInstalled = MutableLiveData<Boolean>()
-    val versionName = MutableLiveData<String>()
-    val installedVersionName = MutableLiveData<String>()
-    val buttonTag = MutableLiveData<ButtonTag>()
-    val buttonImage = MutableLiveData<Drawable>()
-    val changelog = MutableLiveData<String>()
-
-    private fun fetch() {
-        val jobj = jsonObject.value
-        isAppInstalled.value = isAppInstalled(appPkg)
-        versionCode.value = jobj?.int("versionCode") ?: 0
-        versionName.value = jobj?.string("version") ?: unavailable
-        changelog.value = jobj?.string("changelog") ?: unavailable
+    val versionName = Transformations.map(jsonObject) { jobj ->
+        jobj?.string("version") ?: unavailable
+    }
+    val changelog = Transformations.map(jsonObject) { jobj ->
+        jobj?.string("changelog") ?: unavailable
+    }
+    val installedVersionName = Transformations.map(isAppInstalled) {
+        getPkgVersionName(appPkg, it)
+    }
+    val buttonTag = CombinedLiveData(versionCode, installedVersionCode) { versionCode, installedVersionCode ->
+        compareInt(installedVersionCode, versionCode)
     }
 
-    init {
-        fetch()
-        with(lifecycleOwner) {
-            jsonObject.observe(this) {
-                fetch()
-            }
-            isAppInstalled.observe(this) {
-                installedVersionCode.value = getPkgVersionCode(appPkg, it)
-                installedVersionName.value = getPkgVersionName(appPkg, it)
-            }
-            versionCode.observe(this) { versionCode ->
-                installedVersionCode.observe(this) { installedVersionCode ->
-                    buttonTag.value = compareInt(installedVersionCode, versionCode)
-                    buttonImage.value = compareIntDrawable(installedVersionCode, versionCode)
-                }
-            }
-        }
-    }
-
-    open fun isAppInstalled(pkg: String): Boolean = isPackageInstalled(pkg, context.packageManager)
+    open fun isAppInstalled(pkg: String): Boolean = isPackageInstalled(pkg, pm)
 
     private fun getPkgVersionName(pkg: String, isAppInstalled: Boolean): String {
         return if (isAppInstalled) {
@@ -94,17 +77,5 @@ open class DataModel(
             }
         }
         return ButtonTag.INSTALL
-    }
-
-    private fun compareIntDrawable(int1: Int?, int2: Int?): Drawable {
-        if (int2 != null && int1 != null) {
-            return when {
-                int1 == 0 -> ContextCompat.getDrawable(context, R.drawable.ic_app_download)!!
-                int2 > int1 -> ContextCompat.getDrawable(context, R.drawable.ic_app_update)!!
-                int1 >= int2 -> ContextCompat.getDrawable(context, R.drawable.ic_app_reinstall)!!
-                else -> ContextCompat.getDrawable(context, R.drawable.ic_app_download)!!
-            }
-        }
-        return ContextCompat.getDrawable(context, R.drawable.ic_app_download)!!
     }
 }

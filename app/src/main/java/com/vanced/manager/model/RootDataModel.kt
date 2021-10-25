@@ -10,7 +10,6 @@ import com.vanced.manager.utils.PackageHelper
 class RootDataModel(
     jsonObject: LiveData<JsonObject?>,
     context: Context,
-    lifecycleOwner: LifecycleOwner,
     appPkg: String,
     appName: String,
     appDescription: String,
@@ -22,7 +21,7 @@ class RootDataModel(
     //Ironic, isn't it?
     private val scriptName: String?
 ) : DataModel(
-    jsonObject, context, lifecycleOwner, appPkg, appName, appDescription, appIcon
+    jsonObject, context, appPkg, appName, appDescription, appIcon
 ) {
 
     override fun isAppInstalled(pkg: String): Boolean {
