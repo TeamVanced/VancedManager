@@ -282,6 +282,9 @@ object PackageHelper {
         val sessionId: Int
         val sessionParams =
             PackageInstaller.SessionParams(PackageInstaller.SessionParams.MODE_FULL_INSTALL)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            sessionParams.setRequireUserAction(PackageInstaller.SessionParams.USER_ACTION_NOT_REQUIRED)
+        }
         val callbackIntent = Intent(context, AppInstallerService::class.java)
         val pendingIntent = PendingIntent.getService(context, 0, callbackIntent, intentFlags)
         try {
