@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
-import com.vanced.manager.preferences.CheckboxPreference
-import com.vanced.manager.preferences.ManagerPreference
+import com.vanced.manager.core.preferences.CheckboxPreference
+import com.vanced.manager.core.preferences.ManagerPreference
 import com.vanced.manager.ui.component.button.ManagerThemedTextButton
 import com.vanced.manager.ui.widget.list.CheckboxItem
 import kotlinx.coroutines.launch

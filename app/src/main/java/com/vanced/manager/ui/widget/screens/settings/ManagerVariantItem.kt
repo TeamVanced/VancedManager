@@ -2,8 +2,8 @@ package com.vanced.manager.ui.widget.screens.settings
 
 import androidx.compose.runtime.Composable
 import com.vanced.manager.R
-import com.vanced.manager.preferences.RadioButtonPreference
-import com.vanced.manager.preferences.holder.managerVariantPref
+import com.vanced.manager.core.preferences.RadioButtonPreference
+import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.ui.component.preference.RadiobuttonDialogPreference
 import com.vanced.manager.ui.resources.managerString
 

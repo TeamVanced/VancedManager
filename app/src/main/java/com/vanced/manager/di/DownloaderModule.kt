@@ -1,34 +1,32 @@
 package com.vanced.manager.di
 
-import com.vanced.manager.downloader.api.MicrogAPI
-import com.vanced.manager.downloader.api.MusicAPI
-import com.vanced.manager.downloader.api.VancedAPI
-import com.vanced.manager.downloader.impl.MicrogDownloader
-import com.vanced.manager.downloader.impl.MusicDownloader
-import com.vanced.manager.downloader.impl.VancedDownloader
-import com.vanced.manager.installer.impl.MicrogInstaller
-import com.vanced.manager.installer.impl.MusicInstaller
-import com.vanced.manager.installer.impl.VancedInstaller
+import android.content.Context
+import com.vanced.manager.core.downloader.api.MicrogAPI
+import com.vanced.manager.core.downloader.api.MusicAPI
+import com.vanced.manager.core.downloader.api.VancedAPI
+import com.vanced.manager.core.downloader.impl.MicrogDownloader
+import com.vanced.manager.core.downloader.impl.MusicDownloader
+import com.vanced.manager.core.downloader.impl.VancedDownloader
 import org.koin.dsl.module
 
 val downloaderModule = module {
 
     fun provideVancedDownloader(
-        vancedInstaller: VancedInstaller,
         vancedAPI: VancedAPI,
-    ) = VancedDownloader(vancedInstaller, vancedAPI)
+        context: Context,
+    ) = VancedDownloader(vancedAPI, context)
 
     fun provideMusicDownloader(
-        musicInstaller: MusicInstaller,
         musicAPI: MusicAPI,
-    ) = MusicDownloader(musicInstaller, musicAPI)
+        context: Context,
+    ) = MusicDownloader(musicAPI, context)
 
     fun provideMicrogDownloader(
-        microgInstaller: MicrogInstaller,
         microgAPI: MicrogAPI,
-    ) = MicrogDownloader(microgInstaller, microgAPI)
+        context: Context,
+    ) = MicrogDownloader(microgAPI, context)
 
-    single { provideVancedDownloader(get(), get()) }
-    single { provideMusicDownloader(get(), get()) }
-    single { provideMicrogDownloader(get(), get()) }
+    factory { provideVancedDownloader(get(), get()) }
+    factory { provideMusicDownloader(get(), get()) }
+    factory { provideMicrogDownloader(get(), get()) }
 }

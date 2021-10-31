@@ -11,11 +11,11 @@ import androidx.compose.ui.text.style.TextAlign
 
 @Composable
 fun ManagerText(
+    text: String,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
     textStyle: TextStyle = LocalTextStyle.current,
     textAlign: TextAlign? = null,
-    text: String,
 ) {
     Text(
         modifier = modifier,
@@ -28,11 +28,11 @@ fun ManagerText(
 
 @Composable
 fun ManagerText(
+    text: AnnotatedString,
     modifier: Modifier = Modifier,
     color: Color = Color.Unspecified,
     textStyle: TextStyle = LocalTextStyle.current,
     textAlign: TextAlign? = null,
-    text: AnnotatedString,
 ) {
     Text(
         modifier = modifier,

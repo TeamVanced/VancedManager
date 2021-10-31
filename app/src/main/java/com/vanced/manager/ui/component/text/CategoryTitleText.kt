@@ -5,14 +5,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.vanced.manager.ui.component.color.managerAnimatedColor
-import com.vanced.manager.ui.util.defaultContentPaddingHorizontal
+import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
 
 @Composable
 fun CategoryTitleText(
     text: String
 ) {
     ManagerText(
-        modifier = Modifier.padding(start = defaultContentPaddingHorizontal),
+        modifier = Modifier.padding(start = DefaultContentPaddingHorizontal),
         text = text,
         textStyle = MaterialTheme.typography.h2,
         color = managerAnimatedColor(MaterialTheme.colors.onSurface)

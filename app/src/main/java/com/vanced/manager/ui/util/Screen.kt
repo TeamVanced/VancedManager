@@ -8,41 +8,32 @@ import com.vanced.manager.ui.screens.HomeLayout
 import com.vanced.manager.ui.screens.LogLayout
 import com.vanced.manager.ui.screens.SettingsLayout
 
-sealed class Screen(
+enum class Screen(
     val route: String,
     @StringRes val displayName: Int,
-    val content: @Composable () -> Unit
 ) {
-
-    object Home : Screen(
+    Home(
         route = "home",
-        displayName = R.string.app_name,
-        content = {
-            HomeLayout()
-        }
-    )
-
-    object Settings : Screen(
+        displayName = R.string.app_name
+    ),
+    Settings(
         route = "settings",
         displayName = R.string.toolbar_settings,
-        content = {
-            SettingsLayout()
-        }
-    )
-
-    object About : Screen(
+    ),
+    About(
         route = "about",
         displayName = R.string.toolbar_about,
-        content = {
-            AboutLayout()
-        }
-    )
-
-    object Logs : Screen(
+    ),
+    Logs(
         route = "logs",
         displayName = R.string.toolbar_logs,
-        content = {
-            LogLayout()
-        }
-    )
+    ),
+    InstallPreferences(
+        route = "installpreferences",
+        displayName = R.string.toolbar_installation_preferences
+    ),
+    Install(
+        route = "install",
+        displayName = R.string.toolbar_install
+    ),
 }

@@ -1,5 +1,6 @@
 package com.vanced.manager.domain.pkg
 
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.os.Build
 
@@ -21,6 +22,7 @@ class PkgManagerImpl(
         const val MAJOR_IGNORE = 0xFFFFFFFF
     }
 
+    @SuppressLint("WrongConstant")
     @Suppress("DEPRECATION")
     @Throws(PackageManager.NameNotFoundException::class)
     override suspend fun getVersionCode(packageName: String): Int {
@@ -37,6 +39,7 @@ class PkgManagerImpl(
         }
     }
 
+    @SuppressLint("WrongConstant")
     @Throws(PackageManager.NameNotFoundException::class)
     override suspend fun getVersionName(packageName: String): String =
         packageManager.getPackageInfo(packageName, PACKAGE_FLAG_ALL_OFF)

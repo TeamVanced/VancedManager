@@ -17,12 +17,12 @@ fun <T> RadiobuttonItem(
     text: String,
     tag: T,
     isSelected: Boolean,
-    onSelect: (tag: T) -> Unit
+    onSelect: (tag: T) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     val onClick = { onSelect(tag) }
     ManagerSelectableListItem(
         modifier = Modifier
-            .fillMaxWidth()
             .managerClickable(onClick = onClick),
         title = {
             Text(

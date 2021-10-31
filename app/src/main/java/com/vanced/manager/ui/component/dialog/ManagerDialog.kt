@@ -8,8 +8,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.Dialog
 import com.vanced.manager.ui.component.card.ManagerCard
 import com.vanced.manager.ui.component.text.ManagerText
-import com.vanced.manager.ui.util.defaultContentPaddingHorizontal
-import com.vanced.manager.ui.util.defaultContentPaddingVertical
+import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
+import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 
 @Composable
 fun ManagerDialog(
@@ -46,8 +46,8 @@ fun ManagerDialog(
         content = {
             ManagerCard {
                 Column(
-                    modifier = Modifier.padding(defaultContentPaddingHorizontal),
-                    verticalArrangement = Arrangement.spacedBy(defaultContentPaddingVertical)
+                    modifier = Modifier.padding(DefaultContentPaddingHorizontal),
+                    verticalArrangement = Arrangement.spacedBy(DefaultContentPaddingVertical)
                 ) {
                     title()
                     content()

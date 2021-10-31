@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import com.vanced.manager.ui.component.color.managerAccentColor
 import com.vanced.manager.ui.component.color.managerSurfaceColor
 import com.vanced.manager.ui.component.layout.ManagerLazyColumn
-import com.vanced.manager.util.logs
+import com.vanced.manager.core.util.logs
 
 @Composable
 fun LogLayout() {

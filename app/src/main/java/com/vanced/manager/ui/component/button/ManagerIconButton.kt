@@ -28,7 +28,7 @@ fun IconButton(
                 onClick = onClick,
                 role = Role.Button,
                 interactionSource = interactionSource,
-                indication = rememberRipple(bounded = false, radius = 18.dp)
+                indication = rememberRipple(radius = buttonSize / 2)
             )
             .size(buttonSize),
         contentAlignment = Alignment.Center

@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.widget.list
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -16,13 +15,13 @@ import com.vanced.manager.ui.widget.checkbox.ManagerAnimatedCheckbox
 fun CheckboxItem(
     text: String,
     isChecked: Boolean,
-    onCheck: (Boolean) -> Unit = {}
+    onCheck: (Boolean) -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val toggle = { onCheck(!isChecked) }
 
     ManagerSelectableListItem(
-        modifier = Modifier
-            .fillMaxWidth()
+        modifier = modifier
             .managerClickable(onClick = toggle),
         title = {
             Text(

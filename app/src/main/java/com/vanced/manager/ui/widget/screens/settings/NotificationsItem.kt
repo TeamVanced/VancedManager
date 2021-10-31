@@ -1,9 +1,9 @@
 package com.vanced.manager.ui.widget.screens.settings
 
 import androidx.compose.runtime.Composable
-import com.vanced.manager.preferences.managerBooleanPreference
+import com.vanced.manager.core.preferences.managerBooleanPreference
+import com.vanced.manager.core.util.notificationApps
 import com.vanced.manager.ui.component.preference.CheckboxPreference
-import com.vanced.manager.util.notificationApps
 
 @Composable
 fun SettingsNotificationsItem() {

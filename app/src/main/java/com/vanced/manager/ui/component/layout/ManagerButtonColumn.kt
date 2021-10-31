@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.vanced.manager.ui.util.defaultContentPaddingVertical
+import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 
 @Composable
 fun ManagerButtonColumn(
@@ -14,7 +14,7 @@ fun ManagerButtonColumn(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(defaultContentPaddingVertical),
+        verticalArrangement = Arrangement.spacedBy(DefaultContentPaddingVertical),
         content = content
     )
 }

@@ -7,7 +7,7 @@ import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
-import com.vanced.manager.preferences.holder.useCustomTabsPref
+import com.vanced.manager.core.preferences.holder.useCustomTabsPref
 
 @Composable
 fun ManagerLinkCard(

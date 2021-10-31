@@ -11,7 +11,7 @@ import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.list.ManagerListItem
 import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.text.ManagerText
-import com.vanced.manager.ui.util.defaultContentPaddingHorizontal
+import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
 
 @Composable
 fun Preference(
@@ -43,7 +43,7 @@ fun Preference(
     ManagerListItem(
         modifier = Modifier
             .managerClickable(onClick = onClick)
-            .padding(horizontal = defaultContentPaddingHorizontal),
+            .padding(horizontal = DefaultContentPaddingHorizontal),
         title = {
             CompositionLocalProvider(
                 LocalContentColor provides color,

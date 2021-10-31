@@ -24,7 +24,7 @@ import com.vanced.manager.ui.component.layout.ScrollableItemRow
 import com.vanced.manager.ui.component.list.ManagerListItem
 import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.resources.managerString
-import com.vanced.manager.ui.util.defaultContentPaddingVertical
+import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 import com.vanced.manager.ui.widget.layout.CategoryLayout
 
 data class Person(
@@ -171,7 +171,7 @@ fun AboutManagerCard() {
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(
-            modifier = Modifier.padding(vertical = defaultContentPaddingVertical),
+            modifier = Modifier.padding(vertical = DefaultContentPaddingVertical),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {

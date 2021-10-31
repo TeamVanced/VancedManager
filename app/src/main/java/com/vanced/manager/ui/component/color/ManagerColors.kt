@@ -6,7 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
-import com.vanced.manager.preferences.holder.managerAccentColorPref
+import com.vanced.manager.core.preferences.holder.managerAccentColorPref
 
 @Composable
 fun contentColorForColor(color: Color) =

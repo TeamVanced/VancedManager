@@ -11,17 +11,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.vanced.manager.ui.util.defaultContentPaddingVertical
+import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 
 @Composable
 fun ManagerScrollableColumn(
-    contentPaddingVertical: Dp = defaultContentPaddingVertical,
+    modifier: Modifier = Modifier,
+    contentPaddingVertical: Dp = DefaultContentPaddingVertical,
     itemSpacing: Dp = 0.dp,
     content: @Composable ColumnScope.() -> Unit
 ) {
     val scrollState = rememberScrollState()
     Column(
-        modifier = Modifier
+        modifier = modifier
             .verticalScroll(scrollState)
             .padding(vertical = contentPaddingVertical),
         horizontalAlignment = Alignment.CenterHorizontally,

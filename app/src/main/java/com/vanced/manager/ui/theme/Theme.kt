@@ -5,7 +5,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import com.vanced.manager.preferences.holder.managerThemePref
+import com.vanced.manager.core.preferences.holder.managerThemePref
 
 const val defAccentColor = 0xFF0477E1
 
