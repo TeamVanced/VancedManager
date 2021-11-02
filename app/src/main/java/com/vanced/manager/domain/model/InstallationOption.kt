@@ -29,6 +29,6 @@ sealed class InstallationOption(
 
 @Parcelize
 data class InstallationOptionItem(
-    val displayText: String,
     val key: String,
+    val displayText: (key: String) -> String,
 ) : Parcelable

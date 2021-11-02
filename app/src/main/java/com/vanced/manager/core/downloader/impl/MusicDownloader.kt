@@ -17,18 +17,18 @@ class MusicDownloader(
     private val version by musicVersionPref
     private val variant by managerVariantPref
 
-    private lateinit var correctVersion: String
+    private lateinit var absoluteVersion: String
 
     override suspend fun download(
-        appVersions: List<String>,
+        appVersions: List<String>?,
         onStatus: (DownloadStatus) -> Unit
     ) {
-        correctVersion = getLatestOrProvidedAppVersion(version, appVersions)
+        absoluteVersion = getLatestOrProvidedAppVersion(version, appVersions)
 
         downloadFiles(
             downloadFiles = arrayOf(DownloadFile(
                 call = musicAPI.getFiles(
-                    version = correctVersion,
+                    version = absoluteVersion,
                     variant = variant,
                 ),
                 fileName = "music.apk"
@@ -53,7 +53,7 @@ class MusicDownloader(
 
     override fun getSavedFilePath(): String {
         val directory =
-            File(context.getExternalFilesDir("vancedmusic")!!.path + "$correctVersion/$variant")
+            File(context.getExternalFilesDir("vancedmusic")!!.path + "$absoluteVersion/$variant")
 
         if (!directory.exists())
             directory.mkdirs()

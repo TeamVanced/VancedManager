@@ -16,6 +16,7 @@ import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.vanced.manager.R
 import com.vanced.manager.core.util.socialMedia
 import com.vanced.manager.core.util.sponsors
+import com.vanced.manager.domain.model.InstallationOption
 import com.vanced.manager.ui.component.card.ManagerLinkCard
 import com.vanced.manager.ui.component.dialog.ManagerDialog
 import com.vanced.manager.ui.component.layout.ManagerScrollableColumn
@@ -35,7 +36,11 @@ import org.koin.androidx.compose.getViewModel
 @ExperimentalAnimationApi
 @Composable
 fun HomeLayout(
-    navController: NavController
+    onAppInstallPress: (
+        appName: String,
+        appVersions: List<String>?,
+        installationOptions: List<InstallationOption>?
+    ) -> Unit
 ) {
     val viewModel: MainViewModel = getViewModel()
     val appState by viewModel.appState.collectAsState()
@@ -78,12 +83,7 @@ fun HomeLayout(
                                         appInstalledVersion = app.installedVersion,
                                         appRemoteVersion = app.remoteVersion,
                                         onDownloadClick = {
-                                            if (app.installationOptions != null) {
-                                                navController.navigate(Screen.InstallPreferences.route)
-                                            } else {
-                                                navController.navigate(Screen.Install.route)
-                                            }
-
+                                            onAppInstallPress(app.name, app.versions, app.installationOptions)
                                         },
                                         onUninstallClick = { /*TODO*/ },
                                         onLaunchClick = { /*TODO*/ },

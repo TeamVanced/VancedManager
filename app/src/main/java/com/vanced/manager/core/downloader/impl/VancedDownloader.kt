@@ -22,13 +22,13 @@ class VancedDownloader(
     private val variant by managerVariantPref
     private val languages by vancedLanguagesPref
 
-    private lateinit var correctVersion: String
+    private lateinit var absoluteVersion: String
 
     override suspend fun download(
-        appVersions: List<String>,
+        appVersions: List<String>?,
         onStatus: (DownloadStatus) -> Unit
     ) {
-        correctVersion = getLatestOrProvidedAppVersion(version, appVersions)
+        absoluteVersion = getLatestOrProvidedAppVersion(version, appVersions)
 
         val files = arrayOf(
             getFile(
@@ -68,7 +68,7 @@ class VancedDownloader(
 
     override fun getSavedFilePath(): String {
         val directory =
-            File(context.getExternalFilesDir("vanced")!!.path + "$correctVersion/$variant")
+            File(context.getExternalFilesDir("vanced")!!.path + "/$absoluteVersion/$variant")
 
         if (!directory.exists())
             directory.mkdirs()
@@ -81,7 +81,7 @@ class VancedDownloader(
         apkName: String,
     ) = DownloadFile(
         call = vancedAPI.getFiles(
-            version = correctVersion,
+            version = absoluteVersion,
             variant = variant,
             type = type,
             apkName = apkName

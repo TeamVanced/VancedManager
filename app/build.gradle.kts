@@ -79,12 +79,12 @@ val languages: String get() {
 
 dependencies {
     implementation(kotlin("reflect"))
-    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.browser:browser:1.3.0")
 
-    val composeVersion = "1.1.0-alpha06"
+    val composeVersion = "1.1.0-beta01"
     implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
@@ -96,9 +96,11 @@ dependencies {
     implementation("androidx.compose.ui:ui-util:$composeVersion")
     implementation("androidx.compose.ui:ui:$composeVersion")
 
+    implementation("com.github.zsoltk:compose-router:0.28.0")
+
     implementation("androidx.preference:preference-ktx:1.1.1")
 
-    implementation("androidx.activity:activity-compose:1.3.1")
+    implementation("androidx.activity:activity-compose:1.4.0")
 
     val lifecycleVersion = "2.4.0-beta01"
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")

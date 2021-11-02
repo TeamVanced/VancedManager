@@ -1,6 +1,7 @@
 package com.vanced.manager.core.downloader.impl
 
 import android.content.Context
+import android.util.Log
 import com.vanced.manager.core.downloader.api.MicrogAPI
 import com.vanced.manager.core.downloader.base.AppDownloader
 import com.vanced.manager.core.downloader.util.DownloadStatus
@@ -12,7 +13,7 @@ class MicrogDownloader(
 ) : AppDownloader() {
 
     override suspend fun download(
-        appVersions: List<String>,
+        appVersions: List<String>?,
         onStatus: (DownloadStatus) -> Unit
     ) {
         downloadFiles(

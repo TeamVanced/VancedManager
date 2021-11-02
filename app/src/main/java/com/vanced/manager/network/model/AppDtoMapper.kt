@@ -23,7 +23,7 @@ class AppDtoMapper(
 
     private val latestVersionRadioButton =
         InstallationOptionItem(
-            displayText = context.getString(R.string.app_version_dialog_option_latest),
+            displayText = { context.getString(R.string.app_version_dialog_option_latest) },
             key = "latest"
         )
 
@@ -83,8 +83,10 @@ class AppDtoMapper(
                     },
                     items = appThemes?.map { theme ->
                         InstallationOptionItem(
-                            displayText = theme.replaceFirstChar {
-                                it.titlecase(Locale.getDefault())
+                            displayText = {
+                                theme.replaceFirstChar {
+                                    it.titlecase(Locale.getDefault())
+                                }
                             },
                             key = theme
                         )
@@ -98,7 +100,7 @@ class AppDtoMapper(
                     },
                     items = appVersions?.map { version ->
                         InstallationOptionItem(
-                            displayText = version,
+                            displayText = { "v$version" },
                             key = version
                         )
                     }?.plus(latestVersionRadioButton)?.reversed() ?: emptyList(),
@@ -112,12 +114,15 @@ class AppDtoMapper(
                     removeOption = {
                         vancedLanguagesPref.save(vancedLanguagesPref.value.value - it)
                     },
-                    items = appLanguages?.map { version ->
+                    items = appLanguages?.map { language ->
                         InstallationOptionItem(
-                            displayText = version,
-                            key = version
+                            displayText = {
+                                val locale = Locale(it)
+                                locale.getDisplayName(locale)
+                            },
+                            key = language
                         )
-                    }?.plus(latestVersionRadioButton)?.reversed() ?: emptyList(),
+                    } ?: emptyList(),
                 ),
             )
             MUSIC_NAME -> listOf(
@@ -129,7 +134,7 @@ class AppDtoMapper(
                     },
                     items = appVersions?.map { version ->
                         InstallationOptionItem(
-                            displayText = version,
+                            displayText = { version },
                             key = version
                         )
                     } ?: emptyList(),

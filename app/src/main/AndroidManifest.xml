@@ -43,6 +43,8 @@
 
         <service android:name="com.xinto.apkhelper.services.PackageManagerService" />
 
+        <service android:name=".core.installer.service.AppInstallService" />
+
     </application>
 
 </manifest>

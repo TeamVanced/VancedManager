@@ -1,19 +1,17 @@
 package com.vanced.manager.core.installer.impl
 
+import android.content.Context
 import com.vanced.manager.core.installer.base.AppInstaller
-import com.xinto.apkhelper.installApk
+import com.vanced.manager.core.installer.util.installApp
+import java.io.File
 
-class MicrogInstaller : AppInstaller() {
+class MicrogInstaller(
+    private val context: Context
+) : AppInstaller() {
 
-    override fun install(
-        onDone: () -> Unit
-    ) {
-        super.install(onDone)
-
-        installApk(
-            apkPath = context.getExternalFilesDir("microg/microg.apk")!!.path,
-            context = context
-        )
+    override fun install(appVersions: List<String>?) {
+        val musicApk = File(context.getExternalFilesDir("microg/microg.apk")!!.path)
+        installApp(musicApk, context)
     }
 
 }

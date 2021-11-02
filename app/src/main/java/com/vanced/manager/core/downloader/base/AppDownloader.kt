@@ -18,7 +18,7 @@ abstract class AppDownloader {
     private lateinit var call: DownloadCall
 
     abstract suspend fun download(
-        appVersions: List<String>,
+        appVersions: List<String>?,
         onStatus: (DownloadStatus) -> Unit
     )
 
@@ -41,9 +41,7 @@ abstract class AppDownloader {
                 if (response.isSuccessful) {
                     val body = response.body()
                     if (body != null) {
-                        writeFile(body, downloadFile.fileName) { progress ->
-                            onProgress(progress)
-                        }
+                        writeFile(body, downloadFile.fileName, onProgress)
                     }
                     continue
                 }
