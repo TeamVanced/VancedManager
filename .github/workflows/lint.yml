@@ -1,0 +1,26 @@
+name: Code Linter
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  qodana:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/work/_temp/_github_home/cache
+          key: ${{ runner.os }}-qodana-${{ github.ref }}
+          restore-keys: |
+            ${{ runner.os }}-qodana-${{ github.ref }}
+            ${{ runner.os }}-qodana-
+      - uses: docker://jetbrains/qodana-jvm-android
+        with:
+          args: --cache-dir=/github/home/cache --results-dir=/github/workspace/qodana --save-report --report-dir=/github/workspace/qodana/report
+      - uses: actions/upload-artifact@v2
+        with:
+          path: qodana
