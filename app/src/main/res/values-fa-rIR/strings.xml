@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="cancel">Cancel</string>
+    <string name="close">Close</string>
+    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_vanced">A modified YouTube client with many useful features!</string>
+    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="select_apps">Select Your Apps</string>
+    <!-- Main Activity -->
+    <string name="title_about">About</string>
+    <string name="title_guide">Guide</string>
+    <string name="title_home">Manager</string>
+    <string name="title_logs">Logs</string>
+    <string name="title_settings">Settings</string>
+    <string name="update_manager">Update Manager</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">Is Your Device Rooted?</string>
+    <string name="grant_root">Grant Root Permission</string>
+    <string name="lets_get_started">Let\'s get started</string>
+    <string name="select_at_least_one_app">Select at least one app!</string>
+    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <!-- Home Page -->
+    <string name="about_app">About %1$s</string>
+    <string name="accessibility_download">Download</string>
+    <string name="accessibility_info">Info</string>
+    <string name="accessibility_launch">Launch</string>
+    <string name="accessibility_reinstall">Reinstall</string>
+    <string name="accessibility_uninstall">Uninstall</string>
+    <string name="accessibility_update">Update</string>
+    <string name="apps">Apps</string>
+    <string name="changelog">Changelog</string>
+    <string name="downloading_file">Downloading %1$s</string>
+    <string name="install">Install</string>
+    <string name="latest">Latest:</string>
+    <string name="no_microg">Install Vanced microG first</string>
+    <string name="root_not_granted">Root access not granted</string>
+    <string name="social_media">Social Media</string>
+    <string name="support_us">Support us</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="version_installed">Installed:</string>
+    <!-- Settings -->
+    <string name="accent_color">Accent Color</string>
+    <string name="category_appearance">Appearance</string>
+    <string name="category_behaviour">Behavior</string>
+    <string name="clear_files">Clear downloaded files</string>
+    <string name="cleared_files">Successfully cleared files</string>
+    <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
+    <string name="firebase_title">Firebase Analytics</string>
+    <string name="language_title">Language</string>
+    <string name="link_custom_tabs">Links will open in Chrome Custom Tabs</string>
+    <string name="link_title">Use Chrome Custom Tabs</string>
+    <string name="push_notifications">%1$s Push Notifications</string>
+    <string name="push_notifications_summary">Receive push notifications when an update for %1$s is released</string>
+    <string name="script_save_failed">Failed to save new time value</string>
+    <string name="script_sleep_timer">Root Script Sleep Time</string>
+    <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
+    <string name="system_default">System Default</string>
+    <string name="theme">Theme</string>
+    <string name="theme_dark">Dark Theme</string>
+    <string name="theme_light">Light Theme</string>
+    <string name="update_center">Manager Update Center</string>
+    <string name="update_not_found">No new updates</string>
+    <string name="variant">Variant</string>
+    <!-- Logs -->
+    <string name="logs_not_saved">Could not save logs</string>
+    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <!-- Dialogs -->
+    <string name="advanced">Details</string>
+    <string name="app_install_files_detected">%1$s installation files detected!</string>
+    <string name="app_install_files_detected_summary">Manager detected that all necessary files for %1$s installation were found. Do you want to install it?</string>
+    <string name="app_installation_preferences">%1$s Installation Preferences</string>
+    <string name="checking_updates">Checking for updates…</string>
+    <string name="chosen_lang">Language(s): %1$s</string>
+    <string name="chosen_theme">Theme: %1$s</string>
+    <string name="chosen_version">Version: %1$s</string>
+    <string name="error">Error</string>
+    <string name="guide">Guide</string>
+    <string name="hold_on">Stop!</string>
+    <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
+    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one_title">MIUI Optimizations are enabled!</string>
+    <string name="please_be_patient">Please do NOT exit the app during this process!</string>
+    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="redownload">Redownload</string>
+    <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
+    <string name="version">Version</string>
+    <string name="welcome">Welcome</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
+    <string name="install_latest">Latest</string>
+    <string name="light_plus_other">Light + %1$s</string>
+    <string name="select_at_least_one_lang">Select at least one language!</string>
+    <string name="vanced_black">Black</string>
+    <string name="vanced_dark">Dark</string>
+    <!-- About Page -->
+    <string name="manager_dev">Manager Devs</string>
+    <string name="other_contributors">Other Contributors</string>
+    <string name="sources">Sources</string>
+    <string name="vanced_team">Vanced Team</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Failed to `chown` APK to system owner, please try again.</string>
+    <string name="error_downloading">Error Downloading %1$s</string>
+    <string name="failed_accent">Failed to apply new accent color</string>
+    <string name="failed_uninstall">Failed to uninstall package %1$s</string>
+    <string name="files_missing_va">Failed to locate the required files for installation. Re-download the installation files, then try again.</string>
+    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="installation_aborted">Installation failed because the user aborted the installation.</string>
+    <string name="installation_conflict">Installation failed because the app conflicts with an already installed app. Uninstall the current version of the app, then try again.</string>
+    <string name="installation_downgrade">Installation failed because the user tried to downgrade the package. Uninstall updates from the stock app, then try again.</string>
+    <string name="installation_failed">Installation failed for unknown reasons, join our Telegram or Discord for further support. Please also attach a screenshot from the Advanced menu</string>
+    <string name="installation_incompatible">Installation failed because the installation file is incompatible with your device. Clear downloaded files in the Settings, then try again.</string>
+    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_miui">Installation failed because MIUI Optimization is enabled. Disable MIUI Optimization, then try again.</string>
+    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_storage">Installation failed because the device doesn\'t have enough free space.</string>
+    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="path_missing">Failed to locate the stock YouTube installation path after split installation.</string>
+</resources>
