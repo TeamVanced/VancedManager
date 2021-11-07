@@ -72,7 +72,7 @@
     <string name="toolbar_logs">Logs</string>
     <string name="toolbar_settings">Settings</string>
     <string name="toolbar_install">Install</string>
-    <string name="toolbar_installation_preferences">Installation Preferences</string>
+    <string name="toolbar_installation_preferences">Configuration</string>
     <string name="toolbar_update_manager">Update Manager</string>
 
     <!-- App Card -->
