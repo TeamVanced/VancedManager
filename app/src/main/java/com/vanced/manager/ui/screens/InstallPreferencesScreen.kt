@@ -46,24 +46,19 @@ fun InstallPreferencesScreen(
 
     ManagerScaffold(
         topBar = {
-            Column {
-                ManagerTopAppBar(
-                    title = managerString(R.string.toolbar_installation_preferences),
-                    navigationIcon = {
-                        IconButton(
-                            onClick = onToolbarBackButtonClick
-                        ) {
-                            Icon(
-                                imageVector = Icons.Rounded.ArrowBackIosNew,
-                                contentDescription = "Back"
-                            )
-                        }
+            ManagerTopAppBar(
+                title = managerString(R.string.toolbar_installation_preferences),
+                navigationIcon = {
+                    IconButton(
+                        onClick = onToolbarBackButtonClick
+                    ) {
+                        Icon(
+                            imageVector = Icons.Rounded.ArrowBackIosNew,
+                            contentDescription = "Back"
+                        )
                     }
-                )
-                ManagerProgressIndicator(
-                    progress = (currentOptionIndex + 1).toFloat() / installationOptions.size.toFloat()
-                )
-            }
+                }
+            )
         },
     ) { paddingValues ->
         Column(
