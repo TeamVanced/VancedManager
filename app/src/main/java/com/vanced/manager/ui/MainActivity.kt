@@ -7,27 +7,17 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.foundation.background
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBackIos
-import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
+import androidx.compose.animation.*
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.SideEffect
 import com.github.zsoltk.compose.backpress.BackPressHandler
 import com.github.zsoltk.compose.backpress.LocalBackPressHandler
 import com.github.zsoltk.compose.router.Router
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.vanced.manager.core.installer.service.AppInstallService
-import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.color.managerSurfaceColor
-import com.vanced.manager.ui.component.color.managerTextColor
-import com.vanced.manager.ui.component.menu.ManagerDropdownMenuItem
-import com.vanced.manager.ui.component.text.ToolbarTitleText
-import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.screens.*
 import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
@@ -53,14 +43,15 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @OptIn(ExperimentalAnimationApi::class)
+    @OptIn(
+        ExperimentalAnimationApi::class,
+        ExperimentalMaterial3Api::class,
+        ExperimentalFoundationApi::class
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ManagerTheme {
-                var isMenuExpanded by remember { mutableStateOf(false) }
-                var currentScreen by remember { mutableStateOf<Screen>(Screen.Home) }
-
                 val surfaceColor = managerSurfaceColor()
 
                 val isDark = isDark()
@@ -78,98 +69,62 @@ class MainActivity : ComponentActivity() {
                     LocalBackPressHandler provides backPressHandler
                 ) {
                     Router<Screen>("VancedManager", Screen.Home) { backStack ->
-                        val screen = backStack.last()
-                        currentScreen = screen
+                        when (val screen = backStack.last()) {
+                            is Screen.Home -> {
+                                HomeLayout(
+                                    onToolbarScreenSelected = {
+                                        backStack.push(it)
+                                    },
+                                    onAppInstallPress = { appName, appVersions, installationOptions ->
+                                        if (installationOptions != null) {
+                                            backStack.push(
+                                                Screen.InstallPreferences(
+                                                    appName,
+                                                    appVersions,
+                                                    installationOptions
+                                                )
+                                            )
+                                        } else {
+                                            backStack.push(Screen.Install(appName, appVersions))
+                                        }
+                                    }
+                                )
+                            }
+                            is Screen.Settings -> {
+                                SettingsLayout(
+                                    onToolbarBackButtonClick = {
+                                        backStack.pop()
+                                    }
+                                )
+                            }
+                            is Screen.About -> {
+                                AboutLayout(
+                                    onToolbarBackButtonClick = {
+                                        backStack.pop()
+                                    }
+                                )
+                            }
+                            is Screen.Logs -> {
 
-                        Scaffold(
-                            topBar = {
-                                TopAppBar(
-                                    title = {
-                                        ToolbarTitleText(
-                                            text = managerString(
-                                                stringId = currentScreen.displayName
+                            }
+                            is Screen.InstallPreferences -> {
+                                InstallPreferencesScreen(
+                                    installationOptions = screen.appInstallationOptions,
+                                    onToolbarBackButtonClick = {
+                                        backStack.pop()
+                                    },
+                                    onDoneClick = {
+                                        backStack.push(
+                                            Screen.Install(
+                                                screen.appName,
+                                                screen.appVersions
                                             )
                                         )
-                                    },
-                                    backgroundColor = managerAnimatedColor(color = MaterialTheme.colors.surface),
-                                    actions = {
-                                        if (currentScreen is Screen.Home) {
-                                            IconButton(
-                                                onClick = { isMenuExpanded = true }
-                                            ) {
-                                                Icon(
-                                                    imageVector = Icons.Default.MoreVert,
-                                                    contentDescription = null,
-                                                    tint = managerTextColor()
-                                                )
-                                            }
-
-                                            DropdownMenu(
-                                                expanded = isMenuExpanded,
-                                                onDismissRequest = {
-                                                    isMenuExpanded = false
-                                                },
-                                                modifier = Modifier.background(MaterialTheme.colors.surface),
-                                            ) {
-                                                ManagerDropdownMenuItem(
-                                                    title = stringResource(id = Screen.Settings.displayName)
-                                                ) {
-                                                    isMenuExpanded = false
-                                                    backStack.push(Screen.Settings)
-                                                }
-                                            }
-                                        }
-                                    },
-                                    navigationIcon = if (currentScreen !is Screen.Home) {
-                                        {
-                                            IconButton(onClick = {
-                                                backStack.pop()
-                                            }) {
-                                                Icon(
-                                                    imageVector = Icons.Default.ArrowBackIos,
-                                                    contentDescription = null,
-                                                    tint = managerTextColor()
-                                                )
-                                            }
-                                        }
-                                    } else null,
-                                    elevation = 0.dp
+                                    }
                                 )
-                            },
-                            backgroundColor = surfaceColor
-                        ) {
-                            when (screen) {
-                                is Screen.Home -> {
-                                    HomeLayout(
-                                        onAppInstallPress = { appName, appVersions, installationOptions ->
-                                            if (installationOptions != null) {
-                                                backStack.push(Screen.InstallPreferences(appName, appVersions,  installationOptions))
-                                            } else {
-                                                backStack.push(Screen.Install(appName, appVersions))
-                                            }
-                                        }
-                                    )
-                                }
-                                is Screen.Settings -> {
-                                    SettingsLayout()
-                                }
-                                is Screen.About -> {
-                                    AboutLayout()
-                                }
-                                is Screen.Logs -> {
-
-                                }
-                                is Screen.InstallPreferences -> {
-                                    InstallPreferencesScreen(
-                                        installationOptions = screen.appInstallationOptions,
-                                        onDoneClick = {
-                                            backStack.push(Screen.Install(screen.appName, screen.appVersions))
-                                        }
-                                    )
-                                }
-                                is Screen.Install -> {
-                                    InstallScreen(screen.appName, screen.appVersions)
-                                }
+                            }
+                            is Screen.Install -> {
+                                InstallScreen(screen.appName, screen.appVersions)
                             }
                         }
                     }

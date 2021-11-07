@@ -3,11 +3,15 @@ package com.vanced.manager.ui.component.preference
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.vanced.manager.R
 import com.vanced.manager.core.preferences.ManagerPreference
 import com.vanced.manager.core.preferences.RadioButtonPreference
+import com.vanced.manager.ui.component.text.ManagerText
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.widget.button.ManagerSaveButton
 import com.vanced.manager.ui.widget.list.RadiobuttonItem
 import kotlinx.coroutines.launch
@@ -27,13 +31,13 @@ fun RadiobuttonDialogPreference(
         preferenceTitle = preferenceTitle,
         preferenceDescription = buttons.find { it.key == pref }?.title,
         trailing = trailing,
-        buttons = { isShown ->
-            ManagerSaveButton {
-                coroutineScope.launch {
-                    isShown.value = false
-                    pref = currentSelection
-                    onSave(currentSelection)
-                }
+        confirmButton = { isShown ->
+            TextButton(onClick = {
+                isShown.value = false
+                pref = currentSelection
+                onSave(currentSelection)
+            }) {
+                ManagerText(managerString(stringId = R.string.dialog_button_save))
             }
         },
     ) {

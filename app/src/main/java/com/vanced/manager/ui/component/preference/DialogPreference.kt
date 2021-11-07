@@ -1,6 +1,5 @@
 package com.vanced.manager.ui.component.preference
 
-import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -13,8 +12,9 @@ fun DialogPreference(
     preferenceDescription: String? = null,
     onDismissRequest: () -> Unit = {},
     trailing: @Composable () -> Unit = {},
-    buttons: @Composable ColumnScope.(isShown: MutableState<Boolean>) -> Unit,
-    content: @Composable ColumnScope.() -> Unit
+    confirmButton: @Composable (isShown: MutableState<Boolean>) -> Unit,
+    dismissButton: @Composable ((isShown: MutableState<Boolean>) -> Unit)? = null,
+    content: @Composable () -> Unit
 ) {
     val isShown = remember { mutableStateOf(false) }
     Preference(
@@ -31,7 +31,14 @@ fun DialogPreference(
                 onDismissRequest()
                 isShown.value = false
             },
-            buttons = { buttons(isShown) },
+            confirmButton = {
+                            confirmButton(isShown)
+            },
+            dismissButton = {
+                if (dismissButton != null) {
+                    dismissButton(isShown)
+                }
+            },
             content = content
         )
     }

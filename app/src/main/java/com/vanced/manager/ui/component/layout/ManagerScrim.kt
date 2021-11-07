@@ -4,7 +4,7 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
@@ -20,7 +20,7 @@ fun ManagerScrim(
     val systemUiController = rememberSystemUiController()
 
     val scrimColor = Color.Black.copy(alpha = 0.5f)
-    val surfaceColor = MaterialTheme.colors.surface
+    val surfaceColor = MaterialTheme.colorScheme.surface
 
     val isDark = isDark()
 

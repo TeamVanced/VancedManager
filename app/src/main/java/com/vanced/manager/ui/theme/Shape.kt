@@ -1,11 +1,9 @@
 package com.vanced.manager.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Shapes
 import androidx.compose.ui.unit.dp
 
-val shapes = Shapes(
-    small = RoundedCornerShape(8.dp),
-    medium = RoundedCornerShape(12.dp),
-    large = RoundedCornerShape(8.dp)
-)
+//TODO M3 doesn't support Shapes yet
+val SmallShape = RoundedCornerShape(8.dp)
+val MediumShape = RoundedCornerShape(12.dp)
+val LargeShape = RoundedCornerShape(16.dp)

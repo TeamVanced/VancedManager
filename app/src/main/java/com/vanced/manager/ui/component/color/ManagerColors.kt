@@ -2,7 +2,7 @@ package com.vanced.manager.ui.component.color
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
@@ -25,10 +25,10 @@ fun managerAccentColor(): Color {
 fun managerThemedCardColor() = managerAccentColor().copy(alpha = 0.27f)
 
 @Composable
-fun managerTextColor(): Color = managerAnimatedColor(color = MaterialTheme.colors.onSurface)
+fun managerTextColor(): Color = managerAnimatedColor(color = MaterialTheme.colorScheme.onSurface)
 
 @Composable
-fun managerSurfaceColor(): Color = managerAnimatedColor(color = MaterialTheme.colors.surface)
+fun managerSurfaceColor(): Color = managerAnimatedColor(color = MaterialTheme.colorScheme.surface)
 
 @Composable
 fun managerAnimatedColor(

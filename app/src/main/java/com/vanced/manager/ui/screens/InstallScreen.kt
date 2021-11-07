@@ -5,33 +5,37 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ArrowDropDown
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.vanced.manager.R
 import com.vanced.manager.ui.component.layout.ManagerLazyColumn
+import com.vanced.manager.ui.component.layout.ManagerScaffold
 import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.progressindicator.ManagerProgressIndicator
 import com.vanced.manager.ui.component.text.ManagerText
+import com.vanced.manager.ui.component.topappbar.ManagerTopAppBar
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
-import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 import com.vanced.manager.ui.viewmodel.InstallViewModel
 import org.koin.androidx.compose.getViewModel
 
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(
+    ExperimentalFoundationApi::class,
+    ExperimentalMaterial3Api::class
+)
 @Composable
 fun InstallScreen(
     appName: String,
@@ -41,18 +45,12 @@ fun InstallScreen(
 
     viewModel.startAppProcess(appName, appVersions)
 
-    Scaffold(
-        floatingActionButton = {
-
-        }
-    ) { paddingValues ->
-        ManagerLazyColumn(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(paddingValues),
-            contentPadding = PaddingValues(0.dp),
-        ) {
-            stickyHeader {
+    ManagerScaffold(
+        topBar = {
+            Column {
+                ManagerTopAppBar(
+                    title = managerString(R.string.toolbar_install),
+                )
                 when (val status = viewModel.status) {
                     is InstallViewModel.Status.Progress -> {
                         ManagerProgressIndicator(status.progress)
@@ -63,11 +61,16 @@ fun InstallScreen(
                     else -> {}
                 }
             }
+        },
+        floatingActionButton = {
 
-            item {
-                Spacer(Modifier.height(DefaultContentPaddingVertical))
-            }
-
+        }
+    ) { paddingValues ->
+        ManagerLazyColumn(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(paddingValues),
+        ) {
             items(viewModel.logs) { log ->
                 when (log) {
                     is InstallViewModel.Log.Success -> {
@@ -79,7 +82,7 @@ fun InstallScreen(
                             textStyle = TextStyle(
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
-                                color = Color.Blue
+                                color = MaterialTheme.colorScheme.tertiary
                             ),
                         )
                     }
@@ -92,7 +95,7 @@ fun InstallScreen(
                             textStyle = TextStyle(
                                 fontWeight = FontWeight.SemiBold,
                                 fontSize = 14.sp,
-                                color = Color.Black
+                                color = MaterialTheme.colorScheme.onSurface
                             ),
                         )
                     }
@@ -114,7 +117,7 @@ fun InstallScreen(
                             ) {
                                 ManagerText(
                                     text = buildAnnotatedString {
-                                        withStyle(SpanStyle(color = MaterialTheme.colors.error)) {
+                                        withStyle(SpanStyle(color = MaterialTheme.colorScheme.error)) {
                                             append(log.displayText)
                                         }
                                     },
@@ -127,7 +130,7 @@ fun InstallScreen(
                                     modifier = Modifier.rotate(iconRotation),
                                     imageVector = Icons.Rounded.ArrowDropDown,
                                     contentDescription = "expand",
-                                    tint = MaterialTheme.colors.error
+                                    tint = MaterialTheme.colorScheme.error
                                 )
                             }
                             AnimatedVisibility(visible) {
@@ -136,7 +139,7 @@ fun InstallScreen(
                                     textStyle = TextStyle(
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 14.sp,
-                                        color = MaterialTheme.colors.error.copy(alpha = 0.7f)
+                                        color = MaterialTheme.colorScheme.error.copy(alpha = 0.7f)
                                     ),
                                 )
                             }

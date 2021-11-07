@@ -2,11 +2,13 @@ package com.vanced.manager.ui.screens
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.ArrowBackIosNew
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -15,26 +17,25 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.util.fastForEach
 import com.vanced.manager.R
 import com.vanced.manager.ui.component.card.ManagerLinkCard
-import com.vanced.manager.ui.component.card.ManagerThemedCard
-import com.vanced.manager.ui.component.layout.ManagerScrollableColumn
+import com.vanced.manager.ui.component.card.ManagerTonalCard
+import com.vanced.manager.ui.component.layout.ManagerLazyColumn
+import com.vanced.manager.ui.component.layout.ManagerScaffold
 import com.vanced.manager.ui.component.layout.ScrollableItemRow
 import com.vanced.manager.ui.component.list.ManagerListItem
 import com.vanced.manager.ui.component.text.ManagerText
+import com.vanced.manager.ui.component.topappbar.ManagerTopAppBar
 import com.vanced.manager.ui.resources.managerString
+import com.vanced.manager.ui.theme.LargeShape
+import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
 import com.vanced.manager.ui.util.DefaultContentPaddingVertical
-import com.vanced.manager.ui.widget.layout.CategoryLayout
+import com.vanced.manager.ui.util.Screen
+import com.vanced.manager.ui.widget.layout.managerCategory
 
 data class Person(
     val name: String,
     val contribution: String
-)
-
-data class Credit(
-    @StringRes val nameId: Int,
-    val persons: List<Person>
 )
 
 data class Source(
@@ -43,66 +44,54 @@ data class Source(
     val link: String
 )
 
-private val credits = listOf(
-    Credit(
-        nameId = R.string.about_category_credits_vanced_team,
-        persons = listOf(
-            Person(
-                name = "xfileFIN",
-                contribution = "Mods, Theming, Support"
-            ),
-            Person(
-                name = "Laura",
-                contribution = "Theming, Support"
-            ),
-            Person(
-                name = "ZaneZam",
-                contribution = "Publishing, Support"
-            ),
-            Person(
-                name = "KevinX8",
-                contribution = "Overlord, Support"
-            )
-        )
+private val vancedTeam = listOf(
+    Person(
+        name = "xfileFIN",
+        contribution = "Mods, Theming, Support"
     ),
-    Credit(
-        nameId = R.string.about_category_credits_manager_devs,
-        persons = listOf(
-            Person(
-                name = "Xinto",
-                contribution = "Manager Core"
-            ),
-            Person(
-                name = "Koopah",
-                contribution = "Root installer"
-            ),
-            Person(
-                name = "Logan",
-                contribution = "UI"
-            ),
-            Person(
-                name = "HaliksaR",
-                contribution = "Refactoring, UI"
-            ),
-        )
+    Person(
+        name = "Laura",
+        contribution = "Theming, Support"
     ),
-    Credit(
-        nameId = R.string.about_category_credits_other,
-        persons = listOf(
-            Person(
-                name = "bhatVikrant",
-                contribution = "Website"
-            ),
-            Person(
-                name = "bawm",
-                contribution = "Sponsorblock"
-            ),
-            Person(
-                name = "cane",
-                contribution = "Sponsorblock"
-            ),
-        )
+    Person(
+        name = "ZaneZam",
+        contribution = "Publishing, Support"
+    ),
+    Person(
+        name = "KevinX8",
+        contribution = "Overlord, Support"
+    ),
+    Person(
+        name = "Xinto",
+        contribution = "Vanced Manager"
     )
+)
+
+private val otherContributors =  listOf(
+    Person(
+        name = "bhatVikrant",
+        contribution = "Website"
+    ),
+    Person(
+        name = "bawm",
+        contribution = "Sponsorblock"
+    ),
+    Person(
+        name = "cane",
+        contribution = "Sponsorblock"
+    ),
+    Person(
+        name = "Koopah",
+        contribution = "Vanced Manager root installer"
+    ),
+    Person(
+        name = "Logan",
+        contribution = "Vanced Manager UI"
+    ),
+    Person(
+        name = "HaliksaR",
+        contribution = "Vanced Manager Refactoring, UI"
+    ),
 )
 
 private val sources = listOf(
@@ -118,79 +107,119 @@ private val sources = listOf(
     )
 )
 
+@ExperimentalMaterial3Api
 @Composable
-fun AboutLayout() {
-    ManagerScrollableColumn(
-        itemSpacing = 12.dp
-    ) {
-        AboutManagerCard()
-        credits.fastForEach { credit ->
-            CategoryLayout(
-                categoryName = managerString(stringId = credit.nameId),
-                categoryNameSpacing = 4.dp
-            ) {
-                Column {
-                    credit.persons.fastForEach { person ->
-                        ManagerListItem(
-                            title = {
-                                ManagerText(
-                                    text = person.name,
-                                    textStyle = MaterialTheme.typography.h6
-                                )
+fun AboutLayout(
+    onToolbarBackButtonClick: () -> Unit
+) {
+    val aboutCategoryVancedTeam = managerString(R.string.about_category_credits_vanced_team)
+    val aboutCategoryOtherContributors = managerString(R.string.about_category_credits_other)
+    val aboutCategorySources = managerString(R.string.about_category_sources)
+
+    ManagerScaffold(
+        topBar = {
+            ManagerTopAppBar(
+                title = managerString(Screen.About.displayName),
+                navigationIcon = {
+                    IconButton(onClick = onToolbarBackButtonClick) {
+                        Icon(
+                            imageVector = Icons.Rounded.ArrowBackIosNew,
+                            contentDescription = "Back"
+                        )
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        ManagerLazyColumn(
+            modifier = Modifier.fillMaxSize().padding(paddingValues),
+        ) {
+            item {
+                ManagerTonalCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = LargeShape
+                ) {
+                    Column(
+                        modifier = Modifier.padding(vertical = DefaultContentPaddingVertical),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(4.dp)
+                    ) {
+                        ManagerText(
+                            modifier = Modifier,
+                            text = managerString(R.string.app_name),
+                            textStyle = MaterialTheme.typography.headlineSmall
+                        )
+                        ManagerText(
+                            modifier = Modifier,
+                            text = buildAnnotatedString {
+                                append("Re")
+                                withStyle(style = SpanStyle(Color(0xFFBBB529))) {
+                                    append("@Compose")
+                                }
+                                append("d")
                             },
-                            description = {
-                                ManagerText(
-                                    text = person.contribution,
-                                    textStyle = MaterialTheme.typography.subtitle1
-                                )
-                            }
+                            textStyle = MaterialTheme.typography.titleSmall
                         )
                     }
                 }
             }
-        }
-        CategoryLayout(
-            categoryName = managerString(
-                stringId = R.string.about_category_sources
-            ),
-        ) {
-            ScrollableItemRow(items = sources) { source ->
-                ManagerLinkCard(
-                    title = managerString(source.nameId),
-                    icon = source.iconId,
-                    link = source.link
+            managerCategory(
+                categoryName = aboutCategoryVancedTeam,
+                items = vancedTeam
+            ) { person ->
+                CreditPersonItem(
+                    modifier = Modifier.fillMaxWidth(),
+                    personName = person.name,
+                    personContribution = person.contribution
                 )
+            }
+            managerCategory(
+                categoryName = aboutCategoryOtherContributors,
+                items = otherContributors
+            ) { person ->
+                CreditPersonItem(
+                    modifier = Modifier.fillMaxWidth(),
+                    personName = person.name,
+                    personContribution = person.contribution
+                )
+            }
+            managerCategory(aboutCategorySources) {
+                ScrollableItemRow(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = DefaultContentPaddingHorizontal),
+                    items = sources
+                ) { source ->
+                    ManagerLinkCard(
+                        title = managerString(source.nameId),
+                        icon = source.iconId,
+                        link = source.link
+                    )
+                }
             }
         }
     }
 }
 
 @Composable
-fun AboutManagerCard() {
-    ManagerThemedCard(
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Column(
-            modifier = Modifier.padding(vertical = DefaultContentPaddingVertical),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(4.dp)
-        ) {
+private fun CreditPersonItem(
+    personName: String,
+    personContribution: String,
+    modifier: Modifier = Modifier,
+) {
+    ManagerListItem(
+        modifier = modifier.padding(horizontal = DefaultContentPaddingHorizontal),
+        title = {
             ManagerText(
-                modifier = Modifier,
-                text = managerString(R.string.app_name),
-                textStyle = MaterialTheme.typography.h1
+                text = personName,
+                textStyle = MaterialTheme.typography.titleSmall
             )
+        },
+        description = {
             ManagerText(
-                modifier = Modifier,
-                text = buildAnnotatedString {
-                    append("Re")
-                    withStyle(style = SpanStyle(Color(0xFFBBB529))) {
-                        append("@Compose")
-                    }
-                    append("d")
-                },
-                textStyle = MaterialTheme.typography.h5
+                text = personContribution,
+                textStyle = MaterialTheme.typography.bodySmall
             )
         }
-    }
+    )
 }

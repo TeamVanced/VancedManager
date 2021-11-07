@@ -3,13 +3,10 @@ package com.vanced.manager.ui.viewmodel
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.vanced.manager.core.downloader.base.AppDownloader
-import com.vanced.manager.core.downloader.util.DownloadStatus
-import com.vanced.manager.domain.model.App
 import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.core.preferences.holder.musicEnabled
 import com.vanced.manager.core.preferences.holder.vancedEnabled
+import com.vanced.manager.domain.model.App
 import com.vanced.manager.repository.JsonRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -34,7 +31,7 @@ class MainViewModel(
     val appState: StateFlow<AppState> = _appState
 
     fun fetch() {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             val vancedEnabled = vancedEnabled.value.value
             val musicEnabled = musicEnabled.value.value
             val isNonroot = managerVariantPref.value.value == "nonroot"

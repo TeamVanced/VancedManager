@@ -1,13 +1,8 @@
 package com.vanced.manager.ui.util
 
 import androidx.annotation.StringRes
-import androidx.compose.runtime.Composable
 import com.vanced.manager.R
 import com.vanced.manager.domain.model.InstallationOption
-import com.vanced.manager.ui.screens.AboutLayout
-import com.vanced.manager.ui.screens.HomeLayout
-import com.vanced.manager.ui.screens.LogLayout
-import com.vanced.manager.ui.screens.SettingsLayout
 
 sealed class Screen(
     val route: String,

@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -15,6 +16,7 @@ import com.vanced.manager.R
 import com.vanced.manager.core.preferences.CheckboxPreference
 import com.vanced.manager.core.preferences.ManagerPreference
 import com.vanced.manager.ui.component.button.ManagerThemedTextButton
+import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.widget.list.CheckboxItem
 import kotlinx.coroutines.launch
 
@@ -37,10 +39,8 @@ fun CheckboxDialogPreference(
             }
         }.sortedBy { it.title }.joinToString(separator = ", ") { it.title },
         trailing = trailing,
-        buttons = { isShown ->
-            ManagerThemedTextButton(
-                text = stringResource(id = R.string.dialog_button_save),
-                modifier = Modifier.fillMaxWidth(),
+        confirmButton = { isShown ->
+            TextButton(
                 onClick = {
                     coroutineScope.launch {
                         isShown.value = false
@@ -48,8 +48,10 @@ fun CheckboxDialogPreference(
                         onSave(selectedButtons)
                     }
                 }
-            )
-        }
+            ) {
+                ManagerText(stringResource(id = R.string.dialog_button_save))
+            }
+        },
     ) {
         LazyColumn(
             modifier = Modifier.heightIn(max = 400.dp)

@@ -11,8 +11,6 @@ fun SettingsCategoryLayout(
 ) {
     CategoryLayout(
         categoryName = categoryName,
-        contentPaddingHorizontal = 0.dp,
-        categoryNameSpacing = 4.dp
     ) {
         Column {
             content()

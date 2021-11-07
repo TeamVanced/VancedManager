@@ -1,6 +1,6 @@
 package com.vanced.manager.ui.theme
 
-import androidx.compose.material.Typography
+import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -14,45 +14,112 @@ private val medium = Font(R.font.inter_medium, FontWeight.Medium)
 private val semibold = Font(R.font.inter_semibold, FontWeight.SemiBold)
 private val bold = Font(R.font.inter_bold, FontWeight.Bold)
 
-private val interFontFamily = FontFamily(light, regular, medium, semibold, bold)
+private val InterFontFamily = FontFamily(light, regular, medium, semibold, bold)
 
-// Set of Material typography styles to start with
-val typography = Typography(
-    defaultFontFamily = interFontFamily,
-    h1 = TextStyle(
-        fontSize = 24.sp,
-        fontWeight = FontWeight.Bold,
-    ),
-    h2 = TextStyle(
-        fontSize = 20.sp,
-        fontWeight = FontWeight.SemiBold
-    ),
-    h5 = TextStyle(
-        fontSize = 16.sp,
-        fontWeight = FontWeight.SemiBold,
-    ),
-    h6 = TextStyle(
-        fontSize = 14.sp,
-        fontWeight = FontWeight.Bold
-    ),
-    body1 = TextStyle(
-        fontWeight = FontWeight.Medium,
-        fontSize = 12.sp
-    ),
-    body2 = TextStyle(
+val ManagerTypography = Typography(
+    displayLarge = TextStyle(
+        fontFamily = InterFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 10.sp,
+        fontSize = 57.sp,
+        lineHeight = 64.sp,
+        letterSpacing = (-0.25).sp,
     ),
-    subtitle1 = TextStyle(
+    displayMedium = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 45.sp,
+        lineHeight = 52.sp,
+        letterSpacing = 0.sp,
+    ),
+    displaySmall = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 36.sp,
+        lineHeight = 44.sp,
+        letterSpacing = 0.sp,
+    ),
+    headlineLarge = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 32.sp,
+        lineHeight = 40.sp,
+        letterSpacing = 0.sp,
+    ),
+    headlineMedium = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 28.sp,
+        lineHeight = 36.sp,
+        letterSpacing = 0.sp,
+    ),
+    headlineSmall = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 24.sp,
+        lineHeight = 32.sp,
+        letterSpacing = 0.sp,
+    ),
+    titleLarge = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 22.sp,
+        lineHeight = 28.sp,
+        letterSpacing = 0.sp,
+    ),
+    titleMedium = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 18.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.1.sp,
+    ),
+    titleSmall = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 16.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.1.sp,
+    ),
+    bodyLarge = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp,
+    ),
+    bodyMedium = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.25.sp,
+    ),
+    bodySmall = TextStyle(
+        fontFamily = InterFontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
+        lineHeight = 14.sp,
+        letterSpacing = 0.sp,
     ),
-    subtitle2 = TextStyle(
-        fontWeight = FontWeight.Normal,
-        fontSize = 14.sp
-    ),
-    button = TextStyle(
+    labelLarge = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 14.sp,
-        fontWeight = FontWeight.Medium
-    )
+        lineHeight = 20.sp,
+        letterSpacing = 0.1.sp,
+    ),
+    labelMedium = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        letterSpacing = 0.5.sp,
+    ),
+    labelSmall = TextStyle(
+        fontFamily = InterFontFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 11.sp,
+        lineHeight = 16.sp,
+        letterSpacing = 0.5.sp,
+    ),
 )

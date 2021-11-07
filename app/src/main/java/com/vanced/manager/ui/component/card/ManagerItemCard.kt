@@ -1,25 +1,22 @@
 package com.vanced.manager.ui.component.card
 
 import androidx.annotation.DrawableRes
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.vanced.manager.ui.component.color.ThemedItemContentColorProvider
-import com.vanced.manager.ui.component.color.managerAccentColor
+import com.github.zsoltk.compose.backpress.LocalBackPressHandler
+import com.vanced.manager.ui.component.text.ManagerText
+import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
+import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 
 private val cardModifier = Modifier.sizeIn(
-    minHeight = 95.dp,
-    minWidth = 95.dp
+    minHeight = 100.dp,
+    minWidth = 100.dp
 )
 
 @Composable
@@ -27,7 +24,8 @@ fun ManagerItemCard(
     title: String,
     @DrawableRes icon: Int? = null
 ) {
-    ManagerThemedCard(
+    LocalBackPressHandler.current.handle()
+    ManagerCard(
         modifier = cardModifier,
     ) {
         ManagerItemCardContent(title, icon)
@@ -35,12 +33,12 @@ fun ManagerItemCard(
 }
 
 @Composable
-fun ManagerClickableItemCard(
+fun ManagerItemCard(
     title: String,
     @DrawableRes icon: Int? = null,
     onClick: () -> Unit
 ) {
-    ManagerClickableThemedCard(
+    ManagerTonalCard(
         modifier = cardModifier,
         onClick = onClick
     ) {
@@ -53,34 +51,25 @@ private fun ManagerItemCardContent(
     title: String,
     @DrawableRes icon: Int? = null,
 ) {
-    val accentColor = managerAccentColor()
-    val circleOffset = 32.dp.value
-    Canvas(modifier = Modifier.requiredSize(72.dp)) {
-        drawCircle(
-            color = accentColor,
-            center = Offset(circleOffset, circleOffset)
-        )
-    }
-    Box(
-        modifier = Modifier.padding(12.dp)
+    Column(
+        modifier = Modifier.padding(
+            horizontal = DefaultContentPaddingHorizontal,
+            vertical = DefaultContentPaddingVertical
+        ),
+        horizontalAlignment = Alignment.Start,
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
         if (icon != null) {
-            ThemedItemContentColorProvider {
-                Icon(
-                    modifier = Modifier
-                        .size(28.dp)
-                        .align(Alignment.TopStart),
-                    painter = painterResource(id = icon),
-                    contentDescription = title
-                )
-            }
+            Icon(
+                modifier = Modifier
+                    .size(36.dp),
+                painter = painterResource(id = icon),
+                contentDescription = title,
+            )
         }
-        Text(
-            modifier = Modifier.align(Alignment.BottomStart),
+        ManagerText(
             text = title,
-            fontSize = 12.sp,
-            fontWeight = FontWeight.Medium,
-            color = MaterialTheme.colors.onSurface
+            textStyle = MaterialTheme.typography.labelLarge
         )
     }
 }

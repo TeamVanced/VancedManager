@@ -4,19 +4,22 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.rounded.DeleteForever
 import androidx.compose.material.icons.rounded.Download
 import androidx.compose.material.icons.rounded.Launch
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.ImagePainter
 import com.vanced.manager.R
-import com.vanced.manager.ui.component.button.IconButton
+import com.vanced.manager.ui.component.button.ManagerIconButton
 import com.vanced.manager.ui.component.text.AppVersionText
 import com.vanced.manager.ui.component.text.ManagerText
 
@@ -27,17 +30,17 @@ fun AppCard(
     appIcon: ImagePainter,
     appInstalledVersion: String?,
     appRemoteVersion: String?,
-    onDownloadClick: () -> Unit,
-    onUninstallClick: () -> Unit,
-    onLaunchClick: () -> Unit,
-    onInfoClick: () -> Unit,
+    onAppDownloadClick: () -> Unit,
+    onAppUninstallClick: () -> Unit,
+    onAppLaunchClick: () -> Unit,
+    onAppInfoClick: () -> Unit,
 ) {
     BaseAppCard(
         appTitle = {
             ManagerText(
                 modifier = Modifier.fillMaxSize(),
                 text = appName,
-                textStyle = MaterialTheme.typography.h5
+                textStyle = MaterialTheme.typography.titleMedium
             )
         },
         appIcon = {
@@ -46,6 +49,14 @@ fun AppCard(
                 painter = appIcon,
                 contentDescription = "App Icon",
             )
+        },
+        appTrailing = {
+            IconButton(onClick = onAppInfoClick) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = "App Info"
+                )
+            }
         },
         appVersionsColumn = {
             AppVersionText(
@@ -66,26 +77,24 @@ fun AppCard(
             )
         },
         appActionsRow = {
-            IconButton(
-                icon = Icons.Outlined.Info,
-                contentDescription = "App Info",
-                onClick = onInfoClick
-            )
-            IconButton(
-                icon = Icons.Rounded.DeleteForever,
-                contentDescription = "Uninstall",
-                onClick = onUninstallClick
-            )
-            IconButton(
-                icon = Icons.Rounded.Launch,
-                contentDescription = "Launch",
-                onClick = onLaunchClick
-            )
-            IconButton(
-                icon = Icons.Rounded.Download,
-                contentDescription = "Install",
-                onClick = onDownloadClick
-            )
+            IconButton(onClick = onAppUninstallClick) {
+                Icon(
+                    imageVector = Icons.Rounded.DeleteForever,
+                    contentDescription = "Uninstall"
+                )
+            }
+            IconButton(onClick = onAppLaunchClick) {
+                Icon(
+                    imageVector = Icons.Rounded.Launch,
+                    contentDescription = "Launch",
+                )
+            }
+            IconButton(onClick = onAppDownloadClick) {
+                Icon(
+                    imageVector = Icons.Rounded.Download,
+                    contentDescription = "Install",
+                )
+            }
         }
     )
 }

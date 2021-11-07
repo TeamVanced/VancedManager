@@ -20,7 +20,7 @@ fun ManagerLinkCard(
     val uri = remember { Uri.parse(link) }
     val intent = remember { Intent(Intent.ACTION_VIEW, uri) }
     val useCustomTabs by useCustomTabsPref
-    ManagerClickableItemCard(
+    ManagerItemCard(
         title = title,
         icon = icon
     ) {

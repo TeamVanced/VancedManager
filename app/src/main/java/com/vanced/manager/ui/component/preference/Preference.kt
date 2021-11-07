@@ -1,9 +1,9 @@
 package com.vanced.manager.ui.component.preference
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.LocalContentColor
-import androidx.compose.material.LocalTextStyle
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.LocalTextStyle
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
@@ -39,7 +39,7 @@ fun Preference(
     trailing: @Composable () -> Unit = {},
     onClick: () -> Unit
 ) {
-    val color = managerAnimatedColor(color = MaterialTheme.colors.onSurface)
+    val color = managerAnimatedColor(color = MaterialTheme.colorScheme.onSurface)
     ManagerListItem(
         modifier = Modifier
             .managerClickable(onClick = onClick)
@@ -47,7 +47,7 @@ fun Preference(
         title = {
             CompositionLocalProvider(
                 LocalContentColor provides color,
-                LocalTextStyle provides MaterialTheme.typography.h6
+                LocalTextStyle provides MaterialTheme.typography.titleSmall
             ) {
                 preferenceTitle()
             }
@@ -56,7 +56,7 @@ fun Preference(
             {
                 CompositionLocalProvider(
                     LocalContentColor provides color,
-                    LocalTextStyle provides MaterialTheme.typography.subtitle1
+                    LocalTextStyle provides MaterialTheme.typography.bodySmall
                 ) {
                     preferenceDescription()
                 }

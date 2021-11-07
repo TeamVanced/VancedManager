@@ -12,11 +12,12 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun <T> ScrollableItemRow(
     items: List<T>,
+    modifier: Modifier = Modifier,
     content: @Composable (T) -> Unit
 ) {
     val state = rememberLazyListState()
     LazyRow(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = modifier,
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         state = state
     ) {
