@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel·lar</string>
+    <string name="cancel">Cancel·la</string>
     <string name="close">Tanca</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Una implementació modificada de GMS per a Vanced basat en el projecte microG.</string>
     <string name="description_vanced">Una aplicació modificada de YouTube amb moltes característiques útils!</string>
     <string name="description_vanced_music">Vanced, però per a YouTube Music! Amb relativament menys característiques, però que assoleix les vostres necessitats.</string>
     <string name="reset">Restableix</string>
@@ -15,7 +15,7 @@
     <string name="title_home">Gestor</string>
     <string name="title_logs">Registre</string>
     <string name="title_settings">Configuració</string>
-    <string name="update_manager">Gestionador d\'actualitzacions</string>
+    <string name="update_manager">Gestor d\'actualitzacions</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Té el vostre dispositiu accés de Superusuari (\'Root\')?</string>
     <string name="grant_root">Concedir permís de Superusuari (\'Root\')</string>
