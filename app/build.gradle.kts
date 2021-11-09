@@ -84,7 +84,7 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.browser:browser:1.3.0")
 
-    val composeVersion = "1.1.0-beta01"
+    val composeVersion = "1.1.0-beta02"
     implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
