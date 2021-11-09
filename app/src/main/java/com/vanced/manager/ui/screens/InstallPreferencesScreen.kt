@@ -23,7 +23,6 @@ import com.vanced.manager.domain.model.InstallationOption
 import com.vanced.manager.ui.component.card.ManagerTonalCard
 import com.vanced.manager.ui.component.layout.ManagerLazyColumn
 import com.vanced.manager.ui.component.layout.ManagerScaffold
-import com.vanced.manager.ui.component.progressindicator.ManagerProgressIndicator
 import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.component.topappbar.ManagerTopAppBar
 import com.vanced.manager.ui.resources.managerString

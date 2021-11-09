@@ -7,10 +7,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ArrowDropDown
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
+import androidx.compose.material.icons.rounded.Done
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -43,7 +43,16 @@ fun InstallScreen(
 ) {
     val viewModel: InstallViewModel = getViewModel()
 
-    viewModel.startAppProcess(appName, appVersions)
+    var startedProcess by rememberSaveable { mutableStateOf(false) }
+
+    // I don't know why, I don't know how,
+    // but it works as intended
+    LaunchedEffect(startedProcess) {
+        if (!startedProcess) {
+            startedProcess = true
+            viewModel.startAppProcess(appName, appVersions)
+        }
+    }
 
     ManagerScaffold(
         topBar = {
@@ -63,12 +72,20 @@ fun InstallScreen(
             }
         },
         floatingActionButton = {
-
+            if (viewModel.status is InstallViewModel.Status.Installed) {
+                ExtendedFloatingActionButton(
+                    text = { /*TODO*/ },
+                    icon = {
+                        Icon(Icons.Rounded.Done, null)
+                    },
+                    onClick = { /*TODO*/ },
+                )
+            }
         }
     ) { paddingValues ->
         ManagerLazyColumn(
             modifier = Modifier
-                .fillMaxWidth()
+                .fillMaxSize()
                 .padding(paddingValues),
         ) {
             items(viewModel.logs) { log ->
