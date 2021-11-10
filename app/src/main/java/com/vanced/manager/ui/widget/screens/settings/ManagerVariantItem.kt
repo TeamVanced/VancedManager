@@ -10,12 +10,12 @@ import com.vanced.manager.ui.resources.managerString
 @Composable
 fun SettingsManagerVariantItem() {
     var showDialog by remember { mutableStateOf(false) }
-    var selectedKey by remember { mutableStateOf(managerVariantPref.value.value) }
+    var selectedKey by remember { mutableStateOf(managerVariantPref) }
     RadiobuttonDialogPreference(
         preferenceTitle = managerString(
             stringId = R.string.settings_preference_variant_title
         ),
-        preferenceDescription = managerVariantPref.value.value,
+        preferenceDescription = managerVariantPref,
         isDialogVisible = showDialog,
         currentSelectedKey = selectedKey,
         buttons = listOf(
@@ -33,13 +33,13 @@ fun SettingsManagerVariantItem() {
         },
         onDismissRequest = {
             showDialog = false
-            selectedKey = managerVariantPref.value.value
+            selectedKey = managerVariantPref
         },
         onItemClick = {
             selectedKey = it
         },
         onSave = {
-            managerVariantPref.save(selectedKey)
+            managerVariantPref = selectedKey
             showDialog = false
         }
     )

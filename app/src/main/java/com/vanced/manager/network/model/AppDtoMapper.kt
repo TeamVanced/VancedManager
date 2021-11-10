@@ -77,9 +77,9 @@ class AppDtoMapper(
             VANCED_NAME -> listOf(
                 InstallationOption.SingleSelect(
                     titleId = R.string.app_installation_options_theme,
-                    getOption = { vancedThemePref.value.value },
+                    getOption = { vancedThemePref },
                     setOption = {
-                        vancedThemePref.save(it)
+                        vancedThemePref = it
                     },
                     items = appThemes?.map { theme ->
                         InstallationOptionItem(
@@ -94,9 +94,9 @@ class AppDtoMapper(
                 ),
                 InstallationOption.SingleSelect(
                     titleId = R.string.app_installation_options_version,
-                    getOption = { vancedVersionPref.value.value },
+                    getOption = { vancedVersionPref },
                     setOption = {
-                        vancedVersionPref.save(it)
+                        vancedVersionPref = it
                     },
                     items = appVersions?.map { version ->
                         InstallationOptionItem(
@@ -107,12 +107,12 @@ class AppDtoMapper(
                 ),
                 InstallationOption.MultiSelect(
                     titleId = R.string.app_installation_options_language,
-                    getOption = { vancedLanguagesPref.value.value },
+                    getOption = { vancedLanguagesPref },
                     addOption = {
-                        vancedLanguagesPref.save(vancedLanguagesPref.value.value + it)
+                        vancedLanguagesPref = vancedLanguagesPref + it
                     },
                     removeOption = {
-                        vancedLanguagesPref.save(vancedLanguagesPref.value.value - it)
+                        vancedLanguagesPref = vancedLanguagesPref - it
                     },
                     items = appLanguages?.map { language ->
                         InstallationOptionItem(
@@ -128,9 +128,9 @@ class AppDtoMapper(
             MUSIC_NAME -> listOf(
                 InstallationOption.SingleSelect(
                     titleId = R.string.app_installation_options_version,
-                    getOption = { musicVersionPref.value.value },
+                    getOption = { musicVersionPref },
                     setOption = {
-                        musicVersionPref.save(it)
+                        musicVersionPref = it
                     },
                     items = appVersions?.map { version ->
                         InstallationOptionItem(

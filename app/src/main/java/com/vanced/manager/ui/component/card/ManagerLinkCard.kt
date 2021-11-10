@@ -19,12 +19,11 @@ fun ManagerLinkCard(
     val customTabs = remember { CustomTabsIntent.Builder().build() }
     val uri = remember { Uri.parse(link) }
     val intent = remember { Intent(Intent.ACTION_VIEW, uri) }
-    val useCustomTabs by useCustomTabsPref
     ManagerItemCard(
         title = title,
         icon = icon
     ) {
-        if (useCustomTabs) {
+        if (useCustomTabsPref) {
             customTabs.launchUrl(context, uri)
         } else {
             context.startActivity(intent)

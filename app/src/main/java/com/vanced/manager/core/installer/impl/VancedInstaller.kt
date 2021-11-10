@@ -12,13 +12,10 @@ class VancedInstaller(
 ) : AppInstaller() {
 
     override fun install(appVersions: List<String>?) {
-        val version by vancedVersionPref
-        val variant by managerVariantPref
-
-        val absoluteVersion = getLatestOrProvidedAppVersion(version, appVersions)
+        val absoluteVersion = getLatestOrProvidedAppVersion(vancedVersionPref, appVersions)
 
         val apks = context
-            .getExternalFilesDir("vanced/$absoluteVersion/$variant")!!
+            .getExternalFilesDir("vanced/$absoluteVersion/$managerVariantPref")!!
             .listFiles { file ->
                 file.extension == "apk"
             }

@@ -11,6 +11,9 @@ fun SettingsCustomTabsItem() {
     CheckboxPreference(
         preferenceTitle = stringResource(id = R.string.settings_preference_use_custom_tabs_title),
         preferenceDescription = stringResource(id = R.string.settings_preference_use_custom_tabs_summary),
-        preference = useCustomTabsPref
+        isChecked = useCustomTabsPref,
+        onCheckedChange = {
+            useCustomTabsPref = it
+        }
     )
 }

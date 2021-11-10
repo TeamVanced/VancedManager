@@ -32,9 +32,9 @@ class MainViewModel(
 
     fun fetch() {
         viewModelScope.launch {
-            val vancedEnabled = vancedEnabled.value.value
-            val musicEnabled = musicEnabled.value.value
-            val isNonroot = managerVariantPref.value.value == "nonroot"
+            val vancedEnabled = vancedEnabled
+            val musicEnabled = musicEnabled
+            val isNonroot = managerVariantPref == "nonroot"
 
             var appsCount = 0
 

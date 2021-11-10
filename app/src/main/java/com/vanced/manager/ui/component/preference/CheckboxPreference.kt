@@ -11,18 +11,13 @@ import kotlinx.coroutines.launch
 fun CheckboxPreference(
     preferenceTitle: String,
     preferenceDescription: String? = null,
-    preference: ManagerPreference<Boolean>,
+    isChecked: Boolean,
     onCheckedChange: (isChecked: Boolean) -> Unit = {}
 ) {
-    var isChecked by preference
-    val coroutineScope = rememberCoroutineScope()
-
     val onClick: () -> Unit = {
-        coroutineScope.launch {
-            isChecked = !isChecked
-            onCheckedChange(isChecked)
-        }
+        onCheckedChange(!isChecked)
     }
+
     Preference(
         preferenceTitle = preferenceTitle,
         preferenceDescription = preferenceDescription,

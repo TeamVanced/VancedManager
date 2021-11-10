@@ -17,8 +17,7 @@ fun contentColorForColor(color: Color) =
 
 @Composable
 fun managerAccentColor(): Color {
-    val accentColor by managerAccentColorPref
-    return Color(accentColor)
+    return Color(managerAccentColorPref)
 }
 
 @Composable

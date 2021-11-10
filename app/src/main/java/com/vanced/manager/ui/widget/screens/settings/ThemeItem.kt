@@ -10,10 +10,10 @@ import com.vanced.manager.ui.resources.managerString
 @Composable
 fun ThemeSettingsItem() {
     var showDialog by remember { mutableStateOf(false) }
-    var selectedKey by remember { mutableStateOf(managerThemePref.value.value) }
+    var selectedKey by remember { mutableStateOf(managerThemePref) }
     RadiobuttonDialogPreference(
         preferenceTitle = managerString(stringId = R.string.settings_preference_theme_title),
-        preferenceDescription = managerThemePref.value.value,
+        preferenceDescription = managerThemePref,
         isDialogVisible = showDialog,
         currentSelectedKey = selectedKey,
         buttons = listOf(
@@ -35,13 +35,13 @@ fun ThemeSettingsItem() {
         },
         onDismissRequest = {
             showDialog = false
-            selectedKey = managerThemePref.value.value
+            selectedKey = managerThemePref
         },
         onItemClick = {
             selectedKey = it
         },
         onSave = {
-            managerThemePref.save(selectedKey)
+            managerThemePref = selectedKey
             showDialog = false
         }
     )

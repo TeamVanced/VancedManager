@@ -72,7 +72,7 @@ private val DarkThemeColors = darkColorScheme(
 )
 
 @Composable
-fun isDark(): Boolean = when (managerThemePref.value.value) {
+fun isDark(): Boolean = when (managerThemePref) {
     "Dark" -> true
     "Light" -> false
     "System Default" -> isSystemInDarkTheme()

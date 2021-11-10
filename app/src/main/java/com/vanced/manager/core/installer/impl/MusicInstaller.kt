@@ -12,10 +12,9 @@ class MusicInstaller(
 ) : AppInstaller() {
 
     override fun install(appVersions: List<String>?) {
-        val version by musicVersionPref
-        val variant by managerVariantPref
-
-        val musicApk = File(context.getExternalFilesDir("music/$version/$variant/music.apk")!!.path)
+        val musicApk = File(
+            context.getExternalFilesDir("music/$musicVersionPref/$managerVariantPref/music.apk")!!.path
+        )
 
         installApp(musicApk, context)
     }
