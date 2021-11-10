@@ -8,38 +8,41 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
-import com.vanced.manager.core.preferences.ManagerPreference
 import com.vanced.manager.core.preferences.RadioButtonPreference
 import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.resources.managerString
-import com.vanced.manager.ui.widget.button.ManagerSaveButton
 import com.vanced.manager.ui.widget.list.RadiobuttonItem
-import kotlinx.coroutines.launch
 
 @Composable
 fun RadiobuttonDialogPreference(
     preferenceTitle: String,
-    preference: ManagerPreference<String>,
-    trailing: @Composable () -> Unit = {},
+    preferenceDescription: String,
+    isDialogVisible: Boolean,
+    currentSelectedKey: String,
     buttons: List<RadioButtonPreference>,
-    onSave: (newPref: String?) -> Unit = {}
+    trailing: @Composable () -> Unit = {},
+    onPreferenceClick: () -> Unit,
+    onDismissRequest: () -> Unit,
+    onItemClick: (itemKey: String) -> Unit,
+    onSave: () -> Unit,
 ) {
-    var pref by preference
-    var currentSelection by remember { mutableStateOf(pref) }
-    val coroutineScope = rememberCoroutineScope()
     DialogPreference(
         preferenceTitle = preferenceTitle,
-        preferenceDescription = buttons.find { it.key == pref }?.title,
+        preferenceDescription = preferenceDescription,
         trailing = trailing,
-        confirmButton = { isShown ->
-            TextButton(onClick = {
-                isShown.value = false
-                pref = currentSelection
-                onSave(currentSelection)
-            }) {
-                ManagerText(managerString(stringId = R.string.dialog_button_save))
+        confirmButton = {
+            TextButton(onClick = onSave) {
+                ManagerText(managerString(R.string.dialog_button_save))
             }
         },
+        dismissButton = {
+            TextButton(onClick = onDismissRequest) {
+                ManagerText(managerString(R.string.dialog_button_cancel))
+            }
+        },
+        onDismissRequest = onDismissRequest,
+        isDialogVisible = isDialogVisible,
+        onPreferenceClick = onPreferenceClick
     ) {
         LazyColumn(
             modifier = Modifier.heightIn(max = 400.dp)
@@ -49,10 +52,8 @@ fun RadiobuttonDialogPreference(
                 RadiobuttonItem(
                     text = title,
                     tag = key,
-                    isSelected = currentSelection == key,
-                    onSelect = {
-                        currentSelection = it
-                    }
+                    isSelected = currentSelectedKey == key,
+                    onSelect = onItemClick
                 )
             }
         }

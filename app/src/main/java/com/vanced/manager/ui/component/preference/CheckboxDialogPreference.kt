@@ -15,43 +15,43 @@ import androidx.compose.ui.unit.dp
 import com.vanced.manager.R
 import com.vanced.manager.core.preferences.CheckboxPreference
 import com.vanced.manager.core.preferences.ManagerPreference
+import com.vanced.manager.core.preferences.RadioButtonPreference
 import com.vanced.manager.ui.component.button.ManagerThemedTextButton
 import com.vanced.manager.ui.component.text.ManagerText
+import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.widget.list.CheckboxItem
 import kotlinx.coroutines.launch
 
 @Composable
 fun CheckboxDialogPreference(
     preferenceTitle: String,
-    preference: ManagerPreference<Set<String>>,
+    preferenceDescription: String,
+    isDialogVisible: Boolean,
+    currentSelectedKeys: List<String>,
+    buttons: List<RadioButtonPreference>,
     trailing: @Composable () -> Unit = {},
-    buttons: List<CheckboxPreference>,
-    onSave: (checkedButtons: List<String>) -> Unit = {}
+    onPreferenceClick: () -> Unit,
+    onDismissRequest: () -> Unit,
+    onItemCheckChange: (isChecked: Boolean, itemKey: String) -> Unit,
+    onSave: () -> Unit,
 ) {
-    var pref by preference
-    val selectedButtons = remember { pref.toMutableStateList() }
-    val coroutineScope = rememberCoroutineScope()
     DialogPreference(
         preferenceTitle = preferenceTitle,
-        preferenceDescription = buttons.filter { button ->
-            pref.any { selectedButton ->
-                button.key == selectedButton
-            }
-        }.sortedBy { it.title }.joinToString(separator = ", ") { it.title },
+        preferenceDescription = preferenceDescription,
         trailing = trailing,
-        confirmButton = { isShown ->
-            TextButton(
-                onClick = {
-                    coroutineScope.launch {
-                        isShown.value = false
-                        pref = selectedButtons.toSet()
-                        onSave(selectedButtons)
-                    }
-                }
-            ) {
-                ManagerText(stringResource(id = R.string.dialog_button_save))
+        confirmButton = {
+            TextButton(onClick = onSave) {
+                ManagerText(managerString(R.string.dialog_button_save))
             }
         },
+        dismissButton = {
+            TextButton(onClick = onDismissRequest) {
+                ManagerText(managerString(R.string.dialog_button_cancel))
+            }
+        },
+        onDismissRequest = onDismissRequest,
+        isDialogVisible = isDialogVisible,
+        onPreferenceClick = onPreferenceClick
     ) {
         LazyColumn(
             modifier = Modifier.heightIn(max = 400.dp)
@@ -60,13 +60,9 @@ fun CheckboxDialogPreference(
                 val (title, key) = button
                 CheckboxItem(
                     text = title,
-                    isChecked = selectedButtons.contains(key),
+                    isChecked = currentSelectedKeys.contains(key),
                     onCheck = { isChecked ->
-                        if (isChecked) {
-                            selectedButtons.add(key)
-                        } else {
-                            selectedButtons.remove(key)
-                        }
+                        onItemCheckChange(isChecked, key)
                     }
                 )
             }

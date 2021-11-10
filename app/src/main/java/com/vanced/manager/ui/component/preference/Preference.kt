@@ -7,11 +7,15 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.vanced.manager.ui.component.card.ManagerTonalCard
 import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.list.ManagerListItem
 import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.text.ManagerText
+import com.vanced.manager.ui.theme.LargeShape
 import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
+import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 
 @Composable
 fun Preference(
@@ -20,48 +24,36 @@ fun Preference(
     trailing: @Composable () -> Unit = {},
     onClick: () -> Unit
 ) {
-    Preference(
-        preferenceTitle = { ManagerText(text = preferenceTitle) },
-        preferenceDescription = if (preferenceDescription != null) {
-            {
-                ManagerText(text = preferenceDescription)
-            }
-        } else null,
-        trailing = trailing,
-        onClick = onClick
-    )
-}
-
-@Composable
-fun Preference(
-    preferenceTitle: @Composable () -> Unit,
-    preferenceDescription: @Composable (() -> Unit)? = null,
-    trailing: @Composable () -> Unit = {},
-    onClick: () -> Unit
-) {
     val color = managerAnimatedColor(color = MaterialTheme.colorScheme.onSurface)
-    ManagerListItem(
-        modifier = Modifier
-            .managerClickable(onClick = onClick)
-            .padding(horizontal = DefaultContentPaddingHorizontal),
-        title = {
-            CompositionLocalProvider(
-                LocalContentColor provides color,
-                LocalTextStyle provides MaterialTheme.typography.titleSmall
-            ) {
-                preferenceTitle()
-            }
-        },
-        description = if (preferenceDescription != null) {
-            {
+    ManagerTonalCard(
+        shape = LargeShape,
+        onClick = onClick
+    ) {
+        ManagerListItem(
+            modifier = Modifier
+                .padding(
+                    horizontal = DefaultContentPaddingHorizontal,
+                    vertical = 8.dp
+                ),
+            title = {
                 CompositionLocalProvider(
                     LocalContentColor provides color,
-                    LocalTextStyle provides MaterialTheme.typography.bodySmall
+                    LocalTextStyle provides MaterialTheme.typography.titleSmall
                 ) {
-                    preferenceDescription()
+                    ManagerText(text = preferenceTitle)
                 }
-            }
-        } else null,
-        trailing = trailing,
-    )
+            },
+            description = if (preferenceDescription != null) {
+                {
+                    CompositionLocalProvider(
+                        LocalContentColor provides color,
+                        LocalTextStyle provides MaterialTheme.typography.bodySmall
+                    ) {
+                        ManagerText(text = preferenceDescription)
+                    }
+                }
+            } else null,
+            trailing = trailing,
+        )
+    }
 }

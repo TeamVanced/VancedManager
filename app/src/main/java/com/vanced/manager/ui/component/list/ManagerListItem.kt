@@ -46,7 +46,7 @@ fun ManagerListItem(
         if (trailing != null) {
             Box(
                 modifier = Modifier
-                    .size(56.dp)
+                    .size(48.dp)
                     .align(Alignment.CenterVertically),
                 contentAlignment = Alignment.Center,
             ) {
