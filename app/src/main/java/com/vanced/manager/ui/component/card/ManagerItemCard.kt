@@ -62,7 +62,7 @@ private fun ManagerItemCardContent(
         if (icon != null) {
             Icon(
                 modifier = Modifier
-                    .size(36.dp),
+                    .size(32.dp),
                 painter = painterResource(id = icon),
                 contentDescription = title,
             )
