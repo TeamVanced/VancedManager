@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Отмена</string>
     <string name="close">Закрыть</string>
-    <string name="description_microg">Пользовательская реализация GMS (сервисов Google) для Vanced, созданная на основе проекта microG.</string>
+    <string name="description_microg">Кастомная реализация GMS для Vanced которая основана на проекте microG.</string>
     <string name="description_vanced">Модифицированный клиент YouTube с массой полезных функций!</string>
     <string name="description_vanced_music">Vanced, но для YouTube Music! Относительно меньше возможностей, но удовлетворит ваши потребности.</string>
     <string name="reset">Сброс</string>
@@ -66,7 +66,7 @@
     <string name="variant">Вариант</string>
     <!-- Logs -->
     <string name="logs_not_saved">Не удалось сохранить логи</string>
-    <string name="logs_saved">Логи успешно сохранены в %1$s</string>
+    <string name="logs_saved">Успешно сохранение логов в %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Подробнее</string>
     <string name="app_install_files_detected">Обнаружены установочные файлы для %1$s!</string>
@@ -107,13 +107,13 @@
     <string name="failed_accent">Не удалось применить новый второстепенный цвет</string>
     <string name="failed_uninstall">Ошибка установки пакета %1$s</string>
     <string name="files_missing_va">Не удалось найти необходимые файлы для установки. Повторно загрузите установочные файлы и попробуйте еще раз.</string>
-    <string name="ifile_missing">Не удалось найти APK-файл для черной/темной темы в памяти устройства, повторите попытку.</string>
+    <string name="ifile_missing">Не удалось найти APK файл для черной/темной темы из хранилища, повторите ещё раз.</string>
     <string name="installation_aborted">Установка не была выполнена, поскольку пользователь прервал установку.</string>
     <string name="installation_conflict">Установка не удалась, так как приложение конфликтует с уже установленным приложением. Удалите текущую версию приложения, затем повторите попытку.</string>
     <string name="installation_downgrade">Установка не удалась, так как пользователь попытался понизить версию приложения. Удалите обновления обычного приложения YouTube, затем повторите попытку.</string>
     <string name="installation_failed">Установка не удалась по неизвестным причинам, присоединитесь к нашим каналам Telegram или Discord для дальнейшей поддержки. Пожалуйста, также прикрепите скриншот из расширенного меню</string>
     <string name="installation_incompatible">Установка не удалась, так как установочный файл несовместим с вашим устройством. Очистите загруженные файлы в настройках, затем повторите попытку.</string>
-    <string name="installation_invalid">Установка не удалась, так как APK-файлы повреждены, попробуйте еще раз.</string>
+    <string name="installation_invalid">Установка не удалась потому, что APK-файлы повреждены, попробуйте еще раз.</string>
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
     <string name="installation_signature">Установка не удалась, так как включена проверка подписи APK. Отключите проверку подписи APK, а затем повторите попытку.</string>
     <string name="installation_storage">Установка не удалась из-за отсутствия на устройстве свободного места.</string>
