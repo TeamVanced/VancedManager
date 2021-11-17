@@ -1,24 +1,18 @@
 package com.vanced.manager.core.preferences
 
 import android.content.SharedPreferences
-import androidx.compose.runtime.State
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.core.content.edit
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import kotlin.reflect.KProperty
 
-fun <T> managerPreference(
-    key: String,
-    defaultValue: T,
-    getter: SharedPreferences.(key: String, defaultValue: T) -> T?,
-    setter: SharedPreferences.Editor.(key: String, newValue: T) -> Unit
-) = ManagerPreference(key, defaultValue, getter, setter)
-
 fun managerStringPreference(
     key: String,
     defaultValue: String = ""
-) = managerPreference(
+) = ManagerPreference(
     key = key,
     defaultValue = defaultValue,
     getter = SharedPreferences::getString,
@@ -28,7 +22,7 @@ fun managerStringPreference(
 fun managerStringSetPreference(
     key: String,
     defaultValue: Set<String> = setOf()
-) = managerPreference(
+) = ManagerPreference(
     key = key,
     defaultValue = defaultValue,
     getter = SharedPreferences::getStringSet,
@@ -38,7 +32,7 @@ fun managerStringSetPreference(
 fun managerBooleanPreference(
     key: String,
     defaultValue: Boolean = false
-) = managerPreference(
+) = ManagerPreference(
     key = key,
     defaultValue = defaultValue,
     getter = SharedPreferences::getBoolean,
@@ -48,7 +42,7 @@ fun managerBooleanPreference(
 fun managerIntPreference(
     key: String,
     defaultValue: Int = 0
-) = managerPreference(
+) = ManagerPreference(
     key = key,
     defaultValue = defaultValue,
     getter = SharedPreferences::getInt,
@@ -58,7 +52,7 @@ fun managerIntPreference(
 fun managerLongPreference(
     key: String,
     defaultValue: Long = 0
-) = managerPreference(
+) = ManagerPreference(
     key = key,
     defaultValue = defaultValue,
     getter = SharedPreferences::getLong,
@@ -74,25 +68,23 @@ class ManagerPreference<T>(
 
     private val sharedPreferences: SharedPreferences by inject()
 
-    private val _value = mutableStateOf(defaultValue)
-    val value: State<T> = _value
+    var value by mutableStateOf(sharedPreferences.getter(key, defaultValue) ?: defaultValue)
+        private set
+    
+    operator fun getValue(
+        thisRef: Any?,
+        property: KProperty<*>
+    ) = value
 
-    operator fun getValue(thisRef: Any?, property: KProperty<*>) = value.value
-
-    operator fun setValue(thisRef: Any?, property: KProperty<*>, newValue: T) {
-        save(newValue)
-    }
-
-    fun save(newValue: T) {
-        _value.value = newValue
+    operator fun setValue(
+        thisRef: Any?,
+        property: KProperty<*>,
+        newValue: T
+    ) {
+        value = newValue
         sharedPreferences.edit {
             setter(key, newValue)
         }
-    }
-
-    //It's Chewsday innit
-    init {
-        _value.value = sharedPreferences.getter(key, defaultValue) ?: defaultValue
     }
 
 }
