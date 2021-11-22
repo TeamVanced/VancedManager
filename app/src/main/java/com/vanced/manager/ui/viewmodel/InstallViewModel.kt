@@ -63,12 +63,14 @@ class InstallViewModel(
     }
 
     fun postInstallStatus(pmStatus: Int, extra: String) {
-        if (pmStatus == PackageInstaller.STATUS_SUCCESS) {
-            status = Status.Installed
-            logs.add(Log.Success("Successfully installed"))
-        } else {
-            status = Status.Failure
-            logs.add(Log.Error("Failed to install app", extra))
+        viewModelScope.launch(Dispatchers.IO) {
+            if (pmStatus == PackageInstaller.STATUS_SUCCESS) {
+                status = Status.Installed
+                log(Log.Success("Successfully installed"))
+            } else {
+                status = Status.Failure
+                log(Log.Error("Failed to install app", extra))
+            }
         }
     }
 
@@ -80,14 +82,14 @@ class InstallViewModel(
 
         downloader.download(appVersions) { downloadStatus ->
             when (downloadStatus) {
-                is DownloadStatus.File -> logs.add(Log.Info("Downloading ${downloadStatus.fileName}"))
-                is DownloadStatus.Error -> logs.add(Log.Error(
+                is DownloadStatus.File -> log(Log.Info("Downloading ${downloadStatus.fileName}"))
+                is DownloadStatus.Error -> log(Log.Error(
                     displayText = downloadStatus.displayError,
                     stacktrace = downloadStatus.stacktrace
                 ))
                 is DownloadStatus.Progress -> status = Status.Progress(downloadStatus.progress / 100)
                 is DownloadStatus.StartInstall -> {
-                    logs.add(Log.Success("Successfully downloaded $appName"))
+                    log(Log.Success("Successfully downloaded $appName"))
                     installApp(appName, appVersions)
                 }
             }
@@ -121,6 +123,10 @@ class InstallViewModel(
         MUSIC_NAME -> musicInstaller
         MICROG_NAME -> microgInstaller
         else -> throw IllegalArgumentException("$appName is not a valid app")
+    }
+
+    private fun log(data: Log) {
+        logs.add(data)
     }
 
     private fun clear() {

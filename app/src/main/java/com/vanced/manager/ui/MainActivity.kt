@@ -23,11 +23,11 @@ import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
 import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.viewmodel.InstallViewModel
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
-    private val installViewModel: InstallViewModel by inject()
+    private val installViewModel: InstallViewModel by viewModel()
 
     private val backPressHandler = BackPressHandler()
 

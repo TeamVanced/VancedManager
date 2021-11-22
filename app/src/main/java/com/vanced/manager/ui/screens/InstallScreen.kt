@@ -45,6 +45,9 @@ fun InstallScreen(
 
     var startedProcess by rememberSaveable { mutableStateOf(false) }
 
+    val logs = viewModel.logs
+    val status = viewModel.status
+
     // I don't know why, I don't know how,
     // but it works as intended
     LaunchedEffect(startedProcess) {
@@ -60,7 +63,7 @@ fun InstallScreen(
                 ManagerTopAppBar(
                     title = managerString(R.string.toolbar_install),
                 )
-                when (val status = viewModel.status) {
+                when (status) {
                     is InstallViewModel.Status.Progress -> {
                         ManagerProgressIndicator(status.progress)
                     }
@@ -72,9 +75,9 @@ fun InstallScreen(
             }
         },
         floatingActionButton = {
-            if (viewModel.status is InstallViewModel.Status.Installed) {
+            if (status is InstallViewModel.Status.Installed) {
                 ExtendedFloatingActionButton(
-                    text = { /*TODO*/ },
+                    text = { ManagerText("Finish") },
                     icon = {
                         Icon(Icons.Rounded.Done, null)
                     },
@@ -88,7 +91,7 @@ fun InstallScreen(
                 .fillMaxSize()
                 .padding(paddingValues),
         ) {
-            items(viewModel.logs) { log ->
+            items(logs) { log ->
                 when (log) {
                     is InstallViewModel.Log.Success -> {
                         ManagerText(
