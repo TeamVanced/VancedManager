@@ -79,12 +79,20 @@ val languages: String get() {
 
 dependencies {
     implementation(kotlin("reflect"))
+
+    // AndroidX
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.browser:browser:1.3.0")
+    implementation("androidx.browser:browser:1.4.0")
+    implementation("androidx.preference:preference-ktx:1.1.1")
+    implementation("androidx.activity:activity-compose:1.4.0")
 
-    val composeVersion = "1.1.0-beta02"
+    val lifecycleVersion = "2.4.0"
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
+
+    // Compose
+    val composeVersion = "1.1.0-beta03"
     implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
@@ -96,15 +104,9 @@ dependencies {
     implementation("androidx.compose.ui:ui-util:$composeVersion")
     implementation("androidx.compose.ui:ui:$composeVersion")
 
-    implementation("com.github.zsoltk:compose-router:0.28.0")
 
-    implementation("androidx.preference:preference-ktx:1.1.1")
-
-    implementation("androidx.activity:activity-compose:1.4.0")
-
-    val lifecycleVersion = "2.4.0-beta01"
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
+    // Google
+    implementation("com.google.android.material:material:1.4.0")
 
     val accompanistVersion = "0.20.0"
     implementation("com.google.accompanist:accompanist-navigation-animation:$accompanistVersion")
@@ -112,19 +114,21 @@ dependencies {
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
 
+
+    // Other
+    implementation("com.github.zsoltk:compose-router:0.28.0")
+
     implementation("io.coil-kt:coil-compose:1.4.0")
 
     implementation("com.github.skydoves:orchestra-colorpicker:1.1.0")
 
-    val koinVersion = "3.1.2"
+    val koinVersion = "3.1.3"
     implementation("io.insert-koin:koin-android:$koinVersion")
     implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
 
     val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-
-    implementation("com.github.x1nto:apkhelper:1.1.2")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
