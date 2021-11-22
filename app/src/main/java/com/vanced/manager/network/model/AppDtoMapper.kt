@@ -74,72 +74,72 @@ class AppDtoMapper(
         appVersions: List<String>?,
         appLanguages: List<String>?,
     ) = when (appName) {
-            VANCED_NAME -> listOf(
-                InstallationOption.SingleSelect(
-                    titleId = R.string.app_installation_options_theme,
-                    getOption = { vancedThemePref },
-                    setOption = {
-                        vancedThemePref = it
-                    },
-                    items = appThemes?.map { theme ->
-                        InstallationOptionItem(
-                            displayText = {
-                                theme.replaceFirstChar {
-                                    it.titlecase(Locale.getDefault())
-                                }
-                            },
-                            key = theme
-                        )
-                    } ?: emptyList(),
-                ),
-                InstallationOption.SingleSelect(
-                    titleId = R.string.app_installation_options_version,
-                    getOption = { vancedVersionPref },
-                    setOption = {
-                        vancedVersionPref = it
-                    },
-                    items = appVersions?.map { version ->
-                        InstallationOptionItem(
-                            displayText = { "v$version" },
-                            key = version
-                        )
-                    }?.plus(latestVersionRadioButton)?.reversed() ?: emptyList(),
-                ),
-                InstallationOption.MultiSelect(
-                    titleId = R.string.app_installation_options_language,
-                    getOption = { vancedLanguagesPref },
-                    addOption = {
-                        vancedLanguagesPref = vancedLanguagesPref + it
-                    },
-                    removeOption = {
-                        vancedLanguagesPref = vancedLanguagesPref - it
-                    },
-                    items = appLanguages?.map { language ->
-                        InstallationOptionItem(
-                            displayText = {
-                                val locale = Locale(it)
-                                locale.getDisplayName(locale)
-                            },
-                            key = language
-                        )
-                    } ?: emptyList(),
-                ),
+        VANCED_NAME -> listOf(
+            InstallationOption.SingleSelect(
+                titleId = R.string.app_installation_options_theme,
+                getOption = { vancedThemePref },
+                setOption = {
+                    vancedThemePref = it
+                },
+                items = appThemes?.map { theme ->
+                    InstallationOptionItem(
+                        displayText = {
+                            theme.replaceFirstChar {
+                                it.titlecase(Locale.getDefault())
+                            }
+                        },
+                        key = theme
+                    )
+                } ?: emptyList(),
+            ),
+            InstallationOption.SingleSelect(
+                titleId = R.string.app_installation_options_version,
+                getOption = { vancedVersionPref },
+                setOption = {
+                    vancedVersionPref = it
+                },
+                items = appVersions?.map { version ->
+                    InstallationOptionItem(
+                        displayText = { "v$version" },
+                        key = version
+                    )
+                }?.plus(latestVersionRadioButton)?.reversed() ?: emptyList(),
+            ),
+            InstallationOption.MultiSelect(
+                titleId = R.string.app_installation_options_language,
+                getOption = { vancedLanguagesPref },
+                addOption = {
+                    vancedLanguagesPref = vancedLanguagesPref + it
+                },
+                removeOption = {
+                    vancedLanguagesPref = vancedLanguagesPref - it
+                },
+                items = appLanguages?.map { language ->
+                    InstallationOptionItem(
+                        displayText = {
+                            val locale = Locale(it)
+                            locale.getDisplayName(locale)
+                        },
+                        key = language
+                    )
+                } ?: emptyList(),
+            ),
+        )
+        MUSIC_NAME -> listOf(
+            InstallationOption.SingleSelect(
+                titleId = R.string.app_installation_options_version,
+                getOption = { musicVersionPref },
+                setOption = {
+                    musicVersionPref = it
+                },
+                items = appVersions?.map { version ->
+                    InstallationOptionItem(
+                        displayText = { version },
+                        key = version
+                    )
+                } ?: emptyList(),
             )
-            MUSIC_NAME -> listOf(
-                InstallationOption.SingleSelect(
-                    titleId = R.string.app_installation_options_version,
-                    getOption = { musicVersionPref },
-                    setOption = {
-                        musicVersionPref = it
-                    },
-                    items = appVersions?.map { version ->
-                        InstallationOptionItem(
-                            displayText = { version },
-                            key = version
-                        )
-                    } ?: emptyList(),
-                )
-            )
-            else -> null
-        }
+        )
+        else -> null
+    }
 }

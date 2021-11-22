@@ -5,7 +5,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.rounded.DeleteForever
 import androidx.compose.material.icons.rounded.Download
@@ -19,7 +18,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.ImagePainter
 import com.vanced.manager.R
-import com.vanced.manager.ui.component.button.ManagerIconButton
 import com.vanced.manager.ui.component.text.AppVersionText
 import com.vanced.manager.ui.component.text.ManagerText
 

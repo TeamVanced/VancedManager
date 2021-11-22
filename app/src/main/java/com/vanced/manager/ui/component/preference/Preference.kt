@@ -11,11 +11,9 @@ import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.component.card.ManagerTonalCard
 import com.vanced.manager.ui.component.color.managerAnimatedColor
 import com.vanced.manager.ui.component.list.ManagerListItem
-import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.theme.LargeShape
 import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
-import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 
 @Composable
 fun Preference(

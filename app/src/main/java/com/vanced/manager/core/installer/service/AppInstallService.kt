@@ -24,7 +24,10 @@ class AppInstallService : Service() {
                 sendBroadcast(Intent().apply {
                     action = APP_INSTALL_STATUS
                     putExtra(EXTRA_INSTALL_STATUS, status)
-                    putExtra(EXTRA_INSTALL_EXTRA, intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE))
+                    putExtra(
+                        EXTRA_INSTALL_EXTRA,
+                        intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE)
+                    )
                 })
             }
         }

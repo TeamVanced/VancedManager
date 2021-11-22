@@ -13,19 +13,21 @@ sealed class Screen(
         displayName = R.string.app_name
     )
 
-    object Settings: Screen(
+    object Settings : Screen(
         route = "settings",
         displayName = R.string.toolbar_settings,
     )
 
-    object About: Screen(
+    object About : Screen(
         route = "about",
         displayName = R.string.toolbar_about,
     )
+
     object Logs : Screen(
         route = "logs",
         displayName = R.string.toolbar_logs,
     )
+
     data class InstallPreferences(
         val appName: String,
         val appVersions: List<String>?,

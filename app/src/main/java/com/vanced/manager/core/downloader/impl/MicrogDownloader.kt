@@ -1,7 +1,6 @@
 package com.vanced.manager.core.downloader.impl
 
 import android.content.Context
-import android.util.Log
 import com.vanced.manager.core.downloader.api.MicrogAPI
 import com.vanced.manager.core.downloader.base.AppDownloader
 import com.vanced.manager.core.downloader.util.DownloadStatus
@@ -33,10 +32,12 @@ class MicrogDownloader(
                 onStatus(DownloadStatus.StartInstall)
             },
             onError = { error, fileName ->
-                onStatus(DownloadStatus.Error(
-                    displayError = "Failed to download $fileName",
-                    stacktrace = error
-                ))
+                onStatus(
+                    DownloadStatus.Error(
+                        displayError = "Failed to download $fileName",
+                        stacktrace = error
+                    )
+                )
             }
         )
     }

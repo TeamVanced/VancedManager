@@ -4,7 +4,10 @@ import androidx.compose.animation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.MoreVert
-import androidx.compose.material3.*
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
@@ -33,12 +36,12 @@ import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.ui.widget.app.AppCard
 import com.vanced.manager.ui.widget.app.AppCardPlaceholder
 import com.vanced.manager.ui.widget.layout.managerCategory
-import org.koin.androidx.compose.getViewModel
 
 @ExperimentalMaterial3Api
 @ExperimentalAnimationApi
 @Composable
 fun HomeLayout(
+    viewModel: MainViewModel,
     onToolbarScreenSelected: (Screen) -> Unit,
     onAppInstallPress: (
         appName: String,
@@ -46,11 +49,10 @@ fun HomeLayout(
         installationOptions: List<InstallationOption>?
     ) -> Unit
 ) {
-    val viewModel: MainViewModel = getViewModel()
-
     val appState by viewModel.appState.collectAsState()
 
-    val refreshState = rememberSwipeRefreshState(isRefreshing = appState is MainViewModel.AppState.Fetching)
+    val refreshState =
+        rememberSwipeRefreshState(isRefreshing = appState is MainViewModel.AppState.Fetching)
     var isMenuExpanded by remember { mutableStateOf(false) }
     val dropdownScreens = remember { listOf(Screen.Settings, Screen.About) }
 
@@ -69,7 +71,7 @@ fun HomeLayout(
                             contentDescription = "Navigation"
                         )
                     }
-                    
+
                     ManagerDropdownMenu(
                         expanded = isMenuExpanded,
                         onDismissRequest = {
@@ -116,7 +118,11 @@ fun HomeLayout(
                                             diskCachePolicy(CachePolicy.ENABLED)
                                         }
 
-                                        var showAppInfoDialog by rememberSaveable { mutableStateOf(false) }
+                                        var showAppInfoDialog by rememberSaveable {
+                                            mutableStateOf(
+                                                false
+                                            )
+                                        }
 
                                         AppCard(
                                             appName = app.name,
@@ -124,7 +130,11 @@ fun HomeLayout(
                                             appInstalledVersion = app.installedVersion,
                                             appRemoteVersion = app.remoteVersion,
                                             onAppDownloadClick = {
-                                                onAppInstallPress(app.name, app.versions, app.installationOptions)
+                                                onAppInstallPress(
+                                                    app.name,
+                                                    app.versions,
+                                                    app.installationOptions
+                                                )
                                             },
                                             onAppUninstallClick = { /*TODO*/ },
                                             onAppLaunchClick = { /*TODO*/ },
@@ -135,7 +145,10 @@ fun HomeLayout(
 
                                         if (showAppInfoDialog) {
                                             ManagerDialog(
-                                                title = managerString(R.string.app_info_title, app.name),
+                                                title = managerString(
+                                                    R.string.app_info_title,
+                                                    app.name
+                                                ),
                                                 onDismissRequest = { showAppInfoDialog = false },
                                                 confirmButton = {
                                                     TextButton(onClick = {

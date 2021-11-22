@@ -7,7 +7,7 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.animation.*
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.CompositionLocalProvider
@@ -23,11 +23,13 @@ import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
 import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.viewmodel.InstallViewModel
+import com.vanced.manager.ui.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
     private val installViewModel: InstallViewModel by viewModel()
+    private val mainViewModel: MainViewModel by viewModel()
 
     private val backPressHandler = BackPressHandler()
 
@@ -46,7 +48,7 @@ class MainActivity : ComponentActivity() {
     @OptIn(
         ExperimentalAnimationApi::class,
         ExperimentalMaterial3Api::class,
-        ExperimentalFoundationApi::class
+        ExperimentalFoundationApi::class,
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,6 +74,7 @@ class MainActivity : ComponentActivity() {
                         when (val screen = backStack.last()) {
                             is Screen.Home -> {
                                 HomeLayout(
+                                    viewModel = mainViewModel,
                                     onToolbarScreenSelected = {
                                         backStack.push(it)
                                     },
@@ -124,7 +127,11 @@ class MainActivity : ComponentActivity() {
                                 )
                             }
                             is Screen.Install -> {
-                                InstallScreen(screen.appName, screen.appVersions)
+                                InstallScreen(
+                                    appName = screen.appName,
+                                    appVersions = screen.appVersions,
+                                    viewModel = installViewModel
+                                )
                             }
                         }
                     }

@@ -8,7 +8,6 @@ import com.vanced.manager.core.preferences.holder.musicEnabled
 import com.vanced.manager.core.preferences.holder.vancedEnabled
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.repository.JsonRepository
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

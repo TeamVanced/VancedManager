@@ -67,7 +67,7 @@ private val vancedTeam = listOf(
     )
 )
 
-private val otherContributors =  listOf(
+private val otherContributors = listOf(
     Person(
         name = "bhatVikrant",
         contribution = "Website"
@@ -132,7 +132,9 @@ fun AboutLayout(
         }
     ) { paddingValues ->
         ManagerLazyColumn(
-            modifier = Modifier.fillMaxSize().padding(paddingValues),
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues),
         ) {
             item {
                 ManagerTonalCard(

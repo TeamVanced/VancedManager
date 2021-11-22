@@ -83,11 +83,14 @@ class InstallViewModel(
         downloader.download(appVersions) { downloadStatus ->
             when (downloadStatus) {
                 is DownloadStatus.File -> log(Log.Info("Downloading ${downloadStatus.fileName}"))
-                is DownloadStatus.Error -> log(Log.Error(
-                    displayText = downloadStatus.displayError,
-                    stacktrace = downloadStatus.stacktrace
-                ))
-                is DownloadStatus.Progress -> status = Status.Progress(downloadStatus.progress / 100)
+                is DownloadStatus.Error -> log(
+                    Log.Error(
+                        displayText = downloadStatus.displayError,
+                        stacktrace = downloadStatus.stacktrace
+                    )
+                )
+                is DownloadStatus.Progress -> status =
+                    Status.Progress(downloadStatus.progress / 100)
                 is DownloadStatus.StartInstall -> {
                     log(Log.Success("Successfully downloaded $appName"))
                     installApp(appName, appVersions)

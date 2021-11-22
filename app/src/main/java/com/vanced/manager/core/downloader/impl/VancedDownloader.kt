@@ -53,10 +53,12 @@ class VancedDownloader(
                 onStatus(DownloadStatus.StartInstall)
             },
             onError = { error, fileName ->
-                onStatus(DownloadStatus.Error(
-                    displayError = "Failed to download $fileName",
-                    stacktrace = error
-                ))
+                onStatus(
+                    DownloadStatus.Error(
+                        displayError = "Failed to download $fileName",
+                        stacktrace = error
+                    )
+                )
             }
         )
     }

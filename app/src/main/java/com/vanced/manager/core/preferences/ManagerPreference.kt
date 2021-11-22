@@ -70,7 +70,7 @@ class ManagerPreference<T>(
 
     var value by mutableStateOf(sharedPreferences.getter(key, defaultValue) ?: defaultValue)
         private set
-    
+
     operator fun getValue(
         thisRef: Any?,
         property: KProperty<*>

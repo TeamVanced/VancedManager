@@ -20,13 +20,13 @@ fun ManagerScaffold(
 //    CompositionLocalProvider(
 //        LocalAbsoluteTonalElevation provides absoluteTonalElevation
 //    ) {
-        Scaffold(
-            modifier = modifier,
-            scaffoldState = scaffoldState,
-            topBar = topBar,
-            floatingActionButton = floatingActionButton,
-            floatingActionButtonPosition = floatingActionButtonPosition,
-            content = content
-        )
+    Scaffold(
+        modifier = modifier,
+        scaffoldState = scaffoldState,
+        topBar = topBar,
+        floatingActionButton = floatingActionButton,
+        floatingActionButtonPosition = floatingActionButtonPosition,
+        content = content
+    )
 //    }
 }

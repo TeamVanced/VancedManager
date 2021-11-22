@@ -8,7 +8,10 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ArrowDropDown
 import androidx.compose.material.icons.rounded.Done
-import androidx.compose.material3.*
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -30,7 +33,6 @@ import com.vanced.manager.ui.component.topappbar.ManagerTopAppBar
 import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
 import com.vanced.manager.ui.viewmodel.InstallViewModel
-import org.koin.androidx.compose.getViewModel
 
 @OptIn(
     ExperimentalFoundationApi::class,
@@ -39,10 +41,9 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun InstallScreen(
     appName: String,
-    appVersions: List<String>?
+    appVersions: List<String>?,
+    viewModel: InstallViewModel,
 ) {
-    val viewModel: InstallViewModel = getViewModel()
-
     var startedProcess by rememberSaveable { mutableStateOf(false) }
 
     val logs = viewModel.logs

@@ -23,13 +23,15 @@ class MusicDownloader(
         absoluteVersion = getLatestOrProvidedAppVersion(musicVersionPref, appVersions)
 
         downloadFiles(
-            downloadFiles = arrayOf(DownloadFile(
-                call = musicAPI.getFiles(
-                    version = absoluteVersion,
-                    variant = managerVariantPref,
-                ),
-                fileName = "music.apk"
-            )),
+            downloadFiles = arrayOf(
+                DownloadFile(
+                    call = musicAPI.getFiles(
+                        version = absoluteVersion,
+                        variant = managerVariantPref,
+                    ),
+                    fileName = "music.apk"
+                )
+            ),
             onProgress = { progress ->
                 onStatus(DownloadStatus.Progress(progress))
             },
@@ -40,10 +42,12 @@ class MusicDownloader(
                 onStatus(DownloadStatus.StartInstall)
             },
             onError = { error, fileName ->
-                onStatus(DownloadStatus.Error(
-                    displayError = "Failed to download $fileName",
-                    stacktrace = error
-                ))
+                onStatus(
+                    DownloadStatus.Error(
+                        displayError = "Failed to download $fileName",
+                        stacktrace = error
+                    )
+                )
             }
         )
     }

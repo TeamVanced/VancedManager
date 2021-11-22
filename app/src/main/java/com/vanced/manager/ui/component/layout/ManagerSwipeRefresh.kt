@@ -3,13 +3,9 @@ package com.vanced.manager.ui.component.layout
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
 import com.google.accompanist.swiperefresh.SwipeRefreshState
-import com.vanced.manager.ui.component.card.ManagerCard
-import com.vanced.manager.ui.component.color.managerAccentColor
 
 @Composable
 fun ManagerSwipeRefresh(
