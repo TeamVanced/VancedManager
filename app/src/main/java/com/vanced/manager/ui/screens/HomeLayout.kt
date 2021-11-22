@@ -49,7 +49,7 @@ fun HomeLayout(
         installationOptions: List<InstallationOption>?
     ) -> Unit
 ) {
-    val appState by viewModel.appState.collectAsState()
+    val appState = viewModel.appState
 
     val refreshState =
         rememberSwipeRefreshState(isRefreshing = appState is MainViewModel.AppState.Fetching)

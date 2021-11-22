@@ -1,6 +1,9 @@
 package com.vanced.manager.ui.viewmodel
 
 import android.util.Log
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vanced.manager.core.preferences.holder.managerVariantPref
@@ -8,8 +11,6 @@ import com.vanced.manager.core.preferences.holder.musicEnabled
 import com.vanced.manager.core.preferences.holder.vancedEnabled
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.repository.JsonRepository
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 class MainViewModel(
@@ -17,22 +18,16 @@ class MainViewModel(
 ) : ViewModel() {
 
     sealed class AppState {
-
         data class Fetching(val placeholderAppsCount: Int) : AppState()
-
         data class Success(val apps: List<App>) : AppState()
-
         data class Error(val error: String) : AppState()
-
     }
 
-    private val _appState = MutableStateFlow<AppState>(AppState.Fetching(3))
-    val appState: StateFlow<AppState> = _appState
+    var appState by mutableStateOf<AppState>(AppState.Fetching(3))
+        private set
 
     fun fetch() {
         viewModelScope.launch {
-            val vancedEnabled = vancedEnabled
-            val musicEnabled = musicEnabled
             val isNonroot = managerVariantPref == "nonroot"
 
             var appsCount = 0
@@ -41,7 +36,7 @@ class MainViewModel(
             if (musicEnabled) appsCount++
             if (isNonroot) appsCount++
 
-            _appState.value = AppState.Fetching(appsCount)
+            appState = AppState.Fetching(appsCount)
 
             try {
                 with(repository.fetch()) {
@@ -53,11 +48,11 @@ class MainViewModel(
                         if (isNonroot) add(microg)
                     }
 
-                    _appState.value = AppState.Success(apps)
+                    appState = AppState.Success(apps)
                 }
             } catch (e: Exception) {
                 val error = "failed to fetch: \n${e.stackTraceToString()}"
-                _appState.value = AppState.Error(error)
+                appState = AppState.Error(error)
                 Log.d("MainViewModel", error)
             }
         }
