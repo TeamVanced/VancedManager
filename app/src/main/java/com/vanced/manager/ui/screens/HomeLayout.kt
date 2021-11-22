@@ -137,7 +137,13 @@ fun HomeLayout(
                                                 )
                                             },
                                             onAppUninstallClick = { /*TODO*/ },
-                                            onAppLaunchClick = { /*TODO*/ },
+                                            onAppLaunchClick = {
+                                                viewModel.launchApp(
+                                                    appName = app.name,
+                                                    appPackage = app.packageName,
+                                                    appPackageRoot = app.packageNameRoot
+                                                )
+                                            },
                                             onAppInfoClick = {
                                                 showAppInfoDialog = true
                                             }

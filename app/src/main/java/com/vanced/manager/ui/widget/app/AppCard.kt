@@ -75,17 +75,19 @@ fun AppCard(
             )
         },
         appActionsRow = {
-            IconButton(onClick = onAppUninstallClick) {
-                Icon(
-                    imageVector = Icons.Rounded.DeleteForever,
-                    contentDescription = "Uninstall"
-                )
-            }
-            IconButton(onClick = onAppLaunchClick) {
-                Icon(
-                    imageVector = Icons.Rounded.Launch,
-                    contentDescription = "Launch",
-                )
+            if (appInstalledVersion != null) {
+                IconButton(onClick = onAppUninstallClick) {
+                    Icon(
+                        imageVector = Icons.Rounded.DeleteForever,
+                        contentDescription = "Uninstall"
+                    )
+                }
+                IconButton(onClick = onAppLaunchClick) {
+                    Icon(
+                        imageVector = Icons.Rounded.Launch,
+                        contentDescription = "Launch",
+                    )
+                }
             }
             IconButton(onClick = onAppDownloadClick) {
                 Icon(
