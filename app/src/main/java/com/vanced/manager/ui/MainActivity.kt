@@ -59,6 +59,7 @@ class MainActivity : ComponentActivity() {
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mainViewModel.fetch()
         setContent {
             ManagerTheme {
                 val surfaceColor = managerSurfaceColor()

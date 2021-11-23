@@ -35,18 +35,12 @@ class MainViewModel(
         data class Error(val error: String) : AppState()
     }
 
-    var appState by mutableStateOf<AppState>(AppState.Fetching(3))
+    var appState by mutableStateOf<AppState>(AppState.Fetching(appCount))
         private set
 
     fun fetch() {
         viewModelScope.launch {
-            var appsCount = 0
-
-            if (vancedEnabled) appsCount++
-            if (musicEnabled) appsCount++
-            if (isNonroot) appsCount++
-
-            appState = AppState.Fetching(appsCount)
+            appState = AppState.Fetching(appCount)
 
             try {
                 with(repository.fetch()) {
@@ -104,14 +98,19 @@ class MainViewModel(
         uninstallPackage(appPackage, app)
     }
 
-    init {
-        fetch()
-    }
+    private val appCount: Int
+        get() {
+            var appsCount = 0
+
+            if (vancedEnabled) appsCount++
+            if (musicEnabled) appsCount++
+            if (isNonroot) appsCount++
+
+            return appsCount
+        }
 
     companion object {
-
         const val TAG = "MainViewModel"
-
     }
 
 }
