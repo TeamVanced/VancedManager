@@ -136,7 +136,11 @@ fun HomeLayout(
                                                     app.installationOptions
                                                 )
                                             },
-                                            onAppUninstallClick = { /*TODO*/ },
+                                            onAppUninstallClick = {
+                                                viewModel.uninstallApp(
+                                                    appPackage = app.packageName
+                                                )
+                                            },
                                             onAppLaunchClick = {
                                                 viewModel.launchApp(
                                                     appName = app.name,

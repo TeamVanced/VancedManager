@@ -17,6 +17,7 @@ import com.github.zsoltk.compose.backpress.LocalBackPressHandler
 import com.github.zsoltk.compose.router.Router
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.vanced.manager.core.installer.service.AppInstallService
+import com.vanced.manager.core.installer.service.AppUninstallService
 import com.vanced.manager.ui.component.color.managerSurfaceColor
 import com.vanced.manager.ui.screens.*
 import com.vanced.manager.ui.theme.ManagerTheme
@@ -36,12 +37,18 @@ class MainActivity : ComponentActivity() {
     private val installBroadcastReceiver = object : BroadcastReceiver() {
 
         override fun onReceive(context: Context?, intent: Intent?) {
-            if (intent?.action != AppInstallService.APP_INSTALL_STATUS) return
-
-            installViewModel.postInstallStatus(
-                pmStatus = intent.getIntExtra(AppInstallService.EXTRA_INSTALL_STATUS, -999),
-                extra = intent.getStringExtra(AppInstallService.EXTRA_INSTALL_EXTRA)!!,
-            )
+            when (intent?.action) {
+                AppInstallService.APP_INSTALL_ACTION -> {
+                    installViewModel.postInstallStatus(
+                        pmStatus = intent.getIntExtra(AppInstallService.EXTRA_INSTALL_STATUS, -999),
+                        extra = intent.getStringExtra(AppInstallService.EXTRA_INSTALL_EXTRA)!!,
+                    )
+                    mainViewModel.fetch()
+                }
+                AppUninstallService.APP_UNINSTALL_ACTION -> {
+                    mainViewModel.fetch()
+                }
+            }
         }
     }
 
@@ -151,7 +158,8 @@ class MainActivity : ComponentActivity() {
         registerReceiver(
             installBroadcastReceiver,
             IntentFilter().apply {
-                addAction(AppInstallService.APP_INSTALL_STATUS)
+                addAction(AppInstallService.APP_INSTALL_ACTION)
+                addAction(AppUninstallService.APP_UNINSTALL_ACTION)
             }
         )
     }

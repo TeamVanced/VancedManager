@@ -5,16 +5,14 @@ import android.content.Intent
 import android.content.pm.PackageInstaller
 import android.os.IBinder
 
-class AppInstallService : Service() {
+class AppUninstallService : Service() {
 
     override fun onStartCommand(
         intent: Intent,
         flags: Int,
         startId: Int
     ): Int {
-        val extraStatus = intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)
-        val extraStatusMessage = intent.getStringExtra(PackageInstaller.EXTRA_STATUS_MESSAGE)
-        when (extraStatus) {
+        when (intent.getIntExtra(PackageInstaller.EXTRA_STATUS, -999)) {
             PackageInstaller.STATUS_PENDING_USER_ACTION -> {
                 startActivity(
                     intent.getParcelableExtra<Intent>(Intent.EXTRA_INTENT).apply {
@@ -24,9 +22,7 @@ class AppInstallService : Service() {
             }
             else -> {
                 sendBroadcast(Intent().apply {
-                    action = APP_INSTALL_ACTION
-                    putExtra(EXTRA_INSTALL_STATUS, extraStatus)
-                    putExtra(EXTRA_INSTALL_EXTRA, extraStatusMessage)
+                    action = APP_UNINSTALL_ACTION
                 })
             }
         }
@@ -37,10 +33,7 @@ class AppInstallService : Service() {
     override fun onBind(intent: Intent?): IBinder? = null
 
     companion object {
-        const val APP_INSTALL_ACTION = "APP_INSTALL_ACTION"
-
-        const val EXTRA_INSTALL_STATUS = "EXTRA_INSTALL_STATUS"
-        const val EXTRA_INSTALL_EXTRA = "EXTRA_INSTALL_EXTRA"
+        const val APP_UNINSTALL_ACTION = "APP_UNINSTALL_ACTION"
     }
 
 }

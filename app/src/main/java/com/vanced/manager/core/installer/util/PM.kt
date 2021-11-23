@@ -7,6 +7,7 @@ import android.content.pm.PackageInstaller
 import android.content.pm.PackageManager
 import android.os.Build
 import com.vanced.manager.core.installer.service.AppInstallService
+import com.vanced.manager.core.installer.service.AppUninstallService
 import java.io.File
 import java.io.FileInputStream
 
@@ -17,7 +18,7 @@ fun installApp(apk: File, context: Context) {
     val session =
         packageInstaller.openSession(packageInstaller.createSession(sessionParams))
     writeApkToSession(apk, session)
-    session.commit(getIntentSender(context))
+    session.commit(context.installIntentSender)
     session.close()
 }
 
@@ -28,8 +29,26 @@ fun installSplitApp(apks: Array<File>, context: Context) {
     for (apk in apks) {
         writeApkToSession(apk, session)
     }
-    session.commit(getIntentSender(context))
+    session.commit(context.installIntentSender)
     session.close()
+}
+
+fun uninstallPackage(pkg: String, context: Context) {
+    val packageInstaller = context.packageManager.packageInstaller
+    packageInstaller.uninstall(pkg, context.uninstallIntentSender)
+}
+
+private fun writeApkToSession(
+    apk: File,
+    session: PackageInstaller.Session
+) {
+    val inputStream = FileInputStream(apk)
+    val outputStream = session.openWrite(apk.name, 0, apk.length())
+    inputStream.copyTo(outputStream, byteArraySize)
+    session.fsync(outputStream)
+    inputStream.close()
+    outputStream.flush()
+    outputStream.close()
 }
 
 private val intentFlags
@@ -47,27 +66,18 @@ private val sessionParams
         }
     }
 
-private fun getIntentSender(context: Context) =
-    PendingIntent.getService(
-        context,
+private val Context.installIntentSender
+    get() = PendingIntent.getService(
+        this,
         0,
-        Intent(context, AppInstallService::class.java),
+        Intent(this, AppInstallService::class.java),
         intentFlags
     ).intentSender
 
-private fun writeApkToSession(
-    apk: File,
-    session: PackageInstaller.Session
-) {
-    val inputStream = FileInputStream(apk)
-    val outputStream = session.openWrite(apk.name, 0, apk.length())
-    val buffer = ByteArray(byteArraySize)
-    var length: Int
-    while (inputStream.read(buffer).also { length = it } > 0) {
-        outputStream.write(buffer, 0, length)
-    }
-    session.fsync(outputStream)
-    inputStream.close()
-    outputStream.flush()
-    outputStream.close()
-}
+private val Context.uninstallIntentSender
+    get() = PendingIntent.getService(
+        this,
+        0,
+        Intent(this, AppUninstallService::class.java),
+        intentFlags
+    ).intentSender

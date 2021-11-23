@@ -10,6 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.vanced.manager.core.installer.util.uninstallPackage
 import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.core.preferences.holder.musicEnabled
 import com.vanced.manager.core.preferences.holder.vancedEnabled
@@ -94,6 +95,13 @@ class MainViewModel(
             Log.d(TAG, "Unable to launch $appName")
             e.printStackTrace()
         }
+    }
+
+    //TODO implement root uninstallation
+    fun uninstallApp(
+        appPackage: String,
+    ) {
+        uninstallPackage(appPackage, app)
     }
 
     init {
