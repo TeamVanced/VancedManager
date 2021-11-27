@@ -15,8 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import com.vanced.manager.BuildConfig
 import com.vanced.manager.R
 import com.vanced.manager.ui.component.card.ManagerLinkCard
 import com.vanced.manager.ui.component.card.ManagerTonalCard
@@ -154,11 +154,14 @@ fun AboutLayout(
                         ManagerText(
                             modifier = Modifier,
                             text = buildAnnotatedString {
-                                append("Re")
-                                withStyle(style = SpanStyle(Color(0xFFBBB529))) {
-                                    append("@Compose")
-                                }
-                                append("d")
+                                append(BuildConfig.VERSION_NAME)
+                                val compose = "@Compose"
+                                val startIndex = BuildConfig.VERSION_NAME.indexOf(compose)
+                                addStyle(
+                                    style = SpanStyle(Color(0xFFBBB529)),
+                                    start = startIndex,
+                                    end = startIndex + compose.length
+                                )
                             },
                             textStyle = MaterialTheme.typography.titleSmall
                         )
