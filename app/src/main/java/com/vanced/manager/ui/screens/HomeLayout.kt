@@ -192,8 +192,7 @@ fun HomeLayout(
                 managerCategory(homeCategorySupportUs) {
                     ScrollableItemRow(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = DefaultContentPaddingHorizontal),
+                            .fillMaxWidth(),
                         items = sponsors
                     ) { sponsor ->
                         ManagerLinkCard(
@@ -206,8 +205,7 @@ fun HomeLayout(
                 managerCategory(homeCategorySocialMedia) {
                     ScrollableItemRow(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = DefaultContentPaddingHorizontal),
+                            .fillMaxWidth(),
                         items = socialMedia
                     ) { socialMedia ->
                         ManagerLinkCard(

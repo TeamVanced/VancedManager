@@ -191,8 +191,7 @@ fun AboutLayout(
             managerCategory(aboutCategorySources) {
                 ScrollableItemRow(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = DefaultContentPaddingHorizontal),
+                        .fillMaxWidth(),
                     items = sources
                 ) { source ->
                     ManagerLinkCard(
