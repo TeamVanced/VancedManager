@@ -43,6 +43,7 @@ fun InstallScreen(
     appName: String,
     appVersions: List<String>?,
     viewModel: InstallViewModel,
+    onFinishClick: () -> Unit
 ) {
     var startedProcess by rememberSaveable { mutableStateOf(false) }
 
@@ -82,7 +83,7 @@ fun InstallScreen(
                     icon = {
                         Icon(Icons.Rounded.Done, null)
                     },
-                    onClick = { /*TODO*/ },
+                    onClick = onFinishClick,
                 )
             }
         }

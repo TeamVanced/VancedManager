@@ -138,7 +138,10 @@ class MainActivity : ComponentActivity() {
                                 InstallScreen(
                                     appName = screen.appName,
                                     appVersions = screen.appVersions,
-                                    viewModel = installViewModel
+                                    viewModel = installViewModel,
+                                    onFinishClick = {
+                                        backStack.newRoot(Screen.Home)
+                                    }
                                 )
                             }
                         }
