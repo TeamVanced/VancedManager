@@ -12,22 +12,25 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.vanced.manager.core.installer.util.uninstallPackage
 import com.vanced.manager.core.preferences.holder.managerVariantPref
-import com.vanced.manager.core.preferences.holder.musicEnabled
-import com.vanced.manager.core.preferences.holder.vancedEnabled
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
-import com.vanced.manager.repository.JsonRepository
+import com.vanced.manager.repository.MainRepository
+import com.vanced.manager.repository.MirrorRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val repository: JsonRepository,
+    private val mainRepository: MainRepository,
+    private val mirrorRepository: MirrorRepository,
     private val app: Application
 ) : AndroidViewModel(app) {
 
-    private val isNonroot
-        get() = managerVariantPref == "nonroot"
+    private val isRoot
+        get() = managerVariantPref == "root"
+
+    private val appCount: Int
+        get() = if (isRoot) 2 else 3
 
     sealed class AppState {
         data class Fetching(val placeholderAppsCount: Int) : AppState()
@@ -42,37 +45,19 @@ class MainViewModel(
         viewModelScope.launch {
             appState = AppState.Fetching(appCount)
 
-            try {
-                with(repository.fetch()) {
-                    val apps = mutableListOf<App>()
-
-                    apps.apply {
-                        if (vancedEnabled) add(vanced)
-                        if (musicEnabled) add(music)
-                        if (isNonroot) add(microg)
-                    }
-
-                    appState = AppState.Success(apps)
-                }
-            } catch (e: Exception) {
-                val error = "failed to fetch: \n${e.stackTraceToString()}"
-                appState = AppState.Error(error)
-                Log.d(TAG, error)
-            }
+            fetchData()
         }
     }
 
     fun launchApp(
         appName: String,
         appPackage: String,
-        appPackageRoot: String?
     ) {
-        val pkg = if (isNonroot) appPackage else appPackageRoot ?: appPackage
         val component = ComponentName(
             /* pkg = */ appPackage,
             /* cls = */ when (appName) {
-                VANCED_NAME -> "$pkg.HomeActivity"
-                MUSIC_NAME -> "$pkg.activities.MusicActivity"
+                VANCED_NAME -> "com.google.android.youtube.HomeActivity"
+                MUSIC_NAME -> "com.google.android.apps.youtube.music.activities.MusicActivity"
                 MICROG_NAME -> "org.microg.gms.ui.SettingsActivity"
                 else -> throw IllegalArgumentException("$appName is not a valid app")
             }
@@ -98,16 +83,25 @@ class MainViewModel(
         uninstallPackage(appPackage, app)
     }
 
-    private val appCount: Int
-        get() {
-            var appsCount = 0
+    private suspend fun fetchData(
+        fromMirror: Boolean = false
+    ) {
+        try {
+            val repository = if (fromMirror) mirrorRepository else mainRepository
+            with(repository.fetch()) {
+                appState = AppState.Success(apps)
+            }
+        } catch (e: Exception) {
+            if (!fromMirror) {
+                fetchData(true)
+                return
+            }
 
-            if (vancedEnabled) appsCount++
-            if (musicEnabled) appsCount++
-            if (isNonroot) appsCount++
-
-            return appsCount
+            val error = "failed to fetch: \n${e.stackTraceToString()}"
+            appState = AppState.Error(error)
+            Log.d(TAG, error)
         }
+    }
 
     companion object {
         const val TAG = "MainViewModel"

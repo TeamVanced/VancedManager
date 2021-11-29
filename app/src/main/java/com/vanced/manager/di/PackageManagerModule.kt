@@ -11,19 +11,15 @@ val packageManagerModule = module {
 
     fun providePackageManager(
         context: Context
-    ): PkgManager {
-        return PkgManagerImpl(
+    ): PkgManager =
+        PkgManagerImpl(
             packageManager = context.packageManager
         )
-    }
 
     fun providePackageInformationDataSource(
         pkgManager: PkgManager
-    ): PackageInformationDataSource {
-        return PackageInformationDataSourceImpl(
-            pkgManager = pkgManager
-        )
-    }
+    ): PackageInformationDataSource =
+        PackageInformationDataSourceImpl(pkgManager)
 
     single { providePackageManager(get()) }
     single { providePackageInformationDataSource(get()) }

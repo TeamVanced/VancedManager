@@ -8,6 +8,7 @@ import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
+//TODO Add mirror support
 val apiModule = module {
 
     fun provideVancedAPI(

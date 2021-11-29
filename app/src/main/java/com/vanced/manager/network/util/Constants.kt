@@ -1,7 +1,8 @@
 package com.vanced.manager.network.util
 
 const val BASE = "https://api.vancedapp.com/api/v1/"
-const val BASE_GITHUB = "https://x1nto.github.io/VancedFiles/"
+const val BASE_MIRROR = "https://x1nto.github.io/VancedFiles/api/v2/" //TODO
+const val BASE_GITHUB = "https://x1nto.github.io/VancedFiles/api/v2/"
 
 const val VANCED_NAME = "YouTube Vanced"
 const val MUSIC_NAME = "YouTube Vanced Music"

@@ -16,7 +16,7 @@
      *;
 }
 
--keep class com.vanced.manager.network.model.JsonDto {
+-keep class com.vanced.manager.network.model.DataDto {
      *;
 }
 

@@ -30,7 +30,6 @@ import com.vanced.manager.ui.component.menu.ManagerDropdownMenuItem
 import com.vanced.manager.ui.component.text.ManagerText
 import com.vanced.manager.ui.component.topappbar.ManagerTopAppBar
 import com.vanced.manager.ui.resources.managerString
-import com.vanced.manager.ui.util.DefaultContentPaddingHorizontal
 import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.viewmodel.MainViewModel
 import com.vanced.manager.ui.widget.app.AppCard
@@ -145,7 +144,6 @@ fun HomeLayout(
                                                 viewModel.launchApp(
                                                     appName = app.name,
                                                     appPackage = app.packageName,
-                                                    appPackageRoot = app.packageNameRoot
                                                 )
                                             },
                                             onAppInfoClick = {
@@ -191,8 +189,7 @@ fun HomeLayout(
                 }
                 managerCategory(homeCategorySupportUs) {
                     ScrollableItemRow(
-                        modifier = Modifier
-                            .fillMaxWidth(),
+                        modifier = Modifier.fillMaxWidth(),
                         items = sponsors
                     ) { sponsor ->
                         ManagerLinkCard(
@@ -204,8 +201,7 @@ fun HomeLayout(
                 }
                 managerCategory(homeCategorySocialMedia) {
                     ScrollableItemRow(
-                        modifier = Modifier
-                            .fillMaxWidth(),
+                        modifier = Modifier.fillMaxWidth(),
                         items = socialMedia
                     ) { socialMedia ->
                         ManagerLinkCard(

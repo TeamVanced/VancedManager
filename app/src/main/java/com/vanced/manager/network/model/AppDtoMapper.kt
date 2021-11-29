@@ -17,8 +17,8 @@ import com.vanced.manager.network.util.VANCED_NAME
 import java.util.*
 
 class AppDtoMapper(
-    private val packageInformationDataSource: PackageInformationDataSource,
-    context: Context
+    private val pkgInfoDataSource: PackageInformationDataSource,
+    private val context: Context
 ) : EntityMapper<AppDto, App> {
 
     private val latestVersionRadioButton =
@@ -27,46 +27,40 @@ class AppDtoMapper(
             key = "latest"
         )
 
-    override suspend fun mapToModel(entity: AppDto): App =
-        with(entity) {
-            val localVersionCode = packageInformationDataSource.getVersionCode(packageName)
-            val localVersionCodeRoot =
-                packageInformationDataSource.getVersionCode(packageNameRoot ?: "")
-            val localVersionName = packageInformationDataSource.getVersionName(packageName)
-            val localVersionNameRoot =
-                packageInformationDataSource.getVersionName(packageNameRoot ?: "")
-            App(
-                name = name,
-                remoteVersion = version,
-                remoteVersionCode = versionCode,
-                installedVersion = localVersionName,
-                installedVersionCode = localVersionCode,
-                installedVersionRoot = localVersionNameRoot,
-                installedVersionCodeRoot = localVersionCodeRoot,
-                appStatus = compareVersionCodes(versionCode, localVersionCode),
-                appStatusRoot = compareVersionCodes(versionCode, localVersionCodeRoot),
-                packageName = packageName,
-                packageNameRoot = packageNameRoot,
-                iconUrl = iconUrl,
-                changelog = changelog,
-                url = url,
-                versions = versions,
-                themes = themes,
-                languages = languages,
-                installationOptions = getInstallationOptions(name, themes, versions, languages)
-            )
-        }
+    override suspend fun mapToModel(
+        entity: AppDto
+    ) = with(entity) {
+        val localVersionCode = pkgInfoDataSource.getVersionCode(packageName)
+        App(
+            name = name,
+            remoteVersion = version,
+            remoteVersionCode = versionCode,
+            installedVersion = pkgInfoDataSource.getVersionName(packageName),
+            installedVersionCode = localVersionCode,
+            appStatus = compareVersionCodes(versionCode, localVersionCode),
+            packageName = packageName,
+            iconUrl = iconUrl,
+            changelog = changelog,
+            url = url,
+            versions = versions,
+            themes = themes,
+            languages = languages,
+            installationOptions = getInstallationOptions(name, themes, versions, languages)
+        )
+    }
 
-    private fun compareVersionCodes(remote: Int?, local: Int?) =
-        if (local != null && remote != null) {
-            when {
-                remote > local -> AppStatus.Update
-                remote <= local -> AppStatus.Reinstall
-                else -> AppStatus.Install
-            }
-        } else {
-            AppStatus.Install
+    private fun compareVersionCodes(
+        remote: Int?,
+        local: Int?
+    ) = if (local != null && remote != null) {
+        when {
+            remote > local -> AppStatus.Update
+            remote <= local -> AppStatus.Reinstall
+            else -> AppStatus.Install
         }
+    } else {
+        AppStatus.Install
+    }
 
     private fun getInstallationOptions(
         appName: String,

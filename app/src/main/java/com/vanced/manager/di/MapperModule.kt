@@ -3,7 +3,7 @@ package com.vanced.manager.di
 import android.content.Context
 import com.vanced.manager.domain.datasource.PackageInformationDataSource
 import com.vanced.manager.network.model.AppDtoMapper
-import com.vanced.manager.network.model.JsonDtoMapper
+import com.vanced.manager.network.model.DataDtoMapper
 import org.koin.dsl.module
 
 val mapperModule = module {
@@ -15,9 +15,7 @@ val mapperModule = module {
 
     fun provideJsonMapper(
         appDtoMapper: AppDtoMapper
-    ): JsonDtoMapper = JsonDtoMapper(
-        appDtoMapper = appDtoMapper
-    )
+    ) = DataDtoMapper(appDtoMapper)
 
     single { provideAppMapper(get(), get()) }
     single { provideJsonMapper(get()) }
