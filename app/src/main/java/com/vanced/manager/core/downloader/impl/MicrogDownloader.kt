@@ -4,6 +4,7 @@ import android.content.Context
 import com.vanced.manager.core.downloader.api.MicrogAPI
 import com.vanced.manager.core.downloader.base.AppDownloader
 import com.vanced.manager.core.downloader.util.DownloadStatus
+import com.vanced.manager.core.downloader.util.getMicrogPath
 import java.io.File
 
 class MicrogDownloader(
@@ -43,8 +44,7 @@ class MicrogDownloader(
     }
 
     override fun getSavedFilePath(): String {
-        val directory =
-            File(context.getExternalFilesDir("microg")!!.path)
+        val directory = File(getMicrogPath(context))
 
         if (!directory.exists())
             directory.mkdirs()
