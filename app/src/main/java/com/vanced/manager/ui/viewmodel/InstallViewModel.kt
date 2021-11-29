@@ -74,6 +74,11 @@ class InstallViewModel(
         }
     }
 
+    fun clear() {
+        logs.clear()
+        status = Status.Idle
+    }
+
     private suspend fun downloadApp(
         appName: String,
         appVersions: List<String>?,
@@ -130,11 +135,6 @@ class InstallViewModel(
 
     private fun log(data: Log) {
         logs.add(data)
-    }
-
-    private fun clear() {
-        logs.clear()
-        status = Status.Idle
     }
 
 }

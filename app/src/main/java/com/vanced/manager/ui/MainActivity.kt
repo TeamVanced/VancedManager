@@ -140,6 +140,7 @@ class MainActivity : ComponentActivity() {
                                     appVersions = screen.appVersions,
                                     viewModel = installViewModel,
                                     onFinishClick = {
+                                        installViewModel.clear()
                                         backStack.newRoot(Screen.Home)
                                     }
                                 )
