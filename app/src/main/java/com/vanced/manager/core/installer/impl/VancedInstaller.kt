@@ -1,7 +1,7 @@
 package com.vanced.manager.core.installer.impl
 
 import android.content.Context
-import com.vanced.manager.core.downloader.util.getVancedPath
+import com.vanced.manager.core.downloader.util.getVancedYoutubePath
 import com.vanced.manager.core.installer.base.AppInstaller
 import com.vanced.manager.core.installer.util.installSplitApp
 import com.vanced.manager.core.preferences.holder.managerVariantPref
@@ -18,7 +18,7 @@ class VancedInstaller(
     ) {
         val absoluteVersion = getLatestOrProvidedAppVersion(vancedVersionPref, appVersions)
 
-        val apks = File(getVancedPath(absoluteVersion, managerVariantPref, context))
+        val apks = File(getVancedYoutubePath(absoluteVersion, managerVariantPref, context))
             .listFiles { file ->
                 file.extension == "apk"
             }

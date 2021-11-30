@@ -26,7 +26,7 @@ val downloaderModule = module {
         context: Context,
     ) = MicrogDownloader(microgAPI, context)
 
-    factory { provideVancedDownloader(get(), get()) }
-    factory { provideMusicDownloader(get(), get()) }
-    factory { provideMicrogDownloader(get(), get()) }
+    single { provideVancedDownloader(get(), get()) }
+    single { provideMusicDownloader(get(), get()) }
+    single { provideMicrogDownloader(get(), get()) }
 }

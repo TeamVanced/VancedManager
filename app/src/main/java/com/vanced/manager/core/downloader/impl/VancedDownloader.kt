@@ -4,7 +4,7 @@ import android.content.Context
 import com.vanced.manager.core.downloader.api.VancedAPI
 import com.vanced.manager.core.downloader.base.AppDownloader
 import com.vanced.manager.core.downloader.util.DownloadStatus
-import com.vanced.manager.core.downloader.util.getVancedMusicPath
+import com.vanced.manager.core.downloader.util.getVancedYoutubePath
 import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.core.preferences.holder.vancedLanguagesPref
 import com.vanced.manager.core.preferences.holder.vancedThemePref
@@ -65,7 +65,7 @@ class VancedDownloader(
     }
 
     override fun getSavedFilePath(): String {
-        val directory = File(getVancedMusicPath(absoluteVersion, managerVariantPref, context))
+        val directory = File(getVancedYoutubePath(absoluteVersion, managerVariantPref, context))
 
         if (!directory.exists())
             directory.mkdirs()

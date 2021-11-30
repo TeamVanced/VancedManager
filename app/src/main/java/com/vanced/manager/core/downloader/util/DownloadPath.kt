@@ -2,7 +2,7 @@ package com.vanced.manager.core.downloader.util
 
 import android.content.Context
 
-fun getVancedPath(
+fun getVancedYoutubePath(
     version: String,
     variant: String,
     context: Context
