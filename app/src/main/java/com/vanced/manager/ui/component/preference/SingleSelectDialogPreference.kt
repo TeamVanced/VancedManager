@@ -14,7 +14,7 @@ import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.widget.list.RadiobuttonItem
 
 @Composable
-fun RadiobuttonDialogPreference(
+fun SingleSelectDialogPreference(
     preferenceTitle: String,
     preferenceDescription: String,
     isDialogVisible: Boolean,
@@ -51,9 +51,10 @@ fun RadiobuttonDialogPreference(
                 val (title, key) = button
                 RadiobuttonItem(
                     text = title,
-                    tag = key,
-                    isSelected = currentSelectedKey == key,
-                    onSelect = onItemClick
+                    selected = currentSelectedKey == key,
+                    onClick = {
+                        onItemClick(key)
+                    }
                 )
             }
         }

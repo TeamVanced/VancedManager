@@ -4,14 +4,14 @@ import androidx.compose.runtime.*
 import com.vanced.manager.R
 import com.vanced.manager.core.preferences.RadioButtonPreference
 import com.vanced.manager.core.preferences.holder.managerThemePref
-import com.vanced.manager.ui.component.preference.RadiobuttonDialogPreference
+import com.vanced.manager.ui.component.preference.SingleSelectDialogPreference
 import com.vanced.manager.ui.resources.managerString
 
 @Composable
 fun ThemeSettingsItem() {
     var showDialog by remember { mutableStateOf(false) }
     var selectedKey by remember { mutableStateOf(managerThemePref) }
-    RadiobuttonDialogPreference(
+    SingleSelectDialogPreference(
         preferenceTitle = managerString(stringId = R.string.settings_preference_theme_title),
         preferenceDescription = managerThemePref,
         isDialogVisible = showDialog,

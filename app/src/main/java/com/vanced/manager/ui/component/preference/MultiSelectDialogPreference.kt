@@ -14,7 +14,7 @@ import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.widget.list.CheckboxItem
 
 @Composable
-fun CheckboxDialogPreference(
+fun MultiSelectDialogPreference(
     preferenceTitle: String,
     preferenceDescription: String,
     isDialogVisible: Boolean,
@@ -51,8 +51,8 @@ fun CheckboxDialogPreference(
                 val (title, key) = button
                 CheckboxItem(
                     text = title,
-                    isChecked = currentSelectedKeys.contains(key),
-                    onCheck = { isChecked ->
+                    checked = currentSelectedKeys.contains(key),
+                    onCheckedChange = { isChecked ->
                         onItemCheckChange(isChecked, key)
                     }
                 )

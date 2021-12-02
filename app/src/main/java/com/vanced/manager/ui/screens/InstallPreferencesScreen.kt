@@ -117,8 +117,8 @@ fun InstallPreferencesScreen(
                                         CheckboxItem(
                                             modifier = Modifier.fillMaxWidth(),
                                             text = item.displayText(item.key),
-                                            isChecked = preference.contains(item.key),
-                                            onCheck = {
+                                            checked = preference.contains(item.key),
+                                            onCheckedChange = {
                                                 if (it) {
                                                     installationOption.addOption(item.key)
                                                 } else {
@@ -134,11 +134,10 @@ fun InstallPreferencesScreen(
                                         RadiobuttonItem(
                                             modifier = Modifier.fillMaxWidth(),
                                             text = item.displayText(item.key),
-                                            isSelected = preference == item.key,
-                                            onSelect = {
+                                            selected = preference == item.key,
+                                            onClick = {
                                                 installationOption.setOption(item.key)
                                             },
-                                            tag = item.key
                                         )
                                     }
                                 }

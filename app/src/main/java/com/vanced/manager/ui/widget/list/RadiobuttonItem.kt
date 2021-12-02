@@ -10,14 +10,12 @@ import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.text.ManagerText
 
 @Composable
-fun <T> RadiobuttonItem(
+fun RadiobuttonItem(
     text: String,
-    tag: T,
-    isSelected: Boolean,
-    onSelect: (tag: T) -> Unit,
+    selected: Boolean,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val onClick = { onSelect(tag) }
     ManagerSelectableListItem(
         modifier = modifier
             .managerClickable(onClick = onClick),
@@ -30,8 +28,8 @@ fun <T> RadiobuttonItem(
         },
         trailing = {
             RadioButton(
-                selected = isSelected,
-                onClick = onClick
+                selected = selected,
+                onClick = null
             )
         }
     )

@@ -12,15 +12,15 @@ import com.vanced.manager.ui.component.text.ManagerText
 @Composable
 fun CheckboxItem(
     text: String,
-    isChecked: Boolean,
-    onCheck: (Boolean) -> Unit,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val toggle = { onCheck(!isChecked) }
-
     ManagerSelectableListItem(
         modifier = modifier
-            .managerClickable(onClick = toggle),
+            .managerClickable(onClick = {
+                onCheckedChange(!checked)
+            }),
         title = {
             ManagerText(
                 text = text,
@@ -30,10 +30,8 @@ fun CheckboxItem(
         },
         trailing = {
             Checkbox(
-                checked = isChecked,
-                onCheckedChange = {
-                    toggle()
-                }
+                checked = checked,
+                onCheckedChange = null
             )
         }
     )
