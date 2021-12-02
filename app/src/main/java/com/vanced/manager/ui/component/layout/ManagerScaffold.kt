@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 @Composable
 fun ManagerScaffold(
     modifier: Modifier = Modifier,
-    scaffoldState: ScaffoldState = rememberScaffoldState(),
     topBar: @Composable () -> Unit = {},
     floatingActionButton: @Composable () -> Unit = {},
     floatingActionButtonPosition: FabPosition = FabPosition.End,
@@ -22,7 +21,6 @@ fun ManagerScaffold(
 //    ) {
     Scaffold(
         modifier = modifier,
-        scaffoldState = scaffoldState,
         topBar = topBar,
         floatingActionButton = floatingActionButton,
         floatingActionButtonPosition = floatingActionButtonPosition,

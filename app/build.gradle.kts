@@ -4,6 +4,8 @@ plugins {
     id("kotlin-parcelize")
 }
 
+val composeVersion = "1.1.0-beta04"
+
 android {
     compileSdk = 31
 
@@ -49,7 +51,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.0-alpha06"
+        kotlinCompilerExtensionVersion = composeVersion
     }
 
 }
@@ -82,7 +84,7 @@ dependencies {
 
     // AndroidX
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("androidx.appcompat:appcompat:1.4.0")
     implementation("androidx.browser:browser:1.4.0")
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("androidx.activity:activity-compose:1.4.0")
@@ -92,13 +94,12 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
 
     // Compose
-    val composeVersion = "1.1.0-beta03"
     implementation("androidx.compose.compiler:compiler:$composeVersion")
     implementation("androidx.compose.foundation:foundation:$composeVersion")
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.material3:material3:1.0.0-alpha01")
+    implementation("androidx.compose.material3:material3:1.0.0-alpha02")
     implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.ui:ui-util:$composeVersion")

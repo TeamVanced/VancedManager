@@ -1,15 +1,13 @@
 package com.vanced.manager.ui.widget.list
 
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.vanced.manager.ui.component.color.managerTextColor
 import com.vanced.manager.ui.component.list.ManagerSelectableListItem
 import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.text.ManagerText
-import com.vanced.manager.ui.widget.radiobutton.ManagerAnimatedRadiobutton
 
 @Composable
 fun <T> RadiobuttonItem(
@@ -31,10 +29,8 @@ fun <T> RadiobuttonItem(
             )
         },
         trailing = {
-            ManagerAnimatedRadiobutton(
-                size = 24.dp,
-                shape = CircleShape,
-                isSelected = isSelected,
+            RadioButton(
+                selected = isSelected,
                 onClick = onClick
             )
         }
