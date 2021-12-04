@@ -67,73 +67,90 @@ class AppDtoMapper(
         appThemes: List<String>?,
         appVersions: List<String>?,
         appLanguages: List<String>?,
-    ) = when (appName) {
-        VANCED_NAME -> listOf(
-            InstallationOption.SingleSelect(
-                titleId = R.string.app_installation_options_theme,
-                getOption = { vancedThemePref },
-                setOption = {
-                    vancedThemePref = it
-                },
-                items = appThemes?.map { theme ->
-                    InstallationOptionItem(
-                        displayText = {
-                            theme.replaceFirstChar {
-                                it.titlecase(Locale.getDefault())
-                            }
+    ) : List<InstallationOption>? = when (appName) {
+        VANCED_NAME -> buildList {
+            if (appThemes != null) {
+                add(
+                    InstallationOption.SingleSelect(
+                        titleId = R.string.app_installation_options_theme,
+                        getOption = { vancedThemePref },
+                        setOption = {
+                            vancedThemePref = it
                         },
-                        key = theme
-                    )
-                } ?: emptyList(),
-            ),
-            InstallationOption.SingleSelect(
-                titleId = R.string.app_installation_options_version,
-                getOption = { vancedVersionPref },
-                setOption = {
-                    vancedVersionPref = it
-                },
-                items = appVersions?.map { version ->
-                    InstallationOptionItem(
-                        displayText = { "v$version" },
-                        key = version
-                    )
-                }?.plus(latestVersionRadioButton)?.reversed() ?: emptyList(),
-            ),
-            InstallationOption.MultiSelect(
-                titleId = R.string.app_installation_options_language,
-                getOption = { vancedLanguagesPref },
-                addOption = {
-                    vancedLanguagesPref = vancedLanguagesPref + it
-                },
-                removeOption = {
-                    vancedLanguagesPref = vancedLanguagesPref - it
-                },
-                items = appLanguages?.map { language ->
-                    InstallationOptionItem(
-                        displayText = {
-                            val locale = Locale(it)
-                            locale.getDisplayName(locale)
+                        items = appThemes.map { theme ->
+                            InstallationOptionItem(
+                                displayText = {
+                                    theme.replaceFirstChar {
+                                        it.titlecase(Locale.getDefault())
+                                    }
+                                },
+                                key = theme
+                            )
                         },
-                        key = language
                     )
-                } ?: emptyList(),
-            ),
-        )
-        MUSIC_NAME -> listOf(
-            InstallationOption.SingleSelect(
-                titleId = R.string.app_installation_options_version,
-                getOption = { musicVersionPref },
-                setOption = {
-                    musicVersionPref = it
-                },
-                items = appVersions?.map { version ->
-                    InstallationOptionItem(
-                        displayText = { version },
-                        key = version
+                )
+            }
+            if (appVersions != null) {
+                add(
+                    InstallationOption.SingleSelect(
+                        titleId = R.string.app_installation_options_version,
+                        getOption = { vancedVersionPref },
+                        setOption = {
+                            vancedVersionPref = it
+                        },
+                        items = (appVersions.map { version ->
+                            InstallationOptionItem(
+                                displayText = { "v$version" },
+                                key = version
+                            )
+                        } + latestVersionRadioButton).reversed(),
                     )
-                } ?: emptyList(),
-            )
-        )
+                )
+            }
+            if (appLanguages != null) {
+                add(
+                    InstallationOption.MultiSelect(
+                        titleId = R.string.app_installation_options_language,
+                        getOption = { vancedLanguagesPref },
+                        addOption = {
+                            vancedLanguagesPref = vancedLanguagesPref + it
+                        },
+                        removeOption = {
+                            vancedLanguagesPref = vancedLanguagesPref - it
+                        },
+                        items = appLanguages.map { language ->
+                            InstallationOptionItem(
+                                displayText = {
+                                    val locale = Locale(it)
+                                    locale.getDisplayName(locale)
+                                },
+                                key = language
+                            )
+                        },
+                    )
+                )
+            }
+        }
+        MUSIC_NAME -> buildList {
+            if (appVersions != null) {
+                add(
+                    InstallationOption.SingleSelect(
+                        titleId = R.string.app_installation_options_version,
+                        getOption = { musicVersionPref },
+                        setOption = {
+                            musicVersionPref = it
+                        },
+                        items = (appVersions.map { version ->
+                            InstallationOptionItem(
+                                displayText = { "v$version" },
+                                key = version
+                            )
+                        } + latestVersionRadioButton).reversed(),
+                    )
+                )
+            }
+
+        }
         else -> null
     }
 }
