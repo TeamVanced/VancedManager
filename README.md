@@ -44,6 +44,6 @@ chmod +x gradlew
 ```
 
 ## Vanced FAQ
-Vanced FAQ (from the faq branch) now available on website!
+Vanced FAQ (from the faq branch) now available on the website!
 
 <a href='https://vancedapp.com/'><img alt='Get it form website' height="85" src='https://vancedapp.com/static/media/logo.866a4e0b.svg'/></a>
