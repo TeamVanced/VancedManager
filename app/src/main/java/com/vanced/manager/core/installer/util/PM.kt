@@ -13,29 +13,32 @@ import java.io.FileInputStream
 
 private const val byteArraySize = 1024 * 1024 // Because 1,048,576 is not readable
 
-fun installApp(apk: File, context: Context) {
-    val packageInstaller = context.packageManager.packageInstaller
-    val session =
-        packageInstaller.openSession(packageInstaller.createSession(sessionParams))
-    writeApkToSession(apk, session)
-    session.commit(context.installIntentSender)
-    session.close()
-}
+object PM {
 
-fun installSplitApp(apks: Array<File>, context: Context) {
-    val packageInstaller = context.packageManager.packageInstaller
-    val session =
-        packageInstaller.openSession(packageInstaller.createSession(sessionParams))
-    for (apk in apks) {
+    fun installApp(apk: File, context: Context) {
+        val packageInstaller = context.packageManager.packageInstaller
+        val session =
+            packageInstaller.openSession(packageInstaller.createSession(sessionParams))
         writeApkToSession(apk, session)
+        session.commit(context.installIntentSender)
+        session.close()
     }
-    session.commit(context.installIntentSender)
-    session.close()
-}
 
-fun uninstallPackage(pkg: String, context: Context) {
-    val packageInstaller = context.packageManager.packageInstaller
-    packageInstaller.uninstall(pkg, context.uninstallIntentSender)
+    fun installSplitApp(apks: Array<File>, context: Context) {
+        val packageInstaller = context.packageManager.packageInstaller
+        val session =
+            packageInstaller.openSession(packageInstaller.createSession(sessionParams))
+        for (apk in apks) {
+            writeApkToSession(apk, session)
+        }
+        session.commit(context.installIntentSender)
+        session.close()
+    }
+
+    fun uninstallPackage(pkg: String, context: Context) {
+        val packageInstaller = context.packageManager.packageInstaller
+        packageInstaller.uninstall(pkg, context.uninstallIntentSender)
+    }
 }
 
 private fun writeApkToSession(

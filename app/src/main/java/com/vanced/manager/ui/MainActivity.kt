@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
                 AppInstallService.APP_INSTALL_ACTION -> {
                     installViewModel.postInstallStatus(
                         pmStatus = intent.getIntExtra(AppInstallService.EXTRA_INSTALL_STATUS, -999),
-                        extra = intent.getStringExtra(AppInstallService.EXTRA_INSTALL_EXTRA)!!,
+                        extra = intent.getStringExtra(AppInstallService.EXTRA_INSTALL_STATUS_MESSAGE)!!,
                     )
                     mainViewModel.fetch()
                 }

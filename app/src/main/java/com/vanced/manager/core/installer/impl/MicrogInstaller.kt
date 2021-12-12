@@ -3,7 +3,7 @@ package com.vanced.manager.core.installer.impl
 import android.content.Context
 import com.vanced.manager.core.downloader.util.getMicrogPath
 import com.vanced.manager.core.installer.base.AppInstaller
-import com.vanced.manager.core.installer.util.installApp
+import com.vanced.manager.core.installer.util.PM
 import java.io.File
 
 class MicrogInstaller(
@@ -15,7 +15,11 @@ class MicrogInstaller(
     ) {
         val musicApk = File(getMicrogPath(context) + "/microg.apk")
 
-        installApp(musicApk, context)
+        PM.installApp(musicApk, context)
+    }
+
+    override fun installRoot(appVersions: List<String>?) {
+        throw IllegalAccessException("Vanced microG does not have a root installer")
     }
 
 }

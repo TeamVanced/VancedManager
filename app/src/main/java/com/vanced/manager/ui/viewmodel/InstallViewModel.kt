@@ -63,14 +63,22 @@ class InstallViewModel(
     }
 
     fun postInstallStatus(pmStatus: Int, extra: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            if (pmStatus == PackageInstaller.STATUS_SUCCESS) {
-                status = Status.Installed
-                log(Log.Success("Successfully installed"))
-            } else {
-                status = Status.Failure
-                log(Log.Error("Failed to install app", extra))
-            }
+        if (pmStatus == PackageInstaller.STATUS_SUCCESS) {
+            status = Status.Installed
+            log(Log.Success("Successfully installed"))
+        } else {
+            status = Status.Failure
+            log(Log.Error("Failed to install app", extra))
+        }
+    }
+
+    fun postInstallStatusRoot(pmStatus: Int, extra: String) {
+        if (pmStatus == PackageInstaller.STATUS_SUCCESS) {
+            status = Status.Installed
+            log(Log.Success("Successfully installed"))
+        } else {
+            status = Status.Failure
+            log(Log.Error("Failed to install app", extra))
         }
     }
 

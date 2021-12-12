@@ -26,7 +26,7 @@ class AppInstallService : Service() {
                 sendBroadcast(Intent().apply {
                     action = APP_INSTALL_ACTION
                     putExtra(EXTRA_INSTALL_STATUS, extraStatus)
-                    putExtra(EXTRA_INSTALL_EXTRA, extraStatusMessage)
+                    putExtra(EXTRA_INSTALL_STATUS_MESSAGE, extraStatusMessage)
                 })
             }
         }
@@ -40,7 +40,7 @@ class AppInstallService : Service() {
         const val APP_INSTALL_ACTION = "APP_INSTALL_ACTION"
 
         const val EXTRA_INSTALL_STATUS = "EXTRA_INSTALL_STATUS"
-        const val EXTRA_INSTALL_EXTRA = "EXTRA_INSTALL_EXTRA"
+        const val EXTRA_INSTALL_STATUS_MESSAGE = "EXTRA_INSTALL_STATUS_MESSAGE"
     }
 
 }

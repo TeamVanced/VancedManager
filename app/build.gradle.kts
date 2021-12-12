@@ -123,6 +123,11 @@ dependencies {
 
     implementation("com.github.skydoves:orchestra-colorpicker:1.1.0")
 
+    val libsuVersion = "3.1.2"
+    implementation("com.github.topjohnwu.libsu:core:$libsuVersion")
+    implementation("com.github.topjohnwu.libsu:io:$libsuVersion")
+    implementation("com.github.topjohnwu.libsu:busybox:$libsuVersion")
+
     val koinVersion = "3.1.3"
     implementation("io.insert-koin:koin-android:$koinVersion")
     implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
