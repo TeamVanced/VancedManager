@@ -5,11 +5,12 @@ import com.topjohnwu.superuser.io.SuFile
 import com.vanced.manager.core.util.errString
 import com.vanced.manager.core.util.outString
 import java.io.File
+import java.io.IOException
 
 class ManagerSuFile : SuFile {
 
     sealed class SuFileResult {
-        data class Success<out V>(val result: V? = null) : SuFileResult()
+        data class Success(val output: String) : SuFileResult()
         data class Error(val error: String) : SuFileResult()
     }
 
@@ -27,6 +28,12 @@ class ManagerSuFile : SuFile {
         return SuFileResult.Success(cmd.outString)
     }
 
-    fun deleteResult() = cmd("rm -f @@ || rmdir -f @@")
+    override fun delete(): Boolean {
+        val result = cmd("rm -f @@ || rmdir -f @@")
+        if (result is SuFileResult.Error)
+            throw SUIOException(result.error)
+
+        return true
+    }
 
 }
