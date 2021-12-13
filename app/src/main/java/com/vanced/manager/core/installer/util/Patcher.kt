@@ -3,6 +3,8 @@ package com.vanced.manager.core.installer.util
 import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.topjohnwu.superuser.io.SuFileOutputStream
+import com.vanced.manager.core.io.ManagerSuFile
+import com.vanced.manager.core.io.SUIOException
 import com.vanced.manager.core.util.errString
 import java.io.File
 import java.io.IOException
@@ -93,27 +95,6 @@ object Patcher {
             serviceDPath = "",
             patchPath = ""
         )
-
-    //TODO return proper error if destroying was unsuccessful
-    private fun cleanPatchFiles(
-        postFsPath: String,
-        serviceDPath: String,
-        patchPath: String,
-    ): PMRootStatus<Nothing> {
-        val postFs = SuFile(postFsPath)
-        if (postFs.exists() && !postFs.delete())
-            return PMRootStatus.Error(PMRootStatusType.SCRIPT_FAILED_DESTROY_POST_FS, "")
-
-        val serviceD = SuFile(serviceDPath)
-        if (serviceD.exists() && !serviceD.delete())
-            return PMRootStatus.Error(PMRootStatusType.SCRIPT_FAILED_DESTROY_SERVICE_D, "")
-
-        val patch = SuFile(patchPath)
-        if (patch.exists() && !patch.delete())
-            return PMRootStatus.Error(PMRootStatusType.PATCH_FAILED_DESTROY, "")
-
-        return PMRootStatus.Success()
-    }
 }
 
 private fun getAppPatchPath(app: String) = "${getAppPatchFolderPath(app)}/base.apk"
@@ -137,6 +118,30 @@ private fun getPostFsDataScript(pkg: String) =
     while read line; do echo \${'$'}{line} | grep $pkg | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts
     """.trimIndent()
 
+private fun cleanPatchFiles(
+    postFsPath: String,
+    serviceDPath: String,
+    patchPath: String,
+): PMRootStatus<Nothing> {
+    val files = mapOf(
+        postFsPath to PMRootStatusType.SCRIPT_FAILED_DESTROY_POST_FS,
+        serviceDPath to PMRootStatusType.SCRIPT_FAILED_DESTROY_SERVICE_D,
+        patchPath to PMRootStatusType.PATCH_FAILED_DESTROY,
+    )
+
+    for ((filePath, statusType) in files) {
+        try {
+            with(ManagerSuFile(filePath)) {
+                if (exists()) delete()
+            }
+        } catch (e: SUIOException) {
+            return PMRootStatus.Error(statusType, e.stackTraceToString())
+        }
+    }
+
+    return PMRootStatus.Success()
+}
+
 private inline fun copyScriptToDestination(
     scriptDestination: String,
     script: String,
@@ -144,8 +149,7 @@ private inline fun copyScriptToDestination(
 ) {
     val scriptFile = SuFile(scriptDestination)
         .apply {
-            if (!exists())
-                createNewFile()
+            if (!exists()) createNewFile()
         }
 
     try {
