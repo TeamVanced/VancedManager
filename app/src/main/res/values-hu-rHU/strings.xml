@@ -114,7 +114,7 @@ Akarod telepíteni?</string>
     <string name="installation_downgrade">A telepítés nem sikerült, mert a felhasználó, régebbi verzióra próbált frissíteni. Távolítsa el az eredeti alkalmazás frissítéseit, majd próbálja újra.</string>
     <string name="installation_failed">A telepítés ismeretlen ok miatt meghiúsult, kérjük csatlakozzon a Telegram vagy a Discord csatornánkhoz további támogatásért. Kérjük mellékeljen egy olyan képernyőképet is, ami a Haladó menüben készült</string>
     <string name="installation_incompatible">A telepítés nem sikerült, mert a telepítő fájl nem kompatibilis a készülékével. Kérjük törölje a letöltött fájlokat a Beállításokban és próbálja újra.</string>
-    <string name="installation_invalid">A telepítés nem sikerült, mert az apk fájlok sérültek. Kérjük próbálja újra.</string>
+    <string name="installation_invalid">A telepítés nem sikerült, mert az APK fájlok sérültek. Kérjük próbálja újra.</string>
     <string name="installation_miui">A telepítés nem sikerült, mert a MIUI Optimalizáció engedélyezve van. Kapcsolja ki a MIUI Optimalizációt és próbálja újra.</string>
     <string name="installation_signature">A telepítés nem sikerült, mert az apk aláírás ellenőrzés engedélyezve van.
 Kapcsolja ki az apk aláírás ellenőrzését és próbálja újra.</string>
