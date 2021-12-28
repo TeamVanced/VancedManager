@@ -13,27 +13,29 @@ object Patcher {
 
     fun setupScript(
         app: String,
-        pkg: String,
+        stockPackage: String,
         stockPath: String,
-    ): PMRootStatus<Nothing> {
+    ): PMRootResult<Nothing> {
         val postFsDataScriptPath = getAppPostFsScriptPath(app)
         val serviceDScriptPath = getAppServiceDScriptPath(app)
 
-        val postFsDataScript = getPostFsDataScript(pkg)
+        val postFsDataScript = getPostFsDataScript(stockPackage)
         val serviceDScript = getServiceDScript(getAppPatchPath(app), stockPath)
 
-        copyScriptToDestination(postFsDataScriptPath, postFsDataScript) { error ->
-            return PMRootStatus.Error(PMRootStatusType.SCRIPT_FAILED_SETUP_POST_FS, error)
-        }
+        val copyServiceDScript = copyScriptToDestination(postFsDataScript, postFsDataScriptPath)
+        if (copyServiceDScript.isFailure)
+            return PMRootResult.Error(PMRootStatus.SCRIPT_FAILED_SETUP_POST_FS,
+                copyServiceDScript.exceptionOrNull()!!.stackTraceToString())
 
-        copyScriptToDestination(serviceDScriptPath, serviceDScript) { error ->
-            return PMRootStatus.Error(PMRootStatusType.SCRIPT_FAILED_SETUP_SERVICE_D, error)
-        }
+        val copyPostFsDataScript = copyScriptToDestination(serviceDScript, serviceDScriptPath)
+        if (copyPostFsDataScript.isFailure)
+            return PMRootResult.Error(PMRootStatus.SCRIPT_FAILED_SETUP_SERVICE_D,
+                copyPostFsDataScript.exceptionOrNull()!!.stackTraceToString())
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun movePatchToDataAdb(patchPath: String, app: String): PMRootStatus<Nothing> {
+    fun movePatchToDataAdb(patchPath: String, app: String): PMRootResult<Nothing> {
         val newPatchPath = getAppPatchPath(app)
 
         val patchApk = File(patchPath)
@@ -47,38 +49,38 @@ object Patcher {
         try {
             patchApk.copyTo(newPatchApk)
         } catch (e: IOException) {
-            return PMRootStatus.Error(PMRootStatusType.PATCH_FAILED_COPY, e.stackTraceToString())
+            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_COPY, e.stackTraceToString())
         }
 
         val chmod = Shell.su("chmod", "644", newPatchPath).exec()
         if (!chmod.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.PATCH_FAILED_CHMOD, chmod.errString)
+            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_CHMOD, chmod.errString)
 
         val chown = Shell.su("chown", "system:system", newPatchPath).exec()
         if (!chmod.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.PATCH_FAILED_CHOWN, chown.errString)
+            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_CHOWN, chown.errString)
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun chconPatch(app: String): PMRootStatus<Nothing> {
+    fun chconPatch(app: String): PMRootResult<Nothing> {
         val chcon = Shell.su("chcon u:object_r:apk_data_file:s0 ${getAppPatchPath(app)}").exec()
         if (!chcon.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.PATCH_FAILED_CHCON, chcon.errString)
+            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_CHCON, chcon.errString)
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun linkPatch(app: String, pkg: String, stockPath: String): PMRootStatus<Nothing> {
-        val umount = Shell.su("""for i in ${'$'}(ls /data/app/ | grep $pkg | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
+    fun linkPatch(app: String, stockPackage: String, stockPath: String): PMRootResult<Nothing> {
+        val umount = Shell.su("""for i in ${'$'}(ls /data/app/ | grep $stockPackage | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """).exec()
         if (!umount.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.LINK_FAILED_UNMOUNT, umount.errString)
+            return PMRootResult.Error(PMRootStatus.LINK_FAILED_UNMOUNT, umount.errString)
 
         val mount = Shell.su("su", "-mm", "-c", """"mount -o bind ${getAppPatchPath(app)} $stockPath"""").exec()
         if (!mount.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.LINK_FAILED_MOUNT, mount.errString)
+            return PMRootResult.Error(PMRootStatus.LINK_FAILED_MOUNT, mount.errString)
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
     fun destroyPatch(app: String) =
@@ -112,42 +114,41 @@ private fun getServiceDScript(patchPath: String, stockPath: String) =
     mount -o bind $patchPath $stockPath
     """.trimIndent()
 
-private fun getPostFsDataScript(pkg: String) =
+private fun getPostFsDataScript(stockPackage: String) =
     """
     #!/system/bin/sh
-    while read line; do echo \${'$'}{line} | grep $pkg | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts
+    while read line; do echo \${'$'}{line} | grep $stockPackage | awk '{print \${'$'}2}' | xargs umount -l; done< /proc/mounts
     """.trimIndent()
 
 private fun cleanPatchFiles(
     postFsPath: String,
     serviceDPath: String,
     patchPath: String,
-): PMRootStatus<Nothing> {
+): PMRootResult<Nothing> {
     val files = mapOf(
-        postFsPath to PMRootStatusType.SCRIPT_FAILED_DESTROY_POST_FS,
-        serviceDPath to PMRootStatusType.SCRIPT_FAILED_DESTROY_SERVICE_D,
-        patchPath to PMRootStatusType.PATCH_FAILED_DESTROY,
+        postFsPath to PMRootStatus.SCRIPT_FAILED_DESTROY_POST_FS,
+        serviceDPath to PMRootStatus.SCRIPT_FAILED_DESTROY_SERVICE_D,
+        patchPath to PMRootStatus.PATCH_FAILED_DESTROY,
     )
 
-    for ((filePath, statusType) in files) {
+    for ((filePath, errorStatusType) in files) {
         try {
             with(ManagerSuFile(filePath)) {
                 if (exists()) delete()
             }
         } catch (e: SUIOException) {
-            return PMRootStatus.Error(statusType, e.stackTraceToString())
+            return PMRootResult.Error(errorStatusType, e.stackTraceToString())
         }
     }
 
-    return PMRootStatus.Success()
+    return PMRootResult.Success()
 }
 
-private inline fun copyScriptToDestination(
-    scriptDestination: String,
+private fun copyScriptToDestination(
     script: String,
-    onError: (String) -> Unit
-) {
-    val scriptFile = SuFile(scriptDestination)
+    destination: String,
+): Result<Nothing?> {
+    val scriptFile = SuFile(destination)
         .apply {
             if (!exists()) createNewFile()
         }
@@ -159,9 +160,11 @@ private inline fun copyScriptToDestination(
         }
         val chmod = Shell.su("chmod", "744", scriptFile.absolutePath).exec()
         if (!chmod.isSuccess) {
-            onError(chmod.errString)
+            return Result.failure(Exception(chmod.errString))
         }
     } catch (e: IOException) {
-        onError(e.stackTraceToString())
+        return Result.failure(e)
     }
+
+    return Result.success(null)
 }

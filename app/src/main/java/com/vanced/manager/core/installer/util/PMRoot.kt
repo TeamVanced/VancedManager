@@ -10,10 +10,10 @@ import java.io.IOException
 
 object PMRoot {
 
-    fun installApp(apkPath: String): PMRootStatus<Nothing> {
+    fun installApp(apkPath: String): PMRootResult<Nothing> {
         val apk = File(apkPath)
-        val tmpApk = copyApkToTemp(apk) { error ->
-            return PMRootStatus.Error(PMRootStatusType.SESSION_FAILED_COPY, error)
+        val tmpApk = copyApkToTemp(apk).getOrElse { exception ->
+            return PMRootResult.Error(PMRootStatus.SESSION_FAILED_COPY, exception.stackTraceToString())
         }
 
         val install = Shell.su("pm", "install", "-r", tmpApk.absolutePath).exec()
@@ -22,27 +22,27 @@ object PMRoot {
 
         if (!install.isSuccess) {
             val errString = install.errString
-            return PMRootStatus.Error(getEnumForInstallFailed(errString), errString)
+            return PMRootResult.Error(getEnumForInstallFailed(errString), errString)
         }
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun installSplitApp(apkPaths: List<String>): PMRootStatus<Nothing> {
+    fun installSplitApp(apkPaths: List<String>): PMRootResult<Nothing> {
         val installCreate = Shell.su("pm", "install-create", "-r").exec()
 
         if (!installCreate.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.SESSION_FAILED_CREATE, installCreate.errString)
+            return PMRootResult.Error(PMRootStatus.SESSION_FAILED_CREATE, installCreate.errString)
 
         val sessionId = installCreate.outString
 
         if (sessionId.toIntOrNull() == null)
-            return PMRootStatus.Error(PMRootStatusType.SESSION_INVALID_ID, installCreate.errString)
+            return PMRootResult.Error(PMRootStatus.SESSION_INVALID_ID, installCreate.errString)
 
         for (apkPath in apkPaths) {
             val apk = File(apkPath)
-            val tmpApk = copyApkToTemp(apk) { error ->
-                return PMRootStatus.Error(PMRootStatusType.SESSION_FAILED_COPY, error)
+            val tmpApk = copyApkToTemp(apk).getOrElse { exception ->
+                return PMRootResult.Error(PMRootStatus.SESSION_FAILED_COPY, exception.stackTraceToString())
             }
 
             val installWrite =
@@ -52,62 +52,82 @@ object PMRoot {
             tmpApk.delete()
 
             if (!installWrite.isSuccess)
-                return PMRootStatus.Error(PMRootStatusType.SESSION_FAILED_WRITE, installWrite.errString)
+                return PMRootResult.Error(PMRootStatus.SESSION_FAILED_WRITE, installWrite.errString)
         }
 
         val installCommit = Shell.su("pm", "install-commit", sessionId).exec()
 
         if (!installCommit.isSuccess) {
             val errString = installCommit.errString
-            return PMRootStatus.Error(getEnumForInstallFailed(errString), errString)
+            return PMRootResult.Error(getEnumForInstallFailed(errString), errString)
         }
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun uninstallApp(pkg: String): PMRootStatus<Nothing> {
+    fun uninstallApp(pkg: String): PMRootResult<Nothing> {
         val uninstall = Shell.su("pm", "uninstall", pkg).exec()
 
         if (!uninstall.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.UNINSTALL_FAILED, uninstall.errString)
+            return PMRootResult.Error(PMRootStatus.UNINSTALL_FAILED, uninstall.errString)
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun setInstallerPackage(targetPkg: String, installerPkg: String): PMRootStatus<Nothing> {
+    fun setInstallerPackage(targetPkg: String, installerPkg: String): PMRootResult<Nothing> {
         val setInstaller = Shell.su("pm", "set-installer", targetPkg, installerPkg)
             .exec()
 
         if (!setInstaller.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.ACTION_FAILED_SET_INSTALLER, setInstaller.errString)
+            return PMRootResult.Error(PMRootStatus.ACTION_FAILED_SET_INSTALLER, setInstaller.errString)
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun forceStopApp(pkg: String): PMRootStatus<Nothing> {
+    fun forceStopApp(pkg: String): PMRootResult<Nothing> {
         val stopApp = Shell.su("am", "force-stop", pkg).exec()
 
         if (!stopApp.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.ACTION_FAILED_FORCE_STOP_APP, stopApp.errString)
+            return PMRootResult.Error(PMRootStatus.ACTION_FAILED_FORCE_STOP_APP, stopApp.errString)
 
-        return PMRootStatus.Success()
+        return PMRootResult.Success()
     }
 
-    fun getPackageDir(pkg: String): PMRootStatus<String> {
-        val delimeter = "path: "
-        val dumpsys = Shell.su("dumpsys", "package", pkg, "|", "grep", delimeter).exec()
+    fun getPackageVersionName(pkg: String): PMRootResult<String> {
+        val keyword = "versionName="
+        val dumpsys = Shell.su("dumpsys", "package", pkg, "|", "grep", keyword).exec()
 
         if (!dumpsys.isSuccess)
-            return PMRootStatus.Error(PMRootStatusType.ACTION_FAILED_GET_PACKAGE_DIR, dumpsys.errString)
+            return PMRootResult.Error(PMRootStatus.ACTION_FAILED_GET_PACKAGE_VERSION_NAME,
+                dumpsys.errString)
 
-        return PMRootStatus.Success(dumpsys.outString.removePrefix(delimeter))
+        return PMRootResult.Success(dumpsys.outString.removePrefix(keyword))
+    }
+
+    fun getPackageVersionCode(pkg: String): PMRootResult<Long> {
+        val keyword = "versionCode="
+        val dumpsys = Shell.su("dumpsys", "package", pkg, "|", "grep", keyword).exec()
+
+        if (!dumpsys.isSuccess)
+            return PMRootResult.Error(PMRootStatus.ACTION_FAILED_GET_PACKAGE_VERSION_CODE,
+                dumpsys.errString)
+
+        return PMRootResult.Success(dumpsys.outString.removePrefix(keyword).substringAfter("minSdk")
+            .toLong())
+    }
+
+    fun getPackageDir(pkg: String): PMRootResult<String> {
+        val keyword = "path: "
+        val dumpsys = Shell.su("dumpsys", "package", pkg, "|", "grep", keyword).exec()
+
+        if (!dumpsys.isSuccess)
+            return PMRootResult.Error(PMRootStatus.ACTION_FAILED_GET_PACKAGE_DIR, dumpsys.errString)
+
+        return PMRootResult.Success(dumpsys.outString.removePrefix(keyword))
     }
 }
 
-private inline fun copyApkToTemp(
-    apk: File,
-    onError: (String) -> Unit
-): SuFile {
+private fun copyApkToTemp(apk: File, ): Result<SuFile> {
     val tmpPath = "/data/local/tmp/${apk.name}"
 
     val tmpApk = SuFile(tmpPath).apply {
@@ -120,20 +140,20 @@ private inline fun copyApkToTemp(
             it.flush()
         }
     } catch (e: IOException) {
-        onError(e.stackTraceToString())
+        return Result.failure(e)
     }
 
-    return tmpApk
+    return Result.success(tmpApk)
 }
 
 private fun getEnumForInstallFailed(outString: String) =
     when {
-        outString.contains("INSTALL_FAILED_ABORTED") -> PMRootStatusType.INSTALL_FAILED_ABORTED
-        outString.contains("INSTALL_FAILED_ALREADY_EXISTS") -> PMRootStatusType.INSTALL_FAILED_ALREADY_EXISTS
-        outString.contains("INSTALL_FAILED_CPU_ABI_INCOMPATIBLE") -> PMRootStatusType.INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
-        outString.contains("INSTALL_FAILED_INSUFFICIENT_STORAGE") -> PMRootStatusType.INSTALL_FAILED_INSUFFICIENT_STORAGE
-        outString.contains("INSTALL_FAILED_INVALID_APK") -> PMRootStatusType.INSTALL_FAILED_INVALID_APK
-        outString.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> PMRootStatusType.INSTALL_FAILED_VERSION_DOWNGRADE
-        outString.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> PMRootStatusType.INSTALL_FAILED_PARSE_NO_CERTIFICATES
-        else -> PMRootStatusType.INSTALL_FAILED_UNKNOWN
+        outString.contains("INSTALL_FAILED_ABORTED") -> PMRootStatus.INSTALL_FAILED_ABORTED
+        outString.contains("INSTALL_FAILED_ALREADY_EXISTS") -> PMRootStatus.INSTALL_FAILED_ALREADY_EXISTS
+        outString.contains("INSTALL_FAILED_CPU_ABI_INCOMPATIBLE") -> PMRootStatus.INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
+        outString.contains("INSTALL_FAILED_INSUFFICIENT_STORAGE") -> PMRootStatus.INSTALL_FAILED_INSUFFICIENT_STORAGE
+        outString.contains("INSTALL_FAILED_INVALID_APK") -> PMRootStatus.INSTALL_FAILED_INVALID_APK
+        outString.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> PMRootStatus.INSTALL_FAILED_VERSION_DOWNGRADE
+        outString.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> PMRootStatus.INSTALL_FAILED_PARSE_NO_CERTIFICATES
+        else -> PMRootStatus.INSTALL_FAILED_UNKNOWN
     }

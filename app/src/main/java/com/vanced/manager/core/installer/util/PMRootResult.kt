@@ -1,8 +1,10 @@
 package com.vanced.manager.core.installer.util
 
-enum class PMRootStatusType {
+enum class PMRootStatus {
     ACTION_FAILED_SET_INSTALLER,
     ACTION_FAILED_GET_PACKAGE_DIR,
+    ACTION_FAILED_GET_PACKAGE_VERSION_NAME,
+    ACTION_FAILED_GET_PACKAGE_VERSION_CODE,
     ACTION_FAILED_FORCE_STOP_APP,
 
     INSTALL_SUCCESSFUL,
@@ -38,35 +40,20 @@ enum class PMRootStatusType {
     UNINSTALL_FAILED,
 }
 
-sealed class PMRootStatus<out V> {
-    data class Success<out V>(val value: V? = null) : PMRootStatus<V>()
-    data class Error(val error: PMRootStatusType, val message: String) : PMRootStatus<Nothing>()
+sealed class PMRootResult<out V> {
+    data class Success<out V>(val value: V? = null) : PMRootResult<V>()
+    data class Error(val error: PMRootStatus, val message: String) : PMRootResult<Nothing>()
+
+    val isError
+        get() = this is Error
+
+    val isSuccess
+        get() = this is Success
 }
 
-inline fun <V, S : PMRootStatus<V>> S.exec(
-    onError: (PMRootStatusType, String) -> Unit,
-    onSuccess: () -> Unit
-) {
-    when (this) {
-        is PMRootStatus.Success<*> -> {
-            onSuccess()
-        }
-        is PMRootStatus.Error -> {
-            onError(error, message)
-        }
-    }
-}
-
-inline fun <reified V, S : PMRootStatus<V>> S.execWithValue(
-    onError: (PMRootStatusType, String) -> Unit,
-    onSuccess: (value: V?) -> Unit
-) {
-    when (this) {
-        is PMRootStatus.Success<*> -> {
-            onSuccess(value as V?)
-        }
-        is PMRootStatus.Error -> {
-            onError(error, message)
-        }
+inline fun <R, T : R> PMRootResult<T>.getOrElse(onError: (PMRootResult.Error) -> R): R? {
+    return when (this) {
+        is PMRootResult.Error -> onError(this)
+        is PMRootResult.Success -> return this.value
     }
 }

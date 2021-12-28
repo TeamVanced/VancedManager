@@ -1,4 +1,4 @@
-package com.vanced.manager.ui.widget.screens.settings
+package com.vanced.manager.ui.widget.settings
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource

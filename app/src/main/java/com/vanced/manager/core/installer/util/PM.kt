@@ -9,7 +9,6 @@ import android.os.Build
 import com.vanced.manager.core.installer.service.AppInstallService
 import com.vanced.manager.core.installer.service.AppUninstallService
 import java.io.File
-import java.io.FileInputStream
 
 private const val byteArraySize = 1024 * 1024 // Because 1,048,576 is not readable
 
@@ -19,7 +18,7 @@ object PM {
         val packageInstaller = context.packageManager.packageInstaller
         val session =
             packageInstaller.openSession(packageInstaller.createSession(sessionParams))
-        writeApkToSession(apk, session)
+        session.writeApk(apk)
         session.commit(context.installIntentSender)
         session.close()
     }
@@ -29,7 +28,7 @@ object PM {
         val session =
             packageInstaller.openSession(packageInstaller.createSession(sessionParams))
         for (apk in apks) {
-            writeApkToSession(apk, session)
+            session.writeApk(apk)
         }
         session.commit(context.installIntentSender)
         session.close()
@@ -41,17 +40,13 @@ object PM {
     }
 }
 
-private fun writeApkToSession(
-    apk: File,
-    session: PackageInstaller.Session
-) {
-    val inputStream = FileInputStream(apk)
-    val outputStream = session.openWrite(apk.name, 0, apk.length())
-    inputStream.copyTo(outputStream, byteArraySize)
-    session.fsync(outputStream)
-    inputStream.close()
-    outputStream.flush()
-    outputStream.close()
+private fun PackageInstaller.Session.writeApk(apk: File) {
+    apk.inputStream().use { inputStream ->
+        openWrite(apk.name, 0, apk.length()).use { outputStream ->
+            inputStream.copyTo(outputStream, byteArraySize)
+            fsync(outputStream)
+        }
+    }
 }
 
 private val intentFlags

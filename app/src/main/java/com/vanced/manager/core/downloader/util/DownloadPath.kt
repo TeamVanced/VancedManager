@@ -6,19 +6,34 @@ fun getVancedYoutubePath(
     version: String,
     variant: String,
     context: Context
-) = context.getExternalFilesDir("vanced_youtube")!!.path + "/$version/$variant"
+) = context.getExternalFilesDirPath("vanced_youtube") + "/$version/$variant"
+
+fun getVancedYoutubeMusicPath(
+    version: String,
+    variant: String,
+    context: Context
+) = context.getExternalFilesDirPath("vanced_music") + "/$version/$variant"
+
+fun getMicrogPath(
+    context: Context
+) = context.getExternalFilesDirPath("microg")
 
 fun getStockYoutubePath(
     version: String,
     context: Context
-) = context.getExternalFilesDir("stock_youtube")!!.path + "/$version"
+) = context.getExternalFilesDirPath("stock_youtube") + "/$version"
 
-fun getVancedMusicPath(
+fun getStockYoutubeMusicPath(
     version: String,
-    variant: String,
     context: Context
-) = context.getExternalFilesDir("vanced_music")!!.path + "/$version/$variant"
+) = context.getExternalFilesDirPath("stock_youtube_music") + "/$version"
 
-fun getMicrogPath(
-    context: Context
-) = context.getExternalFilesDir("microg")!!.path
+private fun Context.getExternalFilesDirPath(
+    type: String
+): String {
+    val filesDir = getExternalFilesDir(type)!! //fuck null safety, amirite?
+    if (!filesDir.exists())
+        filesDir.mkdirs()
+
+    return filesDir.path
+}

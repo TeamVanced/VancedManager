@@ -3,7 +3,6 @@ package com.vanced.manager.core.downloader.impl
 import android.content.Context
 import com.vanced.manager.core.downloader.api.VancedAPI
 import com.vanced.manager.core.downloader.base.AppDownloader
-import com.vanced.manager.core.downloader.util.DownloadStatus
 import com.vanced.manager.core.downloader.util.getVancedYoutubePath
 import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.core.preferences.holder.vancedLanguagesPref
@@ -22,8 +21,9 @@ class VancedDownloader(
 
     override suspend fun download(
         appVersions: List<String>?,
-        onStatus: (DownloadStatus) -> Unit
-    ) {
+        onProgress: (Float) -> Unit,
+        onFile: (String) -> Unit
+    ): DownloadStatus {
         absoluteVersion = getLatestOrProvidedAppVersion(vancedVersionPref, appVersions)
 
         val files = arrayOf(
@@ -42,26 +42,23 @@ class VancedDownloader(
             )
         }
 
-        downloadFiles(
-            downloadFiles = files,
-            onProgress = { progress ->
-                onStatus(DownloadStatus.Progress(progress))
-            },
-            onFile = { fileName ->
-                onStatus(DownloadStatus.File(fileName))
-            },
-            onSuccess = {
-                onStatus(DownloadStatus.StartInstall)
-            },
-            onError = { error, fileName ->
-                onStatus(
-                    DownloadStatus.Error(
-                        displayError = "Failed to download $fileName",
-                        stacktrace = error
-                    )
-                )
-            }
+        val downloadStatus = downloadFiles(
+            files = files,
+            onProgress = onProgress,
+            onFile = onFile,
         )
+        if (downloadStatus.isError)
+            return downloadStatus
+
+        return DownloadStatus.Success
+    }
+
+    override suspend fun downloadRoot(
+        appVersions: List<String>?,
+        onProgress: (Float) -> Unit,
+        onFile: (String) -> Unit
+    ): DownloadStatus {
+        return DownloadStatus.Success
     }
 
     override fun getSavedFilePath(): String {

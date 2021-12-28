@@ -1,83 +1,67 @@
 package com.vanced.manager.core.downloader.base
 
-import com.vanced.manager.core.downloader.util.DownloadStatus
+import com.vanced.manager.core.io.writeFile
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.awaitResponse
-import java.io.FileOutputStream
-
-typealias DownloadCall = Call<ResponseBody>
 
 abstract class AppDownloader {
 
     data class DownloadFile(
         val fileName: String,
-        val call: DownloadCall,
+        val call: Call<ResponseBody>,
     )
 
-    private lateinit var call: DownloadCall
+    sealed class DownloadStatus {
+        object Success : DownloadStatus()
+        data class Error(val error: String, val fileName: String) : DownloadStatus()
+
+        val isSuccess
+            get() = this is Success
+
+        val isError
+            get() = this is Error
+    }
 
     abstract suspend fun download(
         appVersions: List<String>?,
-        onStatus: (DownloadStatus) -> Unit
-    )
+        onProgress: (Float) -> Unit,
+        onFile: (String) -> Unit
+    ): DownloadStatus
+
+    abstract suspend fun downloadRoot(
+        appVersions: List<String>?,
+        onProgress: (Float) -> Unit,
+        onFile: (String) -> Unit
+    ): DownloadStatus
 
     abstract fun getSavedFilePath(): String
 
-    suspend fun downloadFiles(
-        downloadFiles: Array<DownloadFile>,
-        onFile: (String) -> Unit,
+    suspend inline fun downloadFiles(
+        files: Array<DownloadFile>,
         onProgress: (Float) -> Unit,
-        onError: (error: String, fileName: String) -> Unit,
-        onSuccess: () -> Unit
-    ) {
-        for (downloadFile in downloadFiles) {
+        onFile: (String) -> Unit
+    ): DownloadStatus {
+        for (file in files) {
             try {
-                this.call = downloadFile.call
+                onFile(file.fileName)
 
-                onFile(downloadFile.fileName)
-
-                val response = call.awaitResponse()
+                val response = file.call.awaitResponse()
                 if (response.isSuccessful) {
-                    val body = response.body()
-                    if (body != null) {
-                        writeFile(body, downloadFile.fileName, onProgress)
-                    }
+                    response.body()?.writeFile(getSavedFilePath() + "/${file.fileName}", onProgress)
                     continue
                 }
 
                 val error = response.errorBody()?.toString()
                 if (error != null) {
-                    onError(error, downloadFile.fileName)
-                    return
+                    return DownloadStatus.Error(error, file.fileName)
                 }
             } catch (e: Exception) {
-                onError(e.stackTraceToString(), downloadFile.fileName)
-                return
+                return DownloadStatus.Error(e.stackTraceToString(), file.fileName)
             }
         }
 
-        onSuccess()
-    }
-
-    private inline fun writeFile(
-        body: ResponseBody,
-        fileName: String,
-        onProgress: (Float) -> Unit
-    ) {
-        val inputStream = body.byteStream()
-        val outputStream = FileOutputStream(getSavedFilePath() + "/$fileName")
-        val totalBytes = body.contentLength()
-        val fileReader = ByteArray(4096)
-        var downloadedBytes = 0L
-        var read: Int
-        while (inputStream.read(fileReader).also { read = it } != -1) {
-            outputStream.write(fileReader, 0, read)
-            downloadedBytes += read
-            onProgress((downloadedBytes * 100 / totalBytes).toFloat())
-        }
-        inputStream.close()
-        outputStream.close()
+        return DownloadStatus.Success
     }
 
 }

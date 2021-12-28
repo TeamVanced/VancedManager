@@ -16,7 +16,7 @@ import com.vanced.manager.ui.component.topappbar.ManagerTopAppBar
 import com.vanced.manager.ui.resources.managerString
 import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.widget.layout.managerCategory
-import com.vanced.manager.ui.widget.screens.settings.*
+import com.vanced.manager.ui.widget.settings.*
 
 @ExperimentalMaterial3Api
 @Composable

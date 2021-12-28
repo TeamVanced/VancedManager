@@ -3,7 +3,6 @@ package com.vanced.manager.core.downloader.impl
 import android.content.Context
 import com.vanced.manager.core.downloader.api.MicrogAPI
 import com.vanced.manager.core.downloader.base.AppDownloader
-import com.vanced.manager.core.downloader.util.DownloadStatus
 import com.vanced.manager.core.downloader.util.getMicrogPath
 import java.io.File
 
@@ -14,33 +13,31 @@ class MicrogDownloader(
 
     override suspend fun download(
         appVersions: List<String>?,
-        onStatus: (DownloadStatus) -> Unit
-    ) {
-        downloadFiles(
-            downloadFiles = arrayOf(
+        onProgress: (Float) -> Unit,
+        onFile: (String) -> Unit
+    ): DownloadStatus {
+        val downloadStatus = downloadFiles(
+            files = arrayOf(
                 DownloadFile(
                     call = microgAPI.getFile(),
                     fileName = "microg.apk"
                 )
             ),
-            onProgress = { progress ->
-                onStatus(DownloadStatus.Progress(progress))
-            },
-            onFile = { fileName ->
-                onStatus(DownloadStatus.File(fileName))
-            },
-            onSuccess = {
-                onStatus(DownloadStatus.StartInstall)
-            },
-            onError = { error, fileName ->
-                onStatus(
-                    DownloadStatus.Error(
-                        displayError = "Failed to download $fileName",
-                        stacktrace = error
-                    )
-                )
-            }
+            onProgress = onProgress,
+            onFile = onFile
         )
+        if (downloadStatus.isError)
+            return downloadStatus
+
+        return DownloadStatus.Success
+    }
+
+    override suspend fun downloadRoot(
+        appVersions: List<String>?,
+        onProgress: (Float) -> Unit,
+        onFile: (String) -> Unit
+    ): DownloadStatus {
+        throw IllegalAccessException("Vanced microG does not have a root downloader")
     }
 
     override fun getSavedFilePath(): String {

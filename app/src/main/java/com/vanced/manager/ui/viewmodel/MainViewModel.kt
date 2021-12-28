@@ -10,7 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.vanced.manager.core.installer.util.uninstallPackage
+import com.vanced.manager.core.installer.util.PM
 import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.domain.model.App
 import com.vanced.manager.network.util.MICROG_NAME
@@ -80,7 +80,7 @@ class MainViewModel(
     fun uninstallApp(
         appPackage: String,
     ) {
-        uninstallPackage(appPackage, app)
+        PM.uninstallPackage(appPackage, app)
     }
 
     private suspend fun fetchData(

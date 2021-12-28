@@ -7,13 +7,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.vanced.manager.core.downloader.base.AppDownloader
 import com.vanced.manager.core.downloader.impl.MicrogDownloader
 import com.vanced.manager.core.downloader.impl.MusicDownloader
 import com.vanced.manager.core.downloader.impl.VancedDownloader
-import com.vanced.manager.core.downloader.util.DownloadStatus
 import com.vanced.manager.core.installer.impl.MicrogInstaller
 import com.vanced.manager.core.installer.impl.MusicInstaller
 import com.vanced.manager.core.installer.impl.VancedInstaller
+import com.vanced.manager.core.installer.util.PMRootResult
+import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
@@ -29,6 +31,9 @@ class InstallViewModel(
     private val musicInstaller: MusicInstaller,
     private val microgInstaller: MicrogInstaller,
 ) : ViewModel() {
+
+    private val isRoot
+        get() = managerVariantPref == "root"
 
     sealed class Log {
         data class Info(val infoText: String) : Log()
@@ -72,16 +77,6 @@ class InstallViewModel(
         }
     }
 
-    fun postInstallStatusRoot(pmStatus: Int, extra: String) {
-        if (pmStatus == PackageInstaller.STATUS_SUCCESS) {
-            status = Status.Installed
-            log(Log.Success("Successfully installed"))
-        } else {
-            status = Status.Failure
-            log(Log.Error("Failed to install app", extra))
-        }
-    }
-
     fun clear() {
         logs.clear()
         status = Status.Idle
@@ -93,21 +88,29 @@ class InstallViewModel(
     ) {
         val downloader = getDownloader(appName)
 
-        downloader.download(appVersions) { downloadStatus ->
-            when (downloadStatus) {
-                is DownloadStatus.File -> log(Log.Info("Downloading ${downloadStatus.fileName}"))
-                is DownloadStatus.Error -> log(
-                    Log.Error(
-                        displayText = downloadStatus.displayError,
-                        stacktrace = downloadStatus.stacktrace
-                    )
-                )
-                is DownloadStatus.Progress -> status =
-                    Status.Progress(downloadStatus.progress / 100)
-                is DownloadStatus.StartInstall -> {
-                    log(Log.Success("Successfully downloaded $appName"))
-                    installApp(appName, appVersions)
-                }
+        val onProgress: (Float) -> Unit = { progress ->
+            status = Status.Progress(progress / 100)
+        }
+        val onFile: (String) -> Unit = { file ->
+            log(Log.Info("Downloading $file"))
+        }
+
+        val download =
+            if (isRoot)
+                downloader.downloadRoot(appVersions, onProgress, onFile)
+            else
+                downloader.download(appVersions, onProgress, onFile)
+
+        when (download) {
+            is AppDownloader.DownloadStatus.Success -> {
+                log(Log.Success("Successfully downloaded $appName"))
+                installApp(appName, appVersions)
+            }
+            is AppDownloader.DownloadStatus.Error -> {
+                log(Log.Error(
+                    displayText = "Failed to download ${download.fileName}",
+                    stacktrace = download.error
+                ))
             }
         }
     }
@@ -120,7 +123,20 @@ class InstallViewModel(
 
         status = Status.Installing
 
-        installer.install(appVersions)
+        if (isRoot) {
+            when (val installStatus = installer.installRoot(appVersions)) {
+                is PMRootResult.Success -> {
+                    status = Status.Installed
+                    log(Log.Success("Successfully installed"))
+                }
+                is PMRootResult.Error -> {
+                    status = Status.Failure
+                    log(Log.Error("Failed to install app", installStatus.message))
+                }
+            }
+        } else {
+            installer.install(appVersions)
+        }
     }
 
     private fun getDownloader(
