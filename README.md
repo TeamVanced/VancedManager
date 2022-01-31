@@ -43,7 +43,3 @@ chmod +x gradlew
 ./gradlew assembleDebug
 ```
 
-## Vanced FAQ
-Vanced FAQ (from the faq branch) now available on the playstore!
-
-<a href='https://play.google.com/store/apps/details?id=com.vanced.faq&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height="85" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
