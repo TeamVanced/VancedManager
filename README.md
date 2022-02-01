@@ -5,23 +5,38 @@
 
 </div>
 
-Hi, when we released Vanced 15.05.54, people were upset because it used the .apks format, which was way harder to install than a traditional .apk file. Even though we wrote clear instructions on how to install the new Vanced build, people still couldn't figure it out.  
-Then we thought, "why don't we make a manager for vanced, which will download, update and uninstall Vanced and MicroG, have an easy and understandable UI and be less than 10mb?" and that's how Vanced Manager was born.  
-  
-After 3 months of development, we are finally ready to introduce Vanced Manager to the masses. Vanced manager can easily install and uninstall vanced and microg, has various settings for customisation and better experience. The Manager comes with an easy-to-use interface  
+## Introduction
 
-##### Background download/installation feature is no longer supported due to problems with some ROMs, please do NOT report issues regarding background activity.
+Hi, when we released Vanced 15.05.54, people were upset because it used the .apks format, which was burdensome to install than a traditional .apk file. Even though we wrote clear instructions on how to install the new Vanced build, people still couldn't figure it out.  
+
+Then we thought, "why don't we make a manager for vanced, which will download, update and uninstall Vanced and MicroG, have an easy and user-freindly UI and be less than 10mb?" and that's how Vanced Manager was born.  
+  
+After 3 months of development, we are finally ready to Introduce [Vanced Manager](https://github.com/YTVanced/VancedManager) to the masses!!
+
+## Features
+
+- Vanced manager can easily install and uninstall Vanced and MicroG.
+- It has various settings for customization and better experience. 
+- The Manager comes with an easy-to-use Interface.  
+
+</br>
+
+<div class="note">
+  <p><strong>NOTE: </strong>Background download/installation feature is no longer supported due to problems with some ROMs, please <b>DO NOT</b> report issues regarding background activity.</p>
+</div>
+
+<!-- ##### Background download/installation feature is no longer supported due to problems with some ROMs, please do NOT report issues regarding background activity. -->
 
 ## Contributions
-Pull requests should be made to the Dev branch as that is the working branch, master is for release code.
+Pull Requests should be made to the [Dev](https://github.com/YTVanced/VancedManager) Branch as that is the working branch, master is for Release code only.
 
-For anyone who wants to provide translations please submit them to https://crowdin.com/project/vanced-manager as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
+For anyone who wants to provide translations please submit them to this [link](https://crowdin.com/project/vanced-manager) as we also use it for YouTube Vanced. Any issues with translations should be posted there too.
 
 ## TODO
 - [ ] Clean up the ViewModel and DataModel code
 - [ ] Migrate to Jetpack Compose when it's officially released
 
-## Building 
+## Building
 
 <div>
 
@@ -29,10 +44,10 @@ For anyone who wants to provide translations please submit them to https://crowd
 
 </div>
 
-### Using Android Studio
-Clone the repo, open it in Android Studio and build the app.
+## Using Android Studio
+Clone the Repository, open it in Android Studio and build the application.
 
-### Using command line
+## Using Command Line
 #### On Windows:
 ```powershell
 .\gradlew.bat assembleDebug
