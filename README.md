@@ -47,6 +47,10 @@ For anyone who wants to provide translations please submit them to this [link](h
 ## Using Android Studio
 Clone the Repository, open it in Android Studio and build the application.
 
+## Google Advanced Protection Program
+If you are using this feature on your google account, you must either disable it or log out from your google account before installing Youtube Vanced via Vanced Manager.
+The Google Advanced Protection Program does not allow the installation of apps from unknown sources and these security measures are tied to the protected account and not the device. After the installation, you will be able to log back in or enroll again into the program.
+
 ## Using Command Line
 #### On Windows:
 ```powershell
