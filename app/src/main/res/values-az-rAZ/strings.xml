@@ -15,7 +15,7 @@
     <string name="title_home">Menecer</string>
     <string name="title_logs">Qeydlər</string>
     <string name="title_settings">Tənzimləmələr</string>
-    <string name="update_manager">Yeniləmə Meneceri</string>
+    <string name="update_manager">Meneceri Yenilə</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Cihazınızda root varmı?</string>
     <string name="grant_root">Root İcazəsi Ver</string>
