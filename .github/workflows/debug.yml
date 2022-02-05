@@ -1,4 +1,4 @@
-name: Debug APK Builder
+name: Debug APK
 
 on:
   push:
