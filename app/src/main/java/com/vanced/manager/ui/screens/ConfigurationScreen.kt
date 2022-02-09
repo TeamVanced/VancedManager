@@ -27,6 +27,9 @@ import com.vanced.manager.ui.viewmodel.ConfigurationViewModel
 import com.vanced.manager.ui.widget.layout.managerCategory
 import org.koin.androidx.compose.getViewModel
 
+private const val enterDuration = 300
+private const val exitDuration = 250
+
 @ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @OptIn(ExperimentalMaterial3Api::class)
@@ -180,7 +183,15 @@ private fun ConfigurationButtons(
             modifier = Modifier
                 .wrapContentWidth(Alignment.Start)
                 .weight(1f),
-            visible = currentIndex > 0) {
+            visible = currentIndex > 0,
+            enter = fadeIn(tween(enterDuration)) +
+                    expandHorizontally(tween(enterDuration)) +
+                    scaleIn(tween(enterDuration)),
+            exit = fadeOut(tween(exitDuration)) +
+                    shrinkHorizontally(tween(exitDuration)) +
+                    scaleOut(tween(exitDuration)),
+
+        ) {
             TextButton(onClick = onBackClick) {
                 ManagerText(text = "Back")
             }
@@ -248,12 +259,12 @@ private fun <S> AnimatedContentScope<S>.slideAnimationSpec(
     slideDirection: AnimatedContentScope.SlideDirection
 ) = slideIntoContainer(
     towards = slideDirection,
-    animationSpec = tween(400)
+    animationSpec = tween(enterDuration)
 ) + fadeIn(
-    animationSpec = tween(400)
+    animationSpec = tween(enterDuration)
 ) with slideOutOfContainer(
     towards = slideDirection,
-    animationSpec = tween(400)
+    animationSpec = tween(exitDuration)
 ) + fadeOut(
-    animationSpec = tween(400)
+    animationSpec = tween(exitDuration)
 )
