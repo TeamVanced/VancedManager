@@ -89,7 +89,7 @@ class MainActivity : ComponentActivity() {
                                     onAppInstallPress = { appName, appVersions, installationOptions ->
                                         if (installationOptions != null) {
                                             backStack.push(
-                                                Screen.InstallPreferences(
+                                                Screen.Configuration(
                                                     appName,
                                                     appVersions,
                                                     installationOptions
@@ -118,13 +118,13 @@ class MainActivity : ComponentActivity() {
                             is Screen.Logs -> {
 
                             }
-                            is Screen.InstallPreferences -> {
-                                InstallPreferencesScreen(
+                            is Screen.Configuration -> {
+                                ConfigurationScreen(
                                     installationOptions = screen.appInstallationOptions,
                                     onToolbarBackButtonClick = {
                                         backStack.pop()
                                     },
-                                    onDoneClick = {
+                                    onFinishClick = {
                                         backStack.push(
                                             Screen.Install(
                                                 screen.appName,

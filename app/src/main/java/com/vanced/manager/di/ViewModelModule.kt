@@ -10,6 +10,7 @@ import com.vanced.manager.core.installer.impl.VancedInstaller
 import com.vanced.manager.repository.DataRepository
 import com.vanced.manager.repository.MainRepository
 import com.vanced.manager.repository.MirrorRepository
+import com.vanced.manager.ui.viewmodel.ConfigurationViewModel
 import com.vanced.manager.ui.viewmodel.InstallViewModel
 import com.vanced.manager.ui.viewmodel.MainViewModel
 import org.koin.android.ext.koin.androidApplication
@@ -34,6 +35,11 @@ val viewModelModule = module {
         microgInstaller: MicrogInstaller,
     ) = InstallViewModel(vancedDownloader, musicDownloader, microgDownloader, vancedInstaller, musicInstaller, microgInstaller)
 
+    fun provideConfigurationViewModel(): ConfigurationViewModel {
+        return ConfigurationViewModel()
+    }
+
     viewModel { provideMainViewModel(get(), get(), androidApplication()) }
     viewModel { provideInstallViewModel(get(), get(), get(), get(), get(), get()) }
+    viewModel { provideConfigurationViewModel() }
 }

@@ -1,29 +1,29 @@
 package com.vanced.manager.domain.model
 
 import android.os.Parcelable
-import androidx.annotation.StringRes
 import kotlinx.parcelize.Parcelize
 
-sealed class InstallationOption(
-    @StringRes val itemTitleId: Int,
-) : Parcelable {
+sealed class InstallationOption : Parcelable {
+
+    abstract val titleId: Int
+    abstract val items: List<InstallationOptionItem>
 
     @Parcelize
     data class MultiSelect(
-        @StringRes val titleId: Int,
-        val items: List<InstallationOptionItem>,
+        override val titleId: Int,
+        override val items: List<InstallationOptionItem>,
         val getOption: () -> Set<String>,
         val addOption: (String) -> Unit,
         val removeOption: (String) -> Unit
-    ) : InstallationOption(titleId)
+    ) : InstallationOption()
 
     @Parcelize
     data class SingleSelect(
-        @StringRes val titleId: Int,
-        val items: List<InstallationOptionItem>,
+        override val titleId: Int,
+        override val items: List<InstallationOptionItem>,
         val getOption: () -> String,
         val setOption: (String) -> Unit,
-    ) : InstallationOption(titleId)
+    ) : InstallationOption()
 
 }
 

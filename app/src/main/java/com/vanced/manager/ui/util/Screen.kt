@@ -28,7 +28,7 @@ sealed class Screen(
         displayName = R.string.toolbar_logs,
     )
 
-    data class InstallPreferences(
+    data class Configuration(
         val appName: String,
         val appVersions: List<String>?,
         val appInstallationOptions: List<InstallationOption>

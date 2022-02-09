@@ -1,6 +1,7 @@
 package com.vanced.manager.ui.widget.list
 
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -9,6 +10,7 @@ import com.vanced.manager.ui.component.list.ManagerSelectableListItem
 import com.vanced.manager.ui.component.modifier.managerClickable
 import com.vanced.manager.ui.component.text.ManagerText
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CheckboxItem(
     text: String,
