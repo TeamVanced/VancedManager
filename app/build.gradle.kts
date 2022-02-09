@@ -4,7 +4,7 @@ plugins {
     id("kotlin-parcelize")
 }
 
-val composeVersion = "1.1.0-beta04"
+val composeVersion = "1.1.0-rc03"
 
 android {
     compileSdk = 31
@@ -24,7 +24,8 @@ android {
     }
 
     lint {
-        disable("MissingTranslation", "ExtraTranslation")
+        disable += "MissingTranslation"
+        disable += "ExtraTranslation"
     }
 
     buildTypes {
@@ -84,9 +85,9 @@ dependencies {
 
     // AndroidX
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation("androidx.appcompat:appcompat:1.4.1")
     implementation("androidx.browser:browser:1.4.0")
-    implementation("androidx.preference:preference-ktx:1.1.1")
+    implementation("androidx.preference:preference-ktx:1.2.0")
     implementation("androidx.activity:activity-compose:1.4.0")
 
     val lifecycleVersion = "2.4.0"
@@ -99,22 +100,20 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.material3:material3:1.0.0-alpha02")
+    implementation("androidx.compose.material3:material3:1.0.0-alpha04")
     implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.ui:ui-util:$composeVersion")
     implementation("androidx.compose.ui:ui:$composeVersion")
 
-
     // Google
-    implementation("com.google.android.material:material:1.4.0")
+    implementation("com.google.android.material:material:1.5.0")
 
-    val accompanistVersion = "0.20.0"
+    val accompanistVersion = "0.22.1-rc"
     implementation("com.google.accompanist:accompanist-navigation-animation:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-placeholder-material:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
     implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
-
 
     // Other
     implementation("com.github.zsoltk:compose-router:0.28.0")
