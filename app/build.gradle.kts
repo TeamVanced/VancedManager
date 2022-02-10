@@ -4,7 +4,7 @@ plugins {
     id("kotlin-parcelize")
 }
 
-val composeVersion = "1.1.0-rc03"
+val composeVersion = "1.1.0"
 
 android {
     compileSdk = 31
@@ -100,7 +100,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
     implementation("androidx.compose.material:material:$composeVersion")
-    implementation("androidx.compose.material3:material3:1.0.0-alpha04")
+    implementation("androidx.compose.material3:material3:1.0.0-alpha05")
     implementation("androidx.compose.runtime:runtime-livedata:$composeVersion")
     implementation("androidx.compose.ui:ui-tooling:$composeVersion")
     implementation("androidx.compose.ui:ui-util:$composeVersion")
