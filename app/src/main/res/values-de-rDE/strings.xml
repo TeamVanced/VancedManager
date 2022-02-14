@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Abbrechen</string>
     <string name="close">Schließen</string>
-    <string name="description_microg">Eine eigene GMS-Implementation für Vanced, basierend auf dem MicroG-Projekt.</string>
+    <string name="description_microg">Eine angepasste GMS Implementierung für Vanced, basierend auf dem Projekt microG.</string>
     <string name="description_vanced">Ein modifizierter YouTube-Client mit vielen nützlichen Funktionen!</string>
     <string name="description_vanced_music">Vanced, aber für YouTube Music! Weniger Funktionen, stillt aber deine Bedürfnisse.</string>
     <string name="reset">Zurücksetzen</string>
@@ -115,8 +115,8 @@
     <string name="installation_incompatible">Installation fehlgeschlagen, da die Installationsdatei nicht mit Ihrem Gerät kompatibel ist. Löschen Sie heruntergeladene Dateien in den Einstellungen, dann versuchen Sie es erneut.</string>
     <string name="installation_invalid">Installation fehlgeschlagen, da die APK-Dateien beschädigt sind, bitte versuchen Sie es erneut.</string>
     <string name="installation_miui">Installation fehlgeschlagen, da die MIUI-Optimierung aktiviert ist. Deaktivieren Sie die MIUI-Optimierung, und versuchen Sie es erneut.</string>
-    <string name="installation_signature">Installation fehlgeschlagen, da die APK-Signaturüberprüfung aktiviert ist. Deaktivieren Sie die APK-Signaturüberprüfung und versuchen Sie es dann erneut.</string>
+    <string name="installation_signature">Die Installation kann nicht fortgeführt werden, weil die Signaturen von APK Dateien geprüft werden müssen. Bitte die Signaturüberprüfung von APK Dateien ausschalten und erneut versuchen.</string>
     <string name="installation_storage">Installation fehlgeschlagen, da das Gerät nicht genügend freien Speicherplatz hat.</string>
-    <string name="modapk_missing">Die Installation hat für die Oberfläche Schwarz/Dunkel keine APK Dateien gefunden. Bitte die App-Daten des Managers löschen und erneut versuchen.</string>
+    <string name="modapk_missing">Die Installation hat für die Oberfläche Schwarz/Dunkel keine APK-Dateien gefunden. Bitte die App-Daten des Managers löschen und erneut versuchen.</string>
     <string name="path_missing">Fehler beim Auffinden des YouTube-Installationspfades nach der geteilten Installation.</string>
 </resources>
