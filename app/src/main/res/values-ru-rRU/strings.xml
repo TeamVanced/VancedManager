@@ -21,7 +21,7 @@
     <string name="grant_root">Предоставить root-права</string>
     <string name="lets_get_started">Давайте приступим</string>
     <string name="select_at_least_one_app">Выберите хотя бы одно приложение!</string>
-    <string name="willing_to_use_root">Не знаете, что это или не хотите использовать рут версию? Просто нажмите на синюю стрелку ниже!</string>
+    <string name="willing_to_use_root">Не знаете, что это или не хотите использовать root-версию? Просто нажмите на синюю стрелку ниже!</string>
     <!-- Home Page -->
     <string name="about_app">О %1$s</string>
     <string name="accessibility_download">Скачать</string>
@@ -113,10 +113,10 @@
     <string name="installation_downgrade">Установка не удалась, так как пользователь попытался понизить версию приложения. Удалите обновления обычного приложения YouTube, затем повторите попытку.</string>
     <string name="installation_failed">Установка не удалась по неизвестным причинам, присоединитесь к нашим каналам Telegram или Discord для дальнейшей поддержки. Пожалуйста, также прикрепите скриншот из расширенного меню</string>
     <string name="installation_incompatible">Установка не удалась, так как установочный файл несовместим с вашим устройством. Очистите загруженные файлы в настройках, затем повторите попытку.</string>
-    <string name="installation_invalid">Установка не удалась потому, что APK-файлы повреждены, пожалуйста, попробуйте ещё раз.</string>
+    <string name="installation_invalid">Установка не удалась, так как APK-файлы повреждены. Пожалуйста, повторите попытку.</string>
     <string name="installation_miui">Установка не удалась, так как включена Оптимизация MIUI. Отключите Оптимизацию MIUI, затем повторите попытку.</string>
     <string name="installation_signature">Установка не удалась, так как включена проверка подписи APK. Отключите проверку подписи APK, а затем повторите попытку.</string>
     <string name="installation_storage">Установка не удалась из-за отсутствия на устройстве свободного места.</string>
-    <string name="modapk_missing">Не удалось найти APK файл для черной/темной темы в установщике. Удалите данные Manager и повторите попытку.</string>
+    <string name="modapk_missing">Не удалось найти APK-файл для черной/темной темы в установщике. Очистите данные Vanced Manager и повторите попытку.</string>
     <string name="path_missing">Не удалось найти стандартный путь установки YouTube после раздельной установки.</string>
 </resources>
