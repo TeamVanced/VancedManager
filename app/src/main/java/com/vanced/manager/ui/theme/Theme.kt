@@ -1,13 +1,9 @@
 package com.vanced.manager.ui.theme
 
-import android.annotation.SuppressLint
 import android.os.Build
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.gestures.LocalOverScrollConfiguration
 import androidx.compose.foundation.gestures.OverScrollConfiguration
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -79,38 +75,42 @@ fun isDark(): Boolean = when (managerThemePref) {
     else -> throw IllegalArgumentException("Unknown theme")
 }
 
-@SuppressLint("NewApi")
-@ExperimentalFoundationApi
+@Composable
+inline fun apiDependantColorScheme(
+    dynamic: () -> ColorScheme,
+    static: () -> ColorScheme
+): ColorScheme {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        dynamic()
+    } else {
+        static()
+    }
+}
+
 @Composable
 fun ManagerTheme(
     content: @Composable () -> Unit
 ) {
-    val isAndroid12OrHigher = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+    val context = LocalContext.current
     val colorScheme =
-        if (isAndroid12OrHigher) {
-            val context = LocalContext.current
-            if (isDark()) {
-                dynamicDarkColorScheme(context)
-            } else {
-                dynamicLightColorScheme(context)
-            }
+        if (isDark()) {
+            apiDependantColorScheme(
+                dynamic = { dynamicDarkColorScheme(context) },
+                static = { DarkThemeColors }
+            )
         } else {
-            if (isDark()) {
-                DarkThemeColors
-            } else {
-                LightThemeColors
-            }
+            apiDependantColorScheme(
+                dynamic = { dynamicLightColorScheme(context)},
+                static = { LightThemeColors }
+            )
         }
-
     MaterialTheme(
         colorScheme = colorScheme,
         typography = ManagerTypography,
     ) {
-        val rippleIndication = rememberRipple()
         CompositionLocalProvider(
-            LocalIndication provides rippleIndication,
             LocalOverScrollConfiguration provides OverScrollConfiguration(
-                forceShowAlways = isAndroid12OrHigher
+                forceShowAlways = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
             )
         ) {
             content()

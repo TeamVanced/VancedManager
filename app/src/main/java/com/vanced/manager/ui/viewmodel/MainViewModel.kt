@@ -36,6 +36,10 @@ class MainViewModel(
         data class Fetching(val placeholderAppsCount: Int) : AppState()
         data class Success(val apps: List<App>) : AppState()
         data class Error(val error: String) : AppState()
+
+        val isFetching get() = this is Fetching
+        val isSuccess get() = this is Success
+        val isError get() = this is Error
     }
 
     var appState by mutableStateOf<AppState>(AppState.Fetching(appCount))

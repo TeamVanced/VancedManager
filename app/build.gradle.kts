@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -57,11 +60,19 @@ android {
 
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+
+tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
         jvmTarget = "11"
-        freeCompilerArgs = freeCompilerArgs + "-Xopt-in=kotlin.RequiresOptIn"
+        optIn("androidx.compose.material3.ExperimentalMaterial3Api")
+        optIn("androidx.compose.animation.ExperimentalAnimationApi")
+        optIn("androidx.compose.foundation.ExperimentalFoundationApi")
     }
+}
+
+fun KotlinJvmOptions.optIn(library: String) {
+    freeCompilerArgs = freeCompilerArgs +
+            "-opt-in=$library"
 }
 
 val languages: String get() {

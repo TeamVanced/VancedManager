@@ -7,9 +7,7 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.SideEffect
 import com.github.zsoltk.compose.backpress.BackPressHandler
@@ -18,11 +16,11 @@ import com.github.zsoltk.compose.router.Router
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.vanced.manager.core.installer.service.AppInstallService
 import com.vanced.manager.core.installer.service.AppUninstallService
-import com.vanced.manager.ui.component.color.managerSurfaceColor
-import com.vanced.manager.ui.screens.*
+import com.vanced.manager.ui.screen.*
 import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.theme.isDark
 import com.vanced.manager.ui.util.Screen
+import com.vanced.manager.ui.util.animated
 import com.vanced.manager.ui.viewmodel.InstallViewModel
 import com.vanced.manager.ui.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -52,17 +50,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @OptIn(
-        ExperimentalAnimationApi::class,
-        ExperimentalMaterial3Api::class,
-        ExperimentalFoundationApi::class,
-    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainViewModel.fetch()
         setContent {
             ManagerTheme {
-                val surfaceColor = managerSurfaceColor()
+                val surfaceColor = MaterialTheme.colorScheme.surface.animated
 
                 val isDark = isDark()
 
@@ -81,12 +74,12 @@ class MainActivity : ComponentActivity() {
                     Router<Screen>("VancedManager", Screen.Home) { backStack ->
                         when (val screen = backStack.last()) {
                             is Screen.Home -> {
-                                HomeLayout(
+                                HomeScreen(
                                     viewModel = mainViewModel,
                                     onToolbarScreenSelected = {
                                         backStack.push(it)
                                     },
-                                    onAppInstallPress = { appName, appVersions, installationOptions ->
+                                    onAppDownloadClick = { appName, appVersions, installationOptions ->
                                         if (installationOptions != null) {
                                             backStack.push(
                                                 Screen.Configuration(
@@ -98,18 +91,24 @@ class MainActivity : ComponentActivity() {
                                         } else {
                                             backStack.push(Screen.Install(appName, appVersions))
                                         }
+                                    },
+                                    onAppLaunchClick = { appName, packageName ->
+                                        mainViewModel.launchApp(appName, packageName)
+                                    },
+                                    onAppUninstallClick = { packageName ->
+                                        mainViewModel.uninstallApp(packageName)
                                     }
                                 )
                             }
                             is Screen.Settings -> {
-                                SettingsLayout(
+                                SettingsScreen(
                                     onToolbarBackButtonClick = {
                                         backStack.pop()
                                     }
                                 )
                             }
                             is Screen.About -> {
-                                AboutLayout(
+                                AboutScreen(
                                     onToolbarBackButtonClick = {
                                         backStack.pop()
                                     }
