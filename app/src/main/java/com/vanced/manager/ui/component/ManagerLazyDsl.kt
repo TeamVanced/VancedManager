@@ -41,9 +41,36 @@ fun ManagerLazyColumn(
     )
 }
 
+@Composable
+fun ManagerLazyRow(
+    modifier: Modifier = Modifier,
+    state: LazyListState = rememberLazyListState(),
+    contentPadding: PaddingValues = PaddingValues(
+        start = EdgeToEdgeContentPadding,
+        end = EdgeToEdgeContentPadding,
+    ),
+    reverseLayout: Boolean = false,
+    horizontalArrangement: Arrangement.Horizontal =
+        Arrangement.spacedBy(8.dp, if (!reverseLayout) Alignment.Start else Alignment.End),
+    verticalAlignment: Alignment.Vertical = Alignment.Top,
+    flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
+    content: LazyListScope.() -> Unit
+) {
+    LazyRow(
+        modifier = modifier,
+        state = state,
+        contentPadding = contentPadding,
+        reverseLayout = reverseLayout,
+        horizontalArrangement = horizontalArrangement,
+        verticalAlignment = verticalAlignment,
+        flingBehavior = flingBehavior,
+        content = content
+    )
+}
+
 inline fun LazyListScope.managerCategory(
-    noinline categoryName: @Composable () -> String,
-    content: LazyListScope.() -> Unit,
+    crossinline categoryName: @Composable () -> String,
+    content: LazyListScope.() -> Unit
 ) {
     item {
         ManagerText(
