@@ -5,10 +5,7 @@ import androidx.compose.foundation.gestures.ScrollableDefaults
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.lazy.*
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -60,4 +57,30 @@ inline fun LazyListScope.managerCategory(
         )
     }
     content()
+}
+
+inline fun <K, V> LazyListScope.items(
+    items: Map<K, V>,
+    noinline key: ((key: K, value: V) -> Any)? = null,
+    crossinline itemContent: @Composable LazyItemScope.(key: K, value: V) -> Unit
+) = items(
+    count = items.size,
+    key = if (key != null) { index ->
+        key(items.keys.elementAt(index), items.values.elementAt(index))
+    } else null
+) { index ->
+    itemContent(items.keys.elementAt(index), items.values.elementAt(index))
+}
+
+inline fun <K, V> LazyListScope.itemsIndexed(
+    items: Map<K, V>,
+    noinline key: ((index: Int, key: K, value: V) -> Any)? = null,
+    crossinline itemContent: @Composable LazyItemScope.(index: Int, key: K, value: V) -> Unit
+) = items(
+    count = items.size,
+    key = if (key != null) { index ->
+        key(index, items.keys.elementAt(index), items.values.elementAt(index))
+    } else null
+) { index ->
+    itemContent(index, items.keys.elementAt(index), items.values.elementAt(index))
 }

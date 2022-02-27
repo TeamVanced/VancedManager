@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
+import android.content.SharedPreferences
 import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -18,12 +19,14 @@ import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
 import com.vanced.manager.repository.MainRepository
 import com.vanced.manager.repository.MirrorRepository
+import com.vanced.manager.ui.theme.ManagerTheme
 import kotlinx.coroutines.launch
 
 class MainViewModel(
     private val mainRepository: MainRepository,
     private val mirrorRepository: MirrorRepository,
-    private val app: Application
+    private val preferences: SharedPreferences,
+    private val app: Application,
 ) : AndroidViewModel(app) {
 
     private val isRoot
@@ -44,6 +47,15 @@ class MainViewModel(
 
     var appState by mutableStateOf<AppState>(AppState.Fetching(appCount))
         private set
+
+    var appTheme by mutableStateOf(
+        ManagerTheme.fromKey(
+            preferences.getString(
+                SettingsViewModel.MANAGER_THEME_KEY,
+                SettingsViewModel.THEME_SYSTEM_DEFAULT_VALUE
+            )
+        )
+    )
 
     fun fetch() {
         viewModelScope.launch {

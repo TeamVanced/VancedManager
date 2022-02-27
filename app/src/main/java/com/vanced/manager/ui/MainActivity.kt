@@ -18,7 +18,6 @@ import com.vanced.manager.core.installer.service.AppInstallService
 import com.vanced.manager.core.installer.service.AppUninstallService
 import com.vanced.manager.ui.screen.*
 import com.vanced.manager.ui.theme.ManagerTheme
-import com.vanced.manager.ui.theme.isDark
 import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.util.animated
 import com.vanced.manager.ui.viewmodel.InstallViewModel
@@ -54,10 +53,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         mainViewModel.fetch()
         setContent {
-            ManagerTheme {
+            val isDark = mainViewModel.appTheme.isDark()
+            ManagerTheme(darkMode = isDark) {
                 val surfaceColor = MaterialTheme.colorScheme.surface.animated
-
-                val isDark = isDark()
 
                 val systemUiController = rememberSystemUiController()
 
@@ -104,6 +102,9 @@ class MainActivity : ComponentActivity() {
                                 SettingsScreen(
                                     onToolbarBackButtonClick = {
                                         backStack.pop()
+                                    },
+                                    onThemeChange = {
+                                        mainViewModel.appTheme = it
                                     }
                                 )
                             }

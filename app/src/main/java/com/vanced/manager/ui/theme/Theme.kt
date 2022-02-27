@@ -8,7 +8,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.LocalContext
-import com.vanced.manager.core.preferences.holder.managerThemePref
+import com.vanced.manager.ui.viewmodel.SettingsViewModel
 
 const val defAccentColor = 0xFF0477E1
 
@@ -67,12 +67,27 @@ private val DarkThemeColors = darkColorScheme(
     inverseSurface = md_theme_dark_inverseSurface,
 )
 
-@Composable
-fun isDark(): Boolean = when (managerThemePref) {
-    "Dark" -> true
-    "Light" -> false
-    "System Default" -> isSystemInDarkTheme()
-    else -> throw IllegalArgumentException("Unknown theme")
+enum class ManagerTheme {
+    LIGHT,
+    DARK,
+    SYSTEM_DEFAULT;
+
+    @Composable
+    fun isDark() = when (this) {
+        LIGHT -> false
+        DARK -> true
+        SYSTEM_DEFAULT -> isSystemInDarkTheme()
+    }
+
+    companion object {
+        fun fromKey(key: String?): ManagerTheme {
+            return when (key) {
+                SettingsViewModel.THEME_DARK_VALUE -> DARK
+                SettingsViewModel.THEME_LIGHT_VALUE -> LIGHT
+                else -> SYSTEM_DEFAULT
+            }
+        }
+    }
 }
 
 @Composable
@@ -89,11 +104,12 @@ inline fun apiDependantColorScheme(
 
 @Composable
 fun ManagerTheme(
+    darkMode: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val context = LocalContext.current
     val colorScheme =
-        if (isDark()) {
+        if (darkMode) {
             apiDependantColorScheme(
                 dynamic = { dynamicDarkColorScheme(context) },
                 static = { DarkThemeColors }
