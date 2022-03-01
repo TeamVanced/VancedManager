@@ -5,8 +5,10 @@ import org.koin.dsl.module
 
 val networkModule = module {
 
-    fun provideOkHttpClient() =
-        OkHttpClient()
+    fun provideOkHttpClient(): OkHttpClient {
+        return OkHttpClient.Builder()
+            .build()
+    }
 
     single { provideOkHttpClient() }
 }

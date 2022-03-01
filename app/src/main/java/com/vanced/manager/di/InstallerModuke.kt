@@ -4,23 +4,36 @@ import android.content.Context
 import com.vanced.manager.core.installer.impl.MicrogInstaller
 import com.vanced.manager.core.installer.impl.MusicInstaller
 import com.vanced.manager.core.installer.impl.VancedInstaller
+import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
 val installerModule = module {
 
     fun provideVancedInstaller(
         context: Context
-    ) = VancedInstaller(context)
+    ): VancedInstaller {
+        return VancedInstaller(
+            context = context
+        )
+    }
 
     fun provideMusicInstaller(
         context: Context
-    ) = MusicInstaller(context)
+    ): MusicInstaller {
+        return MusicInstaller(
+            context = context
+        )
+    }
 
     fun provideMicrogInstaller(
         context: Context
-    ) = MicrogInstaller(context)
+    ): MicrogInstaller {
+        return MicrogInstaller(
+            context = context
+        )
+    }
 
-    single { provideVancedInstaller(get()) }
-    single { provideMusicInstaller(get()) }
-    single { provideMicrogInstaller(get()) }
+    single { provideVancedInstaller(androidContext()) }
+    single { provideMusicInstaller(androidContext()) }
+    single { provideMicrogInstaller(androidContext()) }
 }

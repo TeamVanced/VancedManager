@@ -39,7 +39,17 @@ val viewModelModule = module {
         vancedInstaller: VancedInstaller,
         musicInstaller: MusicInstaller,
         microgInstaller: MicrogInstaller,
-    ) = InstallViewModel(vancedDownloader, musicDownloader, microgDownloader, vancedInstaller, musicInstaller, microgInstaller)
+    ): InstallViewModel {
+        return InstallViewModel(
+            vancedDownloader = vancedDownloader,
+            musicDownloader = musicDownloader,
+            microgDownloader = microgDownloader,
+
+            vancedInstaller = vancedInstaller,
+            musicInstaller = musicInstaller,
+            microgInstaller = microgInstaller
+        )
+    }
 
     fun provideConfigurationViewModel(): ConfigurationViewModel {
         return ConfigurationViewModel()
