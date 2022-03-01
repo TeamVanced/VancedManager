@@ -1,25 +1,31 @@
 package com.vanced.manager.di
 
-import com.vanced.manager.network.DataService
-import com.vanced.manager.network.model.DataDtoMapper
-import com.vanced.manager.repository.DataRepository
-import com.vanced.manager.repository.MainRepository
-import com.vanced.manager.repository.MirrorRepository
-import org.koin.core.qualifier.named
+import com.vanced.manager.datasource.PkgInfoDatasource
+import com.vanced.manager.datasource.PreferenceDatasource
+import com.vanced.manager.network.GithubService
+import com.vanced.manager.repository.*
 import org.koin.dsl.module
 
 val repositoryModule = module {
 
-    fun provideMainRepository(
-        dataService: DataService,
-        dataDtoMapper: DataDtoMapper
-    ) = MainRepository(dataService, dataDtoMapper)
+    fun provideGithubRepository(
+        githubService: GithubService,
+        pkgInfoDatasource: PkgInfoDatasource
+    ): AppRepository {
+        return AppRepositoryImpl(
+            githubService = githubService,
+            pkgInfoDatasource = pkgInfoDatasource
+        )
+    }
 
-    fun provideMirrorRepository(
-        dataService: DataService,
-        dataDtoMapper: DataDtoMapper
-    ) = MirrorRepository(dataService, dataDtoMapper)
+    fun providePreferenceRepository(
+        preferenceDatasource: PreferenceDatasource
+    ): PreferenceRepository {
+        return PreferenceRepositoryImpl(
+            preferenceDatasource = preferenceDatasource
+        )
+    }
 
-    single { provideMainRepository(get(named("main")), get()) }
-    single { provideMirrorRepository(get(named("mirror")), get()) }
+    single { provideGithubRepository(get(), get()) }
+    single { providePreferenceRepository(get()) }
 }

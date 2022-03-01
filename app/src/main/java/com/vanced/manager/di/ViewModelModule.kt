@@ -1,16 +1,14 @@
 package com.vanced.manager.di
 
 import android.app.Application
-import android.content.SharedPreferences
 import com.vanced.manager.core.downloader.impl.MicrogDownloader
 import com.vanced.manager.core.downloader.impl.MusicDownloader
 import com.vanced.manager.core.downloader.impl.VancedDownloader
 import com.vanced.manager.core.installer.impl.MicrogInstaller
 import com.vanced.manager.core.installer.impl.MusicInstaller
 import com.vanced.manager.core.installer.impl.VancedInstaller
-import com.vanced.manager.repository.DataRepository
-import com.vanced.manager.repository.MainRepository
-import com.vanced.manager.repository.MirrorRepository
+import com.vanced.manager.repository.AppRepository
+import com.vanced.manager.repository.PreferenceRepository
 import com.vanced.manager.ui.viewmodel.ConfigurationViewModel
 import com.vanced.manager.ui.viewmodel.InstallViewModel
 import com.vanced.manager.ui.viewmodel.MainViewModel
@@ -22,11 +20,16 @@ import org.koin.dsl.module
 val viewModelModule = module {
 
     fun provideMainViewModel(
-        mainRepository: MainRepository,
-        mirrorRepository: MirrorRepository,
-        preferences: SharedPreferences,
+        appRepository: AppRepository,
+        preferenceRepository: PreferenceRepository,
         app: Application,
-    ) = MainViewModel(mainRepository, mirrorRepository, preferences, app)
+    ): MainViewModel {
+        return MainViewModel(
+            appRepository = appRepository,
+            preferenceRepository = preferenceRepository,
+            app = app
+        )
+    }
 
     fun provideInstallViewModel(
         vancedDownloader: VancedDownloader,
@@ -42,12 +45,16 @@ val viewModelModule = module {
         return ConfigurationViewModel()
     }
 
-    fun provideSettingsViewModel(): SettingsViewModel {
-        return SettingsViewModel()
+    fun provideSettingsViewModel(
+        preferenceRepository: PreferenceRepository
+    ): SettingsViewModel {
+        return SettingsViewModel(
+            preferenceRepository = preferenceRepository
+        )
     }
 
-    viewModel { provideMainViewModel(get(), get(), get(), androidApplication()) }
+    viewModel { provideMainViewModel(get(), get(), androidApplication()) }
     viewModel { provideInstallViewModel(get(), get(), get(), get(), get(), get()) }
     viewModel { provideConfigurationViewModel() }
-    viewModel { provideSettingsViewModel() }
+    viewModel { provideSettingsViewModel(get()) }
 }

@@ -1,95 +1,84 @@
 package com.vanced.manager.ui.viewmodel
 
 import android.app.Application
-import android.content.ActivityNotFoundException
 import android.content.ComponentName
 import android.content.Intent
-import android.content.SharedPreferences
-import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.vanced.manager.core.installer.util.PM
-import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.domain.model.App
-import com.vanced.manager.network.util.MICROG_NAME
-import com.vanced.manager.network.util.MUSIC_NAME
-import com.vanced.manager.network.util.VANCED_NAME
-import com.vanced.manager.repository.MainRepository
-import com.vanced.manager.repository.MirrorRepository
-import com.vanced.manager.ui.theme.ManagerTheme
+import com.vanced.manager.repository.*
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.supervisorScope
+import retrofit2.HttpException
 
 class MainViewModel(
-    private val mainRepository: MainRepository,
-    private val mirrorRepository: MirrorRepository,
-    private val preferences: SharedPreferences,
+    private val appRepository: AppRepository,
+    private val preferenceRepository: PreferenceRepository,
     private val app: Application,
 ) : AndroidViewModel(app) {
 
-    private val isRoot
-        get() = managerVariantPref == "root"
+    var appMode by mutableStateOf(preferenceRepository.managerMode)
+    var appTheme by mutableStateOf(preferenceRepository.managerTheme)
 
-    private val appCount: Int
-        get() = if (isRoot) 2 else 3
+    private val appCount
+        get() = when (appMode) {
+            ManagerMode.ROOT -> 2
+            ManagerMode.NONROOT -> 3
+        }
 
-    sealed class AppState {
-        data class Fetching(val placeholderAppsCount: Int) : AppState()
-        data class Success(val apps: List<App>) : AppState()
-        data class Error(val error: String) : AppState()
-
-        val isFetching get() = this is Fetching
-        val isSuccess get() = this is Success
-        val isError get() = this is Error
-    }
-
-    var appState by mutableStateOf<AppState>(AppState.Fetching(appCount))
+    var appState by mutableStateOf<ManagerState>(ManagerState.Fetching(appCount))
         private set
-
-    var appTheme by mutableStateOf(
-        ManagerTheme.fromKey(
-            preferences.getString(
-                SettingsViewModel.MANAGER_THEME_KEY,
-                SettingsViewModel.THEME_SYSTEM_DEFAULT_VALUE
-            )
-        )
-    )
 
     fun fetch() {
         viewModelScope.launch {
-            appState = AppState.Fetching(appCount)
+            try {
+                supervisorScope {
+                    appState = ManagerState.Fetching(appCount)
 
-            fetchData()
+                    when (appMode) {
+                        ManagerMode.ROOT -> {
+                            appState = ManagerState.Success(
+                                apps = listOf(
+                                    async { appRepository.getVancedYoutubeRoot() },
+                                    async { appRepository.getVancedYoutubeMusicRoot() }
+                                ).awaitAll()
+                            )
+                        }
+                        ManagerMode.NONROOT -> {
+                            appState = ManagerState.Success(
+                                apps = listOf(
+                                    async { appRepository.getVancedYoutubeNonroot() },
+                                    async { appRepository.getVancedYoutubeMusicNonroot() },
+                                    async { appRepository.getVancedMicrog() }
+                                ).awaitAll()
+                            )
+                        }
+                    }
+                }
+            } catch (e: HttpException) {
+                appState = ManagerState.Error(e.message())
+            } catch (e: Exception) {
+                appState = ManagerState.Error(e.toString())
+            }
         }
     }
 
     fun launchApp(
-        appName: String,
-        appPackage: String,
+        packageName: String,
+        launchActivity: String
     ) {
-        val component = ComponentName(
-            /* pkg = */ appPackage,
-            /* cls = */ when (appName) {
-                VANCED_NAME -> "com.google.android.youtube.HomeActivity"
-                MUSIC_NAME -> "com.google.android.apps.youtube.music.activities.MusicActivity"
-                MICROG_NAME -> "org.microg.gms.ui.SettingsActivity"
-                else -> throw IllegalArgumentException("$appName is not a valid app")
-            }
-        )
-
-        try {
-            app.startActivity(
-                Intent().apply {
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    setComponent(component)
-                }
-            )
-        } catch (e: ActivityNotFoundException) {
-            Log.d(TAG, "Unable to launch $appName")
-            e.printStackTrace()
+        val component = ComponentName(packageName, launchActivity)
+        val intent = Intent().apply {
+            setComponent(component)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
+        app.startActivity(intent)
     }
 
     //TODO implement root uninstallation
@@ -99,28 +88,14 @@ class MainViewModel(
         PM.uninstallPackage(appPackage, app)
     }
 
-    private suspend fun fetchData(
-        fromMirror: Boolean = false
-    ) {
-        try {
-            val repository = if (fromMirror) mirrorRepository else mainRepository
-            with(repository.fetch()) {
-                appState = AppState.Success(apps)
-            }
-        } catch (e: Exception) {
-            if (!fromMirror) {
-                fetchData(true)
-                return
-            }
+}
 
-            val error = "failed to fetch: \n${e.stackTraceToString()}"
-            appState = AppState.Error(error)
-            Log.d(TAG, error)
-        }
-    }
+sealed class ManagerState {
+    data class Fetching(val placeholderAppsCount: Int) : ManagerState()
+    data class Success(val apps: List<App>) : ManagerState()
+    data class Error(val error: String) : ManagerState()
 
-    companion object {
-        const val TAG = "MainViewModel"
-    }
-
+    val isFetching get() = this is Fetching
+    val isSuccess get() = this is Success
+    val isError get() = this is Error
 }

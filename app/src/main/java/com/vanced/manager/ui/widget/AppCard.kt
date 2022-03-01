@@ -5,9 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material.icons.rounded.DeleteForever
-import androidx.compose.material.icons.rounded.Download
-import androidx.compose.material.icons.rounded.Launch
+import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -15,13 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import coil.compose.ImagePainter
 import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
 import com.vanced.manager.R
+import com.vanced.manager.domain.model.AppState
 import com.vanced.manager.ui.component.ManagerElevatedCard
 import com.vanced.manager.ui.component.ManagerListItem
 import com.vanced.manager.ui.component.ManagerText
@@ -34,9 +33,10 @@ import com.vanced.manager.ui.util.DefaultContentPaddingVertical
 @Composable
 fun AppCard(
     appName: String,
-    appIcon: ImagePainter,
+    appIcon: Painter,
     appInstalledVersion: String?,
     appRemoteVersion: String?,
+    appState: AppState,
     onAppDownloadClick: () -> Unit,
     onAppUninstallClick: () -> Unit,
     onAppLaunchClick: () -> Unit,
@@ -101,10 +101,27 @@ fun AppCard(
                 }
             }
             IconButton(onClick = onAppDownloadClick) {
-                Icon(
-                    imageVector = Icons.Rounded.Download,
-                    contentDescription = "Install",
-                )
+                when (appState) {
+                    AppState.NOT_INSTALLED -> {
+                        Icon(
+                            imageVector = Icons.Rounded.GetApp,
+                            contentDescription = "Install",
+                        )
+                    }
+                    AppState.INSTALLED -> {
+                        Icon(
+                            imageVector = Icons.Rounded.GetApp,
+                            contentDescription = "Install",
+                        )
+                    }
+                    AppState.NEEDS_UPDATE -> {
+                        Icon(
+                            imageVector = Icons.Rounded.Update,
+                            contentDescription = "Update",
+                        )
+                    }
+                }
+
             }
         }
     )

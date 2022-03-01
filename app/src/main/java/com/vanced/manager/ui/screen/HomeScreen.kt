@@ -15,36 +15,30 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import coil.compose.rememberImagePainter
-import coil.request.CachePolicy
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.vanced.manager.R
 import com.vanced.manager.core.util.socialMedia
 import com.vanced.manager.core.util.sponsors
 import com.vanced.manager.domain.model.App
-import com.vanced.manager.domain.model.InstallationOption
 import com.vanced.manager.ui.component.*
 import com.vanced.manager.ui.resource.managerString
 import com.vanced.manager.ui.util.Screen
-import com.vanced.manager.ui.viewmodel.MainViewModel
+import com.vanced.manager.ui.viewmodel.ManagerState
 import com.vanced.manager.ui.widget.AppCard
 import com.vanced.manager.ui.widget.AppCardPlaceholder
 import com.vanced.manager.ui.widget.LinkCard
 
 @Composable
 fun HomeScreen(
-    viewModel: MainViewModel,
+    managerState: ManagerState,
+    onRefresh: () -> Unit,
     onToolbarScreenSelected: (Screen) -> Unit,
-    onAppDownloadClick: (
-        appName: String,
-        appVersions: List<String>?,
-        installationOptions: List<InstallationOption>?
-    ) -> Unit,
-    onAppUninstallClick: (appPackage: String) -> Unit,
-    onAppLaunchClick: (appName: String, appPackage: String) -> Unit,
+    onAppDownloadClick: (App) -> Unit,
+    onAppUninstallClick: (App) -> Unit,
+    onAppLaunchClick: (App) -> Unit,
 ) {
     val refreshState =
-        rememberSwipeRefreshState(isRefreshing = viewModel.appState.isFetching)
+        rememberSwipeRefreshState(isRefreshing = managerState.isFetching)
     var menuExpanded by remember { mutableStateOf(false) }
     val dropdownScreens = remember { listOf(Screen.Settings, Screen.About) }
 
@@ -68,24 +62,24 @@ fun HomeScreen(
                 .fillMaxSize()
                 .padding(paddingValues),
             swipeRefreshState = refreshState,
-            onRefresh = { viewModel.fetch() }
+            onRefresh = onRefresh
         ) {
             AnimatedContent(
                 modifier = Modifier.fillMaxSize(),
-                targetState = viewModel.appState,
+                targetState = managerState,
                 transitionSpec = {
                     scaleIn(initialScale = 0.9f) + fadeIn() with
                             scaleOut(targetScale = 0.9f) + fadeOut()
                 }
             ) { animatedAppState ->
                 when (animatedAppState) {
-                    is StateFetching -> {
+                    is ManagerState.Fetching -> {
                         HomeScreenLoading(
                             modifier = Modifier.fillMaxSize(),
                             appsCount = animatedAppState.placeholderAppsCount
                         )
                     }
-                    is StateSuccess -> {
+                    is ManagerState.Success -> {
                         HomeScreenLoaded(
                             modifier = Modifier.fillMaxSize(),
                             apps = animatedAppState.apps,
@@ -94,7 +88,7 @@ fun HomeScreen(
                             onAppLaunchClick = onAppLaunchClick
                         )
                     }
-                    is StateError -> {
+                    is ManagerState.Error -> {
                         //TODO
                     }
                 }
@@ -102,10 +96,6 @@ fun HomeScreen(
         }
     }
 }
-
-typealias StateFetching = MainViewModel.AppState.Fetching
-typealias StateSuccess = MainViewModel.AppState.Success
-typealias StateError = MainViewModel.AppState.Error
 
 @Composable
 private fun HomeScreenTopBar(
@@ -150,49 +140,34 @@ private fun HomeScreenTopBar(
 private fun HomeScreenLoaded(
     modifier: Modifier = Modifier,
     apps: List<App>,
-    onAppDownloadClick: (
-        appName: String,
-        appVersions: List<String>?,
-        installationOptions: List<InstallationOption>?
-    ) -> Unit,
-    onAppUninstallClick: (appPackage: String) -> Unit,
-    onAppLaunchClick: (appName: String, appPackage: String) -> Unit,
+    onAppDownloadClick: (App) -> Unit,
+    onAppUninstallClick: (App) -> Unit,
+    onAppLaunchClick: (App) -> Unit,
 ) {
     HomeScreenBody(modifier = modifier) {
         managerCategory(categoryName = {
             managerString(R.string.home_category_apps)
         }) {
             items(apps) { app ->
-                val appIcon = rememberImagePainter(app.iconUrl) {
-                    diskCachePolicy(CachePolicy.ENABLED)
-                }
+                val appIcon = painterResource(id = app.iconResId)
 
                 var showAppInfoDialog by remember { mutableStateOf(false) }
 
                 AppCard(
-                    modifier = Modifier
-                        .fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth(),
                     appName = app.name,
                     appIcon = appIcon,
-                    appInstalledVersion = app.installedVersion,
-                    appRemoteVersion = app.remoteVersion,
+                    appInstalledVersion = app.installedVersionName,
+                    appRemoteVersion = app.remoteVersionName,
+                    appState = app.state,
                     onAppDownloadClick = {
-                        onAppDownloadClick(
-                            app.name,
-                            app.versions,
-                            app.installationOptions
-                        )
+                        onAppDownloadClick(app)
                     },
                     onAppUninstallClick = {
-                        onAppUninstallClick(
-                            app.packageName
-                        )
+                        onAppUninstallClick(app)
                     },
                     onAppLaunchClick = {
-                        onAppLaunchClick(
-                            app.name,
-                            app.packageName,
-                        )
+                        onAppLaunchClick(app)
                     },
                     onAppInfoClick = {
                         showAppInfoDialog = true

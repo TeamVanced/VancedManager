@@ -1,35 +1,31 @@
 package com.vanced.manager.di
 
-import com.google.gson.GsonBuilder
-import com.vanced.manager.network.DataService
-import com.vanced.manager.network.util.BASE_GITHUB
-import com.vanced.manager.network.util.BASE_MIRROR
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import com.vanced.manager.network.GithubService
+import com.vanced.manager.network.util.GITHUB_API_BASE
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType
 import okhttp3.OkHttpClient
-import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
+
+private val json = Json {
+    ignoreUnknownKeys = true
+}
 
 val serviceModule = module {
 
-    fun provideMainService(
+    fun provideGithubService(
         okHttpClient: OkHttpClient
-    ) = Retrofit.Builder()
-        .baseUrl(BASE_GITHUB)
-        .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
-        .client(okHttpClient)
-        .build()
-        .create(DataService::class.java)
+    ): GithubService {
+        return Retrofit.Builder()
+            .baseUrl(GITHUB_API_BASE)
+            .addConverterFactory(json.asConverterFactory(MediaType.get("application/json")))
+            .client(okHttpClient)
+            .build()
+            .create()
+    }
 
-    fun provideMirrorService(
-        okHttpClient: OkHttpClient
-    ) = Retrofit.Builder()
-        .baseUrl(BASE_MIRROR)
-        .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
-        .client(okHttpClient)
-        .build()
-        .create(DataService::class.java)
-
-    single(named("main")) { provideMainService(get()) }
-    single(named("mirror")) { provideMirrorService(get()) }
+    single { provideGithubService(get()) }
 }

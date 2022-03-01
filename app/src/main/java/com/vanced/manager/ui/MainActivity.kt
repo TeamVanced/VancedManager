@@ -73,12 +73,15 @@ class MainActivity : ComponentActivity() {
                         when (val screen = backStack.last()) {
                             is Screen.Home -> {
                                 HomeScreen(
-                                    viewModel = mainViewModel,
+                                    managerState = mainViewModel.appState,
+                                    onRefresh = {
+                                        mainViewModel.fetch()
+                                    },
                                     onToolbarScreenSelected = {
                                         backStack.push(it)
                                     },
-                                    onAppDownloadClick = { appName, appVersions, installationOptions ->
-                                        if (installationOptions != null) {
+                                    onAppDownloadClick = { app ->
+                                        /*if (installationOptions != null) {
                                             backStack.push(
                                                 Screen.Configuration(
                                                     appName,
@@ -88,13 +91,13 @@ class MainActivity : ComponentActivity() {
                                             )
                                         } else {
                                             backStack.push(Screen.Install(appName, appVersions))
-                                        }
+                                        }*/
                                     },
-                                    onAppLaunchClick = { appName, packageName ->
-                                        mainViewModel.launchApp(appName, packageName)
+                                    onAppLaunchClick = { app ->
+                                        mainViewModel.launchApp(app.packageName, app.launchActivity)
                                     },
-                                    onAppUninstallClick = { packageName ->
-                                        mainViewModel.uninstallApp(packageName)
+                                    onAppUninstallClick = { app ->
+                                        mainViewModel.uninstallApp(app.packageName)
                                     }
                                 )
                             }

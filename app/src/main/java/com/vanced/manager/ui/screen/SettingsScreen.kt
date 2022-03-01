@@ -11,12 +11,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.vanced.manager.R
-import com.vanced.manager.core.preferences.holder.managerThemePref
-import com.vanced.manager.core.preferences.holder.managerVariantPref
 import com.vanced.manager.core.util.isMagiskInstalled
+import com.vanced.manager.repository.ManagerMode
+import com.vanced.manager.repository.ManagerTheme
 import com.vanced.manager.ui.component.*
 import com.vanced.manager.ui.resource.managerString
-import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.viewmodel.SettingsViewModel
 import org.koin.androidx.compose.viewModel
@@ -60,13 +59,13 @@ fun SettingsScreen(
                         preferenceDescription = stringResource(id = R.string.settings_preference_use_custom_tabs_summary),
                         isChecked = viewModel.managerUseCustomTabs,
                         onCheckedChange = {
-                            viewModel.managerUseCustomTabs = it
+                            viewModel.saveManagerUseCustomTabs(it)
                         }
                     )
                 }
                 item {
                     var showDialog by remember { mutableStateOf(false) }
-                    var selectedMode by remember { mutableStateOf(EntryValue(viewModel.managerMode)) }
+                    var selectedMode by remember { mutableStateOf(EntryValue(viewModel.managerMode.value)) }
                     ManagerSingleSelectDialogPreference(
                         preferenceTitle = managerString(
                             stringId = R.string.settings_preference_variant_title
@@ -83,7 +82,7 @@ fun SettingsScreen(
                         },
                         onDismissRequest = {
                             showDialog = false
-                            selectedMode = EntryValue(managerVariantPref)
+                            selectedMode = EntryValue(viewModel.managerMode.value)
                         },
                         onEntrySelect = {
                             if (it.value == "root" && !isMagiskInstalled)
@@ -92,7 +91,7 @@ fun SettingsScreen(
                             selectedMode = it
                         },
                         onSave = {
-                            viewModel.managerMode = selectedMode.value
+                            viewModel.saveManagerMode(ManagerMode.fromValue(selectedMode.value))
                             showDialog = false
                         }
                     )
@@ -103,36 +102,38 @@ fun SettingsScreen(
             }) {
                 item {
                     var showDialog by remember { mutableStateOf(false) }
-                    var selectedTheme by remember { mutableStateOf(EntryValue(managerThemePref)) }
+                    var selectedTheme by remember { mutableStateOf(EntryValue(viewModel.managerTheme.value)) }
                     ManagerSingleSelectDialogPreference(
                         preferenceTitle = managerString(stringId = R.string.settings_preference_theme_title),
                         preferenceDescription = managerString(
-                            stringId = viewModel.getThemeStringIdByValue(selectedTheme.value)
+                            stringId = viewModel.getThemeStringId(
+                                ManagerTheme.fromValue(selectedTheme.value)
+                            )
                         ),
                         showDialog = showDialog,
                         selected = selectedTheme,
                         entries = mapOf(
-                            EntryText(managerString(viewModel.getThemeStringIdByValue(SettingsViewModel.THEME_LIGHT_VALUE))) to
-                                    EntryValue(SettingsViewModel.THEME_LIGHT_VALUE),
-                            EntryText(managerString(viewModel.getThemeStringIdByValue(SettingsViewModel.THEME_DARK_VALUE))) to
-                                    EntryValue(SettingsViewModel.THEME_DARK_VALUE),
-                            EntryText(managerString(viewModel.getThemeStringIdByValue(SettingsViewModel.THEME_SYSTEM_DEFAULT_VALUE))) to
-                                    EntryValue(SettingsViewModel.THEME_SYSTEM_DEFAULT_VALUE),
+                            EntryText(managerString(viewModel.getThemeStringId(ManagerTheme.LIGHT)))
+                                    to EntryValue(ManagerTheme.LIGHT.value),
+                            EntryText(managerString(viewModel.getThemeStringId(ManagerTheme.DARK)))
+                                    to EntryValue(ManagerTheme.DARK.value),
+                            EntryText(managerString(viewModel.getThemeStringId(ManagerTheme.SYSTEM_DEFAULT)))
+                                    to EntryValue(ManagerTheme.SYSTEM_DEFAULT.value),
                         ),
                         onClick = {
                             showDialog = true
                         },
                         onDismissRequest = {
                             showDialog = false
-                            selectedTheme = EntryValue(viewModel.managerTheme)
+                            selectedTheme = EntryValue(viewModel.managerTheme.value)
                         },
                         onEntrySelect = {
                             selectedTheme = it
                         },
                         onSave = {
-                            viewModel.managerTheme = selectedTheme.value
                             showDialog = false
-                            onThemeChange(ManagerTheme.fromKey(selectedTheme.value))
+                            viewModel.saveManagerTheme(ManagerTheme.fromValue(selectedTheme.value))
+                            onThemeChange(ManagerTheme.fromValue(selectedTheme.value))
                         }
                     )
                 }

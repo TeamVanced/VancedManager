@@ -1,29 +1,46 @@
 package com.vanced.manager.ui.viewmodel
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.vanced.manager.R
 import com.vanced.manager.core.preferences.managerBooleanPreference
 import com.vanced.manager.core.preferences.managerStringPreference
+import com.vanced.manager.repository.ManagerMode
+import com.vanced.manager.repository.ManagerTheme
+import com.vanced.manager.repository.PreferenceRepository
 
-class SettingsViewModel : ViewModel() {
+class SettingsViewModel(
+    private val preferenceRepository: PreferenceRepository
+) : ViewModel() {
 
-    companion object {
-        const val MANAGER_THEME_KEY = "manager_theme"
-        const val MANAGER_MODE_KEY = "manager_mode"
-
-        const val THEME_DARK_VALUE = "dark"
-        const val THEME_LIGHT_VALUE = "light"
-        const val THEME_SYSTEM_DEFAULT_VALUE = "system_default"
+    var managerUseCustomTabs by mutableStateOf(preferenceRepository.managerUseCustomTabs)
+        private set
+    var managerMode by mutableStateOf(preferenceRepository.managerMode)
+        private set
+    var managerTheme by mutableStateOf(preferenceRepository.managerTheme)
+        private set
+    
+    fun saveManagerUseCustomTabs(value: Boolean) {
+        managerUseCustomTabs = value
+        preferenceRepository.managerUseCustomTabs = value
+    }
+    
+    fun saveManagerMode(value: ManagerMode) {
+        managerMode = value
+        preferenceRepository.managerMode = value
+    }
+    
+    fun saveManagerTheme(value: ManagerTheme) {
+        managerTheme = value
+        preferenceRepository.managerTheme = value
     }
 
-    var managerUseCustomTabs by managerBooleanPreference(key = "manager_use_custom_tabs")
-    var managerMode by managerStringPreference(key = MANAGER_MODE_KEY, defaultValue = "nonroot")
-    var managerTheme by managerStringPreference(MANAGER_THEME_KEY, THEME_SYSTEM_DEFAULT_VALUE)
-
-    fun getThemeStringIdByValue(value: String): Int {
+    fun getThemeStringId(value: ManagerTheme): Int {
         return when (value) {
-            THEME_DARK_VALUE -> R.string.settings_preference_theme_dark
-            THEME_LIGHT_VALUE -> R.string.settings_preference_theme_light
+            ManagerTheme.DARK -> R.string.settings_preference_theme_dark
+            ManagerTheme.LIGHT -> R.string.settings_preference_theme_light
             else -> R.string.settings_option_system_default
         }
     }

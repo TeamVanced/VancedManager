@@ -15,12 +15,11 @@ class ManagerApplication : Application() {
 
             modules(
                 apiModule,
+                customTabsModule,
+                datasourceModule,
                 downloaderModule,
                 installerModule,
-                mapperModule,
                 networkModule,
-                packageManagerModule,
-                preferenceModule,
                 repositoryModule,
                 serviceModule,
                 viewModelModule,
