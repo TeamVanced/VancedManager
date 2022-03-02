@@ -37,7 +37,8 @@ object AppData {
     const val PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC = "com.google.android.youtube.apps.music"
 
     const val LAUNCH_ACTIVITY_VANCED_YOUTUBE = "com.google.android.youtube.HomeActivity"
-    const val LAUNCH_ACTIVITY_VANCED_YOUTUBE_MUSIC = "com.google.android.apps.youtube.music.activities.MusicActivity"
+    const val LAUNCH_ACTIVITY_VANCED_YOUTUBE_MUSIC =
+        "com.google.android.apps.youtube.music.activities.MusicActivity"
     const val LAUNCH_ACTIVITY_VANCED_MICROG = "org.microg.gms.ui.SettingsActivity"
     const val LAUNCH_ACTIVITY_VANCED_MANAGER = ""
 }

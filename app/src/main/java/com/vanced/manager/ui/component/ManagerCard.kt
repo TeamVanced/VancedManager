@@ -49,6 +49,7 @@ fun ManagerCard(
         )
     }
 }
+
 @Composable
 fun ManagerElevatedCard(
     modifier: Modifier = Modifier,
@@ -86,6 +87,7 @@ fun ManagerElevatedCard(
         )
     }
 }
+
 @Composable
 fun ManagerOutlinedCard(
     modifier: Modifier = Modifier,

@@ -11,13 +11,13 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.vanced.manager.R
-import com.vanced.manager.core.util.isMagiskInstalled
 import com.vanced.manager.repository.ManagerMode
 import com.vanced.manager.repository.ManagerTheme
 import com.vanced.manager.ui.component.*
 import com.vanced.manager.ui.resource.managerString
 import com.vanced.manager.ui.util.Screen
 import com.vanced.manager.ui.viewmodel.SettingsViewModel
+import com.vanced.manager.util.isMagiskInstalled
 import org.koin.androidx.compose.viewModel
 
 @ExperimentalMaterial3Api

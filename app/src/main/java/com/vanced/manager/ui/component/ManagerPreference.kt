@@ -212,7 +212,7 @@ private fun ListDialogRadiobuttonItem(
 ) {
     ListDialogItem(
         modifier = modifier,
-        text = text, 
+        text = text,
         onClick = onClick,
         trailing = {
             RadioButton(
@@ -232,7 +232,7 @@ private fun ListDialogCheckboxItem(
 ) {
     ListDialogItem(
         modifier = modifier,
-        text = text, 
+        text = text,
         onClick = {
             onCheckedChange(!checked)
         },

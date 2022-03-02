@@ -37,7 +37,7 @@ fun ManagerListItem(
                 .weight(1f)
                 .padding(
                     vertical =
-                        if (description != null) DefaultContentPaddingVertical - 4.dp else DefaultContentPaddingVertical,
+                    if (description != null) DefaultContentPaddingVertical - 4.dp else DefaultContentPaddingVertical,
                 )
                 .align(Alignment.CenterVertically)
         ) {

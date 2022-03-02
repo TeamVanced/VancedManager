@@ -1,4 +1,4 @@
-package com.vanced.manager.ui.navigation
+package com.vanced.manager.ui.component
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedContentScope

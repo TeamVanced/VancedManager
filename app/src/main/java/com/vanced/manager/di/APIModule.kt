@@ -1,8 +1,8 @@
 package com.vanced.manager.di
 
-import com.vanced.manager.core.downloader.api.MicrogAPI
-import com.vanced.manager.core.downloader.api.MusicAPI
-import com.vanced.manager.core.downloader.api.VancedAPI
+import com.vanced.manager.downloader.api.MicrogAPI
+import com.vanced.manager.downloader.api.MusicAPI
+import com.vanced.manager.downloader.api.VancedAPI
 import com.vanced.manager.network.util.BASE
 import okhttp3.OkHttpClient
 import org.koin.dsl.module

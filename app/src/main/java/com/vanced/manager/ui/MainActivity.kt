@@ -14,8 +14,8 @@ import com.github.zsoltk.compose.backpress.BackPressHandler
 import com.github.zsoltk.compose.backpress.LocalBackPressHandler
 import com.github.zsoltk.compose.router.Router
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.vanced.manager.core.installer.service.AppInstallService
-import com.vanced.manager.core.installer.service.AppUninstallService
+import com.vanced.manager.installer.service.AppInstallService
+import com.vanced.manager.installer.service.AppUninstallService
 import com.vanced.manager.ui.screen.*
 import com.vanced.manager.ui.theme.ManagerTheme
 import com.vanced.manager.ui.util.Screen

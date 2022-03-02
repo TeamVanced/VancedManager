@@ -1,12 +1,12 @@
 package com.vanced.manager.di
 
 import android.content.Context
-import com.vanced.manager.core.downloader.api.MicrogAPI
-import com.vanced.manager.core.downloader.api.MusicAPI
-import com.vanced.manager.core.downloader.api.VancedAPI
-import com.vanced.manager.core.downloader.impl.MicrogDownloader
-import com.vanced.manager.core.downloader.impl.MusicDownloader
-import com.vanced.manager.core.downloader.impl.VancedDownloader
+import com.vanced.manager.downloader.api.MicrogAPI
+import com.vanced.manager.downloader.api.MusicAPI
+import com.vanced.manager.downloader.api.VancedAPI
+import com.vanced.manager.downloader.impl.MicrogDownloader
+import com.vanced.manager.downloader.impl.MusicDownloader
+import com.vanced.manager.downloader.impl.VancedDownloader
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 

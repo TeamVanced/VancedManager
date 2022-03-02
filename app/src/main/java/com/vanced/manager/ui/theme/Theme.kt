@@ -92,7 +92,7 @@ fun ManagerTheme(
             )
         } else {
             apiDependantColorScheme(
-                dynamic = { dynamicLightColorScheme(context)},
+                dynamic = { dynamicLightColorScheme(context) },
                 static = { LightThemeColors }
             )
         }

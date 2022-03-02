@@ -41,8 +41,8 @@
             android:theme="@style/Theme.MaterialComponents.NoActionBar"
             android:label="@string/app_name"/>
 
-        <service android:name=".core.installer.service.AppInstallService" />
-        <service android:name=".core.installer.service.AppUninstallService" />
+        <service android:name="com.vanced.manager.installer.service.AppInstallService" />
+        <service android:name="com.vanced.manager.installer.service.AppUninstallService" />
 
     </application>
 

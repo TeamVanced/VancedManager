@@ -178,7 +178,7 @@ private fun ConfigurationBottomBar(
                     shrinkHorizontally(tween(exitDuration)) +
                     scaleOut(tween(exitDuration)),
 
-        ) {
+            ) {
             TextButton(onClick = onBackClick) {
                 ManagerText(text = "Back")
             }

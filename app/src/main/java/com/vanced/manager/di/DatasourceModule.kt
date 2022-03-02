@@ -1,10 +1,10 @@
 package com.vanced.manager.di
 
 import android.content.Context
-import com.vanced.manager.datasource.PkgInfoDatasource
-import com.vanced.manager.datasource.PkgInfoDatasourceImpl
-import com.vanced.manager.datasource.PreferenceDatasource
-import com.vanced.manager.datasource.PreferenceDatasourceImpl
+import com.vanced.manager.repository.source.PkgInfoDatasource
+import com.vanced.manager.repository.source.PkgInfoDatasourceImpl
+import com.vanced.manager.repository.source.PreferenceDatasource
+import com.vanced.manager.repository.source.PreferenceDatasourceImpl
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -22,7 +22,10 @@ val datasourceModule = module {
         context: Context
     ): PreferenceDatasource {
         return PreferenceDatasourceImpl(
-            sharedPreferences = context.getSharedPreferences("manager_settings", Context.MODE_PRIVATE)
+            sharedPreferences = context.getSharedPreferences(
+                "manager_settings",
+                Context.MODE_PRIVATE
+            )
         )
     }
 

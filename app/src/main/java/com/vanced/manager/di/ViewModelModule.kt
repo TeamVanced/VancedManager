@@ -1,12 +1,12 @@
 package com.vanced.manager.di
 
 import android.app.Application
-import com.vanced.manager.core.downloader.impl.MicrogDownloader
-import com.vanced.manager.core.downloader.impl.MusicDownloader
-import com.vanced.manager.core.downloader.impl.VancedDownloader
-import com.vanced.manager.core.installer.impl.MicrogInstaller
-import com.vanced.manager.core.installer.impl.MusicInstaller
-import com.vanced.manager.core.installer.impl.VancedInstaller
+import com.vanced.manager.downloader.impl.MicrogDownloader
+import com.vanced.manager.downloader.impl.MusicDownloader
+import com.vanced.manager.downloader.impl.VancedDownloader
+import com.vanced.manager.installer.impl.MicrogInstaller
+import com.vanced.manager.installer.impl.MusicInstaller
+import com.vanced.manager.installer.impl.VancedInstaller
 import com.vanced.manager.repository.AppRepository
 import com.vanced.manager.repository.PreferenceRepository
 import com.vanced.manager.ui.viewmodel.ConfigurationViewModel

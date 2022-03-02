@@ -1,12 +1,12 @@
 package com.vanced.manager.repository
 
-import com.vanced.manager.datasource.PkgInfoDatasource
+import com.vanced.manager.domain.model.App
 import com.vanced.manager.domain.model.AppData
 import com.vanced.manager.domain.model.AppState
 import com.vanced.manager.domain.model.AppType
-import com.vanced.manager.domain.model.App
 import com.vanced.manager.network.GithubService
 import com.vanced.manager.network.dto.GithubReleaseDto
+import com.vanced.manager.repository.source.PkgInfoDatasource
 
 interface AppRepository {
 
@@ -54,8 +54,10 @@ class AppRepositoryImpl(
         val githubRelease = githubService.getVancedYoutubeRelease()
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
-        val installedVersionCode = pkgInfoDatasource.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE)
-        val installedVersionName = pkgInfoDatasource.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE)
+        val installedVersionCode =
+            pkgInfoDatasource.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE)
+        val installedVersionName =
+            pkgInfoDatasource.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE)
         return App(
             name = AppData.NAME_VANCED_YOUTUBE,
             iconResId = AppData.ICON_VANCED_YOUTUBE,
@@ -75,8 +77,10 @@ class AppRepositoryImpl(
         val githubRelease = githubService.getVancedYoutubeMusicRelease()
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
-        val installedVersionCode = pkgInfoDatasource.getVersionCode(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC)
-        val installedVersionName = pkgInfoDatasource.getVersionName(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC)
+        val installedVersionCode =
+            pkgInfoDatasource.getVersionCode(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC)
+        val installedVersionName =
+            pkgInfoDatasource.getVersionName(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC)
         return App(
             name = AppData.NAME_VANCED_YOUTUBE_MUSIC,
             iconResId = AppData.ICON_VANCED_YOUTUBE_MUSIC,
@@ -96,8 +100,10 @@ class AppRepositoryImpl(
         val githubRelease = githubService.getVancedYoutubeMusicRelease()
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
-        val installedVersionCode = pkgInfoDatasource.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC)
-        val installedVersionName = pkgInfoDatasource.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC)
+        val installedVersionCode =
+            pkgInfoDatasource.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC)
+        val installedVersionName =
+            pkgInfoDatasource.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC)
         return App(
             name = AppData.NAME_VANCED_YOUTUBE_MUSIC,
             iconResId = AppData.ICON_VANCED_YOUTUBE_MUSIC,

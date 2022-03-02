@@ -10,7 +10,7 @@ import com.vanced.manager.BuildConfig
 class SplashScreenActivity : ComponentActivity() {
 
     init {
-        Shell.enableVerboseLogging = BuildConfig.DEBUG;
+        Shell.enableVerboseLogging = BuildConfig.DEBUG
         Shell.setDefaultBuilder(
             Shell.Builder
                 .create()

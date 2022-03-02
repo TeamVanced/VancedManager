@@ -8,9 +8,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.vanced.manager.core.installer.util.PM
 import com.vanced.manager.domain.model.App
-import com.vanced.manager.repository.*
+import com.vanced.manager.installer.util.PM
+import com.vanced.manager.repository.AppRepository
+import com.vanced.manager.repository.ManagerMode
+import com.vanced.manager.repository.PreferenceRepository
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.launch

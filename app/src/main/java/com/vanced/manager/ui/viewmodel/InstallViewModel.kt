@@ -7,18 +7,18 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.vanced.manager.core.downloader.base.AppDownloader
-import com.vanced.manager.core.downloader.impl.MicrogDownloader
-import com.vanced.manager.core.downloader.impl.MusicDownloader
-import com.vanced.manager.core.downloader.impl.VancedDownloader
-import com.vanced.manager.core.installer.impl.MicrogInstaller
-import com.vanced.manager.core.installer.impl.MusicInstaller
-import com.vanced.manager.core.installer.impl.VancedInstaller
-import com.vanced.manager.core.installer.util.PMRootResult
-import com.vanced.manager.core.preferences.holder.managerVariantPref
+import com.vanced.manager.downloader.base.AppDownloader
+import com.vanced.manager.downloader.impl.MicrogDownloader
+import com.vanced.manager.downloader.impl.MusicDownloader
+import com.vanced.manager.downloader.impl.VancedDownloader
+import com.vanced.manager.installer.impl.MicrogInstaller
+import com.vanced.manager.installer.impl.MusicInstaller
+import com.vanced.manager.installer.impl.VancedInstaller
+import com.vanced.manager.installer.util.PMRootResult
 import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
+import com.vanced.manager.preferences.holder.managerVariantPref
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -107,10 +107,12 @@ class InstallViewModel(
                 installApp(appName, appVersions)
             }
             is AppDownloader.DownloadStatus.Error -> {
-                log(Log.Error(
-                    displayText = "Failed to download ${download.fileName}",
-                    stacktrace = download.error
-                ))
+                log(
+                    Log.Error(
+                        displayText = "Failed to download ${download.fileName}",
+                        stacktrace = download.error
+                    )
+                )
             }
         }
     }

@@ -2,8 +2,8 @@ package com.vanced.manager.repository
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
-import com.vanced.manager.datasource.PreferenceData
-import com.vanced.manager.datasource.PreferenceDatasource
+import com.vanced.manager.repository.source.PreferenceData
+import com.vanced.manager.repository.source.PreferenceDatasource
 
 interface PreferenceRepository {
 

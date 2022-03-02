@@ -5,7 +5,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material.icons.rounded.*
+import androidx.compose.material.icons.rounded.DeleteForever
+import androidx.compose.material.icons.rounded.GetApp
+import androidx.compose.material.icons.rounded.Launch
+import androidx.compose.material.icons.rounded.Update
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment

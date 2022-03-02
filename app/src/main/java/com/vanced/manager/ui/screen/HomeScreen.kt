@@ -1,5 +1,6 @@
 package com.vanced.manager.ui.screen
 
+import androidx.annotation.DrawableRes
 import androidx.compose.animation.*
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -17,9 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.vanced.manager.R
-import com.vanced.manager.core.util.socialMedia
-import com.vanced.manager.core.util.sponsors
 import com.vanced.manager.domain.model.App
+import com.vanced.manager.network.util.*
 import com.vanced.manager.ui.component.*
 import com.vanced.manager.ui.resource.managerString
 import com.vanced.manager.ui.util.Screen
@@ -257,3 +257,66 @@ private inline fun HomeScreenBody(
         }
     }
 }
+
+data class Link(
+    val title: String,
+    val link: String,
+    @DrawableRes val icon: Int
+)
+
+
+val sponsors = listOf(
+    Link(
+        title = "Brave",
+        link = URL_SPONSOR_BRAVE,
+        icon = R.drawable.ic_brave
+    ),
+    Link(
+        title = "Adguard",
+        link = URL_SPONSOR_ADGUARD,
+        icon = R.drawable.ic_adguard
+    )
+)
+
+val socialMedia = listOf(
+    Link(
+        title = "Instagram",
+        link = URL_MEDIA_INSTAGRAM,
+        icon = R.drawable.ic_instagram
+    ),
+    Link(
+        title = "YouTube",
+        link = URL_MEDIA_YOUTUBE,
+        icon = R.drawable.ic_youtube
+    ),
+    Link(
+        title = "GitHub",
+        link = URL_MEDIA_GITHUB,
+        icon = R.drawable.ic_github
+    ),
+    Link(
+        title = "Website",
+        link = URL_MEDIA_WEBSITE,
+        icon = R.drawable.ic_website
+    ),
+    Link(
+        title = "Telegram",
+        link = URL_MEDIA_TELEGRAM,
+        icon = R.drawable.ic_telegram
+    ),
+    Link(
+        title = "Twitter",
+        link = URL_MEDIA_TWITTER,
+        icon = R.drawable.ic_twitter
+    ),
+    Link(
+        title = "Discord",
+        link = URL_MEDIA_DISCORD,
+        icon = R.drawable.ic_discord
+    ),
+    Link(
+        title = "Reddit",
+        link = URL_MEDIA_REDDIT,
+        icon = R.drawable.ic_reddit
+    ),
+)
