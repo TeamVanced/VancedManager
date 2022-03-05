@@ -14,11 +14,11 @@ import com.vanced.manager.downloader.impl.VancedDownloader
 import com.vanced.manager.installer.impl.MicrogInstaller
 import com.vanced.manager.installer.impl.MusicInstaller
 import com.vanced.manager.installer.impl.VancedInstaller
-import com.vanced.manager.installer.util.PMRootResult
 import com.vanced.manager.network.util.MICROG_NAME
 import com.vanced.manager.network.util.MUSIC_NAME
 import com.vanced.manager.network.util.VANCED_NAME
 import com.vanced.manager.preferences.holder.managerVariantPref
+import com.vanced.manager.repository.manager.PackageManagerResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -117,7 +117,7 @@ class InstallViewModel(
         }
     }
 
-    private fun installApp(
+    private suspend fun installApp(
         appName: String,
         appVersions: List<String>?,
     ) {
@@ -127,11 +127,11 @@ class InstallViewModel(
 
         if (isRoot) {
             when (val installStatus = installer.installRoot(appVersions)) {
-                is PMRootResult.Success -> {
+                is PackageManagerResult.Success -> {
                     status = Status.Installed
                     log(Log.Success("Successfully installed"))
                 }
-                is PMRootResult.Error -> {
+                is PackageManagerResult.Error -> {
                     status = Status.Failure
                     log(Log.Error("Failed to install app", installStatus.message))
                 }

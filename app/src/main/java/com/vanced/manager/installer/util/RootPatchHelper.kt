@@ -1,8 +1,11 @@
 package com.vanced.manager.installer.util
 
+import com.vanced.manager.repository.manager.PackageManagerResult
+import com.vanced.manager.repository.manager.getOrElse
+
 object RootPatchHelper {
 
-    fun cleanPatches(app: String): PMRootResult<Nothing> {
+    fun cleanPatches(app: String): PackageManagerResult<Nothing> {
         val cleanOldPatches = Patcher.destroyOldPatch(app)
         if (cleanOldPatches.isError)
             return cleanOldPatches
@@ -11,14 +14,14 @@ object RootPatchHelper {
         if (cleanOldPatches.isError)
             return cleanPatches
 
-        return PMRootResult.Success()
+        return PackageManagerResult.Success(null)
     }
 
     inline fun prepareStock(
         stockPackage: String,
         stockVersion: String,
-        install: () -> PMRootResult<Nothing>
-    ): PMRootResult<Nothing> {
+        install: () -> PackageManagerResult<Nothing>
+    ): PackageManagerResult<Nothing> {
         val stockYoutubeVersion = PMRoot.getPackageVersionName(stockPackage)
             .getOrElse { null }
         if (stockYoutubeVersion != stockVersion) {
@@ -31,14 +34,14 @@ object RootPatchHelper {
                 return installStock
         }
 
-        return PMRootResult.Success()
+        return PackageManagerResult.Success(null)
     }
 
     fun patchStock(
         patchPath: String,
         stockPackage: String,
         app: String
-    ): PMRootResult<Nothing> {
+    ): PackageManagerResult<Nothing> {
         val movePatch = Patcher.movePatchToDataAdb(patchPath, app)
         if (movePatch.isError)
             return movePatch
@@ -51,14 +54,14 @@ object RootPatchHelper {
             .getOrElse { error -> return error }!!
 
         val setupScript = Patcher.setupScript(app, stockPackage, stockPackageDir)
-        if (setupScript is PMRootResult.Error)
+        if (setupScript is PackageManagerResult.Error)
             return setupScript
 
         val linkPatch = Patcher.linkPatch(app, stockPackage, stockPackageDir)
-        if (linkPatch is PMRootResult.Error)
+        if (linkPatch is PackageManagerResult.Error)
             return linkPatch
 
-        return PMRootResult.Success()
+        return PackageManagerResult.Success(null)
     }
 
 }

@@ -19,6 +19,7 @@ class ManagerApplication : Application() {
                 datasourceModule,
                 downloaderModule,
                 installerModule,
+                managerModule,
                 networkModule,
                 repositoryModule,
                 serviceModule,

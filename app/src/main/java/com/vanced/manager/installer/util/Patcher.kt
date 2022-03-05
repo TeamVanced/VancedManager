@@ -5,6 +5,8 @@ import com.topjohnwu.superuser.io.SuFile
 import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.io.ManagerSuFile
 import com.vanced.manager.io.SUIOException
+import com.vanced.manager.repository.manager.PackageManagerResult
+import com.vanced.manager.repository.manager.PackageManagerStatus
 import com.vanced.manager.util.errString
 import java.io.File
 import java.io.IOException
@@ -15,7 +17,7 @@ object Patcher {
         app: String,
         stockPackage: String,
         stockPath: String,
-    ): PMRootResult<Nothing> {
+    ): PackageManagerResult<Nothing> {
         val postFsDataScriptPath = getAppPostFsScriptPath(app)
         val serviceDScriptPath = getAppServiceDScriptPath(app)
 
@@ -24,22 +26,22 @@ object Patcher {
 
         val copyServiceDScript = copyScriptToDestination(postFsDataScript, postFsDataScriptPath)
         if (copyServiceDScript.isFailure)
-            return PMRootResult.Error(
-                PMRootStatus.SCRIPT_FAILED_SETUP_POST_FS,
+            return PackageManagerResult.Error(
+                PackageManagerStatus.SCRIPT_FAILED_SETUP_POST_FS,
                 copyServiceDScript.exceptionOrNull()!!.stackTraceToString()
             )
 
         val copyPostFsDataScript = copyScriptToDestination(serviceDScript, serviceDScriptPath)
         if (copyPostFsDataScript.isFailure)
-            return PMRootResult.Error(
-                PMRootStatus.SCRIPT_FAILED_SETUP_SERVICE_D,
+            return PackageManagerResult.Error(
+                PackageManagerStatus.SCRIPT_FAILED_SETUP_SERVICE_D,
                 copyPostFsDataScript.exceptionOrNull()!!.stackTraceToString()
             )
 
-        return PMRootResult.Success()
+        return PackageManagerResult.Success(null)
     }
 
-    fun movePatchToDataAdb(patchPath: String, app: String): PMRootResult<Nothing> {
+    fun movePatchToDataAdb(patchPath: String, app: String): PackageManagerResult<Nothing> {
         val newPatchPath = getAppPatchPath(app)
 
         val patchApk = File(patchPath)
@@ -53,42 +55,42 @@ object Patcher {
         try {
             patchApk.copyTo(newPatchApk)
         } catch (e: IOException) {
-            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_COPY, e.stackTraceToString())
+            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_COPY, e.stackTraceToString())
         }
 
         val chmod = Shell.su("chmod", "644", newPatchPath).exec()
         if (!chmod.isSuccess)
-            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_CHMOD, chmod.errString)
+            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_CHMOD, chmod.errString)
 
         val chown = Shell.su("chown", "system:system", newPatchPath).exec()
         if (!chmod.isSuccess)
-            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_CHOWN, chown.errString)
+            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_CHOWN, chown.errString)
 
-        return PMRootResult.Success()
+        return PackageManagerResult.Success(null)
     }
 
-    fun chconPatch(app: String): PMRootResult<Nothing> {
+    fun chconPatch(app: String): PackageManagerResult<Nothing> {
         val chcon = Shell.su("chcon u:object_r:apk_data_file:s0 ${getAppPatchPath(app)}").exec()
         if (!chcon.isSuccess)
-            return PMRootResult.Error(PMRootStatus.PATCH_FAILED_CHCON, chcon.errString)
+            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_CHCON, chcon.errString)
 
-        return PMRootResult.Success()
+        return PackageManagerResult.Success(null)
     }
 
-    fun linkPatch(app: String, stockPackage: String, stockPath: String): PMRootResult<Nothing> {
+    fun linkPatch(app: String, stockPackage: String, stockPath: String): PackageManagerResult<Nothing> {
         val umount =
             Shell.su("""for i in ${'$'}(ls /data/app/ | grep $stockPackage | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """)
                 .exec()
         if (!umount.isSuccess)
-            return PMRootResult.Error(PMRootStatus.LINK_FAILED_UNMOUNT, umount.errString)
+            return PackageManagerResult.Error(PackageManagerStatus.LINK_FAILED_UNMOUNT, umount.errString)
 
         val mount =
             Shell.su("su", "-mm", "-c", """"mount -o bind ${getAppPatchPath(app)} $stockPath"""")
                 .exec()
         if (!mount.isSuccess)
-            return PMRootResult.Error(PMRootStatus.LINK_FAILED_MOUNT, mount.errString)
+            return PackageManagerResult.Error(PackageManagerStatus.LINK_FAILED_MOUNT, mount.errString)
 
-        return PMRootResult.Success()
+        return PackageManagerResult.Success(null)
     }
 
     fun destroyPatch(app: String) =
@@ -132,11 +134,11 @@ private fun cleanPatchFiles(
     postFsPath: String,
     serviceDPath: String,
     patchPath: String,
-): PMRootResult<Nothing> {
+): PackageManagerResult<Nothing> {
     val files = mapOf(
-        postFsPath to PMRootStatus.SCRIPT_FAILED_DESTROY_POST_FS,
-        serviceDPath to PMRootStatus.SCRIPT_FAILED_DESTROY_SERVICE_D,
-        patchPath to PMRootStatus.PATCH_FAILED_DESTROY,
+        postFsPath to PackageManagerStatus.SCRIPT_FAILED_DESTROY_POST_FS,
+        serviceDPath to PackageManagerStatus.SCRIPT_FAILED_DESTROY_SERVICE_D,
+        patchPath to PackageManagerStatus.PATCH_FAILED_DESTROY,
     )
 
     for ((filePath, errorStatusType) in files) {
@@ -145,11 +147,11 @@ private fun cleanPatchFiles(
                 if (exists()) delete()
             }
         } catch (e: SUIOException) {
-            return PMRootResult.Error(errorStatusType, e.stackTraceToString())
+            return PackageManagerResult.Error(errorStatusType, e.stackTraceToString())
         }
     }
 
-    return PMRootResult.Success()
+    return PackageManagerResult.Success(null)
 }
 
 private fun copyScriptToDestination(

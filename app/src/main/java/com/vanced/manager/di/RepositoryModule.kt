@@ -5,7 +5,8 @@ import com.vanced.manager.repository.AppRepository
 import com.vanced.manager.repository.AppRepositoryImpl
 import com.vanced.manager.repository.PreferenceRepository
 import com.vanced.manager.repository.PreferenceRepositoryImpl
-import com.vanced.manager.repository.source.PkgInfoDatasource
+import com.vanced.manager.repository.manager.NonrootPackageManager
+import com.vanced.manager.repository.manager.RootPackageManager
 import com.vanced.manager.repository.source.PreferenceDatasource
 import org.koin.dsl.module
 
@@ -13,11 +14,13 @@ val repositoryModule = module {
 
     fun provideGithubRepository(
         githubService: GithubService,
-        pkgInfoDatasource: PkgInfoDatasource
+        nonrootPackageManager: NonrootPackageManager,
+        rootPackageManager: RootPackageManager,
     ): AppRepository {
         return AppRepositoryImpl(
             githubService = githubService,
-            pkgInfoDatasource = pkgInfoDatasource
+            nonrootPackageManager = nonrootPackageManager,
+            rootPackageManager = rootPackageManager
         )
     }
 
@@ -29,6 +32,6 @@ val repositoryModule = module {
         )
     }
 
-    single { provideGithubRepository(get(), get()) }
+    single { provideGithubRepository(get(), get(), get()) }
     single { providePreferenceRepository(get()) }
 }

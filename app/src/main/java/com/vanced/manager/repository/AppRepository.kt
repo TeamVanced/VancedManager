@@ -6,7 +6,9 @@ import com.vanced.manager.domain.model.AppState
 import com.vanced.manager.domain.model.AppType
 import com.vanced.manager.network.GithubService
 import com.vanced.manager.network.dto.GithubReleaseDto
-import com.vanced.manager.repository.source.PkgInfoDatasource
+import com.vanced.manager.repository.manager.NonrootPackageManager
+import com.vanced.manager.repository.manager.PackageManager
+import com.vanced.manager.repository.manager.RootPackageManager
 
 interface AppRepository {
 
@@ -26,15 +28,18 @@ interface AppRepository {
 
 class AppRepositoryImpl(
     private val githubService: GithubService,
-    private val pkgInfoDatasource: PkgInfoDatasource,
+    private val nonrootPackageManager: NonrootPackageManager,
+    private val rootPackageManager: RootPackageManager,
 ) : AppRepository {
 
     override suspend fun getVancedYoutubeNonroot(): App {
         val githubRelease = githubService.getVancedYoutubeRelease()
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
-        val installedVersionCode = pkgInfoDatasource.getVersionCode(AppData.PACKAGE_VANCED_YOUTUBE)
-        val installedVersionName = pkgInfoDatasource.getVersionName(AppData.PACKAGE_VANCED_YOUTUBE)
+        val installedVersionCode =
+            nonrootPackageManager.getVersionCode(AppData.PACKAGE_VANCED_YOUTUBE).getValueOrNull()
+        val installedVersionName =
+            nonrootPackageManager.getVersionName(AppData.PACKAGE_VANCED_YOUTUBE).getValueOrNull()
         return App(
             name = AppData.NAME_VANCED_YOUTUBE,
             iconResId = AppData.ICON_VANCED_YOUTUBE,
@@ -55,9 +60,9 @@ class AppRepositoryImpl(
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
         val installedVersionCode =
-            pkgInfoDatasource.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE)
+            rootPackageManager.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE).getValueOrNull()
         val installedVersionName =
-            pkgInfoDatasource.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE)
+            rootPackageManager.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE).getValueOrNull()
         return App(
             name = AppData.NAME_VANCED_YOUTUBE,
             iconResId = AppData.ICON_VANCED_YOUTUBE,
@@ -78,9 +83,9 @@ class AppRepositoryImpl(
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
         val installedVersionCode =
-            pkgInfoDatasource.getVersionCode(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC)
+            nonrootPackageManager.getVersionCode(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC).getValueOrNull()
         val installedVersionName =
-            pkgInfoDatasource.getVersionName(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC)
+            nonrootPackageManager.getVersionName(AppData.PACKAGE_VANCED_YOUTUBE_MUSIC).getValueOrNull()
         return App(
             name = AppData.NAME_VANCED_YOUTUBE_MUSIC,
             iconResId = AppData.ICON_VANCED_YOUTUBE_MUSIC,
@@ -101,9 +106,9 @@ class AppRepositoryImpl(
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
         val installedVersionCode =
-            pkgInfoDatasource.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC)
+            rootPackageManager.getVersionCode(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC).getValueOrNull()
         val installedVersionName =
-            pkgInfoDatasource.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC)
+            rootPackageManager.getVersionName(AppData.PACKAGE_ROOT_VANCED_YOUTUBE_MUSIC).getValueOrNull()
         return App(
             name = AppData.NAME_VANCED_YOUTUBE_MUSIC,
             iconResId = AppData.ICON_VANCED_YOUTUBE_MUSIC,
@@ -123,8 +128,10 @@ class AppRepositoryImpl(
         val githubRelease = githubService.getVancedMicrogRelease()
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
-        val installedVersionCode = pkgInfoDatasource.getVersionCode(AppData.PACKAGE_VANCED_MICROG)
-        val installedVersionName = pkgInfoDatasource.getVersionName(AppData.PACKAGE_VANCED_MICROG)
+        val installedVersionCode =
+            nonrootPackageManager.getVersionCode(AppData.PACKAGE_VANCED_MICROG).getValueOrNull()
+        val installedVersionName =
+            nonrootPackageManager.getVersionName(AppData.PACKAGE_VANCED_MICROG).getValueOrNull()
         return App(
             name = AppData.NAME_VANCED_MICROG,
             iconResId = AppData.ICON_VANCED_MICROG,
@@ -144,8 +151,10 @@ class AppRepositoryImpl(
         val githubRelease = githubService.getVancedManagerRelease()
         val remoteVersionCode = githubRelease.getVersionCode()
         val remoteVersionName = githubRelease.getVersionName()
-        val installedVersionCode = pkgInfoDatasource.getVersionCode(AppData.PACKAGE_VANCED_MANAGER)
-        val installedVersionName = pkgInfoDatasource.getVersionName(AppData.PACKAGE_VANCED_MANAGER)
+        val installedVersionCode =
+            nonrootPackageManager.getVersionCode(AppData.PACKAGE_VANCED_MANAGER).getValueOrNull()
+        val installedVersionName =
+            nonrootPackageManager.getVersionName(AppData.PACKAGE_VANCED_MANAGER).getValueOrNull()
         return App(
             name = AppData.NAME_VANCED_MANAGER,
             iconResId = AppData.ICON_VANCED_MANAGER,
