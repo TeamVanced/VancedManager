@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">ବାତିଲ୍ କର</string>
     <string name="close">Close</string>
     <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
     <string name="description_vanced">A modified YouTube client with many useful features!</string>
@@ -25,7 +25,7 @@
     <!-- Home Page -->
     <string name="about_app">About %1$s</string>
     <string name="accessibility_download">Download</string>
-    <string name="accessibility_info">Info</string>
+    <string name="accessibility_info">ସୂଚନା</string>
     <string name="accessibility_launch">Launch</string>
     <string name="accessibility_reinstall">Reinstall</string>
     <string name="accessibility_uninstall">Uninstall</string>
@@ -43,8 +43,8 @@
     <string name="version_installed">Installed:</string>
     <!-- Settings -->
     <string name="accent_color">Accent Color</string>
-    <string name="category_appearance">Appearance</string>
-    <string name="category_behaviour">Behavior</string>
+    <string name="category_appearance">ରୂପ</string>
+    <string name="category_behaviour">ଆଚରଣ</string>
     <string name="clear_files">Clear downloaded files</string>
     <string name="cleared_files">Successfully cleared files</string>
     <string name="firebase_summary">This lets us collect information about app performance and crash logs</string>
@@ -59,8 +59,8 @@
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="system_default">System Default</string>
     <string name="theme">Theme</string>
-    <string name="theme_dark">Dark Theme</string>
-    <string name="theme_light">Light Theme</string>
+    <string name="theme_dark">ଗାଢ଼ ଥିମ୍</string>
+    <string name="theme_light">ହାଲୁକା ଥିମ୍</string>
     <string name="update_center">Manager Update Center</string>
     <string name="update_not_found">No new updates</string>
     <string name="variant">Variant</string>
@@ -74,7 +74,7 @@
     <string name="app_installation_preferences">%1$s Installation Preferences</string>
     <string name="checking_updates">Checking for updates…</string>
     <string name="chosen_lang">Language(s): %1$s</string>
-    <string name="chosen_theme">Theme: %1$s</string>
+    <string name="chosen_theme">ଥିମ୍: %1$s</string>
     <string name="chosen_version">Version: %1$s</string>
     <string name="error">Error</string>
     <string name="guide">Guide</string>
