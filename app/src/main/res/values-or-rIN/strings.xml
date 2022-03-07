@@ -58,7 +58,7 @@
     <string name="script_sleep_timer">Root Script Sleep Time</string>
     <string name="script_sleep_timer_description">Adjust sleep time value used in /data/adb/service.d/app.sh script, useful for fixing mounting issues</string>
     <string name="system_default">System Default</string>
-    <string name="theme">Theme</string>
+    <string name="theme">ଥିମ୍</string>
     <string name="theme_dark">ଗାଢ଼ ଥିମ୍</string>
     <string name="theme_light">ହାଲୁକା ଥିମ୍</string>
     <string name="update_center">Manager Update Center</string>
@@ -75,8 +75,8 @@
     <string name="checking_updates">Checking for updates…</string>
     <string name="chosen_lang">Language(s): %1$s</string>
     <string name="chosen_theme">ଥିମ୍: %1$s</string>
-    <string name="chosen_version">Version: %1$s</string>
-    <string name="error">Error</string>
+    <string name="chosen_version">ସଂସ୍କରଣ: %1$s</string>
+    <string name="error">ତ୍ରୁଟି</string>
     <string name="guide">Guide</string>
     <string name="hold_on">Stop!</string>
     <string name="magisk_vanced">You are using the Magisk/TWRP version of Vanced, which is discontinued and cannot be updated using this app. Please remove it by removing the Magisk module/using TWRP Vanced uninstaller.</string>
@@ -87,15 +87,15 @@
     <string name="uninstall">Uninstall</string>
     <string name="redownload">Redownload</string>
     <string name="security_context">Make sure that you downloaded the app from vancedapp.com, the Vanced Discord server, or the Vanced GitHub</string>
-    <string name="version">Version</string>
+    <string name="version">ସଂସ୍କରଣ</string>
     <string name="welcome">Welcome</string>
     <!-- Install Page -->
     <string name="choose_preferred_language">Choose your preferred language(s) for Vanced</string>
     <string name="install_latest">Latest</string>
     <string name="light_plus_other">Light + %1$s</string>
     <string name="select_at_least_one_lang">Select at least one language!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">କଳା</string>
+    <string name="vanced_dark">ଗାଢ଼</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
     <string name="other_contributors">Other Contributors</string>
