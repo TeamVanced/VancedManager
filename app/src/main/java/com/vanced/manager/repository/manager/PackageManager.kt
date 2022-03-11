@@ -12,8 +12,7 @@ import com.topjohnwu.superuser.io.SuFileInputStream
 import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.installer.service.AppInstallService
 import com.vanced.manager.installer.service.AppUninstallService
-import com.vanced.manager.util.SuException
-import com.vanced.manager.util.awaitOutputOrThrow
+import com.vanced.manager.util.*
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -53,10 +52,11 @@ class NonrootPackageManager(
             } else {
                 packageInfo.versionCode
             }
+
             PackageManagerResult.Success(versionCode)
         } catch (e: android.content.pm.PackageManager.NameNotFoundException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.GET_FAILED_PACKAGE_VERSION_CODE,
+                error = PackageManagerError.GET_FAILED_PACKAGE_VERSION_CODE,
                 message = e.stackTraceToString()
             )
         }
@@ -68,10 +68,11 @@ class NonrootPackageManager(
             val versionName = context.packageManager
                 .getPackageInfo(packageName, FLAG_NOTHING)
                 .versionName
+
             PackageManagerResult.Success(versionName)
         } catch (e: android.content.pm.PackageManager.NameNotFoundException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.GET_FAILED_PACKAGE_VERSION_NAME,
+                error = PackageManagerError.GET_FAILED_PACKAGE_VERSION_NAME,
                 message = e.stackTraceToString()
             )
         }
@@ -84,10 +85,11 @@ class NonrootPackageManager(
                 .getPackageInfo(packageName, FLAG_NOTHING)
                 .applicationInfo
                 .sourceDir
+
             PackageManagerResult.Success(installationDir)
         } catch (e: android.content.pm.PackageManager.NameNotFoundException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.GET_FAILED_PACKAGE_DIR,
+                error = PackageManagerError.GET_FAILED_PACKAGE_DIR,
                 message = e.stackTraceToString()
             )
         }
@@ -98,14 +100,14 @@ class NonrootPackageManager(
         installerPackage: String
     ): PackageManagerResult<Nothing> {
         return PackageManagerResult.Error(
-            status = PackageManagerStatus.SET_FAILED_INSTALLER,
+            error = PackageManagerError.SET_FAILED_INSTALLER,
             message = "Unsupported"
         )
     }
 
     override suspend fun forceStop(packageName: String): PackageManagerResult<Nothing> {
         return PackageManagerResult.Error(
-            status = PackageManagerStatus.APP_FAILED_FORCE_STOP,
+            error = PackageManagerError.APP_FAILED_FORCE_STOP,
             message = "Unsupported"
         )
     }
@@ -154,29 +156,26 @@ class NonrootPackageManager(
             intentFlags
         ).intentSender
 
-        val sessionId: Int
-        try {
-            sessionId = packageInstaller.createSession(sessionParams)
-        } catch (e: IOException) {
-            return PackageManagerResult.Error(
-                status = PackageManagerStatus.SESSION_FAILED_CREATE,
-                message = e.stackTraceToString()
-            )
+        val sessionId = tripleUnionTryCatch<IOException, SecurityException, IllegalArgumentException, Int>(
+            onCatch = {
+                return PackageManagerResult.Error(
+                    error = PackageManagerError.SESSION_FAILED_CREATE,
+                    message = it.stackTraceToString()
+                )
+            }
+        ) {
+            packageInstaller.createSession(sessionParams)
         }
 
-        val session: PackageInstaller.Session
-        try {
-            session = packageInstaller.openSession(sessionId)
-        } catch (e: IOException) {
-            return PackageManagerResult.Error(
-                status = PackageManagerStatus.SESSION_FAILED_OPEN,
-                message = e.stackTraceToString()
-            )
-        } catch (e: SecurityException) {
-            return PackageManagerResult.Error(
-                status = PackageManagerStatus.SESSION_FAILED_OPEN,
-                message = e.stackTraceToString()
-            )
+        val session = doubleUnionTryCatch<IOException, SecurityException, PackageInstaller.Session>(
+            onCatch = {
+                return PackageManagerResult.Error(
+                    error = PackageManagerError.SESSION_FAILED_CREATE,
+                    message = it.stackTraceToString()
+                )
+            }
+        ) {
+            packageInstaller.openSession(sessionId)
         }
 
         try {
@@ -186,12 +185,12 @@ class NonrootPackageManager(
             }
         } catch (e: IOException) {
             return PackageManagerResult.Error(
-                status = PackageManagerStatus.SESSION_FAILED_WRITE,
+                error = PackageManagerError.SESSION_FAILED_WRITE,
                 message = e.stackTraceToString()
             )
         } catch (e: SecurityException) {
             return PackageManagerResult.Error(
-                status = PackageManagerStatus.SESSION_FAILED_COMMIT,
+                error = PackageManagerError.SESSION_FAILED_COMMIT,
                 message = e.stackTraceToString()
             )
         }
@@ -236,12 +235,12 @@ class RootPackageManager : PackageManager {
             PackageManagerResult.Success(versionCode)
         } catch (e: SuException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.GET_FAILED_PACKAGE_VERSION_CODE,
+                error = PackageManagerError.GET_FAILED_PACKAGE_VERSION_CODE,
                 message = e.stderrOut
             )
         } catch (e: java.lang.NumberFormatException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.GET_FAILED_PACKAGE_VERSION_CODE,
+                error = PackageManagerError.GET_FAILED_PACKAGE_VERSION_CODE,
                 message = e.stackTraceToString()
             )
         }
@@ -256,7 +255,7 @@ class RootPackageManager : PackageManager {
             PackageManagerResult.Success(versionName)
         } catch (e: SuException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.GET_FAILED_PACKAGE_VERSION_NAME,
+                error = PackageManagerError.GET_FAILED_PACKAGE_VERSION_NAME,
                 message = e.stderrOut
             )
         }
@@ -271,7 +270,7 @@ class RootPackageManager : PackageManager {
             PackageManagerResult.Success(installationDir)
         } catch (e: SuException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.GET_FAILED_PACKAGE_DIR,
+                error = PackageManagerError.GET_FAILED_PACKAGE_DIR,
                 message = e.stderrOut
             )
         }
@@ -281,25 +280,26 @@ class RootPackageManager : PackageManager {
         targetPackage: String,
         installerPackage: String
     ): PackageManagerResult<Nothing> {
-        try {
+        return try {
             Shell.su("pm", "set-installer", targetPackage, installerPackage).awaitOutputOrThrow()
+
+            PackageManagerResult.Success(null)
         } catch (e: SuException) {
-            return PackageManagerResult.Error(
-                status = PackageManagerStatus.SET_FAILED_INSTALLER,
+            PackageManagerResult.Error(
+                error = PackageManagerError.SET_FAILED_INSTALLER,
                 message = e.stderrOut
             )
         }
-
-        return PackageManagerResult.Success(null)
     }
 
     override suspend fun forceStop(packageName: String): PackageManagerResult<Nothing> {
         return try {
             Shell.su("am", "force-stop", packageName).awaitOutputOrThrow()
+
             PackageManagerResult.Success(null)
         } catch (e: SuException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.APP_FAILED_FORCE_STOP,
+                error = PackageManagerError.APP_FAILED_FORCE_STOP,
                 message = e.stderrOut
             )
         }
@@ -307,38 +307,39 @@ class RootPackageManager : PackageManager {
 
     override suspend fun installApp(apk: File): PackageManagerResult<Nothing> {
         var tempApk: File? = null
-        try {
+        return try {
             tempApk = copyApkToTemp(apk)
             Shell.su("pm", "install", "-r", tempApk.absolutePath).awaitOutputOrThrow()
+
+            PackageManagerResult.Success(null)
         } catch (e: IOException) {
-             return PackageManagerResult.Error(
-                 status = PackageManagerStatus.SESSION_FAILED_COPY,
+             PackageManagerResult.Error(
+                 error = PackageManagerError.SESSION_FAILED_COPY,
                  message = e.stackTraceToString()
              )
         } catch (e: SuException) {
-            return PackageManagerResult.Error(
-                status = getEnumForInstallFailed(e.stderrOut),
+            PackageManagerResult.Error(
+                error = getEnumForInstallFailed(e.stderrOut),
                 message = e.stderrOut
             )
         } finally {
             tempApk?.delete()
         }
-        return PackageManagerResult.Success(null)
     }
 
     override suspend fun installSplitApp(apks: Array<File>): PackageManagerResult<Nothing> {
-        val sessionId: Int
-        try {
+        val sessionId = try {
             val installCreate = Shell.su("pm", "install-create", "-r").awaitOutputOrThrow()
-            sessionId = installCreate.toInt()
+
+            installCreate.toInt()
         } catch (e: SuException) {
             return PackageManagerResult.Error(
-                status = PackageManagerStatus.SESSION_FAILED_CREATE,
+                error = PackageManagerError.SESSION_FAILED_CREATE,
                 message = e.stderrOut
             )
         } catch (e: NumberFormatException) {
             return PackageManagerResult.Error(
-                status = PackageManagerStatus.SESSION_INVALID_ID,
+                error = PackageManagerError.SESSION_INVALID_ID,
                 message = e.stackTraceToString()
             )
         }
@@ -350,12 +351,12 @@ class RootPackageManager : PackageManager {
                 Shell.su("pm", "install-write", sessionId.toString(), tempApk.name, tempApk.absolutePath).awaitOutputOrThrow()
             } catch (e: SuException) {
                 return PackageManagerResult.Error(
-                    status = PackageManagerStatus.SESSION_FAILED_WRITE,
+                    error = PackageManagerError.SESSION_FAILED_WRITE,
                     message = e.stderrOut
                 )
             } catch (e: IOException) {
                 return PackageManagerResult.Error(
-                    status = PackageManagerStatus.SESSION_FAILED_COPY,
+                    error = PackageManagerError.SESSION_FAILED_COPY,
                     message = e.stackTraceToString()
                 )
             } finally {
@@ -363,24 +364,26 @@ class RootPackageManager : PackageManager {
             }
         }
 
-        try {
+        return try {
             Shell.su("pm", "install-commit", sessionId.toString()).awaitOutputOrThrow()
+
+            PackageManagerResult.Success(null)
         } catch (e: SuException) {
-            return PackageManagerResult.Error(
-                status = getEnumForInstallFailed(e.stderrOut),
+            PackageManagerResult.Error(
+                error = getEnumForInstallFailed(e.stderrOut),
                 message = e.stderrOut
             )
         }
-        return PackageManagerResult.Success(null)
     }
 
     override suspend fun uninstallApp(packageName: String): PackageManagerResult<Nothing> {
         return try {
             Shell.su("pm", "uninstall", packageName).awaitOutputOrThrow()
+
             PackageManagerResult.Success(null)
         } catch (e: SuException) {
             PackageManagerResult.Error(
-                status = PackageManagerStatus.UNINSTALL_FAILED,
+                error = PackageManagerError.UNINSTALL_FAILED,
                 message = e.stderrOut
             )
         }
@@ -409,7 +412,7 @@ class RootPackageManager : PackageManager {
 
 }
 
-enum class PackageManagerStatus {
+enum class PackageManagerError {
     SET_FAILED_INSTALLER,
     GET_FAILED_PACKAGE_DIR,
     GET_FAILED_PACKAGE_VERSION_NAME,
@@ -450,22 +453,22 @@ enum class PackageManagerStatus {
     SCRIPT_FAILED_DESTROY_SERVICE_D,
 }
 
-fun getEnumForInstallFailed(outString: String): PackageManagerStatus {
+fun getEnumForInstallFailed(outString: String): PackageManagerError {
     return when {
-        outString.contains("INSTALL_FAILED_ABORTED") -> PackageManagerStatus.INSTALL_FAILED_ABORTED
-        outString.contains("INSTALL_FAILED_ALREADY_EXISTS") -> PackageManagerStatus.INSTALL_FAILED_ALREADY_EXISTS
-        outString.contains("INSTALL_FAILED_CPU_ABI_INCOMPATIBLE") -> PackageManagerStatus.INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
-        outString.contains("INSTALL_FAILED_INSUFFICIENT_STORAGE") -> PackageManagerStatus.INSTALL_FAILED_INSUFFICIENT_STORAGE
-        outString.contains("INSTALL_FAILED_INVALID_APK") -> PackageManagerStatus.INSTALL_FAILED_INVALID_APK
-        outString.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> PackageManagerStatus.INSTALL_FAILED_VERSION_DOWNGRADE
-        outString.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> PackageManagerStatus.INSTALL_FAILED_PARSE_NO_CERTIFICATES
-        else -> PackageManagerStatus.INSTALL_FAILED_UNKNOWN
+        outString.contains("INSTALL_FAILED_ABORTED") -> PackageManagerError.INSTALL_FAILED_ABORTED
+        outString.contains("INSTALL_FAILED_ALREADY_EXISTS") -> PackageManagerError.INSTALL_FAILED_ALREADY_EXISTS
+        outString.contains("INSTALL_FAILED_CPU_ABI_INCOMPATIBLE") -> PackageManagerError.INSTALL_FAILED_CPU_ABI_INCOMPATIBLE
+        outString.contains("INSTALL_FAILED_INSUFFICIENT_STORAGE") -> PackageManagerError.INSTALL_FAILED_INSUFFICIENT_STORAGE
+        outString.contains("INSTALL_FAILED_INVALID_APK") -> PackageManagerError.INSTALL_FAILED_INVALID_APK
+        outString.contains("INSTALL_FAILED_VERSION_DOWNGRADE") -> PackageManagerError.INSTALL_FAILED_VERSION_DOWNGRADE
+        outString.contains("INSTALL_PARSE_FAILED_NO_CERTIFICATES") -> PackageManagerError.INSTALL_FAILED_PARSE_NO_CERTIFICATES
+        else -> PackageManagerError.INSTALL_FAILED_UNKNOWN
     }
 }
 
 sealed class PackageManagerResult<out V> {
     data class Success<out V>(val value: V?) : PackageManagerResult<V>()
-    data class Error(val status: PackageManagerStatus, val message: String) : PackageManagerResult<Nothing>()
+    data class Error(val error: PackageManagerError, val message: String) : PackageManagerResult<Nothing>()
 
     fun getValueOrNull(): V? = getOrElse { null }
 

@@ -4,7 +4,7 @@ import com.topjohnwu.superuser.Shell
 import com.topjohnwu.superuser.io.SuFile
 import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.repository.manager.PackageManagerResult
-import com.vanced.manager.repository.manager.PackageManagerStatus
+import com.vanced.manager.repository.manager.PackageManagerError
 import com.vanced.manager.repository.manager.getEnumForInstallFailed
 import com.vanced.manager.util.errString
 import com.vanced.manager.util.outString
@@ -17,7 +17,7 @@ object PMRoot {
         val apk = File(apkPath)
         val tmpApk = copyApkToTemp(apk).getOrElse { exception ->
             return PackageManagerResult.Error(
-                PackageManagerStatus.SESSION_FAILED_COPY,
+                PackageManagerError.SESSION_FAILED_COPY,
                 exception.stackTraceToString()
             )
         }
@@ -38,18 +38,18 @@ object PMRoot {
         val installCreate = Shell.su("pm", "install-create", "-r").exec()
 
         if (!installCreate.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.SESSION_FAILED_CREATE, installCreate.errString)
+            return PackageManagerResult.Error(PackageManagerError.SESSION_FAILED_CREATE, installCreate.errString)
 
         val sessionId = installCreate.outString
 
         if (sessionId.toIntOrNull() == null)
-            return PackageManagerResult.Error(PackageManagerStatus.SESSION_INVALID_ID, installCreate.errString)
+            return PackageManagerResult.Error(PackageManagerError.SESSION_INVALID_ID, installCreate.errString)
 
         for (apkPath in apkPaths) {
             val apk = File(apkPath)
             val tmpApk = copyApkToTemp(apk).getOrElse { exception ->
                 return PackageManagerResult.Error(
-                    PackageManagerStatus.SESSION_FAILED_COPY,
+                    PackageManagerError.SESSION_FAILED_COPY,
                     exception.stackTraceToString()
                 )
             }
@@ -61,7 +61,7 @@ object PMRoot {
             tmpApk.delete()
 
             if (!installWrite.isSuccess)
-                return PackageManagerResult.Error(PackageManagerStatus.SESSION_FAILED_WRITE, installWrite.errString)
+                return PackageManagerResult.Error(PackageManagerError.SESSION_FAILED_WRITE, installWrite.errString)
         }
 
         val installCommit = Shell.su("pm", "install-commit", sessionId).exec()
@@ -78,7 +78,7 @@ object PMRoot {
         val uninstall = Shell.su("pm", "uninstall", pkg).exec()
 
         if (!uninstall.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.UNINSTALL_FAILED, uninstall.errString)
+            return PackageManagerResult.Error(PackageManagerError.UNINSTALL_FAILED, uninstall.errString)
 
         return PackageManagerResult.Success(null)
     }
@@ -89,7 +89,7 @@ object PMRoot {
 
         if (!setInstaller.isSuccess)
             return PackageManagerResult.Error(
-                PackageManagerStatus.SET_FAILED_INSTALLER,
+                PackageManagerError.SET_FAILED_INSTALLER,
                 setInstaller.errString
             )
 
@@ -100,7 +100,7 @@ object PMRoot {
         val stopApp = Shell.su("am", "force-stop", pkg).exec()
 
         if (!stopApp.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.APP_FAILED_FORCE_STOP, stopApp.errString)
+            return PackageManagerResult.Error(PackageManagerError.APP_FAILED_FORCE_STOP, stopApp.errString)
 
         return PackageManagerResult.Success(null)
     }
@@ -111,7 +111,7 @@ object PMRoot {
 
         if (!dumpsys.isSuccess)
             return PackageManagerResult.Error(
-                PackageManagerStatus.GET_FAILED_PACKAGE_VERSION_NAME,
+                PackageManagerError.GET_FAILED_PACKAGE_VERSION_NAME,
                 dumpsys.errString
             )
 
@@ -124,7 +124,7 @@ object PMRoot {
 
         if (!dumpsys.isSuccess)
             return PackageManagerResult.Error(
-                PackageManagerStatus.GET_FAILED_PACKAGE_VERSION_CODE,
+                PackageManagerError.GET_FAILED_PACKAGE_VERSION_CODE,
                 dumpsys.errString
             )
 
@@ -139,7 +139,7 @@ object PMRoot {
         val dumpsys = Shell.su("dumpsys", "package", pkg, "|", "grep", keyword).exec()
 
         if (!dumpsys.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.GET_FAILED_PACKAGE_DIR, dumpsys.errString)
+            return PackageManagerResult.Error(PackageManagerError.GET_FAILED_PACKAGE_DIR, dumpsys.errString)
 
         return PackageManagerResult.Success(dumpsys.outString.removePrefix(keyword))
     }

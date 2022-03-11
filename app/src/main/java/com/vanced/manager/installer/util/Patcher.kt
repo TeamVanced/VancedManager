@@ -6,7 +6,7 @@ import com.topjohnwu.superuser.io.SuFileOutputStream
 import com.vanced.manager.io.ManagerSuFile
 import com.vanced.manager.io.SUIOException
 import com.vanced.manager.repository.manager.PackageManagerResult
-import com.vanced.manager.repository.manager.PackageManagerStatus
+import com.vanced.manager.repository.manager.PackageManagerError
 import com.vanced.manager.util.errString
 import java.io.File
 import java.io.IOException
@@ -27,14 +27,14 @@ object Patcher {
         val copyServiceDScript = copyScriptToDestination(postFsDataScript, postFsDataScriptPath)
         if (copyServiceDScript.isFailure)
             return PackageManagerResult.Error(
-                PackageManagerStatus.SCRIPT_FAILED_SETUP_POST_FS,
+                PackageManagerError.SCRIPT_FAILED_SETUP_POST_FS,
                 copyServiceDScript.exceptionOrNull()!!.stackTraceToString()
             )
 
         val copyPostFsDataScript = copyScriptToDestination(serviceDScript, serviceDScriptPath)
         if (copyPostFsDataScript.isFailure)
             return PackageManagerResult.Error(
-                PackageManagerStatus.SCRIPT_FAILED_SETUP_SERVICE_D,
+                PackageManagerError.SCRIPT_FAILED_SETUP_SERVICE_D,
                 copyPostFsDataScript.exceptionOrNull()!!.stackTraceToString()
             )
 
@@ -55,16 +55,16 @@ object Patcher {
         try {
             patchApk.copyTo(newPatchApk)
         } catch (e: IOException) {
-            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_COPY, e.stackTraceToString())
+            return PackageManagerResult.Error(PackageManagerError.PATCH_FAILED_COPY, e.stackTraceToString())
         }
 
         val chmod = Shell.su("chmod", "644", newPatchPath).exec()
         if (!chmod.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_CHMOD, chmod.errString)
+            return PackageManagerResult.Error(PackageManagerError.PATCH_FAILED_CHMOD, chmod.errString)
 
         val chown = Shell.su("chown", "system:system", newPatchPath).exec()
         if (!chmod.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_CHOWN, chown.errString)
+            return PackageManagerResult.Error(PackageManagerError.PATCH_FAILED_CHOWN, chown.errString)
 
         return PackageManagerResult.Success(null)
     }
@@ -72,7 +72,7 @@ object Patcher {
     fun chconPatch(app: String): PackageManagerResult<Nothing> {
         val chcon = Shell.su("chcon u:object_r:apk_data_file:s0 ${getAppPatchPath(app)}").exec()
         if (!chcon.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.PATCH_FAILED_CHCON, chcon.errString)
+            return PackageManagerResult.Error(PackageManagerError.PATCH_FAILED_CHCON, chcon.errString)
 
         return PackageManagerResult.Success(null)
     }
@@ -82,13 +82,13 @@ object Patcher {
             Shell.su("""for i in ${'$'}(ls /data/app/ | grep $stockPackage | tr " "); do umount -l "/data/app/${"$"}i/base.apk"; done """)
                 .exec()
         if (!umount.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.LINK_FAILED_UNMOUNT, umount.errString)
+            return PackageManagerResult.Error(PackageManagerError.LINK_FAILED_UNMOUNT, umount.errString)
 
         val mount =
             Shell.su("su", "-mm", "-c", """"mount -o bind ${getAppPatchPath(app)} $stockPath"""")
                 .exec()
         if (!mount.isSuccess)
-            return PackageManagerResult.Error(PackageManagerStatus.LINK_FAILED_MOUNT, mount.errString)
+            return PackageManagerResult.Error(PackageManagerError.LINK_FAILED_MOUNT, mount.errString)
 
         return PackageManagerResult.Success(null)
     }
@@ -136,9 +136,9 @@ private fun cleanPatchFiles(
     patchPath: String,
 ): PackageManagerResult<Nothing> {
     val files = mapOf(
-        postFsPath to PackageManagerStatus.SCRIPT_FAILED_DESTROY_POST_FS,
-        serviceDPath to PackageManagerStatus.SCRIPT_FAILED_DESTROY_SERVICE_D,
-        patchPath to PackageManagerStatus.PATCH_FAILED_DESTROY,
+        postFsPath to PackageManagerError.SCRIPT_FAILED_DESTROY_POST_FS,
+        serviceDPath to PackageManagerError.SCRIPT_FAILED_DESTROY_SERVICE_D,
+        patchPath to PackageManagerError.PATCH_FAILED_DESTROY,
     )
 
     for ((filePath, errorStatusType) in files) {
