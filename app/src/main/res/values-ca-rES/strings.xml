@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <!-- Global Strings -->
-    <string name="cancel">Cancel·lar</string>
+    <string name="cancel">Cancel·la</string>
     <string name="close">Tanca</string>
-    <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
+    <string name="description_microg">Una implementació modificada de GMS per a Vanced basat en el projecte microG.</string>
     <string name="description_vanced">Una aplicació modificada de YouTube amb moltes característiques útils!</string>
     <string name="description_vanced_music">Vanced, però per a YouTube Music! Amb relativament menys característiques, però que assoleix les vostres necessitats.</string>
     <string name="reset">Restableix</string>
@@ -15,13 +15,13 @@
     <string name="title_home">Gestor</string>
     <string name="title_logs">Registre</string>
     <string name="title_settings">Configuració</string>
-    <string name="update_manager">Gestionador d\'actualitzacions</string>
+    <string name="update_manager">Gestor d\'actualitzacions</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Té el vostre dispositiu accés de Superusuari (\'Root\')?</string>
     <string name="grant_root">Concedir permís de Superusuari (\'Root\')</string>
     <string name="lets_get_started">Comencem-hi</string>
     <string name="select_at_least_one_app">Selecciona com a mínim una aplicació!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">No saps què és això o no vols fer servir la versió de superusuari (\'root\')? Simplement prem la fletxa blava de sota!</string>
     <!-- Home Page -->
     <string name="about_app">Sobre %1$s</string>
     <string name="accessibility_download">Descarrega</string>
@@ -66,7 +66,7 @@
     <string name="variant">Variant</string>
     <!-- Logs -->
     <string name="logs_not_saved">No s\'han pogut desar els registres</string>
-    <string name="logs_saved">Successfully saved logs to %1$s</string>
+    <string name="logs_saved">Registres desats satisfactòriament a %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalls</string>
     <string name="app_install_files_detected">Arxius d\'instal·lació de %1$s detectats!</string>
@@ -107,16 +107,16 @@
     <string name="failed_accent">No s\'ha pogut aplicar el nou color d\'accent</string>
     <string name="failed_uninstall">Error en instal·lar el paquet %1$s</string>
     <string name="files_missing_va">No s\'ha pogut localitzar els fitxers necessaris per a la instal·lació. Torneu a descarregar els fitxers d\'instal·lació i intenteu-ho de nou.</string>
-    <string name="ifile_missing">Failed to locate APK file for black/dark theme from storage, please try again.</string>
+    <string name="ifile_missing">No s\'ha pogut localitzar el fitxer apk per al tema negre/fosc a l\'emmagatzematge, si us plau, intenteu-ho de nou.</string>
     <string name="installation_aborted">La instal·lació ha fallat perquè l\'usuari ha cancel·lat la instal·lació.</string>
     <string name="installation_conflict">La instal·lació ha fallat perquè l\'aplicació entra en conflicte amb una aplicació ja instal·lada. Desinstal·leu la versió actual de Vanced i intenteu-ho de nou.</string>
     <string name="installation_downgrade">La instal·lació ha fallat perquè l\'usuari ha tractat de rebaixar el paquet. Desinstal·leu les actualitzacions de l\'aplicació original i intenteu-ho de nou.</string>
     <string name="installation_failed">La instal·lació ha fallat per motius desconeguts, uniu-vos al nostre Telegram o Discord per a més suport. Si us plau, adjunteu-hi també una captura de pantalla des del menú Avançat</string>
     <string name="installation_incompatible">La instal·lació ha fallat perquè el fitxer d\'instal·lació és incompatible amb el dispositiu. Esborreu els fitxers descarregats a Configuració i torneu-ho a provar.</string>
-    <string name="installation_invalid">Installation failed because the APK files are corrupted, please try again.</string>
+    <string name="installation_invalid">La instal·lació ha fallat perquè els fitxers apk estan malmesos. Torneu-ho a provar.</string>
     <string name="installation_miui">La instal·lació ha fallat perquè l\'optimització MIUI està activada. Desactiveu l\'optimització MIUI i torneu-ho a provar.</string>
-    <string name="installation_signature">Installation failed because APK signature verification is enabled. Disable APK signature verification, then try again.</string>
+    <string name="installation_signature">La instal·lació ha fallat perquè la verificació de la signatura d\'APK està activada. Desactiveu la verificació de la signatura d\'APK i torneu-ho a intentar.</string>
     <string name="installation_storage">La instal·lació ha fallat perquè el dispositiu no disposa de prou espai lliure.</string>
-    <string name="modapk_missing">Failed to find APK file for black/dark theme from the installer. Clear app data of Manager, then try again.</string>
+    <string name="modapk_missing">No s\'ha trobat el fitxer APK per al tema negre/fosc a l\'instal·lador. Netejeu les dades del Gestor i intenteu-ho de nou.</string>
     <string name="path_missing">No s\'ha pogut localitzar la ruta de instal·lació de YouTube després de la instal·lació \'split\'.</string>
 </resources>

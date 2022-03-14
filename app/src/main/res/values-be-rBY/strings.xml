@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="cancel">Скасаваць</string>
+    <string name="close">Закрыць</string>
+    <string name="description_microg">Карыстальнцкая рэалізацыя для Vanced, заснованная на праэкце microG.</string>
+    <string name="description_vanced">Мадзіфіцыраваны кліент YouTube з з мноствам карысных функцый!</string>
+    <string name="description_vanced_music">Vanced, але для YouTube Music! Адносна менш шматфункцыянальны, але адпавядае вашым патрэбам.</string>
+    <string name="reset">Скінуць</string>
+    <string name="save">Захаваць</string>
+    <string name="select_apps">Выберыце вашы праграмы</string>
+    <!-- Main Activity -->
+    <string name="title_about">Пра нас</string>
+    <string name="title_guide">Кіраўніцтва</string>
+    <string name="title_home">Менеджэр</string>
+    <string name="title_logs">Журнал</string>
+    <string name="title_settings">Налады</string>
+    <string name="update_manager">Абнавіць Менеджэр</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">На вашай прыладзе ёсць рут-права?</string>
+    <string name="grant_root">Прадастаўленне root доступу</string>
+    <string name="lets_get_started">Давайце пачнём</string>
+    <string name="select_at_least_one_app">Выберыце прынамсі адну праграму!</string>
+    <string name="willing_to_use_root">Не ведаеце, што гэта ці не жадаеце выкарыстоўваць root-версію? Проста націсніце на сінюю стрэлку ніжэй!</string>
+    <!-- Home Page -->
+    <string name="about_app">Аб %1$s</string>
+    <string name="accessibility_download">Спампаваць</string>
+    <string name="accessibility_info">Звесткі</string>
+    <string name="accessibility_launch">Запусціць</string>
+    <string name="accessibility_reinstall">Пераўсталяваць</string>
+    <string name="accessibility_uninstall">Выдаліць</string>
+    <string name="accessibility_update">Абнавіць</string>
+    <string name="apps">Праграмы</string>
+    <string name="changelog">Журнал змяненняў</string>
+    <string name="downloading_file">Спампована %1$s</string>
+    <string name="install">Усталяваць</string>
+    <string name="latest">Апошняя:</string>
+    <string name="no_microg">Спачатку ўсталюйце Vanced microG</string>
+    <string name="root_not_granted">Root доступ не прадастаўлены</string>
+    <string name="social_media">Сацыяльныя сеткі</string>
+    <string name="support_us">Падтрымаць нас</string>
+    <string name="unavailable">Недаступна</string>
+    <string name="version_installed">Усталявана:</string>
+    <!-- Settings -->
+    <string name="accent_color">Колер акцэнту</string>
+    <string name="category_appearance">Знешні выгляд</string>
+    <string name="category_behaviour">Паводзіны</string>
+    <string name="clear_files">Выдаліць спампованыя файлы</string>
+    <string name="cleared_files">Файлы паспяхова выдалены</string>
+    <string name="firebase_summary">Гэта дазваляе нам збіраць інфармацыю аб прадукцыйнасці праграмы і журналы збояў</string>
+    <string name="firebase_title">Аналітыка Firebase</string>
+    <string name="language_title">Мова</string>
+    <string name="link_custom_tabs">Адкрываць спасылкі ў Chrome Custom Tabs</string>
+    <string name="link_title">Выкарыстоўваць Chrome Custom Tabs</string>
+    <string name="push_notifications">Push-апавяшчэнні для %1$s</string>
+    <string name="push_notifications_summary">Атрымліваць апавяшчэнні аб абнаўленні для %1$s</string>
+    <string name="script_save_failed">Не ўдалося захаваць новае значэнне часу</string>
+    <string name="script_sleep_timer">Root скрыпт Таймер сну</string>
+    <string name="script_sleep_timer_description">Адрэгулюйце значэнне часу сну, якое выкарыстоўваецца ў сцэнарыі /data/adb/service.d/app.sh, карысна для выпраўлення праблем з мантажом</string>
+    <string name="system_default">Сістэмны</string>
+    <string name="theme">Тэма</string>
+    <string name="theme_dark">Цёмная тэма</string>
+    <string name="theme_light">Светлая тэма</string>
+    <string name="update_center">Цэнтр абнаўленняў</string>
+    <string name="update_not_found">Абнаўленні не знойдзены</string>
+    <string name="variant">Варыянт</string>
+    <!-- Logs -->
+    <string name="logs_not_saved">Не атрымалася захаваць логі</string>
+    <string name="logs_saved">Логі паспяхова захаваны ў %1$s</string>
+    <!-- Dialogs -->
+    <string name="advanced">Падрабязнасці</string>
+    <string name="app_install_files_detected">Знойдзены файлы ўстаноўкі для %1$s!</string>
+    <string name="app_install_files_detected_summary">Менеджэр знайшоў усе неабходныя файлы для ўсталёўкі %1$s. Працягнуць усталёўку?</string>
+    <string name="app_installation_preferences">Параметры усталёўкі %1$s</string>
+    <string name="checking_updates">Праверка абнаўленняў…</string>
+    <string name="chosen_lang">Мова(-ы): %1$s</string>
+    <string name="chosen_theme">Тэма: %1$s</string>
+    <string name="chosen_version">Версія: %1$s</string>
+    <string name="error">Памылка</string>
+    <string name="guide">Кіраўніцтва</string>
+    <string name="hold_on">Спыніцеся!</string>
+    <string name="magisk_vanced">Здаецца, вы выкарыстоўваеце Magisk/TWRP версію Vanced, якая больш не падтрымліваецца і не можа быць абноўлена з дапамогай гэтай праграмы. Калі ласка, выдаліце модуль Vanced праз Magisk ці з дапамогай Vanced TWRP uninstaller.</string>
+    <string name="miui_one">Каб усталяваць Vanced, вы ПАВІННЫ адключыць аптымізацыю MIUI у наладах распрацоўшчыка. (Вы можаце праігнараваць гэтае папярэджанне, калі вы карыстаецеся прашыўкай на xiaomi.eu версіі 20.2.20+)</string>
+    <string name="miui_one_title">Аптымізацыя MIUI уключана!</string>
+    <string name="please_be_patient">Калі ласка, НЕ выходзьце з праграмы падчас гэтага працэсу!</string>
+    <string name="uninstall_app_text">Вы сапраўды жадаеце выдаліць %1$s?</string>
+    <string name="uninstall">Выдаліць</string>
+    <string name="redownload">Спампаваць зноў</string>
+    <string name="security_context">Калі ласка, пераканайцеся, што вы спампавалі гэту праграму з vancedapp.com, сервера Vanced у Discord або з афіцыйнага GitHub</string>
+    <string name="version">Версія</string>
+    <string name="welcome">Вітаем</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">Выберыце пажаданую мову(-ы) для Vanced</string>
+    <string name="install_latest">Апошняя</string>
+    <string name="light_plus_other">Светлая + %1$s</string>
+    <string name="select_at_least_one_lang">Выберыце прынамсі адну мову!</string>
+    <string name="vanced_black">Чорны</string>
+    <string name="vanced_dark">Цёмны</string>
+    <!-- About Page -->
+    <string name="manager_dev">Распрацоўшчыкі Менеджэра</string>
+    <string name="other_contributors">Іншыя ўдзельнікі</string>
+    <string name="sources">Крыніца</string>
+    <string name="vanced_team">Каманда Vanced</string>
+    <!-- Error messages -->
+    <string name="chown_fail">Не атрымалася перадаць apk уладальніку сістэмы, паспрабуйце яшчэ раз.</string>
+    <string name="error_downloading">Памылка спампоўвання %1$s</string>
+    <string name="failed_accent">Не ўдалося прымяніць новы колер акцэнту</string>
+    <string name="failed_uninstall">Не ўдалося выдаліць пакет %1$s</string>
+    <string name="files_missing_va">Не ўдалося знайсці неабходныя файлы для ўстаноўкі. Паўторна загрузіце файлы ўсталявання і паспрабуйце яшчэ раз.</string>
+    <string name="ifile_missing">Не атрымался знайсці apk файл для чорнай/цёмнай тэмы ў сховішчы, калі ласка, паўтарыце яшчэ раз.</string>
+    <string name="installation_aborted">Не атрымалася ўсталяваць, таму што карыстальнік спыніў усталяванне.</string>
+    <string name="installation_conflict">Усталёўка не ўдалася, бо праграма канфліктуе з ужо ўсталёванай праграмай. Выдаліце бягучую версію праграмы, паспрабуйце яшчэ раз.</string>
+    <string name="installation_downgrade">Усталёўка не атрымалася, бо карыстач паспрабаваў панізіць версію праграмы. Выдаліце абнаўленні звычайнага YouTube, потым паспрабуйце яшчэ раз.</string>
+    <string name="installation_failed">Не атрымалася ўсталяваць па невядомых прычынах, далучайцесь да нашага Telegram або Discord для далейшай падтрымкі. Калі ласка, таксама прыкладзеце скрыншот з меню Падрабязнасці</string>
+    <string name="installation_incompatible">Не атрымалася ўсталяваць, таму што файл ўсталёўкі несумяшчальны з вашай прыладай. Выдаліце спампаваныя файлы ў наладах, а потым паспрабуйце яшчэ раз.</string>
+    <string name="installation_invalid">Усталёўка не ўдалася, таму што apk файлы пашкоджаны. Калі ласка, паспрабуйце яшчэ раз.</string>
+    <string name="installation_miui">Не атрымалася ўсталяваць, таму што ўключана аптымізацыя MIUI. Адключыце аптымізацыю MIUI, а потым паўтарыце спробу.</string>
+    <string name="installation_signature">Усталёўка не ўдалася, таму што ўключана праверка подпісу apk. Адключыце праверку подпісу apk, а потым паспрабуйце яшчэ раз.</string>
+    <string name="installation_storage">Не атрымалася ўсталяваць, таму што на прыладзе недастаткова месца.</string>
+    <string name="modapk_missing">Не атрымалася знайсці apk файл для чорнай/цёмнай тэмы ва ўсталёўніку. Ачысціце данныя Vanced Manager і паспрабуйце яшчэ раз.</string>
+    <string name="path_missing">Не атрымалася знайсці стандартны шлях ўсталёўкіі YouTube пасля раздзеленай ўсталёўкі.</string>
+</resources>

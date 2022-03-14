@@ -3,7 +3,7 @@
     <!-- Global Strings -->
     <string name="cancel">Odustani</string>
     <string name="close">Zatvori</string>
-    <string name="description_microg">Prilagođena GMS implementacija za Vanced zasnovana na microG projektu.</string>
+    <string name="description_microg">Prilagođena GMS implementacija za Vanced temeljena na microG projektu.</string>
     <string name="description_vanced">Modificirani YouTube klijent sa mnogo korisnih značajki!</string>
     <string name="description_vanced_music">Vanced, ali za YouTube Music! S manje značajki ali ispunjava vaše potrebe.</string>
     <string name="reset">Resetiraj</string>
@@ -21,7 +21,7 @@
     <string name="grant_root">Dopusti root dozvolu</string>
     <string name="lets_get_started">Započnite</string>
     <string name="select_at_least_one_app">Odaberite najmanje jednu aplikaciju!</string>
-    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root verziju? Jednostavno kliknite na plavu strelicu ispod!</string>
+    <string name="willing_to_use_root">Ne znate što je ovo ili ne želite koristiti root izdanje? Jednostavno kliknite na plavu strelicu ispod!</string>
     <!-- Home Page -->
     <string name="about_app">O %1$s</string>
     <string name="accessibility_download">Preuzmi</string>
@@ -66,7 +66,7 @@
     <string name="variant">Izdanje</string>
     <!-- Logs -->
     <string name="logs_not_saved">Nije moguće spremiti zapise</string>
-    <string name="logs_saved">Dnevnici su uspješno spremljeni u %1$s</string>
+    <string name="logs_saved">Uspješno spremljeni zapisi u %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalji</string>
     <string name="app_install_files_detected">%1$s instalacijska datoteka je otkrivena!</string>
@@ -83,7 +83,7 @@
     <string name="miui_one">Kako bi instalirali Vanced, MORATE onemogućiti MIUI optimizaciju u razvojnim mogućnostima. (Ovo upozorenje možete zanemariti ako koristite 20.2.20 ili noviji xiaomi.eu ROM)</string>
     <string name="miui_one_title">MIUI optimizacija je omogućena!</string>
     <string name="please_be_patient">NE zatvarajte aplikaciju tijekom ovog postupka!</string>
-    <string name="uninstall_app_text">Da li ste sigurni da želite deinstalirati %1$s ?</string>
+    <string name="uninstall_app_text">Sigurno želite deinstalirati %1$s ?</string>
     <string name="uninstall">Deinstaliraj</string>
     <string name="redownload">Ponovno preuzmi</string>
     <string name="security_context">Aplikaciju obavezno preuzmite s vancedapp.com, Vanced Discord poslužitelja ili Vanced GitHuba</string>
@@ -113,10 +113,10 @@
     <string name="installation_downgrade">Instalacija nije uspjela jer je korisnik pokušao instalirati stariju inačicu paketa. Deinstalirajte ažuriranja izvorne YouTube aplikacije, zatim pokušajte ponovno.</string>
     <string name="installation_failed">Neuspjela instalacija, nepoznati razlog. Priključite se našem Telegramu ili Diskordu za našu pomoć. Molimo Vas da priključite sliku ekrana iz Proširenog Menua</string>
     <string name="installation_incompatible">Instalacija nije uspjela zato jer datoteka instalacije nije kompatibilna s vašim uređajem. Uklonite preuzete datoteke u postavkama, zatim pokušajte ponovno.</string>
-    <string name="installation_invalid">Instalacija nije uspjela jer su APK datoteke oštećene, pokušajte ponovo.</string>
+    <string name="installation_invalid">Instalacija nije uspjela jer su APK datoteke oštećene, pokušajte ponovno.</string>
     <string name="installation_miui">Instalacija nije uspjela zato jer je MIUI optimizacija uključena. Isključite MIUI optimizaciju, zatim pokušajte ponovno.</string>
-    <string name="installation_signature">Instalacija nije uspjela jer je omogućena provjera potpisa APK -a. Onemogućite provjeru potpisa APK -a, a zatim pokušajte ponovno.</string>
+    <string name="installation_signature">Instalacija nije uspjela jer je omogućena provjera APK potpisa. Onemogućite provjeru APK potpisa, a zatim pokušajte ponovno.</string>
     <string name="installation_storage">Neuspješna instalacija jer na uređaju nema dovoljno slobodnog prostora.</string>
-    <string name="modapk_missing">Instalacijski program nije uspio pronaći APK datoteku za crnu/tamnu temu. Izbrišite podatke aplikacije Managera, a zatim pokušajte ponovno.</string>
+    <string name="modapk_missing">Instalacijski program nije uspio pronaći APK datoteku za crnu/tamnu temu. Uklonite podatke aplikacije Upravitelja, a zatim pokušajte ponovno.</string>
     <string name="path_missing">Neuspjelo lociranje putanje izvorne YouTube instalacije nakon razdvojene instalacije.</string>
 </resources>

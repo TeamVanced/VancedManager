@@ -45,8 +45,8 @@
     <string name="accent_color">Aksen Warna</string>
     <string name="category_appearance">Penampilan</string>
     <string name="category_behaviour">Perilaku</string>
-    <string name="clear_files">Hapus file yang diunduh</string>
-    <string name="cleared_files">Berhasil menghapus file</string>
+    <string name="clear_files">Hapus berkas yang terunduh</string>
+    <string name="cleared_files">Berhasil menghapus berkas</string>
     <string name="firebase_summary">Analisis firebase mengizinkan kami mengumpulkan informasi tentang performa aplikasi dan catatan crash</string>
     <string name="firebase_title">Analisis Firebase</string>
     <string name="language_title">Bahasa</string>
@@ -69,8 +69,8 @@
     <string name="logs_saved">Berhasil menyimpan log ke %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Rincian</string>
-    <string name="app_install_files_detected">File instalasi %1$s terdeteksi!</string>
-    <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua file yang diperlukan untuk instalasi %1$s ditemukan. Apakah Anda ingin memasangnya?</string>
+    <string name="app_install_files_detected">Berkas instalasi %1$s terdeteksi!</string>
+    <string name="app_install_files_detected_summary">Manager mendeteksi bahwa semua berkas yang diperlukan untuk instalasi %1$s ditemukan. Apakah Anda ingin memasangnya?</string>
     <string name="app_installation_preferences">Preferensi Instalasi %1$s</string>
     <string name="checking_updates">Memeriksa pembaruan…</string>
     <string name="chosen_lang">Bahasa: %1$s</string>
@@ -80,7 +80,7 @@
     <string name="guide">Petunjuk</string>
     <string name="hold_on">Berhenti!</string>
     <string name="magisk_vanced">Anda memakai Vanced versi Magisk/TWRP, yang pengembangannya dihentikan dan tidak bisa diperbarui menggunakan aplikasi ini. Mohon untuk menghapusnya dengan menghapus modul Magisk/gunakan pencopot Vanced TWRP.</string>
-    <string name="miui_one">Untuk memasang Vanced, Anda HARUS menonaktifkan Optimisasi MIUI pada pengaturan developer. (Anda dapat mengabaikan peringatan ini apabila Anda menggunakan ROM versi 20.2.20 atau lebih yang berbasis xiaomi.eu)</string>
+    <string name="miui_one">Untuk memasang Vanced, Anda HARUS menonaktifkan Optimisasi MIUI pada opsi pengembang. (Anda dapat mengabaikan peringatan ini apabila Anda menggunakan ROM versi 20.2.20 atau lebih yang berbasis xiaomi.eu)</string>
     <string name="miui_one_title">Optimisasi MIUI diaktifkan!</string>
     <string name="please_be_patient">Mohon untuk TIDAK keluar dari aplikasi saat proses ini!</string>
     <string name="uninstall_app_text">Apakah Anda yakin ingin mencopot pemasangan %1$s ?</string>
@@ -106,17 +106,17 @@
     <string name="error_downloading">Gagal Mengunduh %1$s</string>
     <string name="failed_accent">Gagal untuk menerapkan warna aksen baru</string>
     <string name="failed_uninstall">Gagal untuk mencopot pemasangan paket %1$s</string>
-    <string name="files_missing_va">Gagal untuk menemukan file yang diperlukan untuk instalasi. Unduh ulang file instalasi, lalu coba lagi.</string>
-    <string name="ifile_missing">Gagal untuk menemukan file APK untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
+    <string name="files_missing_va">Gagal untuk menemukan berkas yang diperlukan untuk instalasi. Unduh ulang berkas instalasi, lalu coba lagi.</string>
+    <string name="ifile_missing">Gagal untuk menemukan berkas APK untuk tema hitam/gelap dari penyimpanan, mohon coba lagi.</string>
     <string name="installation_aborted">Pemasangan gagal dikarenakan pengguna membatalkan pemasangan.</string>
     <string name="installation_conflict">Pemasangan gagal dikarenakan aplikasi konflik dengan aplikasi yang sudah terpasang. Copot pemasangan aplikasi versi saat ini, lalu coba lagi.</string>
     <string name="installation_downgrade">Pemasangan gagal dikarenakan pengguna mencoba menurunkan versi paket. Hapus pembaruan dari aplikasi bawaan, lalu coba lagi.</string>
-    <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut. Mohon untuk melampirkan screenshot dari menu Tingkat Lanjut</string>
-    <string name="installation_incompatible">Pemasangan gagal dikarenakan file pemasangan tidak kompatibel dengan perangkat Anda. Hapus file yang diunduh di pengaturan, lalu coba lagi.</string>
-    <string name="installation_invalid">Pemasangan gagal dikarenakan file APK rusak, mohon coba lagi.</string>
+    <string name="installation_failed">Pemasangan gagal untuk alasan yang tidak diketahui, gabung Telegram atau Discord kami untuk bantuan lebih lanjut. Mohon untuk melampirkan screenshot dari menu Rincian</string>
+    <string name="installation_incompatible">Pemasangan gagal dikarenakan berkas pemasangan tidak kompatibel dengan perangkat Anda. Hapus berkas yang diunduh di pengaturan, lalu coba lagi.</string>
+    <string name="installation_invalid">Pemasangan gagal dikarenakan berkas APK rusak, mohon coba lagi.</string>
     <string name="installation_miui">Pemasangan gagal dikarenakan Optimisasi MIUI diaktifkan. Nonaktifkan Optimisasi MIUI, lalu coba lagi.</string>
     <string name="installation_signature">Pemasangan gagal dikarenakan APK signature verification diaktifkan. Nonaktifkan APK signature verification, lalu coba lagi.</string>
     <string name="installation_storage">Pemasangan gagal dikarenakan perangkat tidak memiliki ruang penyimpanan yang cukup.</string>
-    <string name="modapk_missing">Gagal untuk menemukan file APK untuk tema hitam/gelap dari penginstal. Hapus data aplikasi Manager, lalu coba lagi.</string>
+    <string name="modapk_missing">Gagal untuk menemukan berkas APK untuk tema hitam/gelap dari penginstal. Hapus data aplikasi Manager, lalu coba lagi.</string>
     <string name="path_missing">Gagal untuk menemukan path instalasi YouTube setelah pemasangan split.</string>
 </resources>

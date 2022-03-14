@@ -5,7 +5,7 @@
     <string name="close">Bağla</string>
     <string name="description_microg">microG layihəsi əsasında Vanced üçün təkmilləşdirilmiş özəl bir GMS tətbiqi.</string>
     <string name="description_vanced">Çoxlu faydalı özəllikləri ilə modifikasiya edilmiş YouTube versiyası!</string>
-    <string name="description_vanced_music">Yenə Vanced, ancaq YouTube Msuic üçün! Nisbətən daha az özəlliyi olsa da, ehtiyaclarınızı qarşılayacaq.</string>
+    <string name="description_vanced_music">Yenə Vanced, ancaq YouTube Music üçün! Nisbətən daha az özəlliyi olsa da, ehtiyaclarınızı qarşılayacaq.</string>
     <string name="reset">Sıfırla</string>
     <string name="save">Saxla</string>
     <string name="select_apps">Tətbiqlərinizi Seçin</string>
@@ -15,7 +15,7 @@
     <string name="title_home">Menecer</string>
     <string name="title_logs">Qeydlər</string>
     <string name="title_settings">Tənzimləmələr</string>
-    <string name="update_manager">Yeniləmə Meneceri</string>
+    <string name="update_manager">Meneceri Yenilə</string>
     <!-- Welcome Page -->
     <string name="are_you_rooted">Cihazınızda root varmı?</string>
     <string name="grant_root">Root İcazəsi Ver</string>
@@ -24,10 +24,10 @@
     <string name="willing_to_use_root">Bunun nə olduğunu bilmirsiniz və ya root (kök) versiyasını istifadə etmək istəmirsiniz? Sadəcə aşağıdakı göy oxa toxunun!</string>
     <!-- Home Page -->
     <string name="about_app">%1$s Haqqında</string>
-    <string name="accessibility_download">Yüklə</string>
+    <string name="accessibility_download">Endir</string>
     <string name="accessibility_info">Məlumat</string>
     <string name="accessibility_launch">Başlat</string>
-    <string name="accessibility_reinstall">Yenidən qur</string>
+    <string name="accessibility_reinstall">Yenidən quraşdır</string>
     <string name="accessibility_uninstall">Sil</string>
     <string name="accessibility_update">Yenilə</string>
     <string name="apps">Tətbiqlər</string>

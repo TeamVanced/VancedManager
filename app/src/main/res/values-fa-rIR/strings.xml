@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!-- Global Strings -->
+    <string name="cancel">انصراف</string>
+    <string name="close">بستن</string>
+    <string name="description_microg">یک پیاده سازی سرویس های گوگل سفارشی برای Vanced بر اساس پروژه microG.</string>
+    <string name="description_vanced">یک یوتیوب اصلاح شده با بسیاری از ویژگی های مفید!</string>
+    <string name="description_vanced_music">پیشرفته، اما برای یوتیوب موزیک! ویژگی های نسبتاً کمتری دارد اما نیازهای شما را برآورده می کند.</string>
+    <string name="reset">بازنشانی</string>
+    <string name="save">ذخیره</string>
+    <string name="select_apps">برنامه های خود را انتخاب کنید</string>
+    <!-- Main Activity -->
+    <string name="title_about">درباره ما</string>
+    <string name="title_guide">راهنما</string>
+    <string name="title_home">مدیریت</string>
+    <string name="title_logs">گزارشات</string>
+    <string name="title_settings">تنظیمات</string>
+    <string name="update_manager">بروزرسانی کردن برنامه</string>
+    <!-- Welcome Page -->
+    <string name="are_you_rooted">آیا دستگاه شما روت شده؟</string>
+    <string name="grant_root">اجازه دسترسی به روت را بدهید</string>
+    <string name="lets_get_started">بریم شروع کنیم</string>
+    <string name="select_at_least_one_app">حداقل یک برنامه را انتخاب کنید!</string>
+    <string name="willing_to_use_root">نمی دانید این چیست یا نمی خواهید از نسخه اصلی استفاده کنید؟ فقط روی فلش آبی زیر کلیک کنید!</string>
+    <!-- Home Page -->
+    <string name="about_app">درباره %1$s</string>
+    <string name="accessibility_download">دانلود</string>
+    <string name="accessibility_info">اطلاعات</string>
+    <string name="accessibility_launch">اجرا</string>
+    <string name="accessibility_reinstall">نصب مجدد</string>
+    <string name="accessibility_uninstall">حذف نصب</string>
+    <string name="accessibility_update">بروزرسانی</string>
+    <string name="apps">برنامه ها</string>
+    <string name="changelog">تغییرات</string>
+    <string name="downloading_file">درحال دانلود %1$s</string>
+    <string name="install">نصب</string>
+    <string name="latest">آخرین:</string>
+    <string name="no_microg">لطفاً اول microG را نصب کنید</string>
+    <string name="root_not_granted">دسترسی به روت داده نشده است</string>
+    <string name="social_media">رسانه های اجتماعی</string>
+    <string name="support_us">ما را پشتیبانی کنید</string>
+    <string name="unavailable">غیر قابل دسترس</string>
+    <string name="version_installed">نصب شده:</string>
+    <!-- Settings -->
+    <string name="accent_color">رنگ برنامه</string>
+    <string name="category_appearance">ظاهراً</string>
+    <string name="category_behaviour">رفتار</string>
+    <string name="clear_files">فایل های دانلود شده را پاک کنید</string>
+    <string name="cleared_files">با موفقیت حذف شدند</string>
+    <string name="firebase_summary">این به ما امکان می‌دهد اطلاعاتی درباره عملکرد برنامه و گزارش‌های خرابی جمع‌آوری کنیم</string>
+    <string name="firebase_title">تجزیه و تحلیل بیس</string>
+    <string name="language_title">زبان</string>
+    <string name="link_custom_tabs">پیوندها در برگه‌های گوگل کروم باز می‌شوند</string>
+    <string name="link_title">استفاده از صفحات های گوگل کروم</string>
+    <string name="push_notifications">%1$s اعلانات لحظه ای</string>
+    <string name="push_notifications_summary">هنگام انتشار بروزرسانی برای %1$s، اعلان‌های لحظه ای دریافت کنید</string>
+    <string name="script_save_failed">ذخیره مقادیر زمان جدید انجام نشد</string>
+    <string name="script_sleep_timer">زمان خاموشی اسکریپت روت</string>
+    <string name="script_sleep_timer_description">مقدار زمان خاموشی مورد استفاده در اسکریپت /data/adb/service.d/app.sh را تنظیم کنید، برای رفع مشکلات نصب ، مفید است</string>
+    <string name="system_default">پیش فرض سیستم</string>
+    <string name="theme">تم</string>
+    <string name="theme_dark">تم تیره</string>
+    <string name="theme_light">تم روشن</string>
+    <string name="update_center">قسمت آپدیت</string>
+    <string name="update_not_found">آپدیت جدیدی موجود نیست</string>
+    <string name="variant">نوع دیگر</string>
+    <!-- Logs -->
+    <string name="logs_not_saved">نمی توان گزارشات را ذخیره کرد</string>
+    <string name="logs_saved">گزارشات با موفقیت ذخیره شدند در %1$s</string>
+    <!-- Dialogs -->
+    <string name="advanced">جزئیات</string>
+    <string name="app_install_files_detected">%1$s فایل های نصبی شناسایی شد!</string>
+    <string name="app_install_files_detected_summary">برنامه تشخیص داد که همه فایل‌های لازم برای نصب %1$s پیدا شد. آیا می خواهید آن را نصب کنید?</string>
+    <string name="app_installation_preferences">%1$s تنظیمات نصب</string>
+    <string name="checking_updates">بررسی برای وجود بروزرسانی ها…</string>
+    <string name="chosen_lang">زبان ها: %1$s</string>
+    <string name="chosen_theme">تم: %1$s</string>
+    <string name="chosen_version">نسخه: %1$s</string>
+    <string name="error">خطا</string>
+    <string name="guide">راهنما</string>
+    <string name="hold_on">توقف!</string>
+    <string name="magisk_vanced">شما از مجیسک /کاستوم ریکاوری استفاده می کنید که متوقف شده است و با استفاده از این برنامه نمی توان آن را به روز کرد. لطفاً با حذف ماژول مجیسک/کاستوم ریکاوری برنامه را حذف کنید.</string>
+    <string name="miui_one">برای نصب برنامه، باید بهینه سازی می یو آی را در تنظیمات توسعه دهنده غیرفعال کنید. (اگر از رام مبتنی بر xiaomi.eu 20.2.20 یا جدیدتر استفاده می کنید، می توانید این هشدار را نادیده بگیرید)</string>
+    <string name="miui_one_title">بهینه سازی می یو آی فعال شده!</string>
+    <string name="please_be_patient">لطفاً در هنگام نصب از برنامه خارج نشوید با تشکر!</string>
+    <string name="uninstall_app_text">آیا مطمئنید می‌خواهید حذف نصب کنید %1$s?</string>
+    <string name="uninstall">حذف نصب</string>
+    <string name="redownload">دانلود مجدد</string>
+    <string name="security_context">مطمئن شوید که برنامه را از vancedapp.com، سرور دیسکورد یا گیت هاپ دانلود کرده اید</string>
+    <string name="version">نسخه</string>
+    <string name="welcome">خوش آمدید</string>
+    <!-- Install Page -->
+    <string name="choose_preferred_language">زبان مورد نظر خود را انتخاب کنید</string>
+    <string name="install_latest">آخرین</string>
+    <string name="light_plus_other">روشن + %1$s</string>
+    <string name="select_at_least_one_lang">حداقل ۱ زبان را انتخاب کنید!</string>
+    <string name="vanced_black">سیاه</string>
+    <string name="vanced_dark">تیره</string>
+    <!-- About Page -->
+    <string name="manager_dev">توسعه دهندگان برنامه</string>
+    <string name="other_contributors">سایر مشارکت کنندگان</string>
+    <string name="sources">منابع</string>
+    <string name="vanced_team">تیم ما</string>
+    <!-- Error messages -->
+    <string name="chown_fail">فایل نصب `اسپلیت` برای مالک سیستم انجام نشد، لطفاً دوباره امتحان کنید.</string>
+    <string name="error_downloading">خطا در دانلود %1$s</string>
+    <string name="failed_accent">اعمال رنگ کلی برنامه ناموفق بود</string>
+    <string name="failed_uninstall">حذف نصب برنامه ناموفق بود %1$s</string>
+    <string name="files_missing_va">یافتن فایل های مورد نیاز برای نصب انجام نشد. فایل های نصب را دوباره دانلود کنید، سپس دوباره امتحان کنید.</string>
+    <string name="ifile_missing">یافتن فایل نصبی برای تم سیاه/تاریک از فضای ذخیره‌سازی انجام نشد، لطفاً دوباره امتحان کنید.</string>
+    <string name="installation_aborted">نصب انجام نشد زیرا کاربر نصب را لغو کرد.</string>
+    <string name="installation_conflict">نصب انجام نشد زیرا برنامه با یک برنامه از قبل نصب شده تداخل دارد. نسخه فعلی برنامه را حذف نصب کنید، سپس دوباره امتحان کنید.</string>
+    <string name="installation_downgrade">نصب انجام نشد زیرا کاربر سعی کرد برنامه را به نسخه قبلی برگرداند. بروزرسانی‌های برنامه اصلی را حذف نصب کنید، سپس دوباره امتحان کنید.</string>
+    <string name="installation_failed">نصب به دلایل نامعلومی انجام نشد، برای پشتیبانی بیشتر به تلگرام یا دیسکورد ما بپیوندید. لطفاً یک اسکرین شات از منوی پیشرفته نیز پیوست کنید</string>
+    <string name="installation_incompatible">نصب انجام نشد زیرا فایل نصبی با دستگاه شما سازگار نیست. فایل های دانلود شده را در تنظیمات پاک کنید، سپس دوباره امتحان کنید.</string>
+    <string name="installation_invalid">نصب انجام نشد زیرا فایل‌های نصبی خراب هستند، لطفاً دوباره امتحان کنید.</string>
+    <string name="installation_miui">نصب انجام نشد زیرا بهینه سازی می یو آی فعال است. بهینه سازی می یو آی را غیرفعال کنید، سپس دوباره امتحان کنید.</string>
+    <string name="installation_signature">نصب انجام نشد زیرا تأیید امضای برنامه فعال است. تأیید امضای برنامه را غیرفعال کنید، سپس دوباره امتحان کنید.</string>
+    <string name="installation_storage">نصب انجام نشد زیرا دستگاه فضای خالی کافی ندارد.</string>
+    <string name="modapk_missing">فایل نصبی برای طرح زمینه سیاه/تاریک از نصب کننده یافت نشد. داده های این برنامه را پاک کنید، سپس دوباره امتحان کنید.</string>
+    <string name="path_missing">پس از نصب تقسیمی برنامه ، مسیر نصب یوتیوب اصلی پیدا نشد.</string>
+</resources>

@@ -21,15 +21,15 @@
     <string name="grant_root">Gi root-tillatelse</string>
     <string name="lets_get_started">La oss komme i gang</string>
     <string name="select_at_least_one_app">Velg minst en app!</string>
-    <string name="willing_to_use_root">Don\'t know what this is or don\'t want to use the root version? Just click the blue arrow below!</string>
+    <string name="willing_to_use_root">Vet du ikke hva dette er eller ønsker ikke å bruke rot-versjonen? Bare klikk på den blå pilen nedenfor!</string>
     <!-- Home Page -->
     <string name="about_app">Om %1$s</string>
-    <string name="accessibility_download">Download</string>
+    <string name="accessibility_download">Last ned</string>
     <string name="accessibility_info">Info</string>
     <string name="accessibility_launch">Launch</string>
-    <string name="accessibility_reinstall">Reinstall</string>
-    <string name="accessibility_uninstall">Uninstall</string>
-    <string name="accessibility_update">Update</string>
+    <string name="accessibility_reinstall">Reinstaller</string>
+    <string name="accessibility_uninstall">Avinstaller</string>
+    <string name="accessibility_update">Oppdater</string>
     <string name="apps">Apper</string>
     <string name="changelog">Endringslogg</string>
     <string name="downloading_file">Laster ned %1$s</string>
@@ -68,7 +68,7 @@
     <string name="logs_not_saved">Could not save logs</string>
     <string name="logs_saved">Successfully saved logs to %1$s</string>
     <!-- Dialogs -->
-    <string name="advanced">Details</string>
+    <string name="advanced">Detaljer</string>
     <string name="app_install_files_detected">%1$s installasjonsfiler oppdaget!</string>
     <string name="app_install_files_detected_summary">Manager oppdaget at alle nødvendige filer for %1$s installasjonen ble funnet. Vil du installere den?</string>
     <string name="app_installation_preferences">%1$s Installasjonsinnstillinger</string>
@@ -80,11 +80,11 @@
     <string name="guide">Guide</string>
     <string name="hold_on">Stopp!</string>
     <string name="magisk_vanced">Du bruker Magisk/TWRP-versjonen av Vansert, som seponeres og som ikke kan oppdateres ved hjelp av denne appen. Vennligst fjern den ved å fjerne Magisk modul/bruke TWRP Vanced uninstaller.</string>
-    <string name="miui_one">To install Vanced, you MUST disable MIUI Optimizations in the developer settings. (You can ignore this warning if you are using 20.2.20 or later xiaomi.eu based ROM)</string>
+    <string name="miui_one">For å installere Vanced MÅ du deaktivere MIUI optimaliseringer i utviklerinnstillingene. (Du kan ignorere denne advarselen hvis du bruker 20.2.20 eller senere xiaomi.eu-basert ROM)</string>
     <string name="miui_one_title">MIUI Optimizations are enabled!</string>
     <string name="please_be_patient">Please do NOT exit the app during this process!</string>
-    <string name="uninstall_app_text">Are you sure you want to uninstall %1$s ?</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="uninstall_app_text">Er du sikker på at du vil avinstallere %1$s?</string>
+    <string name="uninstall">Avinstaller</string>
     <string name="redownload">Last ned på nytt</string>
     <string name="security_context">Sørg for at du lastet ned appen fra vancedapp.com, Vanced Discord server, eller Vanced GitHub</string>
     <string name="version">Versjon</string>
@@ -94,11 +94,11 @@
     <string name="install_latest">Latest</string>
     <string name="light_plus_other">Lys + %1$s</string>
     <string name="select_at_least_one_lang">Velg minst ett språk!</string>
-    <string name="vanced_black">Black</string>
-    <string name="vanced_dark">Dark</string>
+    <string name="vanced_black">Svart</string>
+    <string name="vanced_dark">Mørk</string>
     <!-- About Page -->
     <string name="manager_dev">Manager Devs</string>
-    <string name="other_contributors">Other Contributors</string>
+    <string name="other_contributors">Andre bidragsytere</string>
     <string name="sources">Kilder</string>
     <string name="vanced_team">Vanced Team</string>
     <!-- Error messages -->

@@ -8,17 +8,17 @@
     <string name="description_vanced_music">Vanced, mas para o YouTube Music! Relativamente menos funções, mas satisfaz suas necessidades.</string>
     <string name="reset">Resetar</string>
     <string name="save">Salvar</string>
-    <string name="select_apps">Selecione Seus Aplicativos</string>
+    <string name="select_apps">Selecione seus aplicativos</string>
     <!-- Main Activity -->
     <string name="title_about">Sobre</string>
     <string name="title_guide">Guia</string>
-    <string name="title_home">Gerenciador</string>
-    <string name="title_logs">Registros</string>
+    <string name="title_home">Vanced Manager</string>
+    <string name="title_logs">Arquivos de logs</string>
     <string name="title_settings">Configurações</string>
-    <string name="update_manager">Gerenciador de Atualização</string>
+    <string name="update_manager">Atualizar o Vanced Manager</string>
     <!-- Welcome Page -->
-    <string name="are_you_rooted">Seu Dispositivo Tem Root?</string>
-    <string name="grant_root">Conceder Permissão de Root</string>
+    <string name="are_you_rooted">Seu dispositivo tem root?</string>
+    <string name="grant_root">Conceder permissão de root</string>
     <string name="lets_get_started">Vamos começar</string>
     <string name="select_at_least_one_app">Selecione pelo menos um aplicativo!</string>
     <string name="willing_to_use_root">Não sabe o que isto é ou não quer usar a versão root? Basta clicar na seta azul abaixo!</string>
@@ -37,7 +37,7 @@
     <string name="latest">Mais recente:</string>
     <string name="no_microg">Instale o microG Vanced primeiro</string>
     <string name="root_not_granted">Acesso root não concedido</string>
-    <string name="social_media">Mídias Sociais</string>
+    <string name="social_media">Redes Sociais</string>
     <string name="support_us">Apoie-nos</string>
     <string name="unavailable">Indisponível</string>
     <string name="version_installed">Instalado:</string>
@@ -66,11 +66,11 @@
     <string name="variant">Variante</string>
     <!-- Logs -->
     <string name="logs_not_saved">Não foi possível salvar os registros</string>
-    <string name="logs_saved">Registros salvos com sucesso em %1$s</string>
+    <string name="logs_saved">Arquivos de logs salvos com sucesso em %1$s</string>
     <!-- Dialogs -->
     <string name="advanced">Detalhes</string>
     <string name="app_install_files_detected">%1$s arquivos de instalação detectados!</string>
-    <string name="app_install_files_detected_summary">O gerenciador detectou que todos os arquivos necessários para a instalação de %1$s foram encontrados. Você quer instalar?</string>
+    <string name="app_install_files_detected_summary">O Vanced Manager detectou que todos os arquivos necessários para a instalação de %1$s foram encontrados. Deseja prosseguir com a instalação?</string>
     <string name="app_installation_preferences">%1$s Preferências de Instalação</string>
     <string name="checking_updates">Verificando por atualizações…</string>
     <string name="chosen_lang">Idioma(s): %1$s</string>
@@ -97,7 +97,7 @@
     <string name="vanced_black">Preto</string>
     <string name="vanced_dark">Escuro</string>
     <!-- About Page -->
-    <string name="manager_dev">Desenvolvedores do Manager</string>
+    <string name="manager_dev">Desenvolvedores do Vanced Manager</string>
     <string name="other_contributors">Outros contribuidores</string>
     <string name="sources">Fontes</string>
     <string name="vanced_team">Equipe Vanced</string>
@@ -107,7 +107,7 @@
     <string name="failed_accent">Falha ao aplicar nova cor de destaque</string>
     <string name="failed_uninstall">Falha ao desinstalar o pacote %1$s</string>
     <string name="files_missing_va">Falha ao localizar os arquivos necessários para instalação. Baixe novamente os arquivos de instalação e tente novamente.</string>
-    <string name="ifile_missing">Falha ao localizar o arquivo APK para o tema preto/escuro a partir do armazenamento, por favor tente novamente.</string>
+    <string name="ifile_missing">Falha ao localizar o arquivo APK para o tema preto/escuro no armazenamento, por favor tente novamente.</string>
     <string name="installation_aborted">A instalação falhou porque o usuário abortou a instalação.</string>
     <string name="installation_conflict">A instalação falhou porque o app está em conflito com um app já instalado. Desinstale a versão atual do aplicativo e tente novamente.</string>
     <string name="installation_downgrade">A instalação falhou porque o usuário tentou fazer o downgrade do pacote. Desinstale as atualizações do aplicativo padrão e tente novamente.</string>
@@ -117,6 +117,6 @@
     <string name="installation_miui">A instalação falhou porque a Otimização MIUI está ativada. Desative a Otimização MIUI e tente novamente.</string>
     <string name="installation_signature">A instalação falhou porque a verificação de assinatura do APK está ativada. Desative a verificação de assinatura do APK e tente novamente.</string>
     <string name="installation_storage">A instalação falhou porque o dispositivo não tem espaço livre suficiente.</string>
-    <string name="modapk_missing">Falha ao encontrar o arquivo APK para o tema preto/escuro a partir do instalador. Limpe os \"dados do app\" do Gerenciador e tente novamente.</string>
+    <string name="modapk_missing">Falha ao encontrar o arquivo APK para o tema preto/escuro a partir do instalador. Limpe os \"dados do app\" do Vanced Manager e tente novamente.</string>
     <string name="path_missing">Falha ao localizar o caminho de instalação padrão do YouTube após a instalação dividida (split).</string>
 </resources>

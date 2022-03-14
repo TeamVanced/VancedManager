@@ -11,7 +11,7 @@
     <string name="select_apps">Piliin ang mga app</string>
     <!-- Main Activity -->
     <string name="title_about">Tungkol sa app</string>
-    <string name="title_guide">Gabay</string>
+    <string name="title_guide">Guide</string>
     <string name="title_home">Manager</string>
     <string name="title_logs">Mga Log</string>
     <string name="title_settings">Settings</string>

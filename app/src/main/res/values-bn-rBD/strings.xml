@@ -4,14 +4,14 @@
     <string name="cancel">বাতিল করুন</string>
     <string name="close">বন্ধ করুন</string>
     <string name="description_microg">A custom GMS Implementation for Vanced based on the microG project.</string>
-    <string name="description_vanced">A modified YouTube client with many useful features!</string>
-    <string name="description_vanced_music">Vanced, but for YouTube Music! Relatively less feature-rich but fulfills your needs.</string>
+    <string name="description_vanced">Çoxlu faydalı özəllikləri ilə modifikasiya edilmiş YouTube versiyası!</string>
+    <string name="description_vanced_music">Yenə Vanced, ancaq YouTube Msuic üçün! Nisbətən daha az özəlliyi olsa da, ehtiyaclarınızı qarşılayacaq.</string>
     <string name="reset">পুনরায় স্থির করুন</string>
     <string name="save">সংরক্ষণ করুন</string>
     <string name="select_apps">আপনার পছন্দসই অ্যাপগুলি নির্বাচন করুন</string>
     <!-- Main Activity -->
     <string name="title_about">সম্বন্ধে</string>
-    <string name="title_guide">Guide</string>
+    <string name="title_guide">แนะนำ</string>
     <string name="title_home">ম্যানেজার</string>
     <string name="title_logs">Logs</string>
     <string name="title_settings">সেটিংস</string>
